@@ -226,25 +226,43 @@ $ git push
 Prerequisite: the PR above has been reviewed and merged into the
 master branch.
 
-1. Checkout the master branch and pull the latest code, which should
-now include the changes you've made.
-
-2. Run `tagreleases.sh` in the root directory, specifying a github
+Run `tagreleases.sh` in the root directory, specifying a github
 access token. This will ask you to confirm that you want to create a
-release.
+release. As of April 2020, this no longer accesses your
+local repository at all, so it doesn't matter what branch you're on.
 
 Sample session:
 
 ```text
-$ git checkout master
-$ git pull upstream master
 $ ./tagreleases.sh your_access_token_here
+
+Fetching all tags from GitHub
+Fetched 1065 tags
+Commit to tag: e6ace9f3836d9eabe9b4761598b4010b4771fede
+---------
+Release Google.Cloud.WebRisk.V1 version 1.0.0
+
+Changes in this release:
+
+No API surface changes since 1.0.0-beta01.
+---------
+APIs requiring a new release:
+Google.Cloud.WebRisk.V1                            v1.0.0
+Go ahead and create releases? (y/n) y
+Creating releases with tags:
+Google.Cloud.WebRisk.V1-1.0.0
 ```
 
 Note that `tagreleases.sh` checks that there are no project
 references from APIs being released now to APIs that *aren't* being
 released. Without this check, it's possible for a released version
-to depend on unreleased changes.
+to depend on unreleased changes. The `--force` command line option
+will skip this check, but we strongly recommend that you don't use
+this without checking with the core .NET client library team.
+
+`tagreleases.sh` allows a specific commit to be the target of the
+tag, rather than the HEAD of master. Just use `--commit=<sha>` as a
+command line argument after the GitHub token.
 
 **Building and publishing the release**
 
