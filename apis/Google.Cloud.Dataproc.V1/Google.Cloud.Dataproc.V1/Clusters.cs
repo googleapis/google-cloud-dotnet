@@ -659,7 +659,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Compute Engine zone where your cluster is deployed, and then create
     /// and manage this project-level, per-location bucket (see
     /// [Dataproc staging
-    /// bucket](/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
+    /// bucket](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/staging-bucket)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ConfigBucket {
@@ -1473,7 +1473,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// communications. Cannot be specified with subnetwork_uri. If neither
     /// `network_uri` nor `subnetwork_uri` is specified, the "default" network of
     /// the project is used, if it exists. Cannot be a "Custom Subnet Network" (see
-    /// [Using Subnetworks](/compute/docs/subnetworks) for more information).
+    /// [Using Subnetworks](https://cloud.google.com/compute/docs/subnetworks) for
+    /// more information).
     ///
     /// A full URL, partial URI, or short name are valid. Examples:
     ///
@@ -1534,15 +1535,15 @@ namespace Google.Cloud.Dataproc.V1 {
     private string serviceAccount_ = "";
     /// <summary>
     /// Optional. The [Dataproc service
-    /// account](/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_cloud_dataproc)
+    /// account](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-accounts#service_accounts_in_cloud_dataproc)
     /// (also see [VM Data Plane
-    /// identity](/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity))
+    /// identity](https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-principals#vm_service_account_data_plane_identity))
     /// used by Dataproc cluster VM instances to access Google Cloud Platform
     /// services.
     ///
     /// If not specified, the
     /// [Compute Engine default service
-    /// account](/compute/docs/access/service-accounts#default_service_account)
+    /// account](https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
     /// is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1585,8 +1586,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The Compute Engine tags to add to all instances (see
-    /// [Tagging instances](/compute/docs/label-or-tag-resources#tags)).
+    /// The Compute Engine tags to add to all instances (see [Tagging
+    /// instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Tags {
@@ -1939,7 +1940,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///
     /// **Auto Zone Exception**: If you are using the Dataproc
     /// [Auto Zone
-    /// Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
     /// feature, you must use the short name of the machine type
     /// resource, for example, `n1-standard-2`.
     /// </summary>
@@ -2015,8 +2016,8 @@ namespace Google.Cloud.Dataproc.V1 {
     private string minCpuPlatform_ = "";
     /// <summary>
     /// Optional. Specifies the minimum cpu platform for the Instance Group.
-    /// See [Dataproc&amp;rarr;Minimum CPU Platform]
-    /// (/dataproc/docs/concepts/compute/dataproc-min-cpu).
+    /// See [Dataproc -> Minimum CPU
+    /// Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MinCpuPlatform {
@@ -2405,7 +2406,8 @@ namespace Google.Cloud.Dataproc.V1 {
 
   /// <summary>
   /// Specifies the type and number of accelerator cards attached to the instances
-  /// of an instance. See [GPUs on Compute Engine](/compute/docs/gpus/).
+  /// of an instance. See [GPUs on Compute
+  /// Engine](https://cloud.google.com/compute/docs/gpus/).
   /// </summary>
   public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig> {
     private static readonly pb::MessageParser<AcceleratorConfig> _parser = new pb::MessageParser<AcceleratorConfig>(() => new AcceleratorConfig());
@@ -2449,7 +2451,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Full URL, partial URI, or short name of the accelerator type resource to
     /// expose to this instance. See
     /// [Compute Engine
-    /// AcceleratorTypes](/compute/docs/reference/beta/acceleratorTypes).
+    /// AcceleratorTypes](https://cloud.google.com/compute/docs/reference/beta/acceleratorTypes).
     ///
     /// Examples:
     ///
@@ -2459,7 +2461,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///
     /// **Auto Zone Exception**: If you are using the Dataproc
     /// [Auto Zone
-    /// Placement](/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
+    /// Placement](https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement)
     /// feature, you must use the short name of the accelerator type
     /// resource, for example, `nvidia-tesla-k80`.
     /// </summary>
@@ -4043,10 +4045,10 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>
     /// Optional. The version of software inside the cluster. It must be one of the
     /// supported [Dataproc
-    /// Versions](/dataproc/docs/concepts/versioning/dataproc-versions#supported_cloud_dataproc_versions),
+    /// Versions](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#supported_cloud_dataproc_versions),
     /// such as "1.2" (including a subminor version, such as "1.2.29"), or the
     /// ["preview"
-    /// version](/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
+    /// version](https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions).
     /// If unspecified, it defaults to the latest Debian version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4079,8 +4081,8 @@ namespace Google.Cloud.Dataproc.V1 {
     /// * spark:  `spark-defaults.conf`
     /// * yarn:   `yarn-site.xml`
     ///
-    /// For more information, see
-    /// [Cluster properties](/dataproc/docs/concepts/cluster-properties).
+    /// For more information, see [Cluster
+    /// properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
