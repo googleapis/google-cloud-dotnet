@@ -91,8 +91,8 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Vision.V1](https://googleapis.dev/dotnet/Google.Cloud.Vision.V1/2.0.0) | 2.0.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.WebRisk.V1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1/1.0.0) | 1.0.0 | [Google Cloud Web Risk](https://cloud.google.com/web-risk/) |
 | [Google.Cloud.WebRisk.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Web Risk](https://cloud.google.com/web-risk/) |
-| [Google.Identity.AccessContextManager.Type](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.Type/1.0.0-beta01) | 1.0.0-beta01 | Version-agnostic types for the Google Identity Access Context Manager API |
-| [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.0.0-beta01) | 1.0.0-beta01 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
+| [Google.Identity.AccessContextManager.Type](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.Type/1.0.0) | 1.0.0 | Version-agnostic types for the Google Identity Access Context Manager API |
+| [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.0.0) | 1.0.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](https://googleapis.dev/dotnet/Google.LongRunning/2.0.0) | 2.0.0 | Support for the Long-Running Operations API pattern |
 | [Grafeas.V1](https://googleapis.dev/dotnet/Grafeas.V1/2.0.0) | 2.0.0 | [Grafeas](https://grafeas.io/) |
 
