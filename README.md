@@ -43,7 +43,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.0.0-beta02) | 2.0.0-beta02 | [Firestore](https://firebase.google.com) |
 | [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](https://googleapis.dev/dotnet/Google.Cloud.Iam.V1/2.0.0) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
-| [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
+| [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.0.0) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](https://googleapis.dev/dotnet/Google.Cloud.Language.V1/2.0.0) | 2.0.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.Logging.Log4Net](https://googleapis.dev/dotnet/Google.Cloud.Logging.Log4Net/3.0.0) | 3.0.0 | Log4Net client library for the Google Cloud Logging API |
 | [Google.Cloud.Logging.NLog](https://googleapis.dev/dotnet/Google.Cloud.Logging.NLog/3.0.0) | 3.0.0 | NLog target for the Google Cloud Logging API |
