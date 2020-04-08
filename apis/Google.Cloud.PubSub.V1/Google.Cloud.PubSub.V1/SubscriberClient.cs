@@ -91,7 +91,7 @@ namespace Google.Cloud.PubSub.V1
             /// <summary>
             /// The lease time before which a message must either be ACKed
             /// or have its lease extended. This is truncated to the nearest second.
-            /// If <c>null</c>, uses the default of <see cref="AckDeadline"/>.
+            /// If <c>null</c>, uses the default of <see cref="DefaultAckDeadline"/>.
             /// </summary>
             public TimeSpan? AckDeadline { get; set; }
 
