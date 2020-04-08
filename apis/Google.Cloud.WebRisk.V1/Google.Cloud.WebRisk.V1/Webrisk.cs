@@ -101,10 +101,11 @@ namespace Google.Cloud.WebRisk.V1 {
             "djEve3BhcmVudD1wcm9qZWN0cy8qfS9zdWJtaXNzaW9uczoKc3VibWlzc2lv",
             "btpBEXBhcmVudCxzdWJtaXNzaW9uGkrKQRZ3ZWJyaXNrLmdvb2dsZWFwaXMu",
             "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybUKiAQoVY29tLmdvb2dsZS53ZWJyaXNrLnYxQgxXZWJSaXNrUHJv",
+            "bGF0Zm9ybUK/AQoVY29tLmdvb2dsZS53ZWJyaXNrLnYxQgxXZWJSaXNrUHJv",
             "dG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
             "bG91ZC93ZWJyaXNrL3YxO3dlYnJpc2uiAgRHQ1dSqgIXR29vZ2xlLkNsb3Vk",
-            "LldlYlJpc2suVjHKAhdHb29nbGVcQ2xvdWRcV2ViUmlza1xWMWIGcHJvdG8z"));
+            "LldlYlJpc2suVjHKAhdHb29nbGVcQ2xvdWRcV2ViUmlza1xWMeoCGkdvb2ds",
+            "ZTo6Q2xvdWQ6OldlYlJpc2s6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.WebRisk.V1.ThreatType), typeof(global::Google.Cloud.WebRisk.V1.CompressionType), }, null, new pbr::GeneratedClrTypeInfo[] {
