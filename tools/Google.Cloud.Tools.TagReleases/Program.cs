@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using LibGit2Sharp;
 using Octokit;
 using System;
 using System.Collections.Generic;
@@ -29,9 +28,8 @@ namespace Google.Cloud.Tools.TagReleases
     /// 
     /// Steps taken:
     /// 
-    /// - Find the current head of the master branch on github
-    /// - Check that the local repo is at the same commit
-    /// - Check that the local repo has no pending changes to apis.json
+    /// - Fetch all tags from GitHub
+    /// - Fetch API catalog from specified commit on GitHub
     /// - Work out which packages would need to be tagged
     /// - Check that there are no project references outside that package set
     /// - Request confirmation of tagging
@@ -41,19 +39,37 @@ namespace Google.Cloud.Tools.TagReleases
     {
         private const string RepositoryOwner = "googleapis";
         private const string RepositoryName = "google-cloud-dotnet";
-        private const string TargetBranch = "master";
         private const string ApplicationName = "google-cloud-dotnet-tagreleases";
 
-        private static int Main(string[] args)
+        private readonly Config _config;
+        private readonly GitHubClient _client;
+
+        private Program(Config config)
         {
-            if (args.Length < 1 || args.Length > 2 || args.Length == 2 && args[1] != "--force")
+            _config = config;
+            _client = new GitHubClient(new ProductHeaderValue(ApplicationName))
             {
-                Console.WriteLine("Arguments: <github access token> [--force]");
-                return 1;
-            }
+                Credentials = new Credentials(config.GitHubToken)
+            };
+        }
+
+        /// <summary>
+        /// Skeleton of execution, with no real business logic. This method has been
+        /// separated from <see cref="RunAsync"/> for clarity.
+        /// </summary>
+        private static async Task<int> Main(string[] args)
+        {
             try
             {
-                return MainAsync(args).GetAwaiter().GetResult();
+                var config = Config.FromCommandLine(args);
+                if (!config.IsValid)
+                {
+                    config.DisplayUsage();
+                    return 1;
+                }
+                var program = new Program(config);
+                await program.RunAsync();
+                return 0;
             }
             catch (UserErrorException e)
             {
@@ -67,82 +83,71 @@ namespace Google.Cloud.Tools.TagReleases
             }
         }
 
-        private static async Task<int> MainAsync(string[] args)
+        private async Task RunAsync()
         {
-            bool force = args.Length == 2 && args[1] == "--force";
-            var client = new GitHubClient(new ProductHeaderValue(ApplicationName))
+            var apis = await LoadApis();
+            var tags = await FetchTags();
+            var newReleases = ComputeNewReleases(apis, tags);
+            if (!newReleases.Any())
             {
-                Credentials = new Octokit.Credentials(args[0])
-            };
-            var commit = await FetchRemoteCommitAsync(client);
-            ValidateLocalRepository(commit);
-            var apis = ApiMetadata.LoadApis();
-            var newReleases = ComputeNewReleasesAsync(apis);
-            if (!force)
-            {
-                ValidateChanges(newReleases);
+                Console.WriteLine($"No releases need to be created for {_config.Committish}. Exiting.");
+                return;
             }
-            if (!ConfirmReleases(newReleases))
-            {
-                return 0;
-            }
+            var commit = await FetchAndDisplayCommit();
 
-            await MakeReleasesAsync(client, newReleases, commit);
-            Console.WriteLine();
-            Console.WriteLine($"Done. Please start the Kokoro release job with any of the above tags as the committish.");
-            return 0;
+            CheckProjectReferences(newReleases);
+            if (ConfirmReleases(newReleases))
+            {
+                await CreateReleasesAsync(newReleases, commit);
+            }            
         }
 
-        private static async Task<GitHubCommit> FetchRemoteCommitAsync(GitHubClient client)
+        private async Task<List<ApiMetadata>> LoadApis()
         {
-            var commit = await client.Repository.Commit.Get(RepositoryOwner, RepositoryName, TargetBranch);
-            Console.WriteLine($"Current GitHub {TargetBranch} commit: {commit.Sha}");
+            var allContents = await _client.Repository.Content.GetAllContentsByRef(RepositoryOwner, RepositoryName, ApiMetadata.RelativeCatalogPath, _config.Committish);
+            var json = allContents.Single().Content;
+            return ApiMetadata.LoadApisFromJson(json);
+        }
+
+        private async Task<List<string>> FetchTags()
+        {
+            // We have a lot of tags - fetch a large number at a time to make this a lot quicker.
+            Console.WriteLine($"Fetching all tags from GitHub");
+            var tags = await _client.Repository.GetAllTags(RepositoryOwner, RepositoryName, new ApiOptions { PageSize = 2000 });
+            Console.WriteLine($"Fetched {tags.Count} tags");
+            return tags.Select(tag => tag.Name).ToList();
+        }
+
+        private async Task<GitHubCommit> FetchAndDisplayCommit()
+        {
+            var commit = await _client.Repository.Commit.Get(RepositoryOwner, RepositoryName, _config.Committish);
+            Console.WriteLine($"Commit to tag: {commit.Sha}");
+            // Make sure it's clear which part of the output is the commit message.
+            Console.WriteLine("---------");
+            Console.WriteLine(commit.Commit.Message);
+            Console.WriteLine("---------");
             return commit;
         }
 
-        private static void ValidateLocalRepository(GitHubCommit expectedCommit)
+        private List<ApiMetadata> ComputeNewReleases(List<ApiMetadata> allApis, List<string> tags)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new LibGit2Sharp.Repository(root))
-            {
-                string tip = repo.Head.Tip.Sha;
-                if (tip != expectedCommit.Sha)
-                {
-                    throw new UserErrorException($"Current local commit: {tip}. Aborting.");
-                }
-                var status = repo.RetrieveStatus("apis/apis.json");
-                if (status != FileStatus.Unaltered)
-                {
-                    throw new UserErrorException($"Expected apis.json to be unaltered. Current status: {status}. Aborting.");
-                }
-            }
-        }
-
-        private static List<ApiMetadata> ComputeNewReleasesAsync(List<ApiMetadata> allApis)
-        {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new LibGit2Sharp.Repository(root))
-            {
-                var tags = repo.Tags.Select(tag => tag.FriendlyName).ToList();
-                var noChange = allApis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
-                return allApis.Except(noChange).ToList();
-            }
+            var noChange = allApis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
+            return allApis.Except(noChange).ToList();
         }
 
         /// <summary>
-        /// Validates the set of changes.
-        /// </summary>
-        /// <remarks>
-        /// <para>Current checks:</para>
-        /// <para>
+        /// Check for invalid project references.
         /// Project references (in production code) are okay so long as all the targets of the references
         /// are also going to be released. If this is not the case, the dependencies within the target could be different
         /// to the ones in the public package version, causing a dependency issue in the package we're about to publish.
         /// (This caused issue #1280 for example.)
-        /// </para>
         /// </remarks>
-        private static void ValidateChanges(List<ApiMetadata> newReleases)
+        private void CheckProjectReferences(List<ApiMetadata> newReleases)
         {
+            if (_config.SkipProjectReferenceCheck)
+            {
+                return;
+            }
             var newReleaseNames = newReleases.Select(api => api.Id).ToList();
             foreach (var api in newReleases)
             {
@@ -156,23 +161,17 @@ namespace Google.Cloud.Tools.TagReleases
             }
         }
 
-        private static bool ConfirmReleases(List<ApiMetadata> newReleases)
+        private bool ConfirmReleases(List<ApiMetadata> newReleases)
         {
             Console.WriteLine("APIs requiring a new release:");
             newReleases.ForEach(api => Console.WriteLine($"{api.Id,-50} v{api.Version}"));
 
-            if (!newReleases.Any())
-            {
-                Console.WriteLine("No releases need to be created. Exiting.");
-                return false;
-            }
-
-            Console.WriteLine("Go ahead and create releases? (y/n)");
+            Console.Write("Go ahead and create releases? (y/n) ");
             string response = Console.ReadLine();
             return response == "y";
         }
 
-        private static async Task MakeReleasesAsync(GitHubClient client, List<ApiMetadata> newReleases, GitHubCommit commit)
+        private async Task CreateReleasesAsync(List<ApiMetadata> newReleases, GitHubCommit commit)
         {
             var originalMessage = commit.Commit.Message;
             var unwrappedMessage = string.Join("\n", UnwrapLines(originalMessage.Split('\n')));
@@ -189,7 +188,7 @@ namespace Google.Cloud.Tools.TagReleases
                     Body = unwrappedMessage
                 };
                 // We could parallelize, but there's very little point.
-                await client.Repository.Release.Create(RepositoryOwner, RepositoryName, gitRelease);
+                await _client.Repository.Release.Create(RepositoryOwner, RepositoryName, gitRelease);
                 Console.WriteLine(tag);
             }
         }
