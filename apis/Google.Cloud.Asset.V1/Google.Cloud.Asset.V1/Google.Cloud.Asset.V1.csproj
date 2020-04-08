@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>2.0.0-beta03</Version>
+    <Version>2.0.0</Version>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -25,9 +25,9 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="3.0.0" />
     <PackageReference Include="Google.Cloud.Iam.V1" Version="2.0.0" />
-    <PackageReference Include="Google.Cloud.OrgPolicy.V1" Version="2.0.0-beta03" />
-    <ProjectReference Include="..\..\Google.Identity.AccessContextManager.Type\Google.Identity.AccessContextManager.Type\Google.Identity.AccessContextManager.Type.csproj" />
-    <ProjectReference Include="..\..\Google.Identity.AccessContextManager.V1\Google.Identity.AccessContextManager.V1\Google.Identity.AccessContextManager.V1.csproj" />
+    <PackageReference Include="Google.Cloud.OrgPolicy.V1" Version="2.0.0" />
+    <PackageReference Include="Google.Identity.AccessContextManager.Type" Version="1.0.0" />
+    <PackageReference Include="Google.Identity.AccessContextManager.V1" Version="1.0.0" />
     <PackageReference Include="Google.LongRunning" Version="2.0.0" />
     <PackageReference Include="Grpc.Core" Version="2.27.0" PrivateAssets="None" />
     <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />

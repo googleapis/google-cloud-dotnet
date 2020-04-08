@@ -15,7 +15,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
+| [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.0.0) | 2.0.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AutoML.V1](https://googleapis.dev/dotnet/Google.Cloud.AutoML.V1/2.0.0) | 2.0.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.DataTransfer.V1/2.0.0) | 2.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
 | [Google.Cloud.BigQuery.V2](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.V2/2.0.0-beta04) | 2.0.0-beta04 | [Google BigQuery](https://cloud.google.com/bigquery/) |

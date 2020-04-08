@@ -5,16 +5,16 @@
     "protoPath": "google/cloud/asset/v1",
     "productName": "Google Cloud Asset Inventory",
     "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
-    "version": "2.0.0-beta03",
+    "version": "2.0.0",
     "type": "grpc",
     "description": "Recommended Google client library to access the Google Cloud Asset Inventory API (v1).",
     "dependencies": {
       "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
-      "Google.Identity.AccessContextManager.Type": "project",
-      "Google.Identity.AccessContextManager.V1": "project",
+      "Google.Identity.AccessContextManager.Type": "1.0.0",
+      "Google.Identity.AccessContextManager.V1": "1.0.0",
       "Google.LongRunning": "2.0.0",
       "Google.Cloud.Iam.V1": "2.0.0",
-      "Google.Cloud.OrgPolicy.V1": "2.0.0-beta03",
+      "Google.Cloud.OrgPolicy.V1": "2.0.0",
       "Grpc.Core": "2.27.0"
     },
     "tags": [
