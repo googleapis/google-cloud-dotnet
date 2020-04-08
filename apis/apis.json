@@ -1474,7 +1474,7 @@
     "id": "Google.Identity.AccessContextManager.Type",
     "generator": "proto",
     "protoPath": "google/identity/accesscontextmanager/type",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0",
     "type": "other",
     "targetFrameworks": "netstandard2.0;net461",
     "description": "Version-agnostic types for the Google Identity Access Context Manager API.",
@@ -1489,7 +1489,7 @@
     "id": "Google.Identity.AccessContextManager.V1",
     "generator": "proto",
     "protoPath": "google/identity/accesscontextmanager/v1",
-    "version": "1.0.0-beta01",
+    "version": "1.0.0",
     "targetFrameworks": "netstandard2.0;net461",
     "description": "Protocol buffer types for the Google Identity Access Context Manager API V1.",
     "tags": [
