@@ -39,7 +39,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Diagnostics.AspNetCore.Analyzers](Google.Cloud.Diagnostics.AspNetCore.Analyzers/index.html) | 2.0.0 | Guidelines for using Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
 | [Google.Cloud.Diagnostics.Common](Google.Cloud.Diagnostics.Common/index.html) | 4.0.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.V2](Google.Cloud.Dialogflow.V2/index.html) | 3.0.0-beta01 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
-| [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html) | 2.0.0-beta03 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
+| [Google.Cloud.Dlp.V2](Google.Cloud.Dlp.V2/index.html) | 2.0.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
 | [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html) | 2.0.0-beta02 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.Firestore.Admin.V1](Google.Cloud.Firestore.Admin.V1/index.html) | 2.0.0 | [Firestore Admin](https://firebase.google.com) |
 | [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.0.0-beta02 | [Firestore](https://firebase.google.com/docs/firestore/) |
