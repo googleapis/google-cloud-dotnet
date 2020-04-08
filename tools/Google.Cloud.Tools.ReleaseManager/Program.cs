@@ -336,7 +336,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var section = historyFile.Sections.FirstOrDefault(s  => s.Version?.ToString() == diff.NewVersion);
             if (section is null)
             {
-                throw new UserErrorException($"Version history Can only automate a release commit with exactly 1 release. Found {diffs.Count}.");
+                throw new UserErrorException($"Unable to find history file section for {diff.NewVersion}. Cannot automate a release commit in this state.");
             }
 
             string header = $"Release {diff.Id} version {diff.NewVersion}";
