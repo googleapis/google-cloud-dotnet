@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0, released 2020-04-08
+
+- [Commit 45c8362](https://github.com/googleapis/google-cloud-dotnet/commit/45c8362): Add support for Cloud EKM to the Cloud KMS service and resource protos.
+
 # Version 2.0.0-beta03, released 2020-03-18
 
 No API surface changes compared with 2.0.0-beta02, just dependency

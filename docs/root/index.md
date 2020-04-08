@@ -46,7 +46,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.0.0-beta02 | [Firestore](https://firebase.google.com) |
 | [Google.Cloud.Gaming.V1Beta](Google.Cloud.Gaming.V1Beta/index.html) | 1.0.0-beta01 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](Google.Cloud.Iam.V1/index.html) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
-| [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html) | 2.0.0-beta03 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
+| [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html) | 2.0.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.Logging.Log4Net](Google.Cloud.Logging.Log4Net/index.html) | 3.0.0 | Log4Net client library for the Google Cloud Logging API |
 | [Google.Cloud.Logging.NLog](Google.Cloud.Logging.NLog/index.html) | 3.0.0 | NLog target for the Google Cloud Logging API |
