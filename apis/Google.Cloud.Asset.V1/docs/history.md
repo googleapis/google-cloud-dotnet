@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0, released 2020-04-08
+
+No API surface changes since 2.0.0-beta03.
+
 # Version 2.0.0-beta03, released 2020-03-30
 
 - [Commit 4a5abd3](https://github.com/googleapis/google-cloud-dotnet/commit/4a5abd3): Feature: support for AccessContextPolicy, AccessLevel, ServicePerimeter and OrgPolicy
