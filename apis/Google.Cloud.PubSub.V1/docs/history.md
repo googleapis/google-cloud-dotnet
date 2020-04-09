@@ -1,5 +1,13 @@
 # Version history
 
+# Version 2.0.0, released 2020-04-09
+
+- [Commit 26de65c](https://github.com/googleapis/google-cloud-dotnet/commit/26de65c): Fix: Fix comment around default AckDeadline
+- [Commit b872180](https://github.com/googleapis/google-cloud-dotnet/commit/b872180): docs: treat a dummy example URL as a string literal instead of a link
+- [Commit ab949d1](https://github.com/googleapis/google-cloud-dotnet/commit/ab949d1): Feature: experimental Subscription.Filter property
+
+First GA release targeting GAX 3.0.0.
+
 # Version 2.0.0-beta02, released 2020-03-18
 
 - [Commit 2096b6d](https://github.com/googleapis/google-cloud-dotnet/commit/2096b6d): Feature: Subscription.RetryPolicy
