@@ -1,11 +1,17 @@
 {
-  "updateTime": "2020-04-08T05:41:27.518450Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/google-cloud-dotnet.git",
+        "sha": "1469d9650cba00fcb7a6109c417772b4e4a6db29"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "27daba50281357b676e1ba882422ebeab4ce4f92"
+        "sha": "9af7212bc2cba8a7184f032e1ab6662ccf604b3a"
       }
     }
   ]
