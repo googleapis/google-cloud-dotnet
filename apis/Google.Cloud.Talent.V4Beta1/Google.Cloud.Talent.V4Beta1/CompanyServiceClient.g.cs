@@ -369,68 +369,6 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Company CreateCompany(gagr::ProjectName parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
-            CreateCompany(new CreateCompanyRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new company entity.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource name of the tenant under which the company is created.
-        /// 
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
-        /// is created, for example, "projects/foo".
-        /// </param>
-        /// <param name="company">
-        /// Required. The company to be created.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Company> CreateCompanyAsync(gagr::ProjectName parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
-            CreateCompanyAsync(new CreateCompanyRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new company entity.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource name of the tenant under which the company is created.
-        /// 
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
-        /// is created, for example, "projects/foo".
-        /// </param>
-        /// <param name="company">
-        /// Required. The company to be created.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Company> CreateCompanyAsync(gagr::ProjectName parent, Company company, st::CancellationToken cancellationToken) =>
-            CreateCompanyAsync(parent, company, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new company entity.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource name of the tenant under which the company is created.
-        /// 
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
-        /// is created, for example, "projects/foo".
-        /// </param>
-        /// <param name="company">
-        /// Required. The company to be created.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
         public virtual Company CreateCompany(TenantName parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
             CreateCompany(new CreateCompanyRequest
             {
@@ -476,6 +414,68 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Company> CreateCompanyAsync(TenantName parent, Company company, st::CancellationToken cancellationToken) =>
+            CreateCompanyAsync(parent, company, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new company entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the tenant under which the company is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
+        /// </param>
+        /// <param name="company">
+        /// Required. The company to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Company CreateCompany(gagr::ProjectName parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompany(new CreateCompanyRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new company entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the tenant under which the company is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
+        /// </param>
+        /// <param name="company">
+        /// Required. The company to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(gagr::ProjectName parent, Company company, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCompanyAsync(new CreateCompanyRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Company = gax::GaxPreconditions.CheckNotNull(company, nameof(company)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new company entity.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the tenant under which the company is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/foo/tenant/bar". If tenant id is unspecified, a default tenant
+        /// is created, for example, "projects/foo".
+        /// </param>
+        /// <param name="company">
+        /// Required. The company to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Company> CreateCompanyAsync(gagr::ProjectName parent, Company company, st::CancellationToken cancellationToken) =>
             CreateCompanyAsync(parent, company, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -947,66 +947,6 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompanies(new ListCompaniesRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lists all companies associated with the project.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource name of the tenant under which the company is created.
-        /// 
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/foo/tenant/bar".
-        /// 
-        /// If tenant id is unspecified, the default tenant will be used, for
-        /// example, "projects/foo".
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="Company"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            ListCompaniesAsync(new ListCompaniesRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            }, callSettings);
-
-        /// <summary>
-        /// Lists all companies associated with the project.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Resource name of the tenant under which the company is created.
-        /// 
-        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
-        /// "projects/foo/tenant/bar".
-        /// 
-        /// If tenant id is unspecified, the default tenant will be used, for
-        /// example, "projects/foo".
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
-        /// page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
-        /// <c>null</c> or <c>0</c> uses a server-defined page size.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="Company"/> resources.</returns>
         public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(TenantName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListCompanies(new ListCompaniesRequest
             {
@@ -1041,6 +981,66 @@ namespace Google.Cloud.Talent.V4Beta1
             ListCompaniesAsync(new ListCompaniesRequest
             {
                 ParentAsTenantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all companies associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the tenant under which the company is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/foo/tenant/bar".
+        /// 
+        /// If tenant id is unspecified, the default tenant will be used, for
+        /// example, "projects/foo".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Company"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListCompaniesResponse, Company> ListCompanies(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCompanies(new ListCompaniesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists all companies associated with the project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Resource name of the tenant under which the company is created.
+        /// 
+        /// The format is "projects/{project_id}/tenants/{tenant_id}", for example,
+        /// "projects/foo/tenant/bar".
+        /// 
+        /// If tenant id is unspecified, the default tenant will be used, for
+        /// example, "projects/foo".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Company"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListCompaniesResponse, Company> ListCompaniesAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListCompaniesAsync(new ListCompaniesRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);

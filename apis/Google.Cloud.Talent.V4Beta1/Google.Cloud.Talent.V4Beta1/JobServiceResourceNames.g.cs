@@ -22,19 +22,19 @@ namespace Google.Cloud.Talent.V4Beta1
 {
     public partial class CreateJobRequest
     {
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public TenantName ParentAsTenantName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -49,13 +49,13 @@ namespace Google.Cloud.Talent.V4Beta1
                 {
                     return null;
                 }
-                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
-                {
-                    return project;
-                }
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -89,19 +89,19 @@ namespace Google.Cloud.Talent.V4Beta1
 
     public partial class BatchDeleteJobsRequest
     {
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public TenantName ParentAsTenantName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -116,13 +116,13 @@ namespace Google.Cloud.Talent.V4Beta1
                 {
                     return null;
                 }
-                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
-                {
-                    return project;
-                }
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -132,19 +132,19 @@ namespace Google.Cloud.Talent.V4Beta1
 
     public partial class ListJobsRequest
     {
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public TenantName ParentAsTenantName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -159,13 +159,13 @@ namespace Google.Cloud.Talent.V4Beta1
                 {
                     return null;
                 }
-                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
-                {
-                    return project;
-                }
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -175,19 +175,19 @@ namespace Google.Cloud.Talent.V4Beta1
 
     public partial class SearchJobsRequest
     {
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public TenantName ParentAsTenantName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -202,13 +202,13 @@ namespace Google.Cloud.Talent.V4Beta1
                 {
                     return null;
                 }
-                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
-                {
-                    return project;
-                }
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -218,19 +218,19 @@ namespace Google.Cloud.Talent.V4Beta1
 
     public partial class BatchCreateJobsRequest
     {
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public TenantName ParentAsTenantName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -245,13 +245,13 @@ namespace Google.Cloud.Talent.V4Beta1
                 {
                     return null;
                 }
-                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
-                {
-                    return project;
-                }
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }
@@ -261,19 +261,19 @@ namespace Google.Cloud.Talent.V4Beta1
 
     public partial class BatchUpdateJobsRequest
     {
+        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TenantName ParentAsTenantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
         /// <summary>
         /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public gagr::ProjectName ParentAsProjectName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-
-        /// <summary><see cref="TenantName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
-        public TenantName ParentAsTenantName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : TenantName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
 
@@ -288,13 +288,13 @@ namespace Google.Cloud.Talent.V4Beta1
                 {
                     return null;
                 }
-                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
-                {
-                    return project;
-                }
                 if (TenantName.TryParse(Parent, out TenantName tenant))
                 {
                     return tenant;
+                }
+                if (gagr::ProjectName.TryParse(Parent, out gagr::ProjectName project))
+                {
+                    return project;
                 }
                 return gax::UnparsedResourceName.Parse(Parent);
             }

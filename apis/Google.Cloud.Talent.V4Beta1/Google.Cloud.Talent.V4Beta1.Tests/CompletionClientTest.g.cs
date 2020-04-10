@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -33,14 +32,14 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<Completion.CompletionClient> mockGrpcClient = new moq::Mock<Completion.CompletionClient>(moq::MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Query = "queryf0c71c1b",
                 LanguageCodes =
                 {
                     "language_codes1de1a181",
                 },
                 PageSize = -226905851,
-                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
                 Type = CompleteQueryRequest.Types.CompletionType.Combined,
             };
@@ -65,14 +64,14 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<Completion.CompletionClient> mockGrpcClient = new moq::Mock<Completion.CompletionClient>(moq::MockBehavior.Strict);
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Query = "queryf0c71c1b",
                 LanguageCodes =
                 {
                     "language_codes1de1a181",
                 },
                 PageSize = -226905851,
-                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
                 Type = CompleteQueryRequest.Types.CompletionType.Combined,
             };

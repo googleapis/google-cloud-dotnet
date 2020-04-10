@@ -73,8 +73,8 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "dGlvbhplChVDdXN0b21BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjsK",
             "BXZhbHVlGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkN1",
             "c3RvbUF0dHJpYnV0ZToCOAE6a+pBaAoXam9icy5nb29nbGVhcGlzLmNvbS9K",
-            "b2ISHXByb2plY3RzL3twcm9qZWN0fS9qb2JzL3tqb2J9Ei5wcm9qZWN0cy97",
-            "cHJvamVjdH0vdGVuYW50cy97dGVuYW50fS9qb2JzL3tqb2J9Qn4KH2NvbS5n",
+            "b2ISLnByb2plY3RzL3twcm9qZWN0fS90ZW5hbnRzL3t0ZW5hbnR9L2pvYnMv",
+            "e2pvYn0SHXByb2plY3RzL3twcm9qZWN0fS9qb2JzL3tqb2J9Qn4KH2NvbS5n",
             "b29nbGUuY2xvdWQudGFsZW50LnY0YmV0YTFCEEpvYlJlc291cmNlUHJvdG9Q",
             "AVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
             "ZC90YWxlbnQvdjRiZXRhMTt0YWxlbnSiAgNDVFNiBnByb3RvMw=="));
