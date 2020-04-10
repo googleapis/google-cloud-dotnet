@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gagr = Google.Api.Gax.ResourceNames;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -34,12 +33,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -69,12 +68,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -106,12 +105,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -141,12 +140,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -178,84 +177,12 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
-                DisplayName = "display_name137f65c2",
-                ExternalId = "external_id9442680e",
-                Size = CompanySize.Mini,
-                HeadquartersAddress = "headquarters_address64cd7eb7",
-                HiringAgency = true,
-                EeoText = "eeo_text70a1a576",
-                WebsiteUri = "website_urid0c5dfce",
-                CareerSiteUri = "career_site_uri62d45b74",
-                ImageUri = "image_urieba3b1bc",
-                KeywordSearchableJobCustomAttributes =
-                {
-                    "keyword_searchable_job_custom_attributese72ec77c",
-                },
-                DerivedInfo = new Company.Types.DerivedInfo(),
-                Suspended = true,
-            };
-            mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            Company response = client.CreateCompany(request.ParentAsProjectName, request.Company);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateCompanyResourceNames1Async()
-        {
-            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
-            CreateCompanyRequest request = new CreateCompanyRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Company = new Company(),
-            };
-            Company expectedResponse = new Company
-            {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
-                DisplayName = "display_name137f65c2",
-                ExternalId = "external_id9442680e",
-                Size = CompanySize.Mini,
-                HeadquartersAddress = "headquarters_address64cd7eb7",
-                HiringAgency = true,
-                EeoText = "eeo_text70a1a576",
-                WebsiteUri = "website_urid0c5dfce",
-                CareerSiteUri = "career_site_uri62d45b74",
-                ImageUri = "image_urieba3b1bc",
-                KeywordSearchableJobCustomAttributes =
-                {
-                    "keyword_searchable_job_custom_attributese72ec77c",
-                },
-                DerivedInfo = new Company.Types.DerivedInfo(),
-                Suspended = true,
-            };
-            mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
-            Company responseCallSettings = await client.CreateCompanyAsync(request.ParentAsProjectName, request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Company responseCancellationToken = await client.CreateCompanyAsync(request.ParentAsProjectName, request.Company, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateCompanyResourceNames2()
-        {
-            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
-            CreateCompanyRequest request = new CreateCompanyRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                Company = new Company(),
-            };
-            Company expectedResponse = new Company
-            {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -280,17 +207,17 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateCompanyResourceNames2Async()
+        public async stt::Task CreateCompanyResourceNames1Async()
         {
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             CreateCompanyRequest request = new CreateCompanyRequest
             {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Company = new Company(),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -317,16 +244,88 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
         }
 
         [xunit::FactAttribute]
+        public void CreateCompanyResourceNames2()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            CreateCompanyRequest request = new CreateCompanyRequest
+            {
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Company = new Company(),
+            };
+            Company expectedResponse = new Company
+            {
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            Company response = client.CreateCompany(request.ParentAsProjectName, request.Company);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateCompanyResourceNames2Async()
+        {
+            moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
+            CreateCompanyRequest request = new CreateCompanyRequest
+            {
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
+                Company = new Company(),
+            };
+            Company expectedResponse = new Company
+            {
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
+                DisplayName = "display_name137f65c2",
+                ExternalId = "external_id9442680e",
+                Size = CompanySize.Mini,
+                HeadquartersAddress = "headquarters_address64cd7eb7",
+                HiringAgency = true,
+                EeoText = "eeo_text70a1a576",
+                WebsiteUri = "website_urid0c5dfce",
+                CareerSiteUri = "career_site_uri62d45b74",
+                ImageUri = "image_urieba3b1bc",
+                KeywordSearchableJobCustomAttributes =
+                {
+                    "keyword_searchable_job_custom_attributese72ec77c",
+                },
+                DerivedInfo = new Company.Types.DerivedInfo(),
+                Suspended = true,
+            };
+            mockGrpcClient.Setup(x => x.CreateCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Company>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CompanyServiceClient client = new CompanyServiceClientImpl(mockGrpcClient.Object, null);
+            Company responseCallSettings = await client.CreateCompanyAsync(request.ParentAsProjectName, request.Company, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Company responseCancellationToken = await client.CreateCompanyAsync(request.ParentAsProjectName, request.Company, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetCompanyRequestObject()
         {
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -356,11 +355,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -392,11 +391,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -426,11 +425,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -462,11 +461,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -496,11 +495,11 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             GetCompanyRequest request = new GetCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -537,7 +536,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -572,7 +571,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -608,7 +607,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -642,7 +641,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             };
             Company expectedResponse = new Company
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 DisplayName = "display_name137f65c2",
                 ExternalId = "external_id9442680e",
                 Size = CompanySize.Mini,
@@ -674,7 +673,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -689,7 +688,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -705,7 +704,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -720,7 +719,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -736,7 +735,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompany(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -751,7 +750,7 @@ namespace Google.Cloud.Talent.V4Beta1.Tests
             moq::Mock<CompanyService.CompanyServiceClient> mockGrpcClient = new moq::Mock<CompanyService.CompanyServiceClient>(moq::MockBehavior.Strict);
             DeleteCompanyRequest request = new DeleteCompanyRequest
             {
-                CompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteCompanyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));

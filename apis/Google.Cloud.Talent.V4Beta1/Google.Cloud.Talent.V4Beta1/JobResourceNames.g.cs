@@ -29,16 +29,16 @@ namespace Google.Cloud.Talent.V4Beta1
             /// <summary>An unparsed resource name.</summary>
             Unparsed = 0,
 
-            /// <summary>A resource name with pattern <c>projects/{project}/jobs/{job}</c>.</summary>
-            ProjectJob = 1,
-
             /// <summary>A resource name with pattern <c>projects/{project}/tenants/{tenant}/jobs/{job}</c>.</summary>
-            ProjectTenantJob = 2
+            ProjectTenantJob = 1,
+
+            /// <summary>A resource name with pattern <c>projects/{project}/jobs/{job}</c>.</summary>
+            ProjectJob = 2
         }
 
-        private static gax::PathTemplate s_projectJob = new gax::PathTemplate("projects/{project}/jobs/{job}");
-
         private static gax::PathTemplate s_projectTenantJob = new gax::PathTemplate("projects/{project}/tenants/{tenant}/jobs/{job}");
+
+        private static gax::PathTemplate s_projectJob = new gax::PathTemplate("projects/{project}/jobs/{job}");
 
         /// <summary>Creates a <see cref="JobName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -47,13 +47,6 @@ namespace Google.Cloud.Talent.V4Beta1
         /// </returns>
         public static JobName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
             new JobName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
-
-        /// <summary>Creates a <see cref="JobName"/> with the pattern <c>projects/{project}/jobs/{job}</c>.</summary>
-        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="jobId">The <c>Job</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="JobName"/> constructed from the provided ids.</returns>
-        public static JobName FromProjectJob(string projectId, string jobId) =>
-            new JobName(ResourceNameType.ProjectJob, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), jobId: gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)));
 
         /// <summary>
         /// Creates a <see cref="JobName"/> with the pattern <c>projects/{project}/tenants/{tenant}/jobs/{job}</c>.
@@ -65,28 +58,26 @@ namespace Google.Cloud.Talent.V4Beta1
         public static JobName FromProjectTenantJob(string projectId, string tenantId, string jobId) =>
             new JobName(ResourceNameType.ProjectTenantJob, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), tenantId: gax::GaxPreconditions.CheckNotNullOrEmpty(tenantId, nameof(tenantId)), jobId: gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)));
 
-        /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="JobName"/> with pattern
-        /// <c>projects/{project}/jobs/{job}</c>.
-        /// </summary>
+        /// <summary>Creates a <see cref="JobName"/> with the pattern <c>projects/{project}/jobs/{job}</c>.</summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="jobId">The <c>Job</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>
-        /// The string representation of this <see cref="JobName"/> with pattern <c>projects/{project}/jobs/{job}</c>.
-        /// </returns>
-        public static string Format(string projectId, string jobId) => FormatProjectJob(projectId, jobId);
+        /// <returns>A new instance of <see cref="JobName"/> constructed from the provided ids.</returns>
+        public static JobName FromProjectJob(string projectId, string jobId) =>
+            new JobName(ResourceNameType.ProjectJob, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), jobId: gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="JobName"/> with pattern
-        /// <c>projects/{project}/jobs/{job}</c>.
+        /// <c>projects/{project}/tenants/{tenant}/jobs/{job}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tenantId">The <c>Tenant</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="jobId">The <c>Job</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="JobName"/> with pattern <c>projects/{project}/jobs/{job}</c>.
+        /// The string representation of this <see cref="JobName"/> with pattern
+        /// <c>projects/{project}/tenants/{tenant}/jobs/{job}</c>.
         /// </returns>
-        public static string FormatProjectJob(string projectId, string jobId) =>
-            s_projectJob.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)));
+        public static string Format(string projectId, string tenantId, string jobId) =>
+            FormatProjectTenantJob(projectId, tenantId, jobId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="JobName"/> with pattern
@@ -102,12 +93,24 @@ namespace Google.Cloud.Talent.V4Beta1
         public static string FormatProjectTenantJob(string projectId, string tenantId, string jobId) =>
             s_projectTenantJob.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(tenantId, nameof(tenantId)), gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="JobName"/> with pattern
+        /// <c>projects/{project}/jobs/{job}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="jobId">The <c>Job</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="JobName"/> with pattern <c>projects/{project}/jobs/{job}</c>.
+        /// </returns>
+        public static string FormatProjectJob(string projectId, string jobId) =>
+            s_projectJob.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="JobName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// <item><description><c>projects/{project}/tenants/{tenant}/jobs/{job}</c></description></item>
+        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="jobName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -121,8 +124,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// <item><description><c>projects/{project}/tenants/{tenant}/jobs/{job}</c></description></item>
+        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -140,8 +143,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// <item><description><c>projects/{project}/tenants/{tenant}/jobs/{job}</c></description></item>
+        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="jobName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -158,8 +161,8 @@ namespace Google.Cloud.Talent.V4Beta1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// <item><description><c>projects/{project}/tenants/{tenant}/jobs/{job}</c></description></item>
+        /// <item><description><c>projects/{project}/jobs/{job}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -177,14 +180,14 @@ namespace Google.Cloud.Talent.V4Beta1
         {
             gax::GaxPreconditions.CheckNotNull(jobName, nameof(jobName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectJob.TryParseName(jobName, out resourceName))
-            {
-                result = FromProjectJob(resourceName[0], resourceName[1]);
-                return true;
-            }
             if (s_projectTenantJob.TryParseName(jobName, out resourceName))
             {
                 result = FromProjectTenantJob(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (s_projectJob.TryParseName(jobName, out resourceName))
+            {
+                result = FromProjectJob(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
@@ -210,11 +213,12 @@ namespace Google.Cloud.Talent.V4Beta1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="JobName"/> class from the component parts of pattern
-        /// <c>projects/{project}/jobs/{job}</c>
+        /// <c>projects/{project}/tenants/{tenant}/jobs/{job}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tenantId">The <c>Tenant</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="jobId">The <c>Job</c> ID. Must not be <c>null</c> or empty.</param>
-        public JobName(string projectId, string jobId) : this(ResourceNameType.ProjectJob, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), jobId: gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)))
+        public JobName(string projectId, string tenantId, string jobId) : this(ResourceNameType.ProjectTenantJob, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), tenantId: gax::GaxPreconditions.CheckNotNullOrEmpty(tenantId, nameof(tenantId)), jobId: gax::GaxPreconditions.CheckNotNullOrEmpty(jobId, nameof(jobId)))
         {
         }
 
@@ -251,8 +255,8 @@ namespace Google.Cloud.Talent.V4Beta1
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectJob: return s_projectJob.Expand(ProjectId, JobId);
                 case ResourceNameType.ProjectTenantJob: return s_projectTenantJob.Expand(ProjectId, TenantId, JobId);
+                case ResourceNameType.ProjectJob: return s_projectJob.Expand(ProjectId, JobId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

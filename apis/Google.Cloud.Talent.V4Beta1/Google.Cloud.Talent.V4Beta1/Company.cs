@@ -40,9 +40,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
             "LkRlcml2ZWRJbmZvQgPgQQMSFgoJc3VzcGVuZGVkGA0gASgIQgPgQQMaUwoL",
             "RGVyaXZlZEluZm8SRAoVaGVhZHF1YXJ0ZXJzX2xvY2F0aW9uGAEgASgLMiUu",
             "Z29vZ2xlLmNsb3VkLnRhbGVudC52NGJldGExLkxvY2F0aW9uOoEB6kF+Chtq",
-            "b2JzLmdvb2dsZWFwaXMuY29tL0NvbXBhbnkSJnByb2plY3RzL3twcm9qZWN0",
-            "fS9jb21wYW5pZXMve2NvbXBhbnl9Ejdwcm9qZWN0cy97cHJvamVjdH0vdGVu",
-            "YW50cy97dGVuYW50fS9jb21wYW5pZXMve2NvbXBhbnl9QoIBCh9jb20uZ29v",
+            "b2JzLmdvb2dsZWFwaXMuY29tL0NvbXBhbnkSN3Byb2plY3RzL3twcm9qZWN0",
+            "fS90ZW5hbnRzL3t0ZW5hbnR9L2NvbXBhbmllcy97Y29tcGFueX0SJnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9jb21wYW5pZXMve2NvbXBhbnl9QoIBCh9jb20uZ29v",
             "Z2xlLmNsb3VkLnRhbGVudC52NGJldGExQhRDb21wYW55UmVzb3VyY2VQcm90",
             "b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
             "b3VkL3RhbGVudC92NGJldGExO3RhbGVudKICA0NUU2IGcHJvdG8z"));

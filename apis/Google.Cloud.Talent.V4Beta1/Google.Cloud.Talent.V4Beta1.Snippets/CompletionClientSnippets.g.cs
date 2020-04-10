@@ -16,7 +16,6 @@
 
 namespace Google.Cloud.Talent.V4Beta1.Snippets
 {
-    using Google.Api.Gax.ResourceNames;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -31,11 +30,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Query = "",
                 LanguageCodes = { "", },
                 PageSize = 0,
-                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
                 Type = CompleteQueryRequest.Types.CompletionType.Unspecified,
             };
@@ -54,11 +53,11 @@ namespace Google.Cloud.Talent.V4Beta1.Snippets
             // Initialize request argument(s)
             CompleteQueryRequest request = new CompleteQueryRequest
             {
-                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ParentAsTenantName = TenantName.FromProjectTenant("[PROJECT]", "[TENANT]"),
                 Query = "",
                 LanguageCodes = { "", },
                 PageSize = 0,
-                CompanyAsCompanyName = CompanyName.FromProjectCompany("[PROJECT]", "[COMPANY]"),
+                CompanyAsCompanyName = CompanyName.FromProjectTenantCompany("[PROJECT]", "[TENANT]", "[COMPANY]"),
                 Scope = CompleteQueryRequest.Types.CompletionScope.Unspecified,
                 Type = CompleteQueryRequest.Types.CompletionType.Unspecified,
             };
