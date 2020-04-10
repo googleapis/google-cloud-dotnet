@@ -63,12 +63,12 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "LlN5bnRoZXNpemVTcGVlY2hSZXNwb25zZSI5gtPkkwIYIhMvdjEvdGV4dDpz",
             "eW50aGVzaXplOgEq2kEYaW5wdXQsdm9pY2UsYXVkaW9fY29uZmlnGk/KQRt0",
             "ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQsIBCiBjb20uZ29vZ2xl",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQuQBCiBjb20uZ29vZ2xl",
             "LmNsb3VkLnRleHR0b3NwZWVjaC52MUIRVGV4dFRvU3BlZWNoUHJvdG9QAVpI",
             "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90",
             "ZXh0dG9zcGVlY2gvdjE7dGV4dHRvc3BlZWNo+AEBqgIcR29vZ2xlLkNsb3Vk",
             "LlRleHRUb1NwZWVjaC5WMcoCHEdvb2dsZVxDbG91ZFxUZXh0VG9TcGVlY2hc",
-            "VjFiBnByb3RvMw=="));
+            "VjHqAh9Hb29nbGU6OkNsb3VkOjpUZXh0VG9TcGVlY2g6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
