@@ -1152,8 +1152,6 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// ============================================================================
-  /// Requests and responses for custom methods.
   /// The request message for [Agents.SearchAgents][google.cloud.dialogflow.v2.Agents.SearchAgents].
   /// </summary>
   public sealed partial class SearchAgentsRequest : pb::IMessage<SearchAgentsRequest> {
