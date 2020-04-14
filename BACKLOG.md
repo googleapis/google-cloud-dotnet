@@ -94,5 +94,5 @@ the request and want to put work into it.
 
 # Diagnostics: Make it easy to not use Stackdriver diagnostics in development
 
-- Issue: [#3335](https://github.com/googleapis/google-cloud-dotnet/issues/335)
+- Issue: [#3335](https://github.com/googleapis/google-cloud-dotnet/issues/3335)
 - Status: Waiting for demand on this. We have some ideas, but little *customer* input.
