@@ -1,5 +1,10 @@
 # Version history
 
+# Version 3.0.0, released 2020-04-15
+
+GA release targeting GAX 3.0.0. No new features compared with
+3.0.0-beta02, other than small resource name improvements for backups.
+
 # Version 3.0.0-beta02, released 2020-03-18
 
 - [Commit c5090d1](https://github.com/googleapis/google-cloud-dotnet/commit/c5090d1):
