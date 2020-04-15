@@ -259,7 +259,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -290,7 +290,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -323,7 +323,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -354,7 +354,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -387,7 +387,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -418,7 +418,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -451,7 +451,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -482,7 +482,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             ga::MetricDescriptor expectedResponse = new ga::MetricDescriptor
             {
@@ -911,7 +911,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -926,7 +926,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -942,7 +942,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -957,7 +957,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -973,7 +973,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -988,7 +988,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1019,7 +1019,7 @@ namespace Google.Cloud.Monitoring.V3.Tests
             moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));

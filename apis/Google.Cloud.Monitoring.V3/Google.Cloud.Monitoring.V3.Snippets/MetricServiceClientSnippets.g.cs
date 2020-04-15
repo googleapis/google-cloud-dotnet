@@ -1246,7 +1246,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             // Make the request
             MetricDescriptor response = metricServiceClient.GetMetricDescriptor(request);
@@ -1263,7 +1263,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             // Make the request
             MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(request);
@@ -1277,7 +1277,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR=**]";
             // Make the request
             MetricDescriptor response = metricServiceClient.GetMetricDescriptor(name);
             // End snippet
@@ -1291,7 +1291,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR=**]";
             // Make the request
             MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
             // End snippet
@@ -1304,7 +1304,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]");
             // Make the request
             MetricDescriptor response = metricServiceClient.GetMetricDescriptor(name);
             // End snippet
@@ -1318,7 +1318,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]");
             // Make the request
             MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
             // End snippet
@@ -1540,7 +1540,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             // Make the request
             metricServiceClient.DeleteMetricDescriptor(request);
@@ -1557,7 +1557,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
-                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]"),
+                MetricDescriptorName = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]"),
             };
             // Make the request
             await metricServiceClient.DeleteMetricDescriptorAsync(request);
@@ -1571,7 +1571,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR=**]";
             // Make the request
             metricServiceClient.DeleteMetricDescriptor(name);
             // End snippet
@@ -1585,7 +1585,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR]";
+            string name = "projects/[PROJECT]/metricDescriptors/[METRIC_DESCRIPTOR=**]";
             // Make the request
             await metricServiceClient.DeleteMetricDescriptorAsync(name);
             // End snippet
@@ -1598,7 +1598,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]");
             // Make the request
             metricServiceClient.DeleteMetricDescriptor(name);
             // End snippet
@@ -1612,7 +1612,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
-            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            MetricDescriptorName name = MetricDescriptorName.FromProjectMetricDescriptor("[PROJECT]", "[METRIC_DESCRIPTOR=**]");
             // Make the request
             await metricServiceClient.DeleteMetricDescriptorAsync(name);
             // End snippet
