@@ -259,6 +259,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             get => string.IsNullOrEmpty(Name) ? null : gcsadv::BackupName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName DatabaseAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
+            set => Database = value?.ToString() ?? "";
+        }
     }
 
     public partial class CreateBackupRequest

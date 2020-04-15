@@ -919,7 +919,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -948,7 +948,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -979,7 +979,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -1008,7 +1008,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -1039,7 +1039,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -1068,7 +1068,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -1162,7 +1162,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
@@ -1192,7 +1192,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
             Backup expectedResponse = new Backup
             {
                 BackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
-                Database = "databased8eee011",
+                DatabaseAsDatabaseName = gcscv::DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 ExpireTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
