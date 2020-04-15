@@ -579,7 +579,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// across repeated search queries.
         /// 
         /// See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -602,7 +603,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// across repeated search queries.
         /// 
         /// See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -625,7 +627,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// across repeated search queries.
         /// 
         /// See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </summary>
         /// <param name="scope">
         /// Required. The scope of this search request. A `scope` that has empty
@@ -644,7 +647,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Note: Query tokens need to have a minimum of 3 characters for substring
         /// matching to work correctly. See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -680,7 +684,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// across repeated search queries.
         /// 
         /// See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </summary>
         /// <param name="scope">
         /// Required. The scope of this search request. A `scope` that has empty
@@ -699,7 +704,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Note: Query tokens need to have a minimum of 3 characters for substring
         /// matching to work correctly. See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -738,7 +744,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -764,7 +771,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -790,7 +798,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -816,7 +825,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project this entry group is in. Example:
@@ -862,7 +872,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project this entry group is in. Example:
@@ -908,7 +919,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project this entry group is in. Example:
@@ -949,7 +961,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project this entry group is in. Example:
@@ -995,7 +1008,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project this entry group is in. Example:
@@ -1041,7 +1055,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project this entry group is in. Example:
@@ -1284,8 +1299,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1296,8 +1312,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1308,8 +1325,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1320,8 +1338,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entryGroup">
         /// Required. The updated entry group. "name" field must be set.
@@ -1337,8 +1356,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entryGroup">
         /// Required. The updated entry group. "name" field must be set.
@@ -1354,8 +1374,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entryGroup">
         /// Required. The updated entry group. "name" field must be set.
@@ -1368,8 +1389,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entryGroup">
         /// Required. The updated entry group. "name" field must be set.
@@ -1390,8 +1412,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entryGroup">
         /// Required. The updated entry group. "name" field must be set.
@@ -1412,8 +1435,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entryGroup">
         /// Required. The updated entry group. "name" field must be set.
@@ -1431,7 +1455,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1443,7 +1468,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1455,7 +1481,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1467,7 +1494,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry group. For example,
@@ -1485,7 +1513,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry group. For example,
@@ -1503,7 +1532,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry group. For example,
@@ -1518,7 +1548,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry group. For example,
@@ -1536,7 +1567,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry group. For example,
@@ -1554,7 +1586,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry group. For example,
@@ -1697,7 +1730,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1713,7 +1747,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1729,7 +1764,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1745,7 +1781,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1779,7 +1816,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1813,7 +1851,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1842,7 +1881,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1876,7 +1916,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1910,7 +1951,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -1937,7 +1979,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1949,7 +1992,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1961,7 +2005,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1973,7 +2018,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entry">
         /// Required. The updated entry. The "name" field must be set.
@@ -1990,7 +2036,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entry">
         /// Required. The updated entry. The "name" field must be set.
@@ -2007,7 +2054,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entry">
         /// Required. The updated entry. The "name" field must be set.
@@ -2021,7 +2069,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entry">
         /// Required. The updated entry. The "name" field must be set.
@@ -2061,7 +2110,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entry">
         /// Required. The updated entry. The "name" field must be set.
@@ -2101,7 +2151,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="entry">
         /// Required. The updated entry. The "name" field must be set.
@@ -2139,7 +2190,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2153,7 +2205,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2167,7 +2220,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2181,7 +2235,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry. Example:
@@ -2202,7 +2257,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry. Example:
@@ -2223,7 +2279,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry. Example:
@@ -2241,7 +2298,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry. Example:
@@ -2262,7 +2320,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry. Example:
@@ -2283,7 +2342,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the entry. Example:
@@ -2574,8 +2634,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2586,8 +2647,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2598,8 +2660,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2610,13 +2673,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -2641,13 +2704,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -2672,13 +2735,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -2698,13 +2761,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -2729,13 +2792,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -2760,13 +2823,13 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -2906,7 +2969,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2920,7 +2984,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2934,7 +2999,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2948,7 +3014,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="tagTemplate">
         /// Required. The template to update. The "name" field must be set.
@@ -2967,7 +3034,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="tagTemplate">
         /// Required. The template to update. The "name" field must be set.
@@ -2986,7 +3054,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="tagTemplate">
         /// Required. The template to update. The "name" field must be set.
@@ -3002,7 +3071,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="tagTemplate">
         /// Required. The template to update. The "name" field must be set.
@@ -3031,7 +3101,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="tagTemplate">
         /// Required. The template to update. The "name" field must be set.
@@ -3060,7 +3131,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="tagTemplate">
         /// Required. The template to update. The "name" field must be set.
@@ -3083,7 +3155,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3095,7 +3168,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3107,7 +3181,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3119,7 +3194,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template to delete. Example:
@@ -3144,7 +3220,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template to delete. Example:
@@ -3169,7 +3246,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template to delete. Example:
@@ -3190,7 +3268,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template to delete. Example:
@@ -3215,7 +3294,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template to delete. Example:
@@ -3240,7 +3320,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template to delete. Example:
@@ -3261,8 +3342,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3274,8 +3355,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3287,8 +3368,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3300,13 +3381,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -3336,13 +3416,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -3372,13 +3451,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -3403,13 +3481,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -3439,13 +3516,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -3475,13 +3551,12 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project and the template location
-        /// [region](/compute/docs/regions-zones/#available).
-        /// NOTE: Currently, only the `us-central1 region` is supported.
+        /// [region](https://cloud.google.com/data-catalog/docs/concepts/regions).
         /// 
         /// Example:
         /// 
@@ -3506,7 +3581,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3518,7 +3594,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3530,7 +3607,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3542,7 +3620,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3565,7 +3644,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3588,7 +3668,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3607,7 +3688,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3630,7 +3712,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3653,7 +3736,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3672,7 +3756,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3712,7 +3797,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3752,7 +3838,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3787,7 +3874,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3827,7 +3915,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3867,7 +3956,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field. Example:
@@ -3901,8 +3991,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3913,8 +4004,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3925,8 +4017,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3937,8 +4030,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template. Example:
@@ -3960,8 +4054,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template. Example:
@@ -3983,8 +4078,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template. Example:
@@ -4002,8 +4098,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template. Example:
@@ -4025,8 +4122,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template. Example:
@@ -4048,8 +4146,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template. Example:
@@ -4068,7 +4167,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4080,7 +4180,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4092,7 +4193,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4104,7 +4206,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field to delete. Example:
@@ -4129,7 +4232,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field to delete. Example:
@@ -4154,7 +4258,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field to delete. Example:
@@ -4175,7 +4280,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field to delete. Example:
@@ -4200,7 +4306,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field to delete. Example:
@@ -4225,7 +4332,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the tag template field to delete. Example:
@@ -4245,10 +4353,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4260,10 +4368,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4275,10 +4383,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4290,10 +4398,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
@@ -4320,10 +4428,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
@@ -4350,10 +4458,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
@@ -4376,10 +4484,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
@@ -4406,10 +4514,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
@@ -4436,10 +4544,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
@@ -5320,7 +5428,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// across repeated search queries.
         /// 
         /// See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5346,7 +5455,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// across repeated search queries.
         /// 
         /// See [Data Catalog Search
-        /// Syntax](/data-catalog/docs/how-to/search-reference) for more information.
+        /// Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference)
+        /// for more information.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5375,7 +5485,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5404,7 +5515,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5442,8 +5554,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5457,8 +5570,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Updates an EntryGroup. The user should enable the Data Catalog API in the
         /// project identified by the `entry_group.name` parameter (see [Data Catalog
-        /// Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource Project]
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5473,7 +5587,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5488,7 +5603,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes an EntryGroup. Only entry groups that do not contain entries can be
         /// deleted. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5529,7 +5645,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -5548,7 +5665,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// 
         /// Users should enable the Data Catalog API in the project identified by
         /// the `parent` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// 
         /// A maximum of 100,000 entries may be created per entry group.
         /// </summary>
@@ -5565,7 +5683,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5580,7 +5699,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates an existing entry.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `entry.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5597,7 +5717,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5614,7 +5735,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// method can be deleted.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5704,8 +5826,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5719,8 +5842,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag template. The user should enable the Data Catalog API in
         /// the project identified by the `parent` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5761,7 +5885,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5778,7 +5903,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// and should be updated using their own create/update/delete methods.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `tag_template.name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5793,7 +5919,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5808,7 +5935,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a tag template and all tags using the template.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5823,8 +5951,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5839,8 +5967,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `parent` parameter (see
         /// [Data Catalog Resource
-        /// Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5855,7 +5983,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5870,7 +5999,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Updates a field in a tag template. This method cannot be used to update the
         /// field type. Users should enable the Data Catalog API in the project
         /// identified by the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5884,8 +6014,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5899,8 +6030,9 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Renames a field in a tag template. The user should enable the Data Catalog
         /// API in the project identified by the `name` parameter (see [Data Catalog
-        /// Resource Project](/data-catalog/docs/concepts/resource-project) for more
-        /// information).
+        /// Resource
+        /// Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project)
+        /// for more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5915,7 +6047,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5930,7 +6063,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Deletes a field in a tag template and all uses of that field.
         /// Users should enable the Data Catalog API in the project identified by
         /// the `name` parameter (see [Data Catalog Resource Project]
-        /// (/data-catalog/docs/concepts/resource-project) for more information).
+        /// (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for
+        /// more information).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5944,10 +6078,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5962,10 +6096,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <summary>
         /// Creates a tag on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// Note: The project identified by the `parent` parameter for the
-        /// [tag](/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
+        /// [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.entryGroups.entries.tags/create#path-parameters)
         /// and the
         /// [tag
-        /// template](/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
+        /// template](https://cloud.google.com/data-catalog/docs/reference/rest/v1/projects.locations.tagTemplates/create#path-parameters)
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
