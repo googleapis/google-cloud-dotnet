@@ -4,14 +4,14 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/google-cloud-dotnet.git",
-        "sha": "1469d9650cba00fcb7a6109c417772b4e4a6db29"
+        "sha": "f3e627ac0972417f8af7e51937b3a8541c089cac"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "b21bc9b46e3263cd4ebe50f60c61589e3fe797f2"
+        "sha": "160e3187dc93265ed635ad68e12c483c8ab4f7be"
       }
     }
   ]
