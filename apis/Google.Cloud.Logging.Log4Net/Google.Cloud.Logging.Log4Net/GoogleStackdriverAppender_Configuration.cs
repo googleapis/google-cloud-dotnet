@@ -318,6 +318,17 @@ namespace Google.Cloud.Logging.Log4Net
             set => _disposeTimeoutSeconds = ThrowIfActivated(value, nameof(DisposeTimeoutSeconds));
         }
 
+        private IJsonLayout _jsonLayout = null;
+        /// <summary>
+        /// A "layout" to use to convert each logging event into a JSON payload. If this is null (the default),
+        /// or if it returns a null JSON payload for a particular logging event, a text payload is used instead.
+        /// </summary>
+        public IJsonLayout JsonLayout
+        {
+            get => _jsonLayout;
+            set => _jsonLayout = ThrowIfActivated(value, nameof(JsonLayout));
+        }
+
         private T ThrowIfActivated<T>(T value, string name)
         {
             GaxPreconditions.CheckState(!_isActivated, "Appender already activated; cannot modify '{0}'", name);

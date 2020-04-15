@@ -338,13 +338,22 @@ namespace Google.Cloud.Logging.Log4Net
             }
             var logEntry = new LogEntry
             {
-                TextPayload = RenderLoggingEvent(loggingEvent),
                 Severity = s_levelMap[loggingEvent.Level],
                 Timestamp = loggingEvent.TimeStamp.ToTimestamp(),
                 LogName = _logName,
                 Resource = _resource,
                 Labels = { labels },
             };
+            // Note that we can't just unconditionally set both TextPayload and JsonPayload, as they're items in a oneof in the proto.
+            var jsonPayload = JsonLayout?.Format(loggingEvent);
+            if (jsonPayload is null)
+            {
+                logEntry.TextPayload = RenderLoggingEvent(loggingEvent);
+            }
+            else
+            {
+                logEntry.JsonPayload = jsonPayload;
+            }
             if (sourceLocation != null)
             {
                 logEntry.SourceLocation = sourceLocation;

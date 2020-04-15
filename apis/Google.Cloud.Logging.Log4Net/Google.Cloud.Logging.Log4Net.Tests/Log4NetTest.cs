@@ -16,6 +16,7 @@ using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Logging.V2;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using log4net;
 using log4net.Core;
@@ -80,6 +81,20 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             }
         }
 
+        private class TestJsonLayout : IJsonLayout
+        {
+            public LoggingEvent LastEvent { get; private set; }
+            public Struct Json { get; }
+
+            public TestJsonLayout(Struct json) => Json = json;
+
+            public Struct Format(LoggingEvent loggingEvent)
+            {
+                LastEvent = loggingEvent;
+                return Json;
+            }
+        }
+
         /// <summary>
         /// Scheduler implementation that does everything instantly, with no delay.
         /// </summary>
@@ -94,7 +109,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             IClock clock = null, IScheduler scheduler = null, Platform platform = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
             IEnumerable<MetaDataType> withMetadata = null, bool enableResourceTypeDetection = false,
-            bool requiresLog4Net = false, IDictionary<string, string> customLabels = null, bool usePatternWithinCustomLabels = false)
+            bool requiresLog4Net = false, IDictionary<string, string> customLabels = null, bool usePatternWithinCustomLabels = false,
+            IJsonLayout jsonLayout = null)
         {
             Hierarchy hierarchy = null;
             if (requiresLog4Net)
@@ -141,6 +157,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                     appender.AddCustomLabel(new GoogleStackdriverAppender.Label { Key = customLabel.Key, Value = customLabel.Value });
                 }
                 appender.UsePatternWithinCustomLabels = usePatternWithinCustomLabels;
+                appender.JsonLayout = jsonLayout;
                 appender.ActivateOptions();
                 if (hierarchy != null)
                 {
@@ -164,7 +181,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             IClock clock = null, IScheduler scheduler = null, Platform platform = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
             IEnumerable<MetaDataType> withMetadata = null, bool enableResourceTypeDetection = false,
-            bool requiresLog4Net = false, IDictionary<string, string> customLabels = null, bool usePatternWithinCustomLabels = false)
+            bool requiresLog4Net = false, IDictionary<string, string> customLabels = null, bool usePatternWithinCustomLabels = false,
+            IJsonLayout jsonLayout = null)
         {
             List<LogEntry> uploadedEntries = new List<LogEntry>();
             await RunTest(entries =>
@@ -172,7 +190,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 uploadedEntries.AddRange(entries);
                 return Task.FromResult(new WriteLogEntriesResponse());
             }, testFn, clock, scheduler, platform, maxMemoryCount, maxMemorySize, maxUploadBatchSize,
-                withMetadata, enableResourceTypeDetection, requiresLog4Net, customLabels, usePatternWithinCustomLabels);
+                withMetadata, enableResourceTypeDetection, requiresLog4Net, customLabels, usePatternWithinCustomLabels, jsonLayout);
             return uploadedEntries;
         }
 
@@ -226,6 +244,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 Assert.Throws<InvalidOperationException>(() => appender.ServerErrorBackoffMultiplier = 0);
                 Assert.Throws<InvalidOperationException>(() => appender.ServerErrorBackoffMaxDelaySeconds = 0);
                 Assert.Throws<InvalidOperationException>(() => appender.DisposeTimeoutSeconds = 0);
+                Assert.Throws<InvalidOperationException>(() => appender.JsonLayout = null);
                 return Task.FromResult(0);
             });
         }
@@ -253,6 +272,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             appender.ServerErrorBackoffMultiplier = 0;
             appender.ServerErrorBackoffMaxDelaySeconds = 0;
             appender.DisposeTimeoutSeconds = 0;
+            appender.JsonLayout = null;
         }
 
         [Fact]
@@ -380,6 +400,43 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Assert.Equal(1, uploadedEntries.Count);
             var entry0 = uploadedEntries[0];
             Assert.Equal(expectedCustomLabels, entry0.Labels.ToDictionary(x => x.Key, x => x.Value));
+        }
+
+        [Fact]
+        public async Task SingleLogEntry_JsonLayoutReturnsNull()
+        {
+            var jsonLayout = new TestJsonLayout(json: null);
+            var uploadedEntries = await RunTestWorkingServer(
+                async appender =>
+                {
+                    LogInfo("Message0");
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
+                },
+                requiresLog4Net: true,
+                jsonLayout: jsonLayout);
+            Assert.Equal(1, uploadedEntries.Count);
+            Assert.Equal("Message0", uploadedEntries[0].TextPayload.Trim());
+            Assert.Null(uploadedEntries[0].JsonPayload);
+            Assert.Equal("Message0", jsonLayout.LastEvent.MessageObject);
+        }
+
+        [Fact]
+        public async Task SingleLogEntry_JsonLayoutReturnsNotNull()
+        {
+            var json = new Struct { Fields = { { "x", Value.ForString("y") } } };
+            var jsonLayout = new TestJsonLayout(json);
+            var uploadedEntries = await RunTestWorkingServer(
+                async appender =>
+                {
+                    LogInfo("Message0");
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
+                },
+                requiresLog4Net: true,
+                jsonLayout: jsonLayout);
+            Assert.Equal(1, uploadedEntries.Count);
+            Assert.Empty(uploadedEntries[0].TextPayload);
+            Assert.Equal(json, uploadedEntries[0].JsonPayload);
+            Assert.Equal("Message0", jsonLayout.LastEvent.MessageObject);
         }
 
         [Fact]
