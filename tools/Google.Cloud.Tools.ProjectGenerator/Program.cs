@@ -131,15 +131,15 @@ namespace Google.Cloud.Tools.ProjectGenerator
             {
                 ValidateCommonHiddenProductionDependencies();
                 var root = DirectoryLayout.DetermineRootDirectory();
-                var apis = ApiMetadata.LoadApis();
-                Console.WriteLine($"API catalog contains {apis.Count} entries");
+                var catalog = ApiCatalog.Load();
+                Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
                 // Now we know we can parse the API catalog, let's reformat it.
                 ReformatApiCatalog();
-                RewriteReadme(apis);
-                RewriteDocsRootIndex(apis);
-                HashSet<string> apiNames = new HashSet<string>(apis.Select(api => api.Id));
+                RewriteReadme(catalog.Apis);
+                RewriteDocsRootIndex(catalog.Apis);
+                HashSet<string> apiNames = new HashSet<string>(catalog.Apis.Select(api => api.Id));
 
-                foreach (var api in apis)
+                foreach (var api in catalog.Apis)
                 {
                     var path = Path.Combine(root, "apis", api.Id);
                     GenerateProjects(path, api, apiNames);
@@ -164,7 +164,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private static void ReformatApiCatalog()
         {
-            string path = ApiMetadata.CatalogPath;
+            string path = ApiCatalog.CatalogPath;
             string existing = File.ReadAllText(path);
             JToken parsed = JToken.Parse(existing);
             string formatted = parsed.ToString(Formatting.Indented);

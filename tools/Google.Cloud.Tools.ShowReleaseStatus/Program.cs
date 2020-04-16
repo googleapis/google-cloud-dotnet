@@ -33,7 +33,7 @@ namespace Google.Cloud.Tools.ShowReleaseStatus
             bool attentionOnly = args.Contains("--attention");
 
             var root = DirectoryLayout.DetermineRootDirectory();
-            var apis = ApiMetadata.LoadApis();
+            var catalog = ApiCatalog.Load();
 
             using (var repo = new Repository(root))
             {
@@ -41,7 +41,7 @@ namespace Google.Cloud.Tools.ShowReleaseStatus
                 var tags = repo.Tags;
                 var shaToTimestamp = repo.Commits.ToDictionary(commit => commit.Sha, commit => commit.Committer.When);
 
-                foreach (var api in apis)
+                foreach (var api in catalog.Apis)
                 {
                     DisplayApi(attentionOnly, api, tags, shaToTimestamp);
                 }

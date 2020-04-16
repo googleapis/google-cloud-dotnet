@@ -126,7 +126,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             string id = args[0];
             var masterCatalog = LoadMasterCatalog();
-            var api = masterCatalog.FirstOrDefault(x => x.Id == id);
+            var api = masterCatalog.Apis.FirstOrDefault(x => x.Id == id);
             if (api == null)
             {
                 throw new UserErrorException($"API '{id}' not found in API catalog.");
@@ -145,8 +145,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             // It's slightly inefficient that we load the API catalog once here and once later on, and the code duplication
             // is annoying too, but it's insignficant really - and at least the code is simple.
 
-            var catalog = ApiMetadata.LoadApis();
-            var api = catalog.FirstOrDefault(x => x.Id == id);
+            var catalog = ApiCatalog.Load();
+            var api = catalog.Apis.FirstOrDefault(x => x.Id == id);
             if (api == null)
             {
                 throw new UserErrorException($"API '{id}' not found in API catalog.");
@@ -183,8 +183,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static void SetVersion(string id, string version)
         {
-            var catalog = ApiMetadata.LoadApis();
-            var api = catalog.FirstOrDefault(x => x.Id == id);
+            var catalog = ApiCatalog.Load();
+            var api = catalog.Apis.FirstOrDefault(x => x.Id == id);
             if (api == null)
             {
                 throw new UserErrorException($"API '{id}' not found in API catalog.");
@@ -193,22 +193,22 @@ namespace Google.Cloud.Tools.ReleaseManager
             string oldVersion = api.Version;
             api.Version = version;
             var layout = DirectoryLayout.ForApi(id);
-            var apiNames = new HashSet<string>(catalog.Select(x => x.Id));
+            var apiNames = new HashSet<string>(catalog.Apis.Select(x => x.Id));
             ProjectGenerator.Program.GenerateMetadataFile(layout.SourceDirectory, api);
             ProjectGenerator.Program.GenerateProjects(layout.SourceDirectory, api, apiNames);
-            ProjectGenerator.Program.RewriteReadme(catalog);
-            ProjectGenerator.Program.RewriteDocsRootIndex(catalog);
+            ProjectGenerator.Program.RewriteReadme(catalog.Apis);
+            ProjectGenerator.Program.RewriteDocsRootIndex(catalog.Apis);
 
             // This is somewhat annoying and ugly, but never mind.
             // If we need similar code in other places, we should put it in ApiMetadata.
-            JToken parsed = JToken.Parse(File.ReadAllText(ApiMetadata.CatalogPath));
+            JToken parsed = JToken.Parse(File.ReadAllText(ApiCatalog.CatalogPath));
             var apiObject = parsed
                 .Children()
                 .OfType<JObject>()
                 .FirstOrDefault(obj => obj.TryGetValue("id", out var idToken) && idToken.Value<string>() == id);
             apiObject["version"] = version;
             string formatted = parsed.ToString(Formatting.Indented);
-            File.WriteAllText(ApiMetadata.CatalogPath, formatted);
+            File.WriteAllText(ApiCatalog.CatalogPath, formatted);
             Console.WriteLine("Updated apis.json");
             Console.WriteLine();
             Console.WriteLine(new ApiVersionPair(id, oldVersion, version));
@@ -229,10 +229,10 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static List<ApiVersionPair> FindChangedVersions()
         {
-            var currentCatalog = ApiMetadata.LoadApis();
+            var currentCatalog = ApiCatalog.Load();
             var masterCatalog = LoadMasterCatalog();
-            var currentVersions = currentCatalog.ToDictionary(api => api.Id, api => api.Version);
-            var masterVersions = masterCatalog.ToDictionary(api => api.Id, api => api.Version);
+            var currentVersions = currentCatalog.Apis.ToDictionary(api => api.Id, api => api.Version);
+            var masterVersions = masterCatalog.Apis.ToDictionary(api => api.Id, api => api.Version);
             return currentVersions.Keys.Concat(masterVersions.Keys)
                 .Distinct()
                 .OrderBy(id => id)
@@ -241,7 +241,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 .ToList();
         }
 
-        private static List<ApiMetadata> LoadMasterCatalog()
+        private static ApiCatalog LoadMasterCatalog()
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new Repository(root))
@@ -253,7 +253,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
 
                 var masterCatalogJson = master.Commits.First()["apis/apis.json"].Target.Peel<Blob>().GetContentText();
-                return JsonConvert.DeserializeObject<List<ApiMetadata>>(masterCatalogJson);
+                return ApiCatalog.FromJson(masterCatalogJson);
             }
         }
 
