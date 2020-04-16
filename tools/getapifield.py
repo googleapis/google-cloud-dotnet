@@ -26,7 +26,7 @@ filename = sys.argv[1]
 file = open(filename, "r") 
 catalog = json.load(file)
 
-query = [api.get(args.field) for api in catalog if api["id"] == args.id]
+query = [api.get(args.field) for api in catalog["apis"] if api["id"] == args.id]
 
 if len(query) != 1:
   raise Exception(f"API {args.id} not found (or has duplicate definitions)")

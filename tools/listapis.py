@@ -36,5 +36,5 @@ filename = sys.argv[1]
 file = open(filename, "r") 
 catalog = json.load(file)
 
-fields = [api.get(args.field) for api in catalog if matcher(api.get(test_field))]
+fields = [api.get(args.field) for api in catalog["apis"] if matcher(api.get(test_field))]
 print(*fields)
