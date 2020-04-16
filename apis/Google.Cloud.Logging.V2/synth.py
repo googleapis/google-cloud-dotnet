@@ -3,9 +3,11 @@
 import json
 import sys
 from synthtool import shell
-import synthtool.metadata
+from synthtool import metadata
 from pathlib import Path
 
+# generateapis.sh updates synth.metadata itself
+metadata.enable_write_metadata(False)
 AUTOSYNTH_MULTIPLE_COMMITS = True
 
 # Parent of the script is the API-specific directory
@@ -22,12 +24,3 @@ shell.run(
   (bash, 'generateapis.sh', '--check_compatibility', package),
   cwd = root,
   hide_output = False)
-
-# Load the synth.metadata that generateapis.sh has written, and
-# re-add all the sources for the in-memory version that synthtool
-# is about to write out. This is a pretty ugly hack, but it works for now.
-# (We assume every source is a git source.)
-with open('synth.metadata') as generated_metadata_file:
-  generated_metadata = json.load(generated_metadata_file)
-  for source in generated_metadata['sources']:
-    synthtool.metadata.get().sources.add(git=source['git'])
