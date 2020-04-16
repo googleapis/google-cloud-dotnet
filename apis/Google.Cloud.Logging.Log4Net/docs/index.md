@@ -12,7 +12,7 @@ Logging](https://cloud.google.com/logging/) with
 
 # Getting started
 
-See the [readme](https://github.com/googleapis/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.Log4Net/Google.Cloud.Logging.Log4Net/readme.md) for all GoogleStackdriverAppender configuration options.
+See the [configuration guide](configuration.md) for details of all GoogleStackdriverAppender configuration options.
 
 ## ASP.NET
 
@@ -39,8 +39,7 @@ Create a `log4net` configuration file (`log4net.xml`):
 Edit the file replacing `PROJECT_ID` with your Google Cloud Project
 ID, and `LOG_ID` with an identifier for your application.
 
-Use this
-file to configure `log4net` and then log as normal:
+Use this file to configure `log4net` and then log as normal:
 
 {{sample:GoogleStackdriverAppender.Overview}}
 
