@@ -346,8 +346,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             {
                 Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("Log4NetTest.cs"),
                 $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
-                // Line 44 on dev machine, line 42 on AppVeyor. Don't ask, I don't understand.
-                Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 45L || entry0.SourceLocation.Line == 43L,
+                // The exact line number seems to vary depending on framework (Core or desktop) and CI system.
+                Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 46L || entry0.SourceLocation.Line == 44L,
                     $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
                 Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
             }
