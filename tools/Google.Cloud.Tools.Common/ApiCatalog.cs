@@ -31,6 +31,11 @@ namespace Google.Cloud.Tools.Common
         public List<ApiMetadata> Apis { get; set; }
 
         /// <summary>
+        /// Proto paths for APIs we knowingly don't generate.
+        /// </summary>
+        public List<string> IgnoredPaths { get; set; }
+
+        /// <summary>
         /// The JSON representation of the catalog. This is populated by <see cref="Load"/> and
         /// <see cref="FromJson(string)"/>, but nothing keeps this in sync with the in-memory data.
         /// </summary>

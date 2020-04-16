@@ -52,7 +52,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.CompareV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.LongRunning", "..\apis\Google.LongRunning\Google.LongRunning\Google.LongRunning.csproj", "{342C4A65-EA46-44CE-9986-1570EF96A6C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.ReleaseManager", "Google.Cloud.Tools.ReleaseManager\Google.Cloud.Tools.ReleaseManager.csproj", "{4171E471-ABAB-43B9-B759-6641BA6C4A4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.ReleaseManager", "Google.Cloud.Tools.ReleaseManager\Google.Cloud.Tools.ReleaseManager.csproj", "{4171E471-ABAB-43B9-B759-6641BA6C4A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.MetadataGenerator", "Google.Cloud.Tools.MetadataGenerator\Google.Cloud.Tools.MetadataGenerator.csproj", "{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -376,6 +378,18 @@ Global
 		{4171E471-ABAB-43B9-B759-6641BA6C4A4A}.Release|x64.Build.0 = Release|Any CPU
 		{4171E471-ABAB-43B9-B759-6641BA6C4A4A}.Release|x86.ActiveCfg = Release|Any CPU
 		{4171E471-ABAB-43B9-B759-6641BA6C4A4A}.Release|x86.Build.0 = Release|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Debug|x64.Build.0 = Debug|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Debug|x86.Build.0 = Debug|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Release|x64.ActiveCfg = Release|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Release|x64.Build.0 = Release|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C768AF5-50D0-4489-BC3F-4A866AEBBBBE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
