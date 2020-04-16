@@ -767,6 +767,7 @@ namespace Google.Cloud.DataCatalog.V1 {
         ///  * asia-east2
         ///  * asia-northeast1
         ///  * asia-northeast2
+        ///  * asia-northeast3
         ///  * asia-south1
         ///  * asia-southeast1
         ///  * australia-southeast1
