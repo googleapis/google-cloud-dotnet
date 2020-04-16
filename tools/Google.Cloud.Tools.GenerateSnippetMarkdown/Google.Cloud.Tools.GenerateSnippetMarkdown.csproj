@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
-    <PackageReference Include="YamlDotNet.Signed" Version="5.3.0" />
+    <PackageReference Include="YamlDotNet" Version="8.1.0" />
   </ItemGroup>
 
 </Project>

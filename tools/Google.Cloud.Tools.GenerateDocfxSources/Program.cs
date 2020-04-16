@@ -301,7 +301,7 @@ present as a root for the [API reference documentation](obj/api/{api.Id}.yml)";
 
             using (var writer = File.CreateText(Path.Combine(outputDirectory, "toc.yml")))
             {
-                var serializer = new SerializerBuilder().WithNamingConvention(new CamelCaseNamingConvention()).Build();
+                var serializer = new SerializerBuilder().WithNamingConvention(CamelCaseNamingConvention.Instance).Build();
                 serializer.Serialize(writer, tocEntries);
             }
         }
