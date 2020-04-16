@@ -15,6 +15,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Google.Cloud.Tools.Common
 {
@@ -24,6 +25,14 @@ namespace Google.Cloud.Tools.Common
     public class ApiCatalog
     {
         public List<ApiMetadata> Apis { get; set; }
+
+        /// <summary>
+        /// Retrieves an API by ID.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <exception cref="UserErrorException"></exception>
+        /// <returns>The API associated with the given ID</returns>
+        public ApiMetadata this[string id] => Apis.SingleOrDefault(api => api.Id == id) ?? throw new UserErrorException($"No API with ID '{id}'");
 
         /// <summary>
         /// The path to the API catalog (apis.json).

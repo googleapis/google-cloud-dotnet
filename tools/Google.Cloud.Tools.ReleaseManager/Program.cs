@@ -126,11 +126,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             string id = args[0];
             var masterCatalog = LoadMasterCatalog();
-            var api = masterCatalog.Apis.FirstOrDefault(x => x.Id == id);
-            if (api == null)
-            {
-                throw new UserErrorException($"API '{id}' not found in API catalog.");
-            }
+            var api = masterCatalog[id];
             Console.WriteLine($"Current version of {id} on master branch: {api.Version}");
         }
 
@@ -146,11 +142,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // is annoying too, but it's insignficant really - and at least the code is simple.
 
             var catalog = ApiCatalog.Load();
-            var api = catalog.Apis.FirstOrDefault(x => x.Id == id);
-            if (api == null)
-            {
-                throw new UserErrorException($"API '{id}' not found in API catalog.");
-            }
+            var api = catalog[id];
             var version = IncrementStructuredVersion(api.StructuredVersion).ToString();
             SetVersion(id, version);
 
@@ -184,11 +176,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static void SetVersion(string id, string version)
         {
             var catalog = ApiCatalog.Load();
-            var api = catalog.Apis.FirstOrDefault(x => x.Id == id);
-            if (api == null)
-            {
-                throw new UserErrorException($"API '{id}' not found in API catalog.");
-            }
+            var api = catalog[id];
 
             string oldVersion = api.Version;
             api.Version = version;

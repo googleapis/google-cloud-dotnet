@@ -55,7 +55,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
         public static void Execute(string id)
         {
             var catalog = ApiCatalog.Load();
-            var api = catalog.Apis.FirstOrDefault(x => x.Id == id) ?? throw new UserErrorException($"Unknown API: {id}");
+            var api = catalog[id];
             string historyFilePath = HistoryFile.GetPathForPackage(id);
 
             var root = DirectoryLayout.DetermineRootDirectory();

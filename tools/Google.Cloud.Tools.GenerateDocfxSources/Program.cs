@@ -47,11 +47,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             }
             string api = args[0];
             var layout = DirectoryLayout.ForApi(api);
-            var apiMetadata = ApiCatalog.Load().Apis.FirstOrDefault(x => x.Id == api);
-            if (apiMetadata == null)
-            {
-                throw new UserErrorException($"Unable to load API metadata from apis.json for {api}");
-            }
+            var apiMetadata = ApiCatalog.Load()[api];
 
             string output = layout.DocsOutputDirectory;
             if (Directory.Exists(output))
