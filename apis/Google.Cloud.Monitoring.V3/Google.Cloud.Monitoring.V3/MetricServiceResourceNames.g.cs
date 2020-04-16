@@ -47,11 +47,11 @@ namespace Google.Cloud.Monitoring.V3
             FolderMetricDescriptor = 3
         }
 
-        private static gax::PathTemplate s_projectMetricDescriptor = new gax::PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
+        private static gax::PathTemplate s_projectMetricDescriptor = new gax::PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor}");
 
-        private static gax::PathTemplate s_organizationMetricDescriptor = new gax::PathTemplate("organizations/{organization}/metricDescriptors/{metric_descriptor=**}");
+        private static gax::PathTemplate s_organizationMetricDescriptor = new gax::PathTemplate("organizations/{organization}/metricDescriptors/{metric_descriptor}");
 
-        private static gax::PathTemplate s_folderMetricDescriptor = new gax::PathTemplate("folders/{folder}/metricDescriptors/{metric_descriptor=**}");
+        private static gax::PathTemplate s_folderMetricDescriptor = new gax::PathTemplate("folders/{folder}/metricDescriptors/{metric_descriptor}");
 
         /// <summary>Creates a <see cref="MetricDescriptorName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
