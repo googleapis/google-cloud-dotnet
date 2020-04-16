@@ -134,7 +134,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 var catalog = ApiCatalog.Load();
                 Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
                 // Now we know we can parse the API catalog, let's reformat it.
-                ReformatApiCatalog();
+                ReformatApiCatalog(catalog);
                 RewriteReadme(catalog.Apis);
                 RewriteDocsRootIndex(catalog.Apis);
                 HashSet<string> apiNames = new HashSet<string>(catalog.Apis.Select(api => api.Id));
@@ -162,12 +162,11 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        private static void ReformatApiCatalog()
+        private static void ReformatApiCatalog(ApiCatalog catalog)
         {
             string path = ApiCatalog.CatalogPath;
             string existing = File.ReadAllText(path);
-            JToken parsed = JToken.Parse(existing);
-            string formatted = parsed.ToString(Formatting.Indented);
+            string formatted = catalog.FormatJson();
             if (existing != formatted)
             {
                 File.WriteAllText(path, formatted);

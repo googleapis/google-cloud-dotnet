@@ -187,15 +187,9 @@ namespace Google.Cloud.Tools.ReleaseManager
             ProjectGenerator.Program.RewriteReadme(catalog.Apis);
             ProjectGenerator.Program.RewriteDocsRootIndex(catalog.Apis);
 
-            // This is somewhat annoying and ugly, but never mind.
-            // If we need similar code in other places, we should put it in ApiMetadata.
-            JToken parsed = JToken.Parse(File.ReadAllText(ApiCatalog.CatalogPath));
-            var apiObject = parsed
-                .Children()
-                .OfType<JObject>()
-                .FirstOrDefault(obj => obj.TryGetValue("id", out var idToken) && idToken.Value<string>() == id);
-            apiObject["version"] = version;
-            string formatted = parsed.ToString(Formatting.Indented);
+            // Update the parsed JObject associated with the ID, and write it back to apis.json.
+            api.Json["version"] = version;
+            string formatted = catalog.FormatJson();
             File.WriteAllText(ApiCatalog.CatalogPath, formatted);
             Console.WriteLine("Updated apis.json");
             Console.WriteLine();
