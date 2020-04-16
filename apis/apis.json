@@ -1549,5 +1549,12 @@
         "Grpc.Core": "2.27.0"
       }
     }
+  ],
+  "ignoredPaths": [
+    "google/ads/googleads/v1",
+    "google/ads/googleads/v2",
+    "google/ads/googleads/v3",
+    "google/cloud/bigquery/v2",
+    "google/storage/v1"
   ]
 }
