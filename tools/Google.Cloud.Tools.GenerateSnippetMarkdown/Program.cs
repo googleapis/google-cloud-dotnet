@@ -918,7 +918,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 using (var input = File.OpenText(file))
                 {
                     var model = new DeserializerBuilder()
-                        .WithNamingConvention(new CamelCaseNamingConvention())
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .IgnoreUnmatchedProperties()
                         .Build()
                         .Deserialize<CodeModel>(input);
