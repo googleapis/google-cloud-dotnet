@@ -1,37 +1,27 @@
-# Google Cloud Logging Log4Net appender
+# Configuration
 
 ## Example use in a console app
 
 Create an appender with the following XML configuration:
-``` xml
-<?xml version="1.0" encoding="utf-8" ?>
-<log4net>
-  <appender name="CloudLogger" type="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net">
-    <layout type="log4net.Layout.PatternLayout">
-      <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message" />
-    </layout>
-    <projectId value="<your project ID>" />
-    <logId value="<your log ID>" />
-  </appender>
-  <root>
-    <level value="ALL" />
-    <appender-ref ref="CloudLogger" />
-  </root>
-</log4net>
-```
+
+[!code-xml[](obj/snippets/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.txt#log4net_template)]
+
 Save this as `log4net.xml` in your application directory.
 Then load it during program startup:
-``` csharp
+
+```csharp
 using log4net;
 using log4net.Config;
 
 public static void Main(string[] args)
 {
-    XmlConfigurator.Configure("new FileInfo("log4net.xml"));
+    XmlConfigurator.Configure(new FileInfo("log4net.xml"));
 }
 ```
+
 Logged items will now be sent to Google Cloud Logging:
-``` csharp
+
+```csharp
 using log4net;
 
 ILog log = LogManager.GetLogger(typeof(Program));
@@ -40,29 +30,34 @@ log.Info("An exciting log entry!");
 
 ## Custom configuration
 
-Within a `GoogleStackdriverAppender` the following options are available (also see [GoogleStackdriverAppender_Configuration.cs](https://github.com/googleapis/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Log4Net/GoogleStackdriverAppender_Configuration.cs)):
+Within a `GoogleStackdriverAppender` the following options are
+available (see also [the GoogleStackdriverAppender reference documentation](api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#properties)
+for more details):
 
 ### projectId
 
-``` xml
+```xml
 <projectId value="<your project ID>"/>
 ```
+
 Optional when running on Google App Engine (GAE) or Google Compute Engine (GCE), must be present on other platforms. The project ID given must be the ID of a project that already exists on [Google Cloud Platform](https://cloud.google.com/).
 
 On GCE and GAE the project ID will be auto-detected from the platform.
 
 ### logId
 
-``` xml
+```xml
 <logId value="<your log ID>"/>
 ```
+
 Must be present. The log ID given is any string that is recorded as the name of the log, which can be used for simple filtering when viewing log entries.
 
 ### withMetaData
 
-``` xml
+```xml
 <withMetaData value="<various, see below>"/>
 ```
+
 By default no extra metadata is logged. `withMetaData` specifies which extra metadata to log with each log entry, and can be specified multiple times to enable multiple type of metadata:
 
  * `Location`: The class name, file name, and line number of the log call.
@@ -75,7 +70,7 @@ By default no extra metadata is logged. `withMetaData` specifies which extra met
 
 ### customLabel
 
-``` xml
+```xml
 <customLabel>
   <key value="<your key>" />
   <value value="<your value>" />
@@ -85,9 +80,10 @@ Allows custom labels to be added to the metadata of log entries.
 
 ### resourceType
 
-``` xml
+```xml
 <resourceType value="<your resource type>"/>
 ```
+
 Allows the [Monitored resources](https://cloud.google.com/logging/docs/reference/v2/rest/v2/MonitoredResource) resource type to be specified; must be set to an entry on the [Monitored Resource List](https://cloud.google.com/logging/docs/api/v2/resource-list).
 
 If unset, the default value depends on the detected platform:
@@ -100,25 +96,28 @@ If unset, the default value depends on the detected platform:
 
 ### resourceLabel
 
-``` xml
+```xml
 <resourceLabel>
   <key value="<key>" />
   <value value="<value>" />
 </resourceLabel>
 ```
+
 If `resourceType` has been manually set, then `resourceLabel` is used to specify extra labels as shown in the [Monitoring Resource Types](https://cloud.google.com/logging/docs/api/v2/resource-list#resource-types) list.
 
 ### DisableResourceTypeDetection
 
-``` xml
+```xml
 <disableResourceTypeDetection value="true">
 ```
+
 Defaults to `false`. Setting this to `true` disables automatic `resourceType` setting based on platform detection.
 
 ### Complete configuration example
 
 So, for example, a complete configuration might look like this:
-``` xml
+
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <log4net>
   <appender name="CloudLogger" type="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net">
@@ -140,15 +139,16 @@ Only in-memory queuing is currently supported. Persistent on-disk queuing is not
 
 The following in-memory options are available:
 
-``` xml
+```xml
 <MaxMemorySize value="<maximum number of bytes to queue>"/>
 ```
+
 Restricts the amount of memory used for local queuing. If memory is exceeded then the 
 oldest log entries will be discarded. A best-effort attempt will be made to log a warning
 to Google Cloud Logging that some log messages have been discarded.
 A value of 0 means there is no byte limit.
 
-``` xml
+```xml
 <MaxMemoryCount value="<maximum count of log messages to queue"/>
 ```
 The maximum count of log messages that be ever be concurrently locally queued. If this
@@ -162,5 +162,47 @@ when the first limit is reached.
 
 The default setting is to limit count to 1,000; with no limit on bytes.
 
+## Providing a JSON payload
+
+Log entries in Google Cloud Logging either have a text payload or a
+JSON payload. By default, the
+`Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender` uses a text
+payload. However, you can implement the
+[IJsonLayout](api/Google.Cloud.Logging.Log4Net.IJsonLayout.html) interface and configure
+the appender to use that. The JSON payload is expressed as a
+Protocol Buffers `Struct` message. If the `IJsonLayout.Format`
+method returns null from your layout, the appender will create a
+text payload as normal.
+
+For example, here's a sample JSON layout implementation that
+demonstrates creating a payload with a mixture of values from
+execution time (the event message and exception) and from
+configuration (the "SampleConfiguration" value).
+
+{{sample:GoogleStackdriverAppender.IJsonLayout}}
+
+You would then configure the appender in XML like this:
+
+```xml
+<appender name="CloudLogger" type="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net">
+  <!-- The IJsonLayout implementation used to create JSON payloads -->  
+  <jsonLayout type="YourNamespace.SampleJsonLayout,YourAssemblyName">
+    <sampleConfigurationValue value="10" />
+  </jsonLayout>
+
+  <!-- 
+    - Other configuration as normal. The textlayout is used if the
+    -  JSON layout returns null.
+    -->
+  
+  <layout type="log4net.Layout.PatternLayout">
+    <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message" />
+  </layout>
+  <projectId value="PROJECT_ID" />
+  <logId value="LOG_ID" />
+</appender>
+```
+
 ## Feedback...
-Please file github issues for bugs or questions.
+
+Please file [GitHub issues](https://github.com/googleapis/google-cloud-dotnet/issues) for bugs or questions.

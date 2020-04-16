@@ -15,9 +15,11 @@
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Logging.V2;
+using Google.Protobuf.WellKnownTypes;
 using log4net;
 using log4net.Appender;
 using log4net.Config;
+using log4net.Core;
 using System;
 using System.IO;
 using System.Linq;
@@ -127,5 +129,31 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
             log4net.Config.XmlConfigurator.Configure(LogManager.GetRepository(GetType().GetTypeInfo().Assembly));
             // End sample
         }
+
+        // Sample: IJsonLayout
+        public class SampleJsonLayout : IJsonLayout, IOptionHandler
+        {
+            public Struct _template;
+
+            public int SampleConfigurationValue { get; set; }
+
+            public void ActivateOptions()
+            {
+                _template = new Struct();
+                _template.Fields["SampleConfiguration"] = Value.ForNumber(SampleConfigurationValue);
+            }
+
+            public Struct Format(LoggingEvent loggingEvent)
+            {
+                Struct ret = _template.Clone();
+                ret.Fields["Message"] = Value.ForString(loggingEvent.RenderedMessage);
+                if (loggingEvent.ExceptionObject != null)
+                {
+                    ret.Fields["Exception"] = Value.ForString(loggingEvent.ExceptionObject.Message);
+                }
+                return ret;
+            }
+        }
+        // End sample
     }
 }
