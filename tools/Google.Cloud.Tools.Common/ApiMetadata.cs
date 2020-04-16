@@ -12,9 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -101,5 +100,12 @@ namespace Google.Cloud.Tools.Common
                 return !PrereleaseApiPattern.IsMatch(parts.Last());
             }
         }
+
+        /// <summary>
+        /// The token this was parsed from in the <see cref="ApiCatalog"/>. This is populated
+        /// by <see cref="ApiCatalog.FromJson(string)"/> and <see cref="ApiCatalog.Load"/>, and
+        /// the token is part of <see cref="ApiCatalog.Json"/>.
+        /// </summary>
+        public JToken Json { get; set; }
     }
 }

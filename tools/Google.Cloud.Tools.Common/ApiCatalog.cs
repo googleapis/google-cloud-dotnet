@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,7 +25,22 @@ namespace Google.Cloud.Tools.Common
     /// </summary>
     public class ApiCatalog
     {
+        /// <summary>
+        /// The APIs within the catalog.
+        /// </summary>
         public List<ApiMetadata> Apis { get; set; }
+
+        /// <summary>
+        /// The JSON representation of the catalog. This is populated by <see cref="Load"/> and
+        /// <see cref="FromJson(string)"/>, but nothing keeps this in sync with the in-memory data.
+        /// </summary>
+        [JsonIgnore]
+        public JToken Json { get; set; }
+
+        /// <summary>
+        /// Formats <see cref="Json"/>.
+        /// </summary>
+        public string FormatJson() => Json.ToString(Formatting.Indented);
 
         /// <summary>
         /// Retrieves an API by ID.
@@ -55,7 +71,19 @@ namespace Google.Cloud.Tools.Common
         /// </summary>
         /// <param name="json">The JSON containing the API catalog.</param>
         /// <returns>The API catalog.</returns>
-        public static ApiCatalog FromJson(string json) =>
-            JsonConvert.DeserializeObject<ApiCatalog>(json);
+        public static ApiCatalog FromJson(string json)
+        {
+            JToken parsed = JToken.Parse(json);
+            var catalog = parsed.ToObject<ApiCatalog>();
+            catalog.Json = parsed;
+            foreach (var apiJson in parsed["apis"].Children().OfType<JObject>())
+            {
+                if (apiJson.TryGetValue("id", out var idToken))
+                {
+                    catalog[idToken.Value<string>()].Json = apiJson;
+                }
+            }
+            return catalog;
+        }
     }
 }
