@@ -81,16 +81,6 @@ namespace Google.Cloud.Tools.Common
         public StructuredVersion StructuredVersion => new StructuredVersion(Version);
 
         /// <summary>
-        /// The path to the API catalog (apis.json).
-        /// </summary>
-        public static string CatalogPath => Path.Combine(DirectoryLayout.DetermineRootDirectory(), "apis", "apis.json");
-
-        /// <summary>
-        /// The relative path to the catalog path, e.g. for use when fetching from GitHub.
-        /// </summary>
-        public static string RelativeCatalogPath = "apis/apis.json";
-
-        /// <summary>
         /// The release level to record in .repo-metadata.json, if this differs from the one
         /// inferred from the JSON. (For example, we will have 2.0.0-alpha00 versions that didn't
         /// have a 1.0.0.)
@@ -111,12 +101,5 @@ namespace Google.Cloud.Tools.Common
                 return !PrereleaseApiPattern.IsMatch(parts.Last());
             }
         }
-
-        // TODO: Introduce an ApiCatalog type rather than dealing with lists all the time.
-        public static List<ApiMetadata> LoadApis() =>
-            LoadApisFromJson(File.ReadAllText(CatalogPath));
-
-        public static List<ApiMetadata> LoadApisFromJson(string json) =>
-            JsonConvert.DeserializeObject<List<ApiMetadata>>(json);
     }
 }

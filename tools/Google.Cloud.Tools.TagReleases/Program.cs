@@ -85,9 +85,9 @@ namespace Google.Cloud.Tools.TagReleases
 
         private async Task RunAsync()
         {
-            var apis = await LoadApis();
+            var catalog = await LoadCatalog();
             var tags = await FetchTags();
-            var newReleases = ComputeNewReleases(apis, tags);
+            var newReleases = ComputeNewReleases(catalog.Apis, tags);
             if (!newReleases.Any())
             {
                 Console.WriteLine($"No releases need to be created for {_config.Committish}. Exiting.");
@@ -102,11 +102,11 @@ namespace Google.Cloud.Tools.TagReleases
             }            
         }
 
-        private async Task<List<ApiMetadata>> LoadApis()
+        private async Task<ApiCatalog> LoadCatalog()
         {
-            var allContents = await _client.Repository.Content.GetAllContentsByRef(RepositoryOwner, RepositoryName, ApiMetadata.RelativeCatalogPath, _config.Committish);
+            var allContents = await _client.Repository.Content.GetAllContentsByRef(RepositoryOwner, RepositoryName, ApiCatalog.RelativeCatalogPath, _config.Committish);
             var json = allContents.Single().Content;
-            return ApiMetadata.LoadApisFromJson(json);
+            return ApiCatalog.FromJson(json);
         }
 
         private async Task<List<string>> FetchTags()
