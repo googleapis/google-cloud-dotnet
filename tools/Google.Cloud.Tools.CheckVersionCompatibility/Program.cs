@@ -45,9 +45,8 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
 
             List<ApiMetadata> apisToCheck = args.Length == 0
                 ? catalog.Apis.Where(api => !api.Version.EndsWith("00") && !tags.Contains($"{api.Id}-{api.Version}")).ToList()
-                // Note: this basically validates the command line arguments. The failure isn't great when the API isn't found,
-                // but that could be worse.
-                : args.Select(arg => catalog.Apis.Single(api => api.Id == arg)).ToList();
+                // Note: this basically validates the command line arguments.
+                : args.Select(arg => catalog[arg]).ToList();
 
             foreach (var api in apisToCheck)
             {
