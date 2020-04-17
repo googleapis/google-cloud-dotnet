@@ -23,10 +23,10 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
     internal sealed class Release
     {
         public StructuredVersion Version { get; }
-        public IReadOnlyList<Commit> Commits { get; }
+        public IReadOnlyList<GitCommit> Commits { get; }
         public DateTime ReleaseDate { get; }
 
-        public Release(StructuredVersion version, Commit tagCommit, IEnumerable<Commit> commits)
+        public Release(StructuredVersion version, Commit tagCommit, IEnumerable<GitCommit> commits)
         {
             Version = version;
             Commits = commits.ToList().AsReadOnly();

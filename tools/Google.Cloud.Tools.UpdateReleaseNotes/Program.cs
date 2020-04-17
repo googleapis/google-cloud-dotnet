@@ -88,7 +88,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
             Commit currentTagCommit = null;
             
             // "Pending" as in "haven't been yielded in a release yet"
-            List<Commit> pendingCommits = new List<Commit>();
+            List<GitCommit> pendingCommits = new List<GitCommit>();
 
             var tagPrefix = $"{id}-";
             var versionsCommitId = repo.Tags
@@ -99,7 +99,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
             {
                 if (CommitContainsApi(commit))
                 {
-                    pendingCommits.Add(commit);
+                    pendingCommits.Add(new GitCommit(commit));
                 }
                 if (versionsCommitId.TryGetValue(commit.Id, out string version) && !version.StartsWith("0."))
                 {

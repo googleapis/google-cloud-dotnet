@@ -115,65 +115,9 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                 Lines.Add("");
                 foreach (var commit in release.Commits)
                 {
-                    Lines.AddRange(GetCommitLines(commit));
+                    Lines.AddRange(commit.GetHistoryLines());
                 }
                 Lines.Add("");
-            }
-
-            private static readonly Regex IssuePattern = new Regex(@"#(\d+)");
-
-            /// <summary>
-            /// Attempts to come up with suitable markdown for release notes, based on a commit.
-            /// This is best effort, heuristic-based - and we'll want to tweak it over time.
-            /// </summary>
-            private IEnumerable<string> GetCommitLines(Commit commit)
-            {
-                string sha = commit.Sha.Substring(0, 7);
-                string commitUrl = $"https://github.com/googleapis/google-cloud-dotnet/commit/{sha}";
-
-                var messageLines = commit.Message.Replace("\r", "").Split('\n')
-                    // Blank lines aren't helpful. It's slightly annoying that if the commit originally
-                    // contained multiple consecutive lines that were intended to be a single paragraph,
-                    // that won't come out nicely - we may want to try to detect that later.
-                    .Where(line => !string.IsNullOrWhiteSpace(line))
-                    .Select(AddIssueLink)
-                    .ToList();
-
-                // Autosynth commits have a meaningless title.
-                if (commit.Author.Email == "yoshi-automation@google.com")
-                {
-                    messageLines.RemoveAt(0);
-                }
-
-                // Common commit format: "Meaningful text [linebreak] Fixes #5000". Put that all on one line.
-                if (messageLines.Count == 2 && messageLines[1].StartsWith("Fixes [issue"))
-                {
-                    if (messageLines[0].Last() != '.')
-                    {
-                        messageLines[0] += '.';
-                    }
-                    messageLines[0] += $" {messageLines[1]}";
-                    messageLines.RemoveAt(1);
-                }
-
-                // Either format as a single list entry "Commit: purpose" or a list with a top-level "Commit:" and one
-                // message line per original line.
-                if (messageLines.Count == 1)
-                {
-                    yield return $"- [Commit {sha}]({commitUrl}): {messageLines[0]}";
-                }
-                else
-                {
-                    yield return $"- [Commit {sha}]({commitUrl}):";
-                    foreach (var line in messageLines)
-                    {
-                        // Anything already in a list can keep its existing list indentation; otherwise, create a list item.
-                        yield return line.TrimStart().StartsWith("-") ? $"  {line}" : $"  - {line}";
-                    }
-                }
-
-                string AddIssueLink(string line) =>
-                    IssuePattern.Replace(line, "[issue $1](https://github.com/googleapis/google-cloud-dotnet/issues/$1)");
             }
         }
     }
