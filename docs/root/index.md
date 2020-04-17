@@ -44,7 +44,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore.Admin.V1](Google.Cloud.Firestore.Admin.V1/index.html) | 2.0.0 | [Firestore Admin](https://firebase.google.com) |
 | [Google.Cloud.Firestore](Google.Cloud.Firestore/index.html) | 2.0.0-beta02 | [Firestore](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](Google.Cloud.Firestore.V1/index.html) | 2.0.0-beta02 | [Firestore](https://firebase.google.com) |
-| [Google.Cloud.Gaming.V1Beta](Google.Cloud.Gaming.V1Beta/index.html) | 1.0.0-beta01 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
+| [Google.Cloud.Gaming.V1Beta](Google.Cloud.Gaming.V1Beta/index.html) | 1.0.0-beta02 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](Google.Cloud.Iam.V1/index.html) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
 | [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html) | 2.0.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
