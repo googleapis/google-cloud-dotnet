@@ -32,7 +32,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "CRIQCghnY3Bfem9uZRgEIAEoCRIXCg9wZWVyX3Byb2plY3RfaWQYBiABKAkS",
             "OgoFc3RhdGUYByABKA4yKy5nb29nbGUubW9uaXRvcmluZy52My5JbnRlcm5h",
             "bENoZWNrZXIuU3RhdGUiMwoFU3RhdGUSDwoLVU5TUEVDSUZJRUQQABIMCghD",
-            "UkVBVElORxABEgsKB1JVTk5JTkcQAjoCGAEizQ0KEVVwdGltZUNoZWNrQ29u",
+            "UkVBVElORxABEgsKB1JVTk5JTkcQAjoCGAEi+w8KEVVwdGltZUNoZWNrQ29u",
             "ZmlnEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEjsKEm1v",
             "bml0b3JlZF9yZXNvdXJjZRgDIAEoCzIdLmdvb2dsZS5hcGkuTW9uaXRvcmVk",
             "UmVzb3VyY2VIABJPCg5yZXNvdXJjZV9ncm91cBgEIAEoCzI1Lmdvb2dsZS5t",
@@ -49,46 +49,53 @@ namespace Google.Cloud.Monitoring.V3 {
             "ARJEChFpbnRlcm5hbF9jaGVja2VycxgOIAMoCzIlLmdvb2dsZS5tb25pdG9y",
             "aW5nLnYzLkludGVybmFsQ2hlY2tlckICGAEaYQoNUmVzb3VyY2VHcm91cBIQ",
             "Cghncm91cF9pZBgBIAEoCRI+Cg1yZXNvdXJjZV90eXBlGAIgASgOMicuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuR3JvdXBSZXNvdXJjZVR5cGUa+gIKCUh0dHBD",
-            "aGVjaxIPCgd1c2Vfc3NsGAEgASgIEgwKBHBhdGgYAiABKAkSDAoEcG9ydBgD",
-            "IAEoBRJYCglhdXRoX2luZm8YBCABKAsyRS5nb29nbGUubW9uaXRvcmluZy52",
-            "My5VcHRpbWVDaGVja0NvbmZpZy5IdHRwQ2hlY2suQmFzaWNBdXRoZW50aWNh",
-            "dGlvbhIUCgxtYXNrX2hlYWRlcnMYBSABKAgSTwoHaGVhZGVycxgGIAMoCzI+",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnLkh0dHBD",
-            "aGVjay5IZWFkZXJzRW50cnkSFAoMdmFsaWRhdGVfc3NsGAcgASgIGjkKE0Jh",
-            "c2ljQXV0aGVudGljYXRpb24SEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dv",
-            "cmQYAiABKAkaLgoMSGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEaGAoIVGNwQ2hlY2sSDAoEcG9ydBgBIAEoBRqYAgoOQ29u",
-            "dGVudE1hdGNoZXISDwoHY29udGVudBgBIAEoCRJcCgdtYXRjaGVyGAIgASgO",
-            "MksuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWcuQ29u",
-            "dGVudE1hdGNoZXIuQ29udGVudE1hdGNoZXJPcHRpb24ilgEKFENvbnRlbnRN",
-            "YXRjaGVyT3B0aW9uEiYKIkNPTlRFTlRfTUFUQ0hFUl9PUFRJT05fVU5TUEVD",
-            "SUZJRUQQABITCg9DT05UQUlOU19TVFJJTkcQARIXChNOT1RfQ09OVEFJTlNf",
-            "U1RSSU5HEAISEQoNTUFUQ0hFU19SRUdFWBADEhUKEU5PVF9NQVRDSEVTX1JF",
-            "R0VYEAQ68wHqQe8BCittb25pdG9yaW5nLmdvb2dsZWFwaXMuY29tL1VwdGlt",
-            "ZUNoZWNrQ29uZmlnEjtwcm9qZWN0cy97cHJvamVjdH0vdXB0aW1lQ2hlY2tD",
-            "b25maWdzL3t1cHRpbWVfY2hlY2tfY29uZmlnfRJFb3JnYW5pemF0aW9ucy97",
-            "b3JnYW5pemF0aW9ufS91cHRpbWVDaGVja0NvbmZpZ3Mve3VwdGltZV9jaGVj",
-            "a19jb25maWd9Ejlmb2xkZXJzL3tmb2xkZXJ9L3VwdGltZUNoZWNrQ29uZmln",
-            "cy97dXB0aW1lX2NoZWNrX2NvbmZpZ30SASpCCgoIcmVzb3VyY2VCFAoSY2hl",
-            "Y2tfcmVxdWVzdF90eXBlIm4KDVVwdGltZUNoZWNrSXASNwoGcmVnaW9uGAEg",
-            "ASgOMicuZ29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tSZWdpb24S",
-            "EAoIbG9jYXRpb24YAiABKAkSEgoKaXBfYWRkcmVzcxgDIAEoCSplChFVcHRp",
-            "bWVDaGVja1JlZ2lvbhIWChJSRUdJT05fVU5TUEVDSUZJRUQQABIHCgNVU0EQ",
-            "ARIKCgZFVVJPUEUQAhIRCg1TT1VUSF9BTUVSSUNBEAMSEAoMQVNJQV9QQUNJ",
-            "RklDEAQqWwoRR3JvdXBSZXNvdXJjZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgwKCElOU1RBTkNFEAESGQoVQVdTX0VMQl9MT0FEX0JB",
-            "TEFOQ0VSEAJCwwEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ILVXB0aW1l",
-            "UHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9u",
-            "aXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz6gIdR29v",
-            "Z2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
+            "Z2xlLm1vbml0b3JpbmcudjMuR3JvdXBSZXNvdXJjZVR5cGUaqAUKCUh0dHBD",
+            "aGVjaxJXCg5yZXF1ZXN0X21ldGhvZBgIIAEoDjI/Lmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLlVwdGltZUNoZWNrQ29uZmlnLkh0dHBDaGVjay5SZXF1ZXN0TWV0",
+            "aG9kEg8KB3VzZV9zc2wYASABKAgSDAoEcGF0aBgCIAEoCRIMCgRwb3J0GAMg",
+            "ASgFElgKCWF1dGhfaW5mbxgEIAEoCzJFLmdvb2dsZS5tb25pdG9yaW5nLnYz",
+            "LlVwdGltZUNoZWNrQ29uZmlnLkh0dHBDaGVjay5CYXNpY0F1dGhlbnRpY2F0",
+            "aW9uEhQKDG1hc2tfaGVhZGVycxgFIAEoCBJPCgdoZWFkZXJzGAYgAygLMj4u",
+            "Z29vZ2xlLm1vbml0b3JpbmcudjMuVXB0aW1lQ2hlY2tDb25maWcuSHR0cENo",
+            "ZWNrLkhlYWRlcnNFbnRyeRJTCgxjb250ZW50X3R5cGUYCSABKA4yPS5nb29n",
+            "bGUubW9uaXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZy5IdHRwQ2hlY2su",
+            "Q29udGVudFR5cGUSFAoMdmFsaWRhdGVfc3NsGAcgASgIEgwKBGJvZHkYCiAB",
+            "KAwaOQoTQmFzaWNBdXRoZW50aWNhdGlvbhIQCgh1c2VybmFtZRgBIAEoCRIQ",
+            "CghwYXNzd29yZBgCIAEoCRouCgxIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASI6Cg1SZXF1ZXN0TWV0aG9kEhYKEk1FVEhP",
+            "RF9VTlNQRUNJRklFRBAAEgcKA0dFVBABEggKBFBPU1QQAiI0CgtDb250ZW50",
+            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDwoLVVJMX0VOQ09ERUQQARoY",
+            "CghUY3BDaGVjaxIMCgRwb3J0GAEgASgFGpgCCg5Db250ZW50TWF0Y2hlchIP",
+            "Cgdjb250ZW50GAEgASgJElwKB21hdGNoZXIYAiABKA4ySy5nb29nbGUubW9u",
+            "aXRvcmluZy52My5VcHRpbWVDaGVja0NvbmZpZy5Db250ZW50TWF0Y2hlci5D",
+            "b250ZW50TWF0Y2hlck9wdGlvbiKWAQoUQ29udGVudE1hdGNoZXJPcHRpb24S",
+            "JgoiQ09OVEVOVF9NQVRDSEVSX09QVElPTl9VTlNQRUNJRklFRBAAEhMKD0NP",
+            "TlRBSU5TX1NUUklORxABEhcKE05PVF9DT05UQUlOU19TVFJJTkcQAhIRCg1N",
+            "QVRDSEVTX1JFR0VYEAMSFQoRTk9UX01BVENIRVNfUkVHRVgQBDrzAepB7wEK",
+            "K21vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vVXB0aW1lQ2hlY2tDb25maWcS",
+            "O3Byb2plY3RzL3twcm9qZWN0fS91cHRpbWVDaGVja0NvbmZpZ3Mve3VwdGlt",
+            "ZV9jaGVja19jb25maWd9EkVvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259",
+            "L3VwdGltZUNoZWNrQ29uZmlncy97dXB0aW1lX2NoZWNrX2NvbmZpZ30SOWZv",
+            "bGRlcnMve2ZvbGRlcn0vdXB0aW1lQ2hlY2tDb25maWdzL3t1cHRpbWVfY2hl",
+            "Y2tfY29uZmlnfRIBKkIKCghyZXNvdXJjZUIUChJjaGVja19yZXF1ZXN0X3R5",
+            "cGUibgoNVXB0aW1lQ2hlY2tJcBI3CgZyZWdpb24YASABKA4yJy5nb29nbGUu",
+            "bW9uaXRvcmluZy52My5VcHRpbWVDaGVja1JlZ2lvbhIQCghsb2NhdGlvbhgC",
+            "IAEoCRISCgppcF9hZGRyZXNzGAMgASgJKmUKEVVwdGltZUNoZWNrUmVnaW9u",
+            "EhYKElJFR0lPTl9VTlNQRUNJRklFRBAAEgcKA1VTQRABEgoKBkVVUk9QRRAC",
+            "EhEKDVNPVVRIX0FNRVJJQ0EQAxIQCgxBU0lBX1BBQ0lGSUMQBCpbChFHcm91",
+            "cFJlc291cmNlVHlwZRIdChlSRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "DAoISU5TVEFOQ0UQARIZChVBV1NfRUxCX0xPQURfQkFMQU5DRVIQAkLDAQoY",
+            "Y29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtVcHRpbWVQcm90b1ABWj5nb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL21vbml0b3Jpbmcv",
+            "djM7bW9uaXRvcmluZ6oCGkdvb2dsZS5DbG91ZC5Nb25pdG9yaW5nLlYzygIa",
+            "R29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1Hb29nbGU6OkNsb3VkOjpN",
+            "b25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckRegion), typeof(global::Google.Cloud.Monitoring.V3.GroupResourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.InternalChecker), global::Google.Cloud.Monitoring.V3.InternalChecker.Parser, new[]{ "Name", "DisplayName", "Network", "GcpZone", "PeerProjectId", "State" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.InternalChecker.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser, new[]{ "Name", "DisplayName", "MonitoredResource", "ResourceGroup", "HttpCheck", "TcpCheck", "Period", "Timeout", "ContentMatchers", "SelectedRegions", "IsInternal", "InternalCheckers" }, new[]{ "Resource", "CheckRequestType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ResourceGroup.Parser, new[]{ "GroupId", "ResourceType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Parser, new[]{ "UseSsl", "Path", "Port", "AuthInfo", "MaskHeaders", "Headers", "ValidateSsl" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication.Parser, new[]{ "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Parser, new[]{ "RequestMethod", "UseSsl", "Path", "Port", "AuthInfo", "MaskHeaders", "Headers", "ContentType", "ValidateSsl", "Body" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod), typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.BasicAuthentication.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.TcpCheck.Parser, new[]{ "Port" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher), global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Parser, new[]{ "Content", "Matcher" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.ContentMatcher.Types.ContentMatcherOption) }, null, null)}),
@@ -1286,19 +1293,36 @@ namespace Google.Cloud.Monitoring.V3 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public HttpCheck(HttpCheck other) : this() {
+          requestMethod_ = other.requestMethod_;
           useSsl_ = other.useSsl_;
           path_ = other.path_;
           port_ = other.port_;
           authInfo_ = other.authInfo_ != null ? other.authInfo_.Clone() : null;
           maskHeaders_ = other.maskHeaders_;
           headers_ = other.headers_.Clone();
+          contentType_ = other.contentType_;
           validateSsl_ = other.validateSsl_;
+          body_ = other.body_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public HttpCheck Clone() {
           return new HttpCheck(this);
+        }
+
+        /// <summary>Field number for the "request_method" field.</summary>
+        public const int RequestMethodFieldNumber = 8;
+        private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod requestMethod_ = global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod.MethodUnspecified;
+        /// <summary>
+        /// The HTTP request method to use for the check.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod RequestMethod {
+          get { return requestMethod_; }
+          set {
+            requestMethod_ = value;
+          }
         }
 
         /// <summary>Field number for the "use_ssl" field.</summary>
@@ -1404,6 +1428,20 @@ namespace Google.Cloud.Monitoring.V3 {
           get { return headers_; }
         }
 
+        /// <summary>Field number for the "content_type" field.</summary>
+        public const int ContentTypeFieldNumber = 9;
+        private global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType contentType_ = global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType.TypeUnspecified;
+        /// <summary>
+        /// The content type to use for the check.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType ContentType {
+          get { return contentType_; }
+          set {
+            contentType_ = value;
+          }
+        }
+
         /// <summary>Field number for the "validate_ssl" field.</summary>
         public const int ValidateSslFieldNumber = 7;
         private bool validateSsl_;
@@ -1421,6 +1459,24 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "body" field.</summary>
+        public const int BodyFieldNumber = 10;
+        private pb::ByteString body_ = pb::ByteString.Empty;
+        /// <summary>
+        /// The request body associated with the HTTP request. If `content_type` is
+        /// `URL_ENCODED`, the body passed in must be URL-encoded. Users can provide
+        /// a `Content-Length` header via the `headers` field or the API will do
+        /// so. The maximum byte size is 1 megabyte. Note: As with all `bytes` fields
+        /// JSON representations are base64 encoded.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pb::ByteString Body {
+          get { return body_; }
+          set {
+            body_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as HttpCheck);
@@ -1434,26 +1490,32 @@ namespace Google.Cloud.Monitoring.V3 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (RequestMethod != other.RequestMethod) return false;
           if (UseSsl != other.UseSsl) return false;
           if (Path != other.Path) return false;
           if (Port != other.Port) return false;
           if (!object.Equals(AuthInfo, other.AuthInfo)) return false;
           if (MaskHeaders != other.MaskHeaders) return false;
           if (!Headers.Equals(other.Headers)) return false;
+          if (ContentType != other.ContentType) return false;
           if (ValidateSsl != other.ValidateSsl) return false;
+          if (Body != other.Body) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
+          if (RequestMethod != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod.MethodUnspecified) hash ^= RequestMethod.GetHashCode();
           if (UseSsl != false) hash ^= UseSsl.GetHashCode();
           if (Path.Length != 0) hash ^= Path.GetHashCode();
           if (Port != 0) hash ^= Port.GetHashCode();
           if (authInfo_ != null) hash ^= AuthInfo.GetHashCode();
           if (MaskHeaders != false) hash ^= MaskHeaders.GetHashCode();
           hash ^= Headers.GetHashCode();
+          if (ContentType != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType.TypeUnspecified) hash ^= ContentType.GetHashCode();
           if (ValidateSsl != false) hash ^= ValidateSsl.GetHashCode();
+          if (Body.Length != 0) hash ^= Body.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1492,6 +1554,18 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(56);
             output.WriteBool(ValidateSsl);
           }
+          if (RequestMethod != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod.MethodUnspecified) {
+            output.WriteRawTag(64);
+            output.WriteEnum((int) RequestMethod);
+          }
+          if (ContentType != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType.TypeUnspecified) {
+            output.WriteRawTag(72);
+            output.WriteEnum((int) ContentType);
+          }
+          if (Body.Length != 0) {
+            output.WriteRawTag(82);
+            output.WriteBytes(Body);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1500,6 +1574,9 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
+          if (RequestMethod != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod.MethodUnspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RequestMethod);
+          }
           if (UseSsl != false) {
             size += 1 + 1;
           }
@@ -1516,8 +1593,14 @@ namespace Google.Cloud.Monitoring.V3 {
             size += 1 + 1;
           }
           size += headers_.CalculateSize(_map_headers_codec);
+          if (ContentType != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType.TypeUnspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentType);
+          }
           if (ValidateSsl != false) {
             size += 1 + 1;
+          }
+          if (Body.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Body);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1529,6 +1612,9 @@ namespace Google.Cloud.Monitoring.V3 {
         public void MergeFrom(HttpCheck other) {
           if (other == null) {
             return;
+          }
+          if (other.RequestMethod != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod.MethodUnspecified) {
+            RequestMethod = other.RequestMethod;
           }
           if (other.UseSsl != false) {
             UseSsl = other.UseSsl;
@@ -1549,8 +1635,14 @@ namespace Google.Cloud.Monitoring.V3 {
             MaskHeaders = other.MaskHeaders;
           }
           headers_.Add(other.headers_);
+          if (other.ContentType != global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType.TypeUnspecified) {
+            ContentType = other.ContentType;
+          }
           if (other.ValidateSsl != false) {
             ValidateSsl = other.ValidateSsl;
+          }
+          if (other.Body.Length != 0) {
+            Body = other.Body;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1594,6 +1686,18 @@ namespace Google.Cloud.Monitoring.V3 {
                 ValidateSsl = input.ReadBool();
                 break;
               }
+              case 64: {
+                RequestMethod = (global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.RequestMethod) input.ReadEnum();
+                break;
+              }
+              case 72: {
+                ContentType = (global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Types.HttpCheck.Types.ContentType) input.ReadEnum();
+                break;
+              }
+              case 82: {
+                Body = input.ReadBytes();
+                break;
+              }
             }
           }
         }
@@ -1602,6 +1706,42 @@ namespace Google.Cloud.Monitoring.V3 {
         /// <summary>Container for nested types declared in the HttpCheck message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
+          /// <summary>
+          /// The HTTP request method options.
+          /// </summary>
+          public enum RequestMethod {
+            /// <summary>
+            /// No request method specified.
+            /// </summary>
+            [pbr::OriginalName("METHOD_UNSPECIFIED")] MethodUnspecified = 0,
+            /// <summary>
+            /// GET request.
+            /// </summary>
+            [pbr::OriginalName("GET")] Get = 1,
+            /// <summary>
+            /// POST request.
+            /// </summary>
+            [pbr::OriginalName("POST")] Post = 2,
+          }
+
+          /// <summary>
+          /// Header options corresponding to the Content-Type of the body in HTTP
+          /// requests. Note that a `Content-Type` header cannot be present in the
+          /// `headers` field if this field is specified.
+          /// </summary>
+          public enum ContentType {
+            /// <summary>
+            /// No content type specified. If the request method is POST, an
+            /// unspecified content type results in a check creation rejection.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] TypeUnspecified = 0,
+            /// <summary>
+            /// `body` is in URL-encoded form. Equivalent to setting the `Content-Type`
+            /// to `application/x-www-form-urlencoded` in the HTTP request.
+            /// </summary>
+            [pbr::OriginalName("URL_ENCODED")] UrlEncoded = 1,
+          }
+
           /// <summary>
           /// The authentication parameters to provide to the specified resource or
           /// URL that requires a username and password. Currently, only
