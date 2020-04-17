@@ -181,7 +181,7 @@ namespace Google.Cloud.OsConfig.V1 {
   }
   #region Messages
   /// <summary>
-  /// A request message to initiate patching across Google Compute Engine
+  /// A request message to initiate patching across Compute Engine
   /// instances.
   /// </summary>
   public sealed partial class ExecutePatchJobRequest : pb::IMessage<ExecutePatchJobRequest> {
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Patch details for a VM instance. For more information about reviewing VM
   /// instance details, see
   /// [Listing all VM instance details for a specific patch
-  /// job](/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details).
+  /// job](https://cloud.google.com/compute/docs/os-patch-management/manage-patch-jobs#list-instance-details).
   /// </summary>
   public sealed partial class PatchJobInstanceDetails : pb::IMessage<PatchJobInstanceDetails> {
     private static readonly pb::MessageParser<PatchJobInstanceDetails> _parser = new pb::MessageParser<PatchJobInstanceDetails>(() => new PatchJobInstanceDetails());
@@ -1709,7 +1709,8 @@ namespace Google.Cloud.OsConfig.V1 {
   /// details, use ListPatchJobInstanceDetails.
   ///
   /// For more information about patch jobs, see
-  /// [Creating patch jobs](/compute/docs/os-patch-management/create-patch-job).
+  /// [Creating patch
+  /// jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).
   /// </summary>
   public sealed partial class PatchJob : pb::IMessage<PatchJob> {
     private static readonly pb::MessageParser<PatchJob> _parser = new pb::MessageParser<PatchJob>(() => new PatchJob());
@@ -4946,7 +4947,7 @@ namespace Google.Cloud.OsConfig.V1 {
     /// <summary>Field number for the "gcs_object" field.</summary>
     public const int GcsObjectFieldNumber = 2;
     /// <summary>
-    /// A Google Cloud Storage object containing the executable.
+    /// A Cloud Storage object containing the executable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.OsConfig.V1.GcsObject GcsObject {
@@ -5176,7 +5177,7 @@ namespace Google.Cloud.OsConfig.V1 {
   }
 
   /// <summary>
-  /// Google Cloud Storage object representation.
+  /// Cloud Storage object representation.
   /// </summary>
   public sealed partial class GcsObject : pb::IMessage<GcsObject> {
     private static readonly pb::MessageParser<GcsObject> _parser = new pb::MessageParser<GcsObject>(() => new GcsObject());
@@ -5218,7 +5219,7 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int BucketFieldNumber = 1;
     private string bucket_ = "";
     /// <summary>
-    /// Required. Bucket of the Google Cloud Storage object.
+    /// Required. Bucket of the Cloud Storage object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Bucket {
@@ -5232,7 +5233,7 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int ObjectFieldNumber = 2;
     private string object_ = "";
     /// <summary>
-    /// Required. Name of the Google Cloud Storage object.
+    /// Required. Name of the Cloud Storage object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Object {
@@ -5246,7 +5247,7 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int GenerationNumberFieldNumber = 3;
     private long generationNumber_;
     /// <summary>
-    /// Required. Generation number of the Google Cloud Storage object. This is used to
+    /// Required. Generation number of the Cloud Storage object. This is used to
     /// ensure that the ExecStep specified by this PatchJob does not change.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5438,8 +5439,8 @@ namespace Google.Cloud.OsConfig.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel> groupLabels_ = new pbc::RepeatedField<global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel>();
     /// <summary>
-    /// Targets VM instances matching at least one of these label sets. This allows
-    /// targeting of disparate groups, for example "env=prod or env=staging".
+    /// Targets VM instances matching ANY of these GroupLabels. This allows
+    /// targeting of disparate groups of VM instances.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel> GroupLabels {
@@ -5614,8 +5615,14 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Represents a group of VMs that can be identified as having all these
-      /// labels, for example "env=prod and app=web".
+      /// Targets a group of VM instances by using their [assigned
+      /// labels](https://cloud.google.com/compute/docs/labeling-resources). Labels
+      /// are key-value pairs. A `GroupLabel` is a combination of labels
+      /// that is used to target VMs for a patch job.
+      ///
+      /// For example, a patch job can target VMs that have the following
+      /// `GroupLabel`: `{"env":"test", "app":"web"}`. This means that the patch job
+      /// is applied to VMs that have both the labels `env=test` and `app=web`.
       /// </summary>
       public sealed partial class GroupLabel : pb::IMessage<GroupLabel> {
         private static readonly pb::MessageParser<GroupLabel> _parser = new pb::MessageParser<GroupLabel>(() => new GroupLabel());
@@ -5657,7 +5664,7 @@ namespace Google.Cloud.OsConfig.V1 {
             = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
         private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
         /// <summary>
-        /// Google Compute Engine instance labels that must be present for a VM
+        /// Compute Engine instance labels that must be present for a VM
         /// instance to be targeted by this filter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
