@@ -25,6 +25,8 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
     /// </summary>
     internal class GitCommit
     {
+        private const string AutosynthEmail = "yoshi-automation@google.com";
+
         private readonly Commit _libGit2Commit;
 
         private string Hash { get; }
@@ -53,10 +55,11 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                 .Select(AddIssueLink)
                 .ToList();
 
-            // Autosynth commits have a meaningless title.
-            if (_libGit2Commit.Author.Email == "yoshi-automation@google.com")
+            // Autosynth includes helpful metadata about the original internal and googleapis commit.
+            // We don't need that in release notes though.
+            if (_libGit2Commit.Author.Email == AutosynthEmail)
             {
-                messageLines.RemoveAt(0);
+                messageLines = messageLines.TakeWhile(line => !line.StartsWith("PiperOrigin-RevId")).ToList();
             }
 
             // Common commit format: "Meaningful text [linebreak] Fixes #5000". Put that all on one line.
