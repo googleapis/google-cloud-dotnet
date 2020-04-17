@@ -114,7 +114,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// complete a patch. These configurations include instance filter, package
   /// repository settings, and a schedule. For more information about creating and
   /// managing patch deployments, see [Scheduling patch
-  /// jobs](/compute/docs/os-patch-management/schedule-patch-jobs).
+  /// jobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).
   /// </summary>
   public sealed partial class PatchDeployment : pb::IMessage<PatchDeployment> {
     private static readonly pb::MessageParser<PatchDeployment> _parser = new pb::MessageParser<PatchDeployment>(() => new PatchDeployment());
@@ -273,8 +273,7 @@ namespace Google.Cloud.OsConfig.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
     /// Output only. Time the patch deployment was created. Timestamp is in
-    /// &lt;a href="https://www.ietf.org/rfc/rfc3339.txt" target="_blank">RFC3339&lt;/a>
-    /// text format.
+    /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -289,8 +288,7 @@ namespace Google.Cloud.OsConfig.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// Output only. Time the patch deployment was last updated. Timestamp is in
-    /// &lt;a href="https://www.ietf.org/rfc/rfc3339.txt" target="_blank">RFC3339&lt;/a>
-    /// text format.
+    /// [RFC3339]("https://www.ietf.org/rfc/rfc3339.txt) text format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -305,9 +303,8 @@ namespace Google.Cloud.OsConfig.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastExecuteTime_;
     /// <summary>
     /// Output only. The last time a patch job was started by this deployment.
-    /// Timestamp is in
-    /// &lt;a href="https://www.ietf.org/rfc/rfc3339.txt" target="_blank">RFC3339&lt;/a>
-    /// text format.
+    /// Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text
+    /// format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastExecuteTime {
@@ -623,8 +620,7 @@ namespace Google.Cloud.OsConfig.V1 {
 
   /// <summary>
   /// Sets the time for a one time patch deployment. Timestamp is in
-  /// &lt;a href="https://www.ietf.org/rfc/rfc3339.txt" target="_blank">RFC3339&lt;/a>
-  /// text format.
+  /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   /// </summary>
   public sealed partial class OneTimeSchedule : pb::IMessage<OneTimeSchedule> {
     private static readonly pb::MessageParser<OneTimeSchedule> _parser = new pb::MessageParser<OneTimeSchedule>(() => new OneTimeSchedule());
