@@ -135,9 +135,9 @@ namespace Google.Cloud.Tools.ProjectGenerator
                 Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
                 // Now we know we can parse the API catalog, let's reformat it.
                 ReformatApiCatalog(catalog);
-                RewriteReadme(catalog.Apis);
-                RewriteDocsRootIndex(catalog.Apis);
-                HashSet<string> apiNames = new HashSet<string>(catalog.Apis.Select(api => api.Id));
+                RewriteReadme(catalog);
+                RewriteDocsRootIndex(catalog);
+                HashSet<string> apiNames = catalog.CreateIdHashSet();
 
                 foreach (var api in catalog.Apis)
                 {
@@ -174,25 +174,25 @@ namespace Google.Cloud.Tools.ProjectGenerator
             }
         }
 
-        public static void RewriteReadme(List<ApiMetadata> apis)
+        public static void RewriteReadme(ApiCatalog catalog)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var readmePath = Path.Combine(root, "README.md");
-            RewriteApiTable(readmePath, apis, api => $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}");
+            RewriteApiTable(readmePath, catalog, api => $"https://googleapis.dev/dotnet/{api.Id}/{api.Version}");
         }
 
-        public static void RewriteDocsRootIndex(List<ApiMetadata> apis)
+        public static void RewriteDocsRootIndex(ApiCatalog catalog)
         {
             var root = DirectoryLayout.ForRootDocs().DocsSourceDirectory;
             var indexPath = Path.Combine(root, "index.md");
-            RewriteApiTable(indexPath, apis, api => $"{api.Id}/index.html");
+            RewriteApiTable(indexPath, catalog, api => $"{api.Id}/index.html");
         }
 
         /// <summary>
         /// README.md and docs/root/index.md use the same table, but with slightly different links. This
         /// method is the common code, with a URL provider to indicate how to link to an API's documentation.
         /// </summary>
-        private static void RewriteApiTable(string path, List<ApiMetadata> apis, Func<ApiMetadata, string> urlProvider)
+        private static void RewriteApiTable(string path, ApiCatalog catalog, Func<ApiMetadata, string> urlProvider)
         {
             var existing = File.ReadAllLines(path).ToList();
 
@@ -211,7 +211,7 @@ namespace Google.Cloud.Tools.ProjectGenerator
             var table = new List<string>();
             table.Add(headerLine);
             table.Add(headerNext);
-            foreach (var api in apis)
+            foreach (var api in catalog.Apis)
             {
                 // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
                 // We can cross that bridge when we come to it.

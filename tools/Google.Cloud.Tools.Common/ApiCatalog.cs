@@ -61,6 +61,17 @@ namespace Google.Cloud.Tools.Common
         public static string RelativeCatalogPath => "apis/apis.json";
 
         /// <summary>
+        /// Creates a hash set of the IDs of all the APIs in the catalog.
+        /// </summary>
+        /// <returns>A hash set of IDs.</returns>
+        public HashSet<string> CreateIdHashSet() => new HashSet<string>(Apis.Select(api => api.Id));
+
+        /// <summary>
+        /// Creates a map from API ID to the current version of that ID (as a string).
+        /// </summary>
+        public Dictionary<string, string> CreateRawVersionMap() => Apis.ToDictionary(api => api.Id, api => api.Version);
+
+        /// <summary>
         /// Loads the API catalog from the local disk, automatically determining the location.
         /// </summary>
         /// <returns></returns>
