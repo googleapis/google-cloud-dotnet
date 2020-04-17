@@ -181,11 +181,11 @@ namespace Google.Cloud.Tools.ReleaseManager
             string oldVersion = api.Version;
             api.Version = version;
             var layout = DirectoryLayout.ForApi(id);
-            var apiNames = new HashSet<string>(catalog.Apis.Select(x => x.Id));
+            var apiNames = catalog.CreateIdHashSet();
             ProjectGenerator.Program.GenerateMetadataFile(layout.SourceDirectory, api);
             ProjectGenerator.Program.GenerateProjects(layout.SourceDirectory, api, apiNames);
-            ProjectGenerator.Program.RewriteReadme(catalog.Apis);
-            ProjectGenerator.Program.RewriteDocsRootIndex(catalog.Apis);
+            ProjectGenerator.Program.RewriteReadme(catalog);
+            ProjectGenerator.Program.RewriteDocsRootIndex(catalog);
 
             // Update the parsed JObject associated with the ID, and write it back to apis.json.
             api.Json["version"] = version;
@@ -213,8 +213,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             var currentCatalog = ApiCatalog.Load();
             var masterCatalog = LoadMasterCatalog();
-            var currentVersions = currentCatalog.Apis.ToDictionary(api => api.Id, api => api.Version);
-            var masterVersions = masterCatalog.Apis.ToDictionary(api => api.Id, api => api.Version);
+            var currentVersions = currentCatalog.CreateRawVersionMap();
+            var masterVersions = masterCatalog.CreateRawVersionMap();
             return currentVersions.Keys.Concat(masterVersions.Keys)
                 .Distinct()
                 .OrderBy(id => id)

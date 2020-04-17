@@ -87,7 +87,7 @@ namespace Google.Cloud.Tools.TagReleases
         {
             var catalog = await LoadCatalog();
             var tags = await FetchTags();
-            var newReleases = ComputeNewReleases(catalog.Apis, tags);
+            var newReleases = ComputeNewReleases(catalog, tags);
             if (!newReleases.Any())
             {
                 Console.WriteLine($"No releases need to be created for {_config.Committish}. Exiting.");
@@ -129,10 +129,10 @@ namespace Google.Cloud.Tools.TagReleases
             return commit;
         }
 
-        private List<ApiMetadata> ComputeNewReleases(List<ApiMetadata> allApis, List<string> tags)
+        private List<ApiMetadata> ComputeNewReleases(ApiCatalog catalog, List<string> tags)
         {
-            var noChange = allApis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
-            return allApis.Except(noChange).ToList();
+            var noChange = catalog.Apis.Where(api => tags.Contains($"{api.Id}-{api.Version}") || api.Version.EndsWith("00")).ToList();
+            return catalog.Apis.Except(noChange).ToList();
         }
 
         /// <summary>
