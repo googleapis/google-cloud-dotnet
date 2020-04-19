@@ -350,6 +350,26 @@ namespace Google.Cloud.Logging.NLog.Tests
         }
 
         [Fact]
+        public async Task SingleLogEntryWithBadJsonProperty()
+        {
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    LogManager.GetLogger("testlogger").Info("Hello {BadBoy}", new BadObject());
+                    return Task.FromResult(0);
+                }, includeEventProperties: true, configFn: googleTarget => googleTarget.SendJsonPayload = true);
+            Assert.Single(uploadedEntries);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
+            Assert.Equal("Hello BadObject", entry0.JsonPayload.Fields["message"].StringValue);
+
+            var properties = entry0.JsonPayload.Fields["properties"].StructValue;
+
+            Assert.Equal(1, properties.Fields.Count);
+            Assert.StartsWith("Google.Cloud.Logging.NLog.Tests", properties.Fields["BadBoy"].StructValue.Fields["Assembly"].StringValue);
+        }
+
+        [Fact]
         public async Task SingleLogEntryWithJsonCollectionProperties()
         {
             var uploadedEntries = await RunTestWorkingServer(
@@ -589,6 +609,23 @@ namespace Google.Cloud.Logging.NLog.Tests
             // If the project ID is not configured, then the target will be the project where
             // the monitored resource is at.
             Assert.Equal("gae_project_id", uploadedEntries[0].LogNameAsLogName.ProjectId);
+        }
+
+        private class BadObject
+        {
+            public System.Collections.Generic.List<object> BadList { get; } = new System.Collections.Generic.List<object>();
+
+            public System.Reflection.Assembly Assembly => typeof(BadObject).Assembly;
+
+            public BadObject()
+            {
+                BadList.Add(this);
+            }
+
+            public override string ToString()
+            {
+                return nameof(BadObject);
+            }
         }
     }
 }
