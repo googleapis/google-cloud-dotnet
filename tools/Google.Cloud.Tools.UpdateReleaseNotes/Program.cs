@@ -84,7 +84,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
             Func<string, bool> pathFilter = path => path.Replace('\\', '/').StartsWith(pathPrefix) && path != projectFile;
 
             List<Release> releases = new List<Release>();
-            StructuredVersion currentVersion = new StructuredVersion(api.Version);
+            StructuredVersion currentVersion = StructuredVersion.FromString(api.Version);
             Commit currentTagCommit = null;
             
             // "Pending" as in "haven't been yielded in a release yet"
@@ -107,7 +107,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                     // Release constructor clones the list, so we're safe to clear it.
                     pendingCommits.Clear();
                     currentTagCommit = commit;
-                    currentVersion = new StructuredVersion(version);
+                    currentVersion = StructuredVersion.FromString(version);
                 }
             }
 

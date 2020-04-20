@@ -55,7 +55,7 @@ namespace Google.Cloud.Tools.UpdateReleaseNotes
                 {
                     sections.Add(new Section(currentVersion, currentSectionLines));
                     currentSectionLines = new List<string>();
-                    currentVersion = new StructuredVersion(match.Groups[1].Value);
+                    currentVersion = StructuredVersion.FromString(match.Groups[1].Value);
                 }
                 currentSectionLines.Add(line);
             }

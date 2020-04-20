@@ -61,7 +61,7 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
                     .Where(tag => tag.StartsWith(prefix))
                     .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
                     .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
-                    .Select(v => new StructuredVersion(v))
+                    .Select(StructuredVersion.FromString)
                     .OrderBy(v => v)
                     .ToList();
                
@@ -106,7 +106,7 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
             if (newVersion.Patch != 0)
             {
                 // A patch version must be identical to major.minor.0.
-                var oldVersion = new StructuredVersion(newVersion.Major, newVersion.Minor, 0, null);
+                var oldVersion = StructuredVersion.FromMajorMinorPatch(newVersion.Major, newVersion.Minor, 0, null);
                 return (oldVersion, Level.Identical);
             }
             else if (newVersion.Minor == 0)
@@ -117,7 +117,7 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
             else
             {
                 // A new minor version must be compatible with the previous minor version
-                var oldVersion = new StructuredVersion(newVersion.Major, newVersion.Minor - 1, 0, null);
+                var oldVersion = StructuredVersion.FromMajorMinorPatch(newVersion.Major, newVersion.Minor - 1, 0, null);
                 return (oldVersion, Level.Minor);
             }
         }
