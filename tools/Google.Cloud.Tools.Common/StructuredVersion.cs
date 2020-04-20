@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.Common
@@ -22,32 +23,42 @@ namespace Google.Cloud.Tools.Common
     /// </summary>
     public class StructuredVersion : IEquatable<StructuredVersion>, IComparable<StructuredVersion>
     {
-        private static readonly Regex s_matcher = new Regex(@"^([1-9]\d*)\.(\d+)\.(\d+)(-.*)?$");
-        
+        private static readonly Regex s_pattern = new Regex(@"^(?<major>[1-9]\d*)\.(?<minor>\d+)\.(?<patch>\d+)(\.(?<build>\d+))?(-(?<prerelease>.*))?$");
+
         public int Major { get; }
         public int Minor { get; }
         public int Patch { get; }
+        public int? Build { get; }
         public string Prerelease { get; }
 
-        public StructuredVersion(int major, int minor, int patch, string prerelease)
+        private StructuredVersion(int major, int minor, int patch, int? build, string prerelease)
         {
             Major = major;
             Minor = minor;
             Patch = patch;
+            Build = build;
             Prerelease = prerelease;
-        }        
+        }
 
-        public StructuredVersion(string version)
+        public static StructuredVersion FromMajorMinorPatch(int major, int minor, int patch, string prerelease) =>
+            new StructuredVersion(major, minor, patch, null, prerelease);
+
+        public static StructuredVersion FromMajorMinorPatchBuild(int major, int minor, int patch, int? build, string prerelease) =>
+            new StructuredVersion(major, minor, patch, build, prerelease);
+
+        public static StructuredVersion FromString(string version)
         {
-            var match = s_matcher.Match(version);
+            var match = s_pattern.Match(version);
             if (!match.Success)
             {
                 throw new ArgumentException($"Invalid version: {version}");
             }
-            Major = int.Parse(match.Groups[1].Value);
-            Minor = int.Parse(match.Groups[2].Value);
-            Patch = int.Parse(match.Groups[3].Value);
-            Prerelease = match.Groups[4].Success ? match.Groups[4].Value.Substring(1) : null;
+            var major = int.Parse(match.Groups["major"].Value);
+            var minor = int.Parse(match.Groups["minor"].Value);
+            var patch = int.Parse(match.Groups["patch"].Value);
+            var build = match.Groups["build"].Success ? int.Parse(match.Groups["build"].Value) : default(int?);
+            var prerelease = match.Groups["prerelease"].Success ? match.Groups["prerelease"].Value : null;
+            return new StructuredVersion(major, minor, patch, build, prerelease);
         }
 
         public int CompareTo(StructuredVersion other)
@@ -66,6 +77,18 @@ namespace Google.Cloud.Tools.Common
             if (patchDiff != 0)
             {
                 return patchDiff;
+            }
+            if (Build != other.Build)
+            {
+                if (Build is null)
+                {
+                    return -1;
+                }
+                if (other.Build is null)
+                {
+                    return -1;
+                }
+                return Build.Value.CompareTo(other.Build.Value);
             }
             // Null comes *after* anything else when it comes to prereleases,
             // so we can't just use StringComparer.
@@ -94,11 +117,11 @@ namespace Google.Cloud.Tools.Common
         // Not a brilliant hash code, but we're not expecting performance to
         // be an issue in our tools.
         public override int GetHashCode() =>
-            Major ^ Minor ^ Patch ^ (Prerelease ?? "").GetHashCode();
+            Major ^ Minor ^ Patch ^ (Build ?? 0) ^ (Prerelease ?? "").GetHashCode();
 
-        public override string ToString() =>
-            Prerelease is null
-            ? $"{Major}.{Minor}.{Patch}"
-            : $"{Major}.{Minor}.{Patch}-{Prerelease}";
+        public override string ToString() => new StringBuilder($"{Major}.{Minor}.{Patch}")
+            .Append(Build is null ? "" : $".{Build}")
+            .Append(Prerelease is null ? "" : $"-{Prerelease}")
+            .ToString();
     }
 }

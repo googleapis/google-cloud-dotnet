@@ -77,7 +77,7 @@ namespace Google.Cloud.Tools.Common
 
         public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
 
-        public StructuredVersion StructuredVersion => new StructuredVersion(Version);
+        public StructuredVersion StructuredVersion => StructuredVersion.FromString(Version);
 
         /// <summary>
         /// The release level to record in .repo-metadata.json, if this differs from the one

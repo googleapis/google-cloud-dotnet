@@ -809,12 +809,28 @@ shell.run(
             }
             var element = new XElement("PackageReference",
                 new XAttribute("Include", package),
-                new XAttribute("Version", version));
+                new XAttribute("Version", GetDependencyVersionRange(package, version)));
             if (privateAssetValue != null)
             {
                 element.Add(new XAttribute("PrivateAssets", privateAssetValue));
             }
             return element;
+        }
+
+        /// <summary>
+        /// Returns the appropriate version to include in a package dependency.
+        /// For Google.* and Grpc.*, this is major-version pinned. For other packages, we just leave it as the version
+        /// specified in the string - as some packages are fine to upgrade beyond major version boundaries.
+        /// </summary>
+        private static string GetDependencyVersionRange(string package, string specifiedVersion)
+        {
+            if (!(package.StartsWith("Google.") || package.StartsWith("Grpc.")))
+            {
+                return specifiedVersion;
+            }
+            var structuredVersion = StructuredVersion.FromString(specifiedVersion);
+            var nextMajor = StructuredVersion.FromMajorMinorPatchBuild(structuredVersion.Major + 1, 0, 0, structuredVersion.Build is null ? default(int?): 0, null);
+            return $"[{structuredVersion}, {nextMajor})";
         }
 
         /// <summary>

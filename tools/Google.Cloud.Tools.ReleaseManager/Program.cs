@@ -151,7 +151,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 // Any GA version just increments the minor version.
                 if (originalVersion.Prerelease is null)
                 {
-                    return new StructuredVersion(originalVersion.Major, originalVersion.Minor + 1, 0, null);
+                    return StructuredVersion.FromMajorMinorPatch(originalVersion.Major, originalVersion.Minor + 1, 0, null);
                 }
 
                 // For prereleases, expect something like "beta01" which should be incremented to "beta02".
@@ -169,7 +169,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
                 counter++;
                 var newSuffix = counter.ToString().PadLeft(suffix.Length, '0');
-                return new StructuredVersion(originalVersion.Major, originalVersion.Minor, originalVersion.Patch, $"{prefix}{newSuffix}");
+                return StructuredVersion.FromMajorMinorPatch(originalVersion.Major, originalVersion.Minor, originalVersion.Patch, $"{prefix}{newSuffix}");
             }
         }
 
