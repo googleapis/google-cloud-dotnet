@@ -46,7 +46,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.0.0) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](https://googleapis.dev/dotnet/Google.Cloud.Language.V1/2.0.0) | 2.0.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.Logging.Log4Net](https://googleapis.dev/dotnet/Google.Cloud.Logging.Log4Net/3.1.0) | 3.1.0 | Log4Net client library for the Google Cloud Logging API |
-| [Google.Cloud.Logging.NLog](https://googleapis.dev/dotnet/Google.Cloud.Logging.NLog/3.0.0) | 3.0.0 | NLog target for the Google Cloud Logging API |
+| [Google.Cloud.Logging.NLog](https://googleapis.dev/dotnet/Google.Cloud.Logging.NLog/3.0.1) | 3.0.1 | NLog target for the Google Cloud Logging API |
 | [Google.Cloud.Logging.Type](https://googleapis.dev/dotnet/Google.Cloud.Logging.Type/3.0.0) | 3.0.0 | Version-agnostic types for the Google Cloud Logging API |
 | [Google.Cloud.Logging.V2](https://googleapis.dev/dotnet/Google.Cloud.Logging.V2/3.0.0) | 3.0.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/2.0.0) | 2.0.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |

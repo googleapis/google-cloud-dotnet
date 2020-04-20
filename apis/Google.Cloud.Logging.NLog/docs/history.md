@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.0.1, released 2020-04-20
+
+- [Commit ced67e4](https://github.com/googleapis/google-cloud-dotnet/commit/ced67e4): Fix: Improve handling of System.Reflection objects that will dump all types in the application-assembly.
+
 # Version 3.0.0, released 2020-03-18
 
 No API surface changes compared with 3.0.0-beta02, just dependency
