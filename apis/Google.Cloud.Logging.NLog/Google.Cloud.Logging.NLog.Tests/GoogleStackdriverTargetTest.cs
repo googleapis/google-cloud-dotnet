@@ -28,6 +28,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
@@ -349,24 +350,52 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal("Ocean", properties.Fields["PlanetType"].StringValue);
         }
 
-        [Fact]
-        public async Task SingleLogEntryWithBadJsonProperty()
+        private async Task<Struct> LogSingleEntryWithProblemType<T>() where T : ProblemTypeBase, new()
         {
             var uploadedEntries = await RunTestWorkingServer(
                 googleTarget =>
                 {
-                    LogManager.GetLogger("testlogger").Info("Hello {BadBoy}", new BadObject());
+                    LogManager.GetLogger("testlogger").Info("Hello {ProblemType}", new T());
                     return Task.FromResult(0);
                 }, includeEventProperties: true, configFn: googleTarget => googleTarget.SendJsonPayload = true);
             Assert.Single(uploadedEntries);
             var entry0 = uploadedEntries[0];
             Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
-            Assert.Equal("Hello BadObject", entry0.JsonPayload.Fields["message"].StringValue);
+            Assert.Equal($"Hello {typeof(T).Name}", entry0.JsonPayload.Fields["message"].StringValue);
 
             var properties = entry0.JsonPayload.Fields["properties"].StructValue;
-
             Assert.Equal(1, properties.Fields.Count);
-            Assert.StartsWith("Google.Cloud.Logging.NLog.Tests", properties.Fields["BadBoy"].StructValue.Fields["Assembly"].StringValue);
+            Assert.Equal("ProblemType", properties.Fields.First().Key);
+            var serializedProperties = properties.Fields["ProblemType"].StructValue;
+            Assert.Equal(ProblemTypeBase.RegularPropertyValue, serializedProperties.Fields[nameof(ProblemTypeBase.RegularProperty)].StringValue);
+            return serializedProperties;
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithAssemblyProperty()
+        {
+            var properties = await LogSingleEntryWithProblemType<TypeContainingAssemblyProperty>();
+            Assert.Equal(2, properties.Fields.Count);
+            Assert.Equal(GetType().Assembly.ToString(), properties.Fields[nameof(TypeContainingAssemblyProperty.Assembly)].StringValue);
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithExceptionThrowingProperty()
+        {
+            var properties = await LogSingleEntryWithProblemType<TypeContainingPropertyThatThrows>();
+            // The throwing property is omitted, leaving just the "control" property.
+            Assert.Equal(1, properties.Fields.Count);
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithRecursiveProperty()
+        {
+            var properties = await LogSingleEntryWithProblemType<TypeContainingSelfInList>();
+            // The list property exists, but omits the recursive value.
+            Assert.Equal(2, properties.Fields.Count);
+            var expectedValue = Value.ForList(Value.ForString(TypeContainingSelfInList.ValidValueInList));
+            var actualValue = properties.Fields[nameof(TypeContainingSelfInList.BadList)];
+            Assert.Equal(expectedValue, actualValue);
         }
 
         [Fact]
@@ -611,21 +640,43 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal("gae_project_id", uploadedEntries[0].LogNameAsLogName.ProjectId);
         }
 
-        private class BadObject
+        private class ProblemTypeBase
         {
-            public System.Collections.Generic.List<object> BadList { get; } = new System.Collections.Generic.List<object>();
+            internal const string RegularPropertyValue = "Regular property value";
+            // Control property to make sure even if other properties fail, we don't get an empty log entry.
+            public string RegularProperty => RegularPropertyValue;
+            public override string ToString() => GetType().Name;
+        }
 
-            public System.Reflection.Assembly Assembly => typeof(BadObject).Assembly;
+        /// <summary>
+        /// Type serialized in <see cref="SingleLogEntryWithAssemblyJsonProperty"/>, to validate
+        /// that the JSON just contains the assembly name.
+        /// </summary>
+        private class TypeContainingAssemblyProperty : ProblemTypeBase
+        {
+            public Assembly Assembly => typeof(TypeContainingAssemblyProperty).Assembly;
+        }
 
-            public BadObject()
-            {
-                BadList.Add(this);
-            }
+        /// <summary>
+        /// Type serialized in <see cref="SingleLogEntryWithExceptionThrowingProperty"/>, to validate
+        /// that we cope with a property that throws an exception.
+        /// </summary>
+        private class TypeContainingPropertyThatThrows : ProblemTypeBase
+        {
+            public object ExceptionalObject => throw new NotSupportedException();
+        }
 
-            public override string ToString()
-            {
-                return nameof(BadObject);
-            }
+        /// <summary>
+        /// Type serialized in <see cref="SingleLogEntryWithRecursiveProperty"/>, to validate
+        /// that we cope with a property returning a list containing the original value. (Without
+        /// explicit handling, this would recurse forever.)
+        /// </summary>
+        private class TypeContainingSelfInList : ProblemTypeBase
+        {
+            internal const string ValidValueInList = "Valid";
+            public List<object> BadList { get; } = new List<object> { ValidValueInList };
+            public TypeContainingSelfInList() => BadList.Add(this);
+            public override string ToString() => GetType().Name;
         }
     }
 }

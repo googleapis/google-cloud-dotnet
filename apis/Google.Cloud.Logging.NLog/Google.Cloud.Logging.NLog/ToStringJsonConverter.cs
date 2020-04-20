@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google LLC
+﻿// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,22 +17,25 @@ using Newtonsoft.Json;
 
 namespace Google.Cloud.Logging.NLog
 {
+    /// <summary>
+    /// JSON converter that just calls ToString on the target value (when non-null).
+    /// This is configured as the converter for types that will otherwise spew a lot of irrelevant JSON
+    /// into logs.
+    /// </summary>
     internal sealed class ToStringJsonConverter : JsonConverter
     {
         private readonly System.Type _type;
 
         /// <inheritdoc />
-        public override bool CanRead { get; } = false;
+        public override bool CanRead => false;
 
-        public ToStringJsonConverter(System.Type type)
-        {
+        public ToStringJsonConverter(System.Type type) =>
             _type = type;
-        }
 
         /// <inheritdoc />
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            if (value == null)
+            if (value is null)
             {
                 writer.WriteNull();
             }
@@ -43,15 +46,11 @@ namespace Google.Cloud.Logging.NLog
         }
 
         /// <inheritdoc />
-        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer)
-        {
+        public override object ReadJson(JsonReader reader, System.Type objectType, object existingValue, JsonSerializer serializer) =>
             throw new NotSupportedException("Only serialization is supported");
-        }
 
         /// <inheritdoc />
-        public override bool CanConvert(System.Type objectType)
-        {
-            return _type.IsAssignableFrom(objectType);
-        }
+        public override bool CanConvert(System.Type objectType) =>
+            _type.IsAssignableFrom(objectType);
     }
 }
