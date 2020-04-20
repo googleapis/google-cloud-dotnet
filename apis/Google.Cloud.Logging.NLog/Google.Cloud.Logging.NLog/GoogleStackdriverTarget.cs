@@ -136,9 +136,12 @@ namespace Google.Cloud.Logging.NLog
                 ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             };
             jsonSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+            // The default serialization of these reflection types really isn't useful, so
+            // just call ToString on them instead.
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(MethodInfo)));
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(Assembly)));
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(Module)));
+
             jsonSettings.Error = (sender, args) =>
             {
                 // Serialization of properties that throws exceptions should not break everything
