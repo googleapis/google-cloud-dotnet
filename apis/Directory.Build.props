@@ -1,0 +1,37 @@
+<Project>
+  <!--
+    - Common properties for all API projects. Some are unnecessary,
+    - e.g. because they're for packages and the project is a test
+    - project. But they do no harm, and it keeps the project files
+    - simpler.
+    -
+    - The properties here are in a .props file instead of a .targets
+    - file so they can be overridden if necessary. See
+    - https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build
+    - for more details, although it's unlikely to matter.
+    -->
+  <PropertyGroup>
+    <!-- Make the repository root available for other properties -->
+    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
+
+    <!-- Build properties -->
+    <AssemblyOriginatorKeyFile>$(RepoRoot)/apis/GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>True</SignAssembly>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>True</Deterministic>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    
+    <!-- Package properties -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+    <Authors>Google LLC</Authors>
+    <PackageIcon>NuGetIcon.png</PackageIcon>
+    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/googleapis/google-cloud-dotnet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
+  </PropertyGroup>
+</Project>
