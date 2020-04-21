@@ -16,8 +16,10 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
@@ -33,12 +35,14 @@ namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
     {
         private static readonly Regex NonAsciiLetters = new Regex($"[^a-zA-Z]");
 
-        static void Main()
+        static async Task Main()
         {
-            var client = new WebClient();
-            client.Encoding = Encoding.UTF8;
+            var client = new HttpClient();
 
-            var html = client.DownloadString("https://cloud.google.com/speech/docs/languages");
+            var response = await client.GetAsync("https://cloud.google.com/speech/docs/languages");
+            response.EnsureSuccessStatusCode();
+            var html = await response.Content.ReadAsStringAsync();
+
             // Yes, we're assuming a single table element. It'll be very obvious if this assumption
             // is violated, at which point we can become smarter.
             int tableStart = html.IndexOf("<table>");
