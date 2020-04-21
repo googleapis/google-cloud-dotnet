@@ -226,6 +226,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(new List<object> { 1L, 2L }, deserialized);
         }
 
+#pragma warning disable DE0006 // ArrayList deprecation
         [Fact]
         public void DeserializeArrayToArrayListUsesArrayList()
         {
@@ -234,6 +235,7 @@ namespace Google.Cloud.Firestore.Tests
             Assert.IsType<ArrayList>(deserialized);
             Assert.Equal(new ArrayList { 1L, 2L }, deserialized);
         }
+#pragma warning restore DE0006
 
         [Fact]
         public void DeserializeArrayToGenericIEnumerableUsesList()

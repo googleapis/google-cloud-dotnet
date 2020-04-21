@@ -4,6 +4,8 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>False</IsPackable>
+    <!-- HdrHistogram isn't signed, so this project can't be signed either. -->
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
