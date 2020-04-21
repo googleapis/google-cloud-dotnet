@@ -12,15 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
 {
@@ -39,18 +38,13 @@ namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
         {
             var client = new HttpClient();
 
-            var response = await client.GetAsync("https://cloud.google.com/speech/docs/languages");
+            var response = await client.GetAsync("https://cloud.google.com/speech-to-text/docs/common/languages.json");
             response.EnsureSuccessStatusCode();
-            var html = await response.Content.ReadAsStringAsync();
+            var json = await response.Content.ReadAsStringAsync();
 
-            // Yes, we're assuming a single table element. It'll be very obvious if this assumption
-            // is violated, at which point we can become smarter.
-            int tableStart = html.IndexOf("<table>");
-            int tableEnd = html.IndexOf("</table>");
-            string table = html.Substring(tableStart, tableEnd - tableStart + "</table>".Length);
-
-            var doc = XDocument.Parse(table);
-            var entries = doc.Root.Element("tbody").Elements("tr").Select(LanguageEntry.FromXElement).ToList();
+            JArray array = JArray.Parse(json);
+            // We see multiple entries per language, but only based on things we don't care about.
+            var entries = array.Skip(1).Cast<JArray>().Select(LanguageEntry.FromJArray).Distinct().ToList();
 
             var languages = entries.GroupBy(code => code.Language).OrderBy(g => g.Key);
 
@@ -83,7 +77,7 @@ namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
             return NonAsciiLetters.Replace(normalized, "");
         }
 
-        private class LanguageEntry
+        private class LanguageEntry : IEquatable<LanguageEntry>
         {
             private static readonly Regex LanguageRegionPattern = new Regex(@"(.+) \((.+)\)");
 
@@ -98,17 +92,27 @@ namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
                 Region = region;
             }
 
-            public static LanguageEntry FromXElement(XElement element)
+            // The JSON returns entries as an array of strings. Only the first two are relevant to us though:
+            // - Name (language and region)
+            // - BCP-47 code
+            public static LanguageEntry FromJArray(JArray array)
             {
-                string code = element.Elements().ElementAt(1).Value;
-                string languageRegion = element.Elements().ElementAt(2).Value;
-                var match = LanguageRegionPattern.Match(languageRegion);
+                string name = (string) array[0];
+                string code = (string) array[1];
+                var match = LanguageRegionPattern.Match(name);
                 if (!match.Success)
                 {
-                    throw new Exception($"Language/region '{languageRegion}' invalid");
+                    throw new Exception($"Language/region '{name}' invalid");
                 }
                 return new LanguageEntry(code, match.Groups[1].Value, match.Groups[2].Value);
             }
+
+            public override bool Equals(object obj) => Equals(obj as LanguageEntry);
+
+            public override int GetHashCode() => (Code, Language, Region).GetHashCode();
+
+            public bool Equals(LanguageEntry other) =>
+                (Code, Language, Region) == (other.Code, other.Language, other.Region);
         }
     }
 }
