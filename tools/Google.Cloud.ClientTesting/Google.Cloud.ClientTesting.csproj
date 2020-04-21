@@ -3,9 +3,11 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
-    <AssemblyOriginatorKeyFile>../GoogleApiTools.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+
+    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
+    <AssemblyOriginatorKeyFile>$(RepoRoot)/apis/GoogleApis.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>True</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
