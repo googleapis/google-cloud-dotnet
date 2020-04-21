@@ -499,39 +499,17 @@ shell.run(
                 // Build-related properties
                 new XElement("Version", api.Version), // TODO: Version, or VersionPrefix/VersionSuffix?
                 new XElement("TargetFrameworks", targetFrameworks),
-                new XElement("LangVersion", "latest"),
                 new XElement("GenerateDocumentationFile", api.Type != ApiType.Analyzers),
-                new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
-                new XElement("SignAssembly", true),
-                new XElement("Deterministic", true),
-                new XElement("TreatWarningsAsErrors", true),
                 // Package-related properties
                 new XElement("Description", api.Description),
                 new XElement("PackageTags", string.Join(";", api.Tags.Concat(new[] { "Google", "Cloud" }))),
-                new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC"),
-                new XElement("Authors", "Google LLC"),
-                new XElement("PackageIcon", "NuGetIcon.png"),
-                new XElement("PackageIconUrl", "https://cloud.google.com/images/gcp-icon-64x64.png"),
-                new XElement("PackageLicenseFile", "LICENSE"),
-                new XElement("PackageProjectUrl", "https://github.com/googleapis/google-cloud-dotnet"),
-                new XElement("RepositoryType", "git"),
-                new XElement("RepositoryUrl", "https://github.com/googleapis/google-cloud-dotnet")
+                new XElement("Copyright", $"Copyright {DateTime.UtcNow.Year} Google LLC")
             );
             if (dependencies.ContainsKey(GrpcPackage))
             {
                 propertyGroup.Add(new XElement("CodeAnalysisRuleSet", "..\\..\\..\\grpc.ruleset"));
             }
             var dependenciesElement = CreateDependenciesElement(api.Id, dependencies, api.IsReleaseVersion, testProject: false, apiNames: apiNames);
-            // Pack the license file; this element isn't a dependency, but it still belongs in an ItemGroup...
-            dependenciesElement.Add(new XElement("None",
-                new XAttribute("Include", "../../../LICENSE"),
-                new XAttribute("Pack", true),
-                new XAttribute("PackagePath", ""))); // Note: not $(PackageLicenseFile) as suggested in docs, due to us using a file with no extension
-            // Pack the icon file; this element isn't a dependency, but it still belongs in an ItemGroup...
-            dependenciesElement.Add(new XElement("None",
-                new XAttribute("Include", "../../../NuGetIcon.png"),
-                new XAttribute("Pack", true),
-                new XAttribute("PackagePath", "")));
 
             if (api.Type == ApiType.Analyzers)
             {
@@ -582,7 +560,6 @@ shell.run(
                 new XElement("PropertyGroup",
                     new XElement("TargetFramework", "netcoreapp2.1"),
                     new XElement("OutputType", "Exe"),
-                    new XElement("LangVersion", "latest"),
                     new XElement("IsPackable", false));
             var dependenciesElement =
                 new XElement("ItemGroup",
@@ -603,7 +580,6 @@ shell.run(
                 new XElement("PropertyGroup",
                     new XElement("TargetFramework", "netcoreapp2.1"),
                     new XElement("OutputType", "Exe"),
-                    new XElement("LangVersion", "latest"),
                     new XElement("IsPackable", false),
                     new XElement("StartupObject", api.Id + ".Samples.Program"));
 
@@ -639,11 +615,7 @@ shell.run(
                 new XElement("PropertyGroup",
                     new XElement("TargetFrameworks", testTargetFrameworks),
                     new XElement("TestTargetFrameworks", new XAttribute("Condition", " '$(OS)' != 'Windows_NT' "), AnyDesktopFramework.Replace(testTargetFrameworks, "")),
-                    new XElement("LangVersion", "latest"),
                     new XElement("IsPackable", false),
-                    new XElement("AssemblyOriginatorKeyFile", "../../GoogleApis.snk"),
-                    new XElement("SignAssembly", true),
-                    new XElement("TreatWarningsAsErrors", true),
                     // 1701, 1702 and 1705 are disabled by default.
                     // xUnit2004 prevents Assert.Equal(true, value) etc, preferring Assert.True and Assert.False, but
                     //   Assert.Equal is clearer (IMO) for comparing values rather than conditions.

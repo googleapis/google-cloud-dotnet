@@ -1,4 +1,5 @@
 <Project>
+
   <!-- 
     - When we want to specialize which target frameworks are
     - used to run (rather than build) tests, we specify
@@ -11,25 +12,20 @@
     </PropertyGroup>
   </Target>
 
-  <!-- Enable SourceLink on all packages in this repo.
-    -  (Not really needed for test packages, tools etc, but
-    -  specifying it here keeps the individual project files simpler.)
-    -->
-  <PropertyGroup>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-  </PropertyGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
-  </ItemGroup>
-  
   <!-- See https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
     <TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)"/>
+  </ItemGroup>
+  
+  <!-- Common references and items that are fine to include in all API projects -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.DotNet.Analyzers.Compatibility" Version="0.2.12-alpha" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+    <None Include="$(RepoRoot)/LICENSE" Pack="true" PackagePath="" />
+    <None Include="$(RepoRoot)/NuGetIcon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
