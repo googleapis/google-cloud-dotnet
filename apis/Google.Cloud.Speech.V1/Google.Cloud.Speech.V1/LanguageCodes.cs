@@ -29,13 +29,26 @@ namespace Google.Cloud.Speech.V1
         // (to just before the closing brace of this class) with the generated text in
         // language-codes.tmp.txt.
 
-        // Generated 2019-08-29; 120 entries.
+        // Note: as of April 2020, the situation around Chinese entries is complex, particularly around Hong
+        // Kong, which has multiple language codes for TraditionalHongKong, and SimplifiedHongKong being
+        // removed from the source table. The file has been manually adjusted to avoid breaking changes;
+        // if customers ask about this we can look at exactly what's required.
+
+        // Generated 2020-04-21; 128 entries.
 
         /// <summary>Language codes for Afrikaans.</summary>
         public static class Afrikaans
         {
             /// <summary>Language code for Afrikaans (South Africa)</summary>
             public const string SouthAfrica = "af-ZA";
+
+        }
+
+        /// <summary>Language codes for Albanian.</summary>
+        public static class Albanian
+        {
+            /// <summary>Language code for Albanian (Albania)</summary>
+            public const string Albania = "sq-AL";
 
         }
 
@@ -140,6 +153,14 @@ namespace Google.Cloud.Speech.V1
 
         }
 
+        /// <summary>Language codes for Burmese.</summary>
+        public static class Burmese
+        {
+            /// <summary>Language code for Burmese (Myanmar)</summary>
+            public const string Myanmar = "my-MM";
+
+        }
+
         /// <summary>Language codes for Catalan.</summary>
         public static class Catalan
         {
@@ -197,6 +218,9 @@ namespace Google.Cloud.Speech.V1
         /// <summary>Language codes for Dutch.</summary>
         public static class Dutch
         {
+            /// <summary>Language code for Dutch (Belgium)</summary>
+            public const string Belgium = "nl-BE";
+
             /// <summary>Language code for Dutch (Netherlands)</summary>
             public const string Netherlands = "nl-NL";
 
@@ -246,6 +270,14 @@ namespace Google.Cloud.Speech.V1
 
             /// <summary>Language code for English (United States)</summary>
             public const string UnitedStates = "en-US";
+
+        }
+
+        /// <summary>Language codes for Estonian.</summary>
+        public static class Estonian
+        {
+            /// <summary>Language code for Estonian (Estonia)</summary>
+            public const string Estonia = "et-EE";
 
         }
 
@@ -428,6 +460,14 @@ namespace Google.Cloud.Speech.V1
 
         }
 
+        /// <summary>Language codes for Macedonian.</summary>
+        public static class Macedonian
+        {
+            /// <summary>Language code for Macedonian (North Macedonia)</summary>
+            public const string NorthMacedonia = "mk-MK";
+
+        }
+
         /// <summary>Language codes for Malay.</summary>
         public static class Malay
         {
@@ -449,6 +489,14 @@ namespace Google.Cloud.Speech.V1
         {
             /// <summary>Language code for Marathi (India)</summary>
             public const string India = "mr-IN";
+
+        }
+
+        /// <summary>Language codes for Mongolian.</summary>
+        public static class Mongolian
+        {
+            /// <summary>Language code for Mongolian (Mongolia)</summary>
+            public const string Mongolia = "mn-MN";
 
         }
 
@@ -492,6 +540,14 @@ namespace Google.Cloud.Speech.V1
 
             /// <summary>Language code for Portuguese (Portugal)</summary>
             public const string Portugal = "pt-PT";
+
+        }
+
+        /// <summary>Language codes for Punjabi.</summary>
+        public static class Punjabi
+        {
+            /// <summary>Language code for Punjabi (Gurmukhi, India)</summary>
+            public const string GurmukhiIndia = "pa-guru-IN";
 
         }
 
@@ -692,6 +748,14 @@ namespace Google.Cloud.Speech.V1
 
             /// <summary>Language code for Urdu (Pakistan)</summary>
             public const string Pakistan = "ur-PK";
+
+        }
+
+        /// <summary>Language codes for Uzbek.</summary>
+        public static class Uzbek
+        {
+            /// <summary>Language code for Uzbek (Uzbekistan)</summary>
+            public const string Uzbekistan = "uz-UZ";
 
         }
 
