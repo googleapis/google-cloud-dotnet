@@ -225,17 +225,16 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(BigQueryNumeric.Zero, value);
         }
 
-#if !NETCOREAPP1_0
         [Theory]
         [InlineData("1234,567", "es-ES")]
         [InlineData("1.234,567", "es-ES")]
         [InlineData("1234,567", "fr-FR")]
         public void TryParse_UnsupportedCultures(string text, string culture)
         {
-            CultureInfo oldCulture = Thread.CurrentThread.CurrentCulture;
+            CultureInfo oldCulture = CultureInfo.CurrentCulture;
             try
             {
-                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture);
+                CultureInfo.CurrentCulture = CultureInfo.CreateSpecificCulture(culture);
 
                 // Just to demonstrate that these numbers are properly parsed with the given culture.
                 // We don't parse them because we don't support the culture.
@@ -246,10 +245,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             }
             finally
             {
-                Thread.CurrentThread.CurrentCulture = oldCulture;
+                CultureInfo.CurrentCulture = oldCulture;
             }
         }
-#endif
 
         [Fact]
         public void ZeroIsDefaultValue()
