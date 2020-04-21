@@ -3,29 +3,15 @@
   <PropertyGroup>
     <Version>2.0.0</Version>
     <TargetFrameworks>netstandard1.3</TargetFrameworks>
-    <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
-    <AssemblyOriginatorKeyFile>../../GoogleApis.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <Deterministic>true</Deterministic>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Description>Guidelines for using Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.</Description>
     <PackageTags>CodeAnalysis;Analyzers;CSharp;Google;Cloud</PackageTags>
     <Copyright>Copyright 2020 Google LLC</Copyright>
-    <Authors>Google LLC</Authors>
-    <PackageIcon>NuGetIcon.png</PackageIcon>
-    <PackageIconUrl>https://cloud.google.com/images/gcp-icon-64x64.png</PackageIconUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/googleapis/google-cloud-dotnet</PackageProjectUrl>
-    <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/googleapis/google-cloud-dotnet</RepositoryUrl>
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.4.0" PrivateAssets="All" />
     <Analyzer Condition="Exists('..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll')" Include="..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll" />
-    <None Include="../../../LICENSE" Pack="true" PackagePath="" />
-    <None Include="../../../NuGetIcon.png" Pack="true" PackagePath="" />
     <None Include="$(OutputPath)\netstandard1.3\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     <None Include="..\..\..\analyzerScripts\install.ps1" Pack="true" PackagePath="tools" Visible="false" />
     <None Include="..\..\..\analyzerScripts\uninstall.ps1" Pack="true" PackagePath="tools" Visible="false" />
