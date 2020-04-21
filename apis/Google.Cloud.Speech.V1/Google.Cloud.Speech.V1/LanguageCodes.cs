@@ -17,7 +17,8 @@ namespace Google.Cloud.Speech.V1
     /// <summary>
     /// A helper class forming a hierarchy of supported language codes, via nested classes.
     /// All language codes are eventually represented as string constants. This is simply
-    /// a code-convenient form of the table at https://cloud.google.com/speech/docs/languages.
+    /// a code-convenient form of the table displayed at https://cloud.google.com/speech/docs/languages,
+    /// although the data is no longer directly in the HTML.
     /// It is regenerated regularly, but not guaranteed to be complete at any moment in time;
     /// if the language you wish to use is present in the table but not covered here, please use
     /// the listed language code as a hard-coded string until this class catches up.

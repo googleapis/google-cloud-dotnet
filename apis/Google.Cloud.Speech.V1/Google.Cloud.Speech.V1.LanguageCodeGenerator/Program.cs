@@ -24,8 +24,9 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
 {
     /// <summary>
-    /// Somewhat "quick and dirty" program to parse the table on
-    /// https://cloud.google.com/speech/docs/languages and generate
+    /// Somewhat "quick and dirty" program to parse the table displayed on
+    /// https://cloud.google.com/speech/docs/languages (although data is actually
+    /// populated from https://cloud.google.com/speech-to-text/docs/common/languages.json) and generate
     /// the body of LanguageCodes.cs in the main client library.
     /// Only the nested classes are generated - it's expected that they'll
     /// periodically be edited in.
