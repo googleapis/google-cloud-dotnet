@@ -92,7 +92,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
         {
             { CompatibilityAnalyzer, "0.2.12-alpha" },
             { ConfigureAwaitAnalyzer, "1.0.1" },
-            { SourceLinkPackage, "2.8.3" },
             { ReferenceAssembliesPackage, ReferenceAssembliesVersion }
         };
 
@@ -105,7 +104,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private const string CompatibilityAnalyzer = "Microsoft.DotNet.Analyzers.Compatibility";
         private const string ConfigureAwaitAnalyzer = "ConfigureAwaitChecker.Analyzer";
-        private const string SourceLinkPackage = "SourceLink.Create.CommandLine";
         private const string CSharpWorkspacesPackage = "Microsoft.CodeAnalysis.CSharp.Workspaces";
         private const string ReferenceAssembliesPackage = "Microsoft.NETFramework.ReferenceAssemblies";
         private const string ReferenceAssembliesVersion = "1.0.0";
@@ -118,7 +116,6 @@ namespace Google.Cloud.Tools.ProjectGenerator
             { GrpcPackage, "None" },
             { CompatibilityAnalyzer, "All" },
             { ConfigureAwaitAnalyzer, "All" },
-            { SourceLinkPackage, "All" },
             { CSharpWorkspacesPackage, "All" },
             { ReferenceAssembliesPackage, "All" }
         };
