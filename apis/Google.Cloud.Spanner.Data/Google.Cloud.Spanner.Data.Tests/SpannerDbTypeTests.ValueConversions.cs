@@ -106,15 +106,15 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         private static void WithCulture(CultureInfo culture, Action action)
         {
-            var originalCulture = Thread.CurrentThread.CurrentCulture;
+            var originalCulture = CultureInfo.CurrentCulture;
             try
             {
-                Thread.CurrentThread.CurrentCulture = culture;
+                CultureInfo.CurrentCulture = culture;
                 action();
             }
             finally
             {
-                Thread.CurrentThread.CurrentCulture = originalCulture;
+                CultureInfo.CurrentCulture = originalCulture;
             }
         }
 
@@ -289,11 +289,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 GetStringsForArray(), SpannerDbType.ArrayOf(SpannerDbType.String),
                 "[ \"abc\", \"123\", \"def\" ]", TestType.ClrToValue
             };
+#pragma warning disable DE0006 // ArrayList deprecation
             yield return new object[]
             {
                 new ArrayList(GetStringsForArray().ToList()), SpannerDbType.ArrayOf(SpannerDbType.String),
                 "[ \"abc\", \"123\", \"def\" ]"
             };
+#pragma warning restore DE0006
             yield return new object[]
             {
                 new List<object>(GetStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
@@ -606,10 +608,12 @@ namespace Google.Cloud.Spanner.Data.Tests
 
         private class CustomList : IList
         {
+#pragma warning disable DE0006 // ArrayList deprecation
             private readonly IList _listImplementation = new ArrayList();
 
             public CustomList(IEnumerable contents) => _listImplementation =
                 new ArrayList(contents.Cast<object>().ToList());
+#pragma warning restore DE0006
 
             // Used by ValueConversion via reflection upon deserialization.
             public CustomList() { }
