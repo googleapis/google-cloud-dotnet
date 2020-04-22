@@ -14,7 +14,7 @@
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
-    internal sealed class ApiVersionPair
+    public sealed class ApiVersionPair
     {
         /// <summary>
         /// The API ID, e.g. "Google.Cloud.Storage.V1"
