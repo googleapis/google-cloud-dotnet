@@ -41,7 +41,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.0.0) | 2.0.0 | [Firestore Admin](https://firebase.google.com) |
 | [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.0.0-beta02) | 2.0.0-beta02 | [Firestore](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.0.0-beta02) | 2.0.0-beta02 | [Firestore](https://firebase.google.com) |
-| [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta02) | 1.0.0-beta02 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
+| [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta03) | 1.0.0-beta03 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](https://googleapis.dev/dotnet/Google.Cloud.Iam.V1/2.0.0) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
 | [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.0.0) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](https://googleapis.dev/dotnet/Google.Cloud.Language.V1/2.0.0) | 2.0.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
