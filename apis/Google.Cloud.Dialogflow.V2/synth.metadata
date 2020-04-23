@@ -2,16 +2,9 @@
   "sources": [
     {
       "git": {
-        "name": ".",
-        "remote": "https://github.com/googleapis/google-cloud-dotnet.git",
-        "sha": "7b95c5b1ffffbb2aa4664e89b44e3274bcbdf7ae"
-      }
-    },
-    {
-      "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "1e92c343790ae63f88817afde60bd2d5bc775f36"
+        "sha": "1d520eaa7bbd8b40f53942ff03b5496fff887b53"        
       }
     }
   ]
