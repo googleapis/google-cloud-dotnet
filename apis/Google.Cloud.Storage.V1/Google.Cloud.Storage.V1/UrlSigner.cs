@@ -186,6 +186,33 @@ namespace Google.Cloud.Storage.V1
                 GaxPreconditions.CheckNotNull(requestTemplate, nameof(requestTemplate)), options, _blobSigner, _clock);
 
         /// <summary>
+        /// Signs the given post policy. The result can be used to make form posting requests matching the conditions
+        /// set in the post policy.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Signing post policies is not supported by <see cref="SigningVersion.V2"/>. A <see cref="NotSupportedException"/>
+        /// will be thrown if an attempt is made to sign a post policy using <see cref="SigningVersion.V2"/>.
+        /// </para>
+        /// <para>
+        /// When a <see cref="UrlSigner"/> is created with a service account credential, the signing can be performed
+        /// with no network access. When it is created with an implementation of <see cref="IBlobSigner"/>, that may require
+        /// network access or other IO. In that case, one of the asynchronous methods should be used when the caller is
+        /// in a context that should not block.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/storage/docs/xml-api/post-object for more information on signed post policies.
+        /// </para>
+        /// </remarks>
+        /// <param name="postPolicy">The post policy to signed and that will be enforced when making the post request.
+        /// Must not be null.</param>
+        /// <param name="options">The options used to generate the signed post policy. Must not be null.</param>
+        /// <returns>The signed post policy, which contains all the fields that should be including in the form to post.</returns>
+        public SignedPostPolicy Sign(PostPolicy postPolicy, Options options) =>
+            GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).Sign(
+                GaxPreconditions.CheckNotNull(postPolicy, nameof(postPolicy)), options, _blobSigner, _clock);
+
+        /// <summary>
         /// Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
         /// in possession of the URL, regardless of whether they have a Google account.
         /// </summary>
@@ -254,6 +281,34 @@ namespace Google.Cloud.Storage.V1
         public Task<string> SignAsync(RequestTemplate requestTemplate, Options options, CancellationToken cancellationToken = default) =>
             GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).SignAsync(
                 GaxPreconditions.CheckNotNull(requestTemplate, nameof(requestTemplate)), options, _blobSigner, _clock, cancellationToken);
+
+        /// <summary>
+        /// Signs the given post policy. The result can be used to make form posting requests matching the conditions
+        /// set in the post policy.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Signing post policies is not supported by <see cref="SigningVersion.V2"/>. A <see cref="NotSupportedException"/>
+        /// will be thrown if an attempt is made to sign a post policy using <see cref="SigningVersion.V2"/>.
+        /// </para>
+        /// <para>
+        /// When a <see cref="UrlSigner"/> is created with a service account credential, the signing can be performed
+        /// with no network access. When it is created with an implementation of <see cref="IBlobSigner"/>, that may require
+        /// network access or other IO. In that case, one of the asynchronous methods should be used when the caller is
+        /// in a context that should not block.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/storage/docs/xml-api/post-object for more information on signed post policies.
+        /// </para>
+        /// </remarks>
+        /// <param name="postPolicy">The post policy to signed and that will be enforced when making the post request.
+        /// Most not be null.</param>
+        /// <param name="options">The options used to generate the signed post policy. Must not be null.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>The signed post policy, which contains all the fields that should be including in the form to post.</returns>
+        public Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, CancellationToken cancellationToken = default) =>
+            GetEffectiveSigner(GaxPreconditions.CheckNotNull(options, nameof(options)).SigningVersion).SignAsync(
+                GaxPreconditions.CheckNotNull(postPolicy, nameof(postPolicy)), options, _blobSigner, _clock, cancellationToken);
 
         private ISigner GetEffectiveSigner(SigningVersion signingVersion) =>
             signingVersion switch
