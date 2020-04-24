@@ -58,11 +58,15 @@ namespace Google.Cloud.Storage.V1.Tests
         {
             var signer = UrlSigner.FromBlobSigner(new FakeBlobSigner());
 
-            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, null));
-            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync(null, null));
+            Assert.Throws<ArgumentNullException>(() => signer.Sign((RequestTemplate)null, null));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync((RequestTemplate)null, null));
+            Assert.Throws<ArgumentNullException>(() => signer.Sign((PostPolicy)null, null));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync((PostPolicy)null, null));
 
-            Assert.Throws<ArgumentNullException>(() => signer.Sign(null, Options.FromDuration(TimeSpan.Zero)));
-            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync(null, Options.FromDuration(TimeSpan.Zero)));
+            Assert.Throws<ArgumentNullException>(() => signer.Sign((RequestTemplate)null, Options.FromDuration(TimeSpan.Zero)));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync((RequestTemplate)null, Options.FromDuration(TimeSpan.Zero)));
+            Assert.Throws<ArgumentNullException>(() => signer.Sign((PostPolicy)null, Options.FromDuration(TimeSpan.Zero)));
+            await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync((PostPolicy)null, Options.FromDuration(TimeSpan.Zero)));
 
             Assert.Throws<ArgumentNullException>(() => signer.Sign(RequestTemplate.FromBucket("bucket"), null));
             await Assert.ThrowsAsync<ArgumentNullException>(() => signer.SignAsync(RequestTemplate.FromBucket("bucket"), null));

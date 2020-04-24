@@ -44,6 +44,12 @@ namespace Google.Cloud.Storage.V1
                 return state.GetResult(signature);
             }
 
+            public SignedPostPolicy Sign(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock) =>
+                throw new NotSupportedException($"Post policy signing is not supported by {nameof(SigningVersion)}.{SigningVersion.V2}.");
+
+            public Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken) =>
+                throw new NotSupportedException($"Post policy signing is not supported by {nameof(SigningVersion)}.{SigningVersion.V2}.");
+
             private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(
                 IReadOnlyDictionary<string, IReadOnlyCollection<string>> requestHeaders,
                 IReadOnlyDictionary<string, IReadOnlyCollection<string>> contentHeaders)

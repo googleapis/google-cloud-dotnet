@@ -21,8 +21,10 @@ using Google.Cloud.ClientTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -186,7 +188,6 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             var bucketName = _fixture.BucketName;
             var objectName = _fixture.HelloStorageObjectName;
-            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
             var httpClient = new HttpClient();
 
             // Sample: IamServiceBlobSignerUsage        
@@ -232,6 +233,182 @@ namespace Google.Cloud.Storage.V1.Snippets
             // End sample
 
             Assert.Equal(_fixture.HelloWorldContent, content);
+        }
+
+        [Fact]
+        public async Task PostPolicySimple()
+        {
+            var bucketName = _fixture.BucketName;
+            var objectName = "places/world.txt";
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+
+            // Sample: PostPolicySimple
+            // [START storage_generate_signed_post_policy_v4]
+            // Create a signed post policy which can be used to upload a specific object and
+            // expires in 1 hour after creation.
+            UrlSigner urlSigner = UrlSigner
+                .FromServiceAccountCredential(credential);
+            UrlSigner.Options options = UrlSigner.Options
+                .FromDuration(TimeSpan.FromHours(1))
+                .WithSigningVersion(SigningVersion.V4)
+                .WithScheme("https");
+            UrlSigner.PostPolicy postPolicy = UrlSigner.PostPolicy.ForBucketAndKey(bucketName, objectName);
+
+            UrlSigner.SignedPostPolicy signedPostPolicy = await urlSigner.SignAsync(postPolicy, options);
+
+            // Create an HTML form including all the fields in the signed post policy.
+            StringBuilder form = new StringBuilder();
+            form.AppendLine($"<form action=\"{signedPostPolicy.PostUrl}\" method=\"post\" enctype=\"multipart/form-data\">");
+            foreach (var field in signedPostPolicy.Fields)
+            {
+                form.AppendLine($"<input type=\"hidden\" name=\"{field.Key}\" value=\"{field.Value}\">");
+            }
+            // Include the file element. It should always be the last element in the form.
+            form.AppendLine("<input name=\"file\" type=\"file\">");
+            form.AppendLine("<input type=\"submit\" value=\"Upload\">");
+            form.AppendLine("</form>");
+
+            // You can now save the form to file and serve it as static content
+            // or send it as the response to a request made to your application.
+            File.WriteAllText("PostPolicySimple.html", form.ToString());
+            // [END storage_generate_signed_post_policy_v4]
+            //// End sample
+
+            Assert.Contains(signedPostPolicy.PostUrl.ToString(), form.ToString());
+            File.Delete("PostPolicySimple.html");
+        }
+
+        [Fact]
+        public async Task PostPolicyCacheControl()
+        {
+            var bucketName = _fixture.BucketName;
+            var objectName = "places/world.txt";
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+
+            // Sample: PostPolicyCacheControl
+            // Create a signed post policy which can be used to upload a specific object with a
+            // specific cache-control value and expires in 1 hour after creation.
+            UrlSigner urlSigner = UrlSigner
+                .FromServiceAccountCredential(credential);
+            UrlSigner.Options options = UrlSigner.Options
+                .FromDuration(TimeSpan.FromHours(1))
+                .WithSigningVersion(SigningVersion.V4)
+                .WithScheme("https");
+            UrlSigner.PostPolicy postPolicy = UrlSigner.PostPolicy.ForBucketAndKey(bucketName, objectName);
+            postPolicy.SetField(UrlSigner.PostPolicyStandardElement.Acl, "public-read");
+            postPolicy.SetField(UrlSigner.PostPolicyStandardElement.CacheControl, "public,max-age=86400");
+
+            UrlSigner.SignedPostPolicy signedPostPolicy = await urlSigner.SignAsync(postPolicy, options);
+
+            // Create an HTML form including all the fields in the signed post policy.
+            StringBuilder form = new StringBuilder();
+            form.AppendLine($"<form action=\"{signedPostPolicy.PostUrl}\" method=\"post\" enctype=\"multipart/form-data\">");
+            foreach (var field in signedPostPolicy.Fields)
+            {
+                form.AppendLine($"<input type=\"hidden\" name=\"{field.Key}\" value=\"{field.Value}\">");
+            }
+            // Include the file element. It should always be the last element in the form.
+            form.AppendLine("<input name=\"file\" type=\"file\">");
+            form.AppendLine("<input type=\"submit\" value=\"Upload\">");
+            form.AppendLine("</form>");
+
+            // You can now save the form to file and serve it as static content
+            // or send it as the response to a request made to your application.
+            File.WriteAllText("PostPolicyCacheControl.html", form.ToString());
+            //// End sample
+
+            Assert.Contains(signedPostPolicy.PostUrl.ToString(), form.ToString());
+            File.Delete("PostPolicyCacheControl.html");
+        }
+
+        [Fact]
+        public async Task PostPolicyAcl()
+        {
+            var bucketName = _fixture.BucketName;
+            var objectName = "places/world.txt";
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+
+            // Sample: PostPolicyAcl
+            // Create a signed post policy which can be used to upload a specific object and
+            // expires in 10 seconds after creation.
+            // It also sets a starts-with condition on the acl form element, that should be met
+            // by the actual form used for posting.
+            UrlSigner urlSigner = UrlSigner
+                .FromServiceAccountCredential(credential);
+            UrlSigner.Options options = UrlSigner.Options
+                .FromDuration(TimeSpan.FromHours(1))
+                .WithSigningVersion(SigningVersion.V4)
+                .WithScheme("https");
+            UrlSigner.PostPolicy postPolicy = UrlSigner.PostPolicy.ForBucketAndKey(bucketName, objectName);
+            postPolicy.SetStartsWith(UrlSigner.PostPolicyStandardElement.Acl, "public");
+
+            UrlSigner.SignedPostPolicy signedPostPolicy = await urlSigner.SignAsync(postPolicy, options);
+
+            // Create an HTML form including all the fields in the signed post policy.
+            StringBuilder form = new StringBuilder();
+            form.AppendLine($"<form action=\"{signedPostPolicy.PostUrl}\" method=\"post\" enctype=\"multipart/form-data\">");
+            foreach (var field in signedPostPolicy.Fields)
+            {
+                form.AppendLine($"<input type=\"hidden\" name=\"{field.Key}\" value=\"{field.Value}\">");
+            }
+            // Include also an acl element with a value that meets the condition set in the policy.
+            form.AppendLine("<input type=\"hidden\" name=\"acl\" value=\"public-read\">");
+            // Include the file element. It should always be the last element in the form.
+            form.AppendLine("<input name=\"file\" type=\"file\">");
+            form.AppendLine("<input type=\"submit\" value=\"Upload\">");
+            form.AppendLine("</form>");
+
+            // You can now save the form to file and serve it as static content
+            // or send it as the response to a request made to your application.
+            File.WriteAllText("PostPolicyAcl.html", form.ToString());
+            //// End sample
+
+            Assert.Contains(signedPostPolicy.PostUrl.ToString(), form.ToString());
+            File.Delete("PostPolicyAcl.html");
+        }
+
+        [Fact]
+        public async Task PostPolicySuccessStatus()
+        {
+            var bucketName = _fixture.BucketName;
+            var objectName = "places/world.txt";
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
+
+            // Sample: PostPolicySuccessStatus
+            // Create a signed post policy which can be used to upload a specific object and
+            // expires in 1 hour after creation.
+            // It also sets a specific HTTP success satus code that should be returned.
+            // Only 200, 201 and 204 are allowed.
+            UrlSigner urlSigner = UrlSigner
+                .FromServiceAccountCredential(credential);
+            UrlSigner.Options options = UrlSigner.Options
+                .FromDuration(TimeSpan.FromHours(1))
+                .WithSigningVersion(SigningVersion.V4)
+                .WithScheme("https");
+            UrlSigner.PostPolicy postPolicy = UrlSigner.PostPolicy.ForBucketAndKey(bucketName, objectName);
+            postPolicy.SetField(UrlSigner.PostPolicyStandardElement.SuccessActionStatus, HttpStatusCode.OK);
+
+            UrlSigner.SignedPostPolicy signedPostPolicy = await urlSigner.SignAsync(postPolicy, options);
+
+            // Create an HTML form including all the fields in the signed post policy.
+            StringBuilder form = new StringBuilder();
+            form.AppendLine($"<form action=\"{signedPostPolicy.PostUrl}\" method=\"post\" enctype=\"multipart/form-data\">");
+            foreach (var field in signedPostPolicy.Fields)
+            {
+                form.AppendLine($"<input type=\"hidden\" name=\"{field.Key}\" value=\"{field.Value}\">");
+            }
+            // Include the file element. It should always be the last element in the form.
+            form.AppendLine("<input name=\"file\" type=\"file\">");
+            form.AppendLine("<input type=\"submit\" value=\"Upload\">");
+            form.AppendLine("</form>");
+
+            // You can now save the form to file and serve it as static content
+            // or send it as the response to a request made to your application.
+            File.WriteAllText("PostPolicySuccessStatus.html", form.ToString());
+            //// End sample
+
+            Assert.Contains(signedPostPolicy.PostUrl.ToString(), form.ToString());
+            File.Delete("PostPolicySuccessStatus.html");
         }
     }
 }

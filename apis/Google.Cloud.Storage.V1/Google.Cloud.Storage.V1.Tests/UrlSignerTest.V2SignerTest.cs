@@ -172,6 +172,18 @@ namespace Google.Cloud.Storage.V1.Tests
                 Assert.Throws<ArgumentOutOfRangeException>(() => signer.Sign(requestTemplate, options));
                 await Assert.ThrowsAsync<ArgumentOutOfRangeException>(() => signer.SignAsync(requestTemplate, options));
             }
+
+            [Fact]
+            public async void Unsupported_SignPostPolicy()
+            {
+                var signer = UrlSigner.FromServiceAccountCredential(CreateFakeServiceAccountCredential());
+                var options = Options
+                    .FromExpiration(DateTimeOffset.UtcNow + TimeSpan.FromDays(1))
+                    .WithSigningVersion(SigningVersion.V2);
+                var postPolicy = PostPolicy.ForBucketAndKey("my-bucket", "my-test-object");
+                Assert.Throws<NotSupportedException>(() => signer.Sign(postPolicy, options));
+                await Assert.ThrowsAsync<NotSupportedException>(() => signer.SignAsync(postPolicy, options));
+            }
         }
     }
 }

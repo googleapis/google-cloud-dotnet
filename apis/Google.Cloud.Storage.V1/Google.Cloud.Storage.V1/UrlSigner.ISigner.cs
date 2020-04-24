@@ -37,6 +37,19 @@ namespace Google.Cloud.Storage.V1
                 IBlobSigner blobSigner,
                 IClock clock,
                 CancellationToken cancellationToken);
+
+            SignedPostPolicy Sign(
+                PostPolicy postPolicy,
+                Options options,
+                IBlobSigner blobSigner,
+                IClock clock);
+
+            Task<SignedPostPolicy> SignAsync(
+                PostPolicy postPolicy,
+                Options options,
+                IBlobSigner blobSigner,
+                IClock clock,
+                CancellationToken cancellationToken);
         }
     }
 }

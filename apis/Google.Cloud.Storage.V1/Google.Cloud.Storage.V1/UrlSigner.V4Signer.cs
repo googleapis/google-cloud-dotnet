@@ -13,9 +13,11 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -41,7 +43,7 @@ namespace Google.Cloud.Storage.V1
 
             public string Sign(RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock)
             {
-                var state = new SigningState(requestTemplate, options, blobSigner, clock);
+                var state = new UrlSigningState(requestTemplate, options, blobSigner, clock);
                 var base64Signature = blobSigner.CreateSignature(state._blobToSign);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
@@ -51,7 +53,25 @@ namespace Google.Cloud.Storage.V1
             public async Task<string> SignAsync(
                 RequestTemplate requestTemplate, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
             {
-                var state = new SigningState(requestTemplate, options, blobSigner, clock);
+                var state = new UrlSigningState(requestTemplate, options, blobSigner, clock);
+                var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
+                var rawSignature = Convert.FromBase64String(base64Signature);
+                var hexSignature = FormatHex(rawSignature);
+                return state.GetResult(hexSignature);
+            }
+
+            public SignedPostPolicy Sign(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock)
+            {
+                var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, clock);
+                var base64Signature = blobSigner.CreateSignature(state._blobToSign);
+                var rawSignature = Convert.FromBase64String(base64Signature);
+                var hexSignature = FormatHex(rawSignature);
+                return state.GetResult(hexSignature);
+            }
+
+            public async Task<SignedPostPolicy> SignAsync(PostPolicy postPolicy, Options options, IBlobSigner blobSigner, IClock clock, CancellationToken cancellationToken)
+            {
+                var state = new PostPolicySigningState(new PostPolicy(postPolicy), options, blobSigner, clock);
                 var base64Signature = await blobSigner.CreateSignatureAsync(state._blobToSign, cancellationToken).ConfigureAwait(false);
                 var rawSignature = Convert.FromBase64String(base64Signature);
                 var hexSignature = FormatHex(rawSignature);
@@ -62,15 +82,15 @@ namespace Google.Cloud.Storage.V1
             /// State which needs to be carried between the "pre-signing" stage and "post-signing" stages
             /// of the implementation.
             /// </summary>
-            private struct SigningState
+            private readonly struct UrlSigningState
             {
-                private string _resourcePath;
-                private string _canonicalQueryString;
-                internal byte[] _blobToSign;
-                private string _scheme;
-                private string _host;
+                private readonly string _resourcePath;
+                private readonly string _canonicalQueryString;
+                internal readonly byte[] _blobToSign;
+                private readonly string _scheme;
+                private readonly string _host;
 
-                internal SigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
+                internal UrlSigningState(RequestTemplate template, Options options, IBlobSigner blobSigner, IClock clock)
                 {
                     (_host, _resourcePath) = options.UrlStyle switch
                     {
@@ -154,6 +174,78 @@ namespace Google.Cloud.Storage.V1
 
                 internal string GetResult(string signature) =>
                     $"{_scheme}://{_host}{_resourcePath}?{_canonicalQueryString}&X-Goog-Signature={WebUtility.UrlEncode(signature)}";
+            }
+
+            /// <summary>
+            /// State which needs to be carried between the "pre-signing" stage and "post-signing" stages
+            /// of the implementation.
+            /// </summary>
+            private readonly struct PostPolicySigningState
+            {
+                private readonly PostPolicy _policy;
+                private readonly string _encodedPolicy;
+                internal readonly byte[] _blobToSign;
+                internal readonly DateTimeOffset _expiration;
+                private readonly Uri _url;
+
+                internal PostPolicySigningState(PostPolicy policy, Options options, IBlobSigner blobSigner, IClock clock)
+                {
+                    string uri = options.UrlStyle switch
+                    {
+                        UrlStyle.PathStyle => policy.Bucket == null ? StorageHost : $"{StorageHost}/{policy.Bucket}",
+                        UrlStyle.VirtualHostedStyle => policy.Bucket == null ?
+                            throw new ArgumentNullException(nameof(PostPolicy.Bucket), $"When using {UrlStyle.VirtualHostedStyle} a bucket condition must be set in the policy.") :
+                            $"{policy.Bucket}.{StorageHost}",
+                        UrlStyle.BucketBoundHostname => options.BucketBoundHostname,
+                        _ => throw new ArgumentOutOfRangeException(nameof(options.UrlStyle))
+                    };
+
+                    uri = $"{options.Scheme}://{uri}/";
+
+                    options = options.ToExpiration(clock);
+                    var now = clock.GetCurrentDateTimeUtc();
+
+                    int expirySeconds = (int)(options.Expiration.Value - now).TotalSeconds;
+                    if (expirySeconds <= 0)
+                    {
+                        throw new ArgumentOutOfRangeException(nameof(options.Expiration), "Expiration must be at least 1 second.");
+                    }
+                    if (expirySeconds > MaxExpirySecondsInclusive)
+                    {
+                        throw new ArgumentOutOfRangeException(nameof(options.Expiration), "Expiration must not be greater than 7 days.");
+                    }
+
+                    var datestamp = now.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
+                    string credentialScope = $"{datestamp}/{DefaultRegion}/{ScopeSuffix}";
+
+                    policy.SetField(PolicyCreationDateTime.Element, new DateTimeOffset(now));
+                    policy.SetField(PolicyAlgorithm.Element, Algorithm);
+                    policy.SetField(PolicyCredential.Element, $"{blobSigner.Id}/{credentialScope}");
+
+                    _expiration = options.Expiration.Value;
+                    _policy = policy;
+                    _url = new Uri(uri);
+
+                    StringBuilder sb = new StringBuilder();
+                    StringWriter sw = new StringWriter(sb);
+
+                    using (JsonWriter writer = new JsonTextWriter(sw))
+                    {
+                        writer.StringEscapeHandling = StringEscapeHandling.EscapeNonAscii;
+                        writer.WriteStartObject();
+                        policy.WriteTo(writer);
+                        writer.WritePropertyName("expiration");
+                        writer.WriteValue(_expiration.UtcDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'", CultureInfo.InvariantCulture));
+                        writer.WriteEndObject();
+                    }
+
+                    var decodedPolicy = sb.ToString();
+                    _encodedPolicy = Convert.ToBase64String(Encoding.UTF8.GetBytes(decodedPolicy));
+                    _blobToSign = Encoding.UTF8.GetBytes(_encodedPolicy);
+                }
+
+                internal SignedPostPolicy GetResult(string signature) =>
+                    new SignedPostPolicy(_policy, _encodedPolicy, signature, _expiration, _url);
             }
 
             private const string HexCharacters = "0123456789abcdef";
