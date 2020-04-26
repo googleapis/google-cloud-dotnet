@@ -138,7 +138,7 @@ namespace Google.Cloud.Logging.NLog
             jsonSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
             // The default serialization of these reflection types really isn't useful, so
             // just call ToString on them instead.
-            jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(MethodInfo)));
+            jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(MemberInfo)));
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(Assembly)));
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(Module)));
 
