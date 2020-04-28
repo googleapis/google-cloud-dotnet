@@ -208,6 +208,13 @@ namespace Google.Cloud.Tools.ProjectGenerator
             var table = new List<string>();
             table.Add(headerLine);
             table.Add(headerNext);
+
+            var ambiguousDescriptions = catalog.Apis
+                .Select(api => api.EffectiveListingDescription)
+                .GroupBy(description => description)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key)
+                .ToList();
             foreach (var api in catalog.Apis)
             {
                 // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
@@ -217,12 +224,20 @@ namespace Google.Cloud.Tools.ProjectGenerator
                     continue;
                 }
                 string packageLink = $"[{api.Id}]({urlProvider(api)})";
+
+                // Disambiguate direct API packages for the same product.
+                string description = api.EffectiveListingDescription;
+                if (ambiguousDescriptions.Contains(description) && api.ApiVersion is string apiVersion)
+                {
+                    description += $" ({apiVersion} API)";
+                }
+
+                // TODO: It gets awkward when there are multiple description for the same product (e.g. Spanner).
+                // This is basically caused by conflating "link to product docs" with "package description", but
+                // in most cases that simplifies things. Never mind.
                 string productLink = api.ProductUrl is null
-                    // Note that NuGet descriptions are usually full sentences, ending in a period.
-                    // The product name or brief description is usually a sentence fragment, so if we *do*
-                    // use the full description, we trim any trailing periods.
-                    ? api.ProductName ?? api.ShortDescription ?? api.Description.TrimEnd('.') // No URL
-                    : $"[{api.ProductName}]({api.ProductUrl})"; // When there's a URL, assume we've got a name too
+                    ? api.ListingDescription ?? api.ProductName ?? api.Description.TrimEnd('.') // No URL
+                    : $"[{description}]({api.ProductUrl})";
                 table.Add($"| {packageLink} | {api.Version} | {productLink} |");
             }
 
