@@ -2815,6 +2815,212 @@ namespace Google.Cloud.Bigtable.Admin.V2
             lro::Operation<Backup, CreateBackupMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupOperationsClient, callSettings);
 
         /// <summary>
+        /// Starts creating a new Cloud Bigtable Backup. The returned backup
+        /// [long-running operation][google.longrunning.Operation] can be used to
+        /// track creation of the backup. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This must be one of the clusters in the instance in which this
+        /// table is located. The backup will be stored in this cluster. Values are
+        /// of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup to be created. The `backup_id` along with
+        /// the parent `parent` are combined as {parent}/backups/{backup_id} to create
+        /// the full backup name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CreateBackupMetadata> CreateBackup(string parent, string backupId, Backup backup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackup(new CreateBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts creating a new Cloud Bigtable Backup. The returned backup
+        /// [long-running operation][google.longrunning.Operation] can be used to
+        /// track creation of the backup. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This must be one of the clusters in the instance in which this
+        /// table is located. The backup will be stored in this cluster. Values are
+        /// of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup to be created. The `backup_id` along with
+        /// the parent `parent` are combined as {parent}/backups/{backup_id} to create
+        /// the full backup name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CreateBackupMetadata>> CreateBackupAsync(string parent, string backupId, Backup backup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupAsync(new CreateBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts creating a new Cloud Bigtable Backup. The returned backup
+        /// [long-running operation][google.longrunning.Operation] can be used to
+        /// track creation of the backup. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This must be one of the clusters in the instance in which this
+        /// table is located. The backup will be stored in this cluster. Values are
+        /// of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup to be created. The `backup_id` along with
+        /// the parent `parent` are combined as {parent}/backups/{backup_id} to create
+        /// the full backup name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CreateBackupMetadata>> CreateBackupAsync(string parent, string backupId, Backup backup, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(parent, backupId, backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts creating a new Cloud Bigtable Backup. The returned backup
+        /// [long-running operation][google.longrunning.Operation] can be used to
+        /// track creation of the backup. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This must be one of the clusters in the instance in which this
+        /// table is located. The backup will be stored in this cluster. Values are
+        /// of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup to be created. The `backup_id` along with
+        /// the parent `parent` are combined as {parent}/backups/{backup_id} to create
+        /// the full backup name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, CreateBackupMetadata> CreateBackup(ClusterName parent, string backupId, Backup backup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackup(new CreateBackupRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts creating a new Cloud Bigtable Backup. The returned backup
+        /// [long-running operation][google.longrunning.Operation] can be used to
+        /// track creation of the backup. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This must be one of the clusters in the instance in which this
+        /// table is located. The backup will be stored in this cluster. Values are
+        /// of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup to be created. The `backup_id` along with
+        /// the parent `parent` are combined as {parent}/backups/{backup_id} to create
+        /// the full backup name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CreateBackupMetadata>> CreateBackupAsync(ClusterName parent, string backupId, Backup backup, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupAsync(new CreateBackupRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts creating a new Cloud Bigtable Backup. The returned backup
+        /// [long-running operation][google.longrunning.Operation] can be used to
+        /// track creation of the backup. The
+        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
+        /// [response][google.longrunning.Operation.response] field type is
+        /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
+        /// returned operation will stop the creation and delete the backup.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. This must be one of the clusters in the instance in which this
+        /// table is located. The backup will be stored in this cluster. Values are
+        /// of the form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The id of the backup to be created. The `backup_id` along with
+        /// the parent `parent` are combined as {parent}/backups/{backup_id} to create
+        /// the full backup name, of the form:
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup_id}`.
+        /// This string must be between 1 and 50 characters in length and match the
+        /// regex [_a-zA-Z0-9][-_.a-zA-Z0-9]*.
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, CreateBackupMetadata>> CreateBackupAsync(ClusterName parent, string backupId, Backup backup, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(parent, backupId, backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets metadata on a pending or completed Cloud Bigtable Backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2840,6 +3046,96 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, st::CancellationToken cancellationToken) =>
             GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets metadata on a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata on a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata on a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets metadata on a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata on a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets metadata on a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a pending or completed Cloud Bigtable Backup.
@@ -2869,6 +3165,77 @@ namespace Google.Cloud.Bigtable.Admin.V2
             UpdateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. The backup to update. `backup.name`, and the fields to be updated
+        /// as specified by `update_mask` are required. Other fields are ignored.
+        /// Update is only supported for the following fields:
+        /// * `backup.expire_time`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields (e.g. `expire_time`) in the
+        /// Backup resource should be updated. This mask is relative to the Backup
+        /// resource, not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased accidentally
+        /// by clients that do not know about them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup UpdateBackup(Backup backup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackup(new UpdateBackupRequest
+            {
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. The backup to update. `backup.name`, and the fields to be updated
+        /// as specified by `update_mask` are required. Other fields are ignored.
+        /// Update is only supported for the following fields:
+        /// * `backup.expire_time`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields (e.g. `expire_time`) in the
+        /// Backup resource should be updated. This mask is relative to the Backup
+        /// resource, not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased accidentally
+        /// by clients that do not know about them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> UpdateBackupAsync(Backup backup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateBackupAsync(new UpdateBackupRequest
+            {
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a pending or completed Cloud Bigtable Backup.
+        /// </summary>
+        /// <param name="backup">
+        /// Required. The backup to update. `backup.name`, and the fields to be updated
+        /// as specified by `update_mask` are required. Other fields are ignored.
+        /// Update is only supported for the following fields:
+        /// * `backup.expire_time`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. A mask specifying which fields (e.g. `expire_time`) in the
+        /// Backup resource should be updated. This mask is relative to the Backup
+        /// resource, not to the request message. The field mask must always be
+        /// specified; this prevents any future fields from being erased accidentally
+        /// by clients that do not know about them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> UpdateBackupAsync(Backup backup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateBackupAsync(backup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a pending or completed Cloud Bigtable backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2896,6 +3263,96 @@ namespace Google.Cloud.Bigtable.Admin.V2
             DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a pending or completed Cloud Bigtable backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a pending or completed Cloud Bigtable backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a pending or completed Cloud Bigtable backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a pending or completed Cloud Bigtable backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a pending or completed Cloud Bigtable backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a pending or completed Cloud Bigtable backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the backup to delete.
+        /// Values are of the form
+        /// `projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists Cloud Bigtable backups. Returns both completed and pending
         /// backups.
         /// </summary>
@@ -2914,6 +3371,118 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Cloud Bigtable backups. Returns both completed and pending
+        /// backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster to list backups from. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list backups for all clusters in an instance,
+        /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Cloud Bigtable backups. Returns both completed and pending
+        /// backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster to list backups from. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list backups for all clusters in an instance,
+        /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Cloud Bigtable backups. Returns both completed and pending
+        /// backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster to list backups from. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list backups for all clusters in an instance,
+        /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Cloud Bigtable backups. Returns both completed and pending
+        /// backups.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The cluster to list backups from. Values are of the
+        /// form `projects/{project}/instances/{instance}/clusters/{cluster}`.
+        /// Use `{cluster} = '-'` to list backups for all clusters in an instance,
+        /// e.g., `projects/{project}/instances/{instance}/clusters/-`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ClusterName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                ParentAsClusterName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Create a new table by restoring from a completed backup. The new table
