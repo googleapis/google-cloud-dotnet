@@ -1436,6 +1436,114 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetBackup()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                SourceTable = "source_table3c9665d0",
+                ExpireTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupAsync()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                SourceTable = "source_table3c9665d0",
+                ExpireTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBackupResourceNames()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                SourceTable = "source_table3c9665d0",
+                ExpireTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request.BackupName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupResourceNamesAsync()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                SourceTable = "source_table3c9665d0",
+                ExpireTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateBackupRequestObject()
         {
             moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
@@ -1492,6 +1600,62 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
         }
 
         [xunit::FactAttribute]
+        public void UpdateBackup()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                SourceTable = "source_table3c9665d0",
+                ExpireTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.UpdateBackup(request.Backup, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateBackupAsync()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateBackupRequest request = new UpdateBackupRequest
+            {
+                Backup = new Backup(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+                SourceTable = "source_table3c9665d0",
+                ExpireTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                SizeBytes = 4628423819757039038L,
+                State = Backup.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.UpdateBackupAsync(request.Backup, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeleteBackupRequestObject()
         {
             moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
@@ -1521,6 +1685,72 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
             await client.DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteBackupAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBackup()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBackup(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBackupAsync()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBackupAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBackupResourceNames()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBackup(request.BackupName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBackupResourceNamesAsync()
+        {
+            moq::Mock<BigtableTableAdmin.BigtableTableAdminClient> mockGrpcClient = new moq::Mock<BigtableTableAdmin.BigtableTableAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteBackupRequest request = new DeleteBackupRequest
+            {
+                BackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBackupAsync(request.BackupName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
