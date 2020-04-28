@@ -21,8 +21,9 @@ namespace Google.Cloud.Tools.Common
 {
     public class ApiMetadata
     {
+        // Pattern to extract the underlying API version from the package name.
+        private static readonly Regex PackageIdVersionPattern = new Regex(@"\.V[1-9]\d*[-A-Za-z0-9]*$");
         private static readonly Regex PrereleaseApiPattern = new Regex(@"^V[1-9]\d*[^\d]+.*$");
-
         private static readonly Regex ReleaseVersion = new Regex(@"^[1-9]\d*\.\d+\.\d+$");
 
         public string Version { get; set; }
@@ -33,16 +34,40 @@ namespace Google.Cloud.Tools.Common
         public string TestTargetFrameworks { get; set; }
 
         /// <summary>
+        /// The version of the underlying API, taken from the last segment of the package ID,
+        /// e.g. Google.Cloud.OSLogin.V1Beta would return V1Beta.
+        /// Returns null if there's no match, e.g. for Google.Cloud.Firestore.
+        /// </summary>
+        public string ApiVersion
+        {
+            get
+            {
+                var match = PackageIdVersionPattern.Match(Id);
+                return match.Success ? match.Value.Substring(1) : null;
+            }
+        }
+
+        /// <summary>
         /// API name to include in documentation, e.g. "Google Monitoring"
         /// </summary>
         public string ProductName { get; set; }
 
         /// <summary>
-        /// When the package isn't direclty for a product (so <see cref="ProductName "/>is null), this name appears
-        /// in the list of packages as a description. If <see cref="Description"/> is already short enough
-        /// for listing, this can be left empty.
+        /// This takes priority over <see cref="ProductName"/> and <see cref="Description"/>  when writing
+        /// a list of packages. This is useful for APIs which have multiple packages, e.g. Firestore and Spanner.
+        /// If <see cref="ProductName"/> is appropriate or the product name is missing but <see cref="Description"/> is
+        /// already short enough, this can be left empty.
         /// </summary>
-        public string ShortDescription { get; set; }
+        public string ListingDescription { get; set; }
+
+        /// <summary>
+        /// The resolved description to use in listing descriptions, using the first of<see cref="ListingDescription"/>,
+        /// <see cref="ProductName"/>, <see cref="Description"/> to be populated.
+        ///Note that NuGet descriptions are usually full sentences, ending in a period.
+        // The product name or brief description is usually a sentence fragment, so if we *do*
+        // use the full description, we trim any trailing periods.
+        /// </summary>
+        public string EffectiveListingDescription => ListingDescription ?? ProductName ?? Description.TrimEnd('.');
 
         /// <summary>
         /// API URL to include in documentation, e.g. "https://cloud.google.com/monitoring/api/v3/"
