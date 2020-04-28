@@ -237,42 +237,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -285,42 +281,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -333,42 +325,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -381,42 +369,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="name">
         /// Required. Name of the model requested to serve the prediction.
@@ -429,14 +413,14 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that have
         /// at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -448,7 +432,7 @@ namespace Google.Cloud.AutoML.V1
         /// boxes returned. The default is 100. The
         /// number of returned bounding boxes might be limited by the server.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Tables&amp;lt;/h4&amp;gt;
+        /// AutoML Tables
         /// 
         /// `feature_importance`
         /// : (boolean) Whether
@@ -476,42 +460,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="name">
         /// Required. Name of the model requested to serve the prediction.
@@ -524,14 +504,14 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that have
         /// at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -543,7 +523,7 @@ namespace Google.Cloud.AutoML.V1
         /// boxes returned. The default is 100. The
         /// number of returned bounding boxes might be limited by the server.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Tables&amp;lt;/h4&amp;gt;
+        /// AutoML Tables
         /// 
         /// `feature_importance`
         /// : (boolean) Whether
@@ -571,42 +551,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="name">
         /// Required. Name of the model requested to serve the prediction.
@@ -619,14 +595,14 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that have
         /// at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -638,7 +614,7 @@ namespace Google.Cloud.AutoML.V1
         /// boxes returned. The default is 100. The
         /// number of returned bounding boxes might be limited by the server.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Tables&amp;lt;/h4&amp;gt;
+        /// AutoML Tables
         /// 
         /// `feature_importance`
         /// : (boolean) Whether
@@ -658,42 +634,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="name">
         /// Required. Name of the model requested to serve the prediction.
@@ -706,14 +678,14 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that have
         /// at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -725,7 +697,7 @@ namespace Google.Cloud.AutoML.V1
         /// boxes returned. The default is 100. The
         /// number of returned bounding boxes might be limited by the server.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Tables&amp;lt;/h4&amp;gt;
+        /// AutoML Tables
         /// 
         /// `feature_importance`
         /// : (boolean) Whether
@@ -753,42 +725,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="name">
         /// Required. Name of the model requested to serve the prediction.
@@ -801,14 +769,14 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that have
         /// at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -820,7 +788,7 @@ namespace Google.Cloud.AutoML.V1
         /// boxes returned. The default is 100. The
         /// number of returned bounding boxes might be limited by the server.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Tables&amp;lt;/h4&amp;gt;
+        /// AutoML Tables
         /// 
         /// `feature_importance`
         /// : (boolean) Whether
@@ -848,42 +816,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="name">
         /// Required. Name of the model requested to serve the prediction.
@@ -896,14 +860,14 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters, any string must be up to 25000
         /// characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that have
         /// at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -915,7 +879,7 @@ namespace Google.Cloud.AutoML.V1
         /// boxes returned. The default is 100. The
         /// number of returned bounding boxes might be limited by the server.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Tables&amp;lt;/h4&amp;gt;
+        /// AutoML Tables
         /// 
         /// `feature_importance`
         /// : (boolean) Whether
@@ -1056,7 +1020,7 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters for the predictions, any string must
         /// be up to 25000 characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Natural Language Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Natural Language Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1064,14 +1028,14 @@ namespace Google.Cloud.AutoML.V1
         /// that have at least this confidence score. The default is 0.5.
         /// 
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that
         /// have at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -1082,7 +1046,7 @@ namespace Google.Cloud.AutoML.V1
         /// : (int64) The maximum number of bounding
         /// boxes returned per image. The default is 100, the
         /// number of bounding boxes returned might be limited by the server.
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1120,7 +1084,7 @@ namespace Google.Cloud.AutoML.V1
         /// type, the quality of it depends on training data, but there are no
         /// metrics provided to describe that quality.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Object Tracking&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Object Tracking
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on video frames,
@@ -1182,7 +1146,7 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters for the predictions, any string must
         /// be up to 25000 characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Natural Language Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Natural Language Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1190,14 +1154,14 @@ namespace Google.Cloud.AutoML.V1
         /// that have at least this confidence score. The default is 0.5.
         /// 
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that
         /// have at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -1208,7 +1172,7 @@ namespace Google.Cloud.AutoML.V1
         /// : (int64) The maximum number of bounding
         /// boxes returned per image. The default is 100, the
         /// number of bounding boxes returned might be limited by the server.
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1246,7 +1210,7 @@ namespace Google.Cloud.AutoML.V1
         /// type, the quality of it depends on training data, but there are no
         /// metrics provided to describe that quality.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Object Tracking&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Object Tracking
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on video frames,
@@ -1308,7 +1272,7 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters for the predictions, any string must
         /// be up to 25000 characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Natural Language Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Natural Language Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1316,14 +1280,14 @@ namespace Google.Cloud.AutoML.V1
         /// that have at least this confidence score. The default is 0.5.
         /// 
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that
         /// have at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -1334,7 +1298,7 @@ namespace Google.Cloud.AutoML.V1
         /// : (int64) The maximum number of bounding
         /// boxes returned per image. The default is 100, the
         /// number of bounding boxes returned might be limited by the server.
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1372,7 +1336,7 @@ namespace Google.Cloud.AutoML.V1
         /// type, the quality of it depends on training data, but there are no
         /// metrics provided to describe that quality.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Object Tracking&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Object Tracking
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on video frames,
@@ -1425,7 +1389,7 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters for the predictions, any string must
         /// be up to 25000 characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Natural Language Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Natural Language Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1433,14 +1397,14 @@ namespace Google.Cloud.AutoML.V1
         /// that have at least this confidence score. The default is 0.5.
         /// 
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that
         /// have at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -1451,7 +1415,7 @@ namespace Google.Cloud.AutoML.V1
         /// : (int64) The maximum number of bounding
         /// boxes returned per image. The default is 100, the
         /// number of bounding boxes returned might be limited by the server.
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1489,7 +1453,7 @@ namespace Google.Cloud.AutoML.V1
         /// type, the quality of it depends on training data, but there are no
         /// metrics provided to describe that quality.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Object Tracking&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Object Tracking
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on video frames,
@@ -1551,7 +1515,7 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters for the predictions, any string must
         /// be up to 25000 characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Natural Language Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Natural Language Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1559,14 +1523,14 @@ namespace Google.Cloud.AutoML.V1
         /// that have at least this confidence score. The default is 0.5.
         /// 
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that
         /// have at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -1577,7 +1541,7 @@ namespace Google.Cloud.AutoML.V1
         /// : (int64) The maximum number of bounding
         /// boxes returned per image. The default is 100, the
         /// number of bounding boxes returned might be limited by the server.
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1615,7 +1579,7 @@ namespace Google.Cloud.AutoML.V1
         /// type, the quality of it depends on training data, but there are no
         /// metrics provided to describe that quality.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Object Tracking&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Object Tracking
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on video frames,
@@ -1677,7 +1641,7 @@ namespace Google.Cloud.AutoML.V1
         /// Additional domain-specific parameters for the predictions, any string must
         /// be up to 25000 characters long.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Natural Language Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Natural Language Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1685,14 +1649,14 @@ namespace Google.Cloud.AutoML.V1
         /// that have at least this confidence score. The default is 0.5.
         /// 
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
         /// makes predictions for an image, it will only produce results that
         /// have at least this confidence score. The default is 0.5.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Vision Object Detection&amp;lt;/h4&amp;gt;
+        /// AutoML Vision Object Detection
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on the image,
@@ -1703,7 +1667,7 @@ namespace Google.Cloud.AutoML.V1
         /// : (int64) The maximum number of bounding
         /// boxes returned per image. The default is 100, the
         /// number of bounding boxes returned might be limited by the server.
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Classification&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Classification
         /// 
         /// `score_threshold`
         /// : (float) A value from 0.0 to 1.0. When the model
@@ -1741,7 +1705,7 @@ namespace Google.Cloud.AutoML.V1
         /// type, the quality of it depends on training data, but there are no
         /// metrics provided to describe that quality.
         /// 
-        /// &amp;lt;h4&amp;gt;AutoML Video Intelligence Object Tracking&amp;lt;/h4&amp;gt;
+        /// AutoML Video Intelligence Object Tracking
         /// 
         /// `score_threshold`
         /// : (float) When Model detects objects on video frames,
@@ -1811,42 +1775,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1862,42 +1822,38 @@ namespace Google.Cloud.AutoML.V1
         /// returned in the response.
         /// Available for following ML scenarios, and their expected request payloads:
         /// 
-        /// &amp;lt;table&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Vision Object Detection&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Classification&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Entity Extraction&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-        /// in .PDF, .TIF or .TIFF format with size upto 20MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Natural Language Sentiment Analysis&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-        /// .PDF, .TIF or .TIFF format with size upto 2MB.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Translation&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A TextSnippet up to 25,000 characters, UTF-8 encoded.&amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;tr&amp;gt;
-        /// &amp;lt;td&amp;gt;AutoML Tables&amp;lt;/td&amp;gt;
-        /// &amp;lt;td&amp;gt;A row with column values matching
+        /// AutoML Vision Classification
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Vision Object Detection
+        /// 
+        /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+        /// 
+        /// AutoML Natural Language Classification
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Natural Language Entity Extraction
+        /// 
+        /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+        /// in .PDF, .TIF or .TIFF format with size upto 20MB.
+        /// 
+        /// AutoML Natural Language Sentiment Analysis
+        /// 
+        /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+        /// .PDF, .TIF or .TIFF format with size upto 2MB.
+        /// 
+        /// AutoML Translation
+        /// 
+        /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+        /// 
+        /// AutoML Tables
+        /// 
+        /// * A row with column values matching
         /// the columns of the model, up to 5MB. Not available for FORECASTING
         /// `prediction_type`.
-        /// &amp;lt;/td&amp;gt;
-        /// &amp;lt;/tr&amp;gt;
-        /// &amp;lt;/table&amp;gt;
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

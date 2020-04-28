@@ -67,42 +67,38 @@ namespace Google.Cloud.AutoML.V1 {
       /// returned in the response.
       /// Available for following ML scenarios, and their expected request payloads:
       ///
-      /// &lt;table>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Classification&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Object Detection&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Classification&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Entity Extraction&lt;/td>
-      /// &lt;td>A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Sentiment Analysis&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Translation&lt;/td>
-      /// &lt;td>A TextSnippet up to 25,000 characters, UTF-8 encoded.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Tables&lt;/td>
-      /// &lt;td>A row with column values matching
+      /// AutoML Vision Classification
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Vision Object Detection
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Natural Language Classification
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Natural Language Entity Extraction
+      ///
+      /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.
+      ///
+      /// AutoML Natural Language Sentiment Analysis
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Translation
+      ///
+      /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+      ///
+      /// AutoML Tables
+      ///
+      /// * A row with column values matching
       ///   the columns of the model, up to 5MB. Not available for FORECASTING
       ///   `prediction_type`.
-      /// &lt;/td>
-      /// &lt;/tr>
-      /// &lt;/table>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -167,42 +163,38 @@ namespace Google.Cloud.AutoML.V1 {
       /// returned in the response.
       /// Available for following ML scenarios, and their expected request payloads:
       ///
-      /// &lt;table>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Classification&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Object Detection&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Classification&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Entity Extraction&lt;/td>
-      /// &lt;td>A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Sentiment Analysis&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Translation&lt;/td>
-      /// &lt;td>A TextSnippet up to 25,000 characters, UTF-8 encoded.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Tables&lt;/td>
-      /// &lt;td>A row with column values matching
+      /// AutoML Vision Classification
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Vision Object Detection
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Natural Language Classification
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Natural Language Entity Extraction
+      ///
+      /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.
+      ///
+      /// AutoML Natural Language Sentiment Analysis
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Translation
+      ///
+      /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+      ///
+      /// AutoML Tables
+      ///
+      /// * A row with column values matching
       ///   the columns of the model, up to 5MB. Not available for FORECASTING
       ///   `prediction_type`.
-      /// &lt;/td>
-      /// &lt;/tr>
-      /// &lt;/table>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -218,42 +210,38 @@ namespace Google.Cloud.AutoML.V1 {
       /// returned in the response.
       /// Available for following ML scenarios, and their expected request payloads:
       ///
-      /// &lt;table>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Classification&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Object Detection&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Classification&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Entity Extraction&lt;/td>
-      /// &lt;td>A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Sentiment Analysis&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Translation&lt;/td>
-      /// &lt;td>A TextSnippet up to 25,000 characters, UTF-8 encoded.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Tables&lt;/td>
-      /// &lt;td>A row with column values matching
+      /// AutoML Vision Classification
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Vision Object Detection
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Natural Language Classification
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Natural Language Entity Extraction
+      ///
+      /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.
+      ///
+      /// AutoML Natural Language Sentiment Analysis
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Translation
+      ///
+      /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+      ///
+      /// AutoML Tables
+      ///
+      /// * A row with column values matching
       ///   the columns of the model, up to 5MB. Not available for FORECASTING
       ///   `prediction_type`.
-      /// &lt;/td>
-      /// &lt;/tr>
-      /// &lt;/table>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -267,42 +255,38 @@ namespace Google.Cloud.AutoML.V1 {
       /// returned in the response.
       /// Available for following ML scenarios, and their expected request payloads:
       ///
-      /// &lt;table>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Classification&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Object Detection&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Classification&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Entity Extraction&lt;/td>
-      /// &lt;td>A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Sentiment Analysis&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Translation&lt;/td>
-      /// &lt;td>A TextSnippet up to 25,000 characters, UTF-8 encoded.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Tables&lt;/td>
-      /// &lt;td>A row with column values matching
+      /// AutoML Vision Classification
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Vision Object Detection
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Natural Language Classification
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Natural Language Entity Extraction
+      ///
+      /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.
+      ///
+      /// AutoML Natural Language Sentiment Analysis
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Translation
+      ///
+      /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+      ///
+      /// AutoML Tables
+      ///
+      /// * A row with column values matching
       ///   the columns of the model, up to 5MB. Not available for FORECASTING
       ///   `prediction_type`.
-      /// &lt;/td>
-      /// &lt;/tr>
-      /// &lt;/table>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -318,42 +302,38 @@ namespace Google.Cloud.AutoML.V1 {
       /// returned in the response.
       /// Available for following ML scenarios, and their expected request payloads:
       ///
-      /// &lt;table>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Classification&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Vision Object Detection&lt;/td>
-      /// &lt;td>An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Classification&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Entity Extraction&lt;/td>
-      /// &lt;td>A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
-      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Natural Language Sentiment Analysis&lt;/td>
-      /// &lt;td>A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
-      /// .PDF, .TIF or .TIFF format with size upto 2MB.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Translation&lt;/td>
-      /// &lt;td>A TextSnippet up to 25,000 characters, UTF-8 encoded.&lt;/td>
-      /// &lt;/tr>
-      /// &lt;tr>
-      /// &lt;td>AutoML Tables&lt;/td>
-      /// &lt;td>A row with column values matching
+      /// AutoML Vision Classification
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Vision Object Detection
+      ///
+      /// * An image in .JPEG, .GIF or .PNG format, image_bytes up to 30MB.
+      ///
+      /// AutoML Natural Language Classification
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Natural Language Entity Extraction
+      ///
+      /// * A TextSnippet up to 10,000 characters, UTF-8 NFC encoded or a document
+      ///  in .PDF, .TIF or .TIFF format with size upto 20MB.
+      ///
+      /// AutoML Natural Language Sentiment Analysis
+      ///
+      /// * A TextSnippet up to 60,000 characters, UTF-8 encoded or a document in
+      /// .PDF, .TIF or .TIFF format with size upto 2MB.
+      ///
+      /// AutoML Translation
+      ///
+      /// * A TextSnippet up to 25,000 characters, UTF-8 encoded.
+      ///
+      /// AutoML Tables
+      ///
+      /// * A row with column values matching
       ///   the columns of the model, up to 5MB. Not available for FORECASTING
       ///   `prediction_type`.
-      /// &lt;/td>
-      /// &lt;/tr>
-      /// &lt;/table>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
