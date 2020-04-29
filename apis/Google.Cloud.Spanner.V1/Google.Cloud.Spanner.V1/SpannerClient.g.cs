@@ -299,6 +299,10 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public SpannerSettings Settings { get; set; }
 
+        partial void PartialBuild(ref SpannerClient client);
+
+        partial void PartialBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SpannerClient> task);
+
         partial void InterceptBuild(ref SpannerClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SpannerClient> task);
@@ -307,7 +311,7 @@ namespace Google.Cloud.Spanner.V1
         public override SpannerClient Build()
         {
             SpannerClient client = null;
-            InterceptBuild(ref client);
+            PartialBuild(ref client);
             return client ?? BuildImpl();
         }
 
@@ -315,7 +319,7 @@ namespace Google.Cloud.Spanner.V1
         public override stt::Task<SpannerClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<SpannerClient> task = null;
-            InterceptBuildAsync(cancellationToken, ref task);
+            PartialBuildAsync(cancellationToken, ref task);
             return task ?? BuildAsyncImpl(cancellationToken);
         }
 
