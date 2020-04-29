@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -26,9 +28,9 @@ namespace Google.Cloud.Tools.Common
         private static readonly Regex PrereleaseApiPattern = new Regex(@"^V[1-9]\d*[^\d]+.*$");
         private static readonly Regex ReleaseVersion = new Regex(@"^[1-9]\d*\.\d+\.\d+$");
 
+        public string Id { get; set; }
         public string Version { get; set; }
         public string ReleasedVersion { get; set; }
-        public string Id { get; set; }
         public ApiType Type { get; set; }
         public string TargetFrameworks { get; set; }
         public string TestTargetFrameworks { get; set; }
@@ -38,6 +40,7 @@ namespace Google.Cloud.Tools.Common
         /// e.g. Google.Cloud.OSLogin.V1Beta would return V1Beta.
         /// Returns null if there's no match, e.g. for Google.Cloud.Firestore.
         /// </summary>
+        [JsonIgnore]
         public string ApiVersion
         {
             get
@@ -67,6 +70,7 @@ namespace Google.Cloud.Tools.Common
         // The product name or brief description is usually a sentence fragment, so if we *do*
         // use the full description, we trim any trailing periods.
         /// </summary>
+        [JsonIgnore]
         public string EffectiveListingDescription => ListingDescription ?? ProductName ?? Description.TrimEnd('.');
 
         /// <summary>
@@ -80,8 +84,9 @@ namespace Google.Cloud.Tools.Common
         public string Description { get; set; }
 
         public List<string> Tags { get; set; } = new List<string>();
-        public Dictionary<string, string> Dependencies { get; set; } = new Dictionary<string, string>();
-        public Dictionary<string, string> TestDependencies { get; set; } = new Dictionary<string, string>();
+        // Using a SortedDictionary means we'll keep dependencies in alphabetical order.
+        public SortedDictionary<string, string> Dependencies { get; set; } = new SortedDictionary<string, string>(StringComparer.Ordinal);
+        public SortedDictionary<string, string> TestDependencies { get; set; } = new SortedDictionary<string, string>(StringComparer.Ordinal);
         public List<string> MetaApis { get; set; } // TODO: enum?
         
         /// <summary>
@@ -100,8 +105,10 @@ namespace Google.Cloud.Tools.Common
         /// </summary>
         public string ServiceYaml { get; set; }
 
+        [JsonIgnore]
         public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
 
+        [JsonIgnore]
         public StructuredVersion StructuredVersion => StructuredVersion.FromString(Version);
 
         /// <summary>
@@ -112,6 +119,7 @@ namespace Google.Cloud.Tools.Common
         public string ReleaseLevelOverride { get; set; }
 
         // TODO: Optimize to do this lazily if it's ever an issue
+        [JsonIgnore]
         public bool CanHaveGaRelease
         {
             get
