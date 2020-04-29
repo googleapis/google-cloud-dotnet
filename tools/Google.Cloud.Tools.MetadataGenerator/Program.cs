@@ -15,9 +15,7 @@
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.MetadataGenerator
 {
@@ -31,9 +29,7 @@ namespace Google.Cloud.Tools.MetadataGenerator
     {
         private static void Main()
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var googleapisRoot = Path.Combine(root, "googleapis");
-            var directory = LoadServiceDirectory(googleapisRoot);
+            var directory = ServiceDirectory.LoadFromGoogleapis();
 
             var catalog = ApiCatalog.Load();
             var paths = new HashSet<string>(catalog.Apis.Select(api => api.ProtoPath));
@@ -46,33 +42,6 @@ namespace Google.Cloud.Tools.MetadataGenerator
                 .Except(catalog.IgnoredPaths)
                 .OrderBy(path => path).ToList();
             ungenerated.ForEach(Console.WriteLine);
-        }
-
-        static ServiceDirectory LoadServiceDirectory(string googleapisRoot)
-        {
-            var configs = LoadServiceConfigsRecursively(googleapisRoot);
-            Console.WriteLine($"Loaded {configs.Count} service config YAML files");
-            return ServiceDirectory.FromServiceConfigs(googleapisRoot, configs);
-        }
-
-        private static readonly Regex ServiceVersionPattern = new Regex(@"^v\d+.*");
-        static IReadOnlyList<ServiceConfig> LoadServiceConfigsRecursively(string directory)
-        {
-            var configs = new List<ServiceConfig>();
-            // Only load service config files from versioned directories (e.g. "google/spanner/v1")
-            if (ServiceVersionPattern.IsMatch(Path.GetFileName(directory)))
-            {
-                var configsInDirectory = Directory.GetFiles(directory, "*.yaml")
-                    .Select(ServiceConfig.TryLoadFile)
-                    .Where(config => config != null);
-                configs.AddRange(configsInDirectory);
-            }
-
-            foreach (var subdir in Directory.GetDirectories(directory))
-            {
-                configs.AddRange(LoadServiceConfigsRecursively(subdir));
-            }
-            return configs;
         }
     }
 }

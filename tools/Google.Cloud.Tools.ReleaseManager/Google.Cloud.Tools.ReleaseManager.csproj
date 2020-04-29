@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +10,7 @@
     <ProjectReference Include="..\Google.Cloud.Tools.ProjectGenerator\Google.Cloud.Tools.ProjectGenerator.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.UpdateReleaseNotes\Google.Cloud.Tools.UpdateReleaseNotes.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.CheckVersionCompatibility\Google.Cloud.Tools.CheckVersionCompatibility.csproj" />
+    <ProjectReference Include="..\Google.Cloud.Tools.MetadataGenerator\Google.Cloud.Tools.MetadataGenerator.csproj" />
   </ItemGroup>
 
 </Project>
