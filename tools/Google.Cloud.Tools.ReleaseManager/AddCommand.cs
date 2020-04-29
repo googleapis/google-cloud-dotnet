@@ -30,14 +30,13 @@ namespace Google.Cloud.Tools.ReleaseManager
     public class AddCommand : CommandBase
     {
         public AddCommand()
-            : base("add", "Adds an API to the API catalog", "id", "protoPath")
+            : base("add", "Adds an API to the API catalog", "id")
         {
         }
 
         protected override void ExecuteImpl(string[] args)
         {
             string id = args[0];
-            string protoPath = args[1];
 
             var catalog = ApiCatalog.Load();
             if (catalog.Apis.Any(api => api.Id == id))
@@ -46,15 +45,21 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
             var serviceDirectory = ServiceDirectory.LoadFromGoogleapis();
 
-            var service = serviceDirectory.Services.FirstOrDefault(service => service.ServiceDirectory == protoPath);
+            var service = serviceDirectory.Services.FirstOrDefault(service => service.CSharpNamespaceFromProtos == id);
             if (service is null)
             {
-                throw new UserErrorException($"No service found with proto path '{protoPath}'");
+                var lowerWithoutCloud = id.Replace(".Cloud", "").ToLowerInvariant();
+                var possibilities = serviceDirectory.Services
+                    .Select(svc => svc.CSharpNamespaceFromProtos)
+                    .Where(ns => ns.Replace(".Cloud", "").ToLowerInvariant() == lowerWithoutCloud);
+                throw new UserErrorException(
+                    $"No service found for '{id}'.{Environment.NewLine}Similar possibilities (check options?): {string.Join(", ", possibilities)}");
             }
+
             var api = new ApiMetadata
             {
                 Id = id,
-                ProtoPath = protoPath,
+                ProtoPath = service.ServiceDirectory,
                 ProductName = service.Title,
                 Description = service.Description,
                 Version = "1.0.0-beta00",
