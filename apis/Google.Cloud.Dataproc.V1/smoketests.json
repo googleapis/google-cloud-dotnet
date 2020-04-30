@@ -1,0 +1,12 @@
+[
+  {
+    "client": "ClusterControllerClient",
+    "method": "ListClusters",
+    "arguments": {
+      "request": {
+        "projectId": "${PROJECT_ID}",
+        "region": "global"
+      }
+    }
+  }
+]

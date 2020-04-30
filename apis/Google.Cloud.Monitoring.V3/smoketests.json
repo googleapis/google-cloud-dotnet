@@ -1,0 +1,9 @@
+[
+  {
+    "client": "MetricServiceClient",
+    "method": "ListMonitoredResourceDescriptors",
+    "arguments": {
+      "name": "projects/${PROJECT_ID}"
+    }
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "method": "ListInstances",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/-"
+    }
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "client": "CompanyServiceClient",
+    "method": "ListCompanies",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]

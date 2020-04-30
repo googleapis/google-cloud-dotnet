@@ -1,0 +1,22 @@
+[
+  {
+    "client": "ReportErrorsServiceClient",
+    "method": "ReportErrorEvent",
+    "arguments": {
+      "projectName": "projects/${PROJECT_ID}",
+      "event": {
+        "message": "[MESSAGE]",
+        "service_context": {
+          "service": "[SERVICE]"
+        },
+        "context": {
+          "report_location": {
+            "file_path": "path/to/file.lang",
+            "line_number": 42,
+            "function_name": "meaningOfLife"
+          }
+        }
+      }
+    }
+  }
+]

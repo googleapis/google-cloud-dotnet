@@ -1,0 +1,11 @@
+[
+  {
+    "method": "BatchGetAssetsHistory",
+    "arguments": {
+      "request": {
+        "parent": "projects/${PROJECT_ID}",
+        "content_type": "RESOURCE"
+      }
+    }
+  }
+]

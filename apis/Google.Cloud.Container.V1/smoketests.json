@@ -1,0 +1,11 @@
+[
+  {
+    "method": "ListClusters",
+    "arguments": {
+      "request": {
+        "projectId": "${PROJECT_ID}",
+        "zone": "us-central1-a"
+      }
+    }
+  }
+]
