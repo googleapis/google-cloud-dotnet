@@ -85,7 +85,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var serializer = new JsonSerializer
             {
                 NullValueHandling = NullValueHandling.Ignore,
-                Converters = { new StringEnumConverter(camelCaseText: true) },
+                Converters = { new StringEnumConverter(new CamelCaseNamingStrategy()) },
                 ContractResolver = new DefaultContractResolver { NamingStrategy = new CamelCaseNamingStrategy() }
             };            
             api.Json = JToken.FromObject(api, serializer);
