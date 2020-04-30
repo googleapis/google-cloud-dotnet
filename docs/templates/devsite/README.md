@@ -1,6 +1,4 @@
-# DocFX Templates
-
-## Devsite
+# Devsite DocFX Templates
 
 The output `toc.html` file should be renamed `_toc.yaml`.
 
@@ -29,7 +27,7 @@ The `docfx.json` file needs some extra config:
 Note: the `_appTitle` property and the last part of the `_rootPath` property
 should be updated with the product. This is used to generate the TOC.
 
-### Updating and diffs
+## Updating and diffs
 
 This was based on the `default` template. You can export it by running
 `docfx template export default`. Run `diff` on any files to see how they were
@@ -43,7 +41,7 @@ changed. A high level summary:
   This makes the right nav work properly.
 * `toc.html` actually results in YAML and should be renamed to `_toc.yaml`.
 
-### Disclaimer
+## Disclaimer
 
 This may change at any time in backwards incompatible ways and is not intended
 for general use.
