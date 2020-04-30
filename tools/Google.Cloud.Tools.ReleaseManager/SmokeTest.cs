@@ -200,7 +200,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                     return null;
                 }
                 var propertyType = parserProperty.PropertyType;
-                Console.WriteLine("Got a parser property of type " + propertyType);
                 return propertyType.IsGenericType && propertyType.GetGenericTypeDefinition().FullName == "Google.Protobuf.MessageParser`1"
                     ? parserProperty.GetValue(null)
                     : null;
