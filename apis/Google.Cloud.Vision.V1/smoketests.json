@@ -1,0 +1,24 @@
+[
+  {
+    "client":"ImageAnnotatorClient",
+    "method":"BatchAnnotateImages",
+    "arguments":{
+      "request":{
+        "requests":[
+          {
+            "image":{
+              "source":{
+                "gcs_image_uri":"gs://cloud-samples-data/vision/face_detection/celebrity_recognition/sergey.jpg"
+              }
+            },
+            "features":[
+              {
+                "type":"FACE_DETECTION"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

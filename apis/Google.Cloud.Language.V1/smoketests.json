@@ -1,0 +1,11 @@
+[
+  {
+    "method":"AnalyzeSyntax",
+    "arguments":{
+      "document":{
+        "content":"This is a simple sentence",
+        "type":"PLAIN_TEXT"
+      }
+    }
+  }
+]
