@@ -1,0 +1,12 @@
+[
+  {
+    "client": "LoggingServiceV2Client",
+    "method": "WriteLogEntries",
+    "arguments": {
+      "logName": "projects/${PROJECT_ID}/logs/smoke-test",
+      "resource": {},
+      "labels": {},
+      "entries": []
+    }
+  }
+]

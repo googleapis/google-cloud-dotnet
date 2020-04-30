@@ -1,0 +1,17 @@
+[
+  {
+    "client": "TextToSpeechClient",
+    "method": "SynthesizeSpeech",
+    "arguments": {
+      "input": {
+        "text": "test"
+      },
+      "voice": {
+        "language_code": "en-US"
+      },
+      "audioConfig": {
+        "audio_encoding": "MP3"
+      }
+    }
+  }
+]

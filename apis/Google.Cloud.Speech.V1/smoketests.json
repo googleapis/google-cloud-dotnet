@@ -1,0 +1,15 @@
+[
+  {
+    "method": "Recognize",
+    "arguments": {
+      "config": {
+      	"language_code": "en-US",
+      	"sample_rate_hertz": 44100,
+      	"encoding": "FLAC"
+      },
+      "audio": {
+      	"uri": "gs://gapic-toolkit/hello.flac"
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "client": "TraceServiceClient",
+    "method": "BatchWriteSpans",
+    "arguments": {
+      "name": "projects/${PROJECT_ID}",
+      "spans": []
+    }
+  }
+]

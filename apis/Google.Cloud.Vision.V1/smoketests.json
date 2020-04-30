@@ -1,19 +1,19 @@
 [
   {
-    "client":"ImageAnnotatorClient",
-    "method":"BatchAnnotateImages",
-    "arguments":{
-      "request":{
-        "requests":[
+    "client": "ImageAnnotatorClient",
+    "method": "BatchAnnotateImages",
+    "arguments": {
+      "request": {
+        "requests": [
           {
-            "image":{
-              "source":{
-                "gcs_image_uri":"gs://cloud-samples-data/vision/face_detection/celebrity_recognition/sergey.jpg"
+            "image": {
+              "source": {
+                "gcs_image_uri": "gs://cloud-samples-data/vision/face_detection/celebrity_recognition/sergey.jpg"
               }
             },
-            "features":[
+            "features": [
               {
-                "type":"FACE_DETECTION"
+                "type": "FACE_DETECTION"
               }
             ]
           }
