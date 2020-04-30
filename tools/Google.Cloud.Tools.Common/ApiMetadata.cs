@@ -87,7 +87,6 @@ namespace Google.Cloud.Tools.Common
         // Using a SortedDictionary means we'll keep dependencies in alphabetical order.
         public SortedDictionary<string, string> Dependencies { get; set; } = new SortedDictionary<string, string>(StringComparer.Ordinal);
         public SortedDictionary<string, string> TestDependencies { get; set; } = new SortedDictionary<string, string>(StringComparer.Ordinal);
-        public List<string> MetaApis { get; set; } // TODO: enum?
         
         /// <summary>
         /// The type of generator used to generate source code for this API.
