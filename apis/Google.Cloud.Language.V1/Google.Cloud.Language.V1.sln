@@ -10,8 +10,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{682040F0-9FA8-458C-A090-D990809DFD13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Language.V1.SmokeTests", "Google.Cloud.Language.V1.SmokeTests\Google.Cloud.Language.V1.SmokeTests.csproj", "{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Language.V1.FixGeneratedCode", "Google.Cloud.Language.V1.FixGeneratedCode\Google.Cloud.Language.V1.FixGeneratedCode.csproj", "{6646A7DC-DC2C-45A9-BE3A-69CB900F5B58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Tools.SourceManipulation", "..\..\tools\Google.Cloud.Tools.SourceManipulation\Google.Cloud.Tools.SourceManipulation.csproj", "{39D0D489-B47E-4EB9-BB5E-B0E0A2BA8427}"
@@ -76,18 +74,6 @@ Global
 		{682040F0-9FA8-458C-A090-D990809DFD13}.Release|x64.Build.0 = Release|Any CPU
 		{682040F0-9FA8-458C-A090-D990809DFD13}.Release|x86.ActiveCfg = Release|Any CPU
 		{682040F0-9FA8-458C-A090-D990809DFD13}.Release|x86.Build.0 = Release|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Debug|x64.Build.0 = Debug|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Debug|x86.Build.0 = Debug|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Release|x64.ActiveCfg = Release|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Release|x64.Build.0 = Release|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Release|x86.ActiveCfg = Release|Any CPU
-		{96FA5295-15D9-4899-8FE6-7FA4D3F6C5BA}.Release|x86.Build.0 = Release|Any CPU
 		{6646A7DC-DC2C-45A9-BE3A-69CB900F5B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6646A7DC-DC2C-45A9-BE3A-69CB900F5B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6646A7DC-DC2C-45A9-BE3A-69CB900F5B58}.Debug|x64.ActiveCfg = Debug|Any CPU
