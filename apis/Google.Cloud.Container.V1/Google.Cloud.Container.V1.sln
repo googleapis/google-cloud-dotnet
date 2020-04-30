@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
@@ -7,8 +7,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Container.V1.Snippets", "Google.Cloud.Container.V1.Snippets\Google.Cloud.Container.V1.Snippets.csproj", "{EEE3FB10-C011-426A-89D6-866E40331C02}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{5D642FB7-D603-4C8D-B205-C9EE5CBA2471}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Container.V1.SmokeTests", "Google.Cloud.Container.V1.SmokeTests\Google.Cloud.Container.V1.SmokeTests.csproj", "{D20D9814-BBEC-441E-9D08-69CD01BBE706}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Container.V1.Tests", "Google.Cloud.Container.V1.Tests\Google.Cloud.Container.V1.Tests.csproj", "{7C0D5064-C692-45E8-B460-766B7308DA74}"
 EndProject
@@ -58,18 +56,6 @@ Global
 		{5D642FB7-D603-4C8D-B205-C9EE5CBA2471}.Release|x64.Build.0 = Release|Any CPU
 		{5D642FB7-D603-4C8D-B205-C9EE5CBA2471}.Release|x86.ActiveCfg = Release|Any CPU
 		{5D642FB7-D603-4C8D-B205-C9EE5CBA2471}.Release|x86.Build.0 = Release|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Debug|x64.Build.0 = Debug|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Debug|x86.Build.0 = Debug|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Release|x64.ActiveCfg = Release|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Release|x64.Build.0 = Release|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Release|x86.ActiveCfg = Release|Any CPU
-		{D20D9814-BBEC-441E-9D08-69CD01BBE706}.Release|x86.Build.0 = Release|Any CPU
 		{7C0D5064-C692-45E8-B460-766B7308DA74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C0D5064-C692-45E8-B460-766B7308DA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C0D5064-C692-45E8-B460-766B7308DA74}.Debug|x64.ActiveCfg = Debug|Any CPU

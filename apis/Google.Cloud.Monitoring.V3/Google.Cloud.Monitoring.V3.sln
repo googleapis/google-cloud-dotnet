@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1BB4B59A-5
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{C434E081-1F68-4C33-8246-4B602C6B9DF3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Monitoring.V3.SmokeTests", "Google.Cloud.Monitoring.V3.SmokeTests\Google.Cloud.Monitoring.V3.SmokeTests.csproj", "{EEE91E65-3734-42C7-AF91-F22F63E19A70}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Monitoring.V3.Tests", "Google.Cloud.Monitoring.V3.Tests\Google.Cloud.Monitoring.V3.Tests.csproj", "{36AD341F-3615-4035-B6B0-93DB9B80A8F7}"
 EndProject
@@ -63,18 +61,6 @@ Global
 		{C434E081-1F68-4C33-8246-4B602C6B9DF3}.Release|x64.Build.0 = Release|Any CPU
 		{C434E081-1F68-4C33-8246-4B602C6B9DF3}.Release|x86.ActiveCfg = Release|Any CPU
 		{C434E081-1F68-4C33-8246-4B602C6B9DF3}.Release|x86.Build.0 = Release|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Debug|x64.Build.0 = Debug|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Debug|x86.Build.0 = Debug|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Release|x64.ActiveCfg = Release|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Release|x64.Build.0 = Release|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Release|x86.ActiveCfg = Release|Any CPU
-		{EEE91E65-3734-42C7-AF91-F22F63E19A70}.Release|x86.Build.0 = Release|Any CPU
 		{36AD341F-3615-4035-B6B0-93DB9B80A8F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36AD341F-3615-4035-B6B0-93DB9B80A8F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36AD341F-3615-4035-B6B0-93DB9B80A8F7}.Debug|x64.ActiveCfg = Debug|Any CPU

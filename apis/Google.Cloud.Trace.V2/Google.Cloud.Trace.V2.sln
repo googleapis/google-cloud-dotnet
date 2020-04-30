@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 15.0.26124.0
@@ -7,8 +7,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Trace.V2.Snippets", "Google.Cloud.Trace.V2.Snippets\Google.Cloud.Trace.V2.Snippets.csproj", "{64F6FEB5-629E-4FE0-B25E-160301F3BABF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{786B367A-6CC9-4B5D-95BF-307E23300574}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Trace.V2.SmokeTests", "Google.Cloud.Trace.V2.SmokeTests\Google.Cloud.Trace.V2.SmokeTests.csproj", "{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Trace.V2.Tests", "Google.Cloud.Trace.V2.Tests\Google.Cloud.Trace.V2.Tests.csproj", "{9B942FD4-F7DF-4201-8C54-A01DE8D4560C}"
 EndProject
@@ -58,18 +56,6 @@ Global
 		{786B367A-6CC9-4B5D-95BF-307E23300574}.Release|x64.Build.0 = Release|Any CPU
 		{786B367A-6CC9-4B5D-95BF-307E23300574}.Release|x86.ActiveCfg = Release|Any CPU
 		{786B367A-6CC9-4B5D-95BF-307E23300574}.Release|x86.Build.0 = Release|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Debug|x64.Build.0 = Debug|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Debug|x86.Build.0 = Debug|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Release|x64.ActiveCfg = Release|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Release|x64.Build.0 = Release|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Release|x86.ActiveCfg = Release|Any CPU
-		{C5C4DB81-8A80-4B7D-A4EF-4C582F9C7B57}.Release|x86.Build.0 = Release|Any CPU
 		{9B942FD4-F7DF-4201-8C54-A01DE8D4560C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9B942FD4-F7DF-4201-8C54-A01DE8D4560C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B942FD4-F7DF-4201-8C54-A01DE8D4560C}.Debug|x64.ActiveCfg = Debug|Any CPU
