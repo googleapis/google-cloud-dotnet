@@ -37,9 +37,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private const string s_emulatorHostEnvironmentVariable = "SPANNER_EMULATOR_HOST";
         private static readonly string[] s_emulatorEnvironmentVariables = { s_emulatorHostEnvironmentVariable };
 
-        partial void PartialBuild(ref DatabaseAdminClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+        partial void InterceptBuild(ref DatabaseAdminClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
 
-        partial void PartialBuildAsync(CancellationToken cancellationToken, ref Task<DatabaseAdminClient> task) =>
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<DatabaseAdminClient> task) =>
             task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
 
         private DatabaseAdminClientBuilder MaybeCreateEmulatorClientBuilder()

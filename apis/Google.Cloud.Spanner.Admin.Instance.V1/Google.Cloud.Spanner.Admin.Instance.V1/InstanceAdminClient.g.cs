@@ -254,10 +254,6 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public InstanceAdminSettings Settings { get; set; }
 
-        partial void PartialBuild(ref InstanceAdminClient client);
-
-        partial void PartialBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<InstanceAdminClient> task);
-
         partial void InterceptBuild(ref InstanceAdminClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<InstanceAdminClient> task);
@@ -266,7 +262,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public override InstanceAdminClient Build()
         {
             InstanceAdminClient client = null;
-            PartialBuild(ref client);
+            InterceptBuild(ref client);
             return client ?? BuildImpl();
         }
 
@@ -274,7 +270,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         public override stt::Task<InstanceAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<InstanceAdminClient> task = null;
-            PartialBuildAsync(cancellationToken, ref task);
+            InterceptBuildAsync(cancellationToken, ref task);
             return task ?? BuildAsyncImpl(cancellationToken);
         }
 
