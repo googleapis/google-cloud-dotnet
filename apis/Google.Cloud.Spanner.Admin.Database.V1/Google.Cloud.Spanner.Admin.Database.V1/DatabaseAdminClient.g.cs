@@ -398,10 +398,6 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
         public DatabaseAdminSettings Settings { get; set; }
 
-        partial void PartialBuild(ref DatabaseAdminClient client);
-
-        partial void PartialBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<DatabaseAdminClient> task);
-
         partial void InterceptBuild(ref DatabaseAdminClient client);
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<DatabaseAdminClient> task);
@@ -410,7 +406,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         public override DatabaseAdminClient Build()
         {
             DatabaseAdminClient client = null;
-            PartialBuild(ref client);
+            InterceptBuild(ref client);
             return client ?? BuildImpl();
         }
 
@@ -418,7 +414,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         public override stt::Task<DatabaseAdminClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<DatabaseAdminClient> task = null;
-            PartialBuildAsync(cancellationToken, ref task);
+            InterceptBuildAsync(cancellationToken, ref task);
             return task ?? BuildAsyncImpl(cancellationToken);
         }
 
