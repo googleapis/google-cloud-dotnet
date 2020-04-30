@@ -27,19 +27,24 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public sealed class PushCommand : CommandBase
     {
+        private const string AccessTokenEnvironmentVariable = "GITHUB_ACCESS_TOKEN";
         private const string RepositoryOwner = "googleapis";
         private const string RepositoryName = "google-cloud-dotnet";
         private const string ApplicationName = "google-cloud-dotnet-release-manager";
         private const string AutoreleasePendingLabel = "autorelease: pending";
 
         public PushCommand()
-            : base("push", "Push the current branch to GitHub and create a pull request with an autorelease tag", "github-token")
+            : base("push", "Push the current branch to GitHub and create a pull request with an autorelease tag")
         {
         }
 
         protected override void ExecuteImpl(string[] args)
         {
-            string gitHubToken = args[0];
+            string gitHubToken = Environment.GetEnvironmentVariable(AccessTokenEnvironmentVariable);
+            if (string.IsNullOrEmpty(gitHubToken))
+            {
+                throw new UserErrorException($"This command requires a non-empty value for the {AccessTokenEnvironmentVariable} environment variable.");
+            }
             var gitHubClient = CreateGitHubClient(gitHubToken);
 
             var root = DirectoryLayout.DetermineRootDirectory();
