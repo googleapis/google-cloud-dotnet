@@ -69,7 +69,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", testProject, "-f", TestTargetFramework);
 
             var assemblyFile = Path.Combine(sourceRoot, testProject, "bin", "Release", TestTargetFramework, "publish", $"{id}.dll");
-            Console.WriteLine(assemblyFile);
             return Assembly.LoadFrom(assemblyFile);
         }
 
