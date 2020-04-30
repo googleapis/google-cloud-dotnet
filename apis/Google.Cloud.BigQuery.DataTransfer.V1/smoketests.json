@@ -1,0 +1,8 @@
+[
+  {
+    "method":"ListDataSources",
+    "arguments":{
+      "parent":"projects/${PROJECT_ID}"
+    }
+  }
+]
