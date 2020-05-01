@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Google.Cloud.Tools.MetadataGenerator;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;

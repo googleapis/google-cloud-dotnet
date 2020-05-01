@@ -20,7 +20,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Google.Cloud.Tools.MetadataGenerator
+namespace Google.Cloud.Tools.Common
 {
     /// <summary>
     /// The service directory, in a ready-to-serialize form.

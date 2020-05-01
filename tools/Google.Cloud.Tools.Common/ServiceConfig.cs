@@ -12,13 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Collections.Generic;
-using System.IO;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace Google.Cloud.Tools.MetadataGenerator
+namespace Google.Cloud.Tools.Common
 {
     /// <summary>
     /// The content of an individual service config file, as stored in YAML.
