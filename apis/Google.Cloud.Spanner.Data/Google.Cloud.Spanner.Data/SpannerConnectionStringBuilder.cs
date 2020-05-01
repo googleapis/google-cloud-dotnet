@@ -307,6 +307,20 @@ namespace Google.Cloud.Spanner.Data
             set => _sessionPoolManager = GaxPreconditions.CheckNotNull(value, nameof(value));
         }
 
+        /// <summary>
+        /// Specifies whether to allow the connection to check for the presence of the emulator
+        /// environment variable.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that the
+        /// environment variable is ignored.
+        /// </remarks>
+        public EmulatorDetection EmulatorDetection
+        {
+            get => SessionPoolManager.EmulatorDetection;
+            set => SessionPoolManager.EmulatorDetection = value;
+        }
+
         internal Task<SessionPool> AcquireSessionPoolAsync() =>
             SessionPoolManager.AcquireSessionPoolAsync(new SpannerClientCreationOptions(this));
 
