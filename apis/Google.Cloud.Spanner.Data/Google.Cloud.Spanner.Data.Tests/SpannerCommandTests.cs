@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
@@ -171,7 +172,43 @@ namespace Google.Cloud.Spanner.Data.Tests
             }, envOptimizerVersion);
         }
 
-        private Mock<SpannerClient> SetupExecuteStreamingSql(string optimizerVersion)
+        [Fact]
+        public void ClientCreatedWithEmulatorDetection()
+        {
+            Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql();
+
+            var spannerClient = spannerClientMock.Object;
+            var sessionPoolOptions = new SessionPoolOptions
+            {
+                MaintenanceLoopDelay = TimeSpan.Zero
+            };
+
+            var emulatorDetection = EmulatorDetection.EmulatorOrProduction;
+            var sessionPoolManager = new SessionPoolManager(
+                sessionPoolOptions, spannerClient.Settings.Logger,
+                (_o, _s, _l, _e) =>
+                {
+                    Assert.Equal(_e, emulatorDetection);
+                    return Task.FromResult(spannerClient);
+                }
+            );
+
+            SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder
+            {
+                DataSource = DatabaseName.Format(SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance, SpannerClientHelpers.Database),
+                SessionPoolManager = sessionPoolManager,
+                EmulatorDetection = emulatorDetection
+            };
+            var connection = new SpannerConnection(builder);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            using (var reader = command.ExecuteReader())
+            {
+                // Do nothing.
+            }
+        }
+
+        private Mock<SpannerClient> SetupExecuteStreamingSql(string optimizerVersion = "")
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
                 .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
