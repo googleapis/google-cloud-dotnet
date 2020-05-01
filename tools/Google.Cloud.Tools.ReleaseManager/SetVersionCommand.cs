@@ -37,10 +37,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             api.Version = version;
             var layout = DirectoryLayout.ForApi(id);
             var apiNames = catalog.CreateIdHashSet();
-            ProjectGenerator.Program.GenerateMetadataFile(layout.SourceDirectory, api);
-            ProjectGenerator.Program.GenerateProjects(layout.SourceDirectory, api, apiNames);
-            ProjectGenerator.Program.RewriteReadme(catalog);
-            ProjectGenerator.Program.RewriteDocsRootIndex(catalog);
+            GenerateProjectsCommand.GenerateMetadataFile(layout.SourceDirectory, api);
+            GenerateProjectsCommand.GenerateProjects(layout.SourceDirectory, api, apiNames);
+            GenerateProjectsCommand.RewriteReadme(catalog);
+            GenerateProjectsCommand.RewriteDocsRootIndex(catalog);
 
             // Update the parsed JObject associated with the ID, and write it back to apis.json.
             api.Json["version"] = version;

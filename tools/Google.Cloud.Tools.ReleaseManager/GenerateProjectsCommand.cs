@@ -23,9 +23,9 @@ using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace Google.Cloud.Tools.ProjectGenerator
+namespace Google.Cloud.Tools.ReleaseManager
 {
-    public class Program
+    public class GenerateProjectsCommand : CommandBase
     {
         private static readonly Regex AnyVersionPattern = new Regex(@"^[0-9]\d*\.\d+\.\d+(\.\d+)?(-.*)?$");
         private static readonly Regex StableVersionPattern = new Regex(@"^[1-9]\d*\.\d+\.\d+(\.\d+)?$");
@@ -122,41 +122,31 @@ namespace Google.Cloud.Tools.ProjectGenerator
 
         private const string AnalyzersPath = @"..\..\..\tools\Google.Cloud.Tools.Analyzers\bin\$(Configuration)\netstandard1.3\publish\Google.Cloud.Tools.Analyzers.dll";
 
-        static int Main()
+        public GenerateProjectsCommand() : base("generate-projects", "Generates project files, coverage files etc from the API catalog")
         {
-            try
-            {
-                ValidateCommonHiddenProductionDependencies();
-                var root = DirectoryLayout.DetermineRootDirectory();
-                var catalog = ApiCatalog.Load();
-                Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
-                // Now we know we can parse the API catalog, let's reformat it.
-                ReformatApiCatalog(catalog);
-                RewriteReadme(catalog);
-                RewriteDocsRootIndex(catalog);
-                HashSet<string> apiNames = catalog.CreateIdHashSet();
+        }
 
-                foreach (var api in catalog.Apis)
-                {
-                    var path = Path.Combine(root, "apis", api.Id);
-                    GenerateProjects(path, api, apiNames);
-                    GenerateSolutionFiles(path, api);
-                    GenerateDocumentationStub(path, api);
-                    GenerateSynthConfiguration(path, api);
-                    GenerateMetadataFile(path, api);
-                }
-                return 0;
-            }
-            catch (UserErrorException e)
+        protected override void ExecuteImpl(string[] args)
+        {
+            ValidateCommonHiddenProductionDependencies();
+            var root = DirectoryLayout.DetermineRootDirectory();
+            var catalog = ApiCatalog.Load();
+            Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
+            // Now we know we can parse the API catalog, let's reformat it.
+            ReformatApiCatalog(catalog);
+            RewriteReadme(catalog);
+            RewriteDocsRootIndex(catalog);
+            HashSet<string> apiNames = catalog.CreateIdHashSet();
+
+            foreach (var api in catalog.Apis)
             {
-                Console.WriteLine($"Configuration error: {e.Message}");
-                return 1;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Failed: {e}");
-                return 1;
-            }
+                var path = Path.Combine(root, "apis", api.Id);
+                GenerateProjects(path, api, apiNames);
+                GenerateSolutionFiles(path, api);
+                GenerateDocumentationStub(path, api);
+                GenerateSynthConfiguration(path, api);
+                GenerateMetadataFile(path, api);
+            }            
         }
 
         private static void ReformatApiCatalog(ApiCatalog catalog)
@@ -437,7 +427,7 @@ shell.run(
         {
             string metadataPath = Path.Combine(apiRoot, ".repo-metadata.json");
             var version = api.StructuredVersion;
-            string versionBasedReleaseLevel = 
+            string versionBasedReleaseLevel =
                 // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
                 (version.Prerelease ?? "").EndsWith("00") && version.Major == 1 && version.Minor == 0 ? "none"
                 // If it's not a prerelease now, or it's ever got to 1.0, it's generally "ga"
@@ -721,7 +711,7 @@ shell.run(
                 Console.WriteLine($"{(beforeHash == null ? "Created" : "Modified")} project file {Path.GetFileName(file)}");
             }
         }
-        
+
         private static XElement CreateDependenciesElement(string project, IDictionary<string, string> dependencies, bool stableRelease, bool testProject, HashSet<string> apiNames) =>
             new XElement("ItemGroup",
                 // Use the GAX version for all otherwise-unversioned GAX dependencies
@@ -777,7 +767,7 @@ shell.run(
                 if (!DefaultPackageVersions.TryGetValue(package, out version))
                 {
                     throw new UserErrorException($"Project {project} depends on default version of unknown package {package}");
-                }                
+                }
             }
 
             PrivateAssets.TryGetValue(package, out string privateAssetValue);
@@ -813,7 +803,7 @@ shell.run(
                 return specifiedVersion;
             }
             var structuredVersion = StructuredVersion.FromString(specifiedVersion);
-            var nextMajor = StructuredVersion.FromMajorMinorPatchBuild(structuredVersion.Major + 1, 0, 0, structuredVersion.Build is null ? default(int?): 0, null);
+            var nextMajor = StructuredVersion.FromMajorMinorPatchBuild(structuredVersion.Major + 1, 0, 0, structuredVersion.Build is null ? default(int?) : 0, null);
             return $"[{structuredVersion}, {nextMajor})";
         }
 
