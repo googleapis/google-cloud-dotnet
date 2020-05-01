@@ -11,7 +11,7 @@ mkdir tmpgit/new
 
 # First build everything, so we can get straight to the good stuff at the end of the log.
 dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CompareVersions
-dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CheckVersionCompatibility
+dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
 
 for api in $apis
 do
@@ -70,4 +70,4 @@ echo ""
 
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
-dotnet run --no-build -p tools/Google.Cloud.Tools.CheckVersionCompatibility
+dotnet run --no-build -p tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility

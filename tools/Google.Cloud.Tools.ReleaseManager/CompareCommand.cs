@@ -48,7 +48,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     Processes.RunDotnet(sourceRoot, "build", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", api);
                 }
             }
-            CheckVersionCompatibility.Program.Main(idsToCheck.ToArray());
+            new CheckVersionCompatibilityCommand().Execute(idsToCheck.ToArray());
         }
     }
 }
