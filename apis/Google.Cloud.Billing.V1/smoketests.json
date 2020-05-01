@@ -1,0 +1,12 @@
+[
+  {
+    "method": "ListBillingAccounts",
+    "client": "CloudBillingClient",
+    "arguments": {}
+  },
+  {
+    "method": "ListServices",
+    "client": "CloudCatalogClient",
+    "arguments": {}
+  }
+]
