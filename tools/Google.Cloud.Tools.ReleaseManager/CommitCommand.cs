@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Google.Cloud.Tools.UpdateReleaseNotes;
+using Google.Cloud.Tools.ReleaseManager.History;
 using LibGit2Sharp;
 using System;
 using System.Collections.Generic;

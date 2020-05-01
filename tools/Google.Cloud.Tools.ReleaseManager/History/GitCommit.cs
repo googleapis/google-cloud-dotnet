@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Google.Cloud.Tools.UpdateReleaseNotes
+namespace Google.Cloud.Tools.ReleaseManager.History
 {
     /// <summary>
     /// A commit in the history of an API. This class basically exists to avoid putting
