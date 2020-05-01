@@ -21,9 +21,9 @@ using Google.Cloud.Tools.VersionCompat;
 using LibGit2Sharp;
 using Mono.Cecil;
 
-namespace Google.Cloud.Tools.CheckVersionCompatibility
+namespace Google.Cloud.Tools.ReleaseManager
 {
-    public class Program
+    public class CheckVersionCompatibilityCommand : ICommand
     {
         // These APIs don't build for netstandard2.0, so for now we ignore them.
         // We could potentially detect the right TFM, but that's more work than it's probably worth.
@@ -33,7 +33,13 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
             "Google.Cloud.Diagnostics.AspNetCore.Analyzers"
         }.ToList();
 
-        public static int Main(string[] args)
+        public string Description => "Compares a package (or all packages) for compatibility against previously-released versions";
+
+        public string Command => "check-version-compatibility";
+
+        public string ExpectedArguments => "[id [id...]]";
+
+        public void Execute(string[] args)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             var catalog = ApiCatalog.Load();
@@ -64,7 +70,7 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
                     .Select(StructuredVersion.FromString)
                     .OrderBy(v => v)
                     .ToList();
-               
+
                 var newVersion = api.StructuredVersion;
 
                 // First perform a "strict" check, where necessary, failing the build if the difference
@@ -74,14 +80,12 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
                 {
                     if (!previousVersions.Contains(requiredVersion))
                     {
-                        Console.WriteLine($"Expected to check compatibility with {requiredVersion}, but no corresponding tag found");
-                        return 1;
+                        throw new UserErrorException($"Expected to check compatibility with {requiredVersion}, but no corresponding tag found");
                     }
                     var actualLevel = CheckCompatibility(api, requiredVersion);
                     if (actualLevel < requiredLevel)
                     {
-                        Console.WriteLine($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
-                        return 1;
+                        throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
                     }
                 }
 
@@ -93,7 +97,6 @@ namespace Google.Cloud.Tools.CheckVersionCompatibility
                     CheckCompatibility(api, lastRelease);
                 }
             }
-            return 0;
         }
 
         /// <summary>
