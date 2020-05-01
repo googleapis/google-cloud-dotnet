@@ -8,7 +8,6 @@
   <ItemGroup>
     <PackageReference Include="Octokit" Version="0.32.0" />
     <ProjectReference Include="..\Google.Cloud.Tools.ProjectGenerator\Google.Cloud.Tools.ProjectGenerator.csproj" />
-    <ProjectReference Include="..\Google.Cloud.Tools.UpdateReleaseNotes\Google.Cloud.Tools.UpdateReleaseNotes.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.CheckVersionCompatibility\Google.Cloud.Tools.CheckVersionCompatibility.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.MetadataGenerator\Google.Cloud.Tools.MetadataGenerator.csproj" />
   </ItemGroup>

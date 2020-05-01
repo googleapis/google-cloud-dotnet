@@ -13,20 +13,19 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using LibGit2Sharp;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Google.Cloud.Tools.UpdateReleaseNotes
+namespace Google.Cloud.Tools.ReleaseManager.History
 {
     /// <summary>
     /// A history file, which is basically a list of sections. Each section has
     /// a version and release date - except potentially the first section, which might contain
     /// some preamble. All sections then have a list of lines.
     /// </summary>
-    public sealed class HistoryFile
+    internal sealed class HistoryFile
     {
         private const string MarkdownFile = "history.md";
         private static readonly Regex SectionHeader = new Regex(@"# Version (.*), released \d{4}-\d{2}-\d{2}");

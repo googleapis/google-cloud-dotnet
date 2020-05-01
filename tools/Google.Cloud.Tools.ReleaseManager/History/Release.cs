@@ -18,7 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Google.Cloud.Tools.UpdateReleaseNotes
+namespace Google.Cloud.Tools.ReleaseManager.History
 {
     internal sealed class Release
     {
