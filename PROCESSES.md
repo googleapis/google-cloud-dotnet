@@ -191,8 +191,18 @@ changes, with a message taken from the version history for the
 package. Use `git commit --amend` to change the commit message if
 you need to. If you're releasing more than one package, commit the
 changes manually with a suitable message.
+  - When using `./prepare-release push` below, make sure the
+    commit contains lines formatted as  
+    `- Release XYZ version ABC`  
+    with one such line per package. That will allow for automatic
+    tagging later.
 
-6. Create a pull request for the commit, and get it reviewed.
+6. Run `./prepare-release push` to push the current branch and
+create a pull request with the `autorelease: pending` tag. Note that
+this checks that there are no project references from
+APIs being released now to APIs that *aren't* being released.
+Without this check, it's possible for a released version to depend
+on unreleased changes.
 
 Sample session when releasing Google.Cloud.Speech.V1:
 
@@ -204,7 +214,8 @@ $ ./prepare-release.sh set-version Google.Cloud.Speech.V1 2.0.0-beta03
 $ ./prepare-release.sh compare
 $ ./prepare-release.sh update-history
 $ ./prepare-release.sh commit
-$ git push
+$ export GITHUB_ACCESS_TOKEN=...
+$ ./prepare-release.sh push
 ```
 
 Equivalent process using `increment-version`, assuming the current
@@ -218,61 +229,15 @@ $ ./prepare-release.sh increment-version Google.Cloud.Speech.V1
 $ ./prepare-release.sh compare
 $ ./prepare-release.sh update-history
 $ ./prepare-release.sh commit
-$ git push
+$ export GITHUB_ACCESS_TOKEN=...
+$ ./prepare-release.sh push
 ```
-
-**Tagging the release**
-
-Prerequisite: the PR above has been reviewed and merged into the
-master branch.
-
-Run `tagreleases.sh` in the root directory, specifying a github
-access token. This will ask you to confirm that you want to create a
-release. As of April 2020, this no longer accesses your
-local repository at all, so it doesn't matter what branch you're on.
-
-Sample session:
-
-```text
-$ ./tagreleases.sh your_access_token_here
-
-Fetching all tags from GitHub
-Fetched 1065 tags
-Commit to tag: e6ace9f3836d9eabe9b4761598b4010b4771fede
----------
-Release Google.Cloud.WebRisk.V1 version 1.0.0
-
-Changes in this release:
-
-No API surface changes since 1.0.0-beta01.
----------
-APIs requiring a new release:
-Google.Cloud.WebRisk.V1                            v1.0.0
-Go ahead and create releases? (y/n) y
-Creating releases with tags:
-Google.Cloud.WebRisk.V1-1.0.0
-```
-
-Note that `tagreleases.sh` checks that there are no project
-references from APIs being released now to APIs that *aren't* being
-released. Without this check, it's possible for a released version
-to depend on unreleased changes. The `--force` command line option
-will skip this check, but we strongly recommend that you don't use
-this without checking with the core .NET client library team.
-
-`tagreleases.sh` allows a specific commit to be the target of the
-tag, rather than the HEAD of master. Just use `--commit=<sha>` as a
-command line argument after the GitHub token.
 
 **Building and publishing the release**
 
-On a Google corp machine, trigger a Kokoro release build. (This
-can only be performed by Googlers.)
-
-If you want to release anything other than the current head of
-`master`, specify the commitish that was tagged (either the commit
-itself, or the tag that's listed on the [releases
-page](https://github.com/googleapis/google-cloud-dotnet/releases).
+Once the pull request is merged, the commit will be tagged
+automatically, and a release will be created. A Kokoro release build
+will then execute automatically.
 
 The Kokoro build will:
 
@@ -286,9 +251,3 @@ The Kokoro build will:
   - Push packages to nuget.org
   - Push documentation to GitHub packages
   - Push documentation to googelapis.dev
-
-If you wish to perform a manual build instead, use
-the command line displayed by `tagreleases.sh` to run
-`buildrelease.sh`, which then displays final instructions for
-pushing to nuget.org and updating the docs.
-
