@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <AssemblyName>Google.Cloud.Tools.Common</AssemblyName>
     <PackageId>Google.Cloud.Tools.Common</PackageId>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <LangVersion>latest</LangVersion>
 
     <!-- Sign this assembly so it can be used by source manipulation projects. -->
     <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
@@ -15,5 +16,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="YamlDotNet" Version="8.1.0" />
   </ItemGroup>
 </Project>
