@@ -2,10 +2,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateSnippetMarkdown", "Google.Cloud.Tools.GenerateSnippetMarkdown\Google.Cloud.Tools.GenerateSnippetMarkdown.csproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.GenerateDocfxSources", "Google.Cloud.Tools.GenerateDocfxSources\Google.Cloud.Tools.GenerateDocfxSources.csproj", "{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Tools.Common", "Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{818C2F19-64A3-4C00-9D59-C2AC7A26AEDF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
@@ -40,30 +36,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|x64.Build.0 = Debug|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Debug|x86.Build.0 = Debug|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|x64.ActiveCfg = Release|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|x64.Build.0 = Release|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|x86.ActiveCfg = Release|Any CPU
-		{656E050F-D24B-4CBE-9771-B3EF472342C0}.Release|x86.Build.0 = Release|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Debug|x64.Build.0 = Debug|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Debug|x86.Build.0 = Debug|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Release|x64.ActiveCfg = Release|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Release|x64.Build.0 = Release|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Release|x86.ActiveCfg = Release|Any CPU
-		{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}.Release|x86.Build.0 = Release|Any CPU
 		{818C2F19-64A3-4C00-9D59-C2AC7A26AEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{818C2F19-64A3-4C00-9D59-C2AC7A26AEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{818C2F19-64A3-4C00-9D59-C2AC7A26AEDF}.Debug|x64.ActiveCfg = Debug|Any CPU
