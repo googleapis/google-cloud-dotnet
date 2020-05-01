@@ -46,6 +46,8 @@ namespace Google.Cloud.Spanner.V1
         {
             var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
             return emulatorEnvironment is null ? null :
+                // We don't set the EmulatorDetection property here to avoid recursively calling
+                // MaybeCreateEmulatorClientBuilder().
                 new SpannerClientBuilder
                 {
                     Settings = Settings,
