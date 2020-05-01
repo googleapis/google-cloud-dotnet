@@ -45,7 +45,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// parsed as JSON. Note that every string value (even within an object) has the substring
         /// "${PROJECT_ID}" replaced by the project ID before invocation.
         /// </summary>
-        public Dictionary<string, JToken> Arguments { get; set; }
+        public Dictionary<string, JToken> Arguments { get; set; } = new Dictionary<string, JToken>();
 
         /// <summary>
         /// Executes a smoke test.
