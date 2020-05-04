@@ -1,5 +1,16 @@
 # Version history
 
+# Version 2.1.0, released 2020-05-04
+
+- [Commit cdd7342](https://github.com/googleapis/google-cloud-dotnet/commit/cdd7342): docs: change relative URLs to absolute URLs to fix broken links.
+- [Commit e644610](https://github.com/googleapis/google-cloud-dotnet/commit/e644610):
+  - Adds Dataproc Jobs.SubmitJobAsOperation RPC
+  - Adds SparkR and Presto job types to WorkflowTemplates
+  - Adds new Optional Components
+  - Clarifies usage of some APIs 
+- [Commit edebc2b](https://github.com/googleapis/google-cloud-dotnet/commit/edebc2b): fix Dataproc: add missing `REQUIRED` annotation.
+- [Commit bd045c2](https://github.com/googleapis/google-cloud-dotnet/commit/bd045c2): Adds resource name overloads for autoscaling policy operations
+
 # Version 2.0.0, released 2020-03-17
 
 - [Commit c120b77](https://github.com/googleapis/google-cloud-dotnet/commit/c120b77):
