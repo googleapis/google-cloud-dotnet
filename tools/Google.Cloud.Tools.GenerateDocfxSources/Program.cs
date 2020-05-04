@@ -132,7 +132,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         $"../../dependencies/xrefmaps/Google.Apis.Storage.v1.xrefmap.yml",
                         $"../../dependencies/xrefmaps/Google.Apis.BigQuery.v2.xrefmap.yml",
                     },
-                    ["template"] = new JArray { "default", "../../docfx-template" },
+                    ["template"] = new JArray { "default", "../../../third_party/docfx/templates/custom" },
                     ["overwrite"] = new JArray { "obj/snippets/*.md" },
                     ["dest"] = "site"
                 }
