@@ -19,10 +19,8 @@ using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Apis.Json;
 using Google.Apis.Requests;
-using Google.Apis.Services;
 using Newtonsoft.Json;
 using System;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -256,6 +254,31 @@ namespace Google.Cloud.BigQuery.V2
                 ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
                 DatasetId = GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId)),
                 ModelId = GaxPreconditions.CheckNotNull(modelId, nameof(modelId)),
+            };
+
+        /// <summary>
+        /// Creates a <see cref="RoutineReference"/> from the given dataset ID and routine ID,
+        /// using this client's project ID.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <returns>A <see cref="RoutineReference"/> representing the requested routine.</returns>
+        public RoutineReference GetRoutineReference(string datasetId, string routineId) =>
+            GetRoutineReference(ProjectId, datasetId, routineId);
+
+        /// <summary>
+        /// Creates a <see cref="RoutineReference"/> from the given project ID, dataset ID and routine ID.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <returns>A <see cref="RoutineReference"/> representing the requested routine.</returns>
+        public RoutineReference GetRoutineReference(string projectId, string datasetId, string routineId) =>
+            new RoutineReference
+            {
+                ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
+                DatasetId = GaxPreconditions.CheckNotNull(datasetId, nameof(datasetId)),
+                RoutineId = GaxPreconditions.CheckNotNull(routineId, nameof(routineId)),
             };
 
         /// <summary>

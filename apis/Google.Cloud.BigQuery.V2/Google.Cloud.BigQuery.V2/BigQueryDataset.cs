@@ -268,6 +268,65 @@ namespace Google.Cloud.BigQuery.V2
         public ModelReference GetModelReference(string modelId) => _client.GetModelReference(Reference.ProjectId, Reference.DatasetId, modelId);
 
         /// <summary>
+        /// Lists the routines within this dataset.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.ListRoutines(DatasetReference, ListRoutinesOptions)"/>.
+        /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A sequence of routines within this dataset.</returns>
+        public PagedEnumerable<ListRoutinesResponse, BigQueryRoutine> ListRoutines(ListRoutinesOptions options = null) =>
+            _client.ListRoutines(Reference, options);
+
+        /// <summary>
+        /// Creates a routine within this dataset.
+        /// This method just creates a <see cref="RoutineReference"/> and delegates to <see cref="BigQueryClient.CreateRoutine(RoutineReference, Routine, CreateRoutineOptions)"/>.
+        /// </summary>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
+        /// If this routine's <see cref="Routine.RoutineReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The newly created routine.</returns>
+        public BigQueryRoutine CreateRoutine(string routineId, Routine routine, CreateRoutineOptions options = null) =>
+            _client.CreateRoutine(GetRoutineReference(routineId), routine, options);
+
+        /// <summary>
+        /// Retrieves a routine within this dataset.
+        /// This method just creates a <see cref="RoutineReference"/> and delegates to <see cref="BigQueryClient.GetRoutine(RoutineReference, GetRoutineOptions)"/>.
+        /// </summary>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The requested routine.</returns>
+        public BigQueryRoutine GetRoutine(string routineId, GetRoutineOptions options = null) =>
+            _client.GetRoutine(GetRoutineReference(routineId), options);
+
+        /// <summary>
+        /// Attempts to fetch the specified routine within this dataset, creating it if it doesn't exist.
+        /// This method just creates a <see cref="RoutineReference"/> and delegates to <see cref="BigQueryClient.GetOrCreateRoutine(RoutineReference, Routine, GetRoutineOptions, CreateRoutineOptions)"/>.
+        /// </summary>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
+        /// If this table's <see cref="Routine.RoutineReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The existing or new routine.</returns>
+        public BigQueryRoutine GetOrCreateRoutine(string routineId, Routine routine, GetRoutineOptions getOptions = null, CreateRoutineOptions createOptions = null) =>
+            _client.GetOrCreateRoutine(GetRoutineReference(routineId), routine, getOptions, createOptions);
+
+        /// <summary>
+        /// Creates a <see cref="RoutineReference"/> for a routine within this dataset.
+        /// </summary>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <returns>A <see cref="RoutineReference"/> representing the requested routine.</returns>
+        public RoutineReference GetRoutineReference(string routineId) => _client.GetRoutineReference(Reference.ProjectId, Reference.DatasetId, routineId);
+
+        /// <summary>
         /// Deletes this dataset.
         /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.DeleteDataset(DatasetReference, DeleteDatasetOptions)"/>.
         /// </summary>
@@ -509,6 +568,65 @@ namespace Google.Cloud.BigQuery.V2
         /// the requested table.</returns>
         public Task<BigQueryModel> GetModelAsync(string modelId, GetModelOptions options = null) =>
             _client.GetModelAsync(GetModelReference(modelId), options);
+
+        /// <summary>
+        /// Asynchronously lists the routines within this dataset.
+        /// This method just creates a <see cref="DatasetReference"/> and delegates to <see cref="BigQueryClient.ListRoutinesAsync(DatasetReference, ListRoutinesOptions)"/>.
+        /// </summary>
+        /// <para>
+        /// No network requests are made until the returned sequence is enumerated.
+        /// This means that any exception due to an invalid request will be deferred until that time. Callers should be prepared
+        /// for exceptions to be thrown while enumerating the results. In addition to failures due to invalid requests, network
+        /// or service failures can cause exceptions even after the first results have been returned.
+        /// </para>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of routines within this dataset.</returns>
+        public PagedAsyncEnumerable<ListRoutinesResponse, BigQueryRoutine> ListRoutinesAsync(ListRoutinesOptions options = null) =>
+            _client.ListRoutinesAsync(Reference, options);
+
+        /// <summary>
+        /// Asynchronously creates a routine within this dataset.
+        /// This method just creates a <see cref="RoutineReference"/> and delegates to <see cref="BigQueryClient.CreateRoutineAsync(RoutineReference, Routine, CreateRoutineOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
+        /// If this table's <see cref="Routine.RoutineReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the newly created routine.</returns>
+        public Task<BigQueryRoutine> CreateRoutineAsync(string routineId, Routine routine, CreateRoutineOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.CreateRoutineAsync(GetRoutineReference(routineId), routine, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously retrieves a routine within this dataset.
+        /// This method just creates a <see cref="RoutineReference"/> and delegates to <see cref="BigQueryClient.GetRoutineAsync(RoutineReference, GetRoutineOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the requested table.</returns>
+        public Task<BigQueryRoutine> GetRoutineAsync(string routineId, GetRoutineOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.GetRoutineAsync(GetRoutineReference(routineId), options, cancellationToken);
+
+        /// <summary>
+        /// Attempts to fetch the specified routine within this dataset, creating it if it doesn't exist.
+        /// This method just creates a <see cref="RoutineReference"/> and delegates to 
+        /// <see cref="BigQueryClient.GetOrCreateRoutineAsync(RoutineReference, Routine, GetRoutineOptions, CreateRoutineOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="routineId">The routine ID. Must not be null.</param>
+        /// <param name="routine">The routine resource representation to use for the creation. Must not be null.
+        /// If this routine's <see cref="Routine.RoutineReference"/> is specified, 
+        /// then it must be the same as the one obtained from the other parameters.</param>
+        /// <param name="getOptions">The options for the "get" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the existing or new routine.</returns>
+        public Task<BigQueryRoutine> GetOrCreateRoutineAsync(string routineId, Routine routine, GetRoutineOptions getOptions = null, CreateRoutineOptions createOptions = null, CancellationToken cancellationToken = default) =>
+            _client.GetOrCreateRoutineAsync(GetRoutineReference(routineId), routine, getOptions, createOptions, cancellationToken);
 
         /// <summary>
         /// Deletes this dataset.

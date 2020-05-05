@@ -49,6 +49,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public string PeopleTableId { get; } = "people";
         public string ComplexTypesTableId { get; } = "complex";
         public string ExhaustiveTypesTableId { get; } = "exhaustive";
+
         /// <summary>
         /// A GCS bucket created for this fixture.
         /// </summary>
@@ -263,6 +264,19 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             InsertAndWait(table, () => table.InsertRow(ExhaustiveTypesTest.GetSampleRow()), 1);
         }
 
+        internal void CreateRoutine(string routineId, BigQueryDataset dataset)
+        {
+            Routine routine = new Routine
+            {
+                DefinitionBody = "SELECT 1;",
+                Description = "test routine",
+            };
+            routine.SetRoutineLanguage(RoutineLanguage.Sql);
+            routine.SetRoutineType(RoutineType.StoredProcedure);
+
+            dataset.CreateRoutine(routineId, routine);
+        }
+
         internal BigQueryInsertResults InsertAndWait(BigQueryTable table, Func<BigQueryInsertResults> insertAction, int expectedRowCountChange)
         {
             var countBefore = table.ListRows().Count();
@@ -294,6 +308,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
         internal string CreateTableId() => IdGenerator.FromGuid(prefix: "test_", separator: "_");
         internal string CreateDatasetId() => $"{DatasetId}_{Interlocked.Increment(ref extraDatasetCounter)}";
+        internal string CreateRoutineId() => IdGenerator.FromGuid(prefix: "test_", separator: "_");
 
         /// <summary>
         /// Sets the labels on <see cref="LabelsDatasetId"/> without using any of the client *Labels methods.
