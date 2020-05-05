@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.1.0, released 2020-05-05
+
+- [Commit 19d9a5e](https://github.com/googleapis/google-cloud-dotnet/commit/19d9a5e): fix: Add missing method_signature annotations for BigTable Admin Backup RPCs. The added method_signatures reflect method flattenings in the GAPIC v1 config.
+
 # Version 2.0.0, released 2020-04-08
 
 - [Commit 3d28ab3](https://github.com/googleapis/google-cloud-dotnet/commit/3d28ab3): Adds table backup functionality
