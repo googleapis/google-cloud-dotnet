@@ -1,5 +1,12 @@
 # Version history
 
+# Version 3.0.0-beta02, released 2020-05-05
+
+- [Commit 610cf69](https://github.com/googleapis/google-cloud-dotnet/commit/610cf69):
+  - feat: Publish ListEnvironments
+  - docs: Clarify WebhookResponse fields
+- [Commit f2f7630](https://github.com/googleapis/google-cloud-dotnet/commit/f2f7630): docs: Update comments on Contexts and Sessions resources.
+
 # Version 3.0.0-beta01, released 2020-04-06
 
 - [Commit 5a41fb5](https://github.com/googleapis/google-cloud-dotnet/commit/5a41fb5):
