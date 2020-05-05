@@ -59,13 +59,13 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             var apiDirectory = layout.SourceDirectory;
             var projects = Project.LoadProjects(apiDirectory).ToList();
 
-            CreateDocfxJson(api, projects, output);
+            CreateDocfxJson(apiMetadata, projects, output);
             CopyAndGenerateArticles(apiMetadata, layout.DocsSourceDirectory, output);
             CreateToc(api, output);
             return 0;
         }
 
-        private static void CreateDocfxJson(string api, List<Project> projects, string outputDirectory)
+        private static void CreateDocfxJson(ApiMetadata api, List<Project> projects, string outputDirectory)
         {
             var src = new JArray();
             foreach (var project in projects)
@@ -73,7 +73,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 src.Add(new JObject
                 {
                     ["files"] = new JArray { $"{project.Name}/{project.Name}.csproj" },
-                    ["cwd"] = $"../../../apis/{api}"
+                    ["cwd"] = $"../../../apis/{api.Id}"
                 });
             }
 
@@ -118,7 +118,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     },
                     ["globalMetadata"] = new JObject
                     {
-                        ["_appTitle"] = api,
+                        ["_appTitle"] = api.Id,
                         ["_disableContribution"] = true,
                         ["_appFooter"] = " "
                     },
@@ -138,6 +138,8 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
+            ModifyForDevSite(api, json);
+            File.WriteAllText(Path.Combine(outputDirectory, "devsite-docfx.json"), json.ToString());
 
             // We let the build script do work with the dependencies:
             // - Copy all yml files
@@ -147,6 +149,34 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 .ToList();
 
             File.WriteAllText(Path.Combine(outputDirectory, "dependencies"), string.Join(" ", externalDependencies));
+        }
+
+        private static void ModifyForDevSite(ApiMetadata api, JObject obj)
+        {
+            // We won't build the metadata, so let's remove it.
+            obj.Remove("metadata");
+            var build = (JObject) obj["build"];
+            var globalMetadata = (JObject) build["globalMetadata"];
+            globalMetadata["_disableNavbar"] = true;
+            globalMetadata["_disable"] = true;
+            globalMetadata["_disableBreadcrumb"] = true;
+            globalMetadata["_enableSearch"] = false;
+            globalMetadata["_disableToc"] = true;
+            globalMetadata["_disableSideFilter"] = true;
+            globalMetadata["_disableAffix"] = true;
+            globalMetadata["_disableFooter"] = true;
+
+            // First pass at guessing the root path to use. We will want to infer from other things, but if
+            // we get it wrong for now, it won't matter as it's not public.
+
+            string productUrl = api.ProductUrl ?? "";
+            string productFamily = productUrl.StartsWith("https://cloud.google.com/")
+                ? productUrl.Split('/')[3]
+                : "unknown";
+            globalMetadata["_rootPath"] = $"/dotnet/reference/{productFamily}";
+
+            build["template"][1] = "../../../third_party/docfx/templates/devsite";
+            build["dest"] = "devsite";
         }
 
         private static void CopyAndGenerateArticles(ApiMetadata api, string inputDirectory, string outputDirectory)
