@@ -16,6 +16,15 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.BigQuery.V2
 {
+    // TODO: Consider mapping this to StandardSqlDataType as well.
+    // (https://cloud.google.com/bigquery/docs/reference/rest/v2/StandardSqlDataType)
+    // StandardSqlDataType is the type used by Routines and some BQML model statistics
+    // for defining types of values. It'd be nice if users of the library only dealt with
+    // one type of type.
+    // At the point of adding Routine support users should use the more "primitive" exposed type
+    // Google.Apis.Bigquery.v2.Data.StandardSqlDataType when creating routines.
+    // Once this is done, consider also adding a Google.Apis.Bigquery.v2.Data.Argument that makes
+    // it easier to define routine's arguments.
     /// <summary>
     /// A BigQuery database type, used for schemas and parameters.
     /// </summary>
