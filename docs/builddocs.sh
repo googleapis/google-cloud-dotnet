@@ -49,7 +49,7 @@ build_api_docs() {
   # Then build for devsite
   $DOCFX build --logLevel Warning --disableGitFeatures output/$api/devsite-docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
-  mv output/$api/devsite/toc.html output/$api/devsite/_toc.yaml
+  mv output/$api/devsite/api/toc.html output/$api/devsite/api/_toc.yaml
 
   # Special case root: that should end up in the root of the assembled
   # site.
