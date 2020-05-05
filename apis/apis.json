@@ -147,7 +147,7 @@
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
         "Google.Api.Gax.Grpc.Gcp": "3.0.0",
-        "Google.Cloud.Bigtable.Common.V2": "project",
+        "Google.Cloud.Bigtable.Common.V2": "2.0.0",
         "Grpc.Core": "2.27.0"
       },
       "testDependencies": {
