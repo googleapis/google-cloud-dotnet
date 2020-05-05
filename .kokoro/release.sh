@@ -60,10 +60,10 @@ fi
 # Push documentation, if we've got the right credentials and haven't been asked to skip
 if [[ -f $DOCS_CREDENTIALS && $SKIP_GOOGLEAPISDEV_UPLOAD = "" ]]
 then
-  echo "Uploading documentation to googleapis.dev"
-  ./uploaddocs.sh releasebuild/nuget releasebuild/docs/output $DOCS_CREDENTIALS docs-staging
+  echo "Uploading documentation to googleapis.dev and devsite"
+  ./uploaddocs.sh releasebuild/nuget releasebuild/docs/output $DOCS_CREDENTIALS docs-staging docs-staging-v2-staging
 else
-  echo "Skipping googleapis.dev upload"
+  echo "Skipping googleapis.dev and devsite upload"
 fi
 
 # Process the build log in releasebuild

@@ -2,16 +2,17 @@
 
 set -e
 
-if [[ -z "$1" || -z "$2" || -z "$3" || -z "$4" ]]
+if [[ -z "$1" || -z "$2" || -z "$3" || -z "$4" || -z "$5" ]]
 then
-  echo "Usage: uploaddocs.sh <nupkg directory> <docs output directory> <service account json> <staging bucket>"
+  echo "Usage: uploaddocs.sh <nupkg directory> <docs output directory> <service account json> <googleapis.dev staging bucket> <devsite staging bucket>"
   exit 1
 fi
 
 declare -r NUPKG_DIR=$1
 declare -r DOCS_OUTPUT_DIR=$2
 declare -r SERVICE_ACCOUNT_JSON=$(realpath $3)
-declare -r STAGING_BUCKET=$4
+declare -r GOOGLEAPIS_DEV_STAGING_BUCKET=$4
+declare -r DEVSITE_STAGING_BUCKET=$5
 
 # Make sure we have the most recent version of pip, then install the gcp-docuploader package
 python -m pip install --upgrade pip
@@ -59,12 +60,19 @@ do
     fi
 
     # TODO: Product page
-    echo "Generating metadata"
+    echo "Generating metadata (googleapis.dev)"
     python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
-    echo "Final upload stage"
-    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $STAGING_BUCKET
+    echo "Final upload stage (googleapis.dev)"
+    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
+
+    cd ../devsite/api
+    echo "Generating metadata (DevSite)"
+    python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
+    echo "Final upload stage (DevSite)"
+    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET
+
     popd > /dev/null
   else
     echo "Skipping $pkg; no documentation generated"
