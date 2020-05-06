@@ -9,5 +9,6 @@
 # explicitly taken by someone else.
 *                               @googleapis/yoshi-dotnet
 
-/apis/Google.Cloud.Bigtable*/     @GoogleCloudPlatform/bigtable-dpe @googleapis/yoshi-dotnet
-/apis/
+/apis/Google.Cloud.Bigtable*/       @GoogleCloudPlatform/bigtable-dpe @googleapis/yoshi-dotnet
+/apis/Google.Cloud.Firestore*/      @GoogleCloudPlatform/firestore-dpe @googleapis/yoshi-dotnet
+/apis/Google.Cloud.Storage*/        @GoogleCloudPlatform/storage-dpe @googleapis/yoshi-dotnet
