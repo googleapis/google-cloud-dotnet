@@ -1,5 +1,15 @@
 # Version history
 
+# Version 2.1.0-beta01, released 2020-05-06
+
+- [Commit 9c1f9d6](https://github.com/googleapis/google-cloud-dotnet/commit/9c1f9d6):
+  - feat: Update public client library for Cloud Monitoring to introduce new Uptime check feature.
+  - feat: Uptime HTTP(S) checks can now be GET or POST.
+- [Commit 6ca5e50](https://github.com/googleapis/google-cloud-dotnet/commit/6ca5e50):
+  - docs: Increase the required minimum difference between start time of the next interval
+    and the end time of the previous one from the one microsecond to one millisecond.
+    This will enable some resource savings for in-memory storage.
+
 # Version 2.0.0, released 2020-03-18
 
 No API surface changes compared with 2.0.0-beta01, just dependency
