@@ -10,5 +10,6 @@
 *                               @googleapis/yoshi-dotnet
 
 /apis/Google.Cloud.Bigtable*/       @GoogleCloudPlatform/bigtable-dpe @googleapis/yoshi-dotnet
+/apis/Google.Cloud.Datastore*/      @GoogleCloudPlatform/firestore-dpe @googleapis/yoshi-dotnet
 /apis/Google.Cloud.Firestore*/      @GoogleCloudPlatform/firestore-dpe @googleapis/yoshi-dotnet
 /apis/Google.Cloud.Storage*/        @GoogleCloudPlatform/storage-dpe @googleapis/yoshi-dotnet
