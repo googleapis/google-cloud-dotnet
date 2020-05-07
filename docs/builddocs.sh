@@ -8,6 +8,11 @@ install_docfx
 # Some versions of docfx fail if VSINSTALLDIR is set.
 export VSINSTALLDIR=
 
+# We don't need deterministic source paths in the docfx metadata build,
+# and they don't seem to work out of the box with the rest of our build
+# setup, so let's just disable them.
+export ContinuousIntegrationBuild=false
+
 build_api_docs() {
   log_build_action "Building docs for $1"
   local api=$1
