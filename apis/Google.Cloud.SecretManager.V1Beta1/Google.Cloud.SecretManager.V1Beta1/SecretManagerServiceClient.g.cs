@@ -559,7 +559,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -568,7 +568,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 SecretId = gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)),
-                Secret = secret,
+                Secret = gax::GaxPreconditions.CheckNotNull(secret, nameof(secret)),
             }, callSettings);
 
         /// <summary>
@@ -586,7 +586,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -595,7 +595,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 SecretId = gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)),
-                Secret = secret,
+                Secret = gax::GaxPreconditions.CheckNotNull(secret, nameof(secret)),
             }, callSettings);
 
         /// <summary>
@@ -613,7 +613,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -635,7 +635,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -644,7 +644,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 SecretId = gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)),
-                Secret = secret,
+                Secret = gax::GaxPreconditions.CheckNotNull(secret, nameof(secret)),
             }, callSettings);
 
         /// <summary>
@@ -662,7 +662,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -671,7 +671,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
             {
                 ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 SecretId = gax::GaxPreconditions.CheckNotNullOrEmpty(secretId, nameof(secretId)),
-                Secret = secret,
+                Secret = gax::GaxPreconditions.CheckNotNull(secret, nameof(secret)),
             }, callSettings);
 
         /// <summary>
@@ -689,7 +689,7 @@ namespace Google.Cloud.SecretManager.V1Beta1
         /// underscore (`_`) characters.
         /// </param>
         /// <param name="secret">
-        /// A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
+        /// Required. A [Secret][google.cloud.secrets.v1beta1.Secret] with initial field values.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
