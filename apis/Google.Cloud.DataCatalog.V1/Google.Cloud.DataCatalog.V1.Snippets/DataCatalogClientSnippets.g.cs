@@ -2992,6 +2992,64 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, Policy, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = dataCatalogClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await dataCatalogClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyResourceNames()
+        {
+            // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = dataCatalogClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await dataCatalogClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIamPolicy</summary>
         public void GetIamPolicyRequestObject()
         {
@@ -3024,6 +3082,60 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             };
             // Make the request
             Policy response = await dataCatalogClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = dataCatalogClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = await dataCatalogClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyResourceNames()
+        {
+            // Snippet: GetIamPolicy(IResourceName, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = dataCatalogClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = await dataCatalogClient.GetIamPolicyAsync(resource);
             // End snippet
         }
 

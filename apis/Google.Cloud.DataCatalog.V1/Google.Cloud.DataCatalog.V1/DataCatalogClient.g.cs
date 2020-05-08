@@ -637,7 +637,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// return an error in such a case.
         /// </param>
         /// <param name="query">
-        /// Required. The query string in search query syntax. The query must be non-empty.
+        /// Required. The query string in search query syntax. The query must be
+        /// non-empty.
         /// 
         /// Query strings can be simple as "x" or more qualified as:
         /// 
@@ -694,7 +695,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// return an error in such a case.
         /// </param>
         /// <param name="query">
-        /// Required. The query string in search query syntax. The query must be non-empty.
+        /// Required. The query string in search query syntax. The query must be
+        /// non-empty.
         /// 
         /// Query strings can be simple as "x" or more qualified as:
         /// 
@@ -1620,8 +1622,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which can be
-        /// provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which
+        /// can be provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -1647,8 +1649,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which can be
-        /// provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which
+        /// can be provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -1674,8 +1676,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which can be
-        /// provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which
+        /// can be provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -1701,8 +1703,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists entry groups.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the location that contains the entry groups, which can be
-        /// provided in URL format. Example:
+        /// Required. The name of the location that contains the entry groups, which
+        /// can be provided in URL format. Example:
         /// 
         /// * projects/{project_id}/locations/{location}
         /// </param>
@@ -4040,7 +4042,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4064,7 +4067,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4088,7 +4092,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4108,7 +4113,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4132,7 +4138,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4156,7 +4163,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}/fields/{tag_template_field_id}
         /// </param>
         /// <param name="newTagTemplateFieldId">
-        /// Required. The new ID of this tag template field. For example, `my_new_field`.
+        /// Required. The new ID of this tag template field. For example,
+        /// `my_new_field`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4405,8 +4413,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be attached to
-        /// Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be
+        /// attached to Entries. Example:
         /// 
         /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
         /// 
@@ -4435,8 +4443,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be attached to
-        /// Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be
+        /// attached to Entries. Example:
         /// 
         /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
         /// 
@@ -4465,8 +4473,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be attached to
-        /// Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be
+        /// attached to Entries. Example:
         /// 
         /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
         /// 
@@ -4491,8 +4499,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be attached to
-        /// Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be
+        /// attached to Entries. Example:
         /// 
         /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
         /// 
@@ -4521,8 +4529,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be attached to
-        /// Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be
+        /// attached to Entries. Example:
         /// 
         /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
         /// 
@@ -4551,8 +4559,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// used to create the tag must be from the same organization.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the resource to attach this tag to. Tags can be attached to
-        /// Entries. Example:
+        /// Required. The name of the resource to attach this tag to. Tags can be
+        /// attached to Entries. Example:
         /// 
         /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
         /// 
@@ -4825,8 +4833,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The resource
-        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The
+        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -4856,8 +4864,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The resource
-        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The
+        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -4887,8 +4895,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The resource
-        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The
+        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -4918,8 +4926,8 @@ namespace Google.Cloud.DataCatalog.V1
         /// Lists the tags on an [Entry][google.cloud.datacatalog.v1.Entry].
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the Data Catalog resource to list the tags of. The resource
-        /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+        /// Required. The name of the Data Catalog resource to list the tags of. The
+        /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
         /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
         /// 
         /// Examples:
@@ -5012,6 +5020,208 @@ namespace Google.Cloud.DataCatalog.V1
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Sets the access control policy for a resource. Replaces any existing
+        /// policy.
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.setIamPolicy` to set policies on tag
+        /// templates.
+        /// - `datacatalog.entries.setIamPolicy` to set policies on entries.
+        /// - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy for a resource. Replaces any existing
+        /// policy.
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.setIamPolicy` to set policies on tag
+        /// templates.
+        /// - `datacatalog.entries.setIamPolicy` to set policies on entries.
+        /// - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy for a resource. Replaces any existing
+        /// policy.
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.setIamPolicy` to set policies on tag
+        /// templates.
+        /// - `datacatalog.entries.setIamPolicy` to set policies on entries.
+        /// - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets the access control policy for a resource. Replaces any existing
+        /// policy.
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.setIamPolicy` to set policies on tag
+        /// templates.
+        /// - `datacatalog.entries.setIamPolicy` to set policies on entries.
+        /// - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy SetIamPolicy(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicy(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy for a resource. Replaces any existing
+        /// policy.
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.setIamPolicy` to set policies on tag
+        /// templates.
+        /// - `datacatalog.entries.setIamPolicy` to set policies on entries.
+        /// - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
+            SetIamPolicyAsync(new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+                Policy = gax::GaxPreconditions.CheckNotNull(policy, nameof(policy)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets the access control policy for a resource. Replaces any existing
+        /// policy.
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.setIamPolicy` to set policies on tag
+        /// templates.
+        /// - `datacatalog.entries.setIamPolicy` to set policies on entries.
+        /// - `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being specified.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="policy">
+        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
+        /// the policy is limited to a few 10s of KB. An empty policy is a
+        /// valid policy but certain Cloud Platform services (such as Projects)
+        /// might reject them.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
+            SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets the access control policy for a resource. A `NOT_FOUND` error
         /// is returned if the resource does not exist. An empty policy is returned
         /// if the resource exists but does not have a policy set on it.
@@ -5082,6 +5292,180 @@ namespace Google.Cloud.DataCatalog.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource. A `NOT_FOUND` error
+        /// is returned if the resource does not exist. An empty policy is returned
+        /// if the resource exists but does not have a policy set on it.
+        /// 
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag
+        /// templates.
+        /// - `datacatalog.entries.getIamPolicy` to get policies on entries.
+        /// - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. A `NOT_FOUND` error
+        /// is returned if the resource does not exist. An empty policy is returned
+        /// if the resource exists but does not have a policy set on it.
+        /// 
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag
+        /// templates.
+        /// - `datacatalog.entries.getIamPolicy` to get policies on entries.
+        /// - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                Resource = gax::GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. A `NOT_FOUND` error
+        /// is returned if the resource does not exist. An empty policy is returned
+        /// if the resource exists but does not have a policy set on it.
+        /// 
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag
+        /// templates.
+        /// - `datacatalog.entries.getIamPolicy` to get policies on entries.
+        /// - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the access control policy for a resource. A `NOT_FOUND` error
+        /// is returned if the resource does not exist. An empty policy is returned
+        /// if the resource exists but does not have a policy set on it.
+        /// 
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag
+        /// templates.
+        /// - `datacatalog.entries.getIamPolicy` to get policies on entries.
+        /// - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual gciv::Policy GetIamPolicy(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicy(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. A `NOT_FOUND` error
+        /// is returned if the resource does not exist. An empty policy is returned
+        /// if the resource exists but does not have a policy set on it.
+        /// 
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag
+        /// templates.
+        /// - `datacatalog.entries.getIamPolicy` to get policies on entries.
+        /// - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
+            GetIamPolicyAsync(new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource. A `NOT_FOUND` error
+        /// is returned if the resource does not exist. An empty policy is returned
+        /// if the resource exists but does not have a policy set on it.
+        /// 
+        /// Supported resources are:
+        /// - Tag templates.
+        /// - Entries.
+        /// - Entry groups.
+        /// Note, this method cannot be used to manage policies for BigQuery, Pub/Sub
+        /// and any external Google Cloud Platform resources synced to Data Catalog.
+        /// 
+        /// Callers must have following Google IAM permission
+        /// - `datacatalog.tagTemplates.getIamPolicy` to get policies on tag
+        /// templates.
+        /// - `datacatalog.entries.getIamPolicy` to get policies on entries.
+        /// - `datacatalog.entryGroups.getIamPolicy` to get policies on entry groups.
+        /// </summary>
+        /// <param name="resource">
+        /// REQUIRED: The resource for which the policy is being requested.
+        /// See the operation documentation for the appropriate value for this field.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
+            GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the caller's permissions on a resource.

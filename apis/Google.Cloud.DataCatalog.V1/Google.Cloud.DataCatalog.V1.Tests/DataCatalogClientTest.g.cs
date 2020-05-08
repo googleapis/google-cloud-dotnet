@@ -3189,6 +3189,110 @@ namespace Google.Cloud.DataCatalog.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void SetIamPolicy()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.SetIamPolicy(request.Resource, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.Resource, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.Resource, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetIamPolicyResourceNames()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.SetIamPolicy(request.ResourceAsResourceName, request.Policy);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetIamPolicyResourceNamesAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::SetIamPolicyRequest request = new gciv::SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+                Policy = new gciv::Policy(),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.SetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.SetIamPolicyAsync(request.ResourceAsResourceName, request.Policy, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
@@ -3236,6 +3340,106 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIamPolicy()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.GetIamPolicy(request.Resource);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.Resource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.Resource, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetIamPolicyResourceNames()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy response = client.GetIamPolicy(request.ResourceAsResourceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetIamPolicyResourceNamesAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            gciv::GetIamPolicyRequest request = new gciv::GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
+            };
+            gciv::Policy expectedResponse = new gciv::Policy
+            {
+                Version = 271578922,
+                Etag = proto::ByteString.CopyFromUtf8("etage8ad7218"),
+                Bindings =
+                {
+                    new gciv::Binding(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<gciv::Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

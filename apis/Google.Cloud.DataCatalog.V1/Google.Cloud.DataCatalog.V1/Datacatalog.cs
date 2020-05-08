@@ -151,7 +151,7 @@ namespace Google.Cloud.DataCatalog.V1 {
             "dWQuZGF0YWNhdGFsb2cudjEuRW50cnkSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
             "ASgJKlsKCUVudHJ5VHlwZRIaChZFTlRSWV9UWVBFX1VOU1BFQ0lGSUVEEAAS",
             "CQoFVEFCTEUQAhIJCgVNT0RFTBAFEg8KC0RBVEFfU1RSRUFNEAMSCwoHRklM",
-            "RVNFVBAEMpAvCgtEYXRhQ2F0YWxvZxKjAQoNU2VhcmNoQ2F0YWxvZxIxLmdv",
+            "RVNFVBAEMq0vCgtEYXRhQ2F0YWxvZxKjAQoNU2VhcmNoQ2F0YWxvZxIxLmdv",
             "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5TZWFyY2hDYXRhbG9nUmVxdWVz",
             "dBoyLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5TZWFyY2hDYXRhbG9n",
             "UmVzcG9uc2UiK4LT5JMCFyISL3YxL2NhdGFsb2c6c2VhcmNoOgEq2kELc2Nv",
@@ -263,33 +263,34 @@ namespace Google.Cloud.DataCatalog.V1 {
             "Zy52MS5MaXN0VGFnc1Jlc3BvbnNlIosBgtPkkwJ8EkAvdjEve3BhcmVudD1w",
             "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyovZW50cmllcy8q",
             "fS90YWdzWjgSNi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "ZW50cnlHcm91cHMvKn0vdGFnc9pBBnBhcmVudBLgAQoMU2V0SWFtUG9saWN5",
+            "ZW50cnlHcm91cHMvKn0vdGFnc9pBBnBhcmVudBLyAQoMU2V0SWFtUG9saWN5",
             "EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xl",
-            "LmlhbS52MS5Qb2xpY3kilAGC0+STAo0BIkEvdjEve3Jlc291cmNlPXByb2pl",
+            "LmlhbS52MS5Qb2xpY3kipgGC0+STAo0BIkEvdjEve3Jlc291cmNlPXByb2pl",
             "Y3RzLyovbG9jYXRpb25zLyovdGFnVGVtcGxhdGVzLyp9OnNldElhbVBvbGlj",
             "eToBKlpFIkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "ZW50cnlHcm91cHMvKn06c2V0SWFtUG9saWN5OgEqErECCgxHZXRJYW1Qb2xp",
-            "Y3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29n",
-            "bGUuaWFtLnYxLlBvbGljeSLlAYLT5JMC3gEiQS92MS97cmVzb3VyY2U9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi90YWdUZW1wbGF0ZXMvKn06Z2V0SWFtUG9s",
-            "aWN5OgEqWkUiQC92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9lbnRyeUdyb3Vwcy8qfTpnZXRJYW1Qb2xpY3k6ASpaTyJKL3YxL3tyZXNv",
-            "dXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2VudHJ5R3JvdXBzLyovZW50",
-            "cmllcy8qfTpnZXRJYW1Qb2xpY3k6ASoS4wIKElRlc3RJYW1QZXJtaXNzaW9u",
-            "cxIoLmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVxdWVzdBop",
-            "Lmdvb2dsZS5pYW0udjEuVGVzdElhbVBlcm1pc3Npb25zUmVzcG9uc2Ui9wGC",
-            "0+STAvABIkcvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "dGFnVGVtcGxhdGVzLyp9OnRlc3RJYW1QZXJtaXNzaW9uczoBKlpLIkYvdjEv",
-            "e3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovZW50cnlHcm91cHMv",
-            "Kn06dGVzdElhbVBlcm1pc3Npb25zOgEqWlUiUC92MS97cmVzb3VyY2U9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qL2VudHJpZXMvKn06",
-            "dGVzdElhbVBlcm1pc3Npb25zOgEqGk7KQRpkYXRhY2F0YWxvZy5nb29nbGVh",
-            "cGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
-            "dWQtcGxhdGZvcm1CywEKH2NvbS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
-            "djFQAVpGZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
-            "bG91ZC9kYXRhY2F0YWxvZy92MTtkYXRhY2F0YWxvZ/gBAaoCG0dvb2dsZS5D",
-            "bG91ZC5EYXRhQ2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxv",
-            "Z1xWMeoCHkdvb2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "ZW50cnlHcm91cHMvKn06c2V0SWFtUG9saWN5OgEq2kEPcmVzb3VyY2UscG9s",
+            "aWN5ErwCCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBv",
+            "bGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSLwAYLT5JMC3gEi",
+            "QS92MS97cmVzb3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YWdUZW1w",
+            "bGF0ZXMvKn06Z2V0SWFtUG9saWN5OgEqWkUiQC92MS97cmVzb3VyY2U9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfTpnZXRJYW1Qb2xp",
+            "Y3k6ASpaTyJKL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2VudHJ5R3JvdXBzLyovZW50cmllcy8qfTpnZXRJYW1Qb2xpY3k6ASraQQhy",
+            "ZXNvdXJjZRLjAgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52",
+            "MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5U",
+            "ZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSL3AYLT5JMC8AEiRy92MS97cmVz",
+            "b3VyY2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90YWdUZW1wbGF0ZXMvKn06",
+            "dGVzdElhbVBlcm1pc3Npb25zOgEqWksiRi92MS97cmVzb3VyY2U9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKi9lbnRyeUdyb3Vwcy8qfTp0ZXN0SWFtUGVybWlz",
+            "c2lvbnM6ASpaVSJQL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2VudHJ5R3JvdXBzLyovZW50cmllcy8qfTp0ZXN0SWFtUGVybWlzc2lv",
+            "bnM6ASoaTspBGmRhdGFjYXRhbG9nLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6",
+            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULLAQof",
+            "Y29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy52MVABWkZnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RhdGFjYXRhbG9n",
+            "L3YxO2RhdGFjYXRhbG9n+AEBqgIbR29vZ2xlLkNsb3VkLkRhdGFDYXRhbG9n",
+            "LlYxygIbR29vZ2xlXENsb3VkXERhdGFDYXRhbG9nXFYx6gIeR29vZ2xlOjpD",
+            "bG91ZDo6RGF0YUNhdGFsb2c6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.CommonReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.GcsFilesetSpecReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.SchemaReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.SearchReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TableSpecReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TagsReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.TimestampsReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.EntryType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -427,7 +428,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int QueryFieldNumber = 1;
     private string query_ = "";
     /// <summary>
-    /// Required. The query string in search query syntax. The query must be non-empty.
+    /// Required. The query string in search query syntax. The query must be
+    /// non-empty.
     ///
     /// Query strings can be simple as "x" or more qualified as:
     ///
@@ -468,8 +470,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// Optional. Pagination token returned in an earlier
-    /// [SearchCatalogResponse.next_page_token][google.cloud.datacatalog.v1.SearchCatalogResponse.next_page_token], which
-    /// indicates that this is a continuation of a prior
+    /// [SearchCatalogResponse.next_page_token][google.cloud.datacatalog.v1.SearchCatalogResponse.next_page_token],
+    /// which indicates that this is a continuation of a prior
     /// [SearchCatalogRequest][google.cloud.datacatalog.v1.DataCatalog.SearchCatalog]
     /// call, and that the system should return the next page of data. If empty,
     /// the first page is returned.
@@ -1871,8 +1873,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the location that contains the entry groups, which can be
-    /// provided in URL format. Example:
+    /// Required. The name of the location that contains the entry groups, which
+    /// can be provided in URL format. Example:
     ///
     /// * projects/{project_id}/locations/{location}
     /// </summary>
@@ -1888,8 +1890,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return. Default is 10. Max limit is 1000.
-    /// Throws an invalid argument for `page_size > 1000`.
+    /// Optional. The maximum number of items to return. Default is 10. Max limit
+    /// is 1000. Throws an invalid argument for `page_size > 1000`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1903,8 +1905,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. Token that specifies which page is requested. If empty, the first page is
-    /// returned.
+    /// Optional. Token that specifies which page is requested. If empty, the first
+    /// page is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -3256,8 +3258,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>Field number for the "integrated_system" field.</summary>
     public const int IntegratedSystemFieldNumber = 17;
     /// <summary>
-    /// Output only. This field indicates the entry's source system that Data Catalog
-    /// integrates with, such as BigQuery or Pub/Sub.
+    /// Output only. This field indicates the entry's source system that Data
+    /// Catalog integrates with, such as BigQuery or Pub/Sub.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.IntegratedSystem IntegratedSystem {
@@ -3877,7 +3879,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int DataCatalogTimestampsFieldNumber = 4;
     private global::Google.Cloud.DataCatalog.V1.SystemTimestamps dataCatalogTimestamps_;
     /// <summary>
-    /// Output only. Timestamps about this EntryGroup. Default value is empty timestamps.
+    /// Output only. Timestamps about this EntryGroup. Default value is empty
+    /// timestamps.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.DataCatalog.V1.SystemTimestamps DataCatalogTimestamps {
@@ -4771,8 +4774,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the resource to attach this tag to. Tags can be attached to
-    /// Entries. Example:
+    /// Required. The name of the resource to attach this tag to. Tags can be
+    /// attached to Entries. Example:
     ///
     /// * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
     ///
@@ -5722,7 +5725,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NewTagTemplateFieldIdFieldNumber = 2;
     private string newTagTemplateFieldId_ = "";
     /// <summary>
-    /// Required. The new ID of this tag template field. For example, `my_new_field`.
+    /// Required. The new ID of this tag template field. For example,
+    /// `my_new_field`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NewTagTemplateFieldId {
@@ -6047,8 +6051,8 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The name of the Data Catalog resource to list the tags of. The resource
-    /// could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
+    /// Required. The name of the Data Catalog resource to list the tags of. The
+    /// resource could be an [Entry][google.cloud.datacatalog.v1.Entry] or an
     /// [EntryGroup][google.cloud.datacatalog.v1.EntryGroup].
     ///
     /// Examples:
