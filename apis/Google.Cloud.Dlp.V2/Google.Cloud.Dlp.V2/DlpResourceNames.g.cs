@@ -21,10 +21,10 @@ using sys = System;
 
 namespace Google.Cloud.Dlp.V2
 {
-    /// <summary>Resource name for the <c>InspectFinding</c> resource.</summary>
-    public sealed partial class InspectFindingName : gax::IResourceName, sys::IEquatable<InspectFindingName>
+    /// <summary>Resource name for the <c>Finding</c> resource.</summary>
+    public sealed partial class FindingName : gax::IResourceName, sys::IEquatable<FindingName>
     {
-        /// <summary>The possible contents of <see cref="InspectFindingName"/>.</summary>
+        /// <summary>The possible contents of <see cref="FindingName"/>.</summary>
         public enum ResourceNameType
         {
             /// <summary>An unparsed resource name.</summary>
@@ -38,56 +38,87 @@ namespace Google.Cloud.Dlp.V2
 
         private static gax::PathTemplate s_projectLocationFinding = new gax::PathTemplate("projects/{project}/locations/{location}/findings/{finding}");
 
-        /// <summary>Creates a <see cref="InspectFindingName"/> containing an unparsed resource name.</summary>
+        /// <summary>Creates a <see cref="FindingName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
         /// <returns>
-        /// A new instance of <see cref="InspectFindingName"/> containing the provided
-        /// <paramref name="unparsedResourceName"/>.
+        /// A new instance of <see cref="FindingName"/> containing the provided <paramref name="unparsedResourceName"/>.
         /// </returns>
-        public static InspectFindingName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new InspectFindingName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+        public static FindingName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new FindingName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="InspectFindingName"/> with the pattern
+        /// Creates a <see cref="FindingName"/> with the pattern
         /// <c>projects/{project}/locations/{location}/findings/{finding}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="InspectFindingName"/> constructed from the provided ids.</returns>
-        public static InspectFindingName FromProjectLocationFinding(string projectId, string locationId, string findingId) =>
-            new InspectFindingName(ResourceNameType.ProjectLocationFinding, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), findingId: gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
+        /// <returns>A new instance of <see cref="FindingName"/> constructed from the provided ids.</returns>
+        public static FindingName FromProjectLocationFinding(string projectId, string locationId, string findingId) =>
+            new FindingName(ResourceNameType.ProjectLocationFinding, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), findingId: gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="InspectFindingName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="FindingName"/> with pattern
         /// <c>projects/{project}/locations/{location}/findings/{finding}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="InspectFindingName"/> with pattern
+        /// The string representation of this <see cref="FindingName"/> with pattern
         /// <c>projects/{project}/locations/{location}/findings/{finding}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string findingId) =>
             FormatProjectLocationFinding(projectId, locationId, findingId);
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="InspectFindingName"/> with pattern
+        /// Formats the IDs into the string representation of this <see cref="FindingName"/> with pattern
         /// <c>projects/{project}/locations/{location}/findings/{finding}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="InspectFindingName"/> with pattern
+        /// The string representation of this <see cref="FindingName"/> with pattern
         /// <c>projects/{project}/locations/{location}/findings/{finding}</c>.
         /// </returns>
         public static string FormatProjectLocationFinding(string projectId, string locationId, string findingId) =>
             s_projectLocationFinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)));
 
+        /// <summary>Parses the given resource name string into a new <see cref="FindingName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/findings/{finding}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="findingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="FindingName"/> if successful.</returns>
+        public static FindingName Parse(string findingName) => Parse(findingName, false);
+
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="InspectFindingName"/> instance.
+        /// Parses the given resource name string into a new <see cref="FindingName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/locations/{location}/findings/{finding}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="findingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="FindingName"/> if successful.</returns>
+        public static FindingName Parse(string findingName, bool allowUnparsed) =>
+            TryParse(findingName, allowUnparsed, out FindingName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="FindingName"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -95,12 +126,15 @@ namespace Google.Cloud.Dlp.V2
         /// <item><description><c>projects/{project}/locations/{location}/findings/{finding}</c></description></item>
         /// </list>
         /// </remarks>
-        /// <param name="inspectFindingName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="InspectFindingName"/> if successful.</returns>
-        public static InspectFindingName Parse(string inspectFindingName) => Parse(inspectFindingName, false);
+        /// <param name="findingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="FindingName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string findingName, out FindingName result) => TryParse(findingName, false, out result);
 
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="InspectFindingName"/> instance; optionally
+        /// Tries to parse the given resource name string into a new <see cref="FindingName"/> instance; optionally
         /// allowing an unparseable resource name.
         /// </summary>
         /// <remarks>
@@ -110,66 +144,28 @@ namespace Google.Cloud.Dlp.V2
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="inspectFindingName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="allowUnparsed">
-        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
-        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
-        /// specified.
-        /// </param>
-        /// <returns>The parsed <see cref="InspectFindingName"/> if successful.</returns>
-        public static InspectFindingName Parse(string inspectFindingName, bool allowUnparsed) =>
-            TryParse(inspectFindingName, allowUnparsed, out InspectFindingName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="InspectFindingName"/> instance.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/findings/{finding}</c></description></item>
-        /// </list>
-        /// </remarks>
-        /// <param name="inspectFindingName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <param name="result">
-        /// When this method returns, the parsed <see cref="InspectFindingName"/>, or <c>null</c> if parsing failed.
-        /// </param>
-        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string inspectFindingName, out InspectFindingName result) =>
-            TryParse(inspectFindingName, false, out result);
-
-        /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="InspectFindingName"/> instance;
-        /// optionally allowing an unparseable resource name.
-        /// </summary>
-        /// <remarks>
-        /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/findings/{finding}</c></description></item>
-        /// </list>
-        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
-        /// </remarks>
-        /// <param name="inspectFindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="findingName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnparsed">
         /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
         /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
         /// specified.
         /// </param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="InspectFindingName"/>, or <c>null</c> if parsing failed.
+        /// When this method returns, the parsed <see cref="FindingName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string inspectFindingName, bool allowUnparsed, out InspectFindingName result)
+        public static bool TryParse(string findingName, bool allowUnparsed, out FindingName result)
         {
-            gax::GaxPreconditions.CheckNotNull(inspectFindingName, nameof(inspectFindingName));
+            gax::GaxPreconditions.CheckNotNull(findingName, nameof(findingName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectLocationFinding.TryParseName(inspectFindingName, out resourceName))
+            if (s_projectLocationFinding.TryParseName(findingName, out resourceName))
             {
                 result = FromProjectLocationFinding(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
             if (allowUnparsed)
             {
-                if (gax::UnparsedResourceName.TryParse(inspectFindingName, out gax::UnparsedResourceName unparsedResourceName))
+                if (gax::UnparsedResourceName.TryParse(findingName, out gax::UnparsedResourceName unparsedResourceName))
                 {
                     result = FromUnparsed(unparsedResourceName);
                     return true;
@@ -179,7 +175,7 @@ namespace Google.Cloud.Dlp.V2
             return false;
         }
 
-        private InspectFindingName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string findingId = null, string locationId = null, string projectId = null)
+        private FindingName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string findingId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
@@ -189,13 +185,13 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Constructs a new instance of a <see cref="InspectFindingName"/> class from the component parts of pattern
+        /// Constructs a new instance of a <see cref="FindingName"/> class from the component parts of pattern
         /// <c>projects/{project}/locations/{location}/findings/{finding}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="findingId">The <c>Finding</c> ID. Must not be <c>null</c> or empty.</param>
-        public InspectFindingName(string projectId, string locationId, string findingId) : this(ResourceNameType.ProjectLocationFinding, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), findingId: gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)))
+        public FindingName(string projectId, string locationId, string findingId) : this(ResourceNameType.ProjectLocationFinding, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), findingId: gax::GaxPreconditions.CheckNotNullOrEmpty(findingId, nameof(findingId)))
         {
         }
 
@@ -241,16 +237,16 @@ namespace Google.Cloud.Dlp.V2
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as InspectFindingName);
+        public override bool Equals(object obj) => Equals(obj as FindingName);
 
         /// <inheritdoc/>
-        public bool Equals(InspectFindingName other) => ToString() == other?.ToString();
+        public bool Equals(FindingName other) => ToString() == other?.ToString();
 
         /// <inheritdoc/>
-        public static bool operator ==(InspectFindingName a, InspectFindingName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(FindingName a, FindingName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc/>
-        public static bool operator !=(InspectFindingName a, InspectFindingName b) => !(a == b);
+        public static bool operator !=(FindingName a, FindingName b) => !(a == b);
     }
 
     /// <summary>Resource name for the <c>InspectTemplate</c> resource.</summary>
@@ -2273,11 +2269,11 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// <see cref="gcdv::InspectFindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gcdv::FindingName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gcdv::InspectFindingName InspectFindingName
+        public gcdv::FindingName FindingName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gcdv::InspectFindingName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::FindingName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

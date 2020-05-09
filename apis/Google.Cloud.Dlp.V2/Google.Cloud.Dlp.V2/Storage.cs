@@ -131,13 +131,13 @@ namespace Google.Cloud.Dlp.V2 {
             "b2dsZS5wcml2YWN5LmRscC52Mi5GaWVsZElkKnQKCkxpa2VsaWhvb2QSGgoW",
             "TElLRUxJSE9PRF9VTlNQRUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIM",
             "CghVTkxJS0VMWRACEgwKCFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVS",
-            "WV9MSUtFTFkQBSpaCghGaWxlVHlwZRIZChVGSUxFX1RZUEVfVU5TUEVDSUZJ",
+            "WV9MSUtFTFkQBSptCghGaWxlVHlwZRIZChVGSUxFX1RZUEVfVU5TUEVDSUZJ",
             "RUQQABIPCgtCSU5BUllfRklMRRABEg0KCVRFWFRfRklMRRACEgkKBUlNQUdF",
-            "EAMSCAoEQVZSTxAHQqgBChljb20uZ29vZ2xlLnByaXZhY3kuZGxwLnYyQgpE",
-            "bHBTdG9yYWdlUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvcHJpdmFjeS9kbHAvdjI7ZGxwqgITR29vZ2xlLkNsb3VkLkRscC5W",
-            "MsoCE0dvb2dsZVxDbG91ZFxEbHBcVjLqAhZHb29nbGU6OkNsb3VkOjpEbHA6",
-            "OlYyYgZwcm90bzM="));
+            "EAMSCAoEV09SRBAFEgcKA1BERhAGEggKBEFWUk8QB0KoAQoZY29tLmdvb2ds",
+            "ZS5wcml2YWN5LmRscC52MkIKRGxwU3RvcmFnZVABWjhnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3ByaXZhY3kvZGxwL3YyO2RscKoC",
+            "E0dvb2dsZS5DbG91ZC5EbHAuVjLKAhNHb29nbGVcQ2xvdWRcRGxwXFYy6gIW",
+            "R29vZ2xlOjpDbG91ZDo6RGxwOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dlp.V2.Likelihood), typeof(global::Google.Cloud.Dlp.V2.FileType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -224,8 +224,19 @@ namespace Google.Cloud.Dlp.V2 {
     /// Included file extensions:
     ///   bmp, gif, jpg, jpeg, jpe, png.
     /// bytes_limit_per_file has no effect on image files.
+    /// Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.
     /// </summary>
     [pbr::OriginalName("IMAGE")] Image = 3,
+    /// <summary>
+    /// Included file extensions:
+    ///   docx, dotx, docm, dotm
+    /// </summary>
+    [pbr::OriginalName("WORD")] Word = 5,
+    /// <summary>
+    /// Included file extensions:
+    ///   pdf
+    /// </summary>
+    [pbr::OriginalName("PDF")] Pdf = 6,
     /// <summary>
     /// Included file extensions:
     ///   avro
@@ -3369,6 +3380,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// If empty, all files are scanned and available data format processors
     /// are applied. In addition, the binary content of the selected files
     /// is always scanned as well.
+    /// Images are scanned only as binary if the specified region
+    /// does not support image inspection and no file_types were specified.
+    /// Image inspection is restricted to 'global', 'us', 'asia', and 'europe'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dlp.V2.FileType> FileTypes {
