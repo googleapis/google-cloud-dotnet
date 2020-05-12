@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.0.0, released 2020-05-12
+
+- [Commit 2f25d1c](https://github.com/googleapis/google-cloud-dotnet/commit/2f25d1c): Implement Query.LimitToLast
+- [Commit 6d8e0f1](https://github.com/googleapis/google-cloud-dotnet/commit/6d8e0f1): Use List<T> as a default deserialization type for sequences
+
+This is the first GA release targeting GAX v3.
+
 # Version 2.0.0-beta02, released 2020-03-18
 
 No API surface changes in Google.Cloud.Firestore compared with

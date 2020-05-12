@@ -4,6 +4,12 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+# Version 2.0.0, released 2020-05-12
+
+No API surface changes.
+
+This is the first GA release targeting GAX v3.
+
 # Version 2.0.0-beta02, released 2020-03-18
 
 - [Commit 1d8b26a](https://github.com/googleapis/google-cloud-dotnet/commit/1d8b26a):
