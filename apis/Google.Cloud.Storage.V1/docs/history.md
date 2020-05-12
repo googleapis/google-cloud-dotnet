@@ -1,5 +1,11 @@
 # Version history
 
+# Version 3.0.0, released 2020-05-12
+
+- [Commit c0dfc6f](https://github.com/googleapis/google-cloud-dotnet/commit/c0dfc6f): feat: POST policy V4 signing support.
+
+This is the first GA release of this package depending on GAX v3.
+
 # Version 3.0.0-beta03, released 2020-04-02
 
 No API surface changes; just updated dependencies. In particular,
