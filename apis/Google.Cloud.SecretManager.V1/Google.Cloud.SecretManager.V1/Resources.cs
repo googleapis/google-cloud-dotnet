@@ -1199,7 +1199,7 @@ namespace Google.Cloud.SecretManager.V1 {
 
   /// <summary>
   /// A secret payload resource in the Secret Manager API. This contains the
-  /// sensitive secret data that is associated with a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+  /// sensitive secret payload that is associated with a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
   /// </summary>
   public sealed partial class SecretPayload : pb::IMessage<SecretPayload> {
     private static readonly pb::MessageParser<SecretPayload> _parser = new pb::MessageParser<SecretPayload>(() => new SecretPayload());
