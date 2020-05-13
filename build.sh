@@ -119,6 +119,12 @@ for api in ${apis[*]}
 do
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
 
+  # ServiceDirectory is in apis/ for the sake of autosynth, but doesn't really build.
+  if [[ "$api" == "ServiceDirectory" ]]
+  then
+    continue
+  fi
+
   # Only build ASP.NET support on Windows
   if [[ "$OS" != "Windows_NT" ]] && [[ "$apidir" == "apis/Google.Cloud.Diagnostics.AspNet" ]]
   then
