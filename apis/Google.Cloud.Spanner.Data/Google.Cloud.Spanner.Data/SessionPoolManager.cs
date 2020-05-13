@@ -52,7 +52,7 @@ namespace Google.Cloud.Spanner.Data
         public static SessionPoolManager Default { get; } =
             new SessionPoolManager(new SessionPoolOptions(), Logger.DefaultLogger, CreateClientAsync);
 
-        private readonly Func<SpannerClientCreationOptions, SpannerSettings, Logger, EmulatorDetection, Task<SpannerClient>> _clientFactory;
+        private readonly Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> _clientFactory;
 
         private readonly ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool> _targetedPools =
             new ConcurrentDictionary<SpannerClientCreationOptions, TargetedPool>();
@@ -68,16 +68,6 @@ namespace Google.Cloud.Spanner.Data
         /// The logger used by this SessionPoolManager and the session pools it creates.
         /// </summary>
         internal Logger Logger { get; }
-
-        /// <summary>
-        /// Specifies whether to allow the connection to check for the presence of the emulator
-        /// environment variable.
-        /// </summary>
-        /// <remarks>
-        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that the
-        /// environment variable is ignored.
-        /// </remarks>
-        public EmulatorDetection EmulatorDetection { get; set; }
 
         /// <summary>
         /// The SpannerSettings used by this SessionPoolManager. These are expected to remain unaltered for the lifetime of the manager.
@@ -103,7 +93,7 @@ namespace Google.Cloud.Spanner.Data
         internal SessionPoolManager(
             SessionPoolOptions options,
             Logger logger,
-            Func<SpannerClientCreationOptions, SpannerSettings, Logger, EmulatorDetection, Task<SpannerClient>> clientFactory)
+            Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>> clientFactory)
         {
             SessionPoolOptions = GaxPreconditions.CheckNotNull(options, nameof(options));
             Logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
@@ -181,7 +171,7 @@ namespace Google.Cloud.Spanner.Data
 
                 async Task<SessionPool> CreateSessionPoolAsync()
                 {
-                    var client = await parent._clientFactory.Invoke(channelOptions, parent.SpannerSettings, parent.Logger, parent.EmulatorDetection).ConfigureAwait(false);
+                    var client = await parent._clientFactory.Invoke(channelOptions, parent.SpannerSettings, parent.Logger).ConfigureAwait(false);
                     var pool = new SessionPool(client, parent.SessionPoolOptions);
                     parent._poolReverseLookup.TryAdd(pool, this);
                     return pool;
@@ -296,7 +286,7 @@ namespace Google.Cloud.Spanner.Data
         };
 
         /// <inheritdoc />
-        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, SpannerSettings spannerSettings, Logger logger, EmulatorDetection emulatorDetection)
+        private static async Task<SpannerClient> CreateClientAsync(SpannerClientCreationOptions channelOptions, SpannerSettings spannerSettings, Logger logger)
         {
             var credentials = await channelOptions.GetCredentialsAsync().ConfigureAwait(false);
 
@@ -324,7 +314,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 CallInvoker = callInvoker,
                 Settings = spannerSettings,
-                EmulatorDetection = emulatorDetection
+                EmulatorDetection = channelOptions.EmulatorDetection
             }.Build();
         }
     }

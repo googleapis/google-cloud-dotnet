@@ -186,9 +186,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             var emulatorDetection = EmulatorDetection.EmulatorOrProduction;
             var sessionPoolManager = new SessionPoolManager(
                 sessionPoolOptions, spannerClient.Settings.Logger,
-                (_o, _s, _l, _e) =>
+                (_o, _s, _l) =>
                 {
-                    Assert.Equal(_e, emulatorDetection);
+                    Assert.Equal(_o.EmulatorDetection, emulatorDetection);
                     return Task.FromResult(spannerClient);
                 }
             );
