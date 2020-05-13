@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -22,7 +21,7 @@ using Xunit;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
-    using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, Logger, EmulatorDetection, Task<SpannerClient>>;
+    using ClientFactory = Func<SpannerClientCreationOptions, SpannerSettings, Logger, Task<SpannerClient>>;
 
     public class SessionPoolManagerTests
     {
@@ -33,7 +32,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task EqualOptions_SameSessionPool()
         {
             int factoryCalls = 0;
-            ClientFactory factory = (options, settings, logger, emulatorDetection) =>
+            ClientFactory factory = (options, settings, logger) =>
             {
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
@@ -54,7 +53,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         public async Task DifferentOptions_DifferentSessionPools()
         {
             int factoryCalls = 0;
-            ClientFactory factory = (options, settings, logger, emulatorDetection) =>
+            ClientFactory factory = (options, settings, logger) =>
             {
                 factoryCalls++;
                 return Task.FromResult<SpannerClient>(new FailingSpannerClient());
@@ -92,7 +91,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         private class FailingSpannerClient : SpannerClient
         {
             // A simple non-counting factory.
-            internal static ClientFactory Factory { get; } = (options, settings, logger, emulatorDetection) => Task.FromResult<SpannerClient>(new FailingSpannerClient());
+            internal static ClientFactory Factory { get; } = (options, settings, logger) => Task.FromResult<SpannerClient>(new FailingSpannerClient());
 
             public FailingSpannerClient()
             {

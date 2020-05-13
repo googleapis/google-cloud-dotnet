@@ -229,7 +229,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 MaintenanceLoopDelay = TimeSpan.Zero
             };
 
-            var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings.Logger, (_o, _s, _l, _e) => Task.FromResult(spannerClient));
+            var sessionPoolManager = new SessionPoolManager(sessionPoolOptions, spannerClient.Settings.Logger, (_o, _s, _l) => Task.FromResult(spannerClient));
             sessionPoolManager.SpannerSettings.Scheduler = spannerClient.Settings.Scheduler;
             sessionPoolManager.SpannerSettings.Clock = spannerClient.Settings.Clock;
 
