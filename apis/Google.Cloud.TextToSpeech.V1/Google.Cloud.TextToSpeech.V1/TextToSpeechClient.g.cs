@@ -97,7 +97,7 @@ namespace Google.Cloud.TextToSpeech.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<TextToSpeechClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override TextToSpeechClient Build()
         {
             TextToSpeechClient client = null;
@@ -105,7 +105,7 @@ namespace Google.Cloud.TextToSpeech.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<TextToSpeechClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<TextToSpeechClient> task = null;
@@ -127,16 +127,18 @@ namespace Google.Cloud.TextToSpeech.V1
             return TextToSpeechClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => TextToSpeechClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => TextToSpeechClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => TextToSpeechClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

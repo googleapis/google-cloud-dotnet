@@ -1,11 +1,10 @@
 {
-  "updateTime": "2020-04-08T05:58:58.225979Z",
   "sources": [
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "9ede34d093b9d786a974448fc7a3a17948c203e2"
+        "sha": "89e89786896d256c70f43e68a975470c4f4f220e"        
       }
     }
   ]

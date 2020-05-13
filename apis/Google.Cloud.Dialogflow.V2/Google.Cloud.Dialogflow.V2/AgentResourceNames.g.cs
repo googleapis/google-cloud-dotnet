@@ -182,10 +182,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         public string ProjectId { get; }
 
-        /// <inheritdoc/>
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
 
-        /// <inheritdoc/>
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
         public override string ToString()
         {
             switch (Type)
@@ -196,7 +197,7 @@ namespace Google.Cloud.Dialogflow.V2
             }
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns a hash code for this resource name.</summary>
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc/>

@@ -217,7 +217,7 @@ namespace Google.Cloud.OsConfig.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<OsConfigServiceClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override OsConfigServiceClient Build()
         {
             OsConfigServiceClient client = null;
@@ -225,7 +225,7 @@ namespace Google.Cloud.OsConfig.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<OsConfigServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<OsConfigServiceClient> task = null;
@@ -247,16 +247,18 @@ namespace Google.Cloud.OsConfig.V1
             return OsConfigServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => OsConfigServiceClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => OsConfigServiceClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => OsConfigServiceClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

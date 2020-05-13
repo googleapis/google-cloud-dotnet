@@ -273,7 +273,7 @@ namespace Grafeas.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<GrafeasClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override GrafeasClient Build()
         {
             GrafeasClient client = null;
@@ -281,7 +281,7 @@ namespace Grafeas.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<GrafeasClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<GrafeasClient> task = null;
@@ -303,10 +303,12 @@ namespace Grafeas.V1
             return GrafeasClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => GrafeasClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

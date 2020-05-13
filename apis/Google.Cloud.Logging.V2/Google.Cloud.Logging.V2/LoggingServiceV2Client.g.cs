@@ -151,7 +151,7 @@ namespace Google.Cloud.Logging.V2
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<LoggingServiceV2Client> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override LoggingServiceV2Client Build()
         {
             LoggingServiceV2Client client = null;
@@ -159,7 +159,7 @@ namespace Google.Cloud.Logging.V2
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<LoggingServiceV2Client> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<LoggingServiceV2Client> task = null;
@@ -181,16 +181,18 @@ namespace Google.Cloud.Logging.V2
             return LoggingServiceV2Client.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => LoggingServiceV2Client.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => LoggingServiceV2Client.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => LoggingServiceV2Client.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

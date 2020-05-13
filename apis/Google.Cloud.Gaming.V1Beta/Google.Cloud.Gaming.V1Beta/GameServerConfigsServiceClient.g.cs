@@ -164,7 +164,7 @@ namespace Google.Cloud.Gaming.V1Beta
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<GameServerConfigsServiceClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override GameServerConfigsServiceClient Build()
         {
             GameServerConfigsServiceClient client = null;
@@ -172,7 +172,7 @@ namespace Google.Cloud.Gaming.V1Beta
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<GameServerConfigsServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<GameServerConfigsServiceClient> task = null;
@@ -194,16 +194,18 @@ namespace Google.Cloud.Gaming.V1Beta
             return GameServerConfigsServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => GameServerConfigsServiceClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => GameServerConfigsServiceClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => GameServerConfigsServiceClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

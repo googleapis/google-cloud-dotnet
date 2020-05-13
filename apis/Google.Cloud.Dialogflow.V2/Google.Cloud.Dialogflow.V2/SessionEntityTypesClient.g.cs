@@ -147,7 +147,7 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<SessionEntityTypesClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override SessionEntityTypesClient Build()
         {
             SessionEntityTypesClient client = null;
@@ -155,7 +155,7 @@ namespace Google.Cloud.Dialogflow.V2
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<SessionEntityTypesClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<SessionEntityTypesClient> task = null;
@@ -177,16 +177,18 @@ namespace Google.Cloud.Dialogflow.V2
             return SessionEntityTypesClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => SessionEntityTypesClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => SessionEntityTypesClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => SessionEntityTypesClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

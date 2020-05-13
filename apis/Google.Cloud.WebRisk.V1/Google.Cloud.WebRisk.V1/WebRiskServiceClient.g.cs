@@ -129,7 +129,7 @@ namespace Google.Cloud.WebRisk.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<WebRiskServiceClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override WebRiskServiceClient Build()
         {
             WebRiskServiceClient client = null;
@@ -137,7 +137,7 @@ namespace Google.Cloud.WebRisk.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<WebRiskServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<WebRiskServiceClient> task = null;
@@ -159,16 +159,18 @@ namespace Google.Cloud.WebRisk.V1
             return WebRiskServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => WebRiskServiceClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => WebRiskServiceClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => WebRiskServiceClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

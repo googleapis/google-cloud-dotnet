@@ -579,7 +579,7 @@ namespace Google.Cloud.Dlp.V2
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<DlpServiceClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override DlpServiceClient Build()
         {
             DlpServiceClient client = null;
@@ -587,7 +587,7 @@ namespace Google.Cloud.Dlp.V2
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<DlpServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<DlpServiceClient> task = null;
@@ -609,16 +609,18 @@ namespace Google.Cloud.Dlp.V2
             return DlpServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => DlpServiceClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => DlpServiceClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => DlpServiceClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
