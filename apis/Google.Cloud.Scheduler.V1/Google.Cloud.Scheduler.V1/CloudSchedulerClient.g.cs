@@ -182,7 +182,7 @@ namespace Google.Cloud.Scheduler.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<CloudSchedulerClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override CloudSchedulerClient Build()
         {
             CloudSchedulerClient client = null;
@@ -190,7 +190,7 @@ namespace Google.Cloud.Scheduler.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<CloudSchedulerClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<CloudSchedulerClient> task = null;
@@ -212,16 +212,18 @@ namespace Google.Cloud.Scheduler.V1
             return CloudSchedulerClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => CloudSchedulerClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => CloudSchedulerClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => CloudSchedulerClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

@@ -155,7 +155,7 @@ namespace Google.Cloud.Talent.V4Beta1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ProfileServiceClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override ProfileServiceClient Build()
         {
             ProfileServiceClient client = null;
@@ -163,7 +163,7 @@ namespace Google.Cloud.Talent.V4Beta1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<ProfileServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<ProfileServiceClient> task = null;
@@ -185,16 +185,18 @@ namespace Google.Cloud.Talent.V4Beta1
             return ProfileServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => ProfileServiceClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => ProfileServiceClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ProfileServiceClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

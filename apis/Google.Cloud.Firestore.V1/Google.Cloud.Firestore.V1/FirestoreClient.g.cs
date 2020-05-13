@@ -256,7 +256,7 @@ namespace Google.Cloud.Firestore.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<FirestoreClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override FirestoreClient Build()
         {
             FirestoreClient client = null;
@@ -264,7 +264,7 @@ namespace Google.Cloud.Firestore.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<FirestoreClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<FirestoreClient> task = null;
@@ -286,16 +286,18 @@ namespace Google.Cloud.Firestore.V1
             return FirestoreClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => FirestoreClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => FirestoreClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => FirestoreClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

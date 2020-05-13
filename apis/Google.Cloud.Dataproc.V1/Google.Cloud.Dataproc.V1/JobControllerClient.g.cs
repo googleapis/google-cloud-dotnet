@@ -200,7 +200,7 @@ namespace Google.Cloud.Dataproc.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<JobControllerClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override JobControllerClient Build()
         {
             JobControllerClient client = null;
@@ -208,7 +208,7 @@ namespace Google.Cloud.Dataproc.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<JobControllerClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<JobControllerClient> task = null;
@@ -230,16 +230,18 @@ namespace Google.Cloud.Dataproc.V1
             return JobControllerClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => JobControllerClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => JobControllerClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => JobControllerClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 

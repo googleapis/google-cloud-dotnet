@@ -344,7 +344,7 @@ namespace Google.Cloud.ManagedIdentities.V1
 
         partial void InterceptBuildAsync(st::CancellationToken cancellationToken, ref stt::Task<ManagedIdentitiesServiceClient> task);
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client.</summary>
         public override ManagedIdentitiesServiceClient Build()
         {
             ManagedIdentitiesServiceClient client = null;
@@ -352,7 +352,7 @@ namespace Google.Cloud.ManagedIdentities.V1
             return client ?? BuildImpl();
         }
 
-        /// <inheritdoc/>
+        /// <summary>Builds the resulting client asynchronously.</summary>
         public override stt::Task<ManagedIdentitiesServiceClient> BuildAsync(st::CancellationToken cancellationToken = default)
         {
             stt::Task<ManagedIdentitiesServiceClient> task = null;
@@ -374,16 +374,18 @@ namespace Google.Cloud.ManagedIdentities.V1
             return ManagedIdentitiesServiceClient.Create(callInvoker, Settings);
         }
 
-        /// <inheritdoc/>
+        /// <summary>Returns the endpoint for this builder type, used if no endpoint is otherwise specified.</summary>
         protected override string GetDefaultEndpoint() => ManagedIdentitiesServiceClient.DefaultEndpoint;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Returns the default scopes for this builder type, used if no scopes are otherwise specified.
+        /// </summary>
         protected override scg::IReadOnlyList<string> GetDefaultScopes() => ManagedIdentitiesServiceClient.DefaultScopes;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
         protected override gaxgrpc::ChannelPool GetChannelPool() => ManagedIdentitiesServiceClient.ChannelPool;
 
-        /// <inheritdoc/>
+        /// <summary>Returns the default <see cref="gaxgrpc::GrpcAdapter"/>to use if not otherwise specified.</summary>
         protected override gaxgrpc::GrpcAdapter DefaultGrpcAdapter => gaxgrpccore::GrpcCoreAdapter.Instance;
     }
 
