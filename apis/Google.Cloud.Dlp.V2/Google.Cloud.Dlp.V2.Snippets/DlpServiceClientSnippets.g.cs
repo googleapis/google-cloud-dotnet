@@ -218,6 +218,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
                 LanguageCode = "",
                 Filter = "",
                 LocationId = "",
+                Parent = "",
             };
             // Make the request
             ListInfoTypesResponse response = dlpServiceClient.ListInfoTypes(request);
@@ -237,6 +238,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
                 LanguageCode = "",
                 Filter = "",
                 LocationId = "",
+                Parent = "",
             };
             // Make the request
             ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(request);
@@ -250,9 +252,9 @@ namespace Google.Cloud.Dlp.V2.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
             // Initialize request argument(s)
-            string locationId = "";
+            string parent = "";
             // Make the request
-            ListInfoTypesResponse response = dlpServiceClient.ListInfoTypes(locationId);
+            ListInfoTypesResponse response = dlpServiceClient.ListInfoTypes(parent);
             // End snippet
         }
 
@@ -264,9 +266,9 @@ namespace Google.Cloud.Dlp.V2.Snippets
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string locationId = "";
+            string parent = "";
             // Make the request
-            ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(locationId);
+            ListInfoTypesResponse response = await dlpServiceClient.ListInfoTypesAsync(parent);
             // End snippet
         }
 
@@ -310,7 +312,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate1()
+        public void CreateInspectTemplate()
         {
             // Snippet: CreateInspectTemplate(string, InspectTemplate, CallSettings)
             // Create client
@@ -324,7 +326,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate1Async()
+        public async Task CreateInspectTemplateAsync()
         {
             // Snippet: CreateInspectTemplateAsync(string, InspectTemplate, CallSettings)
             // Additional: CreateInspectTemplateAsync(string, InspectTemplate, CancellationToken)
@@ -339,7 +341,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate1ResourceNames1()
+        public void CreateInspectTemplateResourceNames1()
         {
             // Snippet: CreateInspectTemplate(OrganizationName, InspectTemplate, CallSettings)
             // Create client
@@ -353,7 +355,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate1ResourceNames1Async()
+        public async Task CreateInspectTemplateResourceNames1Async()
         {
             // Snippet: CreateInspectTemplateAsync(OrganizationName, InspectTemplate, CallSettings)
             // Additional: CreateInspectTemplateAsync(OrganizationName, InspectTemplate, CancellationToken)
@@ -368,7 +370,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate1ResourceNames2()
+        public void CreateInspectTemplateResourceNames2()
         {
             // Snippet: CreateInspectTemplate(ProjectName, InspectTemplate, CallSettings)
             // Create client
@@ -382,7 +384,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate1ResourceNames2Async()
+        public async Task CreateInspectTemplateResourceNames2Async()
         {
             // Snippet: CreateInspectTemplateAsync(ProjectName, InspectTemplate, CallSettings)
             // Additional: CreateInspectTemplateAsync(ProjectName, InspectTemplate, CancellationToken)
@@ -397,7 +399,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate1ResourceNames3()
+        public void CreateInspectTemplateResourceNames3()
         {
             // Snippet: CreateInspectTemplate(OrganizationLocationName, InspectTemplate, CallSettings)
             // Create client
@@ -411,7 +413,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate1ResourceNames3Async()
+        public async Task CreateInspectTemplateResourceNames3Async()
         {
             // Snippet: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, CallSettings)
             // Additional: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, CancellationToken)
@@ -426,7 +428,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate1ResourceNames4()
+        public void CreateInspectTemplateResourceNames4()
         {
             // Snippet: CreateInspectTemplate(LocationName, InspectTemplate, CallSettings)
             // Create client
@@ -440,7 +442,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate1ResourceNames4Async()
+        public async Task CreateInspectTemplateResourceNames4Async()
         {
             // Snippet: CreateInspectTemplateAsync(LocationName, InspectTemplate, CallSettings)
             // Additional: CreateInspectTemplateAsync(LocationName, InspectTemplate, CancellationToken)
@@ -451,161 +453,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
             InspectTemplate inspectTemplate = new InspectTemplate();
             // Make the request
             InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate2()
-        {
-            // Snippet: CreateInspectTemplate(string, InspectTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]";
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate2Async()
-        {
-            // Snippet: CreateInspectTemplateAsync(string, InspectTemplate, string, CallSettings)
-            // Additional: CreateInspectTemplateAsync(string, InspectTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]";
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate2ResourceNames1()
-        {
-            // Snippet: CreateInspectTemplate(OrganizationName, InspectTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate2ResourceNames1Async()
-        {
-            // Snippet: CreateInspectTemplateAsync(OrganizationName, InspectTemplate, string, CallSettings)
-            // Additional: CreateInspectTemplateAsync(OrganizationName, InspectTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate2ResourceNames2()
-        {
-            // Snippet: CreateInspectTemplate(ProjectName, InspectTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate2ResourceNames2Async()
-        {
-            // Snippet: CreateInspectTemplateAsync(ProjectName, InspectTemplate, string, CallSettings)
-            // Additional: CreateInspectTemplateAsync(ProjectName, InspectTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate2ResourceNames3()
-        {
-            // Snippet: CreateInspectTemplate(OrganizationLocationName, InspectTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate2ResourceNames3Async()
-        {
-            // Snippet: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, string, CallSettings)
-            // Additional: CreateInspectTemplateAsync(OrganizationLocationName, InspectTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplate</summary>
-        public void CreateInspectTemplate2ResourceNames4()
-        {
-            // Snippet: CreateInspectTemplate(LocationName, InspectTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = dlpServiceClient.CreateInspectTemplate(parent, inspectTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateInspectTemplateAsync</summary>
-        public async Task CreateInspectTemplate2ResourceNames4Async()
-        {
-            // Snippet: CreateInspectTemplateAsync(LocationName, InspectTemplate, string, CallSettings)
-            // Additional: CreateInspectTemplateAsync(LocationName, InspectTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            InspectTemplate inspectTemplate = new InspectTemplate();
-            string locationId = "";
-            // Make the request
-            InspectTemplate response = await dlpServiceClient.CreateInspectTemplateAsync(parent, inspectTemplate, locationId);
             // End snippet
         }
 
@@ -1472,7 +1319,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate1()
+        public void CreateDeidentifyTemplate()
         {
             // Snippet: CreateDeidentifyTemplate(string, DeidentifyTemplate, CallSettings)
             // Create client
@@ -1486,7 +1333,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate1Async()
+        public async Task CreateDeidentifyTemplateAsync()
         {
             // Snippet: CreateDeidentifyTemplateAsync(string, DeidentifyTemplate, CallSettings)
             // Additional: CreateDeidentifyTemplateAsync(string, DeidentifyTemplate, CancellationToken)
@@ -1501,7 +1348,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate1ResourceNames1()
+        public void CreateDeidentifyTemplateResourceNames1()
         {
             // Snippet: CreateDeidentifyTemplate(OrganizationName, DeidentifyTemplate, CallSettings)
             // Create client
@@ -1515,7 +1362,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate1ResourceNames1Async()
+        public async Task CreateDeidentifyTemplateResourceNames1Async()
         {
             // Snippet: CreateDeidentifyTemplateAsync(OrganizationName, DeidentifyTemplate, CallSettings)
             // Additional: CreateDeidentifyTemplateAsync(OrganizationName, DeidentifyTemplate, CancellationToken)
@@ -1530,7 +1377,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate1ResourceNames2()
+        public void CreateDeidentifyTemplateResourceNames2()
         {
             // Snippet: CreateDeidentifyTemplate(ProjectName, DeidentifyTemplate, CallSettings)
             // Create client
@@ -1544,7 +1391,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate1ResourceNames2Async()
+        public async Task CreateDeidentifyTemplateResourceNames2Async()
         {
             // Snippet: CreateDeidentifyTemplateAsync(ProjectName, DeidentifyTemplate, CallSettings)
             // Additional: CreateDeidentifyTemplateAsync(ProjectName, DeidentifyTemplate, CancellationToken)
@@ -1559,7 +1406,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate1ResourceNames3()
+        public void CreateDeidentifyTemplateResourceNames3()
         {
             // Snippet: CreateDeidentifyTemplate(OrganizationLocationName, DeidentifyTemplate, CallSettings)
             // Create client
@@ -1573,7 +1420,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate1ResourceNames3Async()
+        public async Task CreateDeidentifyTemplateResourceNames3Async()
         {
             // Snippet: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, CallSettings)
             // Additional: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, CancellationToken)
@@ -1588,7 +1435,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate1ResourceNames4()
+        public void CreateDeidentifyTemplateResourceNames4()
         {
             // Snippet: CreateDeidentifyTemplate(LocationName, DeidentifyTemplate, CallSettings)
             // Create client
@@ -1602,7 +1449,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate1ResourceNames4Async()
+        public async Task CreateDeidentifyTemplateResourceNames4Async()
         {
             // Snippet: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, CallSettings)
             // Additional: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, CancellationToken)
@@ -1613,161 +1460,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
             DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
             // Make the request
             DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate2()
-        {
-            // Snippet: CreateDeidentifyTemplate(string, DeidentifyTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]";
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate2Async()
-        {
-            // Snippet: CreateDeidentifyTemplateAsync(string, DeidentifyTemplate, string, CallSettings)
-            // Additional: CreateDeidentifyTemplateAsync(string, DeidentifyTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]";
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate2ResourceNames1()
-        {
-            // Snippet: CreateDeidentifyTemplate(OrganizationName, DeidentifyTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate2ResourceNames1Async()
-        {
-            // Snippet: CreateDeidentifyTemplateAsync(OrganizationName, DeidentifyTemplate, string, CallSettings)
-            // Additional: CreateDeidentifyTemplateAsync(OrganizationName, DeidentifyTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate2ResourceNames2()
-        {
-            // Snippet: CreateDeidentifyTemplate(ProjectName, DeidentifyTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate2ResourceNames2Async()
-        {
-            // Snippet: CreateDeidentifyTemplateAsync(ProjectName, DeidentifyTemplate, string, CallSettings)
-            // Additional: CreateDeidentifyTemplateAsync(ProjectName, DeidentifyTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate2ResourceNames3()
-        {
-            // Snippet: CreateDeidentifyTemplate(OrganizationLocationName, DeidentifyTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate2ResourceNames3Async()
-        {
-            // Snippet: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, string, CallSettings)
-            // Additional: CreateDeidentifyTemplateAsync(OrganizationLocationName, DeidentifyTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplate</summary>
-        public void CreateDeidentifyTemplate2ResourceNames4()
-        {
-            // Snippet: CreateDeidentifyTemplate(LocationName, DeidentifyTemplate, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = dlpServiceClient.CreateDeidentifyTemplate(parent, deidentifyTemplate, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDeidentifyTemplateAsync</summary>
-        public async Task CreateDeidentifyTemplate2ResourceNames4Async()
-        {
-            // Snippet: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, string, CallSettings)
-            // Additional: CreateDeidentifyTemplateAsync(LocationName, DeidentifyTemplate, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            DeidentifyTemplate deidentifyTemplate = new DeidentifyTemplate();
-            string locationId = "";
-            // Make the request
-            DeidentifyTemplate response = await dlpServiceClient.CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId);
             // End snippet
         }
 
@@ -2634,7 +2326,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateJobTrigger</summary>
-        public void CreateJobTrigger1()
+        public void CreateJobTrigger()
         {
             // Snippet: CreateJobTrigger(string, JobTrigger, CallSettings)
             // Create client
@@ -2648,7 +2340,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateJobTriggerAsync</summary>
-        public async Task CreateJobTrigger1Async()
+        public async Task CreateJobTriggerAsync()
         {
             // Snippet: CreateJobTriggerAsync(string, JobTrigger, CallSettings)
             // Additional: CreateJobTriggerAsync(string, JobTrigger, CancellationToken)
@@ -2663,7 +2355,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateJobTrigger</summary>
-        public void CreateJobTrigger1ResourceNames()
+        public void CreateJobTriggerResourceNames()
         {
             // Snippet: CreateJobTrigger(ProjectName, JobTrigger, CallSettings)
             // Create client
@@ -2677,7 +2369,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateJobTriggerAsync</summary>
-        public async Task CreateJobTrigger1ResourceNamesAsync()
+        public async Task CreateJobTriggerResourceNamesAsync()
         {
             // Snippet: CreateJobTriggerAsync(ProjectName, JobTrigger, CallSettings)
             // Additional: CreateJobTriggerAsync(ProjectName, JobTrigger, CancellationToken)
@@ -2688,68 +2380,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
             JobTrigger jobTrigger = new JobTrigger();
             // Make the request
             JobTrigger response = await dlpServiceClient.CreateJobTriggerAsync(parent, jobTrigger);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateJobTrigger</summary>
-        public void CreateJobTrigger2()
-        {
-            // Snippet: CreateJobTrigger(string, JobTrigger, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            JobTrigger jobTrigger = new JobTrigger();
-            string locationId = "";
-            // Make the request
-            JobTrigger response = dlpServiceClient.CreateJobTrigger(parent, jobTrigger, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateJobTriggerAsync</summary>
-        public async Task CreateJobTrigger2Async()
-        {
-            // Snippet: CreateJobTriggerAsync(string, JobTrigger, string, CallSettings)
-            // Additional: CreateJobTriggerAsync(string, JobTrigger, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            JobTrigger jobTrigger = new JobTrigger();
-            string locationId = "";
-            // Make the request
-            JobTrigger response = await dlpServiceClient.CreateJobTriggerAsync(parent, jobTrigger, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateJobTrigger</summary>
-        public void CreateJobTrigger2ResourceNames()
-        {
-            // Snippet: CreateJobTrigger(ProjectName, JobTrigger, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            JobTrigger jobTrigger = new JobTrigger();
-            string locationId = "";
-            // Make the request
-            JobTrigger response = dlpServiceClient.CreateJobTrigger(parent, jobTrigger, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateJobTriggerAsync</summary>
-        public async Task CreateJobTrigger2ResourceNamesAsync()
-        {
-            // Snippet: CreateJobTriggerAsync(ProjectName, JobTrigger, string, CallSettings)
-            // Additional: CreateJobTriggerAsync(ProjectName, JobTrigger, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            JobTrigger jobTrigger = new JobTrigger();
-            string locationId = "";
-            // Make the request
-            JobTrigger response = await dlpServiceClient.CreateJobTriggerAsync(parent, jobTrigger, locationId);
             // End snippet
         }
 
@@ -3532,68 +3162,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
         /// <summary>Snippet for CreateDlpJob</summary>
         public void CreateDlpJob2()
         {
-            // Snippet: CreateDlpJob(string, InspectJobConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            InspectJobConfig inspectJob = new InspectJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = dlpServiceClient.CreateDlpJob(parent, inspectJob, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob2Async()
-        {
-            // Snippet: CreateDlpJobAsync(string, InspectJobConfig, string, CallSettings)
-            // Additional: CreateDlpJobAsync(string, InspectJobConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            InspectJobConfig inspectJob = new InspectJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, inspectJob, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJob</summary>
-        public void CreateDlpJob2ResourceNames()
-        {
-            // Snippet: CreateDlpJob(ProjectName, InspectJobConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            InspectJobConfig inspectJob = new InspectJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = dlpServiceClient.CreateDlpJob(parent, inspectJob, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob2ResourceNamesAsync()
-        {
-            // Snippet: CreateDlpJobAsync(ProjectName, InspectJobConfig, string, CallSettings)
-            // Additional: CreateDlpJobAsync(ProjectName, InspectJobConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            InspectJobConfig inspectJob = new InspectJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, inspectJob, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJob</summary>
-        public void CreateDlpJob3()
-        {
             // Snippet: CreateDlpJob(string, RiskAnalysisJobConfig, CallSettings)
             // Create client
             DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
@@ -3606,7 +3174,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob3Async()
+        public async Task CreateDlpJob2Async()
         {
             // Snippet: CreateDlpJobAsync(string, RiskAnalysisJobConfig, CallSettings)
             // Additional: CreateDlpJobAsync(string, RiskAnalysisJobConfig, CancellationToken)
@@ -3621,7 +3189,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDlpJob</summary>
-        public void CreateDlpJob3ResourceNames()
+        public void CreateDlpJob2ResourceNames()
         {
             // Snippet: CreateDlpJob(ProjectName, RiskAnalysisJobConfig, CallSettings)
             // Create client
@@ -3635,7 +3203,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob3ResourceNamesAsync()
+        public async Task CreateDlpJob2ResourceNamesAsync()
         {
             // Snippet: CreateDlpJobAsync(ProjectName, RiskAnalysisJobConfig, CallSettings)
             // Additional: CreateDlpJobAsync(ProjectName, RiskAnalysisJobConfig, CancellationToken)
@@ -3646,68 +3214,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
             RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
             // Make the request
             DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, riskJob);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJob</summary>
-        public void CreateDlpJob4()
-        {
-            // Snippet: CreateDlpJob(string, RiskAnalysisJobConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = dlpServiceClient.CreateDlpJob(parent, riskJob, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob4Async()
-        {
-            // Snippet: CreateDlpJobAsync(string, RiskAnalysisJobConfig, string, CallSettings)
-            // Additional: CreateDlpJobAsync(string, RiskAnalysisJobConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "projects/[PROJECT]";
-            RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, riskJob, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJob</summary>
-        public void CreateDlpJob4ResourceNames()
-        {
-            // Snippet: CreateDlpJob(ProjectName, RiskAnalysisJobConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = dlpServiceClient.CreateDlpJob(parent, riskJob, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob4ResourceNamesAsync()
-        {
-            // Snippet: CreateDlpJobAsync(ProjectName, RiskAnalysisJobConfig, string, CallSettings)
-            // Additional: CreateDlpJobAsync(ProjectName, RiskAnalysisJobConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
-            string locationId = "";
-            // Make the request
-            DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, riskJob, locationId);
             // End snippet
         }
 
@@ -4242,7 +3748,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType1()
+        public void CreateStoredInfoType()
         {
             // Snippet: CreateStoredInfoType(string, StoredInfoTypeConfig, CallSettings)
             // Create client
@@ -4256,7 +3762,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType1Async()
+        public async Task CreateStoredInfoTypeAsync()
         {
             // Snippet: CreateStoredInfoTypeAsync(string, StoredInfoTypeConfig, CallSettings)
             // Additional: CreateStoredInfoTypeAsync(string, StoredInfoTypeConfig, CancellationToken)
@@ -4271,7 +3777,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType1ResourceNames1()
+        public void CreateStoredInfoTypeResourceNames1()
         {
             // Snippet: CreateStoredInfoType(OrganizationName, StoredInfoTypeConfig, CallSettings)
             // Create client
@@ -4285,7 +3791,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType1ResourceNames1Async()
+        public async Task CreateStoredInfoTypeResourceNames1Async()
         {
             // Snippet: CreateStoredInfoTypeAsync(OrganizationName, StoredInfoTypeConfig, CallSettings)
             // Additional: CreateStoredInfoTypeAsync(OrganizationName, StoredInfoTypeConfig, CancellationToken)
@@ -4300,7 +3806,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType1ResourceNames2()
+        public void CreateStoredInfoTypeResourceNames2()
         {
             // Snippet: CreateStoredInfoType(ProjectName, StoredInfoTypeConfig, CallSettings)
             // Create client
@@ -4314,7 +3820,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType1ResourceNames2Async()
+        public async Task CreateStoredInfoTypeResourceNames2Async()
         {
             // Snippet: CreateStoredInfoTypeAsync(ProjectName, StoredInfoTypeConfig, CallSettings)
             // Additional: CreateStoredInfoTypeAsync(ProjectName, StoredInfoTypeConfig, CancellationToken)
@@ -4329,7 +3835,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType1ResourceNames3()
+        public void CreateStoredInfoTypeResourceNames3()
         {
             // Snippet: CreateStoredInfoType(OrganizationLocationName, StoredInfoTypeConfig, CallSettings)
             // Create client
@@ -4343,7 +3849,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType1ResourceNames3Async()
+        public async Task CreateStoredInfoTypeResourceNames3Async()
         {
             // Snippet: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, CallSettings)
             // Additional: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, CancellationToken)
@@ -4358,7 +3864,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType1ResourceNames4()
+        public void CreateStoredInfoTypeResourceNames4()
         {
             // Snippet: CreateStoredInfoType(LocationName, StoredInfoTypeConfig, CallSettings)
             // Create client
@@ -4372,7 +3878,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType1ResourceNames4Async()
+        public async Task CreateStoredInfoTypeResourceNames4Async()
         {
             // Snippet: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, CallSettings)
             // Additional: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, CancellationToken)
@@ -4383,161 +3889,6 @@ namespace Google.Cloud.Dlp.V2.Snippets
             StoredInfoTypeConfig config = new StoredInfoTypeConfig();
             // Make the request
             StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType2()
-        {
-            // Snippet: CreateStoredInfoType(string, StoredInfoTypeConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]";
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType2Async()
-        {
-            // Snippet: CreateStoredInfoTypeAsync(string, StoredInfoTypeConfig, string, CallSettings)
-            // Additional: CreateStoredInfoTypeAsync(string, StoredInfoTypeConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            string parent = "organizations/[ORGANIZATION]";
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType2ResourceNames1()
-        {
-            // Snippet: CreateStoredInfoType(OrganizationName, StoredInfoTypeConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType2ResourceNames1Async()
-        {
-            // Snippet: CreateStoredInfoTypeAsync(OrganizationName, StoredInfoTypeConfig, string, CallSettings)
-            // Additional: CreateStoredInfoTypeAsync(OrganizationName, StoredInfoTypeConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType2ResourceNames2()
-        {
-            // Snippet: CreateStoredInfoType(ProjectName, StoredInfoTypeConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType2ResourceNames2Async()
-        {
-            // Snippet: CreateStoredInfoTypeAsync(ProjectName, StoredInfoTypeConfig, string, CallSettings)
-            // Additional: CreateStoredInfoTypeAsync(ProjectName, StoredInfoTypeConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            ProjectName parent = ProjectName.FromProject("[PROJECT]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType2ResourceNames3()
-        {
-            // Snippet: CreateStoredInfoType(OrganizationLocationName, StoredInfoTypeConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType2ResourceNames3Async()
-        {
-            // Snippet: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, string, CallSettings)
-            // Additional: CreateStoredInfoTypeAsync(OrganizationLocationName, StoredInfoTypeConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            OrganizationLocationName parent = OrganizationLocationName.FromOrganizationLocation("[ORGANIZATION]", "[LOCATION]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoType</summary>
-        public void CreateStoredInfoType2ResourceNames4()
-        {
-            // Snippet: CreateStoredInfoType(LocationName, StoredInfoTypeConfig, string, CallSettings)
-            // Create client
-            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = dlpServiceClient.CreateStoredInfoType(parent, config, locationId);
-            // End snippet
-        }
-
-        /// <summary>Snippet for CreateStoredInfoTypeAsync</summary>
-        public async Task CreateStoredInfoType2ResourceNames4Async()
-        {
-            // Snippet: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, string, CallSettings)
-            // Additional: CreateStoredInfoTypeAsync(LocationName, StoredInfoTypeConfig, string, CancellationToken)
-            // Create client
-            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
-            // Initialize request argument(s)
-            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
-            StoredInfoTypeConfig config = new StoredInfoTypeConfig();
-            string locationId = "";
-            // Make the request
-            StoredInfoType response = await dlpServiceClient.CreateStoredInfoTypeAsync(parent, config, locationId);
             // End snippet
         }
 

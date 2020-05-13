@@ -254,6 +254,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 Filter = "filtere47ac9b2",
                 LocationId = "location_iddaa574e2",
+                Parent = "parent7858e4d0",
             };
             ListInfoTypesResponse expectedResponse = new ListInfoTypesResponse
             {
@@ -278,6 +279,7 @@ namespace Google.Cloud.Dlp.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 Filter = "filtere47ac9b2",
                 LocationId = "location_iddaa574e2",
+                Parent = "parent7858e4d0",
             };
             ListInfoTypesResponse expectedResponse = new ListInfoTypesResponse
             {
@@ -301,7 +303,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
-                LocationId = "location_iddaa574e2",
+                Parent = "parent7858e4d0",
             };
             ListInfoTypesResponse expectedResponse = new ListInfoTypesResponse
             {
@@ -312,7 +314,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             mockGrpcClient.Setup(x => x.ListInfoTypes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            ListInfoTypesResponse response = client.ListInfoTypes(request.LocationId);
+            ListInfoTypesResponse response = client.ListInfoTypes(request.Parent);
             xunit::Assert.Same(expectedResponse, response);
             mockGrpcClient.VerifyAll();
         }
@@ -323,7 +325,7 @@ namespace Google.Cloud.Dlp.V2.Tests
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             ListInfoTypesRequest request = new ListInfoTypesRequest
             {
-                LocationId = "location_iddaa574e2",
+                Parent = "parent7858e4d0",
             };
             ListInfoTypesResponse expectedResponse = new ListInfoTypesResponse
             {
@@ -334,9 +336,9 @@ namespace Google.Cloud.Dlp.V2.Tests
             };
             mockGrpcClient.Setup(x => x.ListInfoTypesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListInfoTypesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            ListInfoTypesResponse responseCallSettings = await client.ListInfoTypesAsync(request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            ListInfoTypesResponse responseCallSettings = await client.ListInfoTypesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ListInfoTypesResponse responseCancellationToken = await client.ListInfoTypesAsync(request.LocationId, st::CancellationToken.None);
+            ListInfoTypesResponse responseCancellationToken = await client.ListInfoTypesAsync(request.Parent, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -398,7 +400,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateInspectTemplate1()
+        public void CreateInspectTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -423,7 +425,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate1Async()
+        public async stt::Task CreateInspectTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -450,7 +452,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateInspectTemplate1ResourceNames1()
+        public void CreateInspectTemplateResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -475,7 +477,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate1ResourceNames1Async()
+        public async stt::Task CreateInspectTemplateResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -502,7 +504,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateInspectTemplate1ResourceNames2()
+        public void CreateInspectTemplateResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -527,7 +529,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate1ResourceNames2Async()
+        public async stt::Task CreateInspectTemplateResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -554,7 +556,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateInspectTemplate1ResourceNames3()
+        public void CreateInspectTemplateResourceNames3()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -579,7 +581,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate1ResourceNames3Async()
+        public async stt::Task CreateInspectTemplateResourceNames3Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -606,7 +608,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateInspectTemplate1ResourceNames4()
+        public void CreateInspectTemplateResourceNames4()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -631,7 +633,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate1ResourceNames4Async()
+        public async stt::Task CreateInspectTemplateResourceNames4Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
@@ -653,276 +655,6 @@ namespace Google.Cloud.Dlp.V2.Tests
             InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsLocationName, request.InspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsLocationName, request.InspectTemplate, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateInspectTemplate2()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate response = client.CreateInspectTemplate(request.Parent, request.InspectTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.Parent, request.InspectTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.Parent, request.InspectTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateInspectTemplate2ResourceNames1()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate response = client.CreateInspectTemplate(request.ParentAsOrganizationName, request.InspectTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate2ResourceNames1Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationName, request.InspectTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationName, request.InspectTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateInspectTemplate2ResourceNames2()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate response = client.CreateInspectTemplate(request.ParentAsProjectName, request.InspectTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate2ResourceNames2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsProjectName, request.InspectTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsProjectName, request.InspectTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateInspectTemplate2ResourceNames3()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate response = client.CreateInspectTemplate(request.ParentAsOrganizationLocationName, request.InspectTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate2ResourceNames3Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationLocationName, request.InspectTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsOrganizationLocationName, request.InspectTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateInspectTemplate2ResourceNames4()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate response = client.CreateInspectTemplate(request.ParentAsLocationName, request.InspectTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateInspectTemplate2ResourceNames4Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateInspectTemplateRequest request = new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                InspectTemplate = new InspectTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            InspectTemplate expectedResponse = new InspectTemplate
-            {
-                InspectTemplateName = InspectTemplateName.FromOrganizationInspectTemplate("[ORGANIZATION]", "[INSPECT_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                InspectConfig = new InspectConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateInspectTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<InspectTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            InspectTemplate responseCallSettings = await client.CreateInspectTemplateAsync(request.ParentAsLocationName, request.InspectTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            InspectTemplate responseCancellationToken = await client.CreateInspectTemplateAsync(request.ParentAsLocationName, request.InspectTemplate, request.LocationId, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1389,7 +1121,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate1()
+        public void CreateDeidentifyTemplate()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1414,7 +1146,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate1Async()
+        public async stt::Task CreateDeidentifyTemplateAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1441,7 +1173,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate1ResourceNames1()
+        public void CreateDeidentifyTemplateResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1466,7 +1198,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate1ResourceNames1Async()
+        public async stt::Task CreateDeidentifyTemplateResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1493,7 +1225,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate1ResourceNames2()
+        public void CreateDeidentifyTemplateResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1518,7 +1250,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate1ResourceNames2Async()
+        public async stt::Task CreateDeidentifyTemplateResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1545,7 +1277,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate1ResourceNames3()
+        public void CreateDeidentifyTemplateResourceNames3()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1570,7 +1302,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate1ResourceNames3Async()
+        public async stt::Task CreateDeidentifyTemplateResourceNames3Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1597,7 +1329,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate1ResourceNames4()
+        public void CreateDeidentifyTemplateResourceNames4()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1622,7 +1354,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate1ResourceNames4Async()
+        public async stt::Task CreateDeidentifyTemplateResourceNames4Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
@@ -1644,276 +1376,6 @@ namespace Google.Cloud.Dlp.V2.Tests
             DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsLocationName, request.DeidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsLocationName, request.DeidentifyTemplate, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate2()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.Parent, request.DeidentifyTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.Parent, request.DeidentifyTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.Parent, request.DeidentifyTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate2ResourceNames1()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsOrganizationName, request.DeidentifyTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate2ResourceNames1Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationName, request.DeidentifyTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationName, request.DeidentifyTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate2ResourceNames2()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsProjectName, request.DeidentifyTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate2ResourceNames2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsProjectName, request.DeidentifyTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsProjectName, request.DeidentifyTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate2ResourceNames3()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsOrganizationLocationName, request.DeidentifyTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate2ResourceNames3Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationLocationName, request.DeidentifyTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsOrganizationLocationName, request.DeidentifyTemplate, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDeidentifyTemplate2ResourceNames4()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate response = client.CreateDeidentifyTemplate(request.ParentAsLocationName, request.DeidentifyTemplate, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDeidentifyTemplate2ResourceNames4Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDeidentifyTemplateRequest request = new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                DeidentifyTemplate = new DeidentifyTemplate(),
-                LocationId = "location_iddaa574e2",
-            };
-            DeidentifyTemplate expectedResponse = new DeidentifyTemplate
-            {
-                DeidentifyTemplateName = DeidentifyTemplateName.FromOrganizationDeidentifyTemplate("[ORGANIZATION]", "[DEIDENTIFY_TEMPLATE]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                DeidentifyConfig = new DeidentifyConfig(),
-            };
-            mockGrpcClient.Setup(x => x.CreateDeidentifyTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DeidentifyTemplate>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DeidentifyTemplate responseCallSettings = await client.CreateDeidentifyTemplateAsync(request.ParentAsLocationName, request.DeidentifyTemplate, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DeidentifyTemplate responseCancellationToken = await client.CreateDeidentifyTemplateAsync(request.ParentAsLocationName, request.DeidentifyTemplate, request.LocationId, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -2394,7 +1856,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateJobTrigger1()
+        public void CreateJobTrigger()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
@@ -2426,7 +1888,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateJobTrigger1Async()
+        public async stt::Task CreateJobTriggerAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
@@ -2460,7 +1922,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateJobTrigger1ResourceNames()
+        public void CreateJobTriggerResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
@@ -2492,7 +1954,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateJobTrigger1ResourceNamesAsync()
+        public async stt::Task CreateJobTriggerResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
@@ -2521,142 +1983,6 @@ namespace Google.Cloud.Dlp.V2.Tests
             JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateJobTrigger2()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateJobTriggerRequest request = new CreateJobTriggerRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                JobTrigger = new JobTrigger(),
-                LocationId = "location_iddaa574e2",
-            };
-            JobTrigger expectedResponse = new JobTrigger
-            {
-                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                InspectJob = new InspectJobConfig(),
-                Triggers =
-                {
-                    new JobTrigger.Types.Trigger(),
-                },
-                Errors = { new Error(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastRunTime = new wkt::Timestamp(),
-                Status = JobTrigger.Types.Status.Paused,
-            };
-            mockGrpcClient.Setup(x => x.CreateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            JobTrigger response = client.CreateJobTrigger(request.Parent, request.JobTrigger, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateJobTrigger2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateJobTriggerRequest request = new CreateJobTriggerRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                JobTrigger = new JobTrigger(),
-                LocationId = "location_iddaa574e2",
-            };
-            JobTrigger expectedResponse = new JobTrigger
-            {
-                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                InspectJob = new InspectJobConfig(),
-                Triggers =
-                {
-                    new JobTrigger.Types.Trigger(),
-                },
-                Errors = { new Error(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastRunTime = new wkt::Timestamp(),
-                Status = JobTrigger.Types.Status.Paused,
-            };
-            mockGrpcClient.Setup(x => x.CreateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.Parent, request.JobTrigger, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.Parent, request.JobTrigger, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateJobTrigger2ResourceNames()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateJobTriggerRequest request = new CreateJobTriggerRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                JobTrigger = new JobTrigger(),
-                LocationId = "location_iddaa574e2",
-            };
-            JobTrigger expectedResponse = new JobTrigger
-            {
-                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                InspectJob = new InspectJobConfig(),
-                Triggers =
-                {
-                    new JobTrigger.Types.Trigger(),
-                },
-                Errors = { new Error(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastRunTime = new wkt::Timestamp(),
-                Status = JobTrigger.Types.Status.Paused,
-            };
-            mockGrpcClient.Setup(x => x.CreateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            JobTrigger response = client.CreateJobTrigger(request.ParentAsProjectName, request.JobTrigger, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateJobTrigger2ResourceNamesAsync()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateJobTriggerRequest request = new CreateJobTriggerRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                JobTrigger = new JobTrigger(),
-                LocationId = "location_iddaa574e2",
-            };
-            JobTrigger expectedResponse = new JobTrigger
-            {
-                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
-                DisplayName = "display_name137f65c2",
-                Description = "description2cf9da67",
-                InspectJob = new InspectJobConfig(),
-                Triggers =
-                {
-                    new JobTrigger.Types.Trigger(),
-                },
-                Errors = { new Error(), },
-                CreateTime = new wkt::Timestamp(),
-                UpdateTime = new wkt::Timestamp(),
-                LastRunTime = new wkt::Timestamp(),
-                Status = JobTrigger.Types.Status.Paused,
-            };
-            mockGrpcClient.Setup(x => x.CreateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, request.LocationId, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -3505,130 +2831,6 @@ namespace Google.Cloud.Dlp.V2.Tests
             CreateDlpJobRequest request = new CreateDlpJobRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                InspectJob = new InspectJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob response = client.CreateDlpJob(request.Parent, request.InspectJob, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                InspectJob = new InspectJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.Parent, request.InspectJob, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.Parent, request.InspectJob, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDlpJob2ResourceNames()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                InspectJob = new InspectJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob response = client.CreateDlpJob(request.ParentAsProjectName, request.InspectJob, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob2ResourceNamesAsync()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                InspectJob = new InspectJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.InspectJob, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.InspectJob, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDlpJob3()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
                 RiskJob = new RiskAnalysisJobConfig(),
             };
             DlpJob expectedResponse = new DlpJob
@@ -3652,7 +2854,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob3Async()
+        public async stt::Task CreateDlpJob2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDlpJobRequest request = new CreateDlpJobRequest
@@ -3683,7 +2885,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDlpJob3ResourceNames()
+        public void CreateDlpJob2ResourceNames()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDlpJobRequest request = new CreateDlpJobRequest
@@ -3712,7 +2914,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob3ResourceNamesAsync()
+        public async stt::Task CreateDlpJob2ResourceNamesAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDlpJobRequest request = new CreateDlpJobRequest
@@ -3738,130 +2940,6 @@ namespace Google.Cloud.Dlp.V2.Tests
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDlpJob4()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                RiskJob = new RiskAnalysisJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob response = client.CreateDlpJob(request.Parent, request.RiskJob, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob4Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                RiskJob = new RiskAnalysisJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.Parent, request.RiskJob, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.Parent, request.RiskJob, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateDlpJob4ResourceNames()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                RiskJob = new RiskAnalysisJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob response = client.CreateDlpJob(request.ParentAsProjectName, request.RiskJob, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob4ResourceNamesAsync()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateDlpJobRequest request = new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
-                RiskJob = new RiskAnalysisJobConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            DlpJob expectedResponse = new DlpJob
-            {
-                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
-                Type = DlpJobType.Unspecified,
-                State = DlpJob.Types.JobState.Active,
-                RiskDetails = new AnalyzeDataSourceRiskDetails(),
-                InspectDetails = new InspectDataSourceDetails(),
-                CreateTime = new wkt::Timestamp(),
-                StartTime = new wkt::Timestamp(),
-                EndTime = new wkt::Timestamp(),
-                JobTriggerName = "job_trigger_name66f423d1",
-                Errors = { new Error(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, request.LocationId, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -4221,7 +3299,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateStoredInfoType1()
+        public void CreateStoredInfoType()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4246,7 +3324,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType1Async()
+        public async stt::Task CreateStoredInfoTypeAsync()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4273,7 +3351,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateStoredInfoType1ResourceNames1()
+        public void CreateStoredInfoTypeResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4298,7 +3376,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType1ResourceNames1Async()
+        public async stt::Task CreateStoredInfoTypeResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4325,7 +3403,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateStoredInfoType1ResourceNames2()
+        public void CreateStoredInfoTypeResourceNames2()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4350,7 +3428,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType1ResourceNames2Async()
+        public async stt::Task CreateStoredInfoTypeResourceNames2Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4377,7 +3455,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateStoredInfoType1ResourceNames3()
+        public void CreateStoredInfoTypeResourceNames3()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4402,7 +3480,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType1ResourceNames3Async()
+        public async stt::Task CreateStoredInfoTypeResourceNames3Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4429,7 +3507,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateStoredInfoType1ResourceNames4()
+        public void CreateStoredInfoTypeResourceNames4()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4454,7 +3532,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType1ResourceNames4Async()
+        public async stt::Task CreateStoredInfoTypeResourceNames4Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
@@ -4476,276 +3554,6 @@ namespace Google.Cloud.Dlp.V2.Tests
             StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsLocationName, request.Config, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsLocationName, request.Config, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateStoredInfoType2()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType response = client.CreateStoredInfoType(request.Parent, request.Config, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.Parent, request.Config, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.Parent, request.Config, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateStoredInfoType2ResourceNames1()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType response = client.CreateStoredInfoType(request.ParentAsOrganizationName, request.Config, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType2ResourceNames1Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationName, request.Config, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationName, request.Config, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateStoredInfoType2ResourceNames2()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType response = client.CreateStoredInfoType(request.ParentAsProjectName, request.Config, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType2ResourceNames2Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsProjectName, request.Config, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsProjectName, request.Config, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateStoredInfoType2ResourceNames3()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType response = client.CreateStoredInfoType(request.ParentAsOrganizationLocationName, request.Config, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType2ResourceNames3Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationLocationName, request.Config, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsOrganizationLocationName, request.Config, request.LocationId, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateStoredInfoType2ResourceNames4()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType response = client.CreateStoredInfoType(request.ParentAsLocationName, request.Config, request.LocationId);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateStoredInfoType2ResourceNames4Async()
-        {
-            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
-            CreateStoredInfoTypeRequest request = new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
-                Config = new StoredInfoTypeConfig(),
-                LocationId = "location_iddaa574e2",
-            };
-            StoredInfoType expectedResponse = new StoredInfoType
-            {
-                StoredInfoTypeName = StoredInfoTypeName.FromOrganizationStoredInfoType("[ORGANIZATION]", "[STORED_INFO_TYPE]"),
-                CurrentVersion = new StoredInfoTypeVersion(),
-                PendingVersions =
-                {
-                    new StoredInfoTypeVersion(),
-                },
-            };
-            mockGrpcClient.Setup(x => x.CreateStoredInfoTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StoredInfoType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
-            StoredInfoType responseCallSettings = await client.CreateStoredInfoTypeAsync(request.ParentAsLocationName, request.Config, request.LocationId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            StoredInfoType responseCancellationToken = await client.CreateStoredInfoTypeAsync(request.ParentAsLocationName, request.Config, request.LocationId, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

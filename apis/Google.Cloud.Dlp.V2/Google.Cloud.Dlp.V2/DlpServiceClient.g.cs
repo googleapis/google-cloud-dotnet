@@ -919,48 +919,39 @@ namespace Google.Cloud.Dlp.V2
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
-        /// <param name="locationId">
-        /// The geographic location to list info types. Reserved for future
-        /// extensions.
+        /// <param name="parent">
+        /// The parent resource name, for example locations/{location_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ListInfoTypesResponse ListInfoTypes(string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            ListInfoTypes(new ListInfoTypesRequest
-            {
-                LocationId = locationId ?? "",
-            }, callSettings);
+        public virtual ListInfoTypesResponse ListInfoTypes(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListInfoTypes(new ListInfoTypesRequest { Parent = parent ?? "", }, callSettings);
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
-        /// <param name="locationId">
-        /// The geographic location to list info types. Reserved for future
-        /// extensions.
+        /// <param name="parent">
+        /// The parent resource name, for example locations/{location_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListInfoTypesResponse> ListInfoTypesAsync(string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            ListInfoTypesAsync(new ListInfoTypesRequest
-            {
-                LocationId = locationId ?? "",
-            }, callSettings);
+        public virtual stt::Task<ListInfoTypesResponse> ListInfoTypesAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListInfoTypesAsync(new ListInfoTypesRequest { Parent = parent ?? "", }, callSettings);
 
         /// <summary>
         /// Returns a list of the sensitive information types that the DLP API
         /// supports. See https://cloud.google.com/dlp/docs/infotypes-reference to
         /// learn more.
         /// </summary>
-        /// <param name="locationId">
-        /// The geographic location to list info types. Reserved for future
-        /// extensions.
+        /// <param name="parent">
+        /// The parent resource name, for example locations/{location_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListInfoTypesResponse> ListInfoTypesAsync(string locationId, st::CancellationToken cancellationToken) =>
-            ListInfoTypesAsync(locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+        public virtual stt::Task<ListInfoTypesResponse> ListInfoTypesAsync(string parent, st::CancellationToken cancellationToken) =>
+            ListInfoTypesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates an InspectTemplate for re-using frequently used configuration
@@ -1002,7 +993,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1023,7 +1014,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1044,7 +1035,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1061,7 +1052,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1082,7 +1073,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1103,7 +1094,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1120,7 +1111,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1141,7 +1132,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1162,7 +1153,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1179,7 +1170,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1200,7 +1191,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1221,7 +1212,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1238,7 +1229,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1259,7 +1250,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1280,7 +1271,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location-id}.
         /// </param>
         /// <param name="inspectTemplate">
         /// Required. The InspectTemplate to create.
@@ -1289,371 +1280,6 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(gagr::LocationName parent, InspectTemplate inspectTemplate, st::CancellationToken cancellationToken) =>
             CreateInspectTemplateAsync(parent, inspectTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InspectTemplate CreateInspectTemplate(string parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplate(new CreateInspectTemplateRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(string parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplateAsync(new CreateInspectTemplateRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(string parent, InspectTemplate inspectTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateInspectTemplateAsync(parent, inspectTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InspectTemplate CreateInspectTemplate(gagr::OrganizationName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplate(new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(gagr::OrganizationName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplateAsync(new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(gagr::OrganizationName parent, InspectTemplate inspectTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateInspectTemplateAsync(parent, inspectTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InspectTemplate CreateInspectTemplate(gagr::ProjectName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplate(new CreateInspectTemplateRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(gagr::ProjectName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplateAsync(new CreateInspectTemplateRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(gagr::ProjectName parent, InspectTemplate inspectTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateInspectTemplateAsync(parent, inspectTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InspectTemplate CreateInspectTemplate(OrganizationLocationName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplate(new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(OrganizationLocationName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplateAsync(new CreateInspectTemplateRequest
-            {
-                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(OrganizationLocationName parent, InspectTemplate inspectTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateInspectTemplateAsync(parent, inspectTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual InspectTemplate CreateInspectTemplate(gagr::LocationName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplate(new CreateInspectTemplateRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(gagr::LocationName parent, InspectTemplate inspectTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateInspectTemplateAsync(new CreateInspectTemplateRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectTemplate = gax::GaxPreconditions.CheckNotNull(inspectTemplate, nameof(inspectTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates an InspectTemplate for re-using frequently used configuration
-        /// for inspecting content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="inspectTemplate">
-        /// Required. The InspectTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the inspection template. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<InspectTemplate> CreateInspectTemplateAsync(gagr::LocationName parent, InspectTemplate inspectTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateInspectTemplateAsync(parent, inspectTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the InspectTemplate.
@@ -1690,8 +1316,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1715,8 +1341,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1740,8 +1366,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1760,8 +1386,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1785,8 +1411,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1810,8 +1436,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and inspectTemplate to be updated, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of organization and inspectTemplate to be updated,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="inspectTemplate">
@@ -1860,8 +1486,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1877,8 +1503,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1894,8 +1520,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1908,8 +1534,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1925,8 +1551,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1942,8 +1568,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be read, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
+        /// Required. Resource name of the organization and inspectTemplate to be read,
+        /// for example `organizations/433245324/inspectTemplates/432452342` or
         /// projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1977,7 +1603,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2003,7 +1629,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2029,7 +1655,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2055,7 +1681,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2081,7 +1707,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2107,7 +1733,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2133,7 +1759,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2159,7 +1785,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2185,7 +1811,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2211,7 +1837,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2266,9 +1892,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2283,9 +1909,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2300,9 +1926,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2314,9 +1940,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2331,9 +1957,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2348,9 +1974,9 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-templates to learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and inspectTemplate to be deleted, for
-        /// example `organizations/433245324/inspectTemplates/432452342` or
-        /// projects/project-id/inspectTemplates/432452342.
+        /// Required. Resource name of the organization and inspectTemplate to be
+        /// deleted, for example `organizations/433245324/inspectTemplates/432452342`
+        /// or projects/project-id/inspectTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2401,7 +2027,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2423,7 +2049,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2445,7 +2071,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2463,7 +2089,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2485,7 +2111,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2507,7 +2133,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2525,7 +2151,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2547,7 +2173,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2569,7 +2195,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2587,7 +2213,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2609,7 +2235,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2631,7 +2257,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2649,7 +2275,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2671,7 +2297,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2693,7 +2319,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="deidentifyTemplate">
         /// Required. The DeidentifyTemplate to create.
@@ -2702,386 +2328,6 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(gagr::LocationName parent, DeidentifyTemplate deidentifyTemplate, st::CancellationToken cancellationToken) =>
             CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DeidentifyTemplate CreateDeidentifyTemplate(string parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplate(new CreateDeidentifyTemplateRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(string parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplateAsync(new CreateDeidentifyTemplateRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(string parent, DeidentifyTemplate deidentifyTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DeidentifyTemplate CreateDeidentifyTemplate(gagr::OrganizationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplate(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(gagr::OrganizationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplateAsync(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(gagr::OrganizationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DeidentifyTemplate CreateDeidentifyTemplate(gagr::ProjectName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplate(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(gagr::ProjectName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplateAsync(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(gagr::ProjectName parent, DeidentifyTemplate deidentifyTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DeidentifyTemplate CreateDeidentifyTemplate(OrganizationLocationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplate(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(OrganizationLocationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplateAsync(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(OrganizationLocationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DeidentifyTemplate CreateDeidentifyTemplate(gagr::LocationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplate(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(gagr::LocationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDeidentifyTemplateAsync(new CreateDeidentifyTemplateRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                DeidentifyTemplate = gax::GaxPreconditions.CheckNotNull(deidentifyTemplate, nameof(deidentifyTemplate)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a DeidentifyTemplate for re-using frequently used configuration
-        /// for de-identifying content, images, and storage.
-        /// See https://cloud.google.com/dlp/docs/creating-templates-deid to learn
-        /// more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="deidentifyTemplate">
-        /// Required. The DeidentifyTemplate to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the deidentification template. Reserved
-        /// for future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DeidentifyTemplate> CreateDeidentifyTemplateAsync(gagr::LocationName parent, DeidentifyTemplate deidentifyTemplate, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDeidentifyTemplateAsync(parent, deidentifyTemplate, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the DeidentifyTemplate.
@@ -3122,8 +2368,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3148,8 +2395,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3174,8 +2422,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3195,8 +2444,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3221,8 +2471,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3247,8 +2498,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of organization and deidentify template to be updated, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of organization and deidentify template to be
+        /// updated, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="deidentifyTemplate">
@@ -3301,9 +2553,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3319,9 +2571,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3337,9 +2589,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3352,9 +2604,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3370,9 +2622,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3388,9 +2640,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be read, for
-        /// example `organizations/433245324/deidentifyTemplates/432452342` or
-        /// projects/project-id/deidentifyTemplates/432452342.
+        /// Required. Resource name of the organization and deidentify template to be
+        /// read, for example `organizations/433245324/deidentifyTemplates/432452342`
+        /// or projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3426,7 +2678,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3453,7 +2705,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3480,7 +2732,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3507,7 +2759,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3534,7 +2786,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3561,7 +2813,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3588,7 +2840,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3615,7 +2867,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3642,7 +2894,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3669,7 +2921,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3728,8 +2980,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3746,8 +2999,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3764,8 +3018,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3779,8 +3034,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3797,8 +3053,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3815,8 +3072,9 @@ namespace Google.Cloud.Dlp.V2
         /// more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and deidentify template to be deleted,
-        /// for example `organizations/433245324/deidentifyTemplates/432452342` or
+        /// Required. Resource name of the organization and deidentify template to be
+        /// deleted, for example
+        /// `organizations/433245324/deidentifyTemplates/432452342` or
         /// projects/project-id/deidentifyTemplates/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3863,7 +3121,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="jobTrigger">
         /// Required. The JobTrigger to create.
@@ -3883,7 +3142,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="jobTrigger">
         /// Required. The JobTrigger to create.
@@ -3903,7 +3163,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="jobTrigger">
         /// Required. The JobTrigger to create.
@@ -3919,7 +3180,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="jobTrigger">
         /// Required. The JobTrigger to create.
@@ -3939,7 +3201,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="jobTrigger">
         /// Required. The JobTrigger to create.
@@ -3959,7 +3222,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="jobTrigger">
         /// Required. The JobTrigger to create.
@@ -3968,146 +3232,6 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<JobTrigger> CreateJobTriggerAsync(gagr::ProjectName parent, JobTrigger jobTrigger, st::CancellationToken cancellationToken) =>
             CreateJobTriggerAsync(parent, jobTrigger, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a job trigger to run DLP actions such as scanning storage for
-        /// sensitive information on a set schedule.
-        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="jobTrigger">
-        /// Required. The JobTrigger to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the job trigger. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual JobTrigger CreateJobTrigger(string parent, JobTrigger jobTrigger, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateJobTrigger(new CreateJobTriggerRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                JobTrigger = gax::GaxPreconditions.CheckNotNull(jobTrigger, nameof(jobTrigger)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a job trigger to run DLP actions such as scanning storage for
-        /// sensitive information on a set schedule.
-        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="jobTrigger">
-        /// Required. The JobTrigger to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the job trigger. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<JobTrigger> CreateJobTriggerAsync(string parent, JobTrigger jobTrigger, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateJobTriggerAsync(new CreateJobTriggerRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                JobTrigger = gax::GaxPreconditions.CheckNotNull(jobTrigger, nameof(jobTrigger)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a job trigger to run DLP actions such as scanning storage for
-        /// sensitive information on a set schedule.
-        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="jobTrigger">
-        /// Required. The JobTrigger to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the job trigger. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<JobTrigger> CreateJobTriggerAsync(string parent, JobTrigger jobTrigger, string locationId, st::CancellationToken cancellationToken) =>
-            CreateJobTriggerAsync(parent, jobTrigger, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a job trigger to run DLP actions such as scanning storage for
-        /// sensitive information on a set schedule.
-        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="jobTrigger">
-        /// Required. The JobTrigger to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the job trigger. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual JobTrigger CreateJobTrigger(gagr::ProjectName parent, JobTrigger jobTrigger, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateJobTrigger(new CreateJobTriggerRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                JobTrigger = gax::GaxPreconditions.CheckNotNull(jobTrigger, nameof(jobTrigger)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a job trigger to run DLP actions such as scanning storage for
-        /// sensitive information on a set schedule.
-        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="jobTrigger">
-        /// Required. The JobTrigger to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the job trigger. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<JobTrigger> CreateJobTriggerAsync(gagr::ProjectName parent, JobTrigger jobTrigger, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateJobTriggerAsync(new CreateJobTriggerRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                JobTrigger = gax::GaxPreconditions.CheckNotNull(jobTrigger, nameof(jobTrigger)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a job trigger to run DLP actions such as scanning storage for
-        /// sensitive information on a set schedule.
-        /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="jobTrigger">
-        /// Required. The JobTrigger to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the job trigger. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<JobTrigger> CreateJobTriggerAsync(gagr::ProjectName parent, JobTrigger jobTrigger, string locationId, st::CancellationToken cancellationToken) =>
-            CreateJobTriggerAsync(parent, jobTrigger, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a job trigger.
@@ -4324,8 +3448,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4344,8 +3468,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4364,8 +3488,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4381,8 +3505,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4401,8 +3525,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4421,8 +3545,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/jobTriggers/53234423`.
+        /// Required. Resource name of the trigger to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/jobTriggers/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4574,7 +3698,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example `projects/my-project-id`.
+        /// Required. The parent resource name, for example `projects/my-project-id`
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4599,7 +3724,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example `projects/my-project-id`.
+        /// Required. The parent resource name, for example `projects/my-project-id`
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4624,7 +3750,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example `projects/my-project-id`.
+        /// Required. The parent resource name, for example `projects/my-project-id`
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4649,7 +3776,8 @@ namespace Google.Cloud.Dlp.V2
         /// See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example `projects/my-project-id`.
+        /// Required. The parent resource name, for example `projects/my-project-id`
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4874,7 +4002,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="inspectJob">
         /// Set to control what and how to inspect.
@@ -4898,7 +4027,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="inspectJob">
         /// Set to control what and how to inspect.
@@ -4922,7 +4052,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="inspectJob">
         /// Set to control what and how to inspect.
@@ -4942,7 +4073,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="inspectJob">
         /// Set to control what and how to inspect.
@@ -4966,7 +4098,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="inspectJob">
         /// Set to control what and how to inspect.
@@ -4990,7 +4123,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="inspectJob">
         /// Set to control what and how to inspect.
@@ -5010,171 +4144,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DlpJob CreateDlpJob(string parent, InspectJobConfig inspectJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJob(new CreateDlpJobRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                InspectJob = inspectJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(string parent, InspectJobConfig inspectJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJobAsync(new CreateDlpJobRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                InspectJob = inspectJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(string parent, InspectJobConfig inspectJob, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDlpJobAsync(parent, inspectJob, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DlpJob CreateDlpJob(gagr::ProjectName parent, InspectJobConfig inspectJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJob(new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectJob = inspectJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(gagr::ProjectName parent, InspectJobConfig inspectJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJobAsync(new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                InspectJob = inspectJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(gagr::ProjectName parent, InspectJobConfig inspectJob, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDlpJobAsync(parent, inspectJob, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="riskJob">
         /// Set to choose what metric to calculate.
@@ -5198,7 +4169,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="riskJob">
         /// Set to choose what metric to calculate.
@@ -5222,7 +4194,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="riskJob">
         /// Set to choose what metric to calculate.
@@ -5242,7 +4215,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="riskJob">
         /// Set to choose what metric to calculate.
@@ -5266,7 +4240,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="riskJob">
         /// Set to choose what metric to calculate.
@@ -5290,7 +4265,8 @@ namespace Google.Cloud.Dlp.V2
         /// be all types, but may change over time as detectors are updated.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="riskJob">
         /// Set to choose what metric to calculate.
@@ -5299,170 +4275,6 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<DlpJob> CreateDlpJobAsync(gagr::ProjectName parent, RiskAnalysisJobConfig riskJob, st::CancellationToken cancellationToken) =>
             CreateDlpJobAsync(parent, riskJob, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DlpJob CreateDlpJob(string parent, RiskAnalysisJobConfig riskJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJob(new CreateDlpJobRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                RiskJob = riskJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(string parent, RiskAnalysisJobConfig riskJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJobAsync(new CreateDlpJobRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                RiskJob = riskJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(string parent, RiskAnalysisJobConfig riskJob, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDlpJobAsync(parent, riskJob, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual DlpJob CreateDlpJob(gagr::ProjectName parent, RiskAnalysisJobConfig riskJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJob(new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                RiskJob = riskJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(gagr::ProjectName parent, RiskAnalysisJobConfig riskJob, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateDlpJobAsync(new CreateDlpJobRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                RiskJob = riskJob,
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a new job to inspect storage or calculate risk metrics.
-        /// See https://cloud.google.com/dlp/docs/inspecting-storage and
-        /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-        /// 
-        /// When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the
-        /// system will automatically choose what detectors to run. By default this may
-        /// be all types, but may change over time as detectors are updated.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
-        /// </param>
-        /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store and process the job. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<DlpJob> CreateDlpJobAsync(gagr::ProjectName parent, RiskAnalysisJobConfig riskJob, string locationId, st::CancellationToken cancellationToken) =>
-            CreateDlpJobAsync(parent, riskJob, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists DlpJobs that match the specified filter in the request.
@@ -5492,7 +4304,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5518,7 +4331,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5544,7 +4358,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5570,7 +4385,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id.
+        /// Required. The parent resource name, for example projects/my-project-id
+        /// or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5933,7 +4749,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -5954,7 +4770,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -5975,7 +4791,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -5992,7 +4808,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6013,7 +4829,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6034,7 +4850,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6051,7 +4867,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6072,7 +4888,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6093,7 +4909,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6110,7 +4926,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6131,7 +4947,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6152,7 +4968,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6169,7 +4985,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6190,7 +5006,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6211,7 +5027,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}
         /// </param>
         /// <param name="config">
         /// Required. Configuration of the storedInfoType to create.
@@ -6220,371 +5036,6 @@ namespace Google.Cloud.Dlp.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(gagr::LocationName parent, StoredInfoTypeConfig config, st::CancellationToken cancellationToken) =>
             CreateStoredInfoTypeAsync(parent, config, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual StoredInfoType CreateStoredInfoType(string parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoType(new CreateStoredInfoTypeRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(string parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoTypeAsync(new CreateStoredInfoTypeRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(string parent, StoredInfoTypeConfig config, string locationId, st::CancellationToken cancellationToken) =>
-            CreateStoredInfoTypeAsync(parent, config, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual StoredInfoType CreateStoredInfoType(gagr::OrganizationName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoType(new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(gagr::OrganizationName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoTypeAsync(new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(gagr::OrganizationName parent, StoredInfoTypeConfig config, string locationId, st::CancellationToken cancellationToken) =>
-            CreateStoredInfoTypeAsync(parent, config, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual StoredInfoType CreateStoredInfoType(gagr::ProjectName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoType(new CreateStoredInfoTypeRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(gagr::ProjectName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoTypeAsync(new CreateStoredInfoTypeRequest
-            {
-                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(gagr::ProjectName parent, StoredInfoTypeConfig config, string locationId, st::CancellationToken cancellationToken) =>
-            CreateStoredInfoTypeAsync(parent, config, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual StoredInfoType CreateStoredInfoType(OrganizationLocationName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoType(new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(OrganizationLocationName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoTypeAsync(new CreateStoredInfoTypeRequest
-            {
-                ParentAsOrganizationLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(OrganizationLocationName parent, StoredInfoTypeConfig config, string locationId, st::CancellationToken cancellationToken) =>
-            CreateStoredInfoTypeAsync(parent, config, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual StoredInfoType CreateStoredInfoType(gagr::LocationName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoType(new CreateStoredInfoTypeRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(gagr::LocationName parent, StoredInfoTypeConfig config, string locationId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateStoredInfoTypeAsync(new CreateStoredInfoTypeRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
-                LocationId = locationId ?? "",
-            }, callSettings);
-
-        /// <summary>
-        /// Creates a pre-built stored infoType to be used for inspection.
-        /// See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
-        /// learn more.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
-        /// </param>
-        /// <param name="config">
-        /// Required. Configuration of the storedInfoType to create.
-        /// </param>
-        /// <param name="locationId">
-        /// The geographic location to store the stored infoType. Reserved for
-        /// future extensions.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<StoredInfoType> CreateStoredInfoTypeAsync(gagr::LocationName parent, StoredInfoTypeConfig config, string locationId, st::CancellationToken cancellationToken) =>
-            CreateStoredInfoTypeAsync(parent, config, locationId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates the stored infoType by creating a new version. The existing version
@@ -6825,8 +5276,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6843,8 +5294,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6861,8 +5312,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6876,8 +5327,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6894,8 +5345,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6912,8 +5363,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be read, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be read,
+        /// for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -6950,7 +5401,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6977,7 +5428,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7004,7 +5455,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7031,7 +5482,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7058,7 +5509,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7085,7 +5536,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7112,7 +5563,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7139,7 +5590,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7166,7 +5617,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7193,7 +5644,7 @@ namespace Google.Cloud.Dlp.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name, for example projects/my-project-id or
-        /// organizations/my-org-id.
+        /// organizations/my-org-id or projects/my-project-id/locations/{location_id}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7252,8 +5703,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7270,8 +5721,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7288,8 +5739,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7303,8 +5754,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7321,8 +5772,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7339,8 +5790,8 @@ namespace Google.Cloud.Dlp.V2
         /// learn more.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the organization and storedInfoType to be deleted, for
-        /// example `organizations/433245324/storedInfoTypes/432452342` or
+        /// Required. Resource name of the organization and storedInfoType to be
+        /// deleted, for example `organizations/433245324/storedInfoTypes/432452342` or
         /// projects/project-id/storedInfoTypes/432452342.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7399,8 +5850,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7419,8 +5870,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7439,8 +5890,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7456,8 +5907,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7476,8 +5927,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7496,8 +5947,8 @@ namespace Google.Cloud.Dlp.V2
         /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
-        /// Required. Resource name of the job to execute a hybrid inspect on, for example
-        /// `projects/dlp-test-project/dlpJob/53234423`.
+        /// Required. Resource name of the job to execute a hybrid inspect on, for
+        /// example `projects/dlp-test-project/dlpJob/53234423`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
