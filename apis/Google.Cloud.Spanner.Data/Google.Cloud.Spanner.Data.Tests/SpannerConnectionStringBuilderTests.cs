@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using System;
@@ -170,6 +171,21 @@ namespace Google.Cloud.Spanner.Data.Tests
             // DbConnectionStringBuilder lower-cases keywords, annoyingly.
             Assert.Equal("timeout=10", connectionStringBuilder.ToString());
             Assert.Throws<ArgumentOutOfRangeException>(() => connectionStringBuilder.Timeout = -1);
+        }
+
+        [Fact]
+        public void EmulatorDetectionProperty()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=2");
+            Assert.Equal(EmulatorDetection.EmulatorOnly, connectionStringBuilder.EmulatorDetection);
+            connectionStringBuilder.EmulatorDetection = EmulatorDetection.ProductionOnly;
+            Assert.Equal(EmulatorDetection.ProductionOnly, connectionStringBuilder.EmulatorDetection);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("emulatordetection=1", connectionStringBuilder.ToString());
+            // Ignores invalid values set in the connection string.
+            var invalidConnectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=-1");
+            Assert.Equal(EmulatorDetection.None, invalidConnectionStringBuilder.EmulatorDetection);
+            // Can't test for ArgumentOutOfRangeException since an out of range enum value can't be set.
         }
 
         [Fact]
