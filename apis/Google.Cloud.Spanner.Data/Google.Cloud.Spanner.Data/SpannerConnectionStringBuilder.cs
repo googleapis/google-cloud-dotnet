@@ -311,7 +311,6 @@ namespace Google.Cloud.Spanner.Data
             }
             set
             {
-		Console.WriteLine($"Set {value}");
                 this[EmulatorDetectionKeyword] = (int) value;
             }
         }
