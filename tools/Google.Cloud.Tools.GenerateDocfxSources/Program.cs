@@ -26,6 +26,25 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 {
     public class Program
     {
+        /// <summary>
+        /// External dependencies we generate docs for, e.g. GAX, Grpc.Core, Protobuf, each with a list
+        /// of its own dependencies. Note all of these are *actually* generated, which is something we
+        /// need to fix - and it would be nice if we could discover the dependencies automatically instead of
+        /// hard-coding them. For now though, this is a reasonable start.
+        /// </summary>
+        private static readonly IDictionary<string, string[]> s_externalDependencies =
+            new Dictionary<string, string[]>
+        {
+            { "Google.Protobuf", new string[0] },
+            { "Google.Api.Gax", new string[0] },
+            { "Google.Api.CommonProtos", new[] { "Google.Protobuf" } },
+            { "Google.Api.Gax.Grpc", new[] { "Google.Api.Gax", "Google.Api.CommonProtos", "Grpc.Core.Api" } },
+            { "Google.Api.Gax.Grpc.Gcp", new[] { "Google.Api.Gax.Grpc.GrpcCore", "Grpc.Gcp" } },
+            { "Google.Api.Gax.Grpc.GrpcCore", new[] { "Google.Api.Gax.Grpc", "Grpc.Core" } },
+            { "Google.Api.Gax.Grpc.GrpcNetClient", new[] { "Google.Api.Gax.Grpc", "Grpc.Net.Client" } },
+            { "Google.Api.Gax.Rest", new[] { "Google.Api.Gax" } }
+        };
+
         private static int Main(string[] args)
         {
             try
@@ -47,7 +66,8 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             }
             string api = args[0];
             var layout = DirectoryLayout.ForApi(api);
-            var apiMetadata = ApiCatalog.Load()[api];
+            var apiCatalog = ApiCatalog.Load();
+            var apiMetadata = apiCatalog[api];
 
             string output = layout.DocsOutputDirectory;
             if (Directory.Exists(output))
@@ -56,42 +76,26 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             }
             Directory.CreateDirectory(output);
 
-            var apiDirectory = layout.SourceDirectory;
-            var projects = Project.LoadProjects(apiDirectory).ToList();
-
-            CreateDocfxJson(apiMetadata, projects, output);
+            CreateDocfxJson(apiCatalog, apiMetadata, output);
             CopyAndGenerateArticles(apiMetadata, layout.DocsSourceDirectory, output);
             CreateToc(api, output);
             return 0;
         }
 
-        private static void CreateDocfxJson(ApiMetadata api, List<Project> projects, string outputDirectory)
+        private static void CreateDocfxJson(ApiCatalog catalog, ApiMetadata rootApi, string outputDirectory)
         {
             var src = new JArray();
-            foreach (var project in projects)
+
+            var allApisToGenerate = GenerateApiSet(catalog, rootApi);
+            foreach (var api in allApisToGenerate)
             {
                 src.Add(new JObject
                 {
-                    ["files"] = new JArray { $"{project.Name}/{project.Name}.csproj" },
-                    ["cwd"] = $"../../../apis/{api.Id}"
+                    ["files"] = new JArray { $"{api}/{api}.csproj" },
+                    ["cwd"] = $"../../../apis/{api}"
                 });
             }
 
-            var dependencies = projects.SelectMany(p => p.Dependencies).OrderBy(d => d).Distinct().ToList();
-            foreach (var dependency in dependencies)
-            {
-                // Cross-API dependencies (currently for IAM and LRO)
-                string candidateDependency = $"../../../apis/{dependency}";
-                if (Directory.Exists(Path.Combine(outputDirectory, candidateDependency)))
-                {
-                    src.Add(new JObject
-                    {
-                        ["files"] = new JArray { $"{dependency}/{dependency}.csproj" },
-                        ["cwd"] = candidateDependency
-                    });
-                    continue;
-                }
-            }
             var json = new JObject
             {
                 ["metadata"] = new JArray {
@@ -118,7 +122,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     },
                     ["globalMetadata"] = new JObject
                     {
-                        ["_appTitle"] = api.Id,
+                        ["_appTitle"] = rootApi.Id,
                         ["_disableContribution"] = true,
                         ["_appFooter"] = " "
                     },
@@ -138,17 +142,76 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
-            ModifyForDevSite(api, json);
+            ModifyForDevSite(rootApi, json);
             File.WriteAllText(Path.Combine(outputDirectory, "devsite-docfx.json"), json.ToString());
 
             // We let the build script do work with the dependencies:
             // - Copy all yml files
             // - Concatenate toc.yml files
-            var externalDependencies = dependencies
-                .Where(d => Directory.Exists(Path.Combine(outputDirectory, $"../../dependencies/api/{d}")))
-                .ToList();
-
+            var externalDependencies = GetExternalDependencies(catalog, allApisToGenerate)
+                // Not all of our external dependencies are actually fetched yet. We need to fix that,
+                // but that can come in a later step.
+                .Where(d => Directory.Exists(Path.Combine(outputDirectory, $"../../dependencies/api/{d}")));
             File.WriteAllText(Path.Combine(outputDirectory, "dependencies"), string.Join(" ", externalDependencies));
+        }
+
+        /// <summary>
+        /// Given an initial starting API, return a set of all API IDs in the recursive set of dependencies.
+        /// This does not include GAX etc.
+        /// </summary>
+        private static IEnumerable<string> GenerateApiSet(ApiCatalog catalog, ApiMetadata api)
+        {
+            var apiIds = catalog.CreateIdHashSet();
+            HashSet<string> set = new HashSet<string>();
+            Queue<string> processingQueue = new Queue<string>();
+            processingQueue.Enqueue(api.Id);
+            while (processingQueue.TryDequeue(out var next))
+            {
+                if (set.Add(next))
+                {
+                    var childApiDependencies = catalog[next].Dependencies.Keys.Intersect(apiIds).ToList();
+                    foreach (var childApiDependency in childApiDependencies)
+                    {
+                        processingQueue.Enqueue(childApiDependency);
+                    }
+                }
+            }
+            Console.WriteLine($"API dependencies: {string.Join(", ", set)}");
+            return set;
+        }
+
+        /// <summary>
+        /// Given a set of APIs we're generating docs for, find transitive external dependencies that we need to include in the doc set (if we have them).
+        /// </summary>
+        private static IEnumerable<string> GetExternalDependencies(ApiCatalog catalog, IEnumerable<string> apiIds)
+        {
+            var directExternalDependencies = apiIds
+                .Select(id => catalog[id])
+                .SelectMany(api => api.Dependencies.Keys)
+                .Intersect(s_externalDependencies.Keys);
+            Console.WriteLine($"Direct dependencies: {string.Join(", ", directExternalDependencies)}");
+            HashSet<string> set = new HashSet<string>();
+            Queue<string> processingQueue = new Queue<string>();
+            foreach (var directDependency in directExternalDependencies)
+            {
+                processingQueue.Enqueue(directDependency);
+            }
+
+            while (processingQueue.TryDequeue(out var next))
+            {
+                if (set.Add(next))
+                {
+                    if (s_externalDependencies.TryGetValue(next, out var childDependencies))
+                    {
+                        foreach (var child in childDependencies)
+                        {
+                            processingQueue.Enqueue(child);
+                        }
+                    }
+                }
+            }
+            Console.WriteLine($"All dependencies: {string.Join(", ", set)}");
+            return set;
         }
 
         private static void ModifyForDevSite(ApiMetadata api, JObject obj)
