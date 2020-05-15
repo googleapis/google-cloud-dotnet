@@ -31,11 +31,6 @@ namespace Google.Cloud.BigQuery.V2
     /// </remarks>
     public sealed class TableSchemaBuilder : IEnumerable
     {
-        // From BigQuery documentation:
-        // The name must contain only letters (a-z, A-Z), numbers (0-9),
-        // or underscores (_), and must start with a letter or underscore.
-        // The maximum length is 128 characters.
-        private static readonly Regex s_fieldNamePattern = new Regex("^[a-zA-Z_][a-zA-Z0-9_]{0,127}$");
         private readonly List<TableFieldSchema> _fields = new List<TableFieldSchema>();
 
         /// <summary>
@@ -76,7 +71,38 @@ namespace Google.Cloud.BigQuery.V2
         internal static void ValidateFieldName(string name, string paramName)
         {
             GaxPreconditions.CheckNotNull(name, paramName);
-            GaxPreconditions.CheckArgument(s_fieldNamePattern.IsMatch(name), paramName, "Invalid field name '{0}'", name);
+
+            GaxPreconditions.CheckArgument(IsValidFieldName(name), paramName, "Invalid field name '{0}'", name);
+        }
+
+        // From BigQuery documentation:
+        // The name must contain only letters (a-z, A-Z), numbers (0-9),
+        // or underscores (_), and must start with a letter or underscore.
+        // The maximum length is 128 characters.
+        // This was originally a regular expression, but the manual code is very significantly faster.
+        // (Roughly 10x faster with the benchmarks I've run.)
+        private static bool IsValidFieldName(string name)
+        {
+            if (name.Length < 1 || name.Length > 128)
+            {
+                return false;
+            }
+            char first = name[0];
+            bool validFirst = (first >= 'a' && first <= 'z') || (first >= 'A' && first <= 'Z') || first == '_';
+            if (!validFirst)
+            {
+                return false;
+            }
+            for (int i = 1; i < name.Length; i++)
+            {
+                char c = name[i];
+                bool valid = (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '_';
+                if (!valid)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         /// <summary>
