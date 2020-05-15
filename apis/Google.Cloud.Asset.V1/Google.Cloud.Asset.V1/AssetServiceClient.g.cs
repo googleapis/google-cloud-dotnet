@@ -23,8 +23,10 @@ using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
+using linq = System.Linq;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 
@@ -53,6 +55,8 @@ namespace Google.Cloud.Asset.V1
             ListFeedsSettings = existing.ListFeedsSettings;
             UpdateFeedSettings = existing.UpdateFeedSettings;
             DeleteFeedSettings = existing.DeleteFeedSettings;
+            SearchAllResourcesSettings = existing.SearchAllResourcesSettings;
+            SearchAllIamPoliciesSettings = existing.SearchAllIamPoliciesSettings;
             OnCopy(existing);
         }
 
@@ -162,6 +166,36 @@ namespace Google.Cloud.Asset.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteFeedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.SearchAllResources</c> and <c>AssetServiceClient.SearchAllResourcesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 15 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchAllResourcesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.SearchAllIamPolicies</c> and <c>AssetServiceClient.SearchAllIamPoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 15 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchAllIamPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AssetServiceSettings"/> object.</returns>
@@ -305,8 +339,9 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-        /// to keep track of the export.
+        /// This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+        /// you to keep track of the export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -317,8 +352,9 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-        /// to keep track of the export.
+        /// This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+        /// you to keep track of the export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -329,8 +365,9 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-        /// to keep track of the export.
+        /// This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+        /// you to keep track of the export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -719,8 +756,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed and the
-        /// field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed
+        /// and the field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -737,8 +774,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed and the
-        /// field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed
+        /// and the field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -755,8 +792,8 @@ namespace Google.Cloud.Asset.V1
         /// Updates an asset feed configuration.
         /// </summary>
         /// <param name="feed">
-        /// Required. The new values of feed details. It must match an existing feed and the
-        /// field `name` must be in the format of:
+        /// Required. The new values of feed details. It must match an existing feed
+        /// and the field `name` must be in the format of:
         /// projects/project_number/feeds/feed_id or
         /// folders/folder_number/feeds/feed_id or
         /// organizations/organization_number/feeds/feed_id.
@@ -888,6 +925,330 @@ namespace Google.Cloud.Asset.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteFeedAsync(FeedName name, st::CancellationToken cancellationToken) =>
             DeleteFeedAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches all the resources within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllResources permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceSearchResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResources(SearchAllResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches all the resources within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllResources permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceSearchResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResourcesAsync(SearchAllResourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches all the resources within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllResources permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="scope">
+        /// Required. A scope can be a project, a folder or an organization. The search
+        /// is limited to the resources within the `scope`.
+        /// 
+        /// The allowed values are:
+        /// 
+        /// * projects/{PROJECT_ID}
+        /// * projects/{PROJECT_NUMBER}
+        /// * folders/{FOLDER_NUMBER}
+        /// * organizations/{ORGANIZATION_NUMBER}
+        /// </param>
+        /// <param name="query">
+        /// Optional. The query statement. An empty query can be specified to search
+        /// all the resources of certain `asset_types` within the given `scope`.
+        /// 
+        /// Examples:
+        /// 
+        /// * `name : "Important"` to find Cloud resources whose name contains
+        /// "Important" as a word.
+        /// * `displayName : "Impor*"` to find Cloud resources whose display name
+        /// contains "Impor" as a word prefix.
+        /// * `description : "*por*"` to find Cloud resources whose description
+        /// contains "por" as a substring.
+        /// * `location : "us-west*"` to find Cloud resources whose location is
+        /// prefixed with "us-west".
+        /// * `labels : "prod"` to find Cloud resources whose labels contain "prod" as
+        /// a key or value.
+        /// * `labels.env : "prod"` to find Cloud resources which have a label "env"
+        /// and its value is "prod".
+        /// * `labels.env : *` to find Cloud resources which have a label "env".
+        /// * `"Important"` to find Cloud resources which contain "Important" as a word
+        /// in any of the searchable fields.
+        /// * `"Impor*"` to find Cloud resources which contain "Impor" as a word prefix
+        /// in any of the searchable fields.
+        /// * `"*por*"` to find Cloud resources which contain "por" as a substring in
+        /// any of the searchable fields.
+        /// * `("Important" AND location : ("us-west1" OR "global"))` to find Cloud
+        /// resources which contain "Important" as a word in any of the searchable
+        /// fields and are also located in the "us-west1" region or the "global"
+        /// location.
+        /// 
+        /// See [how to construct a
+        /// query](https://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
+        /// for more details.
+        /// </param>
+        /// <param name="assetTypes">
+        /// Optional. A list of asset types that this request searches for. If empty,
+        /// it will search all the [searchable asset
+        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceSearchResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResources(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllResources(new SearchAllResourcesRequest
+            {
+                Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
+                Query = query ?? "",
+                AssetTypes =
+                {
+                    assetTypes ?? linq::Enumerable.Empty<string>(),
+                },
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches all the resources within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllResources permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="scope">
+        /// Required. A scope can be a project, a folder or an organization. The search
+        /// is limited to the resources within the `scope`.
+        /// 
+        /// The allowed values are:
+        /// 
+        /// * projects/{PROJECT_ID}
+        /// * projects/{PROJECT_NUMBER}
+        /// * folders/{FOLDER_NUMBER}
+        /// * organizations/{ORGANIZATION_NUMBER}
+        /// </param>
+        /// <param name="query">
+        /// Optional. The query statement. An empty query can be specified to search
+        /// all the resources of certain `asset_types` within the given `scope`.
+        /// 
+        /// Examples:
+        /// 
+        /// * `name : "Important"` to find Cloud resources whose name contains
+        /// "Important" as a word.
+        /// * `displayName : "Impor*"` to find Cloud resources whose display name
+        /// contains "Impor" as a word prefix.
+        /// * `description : "*por*"` to find Cloud resources whose description
+        /// contains "por" as a substring.
+        /// * `location : "us-west*"` to find Cloud resources whose location is
+        /// prefixed with "us-west".
+        /// * `labels : "prod"` to find Cloud resources whose labels contain "prod" as
+        /// a key or value.
+        /// * `labels.env : "prod"` to find Cloud resources which have a label "env"
+        /// and its value is "prod".
+        /// * `labels.env : *` to find Cloud resources which have a label "env".
+        /// * `"Important"` to find Cloud resources which contain "Important" as a word
+        /// in any of the searchable fields.
+        /// * `"Impor*"` to find Cloud resources which contain "Impor" as a word prefix
+        /// in any of the searchable fields.
+        /// * `"*por*"` to find Cloud resources which contain "por" as a substring in
+        /// any of the searchable fields.
+        /// * `("Important" AND location : ("us-west1" OR "global"))` to find Cloud
+        /// resources which contain "Important" as a word in any of the searchable
+        /// fields and are also located in the "us-west1" region or the "global"
+        /// location.
+        /// 
+        /// See [how to construct a
+        /// query](https://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
+        /// for more details.
+        /// </param>
+        /// <param name="assetTypes">
+        /// Optional. A list of asset types that this request searches for. If empty,
+        /// it will search all the [searchable asset
+        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceSearchResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResourcesAsync(string scope, string query, scg::IEnumerable<string> assetTypes, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllResourcesAsync(new SearchAllResourcesRequest
+            {
+                Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
+                Query = query ?? "",
+                AssetTypes =
+                {
+                    assetTypes ?? linq::Enumerable.Empty<string>(),
+                },
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches all the IAM policies within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllIamPolicies permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPolicies(SearchAllIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches all the IAM policies within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllIamPolicies permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPoliciesAsync(SearchAllIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches all the IAM policies within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllIamPolicies permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="scope">
+        /// Required. A scope can be a project, a folder or an organization. The search
+        /// is limited to the IAM policies within the `scope`.
+        /// 
+        /// The allowed values are:
+        /// 
+        /// * projects/{PROJECT_ID}
+        /// * projects/{PROJECT_NUMBER}
+        /// * folders/{FOLDER_NUMBER}
+        /// * organizations/{ORGANIZATION_NUMBER}
+        /// </param>
+        /// <param name="query">
+        /// Optional. The query statement. An empty query can be specified to search
+        /// all the IAM policies within the given `scope`.
+        /// 
+        /// Examples:
+        /// 
+        /// * `policy : "amy@gmail.com"` to find Cloud IAM policy bindings that
+        /// specify user "amy@gmail.com".
+        /// * `policy : "roles/compute.admin"` to find Cloud IAM policy bindings that
+        /// specify the Compute Admin role.
+        /// * `policy.role.permissions : "storage.buckets.update"` to find Cloud IAM
+        /// policy bindings that specify a role containing "storage.buckets.update"
+        /// permission.
+        /// * `resource : "organizations/123"` to find Cloud IAM policy bindings that
+        /// are set on "organizations/123".
+        /// * `(resource : ("organizations/123" OR "folders/1234") AND policy : "amy")`
+        /// to find Cloud IAM policy bindings that are set on "organizations/123" or
+        /// "folders/1234", and also specify user "amy".
+        /// 
+        /// See [how to construct a
+        /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
+        /// for more details.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPolicies(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllIamPolicies(new SearchAllIamPoliciesRequest
+            {
+                Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
+                Query = query ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches all the IAM policies within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllIamPolicies permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="scope">
+        /// Required. A scope can be a project, a folder or an organization. The search
+        /// is limited to the IAM policies within the `scope`.
+        /// 
+        /// The allowed values are:
+        /// 
+        /// * projects/{PROJECT_ID}
+        /// * projects/{PROJECT_NUMBER}
+        /// * folders/{FOLDER_NUMBER}
+        /// * organizations/{ORGANIZATION_NUMBER}
+        /// </param>
+        /// <param name="query">
+        /// Optional. The query statement. An empty query can be specified to search
+        /// all the IAM policies within the given `scope`.
+        /// 
+        /// Examples:
+        /// 
+        /// * `policy : "amy@gmail.com"` to find Cloud IAM policy bindings that
+        /// specify user "amy@gmail.com".
+        /// * `policy : "roles/compute.admin"` to find Cloud IAM policy bindings that
+        /// specify the Compute Admin role.
+        /// * `policy.role.permissions : "storage.buckets.update"` to find Cloud IAM
+        /// policy bindings that specify a role containing "storage.buckets.update"
+        /// permission.
+        /// * `resource : "organizations/123"` to find Cloud IAM policy bindings that
+        /// are set on "organizations/123".
+        /// * `(resource : ("organizations/123" OR "folders/1234") AND policy : "amy")`
+        /// to find Cloud IAM policy bindings that are set on "organizations/123" or
+        /// "folders/1234", and also specify user "amy".
+        /// 
+        /// See [how to construct a
+        /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
+        /// for more details.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPoliciesAsync(string scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllIamPoliciesAsync(new SearchAllIamPoliciesRequest
+            {
+                Scope = gax::GaxPreconditions.CheckNotNullOrEmpty(scope, nameof(scope)),
+                Query = query ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>AssetService client wrapper implementation, for convenient use.</summary>
@@ -906,6 +1267,10 @@ namespace Google.Cloud.Asset.V1
         private readonly gaxgrpc::ApiCall<UpdateFeedRequest, Feed> _callUpdateFeed;
 
         private readonly gaxgrpc::ApiCall<DeleteFeedRequest, wkt::Empty> _callDeleteFeed;
+
+        private readonly gaxgrpc::ApiCall<SearchAllResourcesRequest, SearchAllResourcesResponse> _callSearchAllResources;
+
+        private readonly gaxgrpc::ApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse> _callSearchAllIamPolicies;
 
         /// <summary>
         /// Constructs a client wrapper for the AssetService service, with the specified gRPC client and settings.
@@ -939,6 +1304,12 @@ namespace Google.Cloud.Asset.V1
             _callDeleteFeed = clientHelper.BuildApiCall<DeleteFeedRequest, wkt::Empty>(grpcClient.DeleteFeedAsync, grpcClient.DeleteFeed, effectiveSettings.DeleteFeedSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFeed);
             Modify_DeleteFeedApiCall(ref _callDeleteFeed);
+            _callSearchAllResources = clientHelper.BuildApiCall<SearchAllResourcesRequest, SearchAllResourcesResponse>(grpcClient.SearchAllResourcesAsync, grpcClient.SearchAllResources, effectiveSettings.SearchAllResourcesSettings).WithGoogleRequestParam("scope", request => request.Scope);
+            Modify_ApiCall(ref _callSearchAllResources);
+            Modify_SearchAllResourcesApiCall(ref _callSearchAllResources);
+            _callSearchAllIamPolicies = clientHelper.BuildApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse>(grpcClient.SearchAllIamPoliciesAsync, grpcClient.SearchAllIamPolicies, effectiveSettings.SearchAllIamPoliciesSettings).WithGoogleRequestParam("scope", request => request.Scope);
+            Modify_ApiCall(ref _callSearchAllIamPolicies);
+            Modify_SearchAllIamPoliciesApiCall(ref _callSearchAllIamPolicies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -957,6 +1328,10 @@ namespace Google.Cloud.Asset.V1
         partial void Modify_UpdateFeedApiCall(ref gaxgrpc::ApiCall<UpdateFeedRequest, Feed> call);
 
         partial void Modify_DeleteFeedApiCall(ref gaxgrpc::ApiCall<DeleteFeedRequest, wkt::Empty> call);
+
+        partial void Modify_SearchAllResourcesApiCall(ref gaxgrpc::ApiCall<SearchAllResourcesRequest, SearchAllResourcesResponse> call);
+
+        partial void Modify_SearchAllIamPoliciesApiCall(ref gaxgrpc::ApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse> call);
 
         partial void OnConstruction(AssetService.AssetServiceClient grpcClient, AssetServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -977,14 +1352,19 @@ namespace Google.Cloud.Asset.V1
 
         partial void Modify_DeleteFeedRequest(ref DeleteFeedRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_SearchAllResourcesRequest(ref SearchAllResourcesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchAllIamPoliciesRequest(ref SearchAllIamPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>The long-running operations client for <c>ExportAssets</c>.</summary>
         public override lro::OperationsClient ExportAssetsOperationsClient { get; }
 
         /// <summary>
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-        /// to keep track of the export.
+        /// This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+        /// you to keep track of the export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -998,8 +1378,9 @@ namespace Google.Cloud.Asset.V1
         /// <summary>
         /// Exports assets with time and resource types to a given Cloud Storage
         /// location. The output format is newline-delimited JSON.
-        /// This API implements the [google.longrunning.Operation][google.longrunning.Operation] API allowing you
-        /// to keep track of the export.
+        /// This API implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
+        /// you to keep track of the export.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1167,6 +1548,90 @@ namespace Google.Cloud.Asset.V1
             Modify_DeleteFeedRequest(ref request, ref callSettings);
             return _callDeleteFeed.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Searches all the resources within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllResources permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ResourceSearchResult"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResources(SearchAllResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchAllResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchAllResourcesRequest, SearchAllResourcesResponse, ResourceSearchResult>(_callSearchAllResources, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches all the resources within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllResources permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ResourceSearchResult"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchAllResourcesResponse, ResourceSearchResult> SearchAllResourcesAsync(SearchAllResourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchAllResourcesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchAllResourcesRequest, SearchAllResourcesResponse, ResourceSearchResult>(_callSearchAllResources, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches all the IAM policies within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllIamPolicies permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPolicies(SearchAllIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchAllIamPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse, IamPolicySearchResult>(_callSearchAllIamPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches all the IAM policies within the given accessible scope (e.g., a
+        /// project, a folder or an organization). Callers should have
+        /// cloud.assets.SearchAllIamPolicies permission upon the requested scope,
+        /// otherwise the request will be rejected.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IamPolicySearchResult"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchAllIamPoliciesResponse, IamPolicySearchResult> SearchAllIamPoliciesAsync(SearchAllIamPoliciesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchAllIamPoliciesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse, IamPolicySearchResult>(_callSearchAllIamPolicies, request, callSettings);
+        }
+    }
+
+    public partial class SearchAllResourcesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchAllIamPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchAllResourcesResponse : gaxgrpc::IPageResponse<ResourceSearchResult>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ResourceSearchResult> GetEnumerator() => Results.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchAllIamPoliciesResponse : gaxgrpc::IPageResponse<IamPolicySearchResult>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<IamPolicySearchResult> GetEnumerator() => Results.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public static partial class AssetService
