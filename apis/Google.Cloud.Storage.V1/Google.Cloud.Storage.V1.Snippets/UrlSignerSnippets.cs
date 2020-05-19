@@ -253,6 +253,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                 .WithSigningVersion(SigningVersion.V4)
                 .WithScheme("https");
             UrlSigner.PostPolicy postPolicy = UrlSigner.PostPolicy.ForBucketAndKey(bucketName, objectName);
+            postPolicy.SetCustomField(UrlSigner.PostPolicyCustomElement.GoogleMetadata, "x-goog-meta-test", "data");
 
             UrlSigner.SignedPostPolicy signedPostPolicy = await urlSigner.SignAsync(postPolicy, options);
 
