@@ -1574,6 +1574,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         private string value_ = "";
         /// <summary>
         /// Optional. The definition of the parameter value. It can be:
+        ///
         /// - a constant string,
         /// - a parameter value defined as `$parameter_name`,
         /// - an original parameter value defined as `$parameter_name.original`,
