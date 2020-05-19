@@ -871,6 +871,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.SecurityCenter.Settings.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/videointelligence/v1p3beta1",
+      "Name": "videointelligence.googleapis.com",
+      "Title": "Cloud Video Intelligence API",
+      "Description": "Detects objects, explicit content, and scene changes in videos. It also specifies the region for annotation and transcribes speech to text. Supports both asynchronous API and streaming API.",
+      "ServiceConfigFile": "google/cloud/videointelligence/v1p3beta1/videointelligence_v1p3beta1.yaml",
+      "Version": "v1p3beta1",
+      "PackageFromDirectory": "google.cloud.videointelligence.v1p3beta1",
+      "PackageFromProtos": "google.cloud.videointelligence.v1p3beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.VideoIntelligence.V1P3Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/videointelligence/v1",
       "Name": "videointelligence.googleapis.com",
       "Title": "Cloud Video Intelligence API",
