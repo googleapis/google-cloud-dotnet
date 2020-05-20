@@ -1573,6 +1573,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ManagedIdentities.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/pubsublite/v1",
+      "Name": "pubsublite.googleapis.com",
+      "Title": "Pub/Sub Lite API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/pubsublite/v1/pubsublite_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.pubsublite.v1",
+      "PackageFromProtos": "google.cloud.pubsublite.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/pubsublite/v1",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Pubsublite.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/kms/v1",
       "Name": "cloudkms.googleapis.com",
       "Title": "Cloud Key Management Service (KMS) API",
