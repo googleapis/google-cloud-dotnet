@@ -135,6 +135,19 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal async Task<ChannelCredentials> GetCredentialsAsync()
         {
+            // Create a builder that may create a client that connects to the
+            // emulator (if configured) so that we can extract the channel
+            // credentials used to connect to the emulator.
+            var builder = new SpannerClientBuilder
+            {
+                EmulatorDetection = EmulatorDetection
+            };
+            var emulatorBuilder = builder.MaybeCreateEmulatorClientBuilder();
+            if (emulatorBuilder != null)
+            {
+                return emulatorBuilder.ChannelCredentials;
+            }
+
             if (_credentialsOverride != null)
             {
                 return _credentialsOverride;
