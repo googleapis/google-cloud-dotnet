@@ -42,7 +42,16 @@ namespace Google.Cloud.Spanner.V1
         partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<SpannerClient> task) =>
             task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
 
-        private SpannerClientBuilder MaybeCreateEmulatorClientBuilder()
+        /// <summary>
+        /// May return a builder that will connect to the emulator under certain conditions.
+        /// </summary>
+        /// <remarks>
+        /// Returns null if <see cref="EmulatorDetection"/> is <see cref="EmulatorDetection.None"/>
+        /// or <see cref="EmulatorDetection.ProductionOnly"/>. Otherwise, returns a builder to
+        /// connect to the emulator using the endpoint specified by the emulator host environment
+        /// variable, and insecure credentials.
+        /// </remarks>
+        public SpannerClientBuilder MaybeCreateEmulatorClientBuilder()
         {
             var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
             return emulatorEnvironment is null ? null :
