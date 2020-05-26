@@ -176,16 +176,16 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void EmulatorDetectionProperty()
         {
-            var connectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=2");
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=EmulatorOnly");
             Assert.Equal(EmulatorDetection.EmulatorOnly, connectionStringBuilder.EmulatorDetection);
             connectionStringBuilder.EmulatorDetection = EmulatorDetection.ProductionOnly;
             Assert.Equal(EmulatorDetection.ProductionOnly, connectionStringBuilder.EmulatorDetection);
             // DbConnectionStringBuilder lower-cases keywords, annoyingly.
-            Assert.Equal("emulatordetection=1", connectionStringBuilder.ToString());
+            Assert.Equal("emulatordetection=ProductionOnly", connectionStringBuilder.ToString());
             // Ignores invalid values set in the connection string.
-            var invalidConnectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=-1");
+            var invalidConnectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=Prod");
             Assert.Equal(EmulatorDetection.None, invalidConnectionStringBuilder.EmulatorDetection);
-            // Can't test for ArgumentOutOfRangeException since an out of range enum value can't be set.
+            Assert.Throws<ArgumentException>(() => connectionStringBuilder.EmulatorDetection = (EmulatorDetection)(-1));
         }
 
         [Fact]

@@ -311,7 +311,8 @@ namespace Google.Cloud.Spanner.Data
             }
             set
             {
-                this[EmulatorDetectionKeyword] = (int) value;
+                GaxPreconditions.CheckEnumValue((EmulatorDetection)value, "value");
+                this[EmulatorDetectionKeyword] = value.ToString();
             }
         }
 
