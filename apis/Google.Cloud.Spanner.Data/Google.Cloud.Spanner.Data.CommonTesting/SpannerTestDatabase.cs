@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 
@@ -71,6 +72,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         // Connection string without the database, generated from the above properties
         public string NoDbConnectionString { get; }
         public string ProjectId { get; }
+        public SpannerConnectionStringBuilder Builder { get; }
         public DatabaseName DatabaseName { get; }
         internal SpannerClientCreationOptions SpannerClientCreationOptions { get; }
 
@@ -79,25 +81,50 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             TestLogger.Install();
 
             ProjectId = projectId;
+            // Tests may connect to the emulator if the emulator host environment variable is set.
+            EmulatorDetection emulatorDetection = EmulatorDetection.EmulatorOrProduction;
+
             var builder = new SpannerConnectionStringBuilder
             {
                 Host = SpannerHost,
                 DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}",
-                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+                EmulatorDetection = emulatorDetection
             };
+
+            SessionPoolOptions options = new SessionPoolOptions();
+
+            // Create a builder that may create a client that connects to the
+            // emulator (if configured) so that we can configure the session
+            // pool. This is necessary because the emulator doesn't support
+            // running concurrent transactions so we need to configure the
+            // session pool to only have one active session at a time so that
+            // we don't prepare multiple concurrent transactions.
+            var clientBuilder = new SpannerClientBuilder
+            {
+                EmulatorDetection = emulatorDetection
+            };
+            var emulatorBuilder = clientBuilder.MaybeCreateEmulatorClientBuilder();
+            if (emulatorBuilder != null)
+            {
+                options.MinimumPooledSessions = 1;
+                options.MaximumActiveSessions = 1;
+            }
+
+            builder.SessionPoolManager = SessionPoolManager.Create(options);
             if (SpannerPort != null)
             {
                 builder.Port = int.Parse(SpannerPort);
             }
             NoDbConnectionString = builder.ConnectionString;
             SpannerClientCreationOptions = new SpannerClientCreationOptions(builder);
-            var databaseBuilder = builder.WithDatabase(SpannerDatabase);
-            ConnectionString = databaseBuilder.ConnectionString;
-            DatabaseName = databaseBuilder.DatabaseName;
+            Builder = builder.WithDatabase(SpannerDatabase);
+            Builder.EmulatorDetection = emulatorDetection;
+            ConnectionString = Builder.ConnectionString;
+            DatabaseName = Builder.DatabaseName;
 
             if (Fresh)
             {
-                using (var connection = new SpannerConnection(NoDbConnectionString))
+                using (var connection = new SpannerConnection(builder))
                 {
                     var createCmd = connection.CreateDdlCommand($"CREATE DATABASE {SpannerDatabase}");
                     createCmd.ExecuteNonQuery();
@@ -116,6 +143,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             return string.IsNullOrEmpty(value) ? defaultValue : value;
         }
         
-        public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);        
+        public SpannerConnection GetConnection() => new SpannerConnection(Builder);
     }
 }
