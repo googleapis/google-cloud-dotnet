@@ -304,7 +304,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A time window specified by its "start_time" and "end_time".
+  /// A time window specified by its `start_time` and `end_time`.
   /// </summary>
   public sealed partial class TimeWindow : pb::IMessage<TimeWindow> {
     private static readonly pb::MessageParser<TimeWindow> _parser = new pb::MessageParser<TimeWindow>(() => new TimeWindow());
@@ -545,7 +545,7 @@ namespace Google.Cloud.Asset.V1 {
     private string name_ = "";
     /// <summary>
     /// The full name of the asset. For example:
-    /// "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1"
+    /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
     ///
     /// See [Resource
     /// names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
@@ -563,7 +563,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetTypeFieldNumber = 2;
     private string assetType_ = "";
     /// <summary>
-    /// The type of the asset. For example: "compute.googleapis.com/Disk"
+    /// The type of the asset. For example: `compute.googleapis.com/Disk`
     ///
     /// See [Supported asset
     /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
@@ -988,7 +988,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int VersionFieldNumber = 1;
     private string version_ = "";
     /// <summary>
-    /// The API version. For example: "v1"
+    /// The API version. For example: `v1`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Version {
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The URL of the discovery document containing the resource's JSON schema.
     /// For example:
-    /// "https://www.googleapis.com/discovery/v1/apis/compute/v1/rest"
+    /// `https://www.googleapis.com/discovery/v1/apis/compute/v1/rest`
     ///
     /// This value is unspecified for resources that do not have an API based on a
     /// discovery document, such as Cloud Bigtable.
@@ -1022,7 +1022,7 @@ namespace Google.Cloud.Asset.V1 {
     private string discoveryName_ = "";
     /// <summary>
     /// The JSON schema name listed in the discovery document. For example:
-    /// "Project"
+    /// `Project`
     ///
     /// This value is unspecified for resources that do not have an API based on a
     /// discovery document, such as Cloud Bigtable.
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The REST URL for accessing the resource. An HTTP `GET` request using this
     /// URL returns the resource itself. For example:
-    /// "https://cloudresourcemanager.googleapis.com/v1/projects/my-project-123"
+    /// `https://cloudresourcemanager.googleapis.com/v1/projects/my-project-123`
     ///
     /// This value is unspecified for resources without a REST API.
     /// </summary>
@@ -1066,7 +1066,7 @@ namespace Google.Cloud.Asset.V1 {
     /// [Cloud IAM policy
     /// hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy).
     /// For example:
-    /// "//cloudresourcemanager.googleapis.com/projects/my_project_123"
+    /// `//cloudresourcemanager.googleapis.com/projects/my_project_123`
     ///
     /// For third-party assets, this field may be set differently.
     /// </summary>
@@ -1344,7 +1344,7 @@ namespace Google.Cloud.Asset.V1 {
     private string name_ = "";
     /// <summary>
     /// The full resource name of this resource. Example:
-    /// "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1".
+    /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
     /// See [Cloud Asset Inventory Resource Name
     /// Format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
     /// for more information.
@@ -1366,7 +1366,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetTypeFieldNumber = 2;
     private string assetType_ = "";
     /// <summary>
-    /// The type of this resource. Example: "compute.googleapis.com/Disk".
+    /// The type of this resource. Example: `compute.googleapis.com/Disk`.
     ///
     /// To search against the `asset_type`:
     ///
@@ -1442,8 +1442,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int LocationFieldNumber = 6;
     private string location_ = "";
     /// <summary>
-    /// Location can be "global", regional like "us-east1", or zonal like
-    /// "us-west1-b".
+    /// Location can be `global`, regional like `us-east1`, or zonal like
+    /// `us-west1-b`.
     ///
     /// To search against the `location`:
     ///
@@ -1507,13 +1507,13 @@ namespace Google.Cloud.Asset.V1 {
     private global::Google.Protobuf.WellKnownTypes.Struct additionalAttributes_;
     /// <summary>
     /// The additional attributes of this resource. The attributes may vary from
-    /// one resource type to another. Examples: "projectId" for Project,
-    /// "dnsName" for DNS ManagedZone.
+    /// one resource type to another. Examples: `projectId` for Project,
+    /// `dnsName` for DNS ManagedZone.
     ///
     /// To search against the `additional_attributes`:
     ///
     /// * use a free text query to match the attributes values. Example: to search
-    ///   additional_attributes = { dnsName: "foobar" }, you can issue a query
+    ///   `additional_attributes = { dnsName: "foobar" }`, you can issue a query
     ///   `"foobar"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1774,7 +1774,7 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// The full resource name of the resource associated with this IAM policy.
     /// Example:
-    /// "//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1".
+    /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
     /// See [Cloud Asset Inventory Resource Name
     /// Format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
     /// for more information.
@@ -2048,7 +2048,7 @@ namespace Google.Cloud.Asset.V1 {
         /// permission query (i.e., a query containing `policy.role.permissions:`).
         /// Example: if query `policy.role.permissions : "compute.disk.get"`
         /// matches a policy binding that contains owner role, the
-        /// matched_permissions will be {"roles/owner": ["compute.disk.get"]}. The
+        /// matched_permissions will be `{"roles/owner": ["compute.disk.get"]}`. The
         /// roles can also be found in the returned `policy` bindings. Note that the
         /// map is populated only for requests with permission queries.
         /// </summary>
@@ -2179,7 +2179,7 @@ namespace Google.Cloud.Asset.V1 {
                 = pb::FieldCodec.ForString(10);
             private readonly pbc::RepeatedField<string> permissions_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// A list of permissions. A sample permission string: "compute.disk.get".
+            /// A list of permissions. A sample permission string: `compute.disk.get`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public pbc::RepeatedField<string> Permissions_ {
