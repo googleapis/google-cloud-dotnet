@@ -1267,5 +1267,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             await publisherServiceApiClient.DeleteTopicAsync(topic);
             // End snippet
         }
+
+        /// <summary>Snippet for DetachSubscription</summary>
+        public void DetachSubscriptionRequestObject()
+        {
+            // Snippet: DetachSubscription(DetachSubscriptionRequest, CallSettings)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = PublisherServiceApiClient.Create();
+            // Initialize request argument(s)
+            DetachSubscriptionRequest request = new DetachSubscriptionRequest
+            {
+                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            DetachSubscriptionResponse response = publisherServiceApiClient.DetachSubscription(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DetachSubscriptionAsync</summary>
+        public async Task DetachSubscriptionRequestObjectAsync()
+        {
+            // Snippet: DetachSubscriptionAsync(DetachSubscriptionRequest, CallSettings)
+            // Additional: DetachSubscriptionAsync(DetachSubscriptionRequest, CancellationToken)
+            // Create client
+            PublisherServiceApiClient publisherServiceApiClient = await PublisherServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            DetachSubscriptionRequest request = new DetachSubscriptionRequest
+            {
+                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            DetachSubscriptionResponse response = await publisherServiceApiClient.DetachSubscriptionAsync(request);
+            // End snippet
+        }
     }
 }

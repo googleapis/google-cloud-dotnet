@@ -44,6 +44,8 @@ namespace Google.Cloud.PubSub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse> __Marshaller_google_pubsub_v1_ListTopicSnapshotsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteTopicRequest> __Marshaller_google_pubsub_v1_DeleteTopicRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest> __Marshaller_google_pubsub_v1_DetachSubscriptionRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse> __Marshaller_google_pubsub_v1_DetachSubscriptionResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic> __Method_CreateTopic = new grpc::Method<global::Google.Cloud.PubSub.V1.Topic, global::Google.Cloud.PubSub.V1.Topic>(
         grpc::MethodType.Unary,
@@ -100,6 +102,13 @@ namespace Google.Cloud.PubSub.V1 {
         "DeleteTopic",
         __Marshaller_google_pubsub_v1_DeleteTopicRequest,
         __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest, global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse> __Method_DetachSubscription = new grpc::Method<global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest, global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DetachSubscription",
+        __Marshaller_google_pubsub_v1_DetachSubscriptionRequest,
+        __Marshaller_google_pubsub_v1_DetachSubscriptionResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -171,7 +180,7 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      /// Lists the names of the subscriptions on this topic.
+      /// Lists the names of the attached subscriptions on this topic.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -208,6 +217,20 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopic(global::Google.Cloud.PubSub.V1.DeleteTopicRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Detaches a subscription from this topic. All messages retained in the
+      /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+      /// will return FAILED_PRECONDITION. If the subscription is a push
+      /// subscription, pushes to the endpoint will stop.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse> DetachSubscription(global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -474,7 +497,7 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTopics, null, options, request);
       }
       /// <summary>
-      /// Lists the names of the subscriptions on this topic.
+      /// Lists the names of the attached subscriptions on this topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -486,7 +509,7 @@ namespace Google.Cloud.PubSub.V1 {
         return ListTopicSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the names of the subscriptions on this topic.
+      /// Lists the names of the attached subscriptions on this topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -496,7 +519,7 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTopicSubscriptions, null, options, request);
       }
       /// <summary>
-      /// Lists the names of the subscriptions on this topic.
+      /// Lists the names of the attached subscriptions on this topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -508,7 +531,7 @@ namespace Google.Cloud.PubSub.V1 {
         return ListTopicSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists the names of the subscriptions on this topic.
+      /// Lists the names of the attached subscriptions on this topic.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -641,6 +664,62 @@ namespace Google.Cloud.PubSub.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTopic, null, options, request);
       }
+      /// <summary>
+      /// Detaches a subscription from this topic. All messages retained in the
+      /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+      /// will return FAILED_PRECONDITION. If the subscription is a push
+      /// subscription, pushes to the endpoint will stop.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse DetachSubscription(global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DetachSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Detaches a subscription from this topic. All messages retained in the
+      /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+      /// will return FAILED_PRECONDITION. If the subscription is a push
+      /// subscription, pushes to the endpoint will stop.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse DetachSubscription(global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DetachSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Detaches a subscription from this topic. All messages retained in the
+      /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+      /// will return FAILED_PRECONDITION. If the subscription is a push
+      /// subscription, pushes to the endpoint will stop.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse> DetachSubscriptionAsync(global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DetachSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Detaches a subscription from this topic. All messages retained in the
+      /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+      /// will return FAILED_PRECONDITION. If the subscription is a push
+      /// subscription, pushes to the endpoint will stop.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse> DetachSubscriptionAsync(global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DetachSubscription, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override PublisherClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -660,7 +739,8 @@ namespace Google.Cloud.PubSub.V1 {
           .AddMethod(__Method_ListTopics, serviceImpl.ListTopics)
           .AddMethod(__Method_ListTopicSubscriptions, serviceImpl.ListTopicSubscriptions)
           .AddMethod(__Method_ListTopicSnapshots, serviceImpl.ListTopicSnapshots)
-          .AddMethod(__Method_DeleteTopic, serviceImpl.DeleteTopic).Build();
+          .AddMethod(__Method_DeleteTopic, serviceImpl.DeleteTopic)
+          .AddMethod(__Method_DetachSubscription, serviceImpl.DetachSubscription).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -677,6 +757,7 @@ namespace Google.Cloud.PubSub.V1 {
       serviceBinder.AddMethod(__Method_ListTopicSubscriptions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest, global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse>(serviceImpl.ListTopicSubscriptions));
       serviceBinder.AddMethod(__Method_ListTopicSnapshots, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.ListTopicSnapshotsRequest, global::Google.Cloud.PubSub.V1.ListTopicSnapshotsResponse>(serviceImpl.ListTopicSnapshots));
       serviceBinder.AddMethod(__Method_DeleteTopic, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.DeleteTopicRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTopic));
+      serviceBinder.AddMethod(__Method_DetachSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.DetachSubscriptionRequest, global::Google.Cloud.PubSub.V1.DetachSubscriptionResponse>(serviceImpl.DetachSubscription));
     }
 
   }

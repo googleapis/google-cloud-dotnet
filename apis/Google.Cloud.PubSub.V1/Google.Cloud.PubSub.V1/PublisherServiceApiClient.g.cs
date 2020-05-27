@@ -54,6 +54,7 @@ namespace Google.Cloud.PubSub.V1
             ListTopicSubscriptionsSettings = existing.ListTopicSubscriptionsSettings;
             ListTopicSnapshotsSettings = existing.ListTopicSnapshotsSettings;
             DeleteTopicSettings = existing.DeleteTopicSettings;
+            DetachSubscriptionSettings = existing.DetachSubscriptionSettings;
             OnCopy(existing);
         }
 
@@ -156,6 +157,19 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteTopicSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PublisherServiceApiClient.DetachSubscription</c> and <c>PublisherServiceApiClient.DetachSubscriptionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DetachSubscriptionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PublisherServiceApiSettings"/> object.</returns>
@@ -869,7 +883,7 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -878,7 +892,7 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -887,7 +901,7 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
         /// Required. The name of the topic that subscriptions are attached to.
@@ -912,7 +926,7 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
         /// Required. The name of the topic that subscriptions are attached to.
@@ -937,7 +951,7 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
         /// Required. The name of the topic that subscriptions are attached to.
@@ -962,7 +976,7 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="topic">
         /// Required. The name of the topic that subscriptions are attached to.
@@ -1280,6 +1294,42 @@ namespace Google.Cloud.PubSub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteTopicAsync(TopicName topic, st::CancellationToken cancellationToken) =>
             DeleteTopicAsync(topic, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Detaches a subscription from this topic. All messages retained in the
+        /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+        /// will return FAILED_PRECONDITION. If the subscription is a push
+        /// subscription, pushes to the endpoint will stop.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual DetachSubscriptionResponse DetachSubscription(DetachSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Detaches a subscription from this topic. All messages retained in the
+        /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+        /// will return FAILED_PRECONDITION. If the subscription is a push
+        /// subscription, pushes to the endpoint will stop.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DetachSubscriptionResponse> DetachSubscriptionAsync(DetachSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Detaches a subscription from this topic. All messages retained in the
+        /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+        /// will return FAILED_PRECONDITION. If the subscription is a push
+        /// subscription, pushes to the endpoint will stop.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<DetachSubscriptionResponse> DetachSubscriptionAsync(DetachSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            DetachSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PublisherServiceApi client wrapper implementation, for convenient use.</summary>
@@ -1300,6 +1350,8 @@ namespace Google.Cloud.PubSub.V1
         private readonly gaxgrpc::ApiCall<ListTopicSnapshotsRequest, ListTopicSnapshotsResponse> _callListTopicSnapshots;
 
         private readonly gaxgrpc::ApiCall<DeleteTopicRequest, wkt::Empty> _callDeleteTopic;
+
+        private readonly gaxgrpc::ApiCall<DetachSubscriptionRequest, DetachSubscriptionResponse> _callDetachSubscription;
 
         /// <summary>
         /// Constructs a client wrapper for the PublisherServiceApi service, with the specified gRPC client and
@@ -1336,6 +1388,9 @@ namespace Google.Cloud.PubSub.V1
             _callDeleteTopic = clientHelper.BuildApiCall<DeleteTopicRequest, wkt::Empty>(grpcClient.DeleteTopicAsync, grpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings).WithGoogleRequestParam("topic", request => request.Topic);
             Modify_ApiCall(ref _callDeleteTopic);
             Modify_DeleteTopicApiCall(ref _callDeleteTopic);
+            _callDetachSubscription = clientHelper.BuildApiCall<DetachSubscriptionRequest, DetachSubscriptionResponse>(grpcClient.DetachSubscriptionAsync, grpcClient.DetachSubscription, effectiveSettings.DetachSubscriptionSettings).WithGoogleRequestParam("subscription", request => request.Subscription);
+            Modify_ApiCall(ref _callDetachSubscription);
+            Modify_DetachSubscriptionApiCall(ref _callDetachSubscription);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1357,6 +1412,8 @@ namespace Google.Cloud.PubSub.V1
 
         partial void Modify_DeleteTopicApiCall(ref gaxgrpc::ApiCall<DeleteTopicRequest, wkt::Empty> call);
 
+        partial void Modify_DetachSubscriptionApiCall(ref gaxgrpc::ApiCall<DetachSubscriptionRequest, DetachSubscriptionResponse> call);
+
         partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherServiceApiSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC PublisherServiceApi client</summary>
@@ -1377,6 +1434,8 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_ListTopicSnapshotsRequest(ref ListTopicSnapshotsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTopicRequest(ref DeleteTopicRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DetachSubscriptionRequest(ref DetachSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates the given topic with the given name. See the
@@ -1507,7 +1566,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1519,7 +1578,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Lists the names of the subscriptions on this topic.
+        /// Lists the names of the attached subscriptions on this topic.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1594,6 +1653,36 @@ namespace Google.Cloud.PubSub.V1
         {
             Modify_DeleteTopicRequest(ref request, ref callSettings);
             return _callDeleteTopic.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Detaches a subscription from this topic. All messages retained in the
+        /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+        /// will return FAILED_PRECONDITION. If the subscription is a push
+        /// subscription, pushes to the endpoint will stop.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override DetachSubscriptionResponse DetachSubscription(DetachSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DetachSubscriptionRequest(ref request, ref callSettings);
+            return _callDetachSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Detaches a subscription from this topic. All messages retained in the
+        /// subscription are dropped. Subsequent `Pull` and `StreamingPull` requests
+        /// will return FAILED_PRECONDITION. If the subscription is a push
+        /// subscription, pushes to the endpoint will stop.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<DetachSubscriptionResponse> DetachSubscriptionAsync(DetachSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DetachSubscriptionRequest(ref request, ref callSettings);
+            return _callDetachSubscription.Async(request, callSettings);
         }
     }
 

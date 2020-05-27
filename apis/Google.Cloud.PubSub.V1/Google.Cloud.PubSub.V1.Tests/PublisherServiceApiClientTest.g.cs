@@ -707,5 +707,39 @@ namespace Google.Cloud.PubSub.V1.Tests
             await client.DeleteTopicAsync(request.TopicAsTopicName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void DetachSubscriptionRequestObject()
+        {
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            DetachSubscriptionRequest request = new DetachSubscriptionRequest
+            {
+                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            DetachSubscriptionResponse expectedResponse = new DetachSubscriptionResponse { };
+            mockGrpcClient.Setup(x => x.DetachSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            DetachSubscriptionResponse response = client.DetachSubscription(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DetachSubscriptionRequestObjectAsync()
+        {
+            moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            DetachSubscriptionRequest request = new DetachSubscriptionRequest
+            {
+                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+            };
+            DetachSubscriptionResponse expectedResponse = new DetachSubscriptionResponse { };
+            mockGrpcClient.Setup(x => x.DetachSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetachSubscriptionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
+            DetachSubscriptionResponse responseCallSettings = await client.DetachSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DetachSubscriptionResponse responseCancellationToken = await client.DetachSubscriptionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
