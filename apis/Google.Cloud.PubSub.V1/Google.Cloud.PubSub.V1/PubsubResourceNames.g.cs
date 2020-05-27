@@ -785,6 +785,18 @@ namespace Google.Cloud.PubSub.V1
         }
     }
 
+    public partial class DetachSubscriptionRequest
+    {
+        /// <summary>
+        /// <see cref="TopicName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// </summary>
+        public TopicName SubscriptionAsTopicName
+        {
+            get => string.IsNullOrEmpty(Subscription) ? null : TopicName.Parse(Subscription, allowUnparsed: true);
+            set => Subscription = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Subscription
     {
         /// <summary>
