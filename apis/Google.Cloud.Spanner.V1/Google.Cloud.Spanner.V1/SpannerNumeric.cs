@@ -36,7 +36,7 @@ namespace Google.Cloud.Spanner.V1
 
         private static readonly BigInteger s_integerScalingFactor = new BigInteger(1_000_000_000L);
         // TODO: Don't require a 0 before the decimal point.
-        // TODO: Replace with manual validation if we find this is a performance bottleneck (as it was with field name validation).
+        // TODO: Replace with manual validation if we find this is a performance bottleneck (as it was with BigQuery field name validations see #4976).
         private static readonly Regex s_validation = new Regex(@"^-?[0-9]+\.?[0-9]*$");
 
         // Note: the following properties must be declared *after* s_maxValue and s_minValue. Initialization order matters.
