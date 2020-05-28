@@ -1277,7 +1277,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             DetachSubscriptionRequest request = new DetachSubscriptionRequest
             {
-                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             DetachSubscriptionResponse response = publisherServiceApiClient.DetachSubscription(request);
@@ -1294,7 +1294,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             DetachSubscriptionRequest request = new DetachSubscriptionRequest
             {
-                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             DetachSubscriptionResponse response = await publisherServiceApiClient.DetachSubscriptionAsync(request);

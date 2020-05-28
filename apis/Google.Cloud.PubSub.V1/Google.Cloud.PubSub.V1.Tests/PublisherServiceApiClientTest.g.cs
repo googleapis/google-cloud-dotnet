@@ -714,7 +714,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DetachSubscriptionRequest request = new DetachSubscriptionRequest
             {
-                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
             };
             DetachSubscriptionResponse expectedResponse = new DetachSubscriptionResponse { };
             mockGrpcClient.Setup(x => x.DetachSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -730,7 +730,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
             DetachSubscriptionRequest request = new DetachSubscriptionRequest
             {
-                SubscriptionAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
+                SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
             };
             DetachSubscriptionResponse expectedResponse = new DetachSubscriptionResponse { };
             mockGrpcClient.Setup(x => x.DetachSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DetachSubscriptionResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
