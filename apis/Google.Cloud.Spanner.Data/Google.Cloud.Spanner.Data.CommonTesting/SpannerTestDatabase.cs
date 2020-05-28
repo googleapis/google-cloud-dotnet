@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
@@ -81,7 +82,8 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             var builder = new SpannerConnectionStringBuilder
             {
                 Host = SpannerHost,
-                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}"
+                DataSource = $"projects/{ProjectId}/instances/{SpannerInstance}",
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
             };
             if (SpannerPort != null)
             {

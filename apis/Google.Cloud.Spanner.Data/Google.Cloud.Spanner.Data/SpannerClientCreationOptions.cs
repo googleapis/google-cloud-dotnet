@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Spanner.V1;
@@ -55,6 +56,16 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal uint MaximumConcurrentStreamsLowWatermark { get; }
 
+        /// <summary>
+        /// Specifies whether to allow the connection to check for the presence of the emulator
+        /// environment variable.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that the
+        /// environment variable is ignored.
+        /// </remarks>
+        internal EmulatorDetection EmulatorDetection { get; }
+
         // Credential-related fields; not properties as GetCredentials is used to
         // obtain properties where necessary.
 
@@ -65,7 +76,10 @@ namespace Google.Cloud.Spanner.Data
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
-            Endpoint = builder.EndPoint;
+            EmulatorDetection = builder.EmulatorDetection;
+            // If the client connects to the emulator use its endpoint.
+            var emulatorBuilder = MaybeCreateEmulatorClientBuilder();
+            Endpoint = emulatorBuilder?.Endpoint ?? builder.EndPoint;
             _credentialsFile = builder.CredentialFile;
             _credentialsOverride = builder.CredentialOverride;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
@@ -79,6 +93,7 @@ namespace Google.Cloud.Spanner.Data
             Endpoint.Equals(other.Endpoint) &&
             Equals(_credentialsFile, other._credentialsFile) &&
             Equals(_credentialsOverride, other._credentialsOverride) &&
+            Equals(EmulatorDetection, other.EmulatorDetection) &&
             MaximumGrpcChannels == other.MaximumGrpcChannels &&
             MaximumConcurrentStreamsLowWatermark == other.MaximumConcurrentStreamsLowWatermark;
 
@@ -90,6 +105,7 @@ namespace Google.Cloud.Spanner.Data
                 hash = hash * 23 + Endpoint.GetHashCode();
                 hash = hash * 23 + (_credentialsFile?.GetHashCode() ?? 0);
                 hash = hash * 23 + (_credentialsOverride?.GetHashCode() ?? 0);
+                hash = hash * 23 + EmulatorDetection.GetHashCode();
                 hash = hash * 23 + MaximumGrpcChannels;
                 hash = hash * 23 + (int) MaximumConcurrentStreamsLowWatermark;
                 return hash;
@@ -111,6 +127,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 builder.Append($"; CredentialsOverride: True");
             }
+            builder.Append($"; EmulaterDetection: {EmulatorDetection}");
             return builder.ToString();
         }
 
@@ -120,6 +137,13 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal async Task<ChannelCredentials> GetCredentialsAsync()
         {
+            // If the client connects to the emulator use its credentials.
+            var emulatorBuilder = MaybeCreateEmulatorClientBuilder();
+            if (emulatorBuilder != null)
+            {
+                return emulatorBuilder.ChannelCredentials;
+            }
+
             if (_credentialsOverride != null)
             {
                 return _credentialsOverride;
@@ -152,6 +176,14 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Use JWT instead? (No scopes.)
             // TODO: Use an async overload
             return GoogleCredential.FromFile(file).CreateScoped(SpannerClient.DefaultScopes).ToChannelCredentials();
+        }
+
+        /// <summary>
+        /// Returns a builder that connects to the emulator if the client is configured to do so.
+        /// </summary>
+        internal SpannerClientBuilder MaybeCreateEmulatorClientBuilder()
+        {
+            return new SpannerClientBuilder { EmulatorDetection = EmulatorDetection }.MaybeCreateEmulatorClientBuilder();
         }
     }
 }

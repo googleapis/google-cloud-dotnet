@@ -307,13 +307,13 @@ namespace Google.Cloud.Spanner.Data
                 new ChannelOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
             };
 
-            var endpoint = channelOptions.Endpoint;
             var callInvoker = new GcpCallInvoker(channelOptions.Endpoint, credentials, grpcOptions);
 
             return new SpannerClientBuilder
             {
                 CallInvoker = callInvoker,
-                Settings = spannerSettings
+                Settings = spannerSettings,
+                EmulatorDetection = channelOptions.EmulatorDetection
             }.Build();
         }
     }

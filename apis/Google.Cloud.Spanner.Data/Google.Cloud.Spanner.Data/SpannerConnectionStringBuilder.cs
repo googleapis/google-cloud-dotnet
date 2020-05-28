@@ -50,6 +50,7 @@ namespace Google.Cloud.Spanner.Data
         private const string DataSourceKeyword = "Data Source";
         private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
+        private const string EmulatorDetectionKeyword = "EmulatorDetection";
 
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -287,6 +288,32 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetInt32OrDefault(nameof(Timeout), 0, int.MaxValue, DefaultTimeout);
             set => SetInt32WithValidation(nameof(Timeout), 0, int.MaxValue, value);
+        }
+
+        /// <summary>
+        /// Specifies whether to allow the connection to check for the presence of the emulator
+        /// environment variable.
+        /// </summary>
+        /// <remarks>
+        /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that the
+        /// environment variable is ignored.
+        /// </remarks>
+        public EmulatorDetection EmulatorDetection
+        {
+            get
+            {
+                if (TryGetValue(EmulatorDetectionKeyword, out object value) &&
+                    (value is EmulatorDetection parsed || (value is string text && EmulatorDetection.TryParse(text, out parsed))))
+                {
+                    return parsed >= EmulatorDetection.None && parsed <= EmulatorDetection.EmulatorOrProduction ? parsed : EmulatorDetection.None;
+                }
+                return EmulatorDetection.None;
+            }
+            set
+            {
+                GaxPreconditions.CheckEnumValue((EmulatorDetection)value, "value");
+                this[EmulatorDetectionKeyword] = value.ToString();
+            }
         }
 
         internal ChannelCredentials CredentialOverride { get; }

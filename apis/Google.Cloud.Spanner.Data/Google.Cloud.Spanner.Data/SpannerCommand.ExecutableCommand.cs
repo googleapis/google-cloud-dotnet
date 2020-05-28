@@ -219,7 +219,8 @@ namespace Google.Cloud.Spanner.Data
                     var databaseAdminClient = new DatabaseAdminClientBuilder
                     {
                         CallInvoker = channel.CreateCallInvoker(),
-                        Settings = s_databaseAdminSettings
+                        Settings = s_databaseAdminSettings,
+                        EmulatorDetection = builder.EmulatorDetection
                     }.Build();
                     if (CommandTextBuilder.IsCreateDatabaseCommand)
                     {
