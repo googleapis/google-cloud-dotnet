@@ -53,7 +53,7 @@ namespace Google.Cloud.BigQuery.V2
         public override async Task<BigQueryModel> GetModelAsync(ModelReference modelReference, GetModelOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateGetModelRequest(modelReference, options);
-            var resource = await request.ExecuteAsync().ConfigureAwait(false);
+            var resource = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryModel(this, resource);
         }
 
@@ -68,7 +68,7 @@ namespace Google.Cloud.BigQuery.V2
         public override async Task DeleteModelAsync(ModelReference modelReference, DeleteModelOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateDeleteModelRequest(modelReference, options);
-            await request.ExecuteAsync().ConfigureAwait(false);
+            await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -83,7 +83,7 @@ namespace Google.Cloud.BigQuery.V2
         public override async Task<BigQueryModel> PatchModelAsync(ModelReference modelReference, Model resource, PatchModelOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreatePatchModelRequest(modelReference, resource, options);
-            var model = await request.ExecuteAsync().ConfigureAwait(false);
+            var model = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryModel(this, model);
         }
 
