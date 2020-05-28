@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -85,7 +86,44 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             stats = manager.GetStatistics().Single();
             Assert.Equal(0, stats.ActiveConnectionCount);
-        }       
+        }
+
+        [Fact]
+        public async Task EmulatorDetectWithEnvironmentVariables_UsesCustomOptions()
+        {
+            var regularOptions = new SessionPoolOptions();
+            var manager = new SessionPoolManager(regularOptions, Logger.DefaultLogger, FailingSpannerClient.Factory);
+
+            var builder = new SpannerConnectionStringBuilder(ConnectionString)
+            {
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction,
+                EnvironmentVariableProvider = key => key == "SPANNER_EMULATOR_HOST" ? "localhost" : null
+            };
+            var clientCreationOptions = new SpannerClientCreationOptions(builder);
+            var pool = await manager.AcquireSessionPoolAsync(clientCreationOptions);
+
+            Assert.NotSame(regularOptions, pool.Options);
+            Assert.Equal(1, pool.Options.MaximumActiveSessions);
+            Assert.Equal(1, pool.Options.MinimumPooledSessions);
+        }
+
+        [Fact]
+        public async Task EmulatorDetectionWithoutEnvironmentVariables_UsesRegularOptions()
+        {
+            var regularOptions = new SessionPoolOptions();
+            var manager = new SessionPoolManager(regularOptions, Logger.DefaultLogger, FailingSpannerClient.Factory);
+
+            var builder = new SpannerConnectionStringBuilder(ConnectionString)
+            {
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction,
+                // Effectively "there are no environment variables"
+                EnvironmentVariableProvider = key => null
+            };
+            var clientCreationOptions = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
+            var pool = await manager.AcquireSessionPoolAsync(clientCreationOptions);
+
+            Assert.Same(regularOptions, pool.Options);
+        }
 
         // A SpannerClient that always fails, but does have valid settings.
         private class FailingSpannerClient : SpannerClient

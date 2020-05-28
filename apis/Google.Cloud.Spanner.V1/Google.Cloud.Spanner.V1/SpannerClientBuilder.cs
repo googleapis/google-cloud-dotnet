@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -43,6 +44,14 @@ namespace Google.Cloud.Spanner.V1
             task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
 
         /// <summary>
+        /// An environment variable provider function (variable -> value) that is used during
+        /// emulator environment detection. This is provided for testability, so that clients are able to test
+        /// how they would connect based on emulator environment variables. This is not expected to be used in
+        /// production code. The default value of null indicates "use the regular process environment variables".
+        /// </summary>
+        public Func<string, string> EnvironmentVariableProvider { get; set; }
+
+        /// <summary>
         /// May return a builder that will connect to the emulator under certain conditions.
         /// </summary>
         /// <remarks>
@@ -52,7 +61,7 @@ namespace Google.Cloud.Spanner.V1
         /// </remarks>
         public SpannerClientBuilder MaybeCreateEmulatorClientBuilder()
         {
-            var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables);
+            var emulatorEnvironment = GetEmulatorEnvironment(s_emulatorEnvironmentVariables, s_emulatorEnvironmentVariables, EnvironmentVariableProvider);
             return emulatorEnvironment is null ? null :
                 // We don't set the EmulatorDetection property here to avoid recursively calling
                 // MaybeCreateEmulatorClientBuilder().
@@ -63,5 +72,6 @@ namespace Google.Cloud.Spanner.V1
                     ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
                 };
         }
+
     }
 }

@@ -303,7 +303,7 @@ namespace Google.Cloud.Spanner.Data
             get
             {
                 if (TryGetValue(EmulatorDetectionKeyword, out object value) &&
-                    (value is EmulatorDetection parsed || (value is string text && EmulatorDetection.TryParse(text, out parsed))))
+                    (value is EmulatorDetection parsed || (value is string text && Enum.TryParse(text, out parsed))))
                 {
                     return parsed >= EmulatorDetection.None && parsed <= EmulatorDetection.EmulatorOrProduction ? parsed : EmulatorDetection.None;
                 }
@@ -311,7 +311,7 @@ namespace Google.Cloud.Spanner.Data
             }
             set
             {
-                GaxPreconditions.CheckEnumValue((EmulatorDetection)value, "value");
+                GaxPreconditions.CheckEnumValue(value, nameof(value));
                 this[EmulatorDetectionKeyword] = value.ToString();
             }
         }
@@ -377,10 +377,17 @@ namespace Google.Cloud.Spanner.Data
         public SpannerConnectionStringBuilder() { }
 
 
-        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager);
+        internal SpannerConnectionStringBuilder Clone() => new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager)
+        {
+            EnvironmentVariableProvider = EnvironmentVariableProvider
+        };
 
-        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource) =>
-            new SpannerConnectionStringBuilder(ConnectionString, CredentialOverride, SessionPoolManager) { DataSource = dataSource };
+        internal SpannerConnectionStringBuilder CloneWithNewDataSource(string dataSource)
+        {
+            var clone = Clone();
+            clone.DataSource = dataSource;
+            return clone;
+        }
 
         /// <summary>
         /// Returns a new instance of a <see cref="SpannerConnectionStringBuilder"/> with the database
@@ -434,5 +441,14 @@ namespace Google.Cloud.Spanner.Data
                 base[keyword] = value;
             }
         }
+
+        /// <summary>
+        /// An environment variable provider function (variable -> value) that is used during
+        /// emulator environment detection. This is provided for testability, so that clients are able to test
+        /// how they would connect based on emulator environment variables. This is not expected to be used in
+        /// production code. (Indeed, this property is currently internal, although the equivalent in SpannerClientBuilder
+        /// is necessarily public.)
+        /// </summary>
+        internal Func<string, string> EnvironmentVariableProvider { get; set; }
     }
 }
