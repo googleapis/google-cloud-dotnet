@@ -788,11 +788,11 @@ namespace Google.Cloud.PubSub.V1
     public partial class DetachSubscriptionRequest
     {
         /// <summary>
-        /// <see cref="TopicName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
-        public TopicName SubscriptionAsTopicName
+        public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get => string.IsNullOrEmpty(Subscription) ? null : TopicName.Parse(Subscription, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Subscription) ? null : SubscriptionName.Parse(Subscription, allowUnparsed: true);
             set => Subscription = value?.ToString() ?? "";
         }
     }
