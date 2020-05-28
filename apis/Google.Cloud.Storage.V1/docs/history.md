@@ -1,5 +1,10 @@
 # Version history
 
+# Version 3.1.0, released 2020-05-28
+
+- [Commit db4f9a9](https://github.com/googleapis/google-cloud-dotnet/commit/db4f9a9): Update Google.Apis.Storage.v1 dependency. Fixes [issue 4984](https://github.com/googleapis/google-cloud-dotnet/issues/4984).
+- [Commit fbcca00](https://github.com/googleapis/google-cloud-dotnet/commit/fbcca00): Implement StartOffset and EndOffset in ListObjectsOptions. Fixes [issue 4993](https://github.com/googleapis/google-cloud-dotnet/issues/4993).
+
 # Version 3.0.0, released 2020-05-12
 
 - [Commit c0dfc6f](https://github.com/googleapis/google-cloud-dotnet/commit/c0dfc6f): feat: POST policy V4 signing support.
