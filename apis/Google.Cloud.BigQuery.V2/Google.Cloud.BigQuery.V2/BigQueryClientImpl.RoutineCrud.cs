@@ -137,7 +137,7 @@ namespace Google.Cloud.BigQuery.V2
         public async override Task DeleteRoutineAsync(RoutineReference routineReference, DeleteRoutineOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateDeleteRoutineRequest(routineReference, options);
-            await request.ExecuteAsync().ConfigureAwait(false);
+            await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -152,7 +152,7 @@ namespace Google.Cloud.BigQuery.V2
         public async override Task<BigQueryRoutine> UpdateRoutineAsync(RoutineReference routineReference, Routine resource, UpdateRoutineOptions options = null, CancellationToken cancellationToken = default)
         {
             var request = CreateUpdateRoutineRequest(routineReference, resource, options);
-            var routine = await request.ExecuteAsync().ConfigureAwait(false);
+            var routine = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryRoutine(this, routine);
         }
 
