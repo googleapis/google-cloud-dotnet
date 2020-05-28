@@ -564,10 +564,11 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="modelId">The model ID. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the requested table.</returns>
-        public Task<BigQueryModel> GetModelAsync(string modelId, GetModelOptions options = null) =>
-            _client.GetModelAsync(GetModelReference(modelId), options);
+        public Task<BigQueryModel> GetModelAsync(string modelId, GetModelOptions options = null, CancellationToken cancellationToken = default) =>
+            _client.GetModelAsync(GetModelReference(modelId), options, cancellationToken);
 
         /// <summary>
         /// Asynchronously lists the routines within this dataset.
