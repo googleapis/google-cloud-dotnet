@@ -68,8 +68,11 @@ namespace Google.Cloud.Spanner.Data
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
-            var emulatorBuilder = new SpannerClientBuilder { EmulatorDetection = builder.EmulatorDetection }
-                .MaybeCreateEmulatorClientBuilder();
+            var emulatorBuilder = new SpannerClientBuilder
+            {
+                EmulatorDetection = builder.EmulatorDetection,
+                EnvironmentVariableProvider = builder.EnvironmentVariableProvider
+            }.MaybeCreateEmulatorClientBuilder();
             UsesEmulator = emulatorBuilder is object;
             // If the client connects to the emulator use its endpoint (regardless of builder.Endpoint)
             Endpoint = emulatorBuilder?.Endpoint ?? builder.EndPoint;
