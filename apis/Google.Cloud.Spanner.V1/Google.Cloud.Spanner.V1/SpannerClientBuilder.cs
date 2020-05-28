@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.V1
         /// May return a builder that will connect to the emulator under certain conditions.
         /// </summary>
         /// <remarks>
-        /// It returns null if the emulator should not be used, i.e. if <see cref="EmulatorDetection"/> is
+        /// It returns null if the emulator should not be used, e.g. if <see cref="EmulatorDetection"/> is
         /// <see cref="EmulatorDetection.EmulatorOrProduction"/> but the environment variable isn't configured.
         /// Otherwise, returns a builder with the endpoint and credentials set appropriately for the emulator.
         /// </remarks>
