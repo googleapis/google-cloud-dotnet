@@ -76,10 +76,12 @@ namespace Google.Cloud.Spanner.Data
 
         internal SpannerClientCreationOptions(SpannerConnectionStringBuilder builder)
         {
-            Endpoint = builder.EndPoint;
+            EmulatorDetection = builder.EmulatorDetection;
+            // If the client connects to the emulator use its endpoint.
+            var emulatorBuilder = MaybeCreateEmulatorClientBuilder();
+            Endpoint = emulatorBuilder?.Endpoint ?? builder.EndPoint;
             _credentialsFile = builder.CredentialFile;
             _credentialsOverride = builder.CredentialOverride;
-            EmulatorDetection = builder.EmulatorDetection;
             MaximumGrpcChannels = builder.MaximumGrpcChannels;
             MaximumConcurrentStreamsLowWatermark = (uint) builder.MaxConcurrentStreamsLowWatermark;
         }
@@ -135,14 +137,8 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal async Task<ChannelCredentials> GetCredentialsAsync()
         {
-            // Create a builder that may create a client that connects to the
-            // emulator (if configured) so that we can extract the channel
-            // credentials used to connect to the emulator.
-            var builder = new SpannerClientBuilder
-            {
-                EmulatorDetection = EmulatorDetection
-            };
-            var emulatorBuilder = builder.MaybeCreateEmulatorClientBuilder();
+            // If the client connects to the emulator use its credentials.
+            var emulatorBuilder = MaybeCreateEmulatorClientBuilder();
             if (emulatorBuilder != null)
             {
                 return emulatorBuilder.ChannelCredentials;
@@ -180,6 +176,14 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Use JWT instead? (No scopes.)
             // TODO: Use an async overload
             return GoogleCredential.FromFile(file).CreateScoped(SpannerClient.DefaultScopes).ToChannelCredentials();
+        }
+
+        /// <summary>
+        /// Returns a builder that connects to the emulator if the client is configured to do so.
+        /// </summary>
+        internal SpannerClientBuilder MaybeCreateEmulatorClientBuilder()
+        {
+            return new SpannerClientBuilder { EmulatorDetection = EmulatorDetection }.MaybeCreateEmulatorClientBuilder();
         }
     }
 }

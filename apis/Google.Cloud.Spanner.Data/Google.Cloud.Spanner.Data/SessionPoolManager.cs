@@ -307,17 +307,7 @@ namespace Google.Cloud.Spanner.Data
                 new ChannelOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString())
             };
 
-            // Create a builder that may create a client that connects to the
-            // emulator (if configured) so that we can extract the endpoint
-            // used to connect to the emulator.
-            var builder = new SpannerClientBuilder
-            {
-                EmulatorDetection = channelOptions.EmulatorDetection
-            };
-            var emulatorBuilder = builder.MaybeCreateEmulatorClientBuilder();
-
-            var endpoint = emulatorBuilder?.Endpoint ?? channelOptions.Endpoint;
-            var callInvoker = new GcpCallInvoker(endpoint, credentials, grpcOptions);
+            var callInvoker = new GcpCallInvoker(channelOptions.Endpoint, credentials, grpcOptions);
 
             return new SpannerClientBuilder
             {
