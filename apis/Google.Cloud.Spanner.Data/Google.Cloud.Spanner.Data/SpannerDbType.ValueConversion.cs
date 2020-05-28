@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
@@ -197,6 +198,13 @@ namespace Google.Cloud.Spanner.Data
                         };
                     }
                     throw new ArgumentException("Struct parameters must be of type SpannerStruct");
+
+                case TypeCode.Numeric:
+                    if (value is SpannerNumeric spannerNumeric)
+                    {
+                        return new Value {StringValue = value.ToString()};
+                    }
+                    throw new ArgumentException("Numeric parameters must be of type SpannerNumeric");
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
@@ -497,6 +505,24 @@ namespace Google.Cloud.Spanner.Data
                             i++;
                         }
                         return newArray;
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+            if (targetClrType == typeof(SpannerNumeric))
+            {
+                if (TypeCode != TypeCode.Numeric)
+                {
+                    throw new ArgumentException(
+                        $"{targetClrType.FullName} can only be used for numeric results");
+                }
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return SpannerNumeric.Parse(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
