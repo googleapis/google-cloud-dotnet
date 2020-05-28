@@ -183,14 +183,12 @@ namespace Google.Cloud.Spanner.Data.Tests
                 MaintenanceLoopDelay = TimeSpan.Zero
             };
 
+            // TODO: Check the UsesEmulator property, but only if we can actually control the
+            // environment.
             var emulatorDetection = EmulatorDetection.EmulatorOrProduction;
             var sessionPoolManager = new SessionPoolManager(
                 sessionPoolOptions, spannerClient.Settings.Logger,
-                (_o, _s, _l) =>
-                {
-                    Assert.Equal(_o.EmulatorDetection, emulatorDetection);
-                    return Task.FromResult(spannerClient);
-                }
+                (_o, _s, _l) => Task.FromResult(spannerClient)
             );
 
             SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder
