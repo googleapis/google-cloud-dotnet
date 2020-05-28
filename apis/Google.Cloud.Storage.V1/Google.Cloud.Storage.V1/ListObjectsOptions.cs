@@ -81,6 +81,18 @@ namespace Google.Cloud.Storage.V1
         public string Fields { get; set; }
 
         /// <summary>
+        /// If set, filters results to objects whose names are lexicographically equal to or after
+        /// this value. (Objects whose names are exactly the start offset are included.)
+        /// </summary>
+        public string StartOffset { get; set; }
+
+        /// <summary>
+        /// If set, filters results to objects whose names are lexicographically before
+        /// this value. (Objects whose names are exactly the end offset are excluded.)
+        /// </summary>
+        public string EndOffset { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>
@@ -117,6 +129,14 @@ namespace Google.Cloud.Storage.V1
             if (Fields != null)
             {
                 request.Fields = Fields;
+            }
+            if (StartOffset != null)
+            {
+                request.StartOffset = StartOffset;
+            }
+            if (EndOffset != null)
+            {
+                request.EndOffset = EndOffset;
             }
         }
     }
