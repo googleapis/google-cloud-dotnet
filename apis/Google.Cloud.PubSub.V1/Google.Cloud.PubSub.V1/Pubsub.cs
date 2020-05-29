@@ -314,6 +314,9 @@ namespace Google.Cloud.PubSub.V1 {
 
   }
   #region Messages
+  /// <summary>
+  /// A policy constraining the storage of messages published to the topic.
+  /// </summary>
   public sealed partial class MessageStoragePolicy : pb::IMessage<MessageStoragePolicy> {
     private static readonly pb::MessageParser<MessageStoragePolicy> _parser = new pb::MessageParser<MessageStoragePolicy>(() => new MessageStoragePolicy());
     private pb::UnknownFieldSet _unknownFields;
