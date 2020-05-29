@@ -285,6 +285,13 @@ namespace Google.Cloud.Spanner.Data
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteBatchDmlSettings, timeoutSeconds, cancellationToken);
                 ExecuteBatchDmlResponse response = await _session.ExecuteBatchDmlAsync(request, callSettings).ConfigureAwait(false);
                 IEnumerable<long> result = response.ResultSets.Select(rs => rs.Stats.RowCountExact);
+                // Work around an issue with the emulator, which can return an ExecuteBatchDmlResponse without populating a status.
+                // TODO: Remove this when the emulator has been fixed, although it does no harm if it stays longer than strictly necessary.
+                if (response.Status is null)
+                {
+                    response.Status = new Rpc.Status { Code = (int) Rpc.Code.Ok };
+                }
+
                 if (response.Status.Code == (int) Rpc.Code.Ok)
                 {
                     return result;
