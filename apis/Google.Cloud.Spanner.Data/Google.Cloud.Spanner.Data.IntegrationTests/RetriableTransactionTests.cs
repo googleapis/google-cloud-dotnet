@@ -86,9 +86,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
+        [SkippableFact]
         public async Task RetriesOnce()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Requires multiple read/write transactions");
             string key = _fixture.CreateTestRows();
             int calls = 0;
             int rowsUpdated;

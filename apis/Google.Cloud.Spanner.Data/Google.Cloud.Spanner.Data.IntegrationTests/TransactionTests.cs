@@ -119,9 +119,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         // [START spanner_test_transaction_retry_on_aborted]
-        [Fact]
+        [SkippableFact]
         public async Task AbortedThrownCorrectly()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Requires multiple read/write transactions");
             // connection 1 starts a transaction and reads
             // connection 2 starts a transaction and reads the same row
             // connection 1 writes and commits
