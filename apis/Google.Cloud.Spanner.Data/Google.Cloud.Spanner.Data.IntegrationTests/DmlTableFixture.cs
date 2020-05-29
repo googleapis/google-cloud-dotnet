@@ -66,7 +66,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             command.Parameters.Add("UpdateMe", SpannerDbType.Bool, update);
                             command.Parameters.Add("DeleteMe", SpannerDbType.Bool, delete);
                             command.Parameters.Add("CopyMe", SpannerDbType.Bool, copy);
-                            RetryHelpers.ExecuteWithRetry(() => command.ExecuteNonQuery());
+                            command.ExecuteNonQuery();
                         }
                     }
                 });
