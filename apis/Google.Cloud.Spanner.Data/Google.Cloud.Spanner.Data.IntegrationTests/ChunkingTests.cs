@@ -89,9 +89,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         // [START spanner_test_query_chunked_data]
-        [Fact]
+        [SkippableFact]
         public async Task TestChunking()
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't support rows of more than 4MB");
             Logger.DefaultLogger.Info($"Seed={_seed}");
             var rowsRead = 0;
             int rowsToWrite = _random.Next(1, 6);

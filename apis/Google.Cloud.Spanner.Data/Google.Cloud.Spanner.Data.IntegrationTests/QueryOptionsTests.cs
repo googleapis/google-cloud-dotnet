@@ -74,9 +74,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_single_key_read_with_cmd_level_query_options]
 
         // [START spanner_test_single_key_read_with_invalid_query_options]
-        [Fact]
+        [SkippableFact]
         public async Task PointReadWithInvalidConnectionLevelQueryOptions()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't fail with invalid optimizer versions");
             using (var connection = _fixture.GetConnection())
             {
                 connection.QueryOptions = QueryOptions.Empty.WithOptimizerVersion("invalid");

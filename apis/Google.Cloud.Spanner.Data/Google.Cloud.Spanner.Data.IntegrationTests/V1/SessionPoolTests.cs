@@ -90,9 +90,10 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
             }
         }
 
-        [Fact]
+        [SkippableFact]
         public async Task SessionLabels()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator does not support filtering by labels");
             string guid = Guid.NewGuid().ToString().ToLowerInvariant();
             var options = new SessionPoolOptions
             {
@@ -115,12 +116,16 @@ namespace Google.Cloud.Spanner.V1.IntegrationTests
                 };
                 var matchingSessions = client.ListSessions(listRequest).ToList();
 
-                // The only sessions matching our labels should be the ones we've created
-                Assert.InRange(matchingSessions.Count, 1, options.MinimumPooledSessions + 1);
                 // The session we've acquired from the pool should be there.
                 Assert.Contains(matchingSessions, s => s.SessionName == session.SessionName);
+                Assert.All(matchingSessions, s => Assert.True(s.Labels.ContainsKey("key1")));
+                Assert.All(matchingSessions, s => Assert.True(s.Labels.ContainsKey("guid")));
+                // All the matching sessions should also the label we searched for.
+                Assert.All(matchingSessions, s => Assert.Equal(guid, s.Labels["guid"]));
                 // All the matching sessions should also have the other label.
                 Assert.All(matchingSessions, s => Assert.Equal("value1", s.Labels["key1"]));
+                // The only sessions matching our labels should be the ones we've created
+                Assert.InRange(matchingSessions.Count, 1, options.MinimumPooledSessions + 1);
 
                 session.ReleaseToPool(false);
             });

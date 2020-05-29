@@ -29,9 +29,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public PartitionedReadTests(PartitionedReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [Fact]
+        [SkippableFact]
         public async Task DistributedReadAsync()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't support distributed reads yet.");
             int numRows;
             using (var connection = _fixture.GetConnection())
             using (var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_fixture.TableName}"))

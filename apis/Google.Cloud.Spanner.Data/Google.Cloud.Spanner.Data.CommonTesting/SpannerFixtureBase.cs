@@ -33,6 +33,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         public DatabaseName DatabaseName => Database.DatabaseName;
         public SpannerConnection GetConnection() => Database.GetConnection();
         public string ConnectionString => Database.ConnectionString;
+        public bool RunningOnEmulator => SpannerClientCreationOptions.UsesEmulator;
         internal SpannerClientCreationOptions SpannerClientCreationOptions => Database.SpannerClientCreationOptions;
     }
 }

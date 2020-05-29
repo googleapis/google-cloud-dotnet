@@ -305,9 +305,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         // [START spanner_test_query_select_struct_fails]
-        [Fact]
+        [SkippableFact]
         public async Task SelectStructFails()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator allows structs to be selected");
             var structParam = new SpannerStruct
             {
                 { "x", SpannerDbType.Int64, 1 },
@@ -328,9 +329,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_select_struct_fails]
 
         // [START spanner_test_query_select_array_struct_fails]
-        [Fact]
+        [SkippableFact]
         public async Task SelectStructArrayFails()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator allows struct arrays to be selected");
             var structParam = new SpannerStruct
             {
                 { "x", SpannerDbType.Int64, 1 },
