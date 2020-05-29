@@ -88,27 +88,12 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(0, stats.ActiveConnectionCount);
         }
 
-        [Fact]
-        public async Task EmulatorDetectWithEnvironmentVariables_UsesCustomOptions()
-        {
-            var regularOptions = new SessionPoolOptions();
-            var manager = new SessionPoolManager(regularOptions, Logger.DefaultLogger, FailingSpannerClient.Factory);
-
-            var builder = new SpannerConnectionStringBuilder(ConnectionString)
-            {
-                EmulatorDetection = EmulatorDetection.EmulatorOrProduction,
-                EnvironmentVariableProvider = key => key == "SPANNER_EMULATOR_HOST" ? "localhost" : null
-            };
-            var clientCreationOptions = new SpannerClientCreationOptions(builder);
-            var pool = await manager.AcquireSessionPoolAsync(clientCreationOptions);
-
-            Assert.NotSame(regularOptions, pool.Options);
-            Assert.Equal(1, pool.Options.MaximumActiveSessions);
-            Assert.Equal(1, pool.Options.MinimumPooledSessions);
-        }
-
-        [Fact]
-        public async Task EmulatorDetectionWithoutEnvironmentVariables_UsesRegularOptions()
+        // At one point we thought we'd need different options for production and emulators. We reverted that.
+        // This tests that whether or not we're using an emulator, we get the options we asked for.
+        [Theory]
+        [InlineData("localhost")]
+        [InlineData(null)]
+        public async Task EmulatorDetection_AlwaysUsesRegularOptions(string emulatorHost)
         {
             var regularOptions = new SessionPoolOptions();
             var manager = new SessionPoolManager(regularOptions, Logger.DefaultLogger, FailingSpannerClient.Factory);
@@ -117,7 +102,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 EmulatorDetection = EmulatorDetection.EmulatorOrProduction,
                 // Effectively "there are no environment variables"
-                EnvironmentVariableProvider = key => null
+                EnvironmentVariableProvider = key => key == "SPANNER_EMULATOR_HOST" ? emulatorHost: null
             };
             var clientCreationOptions = new SpannerClientCreationOptions(new SpannerConnectionStringBuilder(ConnectionString));
             var pool = await manager.AcquireSessionPoolAsync(clientCreationOptions);

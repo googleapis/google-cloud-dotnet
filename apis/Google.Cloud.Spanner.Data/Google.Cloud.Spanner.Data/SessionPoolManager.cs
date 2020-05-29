@@ -45,12 +45,6 @@ namespace Google.Cloud.Spanner.Data
         {
         }
 
-        private static readonly SessionPoolOptions s_emulatorSessionPoolOptions = new SessionPoolOptions
-        {
-            MinimumPooledSessions = 1,
-            MaximumActiveSessions = 1
-        };
-
         /// <summary>
         /// The default session pool manager, used by <see cref="SpannerConnection"/> unless a different pool
         /// is specified on construction.
@@ -118,10 +112,7 @@ namespace Google.Cloud.Spanner.Data
         internal Task<SessionPool> AcquireSessionPoolAsync(SpannerClientCreationOptions options)
         {
             GaxPreconditions.CheckNotNull(options, nameof(options));
-            // If we're using the emulator, we need to apply special options. It's friendly to do this by default rather
-            // than requiring the client to set it up.
-            var poolOptions = options.UsesEmulator ? s_emulatorSessionPoolOptions : SessionPoolOptions;
-            var targetedPool = _targetedPools.GetOrAdd(options, key => new TargetedPool(this, key, poolOptions));
+            var targetedPool = _targetedPools.GetOrAdd(options, key => new TargetedPool(this, key));
             targetedPool.IncrementConnectionCount();
             return targetedPool.SessionPoolTask;
         }
@@ -173,7 +164,7 @@ namespace Google.Cloud.Spanner.Data
             private int _activeConnections;
             internal Task<SessionPool> SessionPoolTask { get; }
 
-            internal TargetedPool(SessionPoolManager parent, SpannerClientCreationOptions channelOptions, SessionPoolOptions poolOptions)
+            internal TargetedPool(SessionPoolManager parent, SpannerClientCreationOptions channelOptions)
             {
                 _diagnosticName = channelOptions.ToString();
                 SessionPoolTask = CreateSessionPoolAsync();
@@ -181,7 +172,7 @@ namespace Google.Cloud.Spanner.Data
                 async Task<SessionPool> CreateSessionPoolAsync()
                 {
                     var client = await parent._clientFactory.Invoke(channelOptions, parent.SpannerSettings, parent.Logger).ConfigureAwait(false);
-                    var pool = new SessionPool(client, poolOptions);
+                    var pool = new SessionPool(client, parent.SessionPoolOptions);
                     parent._poolReverseLookup.TryAdd(pool, this);
                     return pool;
                 }
