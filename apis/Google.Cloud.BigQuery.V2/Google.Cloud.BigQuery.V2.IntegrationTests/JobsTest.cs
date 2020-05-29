@@ -97,6 +97,23 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             VerifyJobLabels(jobFound.Resource.Configuration.Labels);
         }
 
+        [Fact]
+        public void ListJobs_ChildJobs()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+
+            var table1 = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.HighScoreTableId);
+            var table2 = client.GetTable(_fixture.ProjectId, _fixture.DatasetId, _fixture.PeopleTableId);
+            string script = $"SELECT * FROM {table1};SELECT * FROM {table2}";
+            var parentJob = client.CreateQueryJob(script, null).PollUntilCompleted().ThrowOnAnyError();
+
+            // Find the child jobs of our job.
+            var options = new ListJobsOptions { ParentJobId = parentJob.Reference.JobId };
+            var childrenJobs = client.ListJobs(options).ToList();
+
+            Assert.Equal(2, childrenJobs.Count);
+        }
+
         /// <summary>
         /// There's an equivalent snippet for this integration test but, where the snippet
         /// tests for GetJob getting a job, this test tests for GetJob getting an
