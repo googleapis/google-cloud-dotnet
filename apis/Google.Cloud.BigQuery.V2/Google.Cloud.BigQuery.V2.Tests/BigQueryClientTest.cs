@@ -1186,6 +1186,65 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void DeleteModelAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var reference = GetModelReference(datasetId, modelId);
+            var options = new DeleteModelOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(
+                client => client.DeleteModelAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.DeleteModelAsync(datasetId, modelId, options, token),
+                client => client.DeleteModelAsync(ProjectId, datasetId, modelId, options, token),
+                client => new BigQueryModel(client, new Model { ModelReference = reference }).DeleteAsync(options, token));
+        }
+
+        [Fact]
+        public void GetModelAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var reference = GetModelReference(datasetId, modelId);
+            var options = new GetModelOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryModel(new DerivedBigQueryClient(), GetModel(reference)),
+                client => client.GetModelAsync(MatchesWhenSerialized(reference), options, token),
+                client => client.GetModelAsync(datasetId, modelId, options, token),
+                client => client.GetModelAsync(ProjectId, datasetId, modelId, options, token),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).GetModelAsync(modelId, options, token));
+        }
+
+        [Fact]
+        public void ListModelsAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var reference = GetDatasetReference(datasetId);
+            var options = new ListModelsOptions();
+            VerifyEquivalent(new UnimplementedPagedAsyncEnumerable<ListModelsResponse, BigQueryModel>(),
+                client => client.ListModelsAsync(MatchesWhenSerialized(reference), options),
+                client => client.ListModelsAsync(datasetId, options),
+                client => client.ListModelsAsync(ProjectId, datasetId, options),
+                client => new BigQueryDataset(client, GetDataset(datasetId)).ListModelsAsync(options));
+        }
+
+        [Fact]
+        public void PatchModelAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var reference = GetModelReference(datasetId, modelId);
+            var resource = new Model();
+            var options = new PatchModelOptions();
+            var token = new CancellationTokenSource().Token;
+            VerifyEquivalentAsync(new BigQueryModel(new DerivedBigQueryClient(), resource),
+                client => client.PatchModelAsync(MatchesWhenSerialized(reference), resource, options, token),
+                client => client.PatchModelAsync(datasetId, modelId, resource, options, token),
+                client => client.PatchModelAsync(ProjectId, datasetId, modelId, resource, options, token),
+                client => new BigQueryModel(client, GetModel(reference)).PatchAsync(resource, false, options, token));
+        }
+
+        [Fact]
         public void GetRoutineAsyncEquivalents()
         {
             var datasetId = "dataset";

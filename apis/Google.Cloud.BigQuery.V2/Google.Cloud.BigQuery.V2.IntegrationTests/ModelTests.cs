@@ -100,6 +100,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
+        public async Task ListModelsAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var modelId = _fixture.ModelId;
+
+            var list = await client.ListModelsAsync(datasetId).ToListAsync();
+            Assert.Contains(list, candidate => candidate.Reference.ModelId == modelId);
+        }
+
+        [Fact]
         public void DeleteModel()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
@@ -113,6 +124,35 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             var list = client.ListModels(datasetId).ToList();
             Assert.DoesNotContain(list, candidate => candidate.Reference.ModelId == modelId);
+        }
+
+        [Fact]
+        public async Task DeleteModelAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var modelId = _fixture.CreateModelId();
+
+            _fixture.CreateModel(client, datasetId, modelId);
+            var model = client.GetModel(datasetId, modelId);
+
+            await model.DeleteAsync();
+
+            var list = client.ListModels(datasetId).ToList();
+            Assert.DoesNotContain(list, candidate => candidate.Reference.ModelId == modelId);
+        }
+
+        [Fact]
+        public async Task GetModelAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            string datasetId = _fixture.DatasetId;
+            var modelId = _fixture.CreateModelId();
+
+            _fixture.CreateModel(client, datasetId, modelId);
+            var model = await client.GetModelAsync(datasetId, modelId);
+
+            Assert.Equal(modelId, model.Reference.ModelId);
         }
     }
 }
