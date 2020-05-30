@@ -314,6 +314,9 @@ namespace Google.Cloud.PubSub.V1 {
 
   }
   #region Messages
+  /// <summary>
+  /// A policy constraining the storage of messages published to the topic.
+  /// </summary>
   public sealed partial class MessageStoragePolicy : pb::IMessage<MessageStoragePolicy> {
     private static readonly pb::MessageParser<MessageStoragePolicy> _parser = new pb::MessageParser<MessageStoragePolicy>(() => new MessageStoragePolicy());
     private pb::UnknownFieldSet _unknownFields;
@@ -3252,9 +3255,6 @@ namespace Google.Cloud.PubSub.V1 {
     /// then only `PubsubMessage`s whose `attributes` field matches the filter are
     /// delivered on this subscription. If empty, then no messages are filtered
     /// out.
-    /// &lt;b>EXPERIMENTAL:&lt;/b> This feature is part of a closed alpha release. This
-    /// API might be changed in backward-incompatible ways and is not recommended
-    /// for production use. It is not subject to any SLA or deprecation policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -3289,16 +3289,13 @@ namespace Google.Cloud.PubSub.V1 {
     public const int RetryPolicyFieldNumber = 14;
     private global::Google.Cloud.PubSub.V1.RetryPolicy retryPolicy_;
     /// <summary>
-    /// A policy that specifies how Cloud Pub/Sub retries message delivery for this
+    /// A policy that specifies how Pub/Sub retries message delivery for this
     /// subscription.
     ///
     /// If not set, the default retry policy is applied. This generally implies
     /// that messages will be retried as soon as possible for healthy subscribers.
     /// RetryPolicy will be triggered on NACKs or acknowledgement deadline
     /// exceeded events for a given message.
-    /// &lt;b>EXPERIMENTAL:&lt;/b> This API might be changed in backward-incompatible
-    /// ways and is not recommended for production use. It is not subject to any
-    /// SLA or deprecation policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.RetryPolicy RetryPolicy {
