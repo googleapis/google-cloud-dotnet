@@ -193,7 +193,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             using (var connection = new SpannerConnection(_fixture.Database.NoDbConnectionString))
             {
-                var createCmd = connection.CreateDdlCommand($"CREATE DATABASE BadName");
+                var createCmd = connection.CreateDdlCommand($"CREATE DATABASE Bad-Name");
                 await Assert.ThrowsAsync<SpannerException>(() => createCmd.ExecuteNonQueryAsync());
                 createCmd = connection.CreateDdlCommand($"CREATE DATABASE {dbName}");
                 await createCmd.ExecuteNonQueryAsync();
