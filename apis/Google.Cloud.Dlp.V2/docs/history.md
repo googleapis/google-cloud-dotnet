@@ -1,5 +1,14 @@
 # Version history
 
+# Version 3.0.0, released 2020-06-01
+
+- [Commit dee878e](https://github.com/googleapis/google-cloud-dotnet/commit/dee878e): Fix routing by including location resource names
+- [Commit 363bfe4](https://github.com/googleapis/google-cloud-dotnet/commit/363bfe4):
+  - feat: Release new file type enums and new MetadataLocation proto
+  - chore: Rename InspectFindingName to FindingName (due to resource name changes)
+
+Both of these changes are breaking, hence the major version bump.
+
 # Version 2.0.0, released 2020-04-08
 
 No API surface changes since 2.0.0-beta03.
