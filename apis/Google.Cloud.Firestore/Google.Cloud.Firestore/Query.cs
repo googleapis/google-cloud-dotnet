@@ -350,7 +350,7 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereIn(string fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.In, values);
+            Where(fieldPath, FieldOp.In, ValidateWhereInValues(values));
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
@@ -363,7 +363,30 @@ namespace Google.Cloud.Firestore
         /// <param name="values">The values to compare in the filter. Must not be null.</param>
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         public Query WhereIn(FieldPath fieldPath, IEnumerable values) =>
-            Where(fieldPath, FieldOp.In, values);
+            Where(fieldPath, FieldOp.In, ValidateWhereInValues(values));
+
+        /// <summary>
+        /// Validates that a value is suitable for a WhereIn query. It can't be null or a string.
+        /// The reason for highlighting string is that it's an IEnumerable{char}, but users
+        /// don't tend to think of it that way: anyone passing a single string to WhereIn is doing so
+        /// expecting it to be treated as an array containing just that string, I'm sure. So let's call that out.
+        /// </summary>
+        /// <param name="values">The value to validate.</param>
+        /// <returns>The original value, if it's valid.</returns>
+        private IEnumerable ValidateWhereInValues(IEnumerable values)
+        {
+            if (values is null)
+            {
+                throw new ArgumentNullException(nameof(values), "The list of values for a WhereIn query must not be null.");
+            }
+            if (values is string)
+            {
+                // This is a really long error message, but it's good at saying exactly what's wrong.
+                throw new ArgumentException("The list of values for a WhereIn query must not be a single string. The code compiles because string implements IEnumerable<char>, but you almost certainly meant to pass a collection of strings, e.g. a string[] or a List<string>",
+                    nameof(values));
+            }
+            return values;
+        }
 
         // Note: the two general Where methods were originally public, accepting a public QueryOperator enum.
         // If we ever want to make them public again, we should reinstate the QueryOperator enum to avoid an API

@@ -261,6 +261,35 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expected, query.ToStructuredQuery());
         }
 
+        // See comments in WhereIn for details.
+        [Fact]
+        public void WhereIn_StringPath_StringValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentException>(() => empty.WhereIn("a.b", "value"));
+        }
+
+        [Fact]
+        public void WhereIn_FieldPath_StringValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentException>(() => empty.WhereIn(new FieldPath("a", "b"), "value"));
+        }
+
+        [Fact]
+        public void WhereIn_StringPath_NullValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentNullException>(() => empty.WhereIn("a.b", null));
+        }
+
+        [Fact]
+        public void WhereIn_FieldPath_NullValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentNullException>(() => empty.WhereIn(new FieldPath("a", "b"), null));
+        }
+
         [Fact]
         public void WhereArrayContainsAny_String()
         {
