@@ -397,10 +397,31 @@ namespace Google.Cloud.Firestore
         /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
         private Query Where(FieldPath fieldPath, FieldOp op, object value)
         {
+            if (fieldPath.Equals(FieldPath.DocumentId))
+            {
+                value = op switch
+                {
+                    FieldOp.ArrayContains => throw new ArgumentException($"Invalid query. Document IDs cannot be used with the {op} operator.", nameof(op)),
+                    FieldOp.ArrayContainsAny => throw new ArgumentException($"Invalid query. Document IDs cannot be used with the {op} operator.", nameof(op)),
+                    FieldOp.In => ConvertValueToDocumentReferencesForInQuery(),
+                    _ => ConvertReference(value, nameof(value))
+                };
+            }
+
             InternalFilter filter = InternalFilter.Create(Database.SerializationContext, fieldPath, op, value);
             var newFilters = _filters == null ? new List<InternalFilter>() : new List<InternalFilter>(_filters);
             newFilters.Add(filter);
             return new Query(_root, _offset, _limit, _orderings, newFilters, _projections, _startAt, _endAt);
+
+            object ConvertValueToDocumentReferencesForInQuery()
+            {
+                var list = (value as IEnumerable)?.Cast<object>().ToList();
+                if (list is null || list.Count == 0)
+                {
+                    throw new ArgumentException($"Invalid Query. A non-empty array is required for '{op}' filters.", nameof(value));
+                }
+                return list.Select(item => ConvertReference(item, nameof(value))).ToList();
+            }
         }
 
         /// <summary>
@@ -745,7 +766,7 @@ namespace Google.Cloud.Firestore
             {
                 string relativePath => Database.GetDocumentReferenceFromResourceName($"{basePath}/{relativePath}"),
                 DocumentReference absoluteRef => absoluteRef,
-                _ => throw new ArgumentException($"A cursor value for a document ID must be a string (relative path) or a DocumentReference", parameterName),
+                _ => throw new ArgumentException($"The corresponding value for a document ID must be a string (relative path) or a DocumentReference", parameterName),
             };
             GaxPreconditions.CheckArgument(
                 reference.Path.StartsWith(basePath + "/"),
@@ -1008,7 +1029,7 @@ namespace Google.Cloud.Firestore
                     }
                     else
                     {
-                        throw new ArgumentException(nameof(value), "null and NaN values can only be used with the Equal operator");
+                        throw new ArgumentException("null and NaN values can only be used with the Equal operator", nameof(value));
                     }
                 }
                 else

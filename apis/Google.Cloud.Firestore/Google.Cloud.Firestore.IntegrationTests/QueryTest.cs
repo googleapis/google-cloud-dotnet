@@ -348,6 +348,48 @@ namespace Google.Cloud.Firestore.IntegrationTests
         }
 
         [Fact]
+        public async Task WhereIn_DocumentId()
+        {
+            var db = _fixture.FirestoreDb;
+            var collection = _fixture.CreateUniqueCollection();
+
+            var batch = db.StartBatch();
+            batch.Set(collection.Document("a"), new { X = 1 });
+            batch.Set(collection.Document("b"), new { X = 2 });
+            batch.Set(collection.Document("c"), new { X = 3 });
+            batch.Set(collection.Document("d"), new { X = 4 });
+            await batch.CommitAsync();
+
+            var query = collection.WhereIn(FieldPath.DocumentId, new[] { collection.Document("a"), collection.Document("c") });
+            var snapshot = await query.GetSnapshotAsync();
+            Assert.Equal(2, snapshot.Count);
+        }
+
+        [Fact]
+        public async Task WhereIn_ArrayValues()
+        {
+            var db = _fixture.FirestoreDb;
+            var collection = _fixture.CreateUniqueCollection();
+            var batch = db.StartBatch();
+            batch.Set(collection.Document("ab"), new { values = new[] { "a", "b" } });
+            batch.Set(collection.Document("bc"), new { values = new[] { "b", "c" } });
+            batch.Set(collection.Document("cd"), new { values = new[] { "c", "d" } });
+            batch.Set(collection.Document("de"), new { values = new[] { "d", "e" } });
+            batch.Set(collection.Document("ef"), new { values = new[] { "e", "f" } });
+            batch.Set(collection.Document("fg"), new { values = new[] { "f", "g" } });
+            await batch.CommitAsync();
+
+            var querySnapshot = await collection.WhereIn("values", new[] {
+                new[] { "a", "b" }, // Matches ab
+                new[] { "c", "d" }, // Matches cd
+                new[] { "e", "f", "g" }, // Doesn't match anything
+                new[] { "e" } // Doesn't match anything
+            }).GetSnapshotAsync();
+            var ids = querySnapshot.Select(d => d.Id).ToList();
+            Assert.Equal(new[] { "ab", "cd" }, ids);
+        }
+
+        [Fact]
         public async Task WhereArrayContainsAny()
         {
             var db = _fixture.FirestoreDb;
