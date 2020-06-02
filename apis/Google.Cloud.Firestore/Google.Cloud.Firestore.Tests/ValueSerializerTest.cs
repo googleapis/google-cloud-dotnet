@@ -162,8 +162,18 @@ namespace Google.Cloud.Firestore.Tests
         [Fact]
         public void ArrayInArray()
         {
-            var badArray = new[] { new int[10] };
-            Assert.Throws<ArgumentException>(() => ValueSerializer.Serialize(SerializationContext.Default, badArray));
+            // We allow this to be created, even though the server will reject *documents* created like this.
+            // It can be useful in filters, e.g. in a WhereIn query.
+            var nestedArray = new[] { new int[] { 10, 20 } };
+            var expected = new Value
+            {
+                ArrayValue = new ArrayValue
+                {
+                    Values = { new Value { ArrayValue = new ArrayValue { Values = { new Value { IntegerValue = 10 }, new Value { IntegerValue = 20 } } } } }
+                }
+            };
+            var actual = ValueSerializer.Serialize(SerializationContext.Default, nestedArray);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]

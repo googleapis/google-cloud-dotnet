@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Castle.DynamicProxy.Generators.Emitters.SimpleAST;
 using Grpc.Core;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -47,6 +49,23 @@ namespace Google.Cloud.Firestore.IntegrationTests
             // TODO: Should we have a more specific exception here?
             // See also https://github.com/googleapis/toolkit/issues/1357
             await Assert.ThrowsAsync<RpcException>(() => reference.CreateAsync(new { Name = "Other" }));
+        }
+
+        [Fact]
+        public async Task Create_WithNestedArray()
+        {
+            var collection = _fixture.NonQueryCollection;
+            var objectWithNestedArray = new
+            {
+                Name = "Test nested array",
+                Array = new[] {
+                    new object[] { 1, 2 },
+                    new object[] { "a", "b" }
+                }
+            };
+            // Even though we now permit nested arrays locally for convenience, the server still
+            // prohibits it.
+            await Assert.ThrowsAsync<RpcException>(() => collection.AddAsync(objectWithNestedArray));
         }
     }
 }
