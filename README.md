@@ -39,7 +39,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/3.0.0) | 3.0.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
 | [Google.Cloud.ErrorReporting.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.0.0) | 2.0.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
-| [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.0.0) | 2.0.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
+| [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.1.0) | 2.1.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.0.0) | 2.0.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta04) | 1.0.0-beta04 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](https://googleapis.dev/dotnet/Google.Cloud.Iam.V1/2.0.0) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
