@@ -1,5 +1,17 @@
 # Version history
 
+# Version 2.1.0, released 2020-06-02
+
+- [Commit 48cef0e](https://github.com/googleapis/google-cloud-dotnet/commit/48cef0e): Allow nested arrays to be constructed client-side, relying on server-side validation
+- [Commit b1e6e8b](https://github.com/googleapis/google-cloud-dotnet/commit/b1e6e8b): Perform some more client-side validation for WhereIn queries to avoid an unfortunate type safety mistake
+- [Commit 2517e6e](https://github.com/googleapis/google-cloud-dotnet/commit/2517e6e): Convert strings into references for DocumentId queries. Fixes [issue 4981](https://github.com/googleapis/google-cloud-dotnet/issues/4981)
+
+Note that although this release doesn't involve any API surface
+changes, the features here (particularly converting strings into
+references for DocumentId queries) feel significant enough to
+warrant a minor version instead of a patch release. (They are
+effectively features rather than bug fixes.)
+
 # Version 2.0.0, released 2020-05-12
 
 - [Commit 2f25d1c](https://github.com/googleapis/google-cloud-dotnet/commit/2f25d1c): Implement Query.LimitToLast
