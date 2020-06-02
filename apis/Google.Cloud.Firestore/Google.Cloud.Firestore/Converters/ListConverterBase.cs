@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Firestore.V1;
-using System;
 using System.Collections;
 using BclType = System.Type;
 
@@ -36,12 +35,7 @@ namespace Google.Cloud.Firestore.Converters
             var repeatedField = proto.ArrayValue.Values;
             foreach (object element in (IEnumerable) value)
             {
-                var serializedElement = ValueSerializer.Serialize(context, element);
-                if (serializedElement.ArrayValue != null)
-                {
-                    throw new ArgumentException("Array values cannot directly contain other array values");
-                }
-                repeatedField.Add(serializedElement);
+                repeatedField.Add(ValueSerializer.Serialize(context, element));
             }
             return proto;
         }
