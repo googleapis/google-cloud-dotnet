@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.1.0, released 2020-06-02
+
+- [Commit 89ca277](https://github.com/googleapis/google-cloud-dotnet/commit/89ca277): docs: Properly format literal strings.
+- [Commit 372df03](https://github.com/googleapis/google-cloud-dotnet/commit/372df03): feat: add SearchAllResources and SearchAllIamPolicies RPCs ([issue 4974](https://github.com/googleapis/google-cloud-dotnet/issues/4974))
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+
 # Version 2.0.0, released 2020-04-08
 
 No API surface changes since 2.0.0-beta03.
