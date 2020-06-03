@@ -31,9 +31,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Debugger.V2](https://googleapis.dev/dotnet/Google.Cloud.Debugger.V2/2.0.0) | 2.0.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/2.0.0) | 2.0.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](https://googleapis.dev/dotnet/Google.Cloud.DevTools.ContainerAnalysis.V1/2.0.0) | 2.0.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
-| [Google.Cloud.Diagnostics.AspNet](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNet/4.0.0) | 4.0.0 | Google Stackdriver Instrumentation Libraries for ASP.NET |
 | [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/4.0.0) | 4.0.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
-| [Google.Cloud.Diagnostics.AspNetCore.Analyzers](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore.Analyzers/2.0.0) | 2.0.0 | Guidelines for using Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
 | [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/4.0.0) | 4.0.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.V2](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.V2/3.0.0) | 3.0.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
 | [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/3.0.0) | 3.0.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
