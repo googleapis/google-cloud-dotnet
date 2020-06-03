@@ -10,8 +10,10 @@ export VSINSTALLDIR=
 
 # We don't need deterministic source paths in the docfx metadata build,
 # and they don't seem to work out of the box with the rest of our build
-# setup, so let's just disable them.
+# setup, so let's just disable them (with both of the environment variables
+# that might have caused them to be turned on).
 export ContinuousIntegrationBuild=false
+export DeterministicSourcePaths=false
 
 build_api_docs() {
   log_build_action "Building docs for $1"
