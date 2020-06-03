@@ -76,15 +76,25 @@ then
     do
       if [[ ! "$api" =~ $apiregex ]]
       then
-        filteredapis+=($api)
+        if [[ -d "apis/$api" ]]
+        then
+          filteredapis+=($api)
+        else
+          echo "Skipping missing API $api; recently deleted?"
+        fi
       fi
     done
   else
     for api in ${apis[*]}
-    do
+    do    
       if [[ "$api" =~ $apiregex ]]
       then
-        filteredapis+=($api)
+        if [[ -d "apis/$api" ]]
+        then
+          filteredapis+=($api)
+        else
+          echo "Skipping missing API $api; recently deleted?"
+        fi
       fi
     done
   fi
