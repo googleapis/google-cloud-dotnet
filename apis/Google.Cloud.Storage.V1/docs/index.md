@@ -19,11 +19,15 @@ Common operations are exposed via the
 In many cases you don't need to worry about disposing of
 `StorageClient` objects, and can create them reasonably freely -
 but be aware that this *can* causes issues with memory and network
-connection usage. We advise you to reuse a single client object if
-possible; if your architecture requires you to frequently create new
-client objects, please dispose of them to help with timely resource
-clean-up. See [the resource clean-up guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis) for more
-details.
+connection usage. We advise you to reuse a single client object if possible.
+`StorageClient` is thread-safe, so in most cases a single object is
+the simplest option.
+
+If your architecture requires you to frequently create new client
+objects, please dispose of them to help with timely resource
+clean-up. See [the resource clean-up
+guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis)
+for more details.
 
 # Sample code
 

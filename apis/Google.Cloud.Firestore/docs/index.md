@@ -12,9 +12,15 @@
 
 Everything starts with [FirestoreDb](obj/api/Google.Cloud.Firestore.FirestoreDb.yml).
 Create an instance using the `Create` or `CreateAsync` methods, passing in your Google Cloud project ID.
-The default credentials will be used to authenticate with the server.
+The default credentials will be used to authenticate with the
+server. `FirestoreDb` is thread-safe, and we recommend using a
+single instance across your application where possible.
 
 From there, you can create, fetch and modify documents, and run queries.
+
+For customization of credentials and other settings, create a
+`FirestoreDbBuilder`, set the appropriate properties, and call
+`Build` to create a `FirestoreDb`.
 
 # Sample code
 
