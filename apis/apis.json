@@ -351,7 +351,6 @@
       ],
       "dependencies": {
         "Google.Cloud.Diagnostics.Common": "project",
-        "Google.Cloud.Diagnostics.AspNetCore.Analyzers": "2.0.0",
         "Grpc.Core": "2.27.0",
         "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
         "Microsoft.AspNetCore.Http": "2.1.1",
@@ -367,23 +366,6 @@
         "Microsoft.Extensions.Http": "2.1.1"
       },
       "additionalAnalyzerTestDependencies": {
-        "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
-        "Microsoft.AspNetCore.Routing": "1.0.4"
-      }
-    },
-    {
-      "id": "Google.Cloud.Diagnostics.AspNetCore.Analyzers",
-      "version": "2.0.0",
-      "type": "analyzers",
-      "targetFrameworks": "netstandard1.3",
-      "testTargetFrameworks": "netcoreapp2.0",
-      "description": "Guidelines for using Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core.",
-      "tags": [
-        "CodeAnalysis",
-        "Analyzers",
-        "CSharp"
-      ],
-      "testDependencies": {
         "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
         "Microsoft.AspNetCore.Routing": "1.0.4"
       }
