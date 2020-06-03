@@ -2,13 +2,19 @@
 
 ## gRPC-based APIs and channels
 
+Clients are thread-safe, and in general we recommend using a single
+instance across a whole application unless you particularly need
+different settings for some clients.
+
 gRPC uses the concept of a *channel* between your application
 and the service implementing an API. This consists of a network
 connection and some unmanaged resources which handle its status and
 multiplex the requests and responses on it.
 
 Most of the time, you don't need to worry about cleaning up the
-unmanaged resources from the C# client libraries.
+unmanaged resources from the C# client libraries. If you use
+multiple client instances created in an entirely-default way, a
+single gRPC channel will be shared between all instances.
 
 If you want to handle this explicitly, you can do so by creating
 channels yourself and shutting them down in an orderly fashion. For
@@ -31,9 +37,10 @@ it has handled all requests appropriately before exiting.
 
 ## REST-based APIs
 
-Summary: Use a single client if you can; if you have to create
-multiple clients at a high frequency, dispose of them when you're
-done.
+Summary: Use a single client if you can. Clients are threads-safe,
+so in most situations you can use a single client for the whole
+application. If you have to create multiple clients at a high
+frequency, dispose of them when you're done.
 
 Just as a reminder, Google Cloud Client Libraries for .NET has three
 libraries for REST-based APIs:

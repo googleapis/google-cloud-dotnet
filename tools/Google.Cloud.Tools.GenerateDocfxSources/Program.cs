@@ -316,7 +316,9 @@ Authentication](https://cloud.google.com/docs/authentication/getting-started) gu
             string clientConstruction =
 $@"Create a client instance by calling the static `Create` method. Alternatively,
 use the builder class associated with each client class (e.g. {exampleClient}Builder for {exampleClient})
-as an easy way of specifying custom credentials, settings, or a custom endpoint.";
+as an easy way of specifying custom credentials, settings, or a custom endpoint. Clients are thread-safe,
+and we recommend using a single instance across your entire application unless you have a particular need
+to configure multiple client objects separately.";
 
             string nonProductStub = $@"This package is not a product in its own right; this page is
 present as a root for the [API reference documentation](obj/api/{api.Id}.yml)";
