@@ -84,7 +84,11 @@ namespace Google.Cloud.Firestore.Converters
                 return AttributedTypeConverter.ForType(targetType);
             }
             // Simple way of checking for an anonymous type. Far from foolproof, but a reasonable start.
-            if (targetTypeInfo.IsDefined(typeof(CompilerGeneratedAttribute)))
+            // If the target type implements IEnumerable, it's probably an iterator method result.
+            // If the target type implements IAsyncStateMachine, it's probably an async method state machine.
+            if (targetTypeInfo.IsDefined(typeof(CompilerGeneratedAttribute)) &&
+                !typeof(IEnumerable).IsAssignableFrom(targetType) &&
+                !typeof(IAsyncStateMachine).IsAssignableFrom(targetType))
             {
                 return new AnonymousTypeConverter(targetType);
             }
@@ -118,6 +122,12 @@ namespace Google.Cloud.Firestore.Converters
             if (typeof(IList).IsAssignableFrom(targetType))
             {
                 return new ListConverter(targetType);
+            }
+
+            // The best we can do is a "serialize-only" converter. That's better than nothing though.
+            if (typeof(IEnumerable).IsAssignableFrom(targetType))
+            {
+                return new SequenceConverter(targetType);
             }
 
             throw new ArgumentException($"Unable to create converter for type {targetType.GetTypeInfo().FullName}");
