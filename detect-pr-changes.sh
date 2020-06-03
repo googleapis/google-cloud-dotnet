@@ -14,14 +14,7 @@ dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CompareVer
 dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
 
 for api in $apis
-do
-  # We can't build Google.Cloud.Diagnostics.AspNet at all on Travis;
-  # The analyzer uses netstandard1.3 instead of netstandard2.0 and it's not worth parameterizing that
-  if [[ $api == "Google.Cloud.Diagnostics.AspNet" || $api == "Google.Cloud.Diagnostics.AspNetCore.Analyzers" ]]
-  then
-    continue
-  fi
-  
+do  
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
   then
     echo "Building $api"
@@ -42,13 +35,7 @@ echo ""
 
 
 for api in $apis
-do
-  # See above
-  if [[ $api == "Google.Cloud.Diagnostics.AspNet" || $api == "Google.Cloud.Diagnostics.AspNetCore.Analyzers" ]]
-  then
-    continue
-  fi
-  
+do  
   if [[ ! -d tmpgit/apis/$api/$api ]]
   then
     echo "$api is new"

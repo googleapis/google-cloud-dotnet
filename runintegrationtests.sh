@@ -95,10 +95,7 @@ log_build_action "(Start) Integration tests"
 for testdir in $testdirs
 do
   log_build_action "Testing $testdir"
-  if [[ "$testdir" =~ AspNet\. && "$OS" != "Windows_NT" ]]
-  then
-    echo "Skipping $testdir; test not supported on non windows environment."
-  elif [[ "$testdir" =~ smoketests.json ]]
+  if [[ "$testdir" =~ smoketests.json ]]
   then
     # If we've found a smoketests.json file (which really isn't a "test directory" of course),
     # run it via ReleaseManager

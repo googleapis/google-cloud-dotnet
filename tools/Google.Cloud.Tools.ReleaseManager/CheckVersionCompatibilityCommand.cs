@@ -25,14 +25,6 @@ namespace Google.Cloud.Tools.ReleaseManager
 {
     public class CheckVersionCompatibilityCommand : ICommand
     {
-        // These APIs don't build for netstandard2.0, so for now we ignore them.
-        // We could potentially detect the right TFM, but that's more work than it's probably worth.
-        private static readonly List<string> IgnoredApis = new[]
-        {
-            "Google.Cloud.Diagnostics.AspNet",
-            "Google.Cloud.Diagnostics.AspNetCore.Analyzers"
-        }.ToList();
-
         public string Description => "Compares a package (or all packages) for compatibility against previously-released versions";
 
         public string Command => "check-version-compatibility";
@@ -56,11 +48,6 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             foreach (var api in apisToCheck)
             {
-                if (IgnoredApis.Contains(api.Id))
-                {
-                    Console.WriteLine($"Skipping check for {api.Id} as it doesn't target netstandard2.0");
-                    continue;
-                }
                 Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
                 var prefix = api.Id + "-";
                 var previousVersions = tags
