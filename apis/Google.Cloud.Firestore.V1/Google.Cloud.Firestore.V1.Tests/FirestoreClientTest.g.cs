@@ -17,6 +17,7 @@
 using gaxgrpc = Google.Api.Gax.Grpc;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -520,6 +521,64 @@ namespace Google.Cloud.Firestore.V1.Tests
             FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
             await client.RollbackAsync(request.Database, request.Transaction, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.RollbackAsync(request.Database, request.Transaction, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchWriteRequestObject()
+        {
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            BatchWriteRequest request = new BatchWriteRequest
+            {
+                Database = "databased8eee011",
+                Writes = { new Write(), },
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            BatchWriteResponse expectedResponse = new BatchWriteResponse
+            {
+                WriteResults = { new WriteResult(), },
+                Status = { new gr::Status(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchWrite(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            BatchWriteResponse response = client.BatchWrite(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchWriteRequestObjectAsync()
+        {
+            moq::Mock<Firestore.FirestoreClient> mockGrpcClient = new moq::Mock<Firestore.FirestoreClient>(moq::MockBehavior.Strict);
+            BatchWriteRequest request = new BatchWriteRequest
+            {
+                Database = "databased8eee011",
+                Writes = { new Write(), },
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            BatchWriteResponse expectedResponse = new BatchWriteResponse
+            {
+                WriteResults = { new WriteResult(), },
+                Status = { new gr::Status(), },
+            };
+            mockGrpcClient.Setup(x => x.BatchWriteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<BatchWriteResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreClient client = new FirestoreClientImpl(mockGrpcClient.Object, null);
+            BatchWriteResponse responseCallSettings = await client.BatchWriteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            BatchWriteResponse responseCancellationToken = await client.BatchWriteAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 

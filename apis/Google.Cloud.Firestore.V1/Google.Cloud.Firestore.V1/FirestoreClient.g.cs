@@ -55,11 +55,13 @@ namespace Google.Cloud.Firestore.V1
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
             RunQuerySettings = existing.RunQuerySettings;
+            PartitionQuerySettings = existing.PartitionQuerySettings;
             WriteSettings = existing.WriteSettings;
             WriteStreamingSettings = existing.WriteStreamingSettings;
             ListenSettings = existing.ListenSettings;
             ListenStreamingSettings = existing.ListenStreamingSettings;
             ListCollectionIdsSettings = existing.ListCollectionIdsSettings;
+            BatchWriteSettings = existing.BatchWriteSettings;
             CreateDocumentSettings = existing.CreateDocumentSettings;
             OnCopy(existing);
         }
@@ -180,6 +182,18 @@ namespace Google.Cloud.Firestore.V1
         public gaxgrpc::CallSettings RunQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreClient.PartitionQuery</c> and <c>FirestoreClient.PartitionQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PartitionQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>FirestoreClient.Write</c>
         /// and <c>FirestoreClient.WriteAsync</c>.
         /// </summary>
@@ -226,6 +240,18 @@ namespace Google.Cloud.Firestore.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListCollectionIdsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>FirestoreClient.BatchWrite</c>
+        ///  and <c>FirestoreClient.BatchWriteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchWriteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -870,6 +896,28 @@ namespace Google.Cloud.Firestore.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Partitions a query by returning partition cursors that can be used to run
+        /// the query in parallel. The returned partition cursors are split points that
+        /// can be used by RunQuery as starting/end points for the query results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Cursor"/> resources.</returns>
+        public virtual gax::PagedEnumerable<PartitionQueryResponse, Cursor> PartitionQuery(PartitionQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Partitions a query by returning partition cursors that can be used to run
+        /// the query in parallel. The returned partition cursors are split points that
+        /// can be used by RunQuery as starting/end points for the query results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Cursor"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<PartitionQueryResponse, Cursor> PartitionQueryAsync(PartitionQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Bidirectional streaming methods for
         /// <see cref="Write(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
         /// </summary>
@@ -976,6 +1024,57 @@ namespace Google.Cloud.Firestore.V1
             }, callSettings);
 
         /// <summary>
+        /// Applies a batch of write operations.
+        /// 
+        /// The BatchWrite method does not apply the write operations atomically
+        /// and can apply them out of order. Method does not allow more than one write
+        /// per document. Each write succeeds or fails independently. See the
+        /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+        /// 
+        /// If you require an atomically applied set of writes, use
+        /// [Commit][google.firestore.v1.Firestore.Commit] instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchWriteResponse BatchWrite(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Applies a batch of write operations.
+        /// 
+        /// The BatchWrite method does not apply the write operations atomically
+        /// and can apply them out of order. Method does not allow more than one write
+        /// per document. Each write succeeds or fails independently. See the
+        /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+        /// 
+        /// If you require an atomically applied set of writes, use
+        /// [Commit][google.firestore.v1.Firestore.Commit] instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWriteResponse> BatchWriteAsync(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Applies a batch of write operations.
+        /// 
+        /// The BatchWrite method does not apply the write operations atomically
+        /// and can apply them out of order. Method does not allow more than one write
+        /// per document. Each write succeeds or fails independently. See the
+        /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+        /// 
+        /// If you require an atomically applied set of writes, use
+        /// [Commit][google.firestore.v1.Firestore.Commit] instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchWriteResponse> BatchWriteAsync(BatchWriteRequest request, st::CancellationToken cancellationToken) =>
+            BatchWriteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a new document.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1024,11 +1123,15 @@ namespace Google.Cloud.Firestore.V1
 
         private readonly gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
 
+        private readonly gaxgrpc::ApiCall<PartitionQueryRequest, PartitionQueryResponse> _callPartitionQuery;
+
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> _callWrite;
 
         private readonly gaxgrpc::ApiBidirectionalStreamingCall<ListenRequest, ListenResponse> _callListen;
 
         private readonly gaxgrpc::ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> _callListCollectionIds;
+
+        private readonly gaxgrpc::ApiCall<BatchWriteRequest, BatchWriteResponse> _callBatchWrite;
 
         private readonly gaxgrpc::ApiCall<CreateDocumentRequest, Document> _callCreateDocument;
 
@@ -1069,6 +1172,9 @@ namespace Google.Cloud.Firestore.V1
             _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(grpcClient.RunQuery, effectiveSettings.RunQuerySettings);
             Modify_ApiCall(ref _callRunQuery);
             Modify_RunQueryApiCall(ref _callRunQuery);
+            _callPartitionQuery = clientHelper.BuildApiCall<PartitionQueryRequest, PartitionQueryResponse>(grpcClient.PartitionQueryAsync, grpcClient.PartitionQuery, effectiveSettings.PartitionQuerySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callPartitionQuery);
+            Modify_PartitionQueryApiCall(ref _callPartitionQuery);
             _callWrite = clientHelper.BuildApiCall<WriteRequest, WriteResponse>(grpcClient.Write, effectiveSettings.WriteSettings, effectiveSettings.WriteStreamingSettings);
             Modify_ApiCall(ref _callWrite);
             Modify_WriteApiCall(ref _callWrite);
@@ -1078,6 +1184,9 @@ namespace Google.Cloud.Firestore.V1
             _callListCollectionIds = clientHelper.BuildApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse>(grpcClient.ListCollectionIdsAsync, grpcClient.ListCollectionIds, effectiveSettings.ListCollectionIdsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCollectionIds);
             Modify_ListCollectionIdsApiCall(ref _callListCollectionIds);
+            _callBatchWrite = clientHelper.BuildApiCall<BatchWriteRequest, BatchWriteResponse>(grpcClient.BatchWriteAsync, grpcClient.BatchWrite, effectiveSettings.BatchWriteSettings).WithGoogleRequestParam("database", request => request.Database);
+            Modify_ApiCall(ref _callBatchWrite);
+            Modify_BatchWriteApiCall(ref _callBatchWrite);
             _callCreateDocument = clientHelper.BuildApiCall<CreateDocumentRequest, Document>(grpcClient.CreateDocumentAsync, grpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent).WithGoogleRequestParam("collection_id", request => request.CollectionId);
             Modify_ApiCall(ref _callCreateDocument);
             Modify_CreateDocumentApiCall(ref _callCreateDocument);
@@ -1108,11 +1217,15 @@ namespace Google.Cloud.Firestore.V1
 
         partial void Modify_RunQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<RunQueryRequest, RunQueryResponse> call);
 
+        partial void Modify_PartitionQueryApiCall(ref gaxgrpc::ApiCall<PartitionQueryRequest, PartitionQueryResponse> call);
+
         partial void Modify_WriteApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<WriteRequest, WriteResponse> call);
 
         partial void Modify_ListenApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<ListenRequest, ListenResponse> call);
 
         partial void Modify_ListCollectionIdsApiCall(ref gaxgrpc::ApiCall<ListCollectionIdsRequest, ListCollectionIdsResponse> call);
+
+        partial void Modify_BatchWriteApiCall(ref gaxgrpc::ApiCall<BatchWriteRequest, BatchWriteResponse> call);
 
         partial void Modify_CreateDocumentApiCall(ref gaxgrpc::ApiCall<CreateDocumentRequest, Document> call);
 
@@ -1139,6 +1252,8 @@ namespace Google.Cloud.Firestore.V1
 
         partial void Modify_RunQueryRequest(ref RunQueryRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_PartitionQueryRequest(ref PartitionQueryRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_WriteRequestCallSettings(ref gaxgrpc::CallSettings settings);
 
         partial void Modify_WriteRequestRequest(ref WriteRequest request);
@@ -1148,6 +1263,8 @@ namespace Google.Cloud.Firestore.V1
         partial void Modify_ListenRequestRequest(ref ListenRequest request);
 
         partial void Modify_ListCollectionIdsRequest(ref ListCollectionIdsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchWriteRequest(ref BatchWriteRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1364,6 +1481,34 @@ namespace Google.Cloud.Firestore.V1
             return new RunQueryStreamImpl(_callRunQuery.Call(request, callSettings));
         }
 
+        /// <summary>
+        /// Partitions a query by returning partition cursors that can be used to run
+        /// the query in parallel. The returned partition cursors are split points that
+        /// can be used by RunQuery as starting/end points for the query results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Cursor"/> resources.</returns>
+        public override gax::PagedEnumerable<PartitionQueryResponse, Cursor> PartitionQuery(PartitionQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PartitionQueryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<PartitionQueryRequest, PartitionQueryResponse, Cursor>(_callPartitionQuery, request, callSettings);
+        }
+
+        /// <summary>
+        /// Partitions a query by returning partition cursors that can be used to run
+        /// the query in parallel. The returned partition cursors are split points that
+        /// can be used by RunQuery as starting/end points for the query results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Cursor"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<PartitionQueryResponse, Cursor> PartitionQueryAsync(PartitionQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PartitionQueryRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<PartitionQueryRequest, PartitionQueryResponse, Cursor>(_callPartitionQuery, request, callSettings);
+        }
+
         internal sealed partial class WriteStreamImpl : WriteStream
         {
             /// <summary>Construct the bidirectional streaming method for <c>Write</c>.</summary>
@@ -1507,6 +1652,46 @@ namespace Google.Cloud.Firestore.V1
         }
 
         /// <summary>
+        /// Applies a batch of write operations.
+        /// 
+        /// The BatchWrite method does not apply the write operations atomically
+        /// and can apply them out of order. Method does not allow more than one write
+        /// per document. Each write succeeds or fails independently. See the
+        /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+        /// 
+        /// If you require an atomically applied set of writes, use
+        /// [Commit][google.firestore.v1.Firestore.Commit] instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchWriteResponse BatchWrite(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchWriteRequest(ref request, ref callSettings);
+            return _callBatchWrite.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Applies a batch of write operations.
+        /// 
+        /// The BatchWrite method does not apply the write operations atomically
+        /// and can apply them out of order. Method does not allow more than one write
+        /// per document. Each write succeeds or fails independently. See the
+        /// [BatchWriteResponse][google.firestore.v1.BatchWriteResponse] for the success status of each write.
+        /// 
+        /// If you require an atomically applied set of writes, use
+        /// [Commit][google.firestore.v1.Firestore.Commit] instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchWriteResponse> BatchWriteAsync(BatchWriteRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchWriteRequest(ref request, ref callSettings);
+            return _callBatchWrite.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a new document.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1535,6 +1720,10 @@ namespace Google.Cloud.Firestore.V1
     {
     }
 
+    public partial class PartitionQueryRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListCollectionIdsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -1543,6 +1732,14 @@ namespace Google.Cloud.Firestore.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Document> GetEnumerator() => Documents.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class PartitionQueryResponse : gaxgrpc::IPageResponse<Cursor>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Cursor> GetEnumerator() => Partitions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
