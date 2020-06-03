@@ -22,6 +22,7 @@ using BclType = System.Type;
 using wkt = Google.Protobuf.WellKnownTypes;
 using static Google.Cloud.Firestore.Tests.DocumentSnapshotHelpers;
 using System.Collections;
+using System.Linq;
 
 namespace Google.Cloud.Firestore.Tests
 {
@@ -274,6 +275,14 @@ namespace Google.Cloud.Firestore.Tests
             // We should get a clone back.
             Assert.NotSame(value, deserialized);
             Assert.Equal(value, deserialized);
+        }
+
+        [Fact]
+        public void DeserializeToLinqResult_Fails()
+        {
+            var sequence = Enumerable.Range(1, 3);
+            var value = ValueSerializer.Serialize(SerializationContext.Default, sequence);
+            Assert.Throws<NotSupportedException>(() => ValueDeserializer.Deserialize(SerializationTestData.Context, value, sequence.GetType()));
         }
 
         // These three classes exist for testing unknown property handling
