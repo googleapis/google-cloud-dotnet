@@ -1,5 +1,15 @@
 # Version history
 
+# Version 3.0.0, released 2020-06-03
+
+Documentation changes only since 3.0.0-beta02:
+
+- [Commit 4181b4f](https://github.com/googleapis/google-cloud-dotnet/commit/4181b4f): docs: Comment updates only
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+- [Commit b3e7794](https://github.com/googleapis/google-cloud-dotnet/commit/b3e7794): docs: minor comments change.
+
+As noted in the 3.0.0-beta01 history, 3.0.0 is a breaking change compared with 2.0.0 due to resource names being corrected.
+
 # Version 3.0.0-beta02, released 2020-05-05
 
 - [Commit 610cf69](https://github.com/googleapis/google-cloud-dotnet/commit/610cf69):
