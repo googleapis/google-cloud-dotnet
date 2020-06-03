@@ -155,9 +155,10 @@ namespace Google.Cloud.Spanner.Data.Snippets
             // End sample
         }
 
-        [Fact]
+        [SkippableFact]
         public async Task PartitionedDmlUpdate()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Partitioned DML is not supported in the emulator");
             string connectionString = _fixture.ConnectionString;
 
             await RetryHelpers.ExecuteWithRetryAsync(async () =>
