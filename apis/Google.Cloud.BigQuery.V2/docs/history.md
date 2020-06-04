@@ -1,5 +1,16 @@
 # Version history
 
+# Version 2.0.0, released 2020-06-04
+
+- [Commit 0970dff](https://github.com/googleapis/google-cloud-dotnet/commit/0970dff): Fix: Propagates some cancellation tokens that weren't being propagated before.
+- [Commit e9e6a47](https://github.com/googleapis/google-cloud-dotnet/commit/e9e6a47): Binary breaking change: Adds missing CancellationToken parameter on BigQueryDataset.DeleteModelAsync.
+- [Commit 8e9c40f](https://github.com/googleapis/google-cloud-dotnet/commit/8e9c40f): Adds BigQuery Routines CRUD operations.
+  - Fixes [issue 3762](https://github.com/googleapis/google-cloud-dotnet/issues/3762)
+- [Commit 575c61a](https://github.com/googleapis/google-cloud-dotnet/commit/575c61a):
+  - Convert BigQuery field validation from a regex to hand-written code.
+  - This is entirely for the sake of performance. Benchmark results are approximately 10x better.
+  - Fixes [issue 4975](https://github.com/googleapis/google-cloud-dotnet/issues/4975)
+
 # Version 2.0.0-beta04, released 2020-04-07
 
 - [Commit f58fa79](https://github.com/googleapis/google-cloud-dotnet/commit/f58fa79): Makes BigQueryRow.TimestampConverter accept pre 1970 dates. Fixes [issue 4821](https://github.com/googleapis/google-cloud-dotnet/issues/4821).
