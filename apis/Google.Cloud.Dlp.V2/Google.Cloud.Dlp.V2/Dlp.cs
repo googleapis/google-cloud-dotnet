@@ -21770,7 +21770,7 @@ namespace Google.Cloud.Dlp.V2 {
     ///
     /// This annotation identifies the surrogate when inspecting content using the
     /// custom infoType
-    /// [`SurrogateType`](/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype).
+    /// [`SurrogateType`](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype).
     /// This facilitates reversal of the surrogate when it occurs in free text.
     ///
     /// In order for inspection to work properly, the name of this infoType must
@@ -22013,19 +22013,19 @@ namespace Google.Cloud.Dlp.V2 {
         /// </summary>
         [pbr::OriginalName("FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// [0-9] (radix of 10)
+        /// `[0-9]` (radix of 10)
         /// </summary>
         [pbr::OriginalName("NUMERIC")] Numeric = 1,
         /// <summary>
-        /// [0-9A-F] (radix of 16)
+        /// `[0-9A-F]` (radix of 16)
         /// </summary>
         [pbr::OriginalName("HEXADECIMAL")] Hexadecimal = 2,
         /// <summary>
-        /// [0-9A-Z] (radix of 36)
+        /// `[0-9A-Z]` (radix of 36)
         /// </summary>
         [pbr::OriginalName("UPPER_CASE_ALPHA_NUMERIC")] UpperCaseAlphaNumeric = 3,
         /// <summary>
-        /// [0-9A-Za-z] (radix of 62)
+        /// `[0-9A-Za-z]` (radix of 62)
         /// </summary>
         [pbr::OriginalName("ALPHA_NUMERIC")] AlphaNumeric = 4,
       }
@@ -27663,7 +27663,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// Publish a message into given Pub/Sub topic when DlpJob has completed. The
       /// message contains a single field, `DlpJobName`, which is equal to the
       /// finished job's
-      /// [`DlpJob.name`](/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob).
+      /// [`DlpJob.name`](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob).
       /// Compatible with: Inspect, Risk
       /// </summary>
       public sealed partial class PublishToPubSub : pb::IMessage<PublishToPubSub> {
