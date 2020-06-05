@@ -51,6 +51,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             Subscription expectedResponse = new Subscription
             {
@@ -72,6 +73,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -104,6 +106,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             Subscription expectedResponse = new Subscription
             {
@@ -125,6 +128,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -166,6 +170,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -205,6 +210,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -246,6 +252,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -285,6 +292,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.CreateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -323,6 +331,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -359,6 +368,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -397,6 +407,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -433,6 +444,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -471,6 +483,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -507,6 +520,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.GetSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -546,6 +560,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSubscription(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -583,6 +598,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 Filter = "filtere47ac9b2",
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
+                Detached = false,
             };
             mockGrpcClient.Setup(x => x.UpdateSubscriptionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subscription>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubscriberServiceApiClient client = new SubscriberServiceApiClientImpl(mockGrpcClient.Object, null);
