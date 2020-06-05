@@ -305,7 +305,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string url_ = "";
     /// <summary>
     /// A URL pointing to a related entry in an issue tracking system.
-    /// Example: https://github.com/user/project/issues/4
+    /// Example: `https://github.com/user/project/issues/4`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Url {

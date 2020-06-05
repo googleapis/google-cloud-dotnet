@@ -251,14 +251,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// &amp;lt;code&amp;gt;projects/&amp;lt;var&amp;gt;projectID&amp;lt;/var&amp;gt;/groups/&amp;lt;var&amp;gt;group_name&amp;lt;/var&amp;gt;&amp;lt;/code&amp;gt;.
-        /// Call
-        /// &amp;lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&amp;gt;
-        /// &amp;lt;code&amp;gt;groupStats.list&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to return a list of groups belonging to
-        /// this project.
+        /// The group resource name. Written as
+        /// `projects/{projectID}/groups/{group_name}`. Call
+        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// to return a list of groups belonging to this project.
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123/groups/my-group&amp;lt;/code&amp;gt;
+        /// Example: `projects/my-project-123/groups/my-group`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -272,14 +270,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// &amp;lt;code&amp;gt;projects/&amp;lt;var&amp;gt;projectID&amp;lt;/var&amp;gt;/groups/&amp;lt;var&amp;gt;group_name&amp;lt;/var&amp;gt;&amp;lt;/code&amp;gt;.
-        /// Call
-        /// &amp;lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&amp;gt;
-        /// &amp;lt;code&amp;gt;groupStats.list&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to return a list of groups belonging to
-        /// this project.
+        /// The group resource name. Written as
+        /// `projects/{projectID}/groups/{group_name}`. Call
+        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// to return a list of groups belonging to this project.
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123/groups/my-group&amp;lt;/code&amp;gt;
+        /// Example: `projects/my-project-123/groups/my-group`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -293,14 +289,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// &amp;lt;code&amp;gt;projects/&amp;lt;var&amp;gt;projectID&amp;lt;/var&amp;gt;/groups/&amp;lt;var&amp;gt;group_name&amp;lt;/var&amp;gt;&amp;lt;/code&amp;gt;.
-        /// Call
-        /// &amp;lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&amp;gt;
-        /// &amp;lt;code&amp;gt;groupStats.list&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to return a list of groups belonging to
-        /// this project.
+        /// The group resource name. Written as
+        /// `projects/{projectID}/groups/{group_name}`. Call
+        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// to return a list of groups belonging to this project.
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123/groups/my-group&amp;lt;/code&amp;gt;
+        /// Example: `projects/my-project-123/groups/my-group`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -311,14 +305,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// &amp;lt;code&amp;gt;projects/&amp;lt;var&amp;gt;projectID&amp;lt;/var&amp;gt;/groups/&amp;lt;var&amp;gt;group_name&amp;lt;/var&amp;gt;&amp;lt;/code&amp;gt;.
-        /// Call
-        /// &amp;lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&amp;gt;
-        /// &amp;lt;code&amp;gt;groupStats.list&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to return a list of groups belonging to
-        /// this project.
+        /// The group resource name. Written as
+        /// `projects/{projectID}/groups/{group_name}`. Call
+        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// to return a list of groups belonging to this project.
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123/groups/my-group&amp;lt;/code&amp;gt;
+        /// Example: `projects/my-project-123/groups/my-group`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -332,14 +324,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// &amp;lt;code&amp;gt;projects/&amp;lt;var&amp;gt;projectID&amp;lt;/var&amp;gt;/groups/&amp;lt;var&amp;gt;group_name&amp;lt;/var&amp;gt;&amp;lt;/code&amp;gt;.
-        /// Call
-        /// &amp;lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&amp;gt;
-        /// &amp;lt;code&amp;gt;groupStats.list&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to return a list of groups belonging to
-        /// this project.
+        /// The group resource name. Written as
+        /// `projects/{projectID}/groups/{group_name}`. Call
+        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// to return a list of groups belonging to this project.
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123/groups/my-group&amp;lt;/code&amp;gt;
+        /// Example: `projects/my-project-123/groups/my-group`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -353,14 +343,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// Required. The group resource name. Written as
-        /// &amp;lt;code&amp;gt;projects/&amp;lt;var&amp;gt;projectID&amp;lt;/var&amp;gt;/groups/&amp;lt;var&amp;gt;group_name&amp;lt;/var&amp;gt;&amp;lt;/code&amp;gt;.
-        /// Call
-        /// &amp;lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&amp;gt;
-        /// &amp;lt;code&amp;gt;groupStats.list&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; to return a list of groups belonging to
-        /// this project.
+        /// The group resource name. Written as
+        /// `projects/{projectID}/groups/{group_name}`. Call
+        /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+        /// to return a list of groups belonging to this project.
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123/groups/my-group&amp;lt;/code&amp;gt;
+        /// Example: `projects/my-project-123/groups/my-group`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
