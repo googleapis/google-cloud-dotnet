@@ -543,7 +543,7 @@ namespace Google.Cloud.Kms.V1 {
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Labels with user-defined metadata. For more information, see
-    /// [Labeling Keys](/kms/docs/labeling-keys).
+    /// [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
