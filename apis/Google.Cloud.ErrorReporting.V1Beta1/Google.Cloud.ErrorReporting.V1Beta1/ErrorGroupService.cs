@@ -104,14 +104,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupNameFieldNumber = 1;
     private string groupName_ = "";
     /// <summary>
-    /// Required. The group resource name. Written as
-    /// &lt;code>projects/&lt;var>projectID&lt;/var>/groups/&lt;var>group_name&lt;/var>&lt;/code>.
-    /// Call
-    /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
-    /// &lt;code>groupStats.list&lt;/code>&lt;/a> to return a list of groups belonging to
-    /// this project.
+    /// The group resource name. Written as
+    /// `projects/{projectID}/groups/{group_name}`. Call
+    /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
+    /// to return a list of groups belonging to this project.
     ///
-    /// Example: &lt;code>projects/my-project-123/groups/my-group&lt;/code>
+    /// Example: `projects/my-project-123/groups/my-group`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupName {
