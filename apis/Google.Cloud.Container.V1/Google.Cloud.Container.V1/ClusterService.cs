@@ -14125,7 +14125,7 @@ namespace Google.Cloud.Container.V1 {
     private int initialNodeCount_;
     /// <summary>
     /// The initial node count for the pool. You must ensure that your
-    /// Compute Engine &lt;a href="/compute/docs/resource-quotas">resource quota&lt;/a>
+    /// Compute Engine [resource quota](https://cloud.google.com/compute/quotas)
     /// is sufficient for this number of instances. You must also have available
     /// firewall and routes quota.
     /// </summary>
