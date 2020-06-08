@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
@@ -401,6 +402,7 @@ namespace Google.Cloud.Spanner.V1
                 catch (RpcException e)
                 {
                     Parent._logger.Warn("Failed to refresh session. Session will be deleted.", e);
+                    Parent.MaybeRollbackTransactionFireAndForget(session.SessionName, session.TransactionId);
                     EvictSession(session);
                     return;
                 }
@@ -487,9 +489,11 @@ namespace Google.Cloud.Spanner.V1
             /// <summary>
             /// Release a session back to the pool (or refresh or evict it) and decrement the number of active sessions.
             /// </summary>
-            public override void Release(PooledSession session, bool deleteSession)
+            public override void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession)
             {
                 Interlocked.Decrement(ref _activeSessionCount);
+                Parent.MaybeRollbackTransactionFireAndForget(session.SessionName, transactionToRollback);
+
                 if (deleteSession)
                 {
                     EvictSession(session);
@@ -523,6 +527,7 @@ namespace Google.Cloud.Spanner.V1
 
                 foreach (var session in sessionsToEvict)
                 {
+                    Parent.MaybeRollbackTransactionFireAndForget(session.SessionName, session.TransactionId);
                     EvictSession(session);
                 }
                 foreach (var session in staleSessions)

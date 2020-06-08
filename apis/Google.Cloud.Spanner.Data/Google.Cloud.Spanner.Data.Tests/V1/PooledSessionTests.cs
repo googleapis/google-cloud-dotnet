@@ -356,7 +356,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 };
             }
 
-            public void Release(PooledSession session, bool deleteSession)
+            public void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession)
             {
                 ReleasedSessionDeleted = deleteSession;
             }

@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Protobuf;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -32,8 +33,9 @@ namespace Google.Cloud.Spanner.V1
             {
             }
 
-            public override void Release(PooledSession session, bool deleteSession)
+            public override void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession)
             {
+                // Note: we never roll back the transaction in a detached session.
                 if (deleteSession)
                 {
                     Parent.DeleteSessionFireAndForget(session);

@@ -82,6 +82,7 @@ namespace Google.Cloud.Spanner.V1
 
         private readonly SessionPool.ISessionPool _pool;
         private int _disposed;
+        private int _committedOrRolledBack;
 
         private PooledSession(SessionPool.ISessionPool pool, SessionName sessionName, ByteString transactionId, ModeOneofCase transactionMode, DateTime evictionTime, long refreshTicks)
         {
@@ -193,6 +194,14 @@ namespace Google.Cloud.Spanner.V1
         private bool MarkAsDisposed() => Interlocked.Exchange(ref _disposed, 1) != 1;
 
         /// <summary>
+        /// Remembers that the transaction in this session has been successfully commmitted or rolled back.
+        /// Sessions that are disposed but still have a
+        /// </summary>
+        private void MarkAsCommittedOrRolledBack() => Interlocked.Exchange(ref _committedOrRolledBack, 1);
+
+        private bool IsCommittedOrRolledBack() => Interlocked.CompareExchange(ref _committedOrRolledBack, 0, 0) == 1;
+
+        /// <summary>
         /// Returns this session to the session pool from which it was acquired, unless
         /// it has become invalid. This method should only be called once per instance; subsequent
         /// calls are ignored. No other methods can be called after this.
@@ -202,7 +211,9 @@ namespace Google.Cloud.Spanner.V1
         {
             if (MarkAsDisposed())
             {
-                _pool.Release(AfterReset(), forceDelete || ServerExpired || ShouldBeEvicted);
+                // TODO: What about Partitioned DML, which implicitly commits as it goes?
+                ByteString transactionToRollback = IsCommittedOrRolledBack() ? null : TransactionId;
+                _pool.Release(AfterReset(), transactionToRollback, forceDelete || ServerExpired || ShouldBeEvicted);
             }
             else
             {
@@ -217,7 +228,7 @@ namespace Google.Cloud.Spanner.V1
         /// from this object.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<CommitResponse> CommitAsync(CommitRequest request, CallSettings callSettings)
+        public async Task<CommitResponse> CommitAsync(CommitRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -225,7 +236,9 @@ namespace Google.Cloud.Spanner.V1
             request.SessionAsSessionName = SessionName;
             request.TransactionId = TransactionId;
 
-            return RecordSuccessAndExpiredSessions(Client.CommitAsync(request, callSettings));
+            var response = await RecordSuccessAndExpiredSessions(Client.CommitAsync(request, callSettings)).ConfigureAwait(false);
+            MarkAsCommittedOrRolledBack();
+            return response;
         }
 
         /// <summary>
@@ -235,7 +248,7 @@ namespace Google.Cloud.Spanner.V1
         /// from this object.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public Task RollbackAsync(RollbackRequest request, CallSettings callSettings)
+        public async Task RollbackAsync(RollbackRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -243,7 +256,8 @@ namespace Google.Cloud.Spanner.V1
             request.SessionAsSessionName = SessionName;
             request.TransactionId = TransactionId;
 
-            return RecordSuccessAndExpiredSessions(Client.RollbackAsync(request, callSettings));
+            await RecordSuccessAndExpiredSessions(Client.RollbackAsync(request, callSettings)).ConfigureAwait(false);
+            MarkAsCommittedOrRolledBack();
         }
 
         /// <summary>
@@ -342,7 +356,7 @@ namespace Google.Cloud.Spanner.V1
             return RecordSuccessAndExpiredSessions(Client.BeginTransactionAsync(request, callSettings));
         }
 
-        private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task, [CallerMemberName] string caller = null)
+        private async Task<T> RecordSuccessAndExpiredSessions<T>(Task<T> task)
         {
             var result = await task.WithSessionExpiryChecking(_session).ConfigureAwait(false);
             UpdateRefreshTime();

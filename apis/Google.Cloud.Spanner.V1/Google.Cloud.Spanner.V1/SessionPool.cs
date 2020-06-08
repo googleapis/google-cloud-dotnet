@@ -158,7 +158,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a <see cref="PooledSession"/> with a known name and transaction ID/mode, with the client associated
         /// with this pool, but is otherwise not part of this pool. This method does not query the server for the session state.
-        /// When the returned <see cref="PooledSession"/> is released, it will not become part of this pool.
+        /// When the returned <see cref="PooledSession"/> is released, it will not become part of this pool, and the transaction
+        /// will not be rolled back.
         /// </summary>
         /// <remarks>
         /// This is typically used for partitioned queries, where the same session is used across multiple machines, so should
@@ -233,6 +234,20 @@ namespace Google.Cloud.Spanner.V1
             ConsumeBackgroundTask(DeleteSessionAsync(session), "session deletion");
         }
 
+        /// <summary>
+        /// Rolls back the specified transaction, if any, in a fire-and-forget manner.
+        /// </summary>
+        /// <param name="session">The name of the session that owns the transaction.</param>
+        /// <param name="transactionID">The ID of the transaction to rollback. May be null, in which case this method is a no-op.</param>
+        private void MaybeRollbackTransactionFireAndForget(SessionName session, ByteString transactionID)
+        {
+            if (transactionID is null)
+            {
+                return;
+            }
+            ConsumeBackgroundTask(RollbackTransactionAsync(session, transactionID), "transaction rollback");
+        }
+
         private async Task DeleteSessionAsync(PooledSession session)
         {
             try
@@ -242,6 +257,19 @@ namespace Google.Cloud.Spanner.V1
             catch (RpcException e)
             {
                 _logger.Warn("Failed to delete session. Session will be abandoned to garbage collection.", e);
+            }
+        }
+
+        private async Task RollbackTransactionAsync(SessionName sessionName, ByteString transactionId)
+        {
+            try
+            {
+                var request = new RollbackRequest { SessionAsSessionName = sessionName, TransactionId = transactionId };
+                await Client.RollbackAsync(request).ConfigureAwait(false);
+            }
+            catch (RpcException e)
+            {
+                _logger.Warn("Failed to rollback transaction. Transaction will be abandoned to garbage collection.", e);
             }
         }
     }
