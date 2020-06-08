@@ -50,7 +50,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(fetched.Resource.ETag, patched.Resource.ETag);
         }
 
-        [Fact(Skip="It seems that ETag is not being used in Model to prevent concurrent modifications")]
+        [Fact]
         public void PatchModel_ConflictMatchEtag()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);

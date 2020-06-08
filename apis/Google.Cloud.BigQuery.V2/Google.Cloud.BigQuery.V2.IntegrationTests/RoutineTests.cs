@@ -196,8 +196,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal("SELECT 2;", updated.Resource.DefinitionBody);
         }
 
-        [Fact(Skip = "It seems that ETag is not being used in Routine to prevent concurrent modifications.")]
-        public void UpdateModel_ConflictMatchEtag()
+        [Fact]
+        public void UpdateRoutine_ConflictMatchEtag()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             string datasetId = _fixture.DatasetId;
