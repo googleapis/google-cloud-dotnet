@@ -202,9 +202,13 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Numeric:
                     if (value is SpannerNumeric spannerNumeric)
                     {
-                        return new Value {StringValue = value.ToString()};
+                        return Value.ForString(spannerNumeric.ToString());
                     }
-                    throw new ArgumentException("Numeric parameters must be of type SpannerNumeric");
+                    if (value is string str)
+                    {
+                        return Value.ForString(SpannerNumeric.Parse(str).ToString());
+                    }
+                    throw new ArgumentException("Numeric parameters must be of type SpannerNumeric or string");
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
