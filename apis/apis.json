@@ -749,6 +749,7 @@
         "Stackdriver"
       ],
       "dependencies": {
+        "Google.Api.CommonProtos": "2.1.0",
         "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
         "Grpc.Core": "2.27.0"
       }
