@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.Documentai.V1Beta2 {
+namespace Google.Cloud.DocumentAI.V1Beta2 {
 
   /// <summary>Holder for reflection information generated from google/cloud/documentai/v1beta2/geometry.proto</summary>
   public static partial class GeometryReflection {
@@ -31,16 +31,19 @@ namespace Google.Cloud.Documentai.V1Beta2 {
             "AiABKAIimQEKDEJvdW5kaW5nUG9seRI5Cgh2ZXJ0aWNlcxgBIAMoCzInLmdv",
             "b2dsZS5jbG91ZC5kb2N1bWVudGFpLnYxYmV0YTIuVmVydGV4Ek4KE25vcm1h",
             "bGl6ZWRfdmVydGljZXMYAiADKAsyMS5nb29nbGUuY2xvdWQuZG9jdW1lbnRh",
-            "aS52MWJldGEyLk5vcm1hbGl6ZWRWZXJ0ZXhCgQEKI2NvbS5nb29nbGUuY2xv",
+            "aS52MWJldGEyLk5vcm1hbGl6ZWRWZXJ0ZXhC6gEKI2NvbS5nb29nbGUuY2xv",
             "dWQuZG9jdW1lbnRhaS52MWJldGEyQg1HZW9tZXRyeVByb3RvUAFaSWdvb2ds",
             "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZG9jdW1l",
-            "bnRhaS92MWJldGEyO2RvY3VtZW50YWliBnByb3RvMw=="));
+            "bnRhaS92MWJldGEyO2RvY3VtZW50YWmqAh9Hb29nbGUuQ2xvdWQuRG9jdW1l",
+            "bnRBSS5WMUJldGEyygIfR29vZ2xlXENsb3VkXERvY3VtZW50QWlcVjFiZXRh",
+            "MuoCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Vertex), global::Google.Cloud.Documentai.V1Beta2.Vertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.NormalizedVertex), global::Google.Cloud.Documentai.V1Beta2.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.BoundingPoly), global::Google.Cloud.Documentai.V1Beta2.BoundingPoly.Parser, new[]{ "Vertices", "NormalizedVertices" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Vertex), global::Google.Cloud.DocumentAI.V1Beta2.Vertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.NormalizedVertex), global::Google.Cloud.DocumentAI.V1Beta2.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly), global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly.Parser, new[]{ "Vertices", "NormalizedVertices" }, null, null, null, null)
           }));
     }
     #endregion
@@ -59,7 +62,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.GeometryReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.GeometryReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -227,7 +230,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.GeometryReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.GeometryReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -393,7 +396,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.GeometryReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.GeometryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -422,27 +425,27 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "vertices" field.</summary>
     public const int VerticesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Vertex> _repeated_vertices_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Documentai.V1Beta2.Vertex.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Vertex> vertices_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Vertex>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Vertex> _repeated_vertices_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta2.Vertex.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Vertex> vertices_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Vertex>();
     /// <summary>
     /// The bounding polygon vertices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Vertex> Vertices {
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Vertex> Vertices {
       get { return vertices_; }
     }
 
     /// <summary>Field number for the "normalized_vertices" field.</summary>
     public const int NormalizedVerticesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.NormalizedVertex> _repeated_normalizedVertices_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Documentai.V1Beta2.NormalizedVertex.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.NormalizedVertex> normalizedVertices_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.NormalizedVertex>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.NormalizedVertex> _repeated_normalizedVertices_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta2.NormalizedVertex.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.NormalizedVertex> normalizedVertices_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.NormalizedVertex>();
     /// <summary>
     /// The bounding polygon normalized vertices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.NormalizedVertex> NormalizedVertices {
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.NormalizedVertex> NormalizedVertices {
       get { return normalizedVertices_; }
     }
 

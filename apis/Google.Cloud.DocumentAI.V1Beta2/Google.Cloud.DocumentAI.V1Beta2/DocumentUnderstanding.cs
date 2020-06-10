@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.Documentai.V1Beta2 {
+namespace Google.Cloud.DocumentAI.V1Beta2 {
 
   /// <summary>Holder for reflection information generated from google/cloud/documentai/v1beta2/document_understanding.proto</summary>
   public static partial class DocumentUnderstandingReflection {
@@ -98,29 +98,31 @@ namespace Google.Cloud.Documentai.V1Beta2 {
             "OgEqWjMiLi92MWJldGEyL3twYXJlbnQ9cHJvamVjdHMvKn0vZG9jdW1lbnRz",
             "OnByb2Nlc3M6ASoaUMpBHHVzLWRvY3VtZW50YWkuZ29vZ2xlYXBpcy5jb23S",
             "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtQoMBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMkIP",
+            "b3JtQuwBCiNjb20uZ29vZ2xlLmNsb3VkLmRvY3VtZW50YWkudjFiZXRhMkIP",
             "RG9jdW1lbnRBaVByb3RvUAFaSWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
             "L2dvb2dsZWFwaXMvY2xvdWQvZG9jdW1lbnRhaS92MWJldGEyO2RvY3VtZW50",
-            "YWliBnByb3RvMw=="));
+            "YWmqAh9Hb29nbGUuQ2xvdWQuRG9jdW1lbnRBSS5WMUJldGEyygIfR29vZ2xl",
+            "XENsb3VkXERvY3VtZW50QWlcVjFiZXRhMuoCIkdvb2dsZTo6Q2xvdWQ6OkRv",
+            "Y3VtZW50QUk6OlYxYmV0YTJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Documentai.V1Beta2.DocumentReflection.Descriptor, global::Google.Cloud.Documentai.V1Beta2.GeometryReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta2.DocumentReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta2.GeometryReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest), global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest), global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest.Parser, new[]{ "Parent", "InputConfig", "OutputConfig", "DocumentType", "TableExtractionParams", "FormExtractionParams", "EntityExtractionParams", "OcrParams", "AutomlParams" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsResponse), global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsResponse.Parser, new[]{ "Responses" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentResponse), global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentResponse.Parser, new[]{ "InputConfig", "OutputConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.OcrParams), global::Google.Cloud.Documentai.V1Beta2.OcrParams.Parser, new[]{ "LanguageHints" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.TableExtractionParams), global::Google.Cloud.Documentai.V1Beta2.TableExtractionParams.Parser, new[]{ "Enabled", "TableBoundHints", "HeaderHints", "ModelVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.TableBoundHint), global::Google.Cloud.Documentai.V1Beta2.TableBoundHint.Parser, new[]{ "PageNumber", "BoundingBox" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.FormExtractionParams), global::Google.Cloud.Documentai.V1Beta2.FormExtractionParams.Parser, new[]{ "Enabled", "KeyValuePairHints", "ModelVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.KeyValuePairHint), global::Google.Cloud.Documentai.V1Beta2.KeyValuePairHint.Parser, new[]{ "Key", "ValueTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.EntityExtractionParams), global::Google.Cloud.Documentai.V1Beta2.EntityExtractionParams.Parser, new[]{ "Enabled", "ModelVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.AutoMlParams), global::Google.Cloud.Documentai.V1Beta2.AutoMlParams.Parser, new[]{ "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.InputConfig), global::Google.Cloud.Documentai.V1Beta2.InputConfig.Parser, new[]{ "GcsSource", "Contents", "MimeType" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.OutputConfig), global::Google.Cloud.Documentai.V1Beta2.OutputConfig.Parser, new[]{ "GcsDestination", "PagesPerShard" }, new[]{ "Destination" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.GcsSource), global::Google.Cloud.Documentai.V1Beta2.GcsSource.Parser, new[]{ "Uri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.GcsDestination), global::Google.Cloud.Documentai.V1Beta2.GcsDestination.Parser, new[]{ "Uri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.OperationMetadata), global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Parser, new[]{ "State", "StateMessage", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest), global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest.Parser, new[]{ "Requests", "Parent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest), global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest.Parser, new[]{ "Parent", "InputConfig", "OutputConfig", "DocumentType", "TableExtractionParams", "FormExtractionParams", "EntityExtractionParams", "OcrParams", "AutomlParams" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsResponse), global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsResponse.Parser, new[]{ "Responses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentResponse), global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentResponse.Parser, new[]{ "InputConfig", "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.OcrParams), global::Google.Cloud.DocumentAI.V1Beta2.OcrParams.Parser, new[]{ "LanguageHints" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.TableExtractionParams), global::Google.Cloud.DocumentAI.V1Beta2.TableExtractionParams.Parser, new[]{ "Enabled", "TableBoundHints", "HeaderHints", "ModelVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.TableBoundHint), global::Google.Cloud.DocumentAI.V1Beta2.TableBoundHint.Parser, new[]{ "PageNumber", "BoundingBox" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.FormExtractionParams), global::Google.Cloud.DocumentAI.V1Beta2.FormExtractionParams.Parser, new[]{ "Enabled", "KeyValuePairHints", "ModelVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.KeyValuePairHint), global::Google.Cloud.DocumentAI.V1Beta2.KeyValuePairHint.Parser, new[]{ "Key", "ValueTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.EntityExtractionParams), global::Google.Cloud.DocumentAI.V1Beta2.EntityExtractionParams.Parser, new[]{ "Enabled", "ModelVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.AutoMlParams), global::Google.Cloud.DocumentAI.V1Beta2.AutoMlParams.Parser, new[]{ "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.InputConfig), global::Google.Cloud.DocumentAI.V1Beta2.InputConfig.Parser, new[]{ "GcsSource", "Contents", "MimeType" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig), global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig.Parser, new[]{ "GcsDestination", "PagesPerShard" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.GcsSource), global::Google.Cloud.DocumentAI.V1Beta2.GcsSource.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.GcsDestination), global::Google.Cloud.DocumentAI.V1Beta2.GcsDestination.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata), global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Parser, new[]{ "State", "StateMessage", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -139,7 +141,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -168,14 +170,14 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "requests" field.</summary>
     public const int RequestsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest> _repeated_requests_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest>();
     /// <summary>
     /// Required. Individual requests for each document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest> Requests {
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest> Requests {
       get { return requests_; }
     }
 
@@ -301,7 +303,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -356,12 +358,12 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "input_config" field.</summary>
     public const int InputConfigFieldNumber = 1;
-    private global::Google.Cloud.Documentai.V1Beta2.InputConfig inputConfig_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.InputConfig inputConfig_;
     /// <summary>
     /// Required. Information about the input file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.InputConfig InputConfig {
+    public global::Google.Cloud.DocumentAI.V1Beta2.InputConfig InputConfig {
       get { return inputConfig_; }
       set {
         inputConfig_ = value;
@@ -370,13 +372,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "output_config" field.</summary>
     public const int OutputConfigFieldNumber = 2;
-    private global::Google.Cloud.Documentai.V1Beta2.OutputConfig outputConfig_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig outputConfig_;
     /// <summary>
     /// Optional. The desired output location. This field is only needed in
     /// BatchProcessDocumentsRequest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.OutputConfig OutputConfig {
+    public global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig OutputConfig {
       get { return outputConfig_; }
       set {
         outputConfig_ = value;
@@ -401,13 +403,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "table_extraction_params" field.</summary>
     public const int TableExtractionParamsFieldNumber = 4;
-    private global::Google.Cloud.Documentai.V1Beta2.TableExtractionParams tableExtractionParams_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.TableExtractionParams tableExtractionParams_;
     /// <summary>
     /// Controls table extraction behavior. If not specified, the system will
     /// decide reasonable defaults.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.TableExtractionParams TableExtractionParams {
+    public global::Google.Cloud.DocumentAI.V1Beta2.TableExtractionParams TableExtractionParams {
       get { return tableExtractionParams_; }
       set {
         tableExtractionParams_ = value;
@@ -416,13 +418,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "form_extraction_params" field.</summary>
     public const int FormExtractionParamsFieldNumber = 5;
-    private global::Google.Cloud.Documentai.V1Beta2.FormExtractionParams formExtractionParams_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.FormExtractionParams formExtractionParams_;
     /// <summary>
     /// Controls form extraction behavior. If not specified, the system will
     /// decide reasonable defaults.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.FormExtractionParams FormExtractionParams {
+    public global::Google.Cloud.DocumentAI.V1Beta2.FormExtractionParams FormExtractionParams {
       get { return formExtractionParams_; }
       set {
         formExtractionParams_ = value;
@@ -431,13 +433,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "entity_extraction_params" field.</summary>
     public const int EntityExtractionParamsFieldNumber = 6;
-    private global::Google.Cloud.Documentai.V1Beta2.EntityExtractionParams entityExtractionParams_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.EntityExtractionParams entityExtractionParams_;
     /// <summary>
     /// Controls entity extraction behavior. If not specified, the system will
     /// decide reasonable defaults.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.EntityExtractionParams EntityExtractionParams {
+    public global::Google.Cloud.DocumentAI.V1Beta2.EntityExtractionParams EntityExtractionParams {
       get { return entityExtractionParams_; }
       set {
         entityExtractionParams_ = value;
@@ -446,13 +448,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "ocr_params" field.</summary>
     public const int OcrParamsFieldNumber = 7;
-    private global::Google.Cloud.Documentai.V1Beta2.OcrParams ocrParams_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.OcrParams ocrParams_;
     /// <summary>
     /// Controls OCR behavior. If not specified, the system will decide reasonable
     /// defaults.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.OcrParams OcrParams {
+    public global::Google.Cloud.DocumentAI.V1Beta2.OcrParams OcrParams {
       get { return ocrParams_; }
       set {
         ocrParams_ = value;
@@ -461,13 +463,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "automl_params" field.</summary>
     public const int AutomlParamsFieldNumber = 8;
-    private global::Google.Cloud.Documentai.V1Beta2.AutoMlParams automlParams_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.AutoMlParams automlParams_;
     /// <summary>
     /// Controls AutoML model prediction behavior. AutoMlParams cannot be used
     /// together with other Params.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.AutoMlParams AutomlParams {
+    public global::Google.Cloud.DocumentAI.V1Beta2.AutoMlParams AutomlParams {
       get { return automlParams_; }
       set {
         automlParams_ = value;
@@ -611,13 +613,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       }
       if (other.inputConfig_ != null) {
         if (inputConfig_ == null) {
-          InputConfig = new global::Google.Cloud.Documentai.V1Beta2.InputConfig();
+          InputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.InputConfig();
         }
         InputConfig.MergeFrom(other.InputConfig);
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          OutputConfig = new global::Google.Cloud.Documentai.V1Beta2.OutputConfig();
+          OutputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -626,31 +628,31 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       }
       if (other.tableExtractionParams_ != null) {
         if (tableExtractionParams_ == null) {
-          TableExtractionParams = new global::Google.Cloud.Documentai.V1Beta2.TableExtractionParams();
+          TableExtractionParams = new global::Google.Cloud.DocumentAI.V1Beta2.TableExtractionParams();
         }
         TableExtractionParams.MergeFrom(other.TableExtractionParams);
       }
       if (other.formExtractionParams_ != null) {
         if (formExtractionParams_ == null) {
-          FormExtractionParams = new global::Google.Cloud.Documentai.V1Beta2.FormExtractionParams();
+          FormExtractionParams = new global::Google.Cloud.DocumentAI.V1Beta2.FormExtractionParams();
         }
         FormExtractionParams.MergeFrom(other.FormExtractionParams);
       }
       if (other.entityExtractionParams_ != null) {
         if (entityExtractionParams_ == null) {
-          EntityExtractionParams = new global::Google.Cloud.Documentai.V1Beta2.EntityExtractionParams();
+          EntityExtractionParams = new global::Google.Cloud.DocumentAI.V1Beta2.EntityExtractionParams();
         }
         EntityExtractionParams.MergeFrom(other.EntityExtractionParams);
       }
       if (other.ocrParams_ != null) {
         if (ocrParams_ == null) {
-          OcrParams = new global::Google.Cloud.Documentai.V1Beta2.OcrParams();
+          OcrParams = new global::Google.Cloud.DocumentAI.V1Beta2.OcrParams();
         }
         OcrParams.MergeFrom(other.OcrParams);
       }
       if (other.automlParams_ != null) {
         if (automlParams_ == null) {
-          AutomlParams = new global::Google.Cloud.Documentai.V1Beta2.AutoMlParams();
+          AutomlParams = new global::Google.Cloud.DocumentAI.V1Beta2.AutoMlParams();
         }
         AutomlParams.MergeFrom(other.AutomlParams);
       }
@@ -667,14 +669,14 @@ namespace Google.Cloud.Documentai.V1Beta2 {
             break;
           case 10: {
             if (inputConfig_ == null) {
-              InputConfig = new global::Google.Cloud.Documentai.V1Beta2.InputConfig();
+              InputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.InputConfig();
             }
             input.ReadMessage(InputConfig);
             break;
           }
           case 18: {
             if (outputConfig_ == null) {
-              OutputConfig = new global::Google.Cloud.Documentai.V1Beta2.OutputConfig();
+              OutputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig();
             }
             input.ReadMessage(OutputConfig);
             break;
@@ -685,35 +687,35 @@ namespace Google.Cloud.Documentai.V1Beta2 {
           }
           case 34: {
             if (tableExtractionParams_ == null) {
-              TableExtractionParams = new global::Google.Cloud.Documentai.V1Beta2.TableExtractionParams();
+              TableExtractionParams = new global::Google.Cloud.DocumentAI.V1Beta2.TableExtractionParams();
             }
             input.ReadMessage(TableExtractionParams);
             break;
           }
           case 42: {
             if (formExtractionParams_ == null) {
-              FormExtractionParams = new global::Google.Cloud.Documentai.V1Beta2.FormExtractionParams();
+              FormExtractionParams = new global::Google.Cloud.DocumentAI.V1Beta2.FormExtractionParams();
             }
             input.ReadMessage(FormExtractionParams);
             break;
           }
           case 50: {
             if (entityExtractionParams_ == null) {
-              EntityExtractionParams = new global::Google.Cloud.Documentai.V1Beta2.EntityExtractionParams();
+              EntityExtractionParams = new global::Google.Cloud.DocumentAI.V1Beta2.EntityExtractionParams();
             }
             input.ReadMessage(EntityExtractionParams);
             break;
           }
           case 58: {
             if (ocrParams_ == null) {
-              OcrParams = new global::Google.Cloud.Documentai.V1Beta2.OcrParams();
+              OcrParams = new global::Google.Cloud.DocumentAI.V1Beta2.OcrParams();
             }
             input.ReadMessage(OcrParams);
             break;
           }
           case 66: {
             if (automlParams_ == null) {
-              AutomlParams = new global::Google.Cloud.Documentai.V1Beta2.AutoMlParams();
+              AutomlParams = new global::Google.Cloud.DocumentAI.V1Beta2.AutoMlParams();
             }
             input.ReadMessage(AutomlParams);
             break;
@@ -740,7 +742,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -768,14 +770,14 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "responses" field.</summary>
     public const int ResponsesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentResponse> _repeated_responses_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentResponse.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentResponse> responses_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentResponse>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentResponse> _repeated_responses_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentResponse.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentResponse> responses_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentResponse>();
     /// <summary>
     /// Responses for each individual document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentResponse> Responses {
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentResponse> Responses {
       get { return responses_; }
     }
 
@@ -867,7 +869,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -896,13 +898,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "input_config" field.</summary>
     public const int InputConfigFieldNumber = 1;
-    private global::Google.Cloud.Documentai.V1Beta2.InputConfig inputConfig_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.InputConfig inputConfig_;
     /// <summary>
     /// Information about the input file. This is the same as the corresponding
     /// input config in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.InputConfig InputConfig {
+    public global::Google.Cloud.DocumentAI.V1Beta2.InputConfig InputConfig {
       get { return inputConfig_; }
       set {
         inputConfig_ = value;
@@ -911,13 +913,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "output_config" field.</summary>
     public const int OutputConfigFieldNumber = 2;
-    private global::Google.Cloud.Documentai.V1Beta2.OutputConfig outputConfig_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig outputConfig_;
     /// <summary>
     /// The output location of the parsed responses. The responses are written to
     /// this location as JSON-serialized `Document` objects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.OutputConfig OutputConfig {
+    public global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig OutputConfig {
       get { return outputConfig_; }
       set {
         outputConfig_ = value;
@@ -995,13 +997,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       }
       if (other.inputConfig_ != null) {
         if (inputConfig_ == null) {
-          InputConfig = new global::Google.Cloud.Documentai.V1Beta2.InputConfig();
+          InputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.InputConfig();
         }
         InputConfig.MergeFrom(other.InputConfig);
       }
       if (other.outputConfig_ != null) {
         if (outputConfig_ == null) {
-          OutputConfig = new global::Google.Cloud.Documentai.V1Beta2.OutputConfig();
+          OutputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig();
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
@@ -1018,14 +1020,14 @@ namespace Google.Cloud.Documentai.V1Beta2 {
             break;
           case 10: {
             if (inputConfig_ == null) {
-              InputConfig = new global::Google.Cloud.Documentai.V1Beta2.InputConfig();
+              InputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.InputConfig();
             }
             input.ReadMessage(InputConfig);
             break;
           }
           case 18: {
             if (outputConfig_ == null) {
-              OutputConfig = new global::Google.Cloud.Documentai.V1Beta2.OutputConfig();
+              OutputConfig = new global::Google.Cloud.DocumentAI.V1Beta2.OutputConfig();
             }
             input.ReadMessage(OutputConfig);
             break;
@@ -1047,7 +1049,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1181,7 +1183,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1226,15 +1228,15 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "table_bound_hints" field.</summary>
     public const int TableBoundHintsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.TableBoundHint> _repeated_tableBoundHints_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Documentai.V1Beta2.TableBoundHint.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.TableBoundHint> tableBoundHints_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.TableBoundHint>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.TableBoundHint> _repeated_tableBoundHints_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta2.TableBoundHint.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.TableBoundHint> tableBoundHints_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.TableBoundHint>();
     /// <summary>
     /// Optional. Table bounding box hints that can be provided to complex cases
     /// which our algorithm cannot locate the table(s) in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.TableBoundHint> TableBoundHints {
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.TableBoundHint> TableBoundHints {
       get { return tableBoundHints_; }
     }
 
@@ -1396,7 +1398,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1441,13 +1443,13 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "bounding_box" field.</summary>
     public const int BoundingBoxFieldNumber = 2;
-    private global::Google.Cloud.Documentai.V1Beta2.BoundingPoly boundingBox_;
+    private global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly boundingBox_;
     /// <summary>
     /// Bounding box hint for a table on this page. The coordinates must be
     /// normalized to [0,1] and the bounding box must be an axis-aligned rectangle.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.BoundingPoly BoundingBox {
+    public global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly BoundingBox {
       get { return boundingBox_; }
       set {
         boundingBox_ = value;
@@ -1528,7 +1530,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       }
       if (other.boundingBox_ != null) {
         if (boundingBox_ == null) {
-          BoundingBox = new global::Google.Cloud.Documentai.V1Beta2.BoundingPoly();
+          BoundingBox = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
         }
         BoundingBox.MergeFrom(other.BoundingBox);
       }
@@ -1549,7 +1551,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
           }
           case 18: {
             if (boundingBox_ == null) {
-              BoundingBox = new global::Google.Cloud.Documentai.V1Beta2.BoundingPoly();
+              BoundingBox = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
             }
             input.ReadMessage(BoundingBox);
             break;
@@ -1571,7 +1573,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1615,9 +1617,9 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "key_value_pair_hints" field.</summary>
     public const int KeyValuePairHintsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.KeyValuePairHint> _repeated_keyValuePairHints_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Documentai.V1Beta2.KeyValuePairHint.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.KeyValuePairHint> keyValuePairHints_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.KeyValuePairHint>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.KeyValuePairHint> _repeated_keyValuePairHints_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta2.KeyValuePairHint.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.KeyValuePairHint> keyValuePairHints_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.KeyValuePairHint>();
     /// <summary>
     /// User can provide pairs of (key text, value type) to improve the parsing
     /// result.
@@ -1633,7 +1635,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
     /// "value_types": []}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.KeyValuePairHint> KeyValuePairHints {
+    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.KeyValuePairHint> KeyValuePairHints {
       get { return keyValuePairHints_; }
     }
 
@@ -1775,7 +1777,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1936,7 +1938,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2103,7 +2105,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2240,7 +2242,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2282,8 +2284,8 @@ namespace Google.Cloud.Documentai.V1Beta2 {
     /// single file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.GcsSource GcsSource {
-      get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.Documentai.V1Beta2.GcsSource) source_ : null; }
+    public global::Google.Cloud.DocumentAI.V1Beta2.GcsSource GcsSource {
+      get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.DocumentAI.V1Beta2.GcsSource) source_ : null; }
       set {
         source_ = value;
         sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.GcsSource;
@@ -2431,7 +2433,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       switch (other.SourceCase) {
         case SourceOneofCase.GcsSource:
           if (GcsSource == null) {
-            GcsSource = new global::Google.Cloud.Documentai.V1Beta2.GcsSource();
+            GcsSource = new global::Google.Cloud.DocumentAI.V1Beta2.GcsSource();
           }
           GcsSource.MergeFrom(other.GcsSource);
           break;
@@ -2452,7 +2454,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::Google.Cloud.Documentai.V1Beta2.GcsSource subBuilder = new global::Google.Cloud.Documentai.V1Beta2.GcsSource();
+            global::Google.Cloud.DocumentAI.V1Beta2.GcsSource subBuilder = new global::Google.Cloud.DocumentAI.V1Beta2.GcsSource();
             if (sourceCase_ == SourceOneofCase.GcsSource) {
               subBuilder.MergeFrom(GcsSource);
             }
@@ -2485,7 +2487,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2523,8 +2525,8 @@ namespace Google.Cloud.Documentai.V1Beta2 {
     /// The Google Cloud Storage location to write the output to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.GcsDestination GcsDestination {
-      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.Documentai.V1Beta2.GcsDestination) destination_ : null; }
+    public global::Google.Cloud.DocumentAI.V1Beta2.GcsDestination GcsDestination {
+      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.DocumentAI.V1Beta2.GcsDestination) destination_ : null; }
       set {
         destination_ = value;
         destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.GcsDestination;
@@ -2656,7 +2658,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       switch (other.DestinationCase) {
         case DestinationOneofCase.GcsDestination:
           if (GcsDestination == null) {
-            GcsDestination = new global::Google.Cloud.Documentai.V1Beta2.GcsDestination();
+            GcsDestination = new global::Google.Cloud.DocumentAI.V1Beta2.GcsDestination();
           }
           GcsDestination.MergeFrom(other.GcsDestination);
           break;
@@ -2674,7 +2676,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            global::Google.Cloud.Documentai.V1Beta2.GcsDestination subBuilder = new global::Google.Cloud.Documentai.V1Beta2.GcsDestination();
+            global::Google.Cloud.DocumentAI.V1Beta2.GcsDestination subBuilder = new global::Google.Cloud.DocumentAI.V1Beta2.GcsDestination();
             if (destinationCase_ == DestinationOneofCase.GcsDestination) {
               subBuilder.MergeFrom(GcsDestination);
             }
@@ -2703,7 +2705,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2835,7 +2837,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2967,7 +2969,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2998,12 +3000,12 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     /// <summary>Field number for the "state" field.</summary>
     public const int StateFieldNumber = 1;
-    private global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State state_ = global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State.Unspecified;
+    private global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State state_ = global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State.Unspecified;
     /// <summary>
     /// The state of the current batch processing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State State {
+    public global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State State {
       get { return state_; }
       set {
         state_ = value;
@@ -3075,7 +3077,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (State != global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StateMessage.Length != 0) hash ^= StateMessage.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -3092,7 +3094,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State != global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State.Unspecified) {
+      if (State != global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
       }
@@ -3116,7 +3118,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State != global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State.Unspecified) {
+      if (State != global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (StateMessage.Length != 0) {
@@ -3139,7 +3141,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       if (other == null) {
         return;
       }
-      if (other.State != global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State.Unspecified) {
+      if (other.State != global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State.Unspecified) {
         State = other.State;
       }
       if (other.StateMessage.Length != 0) {
@@ -3169,7 +3171,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            State = (global::Google.Cloud.Documentai.V1Beta2.OperationMetadata.Types.State) input.ReadEnum();
+            State = (global::Google.Cloud.DocumentAI.V1Beta2.OperationMetadata.Types.State) input.ReadEnum();
             break;
           }
           case 18: {
