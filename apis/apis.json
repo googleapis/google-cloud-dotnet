@@ -1544,11 +1544,11 @@
       }
     }
   ],
-  "ignoredPaths": [
-    "google/ads/googleads/v1",
-    "google/ads/googleads/v2",
-    "google/ads/googleads/v3",
-    "google/cloud/bigquery/v2",
-    "google/storage/v1"
-  ]
+  "ignoredPaths": {
+    "google/ads/googleads/v1": "Ads maintains its own libraries",
+    "google/ads/googleads/v2": "Ads maintains its own libraries",
+    "google/ads/googleads/v3": "Ads maintains its own libraries",
+    "google/cloud/bigquery/v2": "Relying on REST API for now",
+    "google/storage/v1": "Relying on REST API for now"
+  }
 }

@@ -31,9 +31,9 @@ namespace Google.Cloud.Tools.Common
         public List<ApiMetadata> Apis { get; set; }
 
         /// <summary>
-        /// Proto paths for APIs we knowingly don't generate.
+        /// Proto paths for APIs we knowingly don't generate. The values are the reasons for not generating.
         /// </summary>
-        public List<string> IgnoredPaths { get; set; }
+        public Dictionary<string, string> IgnoredPaths { get; set; }
 
         /// <summary>
         /// The JSON representation of the catalog. This is populated by <see cref="Load"/> and
