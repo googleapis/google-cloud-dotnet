@@ -396,7 +396,7 @@
         "google/type"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Documentai.V1Beta2"
+      "CSharpNamespaceFromProtos": "Google.Cloud.DocumentAI.V1Beta2"
     },
     {
       "ServiceDirectory": "google/cloud/recommender/logging/v1beta1",
