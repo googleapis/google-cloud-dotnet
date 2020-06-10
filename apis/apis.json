@@ -773,7 +773,7 @@
       "protoPath": "google/cloud/osconfig/v1",
       "productName": "Google Cloud OS Config API",
       "productUrl": "https://cloud.google.com/compute/docs/osconfig/rest",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "description": "Recommended Google client library for the Cloud OS Config API. These are OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.",
       "tags": [
@@ -785,7 +785,8 @@
       ],
       "dependencies": {
         "Google.Api.CommonProtos": "2.0.0",
-        "Google.Api.Gax": "3.0.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
+        "Grpc.Core": "2.27.0"
       }
     },
     {
