@@ -22,7 +22,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Google.Cloud.Documentai.V1Beta2 {
+namespace Google.Cloud.DocumentAI.V1Beta2 {
   /// <summary>
   /// Service to parse structured information from unstructured or semi-structured
   /// documents using state-of-the-art Google AI such as natural language,
@@ -32,19 +32,19 @@ namespace Google.Cloud.Documentai.V1Beta2 {
   {
     static readonly string __ServiceName = "google.cloud.documentai.v1beta2.DocumentUnderstandingService";
 
-    static readonly grpc::Marshaller<global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest> __Marshaller_google_cloud_documentai_v1beta2_BatchProcessDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest> __Marshaller_google_cloud_documentai_v1beta2_BatchProcessDocumentsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest> __Marshaller_google_cloud_documentai_v1beta2_ProcessDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Documentai.V1Beta2.Document> __Marshaller_google_cloud_documentai_v1beta2_Document = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Documentai.V1Beta2.Document.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest> __Marshaller_google_cloud_documentai_v1beta2_ProcessDocumentRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1Beta2.Document> __Marshaller_google_cloud_documentai_v1beta2_Document = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.DocumentAI.V1Beta2.Document.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation> __Method_BatchProcessDocuments = new grpc::Method<global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation>(
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation> __Method_BatchProcessDocuments = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchProcessDocuments",
         __Marshaller_google_cloud_documentai_v1beta2_BatchProcessDocumentsRequest,
         __Marshaller_google_longrunning_Operation);
 
-    static readonly grpc::Method<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest, global::Google.Cloud.Documentai.V1Beta2.Document> __Method_ProcessDocument = new grpc::Method<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest, global::Google.Cloud.Documentai.V1Beta2.Document>(
+    static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest, global::Google.Cloud.DocumentAI.V1Beta2.Document> __Method_ProcessDocument = new grpc::Method<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest, global::Google.Cloud.DocumentAI.V1Beta2.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ProcessDocument",
@@ -54,7 +54,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentUnderstandingReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentUnderstandingReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of DocumentUnderstandingService</summary>
@@ -68,7 +68,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchProcessDocuments(global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchProcessDocuments(global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -79,7 +79,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Documentai.V1Beta2.Document> ProcessDocument(global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1Beta2.Document> ProcessDocument(global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -118,7 +118,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation BatchProcessDocuments(global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.LongRunning.Operation BatchProcessDocuments(global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchProcessDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -129,7 +129,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation BatchProcessDocuments(global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest request, grpc::CallOptions options)
+      public virtual global::Google.LongRunning.Operation BatchProcessDocuments(global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchProcessDocuments, null, options, request);
       }
@@ -142,7 +142,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchProcessDocumentsAsync(global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchProcessDocumentsAsync(global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchProcessDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -153,7 +153,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchProcessDocumentsAsync(global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchProcessDocumentsAsync(global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchProcessDocuments, null, options, request);
       }
@@ -165,7 +165,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Documentai.V1Beta2.Document ProcessDocument(global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.DocumentAI.V1Beta2.Document ProcessDocument(global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ProcessDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -175,7 +175,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Documentai.V1Beta2.Document ProcessDocument(global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.DocumentAI.V1Beta2.Document ProcessDocument(global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ProcessDocument, null, options, request);
       }
@@ -187,7 +187,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Documentai.V1Beta2.Document> ProcessDocumentAsync(global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1Beta2.Document> ProcessDocumentAsync(global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ProcessDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -197,7 +197,7 @@ namespace Google.Cloud.Documentai.V1Beta2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Documentai.V1Beta2.Document> ProcessDocumentAsync(global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1Beta2.Document> ProcessDocumentAsync(global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ProcessDocument, null, options, request);
       }
@@ -223,8 +223,8 @@ namespace Google.Cloud.Documentai.V1Beta2 {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DocumentUnderstandingServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_BatchProcessDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Documentai.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchProcessDocuments));
-      serviceBinder.AddMethod(__Method_ProcessDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Documentai.V1Beta2.ProcessDocumentRequest, global::Google.Cloud.Documentai.V1Beta2.Document>(serviceImpl.ProcessDocument));
+      serviceBinder.AddMethod(__Method_BatchProcessDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta2.BatchProcessDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchProcessDocuments));
+      serviceBinder.AddMethod(__Method_ProcessDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1Beta2.ProcessDocumentRequest, global::Google.Cloud.DocumentAI.V1Beta2.Document>(serviceImpl.ProcessDocument));
     }
 
   }
