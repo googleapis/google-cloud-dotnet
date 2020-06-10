@@ -276,6 +276,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -307,6 +311,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -340,6 +348,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -371,6 +383,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -404,6 +420,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -435,6 +455,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -468,6 +492,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -499,6 +527,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.GetMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -533,6 +565,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -565,6 +601,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -599,6 +639,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -631,6 +675,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -665,6 +713,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -697,6 +749,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -731,6 +787,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -763,6 +823,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -797,6 +861,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -829,6 +897,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -863,6 +935,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptor(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
@@ -895,6 +971,10 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Type = "typee2cc9d59",
                 Metadata = new ga::MetricDescriptor.Types.MetricDescriptorMetadata(),
                 LaunchStage = ga::LaunchStage.Unspecified,
+                MonitoredResourceTypes =
+                {
+                    "monitored_resource_typesc49bdc0a",
+                },
             };
             mockGrpcClient.Setup(x => x.CreateMetricDescriptorAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ga::MetricDescriptor>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
