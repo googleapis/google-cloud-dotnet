@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.DocumentAI.V1Beta2 {
+namespace Google.Cloud.Documentai.V1Beta2 {
 
   /// <summary>Holder for reflection information generated from google/cloud/documentai/v1beta2/document.proto</summary>
   public static partial class DocumentReflection {
@@ -153,32 +153,31 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
             "CgpMYXlvdXRUeXBlEhsKF0xBWU9VVF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoF",
             "QkxPQ0sQARINCglQQVJBR1JBUEgQAhIICgRMSU5FEAMSCQoFVE9LRU4QBBIS",
             "Cg5WSVNVQUxfRUxFTUVOVBAFEgkKBVRBQkxFEAYSDgoKRk9STV9GSUVMRBAH",
-            "QggKBnNvdXJjZUKjAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
+            "QggKBnNvdXJjZUKBAQojY29tLmdvb2dsZS5jbG91ZC5kb2N1bWVudGFpLnYx",
             "YmV0YTJCDURvY3VtZW50UHJvdG9QAVpJZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
             "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTI7ZG9j",
-            "dW1lbnRhaaoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTJiBnBy",
-            "b3RvMw=="));
+            "dW1lbnRhaWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta2.GeometryReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Documentai.V1Beta2.GeometryReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document), global::Google.Cloud.DocumentAI.V1Beta2.Document.Parser, new[]{ "Uri", "Content", "MimeType", "Text", "TextStyles", "Pages", "Entities", "EntityRelations", "ShardInfo", "Labels", "Error" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.ShardInfo), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.ShardInfo.Parser, new[]{ "ShardIndex", "ShardCount", "TextOffset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Label), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Label.Parser, new[]{ "AutomlModel", "Name", "Confidence" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Parser, new[]{ "TextAnchor", "Color", "BackgroundColor", "FontWeight", "TextStyle", "TextDecoration", "FontSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Types.FontSize), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Types.FontSize.Parser, new[]{ "Size", "Unit" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Parser, new[]{ "PageNumber", "Dimension", "Layout", "DetectedLanguages", "Blocks", "Paragraphs", "Lines", "Tokens", "VisualElements", "Tables", "FormFields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Dimension), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Dimension.Parser, new[]{ "Width", "Height", "Unit" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Parser, new[]{ "TextAnchor", "Confidence", "BoundingPoly", "Orientation", "Id" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Block), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Block.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Paragraph), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Paragraph.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Line), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Line.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Parser, new[]{ "Layout", "DetectedBreak", "DetectedLanguages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.VisualElement), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.VisualElement.Parser, new[]{ "Layout", "Type", "DetectedLanguages" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Parser, new[]{ "Layout", "HeaderRows", "BodyRows", "DetectedLanguages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow.Parser, new[]{ "Cells" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell.Parser, new[]{ "Layout", "RowSpan", "ColSpan", "DetectedLanguages" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.FormField), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.FormField.Parser, new[]{ "FieldName", "FieldValue", "NameDetectedLanguages", "ValueDetectedLanguages", "ValueType", "CorrectedKeyText", "CorrectedValueText" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Entity), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Entity.Parser, new[]{ "TextAnchor", "Type", "MentionText", "MentionId", "Confidence", "PageAnchor", "Id", "BoundingPolyForDemoFrontend" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.EntityRelation), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.EntityRelation.Parser, new[]{ "SubjectId", "ObjectId", "Relation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Parser, new[]{ "TextSegments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Types.TextSegment), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Types.TextSegment.Parser, new[]{ "StartIndex", "EndIndex" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Parser, new[]{ "PageRefs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef), global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Parser, new[]{ "Page", "LayoutType", "LayoutId" }, null, new[]{ typeof(global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) }, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document), global::Google.Cloud.Documentai.V1Beta2.Document.Parser, new[]{ "Uri", "Content", "MimeType", "Text", "TextStyles", "Pages", "Entities", "EntityRelations", "ShardInfo", "Labels", "Error" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.ShardInfo), global::Google.Cloud.Documentai.V1Beta2.Document.Types.ShardInfo.Parser, new[]{ "ShardIndex", "ShardCount", "TextOffset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Label), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Label.Parser, new[]{ "AutomlModel", "Name", "Confidence" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Parser, new[]{ "TextAnchor", "Color", "BackgroundColor", "FontWeight", "TextStyle", "TextDecoration", "FontSize" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Types.FontSize), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Types.FontSize.Parser, new[]{ "Size", "Unit" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Parser, new[]{ "PageNumber", "Dimension", "Layout", "DetectedLanguages", "Blocks", "Paragraphs", "Lines", "Tokens", "VisualElements", "Tables", "FormFields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Dimension), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Dimension.Parser, new[]{ "Width", "Height", "Unit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Parser, new[]{ "TextAnchor", "Confidence", "BoundingPoly", "Orientation", "Id" }, null, new[]{ typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Block), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Block.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Paragraph), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Paragraph.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Line), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Line.Parser, new[]{ "Layout", "DetectedLanguages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Parser, new[]{ "Layout", "DetectedBreak", "DetectedLanguages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.VisualElement), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.VisualElement.Parser, new[]{ "Layout", "Type", "DetectedLanguages" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Parser, new[]{ "Layout", "HeaderRows", "BodyRows", "DetectedLanguages" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow.Parser, new[]{ "Cells" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell.Parser, new[]{ "Layout", "RowSpan", "ColSpan", "DetectedLanguages" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.FormField), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.FormField.Parser, new[]{ "FieldName", "FieldValue", "NameDetectedLanguages", "ValueDetectedLanguages", "ValueType", "CorrectedKeyText", "CorrectedValueText" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser, new[]{ "LanguageCode", "Confidence" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.Entity), global::Google.Cloud.Documentai.V1Beta2.Document.Types.Entity.Parser, new[]{ "TextAnchor", "Type", "MentionText", "MentionId", "Confidence", "PageAnchor", "Id", "BoundingPolyForDemoFrontend" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.EntityRelation), global::Google.Cloud.Documentai.V1Beta2.Document.Types.EntityRelation.Parser, new[]{ "SubjectId", "ObjectId", "Relation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor), global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Parser, new[]{ "TextSegments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Types.TextSegment), global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Types.TextSegment.Parser, new[]{ "StartIndex", "EndIndex" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor), global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Parser, new[]{ "PageRefs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef), global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Parser, new[]{ "Page", "LayoutType", "LayoutId" }, null, new[]{ typeof(global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) }, null, null)})})
           }));
     }
     #endregion
@@ -200,7 +199,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DocumentAI.V1Beta2.DocumentReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Documentai.V1Beta2.DocumentReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -309,66 +308,66 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
     /// <summary>Field number for the "text_styles" field.</summary>
     public const int TextStylesFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style> _repeated_textStyles_codec
-        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style> textStyles_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style> _repeated_textStyles_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style> textStyles_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style>();
     /// <summary>
     /// Styles for the [Document.text][google.cloud.documentai.v1beta2.Document.text].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style> TextStyles {
+    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style> TextStyles {
       get { return textStyles_; }
     }
 
     /// <summary>Field number for the "pages" field.</summary>
     public const int PagesFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page> _repeated_pages_codec
-        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page> pages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page> _repeated_pages_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page> pages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page>();
     /// <summary>
     /// Visual page layout for the [Document][google.cloud.documentai.v1beta2.Document].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page> Pages {
+    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page> Pages {
       get { return pages_; }
     }
 
     /// <summary>Field number for the "entities" field.</summary>
     public const int EntitiesFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Entity> _repeated_entities_codec
-        = pb::FieldCodec.ForMessage(58, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Entity.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Entity>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Entity> _repeated_entities_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Entity.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Entity>();
     /// <summary>
     /// A list of entities detected on [Document.text][google.cloud.documentai.v1beta2.Document.text]. For document shards,
     /// entities in this list may cross shard boundaries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Entity> Entities {
+    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Entity> Entities {
       get { return entities_; }
     }
 
     /// <summary>Field number for the "entity_relations" field.</summary>
     public const int EntityRelationsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.EntityRelation> _repeated_entityRelations_codec
-        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.EntityRelation.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.EntityRelation> entityRelations_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.EntityRelation>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.EntityRelation> _repeated_entityRelations_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Documentai.V1Beta2.Document.Types.EntityRelation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.EntityRelation> entityRelations_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.EntityRelation>();
     /// <summary>
     /// Relationship among [Document.entities][google.cloud.documentai.v1beta2.Document.entities].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.EntityRelation> EntityRelations {
+    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.EntityRelation> EntityRelations {
       get { return entityRelations_; }
     }
 
     /// <summary>Field number for the "shard_info" field.</summary>
     public const int ShardInfoFieldNumber = 9;
-    private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.ShardInfo shardInfo_;
+    private global::Google.Cloud.Documentai.V1Beta2.Document.Types.ShardInfo shardInfo_;
     /// <summary>
     /// Information about the sharding if this document is sharded part of a larger
     /// document. If the document is not sharded, this message is not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.ShardInfo ShardInfo {
+    public global::Google.Cloud.Documentai.V1Beta2.Document.Types.ShardInfo ShardInfo {
       get { return shardInfo_; }
       set {
         shardInfo_ = value;
@@ -377,14 +376,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Label> _repeated_labels_codec
-        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Label.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Label> labels_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Label>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Label> _repeated_labels_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Label.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Label> labels_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Label>();
     /// <summary>
     /// [Label][google.cloud.documentai.v1beta2.Document.Label]s for this document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Label> Labels {
+    public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Label> Labels {
       get { return labels_; }
     }
 
@@ -560,7 +559,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       entityRelations_.Add(other.entityRelations_);
       if (other.shardInfo_ != null) {
         if (shardInfo_ == null) {
-          ShardInfo = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.ShardInfo();
+          ShardInfo = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.ShardInfo();
         }
         ShardInfo.MergeFrom(other.ShardInfo);
       }
@@ -625,7 +624,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
           case 74: {
             if (shardInfo_ == null) {
-              ShardInfo = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.ShardInfo();
+              ShardInfo = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.ShardInfo();
             }
             input.ReadMessage(ShardInfo);
             break;
@@ -662,7 +661,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -863,7 +862,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1096,7 +1095,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1130,12 +1129,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "text_anchor" field.</summary>
         public const int TextAnchorFieldNumber = 1;
-        private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor textAnchor_;
+        private global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor textAnchor_;
         /// <summary>
         /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1beta2.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor TextAnchor {
+        public global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor TextAnchor {
           get { return textAnchor_; }
           set {
             textAnchor_ = value;
@@ -1218,12 +1217,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "font_size" field.</summary>
         public const int FontSizeFieldNumber = 7;
-        private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Types.FontSize fontSize_;
+        private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Types.FontSize fontSize_;
         /// <summary>
         /// Font size.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Types.FontSize FontSize {
+        public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Types.FontSize FontSize {
           get { return fontSize_; }
           set {
             fontSize_ = value;
@@ -1346,7 +1345,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
           if (other.textAnchor_ != null) {
             if (textAnchor_ == null) {
-              TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+              TextAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor();
             }
             TextAnchor.MergeFrom(other.TextAnchor);
           }
@@ -1373,7 +1372,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
           if (other.fontSize_ != null) {
             if (fontSize_ == null) {
-              FontSize = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Types.FontSize();
+              FontSize = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Types.FontSize();
             }
             FontSize.MergeFrom(other.FontSize);
           }
@@ -1390,7 +1389,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                 break;
               case 10: {
                 if (textAnchor_ == null) {
-                  TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+                  TextAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor();
                 }
                 input.ReadMessage(TextAnchor);
                 break;
@@ -1423,7 +1422,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               case 58: {
                 if (fontSize_ == null) {
-                  FontSize = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Types.FontSize();
+                  FontSize = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Types.FontSize();
                 }
                 input.ReadMessage(FontSize);
                 break;
@@ -1447,7 +1446,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Descriptor.NestedTypes[0]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Style.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1618,7 +1617,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1672,12 +1671,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "dimension" field.</summary>
         public const int DimensionFieldNumber = 2;
-        private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Dimension dimension_;
+        private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Dimension dimension_;
         /// <summary>
         /// Physical dimension of the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Dimension Dimension {
+        public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Dimension Dimension {
           get { return dimension_; }
           set {
             dimension_ = value;
@@ -1686,12 +1685,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "layout" field.</summary>
         public const int LayoutFieldNumber = 3;
-        private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+        private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
         /// <summary>
         /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+        public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
           get { return layout_; }
           set {
             layout_ = value;
@@ -1700,110 +1699,110 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "detected_languages" field.</summary>
         public const int DetectedLanguagesFieldNumber = 4;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+            = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
         /// <summary>
         /// A list of detected languages together with confidence.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
           get { return detectedLanguages_; }
         }
 
         /// <summary>Field number for the "blocks" field.</summary>
         public const int BlocksFieldNumber = 5;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Block> _repeated_blocks_codec
-            = pb::FieldCodec.ForMessage(42, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Block.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Block> blocks_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Block>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Block> _repeated_blocks_codec
+            = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Block.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Block> blocks_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Block>();
         /// <summary>
         /// A list of visually detected text blocks on the page.
         /// A block has a set of lines (collected into paragraphs) that have a common
         /// line-spacing and orientation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Block> Blocks {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Block> Blocks {
           get { return blocks_; }
         }
 
         /// <summary>Field number for the "paragraphs" field.</summary>
         public const int ParagraphsFieldNumber = 6;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Paragraph> _repeated_paragraphs_codec
-            = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Paragraph.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Paragraph> paragraphs_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Paragraph>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Paragraph> _repeated_paragraphs_codec
+            = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Paragraph.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Paragraph> paragraphs_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Paragraph>();
         /// <summary>
         /// A list of visually detected text paragraphs on the page.
         /// A collection of lines that a human would perceive as a paragraph.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Paragraph> Paragraphs {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Paragraph> Paragraphs {
           get { return paragraphs_; }
         }
 
         /// <summary>Field number for the "lines" field.</summary>
         public const int LinesFieldNumber = 7;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Line> _repeated_lines_codec
-            = pb::FieldCodec.ForMessage(58, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Line.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Line> lines_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Line>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Line> _repeated_lines_codec
+            = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Line.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Line> lines_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Line>();
         /// <summary>
         /// A list of visually detected text lines on the page.
         /// A collection of tokens that a human would perceive as a line.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Line> Lines {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Line> Lines {
           get { return lines_; }
         }
 
         /// <summary>Field number for the "tokens" field.</summary>
         public const int TokensFieldNumber = 8;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token> _repeated_tokens_codec
-            = pb::FieldCodec.ForMessage(66, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token> tokens_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token> _repeated_tokens_codec
+            = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token> tokens_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token>();
         /// <summary>
         /// A list of visually detected tokens on the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token> Tokens {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token> Tokens {
           get { return tokens_; }
         }
 
         /// <summary>Field number for the "visual_elements" field.</summary>
         public const int VisualElementsFieldNumber = 9;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.VisualElement> _repeated_visualElements_codec
-            = pb::FieldCodec.ForMessage(74, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.VisualElement.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.VisualElement> visualElements_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.VisualElement>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.VisualElement> _repeated_visualElements_codec
+            = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.VisualElement.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.VisualElement> visualElements_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.VisualElement>();
         /// <summary>
         /// A list of detected non-text visual elements e.g. checkbox,
         /// signature etc. on the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.VisualElement> VisualElements {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.VisualElement> VisualElements {
           get { return visualElements_; }
         }
 
         /// <summary>Field number for the "tables" field.</summary>
         public const int TablesFieldNumber = 10;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table> _repeated_tables_codec
-            = pb::FieldCodec.ForMessage(82, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table> tables_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table> _repeated_tables_codec
+            = pb::FieldCodec.ForMessage(82, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table> tables_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table>();
         /// <summary>
         /// A list of visually detected tables on the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table> Tables {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table> Tables {
           get { return tables_; }
         }
 
         /// <summary>Field number for the "form_fields" field.</summary>
         public const int FormFieldsFieldNumber = 11;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.FormField> _repeated_formFields_codec
-            = pb::FieldCodec.ForMessage(90, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.FormField.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.FormField> formFields_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.FormField>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.FormField> _repeated_formFields_codec
+            = pb::FieldCodec.ForMessage(90, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.FormField.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.FormField> formFields_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.FormField>();
         /// <summary>
         /// A list of visually detected form fields on the page.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.FormField> FormFields {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.FormField> FormFields {
           get { return formFields_; }
         }
 
@@ -1922,13 +1921,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
           if (other.dimension_ != null) {
             if (dimension_ == null) {
-              Dimension = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Dimension();
+              Dimension = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Dimension();
             }
             Dimension.MergeFrom(other.Dimension);
           }
           if (other.layout_ != null) {
             if (layout_ == null) {
-              Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+              Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
             }
             Layout.MergeFrom(other.Layout);
           }
@@ -1957,14 +1956,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               case 18: {
                 if (dimension_ == null) {
-                  Dimension = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Dimension();
+                  Dimension = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Dimension();
                 }
                 input.ReadMessage(Dimension);
                 break;
               }
               case 26: {
                 if (layout_ == null) {
-                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 input.ReadMessage(Layout);
                 break;
@@ -2020,7 +2019,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[0]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2217,7 +2216,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[1]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[1]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2249,12 +2248,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "text_anchor" field.</summary>
             public const int TextAnchorFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor textAnchor_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor textAnchor_;
             /// <summary>
             /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1beta2.Document.text].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor TextAnchor {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor TextAnchor {
               get { return textAnchor_; }
               set {
                 textAnchor_ = value;
@@ -2279,12 +2278,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "bounding_poly" field.</summary>
             public const int BoundingPolyFieldNumber = 3;
-            private global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly boundingPoly_;
+            private global::Google.Cloud.Documentai.V1Beta2.BoundingPoly boundingPoly_;
             /// <summary>
             /// The bounding polygon for the [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly BoundingPoly {
+            public global::Google.Cloud.Documentai.V1Beta2.BoundingPoly BoundingPoly {
               get { return boundingPoly_; }
               set {
                 boundingPoly_ = value;
@@ -2293,12 +2292,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "orientation" field.</summary>
             public const int OrientationFieldNumber = 4;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation orientation_ = global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation orientation_ = global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified;
             /// <summary>
             /// Detected orientation for the [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation Orientation {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation Orientation {
               get { return orientation_; }
               set {
                 orientation_ = value;
@@ -2346,7 +2345,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (textAnchor_ != null) hash ^= TextAnchor.GetHashCode();
               if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
               if (boundingPoly_ != null) hash ^= BoundingPoly.GetHashCode();
-              if (Orientation != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) hash ^= Orientation.GetHashCode();
+              if (Orientation != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) hash ^= Orientation.GetHashCode();
               if (Id.Length != 0) hash ^= Id.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -2373,7 +2372,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                 output.WriteRawTag(26);
                 output.WriteMessage(BoundingPoly);
               }
-              if (Orientation != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) {
+              if (Orientation != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) {
                 output.WriteRawTag(32);
                 output.WriteEnum((int) Orientation);
               }
@@ -2398,7 +2397,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (boundingPoly_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingPoly);
               }
-              if (Orientation != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) {
+              if (Orientation != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Orientation);
               }
               if (Id.Length != 0) {
@@ -2417,7 +2416,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.textAnchor_ != null) {
                 if (textAnchor_ == null) {
-                  TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+                  TextAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor();
                 }
                 TextAnchor.MergeFrom(other.TextAnchor);
               }
@@ -2426,11 +2425,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.boundingPoly_ != null) {
                 if (boundingPoly_ == null) {
-                  BoundingPoly = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
+                  BoundingPoly = new global::Google.Cloud.Documentai.V1Beta2.BoundingPoly();
                 }
                 BoundingPoly.MergeFrom(other.BoundingPoly);
               }
-              if (other.Orientation != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) {
+              if (other.Orientation != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) {
                 Orientation = other.Orientation;
               }
               if (other.Id.Length != 0) {
@@ -2449,7 +2448,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (textAnchor_ == null) {
-                      TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+                      TextAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor();
                     }
                     input.ReadMessage(TextAnchor);
                     break;
@@ -2460,13 +2459,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                   case 26: {
                     if (boundingPoly_ == null) {
-                      BoundingPoly = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
+                      BoundingPoly = new global::Google.Cloud.Documentai.V1Beta2.BoundingPoly();
                     }
                     input.ReadMessage(BoundingPoly);
                     break;
                   }
                   case 32: {
-                    Orientation = (global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation) input.ReadEnum();
+                    Orientation = (global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation) input.ReadEnum();
                     break;
                   }
                   case 42: {
@@ -2527,7 +2526,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[2]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[2]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2556,12 +2555,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "layout" field.</summary>
             public const int LayoutFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for [Block][google.cloud.documentai.v1beta2.Document.Page.Block].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
               get { return layout_; }
               set {
                 layout_ = value;
@@ -2570,14 +2569,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "detected_languages" field.</summary>
             public const int DetectedLanguagesFieldNumber = 2;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
               get { return detectedLanguages_; }
             }
 
@@ -2647,7 +2646,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.layout_ != null) {
                 if (layout_ == null) {
-                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 Layout.MergeFrom(other.Layout);
               }
@@ -2665,7 +2664,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (layout_ == null) {
-                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(Layout);
                     break;
@@ -2691,7 +2690,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[3]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[3]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2720,12 +2719,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "layout" field.</summary>
             public const int LayoutFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for [Paragraph][google.cloud.documentai.v1beta2.Document.Page.Paragraph].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
               get { return layout_; }
               set {
                 layout_ = value;
@@ -2734,14 +2733,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "detected_languages" field.</summary>
             public const int DetectedLanguagesFieldNumber = 2;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
               get { return detectedLanguages_; }
             }
 
@@ -2811,7 +2810,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.layout_ != null) {
                 if (layout_ == null) {
-                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 Layout.MergeFrom(other.Layout);
               }
@@ -2829,7 +2828,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (layout_ == null) {
-                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(Layout);
                     break;
@@ -2856,7 +2855,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[4]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[4]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2885,12 +2884,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "layout" field.</summary>
             public const int LayoutFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for [Line][google.cloud.documentai.v1beta2.Document.Page.Line].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
               get { return layout_; }
               set {
                 layout_ = value;
@@ -2899,14 +2898,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "detected_languages" field.</summary>
             public const int DetectedLanguagesFieldNumber = 2;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
               get { return detectedLanguages_; }
             }
 
@@ -2976,7 +2975,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.layout_ != null) {
                 if (layout_ == null) {
-                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 Layout.MergeFrom(other.Layout);
               }
@@ -2994,7 +2993,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (layout_ == null) {
-                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(Layout);
                     break;
@@ -3020,7 +3019,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[5]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[5]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3050,12 +3049,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "layout" field.</summary>
             public const int LayoutFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for [Token][google.cloud.documentai.v1beta2.Document.Page.Token].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
               get { return layout_; }
               set {
                 layout_ = value;
@@ -3064,12 +3063,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "detected_break" field.</summary>
             public const int DetectedBreakFieldNumber = 2;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak detectedBreak_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak detectedBreak_;
             /// <summary>
             /// Detected break at the end of a [Token][google.cloud.documentai.v1beta2.Document.Page.Token].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak DetectedBreak {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak DetectedBreak {
               get { return detectedBreak_; }
               set {
                 detectedBreak_ = value;
@@ -3078,14 +3077,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "detected_languages" field.</summary>
             public const int DetectedLanguagesFieldNumber = 3;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
               get { return detectedLanguages_; }
             }
 
@@ -3164,13 +3163,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.layout_ != null) {
                 if (layout_ == null) {
-                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 Layout.MergeFrom(other.Layout);
               }
               if (other.detectedBreak_ != null) {
                 if (detectedBreak_ == null) {
-                  DetectedBreak = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak();
+                  DetectedBreak = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak();
                 }
                 DetectedBreak.MergeFrom(other.DetectedBreak);
               }
@@ -3188,14 +3187,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (layout_ == null) {
-                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(Layout);
                     break;
                   }
                   case 18: {
                     if (detectedBreak_ == null) {
-                      DetectedBreak = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak();
+                      DetectedBreak = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak();
                     }
                     input.ReadMessage(DetectedBreak);
                     break;
@@ -3223,7 +3222,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public static pbr::MessageDescriptor Descriptor {
-                  get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Descriptor.NestedTypes[0]; }
+                  get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3251,12 +3250,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 /// <summary>Field number for the "type" field.</summary>
                 public const int TypeFieldNumber = 1;
-                private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type type_ = global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified;
+                private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type type_ = global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified;
                 /// <summary>
                 /// Detected break type.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type Type {
+                public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type Type {
                   get { return type_; }
                   set {
                     type_ = value;
@@ -3283,7 +3282,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public override int GetHashCode() {
                   int hash = 1;
-                  if (Type != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+                  if (Type != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) hash ^= Type.GetHashCode();
                   if (_unknownFields != null) {
                     hash ^= _unknownFields.GetHashCode();
                   }
@@ -3297,7 +3296,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void WriteTo(pb::CodedOutputStream output) {
-                  if (Type != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
+                  if (Type != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
                     output.WriteRawTag(8);
                     output.WriteEnum((int) Type);
                   }
@@ -3309,7 +3308,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public int CalculateSize() {
                   int size = 0;
-                  if (Type != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
+                  if (Type != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
                     size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
                   }
                   if (_unknownFields != null) {
@@ -3323,7 +3322,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   if (other == null) {
                     return;
                   }
-                  if (other.Type != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
+                  if (other.Type != global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
                     Type = other.Type;
                   }
                   _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3338,7 +3337,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                         _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                         break;
                       case 8: {
-                        Type = (global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) input.ReadEnum();
+                        Type = (global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) input.ReadEnum();
                         break;
                       }
                     }
@@ -3393,7 +3392,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[6]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[6]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3423,12 +3422,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "layout" field.</summary>
             public const int LayoutFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for [VisualElement][google.cloud.documentai.v1beta2.Document.Page.VisualElement].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
               get { return layout_; }
               set {
                 layout_ = value;
@@ -3451,14 +3450,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "detected_languages" field.</summary>
             public const int DetectedLanguagesFieldNumber = 3;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
               get { return detectedLanguages_; }
             }
 
@@ -3537,7 +3536,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.layout_ != null) {
                 if (layout_ == null) {
-                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 Layout.MergeFrom(other.Layout);
               }
@@ -3558,7 +3557,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (layout_ == null) {
-                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(Layout);
                     break;
@@ -3588,7 +3587,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[7]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[7]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3619,12 +3618,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "layout" field.</summary>
             public const int LayoutFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for [Table][google.cloud.documentai.v1beta2.Document.Page.Table].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
               get { return layout_; }
               set {
                 layout_ = value;
@@ -3633,40 +3632,40 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "header_rows" field.</summary>
             public const int HeaderRowsFieldNumber = 2;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> _repeated_headerRows_codec
-                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> headerRows_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> _repeated_headerRows_codec
+                = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> headerRows_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow>();
             /// <summary>
             /// Header rows of the table.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> HeaderRows {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> HeaderRows {
               get { return headerRows_; }
             }
 
             /// <summary>Field number for the "body_rows" field.</summary>
             public const int BodyRowsFieldNumber = 3;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> _repeated_bodyRows_codec
-                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> bodyRows_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> _repeated_bodyRows_codec
+                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> bodyRows_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow>();
             /// <summary>
             /// Body rows of the table.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> BodyRows {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableRow> BodyRows {
               get { return bodyRows_; }
             }
 
             /// <summary>Field number for the "detected_languages" field.</summary>
             public const int DetectedLanguagesFieldNumber = 4;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
               get { return detectedLanguages_; }
             }
 
@@ -3744,7 +3743,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.layout_ != null) {
                 if (layout_ == null) {
-                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 Layout.MergeFrom(other.Layout);
               }
@@ -3764,7 +3763,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (layout_ == null) {
-                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(Layout);
                     break;
@@ -3800,7 +3799,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public static pbr::MessageDescriptor Descriptor {
-                  get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Descriptor.NestedTypes[0]; }
+                  get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3828,14 +3827,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 /// <summary>Field number for the "cells" field.</summary>
                 public const int CellsFieldNumber = 1;
-                private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell> _repeated_cells_codec
-                    = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell.Parser);
-                private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell> cells_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell>();
+                private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell> _repeated_cells_codec
+                    = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell.Parser);
+                private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell> cells_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell>();
                 /// <summary>
                 /// Cells that make up this row.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell> Cells {
+                public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Types.TableCell> Cells {
                   get { return cells_; }
                 }
 
@@ -3927,7 +3926,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public static pbr::MessageDescriptor Descriptor {
-                  get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Table.Descriptor.NestedTypes[1]; }
+                  get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Table.Descriptor.NestedTypes[1]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3958,12 +3957,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 /// <summary>Field number for the "layout" field.</summary>
                 public const int LayoutFieldNumber = 1;
-                private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout layout_;
+                private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout layout_;
                 /// <summary>
                 /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for [TableCell][google.cloud.documentai.v1beta2.Document.Page.Table.TableCell].
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout Layout {
+                public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout Layout {
                   get { return layout_; }
                   set {
                     layout_ = value;
@@ -4000,14 +3999,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 /// <summary>Field number for the "detected_languages" field.</summary>
                 public const int DetectedLanguagesFieldNumber = 4;
-                private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
-                    = pb::FieldCodec.ForMessage(34, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-                private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+                private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_detectedLanguages_codec
+                    = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+                private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
                 /// <summary>
                 /// A list of detected languages together with confidence.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-                public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
+                public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> DetectedLanguages {
                   get { return detectedLanguages_; }
                 }
 
@@ -4095,7 +4094,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                   if (other.layout_ != null) {
                     if (layout_ == null) {
-                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     Layout.MergeFrom(other.Layout);
                   }
@@ -4119,7 +4118,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                         break;
                       case 10: {
                         if (layout_ == null) {
-                          Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                          Layout = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                         }
                         input.ReadMessage(Layout);
                         break;
@@ -4158,7 +4157,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[8]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[8]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4192,13 +4191,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "field_name" field.</summary>
             public const int FieldNameFieldNumber = 1;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout fieldName_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout fieldName_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for the [FormField][google.cloud.documentai.v1beta2.Document.Page.FormField] name. e.g. `Address`, `Email`,
             /// `Grand total`, `Phone number`, etc.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout FieldName {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout FieldName {
               get { return fieldName_; }
               set {
                 fieldName_ = value;
@@ -4207,12 +4206,12 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "field_value" field.</summary>
             public const int FieldValueFieldNumber = 2;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout fieldValue_;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout fieldValue_;
             /// <summary>
             /// [Layout][google.cloud.documentai.v1beta2.Document.Page.Layout] for the [FormField][google.cloud.documentai.v1beta2.Document.Page.FormField] value.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout FieldValue {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout FieldValue {
               get { return fieldValue_; }
               set {
                 fieldValue_ = value;
@@ -4221,27 +4220,27 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "name_detected_languages" field.</summary>
             public const int NameDetectedLanguagesFieldNumber = 3;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_nameDetectedLanguages_codec
-                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> nameDetectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_nameDetectedLanguages_codec
+                = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> nameDetectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages for name together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> NameDetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> NameDetectedLanguages {
               get { return nameDetectedLanguages_; }
             }
 
             /// <summary>Field number for the "value_detected_languages" field.</summary>
             public const int ValueDetectedLanguagesFieldNumber = 4;
-            private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_valueDetectedLanguages_codec
-                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
-            private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> valueDetectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
+            private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> _repeated_valueDetectedLanguages_codec
+                = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> valueDetectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage>();
             /// <summary>
             /// A list of detected languages for value together with confidence.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.DetectedLanguage> ValueDetectedLanguages {
+            public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.DetectedLanguage> ValueDetectedLanguages {
               get { return valueDetectedLanguages_; }
             }
 
@@ -4397,13 +4396,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               if (other.fieldName_ != null) {
                 if (fieldName_ == null) {
-                  FieldName = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  FieldName = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 FieldName.MergeFrom(other.FieldName);
               }
               if (other.fieldValue_ != null) {
                 if (fieldValue_ == null) {
-                  FieldValue = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                  FieldValue = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                 }
                 FieldValue.MergeFrom(other.FieldValue);
               }
@@ -4431,14 +4430,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   case 10: {
                     if (fieldName_ == null) {
-                      FieldName = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      FieldName = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(FieldName);
                     break;
                   }
                   case 18: {
                     if (fieldValue_ == null) {
-                      FieldValue = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                      FieldValue = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Types.Layout();
                     }
                     input.ReadMessage(FieldValue);
                     break;
@@ -4480,7 +4479,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[9]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.Page.Descriptor.NestedTypes[9]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4654,7 +4653,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4689,13 +4688,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "text_anchor" field.</summary>
         public const int TextAnchorFieldNumber = 1;
-        private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor textAnchor_;
+        private global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor textAnchor_;
         /// <summary>
         /// Provenance of the entity.
         /// Text anchor indexing into the [Document.text][google.cloud.documentai.v1beta2.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor TextAnchor {
+        public global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor TextAnchor {
           get { return textAnchor_; }
           set {
             textAnchor_ = value;
@@ -4760,13 +4759,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "page_anchor" field.</summary>
         public const int PageAnchorFieldNumber = 6;
-        private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor pageAnchor_;
+        private global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor pageAnchor_;
         /// <summary>
         /// Optional. Represents the provenance of this entity wrt. the location on the
         /// page where it was found.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor PageAnchor {
+        public global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor PageAnchor {
           get { return pageAnchor_; }
           set {
             pageAnchor_ = value;
@@ -4790,13 +4789,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "bounding_poly_for_demo_frontend" field.</summary>
         public const int BoundingPolyForDemoFrontendFieldNumber = 8;
-        private global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly boundingPolyForDemoFrontend_;
+        private global::Google.Cloud.Documentai.V1Beta2.BoundingPoly boundingPolyForDemoFrontend_;
         /// <summary>
         /// Optional. Temporary field to store the bounding poly for short-term POCs. Used by
         /// the frontend only. Do not use before you talk to ybo@ and lukasr@.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly BoundingPolyForDemoFrontend {
+        public global::Google.Cloud.Documentai.V1Beta2.BoundingPoly BoundingPolyForDemoFrontend {
           get { return boundingPolyForDemoFrontend_; }
           set {
             boundingPolyForDemoFrontend_ = value;
@@ -4928,7 +4927,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
           if (other.textAnchor_ != null) {
             if (textAnchor_ == null) {
-              TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+              TextAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor();
             }
             TextAnchor.MergeFrom(other.TextAnchor);
           }
@@ -4946,7 +4945,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
           if (other.pageAnchor_ != null) {
             if (pageAnchor_ == null) {
-              PageAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor();
+              PageAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor();
             }
             PageAnchor.MergeFrom(other.PageAnchor);
           }
@@ -4955,7 +4954,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
           if (other.boundingPolyForDemoFrontend_ != null) {
             if (boundingPolyForDemoFrontend_ == null) {
-              BoundingPolyForDemoFrontend = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
+              BoundingPolyForDemoFrontend = new global::Google.Cloud.Documentai.V1Beta2.BoundingPoly();
             }
             BoundingPolyForDemoFrontend.MergeFrom(other.BoundingPolyForDemoFrontend);
           }
@@ -4972,7 +4971,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                 break;
               case 10: {
                 if (textAnchor_ == null) {
-                  TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+                  TextAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor();
                 }
                 input.ReadMessage(TextAnchor);
                 break;
@@ -4995,7 +4994,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               case 50: {
                 if (pageAnchor_ == null) {
-                  PageAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor();
+                  PageAnchor = new global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor();
                 }
                 input.ReadMessage(PageAnchor);
                 break;
@@ -5006,7 +5005,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
               case 66: {
                 if (boundingPolyForDemoFrontend_ == null) {
-                  BoundingPolyForDemoFrontend = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
+                  BoundingPolyForDemoFrontend = new global::Google.Cloud.Documentai.V1Beta2.BoundingPoly();
                 }
                 input.ReadMessage(BoundingPolyForDemoFrontend);
                 break;
@@ -5028,7 +5027,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5225,7 +5224,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[6]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5253,14 +5252,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "text_segments" field.</summary>
         public const int TextSegmentsFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Types.TextSegment> _repeated_textSegments_codec
-            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Types.TextSegment.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Types.TextSegment> textSegments_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Types.TextSegment>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Types.TextSegment> _repeated_textSegments_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Types.TextSegment.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Types.TextSegment> textSegments_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Types.TextSegment>();
         /// <summary>
         /// The text segments from the [Document.text][google.cloud.documentai.v1beta2.Document.text].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Types.TextSegment> TextSegments {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Types.TextSegment> TextSegments {
           get { return textSegments_; }
         }
 
@@ -5356,7 +5355,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor.Descriptor.NestedTypes[0]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.TextAnchor.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5528,7 +5527,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Descriptor.NestedTypes[7]; }
+          get { return global::Google.Cloud.Documentai.V1Beta2.Document.Descriptor.NestedTypes[7]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5556,14 +5555,14 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         /// <summary>Field number for the "page_refs" field.</summary>
         public const int PageRefsFieldNumber = 1;
-        private static readonly pb::FieldCodec<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef> _repeated_pageRefs_codec
-            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef> pageRefs_ = new pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef>();
+        private static readonly pb::FieldCodec<global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef> _repeated_pageRefs_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef> pageRefs_ = new pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef>();
         /// <summary>
         /// One or more references to visual page elements
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef> PageRefs {
+        public pbc::RepeatedField<global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef> PageRefs {
           get { return pageRefs_; }
         }
 
@@ -5657,7 +5656,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public static pbr::MessageDescriptor Descriptor {
-              get { return global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Descriptor.NestedTypes[0]; }
+              get { return global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5701,13 +5700,13 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             /// <summary>Field number for the "layout_type" field.</summary>
             public const int LayoutTypeFieldNumber = 2;
-            private global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType layoutType_ = global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified;
+            private global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType layoutType_ = global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified;
             /// <summary>
             /// Optional. The type of the layout element that is being referenced.  If not
             /// specified the whole page is assumed to be referenced.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType LayoutType {
+            public global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType LayoutType {
               get { return layoutType_; }
               set {
                 layoutType_ = value;
@@ -5753,7 +5752,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
             public override int GetHashCode() {
               int hash = 1;
               if (Page != 0L) hash ^= Page.GetHashCode();
-              if (LayoutType != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) hash ^= LayoutType.GetHashCode();
+              if (LayoutType != global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) hash ^= LayoutType.GetHashCode();
               if (LayoutId.Length != 0) hash ^= LayoutId.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -5772,7 +5771,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                 output.WriteRawTag(8);
                 output.WriteInt64(Page);
               }
-              if (LayoutType != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) {
+              if (LayoutType != global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) {
                 output.WriteRawTag(16);
                 output.WriteEnum((int) LayoutType);
               }
@@ -5791,7 +5790,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (Page != 0L) {
                 size += 1 + pb::CodedOutputStream.ComputeInt64Size(Page);
               }
-              if (LayoutType != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) {
+              if (LayoutType != global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) LayoutType);
               }
               if (LayoutId.Length != 0) {
@@ -5811,7 +5810,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (other.Page != 0L) {
                 Page = other.Page;
               }
-              if (other.LayoutType != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) {
+              if (other.LayoutType != global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) {
                 LayoutType = other.LayoutType;
               }
               if (other.LayoutId.Length != 0) {
@@ -5833,7 +5832,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                     break;
                   }
                   case 16: {
-                    LayoutType = (global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) input.ReadEnum();
+                    LayoutType = (global::Google.Cloud.Documentai.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) input.ReadEnum();
                     break;
                   }
                   case 26: {
