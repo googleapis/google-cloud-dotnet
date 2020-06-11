@@ -836,8 +836,8 @@
     {
       "ServiceDirectory": "google/cloud/securitycenter/v1",
       "Name": "securitycenter.googleapis.com",
-      "Title": "Cloud Security Command Center API",
-      "Description": "Cloud Security Command Center API provides access to temporal views of assets and findings within an organization.",
+      "Title": "Security Command Center API",
+      "Description": "Security Command Center API provides access to temporal views of assets and findings within an organization.",
       "ServiceConfigFile": "google/cloud/securitycenter/v1/securitycenter_v1.yaml",
       "Version": "v1",
       "PackageFromDirectory": "google.cloud.securitycenter.v1",
