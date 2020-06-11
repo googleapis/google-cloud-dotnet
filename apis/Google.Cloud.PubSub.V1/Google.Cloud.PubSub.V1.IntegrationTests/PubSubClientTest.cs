@@ -469,8 +469,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             Assert.Equal(7, subchannelsCreated);
         }
 
-        // TODO: Enable this test by end of Feb 2020, once feature is no longer whitelisted.
-        [Fact(Skip = "Feature behind whitelist; recommended not to whitelist CI GCP project due to possible pre-GA unreliability")]
+        [Fact]
         public async Task DeadLetterQueueAndDeliveryAttempt()
         {
             // Construct the pubsub service account name. This is required for setting IAM permissions.
