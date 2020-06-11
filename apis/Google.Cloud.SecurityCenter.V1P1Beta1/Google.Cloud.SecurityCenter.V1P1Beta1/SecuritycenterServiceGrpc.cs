@@ -3,7 +3,7 @@
 //     source: google/cloud/securitycenter/v1p1beta1/securitycenter_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -456,7 +455,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
 
       /// <summary>
-      ///
       /// Creates or updates a finding. The corresponding source must exist for a
       /// finding creation to succeed.
       /// </summary>
@@ -1394,7 +1392,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      ///
       /// Creates or updates a finding. The corresponding source must exist for a
       /// finding creation to succeed.
       /// </summary>
@@ -1408,7 +1405,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return UpdateFinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///
       /// Creates or updates a finding. The corresponding source must exist for a
       /// finding creation to succeed.
       /// </summary>
@@ -1420,7 +1416,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateFinding, null, options, request);
       }
       /// <summary>
-      ///
       /// Creates or updates a finding. The corresponding source must exist for a
       /// finding creation to succeed.
       /// </summary>
@@ -1434,7 +1429,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return UpdateFindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///
       /// Creates or updates a finding. The corresponding source must exist for a
       /// finding creation to succeed.
       /// </summary>

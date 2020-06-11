@@ -64,12 +64,12 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// Cloud Security Command Center (Cloud SCC) finding.
+  /// Security Command Center finding.
   ///
   /// A finding is a record of assessment data (security, risk, health or privacy)
-  /// ingested into Cloud SCC for presentation, notification, analysis,
-  /// policy testing, and enforcement. For example, an XSS vulnerability in an
-  /// App Engine application is a finding.
+  /// ingested into Security Command Center for presentation, notification,
+  /// analysis, policy testing, and enforcement. For example, an XSS vulnerability
+  /// in an App Engine application is a finding.
   /// </summary>
   public sealed partial class Finding : pb::IMessage<Finding> {
     private static readonly pb::MessageParser<Finding> _parser = new pb::MessageParser<Finding>(() => new Finding());
@@ -153,12 +153,12 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     public const int ResourceNameFieldNumber = 3;
     private string resourceName_ = "";
     /// <summary>
-    /// For findings on Google Cloud Platform (GCP) resources, the full resource
-    /// name of the GCP resource this finding is for. See:
+    /// For findings on Google Cloud resources, the full resource
+    /// name of the Google Cloud resource this finding is for. See:
     /// https://cloud.google.com/apis/design/resource_names#full_resource_name
-    /// When the finding is for a non-GCP resource, the resourceName can be a
-    /// customer or partner defined string.
-    /// This field is immutable after creation time.
+    /// When the finding is for a non-Google Cloud resource, the resourceName can
+    /// be a customer or partner defined string. This field is immutable after
+    /// creation time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResourceName {
@@ -202,9 +202,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     public const int ExternalUriFieldNumber = 6;
     private string externalUri_ = "";
     /// <summary>
-    /// The URI that, if available, points to a web page outside of Cloud SCC
-    /// where additional information about the finding can be found. This field is
-    /// guaranteed to be either empty or a well formed URL.
+    /// The URI that, if available, points to a web page outside of Security
+    /// Command Center where additional information about the finding can be found.
+    /// This field is guaranteed to be either empty or a well formed URL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ExternalUri {
@@ -266,7 +266,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     public const int CreateTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// The time at which the finding was created in Cloud SCC.
+    /// The time at which the finding was created in Security Command Center.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
