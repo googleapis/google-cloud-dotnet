@@ -183,7 +183,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
       ///
-      /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -196,7 +196,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -515,7 +515,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
       ///
-      /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -530,7 +530,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
       ///
-      /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -543,7 +543,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
       ///
-      /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -558,7 +558,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// Sets the access control policy on the specified resource. Replaces any
       /// existing policy.
       ///
-      /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+      /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -570,7 +570,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -588,7 +588,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -604,7 +604,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
@@ -622,7 +622,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       /// <summary>
       /// Returns permissions that a caller has on the specified resource.
       /// If the resource does not exist, this will return an empty set of
-      /// permissions, not a NOT_FOUND error.
+      /// permissions, not a `NOT_FOUND` error.
       ///
       /// Note: This operation is designed to be used for building permission-aware
       /// UIs and command-line tools, not for authorization checking. This operation
