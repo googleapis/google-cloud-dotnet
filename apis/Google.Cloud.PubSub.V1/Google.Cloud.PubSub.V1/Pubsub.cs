@@ -752,7 +752,8 @@ namespace Google.Cloud.PubSub.V1 {
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
     /// <summary>
     /// Attributes for this message. If this field is empty, the message must
-    /// contain non-empty data.
+    /// contain non-empty data. This can be used to filter messages on the
+    /// subscription.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Attributes {
@@ -3252,7 +3253,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int FilterFieldNumber = 12;
     private string filter_ = "";
     /// <summary>
-    /// An expression written in the Cloud Pub/Sub filter language. If non-empty,
+    /// An expression written in the Pub/Sub [filter
+    /// language](https://cloud.google.com/pubsub/docs/filtering). If non-empty,
     /// then only `PubsubMessage`s whose `attributes` field matches the filter are
     /// delivered on this subscription. If empty, then no messages are filtered
     /// out.
