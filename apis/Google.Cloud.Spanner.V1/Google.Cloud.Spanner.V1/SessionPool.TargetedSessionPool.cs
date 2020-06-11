@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.Common.V1;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Concurrent;
@@ -486,10 +487,29 @@ namespace Google.Cloud.Spanner.V1
 
             /// <summary>
             /// Release a session back to the pool (or refresh or evict it) and decrement the number of active sessions.
+            /// All the work is done in a background task, as it can involve RPCs.
             /// </summary>
-            public override void Release(PooledSession session, bool deleteSession)
+            public override void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>
+                Parent.ConsumeBackgroundTask(ReleaseAsync(session, transactionId, deleteSession), "session release");
+
+            private async Task ReleaseAsync(PooledSession session, ByteString transactionId, bool deleteSession)
             {
                 Interlocked.Decrement(ref _activeSessionCount);
+                // If we've got a transaction to rollback, do that first.
+                if (transactionId is object)
+                {
+                    var request = new RollbackRequest { SessionAsSessionName = session.SessionName, TransactionId = transactionId };
+                    try
+                    {
+                        await Client.RollbackAsync(request).ConfigureAwait(false);
+                    }
+                    catch (RpcException e)
+                    {
+                        // Rollback failed. Evict the session as it's effectively unstable now.
+                        Parent._logger.Warn("Failed to rollback transaction for pooled session", e);
+                        deleteSession = true;
+                    }
+                }
                 if (deleteSession)
                 {
                     EvictSession(session);

@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
@@ -207,6 +208,38 @@ namespace Google.Cloud.Spanner.V1.Tests
                     Assert.NotEqual(firstSession.SessionName, laterSession.SessionName);
                     Assert.Equal(101, client.SessionsCreated);
                     Assert.Equal(1, client.SessionsDeleted);
+                });
+
+                client.Logger.AssertNoWarningsOrErrors();
+            }
+
+            [Fact(Timeout = TestTimeoutMilliseconds)]
+            public async Task ReleaseSession_TransactionRolledback()
+            {
+                var pool = CreatePool(true);
+                var client = (SessionTestingSpannerClient) pool.Client;
+                await client.Scheduler.RunAsync(async () =>
+                {
+                    // Acquire all 100 possible active sessions, so we don't get any more behind the scenes.
+                    var sessions = await AcquireAllSessionsAsync(pool);
+
+                    var transactionId = ByteString.CopyFromUtf8("sample transaction");
+                    var firstSession = sessions[0].WithTransaction(transactionId, TransactionOptions.ModeOneofCase.ReadWrite);
+
+                    var timeBeforeRelease = client.Clock.GetCurrentDateTimeUtc();
+                    firstSession.ReleaseToPool(false);
+
+                    var reacquiredSession = await pool.AcquireSessionAsync(new TransactionOptions(), default);
+                    Assert.Equal(firstSession.SessionName, reacquiredSession.SessionName);
+
+                    // The only rollback request is the one we sent
+                    Assert.Equal(1, client.RollbackRequests.Count);
+                    Assert.True(client.RollbackRequests.TryDequeue(out var rollbackRequest));
+                    Assert.Equal(transactionId, rollbackRequest.TransactionId);
+                    Assert.Equal(firstSession.SessionName, rollbackRequest.SessionAsSessionName);
+
+                    // We should have waited for the rollback to complete before reacquiring
+                    Assert.Equal(timeBeforeRelease + client.RollbackDelay, client.Clock.GetCurrentDateTimeUtc());
                 });
 
                 client.Logger.AssertNoWarningsOrErrors();

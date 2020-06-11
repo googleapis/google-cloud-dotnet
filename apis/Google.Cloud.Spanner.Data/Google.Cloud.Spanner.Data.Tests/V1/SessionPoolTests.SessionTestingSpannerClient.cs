@@ -35,6 +35,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             public TimeSpan BeginTransactionDelay { get; set; } = TimeSpan.FromSeconds(1);
             public TimeSpan ExecuteSqlDelay { get; set; } = TimeSpan.FromSeconds(1);
             public TimeSpan DeleteSessionDelay { get; set; } = TimeSpan.FromSeconds(1);
+            public TimeSpan RollbackDelay { get; set; } = TimeSpan.FromSeconds(1);
             public TimeSpan FailAllRpcsDelay { get; set; } = TimeSpan.Zero;
             // We do quite a bit of work in our continuations, so allow a bit longer than the default of 10ms.
             // Ditto allow a bit longer than normal for any test assertions to complete; this is particularly
@@ -52,6 +53,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             public bool FailAllRpcs { get; set; } = false;
 
             public ConcurrentQueue<ExecuteSqlRequest> ExecuteSqlRequests { get; } = new ConcurrentQueue<ExecuteSqlRequest>();
+            public ConcurrentQueue<RollbackRequest> RollbackRequests { get; } = new ConcurrentQueue<RollbackRequest>();
 
             // TODO: Keep track of created and deleted session names?
 
@@ -95,7 +97,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             {
                 await CheckFailAllRpcs();
                 await Scheduler.Delay(DeleteSessionDelay);
-                int count = Interlocked.Increment(ref _deletionCounter);
+                Interlocked.Increment(ref _deletionCounter);
             }
 
             public override async Task<ResultSet> ExecuteSqlAsync(ExecuteSqlRequest request, CallSettings callSettings = null)
@@ -104,6 +106,13 @@ namespace Google.Cloud.Spanner.V1.Tests
                 ExecuteSqlRequests.Enqueue(request.Clone());
                 await Scheduler.Delay(ExecuteSqlDelay);
                 return new ResultSet();
+            }
+
+            public override async Task RollbackAsync(RollbackRequest request, CallSettings callSettings = null)
+            {
+                await CheckFailAllRpcs();
+                RollbackRequests.Enqueue(request.Clone());
+                await Scheduler.Delay(RollbackDelay);
             }
 
             private async Task CheckFailAllRpcs()

@@ -23,6 +23,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.Spanner.V1.TransactionOptions.ModeOneofCase;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
@@ -229,9 +230,8 @@ namespace Google.Cloud.Spanner.V1.Tests
         {
             var pool = new FakeSessionPool();
             var transactionId = ByteString.CopyFromUtf8("transaction");
-            var mode = TransactionOptions.ModeOneofCase.ReadWrite;
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
-            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, mode);
+            var sessionWithTransaction = pooledSession.WithTransaction(transactionId, ReadWrite);
 
             // Make a successful request
             var request = new ExecuteBatchDmlRequest();
@@ -275,6 +275,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
             pooledSession.ReleaseToPool(false);
             Assert.False(pool.ReleasedSessionDeleted);
+            Assert.Null(pool.RolledBackTransaction);
         }
 
         [Fact]
@@ -284,6 +285,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var pooledSession = PooledSession.FromSessionName(pool, s_sampleSessionName);
             pooledSession.ReleaseToPool(true);
             Assert.True(pool.ReleasedSessionDeleted);
+            Assert.Null(pool.RolledBackTransaction);
         }
 
         [Fact]
@@ -302,6 +304,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // When we release the session, the pool should delete it even if we didn't ask it to.
             pooledSession.ReleaseToPool(false);
             Assert.True(pool.ReleasedSessionDeleted);
+            Assert.Null(pool.RolledBackTransaction);
 
             pool.Mock.Verify();
         }
@@ -319,6 +322,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             // When we release the session, the pool should delete it even if we didn't ask it to.
             pooledSession.ReleaseToPool(false);
             Assert.True(pool.ReleasedSessionDeleted);
+            Assert.Null(pool.RolledBackTransaction);
         }
 
         [Fact]
@@ -335,6 +339,65 @@ namespace Google.Cloud.Spanner.V1.Tests
                 () => pooledSession.BeginTransactionAsync(new BeginTransactionRequest(), null));
         }
 
+        [Fact]
+        public void ReleaseToPool_ReadOnlyTransactionNotRolledBack()
+        {
+            var pool = new FakeSessionPool();
+            var pooledSession = CreateWithTransaction(pool, ReadOnly);
+            pooledSession.ReleaseToPool(false);
+            Assert.Null(pool.RolledBackTransaction);
+        }
+
+        [Fact]
+        public void ReleaseToPool_PartitionedDmlTransactionNotRolledBack()
+        {
+            var pool = new FakeSessionPool();
+            var pooledSession = CreateWithTransaction(pool, PartitionedDml);
+            pooledSession.ReleaseToPool(false);
+            Assert.Null(pool.RolledBackTransaction);
+        }
+
+        [Fact]
+        public async Task ReleaseToPool_CommittedTransactionNotRolledBack()
+        {
+            var pool = new FakeSessionPool();
+            pool.Mock.Setup(client => client.CommitAsync(It.IsAny<CommitRequest>(), It.IsAny<CallSettings>()))
+                .ReturnsAsync(new CommitResponse());
+
+            var pooledSession = CreateWithTransaction(pool, ReadWrite);
+            await pooledSession.CommitAsync(new CommitRequest(), null);
+            pooledSession.ReleaseToPool(false);
+            Assert.Null(pool.RolledBackTransaction);
+        }
+
+        [Fact]
+        public async Task ReleaseToPool_RolledBackTransactionNotRolledBack()
+        {
+            var pool = new FakeSessionPool();
+            pool.Mock.Setup(client => client.RollbackAsync(It.IsAny<RollbackRequest>(), It.IsAny<CallSettings>()))
+                .Returns(Task.CompletedTask);
+
+            var pooledSession = CreateWithTransaction(pool, ReadWrite);
+            await pooledSession.RollbackAsync(new RollbackRequest(), null);
+            pooledSession.ReleaseToPool(false);
+            Assert.Null(pool.RolledBackTransaction);
+        }
+
+        [Fact]
+        public void ReleaseToPool_ReadWriteUncommittedTransactionRolledBack()
+        {
+            var pool = new FakeSessionPool();
+            var pooledSession = CreateWithTransaction(pool, ReadWrite);
+            pooledSession.ReleaseToPool(false);
+            Assert.Equal(pool.RolledBackTransaction, pooledSession.TransactionId);
+        }
+
+        private PooledSession CreateWithTransaction(SessionPool.ISessionPool pool, TransactionOptions.ModeOneofCase mode)
+        {
+            ByteString transactionId = ByteString.CopyFromUtf8(Guid.NewGuid().ToString());
+            return PooledSession.FromSessionName(pool, s_sampleSessionName).WithTransaction(transactionId, mode);
+        }
+
         private class FakeSessionPool : SessionPool.ISessionPool
         {
             public Mock<SpannerClient> Mock { get; }
@@ -345,6 +408,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             public Logger Logger { get; } = Logger.DefaultLogger;
 
             public bool? ReleasedSessionDeleted { get; private set; }
+            public ByteString RolledBackTransaction { get; private set; }
 
             internal FakeSessionPool()
             {
@@ -356,8 +420,9 @@ namespace Google.Cloud.Spanner.V1.Tests
                 };
             }
 
-            public void Release(PooledSession session, bool deleteSession)
+            public void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession)
             {
+                RolledBackTransaction = transactionToRollback;
                 ReleasedSessionDeleted = deleteSession;
             }
 

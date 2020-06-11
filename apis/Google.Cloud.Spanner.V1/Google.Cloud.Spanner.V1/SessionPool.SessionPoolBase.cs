@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Protobuf;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -31,7 +32,7 @@ namespace Google.Cloud.Spanner.V1
             public SessionPoolOptions Options => Parent.Options;
             protected SessionPool Parent { get; }
             public abstract Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken);
-            public abstract void Release(PooledSession session, bool deleteSession);
+            public abstract void Release(PooledSession session, ByteString transactionToRollback, bool deleteSession);
             protected SessionPoolBase(SessionPool parent) => Parent = parent;
         }
     }

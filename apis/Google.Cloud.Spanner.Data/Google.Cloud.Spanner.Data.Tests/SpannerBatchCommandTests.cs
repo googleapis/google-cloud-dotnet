@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -153,7 +154,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             public SpannerClient Client => throw new NotImplementedException();
             public IClock Clock => SystemClock.Instance;
             public SessionPoolOptions Options { get; } = new SessionPoolOptions();
-            public void Release(PooledSession session, bool deleteSession) =>  throw new NotImplementedException();
+            public void Release(PooledSession session, ByteString transactionId, bool deleteSession) =>  throw new NotImplementedException();
 
             public Task<PooledSession> WithFreshTransactionOrNewAsync(PooledSession session, TransactionOptions transactionOptions, CancellationToken cancellationToken) =>
                 throw new NotImplementedException();

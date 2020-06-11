@@ -158,7 +158,8 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates a <see cref="PooledSession"/> with a known name and transaction ID/mode, with the client associated
         /// with this pool, but is otherwise not part of this pool. This method does not query the server for the session state.
-        /// When the returned <see cref="PooledSession"/> is released, it will not become part of this pool.
+        /// When the returned <see cref="PooledSession"/> is released, it will not become part of this pool, and the transaction
+        /// will not be rolled back.
         /// </summary>
         /// <remarks>
         /// This is typically used for partitioned queries, where the same session is used across multiple machines, so should
