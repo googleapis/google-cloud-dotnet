@@ -593,6 +593,106 @@ namespace Google.Cloud.BigQuery.Connection.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Returns a list of connections in the given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// Must be in the form: `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnections(new ListConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of connections in the given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// Must be in the form: `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnectionsAsync(new ListConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of connections in the given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// Must be in the form: `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListConnectionsResponse, Connection> ListConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnections(new ListConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Returns a list of connections in the given project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent resource name.
+        /// Must be in the form: `projects/{project_id}/locations/{location_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Connection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListConnectionsResponse, Connection> ListConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListConnectionsAsync(new ListConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
         /// Updates the specified connection. For security reasons, also resets
         /// credential if connection properties are in the update field mask.
         /// </summary>
@@ -1028,7 +1128,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1040,7 +1140,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1052,7 +1152,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1064,7 +1164,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1089,7 +1189,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1114,7 +1214,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1135,7 +1235,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1160,7 +1260,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1185,7 +1285,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy is being specified.
@@ -1205,7 +1305,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1220,7 +1320,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1235,7 +1335,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1250,7 +1350,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1281,7 +1381,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1312,7 +1412,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1336,7 +1436,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1367,7 +1467,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1398,7 +1498,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1669,7 +1769,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1684,7 +1784,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// 
-        /// Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+        /// Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1698,7 +1798,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
@@ -1716,7 +1816,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
         /// If the resource does not exist, this will return an empty set of
-        /// permissions, not a NOT_FOUND error.
+        /// permissions, not a `NOT_FOUND` error.
         /// 
         /// Note: This operation is designed to be used for building permission-aware
         /// UIs and command-line tools, not for authorization checking. This operation
