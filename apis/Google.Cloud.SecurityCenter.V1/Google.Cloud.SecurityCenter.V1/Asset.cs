@@ -68,12 +68,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// Cloud Security Command Center's (Cloud SCC) representation of a Google Cloud
-  /// Platform (GCP) resource.
+  /// Security Command Center representation of a Google Cloud
+  /// resource.
   ///
-  /// The Asset is a Cloud SCC resource that captures information about a single
-  /// GCP resource. All modifications to an Asset are only within the context of
-  /// Cloud SCC and don't affect the referenced GCP resource.
+  /// The Asset is a Security Command Center resource that captures information
+  /// about a single Google Cloud resource. All modifications to an Asset are only
+  /// within the context of Security Command Center and don't affect the referenced
+  /// Google Cloud resource.
   /// </summary>
   public sealed partial class Asset : pb::IMessage<Asset> {
     private static readonly pb::MessageParser<Asset> _parser = new pb::MessageParser<Asset>(() => new Asset());
@@ -136,8 +137,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int SecurityCenterPropertiesFieldNumber = 2;
     private global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties securityCenterProperties_;
     /// <summary>
-    /// Cloud SCC managed properties. These properties are managed by
-    /// Cloud SCC and cannot be modified by the user.
+    /// Security Command Center managed properties. These properties are managed by
+    /// Security Command Center and cannot be modified by the user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.SecurityCenter.V1.Asset.Types.SecurityCenterProperties SecurityCenterProperties {
@@ -154,7 +155,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> resourceProperties_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
     /// Resource managed properties. These properties are managed and defined by
-    /// the GCP resource and cannot be modified by the user.
+    /// the Google Cloud resource and cannot be modified by the user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.Value> ResourceProperties {
@@ -180,7 +181,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int CreateTimeFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// The time at which the asset was created in Cloud SCC.
+    /// The time at which the asset was created in Security Command Center.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -194,8 +195,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int UpdateTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// The time at which the asset was last updated, added, or deleted in Cloud
-    /// SCC.
+    /// The time at which the asset was last updated, added, or deleted in Security
+    /// Command Center.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
@@ -209,9 +210,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int IamPolicyFieldNumber = 11;
     private global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy iamPolicy_;
     /// <summary>
-    /// IAM Policy information associated with the GCP resource described by the
-    /// Cloud SCC asset. This information is managed and defined by the GCP
-    /// resource and cannot be modified by the user.
+    /// Cloud IAM Policy information associated with the Google Cloud resource
+    /// described by the Security Command Center asset. This information is managed
+    /// and defined by the Google Cloud resource and cannot be modified by the
+    /// user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.SecurityCenter.V1.Asset.Types.IamPolicy IamPolicy {
@@ -427,8 +429,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Cloud SCC managed properties. These properties are managed by Cloud SCC and
-      /// cannot be modified by the user.
+      /// Security Command Center managed properties. These properties are managed by
+      /// Security Command Center and cannot be modified by the user.
       /// </summary>
       public sealed partial class SecurityCenterProperties : pb::IMessage<SecurityCenterProperties> {
         private static readonly pb::MessageParser<SecurityCenterProperties> _parser = new pb::MessageParser<SecurityCenterProperties>(() => new SecurityCenterProperties());
@@ -475,7 +477,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int ResourceNameFieldNumber = 1;
         private string resourceName_ = "";
         /// <summary>
-        /// The full resource name of the GCP resource this asset
+        /// The full resource name of the Google Cloud resource this asset
         /// represents. This field is immutable after create time. See:
         /// https://cloud.google.com/apis/design/resource_names#full_resource_name
         /// </summary>
@@ -491,10 +493,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         public const int ResourceTypeFieldNumber = 2;
         private string resourceType_ = "";
         /// <summary>
-        /// The type of the GCP resource. Examples include: APPLICATION,
+        /// The type of the Google Cloud resource. Examples include: APPLICATION,
         /// PROJECT, and ORGANIZATION. This is a case insensitive field defined by
-        /// Cloud SCC and/or the producer of the resource and is immutable
-        /// after create time.
+        /// Security Command Center and/or the producer of the resource and is
+        /// immutable after create time.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string ResourceType {
@@ -779,9 +781,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
-      /// IAM Policy information associated with the GCP resource described by the
-      /// Cloud SCC asset. This information is managed and defined by the GCP
-      /// resource and cannot be modified by the user.
+      /// Cloud IAM Policy information associated with the Google Cloud resource
+      /// described by the Security Command Center asset. This information is managed
+      /// and defined by the Google Cloud resource and cannot be modified by the
+      /// user.
       /// </summary>
       public sealed partial class IamPolicy : pb::IMessage<IamPolicy> {
         private static readonly pb::MessageParser<IamPolicy> _parser = new pb::MessageParser<IamPolicy>(() => new IamPolicy());
