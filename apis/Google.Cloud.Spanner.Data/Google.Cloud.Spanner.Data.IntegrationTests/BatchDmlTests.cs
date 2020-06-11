@@ -266,10 +266,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [SkippableFact]
+        [Fact]
         public void InvalidDmlBatch_PartialSuccess_ImplicitTransaction()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Leaks a transaction, causing all further tests to fail.");
             string key = _fixture.CreateTestRows();
 
             SpannerBatchNonQueryException exception;
