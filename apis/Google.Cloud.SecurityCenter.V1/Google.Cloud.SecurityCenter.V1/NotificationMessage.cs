@@ -27,20 +27,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Cjlnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbm90aWZpY2F0aW9u",
             "X21lc3NhZ2UucHJvdG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52",
             "MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxosZ29vZ2xlL2Nsb3Vk",
-            "L3NlY3VyaXR5Y2VudGVyL3YxL2ZpbmRpbmcucHJvdG8ifAoTTm90aWZpY2F0",
-            "aW9uTWVzc2FnZRIgChhub3RpZmljYXRpb25fY29uZmlnX25hbWUYASABKAkS",
-            "OgoHZmluZGluZxgCIAEoCzInLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRl",
-            "ci52MS5GaW5kaW5nSABCBwoFZXZlbnRC9AEKImNvbS5nb29nbGUuY2xvdWQu",
-            "c2VjdXJpdHljZW50ZXIudjFCGE5vdGlmaWNhdGlvbk1lc3NhZ2VQcm90b1AB",
-            "Wkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNs",
-            "b3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5",
-            "Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYx",
-            "YgZwcm90bzM="));
+            "L3NlY3VyaXR5Y2VudGVyL3YxL2ZpbmRpbmcucHJvdG8aLWdvb2dsZS9jbG91",
+            "ZC9zZWN1cml0eWNlbnRlci92MS9yZXNvdXJjZS5wcm90byK4AQoTTm90aWZp",
+            "Y2F0aW9uTWVzc2FnZRIgChhub3RpZmljYXRpb25fY29uZmlnX25hbWUYASAB",
+            "KAkSOgoHZmluZGluZxgCIAEoCzInLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
+            "bnRlci52MS5GaW5kaW5nSAASOgoIcmVzb3VyY2UYAyABKAsyKC5nb29nbGUu",
+            "Y2xvdWQuc2VjdXJpdHljZW50ZXIudjEuUmVzb3VyY2VCBwoFZXZlbnRC9AEK",
+            "ImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCGE5vdGlmaWNh",
+            "dGlvbk1lc3NhZ2VQcm90b1ABWkxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxO3NlY3VyaXR5",
+            "Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxygIeR29v",
+            "Z2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29vZ2xlOjpDbG91ZDo6",
+            "U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FindingReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationMessage), global::Google.Cloud.SecurityCenter.V1.NotificationMessage.Parser, new[]{ "NotificationConfigName", "Finding" }, new[]{ "Event" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.NotificationMessage), global::Google.Cloud.SecurityCenter.V1.NotificationMessage.Parser, new[]{ "NotificationConfigName", "Finding", "Resource" }, new[]{ "Event" }, null, null, null)
           }));
     }
     #endregion
@@ -76,6 +78,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public NotificationMessage(NotificationMessage other) : this() {
       notificationConfigName_ = other.notificationConfigName_;
+      resource_ = other.resource_ != null ? other.resource_.Clone() : null;
       switch (other.EventCase) {
         case EventOneofCase.Finding:
           Finding = other.Finding.Clone();
@@ -119,6 +122,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "resource" field.</summary>
+    public const int ResourceFieldNumber = 3;
+    private global::Google.Cloud.SecurityCenter.V1.Resource resource_;
+    /// <summary>
+    /// The Cloud resource tied to this notification's Finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecurityCenter.V1.Resource Resource {
+      get { return resource_; }
+      set {
+        resource_ = value;
+      }
+    }
+
     private object event_;
     /// <summary>Enum of possible cases for the "event" oneof.</summary>
     public enum EventOneofCase {
@@ -152,6 +169,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (NotificationConfigName != other.NotificationConfigName) return false;
       if (!object.Equals(Finding, other.Finding)) return false;
+      if (!object.Equals(Resource, other.Resource)) return false;
       if (EventCase != other.EventCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,6 +179,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       int hash = 1;
       if (NotificationConfigName.Length != 0) hash ^= NotificationConfigName.GetHashCode();
       if (eventCase_ == EventOneofCase.Finding) hash ^= Finding.GetHashCode();
+      if (resource_ != null) hash ^= Resource.GetHashCode();
       hash ^= (int) eventCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -183,6 +202,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Finding);
       }
+      if (resource_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Resource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -197,6 +220,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (eventCase_ == EventOneofCase.Finding) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Finding);
       }
+      if (resource_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Resource);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -210,6 +236,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (other.NotificationConfigName.Length != 0) {
         NotificationConfigName = other.NotificationConfigName;
+      }
+      if (other.resource_ != null) {
+        if (resource_ == null) {
+          Resource = new global::Google.Cloud.SecurityCenter.V1.Resource();
+        }
+        Resource.MergeFrom(other.Resource);
       }
       switch (other.EventCase) {
         case EventOneofCase.Finding:
@@ -242,6 +274,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
             }
             input.ReadMessage(subBuilder);
             Finding = subBuilder;
+            break;
+          }
+          case 26: {
+            if (resource_ == null) {
+              Resource = new global::Google.Cloud.SecurityCenter.V1.Resource();
+            }
+            input.ReadMessage(Resource);
             break;
           }
         }

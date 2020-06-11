@@ -1546,15 +1546,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
     ///
     ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
     ///   Examples:
-    ///     "update_time = \"2019-06-10T16:07:18-07:00\""
-    ///     "update_time = 1560208038000"
+    ///     `update_time = "2019-06-10T16:07:18-07:00"`
+    ///     `update_time = 1560208038000`
     ///
     /// * create_time: `=`, `>`, `&lt;`, `>=`, `&lt;=`
     ///
     ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
     ///   Examples:
-    ///     "create_time = \"2019-06-10T16:07:18-07:00\""
-    ///     "create_time = 1560208038000"
+    ///     `create_time = "2019-06-10T16:07:18-07:00"`
+    ///     `create_time = 1560208038000`
     ///
     /// * iam_policy.policy_blob: `=`, `:`
     /// * resource_properties: `=`, `:`, `>`, `&lt;`, `>=`, `&lt;=`
@@ -1569,6 +1569,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * security_center_properties.resource_owners: `=`, `:`
     ///
     /// For example, `resource_properties.size = 100` is a valid filter string.
+    ///
+    /// Use a partial match on the empty string to filter based on a property
+    /// existing:`resource_properties.my_property : ""`
+    ///
+    /// Use a negated partial match on the empty string to filter based on a
+    /// property not existing: `-resource_properties.my_property : ""`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -2218,13 +2224,19 @@ namespace Google.Cloud.SecurityCenter.V1 {
     ///
     ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
     ///   Examples:
-    ///     "event_time = \"2019-06-10T16:07:18-07:00\""
-    ///     "event_time = 1560208038000"
+    ///     `event_time = "2019-06-10T16:07:18-07:00"`
+    ///     `event_time = 1560208038000`
     ///
     /// * security_marks.marks: `=`, `:`
     /// * source_properties: `=`, `:`, `>`, `&lt;`, `>=`, `&lt;=`
     ///
     /// For example, `source_properties.size = 100` is a valid filter string.
+    ///
+    /// Use a partial match on the empty string to filter based on a property
+    /// existing: `source_properties.my_property : ""`
+    ///
+    /// Use a negated partial match on the empty string to filter based on a
+    /// property not existing: `-source_properties.my_property : ""`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -3749,15 +3761,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
     ///
     ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
     ///   Examples:
-    ///     "update_time = \"2019-06-10T16:07:18-07:00\""
-    ///     "update_time = 1560208038000"
+    ///     `update_time = "2019-06-10T16:07:18-07:00"`
+    ///     `update_time = 1560208038000`
     ///
     /// * create_time: `=`, `>`, `&lt;`, `>=`, `&lt;=`
     ///
     ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
     ///   Examples:
-    ///     "create_time = \"2019-06-10T16:07:18-07:00\""
-    ///     "create_time = 1560208038000"
+    ///     `create_time = "2019-06-10T16:07:18-07:00"`
+    ///     `create_time = 1560208038000`
     ///
     /// * iam_policy.policy_blob: `=`, `:`
     /// * resource_properties: `=`, `:`, `>`, `&lt;`, `>=`, `&lt;=`
@@ -3772,6 +3784,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// * security_center_properties.resource_owners: `=`, `:`
     ///
     /// For example, `resource_properties.size = 100` is a valid filter string.
+    ///
+    /// Use a partial match on the empty string to filter based on a property
+    /// existing: `resource_properties.my_property : ""`
+    ///
+    /// Use a negated partial match on the empty string to filter based on a
+    /// property not existing: `-resource_properties.my_property : ""`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -4670,13 +4688,19 @@ namespace Google.Cloud.SecurityCenter.V1 {
     ///
     ///   Usage: This should be milliseconds since epoch or an RFC3339 string.
     ///   Examples:
-    ///     "event_time = \"2019-06-10T16:07:18-07:00\""
-    ///     "event_time = 1560208038000"
+    ///     `event_time = "2019-06-10T16:07:18-07:00"`
+    ///     `event_time = 1560208038000`
     ///
     /// security_marks.marks: `=`, `:`
     /// source_properties: `=`, `:`, `>`, `&lt;`, `>=`, `&lt;=`
     ///
     /// For example, `source_properties.size = 100` is a valid filter string.
+    ///
+    /// Use a partial match on the empty string to filter based on a property
+    /// existing: `source_properties.my_property : ""`
+    ///
+    /// Use a negated partial match on the empty string to filter based on a
+    /// property not existing: `-source_properties.my_property : ""`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -5514,7 +5538,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
 
           /// <summary>
-          /// Information related to the Google Cloud Platform (GCP) resource that is
+          /// Information related to the Google Cloud resource that is
           /// associated with this finding.
           /// </summary>
           public sealed partial class Resource : pb::IMessage<Resource> {

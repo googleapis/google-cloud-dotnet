@@ -56,8 +56,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
   }
   #region Messages
   /// <summary>
-  /// User specified settings that are attached to the Cloud Security Command
-  /// Center (Cloud SCC) organization.
+  /// User specified settings that are attached to the Security Command
+  /// Center organization.
   /// </summary>
   public sealed partial class OrganizationSettings : pb::IMessage<OrganizationSettings> {
     private static readonly pb::MessageParser<OrganizationSettings> _parser = new pb::MessageParser<OrganizationSettings>(() => new OrganizationSettings());
