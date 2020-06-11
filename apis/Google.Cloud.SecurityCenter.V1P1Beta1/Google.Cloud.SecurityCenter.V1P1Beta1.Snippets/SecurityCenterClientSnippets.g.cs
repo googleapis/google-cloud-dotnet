@@ -891,7 +891,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 GroupBy = "",
                 CompareDuration = new Duration(),
                 ReadTime = new Timestamp(),
-                Having = "",
             };
             // Make the request
             PagedEnumerable<GroupAssetsResponse, GroupResult> response = securityCenterClient.GroupAssets(request);
@@ -944,7 +943,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 GroupBy = "",
                 CompareDuration = new Duration(),
                 ReadTime = new Timestamp(),
-                Having = "",
             };
             // Make the request
             PagedAsyncEnumerable<GroupAssetsResponse, GroupResult> response = securityCenterClient.GroupAssetsAsync(request);
@@ -997,7 +995,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 GroupBy = "",
                 ReadTime = new Timestamp(),
                 CompareDuration = new Duration(),
-                Having = "",
             };
             // Make the request
             PagedEnumerable<GroupFindingsResponse, GroupResult> response = securityCenterClient.GroupFindings(request);
@@ -1050,7 +1047,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 GroupBy = "",
                 ReadTime = new Timestamp(),
                 CompareDuration = new Duration(),
-                Having = "",
             };
             // Make the request
             PagedAsyncEnumerable<GroupFindingsResponse, GroupResult> response = securityCenterClient.GroupFindingsAsync(request);
@@ -1287,7 +1283,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 OrderBy = "",
                 ReadTime = new Timestamp(),
                 CompareDuration = new Duration(),
-                Having = "",
                 FieldMask = new FieldMask(),
             };
             // Make the request
@@ -1341,7 +1336,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 OrderBy = "",
                 ReadTime = new Timestamp(),
                 CompareDuration = new Duration(),
-                Having = "",
                 FieldMask = new FieldMask(),
             };
             // Make the request
@@ -1575,7 +1569,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 OrderBy = "",
                 ReadTime = new Timestamp(),
                 CompareDuration = new Duration(),
-                Having = "",
                 FieldMask = new FieldMask(),
             };
             // Make the request
@@ -1629,7 +1622,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1.Snippets
                 OrderBy = "",
                 ReadTime = new Timestamp(),
                 CompareDuration = new Duration(),
-                Having = "",
                 FieldMask = new FieldMask(),
             };
             // Make the request

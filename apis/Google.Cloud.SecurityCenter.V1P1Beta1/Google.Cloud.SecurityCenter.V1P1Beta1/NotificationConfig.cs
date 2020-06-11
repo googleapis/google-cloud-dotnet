@@ -60,10 +60,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// Cloud Security Command Center (Cloud SCC) notification configs.
+  /// Security Command Center notification configs.
   ///
-  /// A notification config is a Cloud SCC resource that contains the configuration
-  /// to send notifications for create/update events of findings, assets and etc.
+  /// A notification config is a Security Command Center resource that contains the
+  /// configuration to send notifications for create/update events of findings,
+  /// assets and etc.
   /// </summary>
   public sealed partial class NotificationConfig : pb::IMessage<NotificationConfig> {
     private static readonly pb::MessageParser<NotificationConfig> _parser = new pb::MessageParser<NotificationConfig>(() => new NotificationConfig());
@@ -158,7 +159,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     public const int PubsubTopicFieldNumber = 4;
     private string pubsubTopic_ = "";
     /// <summary>
-    /// The PubSub topic to send notifications to. Its format is
+    /// The Pub/Sub topic to send notifications to. Its format is
     /// "projects/[project_id]/topics/[topic]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -174,7 +175,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     private string serviceAccount_ = "";
     /// <summary>
     /// Output only. The service account that needs "pubsub.topics.publish"
-    /// permission to publish to the PubSub topic.
+    /// permission to publish to the Pub/Sub topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ServiceAccount {
