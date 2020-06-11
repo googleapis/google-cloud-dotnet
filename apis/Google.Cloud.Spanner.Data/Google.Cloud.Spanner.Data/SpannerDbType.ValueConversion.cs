@@ -518,8 +518,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 if (TypeCode != TypeCode.Numeric)
                 {
-                    throw new ArgumentException(
-                        $"{targetClrType.FullName} can only be used for numeric results");
+                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
                 }
                 switch (wireValue.KindCase)
                 {
