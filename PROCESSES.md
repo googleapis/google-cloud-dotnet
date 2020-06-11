@@ -14,7 +14,7 @@ every project within that directory is published.
 Nothing in the `tools` directory is published as a package.
 
 Most project files under `apis` are at least partially generated.
-The master information is in [apis.json](apis/apis.json) - the API
+Metadata used for generation is in [apis.json](apis/apis.json) - the API
 catalog file. There's an entry for each API, containing:
 
 - The kind of API (grpc, rest, other)

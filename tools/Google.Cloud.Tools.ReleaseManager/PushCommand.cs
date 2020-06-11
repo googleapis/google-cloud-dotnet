@@ -105,7 +105,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 throw new UserErrorException($"Origin remote is not on GitHub. Url: {url}");
             }
             // TODO: Do we mind if the origin remote is googleapis/google-cloud-dotnet?
-            // Probably not, so long as we don't use a master branch.
+            // Probably not, so long as we don't use a primary branch.
             return originRemote;
         }
 

@@ -24,9 +24,9 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public abstract class CommandBase : ICommand
     {
-        // The branch we're thinking of as master. It may actually be some other branch for occasional
+        // The branch we're thinking of as primary (e.g. master). It may actually be some other branch for occasional
         // releases, but fundamentally it's "the current source of truth we're basing this release on".
-        private const string MasterBranch = "master";
+        private const string PrimaryBranch = "master";
 
         private readonly int _expectedArgCount;
 
@@ -66,30 +66,30 @@ namespace Google.Cloud.Tools.ReleaseManager
         protected List<ApiVersionPair> FindChangedVersions()
         {
             var currentCatalog = ApiCatalog.Load();
-            var masterCatalog = LoadMasterCatalog();
+            var primaryCatalog = LoadPrimaryCatalog();
             var currentVersions = currentCatalog.CreateRawVersionMap();
-            var masterVersions = masterCatalog.CreateRawVersionMap();
-            return currentVersions.Keys.Concat(masterVersions.Keys)
+            var primaryVersions = primaryCatalog.CreateRawVersionMap();
+            return currentVersions.Keys.Concat(primaryVersions.Keys)
                 .Distinct()
                 .OrderBy(id => id)
-                .Select(id => new ApiVersionPair(id, masterVersions.GetValueOrDefault(id), currentVersions.GetValueOrDefault(id)))
+                .Select(id => new ApiVersionPair(id, primaryVersions.GetValueOrDefault(id), currentVersions.GetValueOrDefault(id)))
                 .Where(v => v.NewVersion != v.OldVersion)
                 .ToList();
         }
 
-        protected ApiCatalog LoadMasterCatalog()
+        protected ApiCatalog LoadPrimaryCatalog()
         {
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new Repository(root))
             {
-                var master = repo.Branches.FirstOrDefault(b => b.FriendlyName == MasterBranch);
-                if (master == null)
+                var primary = repo.Branches.FirstOrDefault(b => b.FriendlyName == PrimaryBranch);
+                if (primary == null)
                 {
-                    throw new UserErrorException($"Unable to find branch '{MasterBranch}'.");
+                    throw new UserErrorException($"Unable to find branch '{PrimaryBranch}'.");
                 }
 
-                var masterCatalogJson = master.Commits.First()["apis/apis.json"].Target.Peel<Blob>().GetContentText();
-                return ApiCatalog.FromJson(masterCatalogJson);
+                var primaryCatalogJson = primary.Commits.First()["apis/apis.json"].Target.Peel<Blob>().GetContentText();
+                return ApiCatalog.FromJson(primaryCatalogJson);
             }
         }
     }

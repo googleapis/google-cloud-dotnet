@@ -22,8 +22,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         public string Id { get; }
 
         /// <summary>
-        /// The old version, i.e. the version on the logical master branch,
-        /// or null if the API does not exist in the master branch.
+        /// The old version, i.e. the version on the logical primary branch,
+        /// or null if the API does not exist in the primary branch.
         /// </summary>
         public string OldVersion { get; }
 
