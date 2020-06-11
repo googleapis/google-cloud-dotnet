@@ -816,8 +816,8 @@
     {
       "ServiceDirectory": "google/cloud/securitycenter/v1p1beta1",
       "Name": "securitycenter.googleapis.com",
-      "Title": "Cloud Security Command Center API",
-      "Description": "Cloud Security Command Center API provides access to temporal views of assets and findings within an organization.",
+      "Title": "Security Command Center API",
+      "Description": "Security Command Center API provides access to temporal views of assets and findings within an organization.",
       "ServiceConfigFile": "google/cloud/securitycenter/v1p1beta1/securitycenter_v1p1beta1.yaml",
       "Version": "v1p1beta1",
       "PackageFromDirectory": "google.cloud.securitycenter.v1p1beta1",
@@ -831,7 +831,7 @@
         "public \"google/cloud/securitycenter/v1p1beta1"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.SecurityCenter.V1P1Beta1"
+      "CSharpNamespaceFromProtos": "<AMBIGUOUS: Google.Cloud.SecurityCenter.V1P1Beta1, Google.Cloud.SecurityCenter.V1p1Beta1>"
     },
     {
       "ServiceDirectory": "google/cloud/securitycenter/v1",
