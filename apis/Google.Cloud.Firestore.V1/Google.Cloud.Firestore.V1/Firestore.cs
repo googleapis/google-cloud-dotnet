@@ -208,11 +208,11 @@ namespace Google.Cloud.Firestore.V1 {
             "LyoqfS97Y29sbGVjdGlvbl9pZH06CGRvY3VtZW50GnbKQRhmaXJlc3RvcmUu",
             "Z29vZ2xlYXBpcy5jb23SQVhodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
             "dXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvZGF0YXN0b3JlQqgBChdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIO",
+            "L2F1dGgvZGF0YXN0b3JlQscBChdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIO",
             "RmlyZXN0b3JlUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
             "Z29vZ2xlYXBpcy9maXJlc3RvcmUvdjE7ZmlyZXN0b3JlogIER0NGU6oCGUdv",
             "b2dsZS5DbG91ZC5GaXJlc3RvcmUuVjHKAhlHb29nbGVcQ2xvdWRcRmlyZXN0",
-            "b3JlXFYxYgZwcm90bzM="));
+            "b3JlXFYx6gIcR29vZ2xlOjpDbG91ZDo6RmlyZXN0b3JlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Firestore.V1.CommonReflection.Descriptor, global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor, global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
