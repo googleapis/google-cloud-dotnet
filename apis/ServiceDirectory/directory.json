@@ -654,7 +654,7 @@
         "google/rpc"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Bigquery.Reservation.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.BigQuery.Reservation.V1"
     },
     {
       "ServiceDirectory": "google/cloud/bigquery/v2",
