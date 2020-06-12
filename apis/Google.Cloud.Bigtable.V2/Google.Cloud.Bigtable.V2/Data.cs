@@ -86,11 +86,11 @@ namespace Google.Cloud.Bigtable.V2 {
             "KAkaDwoNRGVsZXRlRnJvbVJvd0IKCghtdXRhdGlvbiKAAQoTUmVhZE1vZGlm",
             "eVdyaXRlUnVsZRITCgtmYW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5fcXVh",
             "bGlmaWVyGAIgASgMEhYKDGFwcGVuZF92YWx1ZRgDIAEoDEgAEhoKEGluY3Jl",
-            "bWVudF9hbW91bnQYBCABKANIAEIGCgRydWxlQpcBChZjb20uZ29vZ2xlLmJp",
+            "bWVudF9hbW91bnQYBCABKANIAEIGCgRydWxlQrUBChZjb20uZ29vZ2xlLmJp",
             "Z3RhYmxlLnYyQglEYXRhUHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
             "cHJvdG8vZ29vZ2xlYXBpcy9iaWd0YWJsZS92MjtiaWd0YWJsZaoCGEdvb2ds",
             "ZS5DbG91ZC5CaWd0YWJsZS5WMsoCGEdvb2dsZVxDbG91ZFxCaWd0YWJsZVxW",
-            "MmIGcHJvdG8z"));
+            "MuoCG0dvb2dsZTo6Q2xvdWQ6OkJpZ3RhYmxlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
