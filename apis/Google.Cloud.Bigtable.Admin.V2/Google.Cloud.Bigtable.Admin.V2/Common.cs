@@ -30,11 +30,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "cmNlbnQYASABKAUSLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
             "b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuVGltZXN0YW1wKj0KC1N0b3JhZ2VUeXBlEhwKGFNUT1JBR0VfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgcKA1NTRBABEgcKA0hERBACQq4BChxjb20uZ29v",
+            "RV9VTlNQRUNJRklFRBAAEgcKA1NTRBABEgcKA0hERBACQtMBChxjb20uZ29v",
             "Z2xlLmJpZ3RhYmxlLmFkbWluLnYyQgtDb21tb25Qcm90b1ABWj1nb29nbGUu",
             "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWlu",
             "L3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIe",
-            "R29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYyYgZwcm90bzM="));
+            "R29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91",
+            "ZDo6QmlndGFibGU6OkFkbWluOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.Admin.V2.StorageType), }, null, new pbr::GeneratedClrTypeInfo[] {
