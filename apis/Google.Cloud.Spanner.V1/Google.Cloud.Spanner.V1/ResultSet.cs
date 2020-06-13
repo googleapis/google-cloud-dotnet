@@ -44,10 +44,11 @@ namespace Google.Cloud.Spanner.V1 {
             "cGFubmVyLnYxLlF1ZXJ5UGxhbhIsCgtxdWVyeV9zdGF0cxgCIAEoCzIXLmdv",
             "b2dsZS5wcm90b2J1Zi5TdHJ1Y3QSGQoPcm93X2NvdW50X2V4YWN0GAMgASgD",
             "SAASHwoVcm93X2NvdW50X2xvd2VyX2JvdW5kGAQgASgDSABCCwoJcm93X2Nv",
-            "dW50QpoBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCDlJlc3VsdFNldFByb3Rv",
+            "dW50QrcBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCDlJlc3VsdFNldFByb3Rv",
             "UAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvc3Bh",
             "bm5lci92MTtzcGFubmVy+AEBqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHK",
-            "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMWIGcHJvdG8z"));
+            "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNw",
+            "YW5uZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
