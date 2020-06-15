@@ -284,6 +284,32 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void WhereIn_NotInOrdering()
+        {
+            var collection = s_db.Collection("col");
+            var document = new Document
+            {
+                CreateTime = CreateProtoTimestamp(0, 0),
+                UpdateTime = CreateProtoTimestamp(0, 0),
+                Name = collection.Document("doc").Path,
+                Fields = { { "foo", CreateArray(CreateValue(1), CreateValue(2)) } }
+            };
+            var snapshot = DocumentSnapshot.ForDocument(s_db, document, Timestamp.FromProto(document.CreateTime));
+
+            var query = collection
+                .WhereIn("foo", new[] { "value1", "value2" })
+                .StartAt(snapshot);
+            var expected = new StructuredQuery
+            {
+                From = { new CollectionSelector { CollectionId = "col" } },
+                Where = Filter(new FieldFilter { Field = Field("foo"), Op = FieldFilter.Types.Operator.In, Value = CreateArray(CreateValue("value1"), CreateValue("value2")) }),
+                OrderBy = { new Order { Field = Field("__name__"), Direction = Direction.Ascending } },
+                StartAt = new Cursor { Values = { CreateValue(collection.Document("doc")) }, Before = true }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
         public void WhereIn_FieldPath_NullValueThrows()
         {
             var empty = GetEmptyQuery();

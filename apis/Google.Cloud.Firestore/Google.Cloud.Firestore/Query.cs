@@ -841,10 +841,10 @@ namespace Google.Cloud.Firestore
 
             if (_orderings.Count == 0 && _filters != null)
             {
-                // If no explicit ordering is specified, use the first inequality to define an implicit order.
+                // If no explicit ordering is specified, use the first ordering filter to define an implicit order.
                 foreach (var filter in _filters)
                 {
-                    if (!filter.IsEqualityFilter())
+                    if (filter.IsOrderingFilter())
                     {
                         modifiedOrderings = new List<InternalOrdering>(newOrderings) { new InternalOrdering(filter.Field, Direction.Ascending) };
                         newOrderings = modifiedOrderings;
@@ -1036,9 +1036,14 @@ namespace Google.Cloud.Firestore
             }
 
             /// <summary>
-            /// Checks whether this is an equality operator. Unary filters are always equality operators, and field filters can be.
+            /// Checks whether this is a comparison operator.
             /// </summary>
-            internal bool IsEqualityFilter() => _value == null || _op == (int) FieldOp.Equal || _op == (int) FieldOp.ArrayContains;
+            internal bool IsOrderingFilter() =>
+                _value is object &&
+                _op == (int) FieldOp.GreaterThan ||
+                _op == (int) FieldOp.GreaterThanOrEqual ||
+                _op == (int) FieldOp.LessThan ||
+                _op == (int) FieldOp.LessThanOrEqual;
 
             internal static InternalFilter Create(SerializationContext context, FieldPath fieldPath, FieldOp op, object value)
             {
