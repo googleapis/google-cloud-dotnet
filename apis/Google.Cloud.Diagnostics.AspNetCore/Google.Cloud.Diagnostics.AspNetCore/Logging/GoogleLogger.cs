@@ -160,6 +160,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var jsonStruct = new Struct();
             jsonStruct.Fields.Add("message", Value.ForString(message));
             jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
+
+            if (_loggerOptions.ServiceContext != null)
+            {
+                jsonStruct.Fields.Add("serviceContext", Value.ForStruct(_loggerOptions.ServiceContext));
+            }
             if (exception != null)
             {
                 jsonStruct.Fields.Add("exception", Value.ForString(exception.ToString()));
