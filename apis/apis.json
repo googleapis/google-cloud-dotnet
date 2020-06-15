@@ -79,6 +79,24 @@
       ]
     },
     {
+      "id": "Google.Cloud.BigQuery.Reservation.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "BigQuery Reservation API",
+      "productUrl": "https://cloud.google.com/bigquery/docs/reference/reservations",
+      "description": "Recommended Google client library to access the BigQuery Reservation API, which allows you to modify your BigQuery flat-rate reservations.",
+      "tags": [
+        "BigQuery",
+        "Reservation"
+      ],
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
+        "Grpc.Core": "2.27.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/bigquery/reservation/v1"
+    },
+    {
       "id": "Google.Cloud.BigQuery.V2",
       "productName": "Google BigQuery",
       "productUrl": "https://cloud.google.com/bigquery/",
