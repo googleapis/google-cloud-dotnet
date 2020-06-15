@@ -20,6 +20,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Diagnostics.Common.ServiceContextUtils;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -29,7 +30,7 @@ namespace Google.Cloud.Diagnostics.Common
     internal class ErrorReportingContextExceptionLogger : IContextExceptionLogger
     {
         // The service context in which this error has occurred.
-        // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
+        // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/ServiceContext
         private readonly Struct _serviceContext;
 
         private readonly string _logName;
@@ -47,15 +48,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckState(eventTarget.Kind == EventTargetKind.Logging, $"Invalid {nameof(EventTarget)}");
             _logName = GaxPreconditions.CheckNotNull(eventTarget.LogTarget, nameof(eventTarget.LogTarget)).GetFullLogName(eventTarget.LogName);
 
-            _serviceContext = new Struct();
-            if (serviceName != null)
-            {
-                _serviceContext.Fields["service"] = Value.ForString(serviceName);
-            }
-            if (version != null)
-            {
-                _serviceContext.Fields["version"] = Value.ForString(version);
-            }
+            _serviceContext = CreateServiceContext(serviceName, version) ?? new Struct();
         }
 
         /// <summary>

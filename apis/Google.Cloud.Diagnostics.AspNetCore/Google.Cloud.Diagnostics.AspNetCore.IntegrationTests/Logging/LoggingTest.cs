@@ -296,6 +296,90 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
             });
         }
+
+        [Fact]
+        public async Task Logging_ServiceContext()
+        {
+            string testId = IdGenerator.FromGuid();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Warning/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                var jsonFields = results.Single().JsonPayload.Fields;
+                Assert.Equal("my.test.service", jsonFields["serviceContext"].StructValue.Fields["service"].StringValue);
+                Assert.Equal("v1.0.0-alpha01", jsonFields["serviceContext"].StructValue.Fields["version"].StringValue);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_ServiceContext_Exception()
+        {
+            string testId = IdGenerator.FromGuid();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Exception/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                var jsonFields = results.Single().JsonPayload.Fields;
+                Assert.Equal("my.test.service", jsonFields["serviceContext"].StructValue.Fields["service"].StringValue);
+                Assert.Equal("v1.0.0-alpha01", jsonFields["serviceContext"].StructValue.Fields["version"].StringValue);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_ServiceContext_ServiceNameOnly_Exception()
+        {
+            string testId = IdGenerator.FromGuid();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextServiceNameOnlyLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Exception/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                var jsonFields = results.Single().JsonPayload.Fields;
+                Assert.Equal("my.test.service", jsonFields["serviceContext"].StructValue.Fields["service"].StringValue);
+                Assert.False(jsonFields["serviceContext"].StructValue.Fields.ContainsKey("version"));
+            });
+        }
+
+        [Fact]
+        public async Task Logging_ServiceContext_VersionOnly_Exception()
+        {
+            string testId = IdGenerator.FromGuid();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextVersionOnlyLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Exception/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                var jsonFields = results.Single().JsonPayload.Fields;
+                Assert.False(jsonFields["serviceContext"].StructValue.Fields.ContainsKey("service"));
+                Assert.Equal("v1.0.0-alpha01", jsonFields["serviceContext"].StructValue.Fields["version"].StringValue);
+            });
+        }
     }
 
     /// <summary>
@@ -421,6 +505,57 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
+    /// of level warning or above and sets a service name and version that will be included as the serviceContext
+    /// field in the json payload.
+    /// </summary>
+    public class NoBufferWarningServiceContextLoggerTestApplication : LoggerTestApplication
+    {
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            SetupRoutes(app);
+            LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
+                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
+                serviceName:"my.test.service", version:"v1.0.0-alpha01");
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+        }
+    }
+
+    /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
+    /// of level warning or above and sets a service name that will be included as the serviceContext
+    /// field in the json payload.
+    /// </summary>
+    public class NoBufferWarningServiceContextServiceNameOnlyLoggerTestApplication : LoggerTestApplication
+    {
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            SetupRoutes(app);
+            LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
+                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
+                serviceName: "my.test.service");
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+        }
+    }
+
+    /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
+    /// of level warning or above and sets a version that will be included as the serviceContext
+    /// field in the json payload.
+    /// </summary>
+    public class NoBufferWarningServiceContextVersionOnlyLoggerTestApplication : LoggerTestApplication
+    {
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            SetupRoutes(app);
+            LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
+                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
+                version: "v1.0.0-alpha01");
+            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+        }
+    }
+
+    /// <summary>
     /// A controller for the <see cref="LoggerTestApplication"/> used to generate simple log entries.
     /// </summary>
     public class MainController : Controller
@@ -503,7 +638,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
             catch (Exception e)
             {
-                _logger.LogCritical(message, e);
+                _logger.LogCritical(e, message);
             }
             return message;
         }

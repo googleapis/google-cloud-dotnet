@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api;
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Hosting;
@@ -35,12 +34,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// the project ID will be detected from the platform.
         /// </param>
         /// <param name="serviceName">
-        /// An identifier of the service used for exception logging, such as the name of the executable or job.
+        /// An identifier of the service used for exception logging (through Error Reporting), such as the name of the executable or job.
         /// If unspecified and running on GAE the service name will be detected from the platform.
+        /// This may be different from <see cref="LoggerOptions.ServiceName"/> which is used for log entries logged with <see cref="GoogleLogger"/>.
         /// </param>
         /// <param name="serviceVersion">
         /// A string that represents the version of the service or the source code used for exception logging.
         /// If unspecified and running on GAE the service version will be detected from the platform.
+        /// This may be different from <see cref="LoggerOptions.Version"/> which is used for log entries logged with <see cref="GoogleLogger"/>.
         /// </param>
         /// <param name="loggerOptions">The options for logging. May be null, in which case default options will be used.</param>
         /// <param name="traceOptions">The options for tracing. May be null, in which case default options will be used.</param>
