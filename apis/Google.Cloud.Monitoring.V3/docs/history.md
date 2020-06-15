@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.1.0, released 2020-06-15
+
+- [Commit 4389faa](https://github.com/googleapis/google-cloud-dotnet/commit/4389faa): docs: Change relative URLs to absolute URLs to fix broken links.
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+
+(No API surface changes relative to 2.1.0-beta01.)
+
 # Version 2.1.0-beta01, released 2020-05-06
 
 - [Commit 9c1f9d6](https://github.com/googleapis/google-cloud-dotnet/commit/9c1f9d6):

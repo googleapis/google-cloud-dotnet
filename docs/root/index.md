@@ -54,7 +54,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html) | 3.0.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](Google.Cloud.ManagedIdentities.V1/index.html) | 2.0.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
 | [Google.Cloud.Memcache.V1Beta2](Google.Cloud.Memcache.V1Beta2/index.html) | 1.0.0-beta02 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
-| [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html) | 2.1.0-beta01 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
+| [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html) | 2.1.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
 | [Google.Cloud.OrgPolicy.V1](Google.Cloud.OrgPolicy.V1/index.html) | 2.0.0 | OrgPolicy API messages |
 | [Google.Cloud.OsConfig.V1](Google.Cloud.OsConfig.V1/index.html) | 1.0.0 | [Google Cloud OS Config API](https://cloud.google.com/compute/docs/osconfig/rest) |
 | [Google.Cloud.OsLogin.Common](Google.Cloud.OsLogin.Common/index.html) | 2.0.0 | Version-agnostic types for the Google OS Login API |
