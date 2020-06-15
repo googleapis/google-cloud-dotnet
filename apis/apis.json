@@ -80,7 +80,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Reservation.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "BigQuery Reservation API",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/reservations",
