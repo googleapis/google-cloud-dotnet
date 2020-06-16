@@ -62,11 +62,11 @@ namespace Google.Cloud.Firestore.V1 {
             "T3BlcmF0b3ISRAoFZmllbGQYAiABKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYx",
             "LlN0cnVjdHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZUgAIj0KCE9wZXJhdG9y",
             "EhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASCgoGSVNfTkFOEAISCwoHSVNf",
-            "TlVMTBADQg4KDG9wZXJhbmRfdHlwZRokCg5GaWVsZFJlZmVyZW5jZRISCgpm",
-            "aWVsZF9wYXRoGAIgASgJGo4BCgVPcmRlchJCCgVmaWVsZBgBIAEoCzIzLmdv",
-            "b2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkZpZWxkUmVmZXJl",
-            "bmNlEkEKCWRpcmVjdGlvbhgCIAEoDjIuLmdvb2dsZS5maXJlc3RvcmUudjEu",
-            "U3RydWN0dXJlZFF1ZXJ5LkRpcmVjdGlvbhpRCgpQcm9qZWN0aW9uEkMKBmZp",
+            "TlVMTBADQg4KDG9wZXJhbmRfdHlwZRqOAQoFT3JkZXISQgoFZmllbGQYASAB",
+            "KAsyMy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5GaWVs",
+            "ZFJlZmVyZW5jZRJBCglkaXJlY3Rpb24YAiABKA4yLi5nb29nbGUuZmlyZXN0",
+            "b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5EaXJlY3Rpb24aJAoORmllbGRSZWZl",
+            "cmVuY2USEgoKZmllbGRfcGF0aBgCIAEoCRpRCgpQcm9qZWN0aW9uEkMKBmZp",
             "ZWxkcxgCIAMoCzIzLmdvb2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1",
             "ZXJ5LkZpZWxkUmVmZXJlbmNlIkUKCURpcmVjdGlvbhIZChVESVJFQ1RJT05f",
             "VU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQARIOCgpERVNDRU5ESU5HEAIi",
@@ -85,8 +85,8 @@ namespace Google.Cloud.Firestore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Parser, new[]{ "Field", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Parser, new[]{ "Op", "Field" }, new[]{ "OperandType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Cursor), global::Google.Cloud.Firestore.V1.Cursor.Parser, new[]{ "Values", "Before" }, null, null, null, null)
           }));
@@ -1621,138 +1621,6 @@ namespace Google.Cloud.Firestore.V1 {
       }
 
       /// <summary>
-      /// A reference to a field, such as `max(messages.time) as max_time`.
-      /// </summary>
-      public sealed partial class FieldReference : pb::IMessage<FieldReference> {
-        private static readonly pb::MessageParser<FieldReference> _parser = new pb::MessageParser<FieldReference>(() => new FieldReference());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<FieldReference> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[5]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference(FieldReference other) : this() {
-          fieldPath_ = other.fieldPath_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference Clone() {
-          return new FieldReference(this);
-        }
-
-        /// <summary>Field number for the "field_path" field.</summary>
-        public const int FieldPathFieldNumber = 2;
-        private string fieldPath_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string FieldPath {
-          get { return fieldPath_; }
-          set {
-            fieldPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as FieldReference);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(FieldReference other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (FieldPath != other.FieldPath) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (FieldPath.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(FieldPath);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (FieldPath.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(FieldReference other) {
-          if (other == null) {
-            return;
-          }
-          if (other.FieldPath.Length != 0) {
-            FieldPath = other.FieldPath;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 18: {
-                FieldPath = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-      /// <summary>
       /// An order on a field.
       /// </summary>
       public sealed partial class Order : pb::IMessage<Order> {
@@ -1763,7 +1631,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[6]; }
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1916,6 +1784,138 @@ namespace Google.Cloud.Firestore.V1 {
               }
               case 16: {
                 Direction = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// A reference to a field, such as `max(messages.time) as max_time`.
+      /// </summary>
+      public sealed partial class FieldReference : pb::IMessage<FieldReference> {
+        private static readonly pb::MessageParser<FieldReference> _parser = new pb::MessageParser<FieldReference>(() => new FieldReference());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<FieldReference> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference(FieldReference other) : this() {
+          fieldPath_ = other.fieldPath_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference Clone() {
+          return new FieldReference(this);
+        }
+
+        /// <summary>Field number for the "field_path" field.</summary>
+        public const int FieldPathFieldNumber = 2;
+        private string fieldPath_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FieldPath {
+          get { return fieldPath_; }
+          set {
+            fieldPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as FieldReference);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(FieldReference other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FieldPath != other.FieldPath) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (FieldPath.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FieldPath);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (FieldPath.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(FieldReference other) {
+          if (other == null) {
+            return;
+          }
+          if (other.FieldPath.Length != 0) {
+            FieldPath = other.FieldPath;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                FieldPath = input.ReadString();
                 break;
               }
             }
