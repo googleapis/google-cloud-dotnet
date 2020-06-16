@@ -114,3 +114,23 @@ available for testing purposes.
 Examples:
 
 - Host=alternative-spanner.googleapis.com; Port=1443
+
+## EmulatorDetection
+
+Controls the effect of the `SPANNER_EMULATOR_HOST` environment
+variable on which Spanner service the client connects to.
+
+Possible values:
+
+- None (the default)
+- ProductionOnly
+- EmulatorOnly
+- EmulatorOrProduction
+
+The effects of these values are described in detail in the
+[EmulatorDetection enum](obj/api/Google.Api.Gax.EmulatorDetection.yml)
+documentation.
+
+Example:
+
+- EmulatorDetection=EmulatorOrProduction
