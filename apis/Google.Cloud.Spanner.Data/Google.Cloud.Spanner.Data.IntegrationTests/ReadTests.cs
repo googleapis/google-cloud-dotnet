@@ -426,9 +426,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         // [START spanner_test_deadline_exceeded_fails]
-        [Fact]
+        [SkippableFact]
         public async Task TimeoutFromOptions()
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator returns too quickly to trigger timeout");
             var connectionStringBuilder = new SpannerConnectionStringBuilder(_fixture.ConnectionString)
             {
                 Timeout = 0,
