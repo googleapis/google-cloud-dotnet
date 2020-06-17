@@ -426,10 +426,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [SkippableFact]
+        [Fact]
         public void PartitionedUpdate_Small()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Emulator doesn't support partitioned updates yet.");
             string key = _fixture.CreateTestRows();
             string table = _fixture.TableName;
             using (var connection = _fixture.GetConnection())
