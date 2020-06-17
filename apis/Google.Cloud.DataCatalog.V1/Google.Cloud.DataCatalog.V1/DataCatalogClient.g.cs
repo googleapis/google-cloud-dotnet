@@ -101,10 +101,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateEntryGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateEntryGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -128,10 +128,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateEntryGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateEntryGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -140,10 +140,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteEntryGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteEntryGroupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -167,10 +167,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -179,10 +179,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -191,10 +191,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataCatalogClient.GetEntry</c>
@@ -248,10 +248,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -260,10 +260,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -272,10 +272,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -284,10 +284,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteTagTemplateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -296,10 +296,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -308,10 +308,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -320,10 +320,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RenameTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings RenameTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -332,10 +332,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteTagTemplateFieldSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataCatalogClient.CreateTag</c>
@@ -344,10 +344,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataCatalogClient.UpdateTag</c>
@@ -356,10 +356,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataCatalogClient.DeleteTag</c>
@@ -368,10 +368,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteTagSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataCatalogClient.ListTags</c>
@@ -395,10 +395,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings SetIamPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -422,10 +422,10 @@ namespace Google.Cloud.DataCatalog.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataCatalogSettings"/> object.</returns>

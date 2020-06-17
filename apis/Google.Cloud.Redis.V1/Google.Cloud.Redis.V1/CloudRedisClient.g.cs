@@ -73,10 +73,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -85,10 +85,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -97,10 +97,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>CloudRedisClient.CreateInstance</c> and
@@ -127,10 +127,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>CloudRedisClient.UpdateInstance</c> and
@@ -157,10 +157,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ImportInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ImportInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>CloudRedisClient.ImportInstance</c> and
@@ -187,10 +187,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ExportInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ExportInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>CloudRedisClient.ExportInstance</c> and
@@ -217,10 +217,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings FailoverInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings FailoverInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>CloudRedisClient.FailoverInstance</c> and
@@ -247,10 +247,10 @@ namespace Google.Cloud.Redis.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>CloudRedisClient.DeleteInstance</c> and

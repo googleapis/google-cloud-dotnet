@@ -135,10 +135,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -148,10 +148,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateNotificationChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -177,10 +177,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SendNotificationChannelVerificationCodeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings SendNotificationChannelVerificationCodeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
