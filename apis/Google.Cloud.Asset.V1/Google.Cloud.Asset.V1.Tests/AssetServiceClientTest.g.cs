@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gt = Google.Type;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -113,6 +114,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.CreateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -145,6 +147,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.CreateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -177,6 +180,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.CreateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -207,6 +211,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.CreateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -239,6 +244,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -269,6 +275,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -301,6 +308,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -331,6 +339,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -363,6 +372,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.GetFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -393,6 +403,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.GetFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -498,6 +509,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.UpdateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -529,6 +541,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.UpdateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -558,6 +571,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.UpdateFeed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
@@ -585,6 +599,7 @@ namespace Google.Cloud.Asset.V1.Tests
                 },
                 ContentType = ContentType.IamPolicy,
                 FeedOutputConfig = new FeedOutputConfig(),
+                Condition = new gt::Expr(),
             };
             mockGrpcClient.Setup(x => x.UpdateFeedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feed>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);

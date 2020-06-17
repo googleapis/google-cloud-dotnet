@@ -29,109 +29,110 @@ namespace Google.Cloud.Asset.V1 {
             "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9m",
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
             "bxoiZ29vZ2xlL2Nsb3VkL2Fzc2V0L3YxL2Fzc2V0cy5wcm90bxojZ29vZ2xl",
-            "L2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1",
-            "Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aFmdvb2dsZS90",
-            "eXBlL2V4cHIucHJvdG8ijQIKE0V4cG9ydEFzc2V0c1JlcXVlc3QSNwoGcGFy",
-            "ZW50GAEgASgJQifgQQL6QSESH2Nsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20v",
-            "QXNzZXQSLQoJcmVhZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBITCgthc3NldF90eXBlcxgDIAMoCRI4Cgxjb250ZW50X3R5cGUY",
-            "BCABKA4yIi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQ29udGVudFR5cGUSPwoN",
-            "b3V0cHV0X2NvbmZpZxgFIAEoCzIjLmdvb2dsZS5jbG91ZC5hc3NldC52MS5P",
-            "dXRwdXRDb25maWdCA+BBAiKBAQoURXhwb3J0QXNzZXRzUmVzcG9uc2USLQoJ",
-            "cmVhZF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI6",
-            "Cg1vdXRwdXRfY29uZmlnGAIgASgLMiMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
-            "Lk91dHB1dENvbmZpZyLtAQocQmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVxdWVz",
-            "dBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIRIfY2xvdWRhc3NldC5nb29nbGVh",
-            "cGlzLmNvbS9Bc3NldBITCgthc3NldF9uYW1lcxgCIAMoCRI9Cgxjb250ZW50",
-            "X3R5cGUYAyABKA4yIi5nb29nbGUuY2xvdWQuYXNzZXQudjEuQ29udGVudFR5",
-            "cGVCA+BBARJAChByZWFkX3RpbWVfd2luZG93GAQgASgLMiEuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLlRpbWVXaW5kb3dCA+BBASJVCh1CYXRjaEdldEFzc2V0",
-            "c0hpc3RvcnlSZXNwb25zZRI0CgZhc3NldHMYASADKAsyJC5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjEuVGVtcG9yYWxBc3NldCJuChFDcmVhdGVGZWVkUmVxdWVz",
-            "dBITCgZwYXJlbnQYASABKAlCA+BBAhIUCgdmZWVkX2lkGAIgASgJQgPgQQIS",
-            "LgoEZmVlZBgDIAEoCzIbLmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkQgPg",
-            "QQIiRgoOR2V0RmVlZFJlcXVlc3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5j",
-            "bG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29tL0ZlZWQiJwoQTGlzdEZlZWRzUmVx",
-            "dWVzdBITCgZwYXJlbnQYASABKAlCA+BBAiI/ChFMaXN0RmVlZHNSZXNwb25z",
-            "ZRIqCgVmZWVkcxgBIAMoCzIbLmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVk",
-            "InkKEVVwZGF0ZUZlZWRSZXF1ZXN0Ei4KBGZlZWQYASABKAsyGy5nb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEuRmVlZEID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECIkkKEURlbGV0ZUZl",
-            "ZWRSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeY2xvdWRhc3NldC5n",
-            "b29nbGVhcGlzLmNvbS9GZWVkIqsBCgxPdXRwdXRDb25maWcSQAoPZ2NzX2Rl",
-            "c3RpbmF0aW9uGAEgASgLMiUuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkdjc0Rl",
-            "c3RpbmF0aW9uSAASSgoUYmlncXVlcnlfZGVzdGluYXRpb24YAiABKAsyKi5n",
-            "b29nbGUuY2xvdWQuYXNzZXQudjEuQmlnUXVlcnlEZXN0aW5hdGlvbkgAQg0K",
-            "C2Rlc3RpbmF0aW9uIkMKDkdjc0Rlc3RpbmF0aW9uEg0KA3VyaRgBIAEoCUgA",
-            "EhQKCnVyaV9wcmVmaXgYAiABKAlIAEIMCgpvYmplY3RfdXJpIk4KE0JpZ1F1",
-            "ZXJ5RGVzdGluYXRpb24SFAoHZGF0YXNldBgBIAEoCUID4EECEhIKBXRhYmxl",
-            "GAIgASgJQgPgQQISDQoFZm9yY2UYAyABKAgiIgoRUHVic3ViRGVzdGluYXRp",
-            "b24SDQoFdG9waWMYASABKAkiaQoQRmVlZE91dHB1dENvbmZpZxJGChJwdWJz",
-            "dWJfZGVzdGluYXRpb24YASABKAsyKC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "UHVic3ViRGVzdGluYXRpb25IAEINCgtkZXN0aW5hdGlvbiLbAgoERmVlZBIR",
-            "CgRuYW1lGAEgASgJQgPgQQISEwoLYXNzZXRfbmFtZXMYAiADKAkSEwoLYXNz",
-            "ZXRfdHlwZXMYAyADKAkSOAoMY29udGVudF90eXBlGAQgASgOMiIuZ29vZ2xl",
-            "LmNsb3VkLmFzc2V0LnYxLkNvbnRlbnRUeXBlEkgKEmZlZWRfb3V0cHV0X2Nv",
-            "bmZpZxgFIAEoCzInLmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkT3V0cHV0",
-            "Q29uZmlnQgPgQQI6kQHqQY0BCh5jbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t",
-            "L0ZlZWQSH3Byb2plY3RzL3twcm9qZWN0fS9mZWVkcy97ZmVlZH0SHWZvbGRl",
-            "cnMve2ZvbGRlcn0vZmVlZHMve2ZlZWR9Eilvcmdhbml6YXRpb25zL3tvcmdh",
-            "bml6YXRpb259L2ZlZWRzL3tmZWVkfSABIqUBChlTZWFyY2hBbGxSZXNvdXJj",
-            "ZXNSZXF1ZXN0EhIKBXNjb3BlGAEgASgJQgPgQQISEgoFcXVlcnkYAiABKAlC",
-            "A+BBARIYCgthc3NldF90eXBlcxgDIAMoCUID4EEBEhYKCXBhZ2Vfc2l6ZRgE",
-            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBSABKAlCA+BBARIVCghvcmRlcl9i",
-            "eRgGIAEoCUID4EEBInMKGlNlYXJjaEFsbFJlc291cmNlc1Jlc3BvbnNlEjwK",
-            "B3Jlc3VsdHMYASADKAsyKy5nb29nbGUuY2xvdWQuYXNzZXQudjEuUmVzb3Vy",
-            "Y2VTZWFyY2hSZXN1bHQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInYKG1Nl",
-            "YXJjaEFsbElhbVBvbGljaWVzUmVxdWVzdBISCgVzY29wZRgBIAEoCUID4EEC",
-            "EhIKBXF1ZXJ5GAIgASgJQgPgQQESFgoJcGFnZV9zaXplGAMgASgFQgPgQQES",
-            "FwoKcGFnZV90b2tlbhgEIAEoCUID4EEBInYKHFNlYXJjaEFsbElhbVBvbGlj",
-            "aWVzUmVzcG9uc2USPQoHcmVzdWx0cxgBIAMoCzIsLmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MS5JYW1Qb2xpY3lTZWFyY2hSZXN1bHQSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJKmwKC0NvbnRlbnRUeXBlEhwKGENPTlRFTlRfVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEgwKCFJFU09VUkNFEAESDgoKSUFNX1BPTElDWRACEg4KCk9S",
-            "R19QT0xJQ1kQBBIRCg1BQ0NFU1NfUE9MSUNZEAUy8AsKDEFzc2V0U2Vydmlj",
-            "ZRLeAQoMRXhwb3J0QXNzZXRzEiouZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4",
-            "cG9ydEFzc2V0c1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIoIBgtPkkwIiIh0vdjEve3BhcmVudD0qLyp9OmV4cG9ydEFzc2V0czoB",
-            "KspBVwoqZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0c1Jlc3Bv",
-            "bnNlEilnb29nbGUuY2xvdWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVz",
-            "dBKyAQoVQmF0Y2hHZXRBc3NldHNIaXN0b3J5EjMuZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlcXVlc3QaNC5nb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVzcG9uc2Ui",
-            "LoLT5JMCKBImL3YxL3twYXJlbnQ9Ki8qfTpiYXRjaEdldEFzc2V0c0hpc3Rv",
-            "cnkSfwoKQ3JlYXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5DcmVh",
-            "dGVGZWVkUmVxdWVzdBobLmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkIiqC",
-            "0+STAhsiFi92MS97cGFyZW50PSovKn0vZmVlZHM6ASraQQZwYXJlbnQSdAoH",
-            "R2V0RmVlZBIlLmdvb2dsZS5jbG91ZC5hc3NldC52MS5HZXRGZWVkUmVxdWVz",
-            "dBobLmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkIiWC0+STAhgSFi92MS97",
-            "bmFtZT0qLyovZmVlZHMvKn3aQQRuYW1lEocBCglMaXN0RmVlZHMSJy5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjEuTGlzdEZlZWRzUmVxdWVzdBooLmdvb2dsZS5j",
-            "bG91ZC5hc3NldC52MS5MaXN0RmVlZHNSZXNwb25zZSIngtPkkwIYEhYvdjEv",
-            "e3BhcmVudD0qLyp9L2ZlZWRz2kEGcGFyZW50EoIBCgpVcGRhdGVGZWVkEigu",
-            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLlVwZGF0ZUZlZWRSZXF1ZXN0GhsuZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLkZlZWQiLYLT5JMCIDIbL3YxL3tmZWVkLm5h",
-            "bWU9Ki8qL2ZlZWRzLyp9OgEq2kEEZmVlZBJ1CgpEZWxldGVGZWVkEiguZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLkRlbGV0ZUZlZWRSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IiWC0+STAhgqFi92MS97bmFtZT0qLyovZmVlZHMv",
-            "Kn3aQQRuYW1lEr8BChJTZWFyY2hBbGxSZXNvdXJjZXMSMC5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjEuU2VhcmNoQWxsUmVzb3VyY2VzUmVxdWVzdBoxLmdvb2ds",
-            "ZS5jbG91ZC5hc3NldC52MS5TZWFyY2hBbGxSZXNvdXJjZXNSZXNwb25zZSJE",
-            "gtPkkwIkEiIvdjEve3Njb3BlPSovKn06c2VhcmNoQWxsUmVzb3VyY2Vz2kEX",
-            "c2NvcGUscXVlcnksYXNzZXRfdHlwZXMSuwEKFFNlYXJjaEFsbElhbVBvbGlj",
-            "aWVzEjIuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFsbElhbVBvbGlj",
-            "aWVzUmVxdWVzdBozLmdvb2dsZS5jbG91ZC5hc3NldC52MS5TZWFyY2hBbGxJ",
-            "YW1Qb2xpY2llc1Jlc3BvbnNlIjqC0+STAiYSJC92MS97c2NvcGU9Ki8qfTpz",
-            "ZWFyY2hBbGxJYW1Qb2xpY2llc9pBC3Njb3BlLHF1ZXJ5Gk3KQRljbG91ZGFz",
-            "c2V0Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKcAQoZY29tLmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MUIRQXNzZXRTZXJ2aWNlUHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9hc3NldC92MTthc3NldKoC",
-            "FUdvb2dsZS5DbG91ZC5Bc3NldC5WMcoCFUdvb2dsZVxDbG91ZFxBc3NldFxW",
-            "MWIGcHJvdG8z"));
+            "L2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aHmdvb2dsZS9wcm90b2J1",
+            "Zi9kdXJhdGlvbi5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3Rv",
+            "GiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3By",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxoWZ29vZ2xlL3R5cGUvZXhwci5wcm90",
+            "byKNAgoTRXhwb3J0QXNzZXRzUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BB",
+            "AvpBIRIfY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9Bc3NldBItCglyZWFk",
+            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhMKC2Fz",
+            "c2V0X3R5cGVzGAMgAygJEjgKDGNvbnRlbnRfdHlwZRgEIAEoDjIiLmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5Db250ZW50VHlwZRI/Cg1vdXRwdXRfY29uZmln",
+            "GAUgASgLMiMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLk91dHB1dENvbmZpZ0ID",
+            "4EECIoEBChRFeHBvcnRBc3NldHNSZXNwb25zZRItCglyZWFkX3RpbWUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjoKDW91dHB1dF9jb25m",
+            "aWcYAiABKAsyIy5nb29nbGUuY2xvdWQuYXNzZXQudjEuT3V0cHV0Q29uZmln",
+            "Iu0BChxCYXRjaEdldEFzc2V0c0hpc3RvcnlSZXF1ZXN0EjcKBnBhcmVudBgB",
+            "IAEoCUIn4EEC+kEhEh9jbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29tL0Fzc2V0",
+            "EhMKC2Fzc2V0X25hbWVzGAIgAygJEj0KDGNvbnRlbnRfdHlwZRgDIAEoDjIi",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5Db250ZW50VHlwZUID4EEBEkAKEHJl",
+            "YWRfdGltZV93aW5kb3cYBCABKAsyIS5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "VGltZVdpbmRvd0ID4EEBIlUKHUJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlc3Bv",
+            "bnNlEjQKBmFzc2V0cxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5hc3NldC52MS5U",
+            "ZW1wb3JhbEFzc2V0Im4KEUNyZWF0ZUZlZWRSZXF1ZXN0EhMKBnBhcmVudBgB",
+            "IAEoCUID4EECEhQKB2ZlZWRfaWQYAiABKAlCA+BBAhIuCgRmZWVkGAMgASgL",
+            "MhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWRCA+BBAiJGCg5HZXRGZWVk",
+            "UmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNsb3VkYXNzZXQuZ29v",
+            "Z2xlYXBpcy5jb20vRmVlZCInChBMaXN0RmVlZHNSZXF1ZXN0EhMKBnBhcmVu",
+            "dBgBIAEoCUID4EECIj8KEUxpc3RGZWVkc1Jlc3BvbnNlEioKBWZlZWRzGAEg",
+            "AygLMhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWQieQoRVXBkYXRlRmVl",
+            "ZFJlcXVlc3QSLgoEZmVlZBgBIAEoCzIbLmdvb2dsZS5jbG91ZC5hc3NldC52",
+            "MS5GZWVkQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgPgQQIiSQoRRGVsZXRlRmVlZFJlcXVlc3QSNAoE",
+            "bmFtZRgBIAEoCUIm4EEC+kEgCh5jbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t",
+            "L0ZlZWQiqwEKDE91dHB1dENvbmZpZxJACg9nY3NfZGVzdGluYXRpb24YASAB",
+            "KAsyJS5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2NzRGVzdGluYXRpb25IABJK",
+            "ChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgCIAEoCzIqLmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5CaWdRdWVyeURlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24i",
+            "QwoOR2NzRGVzdGluYXRpb24SDQoDdXJpGAEgASgJSAASFAoKdXJpX3ByZWZp",
+            "eBgCIAEoCUgAQgwKCm9iamVjdF91cmkiTgoTQmlnUXVlcnlEZXN0aW5hdGlv",
+            "bhIUCgdkYXRhc2V0GAEgASgJQgPgQQISEgoFdGFibGUYAiABKAlCA+BBAhIN",
+            "CgVmb3JjZRgDIAEoCCIiChFQdWJzdWJEZXN0aW5hdGlvbhINCgV0b3BpYxgB",
+            "IAEoCSJpChBGZWVkT3V0cHV0Q29uZmlnEkYKEnB1YnN1Yl9kZXN0aW5hdGlv",
+            "bhgBIAEoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5QdWJzdWJEZXN0aW5h",
+            "dGlvbkgAQg0KC2Rlc3RpbmF0aW9uIoEDCgRGZWVkEhEKBG5hbWUYASABKAlC",
+            "A+BBAhITCgthc3NldF9uYW1lcxgCIAMoCRITCgthc3NldF90eXBlcxgDIAMo",
+            "CRI4Cgxjb250ZW50X3R5cGUYBCABKA4yIi5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djEuQ29udGVudFR5cGUSSAoSZmVlZF9vdXRwdXRfY29uZmlnGAUgASgLMicu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWRPdXRwdXRDb25maWdCA+BBAhIk",
+            "Cgljb25kaXRpb24YBiABKAsyES5nb29nbGUudHlwZS5FeHByOpEB6kGNAQoe",
+            "Y2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9GZWVkEh9wcm9qZWN0cy97cHJv",
+            "amVjdH0vZmVlZHMve2ZlZWR9Eh1mb2xkZXJzL3tmb2xkZXJ9L2ZlZWRzL3tm",
+            "ZWVkfRIpb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9mZWVkcy97ZmVl",
+            "ZH0gASKlAQoZU2VhcmNoQWxsUmVzb3VyY2VzUmVxdWVzdBISCgVzY29wZRgB",
+            "IAEoCUID4EECEhIKBXF1ZXJ5GAIgASgJQgPgQQESGAoLYXNzZXRfdHlwZXMY",
+            "AyADKAlCA+BBARIWCglwYWdlX3NpemUYBCABKAVCA+BBARIXCgpwYWdlX3Rv",
+            "a2VuGAUgASgJQgPgQQESFQoIb3JkZXJfYnkYBiABKAlCA+BBASJzChpTZWFy",
+            "Y2hBbGxSZXNvdXJjZXNSZXNwb25zZRI8CgdyZXN1bHRzGAEgAygLMisuZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLlJlc291cmNlU2VhcmNoUmVzdWx0EhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSJ2ChtTZWFyY2hBbGxJYW1Qb2xpY2llc1Jl",
+            "cXVlc3QSEgoFc2NvcGUYASABKAlCA+BBAhISCgVxdWVyeRgCIAEoCUID4EEB",
+            "EhYKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBCABKAlC",
+            "A+BBASJ2ChxTZWFyY2hBbGxJYW1Qb2xpY2llc1Jlc3BvbnNlEj0KB3Jlc3Vs",
+            "dHMYASADKAsyLC5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5U2Vh",
+            "cmNoUmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSpsCgtDb250ZW50",
+            "VHlwZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghSRVNPVVJD",
+            "RRABEg4KCklBTV9QT0xJQ1kQAhIOCgpPUkdfUE9MSUNZEAQSEQoNQUNDRVNT",
+            "X1BPTElDWRAFMvALCgxBc3NldFNlcnZpY2US3gEKDEV4cG9ydEFzc2V0cxIq",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0Gh0u",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKCAYLT5JMCIiIdL3YxL3tw",
+            "YXJlbnQ9Ki8qfTpleHBvcnRBc3NldHM6ASrKQVcKKmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5FeHBvcnRBc3NldHNSZXNwb25zZRIpZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkV4cG9ydEFzc2V0c1JlcXVlc3QSsgEKFUJhdGNoR2V0QXNzZXRz",
+            "SGlzdG9yeRIzLmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEFzc2V0",
+            "c0hpc3RvcnlSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJhdGNo",
+            "R2V0QXNzZXRzSGlzdG9yeVJlc3BvbnNlIi6C0+STAigSJi92MS97cGFyZW50",
+            "PSovKn06YmF0Y2hHZXRBc3NldHNIaXN0b3J5En8KCkNyZWF0ZUZlZWQSKC5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuQ3JlYXRlRmVlZFJlcXVlc3QaGy5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuRmVlZCIqgtPkkwIbIhYvdjEve3BhcmVudD0q",
+            "Lyp9L2ZlZWRzOgEq2kEGcGFyZW50EnQKB0dldEZlZWQSJS5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuR2V0RmVlZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuRmVlZCIlgtPkkwIYEhYvdjEve25hbWU9Ki8qL2ZlZWRzLyp92kEE",
+            "bmFtZRKHAQoJTGlzdEZlZWRzEicuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkxp",
+            "c3RGZWVkc1JlcXVlc3QaKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuTGlzdEZl",
+            "ZWRzUmVzcG9uc2UiJ4LT5JMCGBIWL3YxL3twYXJlbnQ9Ki8qfS9mZWVkc9pB",
+            "BnBhcmVudBKCAQoKVXBkYXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3NldC52",
+            "MS5VcGRhdGVGZWVkUmVxdWVzdBobLmdvb2dsZS5jbG91ZC5hc3NldC52MS5G",
+            "ZWVkIi2C0+STAiAyGy92MS97ZmVlZC5uYW1lPSovKi9mZWVkcy8qfToBKtpB",
+            "BGZlZWQSdQoKRGVsZXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5E",
+            "ZWxldGVGZWVkUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIlgtPk",
+            "kwIYKhYvdjEve25hbWU9Ki8qL2ZlZWRzLyp92kEEbmFtZRK/AQoSU2VhcmNo",
+            "QWxsUmVzb3VyY2VzEjAuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFs",
+            "bFJlc291cmNlc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2Vh",
+            "cmNoQWxsUmVzb3VyY2VzUmVzcG9uc2UiRILT5JMCJBIiL3YxL3tzY29wZT0q",
+            "Lyp9OnNlYXJjaEFsbFJlc291cmNlc9pBF3Njb3BlLHF1ZXJ5LGFzc2V0X3R5",
+            "cGVzErsBChRTZWFyY2hBbGxJYW1Qb2xpY2llcxIyLmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5TZWFyY2hBbGxJYW1Qb2xpY2llc1JlcXVlc3QaMy5nb29nbGUu",
+            "Y2xvdWQuYXNzZXQudjEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXNwb25zZSI6",
+            "gtPkkwImEiQvdjEve3Njb3BlPSovKn06c2VhcmNoQWxsSWFtUG9saWNpZXPa",
+            "QQtzY29wZSxxdWVyeRpNykEZY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbdJB",
+            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm1CnAEKGWNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFCEUFzc2V0U2Vydmlj",
+            "ZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvYXNzZXQvdjE7YXNzZXSqAhVHb29nbGUuQ2xvdWQuQXNzZXQu",
+            "VjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsRequest), global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentType", "OutputConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsResponse), global::Google.Cloud.Asset.V1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null, null),
@@ -148,7 +149,7 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.PubsubDestination), global::Google.Cloud.Asset.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.FeedOutputConfig), global::Google.Cloud.Asset.V1.FeedOutputConfig.Parser, new[]{ "PubsubDestination" }, new[]{ "Destination" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Feed), global::Google.Cloud.Asset.V1.Feed.Parser, new[]{ "Name", "AssetNames", "AssetTypes", "ContentType", "FeedOutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Feed), global::Google.Cloud.Asset.V1.Feed.Parser, new[]{ "Name", "AssetNames", "AssetTypes", "ContentType", "FeedOutputConfig", "Condition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllResourcesRequest), global::Google.Cloud.Asset.V1.SearchAllResourcesRequest.Parser, new[]{ "Scope", "Query", "AssetTypes", "PageSize", "PageToken", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllResourcesResponse), global::Google.Cloud.Asset.V1.SearchAllResourcesResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest), global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest.Parser, new[]{ "Scope", "Query", "PageSize", "PageToken" }, null, null, null, null),
@@ -270,7 +271,7 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of asset types of which to take a snapshot for. For example:
+    /// A list of asset types of which to take a snapshot for. Example:
     /// "compute.googleapis.com/Disk". If specified, only matching assets will be
     /// returned. See [Introduction to Cloud Asset
     /// Inventory](https://cloud.google.com/asset-inventory/docs/overview)
@@ -301,7 +302,7 @@ namespace Google.Cloud.Asset.V1 {
     private global::Google.Cloud.Asset.V1.OutputConfig outputConfig_;
     /// <summary>
     /// Required. Output configuration indicating where the results will be output
-    /// to. All results will be in newline delimited JSON format.
+    /// to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1.OutputConfig OutputConfig {
@@ -525,7 +526,6 @@ namespace Google.Cloud.Asset.V1 {
     private global::Google.Cloud.Asset.V1.OutputConfig outputConfig_;
     /// <summary>
     /// Output configuration indicating where the results were output to.
-    /// All results are in JSON format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1.OutputConfig OutputConfig {
@@ -709,13 +709,11 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> assetNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of the full names of the assets. For example:
+    /// A list of the full names of the assets.
+    /// See: https://cloud.google.com/asset-inventory/docs/resource-name-format
+    /// Example:
+    ///
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
-    /// See [Resource
-    /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-    /// and [Resource Name
-    /// Format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
-    /// for more info.
     ///
     /// The request becomes a no-op if the asset name list is empty, and the max
     /// size of the asset name list is 100 in one request.
@@ -2008,9 +2006,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int BigqueryDestinationFieldNumber = 2;
     /// <summary>
     /// Destination on BigQuery. The output table stores the fields in asset
-    /// proto as columns in BigQuery. The resource/iam_policy field is converted
-    /// to a record with each field to a column, except metadata to a single JSON
-    /// string.
+    /// proto as columns in BigQuery.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1.BigQueryDestination BigqueryDestination {
@@ -2210,7 +2206,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int UriFieldNumber = 1;
     /// <summary>
     /// The uri of the Cloud Storage object. It's the same uri that is used by
-    /// gsutil. For example: "gs://bucket_name/object_name". See [Viewing and
+    /// gsutil. Example: "gs://bucket_name/object_name". See [Viewing and
     /// Editing Object
     /// Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)
     /// for more information.
@@ -2227,10 +2223,10 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>Field number for the "uri_prefix" field.</summary>
     public const int UriPrefixFieldNumber = 2;
     /// <summary>
-    /// The uri prefix of all generated Cloud Storage objects. For example:
+    /// The uri prefix of all generated Cloud Storage objects. Example:
     /// "gs://bucket_name/object_name_prefix". Each object uri is in format:
     /// "gs://bucket_name/object_name_prefix/&lt;asset type>/&lt;shard number> and only
-    /// contains assets for that type. &lt;shard number> starts from 0. For example:
+    /// contains assets for that type. &lt;shard number> starts from 0. Example:
     /// "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is
     /// the first shard of output objects containing all
     /// compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error will be
@@ -2371,7 +2367,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A BigQuery destination.
+  /// A BigQuery destination for exporting assets to.
   /// </summary>
   public sealed partial class BigQueryDestination : pb::IMessage<BigQueryDestination> {
     private static readonly pb::MessageParser<BigQueryDestination> _parser = new pb::MessageParser<BigQueryDestination>(() => new BigQueryDestination());
@@ -2617,7 +2613,7 @@ namespace Google.Cloud.Asset.V1 {
     private string topic_ = "";
     /// <summary>
     /// The name of the Pub/Sub topic to publish to.
-    /// For example: `projects/PROJECT_ID/topics/TOPIC_ID`.
+    /// Example: `projects/PROJECT_ID/topics/TOPIC_ID`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -2919,6 +2915,7 @@ namespace Google.Cloud.Asset.V1 {
       assetTypes_ = other.assetTypes_.Clone();
       contentType_ = other.contentType_;
       feedOutputConfig_ = other.feedOutputConfig_ != null ? other.feedOutputConfig_.Clone() : null;
+      condition_ = other.condition_ != null ? other.condition_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2955,8 +2952,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// A list of the full names of the assets to receive updates. You must specify
     /// either or both of asset_names and asset_types. Only asset updates matching
-    /// specified asset_names and asset_types are exported to the feed. For
-    /// example:
+    /// specified asset_names or asset_types are exported to the feed.
+    /// Example:
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`.
     /// See [Resource
     /// Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
@@ -2975,8 +2972,8 @@ namespace Google.Cloud.Asset.V1 {
     /// <summary>
     /// A list of types of the assets to receive updates. You must specify either
     /// or both of asset_names and asset_types. Only asset updates matching
-    /// specified asset_names and asset_types are exported to the feed.
-    /// For example: `"compute.googleapis.com/Disk"`
+    /// specified asset_names or asset_types are exported to the feed.
+    /// Example: `"compute.googleapis.com/Disk"`
     ///
     /// See [this
     /// topic](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
@@ -3017,6 +3014,27 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "condition" field.</summary>
+    public const int ConditionFieldNumber = 6;
+    private global::Google.Type.Expr condition_;
+    /// <summary>
+    /// A condition which determines whether an asset update should be published.
+    /// If specified, an asset will be returned only when the expression evaluates
+    /// to true.
+    /// When set, `expression` field in the `Expr` must be a valid [CEL expression]
+    /// (https://github.com/google/cel-spec) on a TemporalAsset with name
+    /// `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted
+    /// == true") will only publish Asset deletions. Other fields in `Expr` are
+    /// optional.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Expr Condition {
+      get { return condition_; }
+      set {
+        condition_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Feed);
@@ -3035,6 +3053,7 @@ namespace Google.Cloud.Asset.V1 {
       if(!assetTypes_.Equals(other.assetTypes_)) return false;
       if (ContentType != other.ContentType) return false;
       if (!object.Equals(FeedOutputConfig, other.FeedOutputConfig)) return false;
+      if (!object.Equals(Condition, other.Condition)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3046,6 +3065,7 @@ namespace Google.Cloud.Asset.V1 {
       hash ^= assetTypes_.GetHashCode();
       if (ContentType != global::Google.Cloud.Asset.V1.ContentType.Unspecified) hash ^= ContentType.GetHashCode();
       if (feedOutputConfig_ != null) hash ^= FeedOutputConfig.GetHashCode();
+      if (condition_ != null) hash ^= Condition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3073,6 +3093,10 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(FeedOutputConfig);
       }
+      if (condition_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Condition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3091,6 +3115,9 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (feedOutputConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FeedOutputConfig);
+      }
+      if (condition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Condition);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3116,6 +3143,12 @@ namespace Google.Cloud.Asset.V1 {
           FeedOutputConfig = new global::Google.Cloud.Asset.V1.FeedOutputConfig();
         }
         FeedOutputConfig.MergeFrom(other.FeedOutputConfig);
+      }
+      if (other.condition_ != null) {
+        if (condition_ == null) {
+          Condition = new global::Google.Type.Expr();
+        }
+        Condition.MergeFrom(other.Condition);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3149,6 +3182,13 @@ namespace Google.Cloud.Asset.V1 {
               FeedOutputConfig = new global::Google.Cloud.Asset.V1.FeedOutputConfig();
             }
             input.ReadMessage(FeedOutputConfig);
+            break;
+          }
+          case 50: {
+            if (condition_ == null) {
+              Condition = new global::Google.Type.Expr();
+            }
+            input.ReadMessage(Condition);
             break;
           }
         }
