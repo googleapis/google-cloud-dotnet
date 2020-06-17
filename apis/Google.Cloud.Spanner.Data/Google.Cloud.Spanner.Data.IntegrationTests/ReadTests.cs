@@ -100,9 +100,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_read_invalid_table_name]
 
         // [START spanner_test_cancel_read_fails]
-        [Fact]
+        [SkippableFact]
         public async Task CancelRead()
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator can return before query is cancelled");
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
@@ -412,9 +413,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact]
+        [SkippableFact]
         public async Task CommandTimeout()
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator returns too quickly to trigger timeout");
             using (var connection =
                 new SpannerConnection($"{_fixture.ConnectionString};{nameof(SpannerConnectionStringBuilder.AllowImmediateTimeouts)}=true"))
             {
