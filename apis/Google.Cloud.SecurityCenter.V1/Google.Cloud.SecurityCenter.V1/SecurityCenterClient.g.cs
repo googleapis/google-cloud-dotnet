@@ -3004,7 +3004,8 @@ namespace Google.Cloud.SecurityCenter.V1
             UpdateFindingAsync(finding, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3013,7 +3014,8 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3022,7 +3024,8 @@ namespace Google.Cloud.SecurityCenter.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3031,7 +3034,8 @@ namespace Google.Cloud.SecurityCenter.V1
             UpdateNotificationConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="notificationConfig">
         /// Required. The notification config to update.
@@ -3045,7 +3049,8 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="notificationConfig">
         /// Required. The notification config to update.
@@ -3059,7 +3064,8 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="notificationConfig">
         /// Required. The notification config to update.
@@ -3070,7 +3076,8 @@ namespace Google.Cloud.SecurityCenter.V1
             UpdateNotificationConfigAsync(notificationConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="notificationConfig">
         /// Required. The notification config to update.
@@ -3090,7 +3097,8 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="notificationConfig">
         /// Required. The notification config to update.
@@ -3110,7 +3118,8 @@ namespace Google.Cloud.SecurityCenter.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="notificationConfig">
         /// Required. The notification config to update.
@@ -4051,7 +4060,8 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4063,7 +4073,8 @@ namespace Google.Cloud.SecurityCenter.V1
         }
 
         /// <summary>
-        /// Updates a notification config.
+        /// Updates a notification config. The following update
+        /// fields are allowed: description, pubsub_topic, streaming_config.filter
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
