@@ -1357,6 +1357,7 @@
         "google/identity/accesscontextmanager/v1",
         "google/longrunning",
         "google/protobuf",
+        "google/rpc",
         "google/type"
       ],
       "Stable": true,
