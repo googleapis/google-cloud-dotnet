@@ -1,5 +1,13 @@
 # Version history
 
+# Version 2.2.0, released 2020-06-17
+
+- [Commit 46ae081](https://github.com/googleapis/google-cloud-dotnet/commit/46ae081):
+  - feat: added support for condition in Feed
+  - docs: updated existing docs.
+ 
+Clients can now specify conditions in Asset Feed. For details, see https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes.
+
 # Version 2.1.0, released 2020-06-02
 
 - [Commit 89ca277](https://github.com/googleapis/google-cloud-dotnet/commit/89ca277): docs: Properly format literal strings.
