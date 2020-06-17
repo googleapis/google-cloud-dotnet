@@ -34,55 +34,62 @@ namespace Google.Cloud.Asset.V1 {
             "ZS9pZGVudGl0eS9hY2Nlc3Njb250ZXh0bWFuYWdlci92MS9zZXJ2aWNlX3Bl",
             "cmltZXRlci5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90bxocZ29v",
             "Z2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byKAAQoNVGVtcG9yYWxBc3NldBIxCgZ3aW5kb3cYASAB",
-            "KAsyIS5nb29nbGUuY2xvdWQuYXNzZXQudjEuVGltZVdpbmRvdxIPCgdkZWxl",
-            "dGVkGAIgASgIEisKBWFzc2V0GAMgASgLMhwuZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLkFzc2V0ImoKClRpbWVXaW5kb3cSLgoKc3RhcnRfdGltZRgBIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIokECgVBc3NldBIMCgRuYW1l",
-            "GAEgASgJEhIKCmFzc2V0X3R5cGUYAiABKAkSMQoIcmVzb3VyY2UYAyABKAsy",
-            "Hy5nb29nbGUuY2xvdWQuYXNzZXQudjEuUmVzb3VyY2USKQoKaWFtX3BvbGlj",
-            "eRgEIAEoCzIVLmdvb2dsZS5pYW0udjEuUG9saWN5EjUKCm9yZ19wb2xpY3kY",
-            "BiADKAsyIS5nb29nbGUuY2xvdWQub3JncG9saWN5LnYxLlBvbGljeRJOCg1h",
-            "Y2Nlc3NfcG9saWN5GAcgASgLMjUuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2Nv",
-            "bnRleHRtYW5hZ2VyLnYxLkFjY2Vzc1BvbGljeUgAEkwKDGFjY2Vzc19sZXZl",
-            "bBgIIAEoCzI0Lmdvb2dsZS5pZGVudGl0eS5hY2Nlc3Njb250ZXh0bWFuYWdl",
-            "ci52MS5BY2Nlc3NMZXZlbEgAElYKEXNlcnZpY2VfcGVyaW1ldGVyGAkgASgL",
-            "MjkuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5hZ2VyLnYxLlNl",
-            "cnZpY2VQZXJpbWV0ZXJIABIRCglhbmNlc3RvcnMYCiADKAk6J+pBJAofY2xv",
-            "dWRhc3NldC5nb29nbGVhcGlzLmNvbS9Bc3NldBIBKkIXChVhY2Nlc3NfY29u",
-            "dGV4dF9wb2xpY3kisgEKCFJlc291cmNlEg8KB3ZlcnNpb24YASABKAkSHgoW",
-            "ZGlzY292ZXJ5X2RvY3VtZW50X3VyaRgCIAEoCRIWCg5kaXNjb3ZlcnlfbmFt",
-            "ZRgDIAEoCRIUCgxyZXNvdXJjZV91cmwYBCABKAkSDgoGcGFyZW50GAUgASgJ",
-            "EiUKBGRhdGEYBiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EhAKCGxv",
-            "Y2F0aW9uGAggASgJIswCChRSZXNvdXJjZVNlYXJjaFJlc3VsdBIMCgRuYW1l",
-            "GAEgASgJEhIKCmFzc2V0X3R5cGUYAiABKAkSDwoHcHJvamVjdBgDIAEoCRIU",
-            "CgxkaXNwbGF5X25hbWUYBCABKAkSEwoLZGVzY3JpcHRpb24YBSABKAkSEAoI",
-            "bG9jYXRpb24YBiABKAkSRwoGbGFiZWxzGAcgAygLMjcuZ29vZ2xlLmNsb3Vk",
-            "LmFzc2V0LnYxLlJlc291cmNlU2VhcmNoUmVzdWx0LkxhYmVsc0VudHJ5EhQK",
-            "DG5ldHdvcmtfdGFncxgIIAMoCRI2ChVhZGRpdGlvbmFsX2F0dHJpYnV0ZXMY",
-            "CSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0Gi0KC0xhYmVsc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi1AMKFUlhbVBvbGlj",
-            "eVNlYXJjaFJlc3VsdBIQCghyZXNvdXJjZRgBIAEoCRIPCgdwcm9qZWN0GAIg",
-            "ASgJEiUKBnBvbGljeRgDIAEoCzIVLmdvb2dsZS5pYW0udjEuUG9saWN5Ek0K",
-            "C2V4cGxhbmF0aW9uGAQgASgLMjguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklh",
-            "bVBvbGljeVNlYXJjaFJlc3VsdC5FeHBsYW5hdGlvbhqhAgoLRXhwbGFuYXRp",
-            "b24SbQoTbWF0Y2hlZF9wZXJtaXNzaW9ucxgBIAMoCzJQLmdvb2dsZS5jbG91",
-            "ZC5hc3NldC52MS5JYW1Qb2xpY3lTZWFyY2hSZXN1bHQuRXhwbGFuYXRpb24u",
-            "TWF0Y2hlZFBlcm1pc3Npb25zRW50cnkaIgoLUGVybWlzc2lvbnMSEwoLcGVy",
-            "bWlzc2lvbnMYASADKAkafwoXTWF0Y2hlZFBlcm1pc3Npb25zRW50cnkSCwoD",
-            "a2V5GAEgASgJElMKBXZhbHVlGAIgASgLMkQuZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLklhbVBvbGljeVNlYXJjaFJlc3VsdC5FeHBsYW5hdGlvbi5QZXJtaXNz",
-            "aW9uczoCOAFCmAEKGWNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFCCkFzc2V0",
-            "UHJvdG9QAVo6Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9hc3NldC92MTthc3NldPgBAaoCFUdvb2dsZS5DbG91ZC5Bc3Nl",
-            "dC5WMcoCFUdvb2dsZVxDbG91ZFxBc3NldFxWMWIGcHJvdG8z"));
+            "bWVzdGFtcC5wcm90bxoVZ29vZ2xlL3JwYy9jb2RlLnByb3RvIvUCCg1UZW1w",
+            "b3JhbEFzc2V0EjEKBndpbmRvdxgBIAEoCzIhLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5UaW1lV2luZG93Eg8KB2RlbGV0ZWQYAiABKAgSKwoFYXNzZXQYAyAB",
+            "KAsyHC5nb29nbGUuY2xvdWQuYXNzZXQudjEuQXNzZXQSTwoRcHJpb3JfYXNz",
+            "ZXRfc3RhdGUYBCABKA4yNC5nb29nbGUuY2xvdWQuYXNzZXQudjEuVGVtcG9y",
+            "YWxBc3NldC5QcmlvckFzc2V0U3RhdGUSMQoLcHJpb3JfYXNzZXQYBSABKAsy",
+            "HC5nb29nbGUuY2xvdWQuYXNzZXQudjEuQXNzZXQibwoPUHJpb3JBc3NldFN0",
+            "YXRlEiEKHVBSSU9SX0FTU0VUX1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUFJF",
+            "U0VOVBABEgsKB0lOVkFMSUQQAhISCg5ET0VTX05PVF9FWElTVBADEgsKB0RF",
+            "TEVURUQQBCJqCgpUaW1lV2luZG93Ei4KCnN0YXJ0X3RpbWUYASABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCK6BAoFQXNzZXQSLwoLdXBkYXRl",
+            "X3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBG5h",
+            "bWUYASABKAkSEgoKYXNzZXRfdHlwZRgCIAEoCRIxCghyZXNvdXJjZRgDIAEo",
+            "CzIfLmdvb2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZRIpCgppYW1fcG9s",
+            "aWN5GAQgASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kSNQoKb3JnX3BvbGlj",
+            "eRgGIAMoCzIhLmdvb2dsZS5jbG91ZC5vcmdwb2xpY3kudjEuUG9saWN5Ek4K",
+            "DWFjY2Vzc19wb2xpY3kYByABKAsyNS5nb29nbGUuaWRlbnRpdHkuYWNjZXNz",
+            "Y29udGV4dG1hbmFnZXIudjEuQWNjZXNzUG9saWN5SAASTAoMYWNjZXNzX2xl",
+            "dmVsGAggASgLMjQuZ29vZ2xlLmlkZW50aXR5LmFjY2Vzc2NvbnRleHRtYW5h",
+            "Z2VyLnYxLkFjY2Vzc0xldmVsSAASVgoRc2VydmljZV9wZXJpbWV0ZXIYCSAB",
+            "KAsyOS5nb29nbGUuaWRlbnRpdHkuYWNjZXNzY29udGV4dG1hbmFnZXIudjEu",
+            "U2VydmljZVBlcmltZXRlckgAEhEKCWFuY2VzdG9ycxgKIAMoCTon6kEkCh9j",
+            "bG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29tL0Fzc2V0EgEqQhcKFWFjY2Vzc19j",
+            "b250ZXh0X3BvbGljeSKyAQoIUmVzb3VyY2USDwoHdmVyc2lvbhgBIAEoCRIe",
+            "ChZkaXNjb3ZlcnlfZG9jdW1lbnRfdXJpGAIgASgJEhYKDmRpc2NvdmVyeV9u",
+            "YW1lGAMgASgJEhQKDHJlc291cmNlX3VybBgEIAEoCRIOCgZwYXJlbnQYBSAB",
+            "KAkSJQoEZGF0YRgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QSEAoI",
+            "bG9jYXRpb24YCCABKAkizAIKFFJlc291cmNlU2VhcmNoUmVzdWx0EgwKBG5h",
+            "bWUYASABKAkSEgoKYXNzZXRfdHlwZRgCIAEoCRIPCgdwcm9qZWN0GAMgASgJ",
+            "EhQKDGRpc3BsYXlfbmFtZRgEIAEoCRITCgtkZXNjcmlwdGlvbhgFIAEoCRIQ",
+            "Cghsb2NhdGlvbhgGIAEoCRJHCgZsYWJlbHMYByADKAsyNy5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuUmVzb3VyY2VTZWFyY2hSZXN1bHQuTGFiZWxzRW50cnkS",
+            "FAoMbmV0d29ya190YWdzGAggAygJEjYKFWFkZGl0aW9uYWxfYXR0cmlidXRl",
+            "cxgJIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3QaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLUAwoVSWFtUG9s",
+            "aWN5U2VhcmNoUmVzdWx0EhAKCHJlc291cmNlGAEgASgJEg8KB3Byb2plY3QY",
+            "AiABKAkSJQoGcG9saWN5GAMgASgLMhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kS",
+            "TQoLZXhwbGFuYXRpb24YBCABKAsyOC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "SWFtUG9saWN5U2VhcmNoUmVzdWx0LkV4cGxhbmF0aW9uGqECCgtFeHBsYW5h",
+            "dGlvbhJtChNtYXRjaGVkX3Blcm1pc3Npb25zGAEgAygLMlAuZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLklhbVBvbGljeVNlYXJjaFJlc3VsdC5FeHBsYW5hdGlv",
+            "bi5NYXRjaGVkUGVybWlzc2lvbnNFbnRyeRoiCgtQZXJtaXNzaW9ucxITCgtw",
+            "ZXJtaXNzaW9ucxgBIAMoCRp/ChdNYXRjaGVkUGVybWlzc2lvbnNFbnRyeRIL",
+            "CgNrZXkYASABKAkSUwoFdmFsdWUYAiABKAsyRC5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuSWFtUG9saWN5U2VhcmNoUmVzdWx0LkV4cGxhbmF0aW9uLlBlcm1p",
+            "c3Npb25zOgI4AUKYAQoZY29tLmdvb2dsZS5jbG91ZC5hc3NldC52MUIKQXNz",
+            "ZXRQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL2Fzc2V0L3YxO2Fzc2V0+AEBqgIVR29vZ2xlLkNsb3VkLkFz",
+            "c2V0LlYxygIVR29vZ2xlXENsb3VkXEFzc2V0XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OrgPolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OrgPolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TemporalAsset), global::Google.Cloud.Asset.V1.TemporalAsset.Parser, new[]{ "Window", "Deleted", "Asset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TemporalAsset), global::Google.Cloud.Asset.V1.TemporalAsset.Parser, new[]{ "Window", "Deleted", "Asset", "PriorAssetState", "PriorAsset" }, null, new[]{ typeof(global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TimeWindow), global::Google.Cloud.Asset.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "Name", "AssetType", "Resource", "IamPolicy", "OrgPolicy", "AccessPolicy", "AccessLevel", "ServicePerimeter", "Ancestors" }, new[]{ "AccessContextPolicy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Asset), global::Google.Cloud.Asset.V1.Asset.Parser, new[]{ "UpdateTime", "Name", "AssetType", "Resource", "IamPolicy", "OrgPolicy", "AccessPolicy", "AccessLevel", "ServicePerimeter", "Ancestors" }, new[]{ "AccessContextPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Resource), global::Google.Cloud.Asset.V1.Resource.Parser, new[]{ "Version", "DiscoveryDocumentUri", "DiscoveryName", "ResourceUrl", "Parent", "Data", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ResourceSearchResult), global::Google.Cloud.Asset.V1.ResourceSearchResult.Parser, new[]{ "Name", "AssetType", "Project", "DisplayName", "Description", "Location", "Labels", "NetworkTags", "AdditionalAttributes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicySearchResult), global::Google.Cloud.Asset.V1.IamPolicySearchResult.Parser, new[]{ "Resource", "Project", "Policy", "Explanation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation), global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation.Parser, new[]{ "MatchedPermissions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation.Types.Permissions), global::Google.Cloud.Asset.V1.IamPolicySearchResult.Types.Explanation.Types.Permissions.Parser, new[]{ "Permissions_" }, null, null, null, null),
@@ -125,6 +132,8 @@ namespace Google.Cloud.Asset.V1 {
       window_ = other.window_ != null ? other.window_.Clone() : null;
       deleted_ = other.deleted_;
       asset_ = other.asset_ != null ? other.asset_.Clone() : null;
+      priorAssetState_ = other.priorAssetState_;
+      priorAsset_ = other.priorAsset_ != null ? other.priorAsset_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -175,6 +184,35 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "prior_asset_state" field.</summary>
+    public const int PriorAssetStateFieldNumber = 4;
+    private global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState priorAssetState_ = global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState.Unspecified;
+    /// <summary>
+    /// State of prior_asset.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState PriorAssetState {
+      get { return priorAssetState_; }
+      set {
+        priorAssetState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "prior_asset" field.</summary>
+    public const int PriorAssetFieldNumber = 5;
+    private global::Google.Cloud.Asset.V1.Asset priorAsset_;
+    /// <summary>
+    /// Prior copy of the asset. Populated if prior_asset_state is PRESENT.
+    /// Currently this is only set for responses in Real-Time Feed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.Asset PriorAsset {
+      get { return priorAsset_; }
+      set {
+        priorAsset_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TemporalAsset);
@@ -191,6 +229,8 @@ namespace Google.Cloud.Asset.V1 {
       if (!object.Equals(Window, other.Window)) return false;
       if (Deleted != other.Deleted) return false;
       if (!object.Equals(Asset, other.Asset)) return false;
+      if (PriorAssetState != other.PriorAssetState) return false;
+      if (!object.Equals(PriorAsset, other.PriorAsset)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -200,6 +240,8 @@ namespace Google.Cloud.Asset.V1 {
       if (window_ != null) hash ^= Window.GetHashCode();
       if (Deleted != false) hash ^= Deleted.GetHashCode();
       if (asset_ != null) hash ^= Asset.GetHashCode();
+      if (PriorAssetState != global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState.Unspecified) hash ^= PriorAssetState.GetHashCode();
+      if (priorAsset_ != null) hash ^= PriorAsset.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -225,6 +267,14 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Asset);
       }
+      if (PriorAssetState != global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) PriorAssetState);
+      }
+      if (priorAsset_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PriorAsset);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -241,6 +291,12 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (asset_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Asset);
+      }
+      if (PriorAssetState != global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PriorAssetState);
+      }
+      if (priorAsset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PriorAsset);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -267,6 +323,15 @@ namespace Google.Cloud.Asset.V1 {
           Asset = new global::Google.Cloud.Asset.V1.Asset();
         }
         Asset.MergeFrom(other.Asset);
+      }
+      if (other.PriorAssetState != global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState.Unspecified) {
+        PriorAssetState = other.PriorAssetState;
+      }
+      if (other.priorAsset_ != null) {
+        if (priorAsset_ == null) {
+          PriorAsset = new global::Google.Cloud.Asset.V1.Asset();
+        }
+        PriorAsset.MergeFrom(other.PriorAsset);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -297,9 +362,53 @@ namespace Google.Cloud.Asset.V1 {
             input.ReadMessage(Asset);
             break;
           }
+          case 32: {
+            PriorAssetState = (global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (priorAsset_ == null) {
+              PriorAsset = new global::Google.Cloud.Asset.V1.Asset();
+            }
+            input.ReadMessage(PriorAsset);
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TemporalAsset message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// State of prior asset.
+      /// </summary>
+      public enum PriorAssetState {
+        /// <summary>
+        /// prior_asset is not applicable for the current asset.
+        /// </summary>
+        [pbr::OriginalName("PRIOR_ASSET_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// prior_asset is populated correctly.
+        /// </summary>
+        [pbr::OriginalName("PRESENT")] Present = 1,
+        /// <summary>
+        /// Failed to set prior_asset.
+        /// </summary>
+        [pbr::OriginalName("INVALID")] Invalid = 2,
+        /// <summary>
+        /// Current asset is the first known state.
+        /// </summary>
+        [pbr::OriginalName("DOES_NOT_EXIST")] DoesNotExist = 3,
+        /// <summary>
+        /// prior_asset is a deletion.
+        /// </summary>
+        [pbr::OriginalName("DELETED")] Deleted = 4,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -487,7 +596,10 @@ namespace Google.Cloud.Asset.V1 {
   /// [resource
   /// hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy),
   /// a resource outside the Google Cloud resource hierarchy (such as Google
-  /// Kubernetes Engine clusters and objects), or a Cloud IAM policy.
+  /// Kubernetes Engine clusters and objects), or a policy (e.g. Cloud IAM policy).
+  /// See [Supported asset
+  /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+  /// for more information.
   /// </summary>
   public sealed partial class Asset : pb::IMessage<Asset> {
     private static readonly pb::MessageParser<Asset> _parser = new pb::MessageParser<Asset>(() => new Asset());
@@ -514,6 +626,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Asset(Asset other) : this() {
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       name_ = other.name_;
       assetType_ = other.assetType_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
@@ -540,11 +653,26 @@ namespace Google.Cloud.Asset.V1 {
       return new Asset(this);
     }
 
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// The last update timestamp of an asset. update_time is updated when
+    /// create/update/delete operation is performed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The full name of the asset. For example:
+    /// The full name of the asset. Example:
     /// `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`
     ///
     /// See [Resource
@@ -563,7 +691,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int AssetTypeFieldNumber = 2;
     private string assetType_ = "";
     /// <summary>
-    /// The type of the asset. For example: `compute.googleapis.com/Disk`
+    /// The type of the asset. Example: `compute.googleapis.com/Disk`
     ///
     /// See [Supported asset
     /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types)
@@ -631,6 +759,10 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "access_policy" field.</summary>
     public const int AccessPolicyFieldNumber = 7;
+    /// <summary>
+    /// Please also refer to the [access policy user
+    /// guide](https://cloud.google.com/access-context-manager/docs/overview#access-policies).
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Identity.AccessContextManager.V1.AccessPolicy AccessPolicy {
       get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessPolicy ? (global::Google.Identity.AccessContextManager.V1.AccessPolicy) accessContextPolicy_ : null; }
@@ -642,6 +774,10 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "access_level" field.</summary>
     public const int AccessLevelFieldNumber = 8;
+    /// <summary>
+    /// Please also refer to the [access level user
+    /// guide](https://cloud.google.com/access-context-manager/docs/overview#access-levels).
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Identity.AccessContextManager.V1.AccessLevel AccessLevel {
       get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.AccessLevel ? (global::Google.Identity.AccessContextManager.V1.AccessLevel) accessContextPolicy_ : null; }
@@ -653,6 +789,10 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Field number for the "service_perimeter" field.</summary>
     public const int ServicePerimeterFieldNumber = 9;
+    /// <summary>
+    /// Please also refer to the [service perimeter user
+    /// guide](https://cloud.google.com/vpc-service-controls/docs/overview).
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Identity.AccessContextManager.V1.ServicePerimeter ServicePerimeter {
       get { return accessContextPolicyCase_ == AccessContextPolicyOneofCase.ServicePerimeter ? (global::Google.Identity.AccessContextManager.V1.ServicePerimeter) accessContextPolicy_ : null; }
@@ -675,7 +815,7 @@ namespace Google.Cloud.Asset.V1 {
     /// is a project, folder, or organization, the ancestry path starts from the
     /// asset itself.
     ///
-    /// For example: `["projects/123456789", "folders/5432", "organizations/1234"]`
+    /// Example: `["projects/123456789", "folders/5432", "organizations/1234"]`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Ancestors {
@@ -715,6 +855,7 @@ namespace Google.Cloud.Asset.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Name != other.Name) return false;
       if (AssetType != other.AssetType) return false;
       if (!object.Equals(Resource, other.Resource)) return false;
@@ -731,6 +872,7 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (AssetType.Length != 0) hash ^= AssetType.GetHashCode();
       if (resource_ != null) hash ^= Resource.GetHashCode();
@@ -784,6 +926,10 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteMessage(ServicePerimeter);
       }
       ancestors_.WriteTo(output, _repeated_ancestors_codec);
+      if (updateTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -792,6 +938,9 @@ namespace Google.Cloud.Asset.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -825,6 +974,12 @@ namespace Google.Cloud.Asset.V1 {
     public void MergeFrom(Asset other) {
       if (other == null) {
         return;
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -935,6 +1090,13 @@ namespace Google.Cloud.Asset.V1 {
             ancestors_.AddEntriesFrom(input, _repeated_ancestors_codec);
             break;
           }
+          case 90: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
         }
       }
     }
@@ -988,7 +1150,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int VersionFieldNumber = 1;
     private string version_ = "";
     /// <summary>
-    /// The API version. For example: `v1`
+    /// The API version. Example: `v1`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Version {
@@ -1003,7 +1165,7 @@ namespace Google.Cloud.Asset.V1 {
     private string discoveryDocumentUri_ = "";
     /// <summary>
     /// The URL of the discovery document containing the resource's JSON schema.
-    /// For example:
+    /// Example:
     /// `https://www.googleapis.com/discovery/v1/apis/compute/v1/rest`
     ///
     /// This value is unspecified for resources that do not have an API based on a
@@ -1021,7 +1183,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int DiscoveryNameFieldNumber = 3;
     private string discoveryName_ = "";
     /// <summary>
-    /// The JSON schema name listed in the discovery document. For example:
+    /// The JSON schema name listed in the discovery document. Example:
     /// `Project`
     ///
     /// This value is unspecified for resources that do not have an API based on a
@@ -1040,7 +1202,7 @@ namespace Google.Cloud.Asset.V1 {
     private string resourceUrl_ = "";
     /// <summary>
     /// The REST URL for accessing the resource. An HTTP `GET` request using this
-    /// URL returns the resource itself. For example:
+    /// URL returns the resource itself. Example:
     /// `https://cloudresourcemanager.googleapis.com/v1/projects/my-project-123`
     ///
     /// This value is unspecified for resources without a REST API.
@@ -1065,7 +1227,7 @@ namespace Google.Cloud.Asset.V1 {
     /// For Google Cloud assets, this value is the parent resource defined in the
     /// [Cloud IAM policy
     /// hierarchy](https://cloud.google.com/iam/docs/overview#policy_hierarchy).
-    /// For example:
+    /// Example:
     /// `//cloudresourcemanager.googleapis.com/projects/my_project_123`
     ///
     /// For third-party assets, this field may be set differently.

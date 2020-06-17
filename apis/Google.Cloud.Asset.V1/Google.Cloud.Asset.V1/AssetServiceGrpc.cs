@@ -122,10 +122,16 @@ namespace Google.Cloud.Asset.V1 {
     {
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
-      /// location. The output format is newline-delimited JSON.
-      /// This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
-      /// you to keep track of the export.
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset proto as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API , which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -137,10 +143,10 @@ namespace Google.Cloud.Asset.V1 {
 
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
-      /// For RESOURCE content, this API outputs history with asset in both
-      /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// Otherwise, this API outputs history with asset in both non-delete or
+      /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
       /// error.
       /// </summary>
@@ -263,10 +269,16 @@ namespace Google.Cloud.Asset.V1 {
 
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
-      /// location. The output format is newline-delimited JSON.
-      /// This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
-      /// you to keep track of the export.
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset proto as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API , which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -279,10 +291,16 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
-      /// location. The output format is newline-delimited JSON.
-      /// This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
-      /// you to keep track of the export.
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset proto as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API , which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -293,10 +311,16 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
-      /// location. The output format is newline-delimited JSON.
-      /// This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
-      /// you to keep track of the export.
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset proto as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API , which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -309,10 +333,16 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Exports assets with time and resource types to a given Cloud Storage
-      /// location. The output format is newline-delimited JSON.
-      /// This API implements the
-      /// [google.longrunning.Operation][google.longrunning.Operation] API allowing
-      /// you to keep track of the export.
+      /// location/BigQuery table. For Cloud Storage location destinations, the
+      /// output format is newline-delimited JSON. Each line represents a
+      /// [google.cloud.asset.v1.Asset][google.cloud.asset.v1.Asset] in the JSON
+      /// format; for BigQuery table destinations, the output table stores the fields
+      /// in asset proto as columns. This API implements the
+      /// [google.longrunning.Operation][google.longrunning.Operation] API , which
+      /// allows you to keep track of the export. We recommend intervals of at least
+      /// 2 seconds with exponential retry to poll the export operation result. For
+      /// regular-size resource parent, the export operation usually finishes within
+      /// 5 minutes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -323,10 +353,10 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
-      /// For RESOURCE content, this API outputs history with asset in both
-      /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// Otherwise, this API outputs history with asset in both non-delete or
+      /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
       /// error.
       /// </summary>
@@ -341,10 +371,10 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
-      /// For RESOURCE content, this API outputs history with asset in both
-      /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// Otherwise, this API outputs history with asset in both non-delete or
+      /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
       /// error.
       /// </summary>
@@ -357,10 +387,10 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
-      /// For RESOURCE content, this API outputs history with asset in both
-      /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// Otherwise, this API outputs history with asset in both non-delete or
+      /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
       /// error.
       /// </summary>
@@ -375,10 +405,10 @@ namespace Google.Cloud.Asset.V1 {
       }
       /// <summary>
       /// Batch gets the update history of assets that overlap a time window.
-      /// For RESOURCE content, this API outputs history with asset in both
-      /// non-delete or deleted status.
       /// For IAM_POLICY content, this API outputs history when the asset and its
       /// attached IAM POLICY both exist. This can create gaps in the output history.
+      /// Otherwise, this API outputs history with asset in both non-delete or
+      /// deleted status.
       /// If a specified asset does not exist, this API returns an INVALID_ARGUMENT
       /// error.
       /// </summary>
