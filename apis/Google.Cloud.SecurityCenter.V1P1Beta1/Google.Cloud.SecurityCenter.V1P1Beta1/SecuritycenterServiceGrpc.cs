@@ -467,7 +467,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
 
       /// <summary>
-      /// Updates a notification config.
+      /// Updates a notification config. The following update
+      /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1440,7 +1441,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateFinding, null, options, request);
       }
       /// <summary>
-      /// Updates a notification config.
+      /// Updates a notification config. The following update
+      /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1452,7 +1454,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return UpdateNotificationConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a notification config.
+      /// Updates a notification config. The following update
+      /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1462,7 +1465,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateNotificationConfig, null, options, request);
       }
       /// <summary>
-      /// Updates a notification config.
+      /// Updates a notification config. The following update
+      /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1474,7 +1478,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return UpdateNotificationConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a notification config.
+      /// Updates a notification config. The following update
+      /// fields are allowed: description, pubsub_topic, streaming_config.filter
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
