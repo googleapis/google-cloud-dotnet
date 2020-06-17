@@ -382,9 +382,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
         // [END spanner_test_write_read_random_bytes]
 
-        [Fact]
+        [SkippableFact]
         public async Task CommandTimeout()
         {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator returns too quickly to trigger timeout");
             var values = new SpannerParameterCollection
             {
                 {"StringValue", SpannerDbType.String, "abc"},
