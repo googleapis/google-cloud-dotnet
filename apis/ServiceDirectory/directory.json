@@ -75,6 +75,22 @@
       "CSharpNamespaceFromProtos": "Google.Storage.V1"
     },
     {
+      "ServiceDirectory": "google/analytics/data/v1alpha",
+      "Name": "analyticsdata.googleapis.com",
+      "Title": "Google Analytics Data API",
+      "Description": "Accesses report data in Google Analytics.",
+      "ServiceConfigFile": "google/analytics/data/v1alpha/analyticsdata_v1alpha.yaml",
+      "Version": "v1alpha",
+      "PackageFromDirectory": "google.analytics.data.v1alpha",
+      "PackageFromProtos": "google.analytics.data.v1alpha",
+      "ImportDirectories": [
+        "google/analytics/data/v1alpha",
+        "google/api"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Analytics.Data.V1Alpha"
+    },
+    {
       "ServiceDirectory": "google/analytics/management/v1alpha",
       "Name": "analyticsmanagement.googleapis.com",
       "Title": "Analytics Management API",
