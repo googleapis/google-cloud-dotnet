@@ -163,7 +163,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous List request, if any.
+    /// Optional. The next_page_token value returned from a previous list request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -395,7 +395,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Gaming.V1Beta.GameServerConfig.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerConfig> gameServerConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerConfig>();
     /// <summary>
-    /// The list of Game Server Configs.
+    /// The list of game server configs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerConfig> GameServerConfigs {
@@ -423,7 +423,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of Locations that could not be reached.
+    /// List of locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Unreachable {
@@ -573,7 +573,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Config to retrieve. Uses the form:
+    /// Required. The name of the game server config to retrieve. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
     /// </summary>
@@ -728,7 +728,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int ConfigIdFieldNumber = 2;
     private string configId_ = "";
     /// <summary>
-    /// Required. The ID of the Game Server Config resource to be created.
+    /// Required. The ID of the game server config resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ConfigId {
@@ -742,7 +742,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerConfigFieldNumber = 3;
     private global::Google.Cloud.Gaming.V1Beta.GameServerConfig gameServerConfig_;
     /// <summary>
-    /// Required. The Game Server Config resource to be created.
+    /// Required. The game server config resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Gaming.V1Beta.GameServerConfig GameServerConfig {
@@ -915,7 +915,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Config to delete. Uses the form:
+    /// Required. The name of the game server config to delete. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
     /// </summary>
@@ -1086,8 +1086,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Gaming.V1Beta.LabelSelector.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.LabelSelector> selectors_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.LabelSelector>();
     /// <summary>
-    /// Labels used to identify the Game Server Clusters to which this Agones
-    /// scaling config applies. A Game Server Cluster is subject to this Agones
+    /// Labels used to identify the game server clusters to which this Agones
+    /// scaling config applies. A game server cluster is subject to this Agones
     /// scaling config if its labels match any of the selector entries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1394,7 +1394,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// A Game Server Config resource.
+  /// A game server config resource.
   /// </summary>
   public sealed partial class GameServerConfig : pb::IMessage<GameServerConfig> {
     private static readonly pb::MessageParser<GameServerConfig> _parser = new pb::MessageParser<GameServerConfig>(() => new GameServerConfig());
@@ -1440,7 +1440,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the Game Server Config. Uses the form:
+    /// The resource name of the game server config. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
     /// For example,
@@ -1489,7 +1489,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The labels associated with this Game Server Config. Each label is a
+    /// The labels associated with this game server config. Each label is a
     /// key-value pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int DescriptionFieldNumber = 7;
     private string description_ = "";
     /// <summary>
-    /// The description of the Game Server Config.
+    /// The description of the game server config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {

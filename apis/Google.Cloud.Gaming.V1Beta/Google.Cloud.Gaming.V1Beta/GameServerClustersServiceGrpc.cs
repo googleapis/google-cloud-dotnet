@@ -113,7 +113,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public abstract partial class GameServerClustersServiceBase
     {
       /// <summary>
-      /// Lists Game Server Clusters in a given project and location.
+      /// Lists game server clusters in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -227,7 +227,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Lists Game Server Clusters in a given project and location.
+      /// Lists game server clusters in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -239,7 +239,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListGameServerClusters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Game Server Clusters in a given project and location.
+      /// Lists game server clusters in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -249,7 +249,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListGameServerClusters, null, options, request);
       }
       /// <summary>
-      /// Lists Game Server Clusters in a given project and location.
+      /// Lists game server clusters in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -261,7 +261,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListGameServerClustersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Game Server Clusters in a given project and location.
+      /// Lists game server clusters in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -147,7 +147,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// will pick an appropriate default. Server may return fewer items than
     /// requested. A caller should only rely on response's
     /// [next_page_token][google.cloud.gaming.v1beta.ListRealmsResponse.next_page_token] to
-    /// determine if there are more Realms left to be queried.
+    /// determine if there are more realms left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -394,7 +394,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Gaming.V1Beta.Realm.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.Realm> realms_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.Realm>();
     /// <summary>
-    /// The list of Realms.
+    /// The list of realms.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.Realm> Realms {
@@ -422,7 +422,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of Locations that could not be reached.
+    /// List of locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Unreachable {
@@ -572,7 +572,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Realm to retrieve. Uses the form:
+    /// Required. The name of the realm to retrieve. Uses the form:
     /// `projects/{project}/locations/{location}/realms/{realm}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -725,7 +725,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int RealmIdFieldNumber = 2;
     private string realmId_ = "";
     /// <summary>
-    /// Required. The ID of the Realm resource to be created.
+    /// Required. The ID of the realm resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RealmId {
@@ -739,7 +739,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int RealmFieldNumber = 3;
     private global::Google.Cloud.Gaming.V1Beta.Realm realm_;
     /// <summary>
-    /// Required. The Realm resource to be created.
+    /// Required. The realm resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Gaming.V1Beta.Realm Realm {
@@ -912,7 +912,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Realm to delete. Uses the form:
+    /// Required. The name of the realm to delete. Uses the form:
     /// `projects/{project}/locations/{location}/realms/{realm}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1049,7 +1049,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int RealmFieldNumber = 1;
     private global::Google.Cloud.Gaming.V1Beta.Realm realm_;
     /// <summary>
-    /// Required. The Realm to be updated.
+    /// Required. The realm to be updated.
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1234,7 +1234,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int RealmFieldNumber = 1;
     private global::Google.Cloud.Gaming.V1Beta.Realm realm_;
     /// <summary>
-    /// Required. The Realm to be updated.
+    /// Required. The realm to be updated.
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1585,7 +1585,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// A Realm resource.
+  /// A realm resource.
   /// </summary>
   public sealed partial class Realm : pb::IMessage<Realm> {
     private static readonly pb::MessageParser<Realm> _parser = new pb::MessageParser<Realm>(() => new Realm());
@@ -1631,7 +1631,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the Realm. Uses the form:
+    /// The resource name of the realm. Uses the form:
     /// `projects/{project}/locations/{location}/realms/{realm}`. For
     /// example, `projects/my-project/locations/{location}/realms/my-realm`.
     /// </summary>
@@ -1677,7 +1677,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The labels associated with this Realm. Each label is a key-value pair.
+    /// The labels associated with this realm. Each label is a key-value pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -1688,7 +1688,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int TimeZoneFieldNumber = 6;
     private string timeZone_ = "";
     /// <summary>
-    /// Required. Time zone where all policies targeting this Realm are evaluated. The value
+    /// Required. Time zone where all policies targeting this realm are evaluated. The value
     /// of this field must be from the IANA time zone database:
     /// https://www.iana.org/time-zones.
     /// </summary>
@@ -1718,7 +1718,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int DescriptionFieldNumber = 8;
     private string description_ = "";
     /// <summary>
-    /// Human readable description of the Realm.
+    /// Human readable description of the realm.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {

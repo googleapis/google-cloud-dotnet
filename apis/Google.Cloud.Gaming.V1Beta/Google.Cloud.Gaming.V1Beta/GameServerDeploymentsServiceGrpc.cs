@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Gaming.V1Beta {
   /// <summary>
-  /// The Game Server Deployment is used to control the deployment of Agones
+  /// The game server deployment is used to control the deployment of Agones
   /// fleets.
   /// </summary>
   public static partial class GameServerDeploymentsService
@@ -121,7 +121,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public abstract partial class GameServerDeploymentsServiceBase
     {
       /// <summary>
-      /// Lists Game Server Deployments in a given project and Location.
+      /// Lists game server deployments in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -132,7 +132,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Gets details of a single Game Server Deployment.
+      /// Gets details of a single game server deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -143,7 +143,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Creates a new Game Server Deployment in a given project and Location.
+      /// Creates a new game server deployment in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -154,7 +154,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Deletes a single Game Server Deployment.
+      /// Deletes a single game server deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -165,7 +165,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Patches a Game Server Deployment.
+      /// Patches a game server deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -176,7 +176,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Gets details a single Game Server Deployment Rollout.
+      /// Gets details a single game server deployment rollout.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -187,7 +187,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Patches a single Game Server Deployment Rollout.
+      /// Patches a single game server deployment rollout.
       /// The method will not return an error if the update does not affect any
       /// existing realms. For example - if the default_game_server_config is changed
       /// but all existing realms use the override, that is valid. Similarly, if a
@@ -203,8 +203,8 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Previews the Game Server Deployment Rollout. This API does not mutate the
-      /// Rollout resource.
+      /// Previews the game server deployment rollout. This API does not mutate the
+      /// rollout resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -215,9 +215,9 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Retrieves information about the current state of the Game Server
-      /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-      /// including fleets running an older version of the Game Server Deployment.
+      /// Retrieves information about the current state of the game server
+      /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+      /// including fleets running an older version of the game server deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -253,7 +253,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Lists Game Server Deployments in a given project and Location.
+      /// Lists game server deployments in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -265,7 +265,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListGameServerDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Game Server Deployments in a given project and Location.
+      /// Lists game server deployments in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -275,7 +275,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListGameServerDeployments, null, options, request);
       }
       /// <summary>
-      /// Lists Game Server Deployments in a given project and Location.
+      /// Lists game server deployments in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -287,7 +287,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListGameServerDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Game Server Deployments in a given project and Location.
+      /// Lists game server deployments in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -297,7 +297,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListGameServerDeployments, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Game Server Deployment.
+      /// Gets details of a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -309,7 +309,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Game Server Deployment.
+      /// Gets details of a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -319,7 +319,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Game Server Deployment.
+      /// Gets details of a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -331,7 +331,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Game Server Deployment.
+      /// Gets details of a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -341,7 +341,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Creates a new Game Server Deployment in a given project and Location.
+      /// Creates a new game server deployment in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CreateGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Game Server Deployment in a given project and Location.
+      /// Creates a new game server deployment in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -363,7 +363,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Creates a new Game Server Deployment in a given project and Location.
+      /// Creates a new game server deployment in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -375,7 +375,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CreateGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Game Server Deployment in a given project and Location.
+      /// Creates a new game server deployment in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -385,7 +385,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Game Server Deployment.
+      /// Deletes a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -397,7 +397,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return DeleteGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Game Server Deployment.
+      /// Deletes a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -407,7 +407,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Game Server Deployment.
+      /// Deletes a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -419,7 +419,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return DeleteGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Game Server Deployment.
+      /// Deletes a single game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -429,7 +429,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Patches a Game Server Deployment.
+      /// Patches a game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -441,7 +441,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return UpdateGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Patches a Game Server Deployment.
+      /// Patches a game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -451,7 +451,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Patches a Game Server Deployment.
+      /// Patches a game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -463,7 +463,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return UpdateGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Patches a Game Server Deployment.
+      /// Patches a game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -473,7 +473,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGameServerDeployment, null, options, request);
       }
       /// <summary>
-      /// Gets details a single Game Server Deployment Rollout.
+      /// Gets details a single game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -485,7 +485,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetGameServerDeploymentRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details a single Game Server Deployment Rollout.
+      /// Gets details a single game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -495,7 +495,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetGameServerDeploymentRollout, null, options, request);
       }
       /// <summary>
-      /// Gets details a single Game Server Deployment Rollout.
+      /// Gets details a single game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -507,7 +507,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetGameServerDeploymentRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details a single Game Server Deployment Rollout.
+      /// Gets details a single game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -517,7 +517,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetGameServerDeploymentRollout, null, options, request);
       }
       /// <summary>
-      /// Patches a single Game Server Deployment Rollout.
+      /// Patches a single game server deployment rollout.
       /// The method will not return an error if the update does not affect any
       /// existing realms. For example - if the default_game_server_config is changed
       /// but all existing realms use the override, that is valid. Similarly, if a
@@ -534,7 +534,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return UpdateGameServerDeploymentRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Patches a single Game Server Deployment Rollout.
+      /// Patches a single game server deployment rollout.
       /// The method will not return an error if the update does not affect any
       /// existing realms. For example - if the default_game_server_config is changed
       /// but all existing realms use the override, that is valid. Similarly, if a
@@ -549,7 +549,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGameServerDeploymentRollout, null, options, request);
       }
       /// <summary>
-      /// Patches a single Game Server Deployment Rollout.
+      /// Patches a single game server deployment rollout.
       /// The method will not return an error if the update does not affect any
       /// existing realms. For example - if the default_game_server_config is changed
       /// but all existing realms use the override, that is valid. Similarly, if a
@@ -566,7 +566,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return UpdateGameServerDeploymentRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Patches a single Game Server Deployment Rollout.
+      /// Patches a single game server deployment rollout.
       /// The method will not return an error if the update does not affect any
       /// existing realms. For example - if the default_game_server_config is changed
       /// but all existing realms use the override, that is valid. Similarly, if a
@@ -581,8 +581,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGameServerDeploymentRollout, null, options, request);
       }
       /// <summary>
-      /// Previews the Game Server Deployment Rollout. This API does not mutate the
-      /// Rollout resource.
+      /// Previews the game server deployment rollout. This API does not mutate the
+      /// rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -594,8 +594,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return PreviewGameServerDeploymentRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Previews the Game Server Deployment Rollout. This API does not mutate the
-      /// Rollout resource.
+      /// Previews the game server deployment rollout. This API does not mutate the
+      /// rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -605,8 +605,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_PreviewGameServerDeploymentRollout, null, options, request);
       }
       /// <summary>
-      /// Previews the Game Server Deployment Rollout. This API does not mutate the
-      /// Rollout resource.
+      /// Previews the game server deployment rollout. This API does not mutate the
+      /// rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -618,8 +618,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return PreviewGameServerDeploymentRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Previews the Game Server Deployment Rollout. This API does not mutate the
-      /// Rollout resource.
+      /// Previews the game server deployment rollout. This API does not mutate the
+      /// rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -629,9 +629,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_PreviewGameServerDeploymentRollout, null, options, request);
       }
       /// <summary>
-      /// Retrieves information about the current state of the Game Server
-      /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-      /// including fleets running an older version of the Game Server Deployment.
+      /// Retrieves information about the current state of the game server
+      /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+      /// including fleets running an older version of the game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -643,9 +643,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return FetchDeploymentState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves information about the current state of the Game Server
-      /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-      /// including fleets running an older version of the Game Server Deployment.
+      /// Retrieves information about the current state of the game server
+      /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+      /// including fleets running an older version of the game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -655,9 +655,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_FetchDeploymentState, null, options, request);
       }
       /// <summary>
-      /// Retrieves information about the current state of the Game Server
-      /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-      /// including fleets running an older version of the Game Server Deployment.
+      /// Retrieves information about the current state of the game server
+      /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+      /// including fleets running an older version of the game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -669,9 +669,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return FetchDeploymentStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves information about the current state of the Game Server
-      /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-      /// including fleets running an older version of the Game Server Deployment.
+      /// Retrieves information about the current state of the game server
+      /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+      /// including fleets running an older version of the game server deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

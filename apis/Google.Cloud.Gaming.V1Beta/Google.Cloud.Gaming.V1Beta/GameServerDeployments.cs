@@ -184,8 +184,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return.  If unspecified, server
-    /// will pick an appropriate default. Server may return fewer items than
+    /// Optional. The maximum number of items to return.  If unspecified, the server
+    /// will pick an appropriate default. The server may return fewer items than
     /// requested. A caller should only rely on response's
     /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerDeploymentsResponse.next_page_token] to
     /// determine if there are more GameServerDeployments left to be queried.
@@ -435,7 +435,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Gaming.V1Beta.GameServerDeployment.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerDeployment> gameServerDeployments_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerDeployment>();
     /// <summary>
-    /// The list of Game Server Delpoyments.
+    /// The list of game server deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerDeployment> GameServerDeployments {
@@ -463,7 +463,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of Locations that could not be reached.
+    /// List of locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Unreachable {
@@ -613,7 +613,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+    /// Required. The name of the game server delpoyment to retrieve. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
@@ -751,7 +751,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+    /// Required. The name of the game server delpoyment to retrieve. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
     /// </summary>
@@ -905,7 +905,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int DeploymentIdFieldNumber = 2;
     private string deploymentId_ = "";
     /// <summary>
-    /// Required. The ID of the Game Server Deployment resource to be created.
+    /// Required. The ID of the game server delpoyment resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DeploymentId {
@@ -919,7 +919,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerDeploymentFieldNumber = 3;
     private global::Google.Cloud.Gaming.V1Beta.GameServerDeployment gameServerDeployment_;
     /// <summary>
-    /// Required. The Game Server Deployment resource to be created.
+    /// Required. The game server delpoyment resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Gaming.V1Beta.GameServerDeployment GameServerDeployment {
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Deployment to delete. Uses the form:
+    /// Required. The name of the game server delpoyment to delete. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
@@ -1231,7 +1231,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerDeploymentFieldNumber = 1;
     private global::Google.Cloud.Gaming.V1Beta.GameServerDeployment gameServerDeployment_;
     /// <summary>
-    /// Required. The Game Server Deployment to be updated.
+    /// Required. The game server delpoyment to be updated.
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1416,7 +1416,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int RolloutFieldNumber = 1;
     private global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout rollout_;
     /// <summary>
-    /// Required. The Game Server Deployment Rollout to be updated.
+    /// Required. The game server delpoyment rollout to be updated.
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1599,7 +1599,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Deployment. Uses the form:
+    /// Required. The name of the game server delpoyment. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
@@ -1739,7 +1739,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Types.DeployedClusterState.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Types.DeployedClusterState> clusterState_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Types.DeployedClusterState>();
     /// <summary>
-    /// The state of the Game Server Deployment in each Game Server Cluster.
+    /// The state of the game server deployment in each game server cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Types.DeployedClusterState> ClusterState {
@@ -1752,7 +1752,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> unavailable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of Locations that could not be reached.
+    /// List of locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Unavailable {
@@ -1848,7 +1848,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// The Game Server Cluster changes made by the Game Server Deployment.
+      /// The game server cluster changes made by the game server deployment.
       /// </summary>
       public sealed partial class DeployedClusterState : pb::IMessage<DeployedClusterState> {
         private static readonly pb::MessageParser<DeployedClusterState> _parser = new pb::MessageParser<DeployedClusterState>(() => new DeployedClusterState());
@@ -1906,7 +1906,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.DeployedFleetDetails> fleetDetails_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.DeployedFleetDetails>();
         /// <summary>
         /// The details about the Agones fleets and autoscalers created in the
-        /// Game Server Cluster.
+        /// game server cluster.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.DeployedFleetDetails> FleetDetails {
@@ -2012,7 +2012,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// A Game Server Deployment resource.
+  /// A game server deployment resource.
   /// </summary>
   public sealed partial class GameServerDeployment : pb::IMessage<GameServerDeployment> {
     private static readonly pb::MessageParser<GameServerDeployment> _parser = new pb::MessageParser<GameServerDeployment>(() => new GameServerDeployment());
@@ -2057,7 +2057,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the Game Server Deployment. Uses the form:
+    /// The resource name of the game server deployment. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// For example,
@@ -2106,7 +2106,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The labels associated with this Game Server Deployment. Each label is a
+    /// The labels associated with this game server deployment. Each label is a
     /// key-value pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2132,7 +2132,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int DescriptionFieldNumber = 8;
     private string description_ = "";
     /// <summary>
-    /// Human readable description of the Game Server Deployment.
+    /// Human readable description of the game server delpoyment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -2312,7 +2312,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// A Game Server Config override.
+  /// A game server config override.
   /// </summary>
   public sealed partial class GameServerConfigOverride : pb::IMessage<GameServerConfigOverride> {
     private static readonly pb::MessageParser<GameServerConfigOverride> _parser = new pb::MessageParser<GameServerConfigOverride>(() => new GameServerConfigOverride());
@@ -2542,7 +2542,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// The Game Server Deployment Rollout which represents the desired rollout
+  /// The game server deployment rollout which represents the desired rollout
   /// state.
   /// </summary>
   public sealed partial class GameServerDeploymentRollout : pb::IMessage<GameServerDeploymentRollout> {
@@ -2588,7 +2588,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the Game Server Deployment Rollout. Uses the form:
+    /// The resource name of the game server deployment rollout. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
     /// For example,
@@ -2635,8 +2635,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int DefaultGameServerConfigFieldNumber = 4;
     private string defaultGameServerConfig_ = "";
     /// <summary>
-    /// The default Game Server Config is applied to all Realms unless overridden
-    /// in the Rollout. For example,
+    /// The default game server config is applied to all realms unless overridden
+    /// in the rollout. For example,
     ///
     /// `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
     /// </summary>
@@ -2654,8 +2654,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Gaming.V1Beta.GameServerConfigOverride.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerConfigOverride> gameServerConfigOverrides_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerConfigOverride>();
     /// <summary>
-    /// Contains the Game Server Config Rollout overrides. Overrides are processed
-    /// in the order they are listed. Once a match is found for a Realm, the rest
+    /// Contains the game server config rollout overrides. Overrides are processed
+    /// in the order they are listed. Once a match is found for a realm, the rest
     /// of the list is not processed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2889,7 +2889,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int RolloutFieldNumber = 1;
     private global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout rollout_;
     /// <summary>
-    /// Required. The Game Server Deployment Rollout to be updated.
+    /// Required. The game server deployment rollout to be updated.
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2924,7 +2924,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     private global::Google.Protobuf.WellKnownTypes.Timestamp previewTime_;
     /// <summary>
     /// Optional. The target timestamp to compute the preview. Defaults to the immediately
-    /// after the proposed Rollout completes.
+    /// after the proposed rollout completes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PreviewTime {
@@ -3125,7 +3125,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int EtagFieldNumber = 3;
     private string etag_ = "";
     /// <summary>
-    /// ETag of the Game Server Deployment.
+    /// ETag of the game server deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Etag {
