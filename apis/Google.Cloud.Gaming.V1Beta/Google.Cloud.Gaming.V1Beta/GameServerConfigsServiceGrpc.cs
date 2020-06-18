@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Gaming.V1Beta {
   /// <summary>
-  /// The Game Server Config configures the game servers in an Agones fleet.
+  /// The game server config configures the game servers in an Agones fleet.
   /// </summary>
   public static partial class GameServerConfigsService
   {
@@ -77,8 +77,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public abstract partial class GameServerConfigsServiceBase
     {
       /// <summary>
-      /// Lists Game Server Configs in a given project, Location, and Game Server
-      /// Deployment.
+      /// Lists game server configs in a given project, location, and game server
+      /// deployment.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -89,7 +89,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Gets details of a single Game Server Config.
+      /// Gets details of a single game server config.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -100,9 +100,9 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Creates a new Game Server Config in a given project, Location, and Game
-      /// Server Deployment. Game Server Configs are immutable, and are not applied
-      /// until referenced in the Game Server Deployment Rollout resource.
+      /// Creates a new game server config in a given project, location, and game
+      /// server deployment. Game server configs are immutable, and are not applied
+      /// until referenced in the game server deployment rollout resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -113,8 +113,8 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Deletes a single Game Server Config. The deletion will fail if the Game
-      /// Server Config is referenced in a Game Server Deployment Rollout.
+      /// Deletes a single game server config. The deletion will fail if the game
+      /// server config is referenced in a game server deployment rollout.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -150,8 +150,8 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Lists Game Server Configs in a given project, Location, and Game Server
-      /// Deployment.
+      /// Lists game server configs in a given project, location, and game server
+      /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -163,8 +163,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListGameServerConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Game Server Configs in a given project, Location, and Game Server
-      /// Deployment.
+      /// Lists game server configs in a given project, location, and game server
+      /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -174,8 +174,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListGameServerConfigs, null, options, request);
       }
       /// <summary>
-      /// Lists Game Server Configs in a given project, Location, and Game Server
-      /// Deployment.
+      /// Lists game server configs in a given project, location, and game server
+      /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -187,8 +187,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListGameServerConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Game Server Configs in a given project, Location, and Game Server
-      /// Deployment.
+      /// Lists game server configs in a given project, location, and game server
+      /// deployment.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -198,7 +198,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListGameServerConfigs, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Game Server Config.
+      /// Gets details of a single game server config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -210,7 +210,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetGameServerConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Game Server Config.
+      /// Gets details of a single game server config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -220,7 +220,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetGameServerConfig, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Game Server Config.
+      /// Gets details of a single game server config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -232,7 +232,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetGameServerConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Game Server Config.
+      /// Gets details of a single game server config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -242,9 +242,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetGameServerConfig, null, options, request);
       }
       /// <summary>
-      /// Creates a new Game Server Config in a given project, Location, and Game
-      /// Server Deployment. Game Server Configs are immutable, and are not applied
-      /// until referenced in the Game Server Deployment Rollout resource.
+      /// Creates a new game server config in a given project, location, and game
+      /// server deployment. Game server configs are immutable, and are not applied
+      /// until referenced in the game server deployment rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -256,9 +256,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CreateGameServerConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Game Server Config in a given project, Location, and Game
-      /// Server Deployment. Game Server Configs are immutable, and are not applied
-      /// until referenced in the Game Server Deployment Rollout resource.
+      /// Creates a new game server config in a given project, location, and game
+      /// server deployment. Game server configs are immutable, and are not applied
+      /// until referenced in the game server deployment rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -268,9 +268,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGameServerConfig, null, options, request);
       }
       /// <summary>
-      /// Creates a new Game Server Config in a given project, Location, and Game
-      /// Server Deployment. Game Server Configs are immutable, and are not applied
-      /// until referenced in the Game Server Deployment Rollout resource.
+      /// Creates a new game server config in a given project, location, and game
+      /// server deployment. Game server configs are immutable, and are not applied
+      /// until referenced in the game server deployment rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -282,9 +282,9 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CreateGameServerConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Game Server Config in a given project, Location, and Game
-      /// Server Deployment. Game Server Configs are immutable, and are not applied
-      /// until referenced in the Game Server Deployment Rollout resource.
+      /// Creates a new game server config in a given project, location, and game
+      /// server deployment. Game server configs are immutable, and are not applied
+      /// until referenced in the game server deployment rollout resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -294,8 +294,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGameServerConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Game Server Config. The deletion will fail if the Game
-      /// Server Config is referenced in a Game Server Deployment Rollout.
+      /// Deletes a single game server config. The deletion will fail if the game
+      /// server config is referenced in a game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -307,8 +307,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return DeleteGameServerConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Game Server Config. The deletion will fail if the Game
-      /// Server Config is referenced in a Game Server Deployment Rollout.
+      /// Deletes a single game server config. The deletion will fail if the game
+      /// server config is referenced in a game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -318,8 +318,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteGameServerConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Game Server Config. The deletion will fail if the Game
-      /// Server Config is referenced in a Game Server Deployment Rollout.
+      /// Deletes a single game server config. The deletion will fail if the game
+      /// server config is referenced in a game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -331,8 +331,8 @@ namespace Google.Cloud.Gaming.V1Beta {
         return DeleteGameServerConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Game Server Config. The deletion will fail if the Game
-      /// Server Config is referenced in a Game Server Deployment Rollout.
+      /// Deletes a single game server config. The deletion will fail if the game
+      /// server config is referenced in a game server deployment rollout.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

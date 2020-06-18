@@ -71,11 +71,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListGameServerClustersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListGameServerClustersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -84,11 +87,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetGameServerClusterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -98,10 +104,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>GameServerClustersServiceClient.CreateGameServerCluster</c>
@@ -128,11 +134,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PreviewCreateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings PreviewCreateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -142,10 +151,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>GameServerClustersServiceClient.DeleteGameServerCluster</c>
@@ -172,11 +181,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PreviewDeleteGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings PreviewDeleteGameServerClusterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -186,10 +198,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>GameServerClustersServiceClient.UpdateGameServerCluster</c>
@@ -216,11 +228,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PreviewUpdateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings PreviewUpdateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="GameServerClustersServiceSettings"/> object.</returns>
@@ -366,7 +381,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public virtual GameServerClustersService.GameServerClustersServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -375,7 +390,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -384,7 +399,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -409,7 +424,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -434,7 +449,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -459,7 +474,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -514,7 +529,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to retrieve. Uses the form:
+        /// Required. The name of the game server cluster to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
         /// </param>
@@ -530,7 +545,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to retrieve. Uses the form:
+        /// Required. The name of the game server cluster to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
         /// </param>
@@ -546,7 +561,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to retrieve. Uses the form:
+        /// Required. The name of the game server cluster to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
         /// </param>
@@ -559,7 +574,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to retrieve. Uses the form:
+        /// Required. The name of the game server cluster to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
         /// </param>
@@ -575,7 +590,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to retrieve. Uses the form:
+        /// Required. The name of the game server cluster to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
         /// </param>
@@ -591,7 +606,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Gets details of a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to retrieve. Uses the form:
+        /// Required. The name of the game server cluster to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
         /// </param>
@@ -662,10 +677,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// `projects/{project}/locations/{location}/realms/{realm-id}`.
         /// </param>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster resource to be created.
+        /// Required. The game server cluster resource to be created.
         /// </param>
         /// <param name="gameServerClusterId">
-        /// Required. The ID of the Game Server Cluster resource to be created.
+        /// Required. The ID of the game server cluster resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -685,10 +700,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// `projects/{project}/locations/{location}/realms/{realm-id}`.
         /// </param>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster resource to be created.
+        /// Required. The game server cluster resource to be created.
         /// </param>
         /// <param name="gameServerClusterId">
-        /// Required. The ID of the Game Server Cluster resource to be created.
+        /// Required. The ID of the game server cluster resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -708,10 +723,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// `projects/{project}/locations/{location}/realms/{realm-id}`.
         /// </param>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster resource to be created.
+        /// Required. The game server cluster resource to be created.
         /// </param>
         /// <param name="gameServerClusterId">
-        /// Required. The ID of the Game Server Cluster resource to be created.
+        /// Required. The ID of the game server cluster resource to be created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -726,10 +741,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// `projects/{project}/locations/{location}/realms/{realm-id}`.
         /// </param>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster resource to be created.
+        /// Required. The game server cluster resource to be created.
         /// </param>
         /// <param name="gameServerClusterId">
-        /// Required. The ID of the Game Server Cluster resource to be created.
+        /// Required. The ID of the game server cluster resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -749,10 +764,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// `projects/{project}/locations/{location}/realms/{realm-id}`.
         /// </param>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster resource to be created.
+        /// Required. The game server cluster resource to be created.
         /// </param>
         /// <param name="gameServerClusterId">
-        /// Required. The ID of the Game Server Cluster resource to be created.
+        /// Required. The ID of the game server cluster resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -772,10 +787,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// `projects/{project}/locations/{location}/realms/{realm-id}`.
         /// </param>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster resource to be created.
+        /// Required. The game server cluster resource to be created.
         /// </param>
         /// <param name="gameServerClusterId">
-        /// Required. The ID of the Game Server Cluster resource to be created.
+        /// Required. The ID of the game server cluster resource to be created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -870,7 +885,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Deletes a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to delete. Uses the form:
+        /// Required. The name of the game server cluster to delete. Uses the form:
         /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -885,7 +900,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Deletes a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to delete. Uses the form:
+        /// Required. The name of the game server cluster to delete. Uses the form:
         /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -900,7 +915,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Deletes a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to delete. Uses the form:
+        /// Required. The name of the game server cluster to delete. Uses the form:
         /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -912,7 +927,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Deletes a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to delete. Uses the form:
+        /// Required. The name of the game server cluster to delete. Uses the form:
         /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -927,7 +942,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Deletes a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to delete. Uses the form:
+        /// Required. The name of the game server cluster to delete. Uses the form:
         /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -942,7 +957,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Deletes a single game server cluster.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Cluster to delete. Uses the form:
+        /// Required. The name of the game server cluster to delete. Uses the form:
         /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1035,7 +1050,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Patches a single game server cluster.
         /// </summary>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster to be updated.
+        /// Required. The game server cluster to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1059,7 +1074,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Patches a single game server cluster.
         /// </summary>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster to be updated.
+        /// Required. The game server cluster to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1083,7 +1098,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// Patches a single game server cluster.
         /// </summary>
         /// <param name="gameServerCluster">
-        /// Required. The Game Server Cluster to be updated.
+        /// Required. The game server cluster to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1229,7 +1244,7 @@ namespace Google.Cloud.Gaming.V1Beta
         partial void Modify_PreviewUpdateGameServerClusterRequest(ref PreviewUpdateGameServerClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1241,7 +1256,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Lists Game Server Clusters in a given project and location.
+        /// Lists game server clusters in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -272,7 +272,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = new pbc::MapField<string, global::Google.Cloud.Gaming.V1Beta.OperationStatus>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Gaming.V1Beta.OperationStatus.Parser), 74);
     private readonly pbc::MapField<string, global::Google.Cloud.Gaming.V1Beta.OperationStatus> operationStatus_ = new pbc::MapField<string, global::Google.Cloud.Gaming.V1Beta.OperationStatus>();
     /// <summary>
-    /// Output only. Operation status for gameservices API operations. Operation status is in
+    /// Output only. Operation status for Game Services API operations. Operation status is in
     /// the form of key-value pairs where keys are resource IDs and the values show
     /// the status of the operation. In case of failures, the value includes an
     /// error code and error message.
@@ -828,7 +828,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// The Realm selector, used to match Realm resources.
+  /// The realm selector, used to match realm resources.
   /// </summary>
   public sealed partial class RealmSelector : pb::IMessage<RealmSelector> {
     private static readonly pb::MessageParser<RealmSelector> _parser = new pb::MessageParser<RealmSelector>(() => new RealmSelector());
@@ -870,7 +870,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> realms_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of Realms to match.
+    /// List of realms to match.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Realms {
@@ -1050,7 +1050,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// <summary>
     /// The cron definition of the scheduled event. See
     /// https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
-    /// defined by the Realm.
+    /// defined by the realm.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CronSpec {
@@ -1252,7 +1252,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerConfigNameFieldNumber = 1;
     private string gameServerConfigName_ = "";
     /// <summary>
-    /// The Game Server Config resource. Uses the form:
+    /// The game server config resource. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}`.
     /// </summary>
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerClusterNameFieldNumber = 1;
     private string gameServerClusterName_ = "";
     /// <summary>
-    /// The Game Server Cluster name. Uses the form:
+    /// The game server cluster name. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
     /// </summary>
@@ -1438,7 +1438,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerDeploymentNameFieldNumber = 2;
     private string gameServerDeploymentName_ = "";
     /// <summary>
-    /// The Game Server Deployment name. Uses the form:
+    /// The game server deployment name. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
     /// </summary>
@@ -1456,7 +1456,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Gaming.V1Beta.TargetDetails.Types.TargetFleetDetails.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.TargetDetails.Types.TargetFleetDetails> fleetDetails_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.TargetDetails.Types.TargetFleetDetails>();
     /// <summary>
-    /// Agones fleet details for Game Server Clusters and Game Server Deployments.
+    /// Agones fleet details for game server clusters and game server deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.TargetDetails.Types.TargetFleetDetails> FleetDetails {

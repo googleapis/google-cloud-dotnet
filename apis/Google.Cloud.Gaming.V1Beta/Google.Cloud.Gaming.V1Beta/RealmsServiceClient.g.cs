@@ -67,11 +67,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListRealmsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListRealmsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -79,11 +82,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetRealmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetRealmSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -92,10 +98,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateRealmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateRealmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>RealmsServiceClient.CreateRealm</c> and
@@ -122,10 +128,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteRealmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteRealmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>RealmsServiceClient.DeleteRealm</c> and
@@ -152,10 +158,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateRealmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateRealmSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>RealmsServiceClient.UpdateRealm</c> and
@@ -181,11 +187,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PreviewRealmUpdateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings PreviewRealmUpdateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RealmsServiceSettings"/> object.</returns>
@@ -328,7 +337,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public virtual RealmsService.RealmsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -337,7 +346,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -346,7 +355,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -371,7 +380,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -396,7 +405,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -421,7 +430,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -446,7 +455,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -455,7 +464,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -464,7 +473,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -473,10 +482,10 @@ namespace Google.Cloud.Gaming.V1Beta
             GetRealmAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to retrieve. Uses the form:
+        /// Required. The name of the realm to retrieve. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -488,10 +497,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to retrieve. Uses the form:
+        /// Required. The name of the realm to retrieve. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -503,10 +512,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to retrieve. Uses the form:
+        /// Required. The name of the realm to retrieve. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -515,10 +524,10 @@ namespace Google.Cloud.Gaming.V1Beta
             GetRealmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to retrieve. Uses the form:
+        /// Required. The name of the realm to retrieve. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -530,10 +539,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to retrieve. Uses the form:
+        /// Required. The name of the realm to retrieve. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -545,10 +554,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to retrieve. Uses the form:
+        /// Required. The name of the realm to retrieve. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -557,7 +566,7 @@ namespace Google.Cloud.Gaming.V1Beta
             GetRealmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -566,7 +575,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -575,7 +584,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -610,17 +619,17 @@ namespace Google.Cloud.Gaming.V1Beta
             lro::Operation<Realm, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateRealmOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="realm">
-        /// Required. The Realm resource to be created.
+        /// Required. The realm resource to be created.
         /// </param>
         /// <param name="realmId">
-        /// Required. The ID of the Realm resource to be created.
+        /// Required. The ID of the realm resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -633,17 +642,17 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="realm">
-        /// Required. The Realm resource to be created.
+        /// Required. The realm resource to be created.
         /// </param>
         /// <param name="realmId">
-        /// Required. The ID of the Realm resource to be created.
+        /// Required. The ID of the realm resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -656,17 +665,17 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="realm">
-        /// Required. The Realm resource to be created.
+        /// Required. The realm resource to be created.
         /// </param>
         /// <param name="realmId">
-        /// Required. The ID of the Realm resource to be created.
+        /// Required. The ID of the realm resource to be created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -674,17 +683,17 @@ namespace Google.Cloud.Gaming.V1Beta
             CreateRealmAsync(parent, realm, realmId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="realm">
-        /// Required. The Realm resource to be created.
+        /// Required. The realm resource to be created.
         /// </param>
         /// <param name="realmId">
-        /// Required. The ID of the Realm resource to be created.
+        /// Required. The ID of the realm resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -697,17 +706,17 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="realm">
-        /// Required. The Realm resource to be created.
+        /// Required. The realm resource to be created.
         /// </param>
         /// <param name="realmId">
-        /// Required. The ID of the Realm resource to be created.
+        /// Required. The ID of the realm resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -720,17 +729,17 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="realm">
-        /// Required. The Realm resource to be created.
+        /// Required. The realm resource to be created.
         /// </param>
         /// <param name="realmId">
-        /// Required. The ID of the Realm resource to be created.
+        /// Required. The ID of the realm resource to be created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -738,7 +747,7 @@ namespace Google.Cloud.Gaming.V1Beta
             CreateRealmAsync(parent, realm, realmId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -747,7 +756,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -756,7 +765,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -791,10 +800,10 @@ namespace Google.Cloud.Gaming.V1Beta
             lro::Operation<Realm, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRealmOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to delete. Uses the form:
+        /// Required. The name of the realm to delete. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -806,10 +815,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to delete. Uses the form:
+        /// Required. The name of the realm to delete. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -821,10 +830,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to delete. Uses the form:
+        /// Required. The name of the realm to delete. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -833,10 +842,10 @@ namespace Google.Cloud.Gaming.V1Beta
             DeleteRealmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to delete. Uses the form:
+        /// Required. The name of the realm to delete. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -848,10 +857,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to delete. Uses the form:
+        /// Required. The name of the realm to delete. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -863,10 +872,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Realm to delete. Uses the form:
+        /// Required. The name of the realm to delete. Uses the form:
         /// `projects/{project}/locations/{location}/realms/{realm}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -875,7 +884,7 @@ namespace Google.Cloud.Gaming.V1Beta
             DeleteRealmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -884,7 +893,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -893,7 +902,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -928,10 +937,10 @@ namespace Google.Cloud.Gaming.V1Beta
             lro::Operation<Realm, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRealmOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="realm">
-        /// Required. The Realm to be updated.
+        /// Required. The realm to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -952,10 +961,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="realm">
-        /// Required. The Realm to be updated.
+        /// Required. The realm to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -976,10 +985,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="realm">
-        /// Required. The Realm to be updated.
+        /// Required. The realm to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -996,7 +1005,7 @@ namespace Google.Cloud.Gaming.V1Beta
             UpdateRealmAsync(realm, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Previews patches to a single Realm.
+        /// Previews patches to a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1005,7 +1014,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Previews patches to a single Realm.
+        /// Previews patches to a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1014,7 +1023,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Previews patches to a single Realm.
+        /// Previews patches to a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1104,7 +1113,7 @@ namespace Google.Cloud.Gaming.V1Beta
         partial void Modify_PreviewRealmUpdateRequest(ref PreviewRealmUpdateRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1116,7 +1125,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Lists Realms in a given project and Location.
+        /// Lists realms in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1128,7 +1137,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1140,7 +1149,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single Realm.
+        /// Gets details of a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1155,7 +1164,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public override lro::OperationsClient CreateRealmOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1167,7 +1176,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Creates a new Realm in a given project and Location.
+        /// Creates a new realm in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1182,7 +1191,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public override lro::OperationsClient DeleteRealmOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1194,7 +1203,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Deletes a single Realm.
+        /// Deletes a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1209,7 +1218,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public override lro::OperationsClient UpdateRealmOperationsClient { get; }
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1221,7 +1230,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Patches a single Realm.
+        /// Patches a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1233,7 +1242,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Previews patches to a single Realm.
+        /// Previews patches to a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1245,7 +1254,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Previews patches to a single Realm.
+        /// Previews patches to a single realm.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

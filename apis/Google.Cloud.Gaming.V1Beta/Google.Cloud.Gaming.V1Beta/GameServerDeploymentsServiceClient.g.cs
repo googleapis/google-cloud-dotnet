@@ -74,11 +74,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListGameServerDeploymentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings ListGameServerDeploymentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -87,11 +90,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -101,10 +107,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to
@@ -133,10 +139,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to
@@ -165,10 +171,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateGameServerDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to
@@ -196,11 +202,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetGameServerDeploymentRolloutSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetGameServerDeploymentRolloutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -210,10 +219,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateGameServerDeploymentRolloutSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateGameServerDeploymentRolloutSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to
@@ -241,11 +250,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PreviewGameServerDeploymentRolloutSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings PreviewGameServerDeploymentRolloutSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -254,11 +266,14 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings FetchDeploymentStateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings FetchDeploymentStateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="GameServerDeploymentsServiceSettings"/> object.</returns>
@@ -404,7 +419,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public virtual GameServerDeploymentsService.GameServerDeploymentsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -413,7 +428,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -422,7 +437,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -447,7 +462,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -472,7 +487,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -497,7 +512,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
@@ -522,7 +537,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -531,7 +546,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -540,7 +555,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -549,10 +564,10 @@ namespace Google.Cloud.Gaming.V1Beta
             GetGameServerDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -565,10 +580,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -581,10 +596,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -594,10 +609,10 @@ namespace Google.Cloud.Gaming.V1Beta
             GetGameServerDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -610,10 +625,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -626,10 +641,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -639,7 +654,7 @@ namespace Google.Cloud.Gaming.V1Beta
             GetGameServerDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -648,7 +663,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -657,7 +672,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -693,14 +708,14 @@ namespace Google.Cloud.Gaming.V1Beta
             lro::Operation<GameServerDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGameServerDeploymentOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment resource to be created.
+        /// Required. The game server delpoyment resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -712,14 +727,14 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment resource to be created.
+        /// Required. The game server delpoyment resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -731,14 +746,14 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment resource to be created.
+        /// Required. The game server delpoyment resource to be created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -746,14 +761,14 @@ namespace Google.Cloud.Gaming.V1Beta
             CreateGameServerDeploymentAsync(parent, gameServerDeployment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment resource to be created.
+        /// Required. The game server delpoyment resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -765,14 +780,14 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment resource to be created.
+        /// Required. The game server delpoyment resource to be created.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -784,14 +799,14 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource name. Uses the form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment resource to be created.
+        /// Required. The game server delpoyment resource to be created.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -799,7 +814,7 @@ namespace Google.Cloud.Gaming.V1Beta
             CreateGameServerDeploymentAsync(parent, gameServerDeployment, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -808,7 +823,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -817,7 +832,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -853,10 +868,10 @@ namespace Google.Cloud.Gaming.V1Beta
             lro::Operation<GameServerDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerDeploymentOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to delete. Uses the form:
+        /// Required. The name of the game server delpoyment to delete. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -869,10 +884,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to delete. Uses the form:
+        /// Required. The name of the game server delpoyment to delete. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -885,10 +900,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to delete. Uses the form:
+        /// Required. The name of the game server delpoyment to delete. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -898,10 +913,10 @@ namespace Google.Cloud.Gaming.V1Beta
             DeleteGameServerDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to delete. Uses the form:
+        /// Required. The name of the game server delpoyment to delete. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -914,10 +929,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to delete. Uses the form:
+        /// Required. The name of the game server delpoyment to delete. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -930,10 +945,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to delete. Uses the form:
+        /// Required. The name of the game server delpoyment to delete. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
@@ -943,7 +958,7 @@ namespace Google.Cloud.Gaming.V1Beta
             DeleteGameServerDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -952,7 +967,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -961,7 +976,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -997,10 +1012,10 @@ namespace Google.Cloud.Gaming.V1Beta
             lro::Operation<GameServerDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGameServerDeploymentOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment to be updated.
+        /// Required. The game server delpoyment to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1021,10 +1036,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment to be updated.
+        /// Required. The game server delpoyment to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1045,10 +1060,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="gameServerDeployment">
-        /// Required. The Game Server Deployment to be updated.
+        /// Required. The game server delpoyment to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1065,7 +1080,7 @@ namespace Google.Cloud.Gaming.V1Beta
             UpdateGameServerDeploymentAsync(gameServerDeployment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1074,7 +1089,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1083,7 +1098,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1092,10 +1107,10 @@ namespace Google.Cloud.Gaming.V1Beta
             GetGameServerDeploymentRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1108,10 +1123,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1124,10 +1139,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1137,10 +1152,10 @@ namespace Google.Cloud.Gaming.V1Beta
             GetGameServerDeploymentRolloutAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1153,10 +1168,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1169,10 +1184,10 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the Game Server Deployment to retrieve. Uses the form:
+        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
         /// 
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
@@ -1182,7 +1197,7 @@ namespace Google.Cloud.Gaming.V1Beta
             GetGameServerDeploymentRolloutAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1196,7 +1211,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1210,7 +1225,7 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1251,7 +1266,7 @@ namespace Google.Cloud.Gaming.V1Beta
             lro::Operation<GameServerDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateGameServerDeploymentRolloutOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1259,7 +1274,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// field, that will also not result in an error.
         /// </summary>
         /// <param name="rollout">
-        /// Required. The Game Server Deployment Rollout to be updated.
+        /// Required. The game server delpoyment rollout to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1280,7 +1295,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1288,7 +1303,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// field, that will also not result in an error.
         /// </summary>
         /// <param name="rollout">
-        /// Required. The Game Server Deployment Rollout to be updated.
+        /// Required. The game server delpoyment rollout to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1309,7 +1324,7 @@ namespace Google.Cloud.Gaming.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1317,7 +1332,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// field, that will also not result in an error.
         /// </summary>
         /// <param name="rollout">
-        /// Required. The Game Server Deployment Rollout to be updated.
+        /// Required. The game server delpoyment rollout to be updated.
         /// Only fields specified in update_mask are updated.
         /// </param>
         /// <param name="updateMask">
@@ -1334,8 +1349,8 @@ namespace Google.Cloud.Gaming.V1Beta
             UpdateGameServerDeploymentRolloutAsync(rollout, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Previews the Game Server Deployment Rollout. This API does not mutate the
-        /// Rollout resource.
+        /// Previews the game server deployment rollout. This API does not mutate the
+        /// rollout resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1344,8 +1359,8 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Previews the Game Server Deployment Rollout. This API does not mutate the
-        /// Rollout resource.
+        /// Previews the game server deployment rollout. This API does not mutate the
+        /// rollout resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1354,8 +1369,8 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Previews the Game Server Deployment Rollout. This API does not mutate the
-        /// Rollout resource.
+        /// Previews the game server deployment rollout. This API does not mutate the
+        /// rollout resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1364,9 +1379,9 @@ namespace Google.Cloud.Gaming.V1Beta
             PreviewGameServerDeploymentRolloutAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves information about the current state of the Game Server
-        /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-        /// including fleets running an older version of the Game Server Deployment.
+        /// Retrieves information about the current state of the game server
+        /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+        /// including fleets running an older version of the game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1375,9 +1390,9 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves information about the current state of the Game Server
-        /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-        /// including fleets running an older version of the Game Server Deployment.
+        /// Retrieves information about the current state of the game server
+        /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+        /// including fleets running an older version of the game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1386,9 +1401,9 @@ namespace Google.Cloud.Gaming.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves information about the current state of the Game Server
-        /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-        /// including fleets running an older version of the Game Server Deployment.
+        /// Retrieves information about the current state of the game server
+        /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+        /// including fleets running an older version of the game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1509,7 +1524,7 @@ namespace Google.Cloud.Gaming.V1Beta
         partial void Modify_FetchDeploymentStateRequest(ref FetchDeploymentStateRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1521,7 +1536,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Lists Game Server Deployments in a given project and Location.
+        /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1533,7 +1548,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1545,7 +1560,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Gets details of a single Game Server Deployment.
+        /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1560,7 +1575,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public override lro::OperationsClient CreateGameServerDeploymentOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1572,7 +1587,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Creates a new Game Server Deployment in a given project and Location.
+        /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1587,7 +1602,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public override lro::OperationsClient DeleteGameServerDeploymentOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1599,7 +1614,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Deletes a single Game Server Deployment.
+        /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1614,7 +1629,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public override lro::OperationsClient UpdateGameServerDeploymentOperationsClient { get; }
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1626,7 +1641,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Patches a Game Server Deployment.
+        /// Patches a game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1638,7 +1653,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1650,7 +1665,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Gets details a single Game Server Deployment Rollout.
+        /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1665,7 +1680,7 @@ namespace Google.Cloud.Gaming.V1Beta
         public override lro::OperationsClient UpdateGameServerDeploymentRolloutOperationsClient { get; }
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1682,7 +1697,7 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Patches a single Game Server Deployment Rollout.
+        /// Patches a single game server deployment rollout.
         /// The method will not return an error if the update does not affect any
         /// existing realms. For example - if the default_game_server_config is changed
         /// but all existing realms use the override, that is valid. Similarly, if a
@@ -1699,8 +1714,8 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Previews the Game Server Deployment Rollout. This API does not mutate the
-        /// Rollout resource.
+        /// Previews the game server deployment rollout. This API does not mutate the
+        /// rollout resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1712,8 +1727,8 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Previews the Game Server Deployment Rollout. This API does not mutate the
-        /// Rollout resource.
+        /// Previews the game server deployment rollout. This API does not mutate the
+        /// rollout resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1725,9 +1740,9 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Retrieves information about the current state of the Game Server
-        /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-        /// including fleets running an older version of the Game Server Deployment.
+        /// Retrieves information about the current state of the game server
+        /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+        /// including fleets running an older version of the game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1739,9 +1754,9 @@ namespace Google.Cloud.Gaming.V1Beta
         }
 
         /// <summary>
-        /// Retrieves information about the current state of the Game Server
-        /// Ddeployment. Gathers all the Agones fleets and Agones autoscalers,
-        /// including fleets running an older version of the Game Server Deployment.
+        /// Retrieves information about the current state of the game server
+        /// deployment. Gathers all the Agones fleets and Agones autoscalers,
+        /// including fleets running an older version of the game server deployment.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Gaming.V1Beta {
   /// <summary>
-  /// A Realm is a grouping of Game Server Clusters that are considered
+  /// A realm is a grouping of game server clusters that are considered
   /// interchangeable.
   /// </summary>
   public static partial class RealmsService
@@ -95,7 +95,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public abstract partial class RealmsServiceBase
     {
       /// <summary>
-      /// Lists Realms in a given project and Location.
+      /// Lists realms in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -106,7 +106,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Gets details of a single Realm.
+      /// Gets details of a single realm.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -117,7 +117,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Creates a new Realm in a given project and Location.
+      /// Creates a new realm in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -128,7 +128,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Deletes a single Realm.
+      /// Deletes a single realm.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -139,7 +139,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Patches a single Realm.
+      /// Patches a single realm.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -150,7 +150,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Previews patches to a single Realm.
+      /// Previews patches to a single realm.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -186,7 +186,7 @@ namespace Google.Cloud.Gaming.V1Beta {
       }
 
       /// <summary>
-      /// Lists Realms in a given project and Location.
+      /// Lists realms in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -198,7 +198,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListRealms(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Realms in a given project and Location.
+      /// Lists realms in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -208,7 +208,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListRealms, null, options, request);
       }
       /// <summary>
-      /// Lists Realms in a given project and Location.
+      /// Lists realms in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -220,7 +220,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return ListRealmsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Realms in a given project and Location.
+      /// Lists realms in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -230,7 +230,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListRealms, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Realm.
+      /// Gets details of a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -242,7 +242,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Realm.
+      /// Gets details of a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -252,7 +252,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetRealm, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single Realm.
+      /// Gets details of a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -264,7 +264,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return GetRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single Realm.
+      /// Gets details of a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -274,7 +274,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetRealm, null, options, request);
       }
       /// <summary>
-      /// Creates a new Realm in a given project and Location.
+      /// Creates a new realm in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -286,7 +286,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CreateRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Realm in a given project and Location.
+      /// Creates a new realm in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -296,7 +296,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_CreateRealm, null, options, request);
       }
       /// <summary>
-      /// Creates a new Realm in a given project and Location.
+      /// Creates a new realm in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -308,7 +308,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CreateRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Realm in a given project and Location.
+      /// Creates a new realm in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -318,7 +318,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRealm, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Realm.
+      /// Deletes a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -330,7 +330,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return DeleteRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Realm.
+      /// Deletes a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteRealm, null, options, request);
       }
       /// <summary>
-      /// Deletes a single Realm.
+      /// Deletes a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -352,7 +352,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return DeleteRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single Realm.
+      /// Deletes a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -362,7 +362,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRealm, null, options, request);
       }
       /// <summary>
-      /// Patches a single Realm.
+      /// Patches a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -374,7 +374,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return UpdateRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Patches a single Realm.
+      /// Patches a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -384,7 +384,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateRealm, null, options, request);
       }
       /// <summary>
-      /// Patches a single Realm.
+      /// Patches a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -396,7 +396,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return UpdateRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Patches a single Realm.
+      /// Patches a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -406,7 +406,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateRealm, null, options, request);
       }
       /// <summary>
-      /// Previews patches to a single Realm.
+      /// Previews patches to a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -418,7 +418,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return PreviewRealmUpdate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Previews patches to a single Realm.
+      /// Previews patches to a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -428,7 +428,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_PreviewRealmUpdate, null, options, request);
       }
       /// <summary>
-      /// Previews patches to a single Realm.
+      /// Previews patches to a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -440,7 +440,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         return PreviewRealmUpdateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Previews patches to a single Realm.
+      /// Previews patches to a single realm.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

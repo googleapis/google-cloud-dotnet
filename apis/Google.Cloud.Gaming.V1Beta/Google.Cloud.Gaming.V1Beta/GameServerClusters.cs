@@ -178,8 +178,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return.  If unspecified, server
-    /// will pick an appropriate default. Server may return fewer items than
+    /// Optional. The maximum number of items to return.  If unspecified, the server
+    /// will pick an appropriate default. The server may return fewer items than
     /// requested. A caller should only rely on response's
     /// [next_page_token][google.cloud.gaming.v1beta.ListGameServerClustersResponse.next_page_token] to
     /// determine if there are more GameServerClusters left to be queried.
@@ -428,7 +428,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Gaming.V1Beta.GameServerCluster.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerCluster> gameServerClusters_ = new pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerCluster>();
     /// <summary>
-    /// The list of Game Server Clusters.
+    /// The list of game server clusters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerCluster> GameServerClusters {
@@ -456,7 +456,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// List of Locations that could not be reached.
+    /// List of locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Unreachable {
@@ -606,7 +606,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Cluster to retrieve. Uses the form:
+    /// Required. The name of the game server cluster to retrieve. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
     /// </summary>
@@ -760,7 +760,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerClusterIdFieldNumber = 2;
     private string gameServerClusterId_ = "";
     /// <summary>
-    /// Required. The ID of the Game Server Cluster resource to be created.
+    /// Required. The ID of the game server cluster resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GameServerClusterId {
@@ -774,7 +774,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerClusterFieldNumber = 3;
     private global::Google.Cloud.Gaming.V1Beta.GameServerCluster gameServerCluster_;
     /// <summary>
-    /// Required. The Game Server Cluster resource to be created.
+    /// Required. The game server cluster resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Gaming.V1Beta.GameServerCluster GameServerCluster {
@@ -965,7 +965,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerClusterIdFieldNumber = 2;
     private string gameServerClusterId_ = "";
     /// <summary>
-    /// Required. The ID of the Game Server Cluster resource to be created.
+    /// Required. The ID of the game server cluster resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GameServerClusterId {
@@ -979,7 +979,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerClusterFieldNumber = 3;
     private global::Google.Cloud.Gaming.V1Beta.GameServerCluster gameServerCluster_;
     /// <summary>
-    /// Required. The Game Server Cluster resource to be created.
+    /// Required. The game server cluster resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Gaming.V1Beta.GameServerCluster GameServerCluster {
@@ -1361,7 +1361,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Cluster to delete. Uses the form:
+    /// Required. The name of the game server cluster to delete. Uses the form:
     /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the Game Server Cluster to delete. Uses the form:
+    /// Required. The name of the game server cluster to delete. Uses the form:
     /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1844,7 +1844,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerClusterFieldNumber = 1;
     private global::Google.Cloud.Gaming.V1Beta.GameServerCluster gameServerCluster_;
     /// <summary>
-    /// Required. The Game Server Cluster to be updated.
+    /// Required. The game server cluster to be updated.
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2029,7 +2029,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int GameServerClusterFieldNumber = 1;
     private global::Google.Cloud.Gaming.V1Beta.GameServerCluster gameServerCluster_;
     /// <summary>
-    /// Required. The Game Server Cluster to be updated.
+    /// Required. The game server cluster to be updated.
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2380,7 +2380,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// The Game Server Cluster connection information.
+  /// The game server cluster connection information.
   /// </summary>
   public sealed partial class GameServerClusterConnectionInfo : pb::IMessage<GameServerClusterConnectionInfo> {
     private static readonly pb::MessageParser<GameServerClusterConnectionInfo> _parser = new pb::MessageParser<GameServerClusterConnectionInfo>(() => new GameServerClusterConnectionInfo());
@@ -2440,7 +2440,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NamespaceFieldNumber = 5;
     private string namespace_ = "";
     /// <summary>
-    /// Namespace designated on the Game Server Cluster where the Agones game
+    /// Namespace designated on the game server cluster where the Agones game
     /// server instances will be created. Existence of the namespace will be
     /// validated during creation.
     /// </summary>
@@ -2726,7 +2726,7 @@ namespace Google.Cloud.Gaming.V1Beta {
   }
 
   /// <summary>
-  /// A Game Server Cluster resource.
+  /// A game server cluster resource.
   /// </summary>
   public sealed partial class GameServerCluster : pb::IMessage<GameServerCluster> {
     private static readonly pb::MessageParser<GameServerCluster> _parser = new pb::MessageParser<GameServerCluster>(() => new GameServerCluster());
@@ -2772,7 +2772,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the Game Server Cluster. Uses the form:
+    /// Required. The resource name of the game server cluster. Uses the form:
     ///
     /// `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
     /// For example,
@@ -2821,7 +2821,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The labels associated with this Game Server Cluster. Each label is a
+    /// The labels associated with this game server cluster. Each label is a
     /// key-value pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2833,8 +2833,8 @@ namespace Google.Cloud.Gaming.V1Beta {
     public const int ConnectionInfoFieldNumber = 5;
     private global::Google.Cloud.Gaming.V1Beta.GameServerClusterConnectionInfo connectionInfo_;
     /// <summary>
-    /// Game Server Cluster connection information. This information is used to
-    /// manage Game Server Clusters.
+    /// The game server cluster connection information. This information is used to
+    /// manage game server clusters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Gaming.V1Beta.GameServerClusterConnectionInfo ConnectionInfo {
