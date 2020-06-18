@@ -960,7 +960,7 @@
     {
       "ServiceDirectory": "google/cloud/gaming/v1beta",
       "Name": "gameservices.googleapis.com",
-      "Title": "Game Servers API",
+      "Title": "Game Services API",
       "Description": "Deploy and manage infrastructure for global multiplayer gaming experiences.",
       "ServiceConfigFile": "google/cloud/gaming/v1beta/gameservices_v1beta.yaml",
       "Version": "v1beta",
