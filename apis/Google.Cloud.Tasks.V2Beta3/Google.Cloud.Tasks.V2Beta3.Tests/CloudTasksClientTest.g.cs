@@ -48,6 +48,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -73,6 +74,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -100,6 +102,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -125,6 +128,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -152,6 +156,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -177,6 +182,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -205,6 +211,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -231,6 +238,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -259,6 +267,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -285,6 +294,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -313,6 +323,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -339,6 +350,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -367,6 +379,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -393,6 +406,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -421,6 +435,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -447,6 +462,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.UpdateQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -567,6 +583,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -592,6 +609,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -619,6 +637,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -644,6 +663,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -671,6 +691,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PurgeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -696,6 +717,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PurgeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -723,6 +745,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -748,6 +771,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -775,6 +799,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -800,6 +825,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -827,6 +853,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PauseQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -852,6 +879,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.PauseQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -879,6 +907,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -904,6 +933,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -931,6 +961,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -956,6 +987,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -983,6 +1015,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumeQueue(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);
@@ -1008,6 +1041,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Tests
                 State = Queue.Types.State.Paused,
                 PurgeTime = new wkt::Timestamp(),
                 StackdriverLoggingConfig = new StackdriverLoggingConfig(),
+                Type = Queue.Types.Type.Unspecified,
             };
             mockGrpcClient.Setup(x => x.ResumeQueueAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Queue>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudTasksClient client = new CloudTasksClientImpl(mockGrpcClient.Object, null);

@@ -706,10 +706,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   /// delivered to can be set at the queue-level or task-level:
   ///
   /// * If set,
-  ///    [app_engine_routing_override][google.cloud.tasks.v2beta3.AppEngineHttpQueue.app_engine_routing_override]
-  ///    is used for all tasks in the queue, no matter what the setting
-  ///    is for the
-  ///    [task-level app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
+  ///   [app_engine_routing_override][google.cloud.tasks.v2beta3.AppEngineHttpQueue.app_engine_routing_override]
+  ///   is used for all tasks in the queue, no matter what the setting
+  ///   is for the
+  ///   [task-level app_engine_routing][google.cloud.tasks.v2beta3.AppEngineHttpRequest.app_engine_routing].
   ///
   /// The `url` that the task will be sent to is:
   ///
@@ -783,14 +783,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// The HTTP method to use for the request. The default is POST.
     ///
     /// The app's request handler for the task's target URL must be able to handle
-    /// HTTP requests with this http_method, otherwise the task attempt will fail
-    /// with error code 405 (Method Not Allowed). See
-    /// [Writing a push task request
+    /// HTTP requests with this http_method, otherwise the task attempt fails with
+    /// error code 405 (Method Not Allowed). See [Writing a push task request
     /// handler](https://cloud.google.com/appengine/docs/java/taskqueue/push/creating-handlers#writing_a_push_task_request_handler)
-    /// and the documentation for the request handlers in the language your app is
-    /// written in e.g.
-    /// [Python Request
-    /// Handler](https://cloud.google.com/appengine/docs/python/tools/webapp/requesthandlerclass).
+    /// and the App Engine documentation for your runtime on [How Requests are
+    /// Handled](https://cloud.google.com/appengine/docs/standard/python3/how-requests-are-handled).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Tasks.V2Beta3.HttpMethod HttpMethod {
