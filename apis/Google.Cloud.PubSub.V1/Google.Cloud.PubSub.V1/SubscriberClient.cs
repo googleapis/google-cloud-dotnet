@@ -990,7 +990,9 @@ namespace Google.Cloud.PubSub.V1
                 Task initTask = _pull.WriteAsync(new StreamingPullRequest
                 {
                     SubscriptionAsSubscriptionName = _subscriptionName,
-                    StreamAckDeadlineSeconds = _modifyDeadlineSeconds
+                    StreamAckDeadlineSeconds = _modifyDeadlineSeconds,
+                    MaxOutstandingMessages = _flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue,
+                    MaxOutstandingBytes = _flowControlSettings.MaxOutstandingByteCount ?? long.MaxValue
                 });
                 Add(initTask, Next(true, () => HandlePullMoveNext(initTask)));
             }
