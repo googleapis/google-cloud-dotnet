@@ -5468,7 +5468,7 @@ namespace Google.Cloud.OsConfig.V1 {
     private readonly pbc::RepeatedField<string> instances_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Targets any of the VM instances specified. Instances are specified by their
-    /// URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME],
+    /// URI in the form `zones/[ZONE]/instances/[INSTANCE_NAME]`,
     /// `projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`, or
     /// `https://www.googleapis.com/compute/v1/projects/[PROJECT_ID]/zones/[ZONE]/instances/[INSTANCE_NAME]`
     /// </summary>
