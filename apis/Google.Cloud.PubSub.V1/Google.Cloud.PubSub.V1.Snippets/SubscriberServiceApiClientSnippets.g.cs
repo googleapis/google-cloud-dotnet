@@ -963,6 +963,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
                     ModifyDeadlineAckIds = { "", },
                     StreamAckDeadlineSeconds = 0,
                     ClientId = "",
+                    MaxOutstandingMessages = 0L,
+                    MaxOutstandingBytes = 0L,
                 };
                 // Stream a request to the server
                 await response.WriteAsync(request);
