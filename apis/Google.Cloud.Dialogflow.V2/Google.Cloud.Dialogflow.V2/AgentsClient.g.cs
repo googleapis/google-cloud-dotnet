@@ -78,7 +78,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings GetAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AgentsClient.SetAgent</c>
@@ -93,7 +93,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SetAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings SetAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AgentsClient.DeleteAgent</c>
@@ -108,7 +108,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings DeleteAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AgentsClient.SearchAgents</c>
@@ -123,7 +123,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SearchAgentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings SearchAgentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>AgentsClient.TrainAgent</c>
@@ -138,7 +138,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings TrainAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings TrainAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>AgentsClient.TrainAgent</c> and
@@ -171,7 +171,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ExportAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings ExportAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>AgentsClient.ExportAgent</c> and
@@ -197,11 +197,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ImportAgentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings ImportAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>AgentsClient.ImportAgent</c> and
@@ -234,7 +237,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings RestoreAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings RestoreAgentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>AgentsClient.RestoreAgent</c> and
@@ -260,11 +263,14 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetValidationResultSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetValidationResultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AgentsSettings"/> object.</returns>
@@ -1164,9 +1170,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Uploads new intents and entity types without deleting the existing ones.
         /// Intents and entity types with the same name are replaced with the new
-        /// versions from ImportAgentRequest.
+        /// versions from [ImportAgentRequest][google.cloud.dialogflow.v2.ImportAgentRequest]. After the import, the imported draft
+        /// agent will be trained automatically (unless disabled in agent settings).
+        /// However, once the import is done, training may not be completed yet. Please
+        /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
+        /// explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when importing is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1179,9 +1191,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Uploads new intents and entity types without deleting the existing ones.
         /// Intents and entity types with the same name are replaced with the new
-        /// versions from ImportAgentRequest.
+        /// versions from [ImportAgentRequest][google.cloud.dialogflow.v2.ImportAgentRequest]. After the import, the imported draft
+        /// agent will be trained automatically (unless disabled in agent settings).
+        /// However, once the import is done, training may not be completed yet. Please
+        /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
+        /// explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when importing is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1194,9 +1212,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Uploads new intents and entity types without deleting the existing ones.
         /// Intents and entity types with the same name are replaced with the new
-        /// versions from ImportAgentRequest.
+        /// versions from [ImportAgentRequest][google.cloud.dialogflow.v2.ImportAgentRequest]. After the import, the imported draft
+        /// agent will be trained automatically (unless disabled in agent settings).
+        /// However, once the import is done, training may not be completed yet. Please
+        /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
+        /// explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when importing is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1234,9 +1258,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// Restores the specified agent from a ZIP file.
         /// 
         /// Replaces the current agent version with a new one. All the intents and
-        /// entity types in the older version are deleted.
+        /// entity types in the older version are deleted. After the restore, the
+        /// restored draft agent will be trained automatically (unless disabled in
+        /// agent settings). However, once the restore is done, training may not be
+        /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
+        /// returns in order to train explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when restoring is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1248,9 +1278,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// Restores the specified agent from a ZIP file.
         /// 
         /// Replaces the current agent version with a new one. All the intents and
-        /// entity types in the older version are deleted.
+        /// entity types in the older version are deleted. After the restore, the
+        /// restored draft agent will be trained automatically (unless disabled in
+        /// agent settings). However, once the restore is done, training may not be
+        /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
+        /// returns in order to train explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when restoring is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1262,9 +1298,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// Restores the specified agent from a ZIP file.
         /// 
         /// Replaces the current agent version with a new one. All the intents and
-        /// entity types in the older version are deleted.
+        /// entity types in the older version are deleted. After the restore, the
+        /// restored draft agent will be trained automatically (unless disabled in
+        /// agent settings). However, once the restore is done, training may not be
+        /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
+        /// returns in order to train explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when restoring is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1615,9 +1657,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Uploads new intents and entity types without deleting the existing ones.
         /// Intents and entity types with the same name are replaced with the new
-        /// versions from ImportAgentRequest.
+        /// versions from [ImportAgentRequest][google.cloud.dialogflow.v2.ImportAgentRequest]. After the import, the imported draft
+        /// agent will be trained automatically (unless disabled in agent settings).
+        /// However, once the import is done, training may not be completed yet. Please
+        /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
+        /// explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when importing is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1633,9 +1681,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// Uploads new intents and entity types without deleting the existing ones.
         /// Intents and entity types with the same name are replaced with the new
-        /// versions from ImportAgentRequest.
+        /// versions from [ImportAgentRequest][google.cloud.dialogflow.v2.ImportAgentRequest]. After the import, the imported draft
+        /// agent will be trained automatically (unless disabled in agent settings).
+        /// However, once the import is done, training may not be completed yet. Please
+        /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
+        /// explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when importing is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1653,9 +1707,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// Restores the specified agent from a ZIP file.
         /// 
         /// Replaces the current agent version with a new one. All the intents and
-        /// entity types in the older version are deleted.
+        /// entity types in the older version are deleted. After the restore, the
+        /// restored draft agent will be trained automatically (unless disabled in
+        /// agent settings). However, once the restore is done, training may not be
+        /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
+        /// returns in order to train explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when restoring is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1670,9 +1730,15 @@ namespace Google.Cloud.Dialogflow.V2
         /// Restores the specified agent from a ZIP file.
         /// 
         /// Replaces the current agent version with a new one. All the intents and
-        /// entity types in the older version are deleted.
+        /// entity types in the older version are deleted. After the restore, the
+        /// restored draft agent will be trained automatically (unless disabled in
+        /// agent settings). However, once the restore is done, training may not be
+        /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
+        /// returns in order to train explicitly.
         /// 
         /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// An operation which tracks when restoring is complete. It only tracks
+        /// when the draft agent is updated not when it is done training.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
