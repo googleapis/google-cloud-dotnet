@@ -288,7 +288,7 @@ namespace Google.Cloud.OsConfig.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// Output only. Time the patch deployment was last updated. Timestamp is in
-    /// [RFC3339]("https://www.ietf.org/rfc/rfc3339.txt) text format.
+    /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
