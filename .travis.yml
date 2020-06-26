@@ -42,5 +42,5 @@ branches:
 script:
   - python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
   - touch build_timing_log.txt
-  - if [ -z "$SPANNER_EMULATOR_HOST" ]; then ./build.sh --diff --regex $API_REGEX; else sh spanner-ITs-against-emulator.sh; fi
+  - if [ -z "$SPANNER_EMULATOR_HOST" ]; then ./build.sh --diff --regex $API_REGEX; else ./spanner-ITs-against-emulator.sh; fi
   - ./processbuildtiminglog.sh
