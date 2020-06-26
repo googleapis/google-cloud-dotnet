@@ -19,6 +19,9 @@ jobs:
       env: API_REGEX='Google\.Cloud\.[M-Z].*'
     - name: "Non-Cloud APIs"
       env: API_REGEX='!Google\.Cloud'
+    - name: "Spanner Emulator"
+      env: API_REGEX='Google\.Cloud\.Spanner\.Data\.*'
+      env: SPANNER_EMULATOR_HOST=localhost:9010
 
 # Install the .NET Core 2.1 runtime as that's what we test against
 addons:
@@ -39,5 +42,5 @@ branches:
 script:
   - python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
   - touch build_timing_log.txt
-  - ./build.sh --diff --regex $API_REGEX
+  - if [ -z "$SPANNER_EMULATOR_HOST" ]; then ./build.sh --diff --regex $API_REGEX; else sh spanner-ITs-against-emulator.sh; fi
   - ./processbuildtiminglog.sh
