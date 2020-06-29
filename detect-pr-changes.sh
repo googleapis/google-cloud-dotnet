@@ -4,7 +4,7 @@ set -e
 
 apis=$(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq)
 
-git clone . tmpgit --no-local -b master --depth 1
+git clone . tmpgit --no-local -b master --depth 1 --recursive
 
 mkdir tmpgit/old
 mkdir tmpgit/new
