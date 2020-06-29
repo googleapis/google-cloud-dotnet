@@ -16,7 +16,7 @@ The `docfx.json` file needs some extra config:
     "_disableSideFilter": true,
     "_disableAffix": true,
     "_disableFooter": true,
-    "_rootPath": "/dotnet/reference/dialogflow"
+    "_rootPath": "/dotnet/docs/reference/dialogflow"
 },
 "template": [
     "default",
