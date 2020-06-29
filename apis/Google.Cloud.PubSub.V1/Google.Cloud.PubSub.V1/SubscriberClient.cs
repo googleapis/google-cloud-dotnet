@@ -501,18 +501,16 @@ namespace Google.Cloud.PubSub.V1
                 internal long ByteCount { get; }
             }
 
-            internal Flow(long maxByteCount, long maxElementCount, Action<Task> registerTaskFn, TaskHelper taskHelper)
+            internal Flow(long maxOutstandingByteCount, long maxOutstandingElementCount, Action<Task> registerTaskFn, TaskHelper taskHelper)
             {
-                _maxByteCount = maxByteCount;
-                _maxElementCount = maxElementCount;
+                MaxOutstandingByteCount = maxOutstandingByteCount;
+                MaxOutstandingElementCount = maxOutstandingElementCount;
                 _registerTaskFn = registerTaskFn;
                 _taskHelper = taskHelper;
                 _event = new AsyncAutoResetEvent(taskHelper);
             }
 
             private readonly object _lock = new object();
-            private readonly long _maxByteCount;
-            private readonly long _maxElementCount;
             private readonly Action<Task> _registerTaskFn;
             private readonly TaskHelper _taskHelper;
             private readonly AsyncAutoResetEvent _event;
@@ -522,10 +520,13 @@ namespace Google.Cloud.PubSub.V1
             private long _byteCount;
             private long _elementCount;
 
+            internal long MaxOutstandingByteCount { get; }
+            internal long MaxOutstandingElementCount { get; }
+
             /// <summary>
             /// Is flow-control currently within limits. Pre-condition: must be locked.
             /// </summary>
-            private bool IsFlowOk() => _byteCount < _maxByteCount && _elementCount < _maxElementCount;
+            private bool IsFlowOk() => _byteCount < MaxOutstandingByteCount && _elementCount < MaxOutstandingElementCount;
 
             /// <summary>
             /// Call <paramref name="fn"/> when allowed to do so by the flow-control limits.
@@ -990,7 +991,9 @@ namespace Google.Cloud.PubSub.V1
                 Task initTask = _pull.WriteAsync(new StreamingPullRequest
                 {
                     SubscriptionAsSubscriptionName = _subscriptionName,
-                    StreamAckDeadlineSeconds = _modifyDeadlineSeconds
+                    StreamAckDeadlineSeconds = _modifyDeadlineSeconds,
+                    MaxOutstandingMessages = _flow.MaxOutstandingElementCount,
+                    MaxOutstandingBytes = _flow.MaxOutstandingByteCount
                 });
                 Add(initTask, Next(true, () => HandlePullMoveNext(initTask)));
             }
