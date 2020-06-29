@@ -43,7 +43,7 @@ namespace Google.Cloud.Spanner.Data
         private bool? _hasRows = null;
         private readonly List<Value> _innerList = new List<Value>();
         private readonly ReliableStreamReader _resultSet;
-        private readonly ConcurrentDictionary<string, int> _fieldIndex = new ConcurrentDictionary<string, int>();
+        private ConcurrentDictionary<string, int> _fieldIndex;
         private ResultSetMetadata _metadata;
         private readonly IDisposable _resourceToClose;
         private readonly SpannerConversionOptions _conversionOptions;
@@ -215,16 +215,54 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override int GetOrdinal(string name)
         {
-            // If we've already populated the field index, complete synchronously.
+            // We can complete synchronously so long as we have the metadata already.
+            // (If we haven't already populated the field index, we can do so synchronously if there's metadata.)
+            // The only time we *wouldn't* already have the metadata is if Read/ReadAsync hasn't already been
+            // called. That isn't as uncommon as it sounds though, as it's not unreasonable to get the ordinals
+            // of columns before entering a loop.
             GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
-            if (_fieldIndex.Count != 0)
+            if (_fieldIndex is null)
             {
-                return _fieldIndex[name];
+                PopulateMetadata();
+                InitializeFieldIndexFromMetadata();
             }
-            // Otherwise, fetch metadata in a new task and wait for it.
-            return Task.Run(() => GetFieldIndexAsync(name, CancellationToken.None)).ResultWithUnwrappedExceptions();
+            return _fieldIndex[name];
         }
-        
+
+        /// <summary>
+        /// Returns the column ordinal given the name of the column, asynchronously requesting metadata from
+        /// the database if necessary.
+        /// </summary>
+        /// <param name="name">The name of the column.</param>
+        /// <param name="cancellationToken">A cancellation token to cancel reading metadata. Defaults to <see cref="CancellationToken.None"/>.</param>
+        /// <returns>The zero-based column ordinal.</returns>
+        public async Task<int> GetOrdinalAsync(string name, CancellationToken cancellationToken = default)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
+            if (_fieldIndex is null)
+            {
+                await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
+                InitializeFieldIndexFromMetadata();
+            }
+            return _fieldIndex[name];
+        }
+
+        // Initializes _fieldIndex, but should only be called after PopulateMetadata or PopulateMetadataAsync
+        // is called. (These can still leave _metadata null, potentially.)
+        private void InitializeFieldIndexFromMetadata()
+        {
+            _fieldIndex = new ConcurrentDictionary<string, int>();
+            if (_metadata is object)
+            {
+                var i = 0;
+                foreach (var field in _metadata.RowType.Fields)
+                {
+                    _fieldIndex[field.Name] = i;
+                    i++;
+                }
+            }
+        }
+
         /// <inheritdoc />
         public override int GetValues(object[] values)
         {
@@ -321,25 +359,6 @@ namespace Google.Cloud.Spanner.Data
         {
             CloseImpl();
             base.Dispose(disposing);
-        }
-
-        private async Task<int> GetFieldIndexAsync(string fieldName, CancellationToken cancellationToken)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(fieldName, nameof(fieldName));
-            if (_fieldIndex.Count == 0)
-            {
-                var metadata = await PopulateMetadataAsync(cancellationToken).ConfigureAwait(false);
-                if (metadata != null)
-                {
-                    var i = 0;
-                    foreach (var field in metadata.RowType.Fields)
-                    {
-                        _fieldIndex[field.Name] = i;
-                        i++;
-                    }
-                }
-            }
-            return _fieldIndex[fieldName];
         }
 
         internal ResultSetMetadata PopulateMetadata()
