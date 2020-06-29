@@ -27,11 +27,11 @@ do
   fi
 done
 
-echo ""
+echo " "
 echo "====================="
 echo "Changes detected"
 echo "====================="
-echo ""
+echo " "
 
 
 for api in $apis
@@ -49,11 +49,11 @@ do
   echo "---------------------"
 done  
 
-echo ""
+echo " "
 echo "============================================="
 echo "Checking compatibility with previous releases"
 echo "============================================="
-echo ""
+echo " "
 
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
