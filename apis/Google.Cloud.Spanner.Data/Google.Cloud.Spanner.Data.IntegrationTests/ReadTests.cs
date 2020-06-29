@@ -563,5 +563,33 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
+
+        [Fact]
+        public void GetOrdinal()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT StringValue, Key FROM {_fixture.TableName} LIMIT 1");
+                using (var reader = cmd.ExecuteReader())
+                {
+                    Assert.Equal(0, reader.GetOrdinal("StringValue"));
+                    Assert.Equal(1, reader.GetOrdinal("Key"));
+                }
+            }
+        }
+
+        [Fact]
+        public async Task GetOrdinalAsync()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand($"SELECT StringValue, Key FROM {_fixture.TableName} LIMIT 1");
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.Equal(0, await reader.GetOrdinalAsync("StringValue"));
+                    Assert.Equal(1, await reader.GetOrdinalAsync("Key"));
+                }
+            }
+        }
     }
 }
