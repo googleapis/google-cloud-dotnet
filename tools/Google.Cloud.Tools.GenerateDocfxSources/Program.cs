@@ -236,7 +236,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             string productFamily = productUrl.StartsWith("https://cloud.google.com/")
                 ? productUrl.Split('/')[3]
                 : "unknown";
-            globalMetadata["_rootPath"] = $"/dotnet/reference/{productFamily}";
+            globalMetadata["_rootPath"] = $"/dotnet/docs/reference/{productFamily}";
 
             build["template"][1] = "../../../third_party/docfx/templates/devsite";
             build["dest"] = "devsite";
