@@ -36,7 +36,7 @@ chmod u+x emulator_main
 EMULATOR_PID=$!
 
 # Stop the emulator & clean the environment variable
-trap "kill -2 $EMULATOR_PID; unset SPANNER_EMULATOR_HOST; unset TEST_PROJECT; echo \"Cleanup the emulator\";" EXIT
+trap "kill -15 $EMULATOR_PID; unset SPANNER_EMULATOR_HOST; unset TEST_PROJECT; echo \"Cleanup the emulator\";" EXIT
 
 cd apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.IntegrationTests
 dotnet test
