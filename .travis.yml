@@ -13,15 +13,14 @@ jobs:
     - name: "Change detection"
       if: type = pull_request
       script: ./detect-pr-changes.sh
+    - name: "Spanner Emulator"
+      script: ./spanner-ITs-against-emulator.sh;
     - name: "Cloud APIs A-L"
       env: API_REGEX='Google\.Cloud\.[A-L].*'
     - name: "Cloud APIs M-Z"
       env: API_REGEX='Google\.Cloud\.[M-Z].*'
     - name: "Non-Cloud APIs"
       env: API_REGEX='!Google\.Cloud'
-    - name: "Spanner Emulator"
-      env: API_REGEX='Google\.Cloud\.Spanner\.Data\.*'
-      env: SPANNER_EMULATOR_HOST=localhost:9010
 
 # Install the .NET Core 2.1 runtime as that's what we test against
 addons:
@@ -42,5 +41,5 @@ branches:
 script:
   - python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
   - touch build_timing_log.txt
-  - if [ -z "$SPANNER_EMULATOR_HOST" ]; then ./build.sh --diff --regex $API_REGEX; else ./spanner-ITs-against-emulator.sh; fi
+  - ./build.sh --diff --regex $API_REGEX
   - ./processbuildtiminglog.sh
