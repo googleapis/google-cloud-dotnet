@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License..
 
-# Fail on any error
+# Fail on any error.
 set -e
 
 export SPANNER_EMULATOR_HOST=localhost:9010
@@ -26,8 +26,10 @@ echo "Running the Cloud Spanner emulator: $SPANNER_EMULATOR_HOST";
 GOOGLE_CLOUD_SDK_VERSION=299.0.0
 wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
 tar zxvf google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
+
+export CLOUDSDK_CORE_DISABLE_PROMPTS=1
 ./google-cloud-sdk/bin/gcloud config set disable_usage_reporting false
-./google-cloud-sdk/bin/gcloud --quiet components update
+./google-cloud-sdk/bin/gcloud components install beta cloud-spanner-emulator
 
 # Start the emulator.
 ./google-cloud-sdk/bin/gcloud beta emulators spanner start &
