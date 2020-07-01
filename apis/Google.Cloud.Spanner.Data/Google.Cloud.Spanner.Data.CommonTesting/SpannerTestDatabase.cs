@@ -13,13 +13,9 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
-using Google.LongRunning;
-using Grpc.Core;
 using System;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
@@ -83,9 +79,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             TestLogger.Install();
 
             ProjectId = projectId;
-
-            MaybeInitializeInstance();
-
             var builder = new SpannerConnectionStringBuilder
             {
                 Host = SpannerHost,
@@ -121,41 +114,6 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         {
             string value = Environment.GetEnvironmentVariable(name);
             return string.IsNullOrEmpty(value) ? defaultValue : value;
-        }
-
-        private void MaybeInitializeInstance()
-        {
-            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
-            try
-            {
-                string name = $"projects/{ProjectId}/instances/{SpannerInstance}";
-                Instance response = instanceAdminClient.GetInstance(name);
-            }
-            catch (RpcException ex) when (ex.Status.StatusCode == StatusCode.NotFound)
-            {
-                // Initialize request parameters.
-                Instance instance = new Instance
-                {
-                    InstanceName = InstanceName.FromProjectInstance(ProjectId, SpannerInstance),
-                    ConfigAsInstanceConfigName =
-                        InstanceConfigName.FromProjectInstanceConfig(ProjectId, "regional-us-central1"),
-                    NodeCount = 1
-                };
-                ProjectName parentAsProjectName = ProjectName.FromProject(ProjectId);
-
-                // Make the CreateInstance request.
-                Operation<Instance, CreateInstanceMetadata> response =
-                    instanceAdminClient.CreateInstance(parentAsProjectName, SpannerInstance, instance);
-
-                // Poll until the returned long-running operation is complete.
-                Operation<Instance, CreateInstanceMetadata> completedResponse =
-                    response.PollUntilCompleted();
-
-                if (completedResponse.IsFaulted)
-                {
-                    throw completedResponse.Exception;
-                }
-            }
         }
         
         public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);        
