@@ -125,10 +125,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
 
         private void MaybeInitializeInstance()
         {
-            InstanceAdminClient instanceAdminClient = new InstanceAdminClientBuilder
-            {
-                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
-            }.Build();
+            InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             try
             {
                 string name = $"projects/{ProjectId}/instances/{SpannerInstance}";
