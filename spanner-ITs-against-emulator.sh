@@ -35,7 +35,7 @@ tar zxvf google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
 EMULATOR_PID=$!
 
 # When this shell exits, stop the emulator.
-trap "kill -15 $EMULATOR_PID; echo \"Cleanup the emulator\";" EXIT
+trap "kill -- -$(ps -o pgid= $EMULATOR_PID | grep -o '[0-9]*'); echo \"Cleaned up the emulator\";" EXIT
 
 ./google-cloud-sdk/bin/gcloud config set auth/disable_credentials true
 ./google-cloud-sdk/bin/gcloud config set project ${TEST_PROJECT}
