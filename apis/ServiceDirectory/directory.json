@@ -91,6 +91,23 @@
       "CSharpNamespaceFromProtos": "Google.Analytics.Data.V1Alpha"
     },
     {
+      "ServiceDirectory": "google/analytics/admin/v1alpha",
+      "Name": "analyticsadmin.googleapis.com",
+      "Title": "Analytics Admin API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/analytics/admin/v1alpha/analyticsadmin_v1alpha.yaml",
+      "Version": "v1alpha",
+      "PackageFromDirectory": "google.analytics.admin.v1alpha",
+      "PackageFromProtos": "google.analytics.admin.v1alpha",
+      "ImportDirectories": [
+        "google/analytics/admin/v1alpha",
+        "google/api",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Analytics.Admin.V1Alpha"
+    },
+    {
       "ServiceDirectory": "google/analytics/management/v1alpha",
       "Name": "analyticsmanagement.googleapis.com",
       "Title": "Analytics Management API",
