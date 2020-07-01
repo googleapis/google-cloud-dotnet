@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.2.0, released 2020-07-01
+
+- [Commit 482a8b0](https://github.com/googleapis/google-cloud-dotnet/commit/482a8b0): Update Google.Apis.Storage.v1 dependency. Fixes [issue 5115](https://github.com/googleapis/google-cloud-dotnet/issues/5115).
+
 # Version 3.1.0, released 2020-05-28
 
 - [Commit db4f9a9](https://github.com/googleapis/google-cloud-dotnet/commit/db4f9a9): Update Google.Apis.Storage.v1 dependency. Fixes [issue 4984](https://github.com/googleapis/google-cloud-dotnet/issues/4984).
