@@ -819,7 +819,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<GameServerDeployment, OperationMetadata> DeleteGameServerDeployment(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerDeployment(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -828,7 +828,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> DeleteGameServerDeploymentAsync(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerDeploymentAsync(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -837,7 +837,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> DeleteGameServerDeploymentAsync(DeleteGameServerDeploymentRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerDeploymentAsync(DeleteGameServerDeploymentRequest request, st::CancellationToken cancellationToken) =>
             DeleteGameServerDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeleteGameServerDeployment</c>.</summary>
@@ -852,8 +852,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<GameServerDeployment, OperationMetadata> PollOnceDeleteGameServerDeployment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<GameServerDeployment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerDeploymentOperationsClient, callSettings);
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteGameServerDeployment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerDeploymentOperationsClient, callSettings);
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -864,8 +864,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> PollOnceDeleteGameServerDeploymentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<GameServerDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerDeploymentOperationsClient, callSettings);
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteGameServerDeploymentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerDeploymentOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes a single game server deployment.
@@ -877,7 +877,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<GameServerDeployment, OperationMetadata> DeleteGameServerDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerDeployment(new DeleteGameServerDeploymentRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -893,7 +893,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> DeleteGameServerDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerDeploymentAsync(new DeleteGameServerDeploymentRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -909,7 +909,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> DeleteGameServerDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteGameServerDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -922,7 +922,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<GameServerDeployment, OperationMetadata> DeleteGameServerDeployment(GameServerDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerDeployment(GameServerDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerDeployment(new DeleteGameServerDeploymentRequest
             {
                 GameServerDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -938,7 +938,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> DeleteGameServerDeploymentAsync(GameServerDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerDeploymentAsync(GameServerDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerDeploymentAsync(new DeleteGameServerDeploymentRequest
             {
                 GameServerDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -954,7 +954,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> DeleteGameServerDeploymentAsync(GameServerDeploymentName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerDeploymentAsync(GameServerDeploymentName name, st::CancellationToken cancellationToken) =>
             DeleteGameServerDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1607,10 +1607,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override lro::Operation<GameServerDeployment, OperationMetadata> DeleteGameServerDeployment(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerDeployment(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGameServerDeploymentRequest(ref request, ref callSettings);
-            return new lro::Operation<GameServerDeployment, OperationMetadata>(_callDeleteGameServerDeployment.Sync(request, callSettings), DeleteGameServerDeploymentOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteGameServerDeployment.Sync(request, callSettings), DeleteGameServerDeploymentOperationsClient);
         }
 
         /// <summary>
@@ -1619,10 +1619,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<GameServerDeployment, OperationMetadata>> DeleteGameServerDeploymentAsync(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerDeploymentAsync(DeleteGameServerDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGameServerDeploymentRequest(ref request, ref callSettings);
-            return new lro::Operation<GameServerDeployment, OperationMetadata>(await _callDeleteGameServerDeployment.Async(request, callSettings).ConfigureAwait(false), DeleteGameServerDeploymentOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteGameServerDeployment.Async(request, callSettings).ConfigureAwait(false), DeleteGameServerDeploymentOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>UpdateGameServerDeployment</c>.</summary>

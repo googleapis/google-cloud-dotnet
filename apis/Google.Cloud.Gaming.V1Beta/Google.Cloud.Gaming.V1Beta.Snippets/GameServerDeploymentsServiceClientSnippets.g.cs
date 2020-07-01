@@ -597,22 +597,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
             };
             // Make the request
-            Operation<GameServerDeployment, OperationMetadata> response = gameServerDeploymentsServiceClient.DeleteGameServerDeployment(request);
+            Operation<Empty, OperationMetadata> response = gameServerDeploymentsServiceClient.DeleteGameServerDeployment(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerDeployment result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerDeployment, OperationMetadata> retrievedResponse = gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeployment(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeployment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerDeployment retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -630,22 +630,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 GameServerDeploymentName = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]"),
             };
             // Make the request
-            Operation<GameServerDeployment, OperationMetadata> response = await gameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync(request);
+            Operation<Empty, OperationMetadata> response = await gameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerDeployment result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerDeployment, OperationMetadata> retrievedResponse = await gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeploymentAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeploymentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerDeployment retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -659,22 +659,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/gameServerDeployments/[DEPLOYMENT]";
             // Make the request
-            Operation<GameServerDeployment, OperationMetadata> response = gameServerDeploymentsServiceClient.DeleteGameServerDeployment(name);
+            Operation<Empty, OperationMetadata> response = gameServerDeploymentsServiceClient.DeleteGameServerDeployment(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerDeployment result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerDeployment, OperationMetadata> retrievedResponse = gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeployment(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeployment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerDeployment retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -689,22 +689,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/gameServerDeployments/[DEPLOYMENT]";
             // Make the request
-            Operation<GameServerDeployment, OperationMetadata> response = await gameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync(name);
+            Operation<Empty, OperationMetadata> response = await gameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerDeployment result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerDeployment, OperationMetadata> retrievedResponse = await gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeploymentAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeploymentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerDeployment retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -718,22 +718,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             GameServerDeploymentName name = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]");
             // Make the request
-            Operation<GameServerDeployment, OperationMetadata> response = gameServerDeploymentsServiceClient.DeleteGameServerDeployment(name);
+            Operation<Empty, OperationMetadata> response = gameServerDeploymentsServiceClient.DeleteGameServerDeployment(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerDeployment result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerDeployment, OperationMetadata> retrievedResponse = gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeployment(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeployment(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerDeployment retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -748,22 +748,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             GameServerDeploymentName name = GameServerDeploymentName.FromProjectLocationDeployment("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]");
             // Make the request
-            Operation<GameServerDeployment, OperationMetadata> response = await gameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync(name);
+            Operation<Empty, OperationMetadata> response = await gameServerDeploymentsServiceClient.DeleteGameServerDeploymentAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerDeployment result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerDeployment, OperationMetadata> retrievedResponse = await gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeploymentAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerDeploymentsServiceClient.PollOnceDeleteGameServerDeploymentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerDeployment retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
