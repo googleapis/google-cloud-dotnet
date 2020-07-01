@@ -18,6 +18,7 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
 {
     using Google.Api.Gax;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -595,22 +596,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
             };
             // Make the request
-            Operation<GameServerConfig, OperationMetadata> response = gameServerConfigsServiceClient.DeleteGameServerConfig(request);
+            Operation<Empty, OperationMetadata> response = gameServerConfigsServiceClient.DeleteGameServerConfig(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerConfig result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerConfig, OperationMetadata> retrievedResponse = gameServerConfigsServiceClient.PollOnceDeleteGameServerConfig(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerConfigsServiceClient.PollOnceDeleteGameServerConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerConfig retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -628,22 +629,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 GameServerConfigName = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]"),
             };
             // Make the request
-            Operation<GameServerConfig, OperationMetadata> response = await gameServerConfigsServiceClient.DeleteGameServerConfigAsync(request);
+            Operation<Empty, OperationMetadata> response = await gameServerConfigsServiceClient.DeleteGameServerConfigAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerConfig result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerConfig, OperationMetadata> retrievedResponse = await gameServerConfigsServiceClient.PollOnceDeleteGameServerConfigAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerConfigsServiceClient.PollOnceDeleteGameServerConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerConfig retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -657,22 +658,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/gameServerDeployments/[DEPLOYMENT]/configs/[CONFIG]";
             // Make the request
-            Operation<GameServerConfig, OperationMetadata> response = gameServerConfigsServiceClient.DeleteGameServerConfig(name);
+            Operation<Empty, OperationMetadata> response = gameServerConfigsServiceClient.DeleteGameServerConfig(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerConfig result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerConfig, OperationMetadata> retrievedResponse = gameServerConfigsServiceClient.PollOnceDeleteGameServerConfig(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerConfigsServiceClient.PollOnceDeleteGameServerConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerConfig retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -687,22 +688,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/gameServerDeployments/[DEPLOYMENT]/configs/[CONFIG]";
             // Make the request
-            Operation<GameServerConfig, OperationMetadata> response = await gameServerConfigsServiceClient.DeleteGameServerConfigAsync(name);
+            Operation<Empty, OperationMetadata> response = await gameServerConfigsServiceClient.DeleteGameServerConfigAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerConfig result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerConfig, OperationMetadata> retrievedResponse = await gameServerConfigsServiceClient.PollOnceDeleteGameServerConfigAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerConfigsServiceClient.PollOnceDeleteGameServerConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerConfig retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -716,22 +717,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             GameServerConfigName name = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]");
             // Make the request
-            Operation<GameServerConfig, OperationMetadata> response = gameServerConfigsServiceClient.DeleteGameServerConfig(name);
+            Operation<Empty, OperationMetadata> response = gameServerConfigsServiceClient.DeleteGameServerConfig(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerConfig, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerConfig result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerConfig, OperationMetadata> retrievedResponse = gameServerConfigsServiceClient.PollOnceDeleteGameServerConfig(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerConfigsServiceClient.PollOnceDeleteGameServerConfig(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerConfig retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -746,22 +747,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             GameServerConfigName name = GameServerConfigName.FromProjectLocationDeploymentConfig("[PROJECT]", "[LOCATION]", "[DEPLOYMENT]", "[CONFIG]");
             // Make the request
-            Operation<GameServerConfig, OperationMetadata> response = await gameServerConfigsServiceClient.DeleteGameServerConfigAsync(name);
+            Operation<Empty, OperationMetadata> response = await gameServerConfigsServiceClient.DeleteGameServerConfigAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerConfig, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerConfig result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerConfig, OperationMetadata> retrievedResponse = await gameServerConfigsServiceClient.PollOnceDeleteGameServerConfigAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerConfigsServiceClient.PollOnceDeleteGameServerConfigAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerConfig retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

@@ -752,7 +752,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Realm, OperationMetadata> DeleteRealm(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRealm(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -761,7 +761,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Realm, OperationMetadata>> DeleteRealmAsync(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRealmAsync(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -770,7 +770,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Realm, OperationMetadata>> DeleteRealmAsync(DeleteRealmRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRealmAsync(DeleteRealmRequest request, st::CancellationToken cancellationToken) =>
             DeleteRealmAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeleteRealm</c>.</summary>
@@ -784,8 +784,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<Realm, OperationMetadata> PollOnceDeleteRealm(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<Realm, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRealmOperationsClient, callSettings);
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteRealm(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRealmOperationsClient, callSettings);
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -796,8 +796,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<Realm, OperationMetadata>> PollOnceDeleteRealmAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<Realm, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRealmOperationsClient, callSettings);
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteRealmAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRealmOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes a single realm.
@@ -808,7 +808,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Realm, OperationMetadata> DeleteRealm(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRealm(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteRealm(new DeleteRealmRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -823,7 +823,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Realm, OperationMetadata>> DeleteRealmAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRealmAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteRealmAsync(new DeleteRealmRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -838,7 +838,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Realm, OperationMetadata>> DeleteRealmAsync(string name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRealmAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteRealmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -850,7 +850,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Realm, OperationMetadata> DeleteRealm(RealmName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRealm(RealmName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteRealm(new DeleteRealmRequest
             {
                 RealmName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -865,7 +865,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Realm, OperationMetadata>> DeleteRealmAsync(RealmName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRealmAsync(RealmName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteRealmAsync(new DeleteRealmRequest
             {
                 RealmName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -880,7 +880,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Realm, OperationMetadata>> DeleteRealmAsync(RealmName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRealmAsync(RealmName name, st::CancellationToken cancellationToken) =>
             DeleteRealmAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1196,10 +1196,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override lro::Operation<Realm, OperationMetadata> DeleteRealm(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteRealm(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRealmRequest(ref request, ref callSettings);
-            return new lro::Operation<Realm, OperationMetadata>(_callDeleteRealm.Sync(request, callSettings), DeleteRealmOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteRealm.Sync(request, callSettings), DeleteRealmOperationsClient);
         }
 
         /// <summary>
@@ -1208,10 +1208,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<Realm, OperationMetadata>> DeleteRealmAsync(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRealmAsync(DeleteRealmRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRealmRequest(ref request, ref callSettings);
-            return new lro::Operation<Realm, OperationMetadata>(await _callDeleteRealm.Async(request, callSettings).ConfigureAwait(false), DeleteRealmOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteRealm.Async(request, callSettings).ConfigureAwait(false), DeleteRealmOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>UpdateRealm</c>.</summary>

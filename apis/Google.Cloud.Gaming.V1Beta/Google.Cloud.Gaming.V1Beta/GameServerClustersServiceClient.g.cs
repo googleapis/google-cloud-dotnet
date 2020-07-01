@@ -104,10 +104,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 120 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateGameServerClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000)));
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>GameServerClustersServiceClient.CreateGameServerCluster</c>
@@ -833,7 +833,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<GameServerCluster, OperationMetadata> DeleteGameServerCluster(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerCluster(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -842,7 +842,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> DeleteGameServerClusterAsync(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerClusterAsync(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -851,7 +851,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> DeleteGameServerClusterAsync(DeleteGameServerClusterRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerClusterAsync(DeleteGameServerClusterRequest request, st::CancellationToken cancellationToken) =>
             DeleteGameServerClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeleteGameServerCluster</c>.</summary>
@@ -866,8 +866,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<GameServerCluster, OperationMetadata> PollOnceDeleteGameServerCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<GameServerCluster, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerClusterOperationsClient, callSettings);
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteGameServerCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerClusterOperationsClient, callSettings);
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -878,8 +878,8 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> PollOnceDeleteGameServerClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<GameServerCluster, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerClusterOperationsClient, callSettings);
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteGameServerClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGameServerClusterOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes a single game server cluster.
@@ -890,7 +890,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<GameServerCluster, OperationMetadata> DeleteGameServerCluster(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerCluster(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerCluster(new DeleteGameServerClusterRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -905,7 +905,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> DeleteGameServerClusterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerClusterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerClusterAsync(new DeleteGameServerClusterRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -920,7 +920,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> DeleteGameServerClusterAsync(string name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerClusterAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteGameServerClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -932,7 +932,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<GameServerCluster, OperationMetadata> DeleteGameServerCluster(GameServerClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerCluster(GameServerClusterName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerCluster(new DeleteGameServerClusterRequest
             {
                 GameServerClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -947,7 +947,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> DeleteGameServerClusterAsync(GameServerClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerClusterAsync(GameServerClusterName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteGameServerClusterAsync(new DeleteGameServerClusterRequest
             {
                 GameServerClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -962,7 +962,7 @@ namespace Google.Cloud.Gaming.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> DeleteGameServerClusterAsync(GameServerClusterName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerClusterAsync(GameServerClusterName name, st::CancellationToken cancellationToken) =>
             DeleteGameServerClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1353,10 +1353,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override lro::Operation<GameServerCluster, OperationMetadata> DeleteGameServerCluster(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteGameServerCluster(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGameServerClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<GameServerCluster, OperationMetadata>(_callDeleteGameServerCluster.Sync(request, callSettings), DeleteGameServerClusterOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteGameServerCluster.Sync(request, callSettings), DeleteGameServerClusterOperationsClient);
         }
 
         /// <summary>
@@ -1365,10 +1365,10 @@ namespace Google.Cloud.Gaming.V1Beta
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<GameServerCluster, OperationMetadata>> DeleteGameServerClusterAsync(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGameServerClusterAsync(DeleteGameServerClusterRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGameServerClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<GameServerCluster, OperationMetadata>(await _callDeleteGameServerCluster.Async(request, callSettings).ConfigureAwait(false), DeleteGameServerClusterOperationsClient);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteGameServerCluster.Async(request, callSettings).ConfigureAwait(false), DeleteGameServerClusterOperationsClient);
         }
 
         /// <summary>

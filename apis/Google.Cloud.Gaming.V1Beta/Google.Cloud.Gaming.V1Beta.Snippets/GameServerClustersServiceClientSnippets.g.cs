@@ -639,22 +639,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
             };
             // Make the request
-            Operation<GameServerCluster, OperationMetadata> response = gameServerClustersServiceClient.DeleteGameServerCluster(request);
+            Operation<Empty, OperationMetadata> response = gameServerClustersServiceClient.DeleteGameServerCluster(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerCluster result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerCluster, OperationMetadata> retrievedResponse = gameServerClustersServiceClient.PollOnceDeleteGameServerCluster(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerClustersServiceClient.PollOnceDeleteGameServerCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerCluster retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -672,22 +672,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
             };
             // Make the request
-            Operation<GameServerCluster, OperationMetadata> response = await gameServerClustersServiceClient.DeleteGameServerClusterAsync(request);
+            Operation<Empty, OperationMetadata> response = await gameServerClustersServiceClient.DeleteGameServerClusterAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerCluster result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerCluster, OperationMetadata> retrievedResponse = await gameServerClustersServiceClient.PollOnceDeleteGameServerClusterAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerClustersServiceClient.PollOnceDeleteGameServerClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerCluster retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -701,22 +701,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/realms/[REALM]/gameServerClusters/[CLUSTER]";
             // Make the request
-            Operation<GameServerCluster, OperationMetadata> response = gameServerClustersServiceClient.DeleteGameServerCluster(name);
+            Operation<Empty, OperationMetadata> response = gameServerClustersServiceClient.DeleteGameServerCluster(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerCluster result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerCluster, OperationMetadata> retrievedResponse = gameServerClustersServiceClient.PollOnceDeleteGameServerCluster(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerClustersServiceClient.PollOnceDeleteGameServerCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerCluster retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -731,22 +731,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/realms/[REALM]/gameServerClusters/[CLUSTER]";
             // Make the request
-            Operation<GameServerCluster, OperationMetadata> response = await gameServerClustersServiceClient.DeleteGameServerClusterAsync(name);
+            Operation<Empty, OperationMetadata> response = await gameServerClustersServiceClient.DeleteGameServerClusterAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerCluster result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerCluster, OperationMetadata> retrievedResponse = await gameServerClustersServiceClient.PollOnceDeleteGameServerClusterAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerClustersServiceClient.PollOnceDeleteGameServerClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerCluster retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -760,22 +760,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             GameServerClusterName name = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]");
             // Make the request
-            Operation<GameServerCluster, OperationMetadata> response = gameServerClustersServiceClient.DeleteGameServerCluster(name);
+            Operation<Empty, OperationMetadata> response = gameServerClustersServiceClient.DeleteGameServerCluster(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerCluster, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            GameServerCluster result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerCluster, OperationMetadata> retrievedResponse = gameServerClustersServiceClient.PollOnceDeleteGameServerCluster(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = gameServerClustersServiceClient.PollOnceDeleteGameServerCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerCluster retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -790,22 +790,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             GameServerClusterName name = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]");
             // Make the request
-            Operation<GameServerCluster, OperationMetadata> response = await gameServerClustersServiceClient.DeleteGameServerClusterAsync(name);
+            Operation<Empty, OperationMetadata> response = await gameServerClustersServiceClient.DeleteGameServerClusterAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<GameServerCluster, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            GameServerCluster result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<GameServerCluster, OperationMetadata> retrievedResponse = await gameServerClustersServiceClient.PollOnceDeleteGameServerClusterAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await gameServerClustersServiceClient.PollOnceDeleteGameServerClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                GameServerCluster retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

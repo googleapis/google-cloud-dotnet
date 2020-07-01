@@ -601,22 +601,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
             };
             // Make the request
-            Operation<Realm, OperationMetadata> response = realmsServiceClient.DeleteRealm(request);
+            Operation<Empty, OperationMetadata> response = realmsServiceClient.DeleteRealm(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Realm, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Realm result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Realm, OperationMetadata> retrievedResponse = realmsServiceClient.PollOnceDeleteRealm(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = realmsServiceClient.PollOnceDeleteRealm(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Realm retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -634,22 +634,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
                 RealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
             };
             // Make the request
-            Operation<Realm, OperationMetadata> response = await realmsServiceClient.DeleteRealmAsync(request);
+            Operation<Empty, OperationMetadata> response = await realmsServiceClient.DeleteRealmAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Realm, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Realm result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Realm, OperationMetadata> retrievedResponse = await realmsServiceClient.PollOnceDeleteRealmAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await realmsServiceClient.PollOnceDeleteRealmAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Realm retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -663,22 +663,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/realms/[REALM]";
             // Make the request
-            Operation<Realm, OperationMetadata> response = realmsServiceClient.DeleteRealm(name);
+            Operation<Empty, OperationMetadata> response = realmsServiceClient.DeleteRealm(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Realm, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Realm result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Realm, OperationMetadata> retrievedResponse = realmsServiceClient.PollOnceDeleteRealm(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = realmsServiceClient.PollOnceDeleteRealm(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Realm retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -693,22 +693,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/realms/[REALM]";
             // Make the request
-            Operation<Realm, OperationMetadata> response = await realmsServiceClient.DeleteRealmAsync(name);
+            Operation<Empty, OperationMetadata> response = await realmsServiceClient.DeleteRealmAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Realm, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Realm result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Realm, OperationMetadata> retrievedResponse = await realmsServiceClient.PollOnceDeleteRealmAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await realmsServiceClient.PollOnceDeleteRealmAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Realm retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -722,22 +722,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             RealmName name = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]");
             // Make the request
-            Operation<Realm, OperationMetadata> response = realmsServiceClient.DeleteRealm(name);
+            Operation<Empty, OperationMetadata> response = realmsServiceClient.DeleteRealm(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Realm, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Realm result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Realm, OperationMetadata> retrievedResponse = realmsServiceClient.PollOnceDeleteRealm(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = realmsServiceClient.PollOnceDeleteRealm(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Realm retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -752,22 +752,22 @@ namespace Google.Cloud.Gaming.V1Beta.Snippets
             // Initialize request argument(s)
             RealmName name = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]");
             // Make the request
-            Operation<Realm, OperationMetadata> response = await realmsServiceClient.DeleteRealmAsync(name);
+            Operation<Empty, OperationMetadata> response = await realmsServiceClient.DeleteRealmAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Realm, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Realm result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Realm, OperationMetadata> retrievedResponse = await realmsServiceClient.PollOnceDeleteRealmAsync(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await realmsServiceClient.PollOnceDeleteRealmAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Realm retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
