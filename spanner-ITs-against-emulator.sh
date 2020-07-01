@@ -17,26 +17,33 @@
 # Fail on any error
 set -e
 
-# Display commands being run
-set -x
-
 export SPANNER_EMULATOR_HOST=localhost:9010
 export TEST_PROJECT=emulator-test-project
 echo "Running the Cloud Spanner emulator: $SPANNER_EMULATOR_HOST";
 
-# Download the emulator
-EMULATOR_VERSION=0.8.0
-wget https://storage.googleapis.com/cloud-spanner-emulator/releases/${EMULATOR_VERSION}/cloud-spanner-emulator_linux_amd64-${EMULATOR_VERSION}.tar.gz
-tar zxvf cloud-spanner-emulator_linux_amd64-${EMULATOR_VERSION}.tar.gz
-chmod u+x emulator_main
+# Download the Google Cloud SDK and fetch the beta component which contains the
+# emulator.
+GOOGLE_CLOUD_SDK_VERSION=299.0.0
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
+tar zxvf google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
+./google-cloud-sdk/bin/gcloud config set disable_usage_reporting false
+./google-cloud-sdk/bin/gcloud --quiet components update
 
-# Start the emulator
-./emulator_main --host_port $SPANNER_EMULATOR_HOST &
+# Start the emulator.
+./google-cloud-sdk/bin/gcloud beta emulators spanner start &
 
 EMULATOR_PID=$!
 
-# Stop the emulator & clean the environment variable
-trap "kill -15 $EMULATOR_PID; unset SPANNER_EMULATOR_HOST; unset TEST_PROJECT; echo \"Cleanup the emulator\";" EXIT
+# When this shell exits, stop the emulator.
+trap "kill -15 $EMULATOR_PID; echo \"Cleanup the emulator\";" EXIT
 
-cd apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.IntegrationTests
-dotnet test
+./google-cloud-sdk/bin/gcloud config set auth/disable_credentials true
+./google-cloud-sdk/bin/gcloud config set project ${TEST_PROJECT}
+./google-cloud-sdk/bin/gcloud config set api_endpoint_overrides/spanner http://localhost:9020/
+./google-cloud-sdk/bin/gcloud spanner instances create spannerintegration \
+   --config=emulator-config --description="Test Instance" --nodes=1
+
+# Run the tests.
+cd apis/Google.Cloud.Spanner.Data
+dotnet test Google.Cloud.Spanner.Data.IntegrationTests
+dotnet test Google.Cloud.Spanner.Data.Snippets
