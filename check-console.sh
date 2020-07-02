@@ -12,7 +12,7 @@ echo "TERM=$TERM"
 echo "First run"
 dotnet run -p foo
 
-export TERM=xterm
+export TERM=dumb
 echo "Second run"
 dotnet run -p foo
 
