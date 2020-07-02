@@ -51,6 +51,7 @@ namespace Google.Cloud.Redis.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.CreateInstanceRequest> __Marshaller_google_cloud_redis_v1_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.CreateInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.UpdateInstanceRequest> __Marshaller_google_cloud_redis_v1_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.UpdateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.UpgradeInstanceRequest> __Marshaller_google_cloud_redis_v1_UpgradeInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.UpgradeInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ImportInstanceRequest> __Marshaller_google_cloud_redis_v1_ImportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ImportInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.ExportInstanceRequest> __Marshaller_google_cloud_redis_v1_ExportInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.ExportInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1.FailoverInstanceRequest> __Marshaller_google_cloud_redis_v1_FailoverInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Redis.V1.FailoverInstanceRequest.Parser.ParseFrom);
@@ -82,6 +83,13 @@ namespace Google.Cloud.Redis.V1 {
         __ServiceName,
         "UpdateInstance",
         __Marshaller_google_cloud_redis_v1_UpdateInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Redis.V1.UpgradeInstanceRequest, global::Google.LongRunning.Operation> __Method_UpgradeInstance = new grpc::Method<global::Google.Cloud.Redis.V1.UpgradeInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpgradeInstance",
+        __Marshaller_google_cloud_redis_v1_UpgradeInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Redis.V1.ImportInstanceRequest, global::Google.LongRunning.Operation> __Method_ImportInstance = new grpc::Method<global::Google.Cloud.Redis.V1.ImportInstanceRequest, global::Google.LongRunning.Operation>(
@@ -185,6 +193,18 @@ namespace Google.Cloud.Redis.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInstance(global::Google.Cloud.Redis.V1.UpdateInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Upgrades Redis instance to the newer Redis version specified in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpgradeInstance(global::Google.Cloud.Redis.V1.UpgradeInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -541,6 +561,54 @@ namespace Google.Cloud.Redis.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
+      /// Upgrades Redis instance to the newer Redis version specified in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UpgradeInstance(global::Google.Cloud.Redis.V1.UpgradeInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpgradeInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upgrades Redis instance to the newer Redis version specified in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UpgradeInstance(global::Google.Cloud.Redis.V1.UpgradeInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpgradeInstance, null, options, request);
+      }
+      /// <summary>
+      /// Upgrades Redis instance to the newer Redis version specified in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeInstanceAsync(global::Google.Cloud.Redis.V1.UpgradeInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpgradeInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Upgrades Redis instance to the newer Redis version specified in the
+      /// request.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeInstanceAsync(global::Google.Cloud.Redis.V1.UpgradeInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpgradeInstance, null, options, request);
+      }
+      /// <summary>
       /// Import a Redis RDB snapshot file from Cloud Storage into a Redis instance.
       ///
       /// Redis may stop serving during this operation. Instance state will be
@@ -788,6 +856,7 @@ namespace Google.Cloud.Redis.V1 {
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
+          .AddMethod(__Method_UpgradeInstance, serviceImpl.UpgradeInstance)
           .AddMethod(__Method_ImportInstance, serviceImpl.ImportInstance)
           .AddMethod(__Method_ExportInstance, serviceImpl.ExportInstance)
           .AddMethod(__Method_FailoverInstance, serviceImpl.FailoverInstance)
@@ -804,6 +873,7 @@ namespace Google.Cloud.Redis.V1 {
       serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.GetInstanceRequest, global::Google.Cloud.Redis.V1.Instance>(serviceImpl.GetInstance));
       serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
+      serviceBinder.AddMethod(__Method_UpgradeInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.UpgradeInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpgradeInstance));
       serviceBinder.AddMethod(__Method_ImportInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.ImportInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportInstance));
       serviceBinder.AddMethod(__Method_ExportInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.ExportInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportInstance));
       serviceBinder.AddMethod(__Method_FailoverInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1.FailoverInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.FailoverInstance));
