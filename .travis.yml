@@ -3,6 +3,9 @@ mono: none
 dotnet: 3.1.301
 dist: xenial
 
+env:
+  - DOTNET_NOLOGO=true
+
 jobs:
   include:
     - name: "Lint for Python syntax errors and undefined names"
