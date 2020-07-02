@@ -29,7 +29,7 @@ namespace Google.Cloud.Recommender.V1 {
             "aS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnBy",
             "b3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJv",
             "dG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90",
-            "byK4BAoOUmVjb21tZW5kYXRpb24SDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlw",
+            "byK4BQoOUmVjb21tZW5kYXRpb24SDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlw",
             "dGlvbhgCIAEoCRIbChNyZWNvbW1lbmRlcl9zdWJ0eXBlGAwgASgJEjUKEWxh",
             "c3RfcmVmcmVzaF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
             "dGFtcBI7Cg5wcmltYXJ5X2ltcGFjdBgFIAEoCzIjLmdvb2dsZS5jbG91ZC5y",
@@ -38,54 +38,57 @@ namespace Google.Cloud.Recommender.V1 {
             "bnRlbnQYByABKAsyMi5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVj",
             "b21tZW5kYXRpb25Db250ZW50EkgKCnN0YXRlX2luZm8YCiABKAsyNC5nb29n",
             "bGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVjb21tZW5kYXRpb25TdGF0ZUlu",
-            "Zm8SDAoEZXRhZxgLIAEoCTqUAepBkAEKKXJlY29tbWVuZGVyLmdvb2dsZWFw",
-            "aXMuY29tL1JlY29tbWVuZGF0aW9uEmNwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0v",
-            "cmVjb21tZW5kYXRpb25zL3tyZWNvbW1lbmRhdGlvbn0iXgoVUmVjb21tZW5k",
-            "YXRpb25Db250ZW50EkUKEG9wZXJhdGlvbl9ncm91cHMYAiADKAsyKy5nb29n",
-            "bGUuY2xvdWQucmVjb21tZW5kZXIudjEuT3BlcmF0aW9uR3JvdXAiTAoOT3Bl",
-            "cmF0aW9uR3JvdXASOgoKb3BlcmF0aW9ucxgBIAMoCzImLmdvb2dsZS5jbG91",
-            "ZC5yZWNvbW1lbmRlci52MS5PcGVyYXRpb24i1wQKCU9wZXJhdGlvbhIOCgZh",
-            "Y3Rpb24YASABKAkSFQoNcmVzb3VyY2VfdHlwZRgCIAEoCRIQCghyZXNvdXJj",
-            "ZRgDIAEoCRIMCgRwYXRoGAQgASgJEhcKD3NvdXJjZV9yZXNvdXJjZRgFIAEo",
-            "CRITCgtzb3VyY2VfcGF0aBgGIAEoCRInCgV2YWx1ZRgHIAEoCzIWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5WYWx1ZUgAEkIKDXZhbHVlX21hdGNoZXIYCiABKAsyKS5n",
-            "b29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuVmFsdWVNYXRjaGVySAASTQoM",
-            "cGF0aF9maWx0ZXJzGAggAygLMjcuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVy",
-            "LnYxLk9wZXJhdGlvbi5QYXRoRmlsdGVyc0VudHJ5EloKE3BhdGhfdmFsdWVf",
-            "bWF0Y2hlcnMYCyADKAsyPS5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEu",
-            "T3BlcmF0aW9uLlBhdGhWYWx1ZU1hdGNoZXJzRW50cnkaSgoQUGF0aEZpbHRl",
-            "cnNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUu",
-            "cHJvdG9idWYuVmFsdWU6AjgBGmMKFlBhdGhWYWx1ZU1hdGNoZXJzRW50cnkS",
-            "CwoDa2V5GAEgASgJEjgKBXZhbHVlGAIgASgLMikuZ29vZ2xlLmNsb3VkLnJl",
-            "Y29tbWVuZGVyLnYxLlZhbHVlTWF0Y2hlcjoCOAFCDAoKcGF0aF92YWx1ZSI6",
-            "CgxWYWx1ZU1hdGNoZXISGQoPbWF0Y2hlc19wYXR0ZXJuGAEgASgJSABCDwoN",
-            "bWF0Y2hfdmFyaWFudCJfCg5Db3N0UHJvamVjdGlvbhIgCgRjb3N0GAEgASgL",
-            "MhIuZ29vZ2xlLnR5cGUuTW9uZXkSKwoIZHVyYXRpb24YAiABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24igAIKBkltcGFjdBI+CghjYXRlZ29yeRgB",
-            "IAEoDjIsLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5JbXBhY3QuQ2F0",
-            "ZWdvcnkSRgoPY29zdF9wcm9qZWN0aW9uGGQgASgLMisuZ29vZ2xlLmNsb3Vk",
-            "LnJlY29tbWVuZGVyLnYxLkNvc3RQcm9qZWN0aW9uSAAiYAoIQ2F0ZWdvcnkS",
-            "GAoUQ0FURUdPUllfVU5TUEVDSUZJRUQQABIICgRDT1NUEAESDAoIU0VDVVJJ",
-            "VFkQAhIPCgtQRVJGT1JNQU5DRRADEhEKDU1BTkFHRUFCSUxJVFkQBEIMCgpw",
-            "cm9qZWN0aW9uIt4CChdSZWNvbW1lbmRhdGlvblN0YXRlSW5mbxJJCgVzdGF0",
-            "ZRgBIAEoDjI6Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5SZWNvbW1l",
-            "bmRhdGlvblN0YXRlSW5mby5TdGF0ZRJfCg5zdGF0ZV9tZXRhZGF0YRgCIAMo",
-            "CzJHLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5SZWNvbW1lbmRhdGlv",
-            "blN0YXRlSW5mby5TdGF0ZU1ldGFkYXRhRW50cnkaNAoSU3RhdGVNZXRhZGF0",
-            "YUVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYQoFU3Rh",
-            "dGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARILCgdDTEFJ",
-            "TUVEEAYSDQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQSDQoJRElTTUlTU0VE",
-            "EAVC/wEKH2NvbS5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjFQAVpGZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZWNv",
-            "bW1lbmRlci92MTtyZWNvbW1lbmRlcqICBENSRUOqAhtHb29nbGUuQ2xvdWQu",
-            "UmVjb21tZW5kZXIuVjHqQWwKJnJlY29tbWVuZGVyLmdvb2dsZWFwaXMuY29t",
-            "L1JlY29tbWVuZGVyEkJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn1iBnByb3RvMw=="));
+            "Zm8SDAoEZXRhZxgLIAEoCRJZChNhc3NvY2lhdGVkX2luc2lnaHRzGA4gAygL",
+            "MjwuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlJlY29tbWVuZGF0aW9u",
+            "Lkluc2lnaHRSZWZlcmVuY2UaIwoQSW5zaWdodFJlZmVyZW5jZRIPCgdpbnNp",
+            "Z2h0GAEgASgJOpQB6kGQAQopcmVjb21tZW5kZXIuZ29vZ2xlYXBpcy5jb20v",
+            "UmVjb21tZW5kYXRpb24SY3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfS9yZWNvbW1l",
+            "bmRhdGlvbnMve3JlY29tbWVuZGF0aW9ufSJeChVSZWNvbW1lbmRhdGlvbkNv",
+            "bnRlbnQSRQoQb3BlcmF0aW9uX2dyb3VwcxgCIAMoCzIrLmdvb2dsZS5jbG91",
+            "ZC5yZWNvbW1lbmRlci52MS5PcGVyYXRpb25Hcm91cCJMCg5PcGVyYXRpb25H",
+            "cm91cBI6CgpvcGVyYXRpb25zGAEgAygLMiYuZ29vZ2xlLmNsb3VkLnJlY29t",
+            "bWVuZGVyLnYxLk9wZXJhdGlvbiLXBAoJT3BlcmF0aW9uEg4KBmFjdGlvbhgB",
+            "IAEoCRIVCg1yZXNvdXJjZV90eXBlGAIgASgJEhAKCHJlc291cmNlGAMgASgJ",
+            "EgwKBHBhdGgYBCABKAkSFwoPc291cmNlX3Jlc291cmNlGAUgASgJEhMKC3Nv",
+            "dXJjZV9wYXRoGAYgASgJEicKBXZhbHVlGAcgASgLMhYuZ29vZ2xlLnByb3Rv",
+            "YnVmLlZhbHVlSAASQgoNdmFsdWVfbWF0Y2hlchgKIAEoCzIpLmdvb2dsZS5j",
+            "bG91ZC5yZWNvbW1lbmRlci52MS5WYWx1ZU1hdGNoZXJIABJNCgxwYXRoX2Zp",
+            "bHRlcnMYCCADKAsyNy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuT3Bl",
+            "cmF0aW9uLlBhdGhGaWx0ZXJzRW50cnkSWgoTcGF0aF92YWx1ZV9tYXRjaGVy",
+            "cxgLIAMoCzI9Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5PcGVyYXRp",
+            "b24uUGF0aFZhbHVlTWF0Y2hlcnNFbnRyeRpKChBQYXRoRmlsdGVyc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1",
+            "Zi5WYWx1ZToCOAEaYwoWUGF0aFZhbHVlTWF0Y2hlcnNFbnRyeRILCgNrZXkY",
+            "ASABKAkSOAoFdmFsdWUYAiABKAsyKS5nb29nbGUuY2xvdWQucmVjb21tZW5k",
+            "ZXIudjEuVmFsdWVNYXRjaGVyOgI4AUIMCgpwYXRoX3ZhbHVlIjoKDFZhbHVl",
+            "TWF0Y2hlchIZCg9tYXRjaGVzX3BhdHRlcm4YASABKAlIAEIPCg1tYXRjaF92",
+            "YXJpYW50Il8KDkNvc3RQcm9qZWN0aW9uEiAKBGNvc3QYASABKAsyEi5nb29n",
+            "bGUudHlwZS5Nb25leRIrCghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbiKAAgoGSW1wYWN0Ej4KCGNhdGVnb3J5GAEgASgOMiwu",
+            "Z29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLkltcGFjdC5DYXRlZ29yeRJG",
+            "Cg9jb3N0X3Byb2plY3Rpb24YZCABKAsyKy5nb29nbGUuY2xvdWQucmVjb21t",
+            "ZW5kZXIudjEuQ29zdFByb2plY3Rpb25IACJgCghDYXRlZ29yeRIYChRDQVRF",
+            "R09SWV9VTlNQRUNJRklFRBAAEggKBENPU1QQARIMCghTRUNVUklUWRACEg8K",
+            "C1BFUkZPUk1BTkNFEAMSEQoNTUFOQUdFQUJJTElUWRAEQgwKCnByb2plY3Rp",
+            "b24i3gIKF1JlY29tbWVuZGF0aW9uU3RhdGVJbmZvEkkKBXN0YXRlGAEgASgO",
+            "MjouZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlJlY29tbWVuZGF0aW9u",
+            "U3RhdGVJbmZvLlN0YXRlEl8KDnN0YXRlX21ldGFkYXRhGAIgAygLMkcuZ29v",
+            "Z2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlJlY29tbWVuZGF0aW9uU3RhdGVJ",
+            "bmZvLlN0YXRlTWV0YWRhdGFFbnRyeRo0ChJTdGF0ZU1ldGFkYXRhRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhCgVTdGF0ZRIVChFT",
+            "VEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgsKB0NMQUlNRUQQBhIN",
+            "CglTVUNDRUVERUQQAxIKCgZGQUlMRUQQBBINCglESVNNSVNTRUQQBUL/AQof",
+            "Y29tLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MVABWkZnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JlY29tbWVuZGVy",
+            "L3YxO3JlY29tbWVuZGVyogIEQ1JFQ6oCG0dvb2dsZS5DbG91ZC5SZWNvbW1l",
+            "bmRlci5WMepBbAomcmVjb21tZW5kZXIuZ29vZ2xlYXBpcy5jb20vUmVjb21t",
+            "ZW5kZXISQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation), global::Google.Cloud.Recommender.V1.Recommendation.Parser, new[]{ "Name", "Description", "RecommenderSubtype", "LastRefreshTime", "PrimaryImpact", "AdditionalImpact", "Content", "StateInfo", "Etag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation), global::Google.Cloud.Recommender.V1.Recommendation.Parser, new[]{ "Name", "Description", "RecommenderSubtype", "LastRefreshTime", "PrimaryImpact", "AdditionalImpact", "Content", "StateInfo", "Etag", "AssociatedInsights" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference), global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference.Parser, new[]{ "Insight" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationContent), global::Google.Cloud.Recommender.V1.RecommendationContent.Parser, new[]{ "OperationGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.OperationGroup), global::Google.Cloud.Recommender.V1.OperationGroup.Parser, new[]{ "Operations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Operation), global::Google.Cloud.Recommender.V1.Operation.Parser, new[]{ "Action", "ResourceType", "Resource", "Path", "SourceResource", "SourcePath", "Value", "ValueMatcher", "PathFilters", "PathValueMatchers" }, new[]{ "PathValue" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
@@ -137,6 +140,7 @@ namespace Google.Cloud.Recommender.V1 {
       content_ = other.content_ != null ? other.content_.Clone() : null;
       stateInfo_ = other.stateInfo_ != null ? other.stateInfo_.Clone() : null;
       etag_ = other.etag_;
+      associatedInsights_ = other.associatedInsights_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -284,6 +288,19 @@ namespace Google.Cloud.Recommender.V1 {
       }
     }
 
+    /// <summary>Field number for the "associated_insights" field.</summary>
+    public const int AssociatedInsightsFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference> _repeated_associatedInsights_codec
+        = pb::FieldCodec.ForMessage(114, global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference> associatedInsights_ = new pbc::RepeatedField<global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference>();
+    /// <summary>
+    /// Insights that led to this recommendation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference> AssociatedInsights {
+      get { return associatedInsights_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Recommendation);
@@ -306,6 +323,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (!object.Equals(Content, other.Content)) return false;
       if (!object.Equals(StateInfo, other.StateInfo)) return false;
       if (Etag != other.Etag) return false;
+      if(!associatedInsights_.Equals(other.associatedInsights_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -321,6 +339,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (content_ != null) hash ^= Content.GetHashCode();
       if (stateInfo_ != null) hash ^= StateInfo.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      hash ^= associatedInsights_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -367,6 +386,7 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(98);
         output.WriteString(RecommenderSubtype);
       }
+      associatedInsights_.WriteTo(output, _repeated_associatedInsights_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -400,6 +420,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
+      size += associatedInsights_.CalculateSize(_repeated_associatedInsights_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -448,6 +469,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
+      associatedInsights_.Add(other.associatedInsights_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -507,9 +529,156 @@ namespace Google.Cloud.Recommender.V1 {
             RecommenderSubtype = input.ReadString();
             break;
           }
+          case 114: {
+            associatedInsights_.AddEntriesFrom(input, _repeated_associatedInsights_codec);
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Recommendation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Reference to an associated insight.
+      /// </summary>
+      public sealed partial class InsightReference : pb::IMessage<InsightReference> {
+        private static readonly pb::MessageParser<InsightReference> _parser = new pb::MessageParser<InsightReference>(() => new InsightReference());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<InsightReference> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Recommender.V1.Recommendation.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public InsightReference() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public InsightReference(InsightReference other) : this() {
+          insight_ = other.insight_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public InsightReference Clone() {
+          return new InsightReference(this);
+        }
+
+        /// <summary>Field number for the "insight" field.</summary>
+        public const int InsightFieldNumber = 1;
+        private string insight_ = "";
+        /// <summary>
+        /// Insight resource name, e.g.
+        /// projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/insights/[INSIGHT_ID]
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Insight {
+          get { return insight_; }
+          set {
+            insight_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as InsightReference);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(InsightReference other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Insight != other.Insight) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Insight.Length != 0) hash ^= Insight.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Insight.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Insight);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Insight.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Insight);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(InsightReference other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Insight.Length != 0) {
+            Insight = other.Insight;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Insight = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2001,7 +2170,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Represents Recommendation State
+      /// Represents Recommendation State.
       /// </summary>
       public enum State {
         /// <summary>

@@ -44,6 +44,9 @@ namespace Google.Cloud.Recommender.V1
         private RecommenderSettings(RecommenderSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ListInsightsSettings = existing.ListInsightsSettings;
+            GetInsightSettings = existing.GetInsightSettings;
+            MarkInsightAcceptedSettings = existing.MarkInsightAcceptedSettings;
             ListRecommendationsSettings = existing.ListRecommendationsSettings;
             GetRecommendationSettings = existing.GetRecommendationSettings;
             MarkRecommendationClaimedSettings = existing.MarkRecommendationClaimedSettings;
@@ -53,6 +56,42 @@ namespace Google.Cloud.Recommender.V1
         }
 
         partial void OnCopy(RecommenderSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.ListInsights</c> and <c>RecommenderClient.ListInsightsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListInsightsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.GetInsight</c> and <c>RecommenderClient.GetInsightAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetInsightSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecommenderClient.MarkInsightAccepted</c> and <c>RecommenderClient.MarkInsightAcceptedAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MarkInsightAcceptedSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -261,6 +300,480 @@ namespace Google.Cloud.Recommender.V1
 
         /// <summary>The underlying gRPC Recommender client</summary>
         public virtual Recommender.RecommenderClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Insight"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(ListInsightsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Insight"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(ListInsightsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The container resource on which to execute the request.
+        /// Acceptable formats:
+        /// 
+        /// 1.
+        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// 
+        /// LOCATION here refers to GCP Locations:
+        /// https://cloud.google.com/about/locations/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Insight"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInsights(new ListInsightsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The container resource on which to execute the request.
+        /// Acceptable formats:
+        /// 
+        /// 1.
+        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// 
+        /// LOCATION here refers to GCP Locations:
+        /// https://cloud.google.com/about/locations/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Insight"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInsightsAsync(new ListInsightsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The container resource on which to execute the request.
+        /// Acceptable formats:
+        /// 
+        /// 1.
+        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// 
+        /// LOCATION here refers to GCP Locations:
+        /// https://cloud.google.com/about/locations/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Insight"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(InsightTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInsights(new ListInsightsRequest
+            {
+                ParentAsInsightTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The container resource on which to execute the request.
+        /// Acceptable formats:
+        /// 
+        /// 1.
+        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// 
+        /// LOCATION here refers to GCP Locations:
+        /// https://cloud.google.com/about/locations/
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Insight"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(InsightTypeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListInsightsAsync(new ListInsightsRequest
+            {
+                ParentAsInsightTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Insight GetInsight(GetInsightRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> GetInsightAsync(GetInsightRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> GetInsightAsync(GetInsightRequest request, st::CancellationToken cancellationToken) =>
+            GetInsightAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Insight GetInsight(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsight(new GetInsightRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> GetInsightAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsightAsync(new GetInsightRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> GetInsightAsync(string name, st::CancellationToken cancellationToken) =>
+            GetInsightAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Insight GetInsight(InsightName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsight(new GetInsightRequest
+            {
+                InsightName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> GetInsightAsync(InsightName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInsightAsync(new GetInsightRequest
+            {
+                InsightName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> GetInsightAsync(InsightName name, st::CancellationToken cancellationToken) =>
+            GetInsightAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Insight MarkInsightAccepted(MarkInsightAcceptedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> MarkInsightAcceptedAsync(MarkInsightAcceptedRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> MarkInsightAcceptedAsync(MarkInsightAcceptedRequest request, st::CancellationToken cancellationToken) =>
+            MarkInsightAcceptedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="stateMetadata">
+        /// Optional. State properties user wish to include with this state.  Full replace of the
+        /// current state_metadata.
+        /// </param>
+        /// <param name="etag">
+        /// Required. Fingerprint of the Insight. Provides optimistic locking.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Insight MarkInsightAccepted(string name, scg::IDictionary<string, string> stateMetadata, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            MarkInsightAccepted(new MarkInsightAcceptedRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                StateMetadata =
+                {
+                    stateMetadata ?? new scg::Dictionary<string, string>(),
+                },
+                Etag = gax::GaxPreconditions.CheckNotNullOrEmpty(etag, nameof(etag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="stateMetadata">
+        /// Optional. State properties user wish to include with this state.  Full replace of the
+        /// current state_metadata.
+        /// </param>
+        /// <param name="etag">
+        /// Required. Fingerprint of the Insight. Provides optimistic locking.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> MarkInsightAcceptedAsync(string name, scg::IDictionary<string, string> stateMetadata, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            MarkInsightAcceptedAsync(new MarkInsightAcceptedRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                StateMetadata =
+                {
+                    stateMetadata ?? new scg::Dictionary<string, string>(),
+                },
+                Etag = gax::GaxPreconditions.CheckNotNullOrEmpty(etag, nameof(etag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="stateMetadata">
+        /// Optional. State properties user wish to include with this state.  Full replace of the
+        /// current state_metadata.
+        /// </param>
+        /// <param name="etag">
+        /// Required. Fingerprint of the Insight. Provides optimistic locking.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> MarkInsightAcceptedAsync(string name, scg::IDictionary<string, string> stateMetadata, string etag, st::CancellationToken cancellationToken) =>
+            MarkInsightAcceptedAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="stateMetadata">
+        /// Optional. State properties user wish to include with this state.  Full replace of the
+        /// current state_metadata.
+        /// </param>
+        /// <param name="etag">
+        /// Required. Fingerprint of the Insight. Provides optimistic locking.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Insight MarkInsightAccepted(InsightName name, scg::IDictionary<string, string> stateMetadata, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            MarkInsightAccepted(new MarkInsightAcceptedRequest
+            {
+                InsightName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                StateMetadata =
+                {
+                    stateMetadata ?? new scg::Dictionary<string, string>(),
+                },
+                Etag = gax::GaxPreconditions.CheckNotNullOrEmpty(etag, nameof(etag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="stateMetadata">
+        /// Optional. State properties user wish to include with this state.  Full replace of the
+        /// current state_metadata.
+        /// </param>
+        /// <param name="etag">
+        /// Required. Fingerprint of the Insight. Provides optimistic locking.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> MarkInsightAcceptedAsync(InsightName name, scg::IDictionary<string, string> stateMetadata, string etag, gaxgrpc::CallSettings callSettings = null) =>
+            MarkInsightAcceptedAsync(new MarkInsightAcceptedRequest
+            {
+                InsightName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                StateMetadata =
+                {
+                    stateMetadata ?? new scg::Dictionary<string, string>(),
+                },
+                Etag = gax::GaxPreconditions.CheckNotNullOrEmpty(etag, nameof(etag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the insight.
+        /// </param>
+        /// <param name="stateMetadata">
+        /// Optional. State properties user wish to include with this state.  Full replace of the
+        /// current state_metadata.
+        /// </param>
+        /// <param name="etag">
+        /// Required. Fingerprint of the Insight. Provides optimistic locking.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Insight> MarkInsightAcceptedAsync(InsightName name, scg::IDictionary<string, string> stateMetadata, string etag, st::CancellationToken cancellationToken) =>
+            MarkInsightAcceptedAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists recommendations for a Cloud project. Requires the recommender.*.list
@@ -677,10 +1190,10 @@ namespace Google.Cloud.Recommender.V1
             GetRecommendationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -695,10 +1208,10 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -713,10 +1226,10 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -731,10 +1244,10 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationClaimedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -768,10 +1281,10 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -805,10 +1318,10 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -834,10 +1347,10 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationClaimedAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -871,10 +1384,10 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -908,10 +1421,10 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -937,10 +1450,11 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationClaimedAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -955,10 +1469,11 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -973,10 +1488,11 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -991,10 +1507,11 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationSucceededAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1028,10 +1545,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1065,10 +1583,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1094,10 +1613,11 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationSucceededAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1131,10 +1651,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1168,10 +1689,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1197,10 +1719,11 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationSucceededAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1215,10 +1738,11 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1233,10 +1757,11 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1251,10 +1776,11 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationFailedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1288,10 +1814,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1325,10 +1852,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1354,10 +1882,11 @@ namespace Google.Cloud.Recommender.V1
             MarkRecommendationFailedAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1391,10 +1920,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1428,10 +1958,11 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1460,6 +1991,12 @@ namespace Google.Cloud.Recommender.V1
     /// <summary>Recommender client wrapper implementation, for convenient use.</summary>
     public sealed partial class RecommenderClientImpl : RecommenderClient
     {
+        private readonly gaxgrpc::ApiCall<ListInsightsRequest, ListInsightsResponse> _callListInsights;
+
+        private readonly gaxgrpc::ApiCall<GetInsightRequest, Insight> _callGetInsight;
+
+        private readonly gaxgrpc::ApiCall<MarkInsightAcceptedRequest, Insight> _callMarkInsightAccepted;
+
         private readonly gaxgrpc::ApiCall<ListRecommendationsRequest, ListRecommendationsResponse> _callListRecommendations;
 
         private readonly gaxgrpc::ApiCall<GetRecommendationRequest, Recommendation> _callGetRecommendation;
@@ -1480,6 +2017,15 @@ namespace Google.Cloud.Recommender.V1
             GrpcClient = grpcClient;
             RecommenderSettings effectiveSettings = settings ?? RecommenderSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            _callListInsights = clientHelper.BuildApiCall<ListInsightsRequest, ListInsightsResponse>(grpcClient.ListInsightsAsync, grpcClient.ListInsights, effectiveSettings.ListInsightsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListInsights);
+            Modify_ListInsightsApiCall(ref _callListInsights);
+            _callGetInsight = clientHelper.BuildApiCall<GetInsightRequest, Insight>(grpcClient.GetInsightAsync, grpcClient.GetInsight, effectiveSettings.GetInsightSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetInsight);
+            Modify_GetInsightApiCall(ref _callGetInsight);
+            _callMarkInsightAccepted = clientHelper.BuildApiCall<MarkInsightAcceptedRequest, Insight>(grpcClient.MarkInsightAcceptedAsync, grpcClient.MarkInsightAccepted, effectiveSettings.MarkInsightAcceptedSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMarkInsightAccepted);
+            Modify_MarkInsightAcceptedApiCall(ref _callMarkInsightAccepted);
             _callListRecommendations = clientHelper.BuildApiCall<ListRecommendationsRequest, ListRecommendationsResponse>(grpcClient.ListRecommendationsAsync, grpcClient.ListRecommendations, effectiveSettings.ListRecommendationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRecommendations);
             Modify_ListRecommendationsApiCall(ref _callListRecommendations);
@@ -1500,6 +2046,12 @@ namespace Google.Cloud.Recommender.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ListInsightsApiCall(ref gaxgrpc::ApiCall<ListInsightsRequest, ListInsightsResponse> call);
+
+        partial void Modify_GetInsightApiCall(ref gaxgrpc::ApiCall<GetInsightRequest, Insight> call);
+
+        partial void Modify_MarkInsightAcceptedApiCall(ref gaxgrpc::ApiCall<MarkInsightAcceptedRequest, Insight> call);
+
         partial void Modify_ListRecommendationsApiCall(ref gaxgrpc::ApiCall<ListRecommendationsRequest, ListRecommendationsResponse> call);
 
         partial void Modify_GetRecommendationApiCall(ref gaxgrpc::ApiCall<GetRecommendationRequest, Recommendation> call);
@@ -1515,6 +2067,12 @@ namespace Google.Cloud.Recommender.V1
         /// <summary>The underlying gRPC Recommender client</summary>
         public override Recommender.RecommenderClient GrpcClient { get; }
 
+        partial void Modify_ListInsightsRequest(ref ListInsightsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetInsightRequest(ref GetInsightRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MarkInsightAcceptedRequest(ref MarkInsightAcceptedRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListRecommendationsRequest(ref ListRecommendationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRecommendationRequest(ref GetRecommendationRequest request, ref gaxgrpc::CallSettings settings);
@@ -1524,6 +2082,92 @@ namespace Google.Cloud.Recommender.V1
         partial void Modify_MarkRecommendationSucceededRequest(ref MarkRecommendationSucceededRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MarkRecommendationFailedRequest(ref MarkRecommendationFailedRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Insight"/> resources.</returns>
+        public override gax::PagedEnumerable<ListInsightsResponse, Insight> ListInsights(ListInsightsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInsightsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListInsightsRequest, ListInsightsResponse, Insight>(_callListInsights, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+        /// permission for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Insight"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListInsightsResponse, Insight> ListInsightsAsync(ListInsightsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListInsightsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListInsightsRequest, ListInsightsResponse, Insight>(_callListInsights, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Insight GetInsight(GetInsightRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInsightRequest(ref request, ref callSettings);
+            return _callGetInsight.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the requested insight. Requires the recommender.*.get IAM permission
+        /// for the specified insight type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Insight> GetInsightAsync(GetInsightRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInsightRequest(ref request, ref callSettings);
+            return _callGetInsight.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Insight MarkInsightAccepted(MarkInsightAcceptedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkInsightAcceptedRequest(ref request, ref callSettings);
+            return _callMarkInsightAccepted.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks the Insight State as Accepted. Users can use this method to
+        /// indicate to the Recommender API that they have applied some action based
+        /// on the insight. This stops the insight content from being updated.
+        /// 
+        /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+        /// the recommender.*.update IAM permission for the specified insight.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Insight> MarkInsightAcceptedAsync(MarkInsightAcceptedRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkInsightAcceptedRequest(ref request, ref callSettings);
+            return _callMarkInsightAccepted.Async(request, callSettings);
+        }
 
         /// <summary>
         /// Lists recommendations for a Cloud project. Requires the recommender.*.list
@@ -1578,10 +2222,10 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -1599,10 +2243,10 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Mark the Recommendation State as Claimed. Users can use this method to
+        /// Marks the Recommendation State as Claimed. Users can use this method to
         /// indicate to the Recommender API that they are starting to apply the
         /// recommendation themselves. This stops the recommendation content from being
-        /// updated.
+        /// updated. Associated insights are frozen and placed in the ACCEPTED state.
         /// 
         /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
         /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -1620,10 +2264,11 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1641,10 +2286,11 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Mark the Recommendation State as Succeeded. Users can use this method to
+        /// Marks the Recommendation State as Succeeded. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation was successful. This stops the recommendation
-        /// content from being updated.
+        /// content from being updated. Associated insights are frozen and placed in
+        /// the ACCEPTED state.
         /// 
         /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1662,10 +2308,11 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1683,10 +2330,11 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Mark the Recommendation State as Failed. Users can use this method to
+        /// Marks the Recommendation State as Failed. Users can use this method to
         /// indicate to the Recommender API that they have applied the recommendation
         /// themselves, and the operation failed. This stops the recommendation content
-        /// from being updated.
+        /// from being updated. Associated insights are frozen and placed in the
+        /// ACCEPTED state.
         /// 
         /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
         /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -1704,8 +2352,20 @@ namespace Google.Cloud.Recommender.V1
         }
     }
 
+    public partial class ListInsightsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListRecommendationsRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class ListInsightsResponse : gaxgrpc::IPageResponse<Insight>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Insight> GetEnumerator() => Insights.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListRecommendationsResponse : gaxgrpc::IPageResponse<Recommendation>
