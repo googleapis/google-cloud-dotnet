@@ -2,6 +2,8 @@
 
 set -e
 
+export TERM=dumb
+
 apis=$(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq)
 
 git clone . tmpgit -q --no-local -b master --depth 1 --recursive
