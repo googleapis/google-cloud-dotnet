@@ -8,6 +8,16 @@ echo "Before dotnet"
 echo "====================="
 echo ""
 
+echo "TERM=$TERM"
+echo "First run"
+dotnet run -p foo
+
+export TERM=xterm
+echo "Second run"
+dotnet run -p foo
+
+export TERM=xterm-256color
+echo "Third run"
 dotnet run -p foo
 
 echo ""
