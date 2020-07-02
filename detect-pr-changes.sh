@@ -31,11 +31,12 @@ do
   fi
 done
 
-echo " "
+echo ""
 echo "====================="
 echo "Changes detected"
 echo "====================="
-echo " "
+echo ""
+echo "This is a line after changes detected"
 stty sane
 
 
@@ -55,12 +56,12 @@ do
 stty sane
 done  
 
-echo " "
+echo ""
 echo "============================================="
 echo "Checking compatibility with previous releases"
 echo "============================================="
-echo " "
-stty sane
+echo ""
+echo "This is a line after checking compatibility"
 
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
