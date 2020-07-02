@@ -22,7 +22,7 @@ for api in $apis
 do  
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
   then
-    echo "\e[1;32mBuilding $api"
+    echo -e "\e[1;32mBuilding $api"
     apidir=apis/$api/$api
     dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false tmpgit/$apidir 
     dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $apidir
@@ -55,7 +55,7 @@ stty sane
 done  
 
 echo ""
-echo "\e[1;32mChecking compatibility with previous releases\e[0m"
+echo -e "\e[1;32mChecking compatibility with previous releases\e[0m"
 echo ""
 echo "This is a line after checking compatibility"
 

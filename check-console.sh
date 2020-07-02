@@ -4,14 +4,14 @@ set -e
 
 echo ""
 echo "====================="
-echo -e "\e[32mChanges detected\e[0m"
+echo "Before dotnet"
 echo "====================="
 echo ""
-echo "This is a line after changes detected"
+
+dotnet run -p foo
 
 echo ""
 echo "============================================="
-echo "Checking compatibility with previous releases"
+echo "After dotnet"
 echo "============================================="
 echo ""
-echo "This is a line after checking compatibility"
