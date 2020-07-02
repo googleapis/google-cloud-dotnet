@@ -161,6 +161,9 @@ install_docfx() {
 
 # Logs to both stdout and a build timing log, allowing
 # post-processing to see how long each part of the build takes.
+# The console log is in magenta to stand out, and doesn't include the
+# timing part.
 log_build_action() {
-  echo "$(date -u -Iseconds) $1" | tee -a $REPO_ROOT/build_timing_log.txt
+  echo -e "\e[1;35m$1\e[0m"
+  echo "$(date -u -Iseconds) $1" >> $REPO_ROOT/build_timing_log.txt
 }
