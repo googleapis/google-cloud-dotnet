@@ -4,7 +4,7 @@ set -e
 
 echo ""
 echo "====================="
-echo "Changes detected"
+echo -e "\e[32mChanges detected\e[0m"
 echo "====================="
 echo ""
 echo "This is a line after changes detected"

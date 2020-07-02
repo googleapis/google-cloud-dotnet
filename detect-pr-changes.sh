@@ -13,7 +13,7 @@ mkdir tmpgit/new
 dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CompareVersions
 dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
 
-stty sane
+echo -e "\e[0m"
 
 echo "First line after sane"
 echo "Second line after sane"
@@ -33,22 +33,21 @@ do
 done
 
 echo ""
-echo "\e[32mChanges detected"
+echo -e "\e[32mChanges detected"
 echo ""
 echo "This is a line after changes detected"
-stty sane
 
 
 for api in $apis
 do  
   if [[ ! -d tmpgit/apis/$api/$api ]]
   then
-    echo "\e[32m$api is new"
+    echo -e "\e[32m$api is new"
   elif [[ ! -d apis/$api/$api ]]
   then
-    echo "\e[32m$api was deleted"
+    echo -e "\e[32m$api was deleted"
   else
-    echo "\e[32mChecking $api for changes"
+    echo -e "\e[32mChecking $api for changes"
     dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
   fi
   echo ""
