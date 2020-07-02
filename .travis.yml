@@ -3,6 +3,13 @@ mono: none
 dotnet: 3.1.101
 dist: xenial
 
+# We really don't need to see "Welcome to .NET Core" everywhere,
+# and setting the TERM variable to "dumb" fixes some odd console
+# output where dotnet appears to issue control characters that
+# Travis doesn't support.
+env:
+  - DOTNET_NOLOGO=true TERM=dumb
+
 jobs:
   include:
     - name: "Lint for Python syntax errors and undefined names"
