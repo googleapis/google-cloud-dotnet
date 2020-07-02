@@ -15,7 +15,8 @@ dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseMan
 
 stty sane
 
-echo "After sane"
+echo "First line after sane"
+echo "Second line after sane"
 
 for api in $apis
 do  
@@ -32,9 +33,7 @@ do
 done
 
 echo ""
-echo "====================="
-echo "Changes detected"
-echo "====================="
+echo "\e[1mChanges detected"
 echo ""
 echo "This is a line after changes detected"
 stty sane
@@ -44,22 +43,20 @@ for api in $apis
 do  
   if [[ ! -d tmpgit/apis/$api/$api ]]
   then
-    echo "$api is new"
+    echo "\e[1m$api is new"
   elif [[ ! -d apis/$api/$api ]]
   then
-    echo "$api was deleted"
+    echo "\e[1m$api was deleted"
   else
-    echo "Checking $api for changes"
+    echo "\e[1mChecking $api for changes"
     dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
   fi
-  echo "---------------------"
+  echo ""
 stty sane
 done  
 
 echo ""
-echo "============================================="
-echo "Checking compatibility with previous releases"
-echo "============================================="
+echo "\e[1mChecking compatibility with previous releases"
 echo ""
 echo "This is a line after checking compatibility"
 
