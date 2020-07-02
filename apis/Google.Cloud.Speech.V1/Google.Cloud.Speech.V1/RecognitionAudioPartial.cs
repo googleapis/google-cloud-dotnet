@@ -19,6 +19,8 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
+// Not a real change
+
 namespace Google.Cloud.Speech.V1
 {
     public partial class RecognitionAudio

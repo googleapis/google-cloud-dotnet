@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Not a real change
 
 namespace Google.Cloud.Vision.V1
 {
