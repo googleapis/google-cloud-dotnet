@@ -33,7 +33,7 @@ do
 done
 
 echo ""
-echo -e "\e[32mChanges detected"
+echo -e "\e[32mChanges detected\e[0m"
 echo ""
 echo "This is a line after changes detected"
 
@@ -42,12 +42,12 @@ for api in $apis
 do  
   if [[ ! -d tmpgit/apis/$api/$api ]]
   then
-    echo -e "\e[32m$api is new"
+    echo -e "\e[32m$api is new\e[0m"
   elif [[ ! -d apis/$api/$api ]]
   then
-    echo -e "\e[32m$api was deleted"
+    echo -e "\e[32m$api was deleted\e[0m"
   else
-    echo -e "\e[32mChecking $api for changes"
+    echo -e "\e[32mChecking $api for changes\e[0m"
     dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
   fi
   echo ""
@@ -55,7 +55,7 @@ stty sane
 done  
 
 echo ""
-echo "\e[32mChecking compatibility with previous releases"
+echo "\e[32mChecking compatibility with previous releases\e[0m"
 echo ""
 echo "This is a line after checking compatibility"
 
