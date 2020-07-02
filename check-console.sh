@@ -2,6 +2,8 @@
 
 set -e
 
+export TERM=dumb
+
 echo ""
 echo "====================="
 echo "Before dotnet"
@@ -12,7 +14,6 @@ echo "TERM=$TERM"
 echo "First run"
 dotnet run -p foo
 
-export TERM=dumb
 echo "Second run"
 dotnet run -p foo
 
