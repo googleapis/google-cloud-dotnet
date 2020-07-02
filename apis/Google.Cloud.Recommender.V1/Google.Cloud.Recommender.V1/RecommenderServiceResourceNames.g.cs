@@ -18,6 +18,42 @@ using gcrv = Google.Cloud.Recommender.V1;
 
 namespace Google.Cloud.Recommender.V1
 {
+    public partial class ListInsightsRequest
+    {
+        /// <summary>
+        /// <see cref="InsightTypeName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InsightTypeName ParentAsInsightTypeName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : InsightTypeName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetInsightRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::InsightName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::InsightName InsightName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InsightName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MarkInsightAcceptedRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::InsightName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::InsightName InsightName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InsightName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListRecommendationsRequest
     {
         /// <summary>

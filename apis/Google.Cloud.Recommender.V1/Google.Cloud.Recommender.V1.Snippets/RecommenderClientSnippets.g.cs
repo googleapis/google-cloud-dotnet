@@ -25,6 +25,470 @@ namespace Google.Cloud.Recommender.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedRecommenderClientSnippets
     {
+        /// <summary>Snippet for ListInsights</summary>
+        public void ListInsightsRequestObject()
+        {
+            // Snippet: ListInsights(ListInsightsRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            ListInsightsRequest request = new ListInsightsRequest
+            {
+                ParentAsInsightTypeName = InsightTypeName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListInsightsResponse, Insight> response = recommenderClient.ListInsights(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Insight item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInsightsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Insight item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Insight> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Insight item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInsights</summary>
+        public async Task ListInsightsRequestObjectAsync()
+        {
+            // Snippet: ListInsightsAsync(ListInsightsRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            ListInsightsRequest request = new ListInsightsRequest
+            {
+                ParentAsInsightTypeName = InsightTypeName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListInsightsResponse, Insight> response = recommenderClient.ListInsightsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Insight item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInsightsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Insight item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Insight> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Insight item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInsights</summary>
+        public void ListInsights()
+        {
+            // Snippet: ListInsights(string, string, int?, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]";
+            // Make the request
+            PagedEnumerable<ListInsightsResponse, Insight> response = recommenderClient.ListInsights(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Insight item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInsightsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Insight item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Insight> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Insight item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInsights</summary>
+        public async Task ListInsightsAsync()
+        {
+            // Snippet: ListInsightsAsync(string, string, int?, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]";
+            // Make the request
+            PagedAsyncEnumerable<ListInsightsResponse, Insight> response = recommenderClient.ListInsightsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Insight item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInsightsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Insight item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Insight> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Insight item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInsights</summary>
+        public void ListInsightsResourceNames()
+        {
+            // Snippet: ListInsights(InsightTypeName, string, int?, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            InsightTypeName parent = InsightTypeName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]");
+            // Make the request
+            PagedEnumerable<ListInsightsResponse, Insight> response = recommenderClient.ListInsights(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Insight item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListInsightsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Insight item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Insight> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Insight item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListInsights</summary>
+        public async Task ListInsightsResourceNamesAsync()
+        {
+            // Snippet: ListInsightsAsync(InsightTypeName, string, int?, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            InsightTypeName parent = InsightTypeName.FromProjectLocationInsightType("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]");
+            // Make the request
+            PagedAsyncEnumerable<ListInsightsResponse, Insight> response = recommenderClient.ListInsightsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Insight item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListInsightsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Insight item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Insight> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Insight item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsight</summary>
+        public void GetInsightRequestObject()
+        {
+            // Snippet: GetInsight(GetInsightRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            // Make the request
+            Insight response = recommenderClient.GetInsight(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightAsync</summary>
+        public async Task GetInsightRequestObjectAsync()
+        {
+            // Snippet: GetInsightAsync(GetInsightRequest, CallSettings)
+            // Additional: GetInsightAsync(GetInsightRequest, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            // Make the request
+            Insight response = await recommenderClient.GetInsightAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsight</summary>
+        public void GetInsight()
+        {
+            // Snippet: GetInsight(string, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]/insights/[INSIGHT]";
+            // Make the request
+            Insight response = recommenderClient.GetInsight(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightAsync</summary>
+        public async Task GetInsightAsync()
+        {
+            // Snippet: GetInsightAsync(string, CallSettings)
+            // Additional: GetInsightAsync(string, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]/insights/[INSIGHT]";
+            // Make the request
+            Insight response = await recommenderClient.GetInsightAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsight</summary>
+        public void GetInsightResourceNames()
+        {
+            // Snippet: GetInsight(InsightName, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            InsightName name = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]");
+            // Make the request
+            Insight response = recommenderClient.GetInsight(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetInsightAsync</summary>
+        public async Task GetInsightResourceNamesAsync()
+        {
+            // Snippet: GetInsightAsync(InsightName, CallSettings)
+            // Additional: GetInsightAsync(InsightName, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            InsightName name = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]");
+            // Make the request
+            Insight response = await recommenderClient.GetInsightAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkInsightAccepted</summary>
+        public void MarkInsightAcceptedRequestObject()
+        {
+            // Snippet: MarkInsightAccepted(MarkInsightAcceptedRequest, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata = { { "", "" }, },
+                Etag = "",
+            };
+            // Make the request
+            Insight response = recommenderClient.MarkInsightAccepted(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkInsightAcceptedAsync</summary>
+        public async Task MarkInsightAcceptedRequestObjectAsync()
+        {
+            // Snippet: MarkInsightAcceptedAsync(MarkInsightAcceptedRequest, CallSettings)
+            // Additional: MarkInsightAcceptedAsync(MarkInsightAcceptedRequest, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata = { { "", "" }, },
+                Etag = "",
+            };
+            // Make the request
+            Insight response = await recommenderClient.MarkInsightAcceptedAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkInsightAccepted</summary>
+        public void MarkInsightAccepted()
+        {
+            // Snippet: MarkInsightAccepted(string, IDictionary<string,string>, string, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]/insights/[INSIGHT]";
+            IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
+            string etag = "";
+            // Make the request
+            Insight response = recommenderClient.MarkInsightAccepted(name, stateMetadata, etag);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkInsightAcceptedAsync</summary>
+        public async Task MarkInsightAcceptedAsync()
+        {
+            // Snippet: MarkInsightAcceptedAsync(string, IDictionary<string,string>, string, CallSettings)
+            // Additional: MarkInsightAcceptedAsync(string, IDictionary<string,string>, string, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE]/insights/[INSIGHT]";
+            IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
+            string etag = "";
+            // Make the request
+            Insight response = await recommenderClient.MarkInsightAcceptedAsync(name, stateMetadata, etag);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkInsightAccepted</summary>
+        public void MarkInsightAcceptedResourceNames()
+        {
+            // Snippet: MarkInsightAccepted(InsightName, IDictionary<string,string>, string, CallSettings)
+            // Create client
+            RecommenderClient recommenderClient = RecommenderClient.Create();
+            // Initialize request argument(s)
+            InsightName name = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]");
+            IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
+            string etag = "";
+            // Make the request
+            Insight response = recommenderClient.MarkInsightAccepted(name, stateMetadata, etag);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkInsightAcceptedAsync</summary>
+        public async Task MarkInsightAcceptedResourceNamesAsync()
+        {
+            // Snippet: MarkInsightAcceptedAsync(InsightName, IDictionary<string,string>, string, CallSettings)
+            // Additional: MarkInsightAcceptedAsync(InsightName, IDictionary<string,string>, string, CancellationToken)
+            // Create client
+            RecommenderClient recommenderClient = await RecommenderClient.CreateAsync();
+            // Initialize request argument(s)
+            InsightName name = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]");
+            IDictionary<string, string> stateMetadata = new Dictionary<string, string> { { "", "" }, };
+            string etag = "";
+            // Make the request
+            Insight response = await recommenderClient.MarkInsightAcceptedAsync(name, stateMetadata, etag);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListRecommendations</summary>
         public void ListRecommendationsRequestObject()
         {

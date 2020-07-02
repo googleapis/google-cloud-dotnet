@@ -28,6 +28,486 @@ namespace Google.Cloud.Recommender.V1.Tests
     public sealed class GeneratedRecommenderClientTest
     {
         [xunit::FactAttribute]
+        public void GetInsightRequestObject()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight response = client.GetInsight(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInsightRequestObjectAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight responseCallSettings = await client.GetInsightAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Insight responseCancellationToken = await client.GetInsightAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInsight()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight response = client.GetInsight(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInsightAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight responseCallSettings = await client.GetInsightAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Insight responseCancellationToken = await client.GetInsightAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetInsightResourceNames()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight response = client.GetInsight(request.InsightName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetInsightResourceNamesAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            GetInsightRequest request = new GetInsightRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight responseCallSettings = await client.GetInsightAsync(request.InsightName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Insight responseCancellationToken = await client.GetInsightAsync(request.InsightName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MarkInsightAcceptedRequestObject()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Etag = "etage8ad7218",
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight response = client.MarkInsightAccepted(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MarkInsightAcceptedRequestObjectAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Etag = "etage8ad7218",
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight responseCallSettings = await client.MarkInsightAcceptedAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Insight responseCancellationToken = await client.MarkInsightAcceptedAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MarkInsightAccepted()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Etag = "etage8ad7218",
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight response = client.MarkInsightAccepted(request.Name, request.StateMetadata, request.Etag);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MarkInsightAcceptedAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Etag = "etage8ad7218",
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight responseCallSettings = await client.MarkInsightAcceptedAsync(request.Name, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Insight responseCancellationToken = await client.MarkInsightAcceptedAsync(request.Name, request.StateMetadata, request.Etag, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MarkInsightAcceptedResourceNames()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Etag = "etage8ad7218",
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight response = client.MarkInsightAccepted(request.InsightName, request.StateMetadata, request.Etag);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MarkInsightAcceptedResourceNamesAsync()
+        {
+            moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
+            MarkInsightAcceptedRequest request = new MarkInsightAcceptedRequest
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                StateMetadata =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                Etag = "etage8ad7218",
+            };
+            Insight expectedResponse = new Insight
+            {
+                InsightName = InsightName.FromProjectLocationInsightTypeInsight("[PROJECT]", "[LOCATION]", "[INSIGHT_TYPE]", "[INSIGHT]"),
+                Description = "description2cf9da67",
+                Content = new wkt::Struct(),
+                LastRefreshTime = new wkt::Timestamp(),
+                ObservationPeriod = new wkt::Duration(),
+                StateInfo = new InsightStateInfo(),
+                Category = Insight.Types.Category.Unspecified,
+                AssociatedRecommendations =
+                {
+                    new Insight.Types.RecommendationReference(),
+                },
+                TargetResources =
+                {
+                    "target_resources1e810c06",
+                },
+                InsightSubtype = "insight_subtype87faa4e7",
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
+            Insight responseCallSettings = await client.MarkInsightAcceptedAsync(request.InsightName, request.StateMetadata, request.Etag, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Insight responseCancellationToken = await client.MarkInsightAcceptedAsync(request.InsightName, request.StateMetadata, request.Etag, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetRecommendationRequestObject()
         {
             moq::Mock<Recommender.RecommenderClient> mockGrpcClient = new moq::Mock<Recommender.RecommenderClient>(moq::MockBehavior.Strict);
@@ -46,6 +526,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -73,6 +557,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -102,6 +590,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -129,6 +621,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -158,6 +654,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -185,6 +685,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -222,6 +726,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -257,6 +765,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -294,6 +806,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -329,6 +845,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -366,6 +886,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -401,6 +925,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -438,6 +966,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -473,6 +1005,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -510,6 +1046,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -545,6 +1085,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -582,6 +1126,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -617,6 +1165,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -654,6 +1206,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -689,6 +1245,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -726,6 +1286,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -761,6 +1325,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -798,6 +1366,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -833,6 +1405,10 @@ namespace Google.Cloud.Recommender.V1.Tests
                 StateInfo = new RecommendationStateInfo(),
                 Etag = "etage8ad7218",
                 RecommenderSubtype = "recommender_subtype6a5b10f9",
+                AssociatedInsights =
+                {
+                    new Recommendation.Types.InsightReference(),
+                },
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);

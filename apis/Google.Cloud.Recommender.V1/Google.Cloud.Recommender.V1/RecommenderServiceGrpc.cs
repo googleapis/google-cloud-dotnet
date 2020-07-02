@@ -3,7 +3,7 @@
 //     source: google/cloud/recommender/v1/recommender_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-//
 #pragma warning disable 0414, 1591
 #region Designer generated code
 
@@ -25,15 +24,20 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Recommender.V1 {
   /// <summary>
-  /// Provides recommendations for cloud customers for various categories like
-  /// performance optimization, cost savings, reliability, feature discovery, etc.
-  /// These recommendations are generated automatically based on analysis of user
-  /// resources, configuration and monitoring metrics.
+  /// Provides insights and recommendations for cloud customers for various
+  /// categories like performance optimization, cost savings, reliability, feature
+  /// discovery, etc. Insights and recommendations are generated automatically
+  /// based on analysis of user resources, configuration and monitoring metrics.
   /// </summary>
   public static partial class Recommender
   {
     static readonly string __ServiceName = "google.cloud.recommender.v1.Recommender";
 
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightsRequest> __Marshaller_google_cloud_recommender_v1_ListInsightsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListInsightsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListInsightsResponse> __Marshaller_google_cloud_recommender_v1_ListInsightsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListInsightsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetInsightRequest> __Marshaller_google_cloud_recommender_v1_GetInsightRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.GetInsightRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.Insight> __Marshaller_google_cloud_recommender_v1_Insight = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.Insight.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest> __Marshaller_google_cloud_recommender_v1_MarkInsightAcceptedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendationsRequest> __Marshaller_google_cloud_recommender_v1_ListRecommendationsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListRecommendationsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.ListRecommendationsResponse> __Marshaller_google_cloud_recommender_v1_ListRecommendationsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.ListRecommendationsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.GetRecommendationRequest> __Marshaller_google_cloud_recommender_v1_GetRecommendationRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.GetRecommendationRequest.Parser.ParseFrom);
@@ -41,6 +45,27 @@ namespace Google.Cloud.Recommender.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationClaimedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationSucceededRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkRecommendationSucceededRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest> __Marshaller_google_cloud_recommender_v1_MarkRecommendationFailedRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Recommender.V1.MarkRecommendationFailedRequest.Parser.ParseFrom);
+
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse> __Method_ListInsights = new grpc::Method<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListInsights",
+        __Marshaller_google_cloud_recommender_v1_ListInsightsRequest,
+        __Marshaller_google_cloud_recommender_v1_ListInsightsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.GetInsightRequest, global::Google.Cloud.Recommender.V1.Insight> __Method_GetInsight = new grpc::Method<global::Google.Cloud.Recommender.V1.GetInsightRequest, global::Google.Cloud.Recommender.V1.Insight>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetInsight",
+        __Marshaller_google_cloud_recommender_v1_GetInsightRequest,
+        __Marshaller_google_cloud_recommender_v1_Insight);
+
+    static readonly grpc::Method<global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest, global::Google.Cloud.Recommender.V1.Insight> __Method_MarkInsightAccepted = new grpc::Method<global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest, global::Google.Cloud.Recommender.V1.Insight>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MarkInsightAccepted",
+        __Marshaller_google_cloud_recommender_v1_MarkInsightAcceptedRequest,
+        __Marshaller_google_cloud_recommender_v1_Insight);
 
     static readonly grpc::Method<global::Google.Cloud.Recommender.V1.ListRecommendationsRequest, global::Google.Cloud.Recommender.V1.ListRecommendationsResponse> __Method_ListRecommendations = new grpc::Method<global::Google.Cloud.Recommender.V1.ListRecommendationsRequest, global::Google.Cloud.Recommender.V1.ListRecommendationsResponse>(
         grpc::MethodType.Unary,
@@ -88,6 +113,46 @@ namespace Google.Cloud.Recommender.V1 {
     public abstract partial class RecommenderBase
     {
       /// <summary>
+      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+      /// permission for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.ListInsightsResponse> ListInsights(global::Google.Cloud.Recommender.V1.ListInsightsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the requested insight. Requires the recommender.*.get IAM permission
+      /// for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.Insight> GetInsight(global::Google.Cloud.Recommender.V1.GetInsightRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Marks the Insight State as Accepted. Users can use this method to
+      /// indicate to the Recommender API that they have applied some action based
+      /// on the insight. This stops the insight content from being updated.
+      ///
+      /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+      /// the recommender.*.update IAM permission for the specified insight.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Recommender.V1.Insight> MarkInsightAccepted(global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists recommendations for a Cloud project. Requires the recommender.*.list
       /// IAM permission for the specified recommender.
       /// </summary>
@@ -112,10 +177,10 @@ namespace Google.Cloud.Recommender.V1 {
       }
 
       /// <summary>
-      /// Mark the Recommendation State as Claimed. Users can use this method to
+      /// Marks the Recommendation State as Claimed. Users can use this method to
       /// indicate to the Recommender API that they are starting to apply the
       /// recommendation themselves. This stops the recommendation content from being
-      /// updated.
+      /// updated. Associated insights are frozen and placed in the ACCEPTED state.
       ///
       /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
       /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -132,10 +197,11 @@ namespace Google.Cloud.Recommender.V1 {
       }
 
       /// <summary>
-      /// Mark the Recommendation State as Succeeded. Users can use this method to
+      /// Marks the Recommendation State as Succeeded. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation was successful. This stops the recommendation
-      /// content from being updated.
+      /// content from being updated. Associated insights are frozen and placed in
+      /// the ACCEPTED state.
       ///
       /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -152,10 +218,11 @@ namespace Google.Cloud.Recommender.V1 {
       }
 
       /// <summary>
-      /// Mark the Recommendation State as Failed. Users can use this method to
+      /// Marks the Recommendation State as Failed. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation failed. This stops the recommendation content
-      /// from being updated.
+      /// from being updated. Associated insights are frozen and placed in the
+      /// ACCEPTED state.
       ///
       /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -196,6 +263,166 @@ namespace Google.Cloud.Recommender.V1 {
       {
       }
 
+      /// <summary>
+      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+      /// permission for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Recommender.V1.ListInsightsResponse ListInsights(global::Google.Cloud.Recommender.V1.ListInsightsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListInsights(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+      /// permission for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Recommender.V1.ListInsightsResponse ListInsights(global::Google.Cloud.Recommender.V1.ListInsightsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListInsights, null, options, request);
+      }
+      /// <summary>
+      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+      /// permission for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.ListInsightsResponse> ListInsightsAsync(global::Google.Cloud.Recommender.V1.ListInsightsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListInsightsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
+      /// permission for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.ListInsightsResponse> ListInsightsAsync(global::Google.Cloud.Recommender.V1.ListInsightsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListInsights, null, options, request);
+      }
+      /// <summary>
+      /// Gets the requested insight. Requires the recommender.*.get IAM permission
+      /// for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Recommender.V1.Insight GetInsight(global::Google.Cloud.Recommender.V1.GetInsightRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInsight(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the requested insight. Requires the recommender.*.get IAM permission
+      /// for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Recommender.V1.Insight GetInsight(global::Google.Cloud.Recommender.V1.GetInsightRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetInsight, null, options, request);
+      }
+      /// <summary>
+      /// Gets the requested insight. Requires the recommender.*.get IAM permission
+      /// for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.Insight> GetInsightAsync(global::Google.Cloud.Recommender.V1.GetInsightRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInsightAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the requested insight. Requires the recommender.*.get IAM permission
+      /// for the specified insight type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.Insight> GetInsightAsync(global::Google.Cloud.Recommender.V1.GetInsightRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetInsight, null, options, request);
+      }
+      /// <summary>
+      /// Marks the Insight State as Accepted. Users can use this method to
+      /// indicate to the Recommender API that they have applied some action based
+      /// on the insight. This stops the insight content from being updated.
+      ///
+      /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+      /// the recommender.*.update IAM permission for the specified insight.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Recommender.V1.Insight MarkInsightAccepted(global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkInsightAccepted(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks the Insight State as Accepted. Users can use this method to
+      /// indicate to the Recommender API that they have applied some action based
+      /// on the insight. This stops the insight content from being updated.
+      ///
+      /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+      /// the recommender.*.update IAM permission for the specified insight.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Recommender.V1.Insight MarkInsightAccepted(global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MarkInsightAccepted, null, options, request);
+      }
+      /// <summary>
+      /// Marks the Insight State as Accepted. Users can use this method to
+      /// indicate to the Recommender API that they have applied some action based
+      /// on the insight. This stops the insight content from being updated.
+      ///
+      /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+      /// the recommender.*.update IAM permission for the specified insight.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.Insight> MarkInsightAcceptedAsync(global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkInsightAcceptedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks the Insight State as Accepted. Users can use this method to
+      /// indicate to the Recommender API that they have applied some action based
+      /// on the insight. This stops the insight content from being updated.
+      ///
+      /// MarkInsightAccepted can be applied to insights in ACTIVE state. Requires
+      /// the recommender.*.update IAM permission for the specified insight.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Recommender.V1.Insight> MarkInsightAcceptedAsync(global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MarkInsightAccepted, null, options, request);
+      }
       /// <summary>
       /// Lists recommendations for a Cloud project. Requires the recommender.*.list
       /// IAM permission for the specified recommender.
@@ -293,10 +520,10 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetRecommendation, null, options, request);
       }
       /// <summary>
-      /// Mark the Recommendation State as Claimed. Users can use this method to
+      /// Marks the Recommendation State as Claimed. Users can use this method to
       /// indicate to the Recommender API that they are starting to apply the
       /// recommendation themselves. This stops the recommendation content from being
-      /// updated.
+      /// updated. Associated insights are frozen and placed in the ACCEPTED state.
       ///
       /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
       /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -314,10 +541,10 @@ namespace Google.Cloud.Recommender.V1 {
         return MarkRecommendationClaimed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Mark the Recommendation State as Claimed. Users can use this method to
+      /// Marks the Recommendation State as Claimed. Users can use this method to
       /// indicate to the Recommender API that they are starting to apply the
       /// recommendation themselves. This stops the recommendation content from being
-      /// updated.
+      /// updated. Associated insights are frozen and placed in the ACCEPTED state.
       ///
       /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
       /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -333,10 +560,10 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_MarkRecommendationClaimed, null, options, request);
       }
       /// <summary>
-      /// Mark the Recommendation State as Claimed. Users can use this method to
+      /// Marks the Recommendation State as Claimed. Users can use this method to
       /// indicate to the Recommender API that they are starting to apply the
       /// recommendation themselves. This stops the recommendation content from being
-      /// updated.
+      /// updated. Associated insights are frozen and placed in the ACCEPTED state.
       ///
       /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
       /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -354,10 +581,10 @@ namespace Google.Cloud.Recommender.V1 {
         return MarkRecommendationClaimedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Mark the Recommendation State as Claimed. Users can use this method to
+      /// Marks the Recommendation State as Claimed. Users can use this method to
       /// indicate to the Recommender API that they are starting to apply the
       /// recommendation themselves. This stops the recommendation content from being
-      /// updated.
+      /// updated. Associated insights are frozen and placed in the ACCEPTED state.
       ///
       /// MarkRecommendationClaimed can be applied to recommendations in CLAIMED,
       /// SUCCEEDED, FAILED, or ACTIVE state.
@@ -373,10 +600,11 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_MarkRecommendationClaimed, null, options, request);
       }
       /// <summary>
-      /// Mark the Recommendation State as Succeeded. Users can use this method to
+      /// Marks the Recommendation State as Succeeded. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation was successful. This stops the recommendation
-      /// content from being updated.
+      /// content from being updated. Associated insights are frozen and placed in
+      /// the ACCEPTED state.
       ///
       /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -394,10 +622,11 @@ namespace Google.Cloud.Recommender.V1 {
         return MarkRecommendationSucceeded(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Mark the Recommendation State as Succeeded. Users can use this method to
+      /// Marks the Recommendation State as Succeeded. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation was successful. This stops the recommendation
-      /// content from being updated.
+      /// content from being updated. Associated insights are frozen and placed in
+      /// the ACCEPTED state.
       ///
       /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -413,10 +642,11 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_MarkRecommendationSucceeded, null, options, request);
       }
       /// <summary>
-      /// Mark the Recommendation State as Succeeded. Users can use this method to
+      /// Marks the Recommendation State as Succeeded. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation was successful. This stops the recommendation
-      /// content from being updated.
+      /// content from being updated. Associated insights are frozen and placed in
+      /// the ACCEPTED state.
       ///
       /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -434,10 +664,11 @@ namespace Google.Cloud.Recommender.V1 {
         return MarkRecommendationSucceededAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Mark the Recommendation State as Succeeded. Users can use this method to
+      /// Marks the Recommendation State as Succeeded. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation was successful. This stops the recommendation
-      /// content from being updated.
+      /// content from being updated. Associated insights are frozen and placed in
+      /// the ACCEPTED state.
       ///
       /// MarkRecommendationSucceeded can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -453,10 +684,11 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_MarkRecommendationSucceeded, null, options, request);
       }
       /// <summary>
-      /// Mark the Recommendation State as Failed. Users can use this method to
+      /// Marks the Recommendation State as Failed. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation failed. This stops the recommendation content
-      /// from being updated.
+      /// from being updated. Associated insights are frozen and placed in the
+      /// ACCEPTED state.
       ///
       /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -474,10 +706,11 @@ namespace Google.Cloud.Recommender.V1 {
         return MarkRecommendationFailed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Mark the Recommendation State as Failed. Users can use this method to
+      /// Marks the Recommendation State as Failed. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation failed. This stops the recommendation content
-      /// from being updated.
+      /// from being updated. Associated insights are frozen and placed in the
+      /// ACCEPTED state.
       ///
       /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -493,10 +726,11 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_MarkRecommendationFailed, null, options, request);
       }
       /// <summary>
-      /// Mark the Recommendation State as Failed. Users can use this method to
+      /// Marks the Recommendation State as Failed. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation failed. This stops the recommendation content
-      /// from being updated.
+      /// from being updated. Associated insights are frozen and placed in the
+      /// ACCEPTED state.
       ///
       /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -514,10 +748,11 @@ namespace Google.Cloud.Recommender.V1 {
         return MarkRecommendationFailedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Mark the Recommendation State as Failed. Users can use this method to
+      /// Marks the Recommendation State as Failed. Users can use this method to
       /// indicate to the Recommender API that they have applied the recommendation
       /// themselves, and the operation failed. This stops the recommendation content
-      /// from being updated.
+      /// from being updated. Associated insights are frozen and placed in the
+      /// ACCEPTED state.
       ///
       /// MarkRecommendationFailed can be applied to recommendations in ACTIVE,
       /// CLAIMED, SUCCEEDED, or FAILED state.
@@ -544,6 +779,9 @@ namespace Google.Cloud.Recommender.V1 {
     public static grpc::ServerServiceDefinition BindService(RecommenderBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_ListInsights, serviceImpl.ListInsights)
+          .AddMethod(__Method_GetInsight, serviceImpl.GetInsight)
+          .AddMethod(__Method_MarkInsightAccepted, serviceImpl.MarkInsightAccepted)
           .AddMethod(__Method_ListRecommendations, serviceImpl.ListRecommendations)
           .AddMethod(__Method_GetRecommendation, serviceImpl.GetRecommendation)
           .AddMethod(__Method_MarkRecommendationClaimed, serviceImpl.MarkRecommendationClaimed)
@@ -557,6 +795,9 @@ namespace Google.Cloud.Recommender.V1 {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, RecommenderBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_ListInsights, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.ListInsightsRequest, global::Google.Cloud.Recommender.V1.ListInsightsResponse>(serviceImpl.ListInsights));
+      serviceBinder.AddMethod(__Method_GetInsight, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.GetInsightRequest, global::Google.Cloud.Recommender.V1.Insight>(serviceImpl.GetInsight));
+      serviceBinder.AddMethod(__Method_MarkInsightAccepted, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkInsightAcceptedRequest, global::Google.Cloud.Recommender.V1.Insight>(serviceImpl.MarkInsightAccepted));
       serviceBinder.AddMethod(__Method_ListRecommendations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.ListRecommendationsRequest, global::Google.Cloud.Recommender.V1.ListRecommendationsResponse>(serviceImpl.ListRecommendations));
       serviceBinder.AddMethod(__Method_GetRecommendation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.GetRecommendationRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.GetRecommendation));
       serviceBinder.AddMethod(__Method_MarkRecommendationClaimed, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Recommender.V1.MarkRecommendationClaimedRequest, global::Google.Cloud.Recommender.V1.Recommendation>(serviceImpl.MarkRecommendationClaimed));
