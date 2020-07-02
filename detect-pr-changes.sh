@@ -2,8 +2,6 @@
 
 set -e
 
-echo "Before first dotnet build call"
-
 apis=$(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq)
 
 git clone . tmpgit -q --no-local -b master --depth 1 --recursive
@@ -14,8 +12,6 @@ mkdir tmpgit/new
 # First build everything, so we can get straight to the good stuff at the end of the log.
 dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.CompareVersions
 dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
-
-echo "Before sane"
 
 stty sane
 
@@ -40,6 +36,7 @@ echo "====================="
 echo "Changes detected"
 echo "====================="
 echo " "
+stty sane
 
 
 for api in $apis
@@ -55,6 +52,7 @@ do
     dotnet run --no-build -p tools/Google.Cloud.Tools.CompareVersions -- --file1=tmpgit/old/$api.dll --file2=tmpgit/new/$api.dll
   fi
   echo "---------------------"
+stty sane
 done  
 
 echo " "
@@ -62,6 +60,7 @@ echo "============================================="
 echo "Checking compatibility with previous releases"
 echo "============================================="
 echo " "
+stty sane
 
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
