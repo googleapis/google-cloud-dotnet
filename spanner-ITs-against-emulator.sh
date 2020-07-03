@@ -25,10 +25,10 @@ echo "Running the Cloud Spanner emulator: $SPANNER_EMULATOR_HOST";
 # emulator.
 GOOGLE_CLOUD_SDK_VERSION=299.0.0
 wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
-tar zxvf google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
+tar zxf google-cloud-sdk-${GOOGLE_CLOUD_SDK_VERSION}-linux-x86_64.tar.gz
 
+# Install the emulator.
 export CLOUDSDK_CORE_DISABLE_PROMPTS=1
-./google-cloud-sdk/bin/gcloud config set disable_usage_reporting false
 ./google-cloud-sdk/bin/gcloud components install beta cloud-spanner-emulator
 
 # Start the emulator.
