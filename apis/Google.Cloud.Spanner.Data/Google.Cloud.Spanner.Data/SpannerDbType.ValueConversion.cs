@@ -208,6 +208,25 @@ namespace Google.Cloud.Spanner.Data
                     {
                         return Value.ForString(SpannerNumeric.Parse(str).ToString());
                     }
+                    if (value is float || value is double || value is decimal)
+                    {
+                        // We throw if there's a loss of precision. We could use
+                        // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
+                        // use half-away-from-zero rounding but the SpannerNumeric implementation
+                        // truncates instead.
+                        return Value.ForString(SpannerNumeric.FromDecimal(
+                            Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Throw).ToString());
+                    }
+                    if (value is sbyte || value is short || value is int || value is long)
+                    {
+                        SpannerNumeric numericValue = Convert.ToInt64(value, InvariantCulture);
+                        return Value.ForString(numericValue.ToString());
+                    }
+                    if (value is byte || value is ushort || value is uint || value is ulong)
+                    {
+                        SpannerNumeric numericValue = Convert.ToUInt64(value, InvariantCulture);
+                        return Value.ForString(numericValue.ToString());
+                    }
                     throw new ArgumentException("Numeric parameters must be of type SpannerNumeric or string");
 
                 default:

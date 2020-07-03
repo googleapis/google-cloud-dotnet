@@ -231,27 +231,19 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {(short) 1, SpannerDbType.String, Quote("1")};
             yield return new object[] {(ushort) 1, SpannerDbType.String, Quote("1")};
             yield return new object[] {s_testDate, SpannerDbType.String, Quote("2017-01-31T03:15:30.5Z")};
-	    // TODO(skuruppu): Figure out if we want to do type conversions from other types to NUMERIC.
             // Spanner type = Numeric tests.
             yield return new object[] {SpannerNumeric.Epsilon, SpannerDbType.Numeric, "\"0.000000001\""};
-	    /*
-            yield return new object[] {true, SpannerDbType.Numeric, "1"};
-            yield return new object[] {false, SpannerDbType.Numeric, "0"};
-            yield return new object[] {(byte) 1, SpannerDbType.Numeric, "1"};
-            yield return new object[] {(sbyte) 1, SpannerDbType.Numeric, "1"};
+            yield return new object[] {(byte) 1, SpannerDbType.Numeric, "\"1\""};
+            yield return new object[] {(sbyte) 1, SpannerDbType.Numeric, "\"1\""};
             yield return new object[] {1.5M, SpannerDbType.Numeric, "\"1.5\""};
             yield return new object[] {1.5D, SpannerDbType.Numeric, "\"1.5\""};
             yield return new object[] {1.5F, SpannerDbType.Numeric, "\"1.5\""};
-            yield return new object[] {double.NegativeInfinity, SpannerDbType.Numeric, Quote("-Infinity")};
-            yield return new object[] {double.PositiveInfinity, SpannerDbType.Numeric, Quote("Infinity")};
-            yield return new object[] {double.NaN, SpannerDbType.Numeric, Quote("NaN")};
             yield return new object[] {1, SpannerDbType.Numeric, "\"1\""};
             yield return new object[] {1U, SpannerDbType.Numeric, "\"1\""};
             yield return new object[] {1L, SpannerDbType.Numeric, "\"1\""};
             yield return new object[] {(ulong) 1, SpannerDbType.Numeric, "\"1\""};
-            yield return new object[] {(short) 1, SpannerDbType.Numeric, "1"};
-            yield return new object[] {(ushort) 1, SpannerDbType.Numeric, "1"};
-	    */
+            yield return new object[] {(short) 1, SpannerDbType.Numeric, "\"1\""};
+            yield return new object[] {(ushort) 1, SpannerDbType.Numeric, "\"1\""};
             yield return new object[] {"1", SpannerDbType.Numeric, "\"1\""};
             yield return new object[] {"1.5", SpannerDbType.Numeric, "\"1.5\""};
             yield return new object[] {DBNull.Value, SpannerDbType.Numeric, "null"};
@@ -420,20 +412,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] {new ToStringClass("hello"), SpannerDbType.Date};
             yield return new object[] {"badjuju", SpannerDbType.Date};
 
-	    // TODO(skuruppu): Remove some of these if we end up allowing casting other types to NUMERIC.
-	    // Spanner type = Numeric tests.
+            // Spanner type = Numeric tests.
             yield return new object[] {true, SpannerDbType.Numeric};
-            yield return new object[] {(byte) 1, SpannerDbType.Numeric};
-            yield return new object[] {(sbyte) 1, SpannerDbType.Numeric};
-            yield return new object[] {1.5M, SpannerDbType.Numeric};
-            yield return new object[] {1.5D, SpannerDbType.Numeric};
-            yield return new object[] {1.5F, SpannerDbType.Numeric};
-            yield return new object[] {1, SpannerDbType.Numeric};
-            yield return new object[] {1U, SpannerDbType.Numeric};
-            yield return new object[] {1L, SpannerDbType.Numeric};
-            yield return new object[] {(ulong) 1, SpannerDbType.Numeric};
-            yield return new object[] {(short) 1, SpannerDbType.Numeric};
-            yield return new object[] {(ushort) 1, SpannerDbType.Numeric};
+            yield return new object[] {double.NegativeInfinity, SpannerDbType.Numeric};
+            yield return new object[] {double.PositiveInfinity, SpannerDbType.Numeric};
+            yield return new object[] {double.NaN, SpannerDbType.Numeric};
         }
 
         private static readonly CultureInfo[] s_cultures = new[]
