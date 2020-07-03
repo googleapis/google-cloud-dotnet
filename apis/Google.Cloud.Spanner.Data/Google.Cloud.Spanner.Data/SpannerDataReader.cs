@@ -191,6 +191,13 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>The value converted to a <see cref="Timestamp"/>.</returns>
         public Timestamp GetTimestamp(int i) => GetFieldValue<Timestamp>(i);
 
+        /// <summary>
+        /// Gets the value of the specified column as type <see cref="SpannerNumeric"/>.
+        /// </summary>
+        /// <param name="i">The index of the column to retrieve.</param>
+        /// <returns>The value converted to a <see cref="SpannerNumeric"/>.</returns>
+        public SpannerNumeric GetNumeric(int i) => GetFieldValue<SpannerNumeric>(i);
+
         /// <inheritdoc />
         public override object GetValue(int i) => this[i];
 

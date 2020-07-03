@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -35,6 +36,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Int64,
             SpannerDbType.Timestamp,
             SpannerDbType.Float64,
+            SpannerDbType.Numeric,
             SpannerDbType.Date,
             SpannerDbType.Bytes,
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
@@ -42,6 +44,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             SpannerDbType.ArrayOf(SpannerDbType.Timestamp),
             SpannerDbType.ArrayOf(SpannerDbType.Float64),
+            SpannerDbType.ArrayOf(SpannerDbType.Numeric),
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
         };
@@ -52,6 +55,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_bind_int64_null]
         // [START spanner_test_query_bind_float64_null]
         // [END spanner_test_query_bind_float64_null]
+        // [START spanner_test_query_bind_numeric_null]
+        // [END spanner_test_query_bind_numeric_null]
         // [START spanner_test_query_bind_string_null]
         // [END spanner_test_query_bind_string_null]
         // [START spanner_test_query_bind_bytes_null]
@@ -66,6 +71,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_bind_int64_array_null]
         // [START spanner_test_query_bind_float64_array_null]
         // [END spanner_test_query_bind_float64_array_null]
+        // [START spanner_test_query_bind_numeric_array_null]
+        // [END spanner_test_query_bind_numeric_array_null]
         // [START spanner_test_query_bind_string_array_null]
         // [END spanner_test_query_bind_string_array_null]
         // [START spanner_test_query_bind_bytes_array_null]
@@ -241,6 +248,25 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             new long[] { });
         // [END spanner_test_query_bind_int64_array_empty]
+
+        // [START spanner_test_query_bind_numeric]
+        [Fact]
+        public Task BindNumeric() => TestBindNonNull(SpannerDbType.Numeric, SpannerNumeric.Parse("1.0"), r => r.GetNumeric(0));
+        // [END spanner_test_query_bind_numeric]
+
+        // [START spanner_test_query_bind_numeric_array]
+        [Fact]
+        public Task BindNumericArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Numeric),
+            new SpannerNumeric?[] {SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("1.0")});
+        // [END spanner_test_query_bind_numeric_array]
+
+        // [START spanner_test_query_bind_numeric_array_empty]
+        [Fact]
+        public Task BindNumericEmptyArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Numeric),
+            new SpannerNumeric[] { });
+        // [END spanner_test_query_bind_numeric_array_empty]
 
         // [START spanner_test_query_bind_string]
         [Fact]
