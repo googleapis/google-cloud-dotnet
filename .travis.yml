@@ -22,7 +22,7 @@ jobs:
       if: type = pull_request
       script: ./detect-pr-changes.sh
     - name: "Spanner Emulator"
-      script: ./spanner-ITs-against-emulator.sh;
+      script: apis/Google.Cloud.Spanner.Data/run-emulator-tests.sh;
     - name: "Cloud APIs A-L"
       env: API_REGEX='Google\.Cloud\.[A-L].*'
     - name: "Cloud APIs M-Z"
