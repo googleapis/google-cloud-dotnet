@@ -45,7 +45,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Connection.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "BigQuery Connection API",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/bigqueryconnection",
@@ -55,7 +55,9 @@
         "connection"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "2.0.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.0.0",
+        "Google.Cloud.Iam.V1": "2.0.0",
+        "Grpc.Core": "2.27.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/bigquery/connection/v1"
