@@ -21,6 +21,8 @@ jobs:
     - name: "Change detection"
       if: type = pull_request
       script: ./detect-pr-changes.sh
+    - name: "Spanner Emulator"
+      script: ./spanner-ITs-against-emulator.sh;
     - name: "Cloud APIs A-L"
       env: API_REGEX='Google\.Cloud\.[A-L].*'
     - name: "Cloud APIs M-Z"
