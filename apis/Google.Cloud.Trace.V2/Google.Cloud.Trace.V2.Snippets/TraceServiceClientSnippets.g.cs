@@ -140,6 +140,7 @@ namespace Google.Cloud.Trace.V2.Snippets
                 Status = new Status(),
                 SameProcessAsParentSpan = false,
                 ChildSpanCount = 0,
+                SpanKind = Span.Types.SpanKind.Unspecified,
             };
             // Make the request
             Span response = traceServiceClient.CreateSpan(request);
@@ -169,6 +170,7 @@ namespace Google.Cloud.Trace.V2.Snippets
                 Status = new Status(),
                 SameProcessAsParentSpan = false,
                 ChildSpanCount = 0,
+                SpanKind = Span.Types.SpanKind.Unspecified,
             };
             // Make the request
             Span response = await traceServiceClient.CreateSpanAsync(request);
