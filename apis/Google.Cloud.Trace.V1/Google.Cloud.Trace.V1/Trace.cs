@@ -25,11 +25,11 @@ namespace Google.Cloud.Trace.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvZGV2dG9vbHMvY2xvdWR0cmFjZS92MS90cmFjZS5wcm90bxId",
-            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjEaHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29n",
-            "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
-            "cmNlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iZgoFVHJhY2USEgoKcHJvamVj",
+            "Z29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjEaF2dvb2dsZS9hcGkvY2xp",
+            "ZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1w",
+            "dHkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdv",
+            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iZgoFVHJhY2USEgoKcHJvamVj",
             "dF9pZBgBIAEoCRIQCgh0cmFjZV9pZBgCIAEoCRI3CgVzcGFucxgDIAMoCzIo",
             "Lmdvb2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYxLlRyYWNlU3BhbiI+CgZU",
             "cmFjZXMSNAoGdHJhY2VzGAEgAygLMiQuZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
@@ -79,7 +79,7 @@ namespace Google.Cloud.Trace.V1 {
             "cmFjZS5WMcoCFUdvb2dsZVxDbG91ZFxUcmFjZVxWMeoCGEdvb2dsZTo6Q2xv",
             "dWQ6OlRyYWNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Trace), global::Google.Cloud.Trace.V1.Trace.Parser, new[]{ "ProjectId", "TraceId", "Spans" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Traces), global::Google.Cloud.Trace.V1.Traces.Parser, new[]{ "Traces_" }, null, null, null, null),
