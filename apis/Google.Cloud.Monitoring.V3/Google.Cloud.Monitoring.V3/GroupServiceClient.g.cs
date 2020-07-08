@@ -208,6 +208,20 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>GroupService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Group API lets you inspect and manage your
+    /// [groups](#google.monitoring.v3.Group).
+    /// 
+    /// A group is a named filter that is used to identify
+    /// a collection of monitored resources. Groups are typically used to
+    /// mirror the physical and/or logical topology of the environment.
+    /// Because group membership is computed dynamically, monitored
+    /// resources that are started in the future are automatically placed
+    /// in matching groups. By using a group to name monitored resources in,
+    /// for example, an alert policy, the target of that alert policy is
+    /// updated automatically as monitored resources are added and removed
+    /// from the infrastructure.
+    /// </remarks>
     public abstract partial class GroupServiceClient
     {
         /// <summary>
@@ -1463,6 +1477,20 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>GroupService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Group API lets you inspect and manage your
+    /// [groups](#google.monitoring.v3.Group).
+    /// 
+    /// A group is a named filter that is used to identify
+    /// a collection of monitored resources. Groups are typically used to
+    /// mirror the physical and/or logical topology of the environment.
+    /// Because group membership is computed dynamically, monitored
+    /// resources that are started in the future are automatically placed
+    /// in matching groups. By using a group to name monitored resources in,
+    /// for example, an alert policy, the target of that alert policy is
+    /// updated automatically as monitored resources are added and removed
+    /// from the infrastructure.
+    /// </remarks>
     public sealed partial class GroupServiceClientImpl : GroupServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListGroupsRequest, ListGroupsResponse> _callListGroups;

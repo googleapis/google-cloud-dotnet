@@ -304,6 +304,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     }
 
     /// <summary>InstanceAdmin client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Spanner Instance Admin API
+    /// 
+    /// The Cloud Spanner Instance Admin API can be used to create, delete,
+    /// modify and list instances. Instances are dedicated Cloud Spanner serving
+    /// and storage resources to be used by Cloud Spanner databases.
+    /// 
+    /// Each instance has a "configuration", which dictates where the
+    /// serving resources for the Cloud Spanner instance are located (e.g.,
+    /// US-central, Europe). Configurations are created by Google based on
+    /// resource availability.
+    /// 
+    /// Cloud Spanner billing is based on the instances that exist and their
+    /// sizes. After an instance exists, there are no additional
+    /// per-database or per-operation charges for use of the instance
+    /// (though there may be additional network bandwidth charges).
+    /// Instances offer isolation: problems with databases in one instance
+    /// will not affect other instances. However, within an instance
+    /// databases can affect each other. For example, if one database in an
+    /// instance receives a lot of requests and consumes most of the
+    /// instance resources, fewer resources are available for other
+    /// databases in that instance, and their performance may suffer.
+    /// </remarks>
     public abstract partial class InstanceAdminClient
     {
         /// <summary>
@@ -2434,6 +2457,29 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     }
 
     /// <summary>InstanceAdmin client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Spanner Instance Admin API
+    /// 
+    /// The Cloud Spanner Instance Admin API can be used to create, delete,
+    /// modify and list instances. Instances are dedicated Cloud Spanner serving
+    /// and storage resources to be used by Cloud Spanner databases.
+    /// 
+    /// Each instance has a "configuration", which dictates where the
+    /// serving resources for the Cloud Spanner instance are located (e.g.,
+    /// US-central, Europe). Configurations are created by Google based on
+    /// resource availability.
+    /// 
+    /// Cloud Spanner billing is based on the instances that exist and their
+    /// sizes. After an instance exists, there are no additional
+    /// per-database or per-operation charges for use of the instance
+    /// (though there may be additional network bandwidth charges).
+    /// Instances offer isolation: problems with databases in one instance
+    /// will not affect other instances. However, within an instance
+    /// databases can affect each other. For example, if one database in an
+    /// instance receives a lot of requests and consumes most of the
+    /// instance resources, fewer resources are available for other
+    /// databases in that instance, and their performance may suffer.
+    /// </remarks>
     public sealed partial class InstanceAdminClientImpl : InstanceAdminClient
     {
         private readonly gaxgrpc::ApiCall<ListInstanceConfigsRequest, ListInstanceConfigsResponse> _callListInstanceConfigs;

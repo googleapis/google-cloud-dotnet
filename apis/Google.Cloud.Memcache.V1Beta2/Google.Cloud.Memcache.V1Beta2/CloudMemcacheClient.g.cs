@@ -303,6 +303,23 @@ namespace Google.Cloud.Memcache.V1Beta2
     }
 
     /// <summary>CloudMemcache client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Configures and manages Cloud Memorystore for Memcached instances.
+    /// 
+    /// 
+    /// The `memcache.googleapis.com` service implements the Google Cloud Memorystore
+    /// for Memcached API and defines the following resource model for managing
+    /// Memorystore Memcached (also called Memcached below) instances:
+    /// * The service works with a collection of cloud projects, named: `/projects/*`
+    /// * Each project has a collection of available locations, named: `/locations/*`
+    /// * Each location has a collection of Memcached instances, named:
+    /// `/instances/*`
+    /// * As such, Memcached instances are resources of the form:
+    /// `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+    /// 
+    /// Note that location_id must be refering to a GCP `region`; for example:
+    /// * `projects/my-memcached-project/locations/us-central1/instances/my-memcached`
+    /// </remarks>
     public abstract partial class CloudMemcacheClient
     {
         /// <summary>
@@ -1463,6 +1480,23 @@ namespace Google.Cloud.Memcache.V1Beta2
     }
 
     /// <summary>CloudMemcache client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Configures and manages Cloud Memorystore for Memcached instances.
+    /// 
+    /// 
+    /// The `memcache.googleapis.com` service implements the Google Cloud Memorystore
+    /// for Memcached API and defines the following resource model for managing
+    /// Memorystore Memcached (also called Memcached below) instances:
+    /// * The service works with a collection of cloud projects, named: `/projects/*`
+    /// * Each project has a collection of available locations, named: `/locations/*`
+    /// * Each location has a collection of Memcached instances, named:
+    /// `/instances/*`
+    /// * As such, Memcached instances are resources of the form:
+    /// `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+    /// 
+    /// Note that location_id must be refering to a GCP `region`; for example:
+    /// * `projects/my-memcached-project/locations/us-central1/instances/my-memcached`
+    /// </remarks>
     public sealed partial class CloudMemcacheClientImpl : CloudMemcacheClient
     {
         private readonly gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> _callListInstances;

@@ -33,6 +33,9 @@ using Google.Api.Gax;
 namespace Google.Cloud.Bigtable.V2
 {
     /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for reading from and writing to existing Bigtable tables.
+    /// </remarks>
     public partial class BigtableClient
     {
         /// <summary>Streams back the contents of all requested rows in key order, optionally applying the same Reader filter to each.</summary>
@@ -270,6 +273,9 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for reading from and writing to existing Bigtable tables.
+    /// </remarks>
     public sealed partial class BigtableClientImpl : BigtableClient
     {
         /// <inheritdoc/>

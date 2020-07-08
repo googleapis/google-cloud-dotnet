@@ -461,6 +461,22 @@ namespace Google.Cloud.Vision.V1
     }
 
     /// <summary>ProductSearch client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Manages Products and ProductSets of reference images for use in product
+    /// search. It uses the following resource model:
+    /// 
+    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet] resources, named
+    /// `projects/*/locations/*/productSets/*`, which acts as a way to put different
+    /// products into groups to limit identification.
+    /// 
+    /// In parallel,
+    /// 
+    /// - The API has a collection of [Product][google.cloud.vision.v1.Product] resources, named
+    /// `projects/*/locations/*/products/*`
+    /// 
+    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
+    /// `projects/*/locations/*/products/*/referenceImages/*`
+    /// </remarks>
     public abstract partial class ProductSearchClient
     {
         /// <summary>
@@ -4266,6 +4282,22 @@ namespace Google.Cloud.Vision.V1
     }
 
     /// <summary>ProductSearch client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Manages Products and ProductSets of reference images for use in product
+    /// search. It uses the following resource model:
+    /// 
+    /// - The API has a collection of [ProductSet][google.cloud.vision.v1.ProductSet] resources, named
+    /// `projects/*/locations/*/productSets/*`, which acts as a way to put different
+    /// products into groups to limit identification.
+    /// 
+    /// In parallel,
+    /// 
+    /// - The API has a collection of [Product][google.cloud.vision.v1.Product] resources, named
+    /// `projects/*/locations/*/products/*`
+    /// 
+    /// - Each [Product][google.cloud.vision.v1.Product] has a collection of [ReferenceImage][google.cloud.vision.v1.ReferenceImage] resources, named
+    /// `projects/*/locations/*/products/*/referenceImages/*`
+    /// </remarks>
     public sealed partial class ProductSearchClientImpl : ProductSearchClient
     {
         private readonly gaxgrpc::ApiCall<CreateProductSetRequest, ProductSet> _callCreateProductSet;

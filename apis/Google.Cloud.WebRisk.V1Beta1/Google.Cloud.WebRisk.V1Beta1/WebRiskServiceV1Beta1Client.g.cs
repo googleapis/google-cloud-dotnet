@@ -163,6 +163,10 @@ namespace Google.Cloud.WebRisk.V1Beta1
     }
 
     /// <summary>WebRiskServiceV1Beta1 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Web Risk v1beta1 API defines an interface to detect malicious URLs on your
+    /// website and in client applications.
+    /// </remarks>
     public abstract partial class WebRiskServiceV1Beta1Client
     {
         /// <summary>
@@ -528,6 +532,10 @@ namespace Google.Cloud.WebRisk.V1Beta1
     }
 
     /// <summary>WebRiskServiceV1Beta1 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Web Risk v1beta1 API defines an interface to detect malicious URLs on your
+    /// website and in client applications.
+    /// </remarks>
     public sealed partial class WebRiskServiceV1Beta1ClientImpl : WebRiskServiceV1Beta1Client
     {
         private readonly gaxgrpc::ApiCall<ComputeThreatListDiffRequest, ComputeThreatListDiffResponse> _callComputeThreatListDiff;

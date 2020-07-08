@@ -263,6 +263,12 @@ namespace Google.Cloud.OsConfig.V1
     }
 
     /// <summary>OsConfigService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// OS Config API
+    /// 
+    /// The OS Config service is a server-side component that you can use to
+    /// manage package installations and patch jobs for virtual machine instances.
+    /// </remarks>
     public abstract partial class OsConfigServiceClient
     {
         /// <summary>
@@ -1261,6 +1267,12 @@ namespace Google.Cloud.OsConfig.V1
     }
 
     /// <summary>OsConfigService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// OS Config API
+    /// 
+    /// The OS Config service is a server-side component that you can use to
+    /// manage package installations and patch jobs for virtual machine instances.
+    /// </remarks>
     public sealed partial class OsConfigServiceClientImpl : OsConfigServiceClient
     {
         private readonly gaxgrpc::ApiCall<ExecutePatchJobRequest, PatchJob> _callExecutePatchJob;

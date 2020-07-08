@@ -349,6 +349,12 @@ namespace Google.Cloud.Spanner.V1
     }
 
     /// <summary>Spanner client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Spanner API
+    /// 
+    /// The Cloud Spanner API can be used to manage sessions and execute
+    /// transactions on data stored in Cloud Spanner databases.
+    /// </remarks>
     public abstract partial class SpannerClient
     {
         /// <summary>
@@ -2386,6 +2392,12 @@ namespace Google.Cloud.Spanner.V1
     }
 
     /// <summary>Spanner client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Spanner API
+    /// 
+    /// The Cloud Spanner API can be used to manage sessions and execute
+    /// transactions on data stored in Cloud Spanner databases.
+    /// </remarks>
     public sealed partial class SpannerClientImpl : SpannerClient
     {
         private readonly gaxgrpc::ApiCall<CreateSessionRequest, Session> _callCreateSession;

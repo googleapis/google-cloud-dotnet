@@ -278,6 +278,10 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>NotificationChannelService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Notification Channel API provides access to configuration that
+    /// controls how messages related to incidents are sent.
+    /// </remarks>
     public abstract partial class NotificationChannelServiceClient
     {
         /// <summary>
@@ -2984,6 +2988,10 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>NotificationChannelService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Notification Channel API provides access to configuration that
+    /// controls how messages related to incidents are sent.
+    /// </remarks>
     public sealed partial class NotificationChannelServiceClientImpl : NotificationChannelServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListNotificationChannelDescriptorsRequest, ListNotificationChannelDescriptorsResponse> _callListNotificationChannelDescriptors;

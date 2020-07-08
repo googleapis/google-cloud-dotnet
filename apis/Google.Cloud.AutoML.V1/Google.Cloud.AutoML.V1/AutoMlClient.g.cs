@@ -547,6 +547,22 @@ namespace Google.Cloud.AutoML.V1
     }
 
     /// <summary>AutoMl client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// AutoML Server API.
+    /// 
+    /// The resource names are assigned by the server.
+    /// The server never reuses names that it has created after the resources with
+    /// those names are deleted.
+    /// 
+    /// An ID of a resource is the last element of the item's resource name. For
+    /// `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`, then
+    /// the id for the item is `{dataset_id}`.
+    /// 
+    /// Currently the only supported `location_id` is "us-central1".
+    /// 
+    /// On any input that is documented to expect a string parameter in
+    /// snake_case or kebab-case, either of those cases is accepted.
+    /// </remarks>
     public abstract partial class AutoMlClient
     {
         /// <summary>
@@ -3310,6 +3326,22 @@ namespace Google.Cloud.AutoML.V1
     }
 
     /// <summary>AutoMl client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// AutoML Server API.
+    /// 
+    /// The resource names are assigned by the server.
+    /// The server never reuses names that it has created after the resources with
+    /// those names are deleted.
+    /// 
+    /// An ID of a resource is the last element of the item's resource name. For
+    /// `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`, then
+    /// the id for the item is `{dataset_id}`.
+    /// 
+    /// Currently the only supported `location_id` is "us-central1".
+    /// 
+    /// On any input that is documented to expect a string parameter in
+    /// snake_case or kebab-case, either of those cases is accepted.
+    /// </remarks>
     public sealed partial class AutoMlClientImpl : AutoMlClient
     {
         private readonly gaxgrpc::ApiCall<CreateDatasetRequest, lro::Operation> _callCreateDataset;

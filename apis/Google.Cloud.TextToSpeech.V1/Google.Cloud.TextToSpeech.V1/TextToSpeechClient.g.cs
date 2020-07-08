@@ -143,6 +143,9 @@ namespace Google.Cloud.TextToSpeech.V1
     }
 
     /// <summary>TextToSpeech client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service that implements Google Cloud Text-to-Speech API.
+    /// </remarks>
     public abstract partial class TextToSpeechClient
     {
         /// <summary>
@@ -402,6 +405,9 @@ namespace Google.Cloud.TextToSpeech.V1
     }
 
     /// <summary>TextToSpeech client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service that implements Google Cloud Text-to-Speech API.
+    /// </remarks>
     public sealed partial class TextToSpeechClientImpl : TextToSpeechClient
     {
         private readonly gaxgrpc::ApiCall<ListVoicesRequest, ListVoicesResponse> _callListVoices;

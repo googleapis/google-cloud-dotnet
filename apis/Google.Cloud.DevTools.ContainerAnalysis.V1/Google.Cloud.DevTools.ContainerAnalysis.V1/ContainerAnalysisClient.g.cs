@@ -153,6 +153,21 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
     }
 
     /// <summary>ContainerAnalysis client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Retrieves analysis results of Cloud components such as Docker container
+    /// images. The Container Analysis API is an implementation of the
+    /// [Grafeas](https://grafeas.io) API.
+    /// 
+    /// Analysis results are stored as a series of occurrences. An `Occurrence`
+    /// contains information about a specific analysis instance on a resource. An
+    /// occurrence refers to a `Note`. A note contains details describing the
+    /// analysis and is generally stored in a separate project, called a `Provider`.
+    /// Multiple occurrences can refer to the same note.
+    /// 
+    /// For example, an SSL vulnerability could affect multiple images. In this case,
+    /// there would be one note for the vulnerability and an occurrence for each
+    /// image with the vulnerability referring to that note.
+    /// </remarks>
     public abstract partial class ContainerAnalysisClient
     {
         /// <summary>
@@ -836,6 +851,21 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
     }
 
     /// <summary>ContainerAnalysis client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Retrieves analysis results of Cloud components such as Docker container
+    /// images. The Container Analysis API is an implementation of the
+    /// [Grafeas](https://grafeas.io) API.
+    /// 
+    /// Analysis results are stored as a series of occurrences. An `Occurrence`
+    /// contains information about a specific analysis instance on a resource. An
+    /// occurrence refers to a `Note`. A note contains details describing the
+    /// analysis and is generally stored in a separate project, called a `Provider`.
+    /// Multiple occurrences can refer to the same note.
+    /// 
+    /// For example, an SSL vulnerability could affect multiple images. In this case,
+    /// there would be one note for the vulnerability and an occurrence for each
+    /// image with the vulnerability referring to that note.
+    /// </remarks>
     public sealed partial class ContainerAnalysisClientImpl : ContainerAnalysisClient
     {
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;

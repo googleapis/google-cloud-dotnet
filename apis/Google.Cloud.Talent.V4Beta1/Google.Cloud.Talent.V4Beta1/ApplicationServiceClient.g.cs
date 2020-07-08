@@ -191,6 +191,10 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>ApplicationService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles application management, including CRUD and
+    /// enumeration.
+    /// </remarks>
     public abstract partial class ApplicationServiceClient
     {
         /// <summary>
@@ -879,6 +883,10 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>ApplicationService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles application management, including CRUD and
+    /// enumeration.
+    /// </remarks>
     public sealed partial class ApplicationServiceClientImpl : ApplicationServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateApplicationRequest, Application> _callCreateApplication;

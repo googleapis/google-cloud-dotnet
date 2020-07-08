@@ -189,6 +189,20 @@ namespace Google.Cloud.Debugger.V2
     }
 
     /// <summary>Debugger2 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Debugger service provides the API that allows users to collect run-time
+    /// information from a running application, without stopping or slowing it down
+    /// and without modifying its state.  An application may include one or
+    /// more replicated processes performing the same work.
+    /// 
+    /// A debugged application is represented using the Debuggee concept. The
+    /// Debugger service provides a way to query for available debuggees, but does
+    /// not provide a way to create one.  A debuggee is created using the Controller
+    /// service, usually by running a debugger agent with the application.
+    /// 
+    /// The Debugger service enables the client to set one or more Breakpoints on a
+    /// Debuggee and collect the results of the set Breakpoints.
+    /// </remarks>
     public abstract partial class Debugger2Client
     {
         /// <summary>
@@ -705,6 +719,20 @@ namespace Google.Cloud.Debugger.V2
     }
 
     /// <summary>Debugger2 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Debugger service provides the API that allows users to collect run-time
+    /// information from a running application, without stopping or slowing it down
+    /// and without modifying its state.  An application may include one or
+    /// more replicated processes performing the same work.
+    /// 
+    /// A debugged application is represented using the Debuggee concept. The
+    /// Debugger service provides a way to query for available debuggees, but does
+    /// not provide a way to create one.  A debuggee is created using the Controller
+    /// service, usually by running a debugger agent with the application.
+    /// 
+    /// The Debugger service enables the client to set one or more Breakpoints on a
+    /// Debuggee and collect the results of the set Breakpoints.
+    /// </remarks>
     public sealed partial class Debugger2ClientImpl : Debugger2Client
     {
         private readonly gaxgrpc::ApiCall<SetBreakpointRequest, SetBreakpointResponse> _callSetBreakpoint;

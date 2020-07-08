@@ -125,6 +125,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>EventService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A service handles client event report.
+    /// </remarks>
     public abstract partial class EventServiceClient
     {
         /// <summary>
@@ -499,6 +502,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>EventService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A service handles client event report.
+    /// </remarks>
     public sealed partial class EventServiceClientImpl : EventServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateClientEventRequest, ClientEvent> _callCreateClientEvent;

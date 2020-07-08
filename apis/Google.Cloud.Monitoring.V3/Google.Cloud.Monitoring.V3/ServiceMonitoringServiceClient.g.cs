@@ -274,6 +274,12 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>ServiceMonitoringService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
+    /// managing and querying aspects of a workspace's services. These include the
+    /// `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
+    /// of categorized Health Metrics.
+    /// </remarks>
     public abstract partial class ServiceMonitoringServiceClient
     {
         /// <summary>
@@ -2149,6 +2155,12 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>ServiceMonitoringService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Cloud Monitoring Service-Oriented Monitoring API has endpoints for
+    /// managing and querying aspects of a workspace's services. These include the
+    /// `Service`'s monitored resources, its Service-Level Objectives, and a taxonomy
+    /// of categorized Health Metrics.
+    /// </remarks>
     public sealed partial class ServiceMonitoringServiceClientImpl : ServiceMonitoringServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateServiceRequest, Service> _callCreateService;

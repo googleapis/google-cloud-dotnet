@@ -156,6 +156,28 @@ namespace Google.Cloud.Debugger.V2
     }
 
     /// <summary>Controller2 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Controller service provides the API for orchestrating a collection of
+    /// debugger agents to perform debugging tasks. These agents are each attached
+    /// to a process of an application which may include one or more replicas.
+    /// 
+    /// The debugger agents register with the Controller to identify the application
+    /// being debugged, the Debuggee. All agents that register with the same data,
+    /// represent the same Debuggee, and are assigned the same `debuggee_id`.
+    /// 
+    /// The debugger agents call the Controller to retrieve  the list of active
+    /// Breakpoints. Agents with the same `debuggee_id` get the same breakpoints
+    /// list. An agent that can fulfill the breakpoint request updates the
+    /// Controller with the breakpoint result. The controller selects the first
+    /// result received and discards the rest of the results.
+    /// Agents that poll again for active breakpoints will no longer have
+    /// the completed breakpoint in the list and should remove that breakpoint from
+    /// their attached process.
+    /// 
+    /// The Controller service does not provide a way to retrieve the results of
+    /// a completed breakpoint. This functionality is available using the Debugger
+    /// service.
+    /// </remarks>
     public abstract partial class Controller2Client
     {
         /// <summary>
@@ -625,6 +647,28 @@ namespace Google.Cloud.Debugger.V2
     }
 
     /// <summary>Controller2 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Controller service provides the API for orchestrating a collection of
+    /// debugger agents to perform debugging tasks. These agents are each attached
+    /// to a process of an application which may include one or more replicas.
+    /// 
+    /// The debugger agents register with the Controller to identify the application
+    /// being debugged, the Debuggee. All agents that register with the same data,
+    /// represent the same Debuggee, and are assigned the same `debuggee_id`.
+    /// 
+    /// The debugger agents call the Controller to retrieve  the list of active
+    /// Breakpoints. Agents with the same `debuggee_id` get the same breakpoints
+    /// list. An agent that can fulfill the breakpoint request updates the
+    /// Controller with the breakpoint result. The controller selects the first
+    /// result received and discards the rest of the results.
+    /// Agents that poll again for active breakpoints will no longer have
+    /// the completed breakpoint in the list and should remove that breakpoint from
+    /// their attached process.
+    /// 
+    /// The Controller service does not provide a way to retrieve the results of
+    /// a completed breakpoint. This functionality is available using the Debugger
+    /// service.
+    /// </remarks>
     public sealed partial class Controller2ClientImpl : Controller2Client
     {
         private readonly gaxgrpc::ApiCall<RegisterDebuggeeRequest, RegisterDebuggeeResponse> _callRegisterDebuggee;

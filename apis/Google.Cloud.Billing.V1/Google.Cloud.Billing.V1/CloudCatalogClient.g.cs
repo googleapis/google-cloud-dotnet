@@ -138,6 +138,11 @@ namespace Google.Cloud.Billing.V1
     }
 
     /// <summary>CloudCatalog client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A catalog of Google Cloud Platform services and SKUs.
+    /// Provides pricing information and metadata on Google Cloud Platform services
+    /// and SKUs.
+    /// </remarks>
     public abstract partial class CloudCatalogClient
     {
         /// <summary>
@@ -392,6 +397,11 @@ namespace Google.Cloud.Billing.V1
     }
 
     /// <summary>CloudCatalog client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A catalog of Google Cloud Platform services and SKUs.
+    /// Provides pricing information and metadata on Google Cloud Platform services
+    /// and SKUs.
+    /// </remarks>
     public sealed partial class CloudCatalogClientImpl : CloudCatalogClient
     {
         private readonly gaxgrpc::ApiCall<ListServicesRequest, ListServicesResponse> _callListServices;

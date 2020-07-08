@@ -228,6 +228,10 @@ namespace Google.Cloud.Scheduler.V1
     }
 
     /// <summary>CloudScheduler client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Cloud Scheduler API allows external entities to reliably
+    /// schedule asynchronous jobs.
+    /// </remarks>
     public abstract partial class CloudSchedulerClient
     {
         /// <summary>
@@ -1396,6 +1400,10 @@ namespace Google.Cloud.Scheduler.V1
     }
 
     /// <summary>CloudScheduler client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Cloud Scheduler API allows external entities to reliably
+    /// schedule asynchronous jobs.
+    /// </remarks>
     public sealed partial class CloudSchedulerClientImpl : CloudSchedulerClient
     {
         private readonly gaxgrpc::ApiCall<ListJobsRequest, ListJobsResponse> _callListJobs;

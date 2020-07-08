@@ -337,6 +337,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     }
 
     /// <summary>DataTransferService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Google BigQuery Data Transfer Service API enables BigQuery users to
+    /// configure the transfer of their data from other Google Products into
+    /// BigQuery. This service contains methods that are end user exposed. It backs
+    /// up the frontend.
+    /// </remarks>
     public abstract partial class DataTransferServiceClient
     {
         /// <summary>
@@ -2319,6 +2325,12 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
     }
 
     /// <summary>DataTransferService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Google BigQuery Data Transfer Service API enables BigQuery users to
+    /// configure the transfer of their data from other Google Products into
+    /// BigQuery. This service contains methods that are end user exposed. It backs
+    /// up the frontend.
+    /// </remarks>
     public sealed partial class DataTransferServiceClientImpl : DataTransferServiceClient
     {
         private readonly gaxgrpc::ApiCall<GetDataSourceRequest, DataSource> _callGetDataSource;

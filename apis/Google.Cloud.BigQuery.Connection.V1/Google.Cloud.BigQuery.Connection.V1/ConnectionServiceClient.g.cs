@@ -230,6 +230,9 @@ namespace Google.Cloud.BigQuery.Connection.V1
     }
 
     /// <summary>ConnectionService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Manages external data source connections and credentials.
+    /// </remarks>
     public abstract partial class ConnectionServiceClient
     {
         /// <summary>
@@ -1521,6 +1524,9 @@ namespace Google.Cloud.BigQuery.Connection.V1
     }
 
     /// <summary>ConnectionService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Manages external data source connections and credentials.
+    /// </remarks>
     public sealed partial class ConnectionServiceClientImpl : ConnectionServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateConnectionRequest, Connection> _callCreateConnection;

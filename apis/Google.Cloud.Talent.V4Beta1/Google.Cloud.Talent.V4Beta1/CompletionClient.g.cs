@@ -127,6 +127,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>Completion client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A service handles auto completion.
+    /// </remarks>
     public abstract partial class CompletionClient
     {
         /// <summary>
@@ -236,6 +239,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>Completion client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A service handles auto completion.
+    /// </remarks>
     public sealed partial class CompletionClientImpl : CompletionClient
     {
         private readonly gaxgrpc::ApiCall<CompleteQueryRequest, CompleteQueryResponse> _callCompleteQuery;

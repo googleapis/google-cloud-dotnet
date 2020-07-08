@@ -217,6 +217,11 @@ namespace Google.Cloud.Vision.V1
     }
 
     /// <summary>ImageAnnotator client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service that performs Google Cloud Vision API detection tasks over client
+    /// images, such as face, landmark, logo, label, and text detection. The
+    /// ImageAnnotator service returns detected entities from the images.
+    /// </remarks>
     public abstract partial class ImageAnnotatorClient
     {
         /// <summary>
@@ -767,6 +772,11 @@ namespace Google.Cloud.Vision.V1
     }
 
     /// <summary>ImageAnnotator client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service that performs Google Cloud Vision API detection tasks over client
+    /// images, such as face, landmark, logo, label, and text detection. The
+    /// ImageAnnotator service returns detected entities from the images.
+    /// </remarks>
     public sealed partial class ImageAnnotatorClientImpl : ImageAnnotatorClient
     {
         private readonly gaxgrpc::ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> _callBatchAnnotateImages;

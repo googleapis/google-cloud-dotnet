@@ -210,6 +210,12 @@ namespace Google.Cloud.OsLogin.V1Beta
     }
 
     /// <summary>OsLoginService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud OS Login API
+    /// 
+    /// The Cloud OS Login API allows you to manage users and their associated SSH
+    /// public keys for logging into virtual machines on Google Cloud Platform.
+    /// </remarks>
     public abstract partial class OsLoginServiceClient
     {
         /// <summary>
@@ -1326,6 +1332,12 @@ namespace Google.Cloud.OsLogin.V1Beta
     }
 
     /// <summary>OsLoginService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud OS Login API
+    /// 
+    /// The Cloud OS Login API allows you to manage users and their associated SSH
+    /// public keys for logging into virtual machines on Google Cloud Platform.
+    /// </remarks>
     public sealed partial class OsLoginServiceClientImpl : OsLoginServiceClient
     {
         private readonly gaxgrpc::ApiCall<DeletePosixAccountRequest, wkt::Empty> _callDeletePosixAccount;

@@ -276,6 +276,10 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>WorkflowTemplateService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The API interface for managing Workflow Templates in the
+    /// Dataproc API.
+    /// </remarks>
     public abstract partial class WorkflowTemplateServiceClient
     {
         /// <summary>
@@ -2458,6 +2462,10 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>WorkflowTemplateService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The API interface for managing Workflow Templates in the
+    /// Dataproc API.
+    /// </remarks>
     public sealed partial class WorkflowTemplateServiceClientImpl : WorkflowTemplateServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateWorkflowTemplateRequest, WorkflowTemplate> _callCreateWorkflowTemplate;

@@ -338,6 +338,11 @@ namespace Google.Cloud.PubSub.V1
     }
 
     /// <summary>SubscriberServiceApi client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The service that an application uses to manipulate subscriptions and to
+    /// consume messages from a subscription via the `Pull` method or by
+    /// establishing a bi-directional stream using the `StreamingPull` method.
+    /// </remarks>
     public abstract partial class SubscriberServiceApiClient
     {
         /// <summary>
@@ -3125,6 +3130,11 @@ namespace Google.Cloud.PubSub.V1
     }
 
     /// <summary>SubscriberServiceApi client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The service that an application uses to manipulate subscriptions and to
+    /// consume messages from a subscription via the `Pull` method or by
+    /// establishing a bi-directional stream using the `StreamingPull` method.
+    /// </remarks>
     public sealed partial class SubscriberServiceApiClientImpl : SubscriberServiceApiClient
     {
         private readonly gaxgrpc::ApiCall<Subscription, Subscription> _callCreateSubscription;

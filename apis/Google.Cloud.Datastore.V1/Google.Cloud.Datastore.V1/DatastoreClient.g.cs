@@ -212,6 +212,14 @@ namespace Google.Cloud.Datastore.V1
     }
 
     /// <summary>Datastore client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Each RPC normalizes the partition IDs of the keys in its input entities,
+    /// and always returns entities with keys with normalized partition IDs.
+    /// This applies to all keys and entities, including those in values, except keys
+    /// with both an empty path and an empty or unset partition ID. Normalization of
+    /// input keys sets the project ID (if not already set) to the project ID from
+    /// the request.
+    /// </remarks>
     public abstract partial class DatastoreClient
     {
         /// <summary>
@@ -1002,6 +1010,14 @@ namespace Google.Cloud.Datastore.V1
     }
 
     /// <summary>Datastore client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Each RPC normalizes the partition IDs of the keys in its input entities,
+    /// and always returns entities with keys with normalized partition IDs.
+    /// This applies to all keys and entities, including those in values, except keys
+    /// with both an empty path and an empty or unset partition ID. Normalization of
+    /// input keys sets the project ID (if not already set) to the project ID from
+    /// the request.
+    /// </remarks>
     public sealed partial class DatastoreClientImpl : DatastoreClient
     {
         private readonly gaxgrpc::ApiCall<LookupRequest, LookupResponse> _callLookup;

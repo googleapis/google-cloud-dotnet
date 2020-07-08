@@ -128,6 +128,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
     }
 
     /// <summary>LookupService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service Directory API for looking up service data at runtime.
+    /// </remarks>
     public abstract partial class LookupServiceClient
     {
         /// <summary>
@@ -239,6 +242,9 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
     }
 
     /// <summary>LookupService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service Directory API for looking up service data at runtime.
+    /// </remarks>
     public sealed partial class LookupServiceClientImpl : LookupServiceClient
     {
         private readonly gaxgrpc::ApiCall<ResolveServiceRequest, ResolveServiceResponse> _callResolveService;

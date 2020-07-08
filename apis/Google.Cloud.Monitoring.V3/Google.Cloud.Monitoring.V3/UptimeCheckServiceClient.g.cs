@@ -211,6 +211,16 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>UptimeCheckService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The UptimeCheckService API is used to manage (list, create, delete, edit)
+    /// Uptime check configurations in the Stackdriver Monitoring product. An Uptime
+    /// check is a piece of configuration that determines which resources and
+    /// services to monitor for availability. These configurations can also be
+    /// configured interactively by navigating to the [Cloud Console]
+    /// (http://console.cloud.google.com), selecting the appropriate project,
+    /// clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
+    /// and then clicking on "Uptime".
+    /// </remarks>
     public abstract partial class UptimeCheckServiceClient
     {
         /// <summary>
@@ -1373,6 +1383,16 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>UptimeCheckService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The UptimeCheckService API is used to manage (list, create, delete, edit)
+    /// Uptime check configurations in the Stackdriver Monitoring product. An Uptime
+    /// check is a piece of configuration that determines which resources and
+    /// services to monitor for availability. These configurations can also be
+    /// configured interactively by navigating to the [Cloud Console]
+    /// (http://console.cloud.google.com), selecting the appropriate project,
+    /// clicking on "Monitoring" on the left-hand side to navigate to Stackdriver,
+    /// and then clicking on "Uptime".
+    /// </remarks>
     public sealed partial class UptimeCheckServiceClientImpl : UptimeCheckServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListUptimeCheckConfigsRequest, ListUptimeCheckConfigsResponse> _callListUptimeCheckConfigs;

@@ -313,6 +313,22 @@ namespace Grafeas.V1
     }
 
     /// <summary>Grafeas client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// [Grafeas](https://grafeas.io) API.
+    /// 
+    /// Retrieves analysis results of Cloud components such as Docker container
+    /// images.
+    /// 
+    /// Analysis results are stored as a series of occurrences. An `Occurrence`
+    /// contains information about a specific analysis instance on a resource. An
+    /// occurrence refers to a `Note`. A note contains details describing the
+    /// analysis and is generally stored in a separate project, called a `Provider`.
+    /// Multiple occurrences can refer to the same note.
+    /// 
+    /// For example, an SSL vulnerability could affect multiple images. In this case,
+    /// there would be one note for the vulnerability and an occurrence for each
+    /// image with the vulnerability referring to that note.
+    /// </remarks>
     public abstract partial class GrafeasClient
     {
 
@@ -2229,6 +2245,22 @@ namespace Grafeas.V1
     }
 
     /// <summary>Grafeas client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// [Grafeas](https://grafeas.io) API.
+    /// 
+    /// Retrieves analysis results of Cloud components such as Docker container
+    /// images.
+    /// 
+    /// Analysis results are stored as a series of occurrences. An `Occurrence`
+    /// contains information about a specific analysis instance on a resource. An
+    /// occurrence refers to a `Note`. A note contains details describing the
+    /// analysis and is generally stored in a separate project, called a `Provider`.
+    /// Multiple occurrences can refer to the same note.
+    /// 
+    /// For example, an SSL vulnerability could affect multiple images. In this case,
+    /// there would be one note for the vulnerability and an occurrence for each
+    /// image with the vulnerability referring to that note.
+    /// </remarks>
     public sealed partial class GrafeasClientImpl : GrafeasClient
     {
         private readonly gaxgrpc::ApiCall<GetOccurrenceRequest, Occurrence> _callGetOccurrence;

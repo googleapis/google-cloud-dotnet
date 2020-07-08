@@ -152,6 +152,11 @@ namespace Google.Cloud.BigQuery.Storage.V1
     }
 
     /// <summary>BigQueryRead client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// BigQuery Read API.
+    /// 
+    /// The Read API can be used to read data from BigQuery.
+    /// </remarks>
     public abstract partial class BigQueryReadClient
     {
         /// <summary>
@@ -727,6 +732,11 @@ namespace Google.Cloud.BigQuery.Storage.V1
     }
 
     /// <summary>BigQueryRead client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// BigQuery Read API.
+    /// 
+    /// The Read API can be used to read data from BigQuery.
+    /// </remarks>
     public sealed partial class BigQueryReadClientImpl : BigQueryReadClient
     {
         private readonly gaxgrpc::ApiCall<CreateReadSessionRequest, ReadSession> _callCreateReadSession;

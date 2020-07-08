@@ -347,6 +347,10 @@ namespace Google.Cloud.Tasks.V2
     }
 
     /// <summary>CloudTasks client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Tasks allows developers to manage the execution of background
+    /// work in their applications.
+    /// </remarks>
     public abstract partial class CloudTasksClient
     {
         /// <summary>
@@ -3634,6 +3638,10 @@ namespace Google.Cloud.Tasks.V2
     }
 
     /// <summary>CloudTasks client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Tasks allows developers to manage the execution of background
+    /// work in their applications.
+    /// </remarks>
     public sealed partial class CloudTasksClientImpl : CloudTasksClient
     {
         private readonly gaxgrpc::ApiCall<ListQueuesRequest, ListQueuesResponse> _callListQueues;

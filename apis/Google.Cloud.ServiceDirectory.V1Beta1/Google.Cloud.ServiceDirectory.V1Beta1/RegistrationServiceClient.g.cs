@@ -405,6 +405,23 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
     }
 
     /// <summary>RegistrationService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service Directory API for registering services. It defines the following
+    /// resource model:
+    /// 
+    /// - The API has a collection of
+    /// [Namespace][google.cloud.servicedirectory.v1beta1.Namespace]
+    /// resources, named `projects/*/locations/*/namespaces/*`.
+    /// 
+    /// - Each Namespace has a collection of
+    /// [Service][google.cloud.servicedirectory.v1beta1.Service] resources, named
+    /// `projects/*/locations/*/namespaces/*/services/*`.
+    /// 
+    /// - Each Service has a collection of
+    /// [Endpoint][google.cloud.servicedirectory.v1beta1.Endpoint]
+    /// resources, named
+    /// `projects/*/locations/*/namespaces/*/services/*/endpoints/*`.
+    /// </remarks>
     public abstract partial class RegistrationServiceClient
     {
         /// <summary>
@@ -2361,6 +2378,23 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
     }
 
     /// <summary>RegistrationService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service Directory API for registering services. It defines the following
+    /// resource model:
+    /// 
+    /// - The API has a collection of
+    /// [Namespace][google.cloud.servicedirectory.v1beta1.Namespace]
+    /// resources, named `projects/*/locations/*/namespaces/*`.
+    /// 
+    /// - Each Namespace has a collection of
+    /// [Service][google.cloud.servicedirectory.v1beta1.Service] resources, named
+    /// `projects/*/locations/*/namespaces/*/services/*`.
+    /// 
+    /// - Each Service has a collection of
+    /// [Endpoint][google.cloud.servicedirectory.v1beta1.Endpoint]
+    /// resources, named
+    /// `projects/*/locations/*/namespaces/*/services/*/endpoints/*`.
+    /// </remarks>
     public sealed partial class RegistrationServiceClientImpl : RegistrationServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateNamespaceRequest, Namespace> _callCreateNamespace;

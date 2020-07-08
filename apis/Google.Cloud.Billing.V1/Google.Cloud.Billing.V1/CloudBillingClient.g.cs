@@ -272,6 +272,9 @@ namespace Google.Cloud.Billing.V1
     }
 
     /// <summary>CloudBilling client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Retrieves GCP Console billing accounts and associates them with projects.
+    /// </remarks>
     public abstract partial class CloudBillingClient
     {
         /// <summary>
@@ -1838,6 +1841,9 @@ namespace Google.Cloud.Billing.V1
     }
 
     /// <summary>CloudBilling client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Retrieves GCP Console billing accounts and associates them with projects.
+    /// </remarks>
     public sealed partial class CloudBillingClientImpl : CloudBillingClient
     {
         private readonly gaxgrpc::ApiCall<GetBillingAccountRequest, BillingAccount> _callGetBillingAccount;

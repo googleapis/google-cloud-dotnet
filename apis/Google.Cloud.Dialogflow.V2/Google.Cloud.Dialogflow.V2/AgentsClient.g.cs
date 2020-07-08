@@ -335,6 +335,9 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>Agents client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for managing [Agents][google.cloud.dialogflow.v2.Agent].
+    /// </remarks>
     public abstract partial class AgentsClient
     {
         /// <summary>
@@ -1372,6 +1375,9 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>Agents client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for managing [Agents][google.cloud.dialogflow.v2.Agent].
+    /// </remarks>
     public sealed partial class AgentsClientImpl : AgentsClient
     {
         private readonly gaxgrpc::ApiCall<GetAgentRequest, Agent> _callGetAgent;

@@ -144,6 +144,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     /// <summary>ErrorGroupService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for retrieving and updating individual error groups.
+    /// </remarks>
     public abstract partial class ErrorGroupServiceClient
     {
         /// <summary>
@@ -429,6 +432,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     /// <summary>ErrorGroupService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for retrieving and updating individual error groups.
+    /// </remarks>
     public sealed partial class ErrorGroupServiceClientImpl : ErrorGroupServiceClient
     {
         private readonly gaxgrpc::ApiCall<GetGroupRequest, ErrorGroup> _callGetGroup;

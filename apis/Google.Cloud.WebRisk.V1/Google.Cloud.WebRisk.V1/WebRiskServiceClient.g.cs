@@ -175,6 +175,10 @@ namespace Google.Cloud.WebRisk.V1
     }
 
     /// <summary>WebRiskService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Web Risk API defines an interface to detect malicious URLs on your
+    /// website and in client applications.
+    /// </remarks>
     public abstract partial class WebRiskServiceClient
     {
         /// <summary>
@@ -778,6 +782,10 @@ namespace Google.Cloud.WebRisk.V1
     }
 
     /// <summary>WebRiskService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Web Risk API defines an interface to detect malicious URLs on your
+    /// website and in client applications.
+    /// </remarks>
     public sealed partial class WebRiskServiceClientImpl : WebRiskServiceClient
     {
         private readonly gaxgrpc::ApiCall<ComputeThreatListDiffRequest, ComputeThreatListDiffResponse> _callComputeThreatListDiff;

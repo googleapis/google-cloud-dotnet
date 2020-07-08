@@ -323,6 +323,10 @@ namespace Google.Cloud.Firestore.Admin.V1
     }
 
     /// <summary>FirestoreAdmin client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Operations are created by service `FirestoreAdmin`, but are accessed via
+    /// service `google.longrunning.Operations`.
+    /// </remarks>
     public abstract partial class FirestoreAdminClient
     {
         /// <summary>
@@ -1716,6 +1720,10 @@ namespace Google.Cloud.Firestore.Admin.V1
     }
 
     /// <summary>FirestoreAdmin client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Operations are created by service `FirestoreAdmin`, but are accessed via
+    /// service `google.longrunning.Operations`.
+    /// </remarks>
     public sealed partial class FirestoreAdminClientImpl : FirestoreAdminClient
     {
         private readonly gaxgrpc::ApiCall<CreateIndexRequest, lro::Operation> _callCreateIndex;

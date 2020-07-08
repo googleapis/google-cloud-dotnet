@@ -189,6 +189,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>CompanyService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles company management, including CRUD and enumeration.
+    /// </remarks>
     public abstract partial class CompanyServiceClient
     {
         /// <summary>
@@ -1049,6 +1052,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>CompanyService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles company management, including CRUD and enumeration.
+    /// </remarks>
     public sealed partial class CompanyServiceClientImpl : CompanyServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateCompanyRequest, Company> _callCreateCompany;

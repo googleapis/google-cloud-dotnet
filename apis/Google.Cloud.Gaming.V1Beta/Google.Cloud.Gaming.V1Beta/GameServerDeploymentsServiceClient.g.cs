@@ -339,6 +339,10 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>GameServerDeploymentsService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The game server deployment is used to control the deployment of Agones
+    /// fleets.
+    /// </remarks>
     public abstract partial class GameServerDeploymentsServiceClient
     {
         /// <summary>
@@ -1413,6 +1417,10 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>GameServerDeploymentsService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The game server deployment is used to control the deployment of Agones
+    /// fleets.
+    /// </remarks>
     public sealed partial class GameServerDeploymentsServiceClientImpl : GameServerDeploymentsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListGameServerDeploymentsRequest, ListGameServerDeploymentsResponse> _callListGameServerDeployments;
