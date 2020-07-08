@@ -114,7 +114,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Output only. The unique identifier of this agent environment.
-    /// Format: `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>`.
+    /// Format: `projects/{Project ID}/agent/environments/{Environment ID}`.
     /// For Environment ID, "-" is reserved for 'draft' environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -145,7 +145,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string agentVersion_ = "";
     /// <summary>
     /// Optional. The agent version loaded into this environment.
-    /// Format: `projects/&lt;Project ID>/agent/versions/&lt;Version ID>`.
+    /// Format: `projects/{Project ID}/agent/versions/{Version ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AgentVersion {
@@ -416,7 +416,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to list all environments from.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
