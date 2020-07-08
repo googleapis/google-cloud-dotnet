@@ -260,6 +260,10 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>RealmsService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A realm is a grouping of game server clusters that are considered
+    /// interchangeable.
+    /// </remarks>
     public abstract partial class RealmsServiceClient
     {
         /// <summary>
@@ -1033,6 +1037,10 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>RealmsService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A realm is a grouping of game server clusters that are considered
+    /// interchangeable.
+    /// </remarks>
     public sealed partial class RealmsServiceClientImpl : RealmsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListRealmsRequest, ListRealmsResponse> _callListRealms;

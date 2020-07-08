@@ -197,6 +197,9 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>LoggingServiceV2 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for ingesting and querying logs.
+    /// </remarks>
     public abstract partial class LoggingServiceV2Client
     {
         /// <summary>
@@ -1968,6 +1971,9 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>LoggingServiceV2 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for ingesting and querying logs.
+    /// </remarks>
     public sealed partial class LoggingServiceV2ClientImpl : LoggingServiceV2Client
     {
         private readonly gaxgrpc::ApiCall<DeleteLogRequest, wkt::Empty> _callDeleteLog;

@@ -168,6 +168,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2
     }
 
     /// <summary>DocumentUnderstandingService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service to parse structured information from unstructured or semi-structured
+    /// documents using state-of-the-art Google AI such as natural language,
+    /// computer vision, and translation.
+    /// </remarks>
     public abstract partial class DocumentUnderstandingServiceClient
     {
         /// <summary>
@@ -381,6 +386,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2
     }
 
     /// <summary>DocumentUnderstandingService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service to parse structured information from unstructured or semi-structured
+    /// documents using state-of-the-art Google AI such as natural language,
+    /// computer vision, and translation.
+    /// </remarks>
     public sealed partial class DocumentUnderstandingServiceClientImpl : DocumentUnderstandingServiceClient
     {
         private readonly gaxgrpc::ApiCall<BatchProcessDocumentsRequest, lro::Operation> _callBatchProcessDocuments;

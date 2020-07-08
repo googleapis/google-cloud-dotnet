@@ -127,6 +127,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     /// <summary>ReportErrorsService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// An API for reporting error events.
+    /// </remarks>
     public abstract partial class ReportErrorsServiceClient
     {
         /// <summary>
@@ -431,6 +434,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     /// <summary>ReportErrorsService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// An API for reporting error events.
+    /// </remarks>
     public sealed partial class ReportErrorsServiceClientImpl : ReportErrorsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ReportErrorEventRequest, ReportErrorEventResponse> _callReportErrorEvent;

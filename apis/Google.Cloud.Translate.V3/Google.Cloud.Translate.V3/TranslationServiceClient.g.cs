@@ -290,6 +290,9 @@ namespace Google.Cloud.Translate.V3
     }
 
     /// <summary>TranslationService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Provides natural language translation operations.
+    /// </remarks>
     public abstract partial class TranslationServiceClient
     {
         /// <summary>
@@ -2265,6 +2268,9 @@ namespace Google.Cloud.Translate.V3
     }
 
     /// <summary>TranslationService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Provides natural language translation operations.
+    /// </remarks>
     public sealed partial class TranslationServiceClientImpl : TranslationServiceClient
     {
         private readonly gaxgrpc::ApiCall<TranslateTextRequest, TranslateTextResponse> _callTranslateText;

@@ -217,6 +217,9 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>GameServerConfigsService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The game server config configures the game servers in an Agones fleet.
+    /// </remarks>
     public abstract partial class GameServerConfigsServiceClient
     {
         /// <summary>
@@ -880,6 +883,9 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>GameServerConfigsService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The game server config configures the game servers in an Agones fleet.
+    /// </remarks>
     public sealed partial class GameServerConfigsServiceClientImpl : GameServerConfigsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListGameServerConfigsRequest, ListGameServerConfigsResponse> _callListGameServerConfigs;

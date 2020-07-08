@@ -151,6 +151,9 @@ namespace Google.Cloud.VideoIntelligence.V1
     }
 
     /// <summary>VideoIntelligenceService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service that implements Google Cloud Video Intelligence API.
+    /// </remarks>
     public abstract partial class VideoIntelligenceServiceClient
     {
         /// <summary>
@@ -386,6 +389,9 @@ namespace Google.Cloud.VideoIntelligence.V1
     }
 
     /// <summary>VideoIntelligenceService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service that implements Google Cloud Video Intelligence API.
+    /// </remarks>
     public sealed partial class VideoIntelligenceServiceClientImpl : VideoIntelligenceServiceClient
     {
         private readonly gaxgrpc::ApiCall<AnnotateVideoRequest, lro::Operation> _callAnnotateVideo;

@@ -448,6 +448,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     }
 
     /// <summary>DatabaseAdmin client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Spanner Database Admin API
+    /// 
+    /// The Cloud Spanner Database Admin API can be used to create, drop, and
+    /// list databases. It also enables updating the schema of pre-existing
+    /// databases. It can be also used to create, delete and list backups for a
+    /// database and to restore from an existing backup.
+    /// </remarks>
     public abstract partial class DatabaseAdminClient
     {
         /// <summary>
@@ -3569,6 +3577,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     }
 
     /// <summary>DatabaseAdmin client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Cloud Spanner Database Admin API
+    /// 
+    /// The Cloud Spanner Database Admin API can be used to create, drop, and
+    /// list databases. It also enables updating the schema of pre-existing
+    /// databases. It can be also used to create, delete and list backups for a
+    /// database and to restore from an existing backup.
+    /// </remarks>
     public sealed partial class DatabaseAdminClientImpl : DatabaseAdminClient
     {
         private readonly gaxgrpc::ApiCall<ListDatabasesRequest, ListDatabasesResponse> _callListDatabases;

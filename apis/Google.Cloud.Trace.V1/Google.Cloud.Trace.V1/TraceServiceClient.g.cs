@@ -161,6 +161,13 @@ namespace Google.Cloud.Trace.V1
     }
 
     /// <summary>TraceService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// This file describes an API for collecting and viewing traces and spans
+    /// within a trace.  A Trace is a collection of spans corresponding to a single
+    /// operation or set of operations for an application. A span is an individual
+    /// timed event which forms a node of the trace tree. Spans for a single trace
+    /// may span multiple services.
+    /// </remarks>
     public abstract partial class TraceServiceClient
     {
         /// <summary>
@@ -487,6 +494,13 @@ namespace Google.Cloud.Trace.V1
     }
 
     /// <summary>TraceService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// This file describes an API for collecting and viewing traces and spans
+    /// within a trace.  A Trace is a collection of spans corresponding to a single
+    /// operation or set of operations for an application. A span is an individual
+    /// timed event which forms a node of the trace tree. Spans for a single trace
+    /// may span multiple services.
+    /// </remarks>
     public sealed partial class TraceServiceClientImpl : TraceServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListTracesRequest, ListTracesResponse> _callListTraces;

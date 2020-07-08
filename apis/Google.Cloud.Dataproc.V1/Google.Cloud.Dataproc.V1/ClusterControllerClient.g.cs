@@ -287,6 +287,10 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>ClusterController client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The ClusterControllerService provides methods to manage clusters
+    /// of Compute Engine instances.
+    /// </remarks>
     public abstract partial class ClusterControllerClient
     {
         /// <summary>
@@ -1346,6 +1350,10 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>ClusterController client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The ClusterControllerService provides methods to manage clusters
+    /// of Compute Engine instances.
+    /// </remarks>
     public sealed partial class ClusterControllerClientImpl : ClusterControllerClient
     {
         private readonly gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> _callCreateCluster;

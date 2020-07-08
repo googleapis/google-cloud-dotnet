@@ -292,6 +292,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>JobService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A service handles job management, including job CRUD, enumeration and search.
+    /// </remarks>
     public abstract partial class JobServiceClient
     {
         /// <summary>
@@ -2240,6 +2243,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>JobService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A service handles job management, including job CRUD, enumeration and search.
+    /// </remarks>
     public sealed partial class JobServiceClientImpl : JobServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateJobRequest, Job> _callCreateJob;

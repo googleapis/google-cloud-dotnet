@@ -322,6 +322,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
     }
 
     /// <summary>SecretManagerService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Secret Manager Service
+    /// 
+    /// Manages secrets and operations using those secrets. Implements a REST
+    /// model with the following objects:
+    /// 
+    /// * [Secret][google.cloud.secrets.v1beta1.Secret]
+    /// * [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+    /// </remarks>
     public abstract partial class SecretManagerServiceClient
     {
         /// <summary>
@@ -2088,6 +2097,15 @@ namespace Google.Cloud.SecretManager.V1Beta1
     }
 
     /// <summary>SecretManagerService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Secret Manager Service
+    /// 
+    /// Manages secrets and operations using those secrets. Implements a REST
+    /// model with the following objects:
+    /// 
+    /// * [Secret][google.cloud.secrets.v1beta1.Secret]
+    /// * [SecretVersion][google.cloud.secrets.v1beta1.SecretVersion]
+    /// </remarks>
     public sealed partial class SecretManagerServiceClientImpl : SecretManagerServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListSecretsRequest, ListSecretsResponse> _callListSecrets;

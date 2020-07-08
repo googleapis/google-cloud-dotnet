@@ -130,6 +130,9 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
     }
 
     /// <summary>PhishingProtectionServiceV1Beta1 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service to report phishing URIs.
+    /// </remarks>
     public abstract partial class PhishingProtectionServiceV1Beta1Client
     {
         /// <summary>
@@ -399,6 +402,9 @@ namespace Google.Cloud.PhishingProtection.V1Beta1
     }
 
     /// <summary>PhishingProtectionServiceV1Beta1 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service to report phishing URIs.
+    /// </remarks>
     public sealed partial class PhishingProtectionServiceV1Beta1ClientImpl : PhishingProtectionServiceV1Beta1Client
     {
         private readonly gaxgrpc::ApiCall<ReportPhishingRequest, ReportPhishingResponse> _callReportPhishing;

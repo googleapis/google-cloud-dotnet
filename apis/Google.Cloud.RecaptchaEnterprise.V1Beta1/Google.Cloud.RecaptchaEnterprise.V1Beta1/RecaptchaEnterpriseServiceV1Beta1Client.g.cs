@@ -219,6 +219,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
     }
 
     /// <summary>RecaptchaEnterpriseServiceV1Beta1 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service to determine the likelihood an event is legitimate.
+    /// </remarks>
     public abstract partial class RecaptchaEnterpriseServiceV1Beta1Client
     {
         /// <summary>
@@ -702,6 +705,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1
     }
 
     /// <summary>RecaptchaEnterpriseServiceV1Beta1 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service to determine the likelihood an event is legitimate.
+    /// </remarks>
     public sealed partial class RecaptchaEnterpriseServiceV1Beta1ClientImpl : RecaptchaEnterpriseServiceV1Beta1Client
     {
         private readonly gaxgrpc::ApiCall<CreateAssessmentRequest, Assessment> _callCreateAssessment;

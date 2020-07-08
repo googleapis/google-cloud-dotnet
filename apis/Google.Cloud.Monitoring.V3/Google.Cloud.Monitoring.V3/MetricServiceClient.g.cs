@@ -242,6 +242,10 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>MetricService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Manages metric descriptors, monitored resource descriptors, and
+    /// time series data.
+    /// </remarks>
     public abstract partial class MetricServiceClient
     {
         /// <summary>
@@ -2259,6 +2263,10 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     /// <summary>MetricService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Manages metric descriptors, monitored resource descriptors, and
+    /// time series data.
+    /// </remarks>
     public sealed partial class MetricServiceClientImpl : MetricServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;

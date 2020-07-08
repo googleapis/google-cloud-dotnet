@@ -246,6 +246,9 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>JobController client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The JobController provides methods to manage jobs.
+    /// </remarks>
     public abstract partial class JobControllerClient
     {
         /// <summary>
@@ -1031,6 +1034,9 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>JobController client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The JobController provides methods to manage jobs.
+    /// </remarks>
     public sealed partial class JobControllerClientImpl : JobControllerClient
     {
         private readonly gaxgrpc::ApiCall<SubmitJobRequest, Job> _callSubmitJob;

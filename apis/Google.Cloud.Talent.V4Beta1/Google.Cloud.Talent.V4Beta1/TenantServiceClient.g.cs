@@ -189,6 +189,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>TenantService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles tenant management, including CRUD and enumeration.
+    /// </remarks>
     public abstract partial class TenantServiceClient
     {
         /// <summary>
@@ -852,6 +855,9 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>TenantService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles tenant management, including CRUD and enumeration.
+    /// </remarks>
     public sealed partial class TenantServiceClientImpl : TenantServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateTenantRequest, Tenant> _callCreateTenant;

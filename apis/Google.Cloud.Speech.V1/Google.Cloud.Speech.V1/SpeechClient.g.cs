@@ -176,6 +176,9 @@ namespace Google.Cloud.Speech.V1
     }
 
     /// <summary>Speech client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service that implements Google Cloud Speech API.
+    /// </remarks>
     public abstract partial class SpeechClient
     {
         /// <summary>
@@ -494,6 +497,9 @@ namespace Google.Cloud.Speech.V1
     }
 
     /// <summary>Speech client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service that implements Google Cloud Speech API.
+    /// </remarks>
     public sealed partial class SpeechClientImpl : SpeechClient
     {
         private readonly gaxgrpc::ApiCall<RecognizeRequest, RecognizeResponse> _callRecognize;

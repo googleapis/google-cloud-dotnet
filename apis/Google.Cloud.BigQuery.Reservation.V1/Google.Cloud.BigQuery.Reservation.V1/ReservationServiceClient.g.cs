@@ -405,6 +405,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     }
 
     /// <summary>ReservationService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// This API allows users to manage their flat-rate BigQuery reservations.
+    /// 
+    /// A reservation provides computational resource guarantees, in the form of
+    /// [slots](https://cloud.google.com/bigquery/docs/slots), to users. A slot is a
+    /// unit of computational power in BigQuery, and serves as the basic unit of
+    /// parallelism. In a scan of a multi-partitioned table, a single slot operates
+    /// on a single partition of the table. A reservation resource exists as a child
+    /// resource of the admin project and location, e.g.:
+    /// `projects/myproject/locations/US/reservations/reservationName`.
+    /// 
+    /// A capacity commitment is a way to purchase compute capacity for BigQuery jobs
+    /// (in the form of slots) with some committed period of usage. A capacity
+    /// commitment resource exists as a child resource of the admin project and
+    /// location, e.g.:
+    /// `projects/myproject/locations/US/capacityCommitments/id`.
+    /// </remarks>
     public abstract partial class ReservationServiceClient
     {
         /// <summary>
@@ -3701,6 +3718,23 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     }
 
     /// <summary>ReservationService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// This API allows users to manage their flat-rate BigQuery reservations.
+    /// 
+    /// A reservation provides computational resource guarantees, in the form of
+    /// [slots](https://cloud.google.com/bigquery/docs/slots), to users. A slot is a
+    /// unit of computational power in BigQuery, and serves as the basic unit of
+    /// parallelism. In a scan of a multi-partitioned table, a single slot operates
+    /// on a single partition of the table. A reservation resource exists as a child
+    /// resource of the admin project and location, e.g.:
+    /// `projects/myproject/locations/US/reservations/reservationName`.
+    /// 
+    /// A capacity commitment is a way to purchase compute capacity for BigQuery jobs
+    /// (in the form of slots) with some committed period of usage. A capacity
+    /// commitment resource exists as a child resource of the admin project and
+    /// location, e.g.:
+    /// `projects/myproject/locations/US/capacityCommitments/id`.
+    /// </remarks>
     public sealed partial class ReservationServiceClientImpl : ReservationServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateReservationRequest, Reservation> _callCreateReservation;

@@ -128,6 +128,9 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>Environments client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Manages agent environments.
+    /// </remarks>
     public abstract partial class EnvironmentsClient
     {
         /// <summary>
@@ -226,6 +229,9 @@ namespace Google.Cloud.Dialogflow.V2
     }
 
     /// <summary>Environments client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Manages agent environments.
+    /// </remarks>
     public sealed partial class EnvironmentsClientImpl : EnvironmentsClient
     {
         private readonly gaxgrpc::ApiCall<ListEnvironmentsRequest, ListEnvironmentsResponse> _callListEnvironments;

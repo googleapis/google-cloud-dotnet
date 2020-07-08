@@ -506,6 +506,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
     }
 
     /// <summary>BigtableInstanceAdmin client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for creating, configuring, and deleting Cloud Bigtable Instances and
+    /// Clusters. Provides access to the Instance and Cluster schemas only, not the
+    /// tables' metadata or data stored in those tables.
+    /// </remarks>
     public abstract partial class BigtableInstanceAdminClient
     {
         /// <summary>
@@ -3018,6 +3023,11 @@ namespace Google.Cloud.Bigtable.Admin.V2
     }
 
     /// <summary>BigtableInstanceAdmin client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for creating, configuring, and deleting Cloud Bigtable Instances and
+    /// Clusters. Provides access to the Instance and Cluster schemas only, not the
+    /// tables' metadata or data stored in those tables.
+    /// </remarks>
     public sealed partial class BigtableInstanceAdminClientImpl : BigtableInstanceAdminClient
     {
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;

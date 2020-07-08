@@ -489,6 +489,20 @@ namespace Google.Cloud.Kms.V1
     }
 
     /// <summary>KeyManagementService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Google Cloud Key Management Service
+    /// 
+    /// Manages cryptographic keys and operations using those keys. Implements a REST
+    /// model with the following objects:
+    /// 
+    /// * [KeyRing][google.cloud.kms.v1.KeyRing]
+    /// * [CryptoKey][google.cloud.kms.v1.CryptoKey]
+    /// * [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+    /// * [ImportJob][google.cloud.kms.v1.ImportJob]
+    /// 
+    /// If you are using manual gRPC libraries, see
+    /// [Using gRPC with Cloud KMS](https://cloud.google.com/kms/docs/grpc).
+    /// </remarks>
     public abstract partial class KeyManagementServiceClient
     {
         /// <summary>
@@ -3727,6 +3741,20 @@ namespace Google.Cloud.Kms.V1
     }
 
     /// <summary>KeyManagementService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Google Cloud Key Management Service
+    /// 
+    /// Manages cryptographic keys and operations using those keys. Implements a REST
+    /// model with the following objects:
+    /// 
+    /// * [KeyRing][google.cloud.kms.v1.KeyRing]
+    /// * [CryptoKey][google.cloud.kms.v1.CryptoKey]
+    /// * [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
+    /// * [ImportJob][google.cloud.kms.v1.ImportJob]
+    /// 
+    /// If you are using manual gRPC libraries, see
+    /// [Using gRPC with Cloud KMS](https://cloud.google.com/kms/docs/grpc).
+    /// </remarks>
     public sealed partial class KeyManagementServiceClientImpl : KeyManagementServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListKeyRingsRequest, ListKeyRingsResponse> _callListKeyRings;

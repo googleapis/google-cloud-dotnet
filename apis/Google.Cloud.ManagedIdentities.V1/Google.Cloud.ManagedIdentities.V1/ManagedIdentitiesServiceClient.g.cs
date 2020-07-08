@@ -390,6 +390,40 @@ namespace Google.Cloud.ManagedIdentities.V1
     }
 
     /// <summary>ManagedIdentitiesService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// ## API Overview
+    /// 
+    /// The `managedidentites.googleapis.com` service implements the Google Cloud
+    /// Managed Identites API for identity services
+    /// (e.g. Microsoft Active Directory).
+    /// 
+    /// The Managed Identities service provides methods to manage
+    /// (create/read/update/delete) domains, reset managed identities admin password,
+    /// add/remove domain controllers in GCP regions and add/remove VPC peering.
+    /// 
+    /// ## Data Model
+    /// 
+    /// The Managed Identities service exposes the following resources:
+    /// 
+    /// * Locations as global, named as follows:
+    /// `projects/{project_id}/locations/global`.
+    /// 
+    /// * Domains, named as follows:
+    /// `/projects/{project_id}/locations/global/domain/{domain_name}`.
+    /// 
+    /// The `{domain_name}` refers to fully qualified domain name in the customer
+    /// project e.g. mydomain.myorganization.com, with the following restrictions:
+    /// 
+    /// * Must contain only lowercase letters, numbers, periods and hyphens.
+    /// * Must start with a letter.
+    /// * Must contain between 2-64 characters.
+    /// * Must end with a number or a letter.
+    /// * Must not start with period.
+    /// * First segement length (mydomain form example above) shouldn't exceed
+    /// 15 chars.
+    /// * The last segment cannot be fully numeric.
+    /// * Must be unique within the customer project.
+    /// </remarks>
     public abstract partial class ManagedIdentitiesServiceClient
     {
         /// <summary>
@@ -2008,6 +2042,40 @@ namespace Google.Cloud.ManagedIdentities.V1
     }
 
     /// <summary>ManagedIdentitiesService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// ## API Overview
+    /// 
+    /// The `managedidentites.googleapis.com` service implements the Google Cloud
+    /// Managed Identites API for identity services
+    /// (e.g. Microsoft Active Directory).
+    /// 
+    /// The Managed Identities service provides methods to manage
+    /// (create/read/update/delete) domains, reset managed identities admin password,
+    /// add/remove domain controllers in GCP regions and add/remove VPC peering.
+    /// 
+    /// ## Data Model
+    /// 
+    /// The Managed Identities service exposes the following resources:
+    /// 
+    /// * Locations as global, named as follows:
+    /// `projects/{project_id}/locations/global`.
+    /// 
+    /// * Domains, named as follows:
+    /// `/projects/{project_id}/locations/global/domain/{domain_name}`.
+    /// 
+    /// The `{domain_name}` refers to fully qualified domain name in the customer
+    /// project e.g. mydomain.myorganization.com, with the following restrictions:
+    /// 
+    /// * Must contain only lowercase letters, numbers, periods and hyphens.
+    /// * Must start with a letter.
+    /// * Must contain between 2-64 characters.
+    /// * Must end with a number or a letter.
+    /// * Must not start with period.
+    /// * First segement length (mydomain form example above) shouldn't exceed
+    /// 15 chars.
+    /// * The last segment cannot be fully numeric.
+    /// * Must be unique within the customer project.
+    /// </remarks>
     public sealed partial class ManagedIdentitiesServiceClientImpl : ManagedIdentitiesServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateMicrosoftAdDomainRequest, lro::Operation> _callCreateMicrosoftAdDomain;

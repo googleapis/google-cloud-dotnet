@@ -340,6 +340,16 @@ namespace Google.Cloud.Firestore.V1
     }
 
     /// <summary>Firestore client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The Cloud Firestore service.
+    /// 
+    /// Cloud Firestore is a fast, fully managed, serverless, cloud-native NoSQL
+    /// document database that simplifies storing, syncing, and querying data for
+    /// your mobile, web, and IoT apps at global scale. Its client libraries provide
+    /// live synchronization and offline support, while its security features and
+    /// integrations with Firebase and Google Cloud Platform (GCP) accelerate
+    /// building truly serverless apps.
+    /// </remarks>
     public abstract partial class FirestoreClient
     {
         /// <summary>
@@ -1115,6 +1125,16 @@ namespace Google.Cloud.Firestore.V1
     }
 
     /// <summary>Firestore client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The Cloud Firestore service.
+    /// 
+    /// Cloud Firestore is a fast, fully managed, serverless, cloud-native NoSQL
+    /// document database that simplifies storing, syncing, and querying data for
+    /// your mobile, web, and IoT apps at global scale. Its client libraries provide
+    /// live synchronization and offline support, while its security features and
+    /// integrations with Firebase and Google Cloud Platform (GCP) accelerate
+    /// building truly serverless apps.
+    /// </remarks>
     public sealed partial class FirestoreClientImpl : FirestoreClient
     {
         private readonly gaxgrpc::ApiCall<GetDocumentRequest, Document> _callGetDocument;

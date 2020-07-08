@@ -196,6 +196,10 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>AutoscalingPolicyService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The API interface for managing autoscaling policies in the
+    /// Dataproc API.
+    /// </remarks>
     public abstract partial class AutoscalingPolicyServiceClient
     {
         /// <summary>
@@ -1162,6 +1166,10 @@ namespace Google.Cloud.Dataproc.V1
     }
 
     /// <summary>AutoscalingPolicyService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The API interface for managing autoscaling policies in the
+    /// Dataproc API.
+    /// </remarks>
     public sealed partial class AutoscalingPolicyServiceClientImpl : AutoscalingPolicyServiceClient
     {
         private readonly gaxgrpc::ApiCall<CreateAutoscalingPolicyRequest, AutoscalingPolicy> _callCreateAutoscalingPolicy;

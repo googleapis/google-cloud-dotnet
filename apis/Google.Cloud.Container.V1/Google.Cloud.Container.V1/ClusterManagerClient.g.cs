@@ -548,6 +548,9 @@ namespace Google.Cloud.Container.V1
     }
 
     /// <summary>ClusterManager client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Google Kubernetes Engine Cluster Manager v1
+    /// </remarks>
     public abstract partial class ClusterManagerClient
     {
         /// <summary>
@@ -4912,6 +4915,9 @@ namespace Google.Cloud.Container.V1
     }
 
     /// <summary>ClusterManager client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Google Kubernetes Engine Cluster Manager v1
+    /// </remarks>
     public sealed partial class ClusterManagerClientImpl : ClusterManagerClient
     {
         private readonly gaxgrpc::ApiCall<ListClustersRequest, ListClustersResponse> _callListClusters;

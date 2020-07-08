@@ -162,6 +162,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     /// <summary>ErrorStatsService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// An API for retrieving and managing error statistics as well as data for
+    /// individual events.
+    /// </remarks>
     public abstract partial class ErrorStatsServiceClient
     {
         /// <summary>
@@ -693,6 +697,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     }
 
     /// <summary>ErrorStatsService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// An API for retrieving and managing error statistics as well as data for
+    /// individual events.
+    /// </remarks>
     public sealed partial class ErrorStatsServiceClientImpl : ErrorStatsServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> _callListGroupStats;

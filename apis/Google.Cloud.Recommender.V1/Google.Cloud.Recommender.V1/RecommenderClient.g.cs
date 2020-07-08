@@ -225,6 +225,12 @@ namespace Google.Cloud.Recommender.V1
     }
 
     /// <summary>Recommender client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Provides insights and recommendations for cloud customers for various
+    /// categories like performance optimization, cost savings, reliability, feature
+    /// discovery, etc. Insights and recommendations are generated automatically
+    /// based on analysis of user resources, configuration and monitoring metrics.
+    /// </remarks>
     public abstract partial class RecommenderClient
     {
         /// <summary>
@@ -1989,6 +1995,12 @@ namespace Google.Cloud.Recommender.V1
     }
 
     /// <summary>Recommender client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Provides insights and recommendations for cloud customers for various
+    /// categories like performance optimization, cost savings, reliability, feature
+    /// discovery, etc. Insights and recommendations are generated automatically
+    /// based on analysis of user resources, configuration and monitoring metrics.
+    /// </remarks>
     public sealed partial class RecommenderClientImpl : RecommenderClient
     {
         private readonly gaxgrpc::ApiCall<ListInsightsRequest, ListInsightsResponse> _callListInsights;

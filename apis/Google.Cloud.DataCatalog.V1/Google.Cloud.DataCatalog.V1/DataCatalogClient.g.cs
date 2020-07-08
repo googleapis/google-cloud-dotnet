@@ -490,6 +490,10 @@ namespace Google.Cloud.DataCatalog.V1
     }
 
     /// <summary>DataCatalog client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Data Catalog API service allows clients to discover, understand, and manage
+    /// their data.
+    /// </remarks>
     public abstract partial class DataCatalogClient
     {
         /// <summary>
@@ -5534,6 +5538,10 @@ namespace Google.Cloud.DataCatalog.V1
     }
 
     /// <summary>DataCatalog client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Data Catalog API service allows clients to discover, understand, and manage
+    /// their data.
+    /// </remarks>
     public sealed partial class DataCatalogClientImpl : DataCatalogClient
     {
         private readonly gaxgrpc::ApiCall<SearchCatalogRequest, SearchCatalogResponse> _callSearchCatalog;

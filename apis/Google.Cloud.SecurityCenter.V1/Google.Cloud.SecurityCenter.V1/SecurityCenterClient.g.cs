@@ -475,6 +475,9 @@ namespace Google.Cloud.SecurityCenter.V1
     }
 
     /// <summary>SecurityCenter client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// V1 APIs for Security Center service.
+    /// </remarks>
     public abstract partial class SecurityCenterClient
     {
         /// <summary>
@@ -3334,6 +3337,9 @@ namespace Google.Cloud.SecurityCenter.V1
     }
 
     /// <summary>SecurityCenter client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// V1 APIs for Security Center service.
+    /// </remarks>
     public sealed partial class SecurityCenterClientImpl : SecurityCenterClient
     {
         private readonly gaxgrpc::ApiCall<CreateSourceRequest, Source> _callCreateSource;

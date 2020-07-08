@@ -507,6 +507,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
     }
 
     /// <summary>BigtableTableAdmin client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for creating, configuring, and deleting Cloud Bigtable tables.
+    /// 
+    /// 
+    /// Provides access to the table schemas only, not the data stored within
+    /// the tables.
+    /// </remarks>
     public abstract partial class BigtableTableAdminClient
     {
         /// <summary>
@@ -4014,6 +4021,13 @@ namespace Google.Cloud.Bigtable.Admin.V2
     }
 
     /// <summary>BigtableTableAdmin client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for creating, configuring, and deleting Cloud Bigtable tables.
+    /// 
+    /// 
+    /// Provides access to the table schemas only, not the data stored within
+    /// the tables.
+    /// </remarks>
     public sealed partial class BigtableTableAdminClientImpl : BigtableTableAdminClient
     {
         private readonly gaxgrpc::ApiCall<CreateTableRequest, Table> _callCreateTable;

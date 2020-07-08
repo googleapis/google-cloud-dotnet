@@ -301,6 +301,10 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>GameServerClustersService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The game server cluster maps to Kubernetes clusters running Agones and is
+    /// used to manage fleets within clusters.
+    /// </remarks>
     public abstract partial class GameServerClustersServiceClient
     {
         /// <summary>
@@ -1143,6 +1147,10 @@ namespace Google.Cloud.Gaming.V1Beta
     }
 
     /// <summary>GameServerClustersService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The game server cluster maps to Kubernetes clusters running Agones and is
+    /// used to manage fleets within clusters.
+    /// </remarks>
     public sealed partial class GameServerClustersServiceClientImpl : GameServerClustersServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListGameServerClustersRequest, ListGameServerClustersResponse> _callListGameServerClusters;

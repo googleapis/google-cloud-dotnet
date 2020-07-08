@@ -195,6 +195,9 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     /// <summary>BigtableServiceApi client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for reading from and writing to existing Bigtable tables.
+    /// </remarks>
     public abstract partial class BigtableServiceApiClient
     {
         /// <summary>
@@ -2069,6 +2072,9 @@ namespace Google.Cloud.Bigtable.V2
     }
 
     /// <summary>BigtableServiceApi client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for reading from and writing to existing Bigtable tables.
+    /// </remarks>
     public sealed partial class BigtableServiceApiClientImpl : BigtableServiceApiClient
     {
         private readonly gaxgrpc::ApiServerStreamingCall<ReadRowsRequest, ReadRowsResponse> _callReadRows;

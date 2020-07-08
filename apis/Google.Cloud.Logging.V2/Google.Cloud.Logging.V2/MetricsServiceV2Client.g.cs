@@ -192,6 +192,9 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>MetricsServiceV2 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for configuring logs-based metrics.
+    /// </remarks>
     public abstract partial class MetricsServiceV2Client
     {
         /// <summary>
@@ -954,6 +957,9 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>MetricsServiceV2 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for configuring logs-based metrics.
+    /// </remarks>
     public sealed partial class MetricsServiceV2ClientImpl : MetricsServiceV2Client
     {
         private readonly gaxgrpc::ApiCall<ListLogMetricsRequest, ListLogMetricsResponse> _callListLogMetrics;

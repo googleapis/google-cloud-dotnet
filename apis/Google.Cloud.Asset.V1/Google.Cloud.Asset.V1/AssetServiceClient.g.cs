@@ -269,6 +269,9 @@ namespace Google.Cloud.Asset.V1
     }
 
     /// <summary>AssetService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Asset service definition.
+    /// </remarks>
     public abstract partial class AssetServiceClient
     {
         /// <summary>
@@ -1279,6 +1282,9 @@ namespace Google.Cloud.Asset.V1
     }
 
     /// <summary>AssetService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Asset service definition.
+    /// </remarks>
     public sealed partial class AssetServiceClientImpl : AssetServiceClient
     {
         private readonly gaxgrpc::ApiCall<ExportAssetsRequest, lro::Operation> _callExportAssets;

@@ -158,6 +158,12 @@ namespace Google.Cloud.AutoML.V1
     }
 
     /// <summary>PredictionService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// AutoML Prediction API.
+    /// 
+    /// On any input that is documented to expect a string parameter in
+    /// snake_case or kebab-case, either of those cases is accepted.
+    /// </remarks>
     public abstract partial class PredictionServiceClient
     {
         /// <summary>
@@ -1731,6 +1737,12 @@ namespace Google.Cloud.AutoML.V1
     }
 
     /// <summary>PredictionService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// AutoML Prediction API.
+    /// 
+    /// On any input that is documented to expect a string parameter in
+    /// snake_case or kebab-case, either of those cases is accepted.
+    /// </remarks>
     public sealed partial class PredictionServiceClientImpl : PredictionServiceClient
     {
         private readonly gaxgrpc::ApiCall<PredictRequest, PredictResponse> _callPredict;

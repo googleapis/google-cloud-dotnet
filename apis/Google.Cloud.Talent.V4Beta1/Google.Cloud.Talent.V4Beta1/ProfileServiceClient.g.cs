@@ -201,6 +201,10 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>ProfileService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles profile management, including profile CRUD,
+    /// enumeration and search.
+    /// </remarks>
     public abstract partial class ProfileServiceClient
     {
         /// <summary>
@@ -936,6 +940,10 @@ namespace Google.Cloud.Talent.V4Beta1
     }
 
     /// <summary>ProfileService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// A service that handles profile management, including profile CRUD,
+    /// enumeration and search.
+    /// </remarks>
     public sealed partial class ProfileServiceClientImpl : ProfileServiceClient
     {
         private readonly gaxgrpc::ApiCall<ListProfilesRequest, ListProfilesResponse> _callListProfiles;

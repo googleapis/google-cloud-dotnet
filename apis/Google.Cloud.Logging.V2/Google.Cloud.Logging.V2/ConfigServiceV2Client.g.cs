@@ -331,6 +331,9 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>ConfigServiceV2 client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Service for configuring sinks used to route log entries.
+    /// </remarks>
     public abstract partial class ConfigServiceV2Client
     {
         /// <summary>
@@ -3798,6 +3801,9 @@ namespace Google.Cloud.Logging.V2
     }
 
     /// <summary>ConfigServiceV2 client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Service for configuring sinks used to route log entries.
+    /// </remarks>
     public sealed partial class ConfigServiceV2ClientImpl : ConfigServiceV2Client
     {
         private readonly gaxgrpc::ApiCall<ListBucketsRequest, ListBucketsResponse> _callListBuckets;

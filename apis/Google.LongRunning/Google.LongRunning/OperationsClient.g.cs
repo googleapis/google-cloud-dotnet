@@ -190,6 +190,17 @@ namespace Google.LongRunning
     }
 
     /// <summary>Operations client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Manages long-running operations with an API service.
+    /// 
+    /// When an API method normally takes long time to complete, it can be designed
+    /// to return [Operation][google.longrunning.Operation] to the client, and the client can use this
+    /// interface to receive the real response asynchronously by polling the
+    /// operation resource, or pass the operation resource to another API (such as
+    /// Google Cloud Pub/Sub API) to receive the response.  Any API service that
+    /// returns long-running operations should implement the `Operations` interface
+    /// so developers can have a consistent client experience.
+    /// </remarks>
     public abstract partial class OperationsClient
     {
         /// <summary>
@@ -685,6 +696,17 @@ namespace Google.LongRunning
     }
 
     /// <summary>Operations client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Manages long-running operations with an API service.
+    /// 
+    /// When an API method normally takes long time to complete, it can be designed
+    /// to return [Operation][google.longrunning.Operation] to the client, and the client can use this
+    /// interface to receive the real response asynchronously by polling the
+    /// operation resource, or pass the operation resource to another API (such as
+    /// Google Cloud Pub/Sub API) to receive the response.  Any API service that
+    /// returns long-running operations should implement the `Operations` interface
+    /// so developers can have a consistent client experience.
+    /// </remarks>
     public sealed partial class OperationsClientImpl : OperationsClient
     {
         private readonly gaxgrpc::ApiCall<ListOperationsRequest, ListOperationsResponse> _callListOperations;

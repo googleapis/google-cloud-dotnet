@@ -339,6 +339,14 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
     }
 
     /// <summary>SecurityCenterSettingsService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// ## API Overview
+    /// 
+    /// The SecurityCenterSettingsService is a sub-api of
+    /// `securitycenter.googleapis.com`. The service provides methods to manage
+    /// Security Center Settings, and Component Settings for GCP organizations,
+    /// folders, projects, and clusters.
+    /// </remarks>
     public abstract partial class SecurityCenterSettingsServiceClient
     {
         /// <summary>
@@ -1908,6 +1916,14 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
     }
 
     /// <summary>SecurityCenterSettingsService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// ## API Overview
+    /// 
+    /// The SecurityCenterSettingsService is a sub-api of
+    /// `securitycenter.googleapis.com`. The service provides methods to manage
+    /// Security Center Settings, and Component Settings for GCP organizations,
+    /// folders, projects, and clusters.
+    /// </remarks>
     public sealed partial class SecurityCenterSettingsServiceClientImpl : SecurityCenterSettingsServiceClient
     {
         private readonly gaxgrpc::ApiCall<GetServiceAccountRequest, ServiceAccount> _callGetServiceAccount;

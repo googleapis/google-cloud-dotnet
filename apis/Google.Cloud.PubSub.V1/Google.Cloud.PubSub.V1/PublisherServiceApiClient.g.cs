@@ -235,6 +235,10 @@ namespace Google.Cloud.PubSub.V1
     }
 
     /// <summary>PublisherServiceApi client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// The service that an application uses to manipulate topics, and to send
+    /// messages to a topic.
+    /// </remarks>
     public abstract partial class PublisherServiceApiClient
     {
         /// <summary>
@@ -1333,6 +1337,10 @@ namespace Google.Cloud.PubSub.V1
     }
 
     /// <summary>PublisherServiceApi client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// The service that an application uses to manipulate topics, and to send
+    /// messages to a topic.
+    /// </remarks>
     public sealed partial class PublisherServiceApiClientImpl : PublisherServiceApiClient
     {
         private readonly gaxgrpc::ApiCall<Topic, Topic> _callCreateTopic;

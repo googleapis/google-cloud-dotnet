@@ -209,6 +209,10 @@ namespace Google.Cloud.Language.V1
     }
 
     /// <summary>LanguageService client wrapper, for convenient use.</summary>
+    /// <remarks>
+    /// Provides text analysis operations such as sentiment analysis and entity
+    /// recognition.
+    /// </remarks>
     public abstract partial class LanguageServiceClient
     {
         /// <summary>
@@ -826,6 +830,10 @@ namespace Google.Cloud.Language.V1
     }
 
     /// <summary>LanguageService client wrapper implementation, for convenient use.</summary>
+    /// <remarks>
+    /// Provides text analysis operations such as sentiment analysis and entity
+    /// recognition.
+    /// </remarks>
     public sealed partial class LanguageServiceClientImpl : LanguageServiceClient
     {
         private readonly gaxgrpc::ApiCall<AnalyzeSentimentRequest, AnalyzeSentimentResponse> _callAnalyzeSentiment;
