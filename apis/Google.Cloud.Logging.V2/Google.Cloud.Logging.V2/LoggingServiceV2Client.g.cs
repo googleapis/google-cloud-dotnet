@@ -70,7 +70,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteLogSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings DeleteLogSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -85,7 +85,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings WriteLogEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings WriteLogEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -100,7 +100,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListLogEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings ListLogEntriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -116,7 +116,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -131,7 +131,7 @@ namespace Google.Cloud.Logging.V2
         /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListLogsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+        public gaxgrpc::CallSettings ListLogsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="LoggingServiceV2Settings"/> object.</returns>
@@ -583,15 +583,16 @@ namespace Google.Cloud.Logging.V2
         /// the entries later in the list. See the `entries.list` method.
         /// 
         /// Log entries with timestamps that are more than the
-        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in the past or more than
-        /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be
-        /// [exported with LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
+        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in
+        /// the past or more than 24 hours in the future will not be available when
+        /// calling `entries.list`. However, those log entries can still be [exported
+        /// with
+        /// LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
         /// 
         /// To improve throughput and to avoid exceeding the
-        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to `entries.write`,
-        /// you should try to include several log entries in this list,
-        /// rather than calling this method for each individual log entry.
+        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to
+        /// `entries.write`, you should try to include several log entries in this
+        /// list, rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -669,15 +670,16 @@ namespace Google.Cloud.Logging.V2
         /// the entries later in the list. See the `entries.list` method.
         /// 
         /// Log entries with timestamps that are more than the
-        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in the past or more than
-        /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be
-        /// [exported with LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
+        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in
+        /// the past or more than 24 hours in the future will not be available when
+        /// calling `entries.list`. However, those log entries can still be [exported
+        /// with
+        /// LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
         /// 
         /// To improve throughput and to avoid exceeding the
-        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to `entries.write`,
-        /// you should try to include several log entries in this list,
-        /// rather than calling this method for each individual log entry.
+        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to
+        /// `entries.write`, you should try to include several log entries in this
+        /// list, rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -755,15 +757,16 @@ namespace Google.Cloud.Logging.V2
         /// the entries later in the list. See the `entries.list` method.
         /// 
         /// Log entries with timestamps that are more than the
-        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in the past or more than
-        /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be
-        /// [exported with LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
+        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in
+        /// the past or more than 24 hours in the future will not be available when
+        /// calling `entries.list`. However, those log entries can still be [exported
+        /// with
+        /// LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
         /// 
         /// To improve throughput and to avoid exceeding the
-        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to `entries.write`,
-        /// you should try to include several log entries in this list,
-        /// rather than calling this method for each individual log entry.
+        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to
+        /// `entries.write`, you should try to include several log entries in this
+        /// list, rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -829,15 +832,16 @@ namespace Google.Cloud.Logging.V2
         /// the entries later in the list. See the `entries.list` method.
         /// 
         /// Log entries with timestamps that are more than the
-        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in the past or more than
-        /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be
-        /// [exported with LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
+        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in
+        /// the past or more than 24 hours in the future will not be available when
+        /// calling `entries.list`. However, those log entries can still be [exported
+        /// with
+        /// LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
         /// 
         /// To improve throughput and to avoid exceeding the
-        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to `entries.write`,
-        /// you should try to include several log entries in this list,
-        /// rather than calling this method for each individual log entry.
+        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to
+        /// `entries.write`, you should try to include several log entries in this
+        /// list, rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -915,15 +919,16 @@ namespace Google.Cloud.Logging.V2
         /// the entries later in the list. See the `entries.list` method.
         /// 
         /// Log entries with timestamps that are more than the
-        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in the past or more than
-        /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be
-        /// [exported with LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
+        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in
+        /// the past or more than 24 hours in the future will not be available when
+        /// calling `entries.list`. However, those log entries can still be [exported
+        /// with
+        /// LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
         /// 
         /// To improve throughput and to avoid exceeding the
-        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to `entries.write`,
-        /// you should try to include several log entries in this list,
-        /// rather than calling this method for each individual log entry.
+        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to
+        /// `entries.write`, you should try to include several log entries in this
+        /// list, rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1001,15 +1006,16 @@ namespace Google.Cloud.Logging.V2
         /// the entries later in the list. See the `entries.list` method.
         /// 
         /// Log entries with timestamps that are more than the
-        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in the past or more than
-        /// 24 hours in the future will not be available when calling `entries.list`.
-        /// However, those log entries can still be
-        /// [exported with LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
+        /// [logs retention period](https://cloud.google.com/logging/quota-policy) in
+        /// the past or more than 24 hours in the future will not be available when
+        /// calling `entries.list`. However, those log entries can still be [exported
+        /// with
+        /// LogSinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
         /// 
         /// To improve throughput and to avoid exceeding the
-        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to `entries.write`,
-        /// you should try to include several log entries in this list,
-        /// rather than calling this method for each individual log entry.
+        /// [quota limit](https://cloud.google.com/logging/quota-policy) for calls to
+        /// `entries.write`, you should try to include several log entries in this
+        /// list, rather than calling this method for each individual log entry.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1019,7 +1025,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1030,7 +1037,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1041,7 +1049,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1057,12 +1066,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1098,7 +1107,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1114,12 +1124,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1155,7 +1165,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1171,12 +1182,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1212,7 +1223,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1228,12 +1240,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1269,7 +1281,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1285,12 +1298,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1326,7 +1339,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1342,12 +1356,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1383,7 +1397,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1399,12 +1414,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1440,7 +1455,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1456,12 +1472,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1497,7 +1513,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1513,12 +1530,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1554,7 +1571,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
         /// Required. Names of one or more parent resources from which to
@@ -1570,12 +1588,12 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
-        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries in
-        /// the resources listed in `resource_names`. Referencing a parent resource
-        /// that is not listed in `resource_names` will cause the filter to return no
-        /// results.
-        /// The maximum length of the filter is 20000 characters.
+        /// Logs Queries](https://cloud.google.com/logging/docs/view/advanced-queries).
+        /// Only log entries that match the filter are returned.  An empty filter
+        /// matches all log entries in the resources listed in `resource_names`.
+        /// Referencing a parent resource that is not listed in `resource_names` will
+        /// cause the filter to return no results. The maximum length of the filter is
+        /// 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -2086,7 +2104,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2100,7 +2119,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists log entries.  Use this method to retrieve log entries that originated
         /// from a project/folder/organization/billing account.  For ways to export log
-        /// entries, see [Exporting Logs](https://cloud.google.com/logging/docs/export).
+        /// entries, see [Exporting
+        /// Logs](https://cloud.google.com/logging/docs/export).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
