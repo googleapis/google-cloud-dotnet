@@ -457,6 +457,7 @@
       "PackageFromDirectory": "google.cloud.recommender.logging.v1",
       "PackageFromProtos": "google.cloud.recommender.logging.v1",
       "ImportDirectories": [
+        "google/api",
         "google/cloud/recommender/v1"
       ],
       "Stable": true,
