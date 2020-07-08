@@ -1196,6 +1196,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Language.V1Beta2"
     },
     {
+      "ServiceDirectory": "google/cloud/notebooks/v1beta1",
+      "Name": "notebooks.googleapis.com",
+      "Title": "Notebooks API",
+      "Description": "AI Platform Notebooks API (beta) is used to manage notebook resources in Google Cloud. AI Platform Notebooks API is in a pre-release state and might change or have limited support. For more information, see the <a href=\"/products#product-launch-stages\">product launch stages</a>.",
+      "ServiceConfigFile": "google/cloud/notebooks/v1beta1/notebooks_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.notebooks.v1beta1",
+      "PackageFromProtos": "google.cloud.notebooks.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/notebooks/v1beta1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Notebooks.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/tasks/v2beta2",
       "Name": "cloudtasks.googleapis.com",
       "Title": "Cloud Tasks API",
