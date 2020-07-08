@@ -394,7 +394,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The unique identifier of this intent.
     /// Required for [Intents.UpdateIntent][google.cloud.dialogflow.v2.Intents.UpdateIntent] and [Intents.BatchUpdateIntents][google.cloud.dialogflow.v2.Intents.BatchUpdateIntents]
     /// methods.
-    /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
+    /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -492,7 +492,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Optional. The list of context names required for this intent to be
     /// triggered.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/-/contexts/&lt;Context ID>`.
+    /// Format: `projects/{Project ID}/agent/sessions/-/contexts/{Context ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> InputContextNames {
@@ -554,7 +554,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// is matched. Context messages in this collection should not set the
     /// parameters field. Setting the `lifespan_count` to 0 will reset the context
     /// when the intent is matched.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/-/contexts/&lt;Context ID>`.
+    /// Format: `projects/{Project ID}/agent/sessions/-/contexts/{Context ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Context> OutputContexts {
@@ -625,7 +625,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// followup intents. It identifies the correct followup intents chain for
     /// this intent. We populate this field only in the output.
     ///
-    /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
+    /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RootFollowupIntentName {
@@ -646,7 +646,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// intent a followup intent.
     ///
     /// It identifies the parent followup intent.
-    /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
+    /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ParentFollowupIntentName {
@@ -7785,7 +7785,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         private string followupIntentName_ = "";
         /// <summary>
         /// The unique identifier of the followup intent.
-        /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string FollowupIntentName {
@@ -7800,7 +7800,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         private string parentFollowupIntentName_ = "";
         /// <summary>
         /// The unique identifier of the followup intent's parent.
-        /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
+        /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string ParentFollowupIntentName {
@@ -7961,7 +7961,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to list all intents from.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -8384,7 +8384,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the intent.
-    /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
+    /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -8587,7 +8587,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to create a intent for.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -9068,7 +9068,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The name of the intent to delete. If this intent has direct or
     /// indirect followup intents, we also delete them.
-    /// Format: `projects/&lt;Project ID>/agent/intents/&lt;Intent ID>`.
+    /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -9213,7 +9213,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the agent to update or create intents in.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -9671,7 +9671,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the agent to delete all entities types for. Format:
-    /// `projects/&lt;Project ID>/agent`.
+    /// `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

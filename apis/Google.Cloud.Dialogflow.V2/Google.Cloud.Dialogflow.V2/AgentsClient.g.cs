@@ -448,7 +448,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -463,7 +463,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -478,7 +478,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -490,7 +490,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -505,7 +505,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -520,7 +520,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to fetch is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -625,7 +625,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -640,7 +640,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -655,7 +655,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -667,7 +667,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -682,7 +682,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -697,7 +697,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to delete is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -745,7 +745,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;`.
+        /// Format: `projects/{Project ID or '-'}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -776,7 +776,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;`.
+        /// Format: `projects/{Project ID or '-'}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -807,7 +807,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;`.
+        /// Format: `projects/{Project ID or '-'}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -838,7 +838,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The project to list agents from.
-        /// Format: `projects/&amp;lt;Project ID or '-'&amp;gt;`.
+        /// Format: `projects/{Project ID or '-'}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -861,7 +861,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -872,7 +872,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -883,7 +883,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -920,11 +920,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -937,11 +937,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -954,11 +954,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -968,11 +968,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -985,11 +985,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1002,11 +1002,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to train is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1038,7 +1038,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1075,11 +1075,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1092,11 +1092,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1109,11 +1109,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1123,11 +1123,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1140,11 +1140,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1157,11 +1157,11 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="parent">
         /// Required. The project that the agent to export is associated with.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;`.
+        /// Format: `projects/{Project ID}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1179,7 +1179,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1200,7 +1200,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1267,7 +1267,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1287,7 +1287,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1599,7 +1599,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1613,7 +1613,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Trains the specified agent.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1630,7 +1630,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1644,7 +1644,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// <summary>
         /// Exports the specified agent to a ZIP file.
         /// 
-        /// Operation &amp;lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]&amp;gt;
+        /// Operation result type: ExportAgentResponse
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1669,7 +1669,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1693,7 +1693,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
         /// explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when importing is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1719,7 +1719,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>
@@ -1742,7 +1742,7 @@ namespace Google.Cloud.Dialogflow.V2
         /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
         /// returns in order to train explicitly.
         /// 
-        /// Operation &amp;lt;response: [google.protobuf.Empty][google.protobuf.Empty]&amp;gt;
+        /// Operation result type: google.protobuf.Empty
         /// An operation which tracks when restoring is complete. It only tracks
         /// when the draft agent is updated not when it is done training.
         /// </summary>

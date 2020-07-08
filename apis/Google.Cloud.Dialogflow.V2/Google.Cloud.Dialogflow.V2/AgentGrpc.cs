@@ -171,7 +171,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Trains the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -184,7 +184,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Exports the specified agent to a ZIP file.
       ///
-      /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]>
+      /// Operation result type: ExportAgentResponse
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -205,7 +205,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
       /// explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when importing is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -227,7 +227,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
       /// returns in order to train explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when restoring is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -479,7 +479,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Trains the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -493,7 +493,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Trains the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -505,7 +505,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Trains the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -519,7 +519,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Trains the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -531,7 +531,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Exports the specified agent to a ZIP file.
       ///
-      /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]>
+      /// Operation result type: ExportAgentResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -545,7 +545,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Exports the specified agent to a ZIP file.
       ///
-      /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]>
+      /// Operation result type: ExportAgentResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -557,7 +557,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Exports the specified agent to a ZIP file.
       ///
-      /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]>
+      /// Operation result type: ExportAgentResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -571,7 +571,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Exports the specified agent to a ZIP file.
       ///
-      /// Operation &lt;response: [ExportAgentResponse][google.cloud.dialogflow.v2.ExportAgentResponse]>
+      /// Operation result type: ExportAgentResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -591,7 +591,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
       /// explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when importing is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -615,7 +615,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
       /// explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when importing is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -637,7 +637,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
       /// explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when importing is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -661,7 +661,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it returns in order to train
       /// explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when importing is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -682,7 +682,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
       /// returns in order to train explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when restoring is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -705,7 +705,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
       /// returns in order to train explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when restoring is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -726,7 +726,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
       /// returns in order to train explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when restoring is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>
@@ -749,7 +749,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// completed yet. Please call [TrainAgent][google.cloud.dialogflow.v2.Agents.TrainAgent] and wait for the operation it
       /// returns in order to train explicitly.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// An operation which tracks when restoring is complete. It only tracks
       /// when the draft agent is updated not when it is done training.
       /// </summary>

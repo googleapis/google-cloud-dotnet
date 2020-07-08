@@ -190,7 +190,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation result type: BatchUpdateIntentsResponse
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -203,7 +203,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -461,7 +461,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation result type: BatchUpdateIntentsResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -475,7 +475,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation result type: BatchUpdateIntentsResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -487,7 +487,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation result type: BatchUpdateIntentsResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -501,7 +501,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple intents in the specified agent.
       ///
-      /// Operation &lt;response: [BatchUpdateIntentsResponse][google.cloud.dialogflow.v2.BatchUpdateIntentsResponse]>
+      /// Operation result type: BatchUpdateIntentsResponse
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -513,7 +513,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -527,7 +527,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -539,7 +539,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -553,7 +553,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes intents in the specified agent.
       ///
-      /// Operation &lt;response: [google.protobuf.Empty][google.protobuf.Empty]>
+      /// Operation result type: google.protobuf.Empty
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

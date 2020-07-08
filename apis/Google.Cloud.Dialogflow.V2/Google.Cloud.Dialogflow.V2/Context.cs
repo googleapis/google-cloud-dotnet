@@ -157,8 +157,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The unique identifier of the context. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`,
-    /// or `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`,
+    /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
     /// ID>/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
     ///
     /// The `Context ID` is always converted to lowercase, may only contain
@@ -393,8 +393,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to list all contexts from.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or
-    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+    /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
     /// ID>/sessions/&lt;Session ID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment. If `User ID` is not specified, we assume default '-' user.
@@ -754,8 +754,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the context. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`
-    /// or `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+    /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
     /// ID>/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment. If `User ID` is not specified, we assume default '-' user.
@@ -895,8 +895,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The session to create a context for.
-    /// Format: `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or
-    /// `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// Format: `projects/{Project ID}/agent/sessions/{Session ID}` or
+    /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
     /// ID>/sessions/&lt;Session ID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment. If `User ID` is not specified, we assume default '-' user.
@@ -1249,8 +1249,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the context to delete. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>/contexts/&lt;Context ID>`
-    /// or `projects/&lt;Project ID>/agent/environments/&lt;Environment ID>/users/&lt;User
+    /// `projects/{Project ID}/agent/sessions/{Session ID}/contexts/{Context ID}`
+    /// or `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
     /// ID>/sessions/&lt;Session ID>/contexts/&lt;Context ID>`.
     /// If `Environment ID` is not specified, we assume default 'draft'
     /// environment. If `User ID` is not specified, we assume default '-' user.
@@ -1389,7 +1389,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the session to delete all contexts from. Format:
-    /// `projects/&lt;Project ID>/agent/sessions/&lt;Session ID>` or `projects/&lt;Project
+    /// `projects/{Project ID}/agent/sessions/{Session ID}` or `projects/{Project
     /// ID>/agent/environments/&lt;Environment ID>/users/&lt;User ID>/sessions/&lt;Session
     /// ID>`.
     /// If `Environment ID` is not specified we assume default 'draft' environment.

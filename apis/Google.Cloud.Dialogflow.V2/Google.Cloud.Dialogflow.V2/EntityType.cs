@@ -225,7 +225,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The unique identifier of the entity type.
     /// Required for [EntityTypes.UpdateEntityType][google.cloud.dialogflow.v2.EntityTypes.UpdateEntityType] and
     /// [EntityTypes.BatchUpdateEntityTypes][google.cloud.dialogflow.v2.EntityTypes.BatchUpdateEntityTypes] methods.
-    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
+    /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -732,7 +732,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to list all entity types from.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1124,7 +1124,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the entity type.
-    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;EntityType ID>`.
+    /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1296,7 +1296,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The agent to create a entity type for.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -1715,7 +1715,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the entity type to delete.
-    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;EntityType ID>`.
+    /// Format: `projects/{Project ID}/agent/entityTypes/{EntityType ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1862,7 +1862,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the agent to update or create entity types in.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2291,7 +2291,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the agent to delete all entities types for. Format:
-    /// `projects/&lt;Project ID>/agent`.
+    /// `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2452,7 +2452,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the entity type to create entities in. Format:
-    /// `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
+    /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2647,7 +2647,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the entity type to update or create entities in.
-    /// Format: `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
+    /// Format: `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2877,7 +2877,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The name of the entity type to delete entries for. Format:
-    /// `projects/&lt;Project ID>/agent/entityTypes/&lt;Entity Type ID>`.
+    /// `projects/{Project ID}/agent/entityTypes/{Entity Type ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2895,7 +2895,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>
     /// Required. The reference `values` of the entities to delete. Note that
     /// these are not fully-qualified names, i.e. they don't start with
-    /// `projects/&lt;Project ID>`.
+    /// `projects/{Project ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> EntityValues {
