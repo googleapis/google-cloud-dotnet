@@ -216,8 +216,8 @@
     {
       "ServiceDirectory": "google/logging/v2",
       "Name": "logging.googleapis.com",
-      "Title": "Stackdriver Logging API",
-      "Description": "Writes log entries and manages your Stackdriver Logging configuration. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the <a href=https://cloud.google.com/logging/docs>Stackdriver Logging documentation</a>.",
+      "Title": "Cloud Logging API",
+      "Description": "Writes log entries and manages your Cloud Logging configuration. The table entries below are presented in alphabetical order, not in order of common use. For explanations of the concepts found in the table entries, read the documentation at https://cloud.google.com/logging/docs.",
       "ServiceConfigFile": "google/logging/v2/logging.yaml",
       "Version": "v2",
       "PackageFromDirectory": "google.logging.v2",
