@@ -708,7 +708,8 @@ namespace Google.Cloud.Logging.V2 {
     /// The sink's `writer_identity`, set when the sink is created, must
     /// have permission to write to the destination or else the log
     /// entries are not exported. For more information, see
-    /// [Exporting Logs with Sinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
+    /// [Exporting Logs with
+    /// Sinks](https://cloud.google.com/logging/docs/api/tasks/exporting-logs).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Destination {
@@ -722,9 +723,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    /// Optional. An [advanced logs filter](https://cloud.google.com/logging/docs/view/advanced-queries). The only
-    /// exported log entries are those that are in the resource owning the sink and
-    /// that match the filter. For example:
+    /// Optional. An [advanced logs
+    /// filter](https://cloud.google.com/logging/docs/view/advanced-queries). The
+    /// only exported log entries are those that are in the resource owning the
+    /// sink and that match the filter. For example:
     ///
     ///     logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
     /// </summary>
@@ -770,8 +772,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int OutputVersionFormatFieldNumber = 6;
     private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat.Unspecified;
     /// <summary>
-    /// Deprecated. The log entry format to use for this sink's exported log
-    /// entries. The v2 format is used by default and cannot be changed.
+    /// Deprecated. This field is unused.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1169,9 +1170,7 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Available log entry formats. Log entries can be written to
-      /// Logging in either format and can be exported in either format.
-      /// Version 2 is the preferred format.
+      /// Deprecated. This is unused.
       /// </summary>
       public enum VersionFormat {
         /// <summary>
@@ -1236,12 +1235,13 @@ namespace Google.Cloud.Logging.V2 {
     private bool usePartitionedTables_;
     /// <summary>
     /// Optional. Whether to use [BigQuery's partition
-    /// tables](https://cloud.google.com/bigquery/docs/partitioned-tables). By default, Logging
-    /// creates dated tables based on the log entries' timestamps, e.g.
-    /// syslog_20170523. With partitioned tables the date suffix is no longer
+    /// tables](https://cloud.google.com/bigquery/docs/partitioned-tables). By
+    /// default, Logging creates dated tables based on the log entries' timestamps,
+    /// e.g. syslog_20170523. With partitioned tables the date suffix is no longer
     /// present and [special query
-    /// syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables) has to be used instead.
-    /// In both cases, tables are sharded based on UTC timezone.
+    /// syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
+    /// has to be used instead. In both cases, tables are sharded based on UTC
+    /// timezone.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool UsePartitionedTables {
@@ -3337,9 +3337,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    /// Required. An [advanced logs filter](https://cloud.google.com/logging/docs/view/advanced-queries)
-    /// that matches the log entries to be excluded. By using the
-    /// [sample function](https://cloud.google.com/logging/docs/view/advanced-queries#sample),
+    /// Required. An [advanced logs
+    /// filter](https://cloud.google.com/logging/docs/view/advanced-queries) that
+    /// matches the log entries to be excluded. By using the [sample
+    /// function](https://cloud.google.com/logging/docs/view/advanced-queries#sample),
     /// you can exclude less than 100% of the matching log entries.
     /// For example, the following query matches 99% of low-severity log
     /// entries from Google Cloud Storage buckets:
@@ -4637,8 +4638,9 @@ namespace Google.Cloud.Logging.V2 {
   /// The parameters to
   /// [GetCmekSettings][google.logging.v2.ConfigServiceV2.GetCmekSettings].
   ///
-  /// See [Enabling CMEK for Logs Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
-  /// for more information.
+  /// See [Enabling CMEK for Logs
+  /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+  /// more information.
   /// </summary>
   public sealed partial class GetCmekSettingsRequest : pb::IMessage<GetCmekSettingsRequest> {
     private static readonly pb::MessageParser<GetCmekSettingsRequest> _parser = new pb::MessageParser<GetCmekSettingsRequest>(() => new GetCmekSettingsRequest());
@@ -4787,8 +4789,9 @@ namespace Google.Cloud.Logging.V2 {
   /// The parameters to
   /// [UpdateCmekSettings][google.logging.v2.ConfigServiceV2.UpdateCmekSettings].
   ///
-  /// See [Enabling CMEK for Logs Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
-  /// for more information.
+  /// See [Enabling CMEK for Logs
+  /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+  /// more information.
   /// </summary>
   public sealed partial class UpdateCmekSettingsRequest : pb::IMessage<UpdateCmekSettingsRequest> {
     private static readonly pb::MessageParser<UpdateCmekSettingsRequest> _parser = new pb::MessageParser<UpdateCmekSettingsRequest>(() => new UpdateCmekSettingsRequest());
@@ -4858,7 +4861,8 @@ namespace Google.Cloud.Logging.V2 {
     /// Required. The CMEK settings to update.
     ///
     /// See [Enabling CMEK for Logs
-    /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+    /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+    /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.CmekSettings CmekSettings {
@@ -5024,8 +5028,9 @@ namespace Google.Cloud.Logging.V2 {
   /// organizations. Once configured, it applies to all projects and folders in the
   /// GCP organization.
   ///
-  /// See [Enabling CMEK for Logs Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
-  /// for more information.
+  /// See [Enabling CMEK for Logs
+  /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for
+  /// more information.
   /// </summary>
   public sealed partial class CmekSettings : pb::IMessage<CmekSettings> {
     private static readonly pb::MessageParser<CmekSettings> _parser = new pb::MessageParser<CmekSettings>(() => new CmekSettings());
@@ -5102,7 +5107,8 @@ namespace Google.Cloud.Logging.V2 {
     /// To disable CMEK for the Logs Router, set this field to an empty string.
     ///
     /// See [Enabling CMEK for Logs
-    /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+    /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+    /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string KmsKeyName {
@@ -5126,7 +5132,8 @@ namespace Google.Cloud.Logging.V2 {
     /// obtain the service account ID.
     ///
     /// See [Enabling CMEK for Logs
-    /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+    /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+    /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ServiceAccountId {

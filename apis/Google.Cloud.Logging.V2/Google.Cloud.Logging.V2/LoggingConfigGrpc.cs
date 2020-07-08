@@ -340,7 +340,8 @@ namespace Google.Cloud.Logging.V2 {
       /// the GCP organization.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -364,7 +365,8 @@ namespace Google.Cloud.Logging.V2 {
       /// 3) access to the key is disabled.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1059,7 +1061,8 @@ namespace Google.Cloud.Logging.V2 {
       /// the GCP organization.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1078,7 +1081,8 @@ namespace Google.Cloud.Logging.V2 {
       /// the GCP organization.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1095,7 +1099,8 @@ namespace Google.Cloud.Logging.V2 {
       /// the GCP organization.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1114,7 +1119,8 @@ namespace Google.Cloud.Logging.V2 {
       /// the GCP organization.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1137,7 +1143,8 @@ namespace Google.Cloud.Logging.V2 {
       /// 3) access to the key is disabled.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1162,7 +1169,8 @@ namespace Google.Cloud.Logging.V2 {
       /// 3) access to the key is disabled.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1185,7 +1193,8 @@ namespace Google.Cloud.Logging.V2 {
       /// 3) access to the key is disabled.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1210,7 +1219,8 @@ namespace Google.Cloud.Logging.V2 {
       /// 3) access to the key is disabled.
       ///
       /// See [Enabling CMEK for Logs
-      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+      /// Router](https://cloud.google.com/logging/docs/routing/managed-encryption)
+      /// for more information.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
