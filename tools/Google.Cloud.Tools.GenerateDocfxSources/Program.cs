@@ -176,7 +176,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     }
                 }
             }
-            Console.WriteLine($"API dependencies: {string.Join(", ", set)}");
             return set;
         }
 
@@ -189,7 +188,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 .Select(id => catalog[id])
                 .SelectMany(api => api.Dependencies.Keys)
                 .Intersect(s_externalDependencies.Keys);
-            Console.WriteLine($"Direct dependencies: {string.Join(", ", directExternalDependencies)}");
             HashSet<string> set = new HashSet<string>();
             Queue<string> processingQueue = new Queue<string>();
             foreach (var directDependency in directExternalDependencies)
@@ -210,7 +208,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                     }
                 }
             }
-            Console.WriteLine($"All dependencies: {string.Join(", ", set)}");
             return set;
         }
 
