@@ -102,7 +102,7 @@ If you need support for other Google APIs, check out the
 
 ## Example Applications
 
-* [getting-started-dotnet](https://github.com/googleapis/getting-started-dotnet/) -
+* [getting-started-dotnet](https://github.com/GoogleCloudPlatform/getting-started-dotnet/) -
   A [quickstart and tutorial](https://cloud.google.com/dotnet/) that demonstrates how to build a complete web 
   application using Cloud Datastore, Cloud Storage, and Cloud Pub/Sub and deploy it to Google Compute Engine.
 
