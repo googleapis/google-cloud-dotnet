@@ -1922,7 +1922,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateJobTriggerResourceNames()
+        public void CreateJobTriggerResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
@@ -1954,7 +1954,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateJobTriggerResourceNamesAsync()
+        public async stt::Task CreateJobTriggerResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateJobTriggerRequest request = new CreateJobTriggerRequest
@@ -1983,6 +1983,72 @@ namespace Google.Cloud.Dlp.V2.Tests
             JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.ParentAsProjectName, request.JobTrigger, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateJobTriggerResourceNames2()
+        {
+            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
+            CreateJobTriggerRequest request = new CreateJobTriggerRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                JobTrigger = new JobTrigger(),
+            };
+            JobTrigger expectedResponse = new JobTrigger
+            {
+                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                InspectJob = new InspectJobConfig(),
+                Triggers =
+                {
+                    new JobTrigger.Types.Trigger(),
+                },
+                Errors = { new Error(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastRunTime = new wkt::Timestamp(),
+                Status = JobTrigger.Types.Status.Paused,
+            };
+            mockGrpcClient.Setup(x => x.CreateJobTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            JobTrigger response = client.CreateJobTrigger(request.ParentAsLocationName, request.JobTrigger);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateJobTriggerResourceNames2Async()
+        {
+            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
+            CreateJobTriggerRequest request = new CreateJobTriggerRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                JobTrigger = new JobTrigger(),
+            };
+            JobTrigger expectedResponse = new JobTrigger
+            {
+                JobTriggerName = JobTriggerName.FromProjectJobTrigger("[PROJECT]", "[JOB_TRIGGER]"),
+                DisplayName = "display_name137f65c2",
+                Description = "description2cf9da67",
+                InspectJob = new InspectJobConfig(),
+                Triggers =
+                {
+                    new JobTrigger.Types.Trigger(),
+                },
+                Errors = { new Error(), },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastRunTime = new wkt::Timestamp(),
+                Status = JobTrigger.Types.Status.Paused,
+            };
+            mockGrpcClient.Setup(x => x.CreateJobTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<JobTrigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            JobTrigger responseCallSettings = await client.CreateJobTriggerAsync(request.ParentAsLocationName, request.JobTrigger, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            JobTrigger responseCancellationToken = await client.CreateJobTriggerAsync(request.ParentAsLocationName, request.JobTrigger, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -2765,7 +2831,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDlpJob1ResourceNames()
+        public void CreateDlpJob1ResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDlpJobRequest request = new CreateDlpJobRequest
@@ -2794,7 +2860,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob1ResourceNamesAsync()
+        public async stt::Task CreateDlpJob1ResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDlpJobRequest request = new CreateDlpJobRequest
@@ -2820,6 +2886,66 @@ namespace Google.Cloud.Dlp.V2.Tests
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.InspectJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.InspectJob, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDlpJob1ResourceNames2()
+        {
+            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
+            CreateDlpJobRequest request = new CreateDlpJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                InspectJob = new InspectJobConfig(),
+            };
+            DlpJob expectedResponse = new DlpJob
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+                Type = DlpJobType.Unspecified,
+                State = DlpJob.Types.JobState.Active,
+                RiskDetails = new AnalyzeDataSourceRiskDetails(),
+                InspectDetails = new InspectDataSourceDetails(),
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                JobTriggerName = "job_trigger_name66f423d1",
+                Errors = { new Error(), },
+            };
+            mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpJob response = client.CreateDlpJob(request.ParentAsLocationName, request.InspectJob);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDlpJob1ResourceNames2Async()
+        {
+            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
+            CreateDlpJobRequest request = new CreateDlpJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                InspectJob = new InspectJobConfig(),
+            };
+            DlpJob expectedResponse = new DlpJob
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+                Type = DlpJobType.Unspecified,
+                State = DlpJob.Types.JobState.Active,
+                RiskDetails = new AnalyzeDataSourceRiskDetails(),
+                InspectDetails = new InspectDataSourceDetails(),
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                JobTriggerName = "job_trigger_name66f423d1",
+                Errors = { new Error(), },
+            };
+            mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.InspectJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.InspectJob, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -2885,7 +3011,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public void CreateDlpJob2ResourceNames()
+        public void CreateDlpJob2ResourceNames1()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDlpJobRequest request = new CreateDlpJobRequest
@@ -2914,7 +3040,7 @@ namespace Google.Cloud.Dlp.V2.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task CreateDlpJob2ResourceNamesAsync()
+        public async stt::Task CreateDlpJob2ResourceNames1Async()
         {
             moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
             CreateDlpJobRequest request = new CreateDlpJobRequest
@@ -2940,6 +3066,66 @@ namespace Google.Cloud.Dlp.V2.Tests
             DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsProjectName, request.RiskJob, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateDlpJob2ResourceNames2()
+        {
+            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
+            CreateDlpJobRequest request = new CreateDlpJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                RiskJob = new RiskAnalysisJobConfig(),
+            };
+            DlpJob expectedResponse = new DlpJob
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+                Type = DlpJobType.Unspecified,
+                State = DlpJob.Types.JobState.Active,
+                RiskDetails = new AnalyzeDataSourceRiskDetails(),
+                InspectDetails = new InspectDataSourceDetails(),
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                JobTriggerName = "job_trigger_name66f423d1",
+                Errors = { new Error(), },
+            };
+            mockGrpcClient.Setup(x => x.CreateDlpJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpJob response = client.CreateDlpJob(request.ParentAsLocationName, request.RiskJob);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateDlpJob2ResourceNames2Async()
+        {
+            moq::Mock<DlpService.DlpServiceClient> mockGrpcClient = new moq::Mock<DlpService.DlpServiceClient>(moq::MockBehavior.Strict);
+            CreateDlpJobRequest request = new CreateDlpJobRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                RiskJob = new RiskAnalysisJobConfig(),
+            };
+            DlpJob expectedResponse = new DlpJob
+            {
+                DlpJobName = DlpJobName.FromProjectDlpJob("[PROJECT]", "[DLP_JOB]"),
+                Type = DlpJobType.Unspecified,
+                State = DlpJob.Types.JobState.Active,
+                RiskDetails = new AnalyzeDataSourceRiskDetails(),
+                InspectDetails = new InspectDataSourceDetails(),
+                CreateTime = new wkt::Timestamp(),
+                StartTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                JobTriggerName = "job_trigger_name66f423d1",
+                Errors = { new Error(), },
+            };
+            mockGrpcClient.Setup(x => x.CreateDlpJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DlpJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DlpServiceClient client = new DlpServiceClientImpl(mockGrpcClient.Object, null);
+            DlpJob responseCallSettings = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.RiskJob, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            DlpJob responseCancellationToken = await client.CreateDlpJobAsync(request.ParentAsLocationName, request.RiskJob, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
