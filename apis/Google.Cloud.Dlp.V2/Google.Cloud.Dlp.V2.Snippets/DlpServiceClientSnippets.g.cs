@@ -2355,7 +2355,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateJobTrigger</summary>
-        public void CreateJobTriggerResourceNames()
+        public void CreateJobTriggerResourceNames1()
         {
             // Snippet: CreateJobTrigger(ProjectName, JobTrigger, CallSettings)
             // Create client
@@ -2369,7 +2369,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateJobTriggerAsync</summary>
-        public async Task CreateJobTriggerResourceNamesAsync()
+        public async Task CreateJobTriggerResourceNames1Async()
         {
             // Snippet: CreateJobTriggerAsync(ProjectName, JobTrigger, CallSettings)
             // Additional: CreateJobTriggerAsync(ProjectName, JobTrigger, CancellationToken)
@@ -2377,6 +2377,35 @@ namespace Google.Cloud.Dlp.V2.Snippets
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            JobTrigger jobTrigger = new JobTrigger();
+            // Make the request
+            JobTrigger response = await dlpServiceClient.CreateJobTriggerAsync(parent, jobTrigger);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateJobTrigger</summary>
+        public void CreateJobTriggerResourceNames2()
+        {
+            // Snippet: CreateJobTrigger(LocationName, JobTrigger, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            JobTrigger jobTrigger = new JobTrigger();
+            // Make the request
+            JobTrigger response = dlpServiceClient.CreateJobTrigger(parent, jobTrigger);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateJobTriggerAsync</summary>
+        public async Task CreateJobTriggerResourceNames2Async()
+        {
+            // Snippet: CreateJobTriggerAsync(LocationName, JobTrigger, CallSettings)
+            // Additional: CreateJobTriggerAsync(LocationName, JobTrigger, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             JobTrigger jobTrigger = new JobTrigger();
             // Make the request
             JobTrigger response = await dlpServiceClient.CreateJobTriggerAsync(parent, jobTrigger);
@@ -2851,7 +2880,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for ListJobTriggers</summary>
-        public void ListJobTriggersResourceNames()
+        public void ListJobTriggersResourceNames1()
         {
             // Snippet: ListJobTriggers(ProjectName, string, int?, CallSettings)
             // Create client
@@ -2896,13 +2925,103 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for ListJobTriggers</summary>
-        public async Task ListJobTriggersResourceNamesAsync()
+        public async Task ListJobTriggersResourceNames1Async()
         {
             // Snippet: ListJobTriggersAsync(ProjectName, string, int?, CallSettings)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> response = dlpServiceClient.ListJobTriggersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((JobTrigger item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListJobTriggersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobTrigger item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobTrigger> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobTrigger item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobTriggers</summary>
+        public void ListJobTriggersResourceNames2()
+        {
+            // Snippet: ListJobTriggers(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListJobTriggersResponse, JobTrigger> response = dlpServiceClient.ListJobTriggers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (JobTrigger item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListJobTriggersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (JobTrigger item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<JobTrigger> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (JobTrigger item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListJobTriggers</summary>
+        public async Task ListJobTriggersResourceNames2Async()
+        {
+            // Snippet: ListJobTriggersAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListJobTriggersResponse, JobTrigger> response = dlpServiceClient.ListJobTriggersAsync(parent);
 
@@ -3131,7 +3250,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDlpJob</summary>
-        public void CreateDlpJob1ResourceNames()
+        public void CreateDlpJob1ResourceNames1()
         {
             // Snippet: CreateDlpJob(ProjectName, InspectJobConfig, CallSettings)
             // Create client
@@ -3145,7 +3264,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob1ResourceNamesAsync()
+        public async Task CreateDlpJob1ResourceNames1Async()
         {
             // Snippet: CreateDlpJobAsync(ProjectName, InspectJobConfig, CallSettings)
             // Additional: CreateDlpJobAsync(ProjectName, InspectJobConfig, CancellationToken)
@@ -3153,6 +3272,35 @@ namespace Google.Cloud.Dlp.V2.Snippets
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            InspectJobConfig inspectJob = new InspectJobConfig();
+            // Make the request
+            DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, inspectJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDlpJob</summary>
+        public void CreateDlpJob1ResourceNames2()
+        {
+            // Snippet: CreateDlpJob(LocationName, InspectJobConfig, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            InspectJobConfig inspectJob = new InspectJobConfig();
+            // Make the request
+            DlpJob response = dlpServiceClient.CreateDlpJob(parent, inspectJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDlpJobAsync</summary>
+        public async Task CreateDlpJob1ResourceNames2Async()
+        {
+            // Snippet: CreateDlpJobAsync(LocationName, InspectJobConfig, CallSettings)
+            // Additional: CreateDlpJobAsync(LocationName, InspectJobConfig, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             InspectJobConfig inspectJob = new InspectJobConfig();
             // Make the request
             DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, inspectJob);
@@ -3189,7 +3337,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDlpJob</summary>
-        public void CreateDlpJob2ResourceNames()
+        public void CreateDlpJob2ResourceNames1()
         {
             // Snippet: CreateDlpJob(ProjectName, RiskAnalysisJobConfig, CallSettings)
             // Create client
@@ -3203,7 +3351,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for CreateDlpJobAsync</summary>
-        public async Task CreateDlpJob2ResourceNamesAsync()
+        public async Task CreateDlpJob2ResourceNames1Async()
         {
             // Snippet: CreateDlpJobAsync(ProjectName, RiskAnalysisJobConfig, CallSettings)
             // Additional: CreateDlpJobAsync(ProjectName, RiskAnalysisJobConfig, CancellationToken)
@@ -3211,6 +3359,35 @@ namespace Google.Cloud.Dlp.V2.Snippets
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
+            // Make the request
+            DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, riskJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDlpJob</summary>
+        public void CreateDlpJob2ResourceNames2()
+        {
+            // Snippet: CreateDlpJob(LocationName, RiskAnalysisJobConfig, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
+            // Make the request
+            DlpJob response = dlpServiceClient.CreateDlpJob(parent, riskJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateDlpJobAsync</summary>
+        public async Task CreateDlpJob2ResourceNames2Async()
+        {
+            // Snippet: CreateDlpJobAsync(LocationName, RiskAnalysisJobConfig, CallSettings)
+            // Additional: CreateDlpJobAsync(LocationName, RiskAnalysisJobConfig, CancellationToken)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             RiskAnalysisJobConfig riskJob = new RiskAnalysisJobConfig();
             // Make the request
             DlpJob response = await dlpServiceClient.CreateDlpJobAsync(parent, riskJob);
@@ -3412,7 +3589,7 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for ListDlpJobs</summary>
-        public void ListDlpJobsResourceNames()
+        public void ListDlpJobsResourceNames1()
         {
             // Snippet: ListDlpJobs(ProjectName, string, int?, CallSettings)
             // Create client
@@ -3457,13 +3634,103 @@ namespace Google.Cloud.Dlp.V2.Snippets
         }
 
         /// <summary>Snippet for ListDlpJobs</summary>
-        public async Task ListDlpJobsResourceNamesAsync()
+        public async Task ListDlpJobsResourceNames1Async()
         {
             // Snippet: ListDlpJobsAsync(ProjectName, string, int?, CallSettings)
             // Create client
             DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> response = dlpServiceClient.ListDlpJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((DlpJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListDlpJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DlpJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DlpJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DlpJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDlpJobs</summary>
+        public void ListDlpJobsResourceNames2()
+        {
+            // Snippet: ListDlpJobs(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = DlpServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListDlpJobsResponse, DlpJob> response = dlpServiceClient.ListDlpJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (DlpJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListDlpJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (DlpJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<DlpJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (DlpJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDlpJobs</summary>
+        public async Task ListDlpJobsResourceNames2Async()
+        {
+            // Snippet: ListDlpJobsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            DlpServiceClient dlpServiceClient = await DlpServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListDlpJobsResponse, DlpJob> response = dlpServiceClient.ListDlpJobsAsync(parent);
 
