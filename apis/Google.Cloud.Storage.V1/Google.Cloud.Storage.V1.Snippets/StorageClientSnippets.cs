@@ -671,6 +671,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             // Update the IAM policy on the bucket.
             client.SetBucketIamPolicy(bucketName, policy);
 
+            // Wait 10 seconds to allow the policy to be applied.
+            // (Normally the policy change is visible pretty much immediately, but
+            // 10 seconds makes this very reliable.)
+            await Task.Delay(TimeSpan.FromSeconds(10));
+
             // Download the object again: this time the response should be OK
             HttpResponseMessage response2 = await httpClient.GetAsync(obj.MediaLink);
             Console.WriteLine($"Response code after setting policy: {response2.StatusCode}");
