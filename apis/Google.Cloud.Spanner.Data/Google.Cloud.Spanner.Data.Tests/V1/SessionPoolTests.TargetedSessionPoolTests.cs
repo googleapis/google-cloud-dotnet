@@ -797,7 +797,17 @@ namespace Google.Cloud.Spanner.V1.Tests
 
                 // Wait a little in real time so that the start session creation tasks
                 // have had time to execute, they are started in a fire and forget manner.
-                await Task.Delay(s_sessionAcquistionDelay);
+                // This test has been flaky, so we wait up to three times, stopping the wait if
+                // we know that the pool is unhealthy.
+                for (int i = 0; i < 3; i++)
+                {
+                    var stats = pool.GetStatisticsSnapshot();
+                    if (!stats.Healthy)
+                    {
+                        break;
+                    }
+                    await Task.Delay(s_sessionAcquistionDelay);
+                }
 
                 await client.Scheduler.RunAsync(async () =>
                 {
