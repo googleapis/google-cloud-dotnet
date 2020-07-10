@@ -2415,6 +2415,26 @@
       "CSharpNamespaceFromProtos": "Google.Maps.Routes.V1Alpha"
     },
     {
+      "ServiceDirectory": "google/maps/routes/v1",
+      "Name": "routespreferred.googleapis.com",
+      "Title": "Routes Preferred API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/maps/routes/v1/routespreferred.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.maps.routes.v1",
+      "PackageFromProtos": "google.maps.routes.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/geo/type",
+        "google/maps/routes/v1",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Maps.Routes.V1"
+    },
+    {
       "ServiceDirectory": "google/container/v1beta1",
       "Name": "container.googleapis.com",
       "Title": "Kubernetes Engine API",
