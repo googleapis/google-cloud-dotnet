@@ -322,6 +322,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.SecretManager.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/functions/v1",
+      "Name": "cloudfunctions.googleapis.com",
+      "Title": "Cloud Functions API",
+      "Description": "Manages lightweight user-provided functions executed in response to events.",
+      "ServiceConfigFile": "google/cloud/functions/v1/cloudfunctions_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.functions.v1",
+      "PackageFromProtos": "google.cloud.functions.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/iam/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Functions.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/functions/v1beta2",
       "Name": "cloudfunctions.googleapis.com",
       "Title": "Cloud Functions API",
