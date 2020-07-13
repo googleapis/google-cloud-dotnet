@@ -181,8 +181,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         }
         // End sample
 
-        [Fact(Skip = "CI can't currently get to metadata server. See https://github.com/googleapis/google-cloud-dotnet/issues/5163")]
-        //[SkippableFact]
+        [SkippableFact]
         public async Task SignedUrlWithIamServiceBlobSigner()
         {
             _fixture.SkipIf(Platform.Instance().Type == PlatformType.Unknown);
