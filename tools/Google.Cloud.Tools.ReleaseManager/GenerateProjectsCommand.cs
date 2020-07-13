@@ -209,7 +209,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
                 // We can cross that bridge when we come to it.
-                if (api.Version == "1.0.0-beta00")
+                if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00")
                 {
                     continue;
                 }
