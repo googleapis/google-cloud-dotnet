@@ -573,6 +573,23 @@
       }
     },
     {
+      "id": "Google.Cloud.Functions.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Functions API",
+      "productUrl": "https://cloud.google.com/functions",
+      "description": "Recommended Google client library to access the Google Cloud Functions API, which manages lightweight user-provided functions executed in response to events.",
+      "tags": [
+        "functions"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "2.0.0",
+        "Google.LongRunning": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/functions/v1"
+    },
+    {
       "id": "Google.Cloud.Gaming.V1Beta",
       "generator": "micro",
       "protoPath": "google/cloud/gaming/v1beta",
