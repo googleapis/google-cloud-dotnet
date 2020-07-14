@@ -18,6 +18,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
+| [Google.Analytics.Admin.V1Alpha](Google.Analytics.Admin.V1Alpha/index.html) | 1.0.0-alpha01 | Analytics Admin API |
 | [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.2.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html) | 2.0.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.Connection.V1](Google.Cloud.BigQuery.Connection.V1/index.html) | 1.0.0 | [BigQuery Connection API](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
