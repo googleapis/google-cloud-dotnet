@@ -20,6 +20,7 @@ parser = argparse.ArgumentParser(description='Fetches a field from a single API 
 parser.add_argument('file', help='File to load')
 parser.add_argument('id', help='ID of API to fetch')
 parser.add_argument('field', help='Field to find and output')
+parser.add_argument('--default', help='Default value to output if field is not present')
 args = parser.parse_args()
 
 filename = sys.argv[1]
@@ -30,6 +31,8 @@ query = [api.get(args.field) for api in catalog["apis"] if api["id"] == args.id]
 
 if len(query) != 1:
   raise Exception(f"API {args.id} not found (or has duplicate definitions)")
+elif not query[0] and args.default:
+  print(args.default)
 elif not query[0]:
   raise Exception(f"API {args.id} has no field {args.field}")
 else:
