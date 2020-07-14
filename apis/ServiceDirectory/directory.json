@@ -340,23 +340,6 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Functions.V1"
     },
     {
-      "ServiceDirectory": "google/cloud/functions/v1beta2",
-      "Name": "cloudfunctions.googleapis.com",
-      "Title": "Cloud Functions API",
-      "Description": "Manages lightweight user-provided functions executed in response to events.",
-      "ServiceConfigFile": "google/cloud/functions/v1beta2/cloudfunctions_v1beta2.yaml",
-      "Version": "v1beta2",
-      "PackageFromDirectory": "google.cloud.functions.v1beta2",
-      "PackageFromProtos": "google.cloud.functions.v1beta2",
-      "ImportDirectories": [
-        "google/api",
-        "google/longrunning",
-        "google/protobuf"
-      ],
-      "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Functions.V1Beta2"
-    },
-    {
       "ServiceDirectory": "google/cloud/memcache/v1beta2",
       "Name": "memcache.googleapis.com",
       "Title": "Cloud Memorystore for Memcached API",
