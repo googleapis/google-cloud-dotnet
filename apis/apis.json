@@ -1510,6 +1510,7 @@
     },
     {
       "id": "Google.Identity.AccessContextManager.Type",
+      "packageOwner": "google-cloud",
       "generator": "proto",
       "protoPath": "google/identity/accesscontextmanager/type",
       "version": "1.0.0",
@@ -1525,6 +1526,7 @@
     },
     {
       "id": "Google.Identity.AccessContextManager.V1",
+      "packageOwner": "google-cloud",
       "generator": "proto",
       "protoPath": "google/identity/accesscontextmanager/v1",
       "version": "1.0.0",
@@ -1540,6 +1542,7 @@
     },
     {
       "id": "Google.LongRunning",
+      "packageOwner": "google-cloud",
       "generator": "micro",
       "protoPath": "google/longrunning",
       "listingDescription": "Support for the Long-Running Operations API pattern",
@@ -1559,6 +1562,7 @@
     },
     {
       "id": "Grafeas.V1",
+      "packageOwner": "google-cloud",
       "generator": "micro",
       "protoPath": "grafeas/v1",
       "productName": "Grafeas",

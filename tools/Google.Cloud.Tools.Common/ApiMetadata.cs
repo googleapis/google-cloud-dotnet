@@ -104,6 +104,18 @@ namespace Google.Cloud.Tools.Common
         /// </summary>
         public string ServiceYaml { get; set; }
 
+        /// <summary>
+        /// The NuGet package owner, typically "google-apis-packages" or "google-cloud".
+        /// This property is used by <see cref="EffectivePackageOwner"/> to override the
+        /// default ID-based value.
+        /// </summary>
+        public string PackageOwner { get; set; }
+
+        /// <summary>
+        /// The effective package owner, taking account of <see cref="PackageOwner"/> and (if that is unset) the package ID.
+        /// </summary>
+        public string EffectivePackageOwner => PackageOwner ?? (Id.StartsWith("Google.Cloud") ? "google-cloud" : "google-apis-packages");
+
         [JsonIgnore]
         public bool IsReleaseVersion => ReleaseVersion.IsMatch(Version);
 
