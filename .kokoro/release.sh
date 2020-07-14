@@ -60,7 +60,7 @@ then
     pkg_id=$(echo $pkg | sed -r 's/^(.*)\.([0-9]+\.[0-9]+\.[0-9]+(-.*)?)\.nupkg$/\1/g')
     # Work out the package owner based on apis.json and the package ID
     default_package_owner=$([[ $pkg == Google.Cloud* ]] && echo google-cloud || echo google-api-packages)
-    package_owner=$PYTHON3 ../tools/getapifield.py ../apis/apis.json $pkg_id --default=$default_package_owner
+    package_owner=$($PYTHON3 ../tools/getapifield.py ../apis/apis.json $pkg_id --default=$default_package_owner)
     # Work out the right NuGet API key based on the package owner
     case "$package_owner" in
       google-cloud)
