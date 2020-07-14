@@ -1,5 +1,13 @@
 # Version history
 
+# Version 3.1.0, released 2020-07-14
+
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): Regenerate all APIs with service comments in client documentation
+- [Commit 2db277b](https://github.com/googleapis/google-cloud-dotnet/commit/2db277b):
+  - Improvements to GetOrdinal behavior
+  - Fixes [issue 5114](https://github.com/googleapis/google-cloud-dotnet/issues/5114)
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): Regenerate APIs with timeouts for RPCs that don't have retries
+
 # Version 3.1.0-beta01, released 2020-06-16
 
 - [Commit 5b07f5a](https://github.com/googleapis/google-cloud-dotnet/commit/5b07f5a): fix: Roll back uncommitted (and not-rolled-back) read/write transactions on session release
