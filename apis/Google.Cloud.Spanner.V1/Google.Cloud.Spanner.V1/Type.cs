@@ -25,23 +25,24 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxnb29nbGUvc3Bhbm5lci92MS90eXBlLnByb3RvEhFnb29nbGUuc3Bhbm5l",
-            "ci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKaAQoEVHlwZRIp",
-            "CgRjb2RlGAEgASgOMhsuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZUNvZGUSMwoS",
-            "YXJyYXlfZWxlbWVudF90eXBlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEu",
-            "VHlwZRIyCgtzdHJ1Y3RfdHlwZRgDIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYx",
-            "LlN0cnVjdFR5cGUifwoKU3RydWN0VHlwZRIzCgZmaWVsZHMYASADKAsyIy5n",
-            "b29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlLkZpZWxkGjwKBUZpZWxkEgwK",
-            "BG5hbWUYASABKAkSJQoEdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFubmVyLnYx",
-            "LlR5cGUqjgEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJRklFRBAA",
-            "EggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQAxINCglUSU1FU1RB",
-            "TVAQBBIICgREQVRFEAUSCgoGU1RSSU5HEAYSCQoFQllURVMQBxIJCgVBUlJB",
-            "WRAIEgoKBlNUUlVDVBAJQq8BChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCCVR5",
-            "cGVQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL3NwYW5uZXIvdjE7c3Bhbm5lcqoCF0dvb2dsZS5DbG91ZC5TcGFubmVy",
-            "LlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3Vk",
-            "OjpTcGFubmVyOjpWMWIGcHJvdG8z"));
+            "ci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxocZ29vZ2xl",
+            "L2FwaS9hbm5vdGF0aW9ucy5wcm90byKfAQoEVHlwZRIuCgRjb2RlGAEgASgO",
+            "MhsuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZUNvZGVCA+BBAhIzChJhcnJheV9l",
+            "bGVtZW50X3R5cGUYAiABKAsyFy5nb29nbGUuc3Bhbm5lci52MS5UeXBlEjIK",
+            "C3N0cnVjdF90eXBlGAMgASgLMh0uZ29vZ2xlLnNwYW5uZXIudjEuU3RydWN0",
+            "VHlwZSJ/CgpTdHJ1Y3RUeXBlEjMKBmZpZWxkcxgBIAMoCzIjLmdvb2dsZS5z",
+            "cGFubmVyLnYxLlN0cnVjdFR5cGUuRmllbGQaPAoFRmllbGQSDAoEbmFtZRgB",
+            "IAEoCRIlCgR0eXBlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZSqb",
+            "AQoIVHlwZUNvZGUSGQoVVFlQRV9DT0RFX1VOU1BFQ0lGSUVEEAASCAoEQk9P",
+            "TBABEgkKBUlOVDY0EAISCwoHRkxPQVQ2NBADEg0KCVRJTUVTVEFNUBAEEggK",
+            "BERBVEUQBRIKCgZTVFJJTkcQBhIJCgVCWVRFUxAHEgkKBUFSUkFZEAgSCgoG",
+            "U1RSVUNUEAkSCwoHTlVNRVJJQxAKQq8BChVjb20uZ29vZ2xlLnNwYW5uZXIu",
+            "djFCCVR5cGVQcm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL3NwYW5uZXIvdjE7c3Bhbm5lcqoCF0dvb2dsZS5DbG91ZC5T",
+            "cGFubmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6",
+            "OkNsb3VkOjpTcGFubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType), global::Google.Cloud.Spanner.V1.StructType.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType.Types.Field), global::Google.Cloud.Spanner.V1.StructType.Types.Field.Parser, new[]{ "Name", "Type" }, null, null, null, null)})
@@ -113,6 +114,18 @@ namespace Google.Cloud.Spanner.V1 {
     /// to [struct_type.fields[i]][google.spanner.v1.StructType.fields].
     /// </summary>
     [pbr::OriginalName("STRUCT")] Struct = 9,
+    /// <summary>
+    /// Encoded as `string`, in decimal format or scientific notation format.
+    /// &lt;br>Decimal format:
+    /// &lt;br>`[+-]Digits[.[Digits]]` or
+    /// &lt;br>`[+-][Digits].Digits`
+    ///
+    /// Scientific notation:
+    /// &lt;br>`[+-]Digits[.[Digits]][ExponentIndicator[+-]Digits]` or
+    /// &lt;br>`[+-][Digits].Digits[ExponentIndicator[+-]Digits]`
+    /// &lt;br>(ExponentIndicator is `"e"` or `"E"`)
+    /// </summary>
+    [pbr::OriginalName("NUMERIC")] Numeric = 10,
   }
 
   #endregion
