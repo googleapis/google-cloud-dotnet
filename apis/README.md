@@ -25,6 +25,7 @@ Fields:
 - `productName`: Name of product to include when using doc templates
 - `productUrl`: Product home page URL to include when using doc templates
 - `generator`: The generator type to use: "micro", "proto", "protogrpc"
+- `packageOwner`: Overrides the default NuGet package owner (google-cloud or googe-apis-packages depending on package ID)
 - `protoPath`: The path within the `googleapis` repo to the API definition
 - `serviceYaml`: (GAPIC generator only) The file (one directory above `protoPath`) containing the service definition
 - `shortDescription`: Used when listing APIs (e.g. in README.md) if there's no `productName` and the `description` is too long
