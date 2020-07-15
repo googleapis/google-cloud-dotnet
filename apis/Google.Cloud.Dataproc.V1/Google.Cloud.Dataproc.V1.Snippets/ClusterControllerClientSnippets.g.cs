@@ -808,22 +808,22 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Region = "",
             };
             // Make the request
-            Operation<Empty, DiagnoseClusterResults> response = clusterControllerClient.DiagnoseCluster(request);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = clusterControllerClient.DiagnoseCluster(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse = response.PollUntilCompleted();
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            DiagnoseClusterResults result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse = clusterControllerClient.PollOnceDiagnoseCluster(operationName);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceDiagnoseCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                DiagnoseClusterResults retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -843,22 +843,22 @@ namespace Google.Cloud.Dataproc.V1.Snippets
                 Region = "",
             };
             // Make the request
-            Operation<Empty, DiagnoseClusterResults> response = await clusterControllerClient.DiagnoseClusterAsync(request);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = await clusterControllerClient.DiagnoseClusterAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            DiagnoseClusterResults result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse = await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                DiagnoseClusterResults retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -874,22 +874,22 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             string region = "";
             string clusterName = "";
             // Make the request
-            Operation<Empty, DiagnoseClusterResults> response = clusterControllerClient.DiagnoseCluster(projectId, region, clusterName);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = clusterControllerClient.DiagnoseCluster(projectId, region, clusterName);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse = response.PollUntilCompleted();
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            DiagnoseClusterResults result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse = clusterControllerClient.PollOnceDiagnoseCluster(operationName);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> retrievedResponse = clusterControllerClient.PollOnceDiagnoseCluster(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                DiagnoseClusterResults retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -906,22 +906,22 @@ namespace Google.Cloud.Dataproc.V1.Snippets
             string region = "";
             string clusterName = "";
             // Make the request
-            Operation<Empty, DiagnoseClusterResults> response = await clusterControllerClient.DiagnoseClusterAsync(projectId, region, clusterName);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> response = await clusterControllerClient.DiagnoseClusterAsync(projectId, region, clusterName);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DiagnoseClusterResults> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            DiagnoseClusterResults result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DiagnoseClusterResults> retrievedResponse = await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
+            Operation<DiagnoseClusterResults, ClusterOperationMetadata> retrievedResponse = await clusterControllerClient.PollOnceDiagnoseClusterAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                DiagnoseClusterResults retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
