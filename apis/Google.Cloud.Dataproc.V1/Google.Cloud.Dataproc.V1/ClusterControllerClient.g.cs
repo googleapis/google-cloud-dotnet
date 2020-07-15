@@ -1207,7 +1207,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, DiagnoseClusterResults> DiagnoseCluster(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata> DiagnoseCluster(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1222,7 +1222,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>> DiagnoseClusterAsync(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1237,7 +1237,7 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(DiagnoseClusterRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>> DiagnoseClusterAsync(DiagnoseClusterRequest request, st::CancellationToken cancellationToken) =>
             DiagnoseClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DiagnoseCluster</c>.</summary>
@@ -1251,8 +1251,8 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<wkt::Empty, DiagnoseClusterResults> PollOnceDiagnoseCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<wkt::Empty, DiagnoseClusterResults>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseClusterOperationsClient, callSettings);
+        public virtual lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata> PollOnceDiagnoseCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseClusterOperationsClient, callSettings);
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -1263,8 +1263,8 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, DiagnoseClusterResults>> PollOnceDiagnoseClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<wkt::Empty, DiagnoseClusterResults>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseClusterOperationsClient, callSettings);
+        public virtual stt::Task<lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>> PollOnceDiagnoseClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DiagnoseClusterOperationsClient, callSettings);
 
         /// <summary>
         /// Gets cluster diagnostic information. The returned
@@ -1287,7 +1287,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, DiagnoseClusterResults> DiagnoseCluster(string projectId, string region, string clusterName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata> DiagnoseCluster(string projectId, string region, string clusterName, gaxgrpc::CallSettings callSettings = null) =>
             DiagnoseCluster(new DiagnoseClusterRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
@@ -1316,7 +1316,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(string projectId, string region, string clusterName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>> DiagnoseClusterAsync(string projectId, string region, string clusterName, gaxgrpc::CallSettings callSettings = null) =>
             DiagnoseClusterAsync(new DiagnoseClusterRequest
             {
                 ProjectId = gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
@@ -1345,7 +1345,7 @@ namespace Google.Cloud.Dataproc.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(string projectId, string region, string clusterName, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>> DiagnoseClusterAsync(string projectId, string region, string clusterName, st::CancellationToken cancellationToken) =>
             DiagnoseClusterAsync(projectId, region, clusterName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
@@ -1590,10 +1590,10 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override lro::Operation<wkt::Empty, DiagnoseClusterResults> DiagnoseCluster(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata> DiagnoseCluster(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DiagnoseClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<wkt::Empty, DiagnoseClusterResults>(_callDiagnoseCluster.Sync(request, callSettings), DiagnoseClusterOperationsClient);
+            return new lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>(_callDiagnoseCluster.Sync(request, callSettings), DiagnoseClusterOperationsClient);
         }
 
         /// <summary>
@@ -1608,10 +1608,10 @@ namespace Google.Cloud.Dataproc.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<wkt::Empty, DiagnoseClusterResults>> DiagnoseClusterAsync(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>> DiagnoseClusterAsync(DiagnoseClusterRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DiagnoseClusterRequest(ref request, ref callSettings);
-            return new lro::Operation<wkt::Empty, DiagnoseClusterResults>(await _callDiagnoseCluster.Async(request, callSettings).ConfigureAwait(false), DiagnoseClusterOperationsClient);
+            return new lro::Operation<DiagnoseClusterResults, ClusterOperationMetadata>(await _callDiagnoseCluster.Async(request, callSettings).ConfigureAwait(false), DiagnoseClusterOperationsClient);
         }
     }
 
