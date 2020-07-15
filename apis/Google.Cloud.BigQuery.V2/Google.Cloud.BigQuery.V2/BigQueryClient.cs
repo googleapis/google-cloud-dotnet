@@ -87,7 +87,22 @@ namespace Google.Cloud.BigQuery.V2
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// <para>
+        /// If the supplied credentials support scoping, the following scopes are specified, overwriting any
+        /// previously-specified scopes.
+        /// </para>
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/bigquery"</description></item>
+        /// <item><description>https://www.googleapis.com/auth/bigquery.insertdata"</description></item>
+        /// <item><description>https://www.googleapis.com/auth/devstorage.full_control"</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// </list>
+        /// <para>
+        /// If you require a different set of scopes, please create and scope the credential,
+        /// then use <see cref="BigQueryClientBuilder"/>, specify the <see cref="ClientBuilderBase{TClient}.Credential"/>
+        /// and <see cref="BigQueryClientBuilder.ProjectId"/> properties, then call <see cref="ClientBuilderBase{TClient}.Build"/>
+        /// to create the client.
+        /// </para>
         /// </remarks>
         /// <param name="projectId">The ID of the project containing the BigQuery data. Must not be null.</param>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
@@ -104,7 +119,22 @@ namespace Google.Cloud.BigQuery.V2
         /// no credentials are specified.
         /// </summary>
         /// <remarks>
-        /// The credentials are scoped as necessary.
+        /// <para>
+        /// If the supplied credentials support scoping, the following scopes are specified, overwriting any
+        /// previously-specified scopes.
+        /// </para>
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/bigquery"</description></item>
+        /// <item><description>https://www.googleapis.com/auth/bigquery.insertdata"</description></item>
+        /// <item><description>https://www.googleapis.com/auth/devstorage.full_control"</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform"</description></item>
+        /// </list>
+        /// <para>
+        /// If you require a different set of scopes, please create and scope the credential,
+        /// then use <see cref="BigQueryClientBuilder"/>, specify the <see cref="ClientBuilderBase{TClient}.Credential"/>
+        /// and <see cref="BigQueryClientBuilder.ProjectId"/> properties, then call <see cref="ClientBuilderBase{TClient}.Build"/>
+        /// to create the client.
+        /// </para>
         /// </remarks>
         /// <param name="projectId">The ID of the project containing the BigQuery data. Must not be null.</param>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
