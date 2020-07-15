@@ -17,6 +17,7 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
+using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,11 +31,18 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using DateTime = System.DateTime;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class LoggingTest : IClassFixture<LogValidatingFixture>
     {
+        // Used in tests that check logs are properly associated to traces.
+        private static readonly TraceIdFactory s_traceIdFactory = TraceIdFactory.Create();
+        private static readonly SpanIdFactory s_spanIdFactory = SpanIdFactory.Create();
+        private static readonly TraceEntryPolling s_tracePolling = new TraceEntryPolling();
+        internal const string ForceTracingQueryParameter = "forceTracing";
+
         private readonly LogValidatingFixture _fixture;
 
         public LoggingTest(LogValidatingFixture fixture) => _fixture = fixture;
@@ -199,9 +207,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
-        public async Task Logging_Trace()
+        public async Task Logging_Trace_FromHeader_Implicit()
         {
-            string traceId = "105445aa7843bc8bf206b12000100f00";
+            string traceId = s_traceIdFactory.NextId();
+            ulong spanId = s_spanIdFactory.NextId();
             string testId = IdGenerator.FromGuid();
 
             var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
@@ -209,14 +218,261 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
-                    TraceHeaderContext.Create(traceId, 81237123, null).ToString());
+                    TraceHeaderContext.Create(traceId, spanId, null).ToString());
                 await client.GetAsync($"/Main/Critical/{testId}");
             }
 
             _fixture.AddValidator(testId, results =>
             {
-                Assert.Contains(TestEnvironment.GetTestProjectId(), results.Single().Trace);
-                Assert.Contains(traceId, results.Single().Trace);
+                // We only have one log entry.
+                LogEntry entry = Assert.Single(results);
+
+                // And the resource name of the trace associated to it points to the trace
+                // we specified on the header.
+                Assert.Contains(TestEnvironment.GetTestProjectId(), entry.Trace);
+                Assert.Contains(traceId, entry.Trace);
+
+                // Let's get our trace.
+                var trace = s_tracePolling.GetTrace(traceId);
+                Assert.NotNull(trace);
+
+                // The span associated to our entry needs to be part of that trace.
+                // (We created this span on the middleware to encompass the whole request)
+                var entrySpan = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == entry.SpanId);
+                // And its parent needs to be the span specified in the header
+                Assert.Equal(spanId, entrySpan.ParentSpanId);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Trace_FromHeader()
+        {
+            string traceId = s_traceIdFactory.NextId();
+            ulong spanId = s_spanIdFactory.NextId();
+            string testId = IdGenerator.FromGuid();
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
+                    TraceHeaderContext.Create(traceId, spanId, null).ToString());
+                await client.GetAsync($"/Main/{nameof(MainController.LogsInOneSpan)}/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // We only have one log entry.
+                LogEntry entry = Assert.Single(results);
+
+                // And the resource name of the trace associated to it points to the trace
+                // we specified on the header.
+                Assert.Contains(TestEnvironment.GetTestProjectId(), entry.Trace);
+                Assert.Contains(traceId, entry.Trace);
+
+                // Let's get our trace.
+                var trace = s_tracePolling.GetTrace(traceId);
+                Assert.NotNull(trace);
+
+                // The span associated to our entry needs to be part of that trace.
+                // (We created this span on the action call)
+                var entrySpan = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == entry.SpanId);
+                // And its grandparent needs to be the span specified in the header
+                // (We created a span in the middleware that will encompass the whole request).
+                var parentSpan = Assert.Single(trace.Spans, s => s.SpanId == entrySpan.ParentSpanId);
+                Assert.Equal(spanId, parentSpan.ParentSpanId);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Trace_FromHeader_MultipleSpans()
+        {
+            string traceId = s_traceIdFactory.NextId();
+            ulong spanId = s_spanIdFactory.NextId();
+            string testId = IdGenerator.FromGuid();
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
+                    TraceHeaderContext.Create(traceId, spanId, true).ToString());
+                await client.GetAsync($"/Main/{nameof(MainController.LogsInDifferentSpans)}/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // Span: span-1
+                //       Log: span-1
+                //       Span: span-1-2
+                //             Log: span-1-2
+                // Span: span-2
+                //       Log: span-2
+
+                string projectId = TestEnvironment.GetTestProjectId();
+
+                // We have 3 logs.
+                Assert.Equal(3, results.Count);
+                // And the resource name of the trace associated to all of them points to the trace
+                // we specified on the header.
+                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(projectId));
+                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(traceId));
+
+                // Let's get our trace.
+                var trace = s_tracePolling.GetTrace(traceId);
+                Assert.NotNull(trace);
+
+                // Let's check that all the entries are associated to the correct spans.
+                var logEntry1 = Assert.Single(results, e => e.JsonPayload.Fields["message"].StringValue.EndsWith("log-1"));
+                var logEntry12 = Assert.Single(results, e => e.JsonPayload.Fields["message"].StringValue.EndsWith("log-1-2"));
+                var logEntry2 = Assert.Single(results, e => e.JsonPayload.Fields["message"].StringValue.EndsWith("log-2"));
+
+                var span1 = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == logEntry1.SpanId);
+                Assert.EndsWith("span-1", span1.Name);
+                var span12 = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == logEntry12.SpanId);
+                Assert.EndsWith("span-1-2", span12.Name);
+                var span2 = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == logEntry2.SpanId);
+                Assert.EndsWith("span-2", span2.Name);
+
+                // Let's check that the spans are correctly created and descend from the span we specified in the header.
+                // span-1-2 is a child of span-1
+                Assert.Equal(span12.ParentSpanId, span1.SpanId);
+                // span-1 and span-2 have the same parent
+                Assert.Equal(span1.ParentSpanId, span2.ParentSpanId);
+                // The grandparent of span-1 and span-2 is the span we specified on the header.
+                var parentSpan = Assert.Single(trace.Spans, s => s.SpanId == span1.ParentSpanId);
+                Assert.Equal(spanId, parentSpan.ParentSpanId);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Trace_Implicit()
+        {
+            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            string testId = IdGenerator.FromGuid();
+
+            string url = $"/Main/Critical/{testId}";
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTracesAllTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync(url);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // Let's get our trace.
+                var trace = s_tracePolling.GetTrace(url, startTime);
+                Assert.NotNull(trace);
+
+                // We only have one log entry.
+                LogEntry entry = Assert.Single(results);
+
+                // And the resource name of the trace associated to it points to the trace
+                // created during the call.
+                Assert.Contains(TestEnvironment.GetTestProjectId(), entry.Trace);
+                Assert.Contains(trace.TraceId, entry.Trace);
+
+                // The span associated to our entry needs to be part of that trace.
+                // (We created this span on the middleware to encompass the whole request)
+                var entrySpan = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == entry.SpanId);
+                // And it shouldn't have a span parent.
+                Assert.Equal((ulong)0, entrySpan.ParentSpanId);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Trace()
+        {
+            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            string testId = IdGenerator.FromGuid();
+
+            string spanPrefix;
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTracesAllTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                spanPrefix = await client.GetStringAsync($"/Main/{nameof(MainController.LogsInOneSpan)}/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // Let's get our trace.
+                var trace = s_tracePolling.GetTrace(spanPrefix, startTime);
+                Assert.NotNull(trace);
+
+                // We only have one log entry.
+                LogEntry entry = Assert.Single(results);
+
+                // And the resource name of the trace associated to it points to the trace
+                // created during the call.
+                Assert.Contains(TestEnvironment.GetTestProjectId(), entry.Trace);
+                Assert.Contains(trace.TraceId, entry.Trace);
+
+                // The span associated to our entry needs to be part of that trace.
+                // (We created this span on the action call)
+                var entrySpan = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == entry.SpanId);
+                // And its parent is a span we create on the middleware to encompass the whole request
+                Assert.NotEqual((ulong)0, entrySpan.ParentSpanId);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Trace_MultipleSpans()
+        {
+            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            string testId = IdGenerator.FromGuid();
+
+            string spanPrefix;
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTracesAllTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                spanPrefix = await client.GetStringAsync($"/Main/{nameof(MainController.LogsInDifferentSpans)}/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // Span: span-1
+                //       Log: span-1
+                //       Span: span-1-2
+                //             Log: span-1-2
+                // Span: span-2
+                //       Log: span-2
+
+                string projectId = TestEnvironment.GetTestProjectId();
+
+                // Let's get our trace.
+                var trace = s_tracePolling.GetTrace(spanPrefix, startTime);
+                Assert.NotNull(trace);
+
+                // We have 3 logs.
+                Assert.Equal(3, results.Count);
+                // And the resource name of the trace associated to all of them points to the trace
+                // created during the call.
+                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(projectId));
+                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(trace.TraceId));
+
+                // Let's check that all the entries are associated to the correct spans.
+                var logEntry1 = Assert.Single(results, e => e.JsonPayload.Fields["message"].StringValue.EndsWith("log-1"));
+                var logEntry12 = Assert.Single(results, e => e.JsonPayload.Fields["message"].StringValue.EndsWith("log-1-2"));
+                var logEntry2 = Assert.Single(results, e => e.JsonPayload.Fields["message"].StringValue.EndsWith("log-2"));
+
+                var span1 = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == logEntry1.SpanId);
+                Assert.EndsWith("span-1", span1.Name);
+                var span12 = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == logEntry12.SpanId);
+                Assert.EndsWith("span-1-2", span12.Name);
+                var span2 = Assert.Single(trace.Spans, s => EntryData.SpanIdToHex(s.SpanId) == logEntry2.SpanId);
+                Assert.EndsWith("span-2", span2.Name);
+
+                // Let's check that the spans are correctly created.
+                // span-1-2 is a child of span-1
+                Assert.Equal(span12.ParentSpanId, span1.SpanId);
+                // span-1 and span-2 have the same parent
+                Assert.Equal(span1.ParentSpanId, span2.ParentSpanId);
+                // The parent of span-1 and span-2 exists, it's the span we created on the middleware
+                // to encompass the whole request.
+                Assert.NotEqual((ulong)0, span1.ParentSpanId);
             });
         }
 
@@ -277,7 +533,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 {
                     var projectId = TestEnvironment.GetTestProjectId();
                     var provider = GoogleLoggerProvider.Create(serviceProvider: null, projectId, LoggerOptions.Create(LogLevel.Warning));
-                    loggingBuilder.AddProvider(provider);                    
+                    loggingBuilder.AddProvider(provider);
                 })
                 .UseStartup<VanillaApplication>();
             using (TestServer server = new TestServer(builder))
@@ -387,21 +643,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public abstract class LoggerTestApplication
     {
-        protected string ProjectId;
+        protected readonly string _projectId = TestEnvironment.GetTestProjectId();
+        protected readonly double _traceQps;
 
         public LoggerTestApplication()
-        {
-            ProjectId = TestEnvironment.GetTestProjectId();
-        }
+            // Don't actually trace anything unless there's a header that forces tracing.
+            : this(0.00000001)
+        { }
+
+        public LoggerTestApplication(double traceQps) => _traceQps = traceQps;
 
         public virtual void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpContextAccessor();
             services.AddGoogleTrace(options =>
             {
-                options.ProjectId = ProjectId;
-                // Don't actually trace anything.
-                options.Options = TraceOptions.Create(qpsSampleRate: 0.00000001);
+                options.ProjectId = _projectId;
+                options.Options = TraceOptions.Create(qpsSampleRate: _traceQps);
             });
             services.AddMvc();
         }
@@ -424,13 +682,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningLoggerTestApplication : LoggerTestApplication
     {
+        public NoBufferWarningLoggerTestApplication()
+            : base()
+        { }
+
+        public NoBufferWarningLoggerTestApplication(double traceQps)
+            : base(traceQps)
+        { }
+
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
+    }
+
+    public class NoBufferWarningLoggerTracesAllTestApplication : NoBufferWarningLoggerTestApplication
+    {
+        public NoBufferWarningLoggerTracesAllTestApplication()
+            : base(double.MaxValue)
+        { }
     }
 
     /// <summary>
@@ -454,7 +727,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, Resource, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
     }
 
@@ -477,7 +750,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, labels, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
     }
 
@@ -488,7 +761,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             SetupRoutes(app);
             var writer = app.ApplicationServices.GetRequiredService<TextWriter>();
             LoggerOptions loggerOptions = LoggerOptions.Create(loggerDiagnosticsOutput: writer);
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
     }
 
@@ -517,7 +790,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
                 LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
                 serviceName:"my.test.service", version:"v1.0.0-alpha01");
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
     }
 
@@ -534,7 +807,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
                 LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
                 serviceName: "my.test.service");
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
     }
 
@@ -551,7 +824,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
                 LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
                 version: "v1.0.0-alpha01");
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId, loggerOptions);
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
     }
 
@@ -640,6 +913,36 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 _logger.LogCritical(e, message);
             }
+            return message;
+        }
+
+        public string LogsInOneSpan(string id, [FromServices] IManagedTracer tracer)
+        {
+            string message = EntryData.GetMessage(nameof(LogsInOneSpan), id);
+            using (tracer.StartSpan(message))
+            {
+                _logger.LogWarning(message);
+            }
+
+            return message;
+        }
+
+        public string LogsInDifferentSpans(string id, [FromServices] IManagedTracer tracer)
+        {
+            string message = EntryData.GetMessage(nameof(LogsInDifferentSpans), id);
+            using (tracer.StartSpan($"{message}-span-1"))
+            {
+                _logger.LogWarning($"{message}-log-1");
+                using (tracer.StartSpan($"{message}-span-1-2"))
+                {
+                    _logger.LogWarning($"{message}-log-1-2");
+                }
+            }
+            using (tracer.StartSpan($"{message}-span-2"))
+            {
+                _logger.LogWarning($"{message}-log-2");
+            }
+
             return message;
         }
     }

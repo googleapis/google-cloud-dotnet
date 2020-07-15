@@ -18,7 +18,6 @@ using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common.IntegrationTests
@@ -35,6 +34,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private readonly TraceServiceClient _client = TraceServiceClient.Create();
 
         internal TraceEntryPolling(TimeSpan timeout = default, TimeSpan sleepInterval = default) : base(timeout, sleepInterval) { }
+
+        public TraceProto GetTrace(string traceId) => 
+            GetEntries(1, () => new[] { _client.GetTrace(_projectId, traceId) })
+                .SingleOrDefault();
 
         /// <summary>
         /// Gets a trace that contains a span with the given name.
