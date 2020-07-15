@@ -123,8 +123,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                     JsonPayload = CreateJsonPayload(eventId, state, exception, message),
                     Labels = { CreateLabels() },
-                    Trace = GetTraceName() ?? "",
                 };
+
+                SetTraceAndSpanIfAny(entry);
 
                 _consumer.Receive(new[] { entry });
             }
@@ -262,23 +263,40 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
         }
 
-        /// <summary>
-        /// Gets the full trace name if the log target is a project, we have an
-        /// HTTP accessor and a valid trace header exists on the current context.
-        /// If the trace name cannot be determined null is returned.
-        /// See: See: https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry
-        /// </summary>
-        internal string GetTraceName()
+        private void SetTraceAndSpanIfAny(LogEntry entry)
         {
-            var httpContext = _serviceProvider?.GetService<IHttpContextAccessor>()?.HttpContext;
-            if (_traceTarget == null || httpContext == null)
+            if (_traceTarget is null)
             {
-                return null;
+                return;
             }
 
-            string header = httpContext.Request?.Headers[TraceHeaderContext.TraceHeader];
-            var traceContext = TraceHeaderContext.FromHeader(header);
-            return traceContext.TraceId == null ? null : _traceTarget.GetFullTraceName(traceContext.TraceId);
+            string traceId = null;
+            ulong? spanId = null;
+
+            // If there's currently a Google trace and span use that one.
+            // This means that the Google Trace component of the diagnostics library
+            // has been initialized.
+            if (ContextTracerManager.GetCurrentTracer() is IManagedTracer tracer && tracer.GetCurrentTraceId() is string googleTraceId)
+            {
+                traceId = googleTraceId;
+                spanId = tracer.GetCurrentSpanId();
+            }
+            // Else let's look at the header.
+            else if (_serviceProvider?.GetService<IHttpContextAccessor>()?.HttpContext is HttpContext httpContext)
+            {
+                var traceContext = TraceHeaderContext.FromHeader(httpContext.Request?.Headers[TraceHeaderContext.TraceHeader]);
+
+                traceId = traceContext.TraceId;
+                spanId = traceContext.SpanId;
+            }
+
+            if (traceId is string)
+            {
+                entry.Trace = _traceTarget.GetFullTraceName(traceId);
+                entry.SpanId = SpanIdToHex(spanId);
+            }
+
+            static string SpanIdToHex(ulong? spanId) => spanId is null ? null : string.Format("0x{0:X}", spanId);
         }
 
         /// <summary>

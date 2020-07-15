@@ -16,7 +16,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
     /// <summary>
     /// Class that contains data and helper methods used to include data in
-    /// <see cref="ErrorEvent"/> entries.
+    /// log entries.
     /// </summary>
     public static class EntryData
     {
@@ -27,5 +27,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// Returns a formatted message based on the two parametes.
         /// </summary>
         public static string GetMessage(string message, string id) => $"{message} - {id}";
+
+        public static string SpanIdToHex(ulong? spanId) => spanId is null ? null : string.Format("0x{0:X}", spanId);
     }
 }
