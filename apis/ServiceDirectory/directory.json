@@ -357,6 +357,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Memcache.V1Beta2"
     },
     {
+      "ServiceDirectory": "google/cloud/security/privateca/v1beta1",
+      "Name": "privateca.googleapis.com",
+      "Title": "Certificate Authority Service API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/security/privateca/v1beta1/privateca_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.security.privateca.v1beta1",
+      "PackageFromProtos": "google.cloud.security.privateca.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/security/privateca/v1beta1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Security.PrivateCA.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/automl/v1beta1",
       "Name": "automl.googleapis.com",
       "Title": "Cloud AutoML API",
