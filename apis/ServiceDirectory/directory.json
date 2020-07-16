@@ -1,6 +1,24 @@
 {
   "Services": [
     {
+      "ServiceDirectory": "google/appengine/v1",
+      "Name": "appengine.googleapis.com",
+      "Title": "App Engine Audit Data",
+      "Description": "Provisions and manages developers' App Engine applications.",
+      "ServiceConfigFile": "google/appengine/v1/appengine.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.appengine.v1",
+      "PackageFromProtos": "google.appengine.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/appengine/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Appengine.V1"
+    },
+    {
       "ServiceDirectory": "google/bigtable/admin/v2",
       "Name": "bigtableadmin.googleapis.com",
       "Title": "Cloud Bigtable Admin API",
