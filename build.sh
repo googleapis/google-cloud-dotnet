@@ -119,6 +119,8 @@ fi
 
 # First build the analyzers, for use in everything else.
 log_build_action "(Start) build.sh"
+log_build_action "Available disk space"
+log_build_action $(df -h)
 log_build_action "Building analyzers"
 
 dotnet publish -nologo -clp:NoSummary -v quiet -c Release -f netstandard1.3 tools/Google.Cloud.Tools.Analyzers
@@ -154,6 +156,9 @@ do
     fi
   done
 done
+
+log_build_action "Available disk space"
+log_build_action $(df -h)
 
 if [[ "$runtests" = true ]]
 then
