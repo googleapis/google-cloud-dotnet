@@ -166,4 +166,6 @@ install_docfx() {
 log_build_action() {
   echo -e "\e[1;35m$1\e[0m"
   echo "$(date -u -Iseconds) $1" >> $REPO_ROOT/build_timing_log.txt
+  echo "Available disk space"
+  df -h
 }
