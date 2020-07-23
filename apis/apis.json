@@ -706,6 +706,23 @@
       }
     },
     {
+      "id": "Google.Cloud.Logging.Console",
+      "version": "1.0.0-alpha00",
+      "type": "other",
+      "targetFrameworks": "netstandard2.0",
+      "testTargetFrameworks": "netcoreapp2.1",
+      "description": "ConsoleFormatter for Google Cloud Logging.",
+      "tags": [
+        "Logging",
+        "Stackdriver",
+        "ILogger",
+        "Console"
+      ],
+      "dependencies": {
+        "Microsoft.Extensions.Logging.Console": "5.0.0-preview.8.20365.13"
+      }
+    },
+    {
       "id": "Google.Cloud.Logging.NLog",
       "version": "3.0.1",
       "type": "other",
