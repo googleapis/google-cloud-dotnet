@@ -47,7 +47,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public TraceTest()
         {
             // The rate limiter instance is static and only set once.  If we do not reset it at the
-            // beginning of each tests the qps will not change.  This is dependent on the tests not
+            // beginning of each test the qps will not change.  This is dependent on the tests not
             // running in parallel.
             RateLimiter.Reset();
 

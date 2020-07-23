@@ -41,11 +41,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private static readonly TraceIdFactory s_traceIdFactory = TraceIdFactory.Create();
         private static readonly SpanIdFactory s_spanIdFactory = SpanIdFactory.Create();
         private static readonly TraceEntryPolling s_tracePolling = new TraceEntryPolling();
-        internal const string ForceTracingQueryParameter = "forceTracing";
 
         private readonly LogValidatingFixture _fixture;
 
-        public LoggingTest(LogValidatingFixture fixture) => _fixture = fixture;
+        public LoggingTest(LogValidatingFixture fixture)
+        {
+            _fixture = fixture;
+
+            // The rate limiter instance is static and only set once.  If we do not reset it at the
+            // beginning of each test the qps will not change.  This is dependent on the tests not
+            // running in parallel, which they don't.
+            RateLimiter.Reset();
+        }
 
         [Fact]
         public async Task Logging_WarningPlus()
@@ -218,7 +225,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
-                    TraceHeaderContext.Create(traceId, spanId, null).ToString());
+                    TraceHeaderContext.Create(traceId, spanId, true).ToString());
                 await client.GetAsync($"/Main/Critical/{testId}");
             }
 
@@ -256,7 +263,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var client = server.CreateClient())
             {
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
-                    TraceHeaderContext.Create(traceId, spanId, null).ToString());
+                    TraceHeaderContext.Create(traceId, spanId, true).ToString());
                 await client.GetAsync($"/Main/{nameof(MainController.LogsInOneSpan)}/{testId}");
             }
 
@@ -659,7 +666,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             services.AddGoogleTrace(options =>
             {
                 options.ProjectId = _projectId;
-                options.Options = TraceOptions.Create(qpsSampleRate: _traceQps);
+                options.Options = TraceOptions.Create(_traceQps, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate));
             });
             services.AddMvc();
         }
