@@ -149,8 +149,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// conversations required for your system.
   ///
   /// For more information about agents, see the
-  /// [Agents
-  /// documentation](https://cloud.google.com/dialogflow/docs/agents-overview).
+  /// [Agent guide](https://cloud.google.com/dialogflow/docs/agents-overview).
   /// </summary>
   public sealed partial class Agent : pb::IMessage<Agent> {
     private static readonly pb::MessageParser<Agent> _parser = new pb::MessageParser<Agent>(() => new Agent());
