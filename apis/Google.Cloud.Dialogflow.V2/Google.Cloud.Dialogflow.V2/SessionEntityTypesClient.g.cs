@@ -200,23 +200,7 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>SessionEntityTypes client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Entities are extracted from user input and represent parameters that are
-    /// meaningful to your application. For example, a date range, a proper name
-    /// such as a geographic location or landmark, and so on. Entities represent
-    /// actionable data for your application.
-    /// 
-    /// Session entity types are referred to as **User** entity types and are
-    /// entities that are built for an individual user such as
-    /// favorites, preferences, playlists, and so on. You can redefine a session
-    /// entity type at the session level.
-    /// 
-    /// Session entity methods do not work with Google Assistant integration.
-    /// Contact Dialogflow support if you need to use session entities
-    /// with Google Assistant integration.
-    /// 
-    /// For more information about entity types, see the
-    /// [Dialogflow
-    /// documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
+    /// Service for managing [SessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityType].
     /// </remarks>
     public abstract partial class SessionEntityTypesClient
     {
@@ -1186,23 +1170,7 @@ namespace Google.Cloud.Dialogflow.V2
 
     /// <summary>SessionEntityTypes client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Entities are extracted from user input and represent parameters that are
-    /// meaningful to your application. For example, a date range, a proper name
-    /// such as a geographic location or landmark, and so on. Entities represent
-    /// actionable data for your application.
-    /// 
-    /// Session entity types are referred to as **User** entity types and are
-    /// entities that are built for an individual user such as
-    /// favorites, preferences, playlists, and so on. You can redefine a session
-    /// entity type at the session level.
-    /// 
-    /// Session entity methods do not work with Google Assistant integration.
-    /// Contact Dialogflow support if you need to use session entities
-    /// with Google Assistant integration.
-    /// 
-    /// For more information about entity types, see the
-    /// [Dialogflow
-    /// documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
+    /// Service for managing [SessionEntityTypes][google.cloud.dialogflow.v2.SessionEntityType].
     /// </remarks>
     public sealed partial class SessionEntityTypesClientImpl : SessionEntityTypesClient
     {

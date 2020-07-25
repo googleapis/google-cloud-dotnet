@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
-  /// Manages agent environments.
+  /// Service for managing [Environments][google.cloud.dialogflow.v2.Environment].
   /// </summary>
   public static partial class Environments
   {
