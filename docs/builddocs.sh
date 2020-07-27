@@ -49,17 +49,10 @@ build_api_docs() {
     cat dependencies/api/$dep/toc >> output/$api/obj/api/toc.yml
   done
   
-  # First build for googleapis.dev and GitHub pages
+  # Build for googleapis.dev and GitHub pages
+  # Note that the devsite build will happen elsewhere.
   $DOCFX build --logLevel Warning --disableGitFeatures output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
-
-  # Then build for devsite (but not in root)
-  if [[ "$api" != "root" ]]
-  then
-    $DOCFX build --logLevel Warning --disableGitFeatures output/$api/devsite-docfx.json | tee errors.txt | grep -v "Invalid file link"
-    (! grep --quiet 'Build failed.' errors.txt)
-    mv output/$api/devsite/api/toc.html output/$api/devsite/api/_toc.yaml
-  fi
 
   # Special case root: that should end up in the root of the assembled
   # site.
