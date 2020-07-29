@@ -29,6 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using DateTime = System.DateTime;
@@ -102,8 +103,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _fixture.AddValidator(testId, results =>
             {
                 Assert.Equal(1000, results.Count);
-                Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Debug);
-                Assert.DoesNotContain(results, l => l.Severity == LogSeverity.Info);
+                Assert.All(results, l =>
+                {
+                    Assert.NotEqual(LogSeverity.Debug, l.Severity);
+                    Assert.NotEqual(LogSeverity.Info, l.Severity);
+                });
                 Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Warning));
                 Assert.Equal(250, results.Count(l => l.Severity == LogSeverity.Error));
                 Assert.Equal(500, results.Count(l => l.Severity == LogSeverity.Critical)); // Exception and Critical
@@ -322,8 +326,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(3, results.Count);
                 // And the resource name of the trace associated to all of them points to the trace
                 // we specified on the header.
-                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(projectId));
-                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(traceId));
+                Assert.All(results, entry =>
+                {
+                    Assert.Contains(projectId, entry.Trace);
+                    Assert.Contains(traceId, entry.Trace);
+                });
 
                 // Let's get our trace.
                 var trace = s_tracePolling.GetTrace(traceId);
@@ -457,8 +464,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal(3, results.Count);
                 // And the resource name of the trace associated to all of them points to the trace
                 // created during the call.
-                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(projectId));
-                Assert.DoesNotContain(results, entry => !entry.Trace.Contains(trace.TraceId));
+                Assert.All(results, entry =>
+                {
+                    Assert.Contains(projectId, entry.Trace);
+                    Assert.Contains(trace.TraceId, entry.Trace);
+                });
 
                 // Let's check that all the entries are associated to the correct spans.
                 var logEntry1 = Assert.Single(results, e => e.JsonPayload.Fields["message"].StringValue.EndsWith("log-1"));
@@ -480,6 +490,81 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 // The parent of span-1 and span-2 exists, it's the span we created on the middleware
                 // to encompass the whole request.
                 Assert.NotEqual((ulong)0, span1.ParentSpanId);
+            });
+        }
+
+        public static object[][] ExternalTraceBuilders
+        {
+            get
+            {
+                return new object[][]
+                {
+                    // TODO: Uncomment afer fixing https://github.com/googleapis/google-cloud-dotnet/issues/5213
+                    // new object[] { new WebHostBuilder().UseStartup<NoBufferWarningLoggerExternalTraceTestApplication>() },
+                    new object[] { new WebHostBuilder().UseStartup<LoggerNoTracingActivatedTestApplication>() }
+                };
+            }
+        }
+
+        [Theory]
+        [MemberData(nameof(ExternalTraceBuilders))]
+        public async Task Logging_Trace_External_OneEntry(IWebHostBuilder builder)
+        {
+            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            string testId = IdGenerator.FromGuid();
+
+            string url = $"/Main/Critical/{testId}";
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync(url);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // We only have one log entry.
+                LogEntry entry = Assert.Single(results);
+
+                // And the resource name of the trace associated to it contains the external trace id.
+                Assert.Contains(TestEnvironment.GetTestProjectId(), entry.Trace);
+                Assert.Contains("external_trace_id", entry.Trace);
+
+                // The span associated to our entry is the external span.
+                Assert.Equal("external_span_number1", entry.SpanId);
+            });
+        }
+
+        [Theory]
+        [MemberData(nameof(ExternalTraceBuilders))]
+        public async Task Logging_Trace_External_MultipleEntries(IWebHostBuilder builder)
+        {
+            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            string testId = IdGenerator.FromGuid();
+
+            string url = $"/Main/LogsThreeEntries/{testId}";
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync(url);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                string projectId = TestEnvironment.GetTestProjectId();
+
+                // We have three log entries.
+                Assert.Equal(3, results.Count);
+
+                // And the resource name of the trace associated to them contains the external trace id.
+                Assert.All(results, entry =>
+                {
+                    Assert.Contains(projectId, entry.Trace);
+                    Assert.Contains("external_trace_id", entry.Trace);
+                });
+
+                // The span associated to our entry is the external span, and is the same span number
+                // as the log entry.
+                Assert.All(results, entry => Assert.Equal($"external_span_number{entry.JsonPayload.Fields["message"].StringValue.Last()}", entry.SpanId));
             });
         }
 
@@ -646,6 +731,46 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
+    /// Application that doesn't perform any diagnostic configuration itself.
+    /// </summary>
+    public class VanillaApplication
+    {
+        public virtual void ConfigureServices(IServiceCollection services) =>
+            services.AddMvc();
+
+        public void Configure(IApplicationBuilder app) =>
+            app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Main}/{action=Index}/{id}"));
+    }
+
+    /// <summary>
+    /// A simple web application to test the <see cref="GoogleLogger"/> and associated classes.
+    /// </summary>
+    public class LoggerNoTracingActivatedTestApplication
+    {
+        protected readonly string _projectId = TestEnvironment.GetTestProjectId();
+
+        public virtual void ConfigureServices(IServiceCollection services)
+        {
+            services.AddHttpContextAccessor();
+            services.AddMvc();
+            services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider());
+        }
+
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Main}/{action=Index}/{id}");
+            });
+            LoggerOptions loggerOptions = LoggerOptions.Create(
+                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer());
+            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
+        }
+    }
+
+    /// <summary>
     /// A simple web application to test the <see cref="GoogleLogger"/> and associated classes.
     /// </summary>
     public abstract class LoggerTestApplication
@@ -713,6 +838,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         { }
     }
 
+    public class NoBufferWarningLoggerExternalTraceTestApplication : NoBufferWarningLoggerTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            base.ConfigureServices(services);
+            services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider());
+        }
+    }
+
     /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
     /// of level warning or above and has a <see cref="MonitoredResource"/> of 'build'.
@@ -770,18 +904,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             LoggerOptions loggerOptions = LoggerOptions.Create(loggerDiagnosticsOutput: writer);
             loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
         }
-    }
-
-    /// <summary>
-    /// Application that doesn't perform any diagnostic configuration itself.
-    /// </summary>
-    public class VanillaApplication
-    {
-        public virtual void ConfigureServices(IServiceCollection services) =>
-            services.AddMvc();
-
-        public void Configure(IApplicationBuilder app) =>
-            app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Main}/{action=Index}/{id}"));
     }
 
     /// <summary>
@@ -952,6 +1074,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             return message;
         }
+
+        public string LogsThreeEntries(string id)
+        {
+            string message = EntryData.GetMessage(nameof(LogsInDifferentSpans), id);
+            _logger.LogWarning($"{message}-log-1");
+            _logger.LogWarning($"{message}-log-2");
+            _logger.LogWarning($"{message}-log-3");
+            return message;
+        }
     }
 
     internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
@@ -960,5 +1091,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             labels["Foo"] = "Hello, World!";
         }
+    }
+
+    internal class SpanCountingExternalTraceProvider : IExternalTraceProvider
+    {
+        internal int _callCount = 0;
+        public TraceContextForLogEntry GetCurrentTraceContext(IServiceProvider serviceProvider) =>
+            new TraceContextForLogEntry("external_trace_id", $"external_span_number{Interlocked.Increment(ref _callCount)}");
     }
 }

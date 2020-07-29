@@ -16,7 +16,6 @@ using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -270,33 +269,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 return;
             }
 
-            string traceId = null;
-            ulong? spanId = null;
-
             // If there's currently a Google trace and span use that one.
             // This means that the Google Trace component of the diagnostics library
             // has been initialized.
-            if (ContextTracerManager.GetCurrentTracer() is IManagedTracer tracer && tracer.GetCurrentTraceId() is string googleTraceId)
+            // Else attempt to use an external trace context.
+            if ((TraceContextForLogEntry.FromGoogleTrace() ?? TraceContextForLogEntry.FromExternalTrace(_serviceProvider)) is TraceContextForLogEntry trace)
             {
-                traceId = googleTraceId;
-                spanId = tracer.GetCurrentSpanId();
+                entry.Trace = _traceTarget.GetFullTraceName(trace.TraceId);
+                entry.SpanId = trace.SpanId;
             }
-            // Else let's look at the header.
-            else if (_serviceProvider?.GetService<IHttpContextAccessor>()?.HttpContext is HttpContext httpContext)
-            {
-                var traceContext = TraceHeaderContext.FromHeader(httpContext.Request?.Headers[TraceHeaderContext.TraceHeader]);
-
-                traceId = traceContext.TraceId;
-                spanId = traceContext.SpanId;
-            }
-
-            if (traceId is string)
-            {
-                entry.Trace = _traceTarget.GetFullTraceName(traceId);
-                entry.SpanId = SpanIdToHex(spanId);
-            }
-
-            static string SpanIdToHex(ulong? spanId) => spanId is null ? null : string.Format("0x{0:X}", spanId);
         }
 
         /// <summary>
