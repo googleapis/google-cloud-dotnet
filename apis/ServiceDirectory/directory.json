@@ -827,6 +827,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.TextToSpeech.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/metastore/v1alpha",
+      "Name": "metastore.googleapis.com",
+      "Title": "Dataproc Metastore API",
+      "Description": "The Dataproc Metastore API is used to manage the lifecycle and configuration of metastore services.",
+      "ServiceConfigFile": "google/cloud/metastore/v1alpha/metastore_v1alpha.yaml",
+      "Version": "v1alpha",
+      "PackageFromDirectory": "google.cloud.metastore.v1alpha",
+      "PackageFromProtos": "google.cloud.metastore.v1alpha",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Metastore.V1Alpha"
+    },
+    {
       "ServiceDirectory": "google/cloud/iot/v1",
       "Name": "cloudiot.googleapis.com",
       "Title": "Cloud IoT API",
