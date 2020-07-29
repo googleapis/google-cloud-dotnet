@@ -1823,6 +1823,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Binaryauthorization.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/video/transcoder/v1beta1",
+      "Name": "transcoder.googleapis.com",
+      "Title": "Transcoder API",
+      "Description": "This API converts video files into formats suitable for consumer distribution.",
+      "ServiceConfigFile": "google/cloud/video/transcoder/v1beta1/transcoder_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.video.transcoder.v1beta1",
+      "PackageFromProtos": "google.cloud.video.transcoder.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/video/transcoder/v1beta1",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Video.Transcoder.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/websecurityscanner/v1alpha",
       "Name": "websecurityscanner.googleapis.com",
       "Title": "Web Security Scanner API",
