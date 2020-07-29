@@ -433,28 +433,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void Log_Trace()
         {
-            string traceId = "105445aa7843bc8bf206b12000100f00";
+            string traceId = "external_trace_id";
+            string spanId = "external_span_id";
             string fullTraceName = TraceTarget.ForProject(ProjectId).GetFullTraceName(traceId);
 
             Predicate<IEnumerable<LogEntry>> matcher = logEntries =>
             {
                 LogEntry entry = logEntries.Single();
                 return entry.LogName == new LogName(ProjectId, BaseLogName).ToString() &&
-                    entry.Trace == fullTraceName;
+                    entry.Trace == fullTraceName &&
+                    entry.SpanId == spanId;
             };
 
-            var tracerContext = TraceHeaderContext.Create(traceId, 81237123, null);
-            HeaderDictionary dict = new HeaderDictionary();
-            dict[TraceHeaderContext.TraceHeader] = tracerContext.ToString();
-
             var mockServiceProvider = new Mock<IServiceProvider>();
-            var mockAccessor = new Mock<IHttpContextAccessor>();
-            var mockContext = new Mock<HttpContext>();
-            var mockRequest = new Mock<HttpRequest>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IHttpContextAccessor))).Returns(mockAccessor.Object);
-            mockAccessor.Setup(a => a.HttpContext).Returns(mockContext.Object);
-            mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
-            mockRequest.Setup(r => r.Headers).Returns(dict);
+            var mockExternalTraceProvider = new Mock<IExternalTraceProvider>();
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IExternalTraceProvider))).Returns(mockExternalTraceProvider.Object);
+            mockExternalTraceProvider.Setup(
+                sp => sp.GetCurrentTraceContext(It.IsAny<IServiceProvider>()))
+                .Returns(new TraceContextForLogEntry(traceId, spanId));
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
