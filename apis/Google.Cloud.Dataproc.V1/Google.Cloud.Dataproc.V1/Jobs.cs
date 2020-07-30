@@ -123,7 +123,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "RUQQBxINCglDQU5DRUxMRUQQBBIICgRET05FEAUSCQoFRVJST1IQBhITCg9B",
             "VFRFTVBUX0ZBSUxVUkUQCSJICghTdWJzdGF0ZRIPCgtVTlNQRUNJRklFRBAA",
             "Eg0KCVNVQk1JVFRFRBABEgoKBlFVRVVFRBACEhAKDFNUQUxFX1NUQVRVUxAD",
-            "IjwKDEpvYlJlZmVyZW5jZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQISEwoG",
+            "IjwKDEpvYlJlZmVyZW5jZRIXCgpwcm9qZWN0X2lkGAEgASgJQgPgQQESEwoG",
             "am9iX2lkGAIgASgJQgPgQQEipQIKD1lhcm5BcHBsaWNhdGlvbhIRCgRuYW1l",
             "GAEgASgJQgPgQQISQwoFc3RhdGUYAiABKA4yLy5nb29nbGUuY2xvdWQuZGF0",
             "YXByb2MudjEuWWFybkFwcGxpY2F0aW9uLlN0YXRlQgPgQQISFQoIcHJvZ3Jl",
@@ -917,8 +917,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> fileUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. HCFS URIs of files to be copied to the working directory of
-    /// Spark drivers and distributed tasks. Useful for naively parallel tasks.
+    /// Optional. HCFS URIs of files to be placed in the working directory of
+    /// each executor. Useful for naively parallel tasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> FileUris {
@@ -931,8 +931,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> archiveUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. HCFS URIs of archives to be extracted in the working directory
-    /// of Spark drivers and tasks. Supported file types:
+    /// Optional. HCFS URIs of archives to be extracted into the working directory
+    /// of each executor. Supported file types:
     /// .jar, .tar, .tar.gz, .tgz, and .zip.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1272,8 +1272,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> fileUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. HCFS URIs of files to be copied to the working directory of
-    /// Python drivers and distributed tasks. Useful for naively parallel tasks.
+    /// Optional. HCFS URIs of files to be placed in the working directory of
+    /// each executor. Useful for naively parallel tasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> FileUris {
@@ -1286,7 +1286,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(50);
     private readonly pbc::RepeatedField<string> archiveUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. HCFS URIs of archives to be extracted in the working directory of
+    /// Optional. HCFS URIs of archives to be extracted into the working directory
+    /// of each executor. Supported file types:
     /// .jar, .tar, .tar.gz, .tgz, and .zip.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2683,8 +2684,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> fileUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. HCFS URIs of files to be copied to the working directory of
-    /// R drivers and distributed tasks. Useful for naively parallel tasks.
+    /// Optional. HCFS URIs of files to be placed in the working directory of
+    /// each executor. Useful for naively parallel tasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> FileUris {
@@ -2697,8 +2698,8 @@ namespace Google.Cloud.Dataproc.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> archiveUris_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. HCFS URIs of archives to be extracted in the working directory of
-    /// Spark drivers and tasks. Supported file types:
+    /// Optional. HCFS URIs of archives to be extracted into the working directory
+    /// of each executor. Supported file types:
     /// .jar, .tar, .tar.gz, .tgz, and .zip.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3772,8 +3773,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// Required. The ID of the Google Cloud Platform project that the job
-    /// belongs to.
+    /// Optional. The ID of the Google Cloud Platform project that the job belongs to. If
+    /// specified, must match the request project ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
