@@ -47,6 +47,52 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.False(rateLimiter.CanTrace());
         }
 
+        [Theory]
+        [InlineData(0)]
+        [InlineData(double.Epsilon)]
+        [InlineData(1.08E-12)] // Wait time will be slightly bigger than TimeSpan.MaxValue.
+        [InlineData(1.08E-16)] // Wait time will be slightly bigger than long.MaxValue in millis.
+        public void CanTrace_Never(double qps)
+        {
+            var rateLimiter = TraceUtils.GetRateLimiter(
+                qps, new long[] { 0, 1, 1000, Convert.ToInt64(TimeSpan.MaxValue.TotalMilliseconds + 1), long.MaxValue });
+            Assert.False(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+        }
+
+        [Theory]
+        [InlineData(2000)]
+        [InlineData(double.PositiveInfinity)]
+        [InlineData(double.MaxValue)]
+        public void CanTrace_Always(double qps)
+        {
+            var rateLimiter = TraceUtils.GetRateLimiter(
+                qps, new long[] { 0, 0, 1, 1000, long.MaxValue });
+            Assert.True(rateLimiter.CanTrace());
+            Assert.True(rateLimiter.CanTrace());
+            Assert.True(rateLimiter.CanTrace());
+            Assert.True(rateLimiter.CanTrace());
+            Assert.True(rateLimiter.CanTrace());
+        }
+
+        [Fact]
+        public void CanTrace_AfterLong()
+        {
+            var rateLimiter = TraceUtils.GetRateLimiter(
+                1.08E-11, new long[] { 0, 1000, 10_000, 100_000, 1_000_000, Convert.ToInt64(TimeSpan.MaxValue.TotalMilliseconds) });
+            // Inmediately traces.
+            Assert.True(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+            Assert.False(rateLimiter.CanTrace());
+            // Traces after waiting for a looooong time.
+            Assert.True(rateLimiter.CanTrace());
+        }
+
         [Fact]
         public void CanTrace_Multiple()
         {

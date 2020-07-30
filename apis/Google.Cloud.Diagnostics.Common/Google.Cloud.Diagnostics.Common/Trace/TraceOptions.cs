@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common
         private TraceOptions(double qpsSampleRate, BufferOptions bufferOptions, RetryOptions retryOptions)
         {
             GaxPreconditions.CheckArgument(
-                qpsSampleRate > 0, nameof(qpsSampleRate), "qpsSampleRate must be greater than 0.");
+                qpsSampleRate >= 0, nameof(qpsSampleRate), "qpsSampleRate must be greater than 0.");
             QpsSampleRate = qpsSampleRate;
             BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
             RetryOptions = GaxPreconditions.CheckNotNull(retryOptions, nameof(retryOptions));

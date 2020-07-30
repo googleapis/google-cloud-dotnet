@@ -499,8 +499,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 return new object[][]
                 {
-                    // TODO: Uncomment afer fixing https://github.com/googleapis/google-cloud-dotnet/issues/5213
-                    // new object[] { new WebHostBuilder().UseStartup<NoBufferWarningLoggerExternalTraceTestApplication>() },
+                    new object[] { new WebHostBuilder().UseStartup<NoBufferWarningLoggerExternalTraceTestApplication>() },
                     new object[] { new WebHostBuilder().UseStartup<LoggerNoTracingActivatedTestApplication>() }
                 };
             }
@@ -780,7 +779,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public LoggerTestApplication()
             // Don't actually trace anything unless there's a header that forces tracing.
-            : this(0.00000001)
+            : this(0)
         { }
 
         public LoggerTestApplication(double traceQps) => _traceQps = traceQps;
@@ -834,7 +833,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     public class NoBufferWarningLoggerTracesAllTestApplication : NoBufferWarningLoggerTestApplication
     {
         public NoBufferWarningLoggerTracesAllTestApplication()
-            : base(double.MaxValue)
+            : base(double.PositiveInfinity)
         { }
     }
 
