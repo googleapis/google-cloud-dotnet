@@ -45,7 +45,7 @@ namespace Google.Cloud.Dataproc.V1 {
   /// </summary>
   public enum Component {
     /// <summary>
-    /// Unspecified component.
+    /// Unspecified component. Specifying this will cause Cluster creation to fail.
     /// </summary>
     [pbr::OriginalName("COMPONENT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
