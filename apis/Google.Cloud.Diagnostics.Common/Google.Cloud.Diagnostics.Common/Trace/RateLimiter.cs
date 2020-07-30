@@ -23,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common
     internal sealed class RateLimiter
     {
         /// <summary>A mutex to protect the rate limiter instance.</summary>
-        private static object _instanceMutex = new object();
+        private static readonly object _instanceMutex = new object();
 
         /// <summary>The single rate limiter instance.</summary>
         private static RateLimiter _instance;
@@ -57,12 +57,24 @@ namespace Google.Cloud.Diagnostics.Common
 
         internal RateLimiter(double qps, ITimer timer)
         {
-            GaxPreconditions.CheckArgument(qps > 0, nameof(qps), "qps must be greater than 0");
+            GaxPreconditions.CheckArgument(qps >= 0, nameof(qps), "qps must be greater than or equal to 0");
 
             _timer = timer;
             _timer.Start();
 
-            _fixedDelayMillis = Convert.ToInt64(TimeSpan.FromSeconds(1 / qps).TotalMilliseconds);
+            if (qps == 0)
+            {
+                _fixedDelayMillis = long.MaxValue;
+            }
+            else
+            {
+                _fixedDelayMillis = (1000 / qps) switch
+                {
+                    double millis when millis > long.MaxValue || millis > TimeSpan.MaxValue.TotalMilliseconds => long.MaxValue,
+                    double millis => Convert.ToInt64(millis)
+                };
+            }
+
             // Allow a trace immediately.
             _lastCallMillis = -_fixedDelayMillis;
         }
@@ -74,9 +86,13 @@ namespace Google.Cloud.Diagnostics.Common
         /// <returns>True if tracing is allowed.</returns>
         public bool CanTrace()
         {
-            if(_fixedDelayMillis == 0)
+            if (_fixedDelayMillis == 0)
             {
                 return true;
+            }
+            if (_fixedDelayMillis == long.MaxValue)
+            {
+                return false;
             }
 
             lock (_lastCallMutex)

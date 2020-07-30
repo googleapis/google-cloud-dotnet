@@ -482,13 +482,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
-    /// This app does not use a buffer and will sample 0.0000001 QPS.
-    /// This will allow no calls to be traced (unless they have a trace header) and
-    /// push them to the Trace API immediately.
+    /// This app does not use a buffer and traces will be pushed to the Trace API inmediately.
+    /// This app will no trace unless requests have a trace header.
     /// </summary>
     public class TraceTestNoBufferLowQpsApplication : AbstractTraceTestApplication
     {
-        public override double GetSampleRate() => 0.0000001;
+        public override double GetSampleRate() => 0;
         public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
     }
 
