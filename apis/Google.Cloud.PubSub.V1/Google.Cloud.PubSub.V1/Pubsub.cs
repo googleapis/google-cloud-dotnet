@@ -512,8 +512,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
-    /// managing labels&lt;/a>.
+    /// See [Creating and managing labels]
+    /// (https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -688,11 +688,11 @@ namespace Google.Cloud.PubSub.V1 {
   /// A message that is published by publishers and consumed by subscribers. The
   /// message must contain either a non-empty data field or at least one attribute.
   /// Note that client libraries represent this object differently
-  /// depending on the language. See the corresponding
-  /// &lt;a href="https://cloud.google.com/pubsub/docs/reference/libraries">client
-  /// library documentation&lt;/a> for more information. See
-  /// &lt;a href="https://cloud.google.com/pubsub/quotas">Quotas and limits&lt;/a>
-  /// for more information about message limits.
+  /// depending on the language. See the corresponding [client library
+  /// documentation](https://cloud.google.com/pubsub/docs/reference/libraries) for
+  /// more information. See [quotas and limits]
+  /// (https://cloud.google.com/pubsub/quotas) for more information about message
+  /// limits.
   /// </summary>
   public sealed partial class PubsubMessage : pb::IMessage<PubsubMessage> {
     private static readonly pb::MessageParser<PubsubMessage> _parser = new pb::MessageParser<PubsubMessage>(() => new PubsubMessage());
@@ -805,9 +805,6 @@ namespace Google.Cloud.PubSub.V1 {
     /// delivered to subscribers in the order in which they are received by the
     /// Pub/Sub system. All `PubsubMessage`s published in a given `PublishRequest`
     /// must specify the same `ordering_key` value.
-    /// &lt;b>EXPERIMENTAL:&lt;/b> This feature is part of a closed alpha release. This
-    /// API might be changed in backward-incompatible ways and is not recommended
-    /// for production use. It is not subject to any SLA or deprecation policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderingKey {
@@ -3166,10 +3163,8 @@ namespace Google.Cloud.PubSub.V1 {
     /// Indicates whether to retain acknowledged messages. If true, then
     /// messages are not expunged from the subscription's backlog, even if they are
     /// acknowledged, until they fall out of the `message_retention_duration`
-    /// window. This must be true if you would like to
-    /// &lt;a
-    /// href="https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time">
-    /// Seek to a timestamp&lt;/a>.
+    /// window. This must be true if you would like to [Seek to a timestamp]
+    /// (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RetainAckedMessages {
@@ -3220,9 +3215,6 @@ namespace Google.Cloud.PubSub.V1 {
     /// will be delivered to the subscribers in the order in which they
     /// are received by the Pub/Sub system. Otherwise, they may be delivered in
     /// any order.
-    /// &lt;b>EXPERIMENTAL:&lt;/b> This feature is part of a closed alpha release. This
-    /// API might be changed in backward-incompatible ways and is not recommended
-    /// for production use. It is not subject to any SLA or deprecation policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool EnableMessageOrdering {
@@ -7375,11 +7367,10 @@ namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>
   /// A snapshot resource. Snapshots are used in
-  /// &lt;a href="https://cloud.google.com/pubsub/docs/replay-overview">Seek&lt;/a>
-  /// operations, which allow
-  /// you to manage message acknowledgments in bulk. That is, you can set the
-  /// acknowledgment state of messages in an existing subscription to the state
-  /// captured by a snapshot.
+  /// [Seek](https://cloud.google.com/pubsub/docs/replay-overview)
+  /// operations, which allow you to manage message acknowledgments in bulk. That
+  /// is, you can set the acknowledgment state of messages in an existing
+  /// subscription to the state captured by a snapshot.
   /// </summary>
   public sealed partial class Snapshot : pb::IMessage<Snapshot> {
     private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
@@ -7475,8 +7466,8 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// See &lt;a href="https://cloud.google.com/pubsub/docs/labels"> Creating and
-    /// managing labels&lt;/a>.
+    /// See [Creating and managing labels]
+    /// (https://cloud.google.com/pubsub/docs/labels).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
