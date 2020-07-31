@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListGameServerDeployments",
+    "client": "GameServerDeploymentsServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListRealms",
+    "client": "RealmsServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
