@@ -607,6 +607,24 @@
       "protoPath": "google/cloud/functions/v1"
     },
     {
+      "id": "Google.Cloud.Gaming.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Game Services API",
+      "productUrl": "https://cloud.google.com/solutions/gaming",
+      "description": "Recommended Google client ilbrary to access the Google Cloud Gaming API version v1, which allows you to deploy and manage infrastructure for global multiplayer gaming experiences.",
+      "tags": [
+        "gaming",
+        "games"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/gaming/v1",
+      "effectivePackageOwner": "google-cloud"
+    },
+    {
       "id": "Google.Cloud.Gaming.V1Beta",
       "generator": "micro",
       "protoPath": "google/cloud/gaming/v1beta",
