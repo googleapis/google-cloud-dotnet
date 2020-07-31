@@ -45,6 +45,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.1.0) | 2.1.0 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.0.0) | 2.0.0 | [Firestore low-level API access](https://firebase.google.com) |
 | [Google.Cloud.Functions.V1](https://googleapis.dev/dotnet/Google.Cloud.Functions.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Functions API](https://cloud.google.com/functions) |
+| [Google.Cloud.Gaming.V1](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1/1.0.0-beta01) | 1.0.0-beta01 | [Game Services API](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta04) | 1.0.0-beta04 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](https://googleapis.dev/dotnet/Google.Cloud.Iam.V1/2.0.0) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
 | [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.0.0) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
