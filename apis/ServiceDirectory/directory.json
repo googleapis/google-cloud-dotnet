@@ -1030,6 +1030,24 @@
       "CSharpNamespaceFromProtos": "<AMBIGUOUS: Google.Cloud.RecommendationEngine.V1Beta1, Google.Cloud.Recommendationengine.V1Beta1>"
     },
     {
+      "ServiceDirectory": "google/cloud/gaming/v1",
+      "Name": "gameservices.googleapis.com",
+      "Title": "Game Services API",
+      "Description": "Deploy and manage infrastructure for global multiplayer gaming experiences.",
+      "ServiceConfigFile": "google/cloud/gaming/v1/gameservices_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.gaming.v1",
+      "PackageFromProtos": "google.cloud.gaming.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/gaming/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Gaming.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/gaming/v1beta",
       "Name": "gameservices.googleapis.com",
       "Title": "Game Services API",
