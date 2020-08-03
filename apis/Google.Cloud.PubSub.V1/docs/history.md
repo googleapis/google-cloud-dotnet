@@ -1,5 +1,21 @@
 # Version history
 
+# Version 2.1.0, released 2020-08-03
+
+- [Commit 330b04e](https://github.com/googleapis/google-cloud-dotnet/commit/330b04e): Fix: PubSub methods will now be retried appropriately. Fixes [issue 5225](https://github.com/googleapis/google-cloud-dotnet/issues/5225)
+- [Commit 0cd128c](https://github.com/googleapis/google-cloud-dotnet/commit/0cd128c): docs: Remove experimental warning for ordering keys properties. ([issue 5219](https://github.com/googleapis/google-cloud-dotnet/issues/5219))
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit 6165e07](https://github.com/googleapis/google-cloud-dotnet/commit/6165e07): feat: Add support for server-side streaming pull flow control ([issue 5119](https://github.com/googleapis/google-cloud-dotnet/issues/5119))
+- [Commit 2c5f3c1](https://github.com/googleapis/google-cloud-dotnet/commit/2c5f3c1): feat: Add flow control settings for StreamingPullRequest to pubsub.proto
+- [Commit b5500f5](https://github.com/googleapis/google-cloud-dotnet/commit/b5500f5): docs: Add a link to Pub/Sub filtering language public documentation to pubsub.proto
+- [Commit ac924f2](https://github.com/googleapis/google-cloud-dotnet/commit/ac924f2): feat: Add "detached" bool to Subscription
+- [Commit f3eeca0](https://github.com/googleapis/google-cloud-dotnet/commit/f3eeca0): docs: Add comment for MessageStoragePolicy message
+- [Commit 1dae64f](https://github.com/googleapis/google-cloud-dotnet/commit/1dae64f): fix: Use correct resource type for DetachSubscriptionRequest
+- [Commit 5f5b8aa](https://github.com/googleapis/google-cloud-dotnet/commit/5f5b8aa): feat: DetachSubscription RPC
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+- [Commit 777b926](https://github.com/googleapis/google-cloud-dotnet/commit/777b926): docs: Removing the experimental tag from dead letter policy related fields.
+- [Commit 8cd3929](https://github.com/googleapis/google-cloud-dotnet/commit/8cd3929): docs: Removing experimental tag from DeadLetterPolicy for Cloud Pub/Sub.
+
 # Version 2.0.0, released 2020-04-09
 
 - [Commit 26de65c](https://github.com/googleapis/google-cloud-dotnet/commit/26de65c): Fix: Fix comment around default AckDeadline
