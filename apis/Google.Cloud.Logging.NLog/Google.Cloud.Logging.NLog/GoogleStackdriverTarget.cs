@@ -141,11 +141,12 @@ namespace Google.Cloud.Logging.NLog
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(MemberInfo)));
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(Assembly)));
             jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(Module)));
+            jsonSettings.Converters.Add(new ToStringJsonConverter(typeof(System.IO.Stream)));
 
             jsonSettings.Error = (sender, args) =>
             {
                 // Serialization of properties that throws exceptions should not break everything
-                InternalLogger.Warn(args.ErrorContext.Error, "GoogleStackdriver(Name={0}): Error serializing exception property: {1}", Name, args.ErrorContext.Member);
+                InternalLogger.Debug(args.ErrorContext.Error, "GoogleStackdriver(Name={0}): Error serializing exception property: {1}", Name, args.ErrorContext.Member);
                 args.ErrorContext.Handled = true;
             };
             var jsonSerializer = Newtonsoft.Json.JsonSerializer.CreateDefault(jsonSettings);
