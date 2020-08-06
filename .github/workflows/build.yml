@@ -2,9 +2,6 @@ name: Build and test
 
 on: [push, pull_request]
 
-defaults:
-  runs-on: ubuntu-18.04
-
 jobs:
 
   build:
