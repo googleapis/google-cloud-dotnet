@@ -15,7 +15,7 @@ jobs:
         submodules: true
         # TODO: Try depth 100. We diff against master, and we don't know
         # how far back that is... there may be a better approach
-        depth: 0
+        fetch-depth: 0
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -25,8 +25,12 @@ jobs:
       with:
         python-version: 3.x
     - run: |
+        echo "First try"
+        git branch
+        echo "Checking out"
         git checkout master -b ${{ github.event.before }}
         git checkout after -b ${{ github.event.after }}
+        echo "Second try"
         git branch
         python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
         touch build_timing_log.txt
