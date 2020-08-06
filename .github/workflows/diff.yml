@@ -9,9 +9,6 @@ jobs:
 
   build:
     runs-on: ubuntu-18.04
-    strategy:
-      matrix:
-        regex: ["'Google\.Cloud\.[A-L].*'", "'Google\.Cloud\.[M-Z].*'", "'!Google\.Cloud'"]
     steps:
     - uses: actions/checkout@v2
       with:
