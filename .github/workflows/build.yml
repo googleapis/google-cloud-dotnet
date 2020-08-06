@@ -25,6 +25,8 @@ jobs:
       with:
         python-version: 3.x
     - run: |
+        git checkout master -b {{ github.event.before }}
+        git checkout after -b {{ github.event.after }}
         git branch
         python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
         touch build_timing_log.txt
