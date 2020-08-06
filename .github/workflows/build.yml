@@ -28,8 +28,8 @@ jobs:
         echo "First try"
         git branch
         echo "Checking out"
-        git checkout master -b ${{ github.event.before }}
-        git checkout after -b ${{ github.event.after }}
+        git checkout -b master ${{ github.event.before }}
+        git checkout -b after ${{ github.event.after }}
         echo "Second try"
         git branch
         python3 tools/listapis.py apis/apis.json > /dev/null || travis_terminate 1
