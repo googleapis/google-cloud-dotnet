@@ -34,6 +34,7 @@ jobs:
       with:
         python-version: 3.x
     - run: |
+        dotnet --info
         # Make sure the master branch is available for diffing.
         git checkout -b master ${{ github.event.before }}
         git checkout -b after ${{ github.event.after }}
