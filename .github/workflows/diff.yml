@@ -2,9 +2,6 @@ name: Detect differences
 
 on: pull_request
 
-defaults:
-  runs-on: ubuntu-18.04
-
 jobs:
 
   build:
