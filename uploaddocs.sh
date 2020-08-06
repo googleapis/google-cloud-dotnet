@@ -66,12 +66,13 @@ do
     echo "Final upload stage (googleapis.dev)"
     python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
 
-    cd ../devsite/api
+    # For DevSite, we just upload the yaml in the obj/api directory
+    cd ../obj/api
     echo "Generating metadata (DevSite)"
     python -m docuploader create-metadata --name $pkg --version $version --language dotnet --github-repository googleapis/google-cloud-dotnet
     
     echo "Final upload stage (DevSite)"
-    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET
+    python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
 
     popd > /dev/null
   else

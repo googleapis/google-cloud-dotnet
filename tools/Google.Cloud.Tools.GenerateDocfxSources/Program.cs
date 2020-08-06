@@ -142,8 +142,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 }
             };
             File.WriteAllText(Path.Combine(outputDirectory, "docfx.json"), json.ToString());
-            ModifyForDevSite(rootApi, json);
-            File.WriteAllText(Path.Combine(outputDirectory, "devsite-docfx.json"), json.ToString());
 
             // We let the build script do work with the dependencies:
             // - Copy all yml files
@@ -209,34 +207,6 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 }
             }
             return set;
-        }
-
-        private static void ModifyForDevSite(ApiMetadata api, JObject obj)
-        {
-            // We won't build the metadata, so let's remove it.
-            obj.Remove("metadata");
-            var build = (JObject) obj["build"];
-            var globalMetadata = (JObject) build["globalMetadata"];
-            globalMetadata["_disableNavbar"] = true;
-            globalMetadata["_disable"] = true;
-            globalMetadata["_disableBreadcrumb"] = true;
-            globalMetadata["_enableSearch"] = false;
-            globalMetadata["_disableToc"] = true;
-            globalMetadata["_disableSideFilter"] = true;
-            globalMetadata["_disableAffix"] = true;
-            globalMetadata["_disableFooter"] = true;
-
-            // First pass at guessing the root path to use. We will want to infer from other things, but if
-            // we get it wrong for now, it won't matter as it's not public.
-
-            string productUrl = api.ProductUrl ?? "";
-            string productFamily = productUrl.StartsWith("https://cloud.google.com/")
-                ? productUrl.Split('/')[3]
-                : "unknown";
-            globalMetadata["_rootPath"] = $"/dotnet/docs/reference/{productFamily}";
-
-            build["template"][1] = "../../../third_party/docfx/templates/devsite";
-            build["dest"] = "devsite";
         }
 
         private static void CopyAndGenerateArticles(ApiMetadata api, string inputDirectory, string outputDirectory)
