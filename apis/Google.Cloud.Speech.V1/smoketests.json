@@ -5,7 +5,7 @@
       "config": {
       	"language_code": "en-US",
       	"sample_rate_hertz": 44100,
-        "encoding": "FLAC",
+              "encoding": "FLAC",
         "audio_channel_count": 2
       },
       "audio": {
