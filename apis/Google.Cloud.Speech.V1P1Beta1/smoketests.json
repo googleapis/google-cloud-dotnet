@@ -3,12 +3,13 @@
     "method": "Recognize",
     "arguments": {
       "config": {
-      	"language_code": "en-US",
-      	"sample_rate_hertz": 44100,
-      	"encoding": "FLAC"
+        "language_code": "en-US",
+        "sample_rate_hertz": 44100,
+        "encoding": "FLAC",
+        "audio_channel_count": 2
       },
       "audio": {
-      	"uri": "gs://gapic-toolkit/hello.flac"
+        "uri": "gs://cloud-samples-data/speech/hello.flac"
       }
     }
   }
