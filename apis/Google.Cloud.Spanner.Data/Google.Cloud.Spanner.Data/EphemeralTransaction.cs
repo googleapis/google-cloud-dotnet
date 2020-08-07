@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -45,17 +46,32 @@ namespace Google.Cloud.Spanner.Data
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.CommitTimeout = timeoutSeconds;
-                    long count = await ((ISpannerTransaction)transaction)
-                        .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
-                        .ConfigureAwait(false);
-
-                    // This is somewhat ugly. PDML commits as it goes, so we don't need to, whereas non-partitioned
-                    // DML needs the commit afterwards to finish up.
-                    if (_transactionOptions.ModeCase != TransactionOptions.ModeOneofCase.PartitionedDml)
+                    while (true)
                     {
-                        await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
+                        try
+                        {
+                            long count = await ((ISpannerTransaction)transaction)
+                                .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
+                                .ConfigureAwait(false);
+
+                            // This is somewhat ugly. PDML commits as it goes, so we don't need to, whereas non-partitioned
+                            // DML needs the commit afterwards to finish up.
+                            if (_transactionOptions.ModeCase != TransactionOptions.ModeOneofCase.PartitionedDml)
+                            {
+                                await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
+                            }
+                            return count;
+                        }
+                        catch (SpannerException e) when (
+                            _transactionOptions.ModeCase == TransactionOptions.ModeOneofCase.PartitionedDml &&
+                            e.ErrorCode == ErrorCode.Internal &&
+                            e.Message.Contains("Received unexpected EOS on DATA frame from server"))
+                        {
+                            // Retry with the same transaction. Since this error happens in long-lived
+                            // transactions (>= 30 mins), it's unnecessary to do exponential backoff.
+                            continue;
+                        }
                     }
-                    return count;
                 }
             }
         }
