@@ -37,10 +37,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public SpannerStressTests(SpannerStressTestTableFixture fixture) =>
             _fixture = fixture;
 
-        [SkippableFact]
+        [Fact]
         public Task RunWriteStress()
         {
-            Skip.If(_fixture.RunningOnEmulator, "Requires multiple read/write transactions");
             return RunStress(async connectionStringBuilder =>
             {
                 using (var connection = new SpannerConnection(connectionStringBuilder))
