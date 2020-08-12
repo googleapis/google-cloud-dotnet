@@ -319,7 +319,7 @@
         "public \"google/cloud/policytroubleshooter/v1"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Policytroubleshooter.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.PolicyTroubleshooter.V1"
     },
     {
       "ServiceDirectory": "google/cloud/secretmanager/v1",
