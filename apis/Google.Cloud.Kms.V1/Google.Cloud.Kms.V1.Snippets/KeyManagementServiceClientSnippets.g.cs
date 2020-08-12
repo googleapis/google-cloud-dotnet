@@ -2157,6 +2157,8 @@ namespace Google.Cloud.Kms.V1.Snippets
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = ByteString.Empty,
                 AdditionalAuthenticatedData = ByteString.Empty,
+                PlaintextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
             };
             // Make the request
             EncryptResponse response = keyManagementServiceClient.Encrypt(request);
@@ -2176,6 +2178,8 @@ namespace Google.Cloud.Kms.V1.Snippets
                 ResourceName = new UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = ByteString.Empty,
                 AdditionalAuthenticatedData = ByteString.Empty,
+                PlaintextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
             };
             // Make the request
             EncryptResponse response = await keyManagementServiceClient.EncryptAsync(request);
@@ -2252,6 +2256,8 @@ namespace Google.Cloud.Kms.V1.Snippets
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Ciphertext = ByteString.Empty,
                 AdditionalAuthenticatedData = ByteString.Empty,
+                CiphertextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
             };
             // Make the request
             DecryptResponse response = keyManagementServiceClient.Decrypt(request);
@@ -2271,6 +2277,8 @@ namespace Google.Cloud.Kms.V1.Snippets
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Ciphertext = ByteString.Empty,
                 AdditionalAuthenticatedData = ByteString.Empty,
+                CiphertextCrc32C = 0L,
+                AdditionalAuthenticatedDataCrc32C = 0L,
             };
             // Make the request
             DecryptResponse response = await keyManagementServiceClient.DecryptAsync(request);
@@ -2346,6 +2354,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Digest = new Digest(),
+                DigestCrc32C = 0L,
             };
             // Make the request
             AsymmetricSignResponse response = keyManagementServiceClient.AsymmetricSign(request);
@@ -2364,6 +2373,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Digest = new Digest(),
+                DigestCrc32C = 0L,
             };
             // Make the request
             AsymmetricSignResponse response = await keyManagementServiceClient.AsymmetricSignAsync(request);
@@ -2439,6 +2449,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Ciphertext = ByteString.Empty,
+                CiphertextCrc32C = 0L,
             };
             // Make the request
             AsymmetricDecryptResponse response = keyManagementServiceClient.AsymmetricDecrypt(request);
@@ -2457,6 +2468,7 @@ namespace Google.Cloud.Kms.V1.Snippets
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Ciphertext = ByteString.Empty,
+                CiphertextCrc32C = 0L,
             };
             // Make the request
             AsymmetricDecryptResponse response = await keyManagementServiceClient.AsymmetricDecryptAsync(request);

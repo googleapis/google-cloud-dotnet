@@ -558,6 +558,8 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Pem = "pemd6ff2189",
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                PemCrc32C = 7888183666447720391L,
+                PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -578,6 +580,8 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Pem = "pemd6ff2189",
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                PemCrc32C = 7888183666447720391L,
+                PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -600,6 +604,8 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Pem = "pemd6ff2189",
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                PemCrc32C = 7888183666447720391L,
+                PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -620,6 +626,8 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Pem = "pemd6ff2189",
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                PemCrc32C = 7888183666447720391L,
+                PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -642,6 +650,8 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Pem = "pemd6ff2189",
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                PemCrc32C = 7888183666447720391L,
+                PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -662,6 +672,8 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Pem = "pemd6ff2189",
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaSignPss4096Sha512,
+                PemCrc32C = 7888183666447720391L,
+                PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1927,11 +1939,16 @@ namespace Google.Cloud.Kms.V1.Tests
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 AdditionalAuthenticatedData = proto::ByteString.CopyFromUtf8("additional_authenticated_data3a987f33"),
+                PlaintextCrc32C = -5108784857370523788L,
+                AdditionalAuthenticatedDataCrc32C = -8178775638889629022L,
             };
             EncryptResponse expectedResponse = new EncryptResponse
             {
                 Name = "name1c9368b0",
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
+                VerifiedPlaintextCrc32C = false,
+                VerifiedAdditionalAuthenticatedDataCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1949,11 +1966,16 @@ namespace Google.Cloud.Kms.V1.Tests
                 ResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 AdditionalAuthenticatedData = proto::ByteString.CopyFromUtf8("additional_authenticated_data3a987f33"),
+                PlaintextCrc32C = -5108784857370523788L,
+                AdditionalAuthenticatedDataCrc32C = -8178775638889629022L,
             };
             EncryptResponse expectedResponse = new EncryptResponse
             {
                 Name = "name1c9368b0",
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
+                VerifiedPlaintextCrc32C = false,
+                VerifiedAdditionalAuthenticatedDataCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1977,6 +1999,9 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Name = "name1c9368b0",
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
+                VerifiedPlaintextCrc32C = false,
+                VerifiedAdditionalAuthenticatedDataCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1998,6 +2023,9 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Name = "name1c9368b0",
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
+                VerifiedPlaintextCrc32C = false,
+                VerifiedAdditionalAuthenticatedDataCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2021,6 +2049,9 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Name = "name1c9368b0",
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
+                VerifiedPlaintextCrc32C = false,
+                VerifiedAdditionalAuthenticatedDataCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2042,6 +2073,9 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Name = "name1c9368b0",
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
+                VerifiedPlaintextCrc32C = false,
+                VerifiedAdditionalAuthenticatedDataCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2061,10 +2095,13 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
                 AdditionalAuthenticatedData = proto::ByteString.CopyFromUtf8("additional_authenticated_data3a987f33"),
+                CiphertextCrc32C = 5835079685918568182L,
+                AdditionalAuthenticatedDataCrc32C = -8178775638889629022L,
             };
             DecryptResponse expectedResponse = new DecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2082,10 +2119,13 @@ namespace Google.Cloud.Kms.V1.Tests
                 CryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
                 AdditionalAuthenticatedData = proto::ByteString.CopyFromUtf8("additional_authenticated_data3a987f33"),
+                CiphertextCrc32C = 5835079685918568182L,
+                AdditionalAuthenticatedDataCrc32C = -8178775638889629022L,
             };
             DecryptResponse expectedResponse = new DecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2108,6 +2148,7 @@ namespace Google.Cloud.Kms.V1.Tests
             DecryptResponse expectedResponse = new DecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2128,6 +2169,7 @@ namespace Google.Cloud.Kms.V1.Tests
             DecryptResponse expectedResponse = new DecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2150,6 +2192,7 @@ namespace Google.Cloud.Kms.V1.Tests
             DecryptResponse expectedResponse = new DecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2170,6 +2213,7 @@ namespace Google.Cloud.Kms.V1.Tests
             DecryptResponse expectedResponse = new DecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2188,10 +2232,14 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Digest = new Digest(),
+                DigestCrc32C = -5836273086403280409L,
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
                 Signature = proto::ByteString.CopyFromUtf8("signatured21f20ac"),
+                SignatureCrc32C = 1544810433627481177L,
+                VerifiedDigestCrc32C = true,
+                Name = "name1c9368b0",
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2208,10 +2256,14 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Digest = new Digest(),
+                DigestCrc32C = -5836273086403280409L,
             };
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
                 Signature = proto::ByteString.CopyFromUtf8("signatured21f20ac"),
+                SignatureCrc32C = 1544810433627481177L,
+                VerifiedDigestCrc32C = true,
+                Name = "name1c9368b0",
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2234,6 +2286,9 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
                 Signature = proto::ByteString.CopyFromUtf8("signatured21f20ac"),
+                SignatureCrc32C = 1544810433627481177L,
+                VerifiedDigestCrc32C = true,
+                Name = "name1c9368b0",
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2254,6 +2309,9 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
                 Signature = proto::ByteString.CopyFromUtf8("signatured21f20ac"),
+                SignatureCrc32C = 1544810433627481177L,
+                VerifiedDigestCrc32C = true,
+                Name = "name1c9368b0",
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2276,6 +2334,9 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
                 Signature = proto::ByteString.CopyFromUtf8("signatured21f20ac"),
+                SignatureCrc32C = 1544810433627481177L,
+                VerifiedDigestCrc32C = true,
+                Name = "name1c9368b0",
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2296,6 +2357,9 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricSignResponse expectedResponse = new AsymmetricSignResponse
             {
                 Signature = proto::ByteString.CopyFromUtf8("signatured21f20ac"),
+                SignatureCrc32C = 1544810433627481177L,
+                VerifiedDigestCrc32C = true,
+                Name = "name1c9368b0",
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2314,10 +2378,13 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
             };
             AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
+                VerifiedCiphertextCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2334,10 +2401,13 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Ciphertext = proto::ByteString.CopyFromUtf8("ciphertext676154cb"),
+                CiphertextCrc32C = 5835079685918568182L,
             };
             AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
+                VerifiedCiphertextCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2360,6 +2430,8 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
+                VerifiedCiphertextCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2380,6 +2452,8 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
+                VerifiedCiphertextCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2402,6 +2476,8 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
+                VerifiedCiphertextCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2422,6 +2498,8 @@ namespace Google.Cloud.Kms.V1.Tests
             AsymmetricDecryptResponse expectedResponse = new AsymmetricDecryptResponse
             {
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
+                PlaintextCrc32C = -5108784857370523788L,
+                VerifiedCiphertextCrc32C = true,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);

@@ -1372,6 +1372,18 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
+    public partial class PublicKey
+    {
+        /// <summary>
+        /// <see cref="gckv::PublicKeyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::PublicKeyName PublicKeyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::PublicKeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ImportJob
     {
         /// <summary>
