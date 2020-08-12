@@ -29,215 +29,233 @@ namespace Google.Cloud.Kms.V1 {
             "b2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
             "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUv",
             "Y2xvdWQva21zL3YxL3Jlc291cmNlcy5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
-            "L2ZpZWxkX21hc2sucHJvdG8irQEKE0xpc3RLZXlSaW5nc1JlcXVlc3QSOQoG",
-            "cGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNv",
-            "bS9Mb2NhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rv",
-            "a2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJf",
-            "YnkYBSABKAlCA+BBASL/AQoVTGlzdENyeXB0b0tleXNSZXF1ZXN0EjcKBnBh",
-            "cmVudBgBIAEoCUIn4EEC+kEhCh9jbG91ZGttcy5nb29nbGVhcGlzLmNvbS9L",
-            "ZXlSaW5nEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
-            "AyABKAlCA+BBARJQCgx2ZXJzaW9uX3ZpZXcYBCABKA4yOi5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24uQ3J5cHRvS2V5VmVyc2lvblZp",
-            "ZXcSEwoGZmlsdGVyGAUgASgJQgPgQQESFQoIb3JkZXJfYnkYBiABKAlCA+BB",
-            "ASKAAgocTGlzdENyeXB0b0tleVZlcnNpb25zUmVxdWVzdBI5CgZwYXJlbnQY",
-            "ASABKAlCKeBBAvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
-            "S2V5EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyAB",
-            "KAlCA+BBARJICgR2aWV3GAQgASgOMjouZ29vZ2xlLmNsb3VkLmttcy52MS5D",
-            "cnlwdG9LZXlWZXJzaW9uLkNyeXB0b0tleVZlcnNpb25WaWV3EhMKBmZpbHRl",
-            "chgFIAEoCUID4EEBEhUKCG9yZGVyX2J5GAYgASgJQgPgQQEirQEKFUxpc3RJ",
-            "bXBvcnRKb2JzUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIQofY2xv",
-            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vS2V5UmluZxIWCglwYWdlX3NpemUYAiAB",
-            "KAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQg",
-            "ASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBASJ0ChRMaXN0S2V5Umlu",
-            "Z3NSZXNwb25zZRIvCglrZXlfcmluZ3MYASADKAsyHC5nb29nbGUuY2xvdWQu",
-            "a21zLnYxLktleVJpbmcSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRv",
-            "dGFsX3NpemUYAyABKAUiegoWTGlzdENyeXB0b0tleXNSZXNwb25zZRIzCgtj",
-            "cnlwdG9fa2V5cxgBIAMoCzIeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRv",
-            "S2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9zaXplGAMg",
-            "ASgFIpABCh1MaXN0Q3J5cHRvS2V5VmVyc2lvbnNSZXNwb25zZRJCChNjcnlw",
-            "dG9fa2V5X3ZlcnNpb25zGAEgAygLMiUuZ29vZ2xlLmNsb3VkLmttcy52MS5D",
-            "cnlwdG9LZXlWZXJzaW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0",
-            "b3RhbF9zaXplGAMgASgFInoKFkxpc3RJbXBvcnRKb2JzUmVzcG9uc2USMwoL",
-            "aW1wb3J0X2pvYnMYASADKAsyHi5nb29nbGUuY2xvdWQua21zLnYxLkltcG9y",
-            "dEpvYhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgD",
-            "IAEoBSJKChFHZXRLZXlSaW5nUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6",
-            "QSEKH2Nsb3Vka21zLmdvb2dsZWFwaXMuY29tL0tleVJpbmciTgoTR2V0Q3J5",
-            "cHRvS2V5UmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWNsb3Vka21z",
-            "Lmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleSJcChpHZXRDcnlwdG9LZXlWZXJz",
-            "aW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGNsb3Vka21zLmdv",
-            "b2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24iVQoTR2V0UHVibGljS2V5",
-            "UmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGNsb3Vka21zLmdvb2ds",
-            "ZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24iTgoTR2V0SW1wb3J0Sm9iUmVx",
-            "dWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWNsb3Vka21zLmdvb2dsZWFw",
-            "aXMuY29tL0ltcG9ydEpvYiKgAQoUQ3JlYXRlS2V5UmluZ1JlcXVlc3QSOQoG",
-            "cGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNv",
-            "bS9Mb2NhdGlvbhIYCgtrZXlfcmluZ19pZBgCIAEoCUID4EECEjMKCGtleV9y",
-            "aW5nGAMgASgLMhwuZ29vZ2xlLmNsb3VkLmttcy52MS5LZXlSaW5nQgPgQQIi",
-            "zQEKFkNyZWF0ZUNyeXB0b0tleVJlcXVlc3QSNwoGcGFyZW50GAEgASgJQifg",
-            "QQL6QSEKH2Nsb3Vka21zLmdvb2dsZWFwaXMuY29tL0tleVJpbmcSGgoNY3J5",
-            "cHRvX2tleV9pZBgCIAEoCUID4EECEjcKCmNyeXB0b19rZXkYAyABKAsyHi5n",
-            "b29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleUID4EECEiUKHXNraXBfaW5p",
-            "dGlhbF92ZXJzaW9uX2NyZWF0aW9uGAUgASgIIqIBCh1DcmVhdGVDcnlwdG9L",
-            "ZXlWZXJzaW9uUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohY2xv",
-            "dWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5EkYKEmNyeXB0b19rZXlf",
-            "dmVyc2lvbhgCIAEoCzIlLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
-            "VmVyc2lvbkID4EECIoMCCh1JbXBvcnRDcnlwdG9LZXlWZXJzaW9uUmVxdWVz",
-            "dBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBp",
-            "cy5jb20vQ3J5cHRvS2V5ElcKCWFsZ29yaXRobRgCIAEoDjI/Lmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9u",
-            "QWxnb3JpdGhtQgPgQQISFwoKaW1wb3J0X2pvYhgEIAEoCUID4EECEh0KE3Jz",
-            "YV9hZXNfd3JhcHBlZF9rZXkYBSABKAxIAEIWChR3cmFwcGVkX2tleV9tYXRl",
-            "cmlhbCKmAQoWQ3JlYXRlSW1wb3J0Sm9iUmVxdWVzdBI3CgZwYXJlbnQYASAB",
-            "KAlCJ+BBAvpBIQofY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vS2V5UmluZxIa",
-            "Cg1pbXBvcnRfam9iX2lkGAIgASgJQgPgQQISNwoKaW1wb3J0X2pvYhgDIAEo",
-            "CzIeLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9iQgPgQQIihwEKFlVw",
-            "ZGF0ZUNyeXB0b0tleVJlcXVlc3QSNwoKY3J5cHRvX2tleRgBIAEoCzIeLmdv",
-            "b2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5QgPgQQISNAoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIinQEK",
-            "HVVwZGF0ZUNyeXB0b0tleVZlcnNpb25SZXF1ZXN0EkYKEmNyeXB0b19rZXlf",
-            "dmVyc2lvbhgBIAEoCzIlLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
-            "VmVyc2lvbkID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLkZpZWxkTWFza0ID4EECIm0KDkVuY3J5cHRSZXF1ZXN0EhcKBG5h",
-            "bWUYASABKAlCCeBBAvpBAwoBKhIWCglwbGFpbnRleHQYAiABKAxCA+BBAhIq",
-            "Ch1hZGRpdGlvbmFsX2F1dGhlbnRpY2F0ZWRfZGF0YRgDIAEoDEID4EEBIo4B",
-            "Cg5EZWNyeXB0UmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWNsb3Vk",
-            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRIXCgpjaXBoZXJ0ZXh0GAIg",
-            "ASgMQgPgQQISKgodYWRkaXRpb25hbF9hdXRoZW50aWNhdGVkX2RhdGEYAyAB",
-            "KAxCA+BBASKJAQoVQXN5bW1ldHJpY1NpZ25SZXF1ZXN0Ej4KBG5hbWUYASAB",
-            "KAlCMOBBAvpBKgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
-            "VmVyc2lvbhIwCgZkaWdlc3QYAyABKAsyGy5nb29nbGUuY2xvdWQua21zLnYx",
-            "LkRpZ2VzdEID4EECInMKGEFzeW1tZXRyaWNEZWNyeXB0UmVxdWVzdBI+CgRu",
-            "YW1lGAEgASgJQjDgQQL6QSoKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0Ny",
-            "eXB0b0tleVZlcnNpb24SFwoKY2lwaGVydGV4dBgDIAEoDEID4EECIiQKD0Rl",
-            "Y3J5cHRSZXNwb25zZRIRCglwbGFpbnRleHQYASABKAwiMwoPRW5jcnlwdFJl",
-            "c3BvbnNlEgwKBG5hbWUYASABKAkSEgoKY2lwaGVydGV4dBgCIAEoDCIrChZB",
-            "c3ltbWV0cmljU2lnblJlc3BvbnNlEhEKCXNpZ25hdHVyZRgBIAEoDCIuChlB",
-            "c3ltbWV0cmljRGVjcnlwdFJlc3BvbnNlEhEKCXBsYWludGV4dBgBIAEoDCKD",
-            "AQokVXBkYXRlQ3J5cHRvS2V5UHJpbWFyeVZlcnNpb25SZXF1ZXN0EjcKBG5h",
-            "bWUYASABKAlCKeBBAvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5",
-            "cHRvS2V5EiIKFWNyeXB0b19rZXlfdmVyc2lvbl9pZBgCIAEoCUID4EECImAK",
-            "HkRlc3Ryb3lDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJ",
-            "QjDgQQL6QSoKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZl",
-            "cnNpb24iYAoeUmVzdG9yZUNyeXB0b0tleVZlcnNpb25SZXF1ZXN0Ej4KBG5h",
+            "L2ZpZWxkX21hc2sucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5w",
+            "cm90byKtAQoTTGlzdEtleVJpbmdzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlC",
+            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhYK",
+            "CXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BB",
+            "ARITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEB",
+            "Iv8BChVMaXN0Q3J5cHRvS2V5c1JlcXVlc3QSNwoGcGFyZW50GAEgASgJQifg",
+            "QQL6QSEKH2Nsb3Vka21zLmdvb2dsZWFwaXMuY29tL0tleVJpbmcSFgoJcGFn",
+            "ZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBElAK",
+            "DHZlcnNpb25fdmlldxgEIAEoDjI6Lmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5",
+            "cHRvS2V5VmVyc2lvbi5DcnlwdG9LZXlWZXJzaW9uVmlldxITCgZmaWx0ZXIY",
+            "BSABKAlCA+BBARIVCghvcmRlcl9ieRgGIAEoCUID4EEBIoACChxMaXN0Q3J5",
+            "cHRvS2V5VmVyc2lvbnNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEj",
+            "CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSFgoJcGFnZV9z",
+            "aXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEkgKBHZp",
+            "ZXcYBCABKA4yOi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNp",
+            "b24uQ3J5cHRvS2V5VmVyc2lvblZpZXcSEwoGZmlsdGVyGAUgASgJQgPgQQES",
+            "FQoIb3JkZXJfYnkYBiABKAlCA+BBASKtAQoVTGlzdEltcG9ydEpvYnNSZXF1",
+            "ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhCh9jbG91ZGttcy5nb29nbGVh",
+            "cGlzLmNvbS9LZXlSaW5nEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBh",
+            "Z2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBARIVCghv",
+            "cmRlcl9ieRgFIAEoCUID4EEBInQKFExpc3RLZXlSaW5nc1Jlc3BvbnNlEi8K",
+            "CWtleV9yaW5ncxgBIAMoCzIcLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5Umlu",
+            "ZxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEo",
+            "BSJ6ChZMaXN0Q3J5cHRvS2V5c1Jlc3BvbnNlEjMKC2NyeXB0b19rZXlzGAEg",
+            "AygLMh4uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXkSFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUikAEKHUxpc3RD",
+            "cnlwdG9LZXlWZXJzaW9uc1Jlc3BvbnNlEkIKE2NyeXB0b19rZXlfdmVyc2lv",
+            "bnMYASADKAsyJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNp",
+            "b24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyAB",
+            "KAUiegoWTGlzdEltcG9ydEpvYnNSZXNwb25zZRIzCgtpbXBvcnRfam9icxgB",
+            "IAMoCzIeLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0Sm9iEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFIkoKEUdldEtl",
+            "eVJpbmdSZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofY2xvdWRrbXMu",
+            "Z29vZ2xlYXBpcy5jb20vS2V5UmluZyJOChNHZXRDcnlwdG9LZXlSZXF1ZXN0",
+            "EjcKBG5hbWUYASABKAlCKeBBAvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5j",
+            "b20vQ3J5cHRvS2V5IlwKGkdldENyeXB0b0tleVZlcnNpb25SZXF1ZXN0Ej4K",
+            "BG5hbWUYASABKAlCMOBBAvpBKgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
+            "Q3J5cHRvS2V5VmVyc2lvbiJVChNHZXRQdWJsaWNLZXlSZXF1ZXN0Ej4KBG5h",
             "bWUYASABKAlCMOBBAvpBKgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5",
-            "cHRvS2V5VmVyc2lvbiJICgZEaWdlc3QSEAoGc2hhMjU2GAEgASgMSAASEAoG",
-            "c2hhMzg0GAIgASgMSAASEAoGc2hhNTEyGAMgASgMSABCCAoGZGlnZXN0IkAK",
-            "EExvY2F0aW9uTWV0YWRhdGESFQoNaHNtX2F2YWlsYWJsZRgBIAEoCBIVCg1l",
-            "a21fYXZhaWxhYmxlGAIgASgIMoYmChRLZXlNYW5hZ2VtZW50U2VydmljZRKi",
-            "AQoMTGlzdEtleVJpbmdzEiguZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0S2V5",
-            "UmluZ3NSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0S2V5Umlu",
-            "Z3NSZXNwb25zZSI9gtPkkwIuEiwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9rZXlSaW5nc9pBBnBhcmVudBK1AQoOTGlzdENyeXB0b0tl",
-            "eXMSKi5nb29nbGUuY2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlzUmVxdWVz",
-            "dBorLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdENyeXB0b0tleXNSZXNwb25z",
-            "ZSJKgtPkkwI7EjkvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2tleVJpbmdzLyp9L2NyeXB0b0tleXPaQQZwYXJlbnQS3gEKFUxpc3RDcnlw",
-            "dG9LZXlWZXJzaW9ucxIxLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlzdENyeXB0",
-            "b0tleVZlcnNpb25zUmVxdWVzdBoyLmdvb2dsZS5jbG91ZC5rbXMudjEuTGlz",
-            "dENyeXB0b0tleVZlcnNpb25zUmVzcG9uc2UiXoLT5JMCTxJNL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
-            "eXMvKn0vY3J5cHRvS2V5VmVyc2lvbnPaQQZwYXJlbnQStQEKDkxpc3RJbXBv",
-            "cnRKb2JzEiouZ29vZ2xlLmNsb3VkLmttcy52MS5MaXN0SW1wb3J0Sm9ic1Jl",
-            "cXVlc3QaKy5nb29nbGUuY2xvdWQua21zLnYxLkxpc3RJbXBvcnRKb2JzUmVz",
-            "cG9uc2UiSoLT5JMCOxI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9rZXlSaW5ncy8qfS9pbXBvcnRKb2Jz2kEGcGFyZW50Eo8BCgpHZXRL",
-            "ZXlSaW5nEiYuZ29vZ2xlLmNsb3VkLmttcy52MS5HZXRLZXlSaW5nUmVxdWVz",
-            "dBocLmdvb2dsZS5jbG91ZC5rbXMudjEuS2V5UmluZyI7gtPkkwIuEiwvdjEv",
-            "e25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qfdpBBG5h",
-            "bWUSogEKDEdldENyeXB0b0tleRIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0",
-            "Q3J5cHRvS2V5UmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRv",
-            "S2V5IkiC0+STAjsSOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2tleVJpbmdzLyovY3J5cHRvS2V5cy8qfdpBBG5hbWUSywEKE0dldENyeXB0",
-            "b0tleVZlcnNpb24SLy5nb29nbGUuY2xvdWQua21zLnYxLkdldENyeXB0b0tl",
-            "eVZlcnNpb25SZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9L",
-            "ZXlWZXJzaW9uIlyC0+STAk8STS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNp",
-            "b25zLyp92kEEbmFtZRLAAQoMR2V0UHVibGljS2V5EiguZ29vZ2xlLmNsb3Vk",
-            "Lmttcy52MS5HZXRQdWJsaWNLZXlSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5QdWJsaWNLZXkiZoLT5JMCWRJXL3YxL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5",
-            "VmVyc2lvbnMvKn0vcHVibGljS2V52kEEbmFtZRKiAQoMR2V0SW1wb3J0Sm9i",
-            "EiguZ29vZ2xlLmNsb3VkLmttcy52MS5HZXRJbXBvcnRKb2JSZXF1ZXN0Gh4u",
-            "Z29vZ2xlLmNsb3VkLmttcy52MS5JbXBvcnRKb2IiSILT5JMCOxI5L3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9pbXBvcnRK",
-            "b2JzLyp92kEEbmFtZRK2AQoNQ3JlYXRlS2V5UmluZxIpLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuQ3JlYXRlS2V5UmluZ1JlcXVlc3QaHC5nb29nbGUuY2xvdWQu",
-            "a21zLnYxLktleVJpbmciXILT5JMCOCIsL3YxL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0va2V5UmluZ3M6CGtleV9yaW5n2kEbcGFyZW50LGtl",
-            "eV9yaW5nX2lkLGtleV9yaW5nEs8BCg9DcmVhdGVDcnlwdG9LZXkSKy5nb29n",
-            "bGUuY2xvdWQua21zLnYxLkNyZWF0ZUNyeXB0b0tleVJlcXVlc3QaHi5nb29n",
-            "bGUuY2xvdWQua21zLnYxLkNyeXB0b0tleSJvgtPkkwJHIjkvdjEve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyp9L2NyeXB0b0tl",
-            "eXM6CmNyeXB0b19rZXnaQR9wYXJlbnQsY3J5cHRvX2tleV9pZCxjcnlwdG9f",
-            "a2V5EvsBChZDcmVhdGVDcnlwdG9LZXlWZXJzaW9uEjIuZ29vZ2xlLmNsb3Vk",
-            "Lmttcy52MS5DcmVhdGVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbiKFAYLT5JMCYyJNL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2Ny",
-            "eXB0b0tleXMvKn0vY3J5cHRvS2V5VmVyc2lvbnM6EmNyeXB0b19rZXlfdmVy",
-            "c2lvbtpBGXBhcmVudCxjcnlwdG9fa2V5X3ZlcnNpb24S1AEKFkltcG9ydENy",
-            "eXB0b0tleVZlcnNpb24SMi5nb29nbGUuY2xvdWQua21zLnYxLkltcG9ydENy",
-            "eXB0b0tleVZlcnNpb25SZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmttcy52MS5D",
-            "cnlwdG9LZXlWZXJzaW9uIl+C0+STAlkiVC92MS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9L2NyeXB0",
-            "b0tleVZlcnNpb25zOmltcG9ydDoBKhLPAQoPQ3JlYXRlSW1wb3J0Sm9iEisu",
-            "Z29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVJbXBvcnRKb2JSZXF1ZXN0Gh4u",
-            "Z29vZ2xlLmNsb3VkLmttcy52MS5JbXBvcnRKb2Iib4LT5JMCRyI5L3YxL3tw",
-            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qfS9pbXBv",
-            "cnRKb2JzOgppbXBvcnRfam9i2kEfcGFyZW50LGltcG9ydF9qb2JfaWQsaW1w",
-            "b3J0X2pvYhLRAQoPVXBkYXRlQ3J5cHRvS2V5EisuZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5VcGRhdGVDcnlwdG9LZXlSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5DcnlwdG9LZXkicYLT5JMCUjJEL3YxL3tjcnlwdG9fa2V5Lm5hbWU9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMv",
-            "Kn06CmNyeXB0b19rZXnaQRZjcnlwdG9fa2V5LHVwZGF0ZV9tYXNrEpMCChZV",
-            "cGRhdGVDcnlwdG9LZXlWZXJzaW9uEjIuZ29vZ2xlLmNsb3VkLmttcy52MS5V",
-            "cGRhdGVDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5r",
-            "bXMudjEuQ3J5cHRvS2V5VmVyc2lvbiKdAYLT5JMCdjJgL3YxL3tjcnlwdG9f",
-            "a2V5X3ZlcnNpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJp",
-            "bmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9OhJjcnlw",
-            "dG9fa2V5X3ZlcnNpb27aQR5jcnlwdG9fa2V5X3ZlcnNpb24sdXBkYXRlX21h",
-            "c2sStAEKB0VuY3J5cHQSIy5nb29nbGUuY2xvdWQua21zLnYxLkVuY3J5cHRS",
-            "ZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmttcy52MS5FbmNyeXB0UmVzcG9uc2Ui",
-            "XoLT5JMCRyJCL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5",
-            "UmluZ3MvKi9jcnlwdG9LZXlzLyoqfTplbmNyeXB0OgEq2kEObmFtZSxwbGFp",
-            "bnRleHQStAEKB0RlY3J5cHQSIy5nb29nbGUuY2xvdWQua21zLnYxLkRlY3J5",
-            "cHRSZXF1ZXN0GiQuZ29vZ2xlLmNsb3VkLmttcy52MS5EZWNyeXB0UmVzcG9u",
-            "c2UiXoLT5JMCRiJBL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "a2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9OmRlY3J5cHQ6ASraQQ9uYW1lLGNp",
-            "cGhlcnRleHQS4AEKDkFzeW1tZXRyaWNTaWduEiouZ29vZ2xlLmNsb3VkLmtt",
-            "cy52MS5Bc3ltbWV0cmljU2lnblJlcXVlc3QaKy5nb29nbGUuY2xvdWQua21z",
-            "LnYxLkFzeW1tZXRyaWNTaWduUmVzcG9uc2UidYLT5JMCYSJcL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlz",
-            "LyovY3J5cHRvS2V5VmVyc2lvbnMvKn06YXN5bW1ldHJpY1NpZ246ASraQQtu",
-            "YW1lLGRpZ2VzdBLwAQoRQXN5bW1ldHJpY0RlY3J5cHQSLS5nb29nbGUuY2xv",
-            "dWQua21zLnYxLkFzeW1tZXRyaWNEZWNyeXB0UmVxdWVzdBouLmdvb2dsZS5j",
-            "bG91ZC5rbXMudjEuQXN5bW1ldHJpY0RlY3J5cHRSZXNwb25zZSJ8gtPkkwJk",
-            "Il8vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8q",
-            "L2NyeXB0b0tleXMvKi9jcnlwdG9LZXlWZXJzaW9ucy8qfTphc3ltbWV0cmlj",
-            "RGVjcnlwdDoBKtpBD25hbWUsY2lwaGVydGV4dBLyAQodVXBkYXRlQ3J5cHRv",
-            "S2V5UHJpbWFyeVZlcnNpb24SOS5nb29nbGUuY2xvdWQua21zLnYxLlVwZGF0",
-            "ZUNyeXB0b0tleVByaW1hcnlWZXJzaW9uUmVxdWVzdBoeLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuQ3J5cHRvS2V5InaC0+STAlMiTi92MS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qfTp1cGRh",
-            "dGVQcmltYXJ5VmVyc2lvbjoBKtpBGm5hbWUsY3J5cHRvX2tleV92ZXJzaW9u",
-            "X2lkEt4BChdEZXN0cm95Q3J5cHRvS2V5VmVyc2lvbhIzLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuRGVzdHJveUNyeXB0b0tleVZlcnNpb25SZXF1ZXN0GiUuZ29v",
-            "Z2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9uImeC0+STAloiVS92",
+            "cHRvS2V5VmVyc2lvbiJOChNHZXRJbXBvcnRKb2JSZXF1ZXN0EjcKBG5hbWUY",
+            "ASABKAlCKeBBAvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vSW1wb3J0",
+            "Sm9iIqABChRDcmVhdGVLZXlSaW5nUmVxdWVzdBI5CgZwYXJlbnQYASABKAlC",
+            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhgK",
+            "C2tleV9yaW5nX2lkGAIgASgJQgPgQQISMwoIa2V5X3JpbmcYAyABKAsyHC5n",
+            "b29nbGUuY2xvdWQua21zLnYxLktleVJpbmdCA+BBAiLNAQoWQ3JlYXRlQ3J5",
+            "cHRvS2V5UmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIQofY2xvdWRr",
+            "bXMuZ29vZ2xlYXBpcy5jb20vS2V5UmluZxIaCg1jcnlwdG9fa2V5X2lkGAIg",
+            "ASgJQgPgQQISNwoKY3J5cHRvX2tleRgDIAEoCzIeLmdvb2dsZS5jbG91ZC5r",
+            "bXMudjEuQ3J5cHRvS2V5QgPgQQISJQodc2tpcF9pbml0aWFsX3ZlcnNpb25f",
+            "Y3JlYXRpb24YBSABKAgiogEKHUNyZWF0ZUNyeXB0b0tleVZlcnNpb25SZXF1",
+            "ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFjbG91ZGttcy5nb29nbGVh",
+            "cGlzLmNvbS9DcnlwdG9LZXkSRgoSY3J5cHRvX2tleV92ZXJzaW9uGAIgASgL",
+            "MiUuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9uQgPgQQIi",
+            "gwIKHUltcG9ydENyeXB0b0tleVZlcnNpb25SZXF1ZXN0EjkKBnBhcmVudBgB",
+            "IAEoCUIp4EEC+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
+            "ZXkSVwoJYWxnb3JpdGhtGAIgASgOMj8uZ29vZ2xlLmNsb3VkLmttcy52MS5D",
+            "cnlwdG9LZXlWZXJzaW9uLkNyeXB0b0tleVZlcnNpb25BbGdvcml0aG1CA+BB",
+            "AhIXCgppbXBvcnRfam9iGAQgASgJQgPgQQISHQoTcnNhX2Flc193cmFwcGVk",
+            "X2tleRgFIAEoDEgAQhYKFHdyYXBwZWRfa2V5X21hdGVyaWFsIqYBChZDcmVh",
+            "dGVJbXBvcnRKb2JSZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhCh9j",
+            "bG91ZGttcy5nb29nbGVhcGlzLmNvbS9LZXlSaW5nEhoKDWltcG9ydF9qb2Jf",
+            "aWQYAiABKAlCA+BBAhI3CgppbXBvcnRfam9iGAMgASgLMh4uZ29vZ2xlLmNs",
+            "b3VkLmttcy52MS5JbXBvcnRKb2JCA+BBAiKHAQoWVXBkYXRlQ3J5cHRvS2V5",
+            "UmVxdWVzdBI3CgpjcnlwdG9fa2V5GAEgASgLMh4uZ29vZ2xlLmNsb3VkLmtt",
+            "cy52MS5DcnlwdG9LZXlCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiKdAQodVXBkYXRlQ3J5cHRv",
+            "S2V5VmVyc2lvblJlcXVlc3QSRgoSY3J5cHRvX2tleV92ZXJzaW9uGAEgASgL",
+            "MiUuZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9uQgPgQQIS",
+            "NAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrQgPgQQIi+QEKDkVuY3J5cHRSZXF1ZXN0EhcKBG5hbWUYASABKAlCCeBB",
+            "AvpBAwoBKhIWCglwbGFpbnRleHQYAiABKAxCA+BBAhIqCh1hZGRpdGlvbmFs",
+            "X2F1dGhlbnRpY2F0ZWRfZGF0YRgDIAEoDEID4EEBEjoKEHBsYWludGV4dF9j",
+            "cmMzMmMYByABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1ZUID4EEB",
+            "Ek4KJGFkZGl0aW9uYWxfYXV0aGVudGljYXRlZF9kYXRhX2NyYzMyYxgIIAEo",
+            "CzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlQgPgQQEimwIKDkRlY3J5",
+            "cHRSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohY2xvdWRrbXMuZ29v",
+            "Z2xlYXBpcy5jb20vQ3J5cHRvS2V5EhcKCmNpcGhlcnRleHQYAiABKAxCA+BB",
+            "AhIqCh1hZGRpdGlvbmFsX2F1dGhlbnRpY2F0ZWRfZGF0YRgDIAEoDEID4EEB",
+            "EjsKEWNpcGhlcnRleHRfY3JjMzJjGAUgASgLMhsuZ29vZ2xlLnByb3RvYnVm",
+            "LkludDY0VmFsdWVCA+BBARJOCiRhZGRpdGlvbmFsX2F1dGhlbnRpY2F0ZWRf",
+            "ZGF0YV9jcmMzMmMYBiABKAsyGy5nb29nbGUucHJvdG9idWYuSW50NjRWYWx1",
+            "ZUID4EEBIsIBChVBc3ltbWV0cmljU2lnblJlcXVlc3QSPgoEbmFtZRgBIAEo",
+            "CUIw4EEC+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlW",
+            "ZXJzaW9uEjAKBmRpZ2VzdBgDIAEoCzIbLmdvb2dsZS5jbG91ZC5rbXMudjEu",
+            "RGlnZXN0QgPgQQISNwoNZGlnZXN0X2NyYzMyYxgEIAEoCzIbLmdvb2dsZS5w",
+            "cm90b2J1Zi5JbnQ2NFZhbHVlQgPgQQEisAEKGEFzeW1tZXRyaWNEZWNyeXB0",
+            "UmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGNsb3Vka21zLmdvb2ds",
+            "ZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SFwoKY2lwaGVydGV4dBgDIAEo",
+            "DEID4EECEjsKEWNpcGhlcnRleHRfY3JjMzJjGAQgASgLMhsuZ29vZ2xlLnBy",
+            "b3RvYnVmLkludDY0VmFsdWVCA+BBASJbCg9EZWNyeXB0UmVzcG9uc2USEQoJ",
+            "cGxhaW50ZXh0GAEgASgMEjUKEHBsYWludGV4dF9jcmMzMmMYAiABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuSW50NjRWYWx1ZSLFAQoPRW5jcnlwdFJlc3BvbnNl",
+            "EgwKBG5hbWUYASABKAkSEgoKY2lwaGVydGV4dBgCIAEoDBI2ChFjaXBoZXJ0",
+            "ZXh0X2NyYzMyYxgEIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVl",
+            "EiEKGXZlcmlmaWVkX3BsYWludGV4dF9jcmMzMmMYBSABKAgSNQotdmVyaWZp",
+            "ZWRfYWRkaXRpb25hbF9hdXRoZW50aWNhdGVkX2RhdGFfY3JjMzJjGAYgASgI",
+            "IpABChZBc3ltbWV0cmljU2lnblJlc3BvbnNlEhEKCXNpZ25hdHVyZRgBIAEo",
+            "DBI1ChBzaWduYXR1cmVfY3JjMzJjGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVm",
+            "LkludDY0VmFsdWUSHgoWdmVyaWZpZWRfZGlnZXN0X2NyYzMyYxgDIAEoCBIM",
+            "CgRuYW1lGAQgASgJIokBChlBc3ltbWV0cmljRGVjcnlwdFJlc3BvbnNlEhEK",
+            "CXBsYWludGV4dBgBIAEoDBI1ChBwbGFpbnRleHRfY3JjMzJjGAIgASgLMhsu",
+            "Z29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWUSIgoadmVyaWZpZWRfY2lwaGVy",
+            "dGV4dF9jcmMzMmMYAyABKAgigwEKJFVwZGF0ZUNyeXB0b0tleVByaW1hcnlW",
+            "ZXJzaW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIWNsb3Vka21z",
+            "Lmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRIiChVjcnlwdG9fa2V5X3ZlcnNp",
+            "b25faWQYAiABKAlCA+BBAiJgCh5EZXN0cm95Q3J5cHRvS2V5VmVyc2lvblJl",
+            "cXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihjbG91ZGttcy5nb29nbGVh",
+            "cGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uImAKHlJlc3RvcmVDcnlwdG9LZXlW",
+            "ZXJzaW9uUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKGNsb3Vka21z",
+            "Lmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24iSAoGRGlnZXN0EhAK",
+            "BnNoYTI1NhgBIAEoDEgAEhAKBnNoYTM4NBgCIAEoDEgAEhAKBnNoYTUxMhgD",
+            "IAEoDEgAQggKBmRpZ2VzdCJAChBMb2NhdGlvbk1ldGFkYXRhEhUKDWhzbV9h",
+            "dmFpbGFibGUYASABKAgSFQoNZWttX2F2YWlsYWJsZRgCIAEoCDKGJgoUS2V5",
+            "TWFuYWdlbWVudFNlcnZpY2USogEKDExpc3RLZXlSaW5ncxIoLmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuTGlzdEtleVJpbmdzUmVxdWVzdBopLmdvb2dsZS5jbG91",
+            "ZC5rbXMudjEuTGlzdEtleVJpbmdzUmVzcG9uc2UiPYLT5JMCLhIsL3YxL3tw",
+            "YXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0va2V5UmluZ3PaQQZwYXJl",
+            "bnQStQEKDkxpc3RDcnlwdG9LZXlzEiouZ29vZ2xlLmNsb3VkLmttcy52MS5M",
+            "aXN0Q3J5cHRvS2V5c1JlcXVlc3QaKy5nb29nbGUuY2xvdWQua21zLnYxLkxp",
+            "c3RDcnlwdG9LZXlzUmVzcG9uc2UiSoLT5JMCOxI5L3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qfS9jcnlwdG9LZXlz2kEG",
+            "cGFyZW50Et4BChVMaXN0Q3J5cHRvS2V5VmVyc2lvbnMSMS5nb29nbGUuY2xv",
+            "dWQua21zLnYxLkxpc3RDcnlwdG9LZXlWZXJzaW9uc1JlcXVlc3QaMi5nb29n",
+            "bGUuY2xvdWQua21zLnYxLkxpc3RDcnlwdG9LZXlWZXJzaW9uc1Jlc3BvbnNl",
+            "Il6C0+STAk8STS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "a2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9L2NyeXB0b0tleVZlcnNpb25z2kEG",
+            "cGFyZW50ErUBCg5MaXN0SW1wb3J0Sm9icxIqLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuTGlzdEltcG9ydEpvYnNSZXF1ZXN0GisuZ29vZ2xlLmNsb3VkLmttcy52",
+            "MS5MaXN0SW1wb3J0Sm9ic1Jlc3BvbnNlIkqC0+STAjsSOS92MS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyova2V5UmluZ3MvKn0vaW1wb3J0Sm9i",
+            "c9pBBnBhcmVudBKPAQoKR2V0S2V5UmluZxImLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuR2V0S2V5UmluZ1JlcXVlc3QaHC5nb29nbGUuY2xvdWQua21zLnYxLktl",
+            "eVJpbmciO4LT5JMCLhIsL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyova2V5UmluZ3MvKn3aQQRuYW1lEqIBCgxHZXRDcnlwdG9LZXkSKC5nb29n",
+            "bGUuY2xvdWQua21zLnYxLkdldENyeXB0b0tleVJlcXVlc3QaHi5nb29nbGUu",
+            "Y2xvdWQua21zLnYxLkNyeXB0b0tleSJIgtPkkwI7EjkvdjEve25hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKn3a",
+            "QQRuYW1lEssBChNHZXRDcnlwdG9LZXlWZXJzaW9uEi8uZ29vZ2xlLmNsb3Vk",
+            "Lmttcy52MS5HZXRDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5j",
+            "bG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbiJcgtPkkwJPEk0vdjEve25h",
+            "bWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tl",
+            "eXMvKi9jcnlwdG9LZXlWZXJzaW9ucy8qfdpBBG5hbWUSwAEKDEdldFB1Ymxp",
+            "Y0tleRIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0UHVibGljS2V5UmVxdWVz",
+            "dBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuUHVibGljS2V5ImaC0+STAlkSVy92",
             "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5",
-            "cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9OmRlc3Ryb3k6ASraQQRu",
-            "YW1lEt4BChdSZXN0b3JlQ3J5cHRvS2V5VmVyc2lvbhIzLmdvb2dsZS5jbG91",
-            "ZC5rbXMudjEuUmVzdG9yZUNyeXB0b0tleVZlcnNpb25SZXF1ZXN0GiUuZ29v",
-            "Z2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXlWZXJzaW9uImeC0+STAloiVS92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5",
-            "cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9OnJlc3RvcmU6ASraQQRu",
-            "YW1lGnTKQRdjbG91ZGttcy5nb29nbGVhcGlzLmNvbdJBV2h0dHBzOi8vd3d3",
-            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZGttc0KMAQoXY29tLmdvb2ds",
-            "ZS5jbG91ZC5rbXMudjFCCEttc1Byb3RvUAFaNmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQva21zL3YxO2ttc/gBAaoCE0dv",
-            "b2dsZS5DbG91ZC5LbXMuVjHKAhNHb29nbGVcQ2xvdWRcS21zXFYxYgZwcm90",
-            "bzM="));
+            "cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9L3B1YmxpY0tledpBBG5h",
+            "bWUSogEKDEdldEltcG9ydEpvYhIoLmdvb2dsZS5jbG91ZC5rbXMudjEuR2V0",
+            "SW1wb3J0Sm9iUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0",
+            "Sm9iIkiC0+STAjsSOS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2tleVJpbmdzLyovaW1wb3J0Sm9icy8qfdpBBG5hbWUStgEKDUNyZWF0ZUtl",
+            "eVJpbmcSKS5nb29nbGUuY2xvdWQua21zLnYxLkNyZWF0ZUtleVJpbmdSZXF1",
+            "ZXN0GhwuZ29vZ2xlLmNsb3VkLmttcy52MS5LZXlSaW5nIlyC0+STAjgiLC92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2tleVJpbmdzOghr",
+            "ZXlfcmluZ9pBG3BhcmVudCxrZXlfcmluZ19pZCxrZXlfcmluZxLPAQoPQ3Jl",
+            "YXRlQ3J5cHRvS2V5EisuZ29vZ2xlLmNsb3VkLmttcy52MS5DcmVhdGVDcnlw",
+            "dG9LZXlSZXF1ZXN0Gh4uZ29vZ2xlLmNsb3VkLmttcy52MS5DcnlwdG9LZXki",
+            "b4LT5JMCRyI5L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9r",
+            "ZXlSaW5ncy8qfS9jcnlwdG9LZXlzOgpjcnlwdG9fa2V52kEfcGFyZW50LGNy",
+            "eXB0b19rZXlfaWQsY3J5cHRvX2tleRL7AQoWQ3JlYXRlQ3J5cHRvS2V5VmVy",
+            "c2lvbhIyLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3JlYXRlQ3J5cHRvS2V5VmVy",
+            "c2lvblJlcXVlc3QaJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZl",
+            "cnNpb24ihQGC0+STAmMiTS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyp9L2NyeXB0b0tleVZlcnNp",
+            "b25zOhJjcnlwdG9fa2V5X3ZlcnNpb27aQRlwYXJlbnQsY3J5cHRvX2tleV92",
+            "ZXJzaW9uEtQBChZJbXBvcnRDcnlwdG9LZXlWZXJzaW9uEjIuZ29vZ2xlLmNs",
+            "b3VkLmttcy52MS5JbXBvcnRDcnlwdG9LZXlWZXJzaW9uUmVxdWVzdBolLmdv",
+            "b2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5VmVyc2lvbiJfgtPkkwJZIlQv",
+            "djEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyov",
+            "Y3J5cHRvS2V5cy8qfS9jcnlwdG9LZXlWZXJzaW9uczppbXBvcnQ6ASoSzwEK",
+            "D0NyZWF0ZUltcG9ydEpvYhIrLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3JlYXRl",
+            "SW1wb3J0Sm9iUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuSW1wb3J0",
+            "Sm9iIm+C0+STAkciOS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyova2V5UmluZ3MvKn0vaW1wb3J0Sm9iczoKaW1wb3J0X2pvYtpBH3BhcmVu",
+            "dCxpbXBvcnRfam9iX2lkLGltcG9ydF9qb2IS0QEKD1VwZGF0ZUNyeXB0b0tl",
+            "eRIrLmdvb2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlQ3J5cHRvS2V5UmVxdWVz",
+            "dBoeLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5InGC0+STAlIyRC92",
+            "MS97Y3J5cHRvX2tleS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyova2V5",
+            "UmluZ3MvKi9jcnlwdG9LZXlzLyp9OgpjcnlwdG9fa2V52kEWY3J5cHRvX2tl",
+            "eSx1cGRhdGVfbWFzaxKTAgoWVXBkYXRlQ3J5cHRvS2V5VmVyc2lvbhIyLmdv",
+            "b2dsZS5jbG91ZC5rbXMudjEuVXBkYXRlQ3J5cHRvS2V5VmVyc2lvblJlcXVl",
+            "c3QaJS5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleVZlcnNpb24inQGC",
+            "0+STAnYyYC92MS97Y3J5cHRvX2tleV92ZXJzaW9uLm5hbWU9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKi9jcnlwdG9L",
+            "ZXlWZXJzaW9ucy8qfToSY3J5cHRvX2tleV92ZXJzaW9u2kEeY3J5cHRvX2tl",
+            "eV92ZXJzaW9uLHVwZGF0ZV9tYXNrErQBCgdFbmNyeXB0EiMuZ29vZ2xlLmNs",
+            "b3VkLmttcy52MS5FbmNyeXB0UmVxdWVzdBokLmdvb2dsZS5jbG91ZC5rbXMu",
+            "djEuRW5jcnlwdFJlc3BvbnNlIl6C0+STAkciQi92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qKn06ZW5j",
+            "cnlwdDoBKtpBDm5hbWUscGxhaW50ZXh0ErQBCgdEZWNyeXB0EiMuZ29vZ2xl",
+            "LmNsb3VkLmttcy52MS5EZWNyeXB0UmVxdWVzdBokLmdvb2dsZS5jbG91ZC5r",
+            "bXMudjEuRGVjcnlwdFJlc3BvbnNlIl6C0+STAkYiQS92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL2tleVJpbmdzLyovY3J5cHRvS2V5cy8qfTpk",
+            "ZWNyeXB0OgEq2kEPbmFtZSxjaXBoZXJ0ZXh0EuABCg5Bc3ltbWV0cmljU2ln",
+            "bhIqLmdvb2dsZS5jbG91ZC5rbXMudjEuQXN5bW1ldHJpY1NpZ25SZXF1ZXN0",
+            "GisuZ29vZ2xlLmNsb3VkLmttcy52MS5Bc3ltbWV0cmljU2lnblJlc3BvbnNl",
+            "InWC0+STAmEiXC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2tl",
+            "eVJpbmdzLyovY3J5cHRvS2V5cy8qL2NyeXB0b0tleVZlcnNpb25zLyp9OmFz",
+            "eW1tZXRyaWNTaWduOgEq2kELbmFtZSxkaWdlc3QS8AEKEUFzeW1tZXRyaWNE",
+            "ZWNyeXB0Ei0uZ29vZ2xlLmNsb3VkLmttcy52MS5Bc3ltbWV0cmljRGVjcnlw",
+            "dFJlcXVlc3QaLi5nb29nbGUuY2xvdWQua21zLnYxLkFzeW1tZXRyaWNEZWNy",
+            "eXB0UmVzcG9uc2UifILT5JMCZCJfL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyova2V5UmluZ3MvKi9jcnlwdG9LZXlzLyovY3J5cHRvS2V5VmVy",
+            "c2lvbnMvKn06YXN5bW1ldHJpY0RlY3J5cHQ6ASraQQ9uYW1lLGNpcGhlcnRl",
+            "eHQS8gEKHVVwZGF0ZUNyeXB0b0tleVByaW1hcnlWZXJzaW9uEjkuZ29vZ2xl",
+            "LmNsb3VkLmttcy52MS5VcGRhdGVDcnlwdG9LZXlQcmltYXJ5VmVyc2lvblJl",
+            "cXVlc3QaHi5nb29nbGUuY2xvdWQua21zLnYxLkNyeXB0b0tleSJ2gtPkkwJT",
+            "Ik4vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9rZXlSaW5ncy8q",
+            "L2NyeXB0b0tleXMvKn06dXBkYXRlUHJpbWFyeVZlcnNpb246ASraQRpuYW1l",
+            "LGNyeXB0b19rZXlfdmVyc2lvbl9pZBLeAQoXRGVzdHJveUNyeXB0b0tleVZl",
+            "cnNpb24SMy5nb29nbGUuY2xvdWQua21zLnYxLkRlc3Ryb3lDcnlwdG9LZXlW",
+            "ZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
+            "VmVyc2lvbiJngtPkkwJaIlUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKi9jcnlwdG9LZXlWZXJzaW9u",
+            "cy8qfTpkZXN0cm95OgEq2kEEbmFtZRLeAQoXUmVzdG9yZUNyeXB0b0tleVZl",
+            "cnNpb24SMy5nb29nbGUuY2xvdWQua21zLnYxLlJlc3RvcmVDcnlwdG9LZXlW",
+            "ZXJzaW9uUmVxdWVzdBolLmdvb2dsZS5jbG91ZC5rbXMudjEuQ3J5cHRvS2V5",
+            "VmVyc2lvbiJngtPkkwJaIlUvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9rZXlSaW5ncy8qL2NyeXB0b0tleXMvKi9jcnlwdG9LZXlWZXJzaW9u",
+            "cy8qfTpyZXN0b3JlOgEq2kEEbmFtZRp0ykEXY2xvdWRrbXMuZ29vZ2xlYXBp",
+            "cy5jb23SQVdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
+            "LXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
+            "dWRrbXNCjAEKF2NvbS5nb29nbGUuY2xvdWQua21zLnYxQghLbXNQcm90b1AB",
+            "WjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2ttcy92MTtrbXP4AQGqAhNHb29nbGUuQ2xvdWQuS21zLlYxygITR29vZ2xl",
+            "XENsb3VkXEttc1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListKeyRingsRequest), global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest), global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "VersionView", "Filter", "OrderBy" }, null, null, null, null),
@@ -259,14 +277,14 @@ namespace Google.Cloud.Kms.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.CreateImportJobRequest), global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser, new[]{ "Parent", "ImportJobId", "ImportJob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser, new[]{ "CryptoKey", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest.Parser, new[]{ "CryptoKeyVersion", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptRequest), global::Google.Cloud.Kms.V1.EncryptRequest.Parser, new[]{ "Name", "Plaintext", "AdditionalAuthenticatedData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptRequest), global::Google.Cloud.Kms.V1.DecryptRequest.Parser, new[]{ "Name", "Ciphertext", "AdditionalAuthenticatedData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignRequest), global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser, new[]{ "Name", "Digest" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest), global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser, new[]{ "Name", "Ciphertext" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptResponse), global::Google.Cloud.Kms.V1.DecryptResponse.Parser, new[]{ "Plaintext" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptResponse), global::Google.Cloud.Kms.V1.EncryptResponse.Parser, new[]{ "Name", "Ciphertext" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignResponse), global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser, new[]{ "Signature" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse), global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser, new[]{ "Plaintext" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptRequest), global::Google.Cloud.Kms.V1.EncryptRequest.Parser, new[]{ "Name", "Plaintext", "AdditionalAuthenticatedData", "PlaintextCrc32C", "AdditionalAuthenticatedDataCrc32C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptRequest), global::Google.Cloud.Kms.V1.DecryptRequest.Parser, new[]{ "Name", "Ciphertext", "AdditionalAuthenticatedData", "CiphertextCrc32C", "AdditionalAuthenticatedDataCrc32C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignRequest), global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser, new[]{ "Name", "Digest", "DigestCrc32C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest), global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser, new[]{ "Name", "Ciphertext", "CiphertextCrc32C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DecryptResponse), global::Google.Cloud.Kms.V1.DecryptResponse.Parser, new[]{ "Plaintext", "PlaintextCrc32C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.EncryptResponse), global::Google.Cloud.Kms.V1.EncryptResponse.Parser, new[]{ "Name", "Ciphertext", "CiphertextCrc32C", "VerifiedPlaintextCrc32C", "VerifiedAdditionalAuthenticatedDataCrc32C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricSignResponse), global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser, new[]{ "Signature", "SignatureCrc32C", "VerifiedDigestCrc32C", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse), global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser, new[]{ "Plaintext", "PlaintextCrc32C", "VerifiedCiphertextCrc32C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest), global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest.Parser, new[]{ "Name", "CryptoKeyVersionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest), global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -4352,6 +4370,8 @@ namespace Google.Cloud.Kms.V1 {
       name_ = other.name_;
       plaintext_ = other.plaintext_;
       additionalAuthenticatedData_ = other.additionalAuthenticatedData_;
+      PlaintextCrc32C = other.PlaintextCrc32C;
+      AdditionalAuthenticatedDataCrc32C = other.AdditionalAuthenticatedDataCrc32C;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4421,6 +4441,67 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "plaintext_crc32c" field.</summary>
+    public const int PlaintextCrc32CFieldNumber = 7;
+    private static readonly pb::FieldCodec<long?> _single_plaintextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(58);
+    private long? plaintextCrc32C_;
+    /// <summary>
+    /// Optional. An optional CRC32C checksum of the [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]. If
+    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
+    /// received [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext] using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
+    /// fails. If you receive a checksum error, your client should verify that
+    /// CRC32C([EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]) is equal to
+    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c], and if so, perform a limited number of
+    /// retries. A persistent mismatch may indicate an issue in your computation of
+    /// the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? PlaintextCrc32C {
+      get { return plaintextCrc32C_; }
+      set {
+        plaintextCrc32C_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "additional_authenticated_data_crc32c" field.</summary>
+    public const int AdditionalAuthenticatedDataCrc32CFieldNumber = 8;
+    private static readonly pb::FieldCodec<long?> _single_additionalAuthenticatedDataCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(66);
+    private long? additionalAuthenticatedDataCrc32C_;
+    /// <summary>
+    /// Optional. An optional CRC32C checksum of the
+    /// [EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]. If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the received
+    /// [EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data] using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
+    /// fails. If you receive a checksum error, your client should verify that
+    /// CRC32C([EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]) is equal to
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c], and if so, perform
+    /// a limited number of retries. A persistent mismatch may indicate an issue in
+    /// your computation of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? AdditionalAuthenticatedDataCrc32C {
+      get { return additionalAuthenticatedDataCrc32C_; }
+      set {
+        additionalAuthenticatedDataCrc32C_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as EncryptRequest);
@@ -4437,6 +4518,8 @@ namespace Google.Cloud.Kms.V1 {
       if (Name != other.Name) return false;
       if (Plaintext != other.Plaintext) return false;
       if (AdditionalAuthenticatedData != other.AdditionalAuthenticatedData) return false;
+      if (PlaintextCrc32C != other.PlaintextCrc32C) return false;
+      if (AdditionalAuthenticatedDataCrc32C != other.AdditionalAuthenticatedDataCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4446,6 +4529,8 @@ namespace Google.Cloud.Kms.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Plaintext.Length != 0) hash ^= Plaintext.GetHashCode();
       if (AdditionalAuthenticatedData.Length != 0) hash ^= AdditionalAuthenticatedData.GetHashCode();
+      if (plaintextCrc32C_ != null) hash ^= PlaintextCrc32C.GetHashCode();
+      if (additionalAuthenticatedDataCrc32C_ != null) hash ^= AdditionalAuthenticatedDataCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4471,6 +4556,12 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteBytes(AdditionalAuthenticatedData);
       }
+      if (plaintextCrc32C_ != null) {
+        _single_plaintextCrc32C_codec.WriteTagAndValue(output, PlaintextCrc32C);
+      }
+      if (additionalAuthenticatedDataCrc32C_ != null) {
+        _single_additionalAuthenticatedDataCrc32C_codec.WriteTagAndValue(output, AdditionalAuthenticatedDataCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4487,6 +4578,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (AdditionalAuthenticatedData.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AdditionalAuthenticatedData);
+      }
+      if (plaintextCrc32C_ != null) {
+        size += _single_plaintextCrc32C_codec.CalculateSizeWithTag(PlaintextCrc32C);
+      }
+      if (additionalAuthenticatedDataCrc32C_ != null) {
+        size += _single_additionalAuthenticatedDataCrc32C_codec.CalculateSizeWithTag(AdditionalAuthenticatedDataCrc32C);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4507,6 +4604,16 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.AdditionalAuthenticatedData.Length != 0) {
         AdditionalAuthenticatedData = other.AdditionalAuthenticatedData;
+      }
+      if (other.plaintextCrc32C_ != null) {
+        if (plaintextCrc32C_ == null || other.PlaintextCrc32C != 0L) {
+          PlaintextCrc32C = other.PlaintextCrc32C;
+        }
+      }
+      if (other.additionalAuthenticatedDataCrc32C_ != null) {
+        if (additionalAuthenticatedDataCrc32C_ == null || other.AdditionalAuthenticatedDataCrc32C != 0L) {
+          AdditionalAuthenticatedDataCrc32C = other.AdditionalAuthenticatedDataCrc32C;
+        }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4529,6 +4636,20 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 26: {
             AdditionalAuthenticatedData = input.ReadBytes();
+            break;
+          }
+          case 58: {
+            long? value = _single_plaintextCrc32C_codec.Read(input);
+            if (plaintextCrc32C_ == null || value != 0L) {
+              PlaintextCrc32C = value;
+            }
+            break;
+          }
+          case 66: {
+            long? value = _single_additionalAuthenticatedDataCrc32C_codec.Read(input);
+            if (additionalAuthenticatedDataCrc32C_ == null || value != 0L) {
+              AdditionalAuthenticatedDataCrc32C = value;
+            }
             break;
           }
         }
@@ -4568,6 +4689,8 @@ namespace Google.Cloud.Kms.V1 {
       name_ = other.name_;
       ciphertext_ = other.ciphertext_;
       additionalAuthenticatedData_ = other.additionalAuthenticatedData_;
+      CiphertextCrc32C = other.CiphertextCrc32C;
+      AdditionalAuthenticatedDataCrc32C = other.AdditionalAuthenticatedDataCrc32C;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4621,6 +4744,67 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "ciphertext_crc32c" field.</summary>
+    public const int CiphertextCrc32CFieldNumber = 5;
+    private static readonly pb::FieldCodec<long?> _single_ciphertextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(42);
+    private long? ciphertextCrc32C_;
+    /// <summary>
+    /// Optional. An optional CRC32C checksum of the [DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext]. If
+    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
+    /// received [DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext] using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
+    /// fails. If you receive a checksum error, your client should verify that
+    /// CRC32C([DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext]) is equal to
+    /// [DecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.DecryptRequest.ciphertext_crc32c], and if so, perform a limited number
+    /// of retries. A persistent mismatch may indicate an issue in your computation
+    /// of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? CiphertextCrc32C {
+      get { return ciphertextCrc32C_; }
+      set {
+        ciphertextCrc32C_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "additional_authenticated_data_crc32c" field.</summary>
+    public const int AdditionalAuthenticatedDataCrc32CFieldNumber = 6;
+    private static readonly pb::FieldCodec<long?> _single_additionalAuthenticatedDataCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(50);
+    private long? additionalAuthenticatedDataCrc32C_;
+    /// <summary>
+    /// Optional. An optional CRC32C checksum of the
+    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data]. If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the received
+    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data] using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
+    /// fails. If you receive a checksum error, your client should verify that
+    /// CRC32C([DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data]) is equal to
+    /// [DecryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data_crc32c], and if so, perform
+    /// a limited number of retries. A persistent mismatch may indicate an issue in
+    /// your computation of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? AdditionalAuthenticatedDataCrc32C {
+      get { return additionalAuthenticatedDataCrc32C_; }
+      set {
+        additionalAuthenticatedDataCrc32C_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DecryptRequest);
@@ -4637,6 +4821,8 @@ namespace Google.Cloud.Kms.V1 {
       if (Name != other.Name) return false;
       if (Ciphertext != other.Ciphertext) return false;
       if (AdditionalAuthenticatedData != other.AdditionalAuthenticatedData) return false;
+      if (CiphertextCrc32C != other.CiphertextCrc32C) return false;
+      if (AdditionalAuthenticatedDataCrc32C != other.AdditionalAuthenticatedDataCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4646,6 +4832,8 @@ namespace Google.Cloud.Kms.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Ciphertext.Length != 0) hash ^= Ciphertext.GetHashCode();
       if (AdditionalAuthenticatedData.Length != 0) hash ^= AdditionalAuthenticatedData.GetHashCode();
+      if (ciphertextCrc32C_ != null) hash ^= CiphertextCrc32C.GetHashCode();
+      if (additionalAuthenticatedDataCrc32C_ != null) hash ^= AdditionalAuthenticatedDataCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4671,6 +4859,12 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteBytes(AdditionalAuthenticatedData);
       }
+      if (ciphertextCrc32C_ != null) {
+        _single_ciphertextCrc32C_codec.WriteTagAndValue(output, CiphertextCrc32C);
+      }
+      if (additionalAuthenticatedDataCrc32C_ != null) {
+        _single_additionalAuthenticatedDataCrc32C_codec.WriteTagAndValue(output, AdditionalAuthenticatedDataCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4687,6 +4881,12 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (AdditionalAuthenticatedData.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(AdditionalAuthenticatedData);
+      }
+      if (ciphertextCrc32C_ != null) {
+        size += _single_ciphertextCrc32C_codec.CalculateSizeWithTag(CiphertextCrc32C);
+      }
+      if (additionalAuthenticatedDataCrc32C_ != null) {
+        size += _single_additionalAuthenticatedDataCrc32C_codec.CalculateSizeWithTag(AdditionalAuthenticatedDataCrc32C);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4707,6 +4907,16 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (other.AdditionalAuthenticatedData.Length != 0) {
         AdditionalAuthenticatedData = other.AdditionalAuthenticatedData;
+      }
+      if (other.ciphertextCrc32C_ != null) {
+        if (ciphertextCrc32C_ == null || other.CiphertextCrc32C != 0L) {
+          CiphertextCrc32C = other.CiphertextCrc32C;
+        }
+      }
+      if (other.additionalAuthenticatedDataCrc32C_ != null) {
+        if (additionalAuthenticatedDataCrc32C_ == null || other.AdditionalAuthenticatedDataCrc32C != 0L) {
+          AdditionalAuthenticatedDataCrc32C = other.AdditionalAuthenticatedDataCrc32C;
+        }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4729,6 +4939,20 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 26: {
             AdditionalAuthenticatedData = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            long? value = _single_ciphertextCrc32C_codec.Read(input);
+            if (ciphertextCrc32C_ == null || value != 0L) {
+              CiphertextCrc32C = value;
+            }
+            break;
+          }
+          case 50: {
+            long? value = _single_additionalAuthenticatedDataCrc32C_codec.Read(input);
+            if (additionalAuthenticatedDataCrc32C_ == null || value != 0L) {
+              AdditionalAuthenticatedDataCrc32C = value;
+            }
             break;
           }
         }
@@ -4767,6 +4991,7 @@ namespace Google.Cloud.Kms.V1 {
     public AsymmetricSignRequest(AsymmetricSignRequest other) : this() {
       name_ = other.name_;
       digest_ = other.digest_ != null ? other.digest_.Clone() : null;
+      DigestCrc32C = other.DigestCrc32C;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4805,6 +5030,36 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "digest_crc32c" field.</summary>
+    public const int DigestCrc32CFieldNumber = 4;
+    private static readonly pb::FieldCodec<long?> _single_digestCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(34);
+    private long? digestCrc32C_;
+    /// <summary>
+    /// Optional. An optional CRC32C checksum of the [AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]. If
+    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
+    /// received [AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest] using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
+    /// fails. If you receive a checksum error, your client should verify that
+    /// CRC32C([AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]) is equal to
+    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c], and if so, perform a limited
+    /// number of retries. A persistent mismatch may indicate an issue in your
+    /// computation of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? DigestCrc32C {
+      get { return digestCrc32C_; }
+      set {
+        digestCrc32C_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AsymmetricSignRequest);
@@ -4820,6 +5075,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(Digest, other.Digest)) return false;
+      if (DigestCrc32C != other.DigestCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4828,6 +5084,7 @@ namespace Google.Cloud.Kms.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (digest_ != null) hash ^= Digest.GetHashCode();
+      if (digestCrc32C_ != null) hash ^= DigestCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4849,6 +5106,9 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Digest);
       }
+      if (digestCrc32C_ != null) {
+        _single_digestCrc32C_codec.WriteTagAndValue(output, DigestCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4862,6 +5122,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (digest_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Digest);
+      }
+      if (digestCrc32C_ != null) {
+        size += _single_digestCrc32C_codec.CalculateSizeWithTag(DigestCrc32C);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4883,6 +5146,11 @@ namespace Google.Cloud.Kms.V1 {
         }
         Digest.MergeFrom(other.Digest);
       }
+      if (other.digestCrc32C_ != null) {
+        if (digestCrc32C_ == null || other.DigestCrc32C != 0L) {
+          DigestCrc32C = other.DigestCrc32C;
+        }
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4903,6 +5171,13 @@ namespace Google.Cloud.Kms.V1 {
               Digest = new global::Google.Cloud.Kms.V1.Digest();
             }
             input.ReadMessage(Digest);
+            break;
+          }
+          case 34: {
+            long? value = _single_digestCrc32C_codec.Read(input);
+            if (digestCrc32C_ == null || value != 0L) {
+              DigestCrc32C = value;
+            }
             break;
           }
         }
@@ -4941,6 +5216,7 @@ namespace Google.Cloud.Kms.V1 {
     public AsymmetricDecryptRequest(AsymmetricDecryptRequest other) : this() {
       name_ = other.name_;
       ciphertext_ = other.ciphertext_;
+      CiphertextCrc32C = other.CiphertextCrc32C;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4979,6 +5255,36 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "ciphertext_crc32c" field.</summary>
+    public const int CiphertextCrc32CFieldNumber = 4;
+    private static readonly pb::FieldCodec<long?> _single_ciphertextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(34);
+    private long? ciphertextCrc32C_;
+    /// <summary>
+    /// Optional. An optional CRC32C checksum of the [AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext].
+    /// If specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
+    /// received [AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext] using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
+    /// fails. If you receive a checksum error, your client should verify that
+    /// CRC32C([AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext]) is equal to
+    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c], and if so, perform a
+    /// limited number of retries. A persistent mismatch may indicate an issue in
+    /// your computation of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? CiphertextCrc32C {
+      get { return ciphertextCrc32C_; }
+      set {
+        ciphertextCrc32C_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AsymmetricDecryptRequest);
@@ -4994,6 +5300,7 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Name != other.Name) return false;
       if (Ciphertext != other.Ciphertext) return false;
+      if (CiphertextCrc32C != other.CiphertextCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5002,6 +5309,7 @@ namespace Google.Cloud.Kms.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Ciphertext.Length != 0) hash ^= Ciphertext.GetHashCode();
+      if (ciphertextCrc32C_ != null) hash ^= CiphertextCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5023,6 +5331,9 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(26);
         output.WriteBytes(Ciphertext);
       }
+      if (ciphertextCrc32C_ != null) {
+        _single_ciphertextCrc32C_codec.WriteTagAndValue(output, CiphertextCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5036,6 +5347,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Ciphertext.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ciphertext);
+      }
+      if (ciphertextCrc32C_ != null) {
+        size += _single_ciphertextCrc32C_codec.CalculateSizeWithTag(CiphertextCrc32C);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5054,6 +5368,11 @@ namespace Google.Cloud.Kms.V1 {
       if (other.Ciphertext.Length != 0) {
         Ciphertext = other.Ciphertext;
       }
+      if (other.ciphertextCrc32C_ != null) {
+        if (ciphertextCrc32C_ == null || other.CiphertextCrc32C != 0L) {
+          CiphertextCrc32C = other.CiphertextCrc32C;
+        }
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5071,6 +5390,13 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 26: {
             Ciphertext = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            long? value = _single_ciphertextCrc32C_codec.Read(input);
+            if (ciphertextCrc32C_ == null || value != 0L) {
+              CiphertextCrc32C = value;
+            }
             break;
           }
         }
@@ -5108,6 +5434,7 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DecryptResponse(DecryptResponse other) : this() {
       plaintext_ = other.plaintext_;
+      PlaintextCrc32C = other.PlaintextCrc32C;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5130,6 +5457,36 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "plaintext_crc32c" field.</summary>
+    public const int PlaintextCrc32CFieldNumber = 2;
+    private static readonly pb::FieldCodec<long?> _single_plaintextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(18);
+    private long? plaintextCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A CRC32C checksum of the returned
+    /// [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext]. An integrity check of
+    /// [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext] can be performed by computing the CRC32C
+    /// checksum of [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext] and comparing your results to
+    /// this field. Discard the response in case of non-matching checksum values,
+    /// and perform a limited number of retries. A persistent mismatch may indicate
+    /// an issue in your computation of the CRC32C checksum. Note: receiving this
+    /// response message indicates that [KeyManagementService][google.cloud.kms.v1.KeyManagementService] is able to
+    /// successfully decrypt the [ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext].
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? PlaintextCrc32C {
+      get { return plaintextCrc32C_; }
+      set {
+        plaintextCrc32C_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DecryptResponse);
@@ -5144,6 +5501,7 @@ namespace Google.Cloud.Kms.V1 {
         return true;
       }
       if (Plaintext != other.Plaintext) return false;
+      if (PlaintextCrc32C != other.PlaintextCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5151,6 +5509,7 @@ namespace Google.Cloud.Kms.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Plaintext.Length != 0) hash ^= Plaintext.GetHashCode();
+      if (plaintextCrc32C_ != null) hash ^= PlaintextCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5168,6 +5527,9 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Plaintext);
       }
+      if (plaintextCrc32C_ != null) {
+        _single_plaintextCrc32C_codec.WriteTagAndValue(output, PlaintextCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5178,6 +5540,9 @@ namespace Google.Cloud.Kms.V1 {
       int size = 0;
       if (Plaintext.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Plaintext);
+      }
+      if (plaintextCrc32C_ != null) {
+        size += _single_plaintextCrc32C_codec.CalculateSizeWithTag(PlaintextCrc32C);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5193,6 +5558,11 @@ namespace Google.Cloud.Kms.V1 {
       if (other.Plaintext.Length != 0) {
         Plaintext = other.Plaintext;
       }
+      if (other.plaintextCrc32C_ != null) {
+        if (plaintextCrc32C_ == null || other.PlaintextCrc32C != 0L) {
+          PlaintextCrc32C = other.PlaintextCrc32C;
+        }
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5206,6 +5576,13 @@ namespace Google.Cloud.Kms.V1 {
             break;
           case 10: {
             Plaintext = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            long? value = _single_plaintextCrc32C_codec.Read(input);
+            if (plaintextCrc32C_ == null || value != 0L) {
+              PlaintextCrc32C = value;
+            }
             break;
           }
         }
@@ -5244,6 +5621,9 @@ namespace Google.Cloud.Kms.V1 {
     public EncryptResponse(EncryptResponse other) : this() {
       name_ = other.name_;
       ciphertext_ = other.ciphertext_;
+      CiphertextCrc32C = other.CiphertextCrc32C;
+      verifiedPlaintextCrc32C_ = other.verifiedPlaintextCrc32C_;
+      verifiedAdditionalAuthenticatedDataCrc32C_ = other.verifiedAdditionalAuthenticatedDataCrc32C_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5281,6 +5661,81 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "ciphertext_crc32c" field.</summary>
+    public const int CiphertextCrc32CFieldNumber = 4;
+    private static readonly pb::FieldCodec<long?> _single_ciphertextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(34);
+    private long? ciphertextCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A CRC32C checksum of the returned
+    /// [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext]. An integrity check of
+    /// [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext] can be performed by computing the CRC32C
+    /// checksum of [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext] and comparing your results to
+    /// this field. Discard the response in case of non-matching checksum values,
+    /// and perform a limited number of retries. A persistent mismatch may indicate
+    /// an issue in your computation of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? CiphertextCrc32C {
+      get { return ciphertextCrc32C_; }
+      set {
+        ciphertextCrc32C_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "verified_plaintext_crc32c" field.</summary>
+    public const int VerifiedPlaintextCrc32CFieldNumber = 5;
+    private bool verifiedPlaintextCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A flag indicating whether
+    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c] was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
+    /// [plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]. A false value of this field
+    /// indicates either that [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c] was left unset or
+    /// that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've set
+    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c] but this field is still false, discard
+    /// the response and perform a limited number of retries.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool VerifiedPlaintextCrc32C {
+      get { return verifiedPlaintextCrc32C_; }
+      set {
+        verifiedPlaintextCrc32C_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "verified_additional_authenticated_data_crc32c" field.</summary>
+    public const int VerifiedAdditionalAuthenticatedDataCrc32CFieldNumber = 6;
+    private bool verifiedAdditionalAuthenticatedDataCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A flag indicating whether
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c] was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
+    /// [AAD][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]. A false value of this
+    /// field indicates either that
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c] was left unset or
+    /// that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've set
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c] but this field is
+    /// still false, discard the response and perform a limited number of retries.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool VerifiedAdditionalAuthenticatedDataCrc32C {
+      get { return verifiedAdditionalAuthenticatedDataCrc32C_; }
+      set {
+        verifiedAdditionalAuthenticatedDataCrc32C_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as EncryptResponse);
@@ -5296,6 +5751,9 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Name != other.Name) return false;
       if (Ciphertext != other.Ciphertext) return false;
+      if (CiphertextCrc32C != other.CiphertextCrc32C) return false;
+      if (VerifiedPlaintextCrc32C != other.VerifiedPlaintextCrc32C) return false;
+      if (VerifiedAdditionalAuthenticatedDataCrc32C != other.VerifiedAdditionalAuthenticatedDataCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5304,6 +5762,9 @@ namespace Google.Cloud.Kms.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Ciphertext.Length != 0) hash ^= Ciphertext.GetHashCode();
+      if (ciphertextCrc32C_ != null) hash ^= CiphertextCrc32C.GetHashCode();
+      if (VerifiedPlaintextCrc32C != false) hash ^= VerifiedPlaintextCrc32C.GetHashCode();
+      if (VerifiedAdditionalAuthenticatedDataCrc32C != false) hash ^= VerifiedAdditionalAuthenticatedDataCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5325,6 +5786,17 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(18);
         output.WriteBytes(Ciphertext);
       }
+      if (ciphertextCrc32C_ != null) {
+        _single_ciphertextCrc32C_codec.WriteTagAndValue(output, CiphertextCrc32C);
+      }
+      if (VerifiedPlaintextCrc32C != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(VerifiedPlaintextCrc32C);
+      }
+      if (VerifiedAdditionalAuthenticatedDataCrc32C != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(VerifiedAdditionalAuthenticatedDataCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5338,6 +5810,15 @@ namespace Google.Cloud.Kms.V1 {
       }
       if (Ciphertext.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Ciphertext);
+      }
+      if (ciphertextCrc32C_ != null) {
+        size += _single_ciphertextCrc32C_codec.CalculateSizeWithTag(CiphertextCrc32C);
+      }
+      if (VerifiedPlaintextCrc32C != false) {
+        size += 1 + 1;
+      }
+      if (VerifiedAdditionalAuthenticatedDataCrc32C != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5356,6 +5837,17 @@ namespace Google.Cloud.Kms.V1 {
       if (other.Ciphertext.Length != 0) {
         Ciphertext = other.Ciphertext;
       }
+      if (other.ciphertextCrc32C_ != null) {
+        if (ciphertextCrc32C_ == null || other.CiphertextCrc32C != 0L) {
+          CiphertextCrc32C = other.CiphertextCrc32C;
+        }
+      }
+      if (other.VerifiedPlaintextCrc32C != false) {
+        VerifiedPlaintextCrc32C = other.VerifiedPlaintextCrc32C;
+      }
+      if (other.VerifiedAdditionalAuthenticatedDataCrc32C != false) {
+        VerifiedAdditionalAuthenticatedDataCrc32C = other.VerifiedAdditionalAuthenticatedDataCrc32C;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5373,6 +5865,21 @@ namespace Google.Cloud.Kms.V1 {
           }
           case 18: {
             Ciphertext = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            long? value = _single_ciphertextCrc32C_codec.Read(input);
+            if (ciphertextCrc32C_ == null || value != 0L) {
+              CiphertextCrc32C = value;
+            }
+            break;
+          }
+          case 40: {
+            VerifiedPlaintextCrc32C = input.ReadBool();
+            break;
+          }
+          case 48: {
+            VerifiedAdditionalAuthenticatedDataCrc32C = input.ReadBool();
             break;
           }
         }
@@ -5410,6 +5917,9 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AsymmetricSignResponse(AsymmetricSignResponse other) : this() {
       signature_ = other.signature_;
+      SignatureCrc32C = other.SignatureCrc32C;
+      verifiedDigestCrc32C_ = other.verifiedDigestCrc32C_;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5432,6 +5942,74 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "signature_crc32c" field.</summary>
+    public const int SignatureCrc32CFieldNumber = 2;
+    private static readonly pb::FieldCodec<long?> _single_signatureCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(18);
+    private long? signatureCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A CRC32C checksum of the returned
+    /// [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature]. An integrity check of
+    /// [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature] can be performed by computing the
+    /// CRC32C checksum of [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature] and comparing your
+    /// results to this field. Discard the response in case of non-matching
+    /// checksum values, and perform a limited number of retries. A persistent
+    /// mismatch may indicate an issue in your computation of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? SignatureCrc32C {
+      get { return signatureCrc32C_; }
+      set {
+        signatureCrc32C_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "verified_digest_crc32c" field.</summary>
+    public const int VerifiedDigestCrc32CFieldNumber = 3;
+    private bool verifiedDigestCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A flag indicating whether
+    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c] was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
+    /// [digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]. A false value of this field
+    /// indicates either that [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c] was left
+    /// unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c] but this field is still false,
+    /// discard the response and perform a limited number of retries.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool VerifiedDigestCrc32C {
+      get { return verifiedDigestCrc32C_; }
+      set {
+        verifiedDigestCrc32C_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 4;
+    private string name_ = "";
+    /// <summary>
+    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing. Check
+    /// this field to verify that the intended resource was used for signing.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AsymmetricSignResponse);
@@ -5446,6 +6024,9 @@ namespace Google.Cloud.Kms.V1 {
         return true;
       }
       if (Signature != other.Signature) return false;
+      if (SignatureCrc32C != other.SignatureCrc32C) return false;
+      if (VerifiedDigestCrc32C != other.VerifiedDigestCrc32C) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5453,6 +6034,9 @@ namespace Google.Cloud.Kms.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
+      if (signatureCrc32C_ != null) hash ^= SignatureCrc32C.GetHashCode();
+      if (VerifiedDigestCrc32C != false) hash ^= VerifiedDigestCrc32C.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5470,6 +6054,17 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Signature);
       }
+      if (signatureCrc32C_ != null) {
+        _single_signatureCrc32C_codec.WriteTagAndValue(output, SignatureCrc32C);
+      }
+      if (VerifiedDigestCrc32C != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(VerifiedDigestCrc32C);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5480,6 +6075,15 @@ namespace Google.Cloud.Kms.V1 {
       int size = 0;
       if (Signature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Signature);
+      }
+      if (signatureCrc32C_ != null) {
+        size += _single_signatureCrc32C_codec.CalculateSizeWithTag(SignatureCrc32C);
+      }
+      if (VerifiedDigestCrc32C != false) {
+        size += 1 + 1;
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5495,6 +6099,17 @@ namespace Google.Cloud.Kms.V1 {
       if (other.Signature.Length != 0) {
         Signature = other.Signature;
       }
+      if (other.signatureCrc32C_ != null) {
+        if (signatureCrc32C_ == null || other.SignatureCrc32C != 0L) {
+          SignatureCrc32C = other.SignatureCrc32C;
+        }
+      }
+      if (other.VerifiedDigestCrc32C != false) {
+        VerifiedDigestCrc32C = other.VerifiedDigestCrc32C;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5508,6 +6123,21 @@ namespace Google.Cloud.Kms.V1 {
             break;
           case 10: {
             Signature = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            long? value = _single_signatureCrc32C_codec.Read(input);
+            if (signatureCrc32C_ == null || value != 0L) {
+              SignatureCrc32C = value;
+            }
+            break;
+          }
+          case 24: {
+            VerifiedDigestCrc32C = input.ReadBool();
+            break;
+          }
+          case 34: {
+            Name = input.ReadString();
             break;
           }
         }
@@ -5545,6 +6175,8 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AsymmetricDecryptResponse(AsymmetricDecryptResponse other) : this() {
       plaintext_ = other.plaintext_;
+      PlaintextCrc32C = other.PlaintextCrc32C;
+      verifiedCiphertextCrc32C_ = other.verifiedCiphertextCrc32C_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5567,6 +6199,57 @@ namespace Google.Cloud.Kms.V1 {
       }
     }
 
+    /// <summary>Field number for the "plaintext_crc32c" field.</summary>
+    public const int PlaintextCrc32CFieldNumber = 2;
+    private static readonly pb::FieldCodec<long?> _single_plaintextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(18);
+    private long? plaintextCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A CRC32C checksum of the returned
+    /// [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext]. An integrity check of
+    /// [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext] can be performed by computing the
+    /// CRC32C checksum of [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext] and comparing
+    /// your results to this field. Discard the response in case of non-matching
+    /// checksum values, and perform a limited number of retries. A persistent
+    /// mismatch may indicate an issue in your computation of the CRC32C checksum.
+    /// Note: This field is defined as int64 for reasons of compatibility across
+    /// different languages. However, it is a non-negative integer, which will
+    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
+    /// that support this type.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? PlaintextCrc32C {
+      get { return plaintextCrc32C_; }
+      set {
+        plaintextCrc32C_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "verified_ciphertext_crc32c" field.</summary>
+    public const int VerifiedCiphertextCrc32CFieldNumber = 3;
+    private bool verifiedCiphertextCrc32C_;
+    /// <summary>
+    /// Integrity verification field. A flag indicating whether
+    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c] was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
+    /// [ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext]. A false value of this
+    /// field indicates either that [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c]
+    /// was left unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If
+    /// you've set [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c] but this field is
+    /// still false, discard the response and perform a limited number of retries.
+    ///
+    /// NOTE: This field is in Beta.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool VerifiedCiphertextCrc32C {
+      get { return verifiedCiphertextCrc32C_; }
+      set {
+        verifiedCiphertextCrc32C_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as AsymmetricDecryptResponse);
@@ -5581,6 +6264,8 @@ namespace Google.Cloud.Kms.V1 {
         return true;
       }
       if (Plaintext != other.Plaintext) return false;
+      if (PlaintextCrc32C != other.PlaintextCrc32C) return false;
+      if (VerifiedCiphertextCrc32C != other.VerifiedCiphertextCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5588,6 +6273,8 @@ namespace Google.Cloud.Kms.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Plaintext.Length != 0) hash ^= Plaintext.GetHashCode();
+      if (plaintextCrc32C_ != null) hash ^= PlaintextCrc32C.GetHashCode();
+      if (VerifiedCiphertextCrc32C != false) hash ^= VerifiedCiphertextCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5605,6 +6292,13 @@ namespace Google.Cloud.Kms.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Plaintext);
       }
+      if (plaintextCrc32C_ != null) {
+        _single_plaintextCrc32C_codec.WriteTagAndValue(output, PlaintextCrc32C);
+      }
+      if (VerifiedCiphertextCrc32C != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(VerifiedCiphertextCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5615,6 +6309,12 @@ namespace Google.Cloud.Kms.V1 {
       int size = 0;
       if (Plaintext.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Plaintext);
+      }
+      if (plaintextCrc32C_ != null) {
+        size += _single_plaintextCrc32C_codec.CalculateSizeWithTag(PlaintextCrc32C);
+      }
+      if (VerifiedCiphertextCrc32C != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5630,6 +6330,14 @@ namespace Google.Cloud.Kms.V1 {
       if (other.Plaintext.Length != 0) {
         Plaintext = other.Plaintext;
       }
+      if (other.plaintextCrc32C_ != null) {
+        if (plaintextCrc32C_ == null || other.PlaintextCrc32C != 0L) {
+          PlaintextCrc32C = other.PlaintextCrc32C;
+        }
+      }
+      if (other.VerifiedCiphertextCrc32C != false) {
+        VerifiedCiphertextCrc32C = other.VerifiedCiphertextCrc32C;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5643,6 +6351,17 @@ namespace Google.Cloud.Kms.V1 {
             break;
           case 10: {
             Plaintext = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            long? value = _single_plaintextCrc32C_codec.Read(input);
+            if (plaintextCrc32C_ == null || value != 0L) {
+              PlaintextCrc32C = value;
+            }
+            break;
+          }
+          case 24: {
+            VerifiedCiphertextCrc32C = input.ReadBool();
             break;
           }
         }
