@@ -80,7 +80,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
             "ZWFwaXMvY2xvdWQvbm90ZWJvb2tzL3YxYmV0YTE7bm90ZWJvb2tzqgIeR29v",
             "Z2xlLkNsb3VkLk5vdGVib29rcy5WMUJldGExygIeR29vZ2xlXENsb3VkXE5v",
             "dGVib29rc1xWMUJldGEx6gIhR29vZ2xlOjpDbG91ZDo6Tm90ZWJvb2tzOjpW",
-            "MUJldGExYgZwcm90bzM="));
+            "MWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1Beta1.EnvironmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
