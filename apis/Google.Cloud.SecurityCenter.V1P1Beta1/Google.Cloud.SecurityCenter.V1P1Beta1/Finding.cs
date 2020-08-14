@@ -30,7 +30,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
             "dG8aOmdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MXAxYmV0YTEvc2Vj",
             "dXJpdHlfbWFya3MucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iuQUKB0ZpbmRp",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i1wYKB0ZpbmRp",
             "bmcSDAoEbmFtZRgBIAEoCRIOCgZwYXJlbnQYAiABKAkSFQoNcmVzb3VyY2Vf",
             "bmFtZRgDIAEoCRJDCgVzdGF0ZRgEIAEoDjI0Lmdvb2dsZS5jbG91ZC5zZWN1",
             "cml0eWNlbnRlci52MXAxYmV0YTEuRmluZGluZy5TdGF0ZRIQCghjYXRlZ29y",
@@ -40,23 +40,26 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             "aXR5X21hcmtzGAggASgLMjQuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
             "LnYxcDFiZXRhMS5TZWN1cml0eU1hcmtzQgPgQQMSLgoKZXZlbnRfdGltZRgJ",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRlX3Rp",
-            "bWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGk8KFVNvdXJj",
-            "ZVByb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsy",
-            "Fi5nb29nbGUucHJvdG9idWYuVmFsdWU6AjgBIjgKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAjps6kFp",
-            "CiVzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBvcmdh",
-            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0vZmlu",
-            "ZGluZ3Mve2ZpbmRpbmd9Qv0BCiljb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
-            "Y2VudGVyLnYxcDFiZXRhMVABWlNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxcDFiZXRhMTtz",
-            "ZWN1cml0eWNlbnRlcqoCJUdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
-            "MVAxQmV0YTHKAiVHb29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjFwMWJl",
-            "dGEx6gIoR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxcDFiZXRh",
-            "MWIGcHJvdG8z"));
+            "bWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkkKCHNldmVy",
+            "aXR5GA0gASgOMjcuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxcDFi",
+            "ZXRhMS5GaW5kaW5nLlNldmVyaXR5Gk8KFVNvdXJjZVByb3BlcnRpZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9i",
+            "dWYuVmFsdWU6AjgBIjgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "CgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAiJRCghTZXZlcml0eRIYChRTRVZF",
+            "UklUWV9VTlNQRUNJRklFRBAAEgwKCENSSVRJQ0FMEAESCAoESElHSBACEgoK",
+            "Bk1FRElVTRADEgcKA0xPVxAEOmzqQWkKJXNlY3VyaXR5Y2VudGVyLmdvb2ds",
+            "ZWFwaXMuY29tL0ZpbmRpbmcSQG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlv",
+            "bn0vc291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ31C/QEKKWNv",
+            "bS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFwMWJldGExUAFaU2dv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2Vj",
+            "dXJpdHljZW50ZXIvdjFwMWJldGExO3NlY3VyaXR5Y2VudGVyqgIlR29vZ2xl",
+            "LkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYxUDFCZXRhMcoCJUdvb2dsZVxDbG91",
+            "ZFxTZWN1cml0eUNlbnRlclxWMXAxYmV0YTHqAihHb29nbGU6OkNsb3VkOjpT",
+            "ZWN1cml0eUNlbnRlcjo6VjFwMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1P1Beta1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding), global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding), global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -106,6 +109,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       securityMarks_ = other.securityMarks_ != null ? other.securityMarks_.Clone() : null;
       eventTime_ = other.eventTime_ != null ? other.eventTime_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      severity_ = other.severity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -276,6 +280,20 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "severity" field.</summary>
+    public const int SeverityFieldNumber = 13;
+    private global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity severity_ = global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity.Unspecified;
+    /// <summary>
+    /// The severity of the finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity Severity {
+      get { return severity_; }
+      set {
+        severity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Finding);
@@ -299,6 +317,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (!object.Equals(SecurityMarks, other.SecurityMarks)) return false;
       if (!object.Equals(EventTime, other.EventTime)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (Severity != other.Severity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -315,6 +334,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (securityMarks_ != null) hash ^= SecurityMarks.GetHashCode();
       if (eventTime_ != null) hash ^= EventTime.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (Severity != global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity.Unspecified) hash ^= Severity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -365,6 +385,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         output.WriteRawTag(82);
         output.WriteMessage(CreateTime);
       }
+      if (Severity != global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Severity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -400,6 +424,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (Severity != global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -448,6 +475,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.Severity != global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity.Unspecified) {
+        Severity = other.Severity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -509,6 +539,10 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
             input.ReadMessage(CreateTime);
             break;
           }
+          case 104: {
+            Severity = (global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -534,6 +568,32 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         /// and is no longer active.
         /// </summary>
         [pbr::OriginalName("INACTIVE")] Inactive = 2,
+      }
+
+      /// <summary>
+      /// The severity of the finding.
+      /// </summary>
+      public enum Severity {
+        /// <summary>
+        /// No severity specified. The default value.
+        /// </summary>
+        [pbr::OriginalName("SEVERITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Critical severity.
+        /// </summary>
+        [pbr::OriginalName("CRITICAL")] Critical = 1,
+        /// <summary>
+        /// High severity.
+        /// </summary>
+        [pbr::OriginalName("HIGH")] High = 2,
+        /// <summary>
+        /// Medium severity.
+        /// </summary>
+        [pbr::OriginalName("MEDIUM")] Medium = 3,
+        /// <summary>
+        /// Low severity.
+        /// </summary>
+        [pbr::OriginalName("LOW")] Low = 4,
       }
 
     }
