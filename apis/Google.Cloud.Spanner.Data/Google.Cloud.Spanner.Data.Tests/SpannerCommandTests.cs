@@ -18,6 +18,7 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Tests;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Grpc.Core;
 using Moq;
 using System;
 using System.Data;
@@ -207,6 +208,27 @@ namespace Google.Cloud.Spanner.Data.Tests
             }
         }
 
+        [Fact]
+        public void ExecuteReaderHasResourceHeader()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
+
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.IsAny<ExecuteSqlRequest>(),
+                It.Is<CallSettings>(settings => HasResourcePrefixHeader(settings))), Times.Once());
+        }
+
         private Mock<SpannerClient> SetupExecuteStreamingSql(string optimizerVersion = "")
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
@@ -257,6 +279,18 @@ namespace Google.Cloud.Spanner.Data.Tests
                 // Set the environment back.
                 Environment.SetEnvironmentVariable(optimizerVersionVariable, savedOptimizerVersion);
             }
+        }
+
+        private bool HasResourcePrefixHeader(CallSettings callSettings)
+        {
+            var expectedDatabaseName = DatabaseName.FromProjectInstanceDatabase(
+                SpannerClientHelpers.ProjectId, SpannerClientHelpers.Instance,
+                SpannerClientHelpers.Database);
+
+            var metadata = new Metadata();
+            callSettings.HeaderMutation?.Invoke(metadata);
+            Metadata.Entry entry = Assert.Single(metadata, e => e.Key == SpannerClientImpl.ResourcePrefixHeader);
+            return expectedDatabaseName.ToString() == entry.Value;
         }
     }
 }

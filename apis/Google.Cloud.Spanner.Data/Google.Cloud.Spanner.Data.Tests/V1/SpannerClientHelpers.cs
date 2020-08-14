@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
+using Google.Api.Gax.Grpc.Testing;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
@@ -22,8 +24,11 @@ using Grpc.Core;
 using Moq;
 using Moq.Language;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Status = Grpc.Core.Status;
+using static Google.Cloud.Spanner.V1.SpannerClientImpl;
 
 namespace Google.Cloud.Spanner.V1.Tests
 {
@@ -182,6 +187,33 @@ namespace Google.Cloud.Spanner.V1.Tests
             spannerClientMock
                 .Setup(client => client.RollbackAsync(It.IsNotNull<RollbackRequest>(), It.IsAny<CallSettings>()))
                 .Returns(Task.FromResult(true));
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupExecuteStreamingSql(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.ExecuteStreamingSql(
+                    It.IsAny<ExecuteSqlRequest>(),
+                    It.IsAny<CallSettings>()))
+                .Returns<ExecuteSqlRequest, CallSettings>((request, _) =>
+                {
+                    IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
+                    .Select((resumeToken, index) => new PartialResultSet
+                    {
+                        ResumeToken = ByteString.CopyFromUtf8(resumeToken),
+                        Values = { Value.ForNumber(index) }
+                    })
+                    .ToList();
+                    IEnumerable<PartialResultSet> callResults = request.ResumeToken.IsEmpty
+                        ? results
+                        : results.SkipWhile(r => r.ResumeToken != request.ResumeToken).Skip(1);
+                    var asyncResults = new AsyncStreamAdapter<PartialResultSet>(callResults.ToAsyncEnumerable().GetAsyncEnumerator(default));
+
+                    var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
+                        Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
+                    return new ExecuteStreamingSqlStreamImpl(call);
+                });
             return spannerClientMock;
         }
 
