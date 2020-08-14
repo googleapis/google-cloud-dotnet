@@ -39,103 +39,107 @@ namespace Google.Cloud.Asset.V1 {
             "c2V0X3R5cGVzGAMgAygJEjgKDGNvbnRlbnRfdHlwZRgEIAEoDjIiLmdvb2ds",
             "ZS5jbG91ZC5hc3NldC52MS5Db250ZW50VHlwZRI/Cg1vdXRwdXRfY29uZmln",
             "GAUgASgLMiMuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLk91dHB1dENvbmZpZ0ID",
-            "4EECIoEBChRFeHBvcnRBc3NldHNSZXNwb25zZRItCglyZWFkX3RpbWUYASAB",
+            "4EECIr0BChRFeHBvcnRBc3NldHNSZXNwb25zZRItCglyZWFkX3RpbWUYASAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjoKDW91dHB1dF9jb25m",
             "aWcYAiABKAsyIy5nb29nbGUuY2xvdWQuYXNzZXQudjEuT3V0cHV0Q29uZmln",
-            "Iu0BChxCYXRjaEdldEFzc2V0c0hpc3RvcnlSZXF1ZXN0EjcKBnBhcmVudBgB",
-            "IAEoCUIn4EEC+kEhEh9jbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29tL0Fzc2V0",
-            "EhMKC2Fzc2V0X25hbWVzGAIgAygJEj0KDGNvbnRlbnRfdHlwZRgDIAEoDjIi",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5Db250ZW50VHlwZUID4EEBEkAKEHJl",
-            "YWRfdGltZV93aW5kb3cYBCABKAsyIS5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "VGltZVdpbmRvd0ID4EEBIlUKHUJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlc3Bv",
-            "bnNlEjQKBmFzc2V0cxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5hc3NldC52MS5U",
-            "ZW1wb3JhbEFzc2V0Im4KEUNyZWF0ZUZlZWRSZXF1ZXN0EhMKBnBhcmVudBgB",
-            "IAEoCUID4EECEhQKB2ZlZWRfaWQYAiABKAlCA+BBAhIuCgRmZWVkGAMgASgL",
-            "MhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWRCA+BBAiJGCg5HZXRGZWVk",
-            "UmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNsb3VkYXNzZXQuZ29v",
-            "Z2xlYXBpcy5jb20vRmVlZCInChBMaXN0RmVlZHNSZXF1ZXN0EhMKBnBhcmVu",
-            "dBgBIAEoCUID4EECIj8KEUxpc3RGZWVkc1Jlc3BvbnNlEioKBWZlZWRzGAEg",
-            "AygLMhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWQieQoRVXBkYXRlRmVl",
-            "ZFJlcXVlc3QSLgoEZmVlZBgBIAEoCzIbLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MS5GZWVkQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuRmllbGRNYXNrQgPgQQIiSQoRRGVsZXRlRmVlZFJlcXVlc3QSNAoE",
-            "bmFtZRgBIAEoCUIm4EEC+kEgCh5jbG91ZGFzc2V0Lmdvb2dsZWFwaXMuY29t",
-            "L0ZlZWQiqwEKDE91dHB1dENvbmZpZxJACg9nY3NfZGVzdGluYXRpb24YASAB",
-            "KAsyJS5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2NzRGVzdGluYXRpb25IABJK",
-            "ChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgCIAEoCzIqLmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MS5CaWdRdWVyeURlc3RpbmF0aW9uSABCDQoLZGVzdGluYXRpb24i",
-            "QwoOR2NzRGVzdGluYXRpb24SDQoDdXJpGAEgASgJSAASFAoKdXJpX3ByZWZp",
-            "eBgCIAEoCUgAQgwKCm9iamVjdF91cmkiTgoTQmlnUXVlcnlEZXN0aW5hdGlv",
-            "bhIUCgdkYXRhc2V0GAEgASgJQgPgQQISEgoFdGFibGUYAiABKAlCA+BBAhIN",
-            "CgVmb3JjZRgDIAEoCCIiChFQdWJzdWJEZXN0aW5hdGlvbhINCgV0b3BpYxgB",
-            "IAEoCSJpChBGZWVkT3V0cHV0Q29uZmlnEkYKEnB1YnN1Yl9kZXN0aW5hdGlv",
-            "bhgBIAEoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5QdWJzdWJEZXN0aW5h",
-            "dGlvbkgAQg0KC2Rlc3RpbmF0aW9uIoEDCgRGZWVkEhEKBG5hbWUYASABKAlC",
-            "A+BBAhITCgthc3NldF9uYW1lcxgCIAMoCRITCgthc3NldF90eXBlcxgDIAMo",
-            "CRI4Cgxjb250ZW50X3R5cGUYBCABKA4yIi5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djEuQ29udGVudFR5cGUSSAoSZmVlZF9vdXRwdXRfY29uZmlnGAUgASgLMicu",
-            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWRPdXRwdXRDb25maWdCA+BBAhIk",
-            "Cgljb25kaXRpb24YBiABKAsyES5nb29nbGUudHlwZS5FeHByOpEB6kGNAQoe",
-            "Y2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9GZWVkEh9wcm9qZWN0cy97cHJv",
-            "amVjdH0vZmVlZHMve2ZlZWR9Eh1mb2xkZXJzL3tmb2xkZXJ9L2ZlZWRzL3tm",
-            "ZWVkfRIpb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9mZWVkcy97ZmVl",
-            "ZH0gASKlAQoZU2VhcmNoQWxsUmVzb3VyY2VzUmVxdWVzdBISCgVzY29wZRgB",
-            "IAEoCUID4EECEhIKBXF1ZXJ5GAIgASgJQgPgQQESGAoLYXNzZXRfdHlwZXMY",
-            "AyADKAlCA+BBARIWCglwYWdlX3NpemUYBCABKAVCA+BBARIXCgpwYWdlX3Rv",
-            "a2VuGAUgASgJQgPgQQESFQoIb3JkZXJfYnkYBiABKAlCA+BBASJzChpTZWFy",
-            "Y2hBbGxSZXNvdXJjZXNSZXNwb25zZRI8CgdyZXN1bHRzGAEgAygLMisuZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLlJlc291cmNlU2VhcmNoUmVzdWx0EhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSJ2ChtTZWFyY2hBbGxJYW1Qb2xpY2llc1Jl",
-            "cXVlc3QSEgoFc2NvcGUYASABKAlCA+BBAhISCgVxdWVyeRgCIAEoCUID4EEB",
-            "EhYKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YBCABKAlC",
-            "A+BBASJ2ChxTZWFyY2hBbGxJYW1Qb2xpY2llc1Jlc3BvbnNlEj0KB3Jlc3Vs",
-            "dHMYASADKAsyLC5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5U2Vh",
-            "cmNoUmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSpsCgtDb250ZW50",
-            "VHlwZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghSRVNPVVJD",
-            "RRABEg4KCklBTV9QT0xJQ1kQAhIOCgpPUkdfUE9MSUNZEAQSEQoNQUNDRVNT",
-            "X1BPTElDWRAFMvALCgxBc3NldFNlcnZpY2US3gEKDEV4cG9ydEFzc2V0cxIq",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKCAYLT5JMCIiIdL3YxL3tw",
-            "YXJlbnQ9Ki8qfTpleHBvcnRBc3NldHM6ASrKQVcKKmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MS5FeHBvcnRBc3NldHNSZXNwb25zZRIpZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkV4cG9ydEFzc2V0c1JlcXVlc3QSsgEKFUJhdGNoR2V0QXNzZXRz",
-            "SGlzdG9yeRIzLmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEFzc2V0",
-            "c0hpc3RvcnlSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkJhdGNo",
-            "R2V0QXNzZXRzSGlzdG9yeVJlc3BvbnNlIi6C0+STAigSJi92MS97cGFyZW50",
-            "PSovKn06YmF0Y2hHZXRBc3NldHNIaXN0b3J5En8KCkNyZWF0ZUZlZWQSKC5n",
-            "b29nbGUuY2xvdWQuYXNzZXQudjEuQ3JlYXRlRmVlZFJlcXVlc3QaGy5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjEuRmVlZCIqgtPkkwIbIhYvdjEve3BhcmVudD0q",
-            "Lyp9L2ZlZWRzOgEq2kEGcGFyZW50EnQKB0dldEZlZWQSJS5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjEuR2V0RmVlZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNz",
-            "ZXQudjEuRmVlZCIlgtPkkwIYEhYvdjEve25hbWU9Ki8qL2ZlZWRzLyp92kEE",
-            "bmFtZRKHAQoJTGlzdEZlZWRzEicuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkxp",
-            "c3RGZWVkc1JlcXVlc3QaKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuTGlzdEZl",
-            "ZWRzUmVzcG9uc2UiJ4LT5JMCGBIWL3YxL3twYXJlbnQ9Ki8qfS9mZWVkc9pB",
-            "BnBhcmVudBKCAQoKVXBkYXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3NldC52",
-            "MS5VcGRhdGVGZWVkUmVxdWVzdBobLmdvb2dsZS5jbG91ZC5hc3NldC52MS5G",
-            "ZWVkIi2C0+STAiAyGy92MS97ZmVlZC5uYW1lPSovKi9mZWVkcy8qfToBKtpB",
-            "BGZlZWQSdQoKRGVsZXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5E",
-            "ZWxldGVGZWVkUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIlgtPk",
-            "kwIYKhYvdjEve25hbWU9Ki8qL2ZlZWRzLyp92kEEbmFtZRK/AQoSU2VhcmNo",
-            "QWxsUmVzb3VyY2VzEjAuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFs",
-            "bFJlc291cmNlc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2Vh",
-            "cmNoQWxsUmVzb3VyY2VzUmVzcG9uc2UiRILT5JMCJBIiL3YxL3tzY29wZT0q",
-            "Lyp9OnNlYXJjaEFsbFJlc291cmNlc9pBF3Njb3BlLHF1ZXJ5LGFzc2V0X3R5",
-            "cGVzErsBChRTZWFyY2hBbGxJYW1Qb2xpY2llcxIyLmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MS5TZWFyY2hBbGxJYW1Qb2xpY2llc1JlcXVlc3QaMy5nb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXNwb25zZSI6",
-            "gtPkkwImEiQvdjEve3Njb3BlPSovKn06c2VhcmNoQWxsSWFtUG9saWNpZXPa",
-            "QQtzY29wZSxxdWVyeRpNykEZY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbdJB",
-            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm1CnAEKGWNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFCEUFzc2V0U2Vydmlj",
-            "ZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvYXNzZXQvdjE7YXNzZXSqAhVHb29nbGUuQ2xvdWQuQXNzZXQu",
-            "VjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
+            "EjoKDW91dHB1dF9yZXN1bHQYAyABKAsyIy5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djEuT3V0cHV0UmVzdWx0Iu0BChxCYXRjaEdldEFzc2V0c0hpc3RvcnlSZXF1",
+            "ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhEh9jbG91ZGFzc2V0Lmdvb2ds",
+            "ZWFwaXMuY29tL0Fzc2V0EhMKC2Fzc2V0X25hbWVzGAIgAygJEj0KDGNvbnRl",
+            "bnRfdHlwZRgDIAEoDjIiLmdvb2dsZS5jbG91ZC5hc3NldC52MS5Db250ZW50",
+            "VHlwZUID4EEBEkAKEHJlYWRfdGltZV93aW5kb3cYBCABKAsyIS5nb29nbGUu",
+            "Y2xvdWQuYXNzZXQudjEuVGltZVdpbmRvd0ID4EEBIlUKHUJhdGNoR2V0QXNz",
+            "ZXRzSGlzdG9yeVJlc3BvbnNlEjQKBmFzc2V0cxgBIAMoCzIkLmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5UZW1wb3JhbEFzc2V0Im4KEUNyZWF0ZUZlZWRSZXF1",
+            "ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEhQKB2ZlZWRfaWQYAiABKAlCA+BB",
+            "AhIuCgRmZWVkGAMgASgLMhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWRC",
+            "A+BBAiJGCg5HZXRGZWVkUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAK",
+            "HmNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20vRmVlZCInChBMaXN0RmVlZHNS",
+            "ZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECIj8KEUxpc3RGZWVkc1Jlc3Bv",
+            "bnNlEioKBWZlZWRzGAEgAygLMhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZl",
+            "ZWQieQoRVXBkYXRlRmVlZFJlcXVlc3QSLgoEZmVlZBgBIAEoCzIbLmdvb2ds",
+            "ZS5jbG91ZC5hc3NldC52MS5GZWVkQgPgQQISNAoLdXBkYXRlX21hc2sYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIiSQoRRGVsZXRl",
+            "RmVlZFJlcXVlc3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5jbG91ZGFzc2V0",
+            "Lmdvb2dsZWFwaXMuY29tL0ZlZWQiqwEKDE91dHB1dENvbmZpZxJACg9nY3Nf",
+            "ZGVzdGluYXRpb24YASABKAsyJS5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2Nz",
+            "RGVzdGluYXRpb25IABJKChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgCIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CaWdRdWVyeURlc3RpbmF0aW9uSABC",
+            "DQoLZGVzdGluYXRpb24iVgoMT3V0cHV0UmVzdWx0EjwKCmdjc19yZXN1bHQY",
+            "ASABKAsyJi5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2NzT3V0cHV0UmVzdWx0",
+            "SABCCAoGcmVzdWx0Ih8KD0djc091dHB1dFJlc3VsdBIMCgR1cmlzGAEgAygJ",
+            "IkMKDkdjc0Rlc3RpbmF0aW9uEg0KA3VyaRgBIAEoCUgAEhQKCnVyaV9wcmVm",
+            "aXgYAiABKAlIAEIMCgpvYmplY3RfdXJpIk4KE0JpZ1F1ZXJ5RGVzdGluYXRp",
+            "b24SFAoHZGF0YXNldBgBIAEoCUID4EECEhIKBXRhYmxlGAIgASgJQgPgQQIS",
+            "DQoFZm9yY2UYAyABKAgiIgoRUHVic3ViRGVzdGluYXRpb24SDQoFdG9waWMY",
+            "ASABKAkiaQoQRmVlZE91dHB1dENvbmZpZxJGChJwdWJzdWJfZGVzdGluYXRp",
+            "b24YASABKAsyKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuUHVic3ViRGVzdGlu",
+            "YXRpb25IAEINCgtkZXN0aW5hdGlvbiKBAwoERmVlZBIRCgRuYW1lGAEgASgJ",
+            "QgPgQQISEwoLYXNzZXRfbmFtZXMYAiADKAkSEwoLYXNzZXRfdHlwZXMYAyAD",
+            "KAkSOAoMY29udGVudF90eXBlGAQgASgOMiIuZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLkNvbnRlbnRUeXBlEkgKEmZlZWRfb3V0cHV0X2NvbmZpZxgFIAEoCzIn",
+            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkT3V0cHV0Q29uZmlnQgPgQQIS",
+            "JAoJY29uZGl0aW9uGAYgASgLMhEuZ29vZ2xlLnR5cGUuRXhwcjqRAepBjQEK",
+            "HmNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20vRmVlZBIfcHJvamVjdHMve3By",
+            "b2plY3R9L2ZlZWRzL3tmZWVkfRIdZm9sZGVycy97Zm9sZGVyfS9mZWVkcy97",
+            "ZmVlZH0SKW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vZmVlZHMve2Zl",
+            "ZWR9IAEipQEKGVNlYXJjaEFsbFJlc291cmNlc1JlcXVlc3QSEgoFc2NvcGUY",
+            "ASABKAlCA+BBAhISCgVxdWVyeRgCIAEoCUID4EEBEhgKC2Fzc2V0X3R5cGVz",
+            "GAMgAygJQgPgQQESFgoJcGFnZV9zaXplGAQgASgFQgPgQQESFwoKcGFnZV90",
+            "b2tlbhgFIAEoCUID4EEBEhUKCG9yZGVyX2J5GAYgASgJQgPgQQEicwoaU2Vh",
+            "cmNoQWxsUmVzb3VyY2VzUmVzcG9uc2USPAoHcmVzdWx0cxgBIAMoCzIrLmdv",
+            "b2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZVNlYXJjaFJlc3VsdBIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkidgobU2VhcmNoQWxsSWFtUG9saWNpZXNS",
+            "ZXF1ZXN0EhIKBXNjb3BlGAEgASgJQgPgQQISEgoFcXVlcnkYAiABKAlCA+BB",
+            "ARIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAQgASgJ",
+            "QgPgQQEidgocU2VhcmNoQWxsSWFtUG9saWNpZXNSZXNwb25zZRI9CgdyZXN1",
+            "bHRzGAEgAygLMiwuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeVNl",
+            "YXJjaFJlc3VsdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkqbAoLQ29udGVu",
+            "dFR5cGUSHAoYQ09OVEVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIUkVTT1VS",
+            "Q0UQARIOCgpJQU1fUE9MSUNZEAISDgoKT1JHX1BPTElDWRAEEhEKDUFDQ0VT",
+            "U19QT0xJQ1kQBTLwCwoMQXNzZXRTZXJ2aWNlEt4BCgxFeHBvcnRBc3NldHMS",
+            "Ki5nb29nbGUuY2xvdWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iggGC0+STAiIiHS92MS97",
+            "cGFyZW50PSovKn06ZXhwb3J0QXNzZXRzOgEqykFXCipnb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuRXhwb3J0QXNzZXRzUmVzcG9uc2USKWdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0ErIBChVCYXRjaEdldEFzc2V0",
+            "c0hpc3RvcnkSMy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3Nl",
+            "dHNIaXN0b3J5UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRj",
+            "aEdldEFzc2V0c0hpc3RvcnlSZXNwb25zZSIugtPkkwIoEiYvdjEve3BhcmVu",
+            "dD0qLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeRJ/CgpDcmVhdGVGZWVkEigu",
+            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkNyZWF0ZUZlZWRSZXF1ZXN0GhsuZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLkZlZWQiKoLT5JMCGyIWL3YxL3twYXJlbnQ9",
+            "Ki8qfS9mZWVkczoBKtpBBnBhcmVudBJ0CgdHZXRGZWVkEiUuZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkdldEZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkZlZWQiJYLT5JMCGBIWL3YxL3tuYW1lPSovKi9mZWVkcy8qfdpB",
+            "BG5hbWUShwEKCUxpc3RGZWVkcxInLmdvb2dsZS5jbG91ZC5hc3NldC52MS5M",
+            "aXN0RmVlZHNSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkxpc3RG",
+            "ZWVkc1Jlc3BvbnNlIieC0+STAhgSFi92MS97cGFyZW50PSovKn0vZmVlZHPa",
+            "QQZwYXJlbnQSggEKClVwZGF0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djEuVXBkYXRlRmVlZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "RmVlZCItgtPkkwIgMhsvdjEve2ZlZWQubmFtZT0qLyovZmVlZHMvKn06ASra",
+            "QQRmZWVkEnUKCkRlbGV0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "RGVsZXRlRmVlZFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJYLT",
+            "5JMCGCoWL3YxL3tuYW1lPSovKi9mZWVkcy8qfdpBBG5hbWUSvwEKElNlYXJj",
+            "aEFsbFJlc291cmNlcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5TZWFyY2hB",
+            "bGxSZXNvdXJjZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNl",
+            "YXJjaEFsbFJlc291cmNlc1Jlc3BvbnNlIkSC0+STAiQSIi92MS97c2NvcGU9",
+            "Ki8qfTpzZWFyY2hBbGxSZXNvdXJjZXPaQRdzY29wZSxxdWVyeSxhc3NldF90",
+            "eXBlcxK7AQoUU2VhcmNoQWxsSWFtUG9saWNpZXMSMi5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXF1ZXN0GjMuZ29vZ2xl",
+            "LmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFsbElhbVBvbGljaWVzUmVzcG9uc2Ui",
+            "OoLT5JMCJhIkL3YxL3tzY29wZT0qLyp9OnNlYXJjaEFsbElhbVBvbGljaWVz",
+            "2kELc2NvcGUscXVlcnkaTcpBGWNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb23S",
+            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtQpwBChljb20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxQhFBc3NldFNlcnZp",
+            "Y2VQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL2Fzc2V0L3YxO2Fzc2V0qgIVR29vZ2xlLkNsb3VkLkFzc2V0",
+            "LlYxygIVR29vZ2xlXENsb3VkXEFzc2V0XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsRequest), global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser, new[]{ "Parent", "ReadTime", "AssetTypes", "ContentType", "OutputConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsResponse), global::Google.Cloud.Asset.V1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.ExportAssetsResponse), global::Google.Cloud.Asset.V1.ExportAssetsResponse.Parser, new[]{ "ReadTime", "OutputConfig", "OutputResult" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser, new[]{ "Parent", "AssetNames", "ContentType", "ReadTimeWindow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse), global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser, new[]{ "Assets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.CreateFeedRequest), global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser, new[]{ "Parent", "FeedId", "Feed" }, null, null, null, null),
@@ -145,6 +149,8 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.UpdateFeedRequest), global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser, new[]{ "Feed", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.DeleteFeedRequest), global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputConfig), global::Google.Cloud.Asset.V1.OutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputResult), global::Google.Cloud.Asset.V1.OutputResult.Parser, new[]{ "GcsResult" }, new[]{ "Result" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsOutputResult), global::Google.Cloud.Asset.V1.GcsOutputResult.Parser, new[]{ "Uris" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsDestination), global::Google.Cloud.Asset.V1.GcsDestination.Parser, new[]{ "Uri", "UriPrefix" }, new[]{ "ObjectUri" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.PubsubDestination), global::Google.Cloud.Asset.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null, null),
@@ -181,7 +187,7 @@ namespace Google.Cloud.Asset.V1 {
     /// </summary>
     [pbr::OriginalName("ORG_POLICY")] OrgPolicy = 4,
     /// <summary>
-    /// The Cloud Access context mananger Policy set on an asset.
+    /// The Cloud Access context manager Policy set on an asset.
     /// </summary>
     [pbr::OriginalName("ACCESS_POLICY")] AccessPolicy = 5,
   }
@@ -271,9 +277,22 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of asset types of which to take a snapshot for. Example:
-    /// "compute.googleapis.com/Disk". If specified, only matching assets will be
-    /// returned. See [Introduction to Cloud Asset
+    /// A list of asset types to take a snapshot for. For example:
+    /// "compute.googleapis.com/Disk".
+    ///
+    /// Regular expressions are also supported. For example:
+    ///
+    /// * "compute.googleapis.com.*" snapshots resources whose asset type starts
+    /// with "compute.googleapis.com".
+    /// * ".*Instance" snapshots resources whose asset type ends with "Instance".
+    /// * ".*Instance.*" snapshots resources whose asset type contains "Instance".
+    ///
+    /// See [RE2](https://github.com/google/re2/wiki/Syntax) for all supported
+    /// regular expression syntax. If the regular expression does not match any
+    /// supported asset type, an INVALID_ARGUMENT error will be returned.
+    ///
+    /// If specified, only matching assets will be returned, otherwise, it will
+    /// snapshot all asset types. See [Introduction to Cloud Asset
     /// Inventory](https://cloud.google.com/asset-inventory/docs/overview)
     /// for all supported asset types.
     /// </summary>
@@ -301,8 +320,7 @@ namespace Google.Cloud.Asset.V1 {
     public const int OutputConfigFieldNumber = 5;
     private global::Google.Cloud.Asset.V1.OutputConfig outputConfig_;
     /// <summary>
-    /// Required. Output configuration indicating where the results will be output
-    /// to.
+    /// Required. Output configuration indicating where the results will be output to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Asset.V1.OutputConfig OutputConfig {
@@ -467,10 +485,8 @@ namespace Google.Cloud.Asset.V1 {
 
   /// <summary>
   /// The export asset response. This message is returned by the
-  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation]
-  /// method in the returned
-  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
-  /// field.
+  /// [google.longrunning.Operations.GetOperation][google.longrunning.Operations.GetOperation] method in the returned
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response] field.
   /// </summary>
   public sealed partial class ExportAssetsResponse : pb::IMessage<ExportAssetsResponse> {
     private static readonly pb::MessageParser<ExportAssetsResponse> _parser = new pb::MessageParser<ExportAssetsResponse>(() => new ExportAssetsResponse());
@@ -499,6 +515,7 @@ namespace Google.Cloud.Asset.V1 {
     public ExportAssetsResponse(ExportAssetsResponse other) : this() {
       readTime_ = other.readTime_ != null ? other.readTime_.Clone() : null;
       outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
+      outputResult_ = other.outputResult_ != null ? other.outputResult_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -535,6 +552,24 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "output_result" field.</summary>
+    public const int OutputResultFieldNumber = 3;
+    private global::Google.Cloud.Asset.V1.OutputResult outputResult_;
+    /// <summary>
+    /// Output result indicating where the assets were exported to. For example, a
+    /// set of actual Google Cloud Storage object uris where the assets are
+    /// exported to. The uris can be different from what [output_config] has
+    /// specified, as the service will split the output object into multiple ones
+    /// once it exceeds a single Google Cloud Storage object limit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.OutputResult OutputResult {
+      get { return outputResult_; }
+      set {
+        outputResult_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ExportAssetsResponse);
@@ -550,6 +585,7 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (!object.Equals(ReadTime, other.ReadTime)) return false;
       if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
+      if (!object.Equals(OutputResult, other.OutputResult)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -558,6 +594,7 @@ namespace Google.Cloud.Asset.V1 {
       int hash = 1;
       if (readTime_ != null) hash ^= ReadTime.GetHashCode();
       if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
+      if (outputResult_ != null) hash ^= OutputResult.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -579,6 +616,10 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(OutputConfig);
       }
+      if (outputResult_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OutputResult);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -592,6 +633,9 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (outputConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputConfig);
+      }
+      if (outputResult_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputResult);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -616,6 +660,12 @@ namespace Google.Cloud.Asset.V1 {
         }
         OutputConfig.MergeFrom(other.OutputConfig);
       }
+      if (other.outputResult_ != null) {
+        if (outputResult_ == null) {
+          OutputResult = new global::Google.Cloud.Asset.V1.OutputResult();
+        }
+        OutputResult.MergeFrom(other.OutputResult);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -639,6 +689,13 @@ namespace Google.Cloud.Asset.V1 {
               OutputConfig = new global::Google.Cloud.Asset.V1.OutputConfig();
             }
             input.ReadMessage(OutputConfig);
+            break;
+          }
+          case 26: {
+            if (outputResult_ == null) {
+              OutputResult = new global::Google.Cloud.Asset.V1.OutputResult();
+            }
+            input.ReadMessage(OutputResult);
             break;
           }
         }
@@ -1090,8 +1147,9 @@ namespace Google.Cloud.Asset.V1 {
     public const int FeedFieldNumber = 3;
     private global::Google.Cloud.Asset.V1.Feed feed_;
     /// <summary>
-    /// Required. The feed details. The field `name` must be empty and it will be
-    /// generated in the format of: projects/project_number/feeds/feed_id
+    /// Required. The feed details. The field `name` must be empty and it will be generated
+    /// in the format of:
+    /// projects/project_number/feeds/feed_id
     /// folders/folder_number/feeds/feed_id
     /// organizations/organization_number/feeds/feed_id
     /// </summary>
@@ -1666,8 +1724,8 @@ namespace Google.Cloud.Asset.V1 {
     public const int FeedFieldNumber = 1;
     private global::Google.Cloud.Asset.V1.Feed feed_;
     /// <summary>
-    /// Required. The new values of feed details. It must match an existing feed
-    /// and the field `name` must be in the format of:
+    /// Required. The new values of feed details. It must match an existing feed and the
+    /// field `name` must be in the format of:
     /// projects/project_number/feeds/feed_id or
     /// folders/folder_number/feeds/feed_id or
     /// organizations/organization_number/feeds/feed_id.
@@ -2158,6 +2216,305 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
+  /// Output result of export assets.
+  /// </summary>
+  public sealed partial class OutputResult : pb::IMessage<OutputResult> {
+    private static readonly pb::MessageParser<OutputResult> _parser = new pb::MessageParser<OutputResult>(() => new OutputResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<OutputResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OutputResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OutputResult(OutputResult other) : this() {
+      switch (other.ResultCase) {
+        case ResultOneofCase.GcsResult:
+          GcsResult = other.GcsResult.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public OutputResult Clone() {
+      return new OutputResult(this);
+    }
+
+    /// <summary>Field number for the "gcs_result" field.</summary>
+    public const int GcsResultFieldNumber = 1;
+    /// <summary>
+    /// Export result on Cloud Storage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.GcsOutputResult GcsResult {
+      get { return resultCase_ == ResultOneofCase.GcsResult ? (global::Google.Cloud.Asset.V1.GcsOutputResult) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.GcsResult;
+      }
+    }
+
+    private object result_;
+    /// <summary>Enum of possible cases for the "result" oneof.</summary>
+    public enum ResultOneofCase {
+      None = 0,
+      GcsResult = 1,
+    }
+    private ResultOneofCase resultCase_ = ResultOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ResultOneofCase ResultCase {
+      get { return resultCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearResult() {
+      resultCase_ = ResultOneofCase.None;
+      result_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as OutputResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(OutputResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsResult, other.GcsResult)) return false;
+      if (ResultCase != other.ResultCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (resultCase_ == ResultOneofCase.GcsResult) hash ^= GcsResult.GetHashCode();
+      hash ^= (int) resultCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (resultCase_ == ResultOneofCase.GcsResult) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (resultCase_ == ResultOneofCase.GcsResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsResult);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(OutputResult other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ResultCase) {
+        case ResultOneofCase.GcsResult:
+          if (GcsResult == null) {
+            GcsResult = new global::Google.Cloud.Asset.V1.GcsOutputResult();
+          }
+          GcsResult.MergeFrom(other.GcsResult);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Asset.V1.GcsOutputResult subBuilder = new global::Google.Cloud.Asset.V1.GcsOutputResult();
+            if (resultCase_ == ResultOneofCase.GcsResult) {
+              subBuilder.MergeFrom(GcsResult);
+            }
+            input.ReadMessage(subBuilder);
+            GcsResult = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// A Cloud Storage output result.
+  /// </summary>
+  public sealed partial class GcsOutputResult : pb::IMessage<GcsOutputResult> {
+    private static readonly pb::MessageParser<GcsOutputResult> _parser = new pb::MessageParser<GcsOutputResult>(() => new GcsOutputResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GcsOutputResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsOutputResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsOutputResult(GcsOutputResult other) : this() {
+      uris_ = other.uris_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GcsOutputResult Clone() {
+      return new GcsOutputResult(this);
+    }
+
+    /// <summary>Field number for the "uris" field.</summary>
+    public const int UrisFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_uris_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> uris_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// List of uris of the Cloud Storage objects. Example:
+    /// "gs://bucket_name/object_name".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Uris {
+      get { return uris_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GcsOutputResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GcsOutputResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!uris_.Equals(other.uris_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= uris_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      uris_.WriteTo(output, _repeated_uris_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += uris_.CalculateSize(_repeated_uris_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GcsOutputResult other) {
+      if (other == null) {
+        return;
+      }
+      uris_.Add(other.uris_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            uris_.AddEntriesFrom(input, _repeated_uris_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// A Cloud Storage location.
   /// </summary>
   public sealed partial class GcsDestination : pb::IMessage<GcsDestination> {
@@ -2168,7 +2525,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2377,7 +2734,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2582,7 +2939,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2718,7 +3075,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2893,7 +3250,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3024,8 +3381,12 @@ namespace Google.Cloud.Asset.V1 {
     /// When set, `expression` field in the `Expr` must be a valid [CEL expression]
     /// (https://github.com/google/cel-spec) on a TemporalAsset with name
     /// `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted
-    /// == true") will only publish Asset deletions. Other fields in `Expr` are
+    /// == true") will only publish Asset deletions. Other fields of `Expr` are
     /// optional.
+    ///
+    /// See our [user
+    /// guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes#feed_with_condition)
+    /// for detailed instructions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Expr Condition {
@@ -3208,7 +3569,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3243,15 +3604,17 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. A scope can be a project, a folder or an organization. The search
-    /// is limited to the resources within the `scope`.
+    /// Required. A scope can be a project, a folder, or an organization. The search is
+    /// limited to the resources within the `scope`. The caller must be granted the
+    /// [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
+    /// permission on the desired scope.
     ///
     /// The allowed values are:
     ///
-    /// * projects/{PROJECT_ID}
-    /// * projects/{PROJECT_NUMBER}
-    /// * folders/{FOLDER_NUMBER}
-    /// * organizations/{ORGANIZATION_NUMBER}
+    /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+    /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
+    /// * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
+    /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Scope {
@@ -3265,38 +3628,41 @@ namespace Google.Cloud.Asset.V1 {
     public const int QueryFieldNumber = 2;
     private string query_ = "";
     /// <summary>
-    /// Optional. The query statement. An empty query can be specified to search
-    /// all the resources of certain `asset_types` within the given `scope`.
+    /// Optional. The query statement. See [how to construct a
+    /// query](http://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
+    /// for more information. If not specified or empty, it will search all the
+    /// resources within the specified `scope`. Note that the query string is
+    /// compared against each Cloud IAM policy binding, including its members,
+    /// roles, and Cloud IAM conditions. The returned Cloud IAM policies will only
+    /// contain the bindings that match your query. To learn more about the IAM
+    /// policy structure, see [IAM policy
+    /// doc](https://cloud.google.com/iam/docs/policies#structure).
     ///
     /// Examples:
     ///
-    /// * `name : "Important"` to find Cloud resources whose name contains
+    /// * `name:Important` to find Cloud resources whose name contains
     ///   "Important" as a word.
-    /// * `displayName : "Impor*"` to find Cloud resources whose display name
-    ///   contains "Impor" as a word prefix.
-    /// * `description : "*por*"` to find Cloud resources whose description
+    /// * `displayName:Impor*` to find Cloud resources whose display name
+    ///   contains "Impor" as a prefix.
+    /// * `description:*por*` to find Cloud resources whose description
     ///   contains "por" as a substring.
-    /// * `location : "us-west*"` to find Cloud resources whose location is
+    /// * `location:us-west*` to find Cloud resources whose location is
     ///   prefixed with "us-west".
-    /// * `labels : "prod"` to find Cloud resources whose labels contain "prod" as
+    /// * `labels:prod` to find Cloud resources whose labels contain "prod" as
     ///   a key or value.
-    /// * `labels.env : "prod"` to find Cloud resources which have a label "env"
+    /// * `labels.env:prod` to find Cloud resources that have a label "env"
     ///   and its value is "prod".
-    /// * `labels.env : *` to find Cloud resources which have a label "env".
-    /// * `"Important"` to find Cloud resources which contain "Important" as a word
+    /// * `labels.env:*` to find Cloud resources that have a label "env".
+    /// * `Important` to find Cloud resources that contain "Important" as a word
     ///   in any of the searchable fields.
-    /// * `"Impor*"` to find Cloud resources which contain "Impor" as a word prefix
+    /// * `Impor*` to find Cloud resources that contain "Impor" as a prefix
     ///   in any of the searchable fields.
-    /// * `"*por*"` to find Cloud resources which contain "por" as a substring in
+    /// * `*por*` to find Cloud resources that contain "por" as a substring in
     ///   any of the searchable fields.
-    /// * `("Important" AND location : ("us-west1" OR "global"))` to find Cloud
-    ///   resources which contain "Important" as a word in any of the searchable
+    /// * `Important location:(us-west1 OR global)` to find Cloud
+    ///   resources that contain "Important" as a word in any of the searchable
     ///   fields and are also located in the "us-west1" region or the "global"
     ///   location.
-    ///
-    /// See [how to construct a
-    /// query](https://cloud.google.com/asset-inventory/docs/searching-resources#how_to_construct_a_query)
-    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Query {
@@ -3312,8 +3678,8 @@ namespace Google.Cloud.Asset.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> assetTypes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A list of asset types that this request searches for. If empty,
-    /// it will search all the [searchable asset
+    /// Optional. A list of asset types that this request searches for. If empty, it will
+    /// search all the [searchable asset
     /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3325,11 +3691,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 4;
     private int pageSize_;
     /// <summary>
-    /// Optional. The page size for search result pagination. Page size is capped
-    /// at 500 even if a larger value is given. If set to zero, server will pick an
-    /// appropriate default. Returned results may be fewer than requested. When
-    /// this happens, there could be more results as long as `next_page_token` is
-    /// returned.
+    /// Optional. The page size for search result pagination. Page size is capped at 500 even
+    /// if a larger value is given. If set to zero, server will pick an appropriate
+    /// default. Returned results may be fewer than requested. When this happens,
+    /// there could be more results as long as `next_page_token` is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -3343,10 +3708,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageTokenFieldNumber = 5;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. If present, then retrieve the next batch of results from the
-    /// preceding call to this method. `page_token` must be the value of
-    /// `next_page_token` from the previous response. The values of all other
-    /// method parameters, must be identical to those in the previous call.
+    /// Optional. If present, then retrieve the next batch of results from the preceding call
+    /// to this method. `page_token` must be the value of `next_page_token` from
+    /// the previous response. The values of all other method parameters, must be
+    /// identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -3360,12 +3725,14 @@ namespace Google.Cloud.Asset.V1 {
     public const int OrderByFieldNumber = 6;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional. A comma separated list of fields specifying the sorting order of
-    /// the results. The default order is ascending. Add " DESC" after the field
-    /// name to indicate descending order. Redundant space characters are ignored.
-    /// Example: "location DESC, name". See [supported resource metadata
-    /// fields](https://cloud.google.com/asset-inventory/docs/searching-resources#query_on_resource_metadata_fields)
-    /// for more details.
+    /// Optional. A comma separated list of fields specifying the sorting order of the
+    /// results. The default order is ascending. Add " DESC" after the field name
+    /// to indicate descending order. Redundant space characters are ignored.
+    /// Example: "location DESC, name". Only string fields in the response are
+    /// sortable, including `name`, `displayName`, `description`, `location`. All
+    /// the other fields such as repeated fields (e.g., `networkTags`), map
+    /// fields (e.g., `labels`) and struct fields (e.g., `additionalAttributes`)
+    /// are not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -3543,7 +3910,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3704,7 +4071,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3737,15 +4104,18 @@ namespace Google.Cloud.Asset.V1 {
     public const int ScopeFieldNumber = 1;
     private string scope_ = "";
     /// <summary>
-    /// Required. A scope can be a project, a folder or an organization. The search
-    /// is limited to the IAM policies within the `scope`.
+    /// Required. A scope can be a project, a folder, or an organization. The search is
+    /// limited to the IAM policies within the `scope`. The caller must be granted
+    /// the
+    /// [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs/access-control#required_permissions)
+    /// permission on the desired scope.
     ///
     /// The allowed values are:
     ///
-    /// * projects/{PROJECT_ID}
-    /// * projects/{PROJECT_NUMBER}
-    /// * folders/{FOLDER_NUMBER}
-    /// * organizations/{ORGANIZATION_NUMBER}
+    /// * projects/{PROJECT_ID} (e.g., "projects/foo-bar")
+    /// * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
+    /// * folders/{FOLDER_NUMBER} (e.g., "folders/1234567")
+    /// * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Scope {
@@ -3759,27 +4129,32 @@ namespace Google.Cloud.Asset.V1 {
     public const int QueryFieldNumber = 2;
     private string query_ = "";
     /// <summary>
-    /// Optional. The query statement. An empty query can be specified to search
-    /// all the IAM policies within the given `scope`.
+    /// Optional. The query statement. See [how to construct a
+    /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
+    /// for more information. If not specified or empty, it will search all the
+    /// IAM policies within the specified `scope`.
     ///
     /// Examples:
     ///
-    /// * `policy : "amy@gmail.com"` to find Cloud IAM policy bindings that
-    ///   specify user "amy@gmail.com".
-    /// * `policy : "roles/compute.admin"` to find Cloud IAM policy bindings that
-    ///   specify the Compute Admin role.
-    /// * `policy.role.permissions : "storage.buckets.update"` to find Cloud IAM
-    ///   policy bindings that specify a role containing "storage.buckets.update"
-    ///   permission.
-    /// * `resource : "organizations/123"` to find Cloud IAM policy bindings that
-    ///   are set on "organizations/123".
-    /// * `(resource : ("organizations/123" OR "folders/1234") AND policy : "amy")`
-    ///   to find Cloud IAM policy bindings that are set on "organizations/123" or
-    ///   "folders/1234", and also specify user "amy".
-    ///
-    /// See [how to construct a
-    /// query](https://cloud.google.com/asset-inventory/docs/searching-iam-policies#how_to_construct_a_query)
-    /// for more details.
+    /// * `policy:amy@gmail.com` to find IAM policy bindings that specify user
+    ///   "amy@gmail.com".
+    /// * `policy:roles/compute.admin` to find IAM policy bindings that specify
+    ///   the Compute Admin role.
+    /// * `policy.role.permissions:storage.buckets.update` to find IAM policy
+    ///   bindings that specify a role containing "storage.buckets.update"
+    ///   permission. Note that if callers don't have `iam.roles.get` access to a
+    ///   role's included permissions, policy bindings that specify this role will
+    ///   be dropped from the search results.
+    /// * `resource:organizations/123456` to find IAM policy bindings
+    ///   that are set on "organizations/123456".
+    /// * `Important` to find IAM policy bindings that contain "Important" as a
+    ///   word in any of the searchable fields (except for the included
+    ///   permissions).
+    /// * `*por*` to find IAM policy bindings that contain "por" as a substring
+    ///   in any of the searchable fields (except for the included permissions).
+    /// * `resource:(instance1 OR instance2) policy:amy` to find
+    ///   IAM policy bindings that are set on resources "instance1" or
+    ///   "instance2" and also specify user "amy".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Query {
@@ -3793,11 +4168,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// Optional. The page size for search result pagination. Page size is capped
-    /// at 500 even if a larger value is given. If set to zero, server will pick an
-    /// appropriate default. Returned results may be fewer than requested. When
-    /// this happens, there could be more results as long as `next_page_token` is
-    /// returned.
+    /// Optional. The page size for search result pagination. Page size is capped at 500 even
+    /// if a larger value is given. If set to zero, server will pick an appropriate
+    /// default. Returned results may be fewer than requested. When this happens,
+    /// there could be more results as long as `next_page_token` is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -3811,10 +4185,10 @@ namespace Google.Cloud.Asset.V1 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. If present, retrieve the next batch of results from the preceding
-    /// call to this method. `page_token` must be the value of `next_page_token`
-    /// from the previous response. The values of all other method parameters must
-    /// be identical to those in the previous call.
+    /// Optional. If present, retrieve the next batch of results from the preceding call to
+    /// this method. `page_token` must be the value of `next_page_token` from the
+    /// previous response. The values of all other method parameters must be
+    /// identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -3967,7 +4341,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

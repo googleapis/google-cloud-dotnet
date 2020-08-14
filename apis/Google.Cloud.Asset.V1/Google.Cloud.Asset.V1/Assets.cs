@@ -25,16 +25,16 @@ namespace Google.Cloud.Asset.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXNzZXQvdjEvYXNzZXRzLnByb3RvEhVnb29nbGUu",
-            "Y2xvdWQuYXNzZXQudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKWdvb2dsZS9jbG91ZC9vcmdw",
-            "b2xpY3kvdjEvb3JncG9saWN5LnByb3RvGhpnb29nbGUvaWFtL3YxL3BvbGlj",
-            "eS5wcm90bxo6Z29vZ2xlL2lkZW50aXR5L2FjY2Vzc2NvbnRleHRtYW5hZ2Vy",
-            "L3YxL2FjY2Vzc19sZXZlbC5wcm90bxo7Z29vZ2xlL2lkZW50aXR5L2FjY2Vz",
-            "c2NvbnRleHRtYW5hZ2VyL3YxL2FjY2Vzc19wb2xpY3kucHJvdG8aP2dvb2ds",
-            "ZS9pZGVudGl0eS9hY2Nlc3Njb250ZXh0bWFuYWdlci92MS9zZXJ2aWNlX3Bl",
-            "cmltZXRlci5wcm90bxoZZ29vZ2xlL3Byb3RvYnVmL2FueS5wcm90bxocZ29v",
-            "Z2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90bxoVZ29vZ2xlL3JwYy9jb2RlLnByb3RvIvUCCg1UZW1w",
+            "Y2xvdWQuYXNzZXQudjEaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKWdv",
+            "b2dsZS9jbG91ZC9vcmdwb2xpY3kvdjEvb3JncG9saWN5LnByb3RvGhpnb29n",
+            "bGUvaWFtL3YxL3BvbGljeS5wcm90bxo6Z29vZ2xlL2lkZW50aXR5L2FjY2Vz",
+            "c2NvbnRleHRtYW5hZ2VyL3YxL2FjY2Vzc19sZXZlbC5wcm90bxo7Z29vZ2xl",
+            "L2lkZW50aXR5L2FjY2Vzc2NvbnRleHRtYW5hZ2VyL3YxL2FjY2Vzc19wb2xp",
+            "Y3kucHJvdG8aP2dvb2dsZS9pZGVudGl0eS9hY2Nlc3Njb250ZXh0bWFuYWdl",
+            "ci92MS9zZXJ2aWNlX3BlcmltZXRlci5wcm90bxoZZ29vZ2xlL3Byb3RvYnVm",
+            "L2FueS5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoVZ29vZ2xlL3JwYy9jb2Rl",
+            "LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIvUCCg1UZW1w",
             "b3JhbEFzc2V0EjEKBndpbmRvdxgBIAEoCzIhLmdvb2dsZS5jbG91ZC5hc3Nl",
             "dC52MS5UaW1lV2luZG93Eg8KB2RlbGV0ZWQYAiABKAgSKwoFYXNzZXQYAyAB",
             "KAsyHC5nb29nbGUuY2xvdWQuYXNzZXQudjEuQXNzZXQSTwoRcHJpb3JfYXNz",
@@ -85,7 +85,7 @@ namespace Google.Cloud.Asset.V1 {
             "cGlzL2Nsb3VkL2Fzc2V0L3YxO2Fzc2V0+AEBqgIVR29vZ2xlLkNsb3VkLkFz",
             "c2V0LlYxygIVR29vZ2xlXENsb3VkXEFzc2V0XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OrgPolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OrgPolicy.V1.OrgpolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessLevelReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.AccessPolicyReflection.Descriptor, global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TemporalAsset), global::Google.Cloud.Asset.V1.TemporalAsset.Parser, new[]{ "Window", "Deleted", "Asset", "PriorAssetState", "PriorAsset" }, null, new[]{ typeof(global::Google.Cloud.Asset.V1.TemporalAsset.Types.PriorAssetState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.TimeWindow), global::Google.Cloud.Asset.V1.TimeWindow.Parser, new[]{ "StartTime", "EndTime" }, null, null, null, null),
@@ -1457,7 +1457,7 @@ namespace Google.Cloud.Asset.V1 {
   }
 
   /// <summary>
-  /// A result of Resource Search, containing information of a cloud resoure.
+  /// A result of Resource Search, containing information of a cloud resource.
   /// </summary>
   public sealed partial class ResourceSearchResult : pb::IMessage<ResourceSearchResult> {
     private static readonly pb::MessageParser<ResourceSearchResult> _parser = new pb::MessageParser<ResourceSearchResult>(() => new ResourceSearchResult());
@@ -1513,8 +1513,8 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `name`:
     ///
-    /// * use a field query. Example: `name : "instance1"`
-    /// * use a free text query. Example: `"instance1"`
+    /// * use a field query. Example: `name:instance1`
+    /// * use a free text query. Example: `instance1`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1569,7 +1569,7 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `display_name`:
     ///
-    /// * use a field query. Example: `displayName : "My Instance"`
+    /// * use a field query. Example: `displayName:"My Instance"`
     /// * use a free text query. Example: `"My Instance"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1589,7 +1589,7 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `description`:
     ///
-    /// * use a field query. Example: `description : "*important instance*"`
+    /// * use a field query. Example: `description:"*important instance*"`
     /// * use a free text query. Example: `"*important instance*"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1609,8 +1609,8 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `location`:
     ///
-    /// * use a field query. Example: `location : "us-west*"`
-    /// * use a free text query. Example: `"us-west*"`
+    /// * use a field query. Example: `location:us-west*`
+    /// * use a free text query. Example: `us-west*`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Location {
@@ -1632,11 +1632,11 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `labels`:
     ///
-    /// * use a field query, as following:
-    ///     - query on any label's key or value. Example: `labels : "prod"`
-    ///     - query by a given label. Example: `labels.env : "prod"`
-    ///     - query by a given label'sexistence. Example: `labels.env : *`
-    /// * use a free text query. Example: `"prod"`
+    /// * use a field query:
+    ///     - query on any label's key or value. Example: `labels:prod`
+    ///     - query by a given label. Example: `labels.env:prod`
+    ///     - query by a given label's existence. Example: `labels.env:*`
+    /// * use a free text query. Example: `prod`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -1656,8 +1656,8 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `network_tags`:
     ///
-    /// * use a field query. Example: `networkTags : "internal"`
-    /// * use a free text query. Example: `"internal"`
+    /// * use a field query. Example: `networkTags:internal`
+    /// * use a free text query. Example: `internal`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> NetworkTags {
@@ -1668,15 +1668,25 @@ namespace Google.Cloud.Asset.V1 {
     public const int AdditionalAttributesFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Struct additionalAttributes_;
     /// <summary>
-    /// The additional attributes of this resource. The attributes may vary from
-    /// one resource type to another. Examples: `projectId` for Project,
-    /// `dnsName` for DNS ManagedZone.
+    /// The additional searchable attributes of this resource. The attributes may
+    /// vary from one resource type to another. Examples: `projectId` for Project,
+    /// `dnsName` for DNS ManagedZone. This field contains a subset of the resource
+    /// metadata fields that are returned by the List or Get APIs provided by the
+    /// corresponding GCP service (e.g., Compute Engine). see [API references and
+    /// supported searchable
+    /// attributes](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types)
+    /// for more information.
+    ///
+    /// You can search values of these fields through free text search. However,
+    /// you should not consume the field programically as the field names and
+    /// values may change as the GCP service updates to a new incompatible API
+    /// version.
     ///
     /// To search against the `additional_attributes`:
     ///
     /// * use a free text query to match the attributes values. Example: to search
     ///   `additional_attributes = { dnsName: "foobar" }`, you can issue a query
-    ///   `"foobar"`.
+    ///   `foobar`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct AdditionalAttributes {
@@ -1943,7 +1953,7 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `resource`:
     ///
-    /// * use a field query. Example: `resource : "organizations/123"`
+    /// * use a field query. Example: `resource:organizations/123`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Resource {
@@ -1986,13 +1996,13 @@ namespace Google.Cloud.Asset.V1 {
     ///
     /// To search against the `policy` bindings:
     ///
-    /// * use a field query, as following:
+    /// * use a field query:
     ///     - query by the policy contained members. Example:
-    ///       `policy : "amy@gmail.com"`
+    ///       `policy:amy@gmail.com`
     ///     - query by the policy contained roles. Example:
-    ///       `policy : "roles/compute.admin"`
-    ///     - query by the policy contained roles' implied permissions. Example:
-    ///       `policy.role.permissions : "compute.instances.create"`
+    ///       `policy:roles/compute.admin`
+    ///     - query by the policy contained roles' included permissions. Example:
+    ///       `policy.role.permissions:compute.instances.create`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Iam.V1.Policy Policy {
@@ -2208,7 +2218,7 @@ namespace Google.Cloud.Asset.V1 {
         /// <summary>
         /// The map from roles to their included permissions that match the
         /// permission query (i.e., a query containing `policy.role.permissions:`).
-        /// Example: if query `policy.role.permissions : "compute.disk.get"`
+        /// Example: if query `policy.role.permissions:compute.disk.get`
         /// matches a policy binding that contains owner role, the
         /// matched_permissions will be `{"roles/owner": ["compute.disk.get"]}`. The
         /// roles can also be found in the returned `policy` bindings. Note that the
