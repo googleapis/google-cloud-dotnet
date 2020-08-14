@@ -252,7 +252,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
 
       /// <summary>
-      ///
       /// Creates a finding. The corresponding source must exist for finding
       /// creation to succeed.
       /// </summary>
@@ -421,7 +420,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
 
       /// <summary>
-      ///
       /// Updates the state of a finding.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -581,7 +579,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSource, null, options, request);
       }
       /// <summary>
-      ///
       /// Creates a finding. The corresponding source must exist for finding
       /// creation to succeed.
       /// </summary>
@@ -595,7 +592,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CreateFinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///
       /// Creates a finding. The corresponding source must exist for finding
       /// creation to succeed.
       /// </summary>
@@ -607,7 +603,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateFinding, null, options, request);
       }
       /// <summary>
-      ///
       /// Creates a finding. The corresponding source must exist for finding
       /// creation to succeed.
       /// </summary>
@@ -621,7 +616,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CreateFindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///
       /// Creates a finding. The corresponding source must exist for finding
       /// creation to succeed.
       /// </summary>
@@ -1257,7 +1251,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_RunAssetDiscovery, null, options, request);
       }
       /// <summary>
-      ///
       /// Updates the state of a finding.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1270,7 +1263,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return SetFindingState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///
       /// Updates the state of a finding.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1281,7 +1273,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_SetFindingState, null, options, request);
       }
       /// <summary>
-      ///
       /// Updates the state of a finding.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1294,7 +1285,6 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         return SetFindingStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///
       /// Updates the state of a finding.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
