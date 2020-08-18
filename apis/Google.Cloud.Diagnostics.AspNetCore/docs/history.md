@@ -1,5 +1,9 @@
 # Version history
 
+# Version 4.1.0, released 2020-08-18
+
+No changes compared with 4.1.0-beta01
+
 # Version 4.1.0-beta01, released 2020-08-03
 
 - [Commit 587cafd](https://github.com/googleapis/google-cloud-dotnet/commit/587cafd): Makes Tracing rate limiter treat overflow values as always/never trace.
