@@ -79,7 +79,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html) | 2.0.0-beta02 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecurityCenter.Settings.V1Beta1](Google.Cloud.SecurityCenter.Settings.V1Beta1/index.html) | 1.0.0-beta01 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](Google.Cloud.SecurityCenter.V1/index.html) | 2.0.0 | [Google Cloud Security Command Center (V1 API)](https://cloud.google.com/security-command-center/) |
-| [Google.Cloud.SecurityCenter.V1P1Beta1](Google.Cloud.SecurityCenter.V1P1Beta1/index.html) | 2.0.0-beta02 | [Google Cloud Security Command Center (V1P1Beta1 API)](https://cloud.google.com/security-command-center/) |
+| [Google.Cloud.SecurityCenter.V1P1Beta1](Google.Cloud.SecurityCenter.V1P1Beta1/index.html) | 2.0.0-beta03 | [Google Cloud Security Command Center (V1P1Beta1 API)](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.ServiceDirectory.V1Beta1](Google.Cloud.ServiceDirectory.V1Beta1/index.html) | 1.0.0-beta02 | [Service Directory](https://cloud.google.com/service-directory/) |
 | [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html) | 3.1.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
 | [Google.Cloud.Spanner.Admin.Instance.V1](Google.Cloud.Spanner.Admin.Instance.V1/index.html) | 3.1.0 | [Google Cloud Spanner Instance Administration](https://cloud.google.com/spanner/) |
