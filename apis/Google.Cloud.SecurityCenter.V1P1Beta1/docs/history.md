@@ -1,5 +1,30 @@
 # Version history
 
+# Version 2.0.0-beta03, released 2020-08-17
+
+- [Commit 95b05fe](https://github.com/googleapis/google-cloud-dotnet/commit/95b05fe):
+  - feat: Added field severity to findings
+  Clients will now see a new field, severity, on findings.
+  They will also be able to filter and group by severity on ListFinding and GroupFinding API calls.
+- [Commit 2f4a2c6](https://github.com/googleapis/google-cloud-dotnet/commit/2f4a2c6):
+  - fix: Correct securitycenter grpc_service_configs
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3):
+  - Includes service comments in client documentation.
+  The comments are included as they are, on a "remarks" section both in the
+  abstract base class and the concrete implementation.
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1):
+  - Enables RPCs without retries to still have timeouts specified.
+- [Commit 2c1b17e](https://github.com/googleapis/google-cloud-dotnet/commit/2c1b17e):
+  - Specify allowed fields for UpdateNotificationConfig
+- [Commit b6d323c](https://github.com/googleapis/google-cloud-dotnet/commit/b6d323c):
+  - fix!: Fix the version casing in the C# namespace option
+  BREAKING CHANGE: This would break any C# code already generated,
+  but this file is very new, so is unlikely to break anyone.
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573):
+  - Adds more explicit documentation
+- [Commit 0dfc53b](https://github.com/googleapis/google-cloud-dotnet/commit/0dfc53b):
+  - docs: fix broken link to policy reference documentation.
+
 # Version 2.0.0-beta02, released 2020-03-19
 
 - [Commit 8746b2d](https://github.com/googleapis/google-cloud-dotnet/commit/8746b2d): Amended retry configuration
