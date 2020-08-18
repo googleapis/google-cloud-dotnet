@@ -2052,19 +2052,6 @@
       "CSharpNamespaceFromProtos": "<UNKNOWN - NO PROTOS WITH NAMESPACES/PACKAGES>"
     },
     {
-      "ServiceDirectory": "google/ads/googleads/v1",
-      "Name": "googleads.googleapis.com",
-      "Title": "Google Ads API",
-      "Description": "Manage your AdWords accounts, campaigns, and reports with this REST-based API.",
-      "ServiceConfigFile": "google/ads/googleads/v1/googleads_v1.yaml",
-      "Version": "v1",
-      "PackageFromDirectory": "google.ads.googleads.v1",
-      "PackageFromProtos": "<UNKNOWN - NO PROTOS WITH PACKAGES>",
-      "ImportDirectories": [],
-      "Stable": true,
-      "CSharpNamespaceFromProtos": "<UNKNOWN - NO PROTOS WITH NAMESPACES/PACKAGES>"
-    },
-    {
       "ServiceDirectory": "google/ads/googleads/v4",
       "Name": "googleads.googleapis.com",
       "Title": "Google Ads API",
