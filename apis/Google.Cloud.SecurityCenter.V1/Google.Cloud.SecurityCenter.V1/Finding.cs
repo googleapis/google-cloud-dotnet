@@ -249,9 +249,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int EventTimeFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp eventTime_;
     /// <summary>
-    /// The time at which the event took place. For example, if the finding
-    /// represents an open firewall it would capture the time the detector believes
-    /// the firewall became open. The accuracy is determined by the detector.
+    /// The time at which the event took place, or when an update to the finding
+    /// occurred. For example, if the finding represents an open firewall it would
+    /// capture the time the detector believes the firewall became open. The
+    /// accuracy is determined by the detector. If the finding were to be resolved
+    /// afterward, this time would reflect when the finding was resolved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EventTime {
