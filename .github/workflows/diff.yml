@@ -13,16 +13,19 @@ jobs:
         # TODO: Try depth 100. We diff against master, and we don't know
         # how far back that is... there may be a better approach
         fetch-depth: 100
+        
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
+        
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
+        
     - run: |
         # Make sure the master branch is available for diffing.
         git checkout -b master ${{ github.event.before }}
         git checkout -b after ${{ github.event.after }}
-       ./detect-pr-changes.sh
+        ./detect-pr-changes.sh
