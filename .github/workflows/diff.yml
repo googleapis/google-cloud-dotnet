@@ -29,7 +29,9 @@ jobs:
         echo "Listing remotes"
         git remote -v
         # Make sure the master branch is available for diffing.
-        git remote add upstream git@github.com:googleapis/google-cloud-dotnet.git
+        git remote add upstream https://github.com/googleapis/google-cloud-dotnet.git
+        echo "Listing again"
+        git remote -v
         git checkout -b master ${{ github.event.before }}
         git checkout -b after ${{ github.event.after }}
         git push --set-upstream upstream master
