@@ -4,7 +4,7 @@ on: [pull_request,push]
 
 jobs:
 
-  build:
+  diff:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
@@ -24,7 +24,8 @@ jobs:
       with:
         python-version: 3.x
         
-    - run: |
+    - name: Detect PR changes
+      run: |
         # Make sure the master branch is available for diffing.
         git checkout -b master ${{ github.event.before }}
         git checkout -b after ${{ github.event.after }}

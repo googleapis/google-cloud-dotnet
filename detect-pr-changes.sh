@@ -58,4 +58,9 @@ log_header "Checking compatibility with previous releases"
 
 # Make sure all the tags are available for checking compatibility
 git fetch --tags -q
+
+echo "Displaying all tags"
+git tag
+echo "Done"
+
 dotnet run --no-build -p tools/Google.Cloud.Tools.ReleaseManager -- check-version-compatibility
