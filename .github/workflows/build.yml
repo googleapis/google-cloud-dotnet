@@ -17,7 +17,7 @@ jobs:
         submodules: true
         # TODO: Try depth 100. We diff against master, and we don't know
         # how far back that is... there may be a better approach
-        fetch-depth: 200
+        fetch-depth: 100
         
     # We need just the .NET Core 2.1 runtime for testing    
     - name: Setup .NET Core 2.1
@@ -29,10 +29,26 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
+
+    # See https://github.com/actions/setup-dotnet/issues/25#issuecomment-646925506
+    - name: Merge .NET Core SDKs
+        shell: pwsh
+        run: |
+          $version = Split-Path (Split-Path $ENV:DOTNET_ROOT -Parent) -Leaf;
+          $root = Split-Path (Split-Path $ENV:DOTNET_ROOT -Parent) -Parent;
+          $directories = Get-ChildItem $root | Where-Object { $_.Name -ne $version };
+          foreach ($dir in $directories) {
+            $from = $dir.FullName;
+            $to = "$root/$version";
+            Write-Host Copying from $from to $to;
+            Copy-Item "$from\*" $to -Recurse -Force;
+          }
+        
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
+
     - run: |
         dotnet --info
         # Make sure the master branch is available for diffing.
