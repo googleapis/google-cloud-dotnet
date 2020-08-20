@@ -17,7 +17,7 @@ jobs:
         submodules: true
         # TODO: Try depth 100. We diff against master, and we don't know
         # how far back that is... there may be a better approach
-        fetch-depth: 0
+        fetch-depth: 200
         
     # We need just the .NET Core 2.1 runtime for testing    
     - name: Setup .NET Core 2.1
