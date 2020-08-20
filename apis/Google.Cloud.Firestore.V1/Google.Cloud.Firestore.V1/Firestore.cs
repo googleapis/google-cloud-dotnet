@@ -3981,8 +3981,9 @@ namespace Google.Cloud.Firestore.V1 {
     public const int StructuredQueryFieldNumber = 2;
     /// <summary>
     /// A structured query.
-    /// Filters, order bys, limits, offsets, and start/end cursors are not
-    /// supported.
+    /// Query must specify collection with all descendants and be ordered by name
+    /// ascending. Other filters, order bys, limits, offsets, and start/end
+    /// cursors are not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Firestore.V1.StructuredQuery StructuredQuery {
@@ -3999,7 +4000,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// <summary>
     /// The desired maximum number of partition points.
     /// The partitions may be returned across multiple pages of results.
-    /// The number must be strictly positive. The actual number of partitions
+    /// The number must be positive. The actual number of partitions
     /// returned may be fewer.
     ///
     /// For example, this may be set to one fewer than the number of parallel
@@ -4297,6 +4298,9 @@ namespace Google.Cloud.Firestore.V1 {
     ///  * query, end_at A
     ///  * query, start_at A, end_at B
     ///  * query, start_at B
+    ///
+    /// An empty result may indicate that the query has too few results to be
+    /// partitioned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Cursor> Partitions {

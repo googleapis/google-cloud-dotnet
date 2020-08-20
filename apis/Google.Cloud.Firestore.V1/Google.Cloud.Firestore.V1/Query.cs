@@ -27,7 +27,7 @@ namespace Google.Cloud.Firestore.V1 {
             "Ch9nb29nbGUvZmlyZXN0b3JlL3YxL3F1ZXJ5LnByb3RvEhNnb29nbGUuZmly",
             "ZXN0b3JlLnYxGiJnb29nbGUvZmlyZXN0b3JlL3YxL2RvY3VtZW50LnByb3Rv",
             "Gh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8i+g4KD1N0cnVjdHVyZWRRdWVyeRI/CgZzZWxl",
+            "YW5ub3RhdGlvbnMucHJvdG8itg8KD1N0cnVjdHVyZWRRdWVyeRI/CgZzZWxl",
             "Y3QYASABKAsyLy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVy",
             "eS5Qcm9qZWN0aW9uEkUKBGZyb20YAiADKAsyNy5nb29nbGUuZmlyZXN0b3Jl",
             "LnYxLlN0cnVjdHVyZWRRdWVyeS5Db2xsZWN0aW9uU2VsZWN0b3ISOgoFd2hl",
@@ -48,35 +48,36 @@ namespace Google.Cloud.Firestore.V1 {
             "b2dsZS5maXJlc3RvcmUudjEuU3RydWN0dXJlZFF1ZXJ5LkNvbXBvc2l0ZUZp",
             "bHRlci5PcGVyYXRvchI8CgdmaWx0ZXJzGAIgAygLMisuZ29vZ2xlLmZpcmVz",
             "dG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmlsdGVyIi0KCE9wZXJhdG9yEhgK",
-            "FE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAEa/QIKC0ZpZWxkRmls",
+            "FE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAEamAMKC0ZpZWxkRmls",
             "dGVyEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1",
             "Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2USRQoCb3AYAiABKA4yOS5nb29n",
             "bGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5GaWVsZEZpbHRlci5P",
             "cGVyYXRvchIpCgV2YWx1ZRgDIAEoCzIaLmdvb2dsZS5maXJlc3RvcmUudjEu",
-            "VmFsdWUitwEKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAAS",
+            "VmFsdWUi0gEKCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAAS",
             "DQoJTEVTU19USEFOEAESFgoSTEVTU19USEFOX09SX0VRVUFMEAISEAoMR1JF",
             "QVRFUl9USEFOEAMSGQoVR1JFQVRFUl9USEFOX09SX0VRVUFMEAQSCQoFRVFV",
-            "QUwQBRISCg5BUlJBWV9DT05UQUlOUxAHEgYKAklOEAgSFgoSQVJSQVlfQ09O",
-            "VEFJTlNfQU5ZEAka6QEKC1VuYXJ5RmlsdGVyEkUKAm9wGAEgASgOMjkuZ29v",
-            "Z2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuVW5hcnlGaWx0ZXIu",
-            "T3BlcmF0b3ISRAoFZmllbGQYAiABKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYx",
-            "LlN0cnVjdHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZUgAIj0KCE9wZXJhdG9y",
-            "EhgKFE9QRVJBVE9SX1VOU1BFQ0lGSUVEEAASCgoGSVNfTkFOEAISCwoHSVNf",
-            "TlVMTBADQg4KDG9wZXJhbmRfdHlwZRokCg5GaWVsZFJlZmVyZW5jZRISCgpm",
-            "aWVsZF9wYXRoGAIgASgJGlEKClByb2plY3Rpb24SQwoGZmllbGRzGAIgAygL",
-            "MjMuZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRS",
-            "ZWZlcmVuY2UajgEKBU9yZGVyEkIKBWZpZWxkGAEgASgLMjMuZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MS5TdHJ1Y3R1cmVkUXVlcnkuRmllbGRSZWZlcmVuY2USQQoJ",
-            "ZGlyZWN0aW9uGAIgASgOMi4uZ29vZ2xlLmZpcmVzdG9yZS52MS5TdHJ1Y3R1",
-            "cmVkUXVlcnkuRGlyZWN0aW9uIkUKCURpcmVjdGlvbhIZChVESVJFQ1RJT05f",
-            "VU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQARIOCgpERVNDRU5ESU5HEAIi",
-            "RAoGQ3Vyc29yEioKBnZhbHVlcxgBIAMoCzIaLmdvb2dsZS5maXJlc3RvcmUu",
-            "djEuVmFsdWUSDgoGYmVmb3JlGAIgASgIQsMBChdjb20uZ29vZ2xlLmZpcmVz",
-            "dG9yZS52MUIKUXVlcnlQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2ZpcmVzdG9yZS92MTtmaXJlc3RvcmWiAgRHQ0ZT",
-            "qgIZR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5WMcoCGUdvb2dsZVxDbG91ZFxG",
-            "aXJlc3RvcmVcVjHqAhxHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OlYxYgZw",
-            "cm90bzM="));
+            "QUwQBRINCglOT1RfRVFVQUwQBhISCg5BUlJBWV9DT05UQUlOUxAHEgYKAklO",
+            "EAgSFgoSQVJSQVlfQ09OVEFJTlNfQU5ZEAkSCgoGTk9UX0lOEAoaigIKC1Vu",
+            "YXJ5RmlsdGVyEkUKAm9wGAEgASgOMjkuZ29vZ2xlLmZpcmVzdG9yZS52MS5T",
+            "dHJ1Y3R1cmVkUXVlcnkuVW5hcnlGaWx0ZXIuT3BlcmF0b3ISRAoFZmllbGQY",
+            "AiABKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5G",
+            "aWVsZFJlZmVyZW5jZUgAIl4KCE9wZXJhdG9yEhgKFE9QRVJBVE9SX1VOU1BF",
+            "Q0lGSUVEEAASCgoGSVNfTkFOEAISCwoHSVNfTlVMTBADEg4KCklTX05PVF9O",
+            "QU4QBBIPCgtJU19OT1RfTlVMTBAFQg4KDG9wZXJhbmRfdHlwZRqOAQoFT3Jk",
+            "ZXISQgoFZmllbGQYASABKAsyMy5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVj",
+            "dHVyZWRRdWVyeS5GaWVsZFJlZmVyZW5jZRJBCglkaXJlY3Rpb24YAiABKA4y",
+            "Li5nb29nbGUuZmlyZXN0b3JlLnYxLlN0cnVjdHVyZWRRdWVyeS5EaXJlY3Rp",
+            "b24aJAoORmllbGRSZWZlcmVuY2USEgoKZmllbGRfcGF0aBgCIAEoCRpRCgpQ",
+            "cm9qZWN0aW9uEkMKBmZpZWxkcxgCIAMoCzIzLmdvb2dsZS5maXJlc3RvcmUu",
+            "djEuU3RydWN0dXJlZFF1ZXJ5LkZpZWxkUmVmZXJlbmNlIkUKCURpcmVjdGlv",
+            "bhIZChVESVJFQ1RJT05fVU5TUEVDSUZJRUQQABINCglBU0NFTkRJTkcQARIO",
+            "CgpERVNDRU5ESU5HEAIiRAoGQ3Vyc29yEioKBnZhbHVlcxgBIAMoCzIaLmdv",
+            "b2dsZS5maXJlc3RvcmUudjEuVmFsdWUSDgoGYmVmb3JlGAIgASgIQsMBChdj",
+            "b20uZ29vZ2xlLmZpcmVzdG9yZS52MUIKUXVlcnlQcm90b1ABWjxnb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2ZpcmVzdG9yZS92MTtm",
+            "aXJlc3RvcmWiAgRHQ0ZTqgIZR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5WMcoC",
+            "GUdvb2dsZVxDbG91ZFxGaXJlc3RvcmVcVjHqAhxHb29nbGU6OkNsb3VkOjpG",
+            "aXJlc3RvcmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.Firestore.V1.DocumentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,9 +86,9 @@ namespace Google.Cloud.Firestore.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Parser, new[]{ "Field", "Op", "Value" }, null, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Parser, new[]{ "Op", "Field" }, new[]{ "OperandType" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser, new[]{ "FieldPath" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order.Parser, new[]{ "Field", "Direction" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection), global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection.Parser, new[]{ "Fields" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Cursor), global::Google.Cloud.Firestore.V1.Cursor.Parser, new[]{ "Values", "Before" }, null, null, null, null)
           }));
     }
@@ -1364,6 +1365,15 @@ namespace Google.Cloud.Firestore.V1 {
             /// </summary>
             [pbr::OriginalName("EQUAL")] Equal = 5,
             /// <summary>
+            /// The given `field` is not equal to the given `value`.
+            ///
+            /// Requires:
+            ///
+            /// * No other `NOT_EQUAL`, `NOT_IN`, `IS_NOT_NULL`, or `IS_NOT_NAN`.
+            /// * That `field` comes first in the `order_by`.
+            /// </summary>
+            [pbr::OriginalName("NOT_EQUAL")] NotEqual = 6,
+            /// <summary>
             /// The given `field` is an array that contains the given `value`.
             /// </summary>
             [pbr::OriginalName("ARRAY_CONTAINS")] ArrayContains = 7,
@@ -1373,7 +1383,7 @@ namespace Google.Cloud.Firestore.V1 {
             /// Requires:
             ///
             /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
-            /// * No other `IN`, `ARRAY_CONTAINS_ANY`, or `NOT_IN`.
+            /// * No other `IN` or `ARRAY_CONTAINS_ANY` or `NOT_IN`.
             /// </summary>
             [pbr::OriginalName("IN")] In = 8,
             /// <summary>
@@ -1383,9 +1393,20 @@ namespace Google.Cloud.Firestore.V1 {
             /// Requires:
             ///
             /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
-            /// * No other `IN`, `ARRAY_CONTAINS_ANY`, or `NOT_IN`.
+            /// * No other `IN` or `ARRAY_CONTAINS_ANY` or `NOT_IN`.
             /// </summary>
             [pbr::OriginalName("ARRAY_CONTAINS_ANY")] ArrayContainsAny = 9,
+            /// <summary>
+            /// The value of the `field` is not in the given array.
+            ///
+            /// Requires:
+            ///
+            /// * That `value` is a non-empty `ArrayValue` with at most 10 values.
+            /// * No other `IN`, `ARRAY_CONTAINS_ANY`, `NOT_IN`, `NOT_EQUAL`,
+            ///   `IS_NOT_NULL`, or `IS_NOT_NAN`.
+            /// * That `field` comes first in the `order_by`.
+            /// </summary>
+            [pbr::OriginalName("NOT_IN")] NotIn = 10,
           }
 
         }
@@ -1613,272 +1634,28 @@ namespace Google.Cloud.Firestore.V1 {
             /// The given `field` is equal to `NULL`.
             /// </summary>
             [pbr::OriginalName("IS_NULL")] IsNull = 3,
+            /// <summary>
+            /// The given `field` is not equal to `NaN`.
+            ///
+            /// Requires:
+            ///
+            /// * No other `NOT_EQUAL`, `NOT_IN`, `IS_NOT_NULL`, or `IS_NOT_NAN`.
+            /// * That `field` comes first in the `order_by`.
+            /// </summary>
+            [pbr::OriginalName("IS_NOT_NAN")] IsNotNan = 4,
+            /// <summary>
+            /// The given `field` is not equal to `NULL`.
+            ///
+            /// Requires:
+            ///
+            /// * A single `NOT_EQUAL`, `NOT_IN`, `IS_NOT_NULL`, or `IS_NOT_NAN`.
+            /// * That `field` comes first in the `order_by`.
+            /// </summary>
+            [pbr::OriginalName("IS_NOT_NULL")] IsNotNull = 5,
           }
 
         }
         #endregion
-
-      }
-
-      /// <summary>
-      /// A reference to a field, such as `max(messages.time) as max_time`.
-      /// </summary>
-      public sealed partial class FieldReference : pb::IMessage<FieldReference> {
-        private static readonly pb::MessageParser<FieldReference> _parser = new pb::MessageParser<FieldReference>(() => new FieldReference());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<FieldReference> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[5]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference(FieldReference other) : this() {
-          fieldPath_ = other.fieldPath_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public FieldReference Clone() {
-          return new FieldReference(this);
-        }
-
-        /// <summary>Field number for the "field_path" field.</summary>
-        public const int FieldPathFieldNumber = 2;
-        private string fieldPath_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string FieldPath {
-          get { return fieldPath_; }
-          set {
-            fieldPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as FieldReference);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(FieldReference other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (FieldPath != other.FieldPath) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (FieldPath.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(FieldPath);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (FieldPath.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(FieldReference other) {
-          if (other == null) {
-            return;
-          }
-          if (other.FieldPath.Length != 0) {
-            FieldPath = other.FieldPath;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 18: {
-                FieldPath = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-      /// <summary>
-      /// The projection of document's fields to return.
-      /// </summary>
-      public sealed partial class Projection : pb::IMessage<Projection> {
-        private static readonly pb::MessageParser<Projection> _parser = new pb::MessageParser<Projection>(() => new Projection());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Projection> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[6]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Projection() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Projection(Projection other) : this() {
-          fields_ = other.fields_.Clone();
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Projection Clone() {
-          return new Projection(this);
-        }
-
-        /// <summary>Field number for the "fields" field.</summary>
-        public const int FieldsFieldNumber = 2;
-        private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference> _repeated_fields_codec
-            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser);
-        private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference> fields_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference>();
-        /// <summary>
-        /// The fields to return.
-        ///
-        /// If empty, all fields are returned. To only return the name
-        /// of the document, use `['__name__']`.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference> Fields {
-          get { return fields_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as Projection);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Projection other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if(!fields_.Equals(other.fields_)) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          hash ^= fields_.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          fields_.WriteTo(output, _repeated_fields_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          size += fields_.CalculateSize(_repeated_fields_codec);
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Projection other) {
-          if (other == null) {
-            return;
-          }
-          fields_.Add(other.fields_);
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 18: {
-                fields_.AddEntriesFrom(input, _repeated_fields_codec);
-                break;
-              }
-            }
-          }
-        }
 
       }
 
@@ -1893,7 +1670,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[7]; }
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2046,6 +1823,268 @@ namespace Google.Cloud.Firestore.V1 {
               }
               case 16: {
                 Direction = (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// A reference to a field, such as `max(messages.time) as max_time`.
+      /// </summary>
+      public sealed partial class FieldReference : pb::IMessage<FieldReference> {
+        private static readonly pb::MessageParser<FieldReference> _parser = new pb::MessageParser<FieldReference>(() => new FieldReference());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<FieldReference> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference(FieldReference other) : this() {
+          fieldPath_ = other.fieldPath_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FieldReference Clone() {
+          return new FieldReference(this);
+        }
+
+        /// <summary>Field number for the "field_path" field.</summary>
+        public const int FieldPathFieldNumber = 2;
+        private string fieldPath_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FieldPath {
+          get { return fieldPath_; }
+          set {
+            fieldPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as FieldReference);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(FieldReference other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FieldPath != other.FieldPath) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (FieldPath.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FieldPath);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (FieldPath.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FieldPath);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(FieldReference other) {
+          if (other == null) {
+            return;
+          }
+          if (other.FieldPath.Length != 0) {
+            FieldPath = other.FieldPath;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                FieldPath = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// The projection of document's fields to return.
+      /// </summary>
+      public sealed partial class Projection : pb::IMessage<Projection> {
+        private static readonly pb::MessageParser<Projection> _parser = new pb::MessageParser<Projection>(() => new Projection());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Projection> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Projection() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Projection(Projection other) : this() {
+          fields_ = other.fields_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Projection Clone() {
+          return new Projection(this);
+        }
+
+        /// <summary>Field number for the "fields" field.</summary>
+        public const int FieldsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference> _repeated_fields_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference> fields_ = new pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference>();
+        /// <summary>
+        /// The fields to return.
+        ///
+        /// If empty, all fields are returned. To only return the name
+        /// of the document, use `['__name__']`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference> Fields {
+          get { return fields_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Projection);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Projection other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!fields_.Equals(other.fields_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= fields_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          fields_.WriteTo(output, _repeated_fields_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += fields_.CalculateSize(_repeated_fields_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Projection other) {
+          if (other == null) {
+            return;
+          }
+          fields_.Add(other.fields_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                fields_.AddEntriesFrom(input, _repeated_fields_codec);
                 break;
               }
             }
