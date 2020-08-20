@@ -74,7 +74,7 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref CallSettings settings) =>
             ApplyResourcePrefixHeaderFromSession(ref settings, request.Session);
 
-        private static void ApplyResourcePrefixHeaderFromDatabase(ref CallSettings settings, string resource)
+        internal static void ApplyResourcePrefixHeaderFromDatabase(ref CallSettings settings, string resource)
         {
             // If we haven't been given a resource name, just leave the request as it is.
             if (string.IsNullOrEmpty(resource))
@@ -88,7 +88,7 @@ namespace Google.Cloud.Spanner.V1
             }
         }
 
-        private static void ApplyResourcePrefixHeaderFromSession(ref CallSettings settings, string resource)
+        internal static void ApplyResourcePrefixHeaderFromSession(ref CallSettings settings, string resource)
         {
             // If we haven't been given a resource name, just leave the request as it is.
             if (string.IsNullOrEmpty(resource))

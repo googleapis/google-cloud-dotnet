@@ -296,6 +296,7 @@ namespace Google.Cloud.Spanner.V1
                 request.Transaction = new TransactionSelector { Id = TransactionId };
             }
             request.SessionAsSessionName = SessionName;
+            SpannerClientImpl.ApplyResourcePrefixHeaderFromSession(ref callSettings, request.Session);
 
             SqlResultStream stream = new SqlResultStream(Client, request, _session, callSettings);
             return new ReliableStreamReader(stream, Client.Settings.Logger);
