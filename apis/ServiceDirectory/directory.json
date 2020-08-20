@@ -56,6 +56,25 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Bigtable.V2"
     },
     {
+      "ServiceDirectory": "google/api/servicecontrol/v1",
+      "Name": "servicecontrol.googleapis.com",
+      "Title": "Service Control API",
+      "Description": "Provides control plane functionality to managed services, such as logging, monitoring, and status checks.",
+      "ServiceConfigFile": "google/api/servicecontrol/v1/servicecontrol.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.api.servicecontrol.v1",
+      "PackageFromProtos": "google.api.servicecontrol.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/api/servicecontrol/v1",
+        "google/logging/type",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Api.Servicecontrol.V1"
+    },
+    {
       "ServiceDirectory": "google/api/servicemanagement/v1",
       "Name": "servicemanagement.googleapis.com",
       "Title": "Service Management API",
