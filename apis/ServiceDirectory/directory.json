@@ -1236,23 +1236,6 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Vision.V1P4Beta1"
     },
     {
-      "ServiceDirectory": "google/cloud/irm/v1alpha2",
-      "Name": "irm.googleapis.com",
-      "Title": "Stackdriver Incident Response & Management API",
-      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
-      "ServiceConfigFile": "google/cloud/irm/v1alpha2/irm_v1alpha2.yaml",
-      "Version": "v1alpha2",
-      "PackageFromDirectory": "google.cloud.irm.v1alpha2",
-      "PackageFromProtos": "google.cloud.irm.v1alpha2",
-      "ImportDirectories": [
-        "google/api",
-        "google/cloud/irm/v1alpha2",
-        "google/protobuf"
-      ],
-      "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Irm.V1Alpha2"
-    },
-    {
       "ServiceDirectory": "google/cloud/language/v1beta2",
       "Name": "language.googleapis.com",
       "Title": "Cloud Natural Language API",
