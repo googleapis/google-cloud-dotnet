@@ -32,17 +32,17 @@ jobs:
 
     # See https://github.com/actions/setup-dotnet/issues/25#issuecomment-646925506
     - name: Merge .NET Core SDKs
-        shell: pwsh
-        run: |
-          $version = Split-Path (Split-Path $ENV:DOTNET_ROOT -Parent) -Leaf;
-          $root = Split-Path (Split-Path $ENV:DOTNET_ROOT -Parent) -Parent;
-          $directories = Get-ChildItem $root | Where-Object { $_.Name -ne $version };
-          foreach ($dir in $directories) {
-            $from = $dir.FullName;
-            $to = "$root/$version";
-            Write-Host Copying from $from to $to;
-            Copy-Item "$from\*" $to -Recurse -Force;
-          }
+      shell: pwsh
+      run: |
+        $version = Split-Path (Split-Path $ENV:DOTNET_ROOT -Parent) -Leaf;
+        $root = Split-Path (Split-Path $ENV:DOTNET_ROOT -Parent) -Parent;
+        $directories = Get-ChildItem $root | Where-Object { $_.Name -ne $version };
+        foreach ($dir in $directories) {
+          $from = $dir.FullName;
+          $to = "$root/$version";
+          Write-Host Copying from $from to $to;
+          Copy-Item "$from\*" $to -Recurse -Force;
+        }
         
     - name: Setup Python
       uses: actions/setup-python@v2
