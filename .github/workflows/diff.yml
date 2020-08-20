@@ -12,7 +12,7 @@ jobs:
         submodules: true
         # TODO: Try depth 100. We diff against master, and we don't know
         # how far back that is... there may be a better approach
-        fetch-depth: 100
+        fetch-depth: 0
         
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
