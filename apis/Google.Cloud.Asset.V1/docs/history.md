@@ -1,5 +1,13 @@
 # Version history
 
+# Version 2.3.0, released 2020-08-25
+
+- [Commit 8ef5dc2](https://github.com/googleapis/google-cloud-dotnet/commit/8ef5dc2): feat: add AnalyzeIamPolicy and ExportIamPolicyAnalysis RPCs
+- [Commit e7b75e6](https://github.com/googleapis/google-cloud-dotnet/commit/e7b75e6): feat: added support OutputResult in ExportAssetsResponse.
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): Adds service comments in client documentation
+- [Commit 5b06141](https://github.com/googleapis/google-cloud-dotnet/commit/5b06141): fix: add missing RPCs to grpc_service_config
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): Enables RPCs without retries to still have timeouts specified.
+
 # Version 2.2.0, released 2020-06-17
 
 - [Commit 46ae081](https://github.com/googleapis/google-cloud-dotnet/commit/46ae081):
