@@ -85,7 +85,7 @@ fi
 if [[ -f $DOCS_CREDENTIALS && $SKIP_GOOGLEAPISDEV_UPLOAD = "" ]]
 then
   echo "Uploading documentation to googleapis.dev and devsite"
-  ./uploaddocs.sh releasebuild/nuget releasebuild/docs/output $DOCS_CREDENTIALS docs-staging docs-staging-v2-staging
+  ./uploaddocs.sh releasebuild/nuget releasebuild/docs/output $DOCS_CREDENTIALS docs-staging docs-staging-v2
 else
   echo "Skipping googleapis.dev and devsite upload"
 fi
