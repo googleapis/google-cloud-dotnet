@@ -1616,6 +1616,22 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.MediaTranslation.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/mediatranslation/v1alpha1",
+      "Name": "mediatranslation.googleapis.com",
+      "Title": "Media Translation API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/mediatranslation/v1alpha1/mediatranslation_v1alpha1.yaml",
+      "Version": "v1alpha1",
+      "PackageFromDirectory": "google.cloud.mediatranslation.v1alpha1",
+      "PackageFromProtos": "google.cloud.mediatranslation.v1alpha1",
+      "ImportDirectories": [
+        "google/api",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Mediatranslation.V1Alpha1"
+    },
+    {
       "ServiceDirectory": "google/cloud/osconfig/v1",
       "Name": "osconfig.googleapis.com",
       "Title": "Cloud OS Config API",
