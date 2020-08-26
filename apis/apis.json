@@ -24,8 +24,7 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/analytics/data/v1alpha",
-      "effectivePackageOwner": "google-apis-packages"
+      "protoPath": "google/analytics/data/v1alpha"
     },
     {
       "id": "Google.Cloud.Asset.V1",
@@ -234,8 +233,7 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/billing/budgets/v1beta1",
-      "effectivePackageOwner": "google-cloud"
+      "protoPath": "google/cloud/billing/budgets/v1beta1"
     },
     {
       "id": "Google.Cloud.Billing.V1",
@@ -635,8 +633,7 @@
         "Google.LongRunning": "2.0.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/gaming/v1",
-      "effectivePackageOwner": "google-cloud"
+      "protoPath": "google/cloud/gaming/v1"
     },
     {
       "id": "Google.Cloud.Gaming.V1Beta",
@@ -885,8 +882,7 @@
         "Google.LongRunning": "2.0.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/notebooks/v1beta1",
-      "effectivePackageOwner": "google-cloud"
+      "protoPath": "google/cloud/notebooks/v1beta1"
     },
     {
       "id": "Google.Cloud.OrgPolicy.V1",
