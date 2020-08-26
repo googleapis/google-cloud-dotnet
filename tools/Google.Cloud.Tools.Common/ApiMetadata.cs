@@ -114,6 +114,7 @@ namespace Google.Cloud.Tools.Common
         /// <summary>
         /// The effective package owner, taking account of <see cref="PackageOwner"/> and (if that is unset) the package ID.
         /// </summary>
+        [JsonIgnore]
         public string EffectivePackageOwner => PackageOwner ?? (Id.StartsWith("Google.Cloud") ? "google-cloud" : "google-apis-packages");
 
         [JsonIgnore]
