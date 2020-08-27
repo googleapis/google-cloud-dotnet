@@ -1289,6 +1289,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Notebooks.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/domains/v1alpha2",
+      "Name": "domains.googleapis.com",
+      "Title": "Cloud Domains API",
+      "Description": "Enables management and configuration of domain names.",
+      "ServiceConfigFile": "google/cloud/domains/v1alpha2/domains_v1alpha2.yaml",
+      "Version": "v1alpha2",
+      "PackageFromDirectory": "google.cloud.domains.v1alpha2",
+      "PackageFromProtos": "google.cloud.domains.v1alpha2",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Domains.V1Alpha2"
+    },
+    {
       "ServiceDirectory": "google/cloud/tasks/v2beta2",
       "Name": "cloudtasks.googleapis.com",
       "Title": "Cloud Tasks API",
