@@ -1049,6 +1049,23 @@
       "CSharpNamespaceFromProtos": "<AMBIGUOUS: Google.Cloud.RecommendationEngine.V1Beta1, Google.Cloud.Recommendationengine.V1Beta1>"
     },
     {
+      "ServiceDirectory": "google/cloud/assuredworkloads/v1beta1",
+      "Name": "assuredworkloads.googleapis.com",
+      "Title": "Assured Workloads API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/assuredworkloads/v1beta1/assuredworkloads_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.assuredworkloads.v1beta1",
+      "PackageFromProtos": "google.cloud.assuredworkloads.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.AssuredWorkloads.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/gaming/v1",
       "Name": "gameservices.googleapis.com",
       "Title": "Game Services API",
