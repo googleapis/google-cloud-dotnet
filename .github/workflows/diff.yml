@@ -26,14 +26,9 @@ jobs:
         
     - name: Detect PR changes
       run: |
-        echo "Listing remotes"
-        git remote -v
-        # Make sure the master branch is available for diffing.
-        git remote add upstream https://github.com/googleapis/google-cloud-dotnet.git
-        echo "Listing again"
-        git remote -v
-        git checkout -b master ${{ github.event.before }}
-        git checkout -b after ${{ github.event.after }}
+        git checkout -b master ${{ github.event.pull_request.base.sha }}
+        git checkout -b after ${{ github.event.pull_request.head.sha }}
+        git diff --name-only master after
         git push --set-upstream upstream master
         git push --set-upstream upstream after
         ./detect-pr-changes.sh
