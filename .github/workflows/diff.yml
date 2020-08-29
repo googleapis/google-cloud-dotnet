@@ -1,6 +1,6 @@
 name: Detect differences
 
-on: [pull_request,push]
+on: [push,pull_request]
 
 jobs:
 
@@ -26,8 +26,10 @@ jobs:
         
     - name: Detect PR changes
       run: |
-        git checkout -b master ${{ github.event.pull_request.base.sha }}
-        git checkout -b after ${{ github.event.pull_request.head.sha }}
+        echo "Base: ${{ github.event.push.base.sha }}"
+        echo "Head: ${{ github.event.push.head.sha }}"
+        git checkout -b master ${{ github.event.push.base.sha }}
+        git checkout -b after ${{ github.event.push.head.sha }}
         git diff --name-only master after
         git push --set-upstream upstream master
         git push --set-upstream upstream after
