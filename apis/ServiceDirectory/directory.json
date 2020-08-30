@@ -2177,6 +2177,22 @@
       "CSharpNamespaceFromProtos": "<UNKNOWN - NO PROTOS WITH NAMESPACES/PACKAGES>"
     },
     {
+      "ServiceDirectory": "google/area120/tables/v1alpha1",
+      "Name": "area120tables.googleapis.com",
+      "Title": "Area120 Tables API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/area120/tables/v1alpha1/area120tables_v1alpha1.yaml",
+      "Version": "v1alpha1",
+      "PackageFromDirectory": "google.area120.tables.v1alpha1",
+      "PackageFromProtos": "google.area120.tables.v1alpha1",
+      "ImportDirectories": [
+        "google/api",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Area120.Tables.V1Alpha1"
+    },
+    {
       "ServiceDirectory": "google/watcher/v1",
       "Name": "watcher.googleapis.com",
       "Title": "Google Watcher API",
