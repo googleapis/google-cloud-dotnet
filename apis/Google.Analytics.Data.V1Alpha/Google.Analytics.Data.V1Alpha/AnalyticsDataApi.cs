@@ -28,66 +28,78 @@ namespace Google.Analytics.Data.V1Alpha {
             "YV9hcGkucHJvdG8SHWdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhGihn",
             "b29nbGUvYW5hbHl0aWNzL2RhdGEvdjFhbHBoYS9kYXRhLnByb3RvGhxnb29n",
             "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5w",
-            "cm90byLJBQoQUnVuUmVwb3J0UmVxdWVzdBI1CgZlbnRpdHkYASABKAsyJS5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5FbnRpdHkSPAoKZGltZW5z",
-            "aW9ucxgCIAMoCzIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkRp",
-            "bWVuc2lvbhI2CgdtZXRyaWNzGAMgAygLMiUuZ29vZ2xlLmFuYWx5dGljcy5k",
-            "YXRhLnYxYWxwaGEuTWV0cmljEj0KC2RhdGVfcmFuZ2VzGAQgAygLMiguZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuRGF0ZVJhbmdlEg4KBm9mZnNl",
-            "dBgFIAEoAxINCgVsaW1pdBgGIAEoAxJNChNtZXRyaWNfYWdncmVnYXRpb25z",
-            "GAcgAygOMjAuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuTWV0cmlj",
-            "QWdncmVnYXRpb24SSQoQZGltZW5zaW9uX2ZpbHRlchgIIAEoCzIvLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkZpbHRlckV4cHJlc3Npb24SRgoN",
-            "bWV0cmljX2ZpbHRlchgJIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWFscGhhLkZpbHRlckV4cHJlc3Npb24SOQoJb3JkZXJfYnlzGAogAygLMiYu",
-            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuT3JkZXJCeRIVCg1jdXJy",
-            "ZW5jeV9jb2RlGAsgASgJEj4KC2NvaG9ydF9zcGVjGAwgASgLMikuZ29vZ2xl",
-            "LmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuQ29ob3J0U3BlYxIXCg9rZWVwX2Vt",
-            "cHR5X3Jvd3MYDSABKAgSHQoVcmV0dXJuX3Byb3BlcnR5X3F1b3RhGA4gASgI",
-            "IrMDChFSdW5SZXBvcnRSZXNwb25zZRJDCg5tZXRyaWNfaGVhZGVycxgBIAMo",
-            "CzIrLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLk1ldHJpY0hlYWRl",
-            "chIwCgRyb3dzGAIgAygLMiIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxw",
-            "aGEuUm93EjIKBnRvdGFscxgIIAMoCzIiLmdvb2dsZS5hbmFseXRpY3MuZGF0",
-            "YS52MWFscGhhLlJvdxI0CghtYXhpbXVtcxgJIAMoCzIiLmdvb2dsZS5hbmFs",
-            "eXRpY3MuZGF0YS52MWFscGhhLlJvdxI0CghtaW5pbXVtcxgKIAMoCzIiLmdv",
-            "b2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLlJvdxJBCghtZXRhZGF0YRgG",
-            "IAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLlJlc3BvbnNl",
-            "TWV0YURhdGESRAoOcHJvcGVydHlfcXVvdGEYByABKAsyLC5nb29nbGUuYW5h",
-            "bHl0aWNzLmRhdGEudjFhbHBoYS5Qcm9wZXJ0eVF1b3RhItsEChVSdW5QaXZv",
-            "dFJlcG9ydFJlcXVlc3QSNQoGZW50aXR5GAEgASgLMiUuZ29vZ2xlLmFuYWx5",
-            "dGljcy5kYXRhLnYxYWxwaGEuRW50aXR5EjwKCmRpbWVuc2lvbnMYAiADKAsy",
-            "KC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5EaW1lbnNpb24SNgoH",
-            "bWV0cmljcxgDIAMoCzIlLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhh",
-            "Lk1ldHJpYxJJChBkaW1lbnNpb25fZmlsdGVyGAQgASgLMi8uZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYWxwaGEuRmlsdGVyRXhwcmVzc2lvbhJGCg1tZXRy",
-            "aWNfZmlsdGVyGAUgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxw",
-            "aGEuRmlsdGVyRXhwcmVzc2lvbhI0CgZwaXZvdHMYBiADKAsyJC5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFhbHBoYS5QaXZvdBI9CgtkYXRlX3JhbmdlcxgH",
-            "IAMoCzIoLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkRhdGVSYW5n",
-            "ZRIVCg1jdXJyZW5jeV9jb2RlGAggASgJEj4KC2NvaG9ydF9zcGVjGAkgASgL",
-            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuQ29ob3J0U3BlYxIX",
-            "Cg9rZWVwX2VtcHR5X3Jvd3MYCiABKAgSHQoVcmV0dXJuX3Byb3BlcnR5X3F1",
-            "b3RhGAsgASgIIpMDChZSdW5QaXZvdFJlcG9ydFJlc3BvbnNlEkEKDXBpdm90",
-            "X2hlYWRlcnMYASADKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBo",
-            "YS5QaXZvdEhlYWRlchJDCg5tZXRyaWNfaGVhZGVycxgCIAMoCzIrLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLk1ldHJpY0hlYWRlchIwCgRyb3dz",
-            "GAMgAygLMiIuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuUm93EjYK",
-            "CmFnZ3JlZ2F0ZXMYBCADKAsyIi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
-            "bHBoYS5Sb3cSQQoIbWV0YWRhdGEYBSABKAsyLy5nb29nbGUuYW5hbHl0aWNz",
+            "cm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
+            "L2FwaS9yZXNvdXJjZS5wcm90byL0AQoITWV0YWRhdGESDAoEbmFtZRgDIAEo",
+            "CRJECgpkaW1lbnNpb25zGAEgAygLMjAuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYWxwaGEuRGltZW5zaW9uTWV0YWRhdGESPgoHbWV0cmljcxgCIAMoCzIt",
+            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLk1ldHJpY01ldGFkYXRh",
+            "OlTqQVEKJWFuYWx5dGljc2RhdGEuZ29vZ2xlYXBpcy5jb20vTWV0YWRhdGES",
+            "CG1ldGFkYXRhEh5wcm9wZXJ0aWVzL3twcm9wZXJ0eX0vbWV0YWRhdGEiyQUK",
+            "EFJ1blJlcG9ydFJlcXVlc3QSNQoGZW50aXR5GAEgASgLMiUuZ29vZ2xlLmFu",
+            "YWx5dGljcy5kYXRhLnYxYWxwaGEuRW50aXR5EjwKCmRpbWVuc2lvbnMYAiAD",
+            "KAsyKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5EaW1lbnNpb24S",
+            "NgoHbWV0cmljcxgDIAMoCzIlLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFs",
+            "cGhhLk1ldHJpYxI9CgtkYXRlX3JhbmdlcxgEIAMoCzIoLmdvb2dsZS5hbmFs",
+            "eXRpY3MuZGF0YS52MWFscGhhLkRhdGVSYW5nZRIOCgZvZmZzZXQYBSABKAMS",
+            "DQoFbGltaXQYBiABKAMSTQoTbWV0cmljX2FnZ3JlZ2F0aW9ucxgHIAMoDjIw",
+            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLk1ldHJpY0FnZ3JlZ2F0",
+            "aW9uEkkKEGRpbWVuc2lvbl9maWx0ZXIYCCABKAsyLy5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFhbHBoYS5GaWx0ZXJFeHByZXNzaW9uEkYKDW1ldHJpY19m",
+            "aWx0ZXIYCSABKAsyLy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5G",
+            "aWx0ZXJFeHByZXNzaW9uEjkKCW9yZGVyX2J5cxgKIAMoCzImLmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWFscGhhLk9yZGVyQnkSFQoNY3VycmVuY3lfY29k",
+            "ZRgLIAEoCRI+Cgtjb2hvcnRfc3BlYxgMIAEoCzIpLmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWFscGhhLkNvaG9ydFNwZWMSFwoPa2VlcF9lbXB0eV9yb3dz",
+            "GA0gASgIEh0KFXJldHVybl9wcm9wZXJ0eV9xdW90YRgOIAEoCCL+AwoRUnVu",
+            "UmVwb3J0UmVzcG9uc2USSQoRZGltZW5zaW9uX2hlYWRlcnMYCyADKAsyLi5n",
+            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5EaW1lbnNpb25IZWFkZXIS",
+            "QwoObWV0cmljX2hlYWRlcnMYASADKAsyKy5nb29nbGUuYW5hbHl0aWNzLmRh",
+            "dGEudjFhbHBoYS5NZXRyaWNIZWFkZXISMAoEcm93cxgCIAMoCzIiLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLlJvdxIyCgZ0b3RhbHMYCCADKAsy",
+            "Ii5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5Sb3cSNAoIbWF4aW11",
+            "bXMYCSADKAsyIi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5Sb3cS",
+            "NAoIbWluaW11bXMYCiADKAsyIi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
+            "bHBoYS5Sb3cSQQoIbWV0YWRhdGEYBiABKAsyLy5nb29nbGUuYW5hbHl0aWNz",
             "LmRhdGEudjFhbHBoYS5SZXNwb25zZU1ldGFEYXRhEkQKDnByb3BlcnR5X3F1",
-            "b3RhGAYgASgLMiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuUHJv",
-            "cGVydHlRdW90YSKSAQoWQmF0Y2hSdW5SZXBvcnRzUmVxdWVzdBI1CgZlbnRp",
-            "dHkYASABKAsyJS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5FbnRp",
-            "dHkSQQoIcmVxdWVzdHMYAiADKAsyLy5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
-            "djFhbHBoYS5SdW5SZXBvcnRSZXF1ZXN0IlwKF0JhdGNoUnVuUmVwb3J0c1Jl",
-            "c3BvbnNlEkEKB3JlcG9ydHMYASADKAsyMC5nb29nbGUuYW5hbHl0aWNzLmRh",
-            "dGEudjFhbHBoYS5SdW5SZXBvcnRSZXNwb25zZSKcAQobQmF0Y2hSdW5QaXZv",
-            "dFJlcG9ydHNSZXF1ZXN0EjUKBmVudGl0eRgBIAEoCzIlLmdvb2dsZS5hbmFs",
-            "eXRpY3MuZGF0YS52MWFscGhhLkVudGl0eRJGCghyZXF1ZXN0cxgCIAMoCzI0",
-            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLlJ1blBpdm90UmVwb3J0",
-            "UmVxdWVzdCJsChxCYXRjaFJ1blBpdm90UmVwb3J0c1Jlc3BvbnNlEkwKDXBp",
-            "dm90X3JlcG9ydHMYASADKAsyNS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
-            "bHBoYS5SdW5QaXZvdFJlcG9ydFJlc3BvbnNlMqwGChJBbHBoYUFuYWx5dGlj",
+            "b3RhGAcgASgLMiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuUHJv",
+            "cGVydHlRdW90YSLbBAoVUnVuUGl2b3RSZXBvcnRSZXF1ZXN0EjUKBmVudGl0",
+            "eRgBIAEoCzIlLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkVudGl0",
+            "eRI8CgpkaW1lbnNpb25zGAIgAygLMiguZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYWxwaGEuRGltZW5zaW9uEjYKB21ldHJpY3MYAyADKAsyJS5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFhbHBoYS5NZXRyaWMSSQoQZGltZW5zaW9uX2Zp",
+            "bHRlchgEIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkZp",
+            "bHRlckV4cHJlc3Npb24SRgoNbWV0cmljX2ZpbHRlchgFIAEoCzIvLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkZpbHRlckV4cHJlc3Npb24SNAoG",
+            "cGl2b3RzGAYgAygLMiQuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEu",
+            "UGl2b3QSPQoLZGF0ZV9yYW5nZXMYByADKAsyKC5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFhbHBoYS5EYXRlUmFuZ2USFQoNY3VycmVuY3lfY29kZRgIIAEo",
+            "CRI+Cgtjb2hvcnRfc3BlYxgJIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0",
+            "YS52MWFscGhhLkNvaG9ydFNwZWMSFwoPa2VlcF9lbXB0eV9yb3dzGAogASgI",
+            "Eh0KFXJldHVybl9wcm9wZXJ0eV9xdW90YRgLIAEoCCLeAwoWUnVuUGl2b3RS",
+            "ZXBvcnRSZXNwb25zZRJBCg1waXZvdF9oZWFkZXJzGAEgAygLMiouZ29vZ2xl",
+            "LmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuUGl2b3RIZWFkZXISSQoRZGltZW5z",
+            "aW9uX2hlYWRlcnMYByADKAsyLi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
+            "bHBoYS5EaW1lbnNpb25IZWFkZXISQwoObWV0cmljX2hlYWRlcnMYAiADKAsy",
+            "Ky5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5NZXRyaWNIZWFkZXIS",
+            "MAoEcm93cxgDIAMoCzIiLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhh",
+            "LlJvdxI2CgphZ2dyZWdhdGVzGAQgAygLMiIuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYWxwaGEuUm93EkEKCG1ldGFkYXRhGAUgASgLMi8uZ29vZ2xlLmFu",
+            "YWx5dGljcy5kYXRhLnYxYWxwaGEuUmVzcG9uc2VNZXRhRGF0YRJECg5wcm9w",
+            "ZXJ0eV9xdW90YRgGIAEoCzIsLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFs",
+            "cGhhLlByb3BlcnR5UXVvdGEikgEKFkJhdGNoUnVuUmVwb3J0c1JlcXVlc3QS",
+            "NQoGZW50aXR5GAEgASgLMiUuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxw",
+            "aGEuRW50aXR5EkEKCHJlcXVlc3RzGAIgAygLMi8uZ29vZ2xlLmFuYWx5dGlj",
+            "cy5kYXRhLnYxYWxwaGEuUnVuUmVwb3J0UmVxdWVzdCJcChdCYXRjaFJ1blJl",
+            "cG9ydHNSZXNwb25zZRJBCgdyZXBvcnRzGAEgAygLMjAuZ29vZ2xlLmFuYWx5",
+            "dGljcy5kYXRhLnYxYWxwaGEuUnVuUmVwb3J0UmVzcG9uc2UinAEKG0JhdGNo",
+            "UnVuUGl2b3RSZXBvcnRzUmVxdWVzdBI1CgZlbnRpdHkYASABKAsyJS5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5FbnRpdHkSRgoIcmVxdWVzdHMY",
+            "AiADKAsyNC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5SdW5QaXZv",
+            "dFJlcG9ydFJlcXVlc3QibAocQmF0Y2hSdW5QaXZvdFJlcG9ydHNSZXNwb25z",
+            "ZRJMCg1waXZvdF9yZXBvcnRzGAEgAygLMjUuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYWxwaGEuUnVuUGl2b3RSZXBvcnRSZXNwb25zZSJRChJHZXRNZXRh",
+            "ZGF0YVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVhbmFseXRpY3Nk",
+            "YXRhLmdvb2dsZWFwaXMuY29tL01ldGFkYXRhMuoHChJBbHBoYUFuYWx5dGlj",
             "c0RhdGESjQEKCVJ1blJlcG9ydBIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
             "MWFscGhhLlJ1blJlcG9ydFJlcXVlc3QaMC5nb29nbGUuYW5hbHl0aWNzLmRh",
             "dGEudjFhbHBoYS5SdW5SZXBvcnRSZXNwb25zZSIdgtPkkwIXIhIvdjFhbHBo",
@@ -102,30 +114,217 @@ namespace Google.Analytics.Data.V1Alpha {
             "aXZvdFJlcG9ydHMSOi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5C",
             "YXRjaFJ1blBpdm90UmVwb3J0c1JlcXVlc3QaOy5nb29nbGUuYW5hbHl0aWNz",
             "LmRhdGEudjFhbHBoYS5CYXRjaFJ1blBpdm90UmVwb3J0c1Jlc3BvbnNlIiiC",
-            "0+STAiIiHS92MWFscGhhOmJhdGNoUnVuUGl2b3RSZXBvcnRzOgEqGn7KQRxh",
-            "bmFseXRpY3NkYXRhLmdvb2dsZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29v",
-            "Z2xlYXBpcy5jb20vYXV0aC9hbmFseXRpY3MsaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9hbmFseXRpY3MucmVhZG9ubHlCfwohY29tLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWFscGhhQhVBbmFseXRpY3NEYXRhQXBpUHJv",
-            "dG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
-            "bmFseXRpY3MvZGF0YS92MWFscGhhO2RhdGFiBnByb3RvMw=="));
+            "0+STAiIiHS92MWFscGhhOmJhdGNoUnVuUGl2b3RSZXBvcnRzOgEqErsBCgtH",
+            "ZXRNZXRhZGF0YRIxLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkdl",
+            "dE1ldGFkYXRhUmVxdWVzdBonLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFs",
+            "cGhhLk1ldGFkYXRhIlCC0+STAkMSGC92MWFscGhhL3tuYW1lPW1ldGFkYXRh",
+            "fVonEiUvdjFhbHBoYS97bmFtZT1wcm9wZXJ0aWVzLyovbWV0YWRhdGF92kEE",
+            "bmFtZRp+ykEcYW5hbHl0aWNzZGF0YS5nb29nbGVhcGlzLmNvbdJBXGh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYW5hbHl0aWNzLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYW5hbHl0aWNzLnJlYWRvbmx5Qn8K",
+            "IWNvbS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYUIVQW5hbHl0aWNz",
+            "RGF0YUFwaVByb3RvUAFaQWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvYW5hbHl0aWNzL2RhdGEvdjFhbHBoYTtkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.Metadata), global::Google.Analytics.Data.V1Alpha.Metadata.Parser, new[]{ "Name", "Dimensions", "Metrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunReportRequest), global::Google.Analytics.Data.V1Alpha.RunReportRequest.Parser, new[]{ "Entity", "Dimensions", "Metrics", "DateRanges", "Offset", "Limit", "MetricAggregations", "DimensionFilter", "MetricFilter", "OrderBys", "CurrencyCode", "CohortSpec", "KeepEmptyRows", "ReturnPropertyQuota" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunReportResponse), global::Google.Analytics.Data.V1Alpha.RunReportResponse.Parser, new[]{ "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "Metadata", "PropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunReportResponse), global::Google.Analytics.Data.V1Alpha.RunReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "Metadata", "PropertyQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest), global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest.Parser, new[]{ "Entity", "Dimensions", "Metrics", "DimensionFilter", "MetricFilter", "Pivots", "DateRanges", "CurrencyCode", "CohortSpec", "KeepEmptyRows", "ReturnPropertyQuota" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse), global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse.Parser, new[]{ "PivotHeaders", "MetricHeaders", "Rows", "Aggregates", "Metadata", "PropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse), global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse.Parser, new[]{ "PivotHeaders", "DimensionHeaders", "MetricHeaders", "Rows", "Aggregates", "Metadata", "PropertyQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest), global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest.Parser, new[]{ "Entity", "Requests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse), global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse.Parser, new[]{ "Reports" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest.Parser, new[]{ "Entity", "Requests" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser, new[]{ "PivotReports" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser, new[]{ "PivotReports" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest), global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  /// The dimensions and metrics currently accepted in reporting methods.
+  /// </summary>
+  public sealed partial class Metadata : pb::IMessage<Metadata> {
+    private static readonly pb::MessageParser<Metadata> _parser = new pb::MessageParser<Metadata>(() => new Metadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Metadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Metadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Metadata(Metadata other) : this() {
+      name_ = other.name_;
+      dimensions_ = other.dimensions_.Clone();
+      metrics_ = other.metrics_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Metadata Clone() {
+      return new Metadata(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 3;
+    private string name_ = "";
+    /// <summary>
+    /// Resource name of this metadata.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dimensions" field.</summary>
+    public const int DimensionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.DimensionMetadata> _repeated_dimensions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Alpha.DimensionMetadata.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionMetadata> dimensions_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionMetadata>();
+    /// <summary>
+    /// The dimensions descriptions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionMetadata> Dimensions {
+      get { return dimensions_; }
+    }
+
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.MetricMetadata> _repeated_metrics_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Analytics.Data.V1Alpha.MetricMetadata.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricMetadata> metrics_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricMetadata>();
+    /// <summary>
+    /// The metric descriptions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricMetadata> Metrics {
+      get { return metrics_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Metadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Metadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!dimensions_.Equals(other.dimensions_)) return false;
+      if(!metrics_.Equals(other.metrics_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= dimensions_.GetHashCode();
+      hash ^= metrics_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      dimensions_.WriteTo(output, _repeated_dimensions_codec);
+      metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += dimensions_.CalculateSize(_repeated_dimensions_codec);
+      size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Metadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      dimensions_.Add(other.dimensions_);
+      metrics_.Add(other.metrics_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            dimensions_.AddEntriesFrom(input, _repeated_dimensions_codec);
+            break;
+          }
+          case 18: {
+            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   /// <summary>
   /// The request to generate a report.
   /// </summary>
@@ -137,7 +336,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -226,7 +425,8 @@ namespace Google.Analytics.Data.V1Alpha {
     /// Date ranges of data to read. If multiple date ranges are requested, each
     /// response row will contain a zero based date range index. If two date
     /// ranges overlap, the event data for the overlapping days is included in the
-    /// response rows for both date ranges.
+    /// response rows for both date ranges. In a cohort request, this `dateRanges`
+    /// must be unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DateRange> DateRanges {
@@ -251,8 +451,8 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int LimitFieldNumber = 6;
     private long limit_;
     /// <summary>
-    /// The number of rows to return.
-    /// If zero or unspecified, all rows are returned.
+    /// The number of rows to return. If unspecified, 10 rows are returned. If
+    /// -1, all rows are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Limit {
@@ -280,7 +480,8 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int DimensionFilterFieldNumber = 8;
     private global::Google.Analytics.Data.V1Alpha.FilterExpression dimensionFilter_;
     /// <summary>
-    /// The filter clause of dimensions.
+    /// The filter clause of dimensions. Dimensions must be requested to be used in
+    /// this filter. Metrics cannot be used in this filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.FilterExpression DimensionFilter {
@@ -295,7 +496,8 @@ namespace Google.Analytics.Data.V1Alpha {
     private global::Google.Analytics.Data.V1Alpha.FilterExpression metricFilter_;
     /// <summary>
     /// The filter clause of metrics. Applied at post aggregation phase, similar to
-    /// SQL having-clause.
+    /// SQL having-clause. Metrics must be requested to be used in this filter.
+    /// Dimensions cannot be used in this filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.FilterExpression MetricFilter {
@@ -352,7 +554,9 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int KeepEmptyRowsFieldNumber = 13;
     private bool keepEmptyRows_;
     /// <summary>
-    /// If false, rows with metrics being 0 will not be returned.
+    /// If false or unspecified, each row with all metrics equal to 0 will not be
+    /// returned. If true, these rows will be returned if they are not separately
+    /// removed by a filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool KeepEmptyRows {
@@ -670,7 +874,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -687,6 +891,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunReportResponse(RunReportResponse other) : this() {
+      dimensionHeaders_ = other.dimensionHeaders_.Clone();
       metricHeaders_ = other.metricHeaders_.Clone();
       rows_ = other.rows_.Clone();
       totals_ = other.totals_.Clone();
@@ -702,13 +907,28 @@ namespace Google.Analytics.Data.V1Alpha {
       return new RunReportResponse(this);
     }
 
+    /// <summary>Field number for the "dimension_headers" field.</summary>
+    public const int DimensionHeadersFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.DimensionHeader> _repeated_dimensionHeaders_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Analytics.Data.V1Alpha.DimensionHeader.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> dimensionHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader>();
+    /// <summary>
+    /// Describes dimension columns. The number of DimensionHeaders and ordering of
+    /// DimensionHeaders matches the dimensions present in rows.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> DimensionHeaders {
+      get { return dimensionHeaders_; }
+    }
+
     /// <summary>Field number for the "metric_headers" field.</summary>
     public const int MetricHeadersFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.MetricHeader> _repeated_metricHeaders_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Alpha.MetricHeader.Parser);
     private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader> metricHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader>();
     /// <summary>
-    /// Describes metric columns.
+    /// Describes metric columns. The number of MetricHeaders and ordering of
+    /// MetricHeaders matches the metrics present in rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader> MetricHeaders {
@@ -808,6 +1028,7 @@ namespace Google.Analytics.Data.V1Alpha {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!dimensionHeaders_.Equals(other.dimensionHeaders_)) return false;
       if(!metricHeaders_.Equals(other.metricHeaders_)) return false;
       if(!rows_.Equals(other.rows_)) return false;
       if(!totals_.Equals(other.totals_)) return false;
@@ -821,6 +1042,7 @@ namespace Google.Analytics.Data.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= dimensionHeaders_.GetHashCode();
       hash ^= metricHeaders_.GetHashCode();
       hash ^= rows_.GetHashCode();
       hash ^= totals_.GetHashCode();
@@ -854,6 +1076,7 @@ namespace Google.Analytics.Data.V1Alpha {
       totals_.WriteTo(output, _repeated_totals_codec);
       maximums_.WriteTo(output, _repeated_maximums_codec);
       minimums_.WriteTo(output, _repeated_minimums_codec);
+      dimensionHeaders_.WriteTo(output, _repeated_dimensionHeaders_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -862,6 +1085,7 @@ namespace Google.Analytics.Data.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      size += dimensionHeaders_.CalculateSize(_repeated_dimensionHeaders_codec);
       size += metricHeaders_.CalculateSize(_repeated_metricHeaders_codec);
       size += rows_.CalculateSize(_repeated_rows_codec);
       size += totals_.CalculateSize(_repeated_totals_codec);
@@ -884,6 +1108,7 @@ namespace Google.Analytics.Data.V1Alpha {
       if (other == null) {
         return;
       }
+      dimensionHeaders_.Add(other.dimensionHeaders_);
       metricHeaders_.Add(other.metricHeaders_);
       rows_.Add(other.rows_);
       totals_.Add(other.totals_);
@@ -946,6 +1171,10 @@ namespace Google.Analytics.Data.V1Alpha {
             minimums_.AddEntriesFrom(input, _repeated_minimums_codec);
             break;
           }
+          case 90: {
+            dimensionHeaders_.AddEntriesFrom(input, _repeated_dimensionHeaders_codec);
+            break;
+          }
         }
       }
     }
@@ -963,7 +1192,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1047,9 +1276,8 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int DimensionFilterFieldNumber = 4;
     private global::Google.Analytics.Data.V1Alpha.FilterExpression dimensionFilter_;
     /// <summary>
-    /// The filter clause of dimensions. Requests are validated that all
-    /// field_names in the dimension_filter are dimensions and are defined in
-    /// Dimensions.
+    /// The filter clause of dimensions. Dimensions must be requested to be used in
+    /// this filter. Metrics cannot be used in this filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.FilterExpression DimensionFilter {
@@ -1064,8 +1292,8 @@ namespace Google.Analytics.Data.V1Alpha {
     private global::Google.Analytics.Data.V1Alpha.FilterExpression metricFilter_;
     /// <summary>
     /// The filter clause of metrics. Applied at post aggregation phase, similar to
-    /// SQL having-clause. Requests are validated that all field_names in the
-    /// metric_filter are metrics and are defined in Metrics.
+    /// SQL having-clause. Metrics must be requested to be used in this filter.
+    /// Dimensions cannot be used in this filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.FilterExpression MetricFilter {
@@ -1101,7 +1329,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// ranges are specified, event data from each date range is used in the
     /// report. A special dimension with field name "dateRange" can be included in
     /// a Pivot's field names; if included, the report compares between date
-    /// ranges. This dateRanges field is not used in cohorts reports.
+    /// ranges. In a cohort request, this `dateRanges` must be unspecified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DateRange> DateRanges {
@@ -1142,7 +1370,9 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int KeepEmptyRowsFieldNumber = 10;
     private bool keepEmptyRows_;
     /// <summary>
-    /// If false, rows with metrics being 0 will not be returned.
+    /// If false or unspecified, each row with all metrics equal to 0 will not be
+    /// returned. If true, these rows will be returned if they are not separately
+    /// removed by a filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool KeepEmptyRows {
@@ -1418,7 +1648,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1436,6 +1666,7 @@ namespace Google.Analytics.Data.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RunPivotReportResponse(RunPivotReportResponse other) : this() {
       pivotHeaders_ = other.pivotHeaders_.Clone();
+      dimensionHeaders_ = other.dimensionHeaders_.Clone();
       metricHeaders_ = other.metricHeaders_.Clone();
       rows_ = other.rows_.Clone();
       aggregates_ = other.aggregates_.Clone();
@@ -1497,13 +1728,28 @@ namespace Google.Analytics.Data.V1Alpha {
       get { return pivotHeaders_; }
     }
 
+    /// <summary>Field number for the "dimension_headers" field.</summary>
+    public const int DimensionHeadersFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.DimensionHeader> _repeated_dimensionHeaders_codec
+        = pb::FieldCodec.ForMessage(58, global::Google.Analytics.Data.V1Alpha.DimensionHeader.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> dimensionHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader>();
+    /// <summary>
+    /// Describes dimension columns. The number of DimensionHeaders and ordering of
+    /// DimensionHeaders matches the dimensions present in rows.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> DimensionHeaders {
+      get { return dimensionHeaders_; }
+    }
+
     /// <summary>Field number for the "metric_headers" field.</summary>
     public const int MetricHeadersFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.MetricHeader> _repeated_metricHeaders_codec
         = pb::FieldCodec.ForMessage(18, global::Google.Analytics.Data.V1Alpha.MetricHeader.Parser);
     private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader> metricHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader>();
     /// <summary>
-    /// Describes metric columns.
+    /// Describes metric columns. The number of MetricHeaders and ordering of
+    /// MetricHeaders matches the metrics present in rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader> MetricHeaders {
@@ -1581,6 +1827,7 @@ namespace Google.Analytics.Data.V1Alpha {
         return true;
       }
       if(!pivotHeaders_.Equals(other.pivotHeaders_)) return false;
+      if(!dimensionHeaders_.Equals(other.dimensionHeaders_)) return false;
       if(!metricHeaders_.Equals(other.metricHeaders_)) return false;
       if(!rows_.Equals(other.rows_)) return false;
       if(!aggregates_.Equals(other.aggregates_)) return false;
@@ -1593,6 +1840,7 @@ namespace Google.Analytics.Data.V1Alpha {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= pivotHeaders_.GetHashCode();
+      hash ^= dimensionHeaders_.GetHashCode();
       hash ^= metricHeaders_.GetHashCode();
       hash ^= rows_.GetHashCode();
       hash ^= aggregates_.GetHashCode();
@@ -1623,6 +1871,7 @@ namespace Google.Analytics.Data.V1Alpha {
         output.WriteRawTag(50);
         output.WriteMessage(PropertyQuota);
       }
+      dimensionHeaders_.WriteTo(output, _repeated_dimensionHeaders_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1632,6 +1881,7 @@ namespace Google.Analytics.Data.V1Alpha {
     public int CalculateSize() {
       int size = 0;
       size += pivotHeaders_.CalculateSize(_repeated_pivotHeaders_codec);
+      size += dimensionHeaders_.CalculateSize(_repeated_dimensionHeaders_codec);
       size += metricHeaders_.CalculateSize(_repeated_metricHeaders_codec);
       size += rows_.CalculateSize(_repeated_rows_codec);
       size += aggregates_.CalculateSize(_repeated_aggregates_codec);
@@ -1653,6 +1903,7 @@ namespace Google.Analytics.Data.V1Alpha {
         return;
       }
       pivotHeaders_.Add(other.pivotHeaders_);
+      dimensionHeaders_.Add(other.dimensionHeaders_);
       metricHeaders_.Add(other.metricHeaders_);
       rows_.Add(other.rows_);
       aggregates_.Add(other.aggregates_);
@@ -1709,6 +1960,10 @@ namespace Google.Analytics.Data.V1Alpha {
             input.ReadMessage(PropertyQuota);
             break;
           }
+          case 58: {
+            dimensionHeaders_.AddEntriesFrom(input, _repeated_dimensionHeaders_codec);
+            break;
+          }
         }
       }
     }
@@ -1726,7 +1981,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1893,7 +2148,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2020,7 +2275,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2187,7 +2442,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2295,6 +2550,144 @@ namespace Google.Analytics.Data.V1Alpha {
             break;
           case 10: {
             pivotReports_.AddEntriesFrom(input, _repeated_pivotReports_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Request for dimension and metric metadata.
+  /// </summary>
+  public sealed partial class GetMetadataRequest : pb::IMessage<GetMetadataRequest> {
+    private static readonly pb::MessageParser<GetMetadataRequest> _parser = new pb::MessageParser<GetMetadataRequest>(() => new GetMetadataRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetMetadataRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMetadataRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMetadataRequest(GetMetadataRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetMetadataRequest Clone() {
+      return new GetMetadataRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the metadata to retrieve. Either has the form
+    /// 'metadata' or 'properties/{property}/metadata'. This name field is
+    /// specified in the URL path and not URL parameters. Property is a numeric
+    /// Google Analytics App + Web Property Id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetMetadataRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetMetadataRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetMetadataRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
             break;
           }
         }
