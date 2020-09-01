@@ -38,6 +38,8 @@ namespace Google.Analytics.Data.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest> __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.Metadata> __Marshaller_google_analytics_data_v1alpha_Metadata = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.Metadata.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse> __Method_RunReport = new grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse>(
         grpc::MethodType.Unary,
@@ -66,6 +68,13 @@ namespace Google.Analytics.Data.V1Alpha {
         "BatchRunPivotReports",
         __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest,
         __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata> __Method_GetMetadata = new grpc::Method<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMetadata",
+        __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest,
+        __Marshaller_google_analytics_data_v1alpha_Metadata);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -129,6 +138,19 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> BatchRunPivotReports(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns metadata for dimensions and metrics available in reporting methods.
+      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
+      /// mostly added over time, but renames and deletions may occur.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.Metadata> GetMetadata(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -382,6 +404,58 @@ namespace Google.Analytics.Data.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchRunPivotReports, null, options, request);
       }
+      /// <summary>
+      /// Returns metadata for dimensions and metrics available in reporting methods.
+      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
+      /// mostly added over time, but renames and deletions may occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Data.V1Alpha.Metadata GetMetadata(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns metadata for dimensions and metrics available in reporting methods.
+      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
+      /// mostly added over time, but renames and deletions may occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Data.V1Alpha.Metadata GetMetadata(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMetadata, null, options, request);
+      }
+      /// <summary>
+      /// Returns metadata for dimensions and metrics available in reporting methods.
+      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
+      /// mostly added over time, but renames and deletions may occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.Metadata> GetMetadataAsync(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns metadata for dimensions and metrics available in reporting methods.
+      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
+      /// mostly added over time, but renames and deletions may occur.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.Metadata> GetMetadataAsync(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMetadata, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AlphaAnalyticsDataClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -397,7 +471,8 @@ namespace Google.Analytics.Data.V1Alpha {
           .AddMethod(__Method_RunReport, serviceImpl.RunReport)
           .AddMethod(__Method_RunPivotReport, serviceImpl.RunPivotReport)
           .AddMethod(__Method_BatchRunReports, serviceImpl.BatchRunReports)
-          .AddMethod(__Method_BatchRunPivotReports, serviceImpl.BatchRunPivotReports).Build();
+          .AddMethod(__Method_BatchRunPivotReports, serviceImpl.BatchRunPivotReports)
+          .AddMethod(__Method_GetMetadata, serviceImpl.GetMetadata).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -410,6 +485,7 @@ namespace Google.Analytics.Data.V1Alpha {
       serviceBinder.AddMethod(__Method_RunPivotReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest, global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse>(serviceImpl.RunPivotReport));
       serviceBinder.AddMethod(__Method_BatchRunReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse>(serviceImpl.BatchRunReports));
       serviceBinder.AddMethod(__Method_BatchRunPivotReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse>(serviceImpl.BatchRunPivotReports));
+      serviceBinder.AddMethod(__Method_GetMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata>(serviceImpl.GetMetadata));
     }
 
   }

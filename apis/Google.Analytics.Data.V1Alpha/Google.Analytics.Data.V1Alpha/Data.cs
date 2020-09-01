@@ -103,41 +103,48 @@ namespace Google.Analytics.Data.V1Alpha {
             "ZXR0aW5ncxgDIAEoCzIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhh",
             "LkNvaG9ydFJlcG9ydFNldHRpbmdzImcKBkNvaG9ydBIMCgRuYW1lGAEgASgJ",
             "EhEKCWRpbWVuc2lvbhgCIAEoCRI8CgpkYXRlX3JhbmdlGAMgASgLMiguZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuRGF0ZVJhbmdlImYKFENvaG9y",
-            "dFJlcG9ydFNldHRpbmdzEhIKCmFjY3VtdWxhdGUYASABKAgSGwoTcGl2b3Rf",
-            "b25fdXNlcl9ldmVudBgCIAEoCBIdChVtaXNzaW5nX3ZhbHVlX2FzX3plcm8Y",
-            "BCABKAgi1gEKDENvaG9ydHNSYW5nZRJMCgtncmFudWxhcml0eRgBIAEoDjI3",
-            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLkNvaG9ydHNSYW5nZS5H",
-            "cmFudWxhcml0eRIUCgxzdGFydF9vZmZzZXQYAiABKAUSEgoKZW5kX29mZnNl",
-            "dBgDIAEoBSJOCgtHcmFudWxhcml0eRIbChdHUkFOVUxBUklUWV9VTlNQRUNJ",
-            "RklFRBAAEgkKBURBSUxZEAESCgoGV0VFS0xZEAISCwoHTU9OVEhMWRADIjQK",
-            "EFJlc3BvbnNlTWV0YURhdGESIAoYZGF0YV9sb3NzX2Zyb21fb3RoZXJfcm93",
-            "GAMgASgIIlUKDE1ldHJpY0hlYWRlchIMCgRuYW1lGAEgASgJEjcKBHR5cGUY",
-            "AiABKA4yKS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5NZXRyaWNU",
-            "eXBlImsKC1Bpdm90SGVhZGVyEkkKEWRpbWVuc2lvbl9oZWFkZXJzGAEgAygL",
-            "Mi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuRGltZW5zaW9uSGVh",
-            "ZGVyEhEKCXJvd19jb3VudBgCIAEoBSJaCg9EaW1lbnNpb25IZWFkZXISRwoQ",
-            "ZGltZW5zaW9uX3ZhbHVlcxgBIAMoCzItLmdvb2dsZS5hbmFseXRpY3MuZGF0",
-            "YS52MWFscGhhLkRpbWVuc2lvblZhbHVlIpEBCgNSb3cSRwoQZGltZW5zaW9u",
-            "X3ZhbHVlcxgBIAMoCzItLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhh",
-            "LkRpbWVuc2lvblZhbHVlEkEKDW1ldHJpY192YWx1ZXMYAiADKAsyKi5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5NZXRyaWNWYWx1ZSIuCg5EaW1l",
-            "bnNpb25WYWx1ZRIPCgV2YWx1ZRgBIAEoCUgAQgsKCW9uZV92YWx1ZSIrCgtN",
-            "ZXRyaWNWYWx1ZRIPCgV2YWx1ZRgEIAEoCUgAQgsKCW9uZV92YWx1ZSJKCgxO",
-            "dW1lcmljVmFsdWUSFQoLaW50NjRfdmFsdWUYASABKANIABIWCgxkb3VibGVf",
-            "dmFsdWUYAiABKAFIAEILCglvbmVfdmFsdWUiuQIKDVByb3BlcnR5UXVvdGES",
-            "QgoOdG9rZW5zX3Blcl9kYXkYASABKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRh",
-            "dGEudjFhbHBoYS5RdW90YVN0YXR1cxJDCg90b2tlbnNfcGVyX2hvdXIYAiAB",
-            "KAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5RdW90YVN0YXR1",
-            "cxJHChNjb25jdXJyZW50X3JlcXVlc3RzGAMgASgLMiouZ29vZ2xlLmFuYWx5",
-            "dGljcy5kYXRhLnYxYWxwaGEuUXVvdGFTdGF0dXMSVgoic2VydmVyX2Vycm9y",
-            "c19wZXJfcHJvamVjdF9wZXJfaG91chgEIAEoCzIqLmdvb2dsZS5hbmFseXRp",
-            "Y3MuZGF0YS52MWFscGhhLlF1b3RhU3RhdHVzIjIKC1F1b3RhU3RhdHVzEhAK",
-            "CGNvbnN1bWVkGAEgASgFEhEKCXJlbWFpbmluZxgCIAEoBSpnChFNZXRyaWNB",
-            "Z2dyZWdhdGlvbhIiCh5NRVRSSUNfQUdHUkVHQVRJT05fVU5TUEVDSUZJRUQQ",
-            "ABIJCgVUT1RBTBABEgsKB01JTklNVU0QBRILCgdNQVhJTVVNEAYSCQoFQ09V",
-            "TlQQBCpLCgpNZXRyaWNUeXBlEhsKF01FVFJJQ19UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASEAoMVFlQRV9JTlRFR0VSEAESDgoKVFlQRV9GTE9BVBACQnsKIWNvbS5n",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuRGF0ZVJhbmdlIioKFENvaG9y",
+            "dFJlcG9ydFNldHRpbmdzEhIKCmFjY3VtdWxhdGUYASABKAgi1gEKDENvaG9y",
+            "dHNSYW5nZRJMCgtncmFudWxhcml0eRgBIAEoDjI3Lmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWFscGhhLkNvaG9ydHNSYW5nZS5HcmFudWxhcml0eRIUCgxz",
+            "dGFydF9vZmZzZXQYAiABKAUSEgoKZW5kX29mZnNldBgDIAEoBSJOCgtHcmFu",
+            "dWxhcml0eRIbChdHUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEgkKBURBSUxZ",
+            "EAESCgoGV0VFS0xZEAISCwoHTU9OVEhMWRADIjQKEFJlc3BvbnNlTWV0YURh",
+            "dGESIAoYZGF0YV9sb3NzX2Zyb21fb3RoZXJfcm93GAMgASgIIh8KD0RpbWVu",
+            "c2lvbkhlYWRlchIMCgRuYW1lGAEgASgJIlUKDE1ldHJpY0hlYWRlchIMCgRu",
+            "YW1lGAEgASgJEjcKBHR5cGUYAiABKA4yKS5nb29nbGUuYW5hbHl0aWNzLmRh",
+            "dGEudjFhbHBoYS5NZXRyaWNUeXBlInYKC1Bpdm90SGVhZGVyElQKF3Bpdm90",
+            "X2RpbWVuc2lvbl9oZWFkZXJzGAEgAygLMjMuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYWxwaGEuUGl2b3REaW1lbnNpb25IZWFkZXISEQoJcm93X2NvdW50",
+            "GAIgASgFIl8KFFBpdm90RGltZW5zaW9uSGVhZGVyEkcKEGRpbWVuc2lvbl92",
+            "YWx1ZXMYASADKAsyLS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5E",
+            "aW1lbnNpb25WYWx1ZSKRAQoDUm93EkcKEGRpbWVuc2lvbl92YWx1ZXMYASAD",
+            "KAsyLS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5EaW1lbnNpb25W",
+            "YWx1ZRJBCg1tZXRyaWNfdmFsdWVzGAIgAygLMiouZ29vZ2xlLmFuYWx5dGlj",
+            "cy5kYXRhLnYxYWxwaGEuTWV0cmljVmFsdWUiLgoORGltZW5zaW9uVmFsdWUS",
+            "DwoFdmFsdWUYASABKAlIAEILCglvbmVfdmFsdWUiKwoLTWV0cmljVmFsdWUS",
+            "DwoFdmFsdWUYBCABKAlIAEILCglvbmVfdmFsdWUiSgoMTnVtZXJpY1ZhbHVl",
+            "EhUKC2ludDY0X3ZhbHVlGAEgASgDSAASFgoMZG91YmxlX3ZhbHVlGAIgASgB",
+            "SABCCwoJb25lX3ZhbHVlIrkCCg1Qcm9wZXJ0eVF1b3RhEkIKDnRva2Vuc19w",
+            "ZXJfZGF5GAEgASgLMiouZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEu",
+            "UXVvdGFTdGF0dXMSQwoPdG9rZW5zX3Blcl9ob3VyGAIgASgLMiouZ29vZ2xl",
+            "LmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuUXVvdGFTdGF0dXMSRwoTY29uY3Vy",
+            "cmVudF9yZXF1ZXN0cxgDIAEoCzIqLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
+            "MWFscGhhLlF1b3RhU3RhdHVzElYKInNlcnZlcl9lcnJvcnNfcGVyX3Byb2pl",
+            "Y3RfcGVyX2hvdXIYBCABKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
+            "bHBoYS5RdW90YVN0YXR1cyIyCgtRdW90YVN0YXR1cxIQCghjb25zdW1lZBgB",
+            "IAEoBRIRCglyZW1haW5pbmcYAiABKAUiaQoRRGltZW5zaW9uTWV0YWRhdGES",
+            "EAoIYXBpX25hbWUYASABKAkSDwoHdWlfbmFtZRgCIAEoCRITCgtkZXNjcmlw",
+            "dGlvbhgDIAEoCRIcChRkZXByZWNhdGVkX2FwaV9uYW1lcxgEIAMoCSKzAQoO",
+            "TWV0cmljTWV0YWRhdGESEAoIYXBpX25hbWUYASABKAkSDwoHdWlfbmFtZRgC",
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIcChRkZXByZWNhdGVkX2FwaV9u",
+            "YW1lcxgEIAMoCRI3CgR0eXBlGAUgASgOMikuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYWxwaGEuTWV0cmljVHlwZRISCgpleHByZXNzaW9uGAYgASgJKmcK",
+            "EU1ldHJpY0FnZ3JlZ2F0aW9uEiIKHk1FVFJJQ19BR0dSRUdBVElPTl9VTlNQ",
+            "RUNJRklFRBAAEgkKBVRPVEFMEAESCwoHTUlOSU1VTRAFEgsKB01BWElNVU0Q",
+            "BhIJCgVDT1VOVBAEKnAKCk1ldHJpY1R5cGUSGwoXTUVUUklDX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIQCgxUWVBFX0lOVEVHRVIQARIOCgpUWVBFX0ZMT0FUEAIS",
+            "EAoMVFlQRV9TRUNPTkRTEAQSEQoNVFlQRV9DVVJSRU5DWRAJQnsKIWNvbS5n",
             "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYUIRUmVwb3J0aW5nQXBpUHJv",
             "dG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
             "bmFseXRpY3MvZGF0YS92MWFscGhhO2RhdGFiBnByb3RvMw=="));
@@ -162,18 +169,21 @@ namespace Google.Analytics.Data.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.Pivot), global::Google.Analytics.Data.V1Alpha.Pivot.Parser, new[]{ "FieldNames", "OrderBys", "Offset", "Limit", "MetricAggregations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortSpec), global::Google.Analytics.Data.V1Alpha.CohortSpec.Parser, new[]{ "Cohorts", "CohortsRange", "CohortReportSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.Cohort), global::Google.Analytics.Data.V1Alpha.Cohort.Parser, new[]{ "Name", "Dimension", "DateRange" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortReportSettings), global::Google.Analytics.Data.V1Alpha.CohortReportSettings.Parser, new[]{ "Accumulate", "PivotOnUserEvent", "MissingValueAsZero" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortReportSettings), global::Google.Analytics.Data.V1Alpha.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortsRange), global::Google.Analytics.Data.V1Alpha.CohortsRange.Parser, new[]{ "Granularity", "StartOffset", "EndOffset" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.ResponseMetaData), global::Google.Analytics.Data.V1Alpha.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.DimensionHeader), global::Google.Analytics.Data.V1Alpha.DimensionHeader.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.MetricHeader), global::Google.Analytics.Data.V1Alpha.MetricHeader.Parser, new[]{ "Name", "Type" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.PivotHeader), global::Google.Analytics.Data.V1Alpha.PivotHeader.Parser, new[]{ "DimensionHeaders", "RowCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.DimensionHeader), global::Google.Analytics.Data.V1Alpha.DimensionHeader.Parser, new[]{ "DimensionValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.PivotHeader), global::Google.Analytics.Data.V1Alpha.PivotHeader.Parser, new[]{ "PivotDimensionHeaders", "RowCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.PivotDimensionHeader), global::Google.Analytics.Data.V1Alpha.PivotDimensionHeader.Parser, new[]{ "DimensionValues" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.Row), global::Google.Analytics.Data.V1Alpha.Row.Parser, new[]{ "DimensionValues", "MetricValues" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.DimensionValue), global::Google.Analytics.Data.V1Alpha.DimensionValue.Parser, new[]{ "Value" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.MetricValue), global::Google.Analytics.Data.V1Alpha.MetricValue.Parser, new[]{ "Value" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.NumericValue), global::Google.Analytics.Data.V1Alpha.NumericValue.Parser, new[]{ "Int64Value", "DoubleValue" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.PropertyQuota), global::Google.Analytics.Data.V1Alpha.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.QuotaStatus), global::Google.Analytics.Data.V1Alpha.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.QuotaStatus), global::Google.Analytics.Data.V1Alpha.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.DimensionMetadata), global::Google.Analytics.Data.V1Alpha.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.MetricMetadata), global::Google.Analytics.Data.V1Alpha.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression" }, null, null, null, null)
           }));
     }
     #endregion
@@ -207,7 +217,7 @@ namespace Google.Analytics.Data.V1Alpha {
   }
 
   /// <summary>
-  /// Type of a metric value.
+  /// A metric's value type.
   /// </summary>
   public enum MetricType {
     /// <summary>
@@ -222,6 +232,14 @@ namespace Google.Analytics.Data.V1Alpha {
     /// Floating point type.
     /// </summary>
     [pbr::OriginalName("TYPE_FLOAT")] TypeFloat = 2,
+    /// <summary>
+    /// A duration of seconds; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_SECONDS")] TypeSeconds = 4,
+    /// <summary>
+    /// An amount of money; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_CURRENCY")] TypeCurrency = 9,
   }
 
   #endregion
@@ -4137,9 +4155,10 @@ namespace Google.Analytics.Data.V1Alpha {
     private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.OrderBy> orderBys_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.OrderBy>();
     /// <summary>
     /// Specifies how dimensions are ordered in the pivot. In the first Pivot, the
-    /// OrderBys determine Row and DimensionHeader ordering; in subsequent Pivots,
-    /// the OrderBys determine only DimensionHeader ordering. Dimensions specified
-    /// in these OrderBys must be a subset of Pivot.field_names.
+    /// OrderBys determine Row and PivotDimensionHeader ordering; in subsequent
+    /// Pivots, the OrderBys determine only PivotDimensionHeader ordering.
+    /// Dimensions specified in these OrderBys must be a subset of
+    /// Pivot.field_names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.OrderBy> OrderBys {
@@ -4164,8 +4183,8 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int LimitFieldNumber = 4;
     private long limit_;
     /// <summary>
-    /// The number of rows to return in this pivot.
-    /// If zero or unspecified, all rows are returned.
+    /// The number of rows to return in this pivot. If unspecified, 10 rows are
+    /// returned. If -1, all rows are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Limit {
@@ -4564,7 +4583,9 @@ namespace Google.Analytics.Data.V1Alpha {
     private string name_ = "";
     /// <summary>
     /// Assigns a name to this cohort. The dimension `cohort` is valued to this
-    /// name in a report response. If not set, a cohort is named the empty string.
+    /// name in a report response. If set, cannot begin with `cohort_` or
+    /// `RESERVED_`. If not set, cohorts are named by their zero based index
+    /// `cohort_0`, `cohort_1`, etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4594,12 +4615,14 @@ namespace Google.Analytics.Data.V1Alpha {
     private global::Google.Analytics.Data.V1Alpha.DateRange dateRange_;
     /// <summary>
     /// The cohort selects users whose first visit date is between start date
-    /// and end date defined in the date_range. The date range should be aligned
-    /// with the cohort's granularity.
-    /// If CohortsRange uses daily granularity, the date range can be aligned to
-    /// any day.
-    /// If CohortsRange uses weekly granularity, the date range should be aligned
-    /// to the week boundary, starting at Sunday and ending Saturday. If
+    /// and end date defined in the `dateRange`. In a cohort request, this
+    /// `dateRange` is required and the `dateRanges` in the `RunReportRequest` or
+    /// `RunPivotReportRequest` must be unspecified.
+    ///
+    /// The date range should be aligned with the cohort's granularity. If
+    /// CohortsRange uses daily granularity, the date range can be aligned to any
+    /// day. If CohortsRange uses weekly granularity, the date range should be
+    /// aligned to the week boundary, starting at Sunday and ending Saturday. If
     /// CohortsRange uses monthly granularity, the date range should be aligned to
     /// the month, starting at the first and ending on the last day of the month.
     /// </summary>
@@ -4762,8 +4785,6 @@ namespace Google.Analytics.Data.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CohortReportSettings(CohortReportSettings other) : this() {
       accumulate_ = other.accumulate_;
-      pivotOnUserEvent_ = other.pivotOnUserEvent_;
-      missingValueAsZero_ = other.missingValueAsZero_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4776,44 +4797,14 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int AccumulateFieldNumber = 1;
     private bool accumulate_;
     /// <summary>
-    /// If true, accumulates the result from first visit day to the end day.
+    /// If true, accumulates the result from first visit day to the end day. Not
+    /// supported in `RunReportRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Accumulate {
       get { return accumulate_; }
       set {
         accumulate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "pivot_on_user_event" field.</summary>
-    public const int PivotOnUserEventFieldNumber = 2;
-    private bool pivotOnUserEvent_;
-    /// <summary>
-    /// If true, the report is for lifetime value report and should pivot on user
-    /// event.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool PivotOnUserEvent {
-      get { return pivotOnUserEvent_; }
-      set {
-        pivotOnUserEvent_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "missing_value_as_zero" field.</summary>
-    public const int MissingValueAsZeroFieldNumber = 4;
-    private bool missingValueAsZero_;
-    /// <summary>
-    /// If some values are missing while computing ratios, we want to compute the
-    /// ratios only based on non-missing values.
-    /// This field should be set to true only for a totals request.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool MissingValueAsZero {
-      get { return missingValueAsZero_; }
-      set {
-        missingValueAsZero_ = value;
       }
     }
 
@@ -4831,8 +4822,6 @@ namespace Google.Analytics.Data.V1Alpha {
         return true;
       }
       if (Accumulate != other.Accumulate) return false;
-      if (PivotOnUserEvent != other.PivotOnUserEvent) return false;
-      if (MissingValueAsZero != other.MissingValueAsZero) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4840,8 +4829,6 @@ namespace Google.Analytics.Data.V1Alpha {
     public override int GetHashCode() {
       int hash = 1;
       if (Accumulate != false) hash ^= Accumulate.GetHashCode();
-      if (PivotOnUserEvent != false) hash ^= PivotOnUserEvent.GetHashCode();
-      if (MissingValueAsZero != false) hash ^= MissingValueAsZero.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4859,14 +4846,6 @@ namespace Google.Analytics.Data.V1Alpha {
         output.WriteRawTag(8);
         output.WriteBool(Accumulate);
       }
-      if (PivotOnUserEvent != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(PivotOnUserEvent);
-      }
-      if (MissingValueAsZero != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(MissingValueAsZero);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4876,12 +4855,6 @@ namespace Google.Analytics.Data.V1Alpha {
     public int CalculateSize() {
       int size = 0;
       if (Accumulate != false) {
-        size += 1 + 1;
-      }
-      if (PivotOnUserEvent != false) {
-        size += 1 + 1;
-      }
-      if (MissingValueAsZero != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -4898,12 +4871,6 @@ namespace Google.Analytics.Data.V1Alpha {
       if (other.Accumulate != false) {
         Accumulate = other.Accumulate;
       }
-      if (other.PivotOnUserEvent != false) {
-        PivotOnUserEvent = other.PivotOnUserEvent;
-      }
-      if (other.MissingValueAsZero != false) {
-        MissingValueAsZero = other.MissingValueAsZero;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4917,14 +4884,6 @@ namespace Google.Analytics.Data.V1Alpha {
             break;
           case 8: {
             Accumulate = input.ReadBool();
-            break;
-          }
-          case 16: {
-            PivotOnUserEvent = input.ReadBool();
-            break;
-          }
-          case 32: {
-            MissingValueAsZero = input.ReadBool();
             break;
           }
         }
@@ -5299,7 +5258,148 @@ namespace Google.Analytics.Data.V1Alpha {
   }
 
   /// <summary>
-  /// Describes the metric column in the report.
+  /// Describes a dimension column in the report. Dimensions requested in a report
+  /// produce column entries within rows and DimensionHeaders. However, dimensions
+  /// used exclusively within filters or expressions do not produce columns in a
+  /// report; correspondingly, those dimensions do not produce headers.
+  /// </summary>
+  public sealed partial class DimensionHeader : pb::IMessage<DimensionHeader> {
+    private static readonly pb::MessageParser<DimensionHeader> _parser = new pb::MessageParser<DimensionHeader>(() => new DimensionHeader());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DimensionHeader> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionHeader() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionHeader(DimensionHeader other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionHeader Clone() {
+      return new DimensionHeader(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// The dimension's name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DimensionHeader);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DimensionHeader other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DimensionHeader other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Describes a metric column in the report. Visible metrics requested in a
+  /// report produce column entries within rows and MetricHeaders. However,
+  /// metrics used exclusively within filters or expressions do not produce columns
+  /// in a report; correspondingly, those metrics do not produce headers.
   /// </summary>
   public sealed partial class MetricHeader : pb::IMessage<MetricHeader> {
     private static readonly pb::MessageParser<MetricHeader> _parser = new pb::MessageParser<MetricHeader>(() => new MetricHeader());
@@ -5309,7 +5409,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5340,7 +5440,7 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Metric name.
+    /// The metric's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -5354,7 +5454,7 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int TypeFieldNumber = 2;
     private global::Google.Analytics.Data.V1Alpha.MetricType type_ = global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified;
     /// <summary>
-    /// Metric data type.
+    /// The metric's data type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.MetricType Type {
@@ -5465,7 +5565,7 @@ namespace Google.Analytics.Data.V1Alpha {
   }
 
   /// <summary>
-  /// Dimensions' values in a pivot.
+  /// Dimensions' values in a single pivot.
   /// </summary>
   public sealed partial class PivotHeader : pb::IMessage<PivotHeader> {
     private static readonly pb::MessageParser<PivotHeader> _parser = new pb::MessageParser<PivotHeader>(() => new PivotHeader());
@@ -5475,7 +5575,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5492,7 +5592,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PivotHeader(PivotHeader other) : this() {
-      dimensionHeaders_ = other.dimensionHeaders_.Clone();
+      pivotDimensionHeaders_ = other.pivotDimensionHeaders_.Clone();
       rowCount_ = other.rowCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5502,18 +5602,18 @@ namespace Google.Analytics.Data.V1Alpha {
       return new PivotHeader(this);
     }
 
-    /// <summary>Field number for the "dimension_headers" field.</summary>
-    public const int DimensionHeadersFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.DimensionHeader> _repeated_dimensionHeaders_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Alpha.DimensionHeader.Parser);
-    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> dimensionHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader>();
+    /// <summary>Field number for the "pivot_dimension_headers" field.</summary>
+    public const int PivotDimensionHeadersFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.PivotDimensionHeader> _repeated_pivotDimensionHeaders_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Alpha.PivotDimensionHeader.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.PivotDimensionHeader> pivotDimensionHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.PivotDimensionHeader>();
     /// <summary>
     /// The size is the same as the cardinality of the corresponding dimension
     /// combinations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> DimensionHeaders {
-      get { return dimensionHeaders_; }
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.PivotDimensionHeader> PivotDimensionHeaders {
+      get { return pivotDimensionHeaders_; }
     }
 
     /// <summary>Field number for the "row_count" field.</summary>
@@ -5543,7 +5643,7 @@ namespace Google.Analytics.Data.V1Alpha {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!dimensionHeaders_.Equals(other.dimensionHeaders_)) return false;
+      if(!pivotDimensionHeaders_.Equals(other.pivotDimensionHeaders_)) return false;
       if (RowCount != other.RowCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5551,7 +5651,7 @@ namespace Google.Analytics.Data.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= dimensionHeaders_.GetHashCode();
+      hash ^= pivotDimensionHeaders_.GetHashCode();
       if (RowCount != 0) hash ^= RowCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5566,7 +5666,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      dimensionHeaders_.WriteTo(output, _repeated_dimensionHeaders_codec);
+      pivotDimensionHeaders_.WriteTo(output, _repeated_pivotDimensionHeaders_codec);
       if (RowCount != 0) {
         output.WriteRawTag(16);
         output.WriteInt32(RowCount);
@@ -5579,7 +5679,7 @@ namespace Google.Analytics.Data.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += dimensionHeaders_.CalculateSize(_repeated_dimensionHeaders_codec);
+      size += pivotDimensionHeaders_.CalculateSize(_repeated_pivotDimensionHeaders_codec);
       if (RowCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RowCount);
       }
@@ -5594,7 +5694,7 @@ namespace Google.Analytics.Data.V1Alpha {
       if (other == null) {
         return;
       }
-      dimensionHeaders_.Add(other.dimensionHeaders_);
+      pivotDimensionHeaders_.Add(other.pivotDimensionHeaders_);
       if (other.RowCount != 0) {
         RowCount = other.RowCount;
       }
@@ -5610,7 +5710,7 @@ namespace Google.Analytics.Data.V1Alpha {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            dimensionHeaders_.AddEntriesFrom(input, _repeated_dimensionHeaders_codec);
+            pivotDimensionHeaders_.AddEntriesFrom(input, _repeated_pivotDimensionHeaders_codec);
             break;
           }
           case 16: {
@@ -5624,17 +5724,17 @@ namespace Google.Analytics.Data.V1Alpha {
   }
 
   /// <summary>
-  /// The header for the dimensions.
+  /// Summarizes dimension values from a row for this pivot.
   /// </summary>
-  public sealed partial class DimensionHeader : pb::IMessage<DimensionHeader> {
-    private static readonly pb::MessageParser<DimensionHeader> _parser = new pb::MessageParser<DimensionHeader>(() => new DimensionHeader());
+  public sealed partial class PivotDimensionHeader : pb::IMessage<PivotDimensionHeader> {
+    private static readonly pb::MessageParser<PivotDimensionHeader> _parser = new pb::MessageParser<PivotDimensionHeader>(() => new PivotDimensionHeader());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DimensionHeader> Parser { get { return _parser; } }
+    public static pb::MessageParser<PivotDimensionHeader> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5643,21 +5743,21 @@ namespace Google.Analytics.Data.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DimensionHeader() {
+    public PivotDimensionHeader() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DimensionHeader(DimensionHeader other) : this() {
+    public PivotDimensionHeader(PivotDimensionHeader other) : this() {
       dimensionValues_ = other.dimensionValues_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DimensionHeader Clone() {
-      return new DimensionHeader(this);
+    public PivotDimensionHeader Clone() {
+      return new PivotDimensionHeader(this);
     }
 
     /// <summary>Field number for the "dimension_values" field.</summary>
@@ -5675,11 +5775,11 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as DimensionHeader);
+      return Equals(other as PivotDimensionHeader);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DimensionHeader other) {
+    public bool Equals(PivotDimensionHeader other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -5724,7 +5824,7 @@ namespace Google.Analytics.Data.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DimensionHeader other) {
+    public void MergeFrom(PivotDimensionHeader other) {
       if (other == null) {
         return;
       }
@@ -5787,7 +5887,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5938,7 +6038,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6101,7 +6201,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6264,7 +6364,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6463,7 +6563,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6719,7 +6819,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6866,6 +6966,520 @@ namespace Google.Analytics.Data.V1Alpha {
           }
           case 16: {
             Remaining = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Explains a dimension.
+  /// </summary>
+  public sealed partial class DimensionMetadata : pb::IMessage<DimensionMetadata> {
+    private static readonly pb::MessageParser<DimensionMetadata> _parser = new pb::MessageParser<DimensionMetadata>(() => new DimensionMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DimensionMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionMetadata(DimensionMetadata other) : this() {
+      apiName_ = other.apiName_;
+      uiName_ = other.uiName_;
+      description_ = other.description_;
+      deprecatedApiNames_ = other.deprecatedApiNames_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionMetadata Clone() {
+      return new DimensionMetadata(this);
+    }
+
+    /// <summary>Field number for the "api_name" field.</summary>
+    public const int ApiNameFieldNumber = 1;
+    private string apiName_ = "";
+    /// <summary>
+    /// This dimension's name. Useable in [Dimension](#Dimension)'s `name`. For
+    /// example, `eventName`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ApiName {
+      get { return apiName_; }
+      set {
+        apiName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ui_name" field.</summary>
+    public const int UiNameFieldNumber = 2;
+    private string uiName_ = "";
+    /// <summary>
+    /// This dimension's name within the Google Analytics user interface. For
+    /// example, `Event name`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UiName {
+      get { return uiName_; }
+      set {
+        uiName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Description of how this dimension is used and calculated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "deprecated_api_names" field.</summary>
+    public const int DeprecatedApiNamesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_deprecatedApiNames_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> deprecatedApiNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Still usable but deprecated names for this dimension. If populated, this
+    /// dimension is available by either `apiName` or one of `deprecatedApiNames`
+    /// for a period of time. After the deprecation period, the dimension will be
+    /// available only by `apiName`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> DeprecatedApiNames {
+      get { return deprecatedApiNames_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DimensionMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DimensionMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ApiName != other.ApiName) return false;
+      if (UiName != other.UiName) return false;
+      if (Description != other.Description) return false;
+      if(!deprecatedApiNames_.Equals(other.deprecatedApiNames_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ApiName.Length != 0) hash ^= ApiName.GetHashCode();
+      if (UiName.Length != 0) hash ^= UiName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      hash ^= deprecatedApiNames_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ApiName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApiName);
+      }
+      if (UiName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UiName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      deprecatedApiNames_.WriteTo(output, _repeated_deprecatedApiNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ApiName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApiName);
+      }
+      if (UiName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UiName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      size += deprecatedApiNames_.CalculateSize(_repeated_deprecatedApiNames_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DimensionMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ApiName.Length != 0) {
+        ApiName = other.ApiName;
+      }
+      if (other.UiName.Length != 0) {
+        UiName = other.UiName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      deprecatedApiNames_.Add(other.deprecatedApiNames_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ApiName = input.ReadString();
+            break;
+          }
+          case 18: {
+            UiName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            deprecatedApiNames_.AddEntriesFrom(input, _repeated_deprecatedApiNames_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// Explains a metric.
+  /// </summary>
+  public sealed partial class MetricMetadata : pb::IMessage<MetricMetadata> {
+    private static readonly pb::MessageParser<MetricMetadata> _parser = new pb::MessageParser<MetricMetadata>(() => new MetricMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<MetricMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricMetadata(MetricMetadata other) : this() {
+      apiName_ = other.apiName_;
+      uiName_ = other.uiName_;
+      description_ = other.description_;
+      deprecatedApiNames_ = other.deprecatedApiNames_.Clone();
+      type_ = other.type_;
+      expression_ = other.expression_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricMetadata Clone() {
+      return new MetricMetadata(this);
+    }
+
+    /// <summary>Field number for the "api_name" field.</summary>
+    public const int ApiNameFieldNumber = 1;
+    private string apiName_ = "";
+    /// <summary>
+    /// A metric name. Useable in [Metric](#Metric)'s `name`. For example,
+    /// `eventCount`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ApiName {
+      get { return apiName_; }
+      set {
+        apiName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ui_name" field.</summary>
+    public const int UiNameFieldNumber = 2;
+    private string uiName_ = "";
+    /// <summary>
+    /// This metric's name within the Google Analytics user interface. For example,
+    /// `Event count`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UiName {
+      get { return uiName_; }
+      set {
+        uiName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Description of how this metric is used and calculated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "deprecated_api_names" field.</summary>
+    public const int DeprecatedApiNamesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_deprecatedApiNames_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> deprecatedApiNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Still usable but deprecated names for this metric. If populated, this
+    /// metric is available by either `apiName` or one of `deprecatedApiNames`
+    /// for a period of time. After the deprecation period, the metric will be
+    /// available only by `apiName`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> DeprecatedApiNames {
+      get { return deprecatedApiNames_; }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 5;
+    private global::Google.Analytics.Data.V1Alpha.MetricType type_ = global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified;
+    /// <summary>
+    /// The type of this metric.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Alpha.MetricType Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expression" field.</summary>
+    public const int ExpressionFieldNumber = 6;
+    private string expression_ = "";
+    /// <summary>
+    /// The mathematical expression for this derived metric. Can be used in
+    /// [Metric](#Metric)'s `expression` field for equivalent reports. Most metrics
+    /// are not expressions, and for non-expressions, this field is empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Expression {
+      get { return expression_; }
+      set {
+        expression_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as MetricMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(MetricMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ApiName != other.ApiName) return false;
+      if (UiName != other.UiName) return false;
+      if (Description != other.Description) return false;
+      if(!deprecatedApiNames_.Equals(other.deprecatedApiNames_)) return false;
+      if (Type != other.Type) return false;
+      if (Expression != other.Expression) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ApiName.Length != 0) hash ^= ApiName.GetHashCode();
+      if (UiName.Length != 0) hash ^= UiName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      hash ^= deprecatedApiNames_.GetHashCode();
+      if (Type != global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified) hash ^= Type.GetHashCode();
+      if (Expression.Length != 0) hash ^= Expression.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ApiName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApiName);
+      }
+      if (UiName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UiName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      deprecatedApiNames_.WriteTo(output, _repeated_deprecatedApiNames_codec);
+      if (Type != global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Type);
+      }
+      if (Expression.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Expression);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ApiName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApiName);
+      }
+      if (UiName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UiName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      size += deprecatedApiNames_.CalculateSize(_repeated_deprecatedApiNames_codec);
+      if (Type != global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (Expression.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Expression);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(MetricMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ApiName.Length != 0) {
+        ApiName = other.ApiName;
+      }
+      if (other.UiName.Length != 0) {
+        UiName = other.UiName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      deprecatedApiNames_.Add(other.deprecatedApiNames_);
+      if (other.Type != global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.Expression.Length != 0) {
+        Expression = other.Expression;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ApiName = input.ReadString();
+            break;
+          }
+          case 18: {
+            UiName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            deprecatedApiNames_.AddEntriesFrom(input, _repeated_deprecatedApiNames_codec);
+            break;
+          }
+          case 40: {
+            Type = (global::Google.Analytics.Data.V1Alpha.MetricType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            Expression = input.ReadString();
             break;
           }
         }
