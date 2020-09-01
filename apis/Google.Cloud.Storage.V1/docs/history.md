@@ -1,5 +1,11 @@
 # Version history
 
+# Version 3.3.0, released 2020-09-01
+
+No API surface changes; just updated dependencies. In particular,
+this uses Google.Apis.Storage.v1 version 1.49.0.2044, which includes
+OLM support.
+
 # Version 3.2.0, released 2020-07-01
 
 - [Commit 482a8b0](https://github.com/googleapis/google-cloud-dotnet/commit/482a8b0): Update Google.Apis.Storage.v1 dependency. Fixes [issue 5115](https://github.com/googleapis/google-cloud-dotnet/issues/5115).
