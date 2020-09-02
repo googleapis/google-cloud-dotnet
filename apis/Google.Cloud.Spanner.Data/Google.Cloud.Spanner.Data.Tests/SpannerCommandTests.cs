@@ -229,6 +229,26 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.Is<CallSettings>(settings => HasResourcePrefixHeader(settings))), Times.Once());
         }
 
+        [Fact]
+        public void PdmlRetriedOnEosError()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDmlThrowingEosError();
+
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateDmlCommand("UPDATE abc SET xyz = 1 WHERE Id > 1");
+            long rowCount = command.ExecutePartitionedUpdate();
+            Assert.True(rowCount > 0);
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.IsAny<ExecuteSqlRequest>(),
+                It.IsAny<CallSettings>()), Times.Exactly(3));
+        }
+
         private Mock<SpannerClient> SetupExecuteStreamingSql(string optimizerVersion = "")
         {
             Mock<SpannerClient> spannerClientMock = SpannerClientHelpers

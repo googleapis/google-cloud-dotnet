@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Grpc.Testing;
 using Google.Api.Gax.Testing;
+using Google.Cloud.Spanner.Data;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -210,6 +211,35 @@ namespace Google.Cloud.Spanner.V1.Tests
                         : results.SkipWhile(r => r.ResumeToken != request.ResumeToken).Skip(1);
                     var asyncResults = new AsyncStreamAdapter<PartialResultSet>(callResults.ToAsyncEnumerable().GetAsyncEnumerator(default));
 
+                    var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
+                        Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
+                    return new ExecuteStreamingSqlStreamImpl(call);
+                });
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupExecuteStreamingSqlForDmlThrowingEosError(this Mock<SpannerClient> spannerClientMock)
+        {
+            const string eosError = "Received unexpected EOS on DATA frame from server";
+            spannerClientMock
+                .SetupSequence(client => client.ExecuteStreamingSql(
+                    It.IsAny<ExecuteSqlRequest>(),
+                    It.IsAny<CallSettings>()))
+		.Throws(new SpannerException(ErrorCode.Internal, eosError))
+		.Throws(new SpannerException(ErrorCode.Internal, eosError))
+                .Returns(() =>
+                {
+                    IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
+                    .Select((resumeToken, index) => new PartialResultSet
+                    {
+                        ResumeToken = ByteString.CopyFromUtf8(resumeToken),
+                        Stats = new ResultSetStats
+                        {
+                            RowCountExact = 10
+                        }
+                    })
+                    .ToList();
+                    var asyncResults = new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default));
                     var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
                         Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
                     return new ExecuteStreamingSqlStreamImpl(call);
