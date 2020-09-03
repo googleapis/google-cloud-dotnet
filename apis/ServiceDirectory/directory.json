@@ -2469,6 +2469,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Iam.V1"
     },
     {
+      "ServiceDirectory": "google/iam/v1beta",
+      "Name": "iam.googleapis.com",
+      "Title": "Identity and Access Management (IAM) API",
+      "Description": "<p>Manages identity and access control for Google Cloud Platform resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls.</p> <aside class=\"note\"><b>Note:</b> This API is tied to the <a href=\"/iam/docs/reference/credentials/rest\">IAM service account credentials API</a> (<code>iamcredentials.googleapis.com</code>). Enabling or disabling this API will also enable or disable the IAM service account credentials API.</aside>",
+      "ServiceConfigFile": "google/iam/v1beta/iam_v1beta.yaml",
+      "Version": "v1beta",
+      "PackageFromDirectory": "google.iam.v1beta",
+      "PackageFromProtos": "google.iam.v1beta",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Iam.V1Beta"
+    },
+    {
       "ServiceDirectory": "google/iam/credentials/v1",
       "Name": "iamcredentials.googleapis.com",
       "Title": "IAM Service Account Credentials API",
