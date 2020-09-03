@@ -309,8 +309,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Name of the information type. Either a name of your choosing when
     /// creating a CustomInfoType, or one of the names listed
     /// at https://cloud.google.com/dlp/docs/infotypes-reference when specifying
-    /// a built-in type. InfoType names should conform to the pattern
-    /// `[a-zA-Z0-9_]{1,64}`.
+    /// a built-in type.  When sending Cloud DLP results to Data Catalog, infoType
+    /// names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4371,16 +4371,18 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// How to sample rows if not all rows are scanned. Meaningful only when used
       /// in conjunction with either rows_limit or rows_limit_percent. If not
-      /// specified, scanning would start from the top.
+      /// specified, rows are scanned in the order BigQuery reads them.
       /// </summary>
       public enum SampleMethod {
         [pbr::OriginalName("SAMPLE_METHOD_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Scan from the top (default).
+        /// Scan groups of rows in the order BigQuery provides (default). Multiple
+        /// groups of rows may be scanned in parallel, so results may not appear in
+        /// the same order the rows are read.
         /// </summary>
         [pbr::OriginalName("TOP")] Top = 1,
         /// <summary>
-        /// Randomly pick the row to start scanning. The scanned rows are contiguous.
+        /// Randomly pick groups of rows to scan.
         /// </summary>
         [pbr::OriginalName("RANDOM_START")] RandomStart = 2,
       }

@@ -6661,9 +6661,21 @@ namespace Google.Cloud.Dlp.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// The parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    /// Parent resource name.
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -7616,8 +7628,20 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -8146,9 +8170,21 @@ namespace Google.Cloud.Dlp.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    /// Required. Parent resource name.
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -8233,10 +8269,11 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// Template to use. References an instance of `DeidentifyTemplate`.
     /// Any configuration directly specified in `reidentify_config` or
-    /// `inspect_config` will override those set in the template. Singular fields
-    /// that are set in this request will replace their corresponding fields in the
-    /// template. Repeated fields are appended. Singular sub-messages and groups
-    /// are recursively merged.
+    /// `inspect_config` will override those set in the template. The
+    /// `DeidentifyTemplate` used must include only reversible transformations.
+    /// Singular fields that are set in this request will replace their
+    /// corresponding fields in the template. Repeated fields are appended.
+    /// Singular sub-messages and groups are recursively merged.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ReidentifyTemplateName {
@@ -8682,8 +8719,20 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -10553,7 +10602,10 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// The parent resource name.
-    /// - Format:locations/[LOCATION-ID]
+    ///
+    /// The format of this value is as follows:
+    ///
+    ///     locations/&lt;var>LOCATION_ID&lt;/var>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -21744,6 +21796,9 @@ namespace Google.Cloud.Dlp.V2 {
     /// Number of characters must be in the range [2, 95].
     /// This must be encoded as ASCII.
     /// The order of characters does not matter.
+    /// The full list of allowed characters is:
+    /// &lt;code>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+    /// ~`!@#$%^&amp;*()_-+={[}]|\:;"'&lt;,>.?/&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CustomAlphabet {
@@ -28302,10 +28357,25 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on the scope of the request
+    /// (project or organization) and whether you have [specified a processing
+    /// location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    /// + Organizations scope, location specified:&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Organizations scope, no location specified (defaults to global):&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -28892,10 +28962,25 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on the scope of the request
+    /// (project or organization) and whether you have [specified a processing
+    /// location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    /// + Organizations scope, location specified:&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Organizations scope, no location specified (defaults to global):&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -29464,8 +29549,20 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -30195,8 +30292,20 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -30500,8 +30609,20 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -32013,8 +32134,20 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on whether you have [specified a
+    /// processing location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -32935,10 +33068,25 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on the scope of the request
+    /// (project or organization) and whether you have [specified a processing
+    /// location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    /// + Organizations scope, location specified:&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Organizations scope, no location specified (defaults to global):&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -33525,10 +33673,25 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on the scope of the request
+    /// (project or organization) and whether you have [specified a processing
+    /// location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    /// + Organizations scope, location specified:&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Organizations scope, no location specified (defaults to global):&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -35462,10 +35625,25 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on the scope of the request
+    /// (project or organization) and whether you have [specified a processing
+    /// location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    /// + Organizations scope, location specified:&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Organizations scope, no location specified (defaults to global):&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -36054,10 +36232,25 @@ namespace Google.Cloud.Dlp.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. Parent resource name.
-    /// - Format:projects/[PROJECT-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]
-    /// - Format:projects/[PROJECT-ID]/locations/[LOCATION-ID]
-    /// - Format:organizations/[ORGANIZATION-ID]/locations/[LOCATION-ID]
+    ///
+    /// The format of this value varies depending on the scope of the request
+    /// (project or organization) and whether you have [specified a processing
+    /// location](/dlp/docs/specifying-location):
+    ///
+    /// + Projects scope, location specified:&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Projects scope, no location specified (defaults to global):&lt;br/>
+    ///   `projects/`&lt;var>PROJECT_ID&lt;/var>
+    /// + Organizations scope, location specified:&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
+    /// + Organizations scope, no location specified (defaults to global):&lt;br/>
+    ///   `organizations/`&lt;var>ORG_ID&lt;/var>
+    ///
+    /// The following example `parent` string specifies a parent project with the
+    /// identifier `example-project`, and specifies the `europe-west3` location
+    /// for processing data:
+    ///
+    ///     parent=projects/example-project/locations/europe-west3
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
