@@ -468,6 +468,26 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ServiceDirectory.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/documentai/v1beta3",
+      "Name": "documentai.googleapis.com",
+      "Title": "Cloud Document AI API",
+      "Description": "Service to parse structured information from unstructured or semi-structured documents using state-of-the-art Google AI such as natural language, computer vision, translation, and AutoML.",
+      "ServiceConfigFile": "google/cloud/documentai/v1beta3/documentai_v1beta3.yaml",
+      "Version": "v1beta3",
+      "PackageFromDirectory": "google.cloud.documentai.v1beta3",
+      "PackageFromProtos": "google.cloud.documentai.v1beta3",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/documentai/v1beta3",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.DocumentAI.v1beta3"
+    },
+    {
       "ServiceDirectory": "google/cloud/documentai/v1beta2",
       "Name": "documentai.googleapis.com",
       "Title": "Cloud Document AI API",
