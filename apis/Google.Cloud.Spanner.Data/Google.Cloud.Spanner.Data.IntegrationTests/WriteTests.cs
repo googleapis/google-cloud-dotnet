@@ -126,7 +126,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BoolValue", SpannerDbType.Bool, true },
                 { "Int64Value", SpannerDbType.Int64, 1 },
                 { "Float64Value", SpannerDbType.Float64, 2.0 },
-                { "NumericValue", SpannerDbType.Numeric, SpannerNumeric.Parse("2.0") },
                 { "StringValue", SpannerDbType.String, "abc" },
                 { "BytesValue", SpannerDbType.Bytes, new byte[] { 4, 5, 6 } },
                 { "TimestampValue", SpannerDbType.Timestamp, testTimestamp },
@@ -134,12 +133,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), bArray },
                 { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), lArray },
                 { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), dArray },
-                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray },
                 { "StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String), sArray },
                 { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), bArrayArray },
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), tmArray },
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), dtArray }
             };
+
+            // The emulator doesn't yet support the NUMERIC type.
+            if (!_fixture.RunningOnEmulator)
+            {
+                parameters.Add("NumericValue", SpannerDbType.Numeric, SpannerNumeric.Parse("2.0"));
+                parameters.Add("NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray);
+            }
 
             Assert.Equal(1, await InsertAsync(parameters));
             await WithLastRowAsync(reader =>
@@ -149,7 +154,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(
                     Math.Abs(2.0 - reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")))
                     < double.Epsilon);
-                Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
                 Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                 Assert.Equal(new byte[] { 4, 5, 6 }, reader.GetFieldValue<byte[]>(reader.GetOrdinal("BytesValue")));
                 Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
@@ -157,11 +161,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(bArray, reader.GetFieldValue<bool?[]>(reader.GetOrdinal("BoolArrayValue")));
                 Assert.Equal(lArray, reader.GetFieldValue<long?[]>(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.Equal(dArray, reader.GetFieldValue<double?[]>(reader.GetOrdinal("Float64ArrayValue")));
-                Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
                 Assert.Equal(sArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("StringArrayValue")));
                 Assert.Equal(bArrayArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("BytesArrayValue")));
                 Assert.Equal(tmArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(dtArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
+                if (!_fixture.RunningOnEmulator)
+                {
+                    Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
+                    Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
+                }
             });
         }
 
@@ -237,25 +245,33 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), new bool[0] },
                 { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), new long[0] },
                 { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), new double[0] },
-                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[0] },
                 { "StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String), new string[0] },
                 { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), new byte[0][] },
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), new DateTime[0] },
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), new DateTime[0] }
             };
-            Assert.Equal(1, await InsertAsync(parameters));
 
+            // The emulator doesn't yet support the NUMERIC type.
+            if (!_fixture.RunningOnEmulator)
+            {
+                parameters.Add("NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[0]);
+            }
+
+            Assert.Equal(1, await InsertAsync(parameters));
             await WithLastRowAsync(reader =>
             {
                 Assert.Equal(new bool[] { }, reader.GetFieldValue<bool[]>(reader.GetOrdinal("BoolArrayValue")));
                 Assert.Equal(new long[] { }, reader.GetFieldValue<long[]>(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.Equal(new double[] { }, reader.GetFieldValue<double[]>(reader.GetOrdinal("Float64ArrayValue")));
-                Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
                 Assert.Equal(new string[] { }, reader.GetFieldValue<string[]>(reader.GetOrdinal("StringArrayValue")));
                 Assert.Equal(new byte[][] { }, reader.GetFieldValue<byte[][]>(reader.GetOrdinal("BytesArrayValue")));
                 Assert.Equal(
                     new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
+                if (!_fixture.RunningOnEmulator)
+                {
+                    Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
+                }
             });
         }
 
@@ -322,7 +338,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BoolValue", SpannerDbType.Bool, null },
                 { "Int64Value", SpannerDbType.Int64, null },
                 { "Float64Value", SpannerDbType.Float64, null },
-                { "NumericValue", SpannerDbType.Numeric, null },
                 { "StringValue", SpannerDbType.String, null },
                 { "BytesValue", SpannerDbType.Bytes, null },
                 { "TimestampValue", SpannerDbType.Timestamp, null },
@@ -336,13 +351,19 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null }
             };
 
+            // The emulator doesn't yet support the NUMERIC type.
+            if (!_fixture.RunningOnEmulator)
+            {
+                parameters.Add("NumericValue", SpannerDbType.Numeric, null);
+                parameters.Add("NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null);
+            }
+
             Assert.Equal(1, await InsertAsync(parameters));
             await WithLastRowAsync(reader =>
             {
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
@@ -350,11 +371,15 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64ArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("StringArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
+                if (!_fixture.RunningOnEmulator)
+                {
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericValue")));
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
+                }
             });
         }
 
