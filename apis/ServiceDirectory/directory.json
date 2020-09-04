@@ -396,7 +396,7 @@
     {
       "ServiceDirectory": "google/cloud/security/privateca/v1beta1",
       "Name": "privateca.googleapis.com",
-      "Title": "Certificate Authority Service API",
+      "Title": "Certificate Authority API",
       "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
       "ServiceConfigFile": "google/cloud/security/privateca/v1beta1/privateca_v1beta1.yaml",
       "Version": "v1beta1",
