@@ -176,7 +176,11 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void ClientCreatedWithEmulatorDetection()
         {
-            Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql();
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
 
             var spannerClient = spannerClientMock.Object;
             var sessionPoolOptions = new SessionPoolOptions
@@ -204,8 +208,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             using (var reader = command.ExecuteReader())
             {
-                // Do nothing.
+                Assert.True(reader.HasRows);
             }
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.IsAny<ExecuteSqlRequest>(),
+                It.IsAny<CallSettings>()), Times.Once());
         }
 
         [Fact]
