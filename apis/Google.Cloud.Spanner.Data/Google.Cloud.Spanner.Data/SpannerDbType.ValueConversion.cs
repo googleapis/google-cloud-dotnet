@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
@@ -197,6 +198,36 @@ namespace Google.Cloud.Spanner.Data
                         };
                     }
                     throw new ArgumentException("Struct parameters must be of type SpannerStruct");
+
+                case TypeCode.Numeric:
+                    if (value is SpannerNumeric spannerNumeric)
+                    {
+                        return Value.ForString(spannerNumeric.ToString());
+                    }
+                    if (value is string str)
+                    {
+                        return Value.ForString(SpannerNumeric.Parse(str).ToString());
+                    }
+                    if (value is float || value is double || value is decimal)
+                    {
+                        // We throw if there's a loss of precision. We could use
+                        // LossOfPrecisionHandling.Truncate but GoogleSQL documentation requests to
+                        // use half-away-from-zero rounding but the SpannerNumeric implementation
+                        // truncates instead.
+                        return Value.ForString(SpannerNumeric.FromDecimal(
+                            Convert.ToDecimal(value, InvariantCulture), LossOfPrecisionHandling.Throw).ToString());
+                    }
+                    if (value is sbyte || value is short || value is int || value is long)
+                    {
+                        SpannerNumeric numericValue = Convert.ToInt64(value, InvariantCulture);
+                        return Value.ForString(numericValue.ToString());
+                    }
+                    if (value is byte || value is ushort || value is uint || value is ulong)
+                    {
+                        SpannerNumeric numericValue = Convert.ToUInt64(value, InvariantCulture);
+                        return Value.ForString(numericValue.ToString());
+                    }
+                    throw new ArgumentException("Numeric parameters must be of type SpannerNumeric or string");
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
@@ -497,6 +528,23 @@ namespace Google.Cloud.Spanner.Data
                             i++;
                         }
                         return newArray;
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+            if (targetClrType == typeof(SpannerNumeric))
+            {
+                if (TypeCode != TypeCode.Numeric)
+                {
+                    throw new ArgumentException($"{targetClrType.FullName} can only be used for numeric results");
+                }
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return SpannerNumeric.Parse(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");

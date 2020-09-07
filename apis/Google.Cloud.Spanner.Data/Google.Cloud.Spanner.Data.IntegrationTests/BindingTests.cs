@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -46,6 +47,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
         };
 
+        public static TheoryData<SpannerDbType> BindNullNumericData { get; } = new TheoryData<SpannerDbType>
+        {
+            SpannerDbType.Numeric,
+            SpannerDbType.ArrayOf(SpannerDbType.Numeric),
+        };
+
         // [START spanner_test_query_bind_bool_null]
         // [END spanner_test_query_bind_bool_null]
         // [START spanner_test_query_bind_int64_null]
@@ -78,6 +85,31 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [MemberData(nameof(BindNullData))]
         public async Task BindNull(SpannerDbType parameterType)
         {
+            using (var connection = _fixture.GetConnection())
+            {
+                var cmd = connection.CreateSelectCommand("SELECT @v");
+                cmd.Parameters.Add("v", parameterType, null);
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+
+                    Assert.True(reader.IsDBNull(0));
+                    Assert.Equal(DBNull.Value, reader.GetValue(0));
+
+                    Assert.False(await reader.ReadAsync());
+                }
+            }
+        }
+
+        // [START spanner_test_query_bind_numeric_null]
+        // [END spanner_test_query_bind_numeric_null]
+        // [START spanner_test_query_bind_numeric_array_null]
+        // [END spanner_test_query_bind_numeric_array_null]
+        [SkippableTheory]
+        [MemberData(nameof(BindNullNumericData))]
+        public async Task BindNullNumeric(SpannerDbType parameterType)
+        {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand("SELECT @v");
@@ -241,6 +273,35 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
             new long[] { });
         // [END spanner_test_query_bind_int64_array_empty]
+
+        // [START spanner_test_query_bind_numeric]
+        [SkippableFact]
+        public async Task BindNumeric()
+        {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
+            await TestBindNonNull(SpannerDbType.Numeric, SpannerNumeric.Parse("1.0"), r => r.GetNumeric(0));
+        }
+        // [END spanner_test_query_bind_numeric]
+
+        // [START spanner_test_query_bind_numeric_array]
+        [SkippableFact]
+        public async Task BindNumericArray()
+        {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
+            await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.Numeric),
+                new SpannerNumeric?[] {SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("1.0")});
+        }
+        // [END spanner_test_query_bind_numeric_array]
+
+        // [START spanner_test_query_bind_numeric_array_empty]
+        [SkippableFact]
+        public async Task BindNumericEmptyArray()
+        {
+            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
+            await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[] { });
+        }
+        // [END spanner_test_query_bind_numeric_array_empty]
 
         // [START spanner_test_query_bind_string]
         [Fact]

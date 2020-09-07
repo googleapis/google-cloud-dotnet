@@ -64,6 +64,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "FLOAT64", SpannerDbType.Float64 };
             yield return new object[] { "INT64", SpannerDbType.Int64 };
             yield return new object[] { "TIMESTAMP", SpannerDbType.Timestamp };
+            yield return new object[] { "NUMERIC", SpannerDbType.Numeric };
 
             yield return new object[] { " STRING  ", SpannerDbType.String };
             yield return new object[] { "  BOOL  ", SpannerDbType.Bool };
@@ -72,6 +73,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "  FLOAT64  ", SpannerDbType.Float64 };
             yield return new object[] { "  INT64  ", SpannerDbType.Int64 };
             yield return new object[] { "  TIMESTAMP  ", SpannerDbType.Timestamp };
+            yield return new object[] { "  NUMERIC  ", SpannerDbType.Numeric };
 
             yield return new object[] { "STRING(2)", SpannerDbType.String.WithSize(2) };
             yield return new object[] { "STRING(100)", SpannerDbType.String.WithSize(100) };
@@ -142,8 +144,9 @@ namespace Google.Cloud.Spanner.Data.Tests
                 { "F5", SpannerDbType.Date, null },
                 { "F6", SpannerDbType.Float64, null },
                 { "F7", SpannerDbType.Timestamp, null },
+                { "F8", SpannerDbType.Numeric, null }
             };
-            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT64,F7:TIMESTAMP>", sampleStruct.GetSpannerDbType() };
+            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT64,F7:TIMESTAMP,F8:NUMERIC>", sampleStruct.GetSpannerDbType() };
 
             sampleStruct = new SpannerStruct
             {

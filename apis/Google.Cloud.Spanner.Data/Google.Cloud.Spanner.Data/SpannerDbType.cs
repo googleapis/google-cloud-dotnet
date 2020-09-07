@@ -70,6 +70,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Bytes { get; } = new SpannerDbType(TypeCode.Bytes);
 
+        /// <summary>
+        /// A fixed-point number with 29 decimal digits of precision in the whole component and 9 decimal digits of precision in the fractional component.
+        /// </summary>
+        public static SpannerDbType Numeric { get; } = new SpannerDbType(TypeCode.Numeric);
+
         private static readonly Dictionary<TypeCode, SpannerDbType> s_simpleTypes
             = new Dictionary<TypeCode, SpannerDbType>
             {
@@ -80,7 +85,8 @@ namespace Google.Cloud.Spanner.Data
                 {TypeCode.Timestamp, Timestamp },
                 {TypeCode.Date, Date },
                 {TypeCode.String, String },
-                {TypeCode.Bytes, Bytes }
+                {TypeCode.Bytes, Bytes },
+                {TypeCode.Numeric, Numeric }
             };
 
         internal static SpannerDbType FromTypeCode(TypeCode code) 
@@ -174,6 +180,8 @@ namespace Google.Cloud.Spanner.Data
                         return typeof(List<>).MakeGenericType(ArrayElementType.DefaultClrType);
                     case TypeCode.Struct:
                         return typeof(SpannerStruct);
+                    case TypeCode.Numeric:
+                        return typeof(SpannerNumeric);
                     default:
                         //if we don't recognize it (or its a struct), we use the google native wellknown type.
                         return typeof(Value);
@@ -240,6 +248,13 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal static SpannerDbType ForStruct(SpannerStruct spannerStruct) =>
             new SpannerDbType(TypeCode.Struct, spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
+
+        /// <summary>
+        /// Factory method for creating a SpannerDbType from SpannerNumeric. Public access would be via the instance
+        /// method; making this internal allows us to avoid exposing constructors even internally.
+        /// </summary>
+        internal static SpannerDbType ForNumeric(SpannerNumeric spannerNumeric) =>
+            new SpannerDbType(TypeCode.Numeric);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.

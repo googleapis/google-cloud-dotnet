@@ -76,6 +76,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_int64]
         // [START spanner_test_write_read_float64]
         // [END spanner_test_write_read_float64]
+        // [START spanner_test_write_read_numeric]
+        // [END spanner_test_write_read_numeric]
         // [START spanner_test_write_read_string]
         // [END spanner_test_write_read_string]
         // [START spanner_test_write_read_bytes]
@@ -90,6 +92,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_int64_array]
         // [START spanner_test_write_read_float64_array]
         // [END spanner_test_write_read_float64_array]
+        // [START spanner_test_write_read_numeric_array]
+        // [END spanner_test_write_read_numeric_array]
         // [START spanner_test_write_read_string_array]
         // [END spanner_test_write_read_string_array]
         // [START spanner_test_write_read_bytes_array]
@@ -106,6 +110,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             bool?[] bArray = { true, null, false };
             long?[] lArray = { 0, null, 1 };
             double?[] dArray = { 0.0, null, 2.0 };
+            SpannerNumeric?[] nArray = { SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("2.0") };
             string[] sArray = { "abc", null, "123" };
             string[] bArrayArray =
             {
@@ -134,6 +139,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), dtArray }
             };
 
+            // The emulator doesn't yet support the NUMERIC type.
+            if (!_fixture.RunningOnEmulator)
+            {
+                parameters.Add("NumericValue", SpannerDbType.Numeric, SpannerNumeric.Parse("2.0"));
+                parameters.Add("NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray);
+            }
+
             Assert.Equal(1, await InsertAsync(parameters));
             await WithLastRowAsync(reader =>
             {
@@ -153,6 +165,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(bArrayArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("BytesArrayValue")));
                 Assert.Equal(tmArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(dtArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
+                if (!_fixture.RunningOnEmulator)
+                {
+                    Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
+                    Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
+                }
             });
         }
 
@@ -210,6 +227,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_empty_int64_array]
         // [START spanner_test_write_read_empty_float64_array]
         // [END spanner_test_write_read_empty_float64_array]
+        // [START spanner_test_write_read_empty_numeric_array]
+        // [END spanner_test_write_read_empty_numeric_array]
         // [START spanner_test_write_read_empty_string_array]
         // [END spanner_test_write_read_empty_string_array]
         // [START spanner_test_write_read_empty_bytes_array]
@@ -231,8 +250,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), new DateTime[0] },
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), new DateTime[0] }
             };
-            Assert.Equal(1, await InsertAsync(parameters));
 
+            // The emulator doesn't yet support the NUMERIC type.
+            if (!_fixture.RunningOnEmulator)
+            {
+                parameters.Add("NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[0]);
+            }
+
+            Assert.Equal(1, await InsertAsync(parameters));
             await WithLastRowAsync(reader =>
             {
                 Assert.Equal(new bool[] { }, reader.GetFieldValue<bool[]>(reader.GetOrdinal("BoolArrayValue")));
@@ -243,6 +268,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(
                     new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(new DateTime[] { }, reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
+                if (!_fixture.RunningOnEmulator)
+                {
+                    Assert.Equal(new SpannerNumeric[] { }, reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
+                }
             });
         }
 
@@ -275,6 +304,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_null_int64]
         // [START spanner_test_write_read_null_float64]
         // [END spanner_test_write_read_null_float64]
+        // [START spanner_test_write_read_null_numeric]
+        // [END spanner_test_write_read_null_numeric]
         // [START spanner_test_write_read_null_string]
         // [END spanner_test_write_read_null_string]
         // [START spanner_test_write_read_null_bytes]
@@ -289,6 +320,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_write_read_null_int64_array]
         // [START spanner_test_write_read_null_float64_array]
         // [END spanner_test_write_read_null_float64_array]
+        // [START spanner_test_write_read_null_numeric_array]
+        // [END spanner_test_write_read_null_numeric_array]
         // [START spanner_test_write_read_null_string_array]
         // [END spanner_test_write_read_null_string_array]
         // [START spanner_test_write_read_null_bytes_array]
@@ -318,6 +351,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null }
             };
 
+            // The emulator doesn't yet support the NUMERIC type.
+            if (!_fixture.RunningOnEmulator)
+            {
+                parameters.Add("NumericValue", SpannerDbType.Numeric, null);
+                parameters.Add("NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null);
+            }
+
             Assert.Equal(1, await InsertAsync(parameters));
             await WithLastRowAsync(reader =>
             {
@@ -335,6 +375,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
+                if (!_fixture.RunningOnEmulator)
+                {
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericValue")));
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
+                }
             });
         }
 
