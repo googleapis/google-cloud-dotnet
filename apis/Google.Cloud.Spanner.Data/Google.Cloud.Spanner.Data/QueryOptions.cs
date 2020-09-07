@@ -26,7 +26,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The query optimizer version configured in the options.
         /// </summary>
-        public string OptimizerVersion { get => Proto.OptimizerVersion; }
+        public string OptimizerVersion => Proto.OptimizerVersion;
+
+        /// <summary>
+        /// The query optimizer statistics package configured in the options.
+        /// </summary>
+        public string OptimizerStatisticsPackage => Proto.OptimizerStatisticsPackage;
 
         /// <summary>
         /// Clones the options and sets the optimizer version to the given value.
@@ -48,6 +53,29 @@ namespace Google.Cloud.Spanner.Data
         {
            var protoCopy = Proto.Clone();
            protoCopy.OptimizerVersion = optimizerVersion;
+           return new QueryOptions(protoCopy);
+        }
+
+        /// <summary>
+        /// Clones the options and sets the optimizer statistics package to the given value.
+        /// </summary>
+        /// <returns>
+        /// A clone of the options with the updated optimizer statistics package.
+        /// </returns>
+        /// <remarks>
+        /// <para>The parameter allows individual queries to pick different query
+        /// optimizer statistics packages.</para>
+        /// <para>Specifying "latest" as a value instructs Cloud Spanner to use the
+        /// latest supported query optimizer statistics package. If not specified,
+        /// Cloud Spanner uses the optimizer statistics package set at the database
+        /// level options. Any other supported statistics package value overrides
+        /// the default optimizer statistics package for query execution.</para>
+        /// </remarks>
+        /// <param name="optimizerStatisticsPackage">Optimizer statistics package to set.</param>
+        public QueryOptions WithOptimizerStatisticsPackage(string optimizerStatisticsPackage)
+        {
+           var protoCopy = Proto.Clone();
+           protoCopy.OptimizerStatisticsPackage = optimizerStatisticsPackage;
            return new QueryOptions(protoCopy);
         }
 
@@ -83,7 +111,10 @@ namespace Google.Cloud.Spanner.Data
         public V1.ExecuteSqlRequest.Types.QueryOptions ToProto() => Proto.Clone();
 
         /// <inheritdoc />
-        public bool Equals(QueryOptions other) => other is object && OptimizerVersion == other.OptimizerVersion;
+        public bool Equals(QueryOptions other) =>
+            other is object &&
+            OptimizerVersion == other.OptimizerVersion &&
+            OptimizerStatisticsPackage == other.OptimizerStatisticsPackage;
 
         /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as QueryOptions);

@@ -26,6 +26,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var proto = new V1.ExecuteSqlRequest.Types.QueryOptions();
             var queryOptions = QueryOptions.FromProto(proto);
             Assert.Equal("", queryOptions.OptimizerVersion);
+            Assert.Equal("", queryOptions.OptimizerStatisticsPackage);
         }
 
         [Fact]
@@ -33,6 +34,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var queryOptions = QueryOptions.Empty;
             Assert.Equal("", queryOptions.OptimizerVersion);
+            Assert.Equal("", queryOptions.OptimizerStatisticsPackage);
         }
 
         [Fact]
@@ -40,6 +42,13 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var queryOptions = QueryOptions.Empty.WithOptimizerVersion("latest");
             Assert.Equal("latest", queryOptions.OptimizerVersion);
+        }
+
+        [Fact]
+        public void SetAndGetOptimizerStatisticsPackage()
+        {
+            var queryOptions = QueryOptions.Empty.WithOptimizerStatisticsPackage("latest");
+            Assert.Equal("latest", queryOptions.OptimizerStatisticsPackage);
         }
     }
 }
