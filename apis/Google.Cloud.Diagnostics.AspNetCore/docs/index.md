@@ -13,6 +13,12 @@ Logging and Stackdriver Trace, and integrates with ASP.NET Core 2.1
 
 {{auth}}
 
+See [API Permissions for `entries.write`](https://cloud.google.com/logging/docs/access-control#api-permissions)
+for the permissions needed for Logging and Error Reporting.
+
+See [API Permissions for PatchTraces](https://cloud.google.com/trace/docs/iam#api_permissions)
+for the permissions needed for Tracing.
+
 # Note
 The Google.Cloud.Diagnostics.AspNetCore package attempts to collect the filename and line number when
 entries are collected. However, to be able to collect this information PDBs must be included with
