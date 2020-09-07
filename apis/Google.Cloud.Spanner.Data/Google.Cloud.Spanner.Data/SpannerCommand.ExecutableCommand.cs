@@ -54,6 +54,7 @@ namespace Google.Cloud.Spanner.Data
             }
 
             private const string SpannerOptimizerVersionVariable = "SPANNER_OPTIMIZER_VERSION";
+            private const string SpannerOptimizerStatisticsPackageVariable = "SPANNER_OPTIMIZER_STATISTICS_PACKAGE";
 
             internal SpannerConnection Connection { get; }
             internal SpannerCommandTextBuilder CommandTextBuilder { get; }
@@ -362,7 +363,8 @@ namespace Google.Cloud.Spanner.Data
                 // Query options set through an environment variable have the next highest precedence.
                 var envQueryOptionsProto = new V1.ExecuteSqlRequest.Types.QueryOptions
                 {
-                    OptimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? ""
+                    OptimizerVersion = Environment.GetEnvironmentVariable(SpannerOptimizerVersionVariable)?.Trim() ?? "",
+                    OptimizerStatisticsPackage = Environment.GetEnvironmentVariable(SpannerOptimizerStatisticsPackageVariable)?.Trim() ?? ""
                 };
                 queryOptionsProto.MergeFrom(envQueryOptionsProto);
 
