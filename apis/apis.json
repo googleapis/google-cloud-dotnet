@@ -1186,6 +1186,24 @@
       ]
     },
     {
+      "id": "Google.Cloud.Security.PrivateCA.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Certificate Authority API",
+      "productUrl": "https://cloud.google.com/certificate-authority-service/",
+      "description": "Recommended Google client library to access the Certificate Authority Service API version v1beta1",
+      "tags": [
+        "security",
+        "certificates",
+        "private-ca"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/security/privateca/v1beta1"
+    },
+    {
       "id": "Google.Cloud.SecurityCenter.Settings.V1Beta1",
       "generator": "micro",
       "protoPath": "google/cloud/securitycenter/settings/v1beta1",
