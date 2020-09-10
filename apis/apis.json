@@ -481,7 +481,8 @@
       "testDependencies": {
         "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta02",
         "Microsoft.AspNetCore.Http": "2.1.1"
-      }
+      },
+      "noVersionHistory": true
     },
     {
       "id": "Google.Cloud.Dialogflow.V2",
@@ -1315,7 +1316,8 @@
         "Google.Cloud.Iam.V1": "2.0.0",
         "Google.Cloud.Spanner.Common.V1": "project",
         "Grpc.Core": "2.31.0"
-      }
+      },
+      "noVersionHistory": true
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Instance.V1",
@@ -1337,7 +1339,8 @@
         "Google.Cloud.Iam.V1": "2.0.0",
         "Google.Cloud.Spanner.Common.V1": "project",
         "Grpc.Core": "2.31.0"
-      }
+      },
+      "noVersionHistory": true
     },
     {
       "id": "Google.Cloud.Spanner.Data",
@@ -1375,7 +1378,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax": "3.1.0"
-      }
+      },
+      "noVersionHistory": true
     },
     {
       "id": "Google.Cloud.Spanner.V1",
@@ -1395,7 +1399,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.1.0",
         "Google.Cloud.Spanner.Common.V1": "project",
         "Grpc.Core": "2.31.0"
-      }
+      },
+      "noVersionHistory": true
     },
     {
       "id": "Google.Cloud.Speech.V1",
