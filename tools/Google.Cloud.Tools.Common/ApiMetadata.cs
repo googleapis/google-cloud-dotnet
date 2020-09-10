@@ -112,6 +112,12 @@ namespace Google.Cloud.Tools.Common
         public string PackageOwner { get; set; }
 
         /// <summary>
+        /// When set to <c>true</c>, this API is skipped by the update-history command in ReleaseManager.
+        /// </summary>
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool NoVersionHistory { get; set; }
+
+        /// <summary>
         /// The effective package owner, taking account of <see cref="PackageOwner"/> and (if that is unset) the package ID.
         /// </summary>
         [JsonIgnore]

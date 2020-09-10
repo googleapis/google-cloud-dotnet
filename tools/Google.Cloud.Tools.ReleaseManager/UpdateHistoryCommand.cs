@@ -48,6 +48,11 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
+            if (api.NoVersionHistory)
+            {
+                Console.WriteLine($"Skipping version history update for {id}");
+                return;
+            }
             string historyFilePath = HistoryFile.GetPathForPackage(id);
 
             var root = DirectoryLayout.DetermineRootDirectory();
