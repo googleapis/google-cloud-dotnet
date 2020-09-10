@@ -708,59 +708,5 @@ namespace Google.Cloud.Asset.V1.Tests
             await client.DeleteFeedAsync(request.FeedName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
-
-        [xunit::FactAttribute]
-        public void AnalyzeIamPolicyRequestObject()
-        {
-            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            AnalyzeIamPolicyRequest request = new AnalyzeIamPolicyRequest
-            {
-                AnalysisQuery = new IamPolicyAnalysisQuery(),
-                ExecutionTimeout = new wkt::Duration(),
-            };
-            AnalyzeIamPolicyResponse expectedResponse = new AnalyzeIamPolicyResponse
-            {
-                MainAnalysis = new AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis(),
-                ServiceAccountImpersonationAnalysis =
-                {
-                    new AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis(),
-                },
-                FullyExplored = false,
-            };
-            mockGrpcClient.Setup(x => x.AnalyzeIamPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            AnalyzeIamPolicyResponse response = client.AnalyzeIamPolicy(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AnalyzeIamPolicyRequestObjectAsync()
-        {
-            moq::Mock<AssetService.AssetServiceClient> mockGrpcClient = new moq::Mock<AssetService.AssetServiceClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
-            AnalyzeIamPolicyRequest request = new AnalyzeIamPolicyRequest
-            {
-                AnalysisQuery = new IamPolicyAnalysisQuery(),
-                ExecutionTimeout = new wkt::Duration(),
-            };
-            AnalyzeIamPolicyResponse expectedResponse = new AnalyzeIamPolicyResponse
-            {
-                MainAnalysis = new AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis(),
-                ServiceAccountImpersonationAnalysis =
-                {
-                    new AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis(),
-                },
-                FullyExplored = false,
-            };
-            mockGrpcClient.Setup(x => x.AnalyzeIamPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnalyzeIamPolicyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AssetServiceClient client = new AssetServiceClientImpl(mockGrpcClient.Object, null);
-            AnalyzeIamPolicyResponse responseCallSettings = await client.AnalyzeIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            AnalyzeIamPolicyResponse responseCancellationToken = await client.AnalyzeIamPolicyAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
     }
 }
