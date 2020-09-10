@@ -36,36 +36,63 @@ namespace Google.Cloud.SecretManager.V1 {
             "MS5TZWNyZXQuTGFiZWxzRW50cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
             "ASgJEg0KBXZhbHVlGAIgASgJOgI4ATpN6kFKCiNzZWNyZXRtYW5hZ2VyLmdv",
             "b2dsZWFwaXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3Jl",
-            "dHMve3NlY3JldH0ikQMKDVNlY3JldFZlcnNpb24SEQoEbmFtZRgBIAEoCUID",
+            "dHMve3NlY3JldH0i3wMKDVNlY3JldFZlcnNpb24SEQoEbmFtZRgBIAEoCUID",
             "4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
             "bWVzdGFtcEID4EEDEjUKDGRlc3Ryb3lfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
             "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJGCgVzdGF0ZRgEIAEoDjIyLmdvb2ds",
             "ZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlNlY3JldFZlcnNpb24uU3RhdGVC",
-            "A+BBAyJICgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0VOQUJM",
-            "RUQQARIMCghESVNBQkxFRBACEg0KCURFU1RST1lFRBADOm7qQWsKKnNlY3Jl",
-            "dG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbhI9cHJvamVj",
-            "dHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH0vdmVyc2lvbnMve3NlY3Jl",
-            "dF92ZXJzaW9ufSLIAgoLUmVwbGljYXRpb24SSQoJYXV0b21hdGljGAEgASgL",
-            "MjQuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb24u",
-            "QXV0b21hdGljSAASTgoMdXNlcl9tYW5hZ2VkGAIgASgLMjYuZ29vZ2xlLmNs",
-            "b3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb24uVXNlck1hbmFnZWRI",
-            "ABoLCglBdXRvbWF0aWMagQEKC1VzZXJNYW5hZ2VkElUKCHJlcGxpY2FzGAEg",
-            "AygLMj4uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRp",
-            "b24uVXNlck1hbmFnZWQuUmVwbGljYUID4EECGhsKB1JlcGxpY2ESEAoIbG9j",
-            "YXRpb24YASABKAlCDQoLcmVwbGljYXRpb24iHQoNU2VjcmV0UGF5bG9hZBIM",
-            "CgRkYXRhGAEgASgMQu0BCiFjb20uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFn",
-            "ZXIudjFCDlJlc291cmNlc1Byb3RvUAFaSmdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjcmV0bWFuYWdlci92MTtzZWNy",
-            "ZXRtYW5hZ2Vy+AEBogIDR1NNqgIdR29vZ2xlLkNsb3VkLlNlY3JldE1hbmFn",
-            "ZXIuVjHKAh1Hb29nbGVcQ2xvdWRcU2VjcmV0TWFuYWdlclxWMeoCIEdvb2ds",
-            "ZTo6Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "A+BBAxJMChJyZXBsaWNhdGlvbl9zdGF0dXMYBSABKAsyMC5nb29nbGUuY2xv",
+            "dWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1cyJICgVTdGF0",
+            "ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNB",
+            "QkxFRBACEg0KCURFU1RST1lFRBADOm7qQWsKKnNlY3JldG1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbhI9cHJvamVjdHMve3Byb2plY3R9",
+            "L3NlY3JldHMve3NlY3JldH0vdmVyc2lvbnMve3NlY3JldF92ZXJzaW9ufSKQ",
+            "BAoLUmVwbGljYXRpb24SSQoJYXV0b21hdGljGAEgASgLMjQuZ29vZ2xlLmNs",
+            "b3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb24uQXV0b21hdGljSAAS",
+            "TgoMdXNlcl9tYW5hZ2VkGAIgASgLMjYuZ29vZ2xlLmNsb3VkLnNlY3JldG1h",
+            "bmFnZXIudjEuUmVwbGljYXRpb24uVXNlck1hbmFnZWRIABpvCglBdXRvbWF0",
+            "aWMSYgobY3VzdG9tZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAEgASgLMjguZ29v",
+            "Z2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5j",
+            "cnlwdGlvbkID4EEBGuUBCgtVc2VyTWFuYWdlZBJVCghyZXBsaWNhcxgBIAMo",
+            "CzI+Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9u",
+            "LlVzZXJNYW5hZ2VkLlJlcGxpY2FCA+BBAhp/CgdSZXBsaWNhEhAKCGxvY2F0",
+            "aW9uGAEgASgJEmIKG2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgCIAEo",
+            "CzI4Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFu",
+            "YWdlZEVuY3J5cHRpb25CA+BBAUINCgtyZXBsaWNhdGlvbiI2ChlDdXN0b21l",
+            "ck1hbmFnZWRFbmNyeXB0aW9uEhkKDGttc19rZXlfbmFtZRgBIAEoCUID4EEC",
+            "IusEChFSZXBsaWNhdGlvblN0YXR1cxJVCglhdXRvbWF0aWMYASABKAsyQC5n",
+            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1",
+            "cy5BdXRvbWF0aWNTdGF0dXNIABJaCgx1c2VyX21hbmFnZWQYAiABKAsyQi5n",
+            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1",
+            "cy5Vc2VyTWFuYWdlZFN0YXR1c0gAGnsKD0F1dG9tYXRpY1N0YXR1cxJoChtj",
+            "dXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YASABKAsyPi5nb29nbGUuY2xv",
+            "dWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRFbmNyeXB0aW9u",
+            "U3RhdHVzQgPgQQMajwIKEVVzZXJNYW5hZ2VkU3RhdHVzEmcKCHJlcGxpY2Fz",
+            "GAEgAygLMlAuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGlj",
+            "YXRpb25TdGF0dXMuVXNlck1hbmFnZWRTdGF0dXMuUmVwbGljYVN0YXR1c0ID",
+            "4EEDGpABCg1SZXBsaWNhU3RhdHVzEhUKCGxvY2F0aW9uGAEgASgJQgPgQQMS",
+            "aAobY3VzdG9tZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAIgASgLMj4uZ29vZ2xl",
+            "LmNsb3VkLnNlY3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlw",
+            "dGlvblN0YXR1c0ID4EEDQhQKEnJlcGxpY2F0aW9uX3N0YXR1cyJECh9DdXN0",
+            "b21lck1hbmFnZWRFbmNyeXB0aW9uU3RhdHVzEiEKFGttc19rZXlfdmVyc2lv",
+            "bl9uYW1lGAEgASgJQgPgQQIiHQoNU2VjcmV0UGF5bG9hZBIMCgRkYXRhGAEg",
+            "ASgMQu0BCiFjb20uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjFCDlJl",
+            "c291cmNlc1Byb3RvUAFaSmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvc2VjcmV0bWFuYWdlci92MTtzZWNyZXRtYW5hZ2Vy",
+            "+AEBogIDR1NNqgIdR29vZ2xlLkNsb3VkLlNlY3JldE1hbmFnZXIuVjHKAh1H",
+            "b29nbGVcQ2xvdWRcU2VjcmV0TWFuYWdlclxWMeoCIEdvb2dsZTo6Q2xvdWQ6",
+            "OlNlY3JldE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication), global::Google.Cloud.SecretManager.V1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication), global::Google.Cloud.SecretManager.V1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption), global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "ReplicationStatus" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus), global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus.Parser, new[]{ "KmsKeyVersionName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretPayload), global::Google.Cloud.SecretManager.V1.SecretPayload.Parser, new[]{ "Data" }, null, null, null, null)
           }));
     }
@@ -353,6 +380,7 @@ namespace Google.Cloud.SecretManager.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       destroyTime_ = other.destroyTime_ != null ? other.destroyTime_.Clone() : null;
       state_ = other.state_;
+      replicationStatus_ = other.replicationStatus_ != null ? other.replicationStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -423,6 +451,20 @@ namespace Google.Cloud.SecretManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "replication_status" field.</summary>
+    public const int ReplicationStatusFieldNumber = 5;
+    private global::Google.Cloud.SecretManager.V1.ReplicationStatus replicationStatus_;
+    /// <summary>
+    /// The replication status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecretManager.V1.ReplicationStatus ReplicationStatus {
+      get { return replicationStatus_; }
+      set {
+        replicationStatus_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SecretVersion);
@@ -440,6 +482,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(DestroyTime, other.DestroyTime)) return false;
       if (State != other.State) return false;
+      if (!object.Equals(ReplicationStatus, other.ReplicationStatus)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -450,6 +493,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (destroyTime_ != null) hash ^= DestroyTime.GetHashCode();
       if (State != global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (replicationStatus_ != null) hash ^= ReplicationStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -479,6 +523,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(32);
         output.WriteEnum((int) State);
       }
+      if (replicationStatus_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ReplicationStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -498,6 +546,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (State != global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (replicationStatus_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReplicationStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -527,6 +578,12 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (other.State != global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.replicationStatus_ != null) {
+        if (replicationStatus_ == null) {
+          ReplicationStatus = new global::Google.Cloud.SecretManager.V1.ReplicationStatus();
+        }
+        ReplicationStatus.MergeFrom(other.ReplicationStatus);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -559,6 +616,13 @@ namespace Google.Cloud.SecretManager.V1 {
           }
           case 32: {
             State = (global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (replicationStatus_ == null) {
+              ReplicationStatus = new global::Google.Cloud.SecretManager.V1.ReplicationStatus();
+            }
+            input.ReadMessage(ReplicationStatus);
             break;
           }
         }
@@ -600,7 +664,7 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
-  /// A policy that defines the replication configuration of data.
+  /// A policy that defines the replication and encryption configuration of data.
   /// </summary>
   public sealed partial class Replication : pb::IMessage<Replication> {
     private static readonly pb::MessageParser<Replication> _parser = new pb::MessageParser<Replication>(() => new Replication());
@@ -843,12 +907,32 @@ namespace Google.Cloud.SecretManager.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Automatic(Automatic other) : this() {
+          customerManagedEncryption_ = other.customerManagedEncryption_ != null ? other.customerManagedEncryption_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Automatic Clone() {
           return new Automatic(this);
+        }
+
+        /// <summary>Field number for the "customer_managed_encryption" field.</summary>
+        public const int CustomerManagedEncryptionFieldNumber = 1;
+        private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption customerManagedEncryption_;
+        /// <summary>
+        /// Optional. The customer-managed encryption configuration of the [Secret][google.cloud.secretmanager.v1.Secret]. If no
+        /// configuration is provided, Google-managed default encryption is used.
+        ///
+        /// Updates to the [Secret][google.cloud.secretmanager.v1.Secret] encryption configuration only apply to
+        /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added afterwards. They do not apply
+        /// retroactively to existing [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption CustomerManagedEncryption {
+          get { return customerManagedEncryption_; }
+          set {
+            customerManagedEncryption_ = value;
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -864,12 +948,14 @@ namespace Google.Cloud.SecretManager.V1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (!object.Equals(CustomerManagedEncryption, other.CustomerManagedEncryption)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
+          if (customerManagedEncryption_ != null) hash ^= CustomerManagedEncryption.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -883,6 +969,10 @@ namespace Google.Cloud.SecretManager.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+          if (customerManagedEncryption_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CustomerManagedEncryption);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -891,6 +981,9 @@ namespace Google.Cloud.SecretManager.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
+          if (customerManagedEncryption_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerManagedEncryption);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -901,6 +994,12 @@ namespace Google.Cloud.SecretManager.V1 {
         public void MergeFrom(Automatic other) {
           if (other == null) {
             return;
+          }
+          if (other.customerManagedEncryption_ != null) {
+            if (customerManagedEncryption_ == null) {
+              CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption();
+            }
+            CustomerManagedEncryption.MergeFrom(other.CustomerManagedEncryption);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -913,6 +1012,13 @@ namespace Google.Cloud.SecretManager.V1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
+              case 10: {
+                if (customerManagedEncryption_ == null) {
+                  CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption();
+                }
+                input.ReadMessage(CustomerManagedEncryption);
+                break;
+              }
             }
           }
         }
@@ -1080,6 +1186,7 @@ namespace Google.Cloud.SecretManager.V1 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public Replica(Replica other) : this() {
               location_ = other.location_;
+              customerManagedEncryption_ = other.customerManagedEncryption_ != null ? other.customerManagedEncryption_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -1103,6 +1210,26 @@ namespace Google.Cloud.SecretManager.V1 {
               }
             }
 
+            /// <summary>Field number for the "customer_managed_encryption" field.</summary>
+            public const int CustomerManagedEncryptionFieldNumber = 2;
+            private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption customerManagedEncryption_;
+            /// <summary>
+            /// Optional. The customer-managed encryption configuration of the [User-Managed
+            /// Replica][Replication.UserManaged.Replica]. If no configuration is
+            /// provided, Google-managed default encryption is used.
+            ///
+            /// Updates to the [Secret][google.cloud.secretmanager.v1.Secret] encryption configuration only apply to
+            /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion] added afterwards. They do not apply
+            /// retroactively to existing [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption CustomerManagedEncryption {
+              get { return customerManagedEncryption_; }
+              set {
+                customerManagedEncryption_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override bool Equals(object other) {
               return Equals(other as Replica);
@@ -1117,6 +1244,7 @@ namespace Google.Cloud.SecretManager.V1 {
                 return true;
               }
               if (Location != other.Location) return false;
+              if (!object.Equals(CustomerManagedEncryption, other.CustomerManagedEncryption)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -1124,6 +1252,7 @@ namespace Google.Cloud.SecretManager.V1 {
             public override int GetHashCode() {
               int hash = 1;
               if (Location.Length != 0) hash ^= Location.GetHashCode();
+              if (customerManagedEncryption_ != null) hash ^= CustomerManagedEncryption.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -1141,6 +1270,10 @@ namespace Google.Cloud.SecretManager.V1 {
                 output.WriteRawTag(10);
                 output.WriteString(Location);
               }
+              if (customerManagedEncryption_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(CustomerManagedEncryption);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -1151,6 +1284,9 @@ namespace Google.Cloud.SecretManager.V1 {
               int size = 0;
               if (Location.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+              }
+              if (customerManagedEncryption_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerManagedEncryption);
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -1166,6 +1302,12 @@ namespace Google.Cloud.SecretManager.V1 {
               if (other.Location.Length != 0) {
                 Location = other.Location;
               }
+              if (other.customerManagedEncryption_ != null) {
+                if (customerManagedEncryption_ == null) {
+                  CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption();
+                }
+                CustomerManagedEncryption.MergeFrom(other.CustomerManagedEncryption);
+              }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
 
@@ -1179,6 +1321,13 @@ namespace Google.Cloud.SecretManager.V1 {
                     break;
                   case 10: {
                     Location = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (customerManagedEncryption_ == null) {
+                      CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption();
+                    }
+                    input.ReadMessage(CustomerManagedEncryption);
                     break;
                   }
                 }
@@ -1198,6 +1347,974 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
+  /// Configuration for encrypting secret payloads using customer-managed
+  /// encryption keys (CMEK).
+  /// </summary>
+  public sealed partial class CustomerManagedEncryption : pb::IMessage<CustomerManagedEncryption> {
+    private static readonly pb::MessageParser<CustomerManagedEncryption> _parser = new pb::MessageParser<CustomerManagedEncryption>(() => new CustomerManagedEncryption());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CustomerManagedEncryption> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomerManagedEncryption() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomerManagedEncryption(CustomerManagedEncryption other) : this() {
+      kmsKeyName_ = other.kmsKeyName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomerManagedEncryption Clone() {
+      return new CustomerManagedEncryption(this);
+    }
+
+    /// <summary>Field number for the "kms_key_name" field.</summary>
+    public const int KmsKeyNameFieldNumber = 1;
+    private string kmsKeyName_ = "";
+    /// <summary>
+    /// Required. The resource name of the Cloud KMS CryptoKey used to encrypt secret
+    /// payloads.
+    ///
+    /// For secrets using the [UserManaged][google.cloud.secretmanager.v1.Replication.UserManaged] replication
+    /// policy type, Cloud KMS CryptoKeys must reside in the same location as the
+    /// [replica location][Secret.UserManaged.Replica.location].
+    ///
+    /// For secrets using the [Automatic][google.cloud.secretmanager.v1.Replication.Automatic] replication policy
+    /// type, Cloud KMS CryptoKeys must reside in `global`.
+    ///
+    /// The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KmsKeyName {
+      get { return kmsKeyName_; }
+      set {
+        kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CustomerManagedEncryption);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CustomerManagedEncryption other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (KmsKeyName != other.KmsKeyName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(KmsKeyName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (KmsKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CustomerManagedEncryption other) {
+      if (other == null) {
+        return;
+      }
+      if (other.KmsKeyName.Length != 0) {
+        KmsKeyName = other.KmsKeyName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  /// The replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+  /// </summary>
+  public sealed partial class ReplicationStatus : pb::IMessage<ReplicationStatus> {
+    private static readonly pb::MessageParser<ReplicationStatus> _parser = new pb::MessageParser<ReplicationStatus>(() => new ReplicationStatus());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ReplicationStatus> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplicationStatus() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplicationStatus(ReplicationStatus other) : this() {
+      switch (other.ReplicationStatusCase) {
+        case ReplicationStatusOneofCase.Automatic:
+          Automatic = other.Automatic.Clone();
+          break;
+        case ReplicationStatusOneofCase.UserManaged:
+          UserManaged = other.UserManaged.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplicationStatus Clone() {
+      return new ReplicationStatus(this);
+    }
+
+    /// <summary>Field number for the "automatic" field.</summary>
+    public const int AutomaticFieldNumber = 1;
+    /// <summary>
+    /// Describes the replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with
+    /// automatic replication.
+    ///
+    /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has an automatic replication
+    /// policy.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus Automatic {
+      get { return replicationStatusCase_ == ReplicationStatusOneofCase.Automatic ? (global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus) replicationStatus_ : null; }
+      set {
+        replicationStatus_ = value;
+        replicationStatusCase_ = value == null ? ReplicationStatusOneofCase.None : ReplicationStatusOneofCase.Automatic;
+      }
+    }
+
+    /// <summary>Field number for the "user_managed" field.</summary>
+    public const int UserManagedFieldNumber = 2;
+    /// <summary>
+    /// Describes the replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] with
+    /// user-managed replication.
+    ///
+    /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has a user-managed replication
+    /// policy.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus UserManaged {
+      get { return replicationStatusCase_ == ReplicationStatusOneofCase.UserManaged ? (global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus) replicationStatus_ : null; }
+      set {
+        replicationStatus_ = value;
+        replicationStatusCase_ = value == null ? ReplicationStatusOneofCase.None : ReplicationStatusOneofCase.UserManaged;
+      }
+    }
+
+    private object replicationStatus_;
+    /// <summary>Enum of possible cases for the "replication_status" oneof.</summary>
+    public enum ReplicationStatusOneofCase {
+      None = 0,
+      Automatic = 1,
+      UserManaged = 2,
+    }
+    private ReplicationStatusOneofCase replicationStatusCase_ = ReplicationStatusOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ReplicationStatusOneofCase ReplicationStatusCase {
+      get { return replicationStatusCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearReplicationStatus() {
+      replicationStatusCase_ = ReplicationStatusOneofCase.None;
+      replicationStatus_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ReplicationStatus);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ReplicationStatus other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Automatic, other.Automatic)) return false;
+      if (!object.Equals(UserManaged, other.UserManaged)) return false;
+      if (ReplicationStatusCase != other.ReplicationStatusCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (replicationStatusCase_ == ReplicationStatusOneofCase.Automatic) hash ^= Automatic.GetHashCode();
+      if (replicationStatusCase_ == ReplicationStatusOneofCase.UserManaged) hash ^= UserManaged.GetHashCode();
+      hash ^= (int) replicationStatusCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (replicationStatusCase_ == ReplicationStatusOneofCase.Automatic) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Automatic);
+      }
+      if (replicationStatusCase_ == ReplicationStatusOneofCase.UserManaged) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UserManaged);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (replicationStatusCase_ == ReplicationStatusOneofCase.Automatic) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Automatic);
+      }
+      if (replicationStatusCase_ == ReplicationStatusOneofCase.UserManaged) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserManaged);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ReplicationStatus other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ReplicationStatusCase) {
+        case ReplicationStatusOneofCase.Automatic:
+          if (Automatic == null) {
+            Automatic = new global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus();
+          }
+          Automatic.MergeFrom(other.Automatic);
+          break;
+        case ReplicationStatusOneofCase.UserManaged:
+          if (UserManaged == null) {
+            UserManaged = new global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus();
+          }
+          UserManaged.MergeFrom(other.UserManaged);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus subBuilder = new global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus();
+            if (replicationStatusCase_ == ReplicationStatusOneofCase.Automatic) {
+              subBuilder.MergeFrom(Automatic);
+            }
+            input.ReadMessage(subBuilder);
+            Automatic = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus subBuilder = new global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus();
+            if (replicationStatusCase_ == ReplicationStatusOneofCase.UserManaged) {
+              subBuilder.MergeFrom(UserManaged);
+            }
+            input.ReadMessage(subBuilder);
+            UserManaged = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReplicationStatus message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// The replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] using automatic replication.
+      ///
+      /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has an automatic replication
+      /// policy.
+      /// </summary>
+      public sealed partial class AutomaticStatus : pb::IMessage<AutomaticStatus> {
+        private static readonly pb::MessageParser<AutomaticStatus> _parser = new pb::MessageParser<AutomaticStatus>(() => new AutomaticStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<AutomaticStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecretManager.V1.ReplicationStatus.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public AutomaticStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public AutomaticStatus(AutomaticStatus other) : this() {
+          customerManagedEncryption_ = other.customerManagedEncryption_ != null ? other.customerManagedEncryption_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public AutomaticStatus Clone() {
+          return new AutomaticStatus(this);
+        }
+
+        /// <summary>Field number for the "customer_managed_encryption" field.</summary>
+        public const int CustomerManagedEncryptionFieldNumber = 1;
+        private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus customerManagedEncryption_;
+        /// <summary>
+        /// Output only. The customer-managed encryption status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only
+        /// populated if customer-managed encryption is used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus CustomerManagedEncryption {
+          get { return customerManagedEncryption_; }
+          set {
+            customerManagedEncryption_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as AutomaticStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(AutomaticStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(CustomerManagedEncryption, other.CustomerManagedEncryption)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (customerManagedEncryption_ != null) hash ^= CustomerManagedEncryption.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (customerManagedEncryption_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(CustomerManagedEncryption);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (customerManagedEncryption_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerManagedEncryption);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(AutomaticStatus other) {
+          if (other == null) {
+            return;
+          }
+          if (other.customerManagedEncryption_ != null) {
+            if (customerManagedEncryption_ == null) {
+              CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus();
+            }
+            CustomerManagedEncryption.MergeFrom(other.CustomerManagedEncryption);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (customerManagedEncryption_ == null) {
+                  CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus();
+                }
+                input.ReadMessage(CustomerManagedEncryption);
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      /// The replication status of a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] using user-managed
+      /// replication.
+      ///
+      /// Only populated if the parent [Secret][google.cloud.secretmanager.v1.Secret] has a user-managed replication
+      /// policy.
+      /// </summary>
+      public sealed partial class UserManagedStatus : pb::IMessage<UserManagedStatus> {
+        private static readonly pb::MessageParser<UserManagedStatus> _parser = new pb::MessageParser<UserManagedStatus>(() => new UserManagedStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<UserManagedStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecretManager.V1.ReplicationStatus.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public UserManagedStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public UserManagedStatus(UserManagedStatus other) : this() {
+          replicas_ = other.replicas_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public UserManagedStatus Clone() {
+          return new UserManagedStatus(this);
+        }
+
+        /// <summary>Field number for the "replicas" field.</summary>
+        public const int ReplicasFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus> _repeated_replicas_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus> replicas_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus>();
+        /// <summary>
+        /// Output only. The list of replica statuses for the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus> Replicas {
+          get { return replicas_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as UserManagedStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(UserManagedStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!replicas_.Equals(other.replicas_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= replicas_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          replicas_.WriteTo(output, _repeated_replicas_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += replicas_.CalculateSize(_repeated_replicas_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(UserManagedStatus other) {
+          if (other == null) {
+            return;
+          }
+          replicas_.Add(other.replicas_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                replicas_.AddEntriesFrom(input, _repeated_replicas_codec);
+                break;
+              }
+            }
+          }
+        }
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the UserManagedStatus message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// Describes the status of a user-managed replica for the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
+          /// </summary>
+          public sealed partial class ReplicaStatus : pb::IMessage<ReplicaStatus> {
+            private static readonly pb::MessageParser<ReplicaStatus> _parser = new pb::MessageParser<ReplicaStatus>(() => new ReplicaStatus());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pb::MessageParser<ReplicaStatus> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public ReplicaStatus() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public ReplicaStatus(ReplicaStatus other) : this() {
+              location_ = other.location_;
+              customerManagedEncryption_ = other.customerManagedEncryption_ != null ? other.customerManagedEncryption_.Clone() : null;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public ReplicaStatus Clone() {
+              return new ReplicaStatus(this);
+            }
+
+            /// <summary>Field number for the "location" field.</summary>
+            public const int LocationFieldNumber = 1;
+            private string location_ = "";
+            /// <summary>
+            /// Output only. The canonical ID of the replica location.
+            /// For example: `"us-east1"`.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public string Location {
+              get { return location_; }
+              set {
+                location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "customer_managed_encryption" field.</summary>
+            public const int CustomerManagedEncryptionFieldNumber = 2;
+            private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus customerManagedEncryption_;
+            /// <summary>
+            /// Output only. The customer-managed encryption status of the [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only
+            /// populated if customer-managed encryption is used.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus CustomerManagedEncryption {
+              get { return customerManagedEncryption_; }
+              set {
+                customerManagedEncryption_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override bool Equals(object other) {
+              return Equals(other as ReplicaStatus);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public bool Equals(ReplicaStatus other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Location != other.Location) return false;
+              if (!object.Equals(CustomerManagedEncryption, other.CustomerManagedEncryption)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Location.Length != 0) hash ^= Location.GetHashCode();
+              if (customerManagedEncryption_ != null) hash ^= CustomerManagedEncryption.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void WriteTo(pb::CodedOutputStream output) {
+              if (Location.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Location);
+              }
+              if (customerManagedEncryption_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(CustomerManagedEncryption);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public int CalculateSize() {
+              int size = 0;
+              if (Location.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+              }
+              if (customerManagedEncryption_ != null) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerManagedEncryption);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(ReplicaStatus other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Location.Length != 0) {
+                Location = other.Location;
+              }
+              if (other.customerManagedEncryption_ != null) {
+                if (customerManagedEncryption_ == null) {
+                  CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus();
+                }
+                CustomerManagedEncryption.MergeFrom(other.CustomerManagedEncryption);
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            public void MergeFrom(pb::CodedInputStream input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Location = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (customerManagedEncryption_ == null) {
+                      CustomerManagedEncryption = new global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus();
+                    }
+                    input.ReadMessage(CustomerManagedEncryption);
+                    break;
+                  }
+                }
+              }
+            }
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Describes the status of customer-managed encryption.
+  /// </summary>
+  public sealed partial class CustomerManagedEncryptionStatus : pb::IMessage<CustomerManagedEncryptionStatus> {
+    private static readonly pb::MessageParser<CustomerManagedEncryptionStatus> _parser = new pb::MessageParser<CustomerManagedEncryptionStatus>(() => new CustomerManagedEncryptionStatus());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CustomerManagedEncryptionStatus> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomerManagedEncryptionStatus() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomerManagedEncryptionStatus(CustomerManagedEncryptionStatus other) : this() {
+      kmsKeyVersionName_ = other.kmsKeyVersionName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CustomerManagedEncryptionStatus Clone() {
+      return new CustomerManagedEncryptionStatus(this);
+    }
+
+    /// <summary>Field number for the "kms_key_version_name" field.</summary>
+    public const int KmsKeyVersionNameFieldNumber = 1;
+    private string kmsKeyVersionName_ = "";
+    /// <summary>
+    /// Required. The resource name of the Cloud KMS CryptoKeyVersion used to encrypt the
+    /// secret payload, in the following format:
+    /// `projects/*/locations/*/keyRings/*/cryptoKeys/*/versions/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KmsKeyVersionName {
+      get { return kmsKeyVersionName_; }
+      set {
+        kmsKeyVersionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CustomerManagedEncryptionStatus);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CustomerManagedEncryptionStatus other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (KmsKeyVersionName != other.KmsKeyVersionName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (KmsKeyVersionName.Length != 0) hash ^= KmsKeyVersionName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (KmsKeyVersionName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(KmsKeyVersionName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (KmsKeyVersionName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyVersionName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CustomerManagedEncryptionStatus other) {
+      if (other == null) {
+        return;
+      }
+      if (other.KmsKeyVersionName.Length != 0) {
+        KmsKeyVersionName = other.KmsKeyVersionName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            KmsKeyVersionName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   /// A secret payload resource in the Secret Manager API. This contains the
   /// sensitive secret payload that is associated with a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
   /// </summary>
@@ -1209,7 +2326,7 @@ namespace Google.Cloud.SecretManager.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
