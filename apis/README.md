@@ -29,3 +29,6 @@ Fields:
 - `protoPath`: The path within the `googleapis` repo to the API definition
 - `serviceYaml`: (GAPIC generator only) The file (one directory above `protoPath`) containing the service definition
 - `shortDescription`: Used when listing APIs (e.g. in README.md) if there's no `productName` and the `description` is too long
+- `noVersionHistory`: When set to `true`, the update-history release manager command skips the API.
+  This is primarily used for libraries which are part of a bigger ecosystem, where
+  another library typically has the version history (e.g. Spanner.Data for all Spanner libraries).
