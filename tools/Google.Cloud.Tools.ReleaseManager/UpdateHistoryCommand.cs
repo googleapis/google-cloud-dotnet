@@ -77,8 +77,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var id = api.Id;
             var pathPrefix = $"apis/{id}/{id}/";
             var projectFile = $"apis/{id}/{id}/{id}.csproj";
-            // Some versions return forward slashes, some return backslashes :(
-            Func<string, bool> pathFilter = path => path.Replace('\\', '/').StartsWith(pathPrefix) && path != projectFile;
+            Func<string, bool> pathFilter = path => path.StartsWith(pathPrefix) && path != projectFile;
 
             List<Release> releases = new List<Release>();
             StructuredVersion currentVersion = StructuredVersion.FromString(api.Version);
@@ -121,8 +120,15 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
                 var tree = commit.Tree;
                 var parentTree = commit.Parents.First().Tree;
+                // If nothing has changed under apis/{id}/{id}, it's definitely not relevant.
+                if (tree[pathPrefix]?.Target.Sha == parentTree[pathPrefix]?.Target.Sha)
+                {
+                    return false;
+                }
+                // Otherwise, check whether something *other* than the project file has changed.
                 var comparison = repo.Diff.Compare<TreeChanges>(parentTree, tree);
-                return comparison.Select(change => change.Path).Any(pathFilter);
+                // Some versions return forward slashes, some return backslashes :(
+                return comparison.Select(change => change.Path.Replace('\\', '/')).Any(pathFilter);
             }
         }
     }
