@@ -99,8 +99,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-            command.QueryOptions = QueryOptions.Empty.WithOptimizerVersion("1");
-            command.QueryOptions = command.QueryOptions.WithOptimizerStatisticsPackage("auto_20191128_14_47_22UTC");
+            command.QueryOptions = QueryOptions.Empty
+                .WithOptimizerVersion("1")
+                .WithOptimizerStatisticsPackage("auto_20191128_14_47_22UTC");
             var command2 = (SpannerCommand)command.Clone();
             Assert.Same(command.SpannerConnection, command2.SpannerConnection);
             Assert.Equal(command.CommandText, command2.CommandText);
@@ -119,9 +120,9 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupExecuteStreamingSql();
 
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
-            queryOptions = queryOptions.WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
-            connection.QueryOptions = queryOptions;
+            connection.QueryOptions = QueryOptions.Empty
+                .WithOptimizerVersion(connOptimizerVersion)
+                .WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             using (var reader = command.ExecuteReader())
@@ -152,9 +153,9 @@ namespace Google.Cloud.Spanner.Data.Tests
                 const string connOptimizerVersion = "1";
                 const string connOptimizerStatisticsPackage = "stats_package_1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-                var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
-                queryOptions = queryOptions.WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
-                connection.QueryOptions = queryOptions;
+                connection.QueryOptions = QueryOptions.Empty
+                    .WithOptimizerVersion(connOptimizerVersion)
+                    .WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
 
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 using (var reader = command.ExecuteReader())
@@ -170,7 +171,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                         request.QueryOptions.OptimizerStatisticsPackage == envOptimizerStatisticsPackage),
                     It.IsAny<CallSettings>()));
             }, envOptimizerVersion, envOptimizerStatisticsPackage);
-
         }
 
         [Fact]
@@ -191,13 +191,14 @@ namespace Google.Cloud.Spanner.Data.Tests
                 const string connOptimizerVersion = "1";
                 const string connOptimizerStatisticsPackage = "stats_package_1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-                var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
-                queryOptions = queryOptions.WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
-                connection.QueryOptions = queryOptions;
+                connection.QueryOptions = QueryOptions.Empty
+                    .WithOptimizerVersion(connOptimizerVersion)
+                    .WithOptimizerStatisticsPackage(connOptimizerStatisticsPackage);
 
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-                command.QueryOptions = QueryOptions.Empty.WithOptimizerVersion(cmdOptimizerVersion);
-                command.QueryOptions = command.QueryOptions.WithOptimizerStatisticsPackage(cmdOptimizerStatisticsPackage);
+                command.QueryOptions = QueryOptions.Empty
+                    .WithOptimizerVersion(cmdOptimizerVersion)
+                    .WithOptimizerStatisticsPackage(cmdOptimizerStatisticsPackage);
                 using (var reader = command.ExecuteReader())
                 {
                     Assert.True(reader.HasRows);
