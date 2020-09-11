@@ -26,12 +26,12 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The query optimizer version configured in the options.
         /// </summary>
-        public string OptimizerVersion { get => Proto.OptimizerVersion; }
+        public string OptimizerVersion => Proto.OptimizerVersion;
 
         /// <summary>
         /// The query optimizer statistics package configured in the options.
         /// </summary>
-        public string OptimizerStatisticsPackage { get => Proto.OptimizerStatisticsPackage; }
+        public string OptimizerStatisticsPackage => Proto.OptimizerStatisticsPackage;
 
         /// <summary>
         /// Clones the options and sets the optimizer version to the given value.
