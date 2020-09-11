@@ -31,9 +31,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             Version = version;
             Commits = commits.ToList().AsReadOnly();
             // Assume that if a release isn't tagged yet, it's because we're releasing it today.
-            ReleaseDate = tagCommit != null
-                ? (tagCommit.Author ?? tagCommit.Committer).When.Date
-                : DateTime.Today;
+            ReleaseDate = tagCommit?.GetDate().UtcDateTime ?? DateTime.Today;
         }
     }
 }

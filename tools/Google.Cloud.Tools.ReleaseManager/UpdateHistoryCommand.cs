@@ -75,9 +75,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static IEnumerable<Release> LoadReleases(Repository repo, ApiMetadata api)
         {
             var id = api.Id;
-            var pathPrefix = $"apis/{id}/{id}/";
-            var projectFile = $"apis/{id}/{id}/{id}.csproj";
-            Func<string, bool> pathFilter = path => path.StartsWith(pathPrefix) && path != projectFile;
+            var commitPredicate = GitHelpers.CreateCommitPredicate(repo, api.Id);
 
             List<Release> releases = new List<Release>();
             StructuredVersion currentVersion = StructuredVersion.FromString(api.Version);
@@ -93,7 +91,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             foreach (var commit in repo.Head.Commits)
             {
-                if (CommitContainsApi(commit))
+                if (commitPredicate(commit))
                 {
                     pendingCommits.Add(new GitCommit(commit));
                 }
@@ -110,25 +108,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             if (pendingCommits.Count != 0)
             {
                 yield return new Release(currentVersion, currentTagCommit, pendingCommits);
-            }
-
-            bool CommitContainsApi(Commit commit)
-            {
-                if (commit.Parents.Count() != 1)
-                {
-                    return false;
-                }
-                var tree = commit.Tree;
-                var parentTree = commit.Parents.First().Tree;
-                // If nothing has changed under apis/{id}/{id}, it's definitely not relevant.
-                if (tree[pathPrefix]?.Target.Sha == parentTree[pathPrefix]?.Target.Sha)
-                {
-                    return false;
-                }
-                // Otherwise, check whether something *other* than the project file has changed.
-                var comparison = repo.Diff.Compare<TreeChanges>(parentTree, tree);
-                // Some versions return forward slashes, some return backslashes :(
-                return comparison.Select(change => change.Path.Replace('\\', '/')).Any(pathFilter);
             }
         }
     }
