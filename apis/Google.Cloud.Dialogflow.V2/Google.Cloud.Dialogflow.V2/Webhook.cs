@@ -743,9 +743,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///    "caller_id": "+18558363987"
     ///  }
     /// }&lt;/pre>
-    /// Note: The caller ID field (`caller_id`) will be redacted for Standard
+    /// Note: The caller ID field (`caller_id`) will be redacted for Trial
     /// Edition agents and populated with the caller ID in [E.164
-    /// format](https://en.wikipedia.org/wiki/E.164) for Enterprise Edition agents.
+    /// format](https://en.wikipedia.org/wiki/E.164) for Essentials Edition agents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct Payload {
