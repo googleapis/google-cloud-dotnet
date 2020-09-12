@@ -922,6 +922,26 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Talent.V4Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/talent/v4",
+      "Name": "jobs.googleapis.com",
+      "Title": "Cloud Talent Solution API",
+      "Description": "Cloud Talent Solution provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
+      "ServiceConfigFile": "google/cloud/talent/v4/jobs_v4.yaml",
+      "Version": "v4",
+      "PackageFromDirectory": "google.cloud.talent.v4",
+      "PackageFromProtos": "google.cloud.talent.v4",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/talent/v4",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Talent.V4"
+    },
+    {
       "ServiceDirectory": "google/cloud/securitycenter/v1beta1",
       "Name": "securitycenter.googleapis.com",
       "Title": "Security Command Center API",
