@@ -276,6 +276,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             if ((TraceContextForLogEntry.FromGoogleTrace() ?? TraceContextForLogEntry.FromExternalTrace(_serviceProvider)) is TraceContextForLogEntry trace)
             {
                 entry.Trace = _traceTarget.GetFullTraceName(trace.TraceId);
+                entry.TraceSampled = true;
                 entry.SpanId = trace.SpanId;
             }
         }
