@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListTenants",
+    "client": "TenantServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
