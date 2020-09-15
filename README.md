@@ -17,7 +17,7 @@ Each package name links to the documentation for that package.
 |---------|----------------|-------------|
 | [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha01) | 1.0.0-alpha01 | Analytics Admin API |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha01) | 1.0.0-alpha01 | Google Analytics Data API |
-| [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.3.0) | 2.3.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
+| [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.4.0) | 2.4.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AutoML.V1](https://googleapis.dev/dotnet/Google.Cloud.AutoML.V1/2.0.0) | 2.0.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.Connection.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Connection.V1/1.0.0) | 1.0.0 | [BigQuery Connection API](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.DataTransfer.V1/2.0.0) | 2.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |

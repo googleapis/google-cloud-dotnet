@@ -1,6 +1,21 @@
 # Version history
 
-# Version 2.3.0, released 2020-08-25
+# Version 2.4.0, released 2020-09-15
+
+- [Commit c9ca107](https://github.com/googleapis/google-cloud-dotnet/commit/c9ca107): Remove AnalyzeIamPolicy and ExportIamPolicyAnalysis RPCs
+
+BREAKING CHANGE: The change here effectively reverts part of [commit 8ef5dc2](https://github.com/googleapis/google-cloud-dotnet/commit/8ef5dc2),
+so removes part of the public API.
+
+We have taken the decision to publish this as a minor version rather than going to version 3.0, as we don't expect customers to be affected by the nature of the breaking change:
+
+- The affected version (2.3.0) has been delisted, and had only been installed by a small number of customers, as reported on NuGet
+- This version *is* compatible with 2.2.0 and earlier versions
+- The accidentally-included new APIs were not enabled server-side, so customers could not have started relying on the server implementation yet
+
+We apologise for any confusion this causes.
+
+# Version 2.3.0, released 2020-08-25 (then delisted 2020-09-14)
 
 - [Commit 8ef5dc2](https://github.com/googleapis/google-cloud-dotnet/commit/8ef5dc2): feat: add AnalyzeIamPolicy and ExportIamPolicyAnalysis RPCs
 - [Commit e7b75e6](https://github.com/googleapis/google-cloud-dotnet/commit/e7b75e6): feat: added support OutputResult in ExportAssetsResponse.
