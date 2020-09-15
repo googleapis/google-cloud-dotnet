@@ -207,11 +207,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
         /// <remarks>
         /// The default BudgetService scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/cloud-billing</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/cloud-billing",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
