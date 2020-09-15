@@ -1458,6 +1458,25 @@
       ]
     },
     {
+      "id": "Google.Cloud.Talent.V4",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Talent Solution",
+      "productUrl": "https://cloud.google.com/talent-solution/",
+      "description": "Recommended Google client library to access the Google Cloud Talent solution API (v4) which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
+      "tags": [
+        "Talent",
+        "Jobs"
+      ],
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.1.0",
+        "Google.LongRunning": "2.0.0",
+        "Grpc.Core": "2.31.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/talent/v4"
+    },
+    {
       "id": "Google.Cloud.Talent.V4Beta1",
       "generator": "micro",
       "protoPath": "google/cloud/talent/v4beta1",
@@ -1466,7 +1485,7 @@
       "version": "2.0.0-beta03",
       "releaseLevelOverride": "beta",
       "type": "grpc",
-      "description": "Recommended Google client library to access the Google Cloud Talent solution API which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
+      "description": "Recommended Google client library to access the Google Cloud Talent solution API (v4 beta1) which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
       "tags": [
         "Talent",
         "Jobs"
