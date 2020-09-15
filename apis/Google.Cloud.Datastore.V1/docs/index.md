@@ -57,4 +57,4 @@ returned using integer values. Use the
 either integer or timestamp values to `DateTime` or `DateTimeOffset`.
 
 Lots more samples:
-[github.com/googleapis/dotnet-docs-samples](https://github.com/googleapis/dotnet-docs-samples/tree/master/datastore/api)
+[github.com/googleapis/dotnet-docs-samples](https://github.com/GoogleCloudPlatform/dotnet-docs-samples/tree/master/datastore/api)
