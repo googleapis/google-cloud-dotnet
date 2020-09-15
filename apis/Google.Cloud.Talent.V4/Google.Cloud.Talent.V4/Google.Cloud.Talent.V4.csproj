@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>2.0.0-beta03</Version>
+    <Version>1.0.0-beta00</Version>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the Google Cloud Talent solution API (v4 beta1) which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.</Description>
+    <Description>Recommended Google client library to access the Google Cloud Talent solution API (v4) which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.</Description>
     <PackageTags>Talent;Jobs;Google;Cloud</PackageTags>
     <Copyright>Copyright 2020 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
