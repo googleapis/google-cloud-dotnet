@@ -1459,7 +1459,7 @@
     },
     {
       "id": "Google.Cloud.Talent.V4",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Google Cloud Talent Solution",
       "productUrl": "https://cloud.google.com/talent-solution/",
