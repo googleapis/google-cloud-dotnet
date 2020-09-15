@@ -1,5 +1,24 @@
 # Version history
 
+# Version 2.1.0, released 2020-09-15
+
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3):
+  - Regenerate all APIs with service comments in client documentation
+  - The comments are included as they are, as a "remarks" section both the abstract base class and the concrete implementation.
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573):
+  - Regenerate all clients with more explicit documentation
+  - The use of "inheritdoc" breaks docfx in many cases. The generator
+  - has been improved to generate more explicit documentation. This PR only
+  - contains changes due to that generator change.
+- [Commit bbccd6f](https://github.com/googleapis/google-cloud-dotnet/commit/bbccd6f):
+  - docs: change a relative URL to an absolute URL to fix broken links.
+  - https://github.com/googleapis/googleapis/commit/4a6a01ce0ead505c245d11a2ce156de34800c58f
+  - commit 4a6a01ce0ead505c245d11a2ce156de34800c58f
+  - Author: Google APIs <noreply@google.com>
+  - Date:   Fri Apr 3 09:40:35 2020 -0700
+  -     docs: change a relative URL to an absolute URL to fix broken links.
+  -     PiperOrigin-RevId: 304633630
+
 # Version 2.0.0, released 2020-03-19
 
 No API surface changes compared with 2.0.0-beta01, just dependency
