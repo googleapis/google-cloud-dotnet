@@ -30,7 +30,7 @@ namespace Grafeas.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/occurrences/{occurrence}</c>.</summary>
-            ProjectOccurrence = 1
+            ProjectOccurrence = 1,
         }
 
         private static gax::PathTemplate s_projectOccurrence = new gax::PathTemplate("projects/{project}/occurrences/{occurrence}");
@@ -247,7 +247,7 @@ namespace Grafeas.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/notes/{note}</c>.</summary>
-            ProjectNote = 1
+            ProjectNote = 1,
         }
 
         private static gax::PathTemplate s_projectNote = new gax::PathTemplate("projects/{project}/notes/{note}");
@@ -450,7 +450,7 @@ namespace Grafeas.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}</c>.</summary>
-            Project = 1
+            Project = 1,
         }
 
         private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}");

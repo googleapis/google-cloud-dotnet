@@ -30,7 +30,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/databases/{database}</c>.</summary>
-            ProjectDatabase = 1
+            ProjectDatabase = 1,
         }
 
         private static gax::PathTemplate s_projectDatabase = new gax::PathTemplate("projects/{project}/databases/{database}");
@@ -249,7 +249,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             /// A resource name with pattern <c>projects/{project}/databases/{database}/collectionGroups/{collection}</c>
             /// .
             /// </summary>
-            ProjectDatabaseCollection = 1
+            ProjectDatabaseCollection = 1,
         }
 
         private static gax::PathTemplate s_projectDatabaseCollection = new gax::PathTemplate("projects/{project}/databases/{database}/collectionGroups/{collection}");

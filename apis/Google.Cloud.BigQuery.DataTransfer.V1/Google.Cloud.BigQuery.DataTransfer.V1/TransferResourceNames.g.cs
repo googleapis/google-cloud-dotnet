@@ -38,7 +38,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/transferConfigs/{transfer_config}</c>.
             /// </summary>
-            ProjectLocationTransferConfig = 2
+            ProjectLocationTransferConfig = 2,
         }
 
         private static gax::PathTemplate s_projectTransferConfig = new gax::PathTemplate("projects/{project}/transferConfigs/{transfer_config}");
@@ -319,7 +319,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/transferConfigs/{transfer_config}/runs/{run}</c>.
             /// </summary>
-            ProjectLocationTransferConfigRun = 2
+            ProjectLocationTransferConfigRun = 2,
         }
 
         private static gax::PathTemplate s_projectTransferConfigRun = new gax::PathTemplate("projects/{project}/transferConfigs/{transfer_config}/runs/{run}");

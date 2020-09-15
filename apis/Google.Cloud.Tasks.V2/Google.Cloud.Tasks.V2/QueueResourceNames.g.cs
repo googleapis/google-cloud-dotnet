@@ -32,7 +32,7 @@ namespace Google.Cloud.Tasks.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/queues/{queue}</c>.
             /// </summary>
-            ProjectLocationQueue = 1
+            ProjectLocationQueue = 1,
         }
 
         private static gax::PathTemplate s_projectLocationQueue = new gax::PathTemplate("projects/{project}/locations/{location}/queues/{queue}");

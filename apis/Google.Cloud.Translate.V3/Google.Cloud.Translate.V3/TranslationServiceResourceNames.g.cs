@@ -33,7 +33,7 @@ namespace Google.Cloud.Translate.V3
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/glossaries/{glossary}</c>.
             /// </summary>
-            ProjectLocationGlossary = 1
+            ProjectLocationGlossary = 1,
         }
 
         private static gax::PathTemplate s_projectLocationGlossary = new gax::PathTemplate("projects/{project}/locations/{location}/glossaries/{glossary}");

@@ -40,7 +40,7 @@ namespace Google.Cloud.Dataproc.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/workflowTemplates/{workflow_template}</c>.
             /// </summary>
-            ProjectLocationWorkflowTemplate = 2
+            ProjectLocationWorkflowTemplate = 2,
         }
 
         private static gax::PathTemplate s_projectRegionWorkflowTemplate = new gax::PathTemplate("projects/{project}/regions/{region}/workflowTemplates/{workflow_template}");

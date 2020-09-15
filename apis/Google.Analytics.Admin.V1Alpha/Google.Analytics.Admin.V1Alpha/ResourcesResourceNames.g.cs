@@ -30,7 +30,7 @@ namespace Google.Analytics.Admin.V1Alpha
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>accounts/{account}</c>.</summary>
-            Account = 1
+            Account = 1,
         }
 
         private static gax::PathTemplate s_account = new gax::PathTemplate("accounts/{account}");
@@ -223,7 +223,7 @@ namespace Google.Analytics.Admin.V1Alpha
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>properties/{property}</c>.</summary>
-            Property = 1
+            Property = 1,
         }
 
         private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}");
@@ -420,7 +420,7 @@ namespace Google.Analytics.Admin.V1Alpha
             /// A resource name with pattern <c>properties/{property}/androidAppDataStreams/{android_app_data_stream}</c>
             /// .
             /// </summary>
-            PropertyAndroidAppDataStream = 1
+            PropertyAndroidAppDataStream = 1,
         }
 
         private static gax::PathTemplate s_propertyAndroidAppDataStream = new gax::PathTemplate("properties/{property}/androidAppDataStreams/{android_app_data_stream}");
@@ -665,7 +665,7 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>
             /// A resource name with pattern <c>properties/{property}/iosAppDataStreams/{ios_app_data_stream}</c>.
             /// </summary>
-            PropertyIosAppDataStream = 1
+            PropertyIosAppDataStream = 1,
         }
 
         private static gax::PathTemplate s_propertyIosAppDataStream = new gax::PathTemplate("properties/{property}/iosAppDataStreams/{ios_app_data_stream}");
@@ -897,7 +897,7 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>
             /// A resource name with pattern <c>properties/{property}/webDataStreams/{web_data_stream}</c>.
             /// </summary>
-            PropertyWebDataStream = 1
+            PropertyWebDataStream = 1,
         }
 
         private static gax::PathTemplate s_propertyWebDataStream = new gax::PathTemplate("properties/{property}/webDataStreams/{web_data_stream}");
@@ -1122,7 +1122,7 @@ namespace Google.Analytics.Admin.V1Alpha
             AccountUserLink = 1,
 
             /// <summary>A resource name with pattern <c>properties/{property}/userLinks/{user_link}</c>.</summary>
-            PropertyUserLink = 2
+            PropertyUserLink = 2,
         }
 
         private static gax::PathTemplate s_accountUserLink = new gax::PathTemplate("accounts/{account}/userLinks/{user_link}");
@@ -1381,7 +1381,7 @@ namespace Google.Analytics.Admin.V1Alpha
             /// A resource name with pattern
             /// <c>properties/{property}/webDataStreams/{web_data_stream}/enhancedMeasurementSettings</c>.
             /// </summary>
-            PropertyWebDataStream = 1
+            PropertyWebDataStream = 1,
         }
 
         private static gax::PathTemplate s_propertyWebDataStream = new gax::PathTemplate("properties/{property}/webDataStreams/{web_data_stream}/enhancedMeasurementSettings");
@@ -1637,7 +1637,7 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>
             /// A resource name with pattern <c>properties/{property}/firebaseLinks/{firebase_link}</c>.
             /// </summary>
-            PropertyFirebaseLink = 1
+            PropertyFirebaseLink = 1,
         }
 
         private static gax::PathTemplate s_propertyFirebaseLink = new gax::PathTemplate("properties/{property}/firebaseLinks/{firebase_link}");
@@ -1857,7 +1857,7 @@ namespace Google.Analytics.Admin.V1Alpha
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>properties/{property}/globalSiteTag</c>.</summary>
-            Property = 1
+            Property = 1,
         }
 
         private static gax::PathTemplate s_property = new gax::PathTemplate("properties/{property}/globalSiteTag");
@@ -2068,7 +2068,7 @@ namespace Google.Analytics.Admin.V1Alpha
             /// <summary>
             /// A resource name with pattern <c>properties/{property}/googleAdsLinks/{google_ads_link}</c>.
             /// </summary>
-            PropertyGoogleAdsLink = 1
+            PropertyGoogleAdsLink = 1,
         }
 
         private static gax::PathTemplate s_propertyGoogleAdsLink = new gax::PathTemplate("properties/{property}/googleAdsLinks/{google_ads_link}");
@@ -2290,7 +2290,7 @@ namespace Google.Analytics.Admin.V1Alpha
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>accounts/{account}/dataSharingSettings</c>.</summary>
-            Account = 1
+            Account = 1,
         }
 
         private static gax::PathTemplate s_account = new gax::PathTemplate("accounts/{account}/dataSharingSettings");

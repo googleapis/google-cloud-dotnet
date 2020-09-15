@@ -33,7 +33,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/datasets/{dataset}/tables/{table}</c>.
             /// </summary>
-            ProjectDatasetTable = 1
+            ProjectDatasetTable = 1,
         }
 
         private static gax::PathTemplate s_projectDatasetTable = new gax::PathTemplate("projects/{project}/datasets/{dataset}/tables/{table}");

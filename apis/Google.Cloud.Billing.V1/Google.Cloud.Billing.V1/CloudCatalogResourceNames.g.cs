@@ -30,7 +30,7 @@ namespace Google.Cloud.Billing.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>services/{service}</c>.</summary>
-            Service = 1
+            Service = 1,
         }
 
         private static gax::PathTemplate s_service = new gax::PathTemplate("services/{service}");
@@ -223,7 +223,7 @@ namespace Google.Cloud.Billing.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>services/{service}/skus/{sku}</c>.</summary>
-            ServiceSku = 1
+            ServiceSku = 1,
         }
 
         private static gax::PathTemplate s_serviceSku = new gax::PathTemplate("services/{service}/skus/{sku}");

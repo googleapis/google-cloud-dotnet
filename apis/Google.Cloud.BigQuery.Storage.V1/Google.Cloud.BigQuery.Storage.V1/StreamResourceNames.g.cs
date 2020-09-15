@@ -32,7 +32,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/sessions/{session}</c>.
             /// </summary>
-            ProjectLocationSession = 1
+            ProjectLocationSession = 1,
         }
 
         private static gax::PathTemplate s_projectLocationSession = new gax::PathTemplate("projects/{project}/locations/{location}/sessions/{session}");
@@ -264,7 +264,7 @@ namespace Google.Cloud.BigQuery.Storage.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/sessions/{session}/streams/{stream}</c>.
             /// </summary>
-            ProjectLocationSessionStream = 1
+            ProjectLocationSessionStream = 1,
         }
 
         private static gax::PathTemplate s_projectLocationSessionStream = new gax::PathTemplate("projects/{project}/locations/{location}/sessions/{session}/streams/{stream}");

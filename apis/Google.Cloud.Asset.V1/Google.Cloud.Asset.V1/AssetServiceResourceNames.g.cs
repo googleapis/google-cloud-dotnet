@@ -36,7 +36,7 @@ namespace Google.Cloud.Asset.V1
             FolderFeed = 2,
 
             /// <summary>A resource name with pattern <c>organizations/{organization}/feeds/{feed}</c>.</summary>
-            OrganizationFeed = 3
+            OrganizationFeed = 3,
         }
 
         private static gax::PathTemplate s_projectFeed = new gax::PathTemplate("projects/{project}/feeds/{feed}");

@@ -33,7 +33,7 @@ namespace Google.Cloud.Functions.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/functions/{function}</c>.
             /// </summary>
-            ProjectLocationFunction = 1
+            ProjectLocationFunction = 1,
         }
 
         private static gax::PathTemplate s_projectLocationFunction = new gax::PathTemplate("projects/{project}/locations/{location}/functions/{function}");

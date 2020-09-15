@@ -33,7 +33,7 @@ namespace Google.Cloud.DataCatalog.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}/tags/{tag}</c>.
             /// </summary>
-            ProjectLocationEntryGroupEntryTag = 1
+            ProjectLocationEntryGroupEntryTag = 1,
         }
 
         private static gax::PathTemplate s_projectLocationEntryGroupEntryTag = new gax::PathTemplate("projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}/tags/{tag}");
@@ -296,7 +296,7 @@ namespace Google.Cloud.DataCatalog.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/tagTemplates/{tag_template}</c>.
             /// </summary>
-            ProjectLocationTagTemplate = 1
+            ProjectLocationTagTemplate = 1,
         }
 
         private static gax::PathTemplate s_projectLocationTagTemplate = new gax::PathTemplate("projects/{project}/locations/{location}/tagTemplates/{tag_template}");
@@ -536,7 +536,7 @@ namespace Google.Cloud.DataCatalog.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{field}</c>.
             /// </summary>
-            ProjectLocationTagTemplateField = 1
+            ProjectLocationTagTemplateField = 1,
         }
 
         private static gax::PathTemplate s_projectLocationTagTemplateField = new gax::PathTemplate("projects/{project}/locations/{location}/tagTemplates/{tag_template}/fields/{field}");

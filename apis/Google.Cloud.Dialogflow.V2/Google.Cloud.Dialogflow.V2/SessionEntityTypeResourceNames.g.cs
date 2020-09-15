@@ -41,7 +41,7 @@ namespace Google.Cloud.Dialogflow.V2
             /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/entityTypes/{entity_type}</c>
             /// .
             /// </summary>
-            ProjectEnvironmentUserSessionEntityType = 2
+            ProjectEnvironmentUserSessionEntityType = 2,
         }
 
         private static gax::PathTemplate s_projectSessionEntityType = new gax::PathTemplate("projects/{project}/agent/sessions/{session}/entityTypes/{entity_type}");

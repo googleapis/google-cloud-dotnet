@@ -34,7 +34,7 @@ namespace Google.Cloud.PubSub.V1
             ProjectTopic = 1,
 
             /// <summary>A resource name with pattern <c>_deleted-topic_</c>.</summary>
-            DeletedTopic = 2
+            DeletedTopic = 2,
         }
 
         private static gax::PathTemplate s_projectTopic = new gax::PathTemplate("projects/{project}/topics/{topic}");
@@ -274,7 +274,7 @@ namespace Google.Cloud.PubSub.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/subscriptions/{subscription}</c>.</summary>
-            ProjectSubscription = 1
+            ProjectSubscription = 1,
         }
 
         private static gax::PathTemplate s_projectSubscription = new gax::PathTemplate("projects/{project}/subscriptions/{subscription}");
@@ -494,7 +494,7 @@ namespace Google.Cloud.PubSub.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/snapshots/{snapshot}</c>.</summary>
-            ProjectSnapshot = 1
+            ProjectSnapshot = 1,
         }
 
         private static gax::PathTemplate s_projectSnapshot = new gax::PathTemplate("projects/{project}/snapshots/{snapshot}");

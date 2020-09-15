@@ -32,7 +32,7 @@ namespace Google.Cloud.Dialogflow.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/agent/environments/{environment}</c>.
             /// </summary>
-            ProjectEnvironment = 1
+            ProjectEnvironment = 1,
         }
 
         private static gax::PathTemplate s_projectEnvironment = new gax::PathTemplate("projects/{project}/agent/environments/{environment}");

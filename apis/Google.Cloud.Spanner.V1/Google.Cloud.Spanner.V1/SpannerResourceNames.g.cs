@@ -34,7 +34,7 @@ namespace Google.Cloud.Spanner.V1
             /// A resource name with pattern
             /// <c>projects/{project}/instances/{instance}/databases/{database}/sessions/{session}</c>.
             /// </summary>
-            ProjectInstanceDatabaseSession = 1
+            ProjectInstanceDatabaseSession = 1,
         }
 
         private static gax::PathTemplate s_projectInstanceDatabaseSession = new gax::PathTemplate("projects/{project}/instances/{instance}/databases/{database}/sessions/{session}");

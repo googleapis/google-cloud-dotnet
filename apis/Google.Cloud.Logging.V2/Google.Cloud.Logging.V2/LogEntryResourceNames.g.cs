@@ -39,7 +39,7 @@ namespace Google.Cloud.Logging.V2
             FolderLog = 3,
 
             /// <summary>A resource name with pattern <c>billingAccounts/{billing_account}/logs/{log}</c>.</summary>
-            BillingAccountLog = 4
+            BillingAccountLog = 4,
         }
 
         private static gax::PathTemplate s_projectLog = new gax::PathTemplate("projects/{project}/logs/{log}");

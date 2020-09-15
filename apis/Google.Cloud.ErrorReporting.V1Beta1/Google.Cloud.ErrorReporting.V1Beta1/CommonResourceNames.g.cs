@@ -30,7 +30,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/groups/{group}</c>.</summary>
-            ProjectGroup = 1
+            ProjectGroup = 1,
         }
 
         private static gax::PathTemplate s_projectGroup = new gax::PathTemplate("projects/{project}/groups/{group}");

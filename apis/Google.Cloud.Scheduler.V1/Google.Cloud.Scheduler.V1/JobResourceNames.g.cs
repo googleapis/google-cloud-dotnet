@@ -32,7 +32,7 @@ namespace Google.Cloud.Scheduler.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/jobs/{job}</c>.
             /// </summary>
-            ProjectLocationJob = 1
+            ProjectLocationJob = 1,
         }
 
         private static gax::PathTemplate s_projectLocationJob = new gax::PathTemplate("projects/{project}/locations/{location}/jobs/{job}");

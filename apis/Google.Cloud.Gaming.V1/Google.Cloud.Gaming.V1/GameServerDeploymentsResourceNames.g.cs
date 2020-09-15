@@ -34,7 +34,7 @@ namespace Google.Cloud.Gaming.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/gameServerDeployments/{deployment}</c>.
             /// </summary>
-            ProjectLocationDeployment = 1
+            ProjectLocationDeployment = 1,
         }
 
         private static gax::PathTemplate s_projectLocationDeployment = new gax::PathTemplate("projects/{project}/locations/{location}/gameServerDeployments/{deployment}");
@@ -289,7 +289,7 @@ namespace Google.Cloud.Gaming.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout</c>.
             /// </summary>
-            ProjectLocationDeployment = 1
+            ProjectLocationDeployment = 1,
         }
 
         private static gax::PathTemplate s_projectLocationDeployment = new gax::PathTemplate("projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout");

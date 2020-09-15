@@ -40,7 +40,7 @@ namespace Google.Cloud.Dataproc.V1
             /// A resource name with pattern
             /// <c>projects/{project}/regions/{region}/autoscalingPolicies/{autoscaling_policy}</c>.
             /// </summary>
-            ProjectRegionAutoscalingPolicy = 2
+            ProjectRegionAutoscalingPolicy = 2,
         }
 
         private static gax::PathTemplate s_projectLocationAutoscalingPolicy = new gax::PathTemplate("projects/{project}/locations/{location}/autoscalingPolicies/{autoscaling_policy}");
@@ -347,7 +347,7 @@ namespace Google.Cloud.Dataproc.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/regions/{region}</c>.</summary>
-            ProjectRegion = 1
+            ProjectRegion = 1,
         }
 
         private static gax::PathTemplate s_projectRegion = new gax::PathTemplate("projects/{project}/regions/{region}");

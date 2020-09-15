@@ -33,7 +33,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             /// A resource name with pattern <c>organizations/{organization}/locations/{location}/workloads/{workload}</c>
             /// .
             /// </summary>
-            OrganizationLocationWorkload = 1
+            OrganizationLocationWorkload = 1,
         }
 
         private static gax::PathTemplate s_organizationLocationWorkload = new gax::PathTemplate("organizations/{organization}/locations/{location}/workloads/{workload}");
@@ -272,7 +272,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1
             /// <summary>
             /// A resource name with pattern <c>organizations/{organization}/locations/{location}</c>.
             /// </summary>
-            OrganizationLocation = 1
+            OrganizationLocation = 1,
         }
 
         private static gax::PathTemplate s_organizationLocation = new gax::PathTemplate("organizations/{organization}/locations/{location}");

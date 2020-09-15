@@ -31,7 +31,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/instances/{instance}</c>.</summary>
-            ProjectInstance = 1
+            ProjectInstance = 1,
         }
 
         private static gax::PathTemplate s_projectInstance = new gax::PathTemplate("projects/{project}/instances/{instance}");
@@ -249,7 +249,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/instances/{instance}/clusters/{cluster}</c>.
             /// </summary>
-            ProjectInstanceCluster = 1
+            ProjectInstanceCluster = 1,
         }
 
         private static gax::PathTemplate s_projectInstanceCluster = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}");
@@ -478,7 +478,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/instances/{instance}/appProfiles/{app_profile}</c>.
             /// </summary>
-            ProjectInstanceAppProfile = 1
+            ProjectInstanceAppProfile = 1,
         }
 
         private static gax::PathTemplate s_projectInstanceAppProfile = new gax::PathTemplate("projects/{project}/instances/{instance}/appProfiles/{app_profile}");

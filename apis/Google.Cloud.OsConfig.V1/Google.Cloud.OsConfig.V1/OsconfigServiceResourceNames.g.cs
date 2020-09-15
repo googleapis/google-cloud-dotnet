@@ -31,7 +31,7 @@ namespace Google.Cloud.OsConfig.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/zones/{zone}/instances/{instance}</c>.
             /// </summary>
-            ProjectZoneInstance = 1
+            ProjectZoneInstance = 1,
         }
 
         private static gax::PathTemplate s_projectZoneInstance = new gax::PathTemplate("projects/{project}/zones/{zone}/instances/{instance}");

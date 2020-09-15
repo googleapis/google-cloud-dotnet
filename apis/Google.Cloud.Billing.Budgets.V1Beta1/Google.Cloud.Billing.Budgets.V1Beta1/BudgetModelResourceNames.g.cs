@@ -32,7 +32,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1
             /// <summary>
             /// A resource name with pattern <c>billingAccounts/{billing_account}/budgets/{budget}</c>.
             /// </summary>
-            BillingAccountBudget = 1
+            BillingAccountBudget = 1,
         }
 
         private static gax::PathTemplate s_billingAccountBudget = new gax::PathTemplate("billingAccounts/{billing_account}/budgets/{budget}");

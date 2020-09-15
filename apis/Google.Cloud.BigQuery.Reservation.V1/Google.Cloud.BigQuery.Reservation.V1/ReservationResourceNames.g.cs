@@ -33,7 +33,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/reservations/{reservation}</c>.
             /// </summary>
-            ProjectLocationReservation = 1
+            ProjectLocationReservation = 1,
         }
 
         private static gax::PathTemplate s_projectLocationReservation = new gax::PathTemplate("projects/{project}/locations/{location}/reservations/{reservation}");
@@ -273,7 +273,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/capacityCommitments/{capacity_commitment}</c>.
             /// </summary>
-            ProjectLocationCapacityCommitment = 1
+            ProjectLocationCapacityCommitment = 1,
         }
 
         private static gax::PathTemplate s_projectLocationCapacityCommitment = new gax::PathTemplate("projects/{project}/locations/{location}/capacityCommitments/{capacity_commitment}");
@@ -532,7 +532,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/reservations/{reservation}/assignments/{assignment}</c>.
             /// </summary>
-            ProjectLocationReservationAssignment = 1
+            ProjectLocationReservationAssignment = 1,
         }
 
         private static gax::PathTemplate s_projectLocationReservationAssignment = new gax::PathTemplate("projects/{project}/locations/{location}/reservations/{reservation}/assignments/{assignment}");
@@ -789,7 +789,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/bireservation</c>.
             /// </summary>
-            ProjectLocation = 1
+            ProjectLocation = 1,
         }
 
         private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}/bireservation");

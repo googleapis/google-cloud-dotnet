@@ -33,7 +33,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/instances/{instance}</c>.
             /// </summary>
-            ProjectLocationInstance = 1
+            ProjectLocationInstance = 1,
         }
 
         private static gax::PathTemplate s_projectLocationInstance = new gax::PathTemplate("projects/{project}/locations/{location}/instances/{instance}");

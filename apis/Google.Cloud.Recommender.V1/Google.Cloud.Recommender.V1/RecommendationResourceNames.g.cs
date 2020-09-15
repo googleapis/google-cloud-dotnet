@@ -34,7 +34,7 @@ namespace Google.Cloud.Recommender.V1
             /// <c>projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}</c>
             /// .
             /// </summary>
-            ProjectLocationRecommenderRecommendation = 1
+            ProjectLocationRecommenderRecommendation = 1,
         }
 
         private static gax::PathTemplate s_projectLocationRecommenderRecommendation = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}/recommendations/{recommendation}");
@@ -294,7 +294,7 @@ namespace Google.Cloud.Recommender.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/recommenders/{recommender}</c>.
             /// </summary>
-            ProjectLocationRecommender = 1
+            ProjectLocationRecommender = 1,
         }
 
         private static gax::PathTemplate s_projectLocationRecommender = new gax::PathTemplate("projects/{project}/locations/{location}/recommenders/{recommender}");
