@@ -48,22 +48,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             "AiABKA4yOS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxYmV0YTEu",
             "VGhyZXNob2xkUnVsZS5CYXNpc0ID4EEBIkcKBUJhc2lzEhUKEUJBU0lTX1VO",
             "U1BFQ0lGSUVEEAASEQoNQ1VSUkVOVF9TUEVORBABEhQKEEZPUkVDQVNURURf",
-            "U1BFTkQQAiJ3Cg5BbGxVcGRhdGVzUnVsZRIZCgxwdWJzdWJfdG9waWMYASAB",
-            "KAlCA+BBAhIbCg5zY2hlbWFfdmVyc2lvbhgCIAEoCUID4EECEi0KIG1vbml0",
-            "b3Jpbmdfbm90aWZpY2F0aW9uX2NoYW5uZWxzGAMgAygJQgPgQQEixAMKBkZp",
-            "bHRlchIVCghwcm9qZWN0cxgBIAMoCUID4EEBEmYKFmNyZWRpdF90eXBlc190",
-            "cmVhdG1lbnQYBCABKA4yQS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRz",
-            "LnYxYmV0YTEuRmlsdGVyLkNyZWRpdFR5cGVzVHJlYXRtZW50QgPgQQESFQoI",
-            "c2VydmljZXMYAyADKAlCA+BBARIYCgtzdWJhY2NvdW50cxgFIAMoCUID4EEB",
-            "Ek0KBmxhYmVscxgGIAMoCzI4Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdl",
-            "dHMudjFiZXRhMS5GaWx0ZXIuTGFiZWxzRW50cnlCA+BBARpJCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSKQoFdmFsdWUYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuTGlzdFZhbHVlOgI4ASJwChRDcmVkaXRUeXBlc1RyZWF0bWVudBIm",
-            "CiJDUkVESVRfVFlQRVNfVFJFQVRNRU5UX1VOU1BFQ0lGSUVEEAASFwoTSU5D",
-            "TFVERV9BTExfQ1JFRElUUxABEhcKE0VYQ0xVREVfQUxMX0NSRURJVFMQAkJ5",
-            "Cihjb20uZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0cy52MWJldGExUAFa",
-            "S2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "YmlsbGluZy9idWRnZXRzL3YxYmV0YTE7YnVkZ2V0c2IGcHJvdG8z"));
+            "U1BFTkQQAiKkAQoOQWxsVXBkYXRlc1J1bGUSGQoMcHVic3ViX3RvcGljGAEg",
+            "ASgJQgPgQQESGwoOc2NoZW1hX3ZlcnNpb24YAiABKAlCA+BBARItCiBtb25p",
+            "dG9yaW5nX25vdGlmaWNhdGlvbl9jaGFubmVscxgDIAMoCUID4EEBEisKHmRp",
+            "c2FibGVfZGVmYXVsdF9pYW1fcmVjaXBpZW50cxgEIAEoCEID4EEBIsQDCgZG",
+            "aWx0ZXISFQoIcHJvamVjdHMYASADKAlCA+BBARJmChZjcmVkaXRfdHlwZXNf",
+            "dHJlYXRtZW50GAQgASgOMkEuZ29vZ2xlLmNsb3VkLmJpbGxpbmcuYnVkZ2V0",
+            "cy52MWJldGExLkZpbHRlci5DcmVkaXRUeXBlc1RyZWF0bWVudEID4EEBEhUK",
+            "CHNlcnZpY2VzGAMgAygJQgPgQQESGAoLc3ViYWNjb3VudHMYBSADKAlCA+BB",
+            "ARJNCgZsYWJlbHMYBiADKAsyOC5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRn",
+            "ZXRzLnYxYmV0YTEuRmlsdGVyLkxhYmVsc0VudHJ5QgPgQQEaSQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkxpc3RWYWx1ZToCOAEicAoUQ3JlZGl0VHlwZXNUcmVhdG1lbnQS",
+            "JgoiQ1JFRElUX1RZUEVTX1RSRUFUTUVOVF9VTlNQRUNJRklFRBAAEhcKE0lO",
+            "Q0xVREVfQUxMX0NSRURJVFMQARIXChNFWENMVURFX0FMTF9DUkVESVRTEAJC",
+            "eQooY29tLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjFiZXRhMVAB",
+            "Wktnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2JpbGxpbmcvYnVkZ2V0cy92MWJldGExO2J1ZGdldHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,7 +72,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount.Parser, new[]{ "SpecifiedAmount", "LastPeriodAmount" }, new[]{ "BudgetAmount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount), global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule), global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Parser, new[]{ "ThresholdPercent", "SpendBasis" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Types.Basis) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule), global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule), global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels", "DisableDefaultIamRecipients" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter), global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Parser, new[]{ "Projects", "CreditTypesTreatment", "Services", "Subaccounts", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -979,6 +980,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       pubsubTopic_ = other.pubsubTopic_;
       schemaVersion_ = other.schemaVersion_;
       monitoringNotificationChannels_ = other.monitoringNotificationChannels_.Clone();
+      disableDefaultIamRecipients_ = other.disableDefaultIamRecipients_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -991,8 +993,8 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int PubsubTopicFieldNumber = 1;
     private string pubsubTopic_ = "";
     /// <summary>
-    /// Required. The name of the Cloud Pub/Sub topic where budget related messages
-    /// will be published, in the form `projects/{project_id}/topics/{topic_id}`.
+    /// Optional. The name of the Pub/Sub topic where budget related messages will
+    /// be published, in the form `projects/{project_id}/topics/{topic_id}`.
     /// Updates are sent at regular intervals to the topic. The topic needs to be
     /// created before the budget is created; see
     /// https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications
@@ -1000,8 +1002,8 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Caller is expected to have
     /// `pubsub.topics.setIamPolicy` permission on the topic when it's set for a
     /// budget, otherwise, the API call will fail with PERMISSION_DENIED. See
-    /// https://cloud.google.com/pubsub/docs/access-control for more details on
-    /// Pub/Sub roles and permissions.
+    /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications
+    /// for more details on Pub/Sub roles and permissions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PubsubTopic {
@@ -1015,9 +1017,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int SchemaVersionFieldNumber = 2;
     private string schemaVersion_ = "";
     /// <summary>
-    /// Required. The schema version of the notification sent to `pubsub_topic`.
+    /// Optional. The schema version of the notification sent to `pubsub_topic`.
     /// Only "1.0" is accepted. It represents the JSON schema as defined in
-    /// https://cloud.google.com/billing/docs/how-to/budgets#notification_format
+    /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SchemaVersion {
@@ -1034,15 +1036,33 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private readonly pbc::RepeatedField<string> monitoringNotificationChannels_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. Targets to send notifications to when a threshold is exceeded.
-    /// This is in addition to default recipients who have billing account roles.
-    /// The value is the full REST resource name of a monitoring notification
-    /// channel with the form
+    /// This is in addition to default recipients who have billing account IAM
+    /// roles. The value is the full REST resource name of a monitoring
+    /// notification channel with the form
     /// `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5
-    /// channels are allowed.
+    /// channels are allowed. See
+    /// https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients
+    /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> MonitoringNotificationChannels {
       get { return monitoringNotificationChannels_; }
+    }
+
+    /// <summary>Field number for the "disable_default_iam_recipients" field.</summary>
+    public const int DisableDefaultIamRecipientsFieldNumber = 4;
+    private bool disableDefaultIamRecipients_;
+    /// <summary>
+    /// Optional. When set to true, disables default notifications sent when a
+    /// threshold is exceeded. Recipients are those with Billing Account
+    /// Administrators and Billing Account Users IAM roles for the target account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool DisableDefaultIamRecipients {
+      get { return disableDefaultIamRecipients_; }
+      set {
+        disableDefaultIamRecipients_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1061,6 +1081,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (PubsubTopic != other.PubsubTopic) return false;
       if (SchemaVersion != other.SchemaVersion) return false;
       if(!monitoringNotificationChannels_.Equals(other.monitoringNotificationChannels_)) return false;
+      if (DisableDefaultIamRecipients != other.DisableDefaultIamRecipients) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1070,6 +1091,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (PubsubTopic.Length != 0) hash ^= PubsubTopic.GetHashCode();
       if (SchemaVersion.Length != 0) hash ^= SchemaVersion.GetHashCode();
       hash ^= monitoringNotificationChannels_.GetHashCode();
+      if (DisableDefaultIamRecipients != false) hash ^= DisableDefaultIamRecipients.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1092,6 +1114,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         output.WriteString(SchemaVersion);
       }
       monitoringNotificationChannels_.WriteTo(output, _repeated_monitoringNotificationChannels_codec);
+      if (DisableDefaultIamRecipients != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(DisableDefaultIamRecipients);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1107,6 +1133,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SchemaVersion);
       }
       size += monitoringNotificationChannels_.CalculateSize(_repeated_monitoringNotificationChannels_codec);
+      if (DisableDefaultIamRecipients != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1125,6 +1154,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
         SchemaVersion = other.SchemaVersion;
       }
       monitoringNotificationChannels_.Add(other.monitoringNotificationChannels_);
+      if (other.DisableDefaultIamRecipients != false) {
+        DisableDefaultIamRecipients = other.DisableDefaultIamRecipients;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1146,6 +1178,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
           case 26: {
             monitoringNotificationChannels_.AddEntriesFrom(input, _repeated_monitoringNotificationChannels_codec);
+            break;
+          }
+          case 32: {
+            DisableDefaultIamRecipients = input.ReadBool();
             break;
           }
         }
@@ -1252,10 +1288,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// <summary>
     /// Optional. A set of subaccounts of the form `billingAccounts/{account_id}`,
     /// specifying that usage from only this set of subaccounts should be included
-    /// in the budget. If a subaccount is set to the name of the reseller account,
-    /// usage from the reseller account will be included. If omitted, the report
-    /// will include usage from the reseller account and all subaccounts, if they
-    /// exist.
+    /// in the budget. If a subaccount is set to the name of the parent account,
+    /// usage from the parent account will be included. If omitted, the
+    /// report will include usage from the parent account and all
+    /// subaccounts, if they exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Subaccounts {
