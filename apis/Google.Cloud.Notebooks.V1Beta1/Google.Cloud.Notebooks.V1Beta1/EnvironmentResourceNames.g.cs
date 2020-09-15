@@ -30,7 +30,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/environments/{environment}</c>.</summary>
-            ProjectEnvironment = 1
+            ProjectEnvironment = 1,
         }
 
         private static gax::PathTemplate s_projectEnvironment = new gax::PathTemplate("projects/{project}/environments/{environment}");

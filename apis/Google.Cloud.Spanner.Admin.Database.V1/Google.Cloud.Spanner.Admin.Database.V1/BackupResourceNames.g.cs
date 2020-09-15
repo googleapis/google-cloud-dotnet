@@ -33,7 +33,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/instances/{instance}/backups/{backup}</c>.
             /// </summary>
-            ProjectInstanceBackup = 1
+            ProjectInstanceBackup = 1,
         }
 
         private static gax::PathTemplate s_projectInstanceBackup = new gax::PathTemplate("projects/{project}/instances/{instance}/backups/{backup}");

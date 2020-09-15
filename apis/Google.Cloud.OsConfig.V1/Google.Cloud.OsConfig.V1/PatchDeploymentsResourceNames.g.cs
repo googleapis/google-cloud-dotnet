@@ -33,7 +33,7 @@ namespace Google.Cloud.OsConfig.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/patchDeployments/{patch_deployment}</c>.
             /// </summary>
-            ProjectPatchDeployment = 1
+            ProjectPatchDeployment = 1,
         }
 
         private static gax::PathTemplate s_projectPatchDeployment = new gax::PathTemplate("projects/{project}/patchDeployments/{patch_deployment}");

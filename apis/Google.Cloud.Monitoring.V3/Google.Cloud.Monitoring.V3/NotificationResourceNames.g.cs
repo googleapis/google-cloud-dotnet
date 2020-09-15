@@ -45,7 +45,7 @@ namespace Google.Cloud.Monitoring.V3
             /// A resource name with pattern <c>folders/{folder}/notificationChannelDescriptors/{channel_descriptor}</c>
             /// .
             /// </summary>
-            FolderChannelDescriptor = 3
+            FolderChannelDescriptor = 3,
         }
 
         private static gax::PathTemplate s_projectChannelDescriptor = new gax::PathTemplate("projects/{project}/notificationChannelDescriptors/{channel_descriptor}");
@@ -415,7 +415,7 @@ namespace Google.Cloud.Monitoring.V3
             /// <summary>
             /// A resource name with pattern <c>folders/{folder}/notificationChannels/{notification_channel}</c>.
             /// </summary>
-            FolderNotificationChannel = 3
+            FolderNotificationChannel = 3,
         }
 
         private static gax::PathTemplate s_projectNotificationChannel = new gax::PathTemplate("projects/{project}/notificationChannels/{notification_channel}");

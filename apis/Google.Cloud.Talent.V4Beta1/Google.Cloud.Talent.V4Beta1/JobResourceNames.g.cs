@@ -33,7 +33,7 @@ namespace Google.Cloud.Talent.V4Beta1
             ProjectTenantJob = 1,
 
             /// <summary>A resource name with pattern <c>projects/{project}/jobs/{job}</c>.</summary>
-            ProjectJob = 2
+            ProjectJob = 2,
         }
 
         private static gax::PathTemplate s_projectTenantJob = new gax::PathTemplate("projects/{project}/tenants/{tenant}/jobs/{job}");

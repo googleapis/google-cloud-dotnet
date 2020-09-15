@@ -40,7 +40,7 @@ namespace Google.Cloud.Dialogflow.V2
             /// projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}/contexts/{context}</c>
             /// .
             /// </summary>
-            ProjectEnvironmentUserSessionContext = 2
+            ProjectEnvironmentUserSessionContext = 2,
         }
 
         private static gax::PathTemplate s_projectSessionContext = new gax::PathTemplate("projects/{project}/agent/sessions/{session}/contexts/{context}");

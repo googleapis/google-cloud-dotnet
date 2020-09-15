@@ -35,7 +35,7 @@ namespace Google.Cloud.Dialogflow.V2
             /// A resource name with pattern
             /// <c>projects/{project}/agent/environments/{environment}/users/{user}/sessions/{session}</c>.
             /// </summary>
-            ProjectEnvironmentUserSession = 2
+            ProjectEnvironmentUserSession = 2,
         }
 
         private static gax::PathTemplate s_projectSession = new gax::PathTemplate("projects/{project}/agent/sessions/{session}");

@@ -36,7 +36,7 @@ namespace Google.Cloud.Monitoring.V3
             OrganizationGroup = 2,
 
             /// <summary>A resource name with pattern <c>folders/{folder}/groups/{group}</c>.</summary>
-            FolderGroup = 3
+            FolderGroup = 3,
         }
 
         private static gax::PathTemplate s_projectGroup = new gax::PathTemplate("projects/{project}/groups/{group}");

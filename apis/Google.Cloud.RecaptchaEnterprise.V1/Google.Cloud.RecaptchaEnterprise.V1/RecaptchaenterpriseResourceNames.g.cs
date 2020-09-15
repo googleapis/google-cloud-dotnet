@@ -31,7 +31,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/assessments/{assessment}</c>.</summary>
-            ProjectAssessment = 1
+            ProjectAssessment = 1,
         }
 
         private static gax::PathTemplate s_projectAssessment = new gax::PathTemplate("projects/{project}/assessments/{assessment}");
@@ -248,7 +248,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/keys/{key}</c>.</summary>
-            ProjectKey = 1
+            ProjectKey = 1,
         }
 
         private static gax::PathTemplate s_projectKey = new gax::PathTemplate("projects/{project}/keys/{key}");

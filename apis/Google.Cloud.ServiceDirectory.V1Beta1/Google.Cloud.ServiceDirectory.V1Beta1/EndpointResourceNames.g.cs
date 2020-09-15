@@ -35,7 +35,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             /// projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}/endpoints/{endpoint}</c>
             /// .
             /// </summary>
-            ProjectLocationNamespaceServiceEndpoint = 1
+            ProjectLocationNamespaceServiceEndpoint = 1,
         }
 
         private static gax::PathTemplate s_projectLocationNamespaceServiceEndpoint = new gax::PathTemplate("projects/{project}/locations/{location}/namespaces/{namespace}/services/{service}/endpoints/{endpoint}");

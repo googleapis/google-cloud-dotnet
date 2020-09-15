@@ -33,7 +33,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             /// A resource name with pattern <c>projects/{project}/locations/{location}/customClasses/{custom_class}</c>
             /// .
             /// </summary>
-            ProjectLocationCustomClass = 1
+            ProjectLocationCustomClass = 1,
         }
 
         private static gax::PathTemplate s_projectLocationCustomClass = new gax::PathTemplate("projects/{project}/locations/{location}/customClasses/{custom_class}");
@@ -272,7 +272,7 @@ namespace Google.Cloud.Speech.V1P1Beta1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/phraseSets/{phrase_set}</c>.
             /// </summary>
-            ProjectLocationPhraseSet = 1
+            ProjectLocationPhraseSet = 1,
         }
 
         private static gax::PathTemplate s_projectLocationPhraseSet = new gax::PathTemplate("projects/{project}/locations/{location}/phraseSets/{phrase_set}");

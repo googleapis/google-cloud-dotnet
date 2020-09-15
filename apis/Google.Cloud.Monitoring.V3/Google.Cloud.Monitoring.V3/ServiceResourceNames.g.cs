@@ -36,7 +36,7 @@ namespace Google.Cloud.Monitoring.V3
             OrganizationService = 2,
 
             /// <summary>A resource name with pattern <c>folders/{folder}/services/{service}</c>.</summary>
-            FolderService = 3
+            FolderService = 3,
         }
 
         private static gax::PathTemplate s_projectService = new gax::PathTemplate("projects/{project}/services/{service}");
@@ -347,7 +347,7 @@ namespace Google.Cloud.Monitoring.V3
             /// A resource name with pattern
             /// <c>folders/{folder}/services/{service}/serviceLevelObjectives/{service_level_objective}</c>.
             /// </summary>
-            FolderServiceServiceLevelObjective = 3
+            FolderServiceServiceLevelObjective = 3,
         }
 
         private static gax::PathTemplate s_projectServiceServiceLevelObjective = new gax::PathTemplate("projects/{project}/services/{service}/serviceLevelObjectives/{service_level_objective}");

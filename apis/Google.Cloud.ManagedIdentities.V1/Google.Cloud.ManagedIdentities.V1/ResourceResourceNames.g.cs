@@ -32,7 +32,7 @@ namespace Google.Cloud.ManagedIdentities.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/domains/{domain}</c>.
             /// </summary>
-            ProjectLocationDomain = 1
+            ProjectLocationDomain = 1,
         }
 
         private static gax::PathTemplate s_projectLocationDomain = new gax::PathTemplate("projects/{project}/locations/{location}/domains/{domain}");

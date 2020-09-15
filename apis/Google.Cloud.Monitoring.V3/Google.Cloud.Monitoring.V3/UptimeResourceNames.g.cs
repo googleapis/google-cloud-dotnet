@@ -43,7 +43,7 @@ namespace Google.Cloud.Monitoring.V3
             /// <summary>
             /// A resource name with pattern <c>folders/{folder}/uptimeCheckConfigs/{uptime_check_config}</c>.
             /// </summary>
-            FolderUptimeCheckConfig = 3
+            FolderUptimeCheckConfig = 3,
         }
 
         private static gax::PathTemplate s_projectUptimeCheckConfig = new gax::PathTemplate("projects/{project}/uptimeCheckConfigs/{uptime_check_config}");

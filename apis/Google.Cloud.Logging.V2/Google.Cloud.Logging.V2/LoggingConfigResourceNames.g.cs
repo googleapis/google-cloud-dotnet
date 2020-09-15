@@ -49,7 +49,7 @@ namespace Google.Cloud.Logging.V2
             /// A resource name with pattern <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}</c>
             /// .
             /// </summary>
-            BillingAccountLocationBucket = 4
+            BillingAccountLocationBucket = 4,
         }
 
         private static gax::PathTemplate s_projectLocationBucket = new gax::PathTemplate("projects/{project}/locations/{location}/buckets/{bucket}");
@@ -433,7 +433,7 @@ namespace Google.Cloud.Logging.V2
             FolderSink = 3,
 
             /// <summary>A resource name with pattern <c>billingAccounts/{billing_account}/sinks/{sink}</c>.</summary>
-            BillingAccountSink = 4
+            BillingAccountSink = 4,
         }
 
         private static gax::PathTemplate s_projectSink = new gax::PathTemplate("projects/{project}/sinks/{sink}");
@@ -783,7 +783,7 @@ namespace Google.Cloud.Logging.V2
             /// <summary>
             /// A resource name with pattern <c>billingAccounts/{billing_account}/exclusions/{exclusion}</c>.
             /// </summary>
-            BillingAccountExclusion = 4
+            BillingAccountExclusion = 4,
         }
 
         private static gax::PathTemplate s_projectExclusion = new gax::PathTemplate("projects/{project}/exclusions/{exclusion}");
@@ -1133,7 +1133,7 @@ namespace Google.Cloud.Logging.V2
             Folder = 3,
 
             /// <summary>A resource name with pattern <c>billingAccounts/{billing_account}/cmekSettings</c>.</summary>
-            BillingAccount = 4
+            BillingAccount = 4,
         }
 
         private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}/cmekSettings");
@@ -1459,7 +1459,7 @@ namespace Google.Cloud.Logging.V2
             /// <summary>
             /// A resource name with pattern <c>organizations/{organization}/locations/{location}</c>.
             /// </summary>
-            OrganizationLocation = 1
+            OrganizationLocation = 1,
         }
 
         private static gax::PathTemplate s_organizationLocation = new gax::PathTemplate("organizations/{organization}/locations/{location}");
@@ -1686,7 +1686,7 @@ namespace Google.Cloud.Logging.V2
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>folders/{folder}/locations/{location}</c>.</summary>
-            FolderLocation = 1
+            FolderLocation = 1,
         }
 
         private static gax::PathTemplate s_folderLocation = new gax::PathTemplate("folders/{folder}/locations/{location}");
@@ -1907,7 +1907,7 @@ namespace Google.Cloud.Logging.V2
             /// <summary>
             /// A resource name with pattern <c>billingAccounts/{billing_account}/locations/{location}</c>.
             /// </summary>
-            BillingAccountLocation = 1
+            BillingAccountLocation = 1,
         }
 
         private static gax::PathTemplate s_billingAccountLocation = new gax::PathTemplate("billingAccounts/{billing_account}/locations/{location}");

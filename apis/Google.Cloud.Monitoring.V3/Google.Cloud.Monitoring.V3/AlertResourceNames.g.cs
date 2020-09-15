@@ -45,7 +45,7 @@ namespace Google.Cloud.Monitoring.V3
             /// A resource name with pattern <c>folders/{folder}/alertPolicies/{alert_policy}/conditions/{condition}</c>
             /// .
             /// </summary>
-            FolderAlertPolicyCondition = 3
+            FolderAlertPolicyCondition = 3,
         }
 
         private static gax::PathTemplate s_projectAlertPolicyCondition = new gax::PathTemplate("projects/{project}/alertPolicies/{alert_policy}/conditions/{condition}");
@@ -413,7 +413,7 @@ namespace Google.Cloud.Monitoring.V3
             OrganizationAlertPolicy = 2,
 
             /// <summary>A resource name with pattern <c>folders/{folder}/alertPolicies/{alert_policy}</c>.</summary>
-            FolderAlertPolicy = 3
+            FolderAlertPolicy = 3,
         }
 
         private static gax::PathTemplate s_projectAlertPolicy = new gax::PathTemplate("projects/{project}/alertPolicies/{alert_policy}");

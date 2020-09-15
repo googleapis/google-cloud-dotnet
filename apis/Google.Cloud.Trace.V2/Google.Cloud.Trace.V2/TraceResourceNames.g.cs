@@ -30,7 +30,7 @@ namespace Google.Cloud.Trace.V2
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/traces/{trace}/spans/{span}</c>.</summary>
-            ProjectTraceSpan = 1
+            ProjectTraceSpan = 1,
         }
 
         private static gax::PathTemplate s_projectTraceSpan = new gax::PathTemplate("projects/{project}/traces/{trace}/spans/{span}");

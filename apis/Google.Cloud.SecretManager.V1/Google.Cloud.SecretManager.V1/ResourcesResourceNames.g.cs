@@ -30,7 +30,7 @@ namespace Google.Cloud.SecretManager.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/secrets/{secret}</c>.</summary>
-            ProjectSecret = 1
+            ProjectSecret = 1,
         }
 
         private static gax::PathTemplate s_projectSecret = new gax::PathTemplate("projects/{project}/secrets/{secret}");
@@ -247,7 +247,7 @@ namespace Google.Cloud.SecretManager.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/secrets/{secret}/versions/{secret_version}</c>.
             /// </summary>
-            ProjectSecretSecretVersion = 1
+            ProjectSecretSecretVersion = 1,
         }
 
         private static gax::PathTemplate s_projectSecretSecretVersion = new gax::PathTemplate("projects/{project}/secrets/{secret}/versions/{secret_version}");

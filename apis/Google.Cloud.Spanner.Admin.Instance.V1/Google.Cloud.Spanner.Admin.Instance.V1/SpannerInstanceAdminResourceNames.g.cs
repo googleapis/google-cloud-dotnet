@@ -34,7 +34,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/instanceConfigs/{instance_config}</c>.
             /// </summary>
-            ProjectInstanceConfig = 1
+            ProjectInstanceConfig = 1,
         }
 
         private static gax::PathTemplate s_projectInstanceConfig = new gax::PathTemplate("projects/{project}/instanceConfigs/{instance_config}");

@@ -33,7 +33,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
             /// A resource name with pattern <c>organizations/{organization}/notificationConfigs/{notification_config}</c>
             /// .
             /// </summary>
-            OrganizationNotificationConfig = 1
+            OrganizationNotificationConfig = 1,
         }
 
         private static gax::PathTemplate s_organizationNotificationConfig = new gax::PathTemplate("organizations/{organization}/notificationConfigs/{notification_config}");
@@ -272,7 +272,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/topics/{topic}</c>.</summary>
-            ProjectTopic = 1
+            ProjectTopic = 1,
         }
 
         private static gax::PathTemplate s_projectTopic = new gax::PathTemplate("projects/{project}/topics/{topic}");

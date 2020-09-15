@@ -30,7 +30,7 @@ namespace Google.Cloud.Dialogflow.V2
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/agent/intents/{intent}</c>.</summary>
-            ProjectIntent = 1
+            ProjectIntent = 1,
         }
 
         private static gax::PathTemplate s_projectIntent = new gax::PathTemplate("projects/{project}/agent/intents/{intent}");

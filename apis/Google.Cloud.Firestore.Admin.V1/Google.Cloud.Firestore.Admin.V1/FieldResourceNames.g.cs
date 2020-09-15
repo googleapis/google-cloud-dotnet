@@ -33,7 +33,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             /// A resource name with pattern
             /// <c>projects/{project}/databases/{database}/collectionGroups/{collection}/fields/{field}</c>.
             /// </summary>
-            ProjectDatabaseCollectionField = 1
+            ProjectDatabaseCollectionField = 1,
         }
 
         private static gax::PathTemplate s_projectDatabaseCollectionField = new gax::PathTemplate("projects/{project}/databases/{database}/collectionGroups/{collection}/fields/{field}");

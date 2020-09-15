@@ -33,7 +33,7 @@ namespace Google.Cloud.Dlp.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/findings/{finding}</c>.
             /// </summary>
-            ProjectLocationFinding = 1
+            ProjectLocationFinding = 1,
         }
 
         private static gax::PathTemplate s_projectLocationFinding = new gax::PathTemplate("projects/{project}/locations/{location}/findings/{finding}");
@@ -279,7 +279,7 @@ namespace Google.Cloud.Dlp.V2
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/inspectTemplates/{inspect_template}</c>.
             /// </summary>
-            ProjectLocationInspectTemplate = 4
+            ProjectLocationInspectTemplate = 4,
         }
 
         private static gax::PathTemplate s_organizationInspectTemplate = new gax::PathTemplate("organizations/{organization}/inspectTemplates/{inspect_template}");
@@ -683,7 +683,7 @@ namespace Google.Cloud.Dlp.V2
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/deidentifyTemplates/{deidentify_template}</c>.
             /// </summary>
-            ProjectLocationDeidentifyTemplate = 4
+            ProjectLocationDeidentifyTemplate = 4,
         }
 
         private static gax::PathTemplate s_organizationDeidentifyTemplate = new gax::PathTemplate("organizations/{organization}/deidentifyTemplates/{deidentify_template}");
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.Dlp.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/jobTriggers/{job_trigger}</c>.
             /// </summary>
-            ProjectLocationJobTrigger = 2
+            ProjectLocationJobTrigger = 2,
         }
 
         private static gax::PathTemplate s_projectJobTrigger = new gax::PathTemplate("projects/{project}/jobTriggers/{job_trigger}");
@@ -1366,7 +1366,7 @@ namespace Google.Cloud.Dlp.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/dlpJobs/{dlp_job}</c>.
             /// </summary>
-            ProjectLocationDlpJob = 2
+            ProjectLocationDlpJob = 2,
         }
 
         private static gax::PathTemplate s_projectDlpJob = new gax::PathTemplate("projects/{project}/dlpJobs/{dlp_job}");
@@ -1643,7 +1643,7 @@ namespace Google.Cloud.Dlp.V2
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/storedInfoTypes/{stored_info_type}</c>.
             /// </summary>
-            ProjectLocationStoredInfoType = 4
+            ProjectLocationStoredInfoType = 4,
         }
 
         private static gax::PathTemplate s_organizationStoredInfoType = new gax::PathTemplate("organizations/{organization}/storedInfoTypes/{stored_info_type}");
@@ -2032,7 +2032,7 @@ namespace Google.Cloud.Dlp.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/dlpContent</c>.
             /// </summary>
-            ProjectLocation = 2
+            ProjectLocation = 2,
         }
 
         private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}/dlpContent");
@@ -2282,7 +2282,7 @@ namespace Google.Cloud.Dlp.V2
             /// <summary>
             /// A resource name with pattern <c>organizations/{organization}/locations/{location}</c>.
             /// </summary>
-            OrganizationLocation = 1
+            OrganizationLocation = 1,
         }
 
         private static gax::PathTemplate s_organizationLocation = new gax::PathTemplate("organizations/{organization}/locations/{location}");

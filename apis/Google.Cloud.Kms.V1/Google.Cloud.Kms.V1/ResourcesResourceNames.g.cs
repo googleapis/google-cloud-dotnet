@@ -32,7 +32,7 @@ namespace Google.Cloud.Kms.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/keyRings/{key_ring}</c>.
             /// </summary>
-            ProjectLocationKeyRing = 1
+            ProjectLocationKeyRing = 1,
         }
 
         private static gax::PathTemplate s_projectLocationKeyRing = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}");
@@ -262,7 +262,7 @@ namespace Google.Cloud.Kms.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}</c>.
             /// </summary>
-            ProjectLocationKeyRingCryptoKey = 1
+            ProjectLocationKeyRingCryptoKey = 1,
         }
 
         private static gax::PathTemplate s_projectLocationKeyRingCryptoKey = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}");
@@ -521,7 +521,7 @@ namespace Google.Cloud.Kms.V1
             /// projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}</c>
             /// .
             /// </summary>
-            ProjectLocationKeyRingCryptoKeyCryptoKeyVersion = 1
+            ProjectLocationKeyRingCryptoKeyCryptoKeyVersion = 1,
         }
 
         private static gax::PathTemplate s_projectLocationKeyRingCryptoKeyCryptoKeyVersion = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}");
@@ -809,7 +809,7 @@ namespace Google.Cloud.Kms.V1
             /// projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}/publicKey</c>
             /// .
             /// </summary>
-            ProjectLocationKeyRingCryptoKeyCryptoKeyVersion = 1
+            ProjectLocationKeyRingCryptoKeyCryptoKeyVersion = 1,
         }
 
         private static gax::PathTemplate s_projectLocationKeyRingCryptoKeyCryptoKeyVersion = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}/publicKey");
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.Kms.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/keyRings/{key_ring}/importJobs/{import_job}</c>.
             /// </summary>
-            ProjectLocationKeyRingImportJob = 1
+            ProjectLocationKeyRingImportJob = 1,
         }
 
         private static gax::PathTemplate s_projectLocationKeyRingImportJob = new gax::PathTemplate("projects/{project}/locations/{location}/keyRings/{key_ring}/importJobs/{import_job}");

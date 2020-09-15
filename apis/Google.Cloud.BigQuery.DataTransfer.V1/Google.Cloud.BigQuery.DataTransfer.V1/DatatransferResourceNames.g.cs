@@ -36,7 +36,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/dataSources/{data_source}</c>.
             /// </summary>
-            ProjectLocationDataSource = 2
+            ProjectLocationDataSource = 2,
         }
 
         private static gax::PathTemplate s_projectDataSource = new gax::PathTemplate("projects/{project}/dataSources/{data_source}");

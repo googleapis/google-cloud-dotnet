@@ -32,7 +32,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/namespaces/{namespace}</c>.
             /// </summary>
-            ProjectLocationNamespace = 1
+            ProjectLocationNamespace = 1,
         }
 
         private static gax::PathTemplate s_projectLocationNamespace = new gax::PathTemplate("projects/{project}/locations/{location}/namespaces/{namespace}");

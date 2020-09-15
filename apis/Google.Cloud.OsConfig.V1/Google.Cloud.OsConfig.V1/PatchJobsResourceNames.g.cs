@@ -31,7 +31,7 @@ namespace Google.Cloud.OsConfig.V1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/patchJobs/{patch_job}</c>.</summary>
-            ProjectPatchJob = 1
+            ProjectPatchJob = 1,
         }
 
         private static gax::PathTemplate s_projectPatchJob = new gax::PathTemplate("projects/{project}/patchJobs/{patch_job}");

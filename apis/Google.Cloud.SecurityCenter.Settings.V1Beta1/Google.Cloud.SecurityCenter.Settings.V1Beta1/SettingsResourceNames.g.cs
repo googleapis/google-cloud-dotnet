@@ -51,7 +51,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/zones/{zone}/clusters/{cluster}/settings</c>.
             /// </summary>
-            ProjectZoneCluster = 6
+            ProjectZoneCluster = 6,
         }
 
         private static gax::PathTemplate s_organization = new gax::PathTemplate("organizations/{organization}/settings");

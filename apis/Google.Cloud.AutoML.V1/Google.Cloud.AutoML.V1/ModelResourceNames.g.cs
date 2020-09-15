@@ -32,7 +32,7 @@ namespace Google.Cloud.AutoML.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/models/{model}</c>.
             /// </summary>
-            ProjectLocationModel = 1
+            ProjectLocationModel = 1,
         }
 
         private static gax::PathTemplate s_projectLocationModel = new gax::PathTemplate("projects/{project}/locations/{location}/models/{model}");

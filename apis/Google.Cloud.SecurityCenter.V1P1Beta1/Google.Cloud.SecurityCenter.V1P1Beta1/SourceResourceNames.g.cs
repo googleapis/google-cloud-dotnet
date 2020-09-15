@@ -30,7 +30,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>organizations/{organization}/sources/{source}</c>.</summary>
-            OrganizationSource = 1
+            OrganizationSource = 1,
         }
 
         private static gax::PathTemplate s_organizationSource = new gax::PathTemplate("organizations/{organization}/sources/{source}");

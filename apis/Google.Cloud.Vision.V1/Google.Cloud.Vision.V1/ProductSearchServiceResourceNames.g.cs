@@ -33,7 +33,7 @@ namespace Google.Cloud.Vision.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/products/{product}</c>.
             /// </summary>
-            ProjectLocationProduct = 1
+            ProjectLocationProduct = 1,
         }
 
         private static gax::PathTemplate s_projectLocationProduct = new gax::PathTemplate("projects/{project}/locations/{location}/products/{product}");
@@ -262,7 +262,7 @@ namespace Google.Cloud.Vision.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/productSets/{product_set}</c>.
             /// </summary>
-            ProjectLocationProductSet = 1
+            ProjectLocationProductSet = 1,
         }
 
         private static gax::PathTemplate s_projectLocationProductSet = new gax::PathTemplate("projects/{project}/locations/{location}/productSets/{product_set}");
@@ -502,7 +502,7 @@ namespace Google.Cloud.Vision.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/products/{product}/referenceImages/{reference_image}</c>.
             /// </summary>
-            ProjectLocationProductReferenceImage = 1
+            ProjectLocationProductReferenceImage = 1,
         }
 
         private static gax::PathTemplate s_projectLocationProductReferenceImage = new gax::PathTemplate("projects/{project}/locations/{location}/products/{product}/referenceImages/{reference_image}");

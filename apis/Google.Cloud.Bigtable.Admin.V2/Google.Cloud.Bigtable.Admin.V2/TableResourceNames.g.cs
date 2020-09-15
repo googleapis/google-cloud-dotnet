@@ -34,7 +34,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             /// A resource name with pattern
             /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}</c>.
             /// </summary>
-            ProjectInstanceClusterSnapshot = 1
+            ProjectInstanceClusterSnapshot = 1,
         }
 
         private static gax::PathTemplate s_projectInstanceClusterSnapshot = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}");
@@ -291,7 +291,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             /// A resource name with pattern
             /// <c>projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}</c>.
             /// </summary>
-            ProjectInstanceClusterBackup = 1
+            ProjectInstanceClusterBackup = 1,
         }
 
         private static gax::PathTemplate s_projectInstanceClusterBackup = new gax::PathTemplate("projects/{project}/instances/{instance}/clusters/{cluster}/backups/{backup}");

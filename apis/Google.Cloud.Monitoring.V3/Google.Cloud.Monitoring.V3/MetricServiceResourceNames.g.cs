@@ -44,7 +44,7 @@ namespace Google.Cloud.Monitoring.V3
             /// <summary>
             /// A resource name with pattern <c>folders/{folder}/metricDescriptors/{metric_descriptor=**}</c>.
             /// </summary>
-            FolderMetricDescriptor = 3
+            FolderMetricDescriptor = 3,
         }
 
         private static gax::PathTemplate s_projectMetricDescriptor = new gax::PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
@@ -372,7 +372,7 @@ namespace Google.Cloud.Monitoring.V3
             /// A resource name with pattern
             /// <c>folders/{folder}/monitoredResourceDescriptors/{monitored_resource_descriptor}</c>.
             /// </summary>
-            FolderMonitoredResourceDescriptor = 3
+            FolderMonitoredResourceDescriptor = 3,
         }
 
         private static gax::PathTemplate s_projectMonitoredResourceDescriptor = new gax::PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");

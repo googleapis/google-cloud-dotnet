@@ -33,7 +33,7 @@ namespace Google.Cloud.AutoML.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/datasets/{dataset}/annotationSpecs/{annotation_spec}</c>.
             /// </summary>
-            ProjectLocationDatasetAnnotationSpec = 1
+            ProjectLocationDatasetAnnotationSpec = 1,
         }
 
         private static gax::PathTemplate s_projectLocationDatasetAnnotationSpec = new gax::PathTemplate("projects/{project}/locations/{location}/datasets/{dataset}/annotationSpecs/{annotation_spec}");

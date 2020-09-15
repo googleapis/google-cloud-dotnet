@@ -33,7 +33,7 @@ namespace Google.Cloud.BigQuery.Connection.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/connections/{connection}</c>.
             /// </summary>
-            ProjectLocationConnection = 1
+            ProjectLocationConnection = 1,
         }
 
         private static gax::PathTemplate s_projectLocationConnection = new gax::PathTemplate("projects/{project}/locations/{location}/connections/{connection}");

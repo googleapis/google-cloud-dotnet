@@ -33,7 +33,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/certificateAuthorities/{certificate_authority}</c>.
             /// </summary>
-            ProjectLocationCertificateAuthority = 1
+            ProjectLocationCertificateAuthority = 1,
         }
 
         private static gax::PathTemplate s_projectLocationCertificateAuthority = new gax::PathTemplate("projects/{project}/locations/{location}/certificateAuthorities/{certificate_authority}");
@@ -299,7 +299,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             /// projects/{project}/locations/{location}/certificateAuthorities/{certificate_authority}/certificateRevocationLists/{certificate_revocation_list}</c>
             /// .
             /// </summary>
-            ProjectLocationCertificateAuthorityCertificateRevocationList = 1
+            ProjectLocationCertificateAuthorityCertificateRevocationList = 1,
         }
 
         private static gax::PathTemplate s_projectLocationCertificateAuthorityCertificateRevocationList = new gax::PathTemplate("projects/{project}/locations/{location}/certificateAuthorities/{certificate_authority}/certificateRevocationLists/{certificate_revocation_list}");
@@ -613,7 +613,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             /// projects/{project}/locations/{location}/certificateAuthorities/{certificate_authority}/certificates/{certificate}</c>
             /// .
             /// </summary>
-            ProjectLocationCertificateAuthorityCertificate = 1
+            ProjectLocationCertificateAuthorityCertificate = 1,
         }
 
         private static gax::PathTemplate s_projectLocationCertificateAuthorityCertificate = new gax::PathTemplate("projects/{project}/locations/{location}/certificateAuthorities/{certificate_authority}/certificates/{certificate}");
@@ -895,7 +895,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/reusableConfigs/{reusable_config}</c>.
             /// </summary>
-            ProjectLocationReusableConfig = 1
+            ProjectLocationReusableConfig = 1,
         }
 
         private static gax::PathTemplate s_projectLocationReusableConfig = new gax::PathTemplate("projects/{project}/locations/{location}/reusableConfigs/{reusable_config}");

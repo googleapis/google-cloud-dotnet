@@ -32,7 +32,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
             /// <summary>
             /// A resource name with pattern <c>organizations/{organization}/sources/{source}/findings/{finding}</c>.
             /// </summary>
-            OrganizationSourceFinding = 1
+            OrganizationSourceFinding = 1,
         }
 
         private static gax::PathTemplate s_organizationSourceFinding = new gax::PathTemplate("organizations/{organization}/sources/{source}/findings/{finding}");

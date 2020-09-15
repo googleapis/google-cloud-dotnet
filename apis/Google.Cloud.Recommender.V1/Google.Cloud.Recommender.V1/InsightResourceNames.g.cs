@@ -33,7 +33,7 @@ namespace Google.Cloud.Recommender.V1
             /// A resource name with pattern
             /// <c>projects/{project}/locations/{location}/insightTypes/{insight_type}/insights/{insight}</c>.
             /// </summary>
-            ProjectLocationInsightTypeInsight = 1
+            ProjectLocationInsightTypeInsight = 1,
         }
 
         private static gax::PathTemplate s_projectLocationInsightTypeInsight = new gax::PathTemplate("projects/{project}/locations/{location}/insightTypes/{insight_type}/insights/{insight}");
@@ -288,7 +288,7 @@ namespace Google.Cloud.Recommender.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/insightTypes/{insight_type}</c>.
             /// </summary>
-            ProjectLocationInsightType = 1
+            ProjectLocationInsightType = 1,
         }
 
         private static gax::PathTemplate s_projectLocationInsightType = new gax::PathTemplate("projects/{project}/locations/{location}/insightTypes/{insight_type}");

@@ -31,7 +31,7 @@ namespace Google.Cloud.Logging.V2
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>projects/{project}/metrics/{metric}</c>.</summary>
-            ProjectMetric = 1
+            ProjectMetric = 1,
         }
 
         private static gax::PathTemplate s_projectMetric = new gax::PathTemplate("projects/{project}/metrics/{metric}");

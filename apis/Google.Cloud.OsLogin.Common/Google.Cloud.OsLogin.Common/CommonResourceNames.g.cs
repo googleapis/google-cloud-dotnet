@@ -30,7 +30,7 @@ namespace Google.Cloud.OsLogin.Common
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>users/{user}/projects/{project}</c>.</summary>
-            UserProject = 1
+            UserProject = 1,
         }
 
         private static gax::PathTemplate s_userProject = new gax::PathTemplate("users/{user}/projects/{project}");
@@ -239,7 +239,7 @@ namespace Google.Cloud.OsLogin.Common
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>users/{user}/sshPublicKeys/{fingerprint}</c>.</summary>
-            UserFingerprint = 1
+            UserFingerprint = 1,
         }
 
         private static gax::PathTemplate s_userFingerprint = new gax::PathTemplate("users/{user}/sshPublicKeys/{fingerprint}");
@@ -456,7 +456,7 @@ namespace Google.Cloud.OsLogin.Common
             Unparsed = 0,
 
             /// <summary>A resource name with pattern <c>users/{user}</c>.</summary>
-            User = 1
+            User = 1,
         }
 
         private static gax::PathTemplate s_user = new gax::PathTemplate("users/{user}");

@@ -32,7 +32,7 @@ namespace Google.Cloud.Dialogflow.V2
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/agent/entityTypes/{entity_type}</c>.
             /// </summary>
-            ProjectEntityType = 1
+            ProjectEntityType = 1,
         }
 
         private static gax::PathTemplate s_projectEntityType = new gax::PathTemplate("projects/{project}/agent/entityTypes/{entity_type}");

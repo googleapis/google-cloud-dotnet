@@ -33,7 +33,7 @@ namespace Google.Cloud.Gaming.V1
             /// <summary>
             /// A resource name with pattern <c>projects/{project}/locations/{location}/realms/{realm}</c>.
             /// </summary>
-            ProjectLocationRealm = 1
+            ProjectLocationRealm = 1,
         }
 
         private static gax::PathTemplate s_projectLocationRealm = new gax::PathTemplate("projects/{project}/locations/{location}/realms/{realm}");

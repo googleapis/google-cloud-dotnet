@@ -33,7 +33,7 @@ namespace Google.Analytics.Data.V1Alpha
             Metadata = 1,
 
             /// <summary>A resource name with pattern <c>properties/{property}/metadata</c>.</summary>
-            Property = 2
+            Property = 2,
         }
 
         private static gax::PathTemplate s_metadata = new gax::PathTemplate("metadata");
