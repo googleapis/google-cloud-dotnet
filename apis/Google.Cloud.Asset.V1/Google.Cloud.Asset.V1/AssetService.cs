@@ -69,72 +69,78 @@ namespace Google.Cloud.Asset.V1 {
             "ASABKAsyJi5nb29nbGUuY2xvdWQuYXNzZXQudjEuR2NzT3V0cHV0UmVzdWx0",
             "SABCCAoGcmVzdWx0Ih8KD0djc091dHB1dFJlc3VsdBIMCgR1cmlzGAEgAygJ",
             "IkMKDkdjc0Rlc3RpbmF0aW9uEg0KA3VyaRgBIAEoCUgAEhQKCnVyaV9wcmVm",
-            "aXgYAiABKAlIAEIMCgpvYmplY3RfdXJpIk4KE0JpZ1F1ZXJ5RGVzdGluYXRp",
-            "b24SFAoHZGF0YXNldBgBIAEoCUID4EECEhIKBXRhYmxlGAIgASgJQgPgQQIS",
-            "DQoFZm9yY2UYAyABKAgiIgoRUHVic3ViRGVzdGluYXRpb24SDQoFdG9waWMY",
-            "ASABKAkiaQoQRmVlZE91dHB1dENvbmZpZxJGChJwdWJzdWJfZGVzdGluYXRp",
-            "b24YASABKAsyKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuUHVic3ViRGVzdGlu",
-            "YXRpb25IAEINCgtkZXN0aW5hdGlvbiKBAwoERmVlZBIRCgRuYW1lGAEgASgJ",
-            "QgPgQQISEwoLYXNzZXRfbmFtZXMYAiADKAkSEwoLYXNzZXRfdHlwZXMYAyAD",
-            "KAkSOAoMY29udGVudF90eXBlGAQgASgOMiIuZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLkNvbnRlbnRUeXBlEkgKEmZlZWRfb3V0cHV0X2NvbmZpZxgFIAEoCzIn",
-            "Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5GZWVkT3V0cHV0Q29uZmlnQgPgQQIS",
-            "JAoJY29uZGl0aW9uGAYgASgLMhEuZ29vZ2xlLnR5cGUuRXhwcjqRAepBjQEK",
-            "HmNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb20vRmVlZBIfcHJvamVjdHMve3By",
-            "b2plY3R9L2ZlZWRzL3tmZWVkfRIdZm9sZGVycy97Zm9sZGVyfS9mZWVkcy97",
-            "ZmVlZH0SKW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vZmVlZHMve2Zl",
-            "ZWR9IAEipQEKGVNlYXJjaEFsbFJlc291cmNlc1JlcXVlc3QSEgoFc2NvcGUY",
-            "ASABKAlCA+BBAhISCgVxdWVyeRgCIAEoCUID4EEBEhgKC2Fzc2V0X3R5cGVz",
-            "GAMgAygJQgPgQQESFgoJcGFnZV9zaXplGAQgASgFQgPgQQESFwoKcGFnZV90",
-            "b2tlbhgFIAEoCUID4EEBEhUKCG9yZGVyX2J5GAYgASgJQgPgQQEicwoaU2Vh",
-            "cmNoQWxsUmVzb3VyY2VzUmVzcG9uc2USPAoHcmVzdWx0cxgBIAMoCzIrLmdv",
-            "b2dsZS5jbG91ZC5hc3NldC52MS5SZXNvdXJjZVNlYXJjaFJlc3VsdBIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkidgobU2VhcmNoQWxsSWFtUG9saWNpZXNS",
-            "ZXF1ZXN0EhIKBXNjb3BlGAEgASgJQgPgQQISEgoFcXVlcnkYAiABKAlCA+BB",
-            "ARIWCglwYWdlX3NpemUYAyABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAQgASgJ",
-            "QgPgQQEidgocU2VhcmNoQWxsSWFtUG9saWNpZXNSZXNwb25zZRI9CgdyZXN1",
-            "bHRzGAEgAygLMiwuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBvbGljeVNl",
-            "YXJjaFJlc3VsdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkqbAoLQ29udGVu",
-            "dFR5cGUSHAoYQ09OVEVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIUkVTT1VS",
-            "Q0UQARIOCgpJQU1fUE9MSUNZEAISDgoKT1JHX1BPTElDWRAEEhEKDUFDQ0VT",
-            "U19QT0xJQ1kQBTLwCwoMQXNzZXRTZXJ2aWNlEt4BCgxFeHBvcnRBc3NldHMS",
-            "Ki5nb29nbGUuY2xvdWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iggGC0+STAiIiHS92MS97",
-            "cGFyZW50PSovKn06ZXhwb3J0QXNzZXRzOgEqykFXCipnb29nbGUuY2xvdWQu",
-            "YXNzZXQudjEuRXhwb3J0QXNzZXRzUmVzcG9uc2USKWdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MS5FeHBvcnRBc3NldHNSZXF1ZXN0ErIBChVCYXRjaEdldEFzc2V0",
-            "c0hpc3RvcnkSMy5nb29nbGUuY2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3Nl",
-            "dHNIaXN0b3J5UmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRj",
-            "aEdldEFzc2V0c0hpc3RvcnlSZXNwb25zZSIugtPkkwIoEiYvdjEve3BhcmVu",
-            "dD0qLyp9OmJhdGNoR2V0QXNzZXRzSGlzdG9yeRJ/CgpDcmVhdGVGZWVkEigu",
-            "Z29vZ2xlLmNsb3VkLmFzc2V0LnYxLkNyZWF0ZUZlZWRSZXF1ZXN0GhsuZ29v",
-            "Z2xlLmNsb3VkLmFzc2V0LnYxLkZlZWQiKoLT5JMCGyIWL3YxL3twYXJlbnQ9",
-            "Ki8qfS9mZWVkczoBKtpBBnBhcmVudBJ0CgdHZXRGZWVkEiUuZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLkdldEZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3VkLmFz",
-            "c2V0LnYxLkZlZWQiJYLT5JMCGBIWL3YxL3tuYW1lPSovKi9mZWVkcy8qfdpB",
-            "BG5hbWUShwEKCUxpc3RGZWVkcxInLmdvb2dsZS5jbG91ZC5hc3NldC52MS5M",
-            "aXN0RmVlZHNSZXF1ZXN0GiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkxpc3RG",
-            "ZWVkc1Jlc3BvbnNlIieC0+STAhgSFi92MS97cGFyZW50PSovKn0vZmVlZHPa",
-            "QQZwYXJlbnQSggEKClVwZGF0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djEuVXBkYXRlRmVlZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "RmVlZCItgtPkkwIgMhsvdjEve2ZlZWQubmFtZT0qLyovZmVlZHMvKn06ASra",
-            "QQRmZWVkEnUKCkRlbGV0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "RGVsZXRlRmVlZFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJYLT",
-            "5JMCGCoWL3YxL3tuYW1lPSovKi9mZWVkcy8qfdpBBG5hbWUSvwEKElNlYXJj",
-            "aEFsbFJlc291cmNlcxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5TZWFyY2hB",
-            "bGxSZXNvdXJjZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNl",
-            "YXJjaEFsbFJlc291cmNlc1Jlc3BvbnNlIkSC0+STAiQSIi92MS97c2NvcGU9",
-            "Ki8qfTpzZWFyY2hBbGxSZXNvdXJjZXPaQRdzY29wZSxxdWVyeSxhc3NldF90",
-            "eXBlcxK7AQoUU2VhcmNoQWxsSWFtUG9saWNpZXMSMi5nb29nbGUuY2xvdWQu",
-            "YXNzZXQudjEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXF1ZXN0GjMuZ29vZ2xl",
-            "LmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFsbElhbVBvbGljaWVzUmVzcG9uc2Ui",
-            "OoLT5JMCJhIkL3YxL3tzY29wZT0qLyp9OnNlYXJjaEFsbElhbVBvbGljaWVz",
-            "2kELc2NvcGUscXVlcnkaTcpBGWNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb23S",
-            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtQpwBChljb20uZ29vZ2xlLmNsb3VkLmFzc2V0LnYxQhFBc3NldFNlcnZp",
-            "Y2VQcm90b1ABWjpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL2Fzc2V0L3YxO2Fzc2V0qgIVR29vZ2xlLkNsb3VkLkFzc2V0",
-            "LlYxygIVR29vZ2xlXENsb3VkXEFzc2V0XFYxYgZwcm90bzM="));
+            "aXgYAiABKAlIAEIMCgpvYmplY3RfdXJpIrQBChNCaWdRdWVyeURlc3RpbmF0",
+            "aW9uEhQKB2RhdGFzZXQYASABKAlCA+BBAhISCgV0YWJsZRgCIAEoCUID4EEC",
+            "Eg0KBWZvcmNlGAMgASgIEjwKDnBhcnRpdGlvbl9zcGVjGAQgASgLMiQuZ29v",
+            "Z2xlLmNsb3VkLmFzc2V0LnYxLlBhcnRpdGlvblNwZWMSJgoec2VwYXJhdGVf",
+            "dGFibGVzX3Blcl9hc3NldF90eXBlGAUgASgIIqkBCg1QYXJ0aXRpb25TcGVj",
+            "EkgKDXBhcnRpdGlvbl9rZXkYASABKA4yMS5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djEuUGFydGl0aW9uU3BlYy5QYXJ0aXRpb25LZXkiTgoMUGFydGl0aW9uS2V5",
+            "Eh0KGVBBUlRJVElPTl9LRVlfVU5TUEVDSUZJRUQQABINCglSRUFEX1RJTUUQ",
+            "ARIQCgxSRVFVRVNUX1RJTUUQAiIiChFQdWJzdWJEZXN0aW5hdGlvbhINCgV0",
+            "b3BpYxgBIAEoCSJpChBGZWVkT3V0cHV0Q29uZmlnEkYKEnB1YnN1Yl9kZXN0",
+            "aW5hdGlvbhgBIAEoCzIoLmdvb2dsZS5jbG91ZC5hc3NldC52MS5QdWJzdWJE",
+            "ZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0aW9uIoEDCgRGZWVkEhEKBG5hbWUY",
+            "ASABKAlCA+BBAhITCgthc3NldF9uYW1lcxgCIAMoCRITCgthc3NldF90eXBl",
+            "cxgDIAMoCRI4Cgxjb250ZW50X3R5cGUYBCABKA4yIi5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuQ29udGVudFR5cGUSSAoSZmVlZF9vdXRwdXRfY29uZmlnGAUg",
+            "ASgLMicuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWRPdXRwdXRDb25maWdC",
+            "A+BBAhIkCgljb25kaXRpb24YBiABKAsyES5nb29nbGUudHlwZS5FeHByOpEB",
+            "6kGNAQoeY2xvdWRhc3NldC5nb29nbGVhcGlzLmNvbS9GZWVkEh9wcm9qZWN0",
+            "cy97cHJvamVjdH0vZmVlZHMve2ZlZWR9Eh1mb2xkZXJzL3tmb2xkZXJ9L2Zl",
+            "ZWRzL3tmZWVkfRIpb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9mZWVk",
+            "cy97ZmVlZH0gASKlAQoZU2VhcmNoQWxsUmVzb3VyY2VzUmVxdWVzdBISCgVz",
+            "Y29wZRgBIAEoCUID4EECEhIKBXF1ZXJ5GAIgASgJQgPgQQESGAoLYXNzZXRf",
+            "dHlwZXMYAyADKAlCA+BBARIWCglwYWdlX3NpemUYBCABKAVCA+BBARIXCgpw",
+            "YWdlX3Rva2VuGAUgASgJQgPgQQESFQoIb3JkZXJfYnkYBiABKAlCA+BBASJz",
+            "ChpTZWFyY2hBbGxSZXNvdXJjZXNSZXNwb25zZRI8CgdyZXN1bHRzGAEgAygL",
+            "MisuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlJlc291cmNlU2VhcmNoUmVzdWx0",
+            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ2ChtTZWFyY2hBbGxJYW1Qb2xp",
+            "Y2llc1JlcXVlc3QSEgoFc2NvcGUYASABKAlCA+BBAhISCgVxdWVyeRgCIAEo",
+            "CUID4EEBEhYKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
+            "BCABKAlCA+BBASJ2ChxTZWFyY2hBbGxJYW1Qb2xpY2llc1Jlc3BvbnNlEj0K",
+            "B3Jlc3VsdHMYASADKAsyLC5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9s",
+            "aWN5U2VhcmNoUmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSpsCgtD",
+            "b250ZW50VHlwZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghS",
+            "RVNPVVJDRRABEg4KCklBTV9QT0xJQ1kQAhIOCgpPUkdfUE9MSUNZEAQSEQoN",
+            "QUNDRVNTX1BPTElDWRAFMvALCgxBc3NldFNlcnZpY2US3gEKDEV4cG9ydEFz",
+            "c2V0cxIqLmdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKCAYLT5JMCIiId",
+            "L3YxL3twYXJlbnQ9Ki8qfTpleHBvcnRBc3NldHM6ASrKQVcKKmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXNwb25zZRIpZ29vZ2xlLmNs",
+            "b3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0c1JlcXVlc3QSsgEKFUJhdGNoR2V0",
+            "QXNzZXRzSGlzdG9yeRIzLmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdl",
+            "dEFzc2V0c0hpc3RvcnlSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
+            "LkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlc3BvbnNlIi6C0+STAigSJi92MS97",
+            "cGFyZW50PSovKn06YmF0Y2hHZXRBc3NldHNIaXN0b3J5En8KCkNyZWF0ZUZl",
+            "ZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuQ3JlYXRlRmVlZFJlcXVlc3Qa",
+            "Gy5nb29nbGUuY2xvdWQuYXNzZXQudjEuRmVlZCIqgtPkkwIbIhYvdjEve3Bh",
+            "cmVudD0qLyp9L2ZlZWRzOgEq2kEGcGFyZW50EnQKB0dldEZlZWQSJS5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuR2V0RmVlZFJlcXVlc3QaGy5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuRmVlZCIlgtPkkwIYEhYvdjEve25hbWU9Ki8qL2ZlZWRz",
+            "Lyp92kEEbmFtZRKHAQoJTGlzdEZlZWRzEicuZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLkxpc3RGZWVkc1JlcXVlc3QaKC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
+            "TGlzdEZlZWRzUmVzcG9uc2UiJ4LT5JMCGBIWL3YxL3twYXJlbnQ9Ki8qfS9m",
+            "ZWVkc9pBBnBhcmVudBKCAQoKVXBkYXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5VcGRhdGVGZWVkUmVxdWVzdBobLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5GZWVkIi2C0+STAiAyGy92MS97ZmVlZC5uYW1lPSovKi9mZWVkcy8q",
+            "fToBKtpBBGZlZWQSdQoKRGVsZXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3Nl",
+            "dC52MS5EZWxldGVGZWVkUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSIlgtPkkwIYKhYvdjEve25hbWU9Ki8qL2ZlZWRzLyp92kEEbmFtZRK/AQoS",
+            "U2VhcmNoQWxsUmVzb3VyY2VzEjAuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNl",
+            "YXJjaEFsbFJlc291cmNlc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djEuU2VhcmNoQWxsUmVzb3VyY2VzUmVzcG9uc2UiRILT5JMCJBIiL3YxL3tz",
+            "Y29wZT0qLyp9OnNlYXJjaEFsbFJlc291cmNlc9pBF3Njb3BlLHF1ZXJ5LGFz",
+            "c2V0X3R5cGVzErsBChRTZWFyY2hBbGxJYW1Qb2xpY2llcxIyLmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5TZWFyY2hBbGxJYW1Qb2xpY2llc1JlcXVlc3QaMy5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXNw",
+            "b25zZSI6gtPkkwImEiQvdjEve3Njb3BlPSovKn06c2VhcmNoQWxsSWFtUG9s",
+            "aWNpZXPaQQtzY29wZSxxdWVyeRpNykEZY2xvdWRhc3NldC5nb29nbGVhcGlz",
+            "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
+            "cGxhdGZvcm1CnAEKGWNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFCEUFzc2V0",
+            "U2VydmljZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvYXNzZXQvdjE7YXNzZXSqAhVHb29nbGUuQ2xvdWQu",
+            "QXNzZXQuVjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -152,7 +158,8 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.OutputResult), global::Google.Cloud.Asset.V1.OutputResult.Parser, new[]{ "GcsResult" }, new[]{ "Result" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsOutputResult), global::Google.Cloud.Asset.V1.GcsOutputResult.Parser, new[]{ "Uris" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.GcsDestination), global::Google.Cloud.Asset.V1.GcsDestination.Parser, new[]{ "Uri", "UriPrefix" }, new[]{ "ObjectUri" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.BigQueryDestination), global::Google.Cloud.Asset.V1.BigQueryDestination.Parser, new[]{ "Dataset", "Table", "Force", "PartitionSpec", "SeparateTablesPerAssetType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.PartitionSpec), global::Google.Cloud.Asset.V1.PartitionSpec.Parser, new[]{ "PartitionKey" }, null, new[]{ typeof(global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.PubsubDestination), global::Google.Cloud.Asset.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.FeedOutputConfig), global::Google.Cloud.Asset.V1.FeedOutputConfig.Parser, new[]{ "PubsubDestination" }, new[]{ "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.Feed), global::Google.Cloud.Asset.V1.Feed.Parser, new[]{ "Name", "AssetNames", "AssetTypes", "ContentType", "FeedOutputConfig", "Condition" }, null, null, null, null),
@@ -2754,6 +2761,8 @@ namespace Google.Cloud.Asset.V1 {
       dataset_ = other.dataset_;
       table_ = other.table_;
       force_ = other.force_;
+      partitionSpec_ = other.partitionSpec_ != null ? other.partitionSpec_.Clone() : null;
+      separateTablesPerAssetType_ = other.separateTablesPerAssetType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2812,6 +2821,76 @@ namespace Google.Cloud.Asset.V1 {
       }
     }
 
+    /// <summary>Field number for the "partition_spec" field.</summary>
+    public const int PartitionSpecFieldNumber = 4;
+    private global::Google.Cloud.Asset.V1.PartitionSpec partitionSpec_;
+    /// <summary>
+    /// [partition_spec] determines whether to export to partitioned table(s) and
+    /// how to partition the data.
+    ///
+    /// If [partition_spec] is unset or [partition_spec.partion_key] is unset or
+    /// `PARTITION_KEY_UNSPECIFIED`, the snapshot results will be exported to
+    /// non-partitioned table(s). [force] will decide whether to overwrite existing
+    /// table(s).
+    ///
+    /// If [partition_spec] is specified. First, the snapshot results will be
+    /// written to partitioned table(s) with two additional timestamp columns,
+    /// readTime and requestTime, one of which will be the partition key. Secondly,
+    /// in the case when any destination table already exists, it will first try to
+    /// update existing table's schema as necessary by appending additional
+    /// columns. Then, if [force] is `TRUE`, the corresponding partition will be
+    /// overwritten by the snapshot results (data in different partitions will
+    /// remain intact); if [force] is unset or `FALSE`, it will append the data. An
+    /// error will be returned if the schema update or data appension fails.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.PartitionSpec PartitionSpec {
+      get { return partitionSpec_; }
+      set {
+        partitionSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "separate_tables_per_asset_type" field.</summary>
+    public const int SeparateTablesPerAssetTypeFieldNumber = 5;
+    private bool separateTablesPerAssetType_;
+    /// <summary>
+    /// If this flag is `TRUE`, the snapshot results will be written to one or
+    /// multiple tables, each of which contains results of one asset type. The
+    /// [force] and [partition_spec] fields will apply to each of them.
+    ///
+    /// Field [table] will be concatenated with "_" and the asset type names (see
+    /// https://cloud.google.com/asset-inventory/docs/supported-asset-types for
+    /// supported asset types) to construct per-asset-type table names, in which
+    /// all non-alphanumeric characters like "." and "/" will be substituted by
+    /// "_". Example: if field [table] is "mytable" and snapshot results
+    /// contain "storage.googleapis.com/Bucket" assets, the corresponding table
+    /// name will be "mytable_storage_googleapis_com_Bucket". If any of these
+    /// tables does not exist, a new table with the concatenated name will be
+    /// created.
+    ///
+    /// When [content_type] in the ExportAssetsRequest is `RESOURCE`, the schema of
+    /// each table will include RECORD-type columns mapped to the nested fields in
+    /// the Asset.resource.data field of that asset type (up to the 15 nested level
+    /// BigQuery supports
+    /// (https://cloud.google.com/bigquery/docs/nested-repeated#limitations)). The
+    /// fields in >15 nested levels will be stored in JSON format string as a child
+    /// column of its parent RECORD column.
+    ///
+    /// If error occurs when exporting to any table, the whole export call will
+    /// return an error but the export results that already succeed will persist.
+    /// Example: if exporting to table_type_A succeeds when exporting to
+    /// table_type_B fails during one export call, the results in table_type_A will
+    /// persist and there will not be partial results persisting in a table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool SeparateTablesPerAssetType {
+      get { return separateTablesPerAssetType_; }
+      set {
+        separateTablesPerAssetType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BigQueryDestination);
@@ -2828,6 +2907,8 @@ namespace Google.Cloud.Asset.V1 {
       if (Dataset != other.Dataset) return false;
       if (Table != other.Table) return false;
       if (Force != other.Force) return false;
+      if (!object.Equals(PartitionSpec, other.PartitionSpec)) return false;
+      if (SeparateTablesPerAssetType != other.SeparateTablesPerAssetType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2837,6 +2918,8 @@ namespace Google.Cloud.Asset.V1 {
       if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
       if (Table.Length != 0) hash ^= Table.GetHashCode();
       if (Force != false) hash ^= Force.GetHashCode();
+      if (partitionSpec_ != null) hash ^= PartitionSpec.GetHashCode();
+      if (SeparateTablesPerAssetType != false) hash ^= SeparateTablesPerAssetType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2862,6 +2945,14 @@ namespace Google.Cloud.Asset.V1 {
         output.WriteRawTag(24);
         output.WriteBool(Force);
       }
+      if (partitionSpec_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PartitionSpec);
+      }
+      if (SeparateTablesPerAssetType != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SeparateTablesPerAssetType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2877,6 +2968,12 @@ namespace Google.Cloud.Asset.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Table);
       }
       if (Force != false) {
+        size += 1 + 1;
+      }
+      if (partitionSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartitionSpec);
+      }
+      if (SeparateTablesPerAssetType != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2898,6 +2995,15 @@ namespace Google.Cloud.Asset.V1 {
       }
       if (other.Force != false) {
         Force = other.Force;
+      }
+      if (other.partitionSpec_ != null) {
+        if (partitionSpec_ == null) {
+          PartitionSpec = new global::Google.Cloud.Asset.V1.PartitionSpec();
+        }
+        PartitionSpec.MergeFrom(other.PartitionSpec);
+      }
+      if (other.SeparateTablesPerAssetType != false) {
+        SeparateTablesPerAssetType = other.SeparateTablesPerAssetType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2922,9 +3028,191 @@ namespace Google.Cloud.Asset.V1 {
             Force = input.ReadBool();
             break;
           }
+          case 34: {
+            if (partitionSpec_ == null) {
+              PartitionSpec = new global::Google.Cloud.Asset.V1.PartitionSpec();
+            }
+            input.ReadMessage(PartitionSpec);
+            break;
+          }
+          case 40: {
+            SeparateTablesPerAssetType = input.ReadBool();
+            break;
+          }
         }
       }
     }
+
+  }
+
+  /// <summary>
+  /// Specifications of BigQuery partitioned table as export destination.
+  /// </summary>
+  public sealed partial class PartitionSpec : pb::IMessage<PartitionSpec> {
+    private static readonly pb::MessageParser<PartitionSpec> _parser = new pb::MessageParser<PartitionSpec>(() => new PartitionSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PartitionSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PartitionSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PartitionSpec(PartitionSpec other) : this() {
+      partitionKey_ = other.partitionKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PartitionSpec Clone() {
+      return new PartitionSpec(this);
+    }
+
+    /// <summary>Field number for the "partition_key" field.</summary>
+    public const int PartitionKeyFieldNumber = 1;
+    private global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey partitionKey_ = global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey.Unspecified;
+    /// <summary>
+    /// The partition key for BigQuery partitioned table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey PartitionKey {
+      get { return partitionKey_; }
+      set {
+        partitionKey_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PartitionSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PartitionSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PartitionKey != other.PartitionKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PartitionKey != global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey.Unspecified) hash ^= PartitionKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (PartitionKey != global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) PartitionKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PartitionKey != global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PartitionKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PartitionSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PartitionKey != global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey.Unspecified) {
+        PartitionKey = other.PartitionKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PartitionKey = (global::Google.Cloud.Asset.V1.PartitionSpec.Types.PartitionKey) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PartitionSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// This enum is used to determine the partition key column when exporting
+      /// assets to BigQuery partitioned table(s). Note that, if the partition key is
+      /// a timestamp column, the actual partition is based on its date value
+      /// (expressed in UTC. see details in
+      /// https://cloud.google.com/bigquery/docs/partitioned-tables#date_timestamp_partitioned_tables).
+      /// </summary>
+      public enum PartitionKey {
+        /// <summary>
+        /// Unspecified partition key. If used, it means using non-partitioned table.
+        /// </summary>
+        [pbr::OriginalName("PARTITION_KEY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The time when the snapshot is taken. If specified as partition key, the
+        /// result table(s) is partitoned by the additional timestamp column,
+        /// readTime. If [read_time] in ExportAssetsRequest is specified, the
+        /// readTime column's value will be the same as it. Otherwise, its value will
+        /// be the current time that is used to take the snapshot.
+        /// </summary>
+        [pbr::OriginalName("READ_TIME")] ReadTime = 1,
+        /// <summary>
+        /// The time when the request is received and started to be processed. If
+        /// specified as partition key, the result table(s) is partitoned by the
+        /// requestTime column, an additional timestamp column representing when the
+        /// request was received.
+        /// </summary>
+        [pbr::OriginalName("REQUEST_TIME")] RequestTime = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2939,7 +3227,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3075,7 +3363,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3250,7 +3538,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3569,7 +3857,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3910,7 +4198,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4071,7 +4359,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4341,7 +4629,7 @@ namespace Google.Cloud.Asset.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
