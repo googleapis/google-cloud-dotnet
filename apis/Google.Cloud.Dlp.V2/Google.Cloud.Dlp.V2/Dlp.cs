@@ -6664,7 +6664,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -7630,7 +7631,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -8173,7 +8175,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Required. Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -8721,7 +8724,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -28360,7 +28364,7 @@ namespace Google.Cloud.Dlp.V2 {
     ///
     /// The format of this value varies depending on the scope of the request
     /// (project or organization) and whether you have [specified a processing
-    /// location](/dlp/docs/specifying-location):
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -28405,7 +28409,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// The template id can contain uppercase and lowercase letters,
     /// numbers, and hyphens; that is, it must match the regular
-    /// expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+    /// expression: `[a-zA-Z\d-_]+`. The maximum length is 100
     /// characters. Can be empty to allow the system to generate one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28965,7 +28969,7 @@ namespace Google.Cloud.Dlp.V2 {
     ///
     /// The format of this value varies depending on the scope of the request
     /// (project or organization) and whether you have [specified a processing
-    /// location](/dlp/docs/specifying-location):
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -29551,7 +29555,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Required. Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -29592,7 +29597,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// The trigger id can contain uppercase and lowercase letters,
     /// numbers, and hyphens; that is, it must match the regular
-    /// expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+    /// expression: `[a-zA-Z\d-_]+`. The maximum length is 100
     /// characters. Can be empty to allow the system to generate one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30294,7 +30299,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Required. Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -30349,7 +30355,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// The job id can contain uppercase and lowercase letters,
     /// numbers, and hyphens; that is, it must match the regular
-    /// expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+    /// expression: `[a-zA-Z\d-_]+`. The maximum length is 100
     /// characters. Can be empty to allow the system to generate one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30611,7 +30617,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Required. Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -32136,7 +32143,8 @@ namespace Google.Cloud.Dlp.V2 {
     /// Required. Parent resource name.
     ///
     /// The format of this value varies depending on whether you have [specified a
-    /// processing location](/dlp/docs/specifying-location):
+    /// processing
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -33071,7 +33079,7 @@ namespace Google.Cloud.Dlp.V2 {
     ///
     /// The format of this value varies depending on the scope of the request
     /// (project or organization) and whether you have [specified a processing
-    /// location](/dlp/docs/specifying-location):
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -33116,7 +33124,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// The template id can contain uppercase and lowercase letters,
     /// numbers, and hyphens; that is, it must match the regular
-    /// expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+    /// expression: `[a-zA-Z\d-_]+`. The maximum length is 100
     /// characters. Can be empty to allow the system to generate one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -33676,7 +33684,7 @@ namespace Google.Cloud.Dlp.V2 {
     ///
     /// The format of this value varies depending on the scope of the request
     /// (project or organization) and whether you have [specified a processing
-    /// location](/dlp/docs/specifying-location):
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -35628,7 +35636,7 @@ namespace Google.Cloud.Dlp.V2 {
     ///
     /// The format of this value varies depending on the scope of the request
     /// (project or organization) and whether you have [specified a processing
-    /// location](/dlp/docs/specifying-location):
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>
@@ -35673,7 +35681,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// <summary>
     /// The storedInfoType ID can contain uppercase and lowercase letters,
     /// numbers, and hyphens; that is, it must match the regular
-    /// expression: `[a-zA-Z\\d-_]+`. The maximum length is 100
+    /// expression: `[a-zA-Z\d-_]+`. The maximum length is 100
     /// characters. Can be empty to allow the system to generate one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36235,7 +36243,7 @@ namespace Google.Cloud.Dlp.V2 {
     ///
     /// The format of this value varies depending on the scope of the request
     /// (project or organization) and whether you have [specified a processing
-    /// location](/dlp/docs/specifying-location):
+    /// location](https://cloud.google.com/dlp/docs/specifying-location):
     ///
     /// + Projects scope, location specified:&lt;br/>
     ///   `projects/`&lt;var>PROJECT_ID&lt;/var>`/locations/`&lt;var>LOCATION_ID&lt;/var>

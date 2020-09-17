@@ -1012,7 +1012,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1090,7 +1090,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1125,7 +1125,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1164,7 +1164,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1203,7 +1203,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1238,7 +1238,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1277,7 +1277,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1316,7 +1316,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1351,7 +1351,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1390,7 +1390,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1429,7 +1429,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1464,7 +1464,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1503,7 +1503,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1542,7 +1542,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1892,7 +1892,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1936,7 +1936,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -1980,7 +1980,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2024,7 +2024,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2068,7 +2068,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2112,7 +2112,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2156,7 +2156,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2200,7 +2200,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2244,7 +2244,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2288,7 +2288,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2496,7 +2496,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2536,7 +2536,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2576,7 +2576,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2612,7 +2612,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2652,7 +2652,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2692,7 +2692,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2728,7 +2728,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2768,7 +2768,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2808,7 +2808,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2844,7 +2844,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2884,7 +2884,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2924,7 +2924,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -2960,7 +2960,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3000,7 +3000,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3040,7 +3040,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3411,7 +3411,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3456,7 +3456,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3501,7 +3501,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3546,7 +3546,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3591,7 +3591,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3636,7 +3636,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3681,7 +3681,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3726,7 +3726,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3771,7 +3771,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -3816,7 +3816,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4028,7 +4028,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4062,7 +4063,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4096,7 +4098,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4126,7 +4129,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4160,7 +4164,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4194,7 +4199,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4224,7 +4230,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4258,7 +4265,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4292,7 +4300,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4781,7 +4790,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4820,7 +4830,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4859,7 +4870,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4898,7 +4910,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4937,7 +4950,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -4976,7 +4990,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5215,7 +5230,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5253,7 +5269,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5291,7 +5308,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5325,7 +5343,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5363,7 +5382,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5401,7 +5421,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5435,7 +5456,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5473,7 +5495,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5511,7 +5534,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5545,7 +5569,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5583,7 +5608,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5621,7 +5647,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5655,7 +5682,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5693,7 +5721,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5731,7 +5760,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5765,7 +5795,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5803,7 +5834,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5841,7 +5873,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5893,7 +5926,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5933,7 +5967,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -5973,7 +6008,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6013,7 +6049,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6053,7 +6090,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6093,7 +6131,8 @@ namespace Google.Cloud.Dlp.V2
         /// Required. Parent resource name.
         /// 
         /// The format of this value varies depending on whether you have [specified a
-        /// processing location](/dlp/docs/specifying-location):
+        /// processing
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6470,7 +6509,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6509,7 +6548,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6548,7 +6587,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6583,7 +6622,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6622,7 +6661,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6661,7 +6700,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6696,7 +6735,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6735,7 +6774,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6774,7 +6813,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6809,7 +6848,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6848,7 +6887,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6887,7 +6926,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6922,7 +6961,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -6961,7 +7000,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7000,7 +7039,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7392,7 +7431,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7437,7 +7476,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7482,7 +7521,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7527,7 +7566,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7572,7 +7611,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7617,7 +7656,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7662,7 +7701,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7707,7 +7746,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7752,7 +7791,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
@@ -7797,7 +7836,7 @@ namespace Google.Cloud.Dlp.V2
         /// 
         /// The format of this value varies depending on the scope of the request
         /// (project or organization) and whether you have [specified a processing
-        /// location](/dlp/docs/specifying-location):
+        /// location](https://cloud.google.com/dlp/docs/specifying-location):
         /// 
         /// + Projects scope, location specified:&amp;lt;br/&amp;gt;
         /// `projects/`&amp;lt;var&amp;gt;PROJECT_ID&amp;lt;/var&amp;gt;`/locations/`&amp;lt;var&amp;gt;LOCATION_ID&amp;lt;/var&amp;gt;
