@@ -341,6 +341,63 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.PolicyTroubleshooter.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/retail/v2beta",
+      "Name": "retail.googleapis.com",
+      "Title": "Cloud Retail Solution",
+      "Description": "TBD",
+      "ServiceConfigFile": "google/cloud/retail/v2beta/retail_v2beta.yaml",
+      "Version": "v2beta",
+      "PackageFromDirectory": "google.cloud.retail.v2beta",
+      "PackageFromProtos": "google.cloud.retail.v2beta",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/retail/v2beta",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2beta"
+    },
+    {
+      "ServiceDirectory": "google/cloud/retail/v2",
+      "Name": "retail.googleapis.com",
+      "Title": "Cloud Retail Solution",
+      "Description": "TBD",
+      "ServiceConfigFile": "google/cloud/retail/v2/retail_v2.yaml",
+      "Version": "v2",
+      "PackageFromDirectory": "google.cloud.retail.v2",
+      "PackageFromProtos": "google.cloud.retail.v2",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/retail/v2",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2"
+    },
+    {
+      "ServiceDirectory": "google/cloud/retail/v2alpha",
+      "Name": "retail.googleapis.com",
+      "Title": "Cloud Retail Solution",
+      "Description": "TBD",
+      "ServiceConfigFile": "google/cloud/retail/v2alpha/retail_v2alpha.yaml",
+      "Version": "v2alpha",
+      "PackageFromDirectory": "google.cloud.retail.v2alpha",
+      "PackageFromProtos": "google.cloud.retail.v2alpha",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/retail/v2alpha",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2alpha"
+    },
+    {
       "ServiceDirectory": "google/cloud/secretmanager/v1",
       "Name": "secretmanager.googleapis.com",
       "Title": "Secret Manager API",
