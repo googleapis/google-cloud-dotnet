@@ -2635,6 +2635,23 @@
       "CSharpNamespaceFromProtos": "Google.Home.Graph.V1"
     },
     {
+      "ServiceDirectory": "google/partner/aistreams/v1alpha1",
+      "Name": "aistreams.googleapis.com",
+      "Title": "AI Streams API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/partner/aistreams/v1alpha1/aistreams_v1alpha1.yaml",
+      "Version": "v1alpha1",
+      "PackageFromDirectory": "google.partner.aistreams.v1alpha1",
+      "PackageFromProtos": "google.partner.aistreams.v1alpha1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Partner.Aistreams.V1Alpha1"
+    },
+    {
       "ServiceDirectory": "google/maps/routespreferred/v1",
       "Name": "routespreferred.googleapis.com",
       "Title": "Routes Preferred API",
