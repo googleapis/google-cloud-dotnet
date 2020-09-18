@@ -9,7 +9,16 @@ SCRIPT_DIR=$(dirname "$SCRIPT")
 cd $SCRIPT_DIR
 cd ..
 
+source $SCRIPT_DIR/populatesecrets.sh
+
 echo "Available disk space at start"
+df -h
+
+populate_all_secrets
+export GOOGLE_APPLICATION_CREDENTIALS="$SECRETS_LOCATION/cloud-sharp-jenkins-compute-service-account"
+export REQUESTER_PAYS_CREDENTIALS="$SECRETS_LOCATION/gcloud-devel-service-account"
+
+echo "Available disk space after populating secrets"
 df -h
 
 echo "Cloning submodules"
@@ -18,9 +27,6 @@ git submodule update
 
 echo "Available disk space after cloning submodules"
 df -h
-
-export GOOGLE_APPLICATION_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_cloud-sharp-jenkins-compute-service-account"
-export REQUESTER_PAYS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_gcloud-devel-service-account"
 
 # Non-coverage run doesn't need any extra flags
 script_flags=
@@ -33,9 +39,9 @@ rm -rf coverage
 echo "Available disk space after removing old coverage"
 df -h
 
-if [[ -f "$KOKORO_KEYSTORE_DIR/73609_codecov-token" ]]
+if [[ -f "$SECRETS_LOCATION/codecov-token" ]]
 then
- export CODECOV_TOKEN=$(cat "$KOKORO_KEYSTORE_DIR/73609_codecov-token")
+ export CODECOV_TOKEN=$(cat "$SECRETS_LOCATION/codecov-token")
  script_flags=--coverage
  report_flags="--upload $report_flags"
 fi
