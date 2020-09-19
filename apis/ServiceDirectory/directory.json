@@ -721,6 +721,26 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Billing.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/aiplatform/v1beta1",
+      "Name": "aiplatform.googleapis.com",
+      "Title": "Cloud AI Platform API",
+      "Description": "Train high-quality custom machine learning models with minimum effort and machine learning expertise.",
+      "ServiceConfigFile": "google/cloud/aiplatform/v1beta1/aiplatform_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.aiplatform.v1beta1",
+      "PackageFromProtos": "google.cloud.aiplatform.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/aiplatform/v1beta1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Aiplatform.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/bigquery/storage/v1beta1",
       "Name": "bigquerystorage.googleapis.com",
       "Title": "BigQuery Storage API",
