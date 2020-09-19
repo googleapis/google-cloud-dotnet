@@ -1038,8 +1038,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
-        /// Required.
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be between 1 and 128 characters, and contains alphanumeric
         /// characters, underscores or hyphens only.
         /// </param>
@@ -1065,8 +1064,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
-        /// Required.
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be between 1 and 128 characters, and contains alphanumeric
         /// characters, underscores or hyphens only.
         /// </param>
@@ -1092,8 +1090,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
-        /// Required.
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be between 1 and 128 characters, and contains alphanumeric
         /// characters, underscores or hyphens only.
         /// </param>
@@ -1114,8 +1111,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
-        /// Required.
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be between 1 and 128 characters, and contains alphanumeric
         /// characters, underscores or hyphens only.
         /// </param>
@@ -1141,8 +1137,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
-        /// Required.
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be between 1 and 128 characters, and contains alphanumeric
         /// characters, underscores or hyphens only.
         /// </param>
@@ -1168,8 +1163,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// "organizations/[organization_id]".
         /// </param>
         /// <param name="configId">
-        /// Required.
-        /// Unique identifier provided by the client within the parent scope.
+        /// Required. Unique identifier provided by the client within the parent scope.
         /// It must be between 1 and 128 characters, and contains alphanumeric
         /// characters, underscores or hyphens only.
         /// </param>
@@ -1919,6 +1913,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// * category
         /// * state
         /// * parent
+        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
@@ -1967,6 +1962,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// * category
         /// * state
         /// * parent
+        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
@@ -2015,6 +2011,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// * category
         /// * state
         /// * parent
+        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
@@ -2063,6 +2060,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1
         /// * category
         /// * state
         /// * parent
+        /// * severity
         /// 
         /// The following fields are supported when compare_duration is set:
         /// 
