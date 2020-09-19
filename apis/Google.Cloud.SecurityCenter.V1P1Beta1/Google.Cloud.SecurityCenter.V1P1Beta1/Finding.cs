@@ -286,7 +286,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     public const int SeverityFieldNumber = 13;
     private global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity severity_ = global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity.Unspecified;
     /// <summary>
-    /// The severity of the finding.
+    /// The severity of the finding. This field is managed by the source that
+    /// writes the finding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.SecurityCenter.V1P1Beta1.Finding.Types.Severity Severity {
@@ -573,7 +574,8 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       }
 
       /// <summary>
-      /// The severity of the finding.
+      /// The severity of the finding. This field is managed by the source that
+      /// writes the finding.
       /// </summary>
       public enum Severity {
         /// <summary>
