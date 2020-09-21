@@ -7,6 +7,10 @@ SCRIPT_DIR=$(dirname "$SCRIPT")
 
 cd $SCRIPT_DIR
 
+# Make sure secrets are loaded in a well known localtion before running releasetool
+source ./populatesecrets.sh
+populate_all_secrets
+
 # Make sure we have the most recent version of pip, then install the gcp-releasetool package
 python -m pip install --upgrade pip
 python -m pip install gcp-releasetool
@@ -22,4 +26,5 @@ sed -i "s/python3/$PYTHON3/g" /tmp/publisher-script
 
 source /tmp/publisher-script
 
-./release.sh
+# Secrets are already populated, let's not do that again
+./release.sh --skippopulatesecrets
