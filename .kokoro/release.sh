@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Environment variables:
-# - KOKORO_KEYSTORE_DIR: Where Kokoro copies the keys from Keystore
 # - COMMITTISH_OVERRIDE: The commit to actually build the release from, if not the one that has been checked out
 # - SKIP_NUGET_PUSH: If non-empty, the push to nuget.org is skipped
 # - SKIP_PAGES_UPLOAD: If non-empty, the push to gh-pages is skipped
@@ -15,13 +14,32 @@ SCRIPT_DIR=$(dirname "$SCRIPT")
 cd $SCRIPT_DIR
 cd ..
 
-export GOOGLE_APPLICATION_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_cloud-sharp-jenkins-compute-service-account"
-export REQUESTER_PAYS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73609_gcloud-devel-service-account"
+source $SCRIPT_DIR/populatesecrets.sh
+
+# Only populate secrets if we have to.
+# Else, we assume secrets have already been populated by the caller.
+populatesecrets=true
+if [[ "$#" -eq 1 ]] && [[ "$1" == "--skippopulatesecrets" ]]
+then
+    populatesecrets=false
+    echo "Skipping populate secrets."
+elif [[ "$#" -gt 0 ]]
+then
+    echo "Usage: $0 [--skippopulatesecrets]"
+    exit 1
+fi
+if [[ "$populatesecrets" == "true" ]]
+then
+    populate_all_secrets
+fi
+
+export GOOGLE_APPLICATION_CREDENTIALS="$SECRETS_LOCATION/cloud-sharp-jenkins-compute-service-account"
+export REQUESTER_PAYS_CREDENTIALS="$SECRETS_LOCATION/gcloud-devel-service-account"
 
 PYTHON3=$(source toolversions.sh && echo $PYTHON3)
-DOCS_CREDENTIALS="$KOKORO_KEYSTORE_DIR/73713_docuploader_service_account"
-GOOGLE_CLOUD_NUGET_API_KEY="$(cat "$KOKORO_KEYSTORE_DIR"/73609_google-cloud-nuget-api-key)"
-GOOGLE_APIS_PACKAGES_NUGET_API_KEY="$(cat "$KOKORO_KEYSTORE_DIR"/73609_google-apis-nuget-api-key)"
+DOCS_CREDENTIALS="$SECRETS_LOCATION/docuploader_service_account"
+GOOGLE_CLOUD_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-cloud-nuget-api-key)"
+GOOGLE_APIS_PACKAGES_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-apis-nuget-api-key)"
 
 COMMITTISH=$COMMITTISH_OVERRIDE
 if [[ $COMMITTISH_OVERRIDE = "" ]]
