@@ -1,6 +1,6 @@
 # Version history
 
-# Version 1.0.0-beta05, released 2020-09-07
+# Version 1.0.0-beta05, released 2020-09-22
 
 - [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Adds service comments to client documentation
 - [Commit 1765de9](https://github.com/googleapis/google-cloud-dotnet/commit/1765de9):
