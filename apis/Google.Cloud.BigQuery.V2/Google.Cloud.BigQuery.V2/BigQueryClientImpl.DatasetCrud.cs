@@ -176,6 +176,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -184,6 +185,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Datasets.List(projectReference.ProjectId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -201,6 +203,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var request = Service.Datasets.Insert(resource, datasetReference.ProjectId);
             options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -209,6 +212,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -219,6 +223,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Datasets.Update(resource, datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -229,6 +234,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Datasets.Patch(resource, datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
     }

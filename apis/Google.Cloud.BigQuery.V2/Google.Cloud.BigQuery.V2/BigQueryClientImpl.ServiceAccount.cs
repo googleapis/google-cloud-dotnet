@@ -41,6 +41,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Projects.GetServiceAccount(projectReference.ProjectId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
     }

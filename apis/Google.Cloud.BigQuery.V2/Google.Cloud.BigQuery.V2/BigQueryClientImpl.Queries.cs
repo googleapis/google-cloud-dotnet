@@ -200,6 +200,7 @@ namespace Google.Cloud.BigQuery.V2
             // but both values mean the same, and that is to return whole rows.
             request.SelectedFields = schema.BuildSelectedFields();
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -220,6 +221,7 @@ namespace Google.Cloud.BigQuery.V2
             request.TimeoutMs = requestTimeoutMs;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
     }

@@ -76,6 +76,17 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override string DefaultLocation { get; }
 
+        /// <inheritdoc />
+        public override bool PrettyPrint { get; }
+
+        internal BigQueryClientImpl(string projectId, BigqueryService service, string defaultLocation, bool prettyPrint)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            Service = GaxPreconditions.CheckNotNull(service, nameof(service));
+            DefaultLocation = defaultLocation;
+            PrettyPrint = prettyPrint;
+        }
+
         /// <summary>
         /// Constructs a new client wrapping the given <see cref="BigqueryService"/>, with a specified default location
         /// for location-specific operations.
@@ -90,10 +101,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="service">The service to wrap. Must not be null.</param>
         /// <param name="defaultLocation">The default location to use for location-specific operations. May be null.</param>
         public BigQueryClientImpl(string projectId, BigqueryService service, string defaultLocation)
+            : this(projectId, service, defaultLocation, prettyPrint: false)
         {
-            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            Service = GaxPreconditions.CheckNotNull(service, nameof(service));
-            DefaultLocation = defaultLocation;
         }
 
         /// <summary>
