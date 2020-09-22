@@ -162,25 +162,36 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance
                     "$success_action_status" => PostPolicyStandardElement.SuccessActionStatus,
                     "success_action_redirect" => PostPolicyStandardElement.SuccessActionRedirect,
                     "$success_action_redirect" => PostPolicyStandardElement.SuccessActionRedirect,
+                    "content-disposition" => PostPolicyStandardElement.ContentDisposition,
+                    "$content-disposition" => PostPolicyStandardElement.ContentDisposition,
+                    "content-encoding" => PostPolicyStandardElement.ContentEncoding,
+                    "$content-encoding" => PostPolicyStandardElement.ContentEncoding,
+                    "content-type" => PostPolicyStandardElement.ContentType,
                     _ => throw new NotImplementedException($"{name} missing from {nameof(GetStandardElement)}.")
                 };
         }
 
         private class PostPolicyElementTestComparer : IComparer<IPostPolicyElement>
         {
+            // This is a very ugly hack to be able to compare expected vs. generated.
+            // Order it's relevant for these tests because the signature was generated with a set order.
+            // This represents the order in which elements appear in the test data.
             private static readonly IDictionary<string, int> s_elementOrder = new Dictionary<string, int>
             {
                 { "acl", 0 },
                 { "content-length", 1 },
-                { "cache-control", 2 },
-                { "success_action_status", 3 },
-                { "success_action_redirect", 4 },
-                { "x-goog-meta-custom-1", 5},
-                { "bucket", 6 },
-                { "key", 7 },
-                { "x-goog-date", 8 },
-                { "x-goog-credential", 9 },
-                { "x-goog-algorithm", 10 },
+                { "content-disposition", 2 },
+                { "content-encoding", 3 },
+                { "content-type", 4 },
+                { "cache-control", 5 },
+                { "success_action_status", 6 },
+                { "success_action_redirect", 7 },
+                { "x-goog-meta-custom-1", 8},
+                { "bucket", 9 },
+                { "key", 10 },
+                { "x-goog-date", 11 },
+                { "x-goog-credential", 12 },
+                { "x-goog-algorithm", 13 },
             };
 
             public int Compare(IPostPolicyElement x, IPostPolicyElement y) =>
