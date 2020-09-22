@@ -1055,6 +1055,9 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
     /// <summary>Field number for the "scheme" field.</summary>
     public const int SchemeFieldNumber = 1;
     private string scheme_ = "";
+    /// <summary>
+    /// http or https
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Scheme {
       get { return scheme_; }
@@ -1134,6 +1137,18 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
     private static readonly pbc::MapField<string, string>.Codec _map_fields_codec
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
     private readonly pbc::MapField<string, string> fields_ = new pbc::MapField<string, string>();
+    /// <summary>
+    ///
+    ///fields with strict equivalence which are added into
+    ///PolicyOutput.expectedDecodedPolicy to generate the
+    ///signature.
+    ///
+    ///Expectations
+    ///
+    ///E.1: Order them in lexigraphical order so it's the
+    ///signature can be verified across different language
+    ///implementations.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Fields {
       get { return fields_; }
@@ -1419,6 +1434,64 @@ namespace Google.Cloud.Storage.V1.Tests.Conformance {
     private static readonly pbc::MapField<string, string>.Codec _map_fields_codec
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> fields_ = new pbc::MapField<string, string>();
+    /// <summary>
+    ///
+    ///Expectations
+    ///
+    ///E.1: PolicyInput.fields must be prepended to form expectedDecodedPolicy
+    ///for consistent result across languages. Ordering doesn't matter to the
+    ///service but the decision is made to make it easier to conform implementations
+    ///in implementation.
+    ///
+    ///Example:
+    ///
+    ///# Step 1
+    ///
+    ///PolicyInput.fields has:
+    ///{
+    ///"content-disposition":"attachment; filename=\"~._-%=/é0Aa\"",
+    ///"content-encoding":"gzip",
+    ///"content-type":"text/plain",
+    ///"success_action_redirect":"http://www.google.com/"
+    ///}
+    ///
+    ///# Step 2
+    ///
+    ///The expectedDecodedPolicy before prepending the PolicyInput.fields
+    ///would look like this:
+    ///
+    ///{
+    ///"conditions":[
+    ///...prepend here in the same order provided in PolicyInput.fields...
+    ///{"bucket":"bucket-name"},
+    ///{"key":"test-object"},
+    ///{"x-goog-date":"20200123T043530Z"},
+    ///{"x-goog-credential":"test-iam-credentials@dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+    ///{"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+    ///],
+    ///"expiration":"2020-01-23T04:35:40Z"
+    ///}
+    ///
+    ///# Step 3
+    ///
+    ///Then expectedDecodedPolicy should prepends PolicyInput.fields in
+    ///the same order to PolicyOutput.expectedDecodedPolicy `conditions` key.
+    ///
+    ///{
+    ///"conditions":[
+    ///{"content-disposition":"attachment; filename=\"~._-%=/é0Aa\""},
+    ///{"content-encoding":"gzip"},
+    ///{"content-type":"text/plain"},
+    ///{"success_action_redirect":"http://www.google.com/"},
+    ///{"bucket":"bucket-name"},
+    ///{"key":"test-object"},
+    ///{"x-goog-date":"20200123T043530Z"},
+    ///{"x-goog-credential":"test-iam-credentials@dummy-project-id.iam.gserviceaccount.com/20200123/auto/storage/goog4_request"},
+    ///{"x-goog-algorithm":"GOOG4-RSA-SHA256"}
+    ///],
+    ///"expiration":"2020-01-23T04:35:40Z"
+    ///}
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Fields {
       get { return fields_; }
