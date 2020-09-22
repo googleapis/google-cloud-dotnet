@@ -27,6 +27,19 @@
       "protoPath": "google/analytics/data/v1alpha"
     },
     {
+      "id": "Google.Area120.Tables.V1Alpha1",
+      "version": "1.0.0-alpha00",
+      "type": "grpc",
+      "productName": "Google Area 120 Tables API",
+      "description": "Recommended Google client library to access the Area 120 Tables API",
+      "tags": [
+        "tables"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/area120/tables/v1alpha1"
+    },
+    {
       "id": "Google.Cloud.Asset.V1",
       "generator": "micro",
       "protoPath": "google/cloud/asset/v1",
