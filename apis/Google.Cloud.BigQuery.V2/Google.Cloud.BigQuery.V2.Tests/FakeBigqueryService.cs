@@ -40,6 +40,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         public void ExpectRequest<TResponse>(ClientServiceRequest<TResponse> request, TResponse response)
         {
+            MaybeDisablePrettyPrint(request);
             string requestContent = SerializeObject(request);
             var httpRequest = request.CreateRequest();
             string responseContent = SerializeObject(response);            
@@ -48,11 +49,20 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         public void ExpectRequest<TResponse>(ClientServiceRequest<TResponse> request, HttpStatusCode statusCode, RequestError error)
         {
+            MaybeDisablePrettyPrint(request);
             string requestContent = SerializeObject(request);
             var httpRequest = request.CreateRequest();
             string responseContent = SerializeObject(new StandardResponse<object> { Error = error });
             var responseMessage = new HttpResponseMessage(statusCode) { Content = new StringContent(responseContent) };
             handler.ExpectRequest(httpRequest.RequestUri, httpRequest.Content?.ReadAsStringAsync()?.Result, responseMessage);
+        }
+
+        private void MaybeDisablePrettyPrint(dynamic request)
+        {
+            // Almost all our tests using FakeBigqueryService will have prettyPrint=false, and the requests will all
+            // be derived from the generic BigqueryServiceBaseRequest which has a PrettyPrint property.
+            // We use ??= so that if the request already has PrettyPrint set, we don't change that.
+            request.PrettyPrint ??= false;
         }
 
         public void Verify() => handler.Verify();

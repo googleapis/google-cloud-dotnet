@@ -163,6 +163,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Routines.Get(routineReference.ProjectId, routineReference.DatasetId, routineReference.RoutineId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -171,6 +172,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Routines.List(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -182,6 +184,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var request = Service.Routines.Insert(resource, routineReference.ProjectId, routineReference.DatasetId);
             options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -190,6 +193,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(routineReference, nameof(routineReference));
             var request = Service.Routines.Delete(routineReference.ProjectId, routineReference.DatasetId, routineReference.RoutineId);
             options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -199,6 +203,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Routines.Update(resource, routineReference.ProjectId, routineReference.DatasetId, routineReference.RoutineId);
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 

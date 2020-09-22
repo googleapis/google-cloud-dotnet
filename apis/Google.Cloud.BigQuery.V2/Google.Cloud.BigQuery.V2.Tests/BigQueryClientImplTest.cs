@@ -32,6 +32,25 @@ namespace Google.Cloud.BigQuery.V2.Tests
         private const string DefaultLocation = "default-location";
 
         [Fact]
+        public void PrettyPrintEnabledOnClientIsPropagatedToRequest()
+        {
+            var projectId = "project";
+            var datasetId = "dataset";
+            var service = new FakeBigqueryService();
+            var client = new BigQueryClientBuilder
+            {
+                Service = service,
+                PrettyPrint = true,
+                ProjectId = projectId
+            }.Build();
+            var reference = client.GetDatasetReference(projectId, datasetId);
+            var expectedRequest = service.Datasets.Delete(projectId, datasetId);
+            expectedRequest.PrettyPrint = true;
+            service.ExpectRequest(expectedRequest, "OK");
+            client.DeleteDataset(reference);
+        }
+
+        [Fact]
         public void Constructor_DefaultLocations()
         {
             var projectId = "project";

@@ -116,6 +116,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Models.Get(modelReference.ProjectId, modelReference.DatasetId, modelReference.ModelId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -124,6 +125,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(modelReference, nameof(modelReference));
             var request = Service.Models.Delete(modelReference.ProjectId, modelReference.DatasetId, modelReference.ModelId);
             options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -134,6 +136,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Models.Patch(resource, modelReference.ProjectId, modelReference.DatasetId, modelReference.ModelId);
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -142,6 +145,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Models.List(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
     }

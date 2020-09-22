@@ -203,6 +203,7 @@ namespace Google.Cloud.BigQuery.V2
             request.Location = jobReference.Location;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -211,6 +212,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Jobs.List(projectReference.ProjectId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -221,6 +223,7 @@ namespace Google.Cloud.BigQuery.V2
             request.Location = jobReference.Location;
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -268,6 +271,7 @@ namespace Google.Cloud.BigQuery.V2
 
             // It's safe to retry job inserts when they include a job ID, which ours always do.
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
     }

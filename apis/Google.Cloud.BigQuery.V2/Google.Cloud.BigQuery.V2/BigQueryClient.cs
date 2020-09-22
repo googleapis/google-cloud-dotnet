@@ -83,6 +83,11 @@ namespace Google.Cloud.BigQuery.V2
         public virtual string DefaultLocation => throw new NotImplementedException();
 
         /// <summary>
+        /// Determines whether or not responses should be formatted with whitespace for readability.
+        /// </summary>
+        public virtual bool PrettyPrint => throw new NotImplementedException();
+
+        /// <summary>
         /// Asynchronously creates a <see cref="BigQueryClient"/>, using application default credentials if
         /// no credentials are specified.
         /// </summary>

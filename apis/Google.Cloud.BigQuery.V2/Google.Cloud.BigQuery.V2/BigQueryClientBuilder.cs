@@ -36,24 +36,48 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string DefaultLocation { get; set; }
 
+        /// <summary>
+        /// If set, overrides the default pretty-print setting.
+        /// </summary>
+        public bool? PrettyPrint { get; set; }
+
+        // Note: we may want to make this public in the future. If we do, we should check that no credentials
+        // are set in Validate().
+        /// <summary>
+        /// If set, this is used as the underlying service for the client.
+        /// Note that this should rarely be used outside testing, unless the service comes from another <see cref="BigQueryClient"/>.
+        /// Usually this library constructs a service using specific settings such as the JSON serializer settings provided by
+        /// <see cref="BigQueryClient.CreateJsonSerializersSettings"/>; if a service is constructed in user code, the client
+        /// may not function as expected.
+        /// </summary>
+        internal BigqueryService Service { get; set; }
+
         /// <inheritdoc />
         public override BigQueryClient Build()
         {
             Validate();
-            var initializer = CreateServiceInitializer();
-            initializer.Serializer = new NewtonsoftJsonSerializer(BigQueryClient.CreateJsonSerializersSettings());
-            var service = new BigqueryService(initializer);
-            return new BigQueryClientImpl(ProjectId, service, DefaultLocation);
+            var service = Service;
+            if (service is null)
+            {
+                var initializer = CreateServiceInitializer();
+                initializer.Serializer = new NewtonsoftJsonSerializer(BigQueryClient.CreateJsonSerializersSettings());
+                service = new BigqueryService(initializer);
+            }
+            return new BigQueryClientImpl(ProjectId, service, DefaultLocation, PrettyPrint ?? false);
         }
 
         /// <inheritdoc />
         public override async Task<BigQueryClient> BuildAsync(CancellationToken cancellationToken = default)
         {
             Validate();
-            var initializer = await CreateServiceInitializerAsync(cancellationToken).ConfigureAwait(false);
-            initializer.Serializer = new NewtonsoftJsonSerializer(BigQueryClient.CreateJsonSerializersSettings());
-            var service = new BigqueryService(initializer);
-            return new BigQueryClientImpl(ProjectId, service, DefaultLocation);
+            var service = Service;
+            if (service is null)
+            {
+                var initializer = await CreateServiceInitializerAsync(cancellationToken).ConfigureAwait(false);
+                initializer.Serializer = new NewtonsoftJsonSerializer(BigQueryClient.CreateJsonSerializersSettings());
+                service = new BigqueryService(initializer);
+            }
+            return new BigQueryClientImpl(ProjectId, service, DefaultLocation, PrettyPrint ?? false);
         }
 
         /// <inheritdoc />

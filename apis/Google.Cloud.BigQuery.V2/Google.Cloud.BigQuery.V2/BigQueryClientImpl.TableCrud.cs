@@ -218,6 +218,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -227,6 +228,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.List(datasetReference.ProjectId, datasetReference.DatasetId);
             options?.ModifyRequest(request);
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -238,6 +240,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var request = Service.Tables.Insert(resource, tableReference.ProjectId, tableReference.DatasetId);
             options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -260,6 +263,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -270,6 +274,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.Update(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
@@ -280,6 +285,7 @@ namespace Google.Cloud.BigQuery.V2
             var request = Service.Tables.Patch(resource, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             options?.ModifyRequest(request);
             RetryIfETagPresent(request, resource);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
     }

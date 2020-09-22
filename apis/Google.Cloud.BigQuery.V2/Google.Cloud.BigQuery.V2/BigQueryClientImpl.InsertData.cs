@@ -319,6 +319,7 @@ namespace Google.Cloud.BigQuery.V2
             // needs to explicitly allow for empty InsertId and should be aware that doing so will be at
             // the expense of de-duplication efforts.
             RetryHandler.MarkAsRetriable(request);
+            request.PrettyPrint = PrettyPrint;
             return request;
         }
 
