@@ -13,8 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -33,7 +33,7 @@ namespace Google.Cloud.Spanner.Data
     /// atomically at a single logical point in time across columns, rows, and
     /// tables in a database.
     /// </summary>
-    public sealed class SpannerTransaction : DbTransaction, ISpannerTransaction
+    public class SpannerTransaction : DbTransaction, ISpannerTransaction
     {
         private readonly List<Mutation> _mutations = new List<Mutation>();
         private DisposeBehavior _disposeBehavior = DisposeBehavior.ReleaseToPool;
@@ -73,7 +73,12 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         public TransactionMode Mode { get; }
 
-        private readonly PooledSession _session;
+        private PooledSession _session;
+        internal PooledSession Session
+        {
+            get => _session;
+            set => _session = GaxPreconditions.CheckNotNull(value, nameof(value));
+        }
 
         private int _commitTimeout;
 
@@ -213,6 +218,14 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             int timeoutSeconds)
         {
+            return DoExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds);
+        }
+
+        internal Task<int> DoExecuteMutationsAsync(
+            List<Mutation> mutations,
+            CancellationToken cancellationToken,
+            int timeoutSeconds)
+        {
             CheckCompatibleMode(TransactionMode.ReadWrite);
             return ExecuteHelper.WithErrorTranslationAndProfiling(() =>
             {
@@ -232,6 +245,14 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             int timeoutSeconds) // Ignored
         {
+            return DoExecuteQueryAsync(request, cancellationToken, timeoutSeconds);
+        }
+
+        internal Task<ReliableStreamReader> DoExecuteQueryAsync(
+            ExecuteSqlRequest request,
+            CancellationToken cancellationToken,
+            int timeoutSeconds) // Ignored
+        {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
             // We're not making any Spanner requests here, so we don't need profiling or error translation.
@@ -240,6 +261,11 @@ namespace Google.Cloud.Spanner.Data
         }
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
+            return DoExecuteDmlAsync(request, cancellationToken, timeoutSeconds);
+        }
+
+        internal Task<long> DoExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -277,6 +303,11 @@ namespace Google.Cloud.Spanner.Data
 
         Task<IEnumerable<long>> ISpannerTransaction.ExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
+            return DoExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds);
+        }
+
+        internal Task<IEnumerable<long>> DoExecuteBatchDmlAsync(ExecuteBatchDmlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
+        {
             CheckCompatibleMode(TransactionMode.ReadWrite);
             GaxPreconditions.CheckNotNull(request, nameof(request));
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
@@ -303,6 +334,18 @@ namespace Google.Cloud.Spanner.Data
             }, "SpannerTransaction.ExecuteBatchDml", SpannerConnection.Logger);
         }
 
+        SpannerDataReader ISpannerTransaction.CreateDataReader(
+            ExecuteSqlRequest request,
+            Logger logger,
+            ReliableStreamReader resultSet,
+            IDisposable resourceToClose,
+            SpannerConversionOptions conversionOptions,
+            bool provideSchemaTable,
+            int readTimeoutSeconds)
+        {
+            return new SpannerDataReader(logger, resultSet, resourceToClose, conversionOptions, provideSchemaTable, readTimeoutSeconds);
+        }
+
         /// <inheritdoc />
         public override void Commit() => Commit(out _);
 
@@ -318,7 +361,7 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <returns>Returns the UTC timestamp when the data was written to the database.</returns>
-        public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
+        public virtual Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
             var request = new CommitRequest { Mutations = { _mutations } };

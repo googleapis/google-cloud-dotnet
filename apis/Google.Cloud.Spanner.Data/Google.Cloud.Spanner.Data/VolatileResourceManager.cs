@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
@@ -194,6 +195,19 @@ namespace Google.Cloud.Spanner.Data
         {
             ISpannerTransaction transaction = await GetTransactionAsync(cancellationToken, timeoutSeconds).ConfigureAwait(false);
             return await transaction.ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds).ConfigureAwait(false);
+        }
+
+        SpannerDataReader ISpannerTransaction.CreateDataReader(
+            ExecuteSqlRequest request,
+            Logger logger,
+            ReliableStreamReader resultSet,
+            IDisposable resourceToClose,
+            SpannerConversionOptions conversionOptions,
+            bool provideSchemaTable,
+            int readTimeoutSeconds)
+        {
+            ISpannerTransaction transaction = GetTransactionAsync(CancellationToken.None, 0).ResultWithUnwrappedExceptions();
+            return transaction.CreateDataReader(request, logger, resultSet, resourceToClose, conversionOptions, provideSchemaTable, readTimeoutSeconds);
         }
 
         private async Task<SpannerTransaction> GetTransactionAsync(CancellationToken cancellationToken, int timeoutSeconds)

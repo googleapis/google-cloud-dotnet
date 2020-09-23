@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -142,6 +143,18 @@ namespace Google.Cloud.Spanner.Data
                 reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
                 return reader;
             }
+        }
+
+        SpannerDataReader ISpannerTransaction.CreateDataReader(
+            ExecuteSqlRequest request,
+            Logger logger,
+            ReliableStreamReader resultSet,
+            IDisposable resourceToClose,
+            SpannerConversionOptions conversionOptions,
+            bool provideSchemaTable,
+            int readTimeoutSeconds)
+        {
+            return new SpannerDataReader(logger, resultSet, resourceToClose, conversionOptions, provideSchemaTable, readTimeoutSeconds);
         }
     }
 }

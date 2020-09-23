@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Spanner.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -35,5 +37,14 @@ namespace Google.Cloud.Spanner.Data
         // Note: the timeout here is *not* used for the streaming result set; it's used by VolatileResourceManager to set the commit timeout.
         // (We may wish to improve this abstraction, but it works for now...)
         Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds);
+
+        SpannerDataReader CreateDataReader(
+            ExecuteSqlRequest request,
+            Logger logger,
+            ReliableStreamReader resultSet,
+            IDisposable resourceToClose,
+            SpannerConversionOptions conversionOptions,
+            bool provideSchemaTable,
+            int readTimeoutSeconds);
     }
 }

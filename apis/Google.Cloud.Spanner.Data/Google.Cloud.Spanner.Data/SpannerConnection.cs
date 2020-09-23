@@ -267,6 +267,15 @@ namespace Google.Cloud.Spanner.Data
             BeginTransactionImplAsync(s_readWriteTransactionOptions, TransactionMode.ReadWrite, cancellationToken);
 
         /// <summary>
+        /// Begins a new retriable read/write transaction.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="cancellationToken">An optional token for canceling the call.</param>
+        /// <returns>A new <see cref="RetriableSpannerTransaction" /></returns>
+        public Task<RetriableSpannerTransaction> BeginRetriableTransactionAsync(CancellationToken cancellationToken = default) =>
+            BeginRetriableTransactionImplAsync(s_readWriteTransactionOptions, cancellationToken);
+
+        /// <summary>
         /// Executes a read-write transaction, with retries as necessary.
         /// The work to perform in each transaction attempt is defined by <paramref name="asyncWork"/>.
         /// </summary>
@@ -774,6 +783,23 @@ namespace Google.Cloud.Spanner.Data
                     var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
                     return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp);
                 }, "SpannerConnection.BeginTransaction", Logger);
+        }
+
+        internal Task<RetriableSpannerTransaction> BeginRetriableTransactionImplAsync(
+            TransactionOptions transactionOptions,
+            CancellationToken cancellationToken)
+        {
+            return ExecuteHelper.WithErrorTranslationAndProfiling(
+                async () =>
+                {
+                    await OpenAsync(cancellationToken).ConfigureAwait(false);
+                    var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
+                    return new RetriableSpannerTransaction(
+                        this,
+                        session,
+                        Builder.SessionPoolManager.SpannerSettings.Clock ?? SystemClock.Instance,
+                        Builder.SessionPoolManager.SpannerSettings.Scheduler ?? SystemScheduler.Instance);
+                }, "SpannerConnection.BeginRetriableTransaction", Logger);
         }
 
         private void TrySetNewConnectionInfo(SpannerConnectionStringBuilder newBuilder)

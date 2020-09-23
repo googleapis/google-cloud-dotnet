@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Data
     /// <summary>
     /// Reads a forward-only stream of rows from a data source.
     /// </summary>
-    public sealed class SpannerDataReader : DbDataReader
+    public class SpannerDataReader : DbDataReader
     {
         private static long s_readerCount;
 
@@ -42,11 +42,9 @@ namespace Google.Cloud.Spanner.Data
         // - Null if a call to HasRows should ask the reader.
         private bool? _hasRows = null;
         private readonly List<Value> _innerList = new List<Value>();
-        private readonly ReliableStreamReader _resultSet;
         private ConcurrentDictionary<string, int> _fieldIndex;
         private ResultSetMetadata _metadata;
         private readonly IDisposable _resourceToClose;
-        private readonly SpannerConversionOptions _conversionOptions;
         private readonly bool _provideSchemaTable;
         private readonly int _readTimeoutSeconds;
 
@@ -67,14 +65,18 @@ namespace Google.Cloud.Spanner.Data
             Logger.LogPerformanceCounter(
                 "SpannerDataReader.ActiveCount",
                 () => Interlocked.Increment(ref s_readerCount));
-            _resultSet = resultSet;
+            ResultSet = resultSet;
             _resourceToClose = resourceToClose;
-            _conversionOptions = conversionOptions;
+            ConversionOptions = conversionOptions;
             _provideSchemaTable = provideSchemaTable;
             _readTimeoutSeconds = readTimeoutSeconds;
         }
 
-        private Logger Logger { get; }
+        internal ReliableStreamReader ResultSet { get; set; }
+
+        internal Logger Logger { get; }
+
+        internal SpannerConversionOptions ConversionOptions { get; }
 
         // Nesting is not supported, so we return 0.
         /// <inheritdoc />
@@ -89,10 +91,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public override bool HasRows =>
             // We only need to ask the result set if we haven't actually read any rows or checked before.
-            _hasRows ?? (_hasRows = Task.Run(() => _resultSet.HasDataAsync(CancellationToken.None)).ResultWithUnwrappedExceptions()).Value;
+            _hasRows ?? (_hasRows = Task.Run(() => ResultSet.HasDataAsync(CancellationToken.None)).ResultWithUnwrappedExceptions()).Value;
 
         /// <inheritdoc />
-        public override bool IsClosed => _resultSet.IsClosed;
+        public override bool IsClosed => ResultSet.IsClosed;
 
         /// <inheritdoc />
         public override int RecordsAffected => -1;
@@ -106,7 +108,7 @@ namespace Google.Cloud.Spanner.Data
 
         /// <inheritdoc />
         public override T GetFieldValue<T>(int ordinal) =>
-            GetSpannerFieldType(ordinal).ConvertToClrType<T>(GetJsonValue(ordinal), _conversionOptions);
+            GetSpannerFieldType(ordinal).ConvertToClrType<T>(GetJsonValue(ordinal), ConversionOptions);
 
         /// <summary>
         /// Gets the value of the specified column as type T.
@@ -323,7 +325,7 @@ namespace Google.Cloud.Spanner.Data
                                 _rowValid = false;
                                 _innerList.Clear();
 
-                                var first = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
+                                var first = await ResultSet.NextAsync(effectiveToken).ConfigureAwait(false);
                                 if (first == null)
                                 {
                                     // If this is the first thing we've tried to read, then we know there are no rows.
@@ -338,7 +340,7 @@ namespace Google.Cloud.Spanner.Data
                                 // We expect to get full rows...
                                 for (var i = 1; i < _metadata.RowType.Fields.Count; i++)
                                 {
-                                    var value = await _resultSet.NextAsync(effectiveToken).ConfigureAwait(false);
+                                    var value = await ResultSet.NextAsync(effectiveToken).ConfigureAwait(false);
                                     GaxPreconditions.CheckState(value != null, "Incomplete row returned by Spanner server");
                                     _innerList.Add(value);
                                 }
@@ -387,7 +389,7 @@ namespace Google.Cloud.Spanner.Data
             }
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async ()
-                    => _metadata ?? (_metadata = await _resultSet.GetMetadataAsync(cancellationToken)
+                    => _metadata ?? (_metadata = await ResultSet.GetMetadataAsync(cancellationToken)
                         .ConfigureAwait(false)), "SpannerDataReader.GetMetadata", Logger);
         }
 
@@ -415,7 +417,7 @@ namespace Google.Cloud.Spanner.Data
                     "SpannerDataReader.ActiveCount",
                     () => Interlocked.Decrement(ref s_readerCount));
 
-                _resultSet?.Dispose();
+                ResultSet?.Dispose();
                 _resourceToClose?.Dispose();
             }
         }
