@@ -47,7 +47,7 @@ namespace Google.Cloud.Firestore.Tests
                     }
                 }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -59,7 +59,7 @@ namespace Google.Cloud.Firestore.Tests
             batch.Delete(doc);
 
             var expectedWrite = new Write { Delete = doc.Path };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -75,7 +75,7 @@ namespace Google.Cloud.Firestore.Tests
                 Delete = doc.Path,
                 CurrentDocument = new V1.Precondition { UpdateTime = CreateProtoTimestamp(1, 2) }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -106,7 +106,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { "`a.b`.`f.g`", "h.m" } }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -132,7 +132,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { "x" } }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -157,7 +157,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { "x" } }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -183,7 +183,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { "x" } }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -204,7 +204,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { "x" } }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Theory]
@@ -233,7 +233,7 @@ namespace Google.Cloud.Firestore.Tests
                 }
                 // No UpdateMask
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -259,7 +259,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { "Name", "Nested.Value1", "Nested.Value2", "Score" } }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -285,7 +285,7 @@ namespace Google.Cloud.Firestore.Tests
                 },
                 UpdateMask = new DocumentMask { FieldPaths = { "Name", "Nested.Value2" } }
             };
-            AssertWrites(batch, (expectedWrite, true));
+            AssertSingleWrite(batch, expectedWrite);
         }
 
         [Fact]
@@ -295,12 +295,11 @@ namespace Google.Cloud.Firestore.Tests
             var write1 = new Write { Update = new Document { Name = "irrelevant1" } };
             var write2 = new Write { Update = new Document { Name = "irrelevant2" } };
             var write3 = new Write { Transform = new DocumentTransform { Document = "irrelevant3" } };
-            var write4 = new Write { Transform = new DocumentTransform { Document = "irrelevant4" } };
-            var write5 = new Write { Update = new Document { Name = "irrelevant5" } };
+            var write4 = new Write { Update = new Document { Name = "irrelevant4" } };
             var request = new CommitRequest
             {
                 Database = "projects/proj/databases/db",
-                Writes = { write1, write2, write3, write4, write5 }
+                Writes = { write1, write2, write3, write4 }
             };
             var response = new CommitResponse
             {
@@ -310,11 +309,7 @@ namespace Google.Cloud.Firestore.Tests
                     new V1.WriteResult { UpdateTime = CreateProtoTimestamp(10, 0) },
                     // Deliberately no UpdateTime; result should default to CommitTime
                     new V1.WriteResult {  },
-                    // Returned even though it's a transform (added with addResultIndex = true)
                     new V1.WriteResult { UpdateTime = CreateProtoTimestamp(100, 0) },
-                    // Not returned (added with addResultIndex = false)
-                    new V1.WriteResult { UpdateTime = CreateProtoTimestamp(125, 0) },
-                    // Returned as the fourth result
                     new V1.WriteResult { UpdateTime = CreateProtoTimestamp(150, 0) },
                 }
             };
@@ -323,14 +318,7 @@ namespace Google.Cloud.Firestore.Tests
             var db = FirestoreDb.Create("proj", "db", mock.Object);
             var reference = db.Document("col/doc");
             var batch = db.StartBatch();
-            batch.Elements.AddRange(new[]
-            {
-                new WriteBatch.BatchElement(write1, true),
-                new WriteBatch.BatchElement(write2, true),
-                new WriteBatch.BatchElement(write3, true),
-                new WriteBatch.BatchElement(write4, false),
-                new WriteBatch.BatchElement(write5, true)
-            });
+            batch.Writes.AddRange(new[] { write1, write2, write3, write4 });
             var actualTimestamps = (await batch.CommitAsync()).Select(x => x.UpdateTime);
             var expectedTimestamps = new[] { new Timestamp(10, 0), new Timestamp(10, 500), new Timestamp(100, 0), new Timestamp(150, 0) };
             Assert.Equal(expectedTimestamps, actualTimestamps);
@@ -347,15 +335,11 @@ namespace Google.Cloud.Firestore.Tests
             Assert.False(batch.IsEmpty);
         }
 
-        private static void AssertWrites(WriteBatch batch, params (Write write, bool includeInWriteResults)[] elements)
+        private static void AssertSingleWrite(WriteBatch batch, Write write)
         {
-            // The ToList calls aren't strictly necessary, but make the failure output easier to read.
-            var expectedWrites = elements.Select(e => CanonicalizeWrite(e.write)).ToList();
-            var actualWrites = batch.Elements.Select(e => CanonicalizeWrite(e.Write)).ToList();
-            Assert.Equal(expectedWrites, actualWrites);
-            var expectedInclusions = elements.Select(e => e.includeInWriteResults).ToList();
-            var actualInclusions = batch.Elements.Select(e => e.IncludeInWriteResults).ToList();
-            Assert.Equal(expectedInclusions, actualInclusions);
+            var actualWrite = CanonicalizeWrite(Assert.Single(batch.Writes));
+            var expectedWrite = CanonicalizeWrite(write);
+            Assert.Equal(expectedWrite, actualWrite);
         }
 
         /// <summary>
