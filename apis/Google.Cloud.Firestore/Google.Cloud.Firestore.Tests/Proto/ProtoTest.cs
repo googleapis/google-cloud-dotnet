@@ -77,7 +77,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             Assert.Empty(testTypes);
         }
 
-        [Theory(Skip = "Waiting on conformance test update guidance.")]
+        [Theory]
         [MemberData(nameof(CreateTests))]
         public void Create(SerializableTest wrapper)
         {
@@ -190,7 +190,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             }
         }
 
-        [Theory(Skip = "Waiting on conformance test update guidance.")]
+        [Theory]
         [MemberData(nameof(SetTests))]
         public void Set(SerializableTest wrapper)
         {
@@ -206,7 +206,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             });
         }
 
-        [Theory(Skip = "Waiting on conformance test update guidance.")]
+        [Theory]
         [MemberData(nameof(UpdateTests))]
         public void Update(SerializableTest wrapper)
         {
@@ -221,7 +221,7 @@ namespace Google.Cloud.Firestore.Tests.Proto
             });
         }
 
-        [Theory(Skip = "Waiting on conformance test update guidance.")]
+        [Theory]
         [MemberData(nameof(UpdatePathsTests))]
         public void UpdatePaths(SerializableTest wrapper)
         {
