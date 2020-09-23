@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.1.0, released 2020-09-23
+
+- [Commit 14be654](https://github.com/googleapis/google-cloud-dotnet/commit/14be654): feat: Disable pretty printing in BigQuery unless explicitly requested. Fixes [issue 5330](https://github.com/googleapis/google-cloud-dotnet/issues/5330).
+- [Commit 909f568](https://github.com/googleapis/google-cloud-dotnet/commit/909f568): docs: Clarify the scopes used by BigQueryClient.Create and CreateAsync
+
 # Version 2.0.0, released 2020-06-04
 
 - [Commit 0970dff](https://github.com/googleapis/google-cloud-dotnet/commit/0970dff): Fix: Propagates some cancellation tokens that weren't being propagated before.
