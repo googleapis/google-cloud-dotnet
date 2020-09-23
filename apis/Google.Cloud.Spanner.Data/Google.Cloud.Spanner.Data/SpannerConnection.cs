@@ -776,6 +776,20 @@ namespace Google.Cloud.Spanner.Data
             CancellationToken cancellationToken,
             TimestampBound targetReadTimestamp = null)
         {
+            if (transactionMode == TransactionMode.ReadWrite)
+            {
+                return ExecuteHelper.WithErrorTranslationAndProfiling(
+                    async () =>
+                    {
+                        await OpenAsync(cancellationToken).ConfigureAwait(false);
+                        var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
+                        return (SpannerTransaction) new RetriableSpannerTransaction(
+                            this,
+                            session,
+                            Builder.SessionPoolManager.SpannerSettings.Clock ?? SystemClock.Instance,
+                            Builder.SessionPoolManager.SpannerSettings.Scheduler ?? SystemScheduler.Instance);
+                    }, "SpannerConnection.BeginRetriableTransaction", Logger);
+            }
             return ExecuteHelper.WithErrorTranslationAndProfiling(
                 async () =>
                 {
