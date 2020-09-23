@@ -94,7 +94,7 @@ namespace Google.Cloud.Firestore.Tests
                 UpdateMask = new DocumentMask { FieldPaths = { "Name", "DeleteMe" } },
                 UpdateTransforms = { ServerTimestampTransform("Timestamp") }
             };
-            AssertWrites(batch, (expectedUpdate, true));
+            AssertSingleWrite(batch, expectedUpdate);
         }
 
         [Fact]
@@ -123,7 +123,7 @@ namespace Google.Cloud.Firestore.Tests
                 UpdateMask = new DocumentMask { FieldPaths = { "ValueA.Name", "ValueA.DeleteMeA", "ValueB.DeleteMeB" } },
                 UpdateTransforms = { ServerTimestampTransform("ValueA.TimestampA"), ServerTimestampTransform("ValueB.TimestampB") }
             };
-            AssertWrites(batch, (expectedUpdate, true));
+            AssertSingleWrite(batch, expectedUpdate);
         }
 
         [Fact]
@@ -134,8 +134,7 @@ namespace Google.Cloud.Firestore.Tests
             var doc = db.Document("col/doc");
             var data = new { Timestamp = FieldValue.ServerTimestamp };
             batch.Set(doc, data, SetOptions.MergeAll);
-            // No Update.
-            var expectedTransform = new Write
+            var write = new Write
             {
                 Update = new Document
                 {
@@ -144,7 +143,7 @@ namespace Google.Cloud.Firestore.Tests
                 UpdateMask = new DocumentMask(),
                 UpdateTransforms = { ServerTimestampTransform("Timestamp") }
             };
-            AssertWrites(batch, (expectedTransform, true));
+            AssertSingleWrite(batch, write);
         }
 
         private static FieldTransform ServerTimestampTransform(string fieldPath) =>

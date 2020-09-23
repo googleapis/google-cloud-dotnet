@@ -35,10 +35,10 @@ namespace Google.Cloud.Firestore
 
         private readonly FirestoreDb _db;
 
-        internal bool IsEmpty => Elements.Count == 0;
+        internal bool IsEmpty => Writes.Count == 0;
 
         // Visible for testing and for this class; should not be used elsewhere in the production code.
-        internal List<BatchElement> Elements { get; } = new List<BatchElement>();
+        internal List<Write> Writes { get; } = new List<Write>();
 
         internal WriteBatch(FirestoreDb firestoreDb)
         {
@@ -80,7 +80,7 @@ namespace Google.Cloud.Firestore
                 CurrentDocument = precondition?.Proto,
                 Delete = documentReference.Path
             };
-            Elements.Add(new BatchElement(write, true)); // No sentinel values to worry about here; always a single write
+            Writes.Add(write);
             return this;
         }
 
@@ -227,11 +227,9 @@ namespace Google.Cloud.Firestore
 
         internal async Task<IList<WriteResult>> CommitAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
-            var request = new CommitRequest { Database = _db.RootPath, Writes = { Elements.Select(e => e.Write) }, Transaction = transactionId };
+            var request = new CommitRequest { Database = _db.RootPath, Writes = { Writes }, Transaction = transactionId };
             var response = await _db.Client.CommitAsync(request, CallSettings.FromCancellationToken(cancellationToken)).ConfigureAwait(false);
             return response.WriteResults
-                // Only include write results from appropriate elements
-                .Where((wr, index) => Elements[index].IncludeInWriteResults)
                 .Select(wr => WriteResult.FromProto(wr, response.CommitTime))
                 .ToList();
         }
@@ -269,7 +267,7 @@ namespace Google.Cloud.Firestore
                 UpdateMask = includeEmptyUpdateMask || updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null,
                 UpdateTransforms = { sentinelFields.Select(p => p.ToFieldTransform()) }
             };
-            Elements.Add(new BatchElement(write, true));
+            Writes.Add(write);
         }
 
         /// <summary>
@@ -484,20 +482,6 @@ namespace Google.Cloud.Firestore
                 {
                     throw new ArgumentException($"{current} is a prefix of {next}. Prefixes must not be specified in updates.");
                 }
-            }
-        }
-
-        // Part of the batch: the write, and whether or not the corresponding WriteResult
-        // should be returned from CommitAsync.
-        internal struct BatchElement
-        {
-            internal Write Write { get; }
-            internal bool IncludeInWriteResults { get; }
-
-            internal BatchElement(Write write, bool includeInWriteResults)
-            {
-                Write = write;
-                IncludeInWriteResults = includeInWriteResults;
             }
         }
 
