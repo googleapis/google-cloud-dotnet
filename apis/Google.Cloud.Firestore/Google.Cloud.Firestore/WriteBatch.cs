@@ -62,7 +62,7 @@ namespace Google.Cloud.Firestore
             RemoveSentinels(fields, sentinels);
             // Force a write if we've not got any sentinel values. Otherwise, we end up with an empty transform instead,
             // just to specify the precondition.
-            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, sentinels, sentinels.Count == 0, false);
+            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, sentinels, forceWrite: sentinels.Count == 0, includeEmptyUpdateMask: false);
             return this;
         }
 
@@ -137,7 +137,7 @@ namespace Google.Cloud.Firestore
             RemoveSentinels(expanded, sentinels);
 
             var nonDeletes = sentinels.Where(sf => !sf.IsDelete).ToList();
-            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, nonDeletes, false, false);
+            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, nonDeletes, forceWrite: false, includeEmptyUpdateMask: false);
             return this;
         }
 
@@ -214,7 +214,7 @@ namespace Google.Cloud.Firestore
                 forceWrite = true;
             }
 
-            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, nonDeletes, forceWrite, options.Merge);
+            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, nonDeletes, forceWrite, includeEmptyUpdateMask: options.Merge);
             return this;
         }
 
@@ -243,38 +243,33 @@ namespace Google.Cloud.Firestore
             Precondition precondition,
             IList<SentinelField> sentinelFields,
             bool forceWrite,
-            bool includeEmptyUpdatePath)
+            bool includeEmptyUpdateMask)
         {
             updatePaths = updatePaths.Except(sentinelFields.Select(sf => sf.FieldPath)).ToList();
-            bool includeTransformInWriteResults = true;
-            if (forceWrite || fields.Count > 0 || updatePaths.Count > 0)
+            if (!forceWrite && fields.Count == 0 && updatePaths.Count == 0 && sentinelFields.Count == 0)
             {
-                Elements.Add(new BatchElement(new Write
-                {
-                    CurrentDocument = precondition?.Proto,
-                    Update = new Document
-                    {
-                        Fields = { fields },
-                        Name = documentReference.Path,
-                    },
-                    UpdateMask = includeEmptyUpdatePath || updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null
-                }, true));
-                includeTransformInWriteResults = false;
-                // Don't include the precondition in the Transform write, if there is one.
-                precondition = null;
+                return;
             }
-            if (sentinelFields.Count > 0)
+
+            // If we've only got sentinels, but we have a precondition that requires the document to exist,
+            // include the empty update mask, to avoid removing all other data.
+            if (!includeEmptyUpdateMask && fields.Count == 0 && sentinelFields.Count > 0 && precondition?.Exists == true)
             {
-                Elements.Add(new BatchElement(new Write
-                {
-                    CurrentDocument = precondition?.Proto,
-                    Transform = new DocumentTransform
-                    {
-                        Document = documentReference.Path,
-                        FieldTransforms = { sentinelFields.Select(p => p.ToFieldTransform()) }
-                    }
-                }, includeTransformInWriteResults));
+                includeEmptyUpdateMask = true;
             }
+
+            var write = new Write
+            {
+                CurrentDocument = precondition?.Proto,
+                Update = new Document
+                {
+                    Fields = { fields },
+                    Name = documentReference.Path,
+                },
+                UpdateMask = includeEmptyUpdateMask || updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null,
+                UpdateTransforms = { sentinelFields.Select(p => p.ToFieldTransform()) }
+            };
+            Elements.Add(new BatchElement(write, true));
         }
 
         /// <summary>
