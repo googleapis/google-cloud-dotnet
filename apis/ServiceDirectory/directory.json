@@ -1408,7 +1408,7 @@
       "ServiceDirectory": "google/cloud/notebooks/v1beta1",
       "Name": "notebooks.googleapis.com",
       "Title": "Notebooks API",
-      "Description": "AI Platform Notebooks API (beta) is used to manage notebook resources in Google Cloud. AI Platform Notebooks API is in a pre-release state and might change or have limited support. For more information, see the <a href=\"/products#product-launch-stages\">product launch stages</a>.",
+      "Description": "AI Platform Notebooks API is used to manage notebook resources in Google Cloud.",
       "ServiceConfigFile": "google/cloud/notebooks/v1beta1/notebooks_v1beta1.yaml",
       "Version": "v1beta1",
       "PackageFromDirectory": "google.cloud.notebooks.v1beta1",
