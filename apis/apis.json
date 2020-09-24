@@ -1801,6 +1801,7 @@
     "google/ads/googleads/v1": "Ads maintains its own libraries",
     "google/ads/googleads/v2": "Ads maintains its own libraries",
     "google/ads/googleads/v3": "Ads maintains its own libraries",
+    "google/partner/aistreams": "Team is maintaining its own libraries",
     "google/cloud/bigquery/v2": "Relying on REST API for now",
     "google/cloud/recommender/logging/v1": "No services yet",
     "google/maps/playablelocations/v3": "Non-Cloud",
