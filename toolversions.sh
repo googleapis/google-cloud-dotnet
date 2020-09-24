@@ -9,8 +9,8 @@ declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 declare -r DOCFX_VERSION=2.50
 declare -r DOTCOVER_VERSION=2019.3.4
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
-declare -r PROTOC_VERSION=3.11.2
-declare -r GRPC_VERSION=1.22.0
+declare -r PROTOC_VERSION=3.13.0
+declare -r GRPC_VERSION=2.31.0
 
 # Tools that only run under Windows (at the moment)
 declare -r DOCFX=$TOOL_PACKAGES/docfx.$DOCFX_VERSION/docfx.exe
