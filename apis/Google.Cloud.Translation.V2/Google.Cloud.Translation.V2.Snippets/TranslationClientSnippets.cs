@@ -93,7 +93,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
 
-            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText);
+            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText, ignoreWhiteSpaceDifferences:true);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -106,7 +106,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End snippet
 
-            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText);
+            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText, ignoreWhiteSpaceDifferences: true);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -151,9 +151,9 @@ namespace Google.Cloud.Translation.V2.Snippets
             }
             // End sample
 
-            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", results[0].TranslatedText);
+            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", results[0].TranslatedText, ignoreWhiteSpaceDifferences: true);
             Assert.Equal("en", results[0].DetectedSourceLanguage);
-            Assert.Equal("<p> <strong>C&#39;est ensoleillé.</strong> </p>", results[1].TranslatedText);
+            Assert.Equal("<p> <strong>C&#39;est ensoleillé.</strong> </p>", results[1].TranslatedText, ignoreWhiteSpaceDifferences: true);
             Assert.Equal("en", results[1].DetectedSourceLanguage);
         }
 
