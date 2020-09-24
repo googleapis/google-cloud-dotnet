@@ -137,7 +137,11 @@ namespace Google.Cloud.Tasks.V2 {
   ///     spikes in create task rates, the queue being unpaused, or many tasks
   ///     that are scheduled at the same time).
   /// </summary>
-  public sealed partial class HttpRequest : pb::IMessage<HttpRequest> {
+  public sealed partial class HttpRequest : pb::IMessage<HttpRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HttpRequest> _parser = new pb::MessageParser<HttpRequest>(() => new HttpRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -383,6 +387,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Url.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Url);
@@ -407,7 +414,38 @@ namespace Google.Cloud.Tasks.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Url.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Url);
+      }
+      if (HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) HttpMethod);
+      }
+      headers_.WriteTo(ref output, _map_headers_codec);
+      if (Body.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Body);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+        output.WriteRawTag(42);
+        output.WriteMessage(OauthToken);
+      }
+      if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+        output.WriteRawTag(50);
+        output.WriteMessage(OidcToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -469,6 +507,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -511,7 +552,56 @@ namespace Google.Cloud.Tasks.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Url = input.ReadString();
+            break;
+          }
+          case 16: {
+            HttpMethod = (global::Google.Cloud.Tasks.V2.HttpMethod) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            headers_.AddEntriesFrom(ref input, _map_headers_codec);
+            break;
+          }
+          case 34: {
+            Body = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Tasks.V2.OAuthToken subBuilder = new global::Google.Cloud.Tasks.V2.OAuthToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OauthToken) {
+              subBuilder.MergeFrom(OauthToken);
+            }
+            input.ReadMessage(subBuilder);
+            OauthToken = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Tasks.V2.OidcToken subBuilder = new global::Google.Cloud.Tasks.V2.OidcToken();
+            if (authorizationHeaderCase_ == AuthorizationHeaderOneofCase.OidcToken) {
+              subBuilder.MergeFrom(OidcToken);
+            }
+            input.ReadMessage(subBuilder);
+            OidcToken = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -576,7 +666,11 @@ namespace Google.Cloud.Tasks.V2 {
   /// Requests) response from an app handler does not cause traffic congestion
   /// control to throttle the queue.
   /// </summary>
-  public sealed partial class AppEngineHttpRequest : pb::IMessage<AppEngineHttpRequest> {
+  public sealed partial class AppEngineHttpRequest : pb::IMessage<AppEngineHttpRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AppEngineHttpRequest> _parser = new pb::MessageParser<AppEngineHttpRequest>(() => new AppEngineHttpRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -789,6 +883,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) HttpMethod);
@@ -809,7 +906,34 @@ namespace Google.Cloud.Tasks.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HttpMethod != global::Google.Cloud.Tasks.V2.HttpMethod.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) HttpMethod);
+      }
+      if (appEngineRouting_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AppEngineRouting);
+      }
+      if (RelativeUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RelativeUri);
+      }
+      headers_.WriteTo(ref output, _map_headers_codec);
+      if (Body.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Body);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -859,6 +983,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -890,7 +1017,45 @@ namespace Google.Cloud.Tasks.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            HttpMethod = (global::Google.Cloud.Tasks.V2.HttpMethod) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (appEngineRouting_ == null) {
+              AppEngineRouting = new global::Google.Cloud.Tasks.V2.AppEngineRouting();
+            }
+            input.ReadMessage(AppEngineRouting);
+            break;
+          }
+          case 26: {
+            RelativeUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            headers_.AddEntriesFrom(ref input, _map_headers_codec);
+            break;
+          }
+          case 42: {
+            Body = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -917,7 +1082,11 @@ namespace Google.Cloud.Tasks.V2 {
   ///
   /// `https://www.googleapis.com/auth/cloud-platform`
   /// </summary>
-  public sealed partial class AppEngineRouting : pb::IMessage<AppEngineRouting> {
+  public sealed partial class AppEngineRouting : pb::IMessage<AppEngineRouting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AppEngineRouting> _parser = new pb::MessageParser<AppEngineRouting>(() => new AppEngineRouting());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1102,6 +1271,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Service.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Service);
@@ -1121,7 +1293,33 @@ namespace Google.Cloud.Tasks.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Service.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Service);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (Instance.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Instance);
+      }
+      if (Host.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Host);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1166,6 +1364,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1190,7 +1391,38 @@ namespace Google.Cloud.Tasks.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Service = input.ReadString();
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+          case 26: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 34: {
+            Host = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1200,7 +1432,11 @@ namespace Google.Cloud.Tasks.V2 {
   /// This type of authorization should generally only be used when calling Google
   /// APIs hosted on *.googleapis.com.
   /// </summary>
-  public sealed partial class OAuthToken : pb::IMessage<OAuthToken> {
+  public sealed partial class OAuthToken : pb::IMessage<OAuthToken>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OAuthToken> _parser = new pb::MessageParser<OAuthToken>(() => new OAuthToken());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1305,6 +1541,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ServiceAccountEmail.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ServiceAccountEmail);
@@ -1316,7 +1555,25 @@ namespace Google.Cloud.Tasks.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccountEmail);
+      }
+      if (Scope.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Scope);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1349,6 +1606,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1365,7 +1625,30 @@ namespace Google.Cloud.Tasks.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
+          case 18: {
+            Scope = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1377,7 +1660,11 @@ namespace Google.Cloud.Tasks.V2 {
   /// calling Cloud Run, or endpoints where you intend to validate the token
   /// yourself.
   /// </summary>
-  public sealed partial class OidcToken : pb::IMessage<OidcToken> {
+  public sealed partial class OidcToken : pb::IMessage<OidcToken>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OidcToken> _parser = new pb::MessageParser<OidcToken>(() => new OidcToken());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1481,6 +1768,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ServiceAccountEmail.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ServiceAccountEmail);
@@ -1492,7 +1782,25 @@ namespace Google.Cloud.Tasks.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ServiceAccountEmail);
+      }
+      if (Audience.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Audience);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1525,6 +1833,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1541,7 +1852,30 @@ namespace Google.Cloud.Tasks.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
+          case 18: {
+            Audience = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

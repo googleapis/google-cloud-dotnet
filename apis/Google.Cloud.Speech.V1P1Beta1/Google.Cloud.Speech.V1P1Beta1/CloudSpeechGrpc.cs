@@ -116,7 +116,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     {
       /// <summary>Creates a new client for Speech</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public SpeechClient(grpc::Channel channel) : base(channel)
+      public SpeechClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Speech that uses a custom <c>CallInvoker</c>.</summary>

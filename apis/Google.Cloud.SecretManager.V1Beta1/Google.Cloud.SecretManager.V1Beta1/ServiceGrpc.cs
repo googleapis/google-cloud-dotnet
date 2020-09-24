@@ -376,7 +376,7 @@ namespace Google.Cloud.SecretManager.V1Beta1 {
     {
       /// <summary>Creates a new client for SecretManagerService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public SecretManagerServiceClient(grpc::Channel channel) : base(channel)
+      public SecretManagerServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SecretManagerService that uses a custom <c>CallInvoker</c>.</summary>

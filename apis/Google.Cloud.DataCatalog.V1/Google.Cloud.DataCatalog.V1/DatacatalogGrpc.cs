@@ -711,7 +711,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     {
       /// <summary>Creates a new client for DataCatalog</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public DataCatalogClient(grpc::Channel channel) : base(channel)
+      public DataCatalogClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DataCatalog that uses a custom <c>CallInvoker</c>.</summary>

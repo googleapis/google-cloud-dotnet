@@ -249,7 +249,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// Describes the identifying information, config, and status of
   /// a cluster of Compute Engine instances.
   /// </summary>
-  public sealed partial class Cluster : pb::IMessage<Cluster> {
+  public sealed partial class Cluster : pb::IMessage<Cluster>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Cluster> _parser = new pb::MessageParser<Cluster>(() => new Cluster());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -460,6 +464,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -489,7 +496,43 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (ClusterName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClusterName);
+      }
+      if (config_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Config);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Status);
+      }
+      if (ClusterUuid.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ClusterUuid);
+      }
+      statusHistory_.WriteTo(ref output, _repeated_statusHistory_codec);
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (metrics_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Metrics);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -559,6 +602,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -608,14 +654,74 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClusterName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Dataproc.V1.ClusterConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 34: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.Dataproc.V1.ClusterStatus();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 50: {
+            ClusterUuid = input.ReadString();
+            break;
+          }
+          case 58: {
+            statusHistory_.AddEntriesFrom(ref input, _repeated_statusHistory_codec);
+            break;
+          }
+          case 66: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 74: {
+            if (metrics_ == null) {
+              Metrics = new global::Google.Cloud.Dataproc.V1.ClusterMetrics();
+            }
+            input.ReadMessage(Metrics);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The cluster config.
   /// </summary>
-  public sealed partial class ClusterConfig : pb::IMessage<ClusterConfig> {
+  public sealed partial class ClusterConfig : pb::IMessage<ClusterConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ClusterConfig> _parser = new pb::MessageParser<ClusterConfig>(() => new ClusterConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -933,6 +1039,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ConfigBucket.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ConfigBucket);
@@ -985,7 +1094,66 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ConfigBucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ConfigBucket);
+      }
+      if (TempBucket.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TempBucket);
+      }
+      if (gceClusterConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GceClusterConfig);
+      }
+      if (masterConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(MasterConfig);
+      }
+      if (workerConfig_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(WorkerConfig);
+      }
+      initializationActions_.WriteTo(ref output, _repeated_initializationActions_codec);
+      if (secondaryWorkerConfig_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(SecondaryWorkerConfig);
+      }
+      if (softwareConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(SoftwareConfig);
+      }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EncryptionConfig);
+      }
+      if (securityConfig_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(SecurityConfig);
+      }
+      if (lifecycleConfig_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(LifecycleConfig);
+      }
+      if (autoscalingConfig_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(AutoscalingConfig);
+      }
+      if (endpointConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(EndpointConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1110,6 +1278,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1200,14 +1371,115 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ConfigBucket = input.ReadString();
+            break;
+          }
+          case 18: {
+            TempBucket = input.ReadString();
+            break;
+          }
+          case 66: {
+            if (gceClusterConfig_ == null) {
+              GceClusterConfig = new global::Google.Cloud.Dataproc.V1.GceClusterConfig();
+            }
+            input.ReadMessage(GceClusterConfig);
+            break;
+          }
+          case 74: {
+            if (masterConfig_ == null) {
+              MasterConfig = new global::Google.Cloud.Dataproc.V1.InstanceGroupConfig();
+            }
+            input.ReadMessage(MasterConfig);
+            break;
+          }
+          case 82: {
+            if (workerConfig_ == null) {
+              WorkerConfig = new global::Google.Cloud.Dataproc.V1.InstanceGroupConfig();
+            }
+            input.ReadMessage(WorkerConfig);
+            break;
+          }
+          case 90: {
+            initializationActions_.AddEntriesFrom(ref input, _repeated_initializationActions_codec);
+            break;
+          }
+          case 98: {
+            if (secondaryWorkerConfig_ == null) {
+              SecondaryWorkerConfig = new global::Google.Cloud.Dataproc.V1.InstanceGroupConfig();
+            }
+            input.ReadMessage(SecondaryWorkerConfig);
+            break;
+          }
+          case 106: {
+            if (softwareConfig_ == null) {
+              SoftwareConfig = new global::Google.Cloud.Dataproc.V1.SoftwareConfig();
+            }
+            input.ReadMessage(SoftwareConfig);
+            break;
+          }
+          case 122: {
+            if (encryptionConfig_ == null) {
+              EncryptionConfig = new global::Google.Cloud.Dataproc.V1.EncryptionConfig();
+            }
+            input.ReadMessage(EncryptionConfig);
+            break;
+          }
+          case 130: {
+            if (securityConfig_ == null) {
+              SecurityConfig = new global::Google.Cloud.Dataproc.V1.SecurityConfig();
+            }
+            input.ReadMessage(SecurityConfig);
+            break;
+          }
+          case 138: {
+            if (lifecycleConfig_ == null) {
+              LifecycleConfig = new global::Google.Cloud.Dataproc.V1.LifecycleConfig();
+            }
+            input.ReadMessage(LifecycleConfig);
+            break;
+          }
+          case 146: {
+            if (autoscalingConfig_ == null) {
+              AutoscalingConfig = new global::Google.Cloud.Dataproc.V1.AutoscalingConfig();
+            }
+            input.ReadMessage(AutoscalingConfig);
+            break;
+          }
+          case 154: {
+            if (endpointConfig_ == null) {
+              EndpointConfig = new global::Google.Cloud.Dataproc.V1.EndpointConfig();
+            }
+            input.ReadMessage(EndpointConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Endpoint config for this cluster
   /// </summary>
-  public sealed partial class EndpointConfig : pb::IMessage<EndpointConfig> {
+  public sealed partial class EndpointConfig : pb::IMessage<EndpointConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<EndpointConfig> _parser = new pb::MessageParser<EndpointConfig>(() => new EndpointConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1307,6 +1579,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       httpPorts_.WriteTo(output, _map_httpPorts_codec);
       if (EnableHttpPortAccess != false) {
         output.WriteRawTag(16);
@@ -1315,7 +1590,22 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      httpPorts_.WriteTo(ref output, _map_httpPorts_codec);
+      if (EnableHttpPortAccess != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnableHttpPortAccess);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1344,6 +1634,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1360,14 +1653,41 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            httpPorts_.AddEntriesFrom(ref input, _map_httpPorts_codec);
+            break;
+          }
+          case 16: {
+            EnableHttpPortAccess = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Autoscaling Policy config associated with the cluster.
   /// </summary>
-  public sealed partial class AutoscalingConfig : pb::IMessage<AutoscalingConfig> {
+  public sealed partial class AutoscalingConfig : pb::IMessage<AutoscalingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AutoscalingConfig> _parser = new pb::MessageParser<AutoscalingConfig>(() => new AutoscalingConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1457,6 +1777,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PolicyUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(PolicyUri);
@@ -1464,7 +1787,21 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PolicyUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PolicyUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1491,6 +1828,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1503,14 +1843,37 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PolicyUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Encryption settings for the cluster.
   /// </summary>
-  public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig> {
+  public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<EncryptionConfig> _parser = new pb::MessageParser<EncryptionConfig>(() => new EncryptionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1593,6 +1956,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (GcePdKmsKeyName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(GcePdKmsKeyName);
@@ -1600,7 +1966,21 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GcePdKmsKeyName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GcePdKmsKeyName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1627,6 +2007,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1639,7 +2022,26 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            GcePdKmsKeyName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1647,7 +2049,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// Common config settings for resources of Compute Engine cluster
   /// instances, applicable to all instances in the cluster.
   /// </summary>
-  public sealed partial class GceClusterConfig : pb::IMessage<GceClusterConfig> {
+  public sealed partial class GceClusterConfig : pb::IMessage<GceClusterConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GceClusterConfig> _parser = new pb::MessageParser<GceClusterConfig>(() => new GceClusterConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1921,6 +2327,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ZoneUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ZoneUri);
@@ -1951,7 +2360,44 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ZoneUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ZoneUri);
+      }
+      if (NetworkUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NetworkUri);
+      }
+      serviceAccountScopes_.WriteTo(ref output, _repeated_serviceAccountScopes_codec);
+      tags_.WriteTo(ref output, _repeated_tags_codec);
+      metadata_.WriteTo(ref output, _map_metadata_codec);
+      if (SubnetworkUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SubnetworkUri);
+      }
+      if (InternalIpOnly != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(InternalIpOnly);
+      }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ServiceAccount);
+      }
+      if (reservationAffinity_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ReservationAffinity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2017,6 +2463,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2064,7 +2513,61 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ZoneUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            NetworkUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            serviceAccountScopes_.AddEntriesFrom(ref input, _repeated_serviceAccountScopes_codec);
+            break;
+          }
+          case 34: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 42: {
+            metadata_.AddEntriesFrom(ref input, _map_metadata_codec);
+            break;
+          }
+          case 50: {
+            SubnetworkUri = input.ReadString();
+            break;
+          }
+          case 56: {
+            InternalIpOnly = input.ReadBool();
+            break;
+          }
+          case 66: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (reservationAffinity_ == null) {
+              ReservationAffinity = new global::Google.Cloud.Dataproc.V1.ReservationAffinity();
+            }
+            input.ReadMessage(ReservationAffinity);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2072,7 +2575,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// The config settings for Compute Engine resources in
   /// an instance group, such as a master or worker group.
   /// </summary>
-  public sealed partial class InstanceGroupConfig : pb::IMessage<InstanceGroupConfig> {
+  public sealed partial class InstanceGroupConfig : pb::IMessage<InstanceGroupConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InstanceGroupConfig> _parser = new pb::MessageParser<InstanceGroupConfig>(() => new InstanceGroupConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2348,6 +2855,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NumInstances != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(NumInstances);
@@ -2385,7 +2895,51 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NumInstances != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(NumInstances);
+      }
+      instanceNames_.WriteTo(ref output, _repeated_instanceNames_codec);
+      if (ImageUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ImageUri);
+      }
+      if (MachineTypeUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MachineTypeUri);
+      }
+      if (diskConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DiskConfig);
+      }
+      if (IsPreemptible != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsPreemptible);
+      }
+      if (managedGroupConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ManagedGroupConfig);
+      }
+      accelerators_.WriteTo(ref output, _repeated_accelerators_codec);
+      if (MinCpuPlatform.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(MinCpuPlatform);
+      }
+      if (Preemptibility != global::Google.Cloud.Dataproc.V1.InstanceGroupConfig.Types.Preemptibility.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Preemptibility);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2464,6 +3018,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2518,7 +3075,68 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NumInstances = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            instanceNames_.AddEntriesFrom(ref input, _repeated_instanceNames_codec);
+            break;
+          }
+          case 26: {
+            ImageUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            MachineTypeUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (diskConfig_ == null) {
+              DiskConfig = new global::Google.Cloud.Dataproc.V1.DiskConfig();
+            }
+            input.ReadMessage(DiskConfig);
+            break;
+          }
+          case 48: {
+            IsPreemptible = input.ReadBool();
+            break;
+          }
+          case 58: {
+            if (managedGroupConfig_ == null) {
+              ManagedGroupConfig = new global::Google.Cloud.Dataproc.V1.ManagedGroupConfig();
+            }
+            input.ReadMessage(ManagedGroupConfig);
+            break;
+          }
+          case 66: {
+            accelerators_.AddEntriesFrom(ref input, _repeated_accelerators_codec);
+            break;
+          }
+          case 74: {
+            MinCpuPlatform = input.ReadString();
+            break;
+          }
+          case 80: {
+            Preemptibility = (global::Google.Cloud.Dataproc.V1.InstanceGroupConfig.Types.Preemptibility) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the InstanceGroupConfig message type.</summary>
@@ -2559,7 +3177,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Specifies the resources used to actively manage an instance group.
   /// </summary>
-  public sealed partial class ManagedGroupConfig : pb::IMessage<ManagedGroupConfig> {
+  public sealed partial class ManagedGroupConfig : pb::IMessage<ManagedGroupConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ManagedGroupConfig> _parser = new pb::MessageParser<ManagedGroupConfig>(() => new ManagedGroupConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2659,6 +3281,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (InstanceTemplateName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(InstanceTemplateName);
@@ -2670,7 +3295,25 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InstanceTemplateName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstanceTemplateName);
+      }
+      if (InstanceGroupManagerName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InstanceGroupManagerName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2703,6 +3346,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2719,7 +3365,30 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InstanceTemplateName = input.ReadString();
+            break;
+          }
+          case 18: {
+            InstanceGroupManagerName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2728,7 +3397,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// of an instance. See [GPUs on Compute
   /// Engine](https://cloud.google.com/compute/docs/gpus/).
   /// </summary>
-  public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig> {
+  public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AcceleratorConfig> _parser = new pb::MessageParser<AcceleratorConfig>(() => new AcceleratorConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2842,6 +3515,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (AcceleratorTypeUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(AcceleratorTypeUri);
@@ -2853,7 +3529,25 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AcceleratorTypeUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AcceleratorTypeUri);
+      }
+      if (AcceleratorCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(AcceleratorCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2886,6 +3580,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2902,14 +3599,41 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AcceleratorTypeUri = input.ReadString();
+            break;
+          }
+          case 16: {
+            AcceleratorCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies the config of disk options for a group of VM instances.
   /// </summary>
-  public sealed partial class DiskConfig : pb::IMessage<DiskConfig> {
+  public sealed partial class DiskConfig : pb::IMessage<DiskConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DiskConfig> _parser = new pb::MessageParser<DiskConfig>(() => new DiskConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3032,6 +3756,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (BootDiskSizeGb != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(BootDiskSizeGb);
@@ -3047,7 +3774,29 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BootDiskSizeGb != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(BootDiskSizeGb);
+      }
+      if (NumLocalSsds != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NumLocalSsds);
+      }
+      if (BootDiskType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(BootDiskType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3086,6 +3835,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3106,7 +3858,34 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            BootDiskSizeGb = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            NumLocalSsds = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            BootDiskType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3114,7 +3893,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// Specifies an executable to run on a fully configured node and a
   /// timeout period for executable completion.
   /// </summary>
-  public sealed partial class NodeInitializationAction : pb::IMessage<NodeInitializationAction> {
+  public sealed partial class NodeInitializationAction : pb::IMessage<NodeInitializationAction>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NodeInitializationAction> _parser = new pb::MessageParser<NodeInitializationAction>(() => new NodeInitializationAction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3219,6 +4002,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ExecutableFile.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ExecutableFile);
@@ -3230,7 +4016,25 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ExecutableFile.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ExecutableFile);
+      }
+      if (executionTimeout_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExecutionTimeout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3266,6 +4070,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3285,14 +4092,44 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ExecutableFile = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (executionTimeout_ == null) {
+              ExecutionTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ExecutionTimeout);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The status of a cluster and its instances.
   /// </summary>
-  public sealed partial class ClusterStatus : pb::IMessage<ClusterStatus> {
+  public sealed partial class ClusterStatus : pb::IMessage<ClusterStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ClusterStatus> _parser = new pb::MessageParser<ClusterStatus>(() => new ClusterStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3427,6 +4264,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (State != global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.State.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
@@ -3446,7 +4286,33 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.State.Unknown) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (Detail.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Detail);
+      }
+      if (stateStartTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StateStartTime);
+      }
+      if (Substate != global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.Substate.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Substate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3494,6 +4360,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3521,7 +4390,41 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Detail = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (stateStartTime_ == null) {
+              StateStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StateStartTime);
+            break;
+          }
+          case 32: {
+            Substate = (global::Google.Cloud.Dataproc.V1.ClusterStatus.Types.Substate) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ClusterStatus message type.</summary>
@@ -3590,7 +4493,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Security related configuration, including Kerberos.
   /// </summary>
-  public sealed partial class SecurityConfig : pb::IMessage<SecurityConfig> {
+  public sealed partial class SecurityConfig : pb::IMessage<SecurityConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SecurityConfig> _parser = new pb::MessageParser<SecurityConfig>(() => new SecurityConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3672,6 +4579,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (kerberosConfig_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(KerberosConfig);
@@ -3679,7 +4589,21 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (kerberosConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(KerberosConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3709,6 +4633,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3724,14 +4651,40 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (kerberosConfig_ == null) {
+              KerberosConfig = new global::Google.Cloud.Dataproc.V1.KerberosConfig();
+            }
+            input.ReadMessage(KerberosConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies Kerberos related configuration.
   /// </summary>
-  public sealed partial class KerberosConfig : pb::IMessage<KerberosConfig> {
+  public sealed partial class KerberosConfig : pb::IMessage<KerberosConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<KerberosConfig> _parser = new pb::MessageParser<KerberosConfig>(() => new KerberosConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4073,6 +5026,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (EnableKerberos != false) {
         output.WriteRawTag(8);
         output.WriteBool(EnableKerberos);
@@ -4136,7 +5092,77 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EnableKerberos != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableKerberos);
+      }
+      if (RootPrincipalPasswordUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RootPrincipalPasswordUri);
+      }
+      if (KmsKeyUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(KmsKeyUri);
+      }
+      if (KeystoreUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(KeystoreUri);
+      }
+      if (TruststoreUri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(TruststoreUri);
+      }
+      if (KeystorePasswordUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(KeystorePasswordUri);
+      }
+      if (KeyPasswordUri.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KeyPasswordUri);
+      }
+      if (TruststorePasswordUri.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(TruststorePasswordUri);
+      }
+      if (CrossRealmTrustRealm.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(CrossRealmTrustRealm);
+      }
+      if (CrossRealmTrustKdc.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(CrossRealmTrustKdc);
+      }
+      if (CrossRealmTrustAdminServer.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(CrossRealmTrustAdminServer);
+      }
+      if (CrossRealmTrustSharedPasswordUri.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CrossRealmTrustSharedPasswordUri);
+      }
+      if (KdcDbKeyUri.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(KdcDbKeyUri);
+      }
+      if (TgtLifetimeHours != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(TgtLifetimeHours);
+      }
+      if (Realm.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Realm);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4247,6 +5273,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4315,14 +5344,93 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            EnableKerberos = input.ReadBool();
+            break;
+          }
+          case 18: {
+            RootPrincipalPasswordUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            KmsKeyUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            KeystoreUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            TruststoreUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            KeystorePasswordUri = input.ReadString();
+            break;
+          }
+          case 58: {
+            KeyPasswordUri = input.ReadString();
+            break;
+          }
+          case 66: {
+            TruststorePasswordUri = input.ReadString();
+            break;
+          }
+          case 74: {
+            CrossRealmTrustRealm = input.ReadString();
+            break;
+          }
+          case 82: {
+            CrossRealmTrustKdc = input.ReadString();
+            break;
+          }
+          case 90: {
+            CrossRealmTrustAdminServer = input.ReadString();
+            break;
+          }
+          case 98: {
+            CrossRealmTrustSharedPasswordUri = input.ReadString();
+            break;
+          }
+          case 106: {
+            KdcDbKeyUri = input.ReadString();
+            break;
+          }
+          case 112: {
+            TgtLifetimeHours = input.ReadInt32();
+            break;
+          }
+          case 122: {
+            Realm = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies the selection and config of software inside the cluster.
   /// </summary>
-  public sealed partial class SoftwareConfig : pb::IMessage<SoftwareConfig> {
+  public sealed partial class SoftwareConfig : pb::IMessage<SoftwareConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SoftwareConfig> _parser = new pb::MessageParser<SoftwareConfig>(() => new SoftwareConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4459,6 +5567,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ImageVersion.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ImageVersion);
@@ -4468,7 +5579,23 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ImageVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ImageVersion);
+      }
+      properties_.WriteTo(ref output, _map_properties_codec);
+      optionalComponents_.WriteTo(ref output, _repeated_optionalComponents_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4499,6 +5626,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4520,14 +5650,46 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ImageVersion = input.ReadString();
+            break;
+          }
+          case 18: {
+            properties_.AddEntriesFrom(ref input, _map_properties_codec);
+            break;
+          }
+          case 26:
+          case 24: {
+            optionalComponents_.AddEntriesFrom(ref input, _repeated_optionalComponents_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies the cluster auto-delete schedule configuration.
   /// </summary>
-  public sealed partial class LifecycleConfig : pb::IMessage<LifecycleConfig> {
+  public sealed partial class LifecycleConfig : pb::IMessage<LifecycleConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LifecycleConfig> _parser = new pb::MessageParser<LifecycleConfig>(() => new LifecycleConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4699,6 +5861,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (idleDeleteTtl_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(IdleDeleteTtl);
@@ -4718,7 +5883,33 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (idleDeleteTtl_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(IdleDeleteTtl);
+      }
+      if (ttlCase_ == TtlOneofCase.AutoDeleteTime) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AutoDeleteTime);
+      }
+      if (ttlCase_ == TtlOneofCase.AutoDeleteTtl) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AutoDeleteTtl);
+      }
+      if (idleStartTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(IdleStartTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4778,6 +5969,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4818,7 +6012,54 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (idleDeleteTtl_ == null) {
+              IdleDeleteTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(IdleDeleteTtl);
+            break;
+          }
+          case 18: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (ttlCase_ == TtlOneofCase.AutoDeleteTime) {
+              subBuilder.MergeFrom(AutoDeleteTime);
+            }
+            input.ReadMessage(subBuilder);
+            AutoDeleteTime = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (ttlCase_ == TtlOneofCase.AutoDeleteTtl) {
+              subBuilder.MergeFrom(AutoDeleteTtl);
+            }
+            input.ReadMessage(subBuilder);
+            AutoDeleteTtl = subBuilder;
+            break;
+          }
+          case 34: {
+            if (idleStartTime_ == null) {
+              IdleStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(IdleStartTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4828,7 +6069,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// **Beta Feature**: This report is available for testing purposes only. It may
   /// be changed before final release.
   /// </summary>
-  public sealed partial class ClusterMetrics : pb::IMessage<ClusterMetrics> {
+  public sealed partial class ClusterMetrics : pb::IMessage<ClusterMetrics>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ClusterMetrics> _parser = new pb::MessageParser<ClusterMetrics>(() => new ClusterMetrics());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4925,12 +6170,27 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       hdfsMetrics_.WriteTo(output, _map_hdfsMetrics_codec);
       yarnMetrics_.WriteTo(output, _map_yarnMetrics_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      hdfsMetrics_.WriteTo(ref output, _map_hdfsMetrics_codec);
+      yarnMetrics_.WriteTo(ref output, _map_yarnMetrics_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4955,6 +6215,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4971,14 +6234,41 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            hdfsMetrics_.AddEntriesFrom(ref input, _map_hdfsMetrics_codec);
+            break;
+          }
+          case 18: {
+            yarnMetrics_.AddEntriesFrom(ref input, _map_yarnMetrics_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to create a cluster.
   /// </summary>
-  public sealed partial class CreateClusterRequest : pb::IMessage<CreateClusterRequest> {
+  public sealed partial class CreateClusterRequest : pb::IMessage<CreateClusterRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateClusterRequest> _parser = new pb::MessageParser<CreateClusterRequest>(() => new CreateClusterRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5122,6 +6412,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -5141,7 +6434,33 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (cluster_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Cluster);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Region);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5189,6 +6508,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5216,14 +6538,52 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (cluster_ == null) {
+              Cluster = new global::Google.Cloud.Dataproc.V1.Cluster();
+            }
+            input.ReadMessage(Cluster);
+            break;
+          }
+          case 26: {
+            Region = input.ReadString();
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to update a cluster.
   /// </summary>
-  public sealed partial class UpdateClusterRequest : pb::IMessage<UpdateClusterRequest> {
+  public sealed partial class UpdateClusterRequest : pb::IMessage<UpdateClusterRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateClusterRequest> _parser = new pb::MessageParser<UpdateClusterRequest>(() => new UpdateClusterRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5476,6 +6836,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -5507,7 +6870,45 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (ClusterName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClusterName);
+      }
+      if (cluster_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Cluster);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateMask);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Region);
+      }
+      if (gracefulDecommissionTimeout_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GracefulDecommissionTimeout);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5579,6 +6980,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5624,14 +7028,70 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClusterName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (cluster_ == null) {
+              Cluster = new global::Google.Cloud.Dataproc.V1.Cluster();
+            }
+            input.ReadMessage(Cluster);
+            break;
+          }
+          case 34: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 42: {
+            Region = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (gracefulDecommissionTimeout_ == null) {
+              GracefulDecommissionTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(GracefulDecommissionTimeout);
+            break;
+          }
+          case 58: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to delete a cluster.
   /// </summary>
-  public sealed partial class DeleteClusterRequest : pb::IMessage<DeleteClusterRequest> {
+  public sealed partial class DeleteClusterRequest : pb::IMessage<DeleteClusterRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteClusterRequest> _parser = new pb::MessageParser<DeleteClusterRequest>(() => new DeleteClusterRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5793,6 +7253,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -5816,7 +7279,37 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (ClusterName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClusterName);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Region);
+      }
+      if (ClusterUuid.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClusterUuid);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5867,6 +7360,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5895,14 +7391,53 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClusterName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Region = input.ReadString();
+            break;
+          }
+          case 34: {
+            ClusterUuid = input.ReadString();
+            break;
+          }
+          case 42: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to get the resource representation for a cluster in a project.
   /// </summary>
-  public sealed partial class GetClusterRequest : pb::IMessage<GetClusterRequest> {
+  public sealed partial class GetClusterRequest : pb::IMessage<GetClusterRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetClusterRequest> _parser = new pb::MessageParser<GetClusterRequest>(() => new GetClusterRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6019,6 +7554,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -6034,7 +7572,29 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (ClusterName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClusterName);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Region);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6073,6 +7633,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6093,14 +7656,45 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClusterName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Region = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to list the clusters in a project.
   /// </summary>
-  public sealed partial class ListClustersRequest : pb::IMessage<ListClustersRequest> {
+  public sealed partial class ListClustersRequest : pb::IMessage<ListClustersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListClustersRequest> _parser = new pb::MessageParser<ListClustersRequest>(() => new ListClustersRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6269,6 +7863,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -6292,7 +7889,37 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Region);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6343,6 +7970,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6371,14 +8001,53 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Region = input.ReadString();
+            break;
+          }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The list of all clusters in a project.
   /// </summary>
-  public sealed partial class ListClustersResponse : pb::IMessage<ListClustersResponse> {
+  public sealed partial class ListClustersResponse : pb::IMessage<ListClustersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListClustersResponse> _parser = new pb::MessageParser<ListClustersResponse>(() => new ListClustersResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6478,6 +8147,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       clusters_.WriteTo(output, _repeated_clusters_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -6486,7 +8158,22 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      clusters_.WriteTo(ref output, _repeated_clusters_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6515,6 +8202,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6531,14 +8221,41 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            clusters_.AddEntriesFrom(ref input, _repeated_clusters_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to collect cluster diagnostic information.
   /// </summary>
-  public sealed partial class DiagnoseClusterRequest : pb::IMessage<DiagnoseClusterRequest> {
+  public sealed partial class DiagnoseClusterRequest : pb::IMessage<DiagnoseClusterRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DiagnoseClusterRequest> _parser = new pb::MessageParser<DiagnoseClusterRequest>(() => new DiagnoseClusterRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6655,6 +8372,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -6670,7 +8390,29 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (ClusterName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClusterName);
+      }
+      if (Region.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Region);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6709,6 +8451,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6729,14 +8474,45 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClusterName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Region = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The location of diagnostic output.
   /// </summary>
-  public sealed partial class DiagnoseClusterResults : pb::IMessage<DiagnoseClusterResults> {
+  public sealed partial class DiagnoseClusterResults : pb::IMessage<DiagnoseClusterResults>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DiagnoseClusterResults> _parser = new pb::MessageParser<DiagnoseClusterResults>(() => new DiagnoseClusterResults());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6820,6 +8596,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (OutputUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(OutputUri);
@@ -6827,7 +8606,21 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OutputUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OutputUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6854,6 +8647,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6866,14 +8662,37 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            OutputUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Reservation Affinity for consuming Zonal reservation.
   /// </summary>
-  public sealed partial class ReservationAffinity : pb::IMessage<ReservationAffinity> {
+  public sealed partial class ReservationAffinity : pb::IMessage<ReservationAffinity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReservationAffinity> _parser = new pb::MessageParser<ReservationAffinity>(() => new ReservationAffinity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6988,6 +8807,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ConsumeReservationType != global::Google.Cloud.Dataproc.V1.ReservationAffinity.Types.Type.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ConsumeReservationType);
@@ -7000,7 +8822,26 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ConsumeReservationType != global::Google.Cloud.Dataproc.V1.ReservationAffinity.Types.Type.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) ConsumeReservationType);
+      }
+      if (Key.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Key);
+      }
+      values_.WriteTo(ref output, _repeated_values_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7035,6 +8876,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7055,7 +8899,34 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ConsumeReservationType = (global::Google.Cloud.Dataproc.V1.ReservationAffinity.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Key = input.ReadString();
+            break;
+          }
+          case 26: {
+            values_.AddEntriesFrom(ref input, _repeated_values_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ReservationAffinity message type.</summary>

@@ -96,7 +96,11 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
   /// <summary>
   /// The definition of a notebook instance.
   /// </summary>
-  public sealed partial class Instance : pb::IMessage<Instance> {
+  public sealed partial class Instance : pb::IMessage<Instance>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Instance> _parser = new pb::MessageParser<Instance>(() => new Instance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -684,6 +688,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -786,7 +793,116 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (environmentCase_ == EnvironmentOneofCase.VmImage) {
+        output.WriteRawTag(18);
+        output.WriteMessage(VmImage);
+      }
+      if (environmentCase_ == EnvironmentOneofCase.ContainerImage) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ContainerImage);
+      }
+      if (PostStartupScript.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PostStartupScript);
+      }
+      if (ProxyUri.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ProxyUri);
+      }
+      instanceOwners_.WriteTo(ref output, _repeated_instanceOwners_codec);
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ServiceAccount);
+      }
+      if (MachineType.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(MachineType);
+      }
+      if (acceleratorConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(AcceleratorConfig);
+      }
+      if (State != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.State.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) State);
+      }
+      if (InstallGpuDriver != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(InstallGpuDriver);
+      }
+      if (CustomGpuDriverPath.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CustomGpuDriverPath);
+      }
+      if (BootDiskType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) BootDiskType);
+      }
+      if (BootDiskSizeGb != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(BootDiskSizeGb);
+      }
+      if (DiskEncryption != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) DiskEncryption);
+      }
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(KmsKey);
+      }
+      if (NoPublicIp != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(NoPublicIp);
+      }
+      if (NoProxyAccess != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(NoProxyAccess);
+      }
+      if (Network.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Network);
+      }
+      if (Subnet.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(Subnet);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      metadata_.WriteTo(ref output, _map_metadata_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(UpdateTime);
+      }
+      if (DataDiskType != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType.Unspecified) {
+        output.WriteRawTag(200, 1);
+        output.WriteEnum((int) DataDiskType);
+      }
+      if (DataDiskSizeGb != 0L) {
+        output.WriteRawTag(208, 1);
+        output.WriteInt64(DataDiskSizeGb);
+      }
+      if (NoRemoveDataDisk != false) {
+        output.WriteRawTag(216, 1);
+        output.WriteBool(NoRemoveDataDisk);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -975,6 +1091,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1110,7 +1229,149 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Notebooks.V1Beta1.VmImage subBuilder = new global::Google.Cloud.Notebooks.V1Beta1.VmImage();
+            if (environmentCase_ == EnvironmentOneofCase.VmImage) {
+              subBuilder.MergeFrom(VmImage);
+            }
+            input.ReadMessage(subBuilder);
+            VmImage = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Notebooks.V1Beta1.ContainerImage subBuilder = new global::Google.Cloud.Notebooks.V1Beta1.ContainerImage();
+            if (environmentCase_ == EnvironmentOneofCase.ContainerImage) {
+              subBuilder.MergeFrom(ContainerImage);
+            }
+            input.ReadMessage(subBuilder);
+            ContainerImage = subBuilder;
+            break;
+          }
+          case 34: {
+            PostStartupScript = input.ReadString();
+            break;
+          }
+          case 42: {
+            ProxyUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            instanceOwners_.AddEntriesFrom(ref input, _repeated_instanceOwners_codec);
+            break;
+          }
+          case 58: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 66: {
+            MachineType = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (acceleratorConfig_ == null) {
+              AcceleratorConfig = new global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorConfig();
+            }
+            input.ReadMessage(AcceleratorConfig);
+            break;
+          }
+          case 80: {
+            State = (global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.State) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            InstallGpuDriver = input.ReadBool();
+            break;
+          }
+          case 98: {
+            CustomGpuDriverPath = input.ReadString();
+            break;
+          }
+          case 104: {
+            BootDiskType = (global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType) input.ReadEnum();
+            break;
+          }
+          case 112: {
+            BootDiskSizeGb = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            DiskEncryption = (global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            KmsKey = input.ReadString();
+            break;
+          }
+          case 136: {
+            NoPublicIp = input.ReadBool();
+            break;
+          }
+          case 144: {
+            NoProxyAccess = input.ReadBool();
+            break;
+          }
+          case 154: {
+            Network = input.ReadString();
+            break;
+          }
+          case 162: {
+            Subnet = input.ReadString();
+            break;
+          }
+          case 170: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 178: {
+            metadata_.AddEntriesFrom(ref input, _map_metadata_codec);
+            break;
+          }
+          case 186: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 194: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 200: {
+            DataDiskType = (global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType) input.ReadEnum();
+            break;
+          }
+          case 208: {
+            DataDiskSizeGb = input.ReadInt64();
+            break;
+          }
+          case 216: {
+            NoRemoveDataDisk = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Instance message type.</summary>
@@ -1260,7 +1521,11 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// Compute Engine](/compute/docs/gpus/#gpus-list) to find a valid
       /// combination. TPUs are not supported.
       /// </summary>
-      public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig> {
+      public sealed partial class AcceleratorConfig : pb::IMessage<AcceleratorConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<AcceleratorConfig> _parser = new pb::MessageParser<AcceleratorConfig>(() => new AcceleratorConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1359,6 +1624,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Type != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Type);
@@ -1370,7 +1638,25 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (CoreCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(CoreCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1403,6 +1689,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1419,7 +1708,30 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                CoreCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

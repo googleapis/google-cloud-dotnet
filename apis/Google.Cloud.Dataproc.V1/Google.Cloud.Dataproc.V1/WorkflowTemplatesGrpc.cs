@@ -232,7 +232,7 @@ namespace Google.Cloud.Dataproc.V1 {
     {
       /// <summary>Creates a new client for WorkflowTemplateService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public WorkflowTemplateServiceClient(grpc::Channel channel) : base(channel)
+      public WorkflowTemplateServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for WorkflowTemplateService that uses a custom <c>CallInvoker</c>.</summary>

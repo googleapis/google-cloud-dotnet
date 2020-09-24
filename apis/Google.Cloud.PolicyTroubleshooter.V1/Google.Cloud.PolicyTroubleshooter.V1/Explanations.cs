@@ -141,7 +141,11 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   /// <summary>
   /// Information about the member, resource, and permission to check.
   /// </summary>
-  public sealed partial class AccessTuple : pb::IMessage<AccessTuple> {
+  public sealed partial class AccessTuple : pb::IMessage<AccessTuple>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AccessTuple> _parser = new pb::MessageParser<AccessTuple>(() => new AccessTuple());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -273,6 +277,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Principal.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Principal);
@@ -288,7 +295,29 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Principal.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Principal);
+      }
+      if (FullResourceName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FullResourceName);
+      }
+      if (Permission.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Permission);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -327,6 +356,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -347,7 +379,34 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Principal = input.ReadString();
+            break;
+          }
+          case 18: {
+            FullResourceName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Permission = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -355,7 +414,11 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   /// Details about how a specific IAM [Policy][google.iam.v1.Policy] contributed
   /// to the access check.
   /// </summary>
-  public sealed partial class ExplainedPolicy : pb::IMessage<ExplainedPolicy> {
+  public sealed partial class ExplainedPolicy : pb::IMessage<ExplainedPolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExplainedPolicy> _parser = new pb::MessageParser<ExplainedPolicy>(() => new ExplainedPolicy());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -529,6 +592,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Access != global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Access);
@@ -549,7 +615,34 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Access != global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Access);
+      }
+      if (FullResourceName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FullResourceName);
+      }
+      if (policy_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Policy);
+      }
+      bindingExplanations_.WriteTo(ref output, _repeated_bindingExplanations_codec);
+      if (Relevance != global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Relevance);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -599,6 +692,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -630,7 +726,45 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Access = (global::Google.Cloud.PolicyTroubleshooter.V1.AccessState) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            FullResourceName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (policy_ == null) {
+              Policy = new global::Google.Cloud.Iam.V1.Policy();
+            }
+            input.ReadMessage(Policy);
+            break;
+          }
+          case 34: {
+            bindingExplanations_.AddEntriesFrom(ref input, _repeated_bindingExplanations_codec);
+            break;
+          }
+          case 40: {
+            Relevance = (global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -638,7 +772,11 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   /// Details about how a binding in a policy affects a member's ability to use a
   /// permission.
   /// </summary>
-  public sealed partial class BindingExplanation : pb::IMessage<BindingExplanation> {
+  public sealed partial class BindingExplanation : pb::IMessage<BindingExplanation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BindingExplanation> _parser = new pb::MessageParser<BindingExplanation>(() => new BindingExplanation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -858,6 +996,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Access != global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Access);
@@ -886,7 +1027,42 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Access != global::Google.Cloud.PolicyTroubleshooter.V1.AccessState.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Access);
+      }
+      if (Role.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Role);
+      }
+      if (RolePermission != global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.RolePermission.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) RolePermission);
+      }
+      if (RolePermissionRelevance != global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) RolePermissionRelevance);
+      }
+      memberships_.WriteTo(ref output, _map_memberships_codec);
+      if (Relevance != global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Relevance);
+      }
+      if (condition_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Condition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -948,6 +1124,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -987,7 +1166,53 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Access = (global::Google.Cloud.PolicyTroubleshooter.V1.AccessState) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Role = input.ReadString();
+            break;
+          }
+          case 24: {
+            RolePermission = (global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.RolePermission) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            RolePermissionRelevance = (global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            memberships_.AddEntriesFrom(ref input, _map_memberships_codec);
+            break;
+          }
+          case 48: {
+            Relevance = (global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (condition_ == null) {
+              Condition = new global::Google.Type.Expr();
+            }
+            input.ReadMessage(Condition);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the BindingExplanation message type.</summary>
@@ -1050,7 +1275,11 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       /// <summary>
       /// Details about whether the binding includes the member.
       /// </summary>
-      public sealed partial class AnnotatedMembership : pb::IMessage<AnnotatedMembership> {
+      public sealed partial class AnnotatedMembership : pb::IMessage<AnnotatedMembership>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<AnnotatedMembership> _parser = new pb::MessageParser<AnnotatedMembership>(() => new AnnotatedMembership());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1150,6 +1379,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Membership != global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.Membership.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Membership);
@@ -1161,7 +1393,25 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Membership != global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.Membership.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Membership);
+          }
+          if (Relevance != global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Relevance);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1194,6 +1444,9 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1210,7 +1463,30 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Membership = (global::Google.Cloud.PolicyTroubleshooter.V1.BindingExplanation.Types.Membership) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                Relevance = (global::Google.Cloud.PolicyTroubleshooter.V1.HeuristicRelevance) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

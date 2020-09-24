@@ -60,7 +60,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Contains annotation information that is relevant to AutoML.
   /// </summary>
-  public sealed partial class AnnotationPayload : pb::IMessage<AnnotationPayload> {
+  public sealed partial class AnnotationPayload : pb::IMessage<AnnotationPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AnnotationPayload> _parser = new pb::MessageParser<AnnotationPayload>(() => new AnnotationPayload());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -288,6 +292,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (AnnotationSpecId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(AnnotationSpecId);
@@ -319,7 +326,45 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AnnotationSpecId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AnnotationSpecId);
+      }
+      if (detailCase_ == DetailOneofCase.Translation) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Translation);
+      }
+      if (detailCase_ == DetailOneofCase.Classification) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Classification);
+      }
+      if (detailCase_ == DetailOneofCase.ImageObjectDetection) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ImageObjectDetection);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
+      }
+      if (detailCase_ == DetailOneofCase.TextExtraction) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TextExtraction);
+      }
+      if (detailCase_ == DetailOneofCase.TextSentiment) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TextSentiment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -400,6 +445,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -461,7 +509,75 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AnnotationSpecId = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.AutoML.V1.TranslationAnnotation subBuilder = new global::Google.Cloud.AutoML.V1.TranslationAnnotation();
+            if (detailCase_ == DetailOneofCase.Translation) {
+              subBuilder.MergeFrom(Translation);
+            }
+            input.ReadMessage(subBuilder);
+            Translation = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.AutoML.V1.ClassificationAnnotation subBuilder = new global::Google.Cloud.AutoML.V1.ClassificationAnnotation();
+            if (detailCase_ == DetailOneofCase.Classification) {
+              subBuilder.MergeFrom(Classification);
+            }
+            input.ReadMessage(subBuilder);
+            Classification = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.AutoML.V1.ImageObjectDetectionAnnotation subBuilder = new global::Google.Cloud.AutoML.V1.ImageObjectDetectionAnnotation();
+            if (detailCase_ == DetailOneofCase.ImageObjectDetection) {
+              subBuilder.MergeFrom(ImageObjectDetection);
+            }
+            input.ReadMessage(subBuilder);
+            ImageObjectDetection = subBuilder;
+            break;
+          }
+          case 42: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.AutoML.V1.TextExtractionAnnotation subBuilder = new global::Google.Cloud.AutoML.V1.TextExtractionAnnotation();
+            if (detailCase_ == DetailOneofCase.TextExtraction) {
+              subBuilder.MergeFrom(TextExtraction);
+            }
+            input.ReadMessage(subBuilder);
+            TextExtraction = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.AutoML.V1.TextSentimentAnnotation subBuilder = new global::Google.Cloud.AutoML.V1.TextSentimentAnnotation();
+            if (detailCase_ == DetailOneofCase.TextSentiment) {
+              subBuilder.MergeFrom(TextSentiment);
+            }
+            input.ReadMessage(subBuilder);
+            TextSentiment = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

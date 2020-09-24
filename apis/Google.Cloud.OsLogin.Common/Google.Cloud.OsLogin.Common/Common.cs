@@ -83,7 +83,11 @@ namespace Google.Cloud.OsLogin.Common {
   /// <summary>
   /// The POSIX account information associated with a Google account.
   /// </summary>
-  public sealed partial class PosixAccount : pb::IMessage<PosixAccount> {
+  public sealed partial class PosixAccount : pb::IMessage<PosixAccount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PosixAccount> _parser = new pb::MessageParser<PosixAccount>(() => new PosixAccount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -336,6 +340,9 @@ namespace Google.Cloud.OsLogin.Common {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Primary != false) {
         output.WriteRawTag(8);
         output.WriteBool(Primary);
@@ -383,7 +390,61 @@ namespace Google.Cloud.OsLogin.Common {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Primary != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Primary);
+      }
+      if (Username.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Username);
+      }
+      if (Uid != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Uid);
+      }
+      if (Gid != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Gid);
+      }
+      if (HomeDirectory.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(HomeDirectory);
+      }
+      if (Shell.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Shell);
+      }
+      if (Gecos.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Gecos);
+      }
+      if (SystemId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(SystemId);
+      }
+      if (AccountId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(AccountId);
+      }
+      if (OperatingSystemType != global::Google.Cloud.OsLogin.Common.OperatingSystemType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) OperatingSystemType);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -470,6 +531,9 @@ namespace Google.Cloud.OsLogin.Common {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -522,14 +586,77 @@ namespace Google.Cloud.OsLogin.Common {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Primary = input.ReadBool();
+            break;
+          }
+          case 18: {
+            Username = input.ReadString();
+            break;
+          }
+          case 24: {
+            Uid = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            Gid = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            HomeDirectory = input.ReadString();
+            break;
+          }
+          case 50: {
+            Shell = input.ReadString();
+            break;
+          }
+          case 58: {
+            Gecos = input.ReadString();
+            break;
+          }
+          case 66: {
+            SystemId = input.ReadString();
+            break;
+          }
+          case 74: {
+            AccountId = input.ReadString();
+            break;
+          }
+          case 80: {
+            OperatingSystemType = (global::Google.Cloud.OsLogin.Common.OperatingSystemType) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The SSH public key information associated with a Google account.
   /// </summary>
-  public sealed partial class SshPublicKey : pb::IMessage<SshPublicKey> {
+  public sealed partial class SshPublicKey : pb::IMessage<SshPublicKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SshPublicKey> _parser = new pb::MessageParser<SshPublicKey>(() => new SshPublicKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -664,6 +791,9 @@ namespace Google.Cloud.OsLogin.Common {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Key.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Key);
@@ -683,7 +813,33 @@ namespace Google.Cloud.OsLogin.Common {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (ExpirationTimeUsec != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(ExpirationTimeUsec);
+      }
+      if (Fingerprint.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Fingerprint);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -728,6 +884,9 @@ namespace Google.Cloud.OsLogin.Common {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -752,7 +911,38 @@ namespace Google.Cloud.OsLogin.Common {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+          case 16: {
+            ExpirationTimeUsec = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Fingerprint = input.ReadString();
+            break;
+          }
+          case 34: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

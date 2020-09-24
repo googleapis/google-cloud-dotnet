@@ -230,7 +230,7 @@ namespace Google.Cloud.OsConfig.V1 {
     {
       /// <summary>Creates a new client for OsConfigService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public OsConfigServiceClient(grpc::Channel channel) : base(channel)
+      public OsConfigServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for OsConfigService that uses a custom <c>CallInvoker</c>.</summary>

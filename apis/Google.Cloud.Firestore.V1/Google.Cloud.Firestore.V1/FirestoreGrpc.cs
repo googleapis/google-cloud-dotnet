@@ -369,7 +369,7 @@ namespace Google.Cloud.Firestore.V1 {
     {
       /// <summary>Creates a new client for Firestore</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public FirestoreClient(grpc::Channel channel) : base(channel)
+      public FirestoreClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Firestore that uses a custom <c>CallInvoker</c>.</summary>

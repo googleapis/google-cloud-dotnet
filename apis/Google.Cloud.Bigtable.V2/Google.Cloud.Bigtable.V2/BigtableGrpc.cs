@@ -185,7 +185,7 @@ namespace Google.Cloud.Bigtable.V2 {
     {
       /// <summary>Creates a new client for Bigtable</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public BigtableClient(grpc::Channel channel) : base(channel)
+      public BigtableClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Bigtable that uses a custom <c>CallInvoker</c>.</summary>

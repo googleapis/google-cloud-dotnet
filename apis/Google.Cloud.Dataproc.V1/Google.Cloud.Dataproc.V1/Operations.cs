@@ -61,7 +61,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// The status of the operation.
   /// </summary>
-  public sealed partial class ClusterOperationStatus : pb::IMessage<ClusterOperationStatus> {
+  public sealed partial class ClusterOperationStatus : pb::IMessage<ClusterOperationStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ClusterOperationStatus> _parser = new pb::MessageParser<ClusterOperationStatus>(() => new ClusterOperationStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -194,6 +198,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (State != global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
@@ -213,7 +220,33 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State.Unknown) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (InnerState.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InnerState);
+      }
+      if (Details.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Details);
+      }
+      if (stateStartTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StateStartTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -261,6 +294,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -288,7 +324,41 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.Dataproc.V1.ClusterOperationStatus.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            InnerState = input.ReadString();
+            break;
+          }
+          case 26: {
+            Details = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (stateStartTime_ == null) {
+              StateStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StateStartTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ClusterOperationStatus message type.</summary>
@@ -324,7 +394,11 @@ namespace Google.Cloud.Dataproc.V1 {
   /// <summary>
   /// Metadata describing the operation.
   /// </summary>
-  public sealed partial class ClusterOperationMetadata : pb::IMessage<ClusterOperationMetadata> {
+  public sealed partial class ClusterOperationMetadata : pb::IMessage<ClusterOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ClusterOperationMetadata> _parser = new pb::MessageParser<ClusterOperationMetadata>(() => new ClusterOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -522,6 +596,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ClusterName.Length != 0) {
         output.WriteRawTag(58);
         output.WriteString(ClusterName);
@@ -548,7 +625,40 @@ namespace Google.Cloud.Dataproc.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ClusterName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ClusterName);
+      }
+      if (ClusterUuid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ClusterUuid);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Status);
+      }
+      statusHistory_.WriteTo(ref output, _repeated_statusHistory_codec);
+      if (OperationType.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(OperationType);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(Description);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      warnings_.WriteTo(ref output, _repeated_warnings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -608,6 +718,9 @@ namespace Google.Cloud.Dataproc.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -651,7 +764,57 @@ namespace Google.Cloud.Dataproc.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 58: {
+            ClusterName = input.ReadString();
+            break;
+          }
+          case 66: {
+            ClusterUuid = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (status_ == null) {
+              Status = new global::Google.Cloud.Dataproc.V1.ClusterOperationStatus();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 82: {
+            statusHistory_.AddEntriesFrom(ref input, _repeated_statusHistory_codec);
+            break;
+          }
+          case 90: {
+            OperationType = input.ReadString();
+            break;
+          }
+          case 98: {
+            Description = input.ReadString();
+            break;
+          }
+          case 106: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 114: {
+            warnings_.AddEntriesFrom(ref input, _repeated_warnings_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

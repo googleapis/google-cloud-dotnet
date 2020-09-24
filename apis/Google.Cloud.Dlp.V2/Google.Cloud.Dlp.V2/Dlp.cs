@@ -1310,7 +1310,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// List of exclude infoTypes.
   /// </summary>
-  public sealed partial class ExcludeInfoTypes : pb::IMessage<ExcludeInfoTypes> {
+  public sealed partial class ExcludeInfoTypes : pb::IMessage<ExcludeInfoTypes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExcludeInfoTypes> _parser = new pb::MessageParser<ExcludeInfoTypes>(() => new ExcludeInfoTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1398,11 +1402,25 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      infoTypes_.WriteTo(ref output, _repeated_infoTypes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1425,6 +1443,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1437,7 +1458,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            infoTypes_.AddEntriesFrom(ref input, _repeated_infoTypes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1445,7 +1485,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// The rule that specifies conditions when findings of infoTypes specified in
   /// `InspectionRuleSet` are removed from results.
   /// </summary>
-  public sealed partial class ExclusionRule : pb::IMessage<ExclusionRule> {
+  public sealed partial class ExclusionRule : pb::IMessage<ExclusionRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExclusionRule> _parser = new pb::MessageParser<ExclusionRule>(() => new ExclusionRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1609,6 +1653,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (typeCase_ == TypeOneofCase.Dictionary) {
         output.WriteRawTag(10);
         output.WriteMessage(Dictionary);
@@ -1628,7 +1675,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (typeCase_ == TypeOneofCase.Dictionary) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Dictionary);
+      }
+      if (typeCase_ == TypeOneofCase.Regex) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Regex);
+      }
+      if (typeCase_ == TypeOneofCase.ExcludeInfoTypes) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ExcludeInfoTypes);
+      }
+      if (MatchingType != global::Google.Cloud.Dlp.V2.MatchingType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MatchingType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1685,6 +1758,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1724,7 +1800,53 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary();
+            if (typeCase_ == TypeOneofCase.Dictionary) {
+              subBuilder.MergeFrom(Dictionary);
+            }
+            input.ReadMessage(subBuilder);
+            Dictionary = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex();
+            if (typeCase_ == TypeOneofCase.Regex) {
+              subBuilder.MergeFrom(Regex);
+            }
+            input.ReadMessage(subBuilder);
+            Regex = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.ExcludeInfoTypes subBuilder = new global::Google.Cloud.Dlp.V2.ExcludeInfoTypes();
+            if (typeCase_ == TypeOneofCase.ExcludeInfoTypes) {
+              subBuilder.MergeFrom(ExcludeInfoTypes);
+            }
+            input.ReadMessage(subBuilder);
+            ExcludeInfoTypes = subBuilder;
+            break;
+          }
+          case 32: {
+            MatchingType = (global::Google.Cloud.Dlp.V2.MatchingType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1732,7 +1854,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// A single inspection rule to be applied to infoTypes, specified in
   /// `InspectionRuleSet`.
   /// </summary>
-  public sealed partial class InspectionRule : pb::IMessage<InspectionRule> {
+  public sealed partial class InspectionRule : pb::IMessage<InspectionRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectionRule> _parser = new pb::MessageParser<InspectionRule>(() => new InspectionRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1859,6 +1985,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (typeCase_ == TypeOneofCase.HotwordRule) {
         output.WriteRawTag(10);
         output.WriteMessage(HotwordRule);
@@ -1870,7 +1999,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (typeCase_ == TypeOneofCase.HotwordRule) {
+        output.WriteRawTag(10);
+        output.WriteMessage(HotwordRule);
+      }
+      if (typeCase_ == TypeOneofCase.ExclusionRule) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExclusionRule);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1912,6 +2059,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1938,7 +2088,40 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.DetectionRule.Types.HotwordRule();
+            if (typeCase_ == TypeOneofCase.HotwordRule) {
+              subBuilder.MergeFrom(HotwordRule);
+            }
+            input.ReadMessage(subBuilder);
+            HotwordRule = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.ExclusionRule subBuilder = new global::Google.Cloud.Dlp.V2.ExclusionRule();
+            if (typeCase_ == TypeOneofCase.ExclusionRule) {
+              subBuilder.MergeFrom(ExclusionRule);
+            }
+            input.ReadMessage(subBuilder);
+            ExclusionRule = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1946,7 +2129,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Rule set for modifying a set of infoTypes to alter behavior under certain
   /// circumstances, depending on the specific details of the rules within the set.
   /// </summary>
-  public sealed partial class InspectionRuleSet : pb::IMessage<InspectionRuleSet> {
+  public sealed partial class InspectionRuleSet : pb::IMessage<InspectionRuleSet>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectionRuleSet> _parser = new pb::MessageParser<InspectionRuleSet>(() => new InspectionRuleSet());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2043,12 +2230,27 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
       rules_.WriteTo(output, _repeated_rules_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      infoTypes_.WriteTo(ref output, _repeated_infoTypes_codec);
+      rules_.WriteTo(ref output, _repeated_rules_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2073,6 +2275,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2089,7 +2294,30 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            infoTypes_.AddEntriesFrom(ref input, _repeated_infoTypes_codec);
+            break;
+          }
+          case 18: {
+            rules_.AddEntriesFrom(ref input, _repeated_rules_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2098,7 +2326,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// When used with redactContent only info_types and min_likelihood are currently
   /// used.
   /// </summary>
-  public sealed partial class InspectConfig : pb::IMessage<InspectConfig> {
+  public sealed partial class InspectConfig : pb::IMessage<InspectConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectConfig> _parser = new pb::MessageParser<InspectConfig>(() => new InspectConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2312,6 +2544,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
       if (MinLikelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
         output.WriteRawTag(16);
@@ -2335,7 +2570,37 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      infoTypes_.WriteTo(ref output, _repeated_infoTypes_codec);
+      if (MinLikelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) MinLikelihood);
+      }
+      if (limits_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Limits);
+      }
+      if (IncludeQuote != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeQuote);
+      }
+      if (ExcludeInfoTypes != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ExcludeInfoTypes);
+      }
+      customInfoTypes_.WriteTo(ref output, _repeated_customInfoTypes_codec);
+      contentOptions_.WriteTo(ref output, _repeated_contentOptions_codec);
+      ruleSet_.WriteTo(ref output, _repeated_ruleSet_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2391,6 +2656,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2435,7 +2703,58 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            infoTypes_.AddEntriesFrom(ref input, _repeated_infoTypes_codec);
+            break;
+          }
+          case 16: {
+            MinLikelihood = (global::Google.Cloud.Dlp.V2.Likelihood) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (limits_ == null) {
+              Limits = new global::Google.Cloud.Dlp.V2.InspectConfig.Types.FindingLimits();
+            }
+            input.ReadMessage(Limits);
+            break;
+          }
+          case 32: {
+            IncludeQuote = input.ReadBool();
+            break;
+          }
+          case 40: {
+            ExcludeInfoTypes = input.ReadBool();
+            break;
+          }
+          case 50: {
+            customInfoTypes_.AddEntriesFrom(ref input, _repeated_customInfoTypes_codec);
+            break;
+          }
+          case 66:
+          case 64: {
+            contentOptions_.AddEntriesFrom(ref input, _repeated_contentOptions_codec);
+            break;
+          }
+          case 82: {
+            ruleSet_.AddEntriesFrom(ref input, _repeated_ruleSet_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the InspectConfig message type.</summary>
@@ -2444,7 +2763,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Configuration to control the number of findings returned.
       /// </summary>
-      public sealed partial class FindingLimits : pb::IMessage<FindingLimits> {
+      public sealed partial class FindingLimits : pb::IMessage<FindingLimits>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<FindingLimits> _parser = new pb::MessageParser<FindingLimits>(() => new FindingLimits());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2564,6 +2887,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (MaxFindingsPerItem != 0) {
             output.WriteRawTag(8);
             output.WriteInt32(MaxFindingsPerItem);
@@ -2576,7 +2902,26 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MaxFindingsPerItem != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MaxFindingsPerItem);
+          }
+          if (MaxFindingsPerRequest != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxFindingsPerRequest);
+          }
+          maxFindingsPerInfoType_.WriteTo(ref output, _repeated_maxFindingsPerInfoType_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2611,6 +2956,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2631,7 +2979,34 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MaxFindingsPerItem = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MaxFindingsPerRequest = input.ReadInt32();
+                break;
+              }
+              case 26: {
+                maxFindingsPerInfoType_.AddEntriesFrom(ref input, _repeated_maxFindingsPerInfoType_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the FindingLimits message type.</summary>
@@ -2641,7 +3016,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// Max findings configuration per infoType, per content item or long
           /// running DlpJob.
           /// </summary>
-          public sealed partial class InfoTypeLimit : pb::IMessage<InfoTypeLimit> {
+          public sealed partial class InfoTypeLimit : pb::IMessage<InfoTypeLimit>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<InfoTypeLimit> _parser = new pb::MessageParser<InfoTypeLimit>(() => new InfoTypeLimit());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2743,6 +3122,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (infoType_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(InfoType);
@@ -2754,7 +3136,25 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (infoType_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(InfoType);
+              }
+              if (MaxFindings != 0) {
+                output.WriteRawTag(16);
+                output.WriteInt32(MaxFindings);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2790,6 +3190,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2809,7 +3212,33 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (infoType_ == null) {
+                      InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
+                    }
+                    input.ReadMessage(InfoType);
+                    break;
+                  }
+                  case 16: {
+                    MaxFindings = input.ReadInt32();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -2826,7 +3255,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Container for bytes to inspect or redact.
   /// </summary>
-  public sealed partial class ByteContentItem : pb::IMessage<ByteContentItem> {
+  public sealed partial class ByteContentItem : pb::IMessage<ByteContentItem>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ByteContentItem> _parser = new pb::MessageParser<ByteContentItem>(() => new ByteContentItem());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2925,6 +3358,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Type != global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
@@ -2936,7 +3372,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (Data.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Data);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2969,6 +3423,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2985,7 +3442,30 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.Dlp.V2.ByteContentItem.Types.BytesType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Data = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ByteContentItem message type.</summary>
@@ -3053,7 +3533,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Container structure for the content to inspect.
   /// </summary>
-  public sealed partial class ContentItem : pb::IMessage<ContentItem> {
+  public sealed partial class ContentItem : pb::IMessage<ContentItem>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ContentItem> _parser = new pb::MessageParser<ContentItem>(() => new ContentItem());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3202,6 +3686,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (dataItemCase_ == DataItemOneofCase.Value) {
         output.WriteRawTag(26);
         output.WriteString(Value);
@@ -3217,7 +3704,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dataItemCase_ == DataItemOneofCase.Value) {
+        output.WriteRawTag(26);
+        output.WriteString(Value);
+      }
+      if (dataItemCase_ == DataItemOneofCase.Table) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Table);
+      }
+      if (dataItemCase_ == DataItemOneofCase.ByteItem) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ByteItem);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3265,6 +3774,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3295,7 +3807,44 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            Value = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.Table subBuilder = new global::Google.Cloud.Dlp.V2.Table();
+            if (dataItemCase_ == DataItemOneofCase.Table) {
+              subBuilder.MergeFrom(Table);
+            }
+            input.ReadMessage(subBuilder);
+            Table = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.ByteContentItem subBuilder = new global::Google.Cloud.Dlp.V2.ByteContentItem();
+            if (dataItemCase_ == DataItemOneofCase.ByteItem) {
+              subBuilder.MergeFrom(ByteItem);
+            }
+            input.ReadMessage(subBuilder);
+            ByteItem = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3304,7 +3853,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// See https://cloud.google.com/dlp/docs/inspecting-text#inspecting_a_table to
   /// learn more.
   /// </summary>
-  public sealed partial class Table : pb::IMessage<Table> {
+  public sealed partial class Table : pb::IMessage<Table>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Table> _parser = new pb::MessageParser<Table>(() => new Table());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3401,12 +3954,27 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       headers_.WriteTo(output, _repeated_headers_codec);
       rows_.WriteTo(output, _repeated_rows_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      headers_.WriteTo(ref output, _repeated_headers_codec);
+      rows_.WriteTo(ref output, _repeated_rows_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3431,6 +3999,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3447,7 +4018,30 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            headers_.AddEntriesFrom(ref input, _repeated_headers_codec);
+            break;
+          }
+          case 18: {
+            rows_.AddEntriesFrom(ref input, _repeated_rows_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Table message type.</summary>
@@ -3456,7 +4050,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Values of the row.
       /// </summary>
-      public sealed partial class Row : pb::IMessage<Row> {
+      public sealed partial class Row : pb::IMessage<Row>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Row> _parser = new pb::MessageParser<Row>(() => new Row());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3537,11 +4135,25 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           values_.WriteTo(output, _repeated_values_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          values_.WriteTo(ref output, _repeated_values_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3564,6 +4176,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3576,7 +4191,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                values_.AddEntriesFrom(ref input, _repeated_values_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3588,7 +4222,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// All the findings for a single scanned item.
   /// </summary>
-  public sealed partial class InspectResult : pb::IMessage<InspectResult> {
+  public sealed partial class InspectResult : pb::IMessage<InspectResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectResult> _parser = new pb::MessageParser<InspectResult>(() => new InspectResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3691,6 +4329,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       findings_.WriteTo(output, _repeated_findings_codec);
       if (FindingsTruncated != false) {
         output.WriteRawTag(16);
@@ -3699,7 +4340,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      findings_.WriteTo(ref output, _repeated_findings_codec);
+      if (FindingsTruncated != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(FindingsTruncated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3728,6 +4384,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3744,14 +4403,41 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            findings_.AddEntriesFrom(ref input, _repeated_findings_codec);
+            break;
+          }
+          case 16: {
+            FindingsTruncated = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Represents a piece of potentially sensitive content.
   /// </summary>
-  public sealed partial class Finding : pb::IMessage<Finding> {
+  public sealed partial class Finding : pb::IMessage<Finding>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Finding> _parser = new pb::MessageParser<Finding>(() => new Finding());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4040,6 +4726,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Quote.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Quote);
@@ -4088,7 +4777,62 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Quote.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Quote);
+      }
+      if (infoType_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InfoType);
+      }
+      if (Likelihood != global::Google.Cloud.Dlp.V2.Likelihood.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Likelihood);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Location);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreateTime);
+      }
+      if (quoteInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(QuoteInfo);
+      }
+      if (ResourceName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ResourceName);
+      }
+      if (TriggerName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(TriggerName);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (jobCreateTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(JobCreateTime);
+      }
+      if (JobName.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(JobName);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4192,6 +4936,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4263,14 +5010,96 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Quote = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (infoType_ == null) {
+              InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
+            }
+            input.ReadMessage(InfoType);
+            break;
+          }
+          case 24: {
+            Likelihood = (global::Google.Cloud.Dlp.V2.Likelihood) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (location_ == null) {
+              Location = new global::Google.Cloud.Dlp.V2.Location();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
+          case 50: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 58: {
+            if (quoteInfo_ == null) {
+              QuoteInfo = new global::Google.Cloud.Dlp.V2.QuoteInfo();
+            }
+            input.ReadMessage(QuoteInfo);
+            break;
+          }
+          case 66: {
+            ResourceName = input.ReadString();
+            break;
+          }
+          case 74: {
+            TriggerName = input.ReadString();
+            break;
+          }
+          case 82: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 90: {
+            if (jobCreateTime_ == null) {
+              JobCreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(JobCreateTime);
+            break;
+          }
+          case 106: {
+            JobName = input.ReadString();
+            break;
+          }
+          case 114: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies the location of the finding.
   /// </summary>
-  public sealed partial class Location : pb::IMessage<Location> {
+  public sealed partial class Location : pb::IMessage<Location>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Location> _parser = new pb::MessageParser<Location>(() => new Location());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4409,6 +5238,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (byteRange_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(ByteRange);
@@ -4425,7 +5257,30 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (byteRange_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ByteRange);
+      }
+      if (codepointRange_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CodepointRange);
+      }
+      contentLocations_.WriteTo(ref output, _repeated_contentLocations_codec);
+      if (container_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Container);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4475,6 +5330,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4508,7 +5366,47 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (byteRange_ == null) {
+              ByteRange = new global::Google.Cloud.Dlp.V2.Range();
+            }
+            input.ReadMessage(ByteRange);
+            break;
+          }
+          case 18: {
+            if (codepointRange_ == null) {
+              CodepointRange = new global::Google.Cloud.Dlp.V2.Range();
+            }
+            input.ReadMessage(CodepointRange);
+            break;
+          }
+          case 58: {
+            contentLocations_.AddEntriesFrom(ref input, _repeated_contentLocations_codec);
+            break;
+          }
+          case 66: {
+            if (container_ == null) {
+              Container = new global::Google.Cloud.Dlp.V2.Container();
+            }
+            input.ReadMessage(Container);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4516,7 +5414,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Precise location of the finding within a document, record, image, or metadata
   /// container.
   /// </summary>
-  public sealed partial class ContentLocation : pb::IMessage<ContentLocation> {
+  public sealed partial class ContentLocation : pb::IMessage<ContentLocation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ContentLocation> _parser = new pb::MessageParser<ContentLocation>(() => new ContentLocation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4747,6 +5649,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ContainerName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ContainerName);
@@ -4778,7 +5683,45 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ContainerName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ContainerName);
+      }
+      if (locationCase_ == LocationOneofCase.RecordLocation) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RecordLocation);
+      }
+      if (locationCase_ == LocationOneofCase.ImageLocation) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ImageLocation);
+      }
+      if (locationCase_ == LocationOneofCase.DocumentLocation) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DocumentLocation);
+      }
+      if (containerTimestamp_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ContainerTimestamp);
+      }
+      if (ContainerVersion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ContainerVersion);
+      }
+      if (locationCase_ == LocationOneofCase.MetadataLocation) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MetadataLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4859,6 +5802,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4918,14 +5864,84 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ContainerName = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.RecordLocation subBuilder = new global::Google.Cloud.Dlp.V2.RecordLocation();
+            if (locationCase_ == LocationOneofCase.RecordLocation) {
+              subBuilder.MergeFrom(RecordLocation);
+            }
+            input.ReadMessage(subBuilder);
+            RecordLocation = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.ImageLocation subBuilder = new global::Google.Cloud.Dlp.V2.ImageLocation();
+            if (locationCase_ == LocationOneofCase.ImageLocation) {
+              subBuilder.MergeFrom(ImageLocation);
+            }
+            input.ReadMessage(subBuilder);
+            ImageLocation = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.DocumentLocation subBuilder = new global::Google.Cloud.Dlp.V2.DocumentLocation();
+            if (locationCase_ == LocationOneofCase.DocumentLocation) {
+              subBuilder.MergeFrom(DocumentLocation);
+            }
+            input.ReadMessage(subBuilder);
+            DocumentLocation = subBuilder;
+            break;
+          }
+          case 50: {
+            if (containerTimestamp_ == null) {
+              ContainerTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ContainerTimestamp);
+            break;
+          }
+          case 58: {
+            ContainerVersion = input.ReadString();
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Dlp.V2.MetadataLocation subBuilder = new global::Google.Cloud.Dlp.V2.MetadataLocation();
+            if (locationCase_ == LocationOneofCase.MetadataLocation) {
+              subBuilder.MergeFrom(MetadataLocation);
+            }
+            input.ReadMessage(subBuilder);
+            MetadataLocation = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Metadata Location
   /// </summary>
-  public sealed partial class MetadataLocation : pb::IMessage<MetadataLocation> {
+  public sealed partial class MetadataLocation : pb::IMessage<MetadataLocation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<MetadataLocation> _parser = new pb::MessageParser<MetadataLocation>(() => new MetadataLocation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5049,6 +6065,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Type != global::Google.Cloud.Dlp.V2.MetadataType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
@@ -5060,7 +6079,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Google.Cloud.Dlp.V2.MetadataType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (labelCase_ == LabelOneofCase.StorageLabel) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StorageLabel);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5099,6 +6136,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5120,14 +6160,46 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.Dlp.V2.MetadataType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.StorageMetadataLabel subBuilder = new global::Google.Cloud.Dlp.V2.StorageMetadataLabel();
+            if (labelCase_ == LabelOneofCase.StorageLabel) {
+              subBuilder.MergeFrom(StorageLabel);
+            }
+            input.ReadMessage(subBuilder);
+            StorageLabel = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Storage metadata label to indicate which metadata entry contains findings.
   /// </summary>
-  public sealed partial class StorageMetadataLabel : pb::IMessage<StorageMetadataLabel> {
+  public sealed partial class StorageMetadataLabel : pb::IMessage<StorageMetadataLabel>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StorageMetadataLabel> _parser = new pb::MessageParser<StorageMetadataLabel>(() => new StorageMetadataLabel());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5206,6 +6278,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Key.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Key);
@@ -5213,7 +6288,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Key);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5240,6 +6329,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5252,14 +6344,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Location of a finding within a document.
   /// </summary>
-  public sealed partial class DocumentLocation : pb::IMessage<DocumentLocation> {
+  public sealed partial class DocumentLocation : pb::IMessage<DocumentLocation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocumentLocation> _parser = new pb::MessageParser<DocumentLocation>(() => new DocumentLocation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5342,6 +6457,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (FileOffset != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(FileOffset);
@@ -5349,7 +6467,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FileOffset != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(FileOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5376,6 +6508,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5388,14 +6523,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            FileOffset = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Location of a finding within a row or record.
   /// </summary>
-  public sealed partial class RecordLocation : pb::IMessage<RecordLocation> {
+  public sealed partial class RecordLocation : pb::IMessage<RecordLocation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecordLocation> _parser = new pb::MessageParser<RecordLocation>(() => new RecordLocation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5511,6 +6669,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (recordKey_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(RecordKey);
@@ -5526,7 +6687,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (recordKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RecordKey);
+      }
+      if (fieldId_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldId);
+      }
+      if (tableLocation_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TableLocation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5574,6 +6757,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5603,14 +6789,54 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (recordKey_ == null) {
+              RecordKey = new global::Google.Cloud.Dlp.V2.RecordKey();
+            }
+            input.ReadMessage(RecordKey);
+            break;
+          }
+          case 18: {
+            if (fieldId_ == null) {
+              FieldId = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(FieldId);
+            break;
+          }
+          case 26: {
+            if (tableLocation_ == null) {
+              TableLocation = new global::Google.Cloud.Dlp.V2.TableLocation();
+            }
+            input.ReadMessage(TableLocation);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Location of a finding within a table.
   /// </summary>
-  public sealed partial class TableLocation : pb::IMessage<TableLocation> {
+  public sealed partial class TableLocation : pb::IMessage<TableLocation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TableLocation> _parser = new pb::MessageParser<TableLocation>(() => new TableLocation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5697,6 +6923,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (RowIndex != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(RowIndex);
@@ -5704,7 +6933,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RowIndex != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RowIndex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5731,6 +6974,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5743,7 +6989,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RowIndex = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -5751,7 +7016,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Represents a container that may contain DLP findings.
   /// Examples of a container include a file, table, or database record.
   /// </summary>
-  public sealed partial class Container : pb::IMessage<Container> {
+  public sealed partial class Container : pb::IMessage<Container>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Container> _parser = new pb::MessageParser<Container>(() => new Container());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5953,6 +7222,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Type.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Type);
@@ -5984,7 +7256,45 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Type);
+      }
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ProjectId);
+      }
+      if (FullPath.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FullPath);
+      }
+      if (RootPath.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RootPath);
+      }
+      if (RelativePath.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RelativePath);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6050,6 +7360,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6089,14 +7402,64 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Type = input.ReadString();
+            break;
+          }
+          case 18: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            FullPath = input.ReadString();
+            break;
+          }
+          case 34: {
+            RootPath = input.ReadString();
+            break;
+          }
+          case 42: {
+            RelativePath = input.ReadString();
+            break;
+          }
+          case 50: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 58: {
+            Version = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Generic half-open interval [start, end)
   /// </summary>
-  public sealed partial class Range : pb::IMessage<Range> {
+  public sealed partial class Range : pb::IMessage<Range>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Range> _parser = new pb::MessageParser<Range>(() => new Range());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6195,6 +7558,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Start != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(Start);
@@ -6206,7 +7572,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Start != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Start);
+      }
+      if (End != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(End);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6239,6 +7623,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6255,14 +7642,41 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Start = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            End = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Location of the finding within an image.
   /// </summary>
-  public sealed partial class ImageLocation : pb::IMessage<ImageLocation> {
+  public sealed partial class ImageLocation : pb::IMessage<ImageLocation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageLocation> _parser = new pb::MessageParser<ImageLocation>(() => new ImageLocation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6343,11 +7757,25 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       boundingBoxes_.WriteTo(output, _repeated_boundingBoxes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      boundingBoxes_.WriteTo(ref output, _repeated_boundingBoxes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6370,6 +7798,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6382,14 +7813,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            boundingBoxes_.AddEntriesFrom(ref input, _repeated_boundingBoxes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Bounding box encompassing detected text within an image.
   /// </summary>
-  public sealed partial class BoundingBox : pb::IMessage<BoundingBox> {
+  public sealed partial class BoundingBox : pb::IMessage<BoundingBox>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BoundingBox> _parser = new pb::MessageParser<BoundingBox>(() => new BoundingBox());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6522,6 +7976,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Top != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(Top);
@@ -6541,7 +7998,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Top != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Top);
+      }
+      if (Left != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Left);
+      }
+      if (Width != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Width);
+      }
+      if (Height != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Height);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6586,6 +8069,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6610,7 +8096,38 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Top = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Left = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Width = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Height = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -6618,7 +8135,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Request to search for potentially sensitive info in an image and redact it
   /// by covering it with a colored rectangle.
   /// </summary>
-  public sealed partial class RedactImageRequest : pb::IMessage<RedactImageRequest> {
+  public sealed partial class RedactImageRequest : pb::IMessage<RedactImageRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RedactImageRequest> _parser = new pb::MessageParser<RedactImageRequest>(() => new RedactImageRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6800,6 +8321,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -6824,7 +8348,38 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (inspectConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InspectConfig);
+      }
+      imageRedactionConfigs_.WriteTo(ref output, _repeated_imageRedactionConfigs_codec);
+      if (IncludeFindings != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IncludeFindings);
+      }
+      if (byteItem_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ByteItem);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6883,6 +8438,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6921,7 +8479,52 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inspectConfig_ == null) {
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
+            }
+            input.ReadMessage(InspectConfig);
+            break;
+          }
+          case 42: {
+            imageRedactionConfigs_.AddEntriesFrom(ref input, _repeated_imageRedactionConfigs_codec);
+            break;
+          }
+          case 48: {
+            IncludeFindings = input.ReadBool();
+            break;
+          }
+          case 58: {
+            if (byteItem_ == null) {
+              ByteItem = new global::Google.Cloud.Dlp.V2.ByteContentItem();
+            }
+            input.ReadMessage(ByteItem);
+            break;
+          }
+          case 66: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RedactImageRequest message type.</summary>
@@ -6930,7 +8533,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Configuration for determining how redaction of images should occur.
       /// </summary>
-      public sealed partial class ImageRedactionConfig : pb::IMessage<ImageRedactionConfig> {
+      public sealed partial class ImageRedactionConfig : pb::IMessage<ImageRedactionConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ImageRedactionConfig> _parser = new pb::MessageParser<ImageRedactionConfig>(() => new ImageRedactionConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7079,6 +8686,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (targetCase_ == TargetOneofCase.InfoType) {
             output.WriteRawTag(10);
             output.WriteMessage(InfoType);
@@ -7094,7 +8704,29 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (targetCase_ == TargetOneofCase.InfoType) {
+            output.WriteRawTag(10);
+            output.WriteMessage(InfoType);
+          }
+          if (targetCase_ == TargetOneofCase.RedactAllText) {
+            output.WriteRawTag(16);
+            output.WriteBool(RedactAllText);
+          }
+          if (redactionColor_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(RedactionColor);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -7142,6 +8774,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -7170,7 +8805,42 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dlp.V2.InfoType subBuilder = new global::Google.Cloud.Dlp.V2.InfoType();
+                if (targetCase_ == TargetOneofCase.InfoType) {
+                  subBuilder.MergeFrom(InfoType);
+                }
+                input.ReadMessage(subBuilder);
+                InfoType = subBuilder;
+                break;
+              }
+              case 16: {
+                RedactAllText = input.ReadBool();
+                break;
+              }
+              case 26: {
+                if (redactionColor_ == null) {
+                  RedactionColor = new global::Google.Cloud.Dlp.V2.Color();
+                }
+                input.ReadMessage(RedactionColor);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -7182,7 +8852,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Represents a color in the RGB color space.
   /// </summary>
-  public sealed partial class Color : pb::IMessage<Color> {
+  public sealed partial class Color : pb::IMessage<Color>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Color> _parser = new pb::MessageParser<Color>(() => new Color());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7298,6 +8972,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Red != 0F) {
         output.WriteRawTag(13);
         output.WriteFloat(Red);
@@ -7313,7 +8990,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Red != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Red);
+      }
+      if (Green != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Green);
+      }
+      if (Blue != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Blue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7352,6 +9051,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7372,14 +9074,45 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            Red = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Green = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Blue = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Results of redacting an image.
   /// </summary>
-  public sealed partial class RedactImageResponse : pb::IMessage<RedactImageResponse> {
+  public sealed partial class RedactImageResponse : pb::IMessage<RedactImageResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RedactImageResponse> _parser = new pb::MessageParser<RedactImageResponse>(() => new RedactImageResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7497,6 +9230,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (RedactedImage.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(RedactedImage);
@@ -7512,7 +9248,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RedactedImage.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(RedactedImage);
+      }
+      if (ExtractedText.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ExtractedText);
+      }
+      if (inspectResult_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InspectResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7554,6 +9312,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7577,14 +9338,48 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RedactedImage = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            ExtractedText = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (inspectResult_ == null) {
+              InspectResult = new global::Google.Cloud.Dlp.V2.InspectResult();
+            }
+            input.ReadMessage(InspectResult);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to de-identify a list of items.
   /// </summary>
-  public sealed partial class DeidentifyContentRequest : pb::IMessage<DeidentifyContentRequest> {
+  public sealed partial class DeidentifyContentRequest : pb::IMessage<DeidentifyContentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeidentifyContentRequest> _parser = new pb::MessageParser<DeidentifyContentRequest>(() => new DeidentifyContentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7795,6 +9590,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -7826,7 +9624,45 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (deidentifyConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DeidentifyConfig);
+      }
+      if (inspectConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InspectConfig);
+      }
+      if (item_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Item);
+      }
+      if (InspectTemplateName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(InspectTemplateName);
+      }
+      if (DeidentifyTemplateName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DeidentifyTemplateName);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7898,6 +9734,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7943,14 +9782,70 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (deidentifyConfig_ == null) {
+              DeidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+            }
+            input.ReadMessage(DeidentifyConfig);
+            break;
+          }
+          case 26: {
+            if (inspectConfig_ == null) {
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
+            }
+            input.ReadMessage(InspectConfig);
+            break;
+          }
+          case 34: {
+            if (item_ == null) {
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
+            }
+            input.ReadMessage(Item);
+            break;
+          }
+          case 42: {
+            InspectTemplateName = input.ReadString();
+            break;
+          }
+          case 50: {
+            DeidentifyTemplateName = input.ReadString();
+            break;
+          }
+          case 58: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Results of de-identifying a ContentItem.
   /// </summary>
-  public sealed partial class DeidentifyContentResponse : pb::IMessage<DeidentifyContentResponse> {
+  public sealed partial class DeidentifyContentResponse : pb::IMessage<DeidentifyContentResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeidentifyContentResponse> _parser = new pb::MessageParser<DeidentifyContentResponse>(() => new DeidentifyContentResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8049,6 +9944,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (item_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Item);
@@ -8060,7 +9958,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (item_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Item);
+      }
+      if (overview_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Overview);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8099,6 +10015,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8121,14 +10040,47 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (item_ == null) {
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
+            }
+            input.ReadMessage(Item);
+            break;
+          }
+          case 18: {
+            if (overview_ == null) {
+              Overview = new global::Google.Cloud.Dlp.V2.TransformationOverview();
+            }
+            input.ReadMessage(Overview);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to re-identify an item.
   /// </summary>
-  public sealed partial class ReidentifyContentRequest : pb::IMessage<ReidentifyContentRequest> {
+  public sealed partial class ReidentifyContentRequest : pb::IMessage<ReidentifyContentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReidentifyContentRequest> _parser = new pb::MessageParser<ReidentifyContentRequest>(() => new ReidentifyContentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8346,6 +10298,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -8377,7 +10332,45 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (reidentifyConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReidentifyConfig);
+      }
+      if (inspectConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InspectConfig);
+      }
+      if (item_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Item);
+      }
+      if (InspectTemplateName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(InspectTemplateName);
+      }
+      if (ReidentifyTemplateName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ReidentifyTemplateName);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8449,6 +10442,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8494,14 +10490,70 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (reidentifyConfig_ == null) {
+              ReidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+            }
+            input.ReadMessage(ReidentifyConfig);
+            break;
+          }
+          case 26: {
+            if (inspectConfig_ == null) {
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
+            }
+            input.ReadMessage(InspectConfig);
+            break;
+          }
+          case 34: {
+            if (item_ == null) {
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
+            }
+            input.ReadMessage(Item);
+            break;
+          }
+          case 42: {
+            InspectTemplateName = input.ReadString();
+            break;
+          }
+          case 50: {
+            ReidentifyTemplateName = input.ReadString();
+            break;
+          }
+          case 58: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Results of re-identifying a item.
   /// </summary>
-  public sealed partial class ReidentifyContentResponse : pb::IMessage<ReidentifyContentResponse> {
+  public sealed partial class ReidentifyContentResponse : pb::IMessage<ReidentifyContentResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReidentifyContentResponse> _parser = new pb::MessageParser<ReidentifyContentResponse>(() => new ReidentifyContentResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8600,6 +10652,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (item_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Item);
@@ -8611,7 +10666,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (item_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Item);
+      }
+      if (overview_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Overview);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8650,6 +10723,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8672,14 +10748,47 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (item_ == null) {
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
+            }
+            input.ReadMessage(Item);
+            break;
+          }
+          case 18: {
+            if (overview_ == null) {
+              Overview = new global::Google.Cloud.Dlp.V2.TransformationOverview();
+            }
+            input.ReadMessage(Overview);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to search for potentially sensitive info in a ContentItem.
   /// </summary>
-  public sealed partial class InspectContentRequest : pb::IMessage<InspectContentRequest> {
+  public sealed partial class InspectContentRequest : pb::IMessage<InspectContentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectContentRequest> _parser = new pb::MessageParser<InspectContentRequest>(() => new InspectContentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8849,6 +10958,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -8872,7 +10984,37 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (inspectConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InspectConfig);
+      }
+      if (item_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Item);
+      }
+      if (InspectTemplateName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(InspectTemplateName);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8929,6 +11071,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8963,14 +11108,59 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inspectConfig_ == null) {
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
+            }
+            input.ReadMessage(InspectConfig);
+            break;
+          }
+          case 26: {
+            if (item_ == null) {
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
+            }
+            input.ReadMessage(Item);
+            break;
+          }
+          case 34: {
+            InspectTemplateName = input.ReadString();
+            break;
+          }
+          case 42: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Results of inspecting an item.
   /// </summary>
-  public sealed partial class InspectContentResponse : pb::IMessage<InspectContentResponse> {
+  public sealed partial class InspectContentResponse : pb::IMessage<InspectContentResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectContentResponse> _parser = new pb::MessageParser<InspectContentResponse>(() => new InspectContentResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9052,6 +11242,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (result_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Result);
@@ -9059,7 +11252,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (result_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -9089,6 +11296,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -9104,14 +11314,40 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (result_ == null) {
+              Result = new global::Google.Cloud.Dlp.V2.InspectResult();
+            }
+            input.ReadMessage(Result);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Cloud repository for storing output.
   /// </summary>
-  public sealed partial class OutputStorageConfig : pb::IMessage<OutputStorageConfig> {
+  public sealed partial class OutputStorageConfig : pb::IMessage<OutputStorageConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OutputStorageConfig> _parser = new pb::MessageParser<OutputStorageConfig>(() => new OutputStorageConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9257,6 +11493,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (typeCase_ == TypeOneofCase.Table) {
         output.WriteRawTag(10);
         output.WriteMessage(Table);
@@ -9268,7 +11507,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (typeCase_ == TypeOneofCase.Table) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Table);
+      }
+      if (OutputSchema != global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OutputSchema);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -9307,6 +11564,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -9328,7 +11588,35 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.BigQueryTable subBuilder = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+            if (typeCase_ == TypeOneofCase.Table) {
+              subBuilder.MergeFrom(Table);
+            }
+            input.ReadMessage(subBuilder);
+            Table = subBuilder;
+            break;
+          }
+          case 24: {
+            OutputSchema = (global::Google.Cloud.Dlp.V2.OutputStorageConfig.Types.OutputSchema) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the OutputStorageConfig message type.</summary>
@@ -9374,7 +11662,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Statistics regarding a specific InfoType.
   /// </summary>
-  public sealed partial class InfoTypeStats : pb::IMessage<InfoTypeStats> {
+  public sealed partial class InfoTypeStats : pb::IMessage<InfoTypeStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InfoTypeStats> _parser = new pb::MessageParser<InfoTypeStats>(() => new InfoTypeStats());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9473,6 +11765,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (infoType_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(InfoType);
@@ -9484,7 +11779,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (infoType_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InfoType);
+      }
+      if (Count != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Count);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -9520,6 +11833,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -9539,14 +11855,44 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (infoType_ == null) {
+              InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
+            }
+            input.ReadMessage(InfoType);
+            break;
+          }
+          case 16: {
+            Count = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The results of an inspect DataSource job.
   /// </summary>
-  public sealed partial class InspectDataSourceDetails : pb::IMessage<InspectDataSourceDetails> {
+  public sealed partial class InspectDataSourceDetails : pb::IMessage<InspectDataSourceDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectDataSourceDetails> _parser = new pb::MessageParser<InspectDataSourceDetails>(() => new InspectDataSourceDetails());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9645,6 +11991,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (requestedOptions_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(RequestedOptions);
@@ -9656,7 +12005,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (requestedOptions_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RequestedOptions);
+      }
+      if (result_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -9695,6 +12062,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -9717,7 +12087,36 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (requestedOptions_ == null) {
+              RequestedOptions = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.RequestedOptions();
+            }
+            input.ReadMessage(RequestedOptions);
+            break;
+          }
+          case 26: {
+            if (result_ == null) {
+              Result = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails.Types.Result();
+            }
+            input.ReadMessage(Result);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the InspectDataSourceDetails message type.</summary>
@@ -9726,7 +12125,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Snapshot of the inspection configuration.
       /// </summary>
-      public sealed partial class RequestedOptions : pb::IMessage<RequestedOptions> {
+      public sealed partial class RequestedOptions : pb::IMessage<RequestedOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<RequestedOptions> _parser = new pb::MessageParser<RequestedOptions>(() => new RequestedOptions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9826,6 +12229,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (snapshotInspectTemplate_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(SnapshotInspectTemplate);
@@ -9837,7 +12243,25 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (snapshotInspectTemplate_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(SnapshotInspectTemplate);
+          }
+          if (jobConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(JobConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -9876,6 +12300,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -9898,14 +12325,47 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (snapshotInspectTemplate_ == null) {
+                  SnapshotInspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+                }
+                input.ReadMessage(SnapshotInspectTemplate);
+                break;
+              }
+              case 26: {
+                if (jobConfig_ == null) {
+                  JobConfig = new global::Google.Cloud.Dlp.V2.InspectJobConfig();
+                }
+                input.ReadMessage(JobConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// All result fields mentioned below are updated while the job is processing.
       /// </summary>
-      public sealed partial class Result : pb::IMessage<Result> {
+      public sealed partial class Result : pb::IMessage<Result>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Result> _parser = new pb::MessageParser<Result>(() => new Result());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10041,6 +12501,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (ProcessedBytes != 0L) {
             output.WriteRawTag(8);
             output.WriteInt64(ProcessedBytes);
@@ -10057,7 +12520,30 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ProcessedBytes != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(ProcessedBytes);
+          }
+          if (TotalEstimatedBytes != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(TotalEstimatedBytes);
+          }
+          infoTypeStats_.WriteTo(ref output, _repeated_infoTypeStats_codec);
+          if (hybridStats_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(HybridStats);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -10101,6 +12587,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -10128,7 +12617,41 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ProcessedBytes = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                TotalEstimatedBytes = input.ReadInt64();
+                break;
+              }
+              case 26: {
+                infoTypeStats_.AddEntriesFrom(ref input, _repeated_infoTypeStats_codec);
+                break;
+              }
+              case 58: {
+                if (hybridStats_ == null) {
+                  HybridStats = new global::Google.Cloud.Dlp.V2.HybridInspectStatistics();
+                }
+                input.ReadMessage(HybridStats);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -10140,7 +12663,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Statistics related to processing hybrid inspect requests.
   /// </summary>
-  public sealed partial class HybridInspectStatistics : pb::IMessage<HybridInspectStatistics> {
+  public sealed partial class HybridInspectStatistics : pb::IMessage<HybridInspectStatistics>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HybridInspectStatistics> _parser = new pb::MessageParser<HybridInspectStatistics>(() => new HybridInspectStatistics());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10261,6 +12788,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProcessedCount != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(ProcessedCount);
@@ -10276,7 +12806,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProcessedCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(ProcessedCount);
+      }
+      if (AbortedCount != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(AbortedCount);
+      }
+      if (PendingCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(PendingCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -10315,6 +12867,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -10335,14 +12890,45 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ProcessedCount = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            AbortedCount = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            PendingCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// InfoType description.
   /// </summary>
-  public sealed partial class InfoTypeDescription : pb::IMessage<InfoTypeDescription> {
+  public sealed partial class InfoTypeDescription : pb::IMessage<InfoTypeDescription>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InfoTypeDescription> _parser = new pb::MessageParser<InfoTypeDescription>(() => new InfoTypeDescription());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10475,6 +13061,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -10491,7 +13080,30 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      supportedBy_.WriteTo(ref output, _repeated_supportedBy_codec);
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -10532,6 +13144,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -10557,14 +13172,50 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26:
+          case 24: {
+            supportedBy_.AddEntriesFrom(ref input, _repeated_supportedBy_codec);
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request for the list of infoTypes.
   /// </summary>
-  public sealed partial class ListInfoTypesRequest : pb::IMessage<ListInfoTypesRequest> {
+  public sealed partial class ListInfoTypesRequest : pb::IMessage<ListInfoTypesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListInfoTypesRequest> _parser = new pb::MessageParser<ListInfoTypesRequest>(() => new ListInfoTypesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10704,6 +13355,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(LanguageCode);
@@ -10723,7 +13377,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LanguageCode);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LocationId);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -10768,6 +13448,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -10792,14 +13475,49 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 26: {
+            LocationId = input.ReadString();
+            break;
+          }
+          case 34: {
+            Parent = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response to the ListInfoTypes request.
   /// </summary>
-  public sealed partial class ListInfoTypesResponse : pb::IMessage<ListInfoTypesResponse> {
+  public sealed partial class ListInfoTypesResponse : pb::IMessage<ListInfoTypesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListInfoTypesResponse> _parser = new pb::MessageParser<ListInfoTypesResponse>(() => new ListInfoTypesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10880,11 +13598,25 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      infoTypes_.WriteTo(ref output, _repeated_infoTypes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -10907,6 +13639,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -10919,7 +13654,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            infoTypes_.AddEntriesFrom(ref input, _repeated_infoTypes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -10927,7 +13681,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Configuration for a risk analysis job. See
   /// https://cloud.google.com/dlp/docs/concepts-risk-analysis to learn more.
   /// </summary>
-  public sealed partial class RiskAnalysisJobConfig : pb::IMessage<RiskAnalysisJobConfig> {
+  public sealed partial class RiskAnalysisJobConfig : pb::IMessage<RiskAnalysisJobConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RiskAnalysisJobConfig> _parser = new pb::MessageParser<RiskAnalysisJobConfig>(() => new RiskAnalysisJobConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11043,6 +13801,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (privacyMetric_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(PrivacyMetric);
@@ -11055,7 +13816,26 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (privacyMetric_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PrivacyMetric);
+      }
+      if (sourceTable_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SourceTable);
+      }
+      actions_.WriteTo(ref output, _repeated_actions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -11096,6 +13876,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -11122,14 +13905,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (privacyMetric_ == null) {
+              PrivacyMetric = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
+            }
+            input.ReadMessage(PrivacyMetric);
+            break;
+          }
+          case 18: {
+            if (sourceTable_ == null) {
+              SourceTable = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+            }
+            input.ReadMessage(SourceTable);
+            break;
+          }
+          case 26: {
+            actions_.AddEntriesFrom(ref input, _repeated_actions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A column with a semantic tag attached.
   /// </summary>
-  public sealed partial class QuasiId : pb::IMessage<QuasiId> {
+  public sealed partial class QuasiId : pb::IMessage<QuasiId>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<QuasiId> _parser = new pb::MessageParser<QuasiId>(() => new QuasiId());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11300,6 +14120,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (field_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Field);
@@ -11319,7 +14142,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (field_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Field);
+      }
+      if (tagCase_ == TagOneofCase.InfoType) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InfoType);
+      }
+      if (tagCase_ == TagOneofCase.CustomTag) {
+        output.WriteRawTag(26);
+        output.WriteString(CustomTag);
+      }
+      if (tagCase_ == TagOneofCase.Inferred) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Inferred);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -11376,6 +14225,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -11413,7 +14265,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (field_ == null) {
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(Field);
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.InfoType subBuilder = new global::Google.Cloud.Dlp.V2.InfoType();
+            if (tagCase_ == TagOneofCase.InfoType) {
+              subBuilder.MergeFrom(InfoType);
+            }
+            input.ReadMessage(subBuilder);
+            InfoType = subBuilder;
+            break;
+          }
+          case 26: {
+            CustomTag = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Google.Protobuf.WellKnownTypes.Empty subBuilder = new global::Google.Protobuf.WellKnownTypes.Empty();
+            if (tagCase_ == TagOneofCase.Inferred) {
+              subBuilder.MergeFrom(Inferred);
+            }
+            input.ReadMessage(subBuilder);
+            Inferred = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -11426,7 +14322,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// corresponding relative frequency is assumed to be zero (and thus, the
   /// tuple is highly reidentifiable).
   /// </summary>
-  public sealed partial class StatisticalTable : pb::IMessage<StatisticalTable> {
+  public sealed partial class StatisticalTable : pb::IMessage<StatisticalTable>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StatisticalTable> _parser = new pb::MessageParser<StatisticalTable>(() => new StatisticalTable());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11542,6 +14442,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
       if (relativeFrequency_ != null) {
         output.WriteRawTag(18);
@@ -11554,7 +14457,26 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      quasiIds_.WriteTo(ref output, _repeated_quasiIds_codec);
+      if (relativeFrequency_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RelativeFrequency);
+      }
+      if (table_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Table);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -11595,6 +14517,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -11621,7 +14546,40 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            quasiIds_.AddEntriesFrom(ref input, _repeated_quasiIds_codec);
+            break;
+          }
+          case 18: {
+            if (relativeFrequency_ == null) {
+              RelativeFrequency = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(RelativeFrequency);
+            break;
+          }
+          case 26: {
+            if (table_ == null) {
+              Table = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+            }
+            input.ReadMessage(Table);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the StatisticalTable message type.</summary>
@@ -11631,7 +14589,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// A quasi-identifier column has a custom_tag, used to know which column
       /// in the data corresponds to which column in the statistical model.
       /// </summary>
-      public sealed partial class QuasiIdentifierField : pb::IMessage<QuasiIdentifierField> {
+      public sealed partial class QuasiIdentifierField : pb::IMessage<QuasiIdentifierField>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<QuasiIdentifierField> _parser = new pb::MessageParser<QuasiIdentifierField>(() => new QuasiIdentifierField());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11732,6 +14694,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (field_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Field);
@@ -11743,7 +14708,25 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (field_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Field);
+          }
+          if (CustomTag.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CustomTag);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -11779,6 +14762,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -11798,7 +14784,33 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (field_ == null) {
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
+                }
+                input.ReadMessage(Field);
+                break;
+              }
+              case 18: {
+                CustomTag = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -11810,7 +14822,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Privacy metric to compute for reidentification risk analysis.
   /// </summary>
-  public sealed partial class PrivacyMetric : pb::IMessage<PrivacyMetric> {
+  public sealed partial class PrivacyMetric : pb::IMessage<PrivacyMetric>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PrivacyMetric> _parser = new pb::MessageParser<PrivacyMetric>(() => new PrivacyMetric());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12017,6 +15033,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (typeCase_ == TypeOneofCase.NumericalStatsConfig) {
         output.WriteRawTag(10);
         output.WriteMessage(NumericalStatsConfig);
@@ -12044,7 +15063,41 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (typeCase_ == TypeOneofCase.NumericalStatsConfig) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NumericalStatsConfig);
+      }
+      if (typeCase_ == TypeOneofCase.CategoricalStatsConfig) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CategoricalStatsConfig);
+      }
+      if (typeCase_ == TypeOneofCase.KAnonymityConfig) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KAnonymityConfig);
+      }
+      if (typeCase_ == TypeOneofCase.LDiversityConfig) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LDiversityConfig);
+      }
+      if (typeCase_ == TypeOneofCase.KMapEstimationConfig) {
+        output.WriteRawTag(42);
+        output.WriteMessage(KMapEstimationConfig);
+      }
+      if (typeCase_ == TypeOneofCase.DeltaPresenceEstimationConfig) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DeltaPresenceEstimationConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -12122,6 +15175,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -12184,7 +15240,76 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.NumericalStatsConfig subBuilder = new global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.NumericalStatsConfig();
+            if (typeCase_ == TypeOneofCase.NumericalStatsConfig) {
+              subBuilder.MergeFrom(NumericalStatsConfig);
+            }
+            input.ReadMessage(subBuilder);
+            NumericalStatsConfig = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.CategoricalStatsConfig subBuilder = new global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.CategoricalStatsConfig();
+            if (typeCase_ == TypeOneofCase.CategoricalStatsConfig) {
+              subBuilder.MergeFrom(CategoricalStatsConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CategoricalStatsConfig = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KAnonymityConfig subBuilder = new global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KAnonymityConfig();
+            if (typeCase_ == TypeOneofCase.KAnonymityConfig) {
+              subBuilder.MergeFrom(KAnonymityConfig);
+            }
+            input.ReadMessage(subBuilder);
+            KAnonymityConfig = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.LDiversityConfig subBuilder = new global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.LDiversityConfig();
+            if (typeCase_ == TypeOneofCase.LDiversityConfig) {
+              subBuilder.MergeFrom(LDiversityConfig);
+            }
+            input.ReadMessage(subBuilder);
+            LDiversityConfig = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig subBuilder = new global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.KMapEstimationConfig();
+            if (typeCase_ == TypeOneofCase.KMapEstimationConfig) {
+              subBuilder.MergeFrom(KMapEstimationConfig);
+            }
+            input.ReadMessage(subBuilder);
+            KMapEstimationConfig = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.DeltaPresenceEstimationConfig subBuilder = new global::Google.Cloud.Dlp.V2.PrivacyMetric.Types.DeltaPresenceEstimationConfig();
+            if (typeCase_ == TypeOneofCase.DeltaPresenceEstimationConfig) {
+              subBuilder.MergeFrom(DeltaPresenceEstimationConfig);
+            }
+            input.ReadMessage(subBuilder);
+            DeltaPresenceEstimationConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the PrivacyMetric message type.</summary>
@@ -12194,7 +15319,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Compute numerical stats over an individual column, including
       /// min, max, and quantiles.
       /// </summary>
-      public sealed partial class NumericalStatsConfig : pb::IMessage<NumericalStatsConfig> {
+      public sealed partial class NumericalStatsConfig : pb::IMessage<NumericalStatsConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<NumericalStatsConfig> _parser = new pb::MessageParser<NumericalStatsConfig>(() => new NumericalStatsConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12277,6 +15406,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (field_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Field);
@@ -12284,7 +15416,21 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (field_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Field);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -12314,6 +15460,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -12329,7 +15478,29 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (field_ == null) {
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
+                }
+                input.ReadMessage(Field);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -12337,7 +15508,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Compute numerical stats over an individual column, including
       /// number of distinct values and value count distribution.
       /// </summary>
-      public sealed partial class CategoricalStatsConfig : pb::IMessage<CategoricalStatsConfig> {
+      public sealed partial class CategoricalStatsConfig : pb::IMessage<CategoricalStatsConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CategoricalStatsConfig> _parser = new pb::MessageParser<CategoricalStatsConfig>(() => new CategoricalStatsConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12422,6 +15597,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (field_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Field);
@@ -12429,7 +15607,21 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (field_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Field);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -12459,6 +15651,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -12474,14 +15669,40 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (field_ == null) {
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
+                }
+                input.ReadMessage(Field);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// k-anonymity metric, used for analysis of reidentification risk.
       /// </summary>
-      public sealed partial class KAnonymityConfig : pb::IMessage<KAnonymityConfig> {
+      public sealed partial class KAnonymityConfig : pb::IMessage<KAnonymityConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<KAnonymityConfig> _parser = new pb::MessageParser<KAnonymityConfig>(() => new KAnonymityConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12592,6 +15813,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
           if (entityId_ != null) {
             output.WriteRawTag(18);
@@ -12600,7 +15824,22 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          quasiIds_.WriteTo(ref output, _repeated_quasiIds_codec);
+          if (entityId_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EntityId);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -12632,6 +15871,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -12651,14 +15893,44 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                quasiIds_.AddEntriesFrom(ref input, _repeated_quasiIds_codec);
+                break;
+              }
+              case 18: {
+                if (entityId_ == null) {
+                  EntityId = new global::Google.Cloud.Dlp.V2.EntityId();
+                }
+                input.ReadMessage(EntityId);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// l-diversity metric, used for analysis of reidentification risk.
       /// </summary>
-      public sealed partial class LDiversityConfig : pb::IMessage<LDiversityConfig> {
+      public sealed partial class LDiversityConfig : pb::IMessage<LDiversityConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<LDiversityConfig> _parser = new pb::MessageParser<LDiversityConfig>(() => new LDiversityConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12758,6 +16030,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
           if (sensitiveAttribute_ != null) {
             output.WriteRawTag(18);
@@ -12766,7 +16041,22 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          quasiIds_.WriteTo(ref output, _repeated_quasiIds_codec);
+          if (sensitiveAttribute_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(SensitiveAttribute);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -12798,6 +16088,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -12817,7 +16110,33 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                quasiIds_.AddEntriesFrom(ref input, _repeated_quasiIds_codec);
+                break;
+              }
+              case 18: {
+                if (sensitiveAttribute_ == null) {
+                  SensitiveAttribute = new global::Google.Cloud.Dlp.V2.FieldId();
+                }
+                input.ReadMessage(SensitiveAttribute);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -12829,7 +16148,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// statistical model (indicated as one or several BigQuery tables), or by
       /// extrapolating from the distribution of values in the input dataset.
       /// </summary>
-      public sealed partial class KMapEstimationConfig : pb::IMessage<KMapEstimationConfig> {
+      public sealed partial class KMapEstimationConfig : pb::IMessage<KMapEstimationConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<KMapEstimationConfig> _parser = new pb::MessageParser<KMapEstimationConfig>(() => new KMapEstimationConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12948,6 +16271,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
           if (RegionCode.Length != 0) {
             output.WriteRawTag(18);
@@ -12957,7 +16283,23 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          quasiIds_.WriteTo(ref output, _repeated_quasiIds_codec);
+          if (RegionCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(RegionCode);
+          }
+          auxiliaryTables_.WriteTo(ref output, _repeated_auxiliaryTables_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -12988,6 +16330,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -13008,7 +16353,34 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                quasiIds_.AddEntriesFrom(ref input, _repeated_quasiIds_codec);
+                break;
+              }
+              case 18: {
+                RegionCode = input.ReadString();
+                break;
+              }
+              case 26: {
+                auxiliaryTables_.AddEntriesFrom(ref input, _repeated_auxiliaryTables_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the KMapEstimationConfig message type.</summary>
@@ -13017,7 +16389,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// A column with a semantic tag attached.
           /// </summary>
-          public sealed partial class TaggedField : pb::IMessage<TaggedField> {
+          public sealed partial class TaggedField : pb::IMessage<TaggedField>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<TaggedField> _parser = new pb::MessageParser<TaggedField>(() => new TaggedField());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13188,6 +16564,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (field_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(Field);
@@ -13207,7 +16586,33 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (field_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Field);
+              }
+              if (tagCase_ == TagOneofCase.InfoType) {
+                output.WriteRawTag(18);
+                output.WriteMessage(InfoType);
+              }
+              if (tagCase_ == TagOneofCase.CustomTag) {
+                output.WriteRawTag(26);
+                output.WriteString(CustomTag);
+              }
+              if (tagCase_ == TagOneofCase.Inferred) {
+                output.WriteRawTag(34);
+                output.WriteMessage(Inferred);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -13264,6 +16669,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -13301,7 +16709,51 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (field_ == null) {
+                      Field = new global::Google.Cloud.Dlp.V2.FieldId();
+                    }
+                    input.ReadMessage(Field);
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.Dlp.V2.InfoType subBuilder = new global::Google.Cloud.Dlp.V2.InfoType();
+                    if (tagCase_ == TagOneofCase.InfoType) {
+                      subBuilder.MergeFrom(InfoType);
+                    }
+                    input.ReadMessage(subBuilder);
+                    InfoType = subBuilder;
+                    break;
+                  }
+                  case 26: {
+                    CustomTag = input.ReadString();
+                    break;
+                  }
+                  case 34: {
+                    global::Google.Protobuf.WellKnownTypes.Empty subBuilder = new global::Google.Protobuf.WellKnownTypes.Empty();
+                    if (tagCase_ == TagOneofCase.Inferred) {
+                      subBuilder.MergeFrom(Inferred);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Inferred = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -13314,7 +16766,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// corresponding relative frequency is assumed to be zero (and thus, the
           /// tuple is highly reidentifiable).
           /// </summary>
-          public sealed partial class AuxiliaryTable : pb::IMessage<AuxiliaryTable> {
+          public sealed partial class AuxiliaryTable : pb::IMessage<AuxiliaryTable>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<AuxiliaryTable> _parser = new pb::MessageParser<AuxiliaryTable>(() => new AuxiliaryTable());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13430,6 +16886,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
               if (relativeFrequency_ != null) {
                 output.WriteRawTag(18);
@@ -13442,7 +16901,26 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              quasiIds_.WriteTo(ref output, _repeated_quasiIds_codec);
+              if (relativeFrequency_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(RelativeFrequency);
+              }
+              if (table_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(Table);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -13483,6 +16961,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -13509,7 +16990,40 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    quasiIds_.AddEntriesFrom(ref input, _repeated_quasiIds_codec);
+                    break;
+                  }
+                  case 18: {
+                    if (relativeFrequency_ == null) {
+                      RelativeFrequency = new global::Google.Cloud.Dlp.V2.FieldId();
+                    }
+                    input.ReadMessage(RelativeFrequency);
+                    break;
+                  }
+                  case 26: {
+                    if (table_ == null) {
+                      Table = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+                    }
+                    input.ReadMessage(Table);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
             #region Nested types
             /// <summary>Container for nested types declared in the AuxiliaryTable message type.</summary>
@@ -13519,7 +17033,11 @@ namespace Google.Cloud.Dlp.V2 {
               /// A quasi-identifier column has a custom_tag, used to know which column
               /// in the data corresponds to which column in the statistical model.
               /// </summary>
-              public sealed partial class QuasiIdField : pb::IMessage<QuasiIdField> {
+              public sealed partial class QuasiIdField : pb::IMessage<QuasiIdField>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
                 private static readonly pb::MessageParser<QuasiIdField> _parser = new pb::MessageParser<QuasiIdField>(() => new QuasiIdField());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13618,6 +17136,9 @@ namespace Google.Cloud.Dlp.V2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
                   if (field_ != null) {
                     output.WriteRawTag(10);
                     output.WriteMessage(Field);
@@ -13629,7 +17150,25 @@ namespace Google.Cloud.Dlp.V2 {
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (field_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(Field);
+                  }
+                  if (CustomTag.Length != 0) {
+                    output.WriteRawTag(18);
+                    output.WriteString(CustomTag);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public int CalculateSize() {
@@ -13665,6 +17204,9 @@ namespace Google.Cloud.Dlp.V2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
                     switch(tag) {
@@ -13684,7 +17226,33 @@ namespace Google.Cloud.Dlp.V2 {
                       }
                     }
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        if (field_ == null) {
+                          Field = new global::Google.Cloud.Dlp.V2.FieldId();
+                        }
+                        input.ReadMessage(Field);
+                        break;
+                      }
+                      case 18: {
+                        CustomTag = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
 
               }
 
@@ -13704,7 +17272,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Similarly to the k-map metric, we cannot compute δ-presence exactly without
       /// knowing the attack dataset, so we use a statistical model instead.
       /// </summary>
-      public sealed partial class DeltaPresenceEstimationConfig : pb::IMessage<DeltaPresenceEstimationConfig> {
+      public sealed partial class DeltaPresenceEstimationConfig : pb::IMessage<DeltaPresenceEstimationConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DeltaPresenceEstimationConfig> _parser = new pb::MessageParser<DeltaPresenceEstimationConfig>(() => new DeltaPresenceEstimationConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13823,6 +17395,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           quasiIds_.WriteTo(output, _repeated_quasiIds_codec);
           if (RegionCode.Length != 0) {
             output.WriteRawTag(18);
@@ -13832,7 +17407,23 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          quasiIds_.WriteTo(ref output, _repeated_quasiIds_codec);
+          if (RegionCode.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(RegionCode);
+          }
+          auxiliaryTables_.WriteTo(ref output, _repeated_auxiliaryTables_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -13863,6 +17454,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -13883,7 +17477,34 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                quasiIds_.AddEntriesFrom(ref input, _repeated_quasiIds_codec);
+                break;
+              }
+              case 18: {
+                RegionCode = input.ReadString();
+                break;
+              }
+              case 26: {
+                auxiliaryTables_.AddEntriesFrom(ref input, _repeated_auxiliaryTables_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -13895,7 +17516,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Result of a risk analysis operation request.
   /// </summary>
-  public sealed partial class AnalyzeDataSourceRiskDetails : pb::IMessage<AnalyzeDataSourceRiskDetails> {
+  public sealed partial class AnalyzeDataSourceRiskDetails : pb::IMessage<AnalyzeDataSourceRiskDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AnalyzeDataSourceRiskDetails> _parser = new pb::MessageParser<AnalyzeDataSourceRiskDetails>(() => new AnalyzeDataSourceRiskDetails());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14136,6 +17761,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (requestedPrivacyMetric_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(RequestedPrivacyMetric);
@@ -14171,7 +17799,49 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (requestedPrivacyMetric_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RequestedPrivacyMetric);
+      }
+      if (requestedSourceTable_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RequestedSourceTable);
+      }
+      if (resultCase_ == ResultOneofCase.NumericalStatsResult) {
+        output.WriteRawTag(26);
+        output.WriteMessage(NumericalStatsResult);
+      }
+      if (resultCase_ == ResultOneofCase.CategoricalStatsResult) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CategoricalStatsResult);
+      }
+      if (resultCase_ == ResultOneofCase.KAnonymityResult) {
+        output.WriteRawTag(42);
+        output.WriteMessage(KAnonymityResult);
+      }
+      if (resultCase_ == ResultOneofCase.LDiversityResult) {
+        output.WriteRawTag(50);
+        output.WriteMessage(LDiversityResult);
+      }
+      if (resultCase_ == ResultOneofCase.KMapEstimationResult) {
+        output.WriteRawTag(58);
+        output.WriteMessage(KMapEstimationResult);
+      }
+      if (resultCase_ == ResultOneofCase.DeltaPresenceEstimationResult) {
+        output.WriteRawTag(74);
+        output.WriteMessage(DeltaPresenceEstimationResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -14267,6 +17937,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -14343,7 +18016,90 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (requestedPrivacyMetric_ == null) {
+              RequestedPrivacyMetric = new global::Google.Cloud.Dlp.V2.PrivacyMetric();
+            }
+            input.ReadMessage(RequestedPrivacyMetric);
+            break;
+          }
+          case 18: {
+            if (requestedSourceTable_ == null) {
+              RequestedSourceTable = new global::Google.Cloud.Dlp.V2.BigQueryTable();
+            }
+            input.ReadMessage(RequestedSourceTable);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.NumericalStatsResult subBuilder = new global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.NumericalStatsResult();
+            if (resultCase_ == ResultOneofCase.NumericalStatsResult) {
+              subBuilder.MergeFrom(NumericalStatsResult);
+            }
+            input.ReadMessage(subBuilder);
+            NumericalStatsResult = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult subBuilder = new global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.CategoricalStatsResult();
+            if (resultCase_ == ResultOneofCase.CategoricalStatsResult) {
+              subBuilder.MergeFrom(CategoricalStatsResult);
+            }
+            input.ReadMessage(subBuilder);
+            CategoricalStatsResult = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult subBuilder = new global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KAnonymityResult();
+            if (resultCase_ == ResultOneofCase.KAnonymityResult) {
+              subBuilder.MergeFrom(KAnonymityResult);
+            }
+            input.ReadMessage(subBuilder);
+            KAnonymityResult = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult subBuilder = new global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.LDiversityResult();
+            if (resultCase_ == ResultOneofCase.LDiversityResult) {
+              subBuilder.MergeFrom(LDiversityResult);
+            }
+            input.ReadMessage(subBuilder);
+            LDiversityResult = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult subBuilder = new global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.KMapEstimationResult();
+            if (resultCase_ == ResultOneofCase.KMapEstimationResult) {
+              subBuilder.MergeFrom(KMapEstimationResult);
+            }
+            input.ReadMessage(subBuilder);
+            KMapEstimationResult = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult subBuilder = new global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails.Types.DeltaPresenceEstimationResult();
+            if (resultCase_ == ResultOneofCase.DeltaPresenceEstimationResult) {
+              subBuilder.MergeFrom(DeltaPresenceEstimationResult);
+            }
+            input.ReadMessage(subBuilder);
+            DeltaPresenceEstimationResult = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the AnalyzeDataSourceRiskDetails message type.</summary>
@@ -14352,7 +18108,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Result of the numerical stats computation.
       /// </summary>
-      public sealed partial class NumericalStatsResult : pb::IMessage<NumericalStatsResult> {
+      public sealed partial class NumericalStatsResult : pb::IMessage<NumericalStatsResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<NumericalStatsResult> _parser = new pb::MessageParser<NumericalStatsResult>(() => new NumericalStatsResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14468,6 +18228,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (minValue_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(MinValue);
@@ -14480,7 +18243,26 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (minValue_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(MinValue);
+          }
+          if (maxValue_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(MaxValue);
+          }
+          quantileValues_.WriteTo(ref output, _repeated_quantileValues_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -14521,6 +18303,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -14547,14 +18332,51 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (minValue_ == null) {
+                  MinValue = new global::Google.Cloud.Dlp.V2.Value();
+                }
+                input.ReadMessage(MinValue);
+                break;
+              }
+              case 18: {
+                if (maxValue_ == null) {
+                  MaxValue = new global::Google.Cloud.Dlp.V2.Value();
+                }
+                input.ReadMessage(MaxValue);
+                break;
+              }
+              case 34: {
+                quantileValues_.AddEntriesFrom(ref input, _repeated_quantileValues_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Result of the categorical stats computation.
       /// </summary>
-      public sealed partial class CategoricalStatsResult : pb::IMessage<CategoricalStatsResult> {
+      public sealed partial class CategoricalStatsResult : pb::IMessage<CategoricalStatsResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CategoricalStatsResult> _parser = new pb::MessageParser<CategoricalStatsResult>(() => new CategoricalStatsResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14635,11 +18457,25 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           valueFrequencyHistogramBuckets_.WriteTo(output, _repeated_valueFrequencyHistogramBuckets_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          valueFrequencyHistogramBuckets_.WriteTo(ref output, _repeated_valueFrequencyHistogramBuckets_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -14662,6 +18498,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -14674,7 +18513,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 42: {
+                valueFrequencyHistogramBuckets_.AddEntriesFrom(ref input, _repeated_valueFrequencyHistogramBuckets_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the CategoricalStatsResult message type.</summary>
@@ -14683,7 +18541,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// Histogram of value frequencies in the column.
           /// </summary>
-          public sealed partial class CategoricalStatsHistogramBucket : pb::IMessage<CategoricalStatsHistogramBucket> {
+          public sealed partial class CategoricalStatsHistogramBucket : pb::IMessage<CategoricalStatsHistogramBucket>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<CategoricalStatsHistogramBucket> _parser = new pb::MessageParser<CategoricalStatsHistogramBucket>(() => new CategoricalStatsHistogramBucket());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14833,6 +18695,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (ValueFrequencyLowerBound != 0L) {
                 output.WriteRawTag(8);
                 output.WriteInt64(ValueFrequencyLowerBound);
@@ -14853,7 +18718,34 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ValueFrequencyLowerBound != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(ValueFrequencyLowerBound);
+              }
+              if (ValueFrequencyUpperBound != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(ValueFrequencyUpperBound);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(ref output, _repeated_bucketValues_codec);
+              if (BucketValueCount != 0L) {
+                output.WriteRawTag(40);
+                output.WriteInt64(BucketValueCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -14900,6 +18792,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -14928,7 +18823,42 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    ValueFrequencyLowerBound = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    ValueFrequencyUpperBound = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    bucketValues_.AddEntriesFrom(ref input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                  case 40: {
+                    BucketValueCount = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -14940,7 +18870,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Result of the k-anonymity computation.
       /// </summary>
-      public sealed partial class KAnonymityResult : pb::IMessage<KAnonymityResult> {
+      public sealed partial class KAnonymityResult : pb::IMessage<KAnonymityResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<KAnonymityResult> _parser = new pb::MessageParser<KAnonymityResult>(() => new KAnonymityResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15021,11 +18955,25 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           equivalenceClassHistogramBuckets_.WriteTo(output, _repeated_equivalenceClassHistogramBuckets_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          equivalenceClassHistogramBuckets_.WriteTo(ref output, _repeated_equivalenceClassHistogramBuckets_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -15048,6 +18996,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -15060,7 +19011,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 42: {
+                equivalenceClassHistogramBuckets_.AddEntriesFrom(ref input, _repeated_equivalenceClassHistogramBuckets_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the KAnonymityResult message type.</summary>
@@ -15069,7 +19039,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// The set of columns' values that share the same ldiversity value
           /// </summary>
-          public sealed partial class KAnonymityEquivalenceClass : pb::IMessage<KAnonymityEquivalenceClass> {
+          public sealed partial class KAnonymityEquivalenceClass : pb::IMessage<KAnonymityEquivalenceClass>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<KAnonymityEquivalenceClass> _parser = new pb::MessageParser<KAnonymityEquivalenceClass>(() => new KAnonymityEquivalenceClass());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15170,6 +19144,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               quasiIdsValues_.WriteTo(output, _repeated_quasiIdsValues_codec);
               if (EquivalenceClassSize != 0L) {
                 output.WriteRawTag(16);
@@ -15178,7 +19155,22 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              quasiIdsValues_.WriteTo(ref output, _repeated_quasiIdsValues_codec);
+              if (EquivalenceClassSize != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EquivalenceClassSize);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -15207,6 +19199,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -15223,14 +19218,41 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    quasiIdsValues_.AddEntriesFrom(ref input, _repeated_quasiIdsValues_codec);
+                    break;
+                  }
+                  case 16: {
+                    EquivalenceClassSize = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// Histogram of k-anonymity equivalence classes.
           /// </summary>
-          public sealed partial class KAnonymityHistogramBucket : pb::IMessage<KAnonymityHistogramBucket> {
+          public sealed partial class KAnonymityHistogramBucket : pb::IMessage<KAnonymityHistogramBucket>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<KAnonymityHistogramBucket> _parser = new pb::MessageParser<KAnonymityHistogramBucket>(() => new KAnonymityHistogramBucket());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15380,6 +19402,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (EquivalenceClassSizeLowerBound != 0L) {
                 output.WriteRawTag(8);
                 output.WriteInt64(EquivalenceClassSizeLowerBound);
@@ -15400,7 +19425,34 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (EquivalenceClassSizeLowerBound != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(EquivalenceClassSizeLowerBound);
+              }
+              if (EquivalenceClassSizeUpperBound != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EquivalenceClassSizeUpperBound);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(ref output, _repeated_bucketValues_codec);
+              if (BucketValueCount != 0L) {
+                output.WriteRawTag(40);
+                output.WriteInt64(BucketValueCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -15447,6 +19499,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -15475,7 +19530,42 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    EquivalenceClassSizeLowerBound = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    EquivalenceClassSizeUpperBound = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    bucketValues_.AddEntriesFrom(ref input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                  case 40: {
+                    BucketValueCount = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -15487,7 +19577,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Result of the l-diversity computation.
       /// </summary>
-      public sealed partial class LDiversityResult : pb::IMessage<LDiversityResult> {
+      public sealed partial class LDiversityResult : pb::IMessage<LDiversityResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<LDiversityResult> _parser = new pb::MessageParser<LDiversityResult>(() => new LDiversityResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15568,11 +19662,25 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           sensitiveValueFrequencyHistogramBuckets_.WriteTo(output, _repeated_sensitiveValueFrequencyHistogramBuckets_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          sensitiveValueFrequencyHistogramBuckets_.WriteTo(ref output, _repeated_sensitiveValueFrequencyHistogramBuckets_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -15595,6 +19703,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -15607,7 +19718,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 42: {
+                sensitiveValueFrequencyHistogramBuckets_.AddEntriesFrom(ref input, _repeated_sensitiveValueFrequencyHistogramBuckets_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the LDiversityResult message type.</summary>
@@ -15616,7 +19746,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// The set of columns' values that share the same ldiversity value.
           /// </summary>
-          public sealed partial class LDiversityEquivalenceClass : pb::IMessage<LDiversityEquivalenceClass> {
+          public sealed partial class LDiversityEquivalenceClass : pb::IMessage<LDiversityEquivalenceClass>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<LDiversityEquivalenceClass> _parser = new pb::MessageParser<LDiversityEquivalenceClass>(() => new LDiversityEquivalenceClass());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15748,6 +19882,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               quasiIdsValues_.WriteTo(output, _repeated_quasiIdsValues_codec);
               if (EquivalenceClassSize != 0L) {
                 output.WriteRawTag(16);
@@ -15761,7 +19898,27 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              quasiIdsValues_.WriteTo(ref output, _repeated_quasiIdsValues_codec);
+              if (EquivalenceClassSize != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EquivalenceClassSize);
+              }
+              if (NumDistinctSensitiveValues != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(NumDistinctSensitiveValues);
+              }
+              topSensitiveValues_.WriteTo(ref output, _repeated_topSensitiveValues_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -15798,6 +19955,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -15822,14 +19982,49 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    quasiIdsValues_.AddEntriesFrom(ref input, _repeated_quasiIdsValues_codec);
+                    break;
+                  }
+                  case 16: {
+                    EquivalenceClassSize = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    NumDistinctSensitiveValues = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    topSensitiveValues_.AddEntriesFrom(ref input, _repeated_topSensitiveValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// Histogram of l-diversity equivalence class sensitive value frequencies.
           /// </summary>
-          public sealed partial class LDiversityHistogramBucket : pb::IMessage<LDiversityHistogramBucket> {
+          public sealed partial class LDiversityHistogramBucket : pb::IMessage<LDiversityHistogramBucket>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<LDiversityHistogramBucket> _parser = new pb::MessageParser<LDiversityHistogramBucket>(() => new LDiversityHistogramBucket());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15981,6 +20176,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (SensitiveValueFrequencyLowerBound != 0L) {
                 output.WriteRawTag(8);
                 output.WriteInt64(SensitiveValueFrequencyLowerBound);
@@ -16001,7 +20199,34 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (SensitiveValueFrequencyLowerBound != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(SensitiveValueFrequencyLowerBound);
+              }
+              if (SensitiveValueFrequencyUpperBound != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(SensitiveValueFrequencyUpperBound);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(ref output, _repeated_bucketValues_codec);
+              if (BucketValueCount != 0L) {
+                output.WriteRawTag(40);
+                output.WriteInt64(BucketValueCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -16048,6 +20273,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -16076,7 +20304,42 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    SensitiveValueFrequencyLowerBound = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    SensitiveValueFrequencyUpperBound = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 34: {
+                    bucketValues_.AddEntriesFrom(ref input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                  case 40: {
+                    BucketValueCount = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -16089,7 +20352,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Result of the reidentifiability analysis. Note that these results are an
       /// estimation, not exact values.
       /// </summary>
-      public sealed partial class KMapEstimationResult : pb::IMessage<KMapEstimationResult> {
+      public sealed partial class KMapEstimationResult : pb::IMessage<KMapEstimationResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<KMapEstimationResult> _parser = new pb::MessageParser<KMapEstimationResult>(() => new KMapEstimationResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16177,11 +20444,25 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           kMapEstimationHistogram_.WriteTo(output, _repeated_kMapEstimationHistogram_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          kMapEstimationHistogram_.WriteTo(ref output, _repeated_kMapEstimationHistogram_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -16204,6 +20485,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -16216,7 +20500,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                kMapEstimationHistogram_.AddEntriesFrom(ref input, _repeated_kMapEstimationHistogram_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the KMapEstimationResult message type.</summary>
@@ -16225,7 +20528,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// A tuple of values for the quasi-identifier columns.
           /// </summary>
-          public sealed partial class KMapEstimationQuasiIdValues : pb::IMessage<KMapEstimationQuasiIdValues> {
+          public sealed partial class KMapEstimationQuasiIdValues : pb::IMessage<KMapEstimationQuasiIdValues>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<KMapEstimationQuasiIdValues> _parser = new pb::MessageParser<KMapEstimationQuasiIdValues>(() => new KMapEstimationQuasiIdValues());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16323,6 +20630,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               quasiIdsValues_.WriteTo(output, _repeated_quasiIdsValues_codec);
               if (EstimatedAnonymity != 0L) {
                 output.WriteRawTag(16);
@@ -16331,7 +20641,22 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              quasiIdsValues_.WriteTo(ref output, _repeated_quasiIdsValues_codec);
+              if (EstimatedAnonymity != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EstimatedAnonymity);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -16360,6 +20685,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -16376,7 +20704,30 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    quasiIdsValues_.AddEntriesFrom(ref input, _repeated_quasiIdsValues_codec);
+                    break;
+                  }
+                  case 16: {
+                    EstimatedAnonymity = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -16390,7 +20741,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// case is when min_anonymity = max_anonymity = 1: the frequency field then
           /// corresponds to the number of uniquely identifiable records.
           /// </summary>
-          public sealed partial class KMapEstimationHistogramBucket : pb::IMessage<KMapEstimationHistogramBucket> {
+          public sealed partial class KMapEstimationHistogramBucket : pb::IMessage<KMapEstimationHistogramBucket>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<KMapEstimationHistogramBucket> _parser = new pb::MessageParser<KMapEstimationHistogramBucket>(() => new KMapEstimationHistogramBucket());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16540,6 +20895,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (MinAnonymity != 0L) {
                 output.WriteRawTag(8);
                 output.WriteInt64(MinAnonymity);
@@ -16560,7 +20918,34 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (MinAnonymity != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(MinAnonymity);
+              }
+              if (MaxAnonymity != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(MaxAnonymity);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(40);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(ref output, _repeated_bucketValues_codec);
+              if (BucketValueCount != 0L) {
+                output.WriteRawTag(56);
+                output.WriteInt64(BucketValueCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -16607,6 +20992,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -16635,7 +21023,42 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    MinAnonymity = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    MaxAnonymity = input.ReadInt64();
+                    break;
+                  }
+                  case 40: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 50: {
+                    bucketValues_.AddEntriesFrom(ref input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                  case 56: {
+                    BucketValueCount = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -16648,7 +21071,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Result of the δ-presence computation. Note that these results are an
       /// estimation, not exact values.
       /// </summary>
-      public sealed partial class DeltaPresenceEstimationResult : pb::IMessage<DeltaPresenceEstimationResult> {
+      public sealed partial class DeltaPresenceEstimationResult : pb::IMessage<DeltaPresenceEstimationResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DeltaPresenceEstimationResult> _parser = new pb::MessageParser<DeltaPresenceEstimationResult>(() => new DeltaPresenceEstimationResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16736,11 +21163,25 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           deltaPresenceEstimationHistogram_.WriteTo(output, _repeated_deltaPresenceEstimationHistogram_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          deltaPresenceEstimationHistogram_.WriteTo(ref output, _repeated_deltaPresenceEstimationHistogram_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -16763,6 +21204,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -16775,7 +21219,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                deltaPresenceEstimationHistogram_.AddEntriesFrom(ref input, _repeated_deltaPresenceEstimationHistogram_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the DeltaPresenceEstimationResult message type.</summary>
@@ -16784,7 +21247,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// <summary>
           /// A tuple of values for the quasi-identifier columns.
           /// </summary>
-          public sealed partial class DeltaPresenceEstimationQuasiIdValues : pb::IMessage<DeltaPresenceEstimationQuasiIdValues> {
+          public sealed partial class DeltaPresenceEstimationQuasiIdValues : pb::IMessage<DeltaPresenceEstimationQuasiIdValues>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<DeltaPresenceEstimationQuasiIdValues> _parser = new pb::MessageParser<DeltaPresenceEstimationQuasiIdValues>(() => new DeltaPresenceEstimationQuasiIdValues());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16889,6 +21356,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               quasiIdsValues_.WriteTo(output, _repeated_quasiIdsValues_codec);
               if (EstimatedProbability != 0D) {
                 output.WriteRawTag(17);
@@ -16897,7 +21367,22 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              quasiIdsValues_.WriteTo(ref output, _repeated_quasiIdsValues_codec);
+              if (EstimatedProbability != 0D) {
+                output.WriteRawTag(17);
+                output.WriteDouble(EstimatedProbability);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -16926,6 +21411,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -16942,7 +21430,30 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    quasiIdsValues_.AddEntriesFrom(ref input, _repeated_quasiIdsValues_codec);
+                    break;
+                  }
+                  case 17: {
+                    EstimatedProbability = input.ReadDouble();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -16957,7 +21468,11 @@ namespace Google.Cloud.Dlp.V2 {
           /// then, every individual who shares this quasi-identifier combination is in
           /// the dataset.
           /// </summary>
-          public sealed partial class DeltaPresenceEstimationHistogramBucket : pb::IMessage<DeltaPresenceEstimationHistogramBucket> {
+          public sealed partial class DeltaPresenceEstimationHistogramBucket : pb::IMessage<DeltaPresenceEstimationHistogramBucket>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<DeltaPresenceEstimationHistogramBucket> _parser = new pb::MessageParser<DeltaPresenceEstimationHistogramBucket>(() => new DeltaPresenceEstimationHistogramBucket());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17107,6 +21622,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (MinProbability != 0D) {
                 output.WriteRawTag(9);
                 output.WriteDouble(MinProbability);
@@ -17127,7 +21645,34 @@ namespace Google.Cloud.Dlp.V2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (MinProbability != 0D) {
+                output.WriteRawTag(9);
+                output.WriteDouble(MinProbability);
+              }
+              if (MaxProbability != 0D) {
+                output.WriteRawTag(17);
+                output.WriteDouble(MaxProbability);
+              }
+              if (BucketSize != 0L) {
+                output.WriteRawTag(40);
+                output.WriteInt64(BucketSize);
+              }
+              bucketValues_.WriteTo(ref output, _repeated_bucketValues_codec);
+              if (BucketValueCount != 0L) {
+                output.WriteRawTag(56);
+                output.WriteInt64(BucketValueCount);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -17174,6 +21719,9 @@ namespace Google.Cloud.Dlp.V2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -17202,7 +21750,42 @@ namespace Google.Cloud.Dlp.V2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 9: {
+                    MinProbability = input.ReadDouble();
+                    break;
+                  }
+                  case 17: {
+                    MaxProbability = input.ReadDouble();
+                    break;
+                  }
+                  case 40: {
+                    BucketSize = input.ReadInt64();
+                    break;
+                  }
+                  case 50: {
+                    bucketValues_.AddEntriesFrom(ref input, _repeated_bucketValues_codec);
+                    break;
+                  }
+                  case 56: {
+                    BucketValueCount = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -17219,7 +21802,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// A value of a field, including its frequency.
   /// </summary>
-  public sealed partial class ValueFrequency : pb::IMessage<ValueFrequency> {
+  public sealed partial class ValueFrequency : pb::IMessage<ValueFrequency>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ValueFrequency> _parser = new pb::MessageParser<ValueFrequency>(() => new ValueFrequency());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17318,6 +21905,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (value_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Value);
@@ -17329,7 +21919,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (value_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Value);
+      }
+      if (Count != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Count);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -17365,6 +21973,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -17384,7 +21995,33 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (value_ == null) {
+              Value = new global::Google.Cloud.Dlp.V2.Value();
+            }
+            input.ReadMessage(Value);
+            break;
+          }
+          case 16: {
+            Count = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -17396,7 +22033,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// 123456789, the number of bytes would be counted as 9, even though an
   /// int64 only holds up to 8 bytes of data.
   /// </summary>
-  public sealed partial class Value : pb::IMessage<Value> {
+  public sealed partial class Value : pb::IMessage<Value>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Value> _parser = new pb::MessageParser<Value>(() => new Value());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17643,6 +22284,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (typeCase_ == TypeOneofCase.IntegerValue) {
         output.WriteRawTag(8);
         output.WriteInt64(IntegerValue);
@@ -17678,7 +22322,49 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (typeCase_ == TypeOneofCase.IntegerValue) {
+        output.WriteRawTag(8);
+        output.WriteInt64(IntegerValue);
+      }
+      if (typeCase_ == TypeOneofCase.FloatValue) {
+        output.WriteRawTag(17);
+        output.WriteDouble(FloatValue);
+      }
+      if (typeCase_ == TypeOneofCase.StringValue) {
+        output.WriteRawTag(26);
+        output.WriteString(StringValue);
+      }
+      if (typeCase_ == TypeOneofCase.BooleanValue) {
+        output.WriteRawTag(32);
+        output.WriteBool(BooleanValue);
+      }
+      if (typeCase_ == TypeOneofCase.TimestampValue) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TimestampValue);
+      }
+      if (typeCase_ == TypeOneofCase.TimeValue) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TimeValue);
+      }
+      if (typeCase_ == TypeOneofCase.DateValue) {
+        output.WriteRawTag(58);
+        output.WriteMessage(DateValue);
+      }
+      if (typeCase_ == TypeOneofCase.DayOfWeekValue) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) DayOfWeekValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -17759,6 +22445,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -17815,14 +22504,81 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            IntegerValue = input.ReadInt64();
+            break;
+          }
+          case 17: {
+            FloatValue = input.ReadDouble();
+            break;
+          }
+          case 26: {
+            StringValue = input.ReadString();
+            break;
+          }
+          case 32: {
+            BooleanValue = input.ReadBool();
+            break;
+          }
+          case 42: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (typeCase_ == TypeOneofCase.TimestampValue) {
+              subBuilder.MergeFrom(TimestampValue);
+            }
+            input.ReadMessage(subBuilder);
+            TimestampValue = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Type.TimeOfDay subBuilder = new global::Google.Type.TimeOfDay();
+            if (typeCase_ == TypeOneofCase.TimeValue) {
+              subBuilder.MergeFrom(TimeValue);
+            }
+            input.ReadMessage(subBuilder);
+            TimeValue = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Type.Date subBuilder = new global::Google.Type.Date();
+            if (typeCase_ == TypeOneofCase.DateValue) {
+              subBuilder.MergeFrom(DateValue);
+            }
+            input.ReadMessage(subBuilder);
+            DateValue = subBuilder;
+            break;
+          }
+          case 64: {
+            type_ = input.ReadEnum();
+            typeCase_ = TypeOneofCase.DayOfWeekValue;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Message for infoType-dependent details parsed from quote.
   /// </summary>
-  public sealed partial class QuoteInfo : pb::IMessage<QuoteInfo> {
+  public sealed partial class QuoteInfo : pb::IMessage<QuoteInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<QuoteInfo> _parser = new pb::MessageParser<QuoteInfo>(() => new QuoteInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17929,6 +22685,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (parsedQuoteCase_ == ParsedQuoteOneofCase.DateTime) {
         output.WriteRawTag(18);
         output.WriteMessage(DateTime);
@@ -17936,7 +22695,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (parsedQuoteCase_ == ParsedQuoteOneofCase.DateTime) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -17969,6 +22742,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -17986,7 +22762,31 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            global::Google.Cloud.Dlp.V2.DateTime subBuilder = new global::Google.Cloud.Dlp.V2.DateTime();
+            if (parsedQuoteCase_ == ParsedQuoteOneofCase.DateTime) {
+              subBuilder.MergeFrom(DateTime);
+            }
+            input.ReadMessage(subBuilder);
+            DateTime = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -17994,7 +22794,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Message for a date time object.
   /// e.g. 2018-01-01, 5th August.
   /// </summary>
-  public sealed partial class DateTime : pb::IMessage<DateTime> {
+  public sealed partial class DateTime : pb::IMessage<DateTime>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DateTime> _parser = new pb::MessageParser<DateTime>(() => new DateTime());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18128,6 +22932,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (date_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
@@ -18147,7 +22954,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (date_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Date);
+      }
+      if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DayOfWeek);
+      }
+      if (time_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Time);
+      }
+      if (timeZone_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TimeZone);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -18201,6 +23034,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -18234,7 +23070,47 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (date_ == null) {
+              Date = new global::Google.Type.Date();
+            }
+            input.ReadMessage(Date);
+            break;
+          }
+          case 16: {
+            DayOfWeek = (global::Google.Type.DayOfWeek) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (time_ == null) {
+              Time = new global::Google.Type.TimeOfDay();
+            }
+            input.ReadMessage(Time);
+            break;
+          }
+          case 34: {
+            if (timeZone_ == null) {
+              TimeZone = new global::Google.Cloud.Dlp.V2.DateTime.Types.TimeZone();
+            }
+            input.ReadMessage(TimeZone);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DateTime message type.</summary>
@@ -18243,7 +23119,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Time zone of the date time object.
       /// </summary>
-      public sealed partial class TimeZone : pb::IMessage<TimeZone> {
+      public sealed partial class TimeZone : pb::IMessage<TimeZone>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<TimeZone> _parser = new pb::MessageParser<TimeZone>(() => new TimeZone());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18326,6 +23206,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (OffsetMinutes != 0) {
             output.WriteRawTag(8);
             output.WriteInt32(OffsetMinutes);
@@ -18333,7 +23216,21 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (OffsetMinutes != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(OffsetMinutes);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -18360,6 +23257,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -18372,7 +23272,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                OffsetMinutes = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -18384,7 +23303,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// The configuration that controls how the data will change.
   /// </summary>
-  public sealed partial class DeidentifyConfig : pb::IMessage<DeidentifyConfig> {
+  public sealed partial class DeidentifyConfig : pb::IMessage<DeidentifyConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeidentifyConfig> _parser = new pb::MessageParser<DeidentifyConfig>(() => new DeidentifyConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18532,6 +23455,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
         output.WriteRawTag(10);
         output.WriteMessage(InfoTypeTransformations);
@@ -18547,7 +23473,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InfoTypeTransformations);
+      }
+      if (transformationCase_ == TransformationOneofCase.RecordTransformations) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RecordTransformations);
+      }
+      if (transformationErrorHandling_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TransformationErrorHandling);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -18598,6 +23546,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -18631,7 +23582,47 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.InfoTypeTransformations subBuilder = new global::Google.Cloud.Dlp.V2.InfoTypeTransformations();
+            if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+              subBuilder.MergeFrom(InfoTypeTransformations);
+            }
+            input.ReadMessage(subBuilder);
+            InfoTypeTransformations = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.RecordTransformations subBuilder = new global::Google.Cloud.Dlp.V2.RecordTransformations();
+            if (transformationCase_ == TransformationOneofCase.RecordTransformations) {
+              subBuilder.MergeFrom(RecordTransformations);
+            }
+            input.ReadMessage(subBuilder);
+            RecordTransformations = subBuilder;
+            break;
+          }
+          case 26: {
+            if (transformationErrorHandling_ == null) {
+              TransformationErrorHandling = new global::Google.Cloud.Dlp.V2.TransformationErrorHandling();
+            }
+            input.ReadMessage(TransformationErrorHandling);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -18645,7 +23636,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// handled, is returned in the response as part of the
   /// `TransformationOverviews`.
   /// </summary>
-  public sealed partial class TransformationErrorHandling : pb::IMessage<TransformationErrorHandling> {
+  public sealed partial class TransformationErrorHandling : pb::IMessage<TransformationErrorHandling>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TransformationErrorHandling> _parser = new pb::MessageParser<TransformationErrorHandling>(() => new TransformationErrorHandling());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18772,6 +23767,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (modeCase_ == ModeOneofCase.ThrowError) {
         output.WriteRawTag(10);
         output.WriteMessage(ThrowError);
@@ -18783,7 +23781,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (modeCase_ == ModeOneofCase.ThrowError) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ThrowError);
+      }
+      if (modeCase_ == ModeOneofCase.LeaveUntransformed) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LeaveUntransformed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -18825,6 +23841,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -18851,7 +23870,40 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.TransformationErrorHandling.Types.ThrowError subBuilder = new global::Google.Cloud.Dlp.V2.TransformationErrorHandling.Types.ThrowError();
+            if (modeCase_ == ModeOneofCase.ThrowError) {
+              subBuilder.MergeFrom(ThrowError);
+            }
+            input.ReadMessage(subBuilder);
+            ThrowError = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.TransformationErrorHandling.Types.LeaveUntransformed subBuilder = new global::Google.Cloud.Dlp.V2.TransformationErrorHandling.Types.LeaveUntransformed();
+            if (modeCase_ == ModeOneofCase.LeaveUntransformed) {
+              subBuilder.MergeFrom(LeaveUntransformed);
+            }
+            input.ReadMessage(subBuilder);
+            LeaveUntransformed = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TransformationErrorHandling message type.</summary>
@@ -18860,7 +23912,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Throw an error and fail the request when a transformation error occurs.
       /// </summary>
-      public sealed partial class ThrowError : pb::IMessage<ThrowError> {
+      public sealed partial class ThrowError : pb::IMessage<ThrowError>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ThrowError> _parser = new pb::MessageParser<ThrowError>(() => new ThrowError());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18925,10 +23981,23 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -18949,6 +24018,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -18957,7 +24029,22 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -18967,7 +24054,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// an an IP address, this mode would leave the IP address unchanged in the
       /// response.
       /// </summary>
-      public sealed partial class LeaveUntransformed : pb::IMessage<LeaveUntransformed> {
+      public sealed partial class LeaveUntransformed : pb::IMessage<LeaveUntransformed>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<LeaveUntransformed> _parser = new pb::MessageParser<LeaveUntransformed>(() => new LeaveUntransformed());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19032,10 +24123,23 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -19056,6 +24160,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -19064,7 +24171,22 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -19076,7 +24198,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// A rule for transforming a value.
   /// </summary>
-  public sealed partial class PrimitiveTransformation : pb::IMessage<PrimitiveTransformation> {
+  public sealed partial class PrimitiveTransformation : pb::IMessage<PrimitiveTransformation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PrimitiveTransformation> _parser = new pb::MessageParser<PrimitiveTransformation>(() => new PrimitiveTransformation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19383,6 +24509,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (transformationCase_ == TransformationOneofCase.ReplaceConfig) {
         output.WriteRawTag(10);
         output.WriteMessage(ReplaceConfig);
@@ -19430,7 +24559,61 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (transformationCase_ == TransformationOneofCase.ReplaceConfig) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ReplaceConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.RedactConfig) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RedactConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CharacterMaskConfig) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CharacterMaskConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CryptoReplaceFfxFpeConfig) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CryptoReplaceFfxFpeConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.FixedSizeBucketingConfig) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FixedSizeBucketingConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.BucketingConfig) {
+        output.WriteRawTag(50);
+        output.WriteMessage(BucketingConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.ReplaceWithInfoTypeConfig) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ReplaceWithInfoTypeConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.TimePartConfig) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TimePartConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CryptoHashConfig) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CryptoHashConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.DateShiftConfig) {
+        output.WriteRawTag(90);
+        output.WriteMessage(DateShiftConfig);
+      }
+      if (transformationCase_ == TransformationOneofCase.CryptoDeterministicConfig) {
+        output.WriteRawTag(98);
+        output.WriteMessage(CryptoDeterministicConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -19553,6 +24736,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -19660,7 +24846,121 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.ReplaceValueConfig subBuilder = new global::Google.Cloud.Dlp.V2.ReplaceValueConfig();
+            if (transformationCase_ == TransformationOneofCase.ReplaceConfig) {
+              subBuilder.MergeFrom(ReplaceConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ReplaceConfig = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.RedactConfig subBuilder = new global::Google.Cloud.Dlp.V2.RedactConfig();
+            if (transformationCase_ == TransformationOneofCase.RedactConfig) {
+              subBuilder.MergeFrom(RedactConfig);
+            }
+            input.ReadMessage(subBuilder);
+            RedactConfig = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.CharacterMaskConfig subBuilder = new global::Google.Cloud.Dlp.V2.CharacterMaskConfig();
+            if (transformationCase_ == TransformationOneofCase.CharacterMaskConfig) {
+              subBuilder.MergeFrom(CharacterMaskConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CharacterMaskConfig = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig subBuilder = new global::Google.Cloud.Dlp.V2.CryptoReplaceFfxFpeConfig();
+            if (transformationCase_ == TransformationOneofCase.CryptoReplaceFfxFpeConfig) {
+              subBuilder.MergeFrom(CryptoReplaceFfxFpeConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CryptoReplaceFfxFpeConfig = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.FixedSizeBucketingConfig subBuilder = new global::Google.Cloud.Dlp.V2.FixedSizeBucketingConfig();
+            if (transformationCase_ == TransformationOneofCase.FixedSizeBucketingConfig) {
+              subBuilder.MergeFrom(FixedSizeBucketingConfig);
+            }
+            input.ReadMessage(subBuilder);
+            FixedSizeBucketingConfig = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Dlp.V2.BucketingConfig subBuilder = new global::Google.Cloud.Dlp.V2.BucketingConfig();
+            if (transformationCase_ == TransformationOneofCase.BucketingConfig) {
+              subBuilder.MergeFrom(BucketingConfig);
+            }
+            input.ReadMessage(subBuilder);
+            BucketingConfig = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Dlp.V2.ReplaceWithInfoTypeConfig subBuilder = new global::Google.Cloud.Dlp.V2.ReplaceWithInfoTypeConfig();
+            if (transformationCase_ == TransformationOneofCase.ReplaceWithInfoTypeConfig) {
+              subBuilder.MergeFrom(ReplaceWithInfoTypeConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ReplaceWithInfoTypeConfig = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Dlp.V2.TimePartConfig subBuilder = new global::Google.Cloud.Dlp.V2.TimePartConfig();
+            if (transformationCase_ == TransformationOneofCase.TimePartConfig) {
+              subBuilder.MergeFrom(TimePartConfig);
+            }
+            input.ReadMessage(subBuilder);
+            TimePartConfig = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Dlp.V2.CryptoHashConfig subBuilder = new global::Google.Cloud.Dlp.V2.CryptoHashConfig();
+            if (transformationCase_ == TransformationOneofCase.CryptoHashConfig) {
+              subBuilder.MergeFrom(CryptoHashConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CryptoHashConfig = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.Dlp.V2.DateShiftConfig subBuilder = new global::Google.Cloud.Dlp.V2.DateShiftConfig();
+            if (transformationCase_ == TransformationOneofCase.DateShiftConfig) {
+              subBuilder.MergeFrom(DateShiftConfig);
+            }
+            input.ReadMessage(subBuilder);
+            DateShiftConfig = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.Dlp.V2.CryptoDeterministicConfig subBuilder = new global::Google.Cloud.Dlp.V2.CryptoDeterministicConfig();
+            if (transformationCase_ == TransformationOneofCase.CryptoDeterministicConfig) {
+              subBuilder.MergeFrom(CryptoDeterministicConfig);
+            }
+            input.ReadMessage(subBuilder);
+            CryptoDeterministicConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -19668,7 +24968,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// For use with `Date`, `Timestamp`, and `TimeOfDay`, extract or preserve a
   /// portion of the value.
   /// </summary>
-  public sealed partial class TimePartConfig : pb::IMessage<TimePartConfig> {
+  public sealed partial class TimePartConfig : pb::IMessage<TimePartConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TimePartConfig> _parser = new pb::MessageParser<TimePartConfig>(() => new TimePartConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19750,6 +25054,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PartToExtract != global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PartToExtract);
@@ -19757,7 +25064,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PartToExtract != global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) PartToExtract);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -19784,6 +25105,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -19796,7 +25120,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PartToExtract = (global::Google.Cloud.Dlp.V2.TimePartConfig.Types.TimePart) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TimePartConfig message type.</summary>
@@ -19850,7 +25193,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Currently, only string and integer values can be hashed.
   /// See https://cloud.google.com/dlp/docs/pseudonymization to learn more.
   /// </summary>
-  public sealed partial class CryptoHashConfig : pb::IMessage<CryptoHashConfig> {
+  public sealed partial class CryptoHashConfig : pb::IMessage<CryptoHashConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CryptoHashConfig> _parser = new pb::MessageParser<CryptoHashConfig>(() => new CryptoHashConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19932,6 +25279,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (cryptoKey_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(CryptoKey);
@@ -19939,7 +25289,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (cryptoKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CryptoKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -19969,6 +25333,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -19984,7 +25351,29 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (cryptoKey_ == null) {
+              CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
+            }
+            input.ReadMessage(CryptoKey);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -19993,7 +25382,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// input. Outputs a base64 encoded representation of the encrypted output.
   /// Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297.
   /// </summary>
-  public sealed partial class CryptoDeterministicConfig : pb::IMessage<CryptoDeterministicConfig> {
+  public sealed partial class CryptoDeterministicConfig : pb::IMessage<CryptoDeterministicConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CryptoDeterministicConfig> _parser = new pb::MessageParser<CryptoDeterministicConfig>(() => new CryptoDeterministicConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20157,6 +25550,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (cryptoKey_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(CryptoKey);
@@ -20172,7 +25568,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (cryptoKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CryptoKey);
+      }
+      if (surrogateInfoType_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SurrogateInfoType);
+      }
+      if (context_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Context);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -20220,6 +25638,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -20249,14 +25670,54 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (cryptoKey_ == null) {
+              CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
+            }
+            input.ReadMessage(CryptoKey);
+            break;
+          }
+          case 18: {
+            if (surrogateInfoType_ == null) {
+              SurrogateInfoType = new global::Google.Cloud.Dlp.V2.InfoType();
+            }
+            input.ReadMessage(SurrogateInfoType);
+            break;
+          }
+          case 26: {
+            if (context_ == null) {
+              Context = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(Context);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Replace each input value with a given `Value`.
   /// </summary>
-  public sealed partial class ReplaceValueConfig : pb::IMessage<ReplaceValueConfig> {
+  public sealed partial class ReplaceValueConfig : pb::IMessage<ReplaceValueConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReplaceValueConfig> _parser = new pb::MessageParser<ReplaceValueConfig>(() => new ReplaceValueConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20338,6 +25799,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (newValue_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(NewValue);
@@ -20345,7 +25809,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (newValue_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NewValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -20375,6 +25853,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -20390,14 +25871,40 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (newValue_ == null) {
+              NewValue = new global::Google.Cloud.Dlp.V2.Value();
+            }
+            input.ReadMessage(NewValue);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Replace each matching finding with the name of the info_type.
   /// </summary>
-  public sealed partial class ReplaceWithInfoTypeConfig : pb::IMessage<ReplaceWithInfoTypeConfig> {
+  public sealed partial class ReplaceWithInfoTypeConfig : pb::IMessage<ReplaceWithInfoTypeConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReplaceWithInfoTypeConfig> _parser = new pb::MessageParser<ReplaceWithInfoTypeConfig>(() => new ReplaceWithInfoTypeConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20462,10 +25969,23 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -20486,6 +26006,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -20494,7 +26017,22 @@ namespace Google.Cloud.Dlp.V2 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -20503,7 +26041,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// transforming PHONE_NUMBER, and input 'My phone number is 206-555-0123', the
   /// output would be 'My phone number is '.
   /// </summary>
-  public sealed partial class RedactConfig : pb::IMessage<RedactConfig> {
+  public sealed partial class RedactConfig : pb::IMessage<RedactConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RedactConfig> _parser = new pb::MessageParser<RedactConfig>(() => new RedactConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20568,10 +26110,23 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -20592,6 +26147,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -20600,7 +26158,22 @@ namespace Google.Cloud.Dlp.V2 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -20608,7 +26181,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Characters to skip when doing deidentification of a value. These will be left
   /// alone and skipped.
   /// </summary>
-  public sealed partial class CharsToIgnore : pb::IMessage<CharsToIgnore> {
+  public sealed partial class CharsToIgnore : pb::IMessage<CharsToIgnore>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CharsToIgnore> _parser = new pb::MessageParser<CharsToIgnore>(() => new CharsToIgnore());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20736,6 +26313,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (charactersCase_ == CharactersOneofCase.CharactersToSkip) {
         output.WriteRawTag(10);
         output.WriteString(CharactersToSkip);
@@ -20747,7 +26327,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (charactersCase_ == CharactersOneofCase.CharactersToSkip) {
+        output.WriteRawTag(10);
+        output.WriteString(CharactersToSkip);
+      }
+      if (charactersCase_ == CharactersOneofCase.CommonCharactersToIgnore) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) CommonCharactersToIgnore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -20783,6 +26381,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -20800,7 +26401,31 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CharactersToSkip = input.ReadString();
+            break;
+          }
+          case 16: {
+            characters_ = input.ReadEnum();
+            charactersCase_ = CharactersOneofCase.CommonCharactersToIgnore;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CharsToIgnore message type.</summary>
@@ -20849,7 +26474,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// type. (This allows you to take a long like 123 and modify it to a string like
   /// **3.
   /// </summary>
-  public sealed partial class CharacterMaskConfig : pb::IMessage<CharacterMaskConfig> {
+  public sealed partial class CharacterMaskConfig : pb::IMessage<CharacterMaskConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CharacterMaskConfig> _parser = new pb::MessageParser<CharacterMaskConfig>(() => new CharacterMaskConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20992,6 +26621,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (MaskingCharacter.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(MaskingCharacter);
@@ -21008,7 +26640,30 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MaskingCharacter.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MaskingCharacter);
+      }
+      if (NumberToMask != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NumberToMask);
+      }
+      if (ReverseOrder != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ReverseOrder);
+      }
+      charactersToIgnore_.WriteTo(ref output, _repeated_charactersToIgnore_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -21049,6 +26704,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -21073,7 +26731,38 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MaskingCharacter = input.ReadString();
+            break;
+          }
+          case 16: {
+            NumberToMask = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            ReverseOrder = input.ReadBool();
+            break;
+          }
+          case 34: {
+            charactersToIgnore_.AddEntriesFrom(ref input, _repeated_charactersToIgnore_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -21095,7 +26784,11 @@ namespace Google.Cloud.Dlp.V2 {
   ///
   /// See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more.
   /// </summary>
-  public sealed partial class FixedSizeBucketingConfig : pb::IMessage<FixedSizeBucketingConfig> {
+  public sealed partial class FixedSizeBucketingConfig : pb::IMessage<FixedSizeBucketingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FixedSizeBucketingConfig> _parser = new pb::MessageParser<FixedSizeBucketingConfig>(() => new FixedSizeBucketingConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21218,6 +26911,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (lowerBound_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(LowerBound);
@@ -21233,7 +26929,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (lowerBound_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(LowerBound);
+      }
+      if (upperBound_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpperBound);
+      }
+      if (BucketSize != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(BucketSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -21278,6 +26996,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -21304,7 +27025,40 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (lowerBound_ == null) {
+              LowerBound = new global::Google.Cloud.Dlp.V2.Value();
+            }
+            input.ReadMessage(LowerBound);
+            break;
+          }
+          case 18: {
+            if (upperBound_ == null) {
+              UpperBound = new global::Google.Cloud.Dlp.V2.Value();
+            }
+            input.ReadMessage(UpperBound);
+            break;
+          }
+          case 25: {
+            BucketSize = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -21319,7 +27073,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// the type of the bound before comparing.
   /// See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more.
   /// </summary>
-  public sealed partial class BucketingConfig : pb::IMessage<BucketingConfig> {
+  public sealed partial class BucketingConfig : pb::IMessage<BucketingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BucketingConfig> _parser = new pb::MessageParser<BucketingConfig>(() => new BucketingConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21400,11 +27158,25 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       buckets_.WriteTo(output, _repeated_buckets_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      buckets_.WriteTo(ref output, _repeated_buckets_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -21427,6 +27199,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -21439,7 +27214,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            buckets_.AddEntriesFrom(ref input, _repeated_buckets_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the BucketingConfig message type.</summary>
@@ -21448,7 +27242,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Bucket is represented as a range, along with replacement values.
       /// </summary>
-      public sealed partial class Bucket : pb::IMessage<Bucket> {
+      public sealed partial class Bucket : pb::IMessage<Bucket>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Bucket> _parser = new pb::MessageParser<Bucket>(() => new Bucket());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21565,6 +27363,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (min_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Min);
@@ -21580,7 +27381,29 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (min_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Min);
+          }
+          if (max_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Max);
+          }
+          if (replacementValue_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ReplacementValue);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -21628,6 +27451,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -21657,7 +27483,43 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (min_ == null) {
+                  Min = new global::Google.Cloud.Dlp.V2.Value();
+                }
+                input.ReadMessage(Min);
+                break;
+              }
+              case 18: {
+                if (max_ == null) {
+                  Max = new global::Google.Cloud.Dlp.V2.Value();
+                }
+                input.ReadMessage(Max);
+                break;
+              }
+              case 26: {
+                if (replacementValue_ == null) {
+                  ReplacementValue = new global::Google.Cloud.Dlp.V2.Value();
+                }
+                input.ReadMessage(ReplacementValue);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -21681,7 +27543,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// do not require preserving the input alphabet space and size, plus warrant
   /// referential integrity.
   /// </summary>
-  public sealed partial class CryptoReplaceFfxFpeConfig : pb::IMessage<CryptoReplaceFfxFpeConfig> {
+  public sealed partial class CryptoReplaceFfxFpeConfig : pb::IMessage<CryptoReplaceFfxFpeConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CryptoReplaceFfxFpeConfig> _parser = new pb::MessageParser<CryptoReplaceFfxFpeConfig>(() => new CryptoReplaceFfxFpeConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21931,6 +27797,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (cryptoKey_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(CryptoKey);
@@ -21958,7 +27827,41 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (cryptoKey_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CryptoKey);
+      }
+      if (context_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Context);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.CommonAlphabet) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) CommonAlphabet);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.CustomAlphabet) {
+        output.WriteRawTag(42);
+        output.WriteString(CustomAlphabet);
+      }
+      if (alphabetCase_ == AlphabetOneofCase.Radix) {
+        output.WriteRawTag(48);
+        output.WriteInt32(Radix);
+      }
+      if (surrogateInfoType_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(SurrogateInfoType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -22027,6 +27930,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -22069,7 +27975,56 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (cryptoKey_ == null) {
+              CryptoKey = new global::Google.Cloud.Dlp.V2.CryptoKey();
+            }
+            input.ReadMessage(CryptoKey);
+            break;
+          }
+          case 18: {
+            if (context_ == null) {
+              Context = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(Context);
+            break;
+          }
+          case 32: {
+            alphabet_ = input.ReadEnum();
+            alphabetCase_ = AlphabetOneofCase.CommonAlphabet;
+            break;
+          }
+          case 42: {
+            CustomAlphabet = input.ReadString();
+            break;
+          }
+          case 48: {
+            Radix = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            if (surrogateInfoType_ == null) {
+              SurrogateInfoType = new global::Google.Cloud.Dlp.V2.InfoType();
+            }
+            input.ReadMessage(SurrogateInfoType);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CryptoReplaceFfxFpeConfig message type.</summary>
@@ -22115,7 +28070,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// IAM policy on the KMS CryptoKey (KEK) to ensure an attacker cannot
   /// unwrap the data crypto key.
   /// </summary>
-  public sealed partial class CryptoKey : pb::IMessage<CryptoKey> {
+  public sealed partial class CryptoKey : pb::IMessage<CryptoKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CryptoKey> _parser = new pb::MessageParser<CryptoKey>(() => new CryptoKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22262,6 +28221,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (sourceCase_ == SourceOneofCase.Transient) {
         output.WriteRawTag(10);
         output.WriteMessage(Transient);
@@ -22277,7 +28239,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (sourceCase_ == SourceOneofCase.Transient) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Transient);
+      }
+      if (sourceCase_ == SourceOneofCase.Unwrapped) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Unwrapped);
+      }
+      if (sourceCase_ == SourceOneofCase.KmsWrapped) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KmsWrapped);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -22328,6 +28312,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -22363,7 +28350,49 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.TransientCryptoKey subBuilder = new global::Google.Cloud.Dlp.V2.TransientCryptoKey();
+            if (sourceCase_ == SourceOneofCase.Transient) {
+              subBuilder.MergeFrom(Transient);
+            }
+            input.ReadMessage(subBuilder);
+            Transient = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.UnwrappedCryptoKey subBuilder = new global::Google.Cloud.Dlp.V2.UnwrappedCryptoKey();
+            if (sourceCase_ == SourceOneofCase.Unwrapped) {
+              subBuilder.MergeFrom(Unwrapped);
+            }
+            input.ReadMessage(subBuilder);
+            Unwrapped = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.KmsWrappedCryptoKey subBuilder = new global::Google.Cloud.Dlp.V2.KmsWrappedCryptoKey();
+            if (sourceCase_ == SourceOneofCase.KmsWrapped) {
+              subBuilder.MergeFrom(KmsWrapped);
+            }
+            input.ReadMessage(subBuilder);
+            KmsWrapped = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -22371,7 +28400,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Use this to have a random data crypto key generated.
   /// It will be discarded after the request finishes.
   /// </summary>
-  public sealed partial class TransientCryptoKey : pb::IMessage<TransientCryptoKey> {
+  public sealed partial class TransientCryptoKey : pb::IMessage<TransientCryptoKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TransientCryptoKey> _parser = new pb::MessageParser<TransientCryptoKey>(() => new TransientCryptoKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22458,6 +28491,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -22465,7 +28501,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -22492,6 +28542,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -22504,7 +28557,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -22512,7 +28584,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Using raw keys is prone to security risks due to accidentally
   /// leaking the key. Choose another type of key if possible.
   /// </summary>
-  public sealed partial class UnwrappedCryptoKey : pb::IMessage<UnwrappedCryptoKey> {
+  public sealed partial class UnwrappedCryptoKey : pb::IMessage<UnwrappedCryptoKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UnwrappedCryptoKey> _parser = new pb::MessageParser<UnwrappedCryptoKey>(() => new UnwrappedCryptoKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22594,6 +28670,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Key.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(Key);
@@ -22601,7 +28680,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Key);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -22628,6 +28721,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -22640,7 +28736,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -22651,7 +28766,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// to perform a crypto transformation using a kms-wrapped crypto key:
   /// dlp.kms.encrypt
   /// </summary>
-  public sealed partial class KmsWrappedCryptoKey : pb::IMessage<KmsWrappedCryptoKey> {
+  public sealed partial class KmsWrappedCryptoKey : pb::IMessage<KmsWrappedCryptoKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<KmsWrappedCryptoKey> _parser = new pb::MessageParser<KmsWrappedCryptoKey>(() => new KmsWrappedCryptoKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22750,6 +28869,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (WrappedKey.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(WrappedKey);
@@ -22761,7 +28883,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WrappedKey.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(WrappedKey);
+      }
+      if (CryptoKeyName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CryptoKeyName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -22794,6 +28934,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -22810,7 +28953,30 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            WrappedKey = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            CryptoKeyName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -22819,7 +28985,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// same context. See https://cloud.google.com/dlp/docs/concepts-date-shifting
   /// to learn more.
   /// </summary>
-  public sealed partial class DateShiftConfig : pb::IMessage<DateShiftConfig> {
+  public sealed partial class DateShiftConfig : pb::IMessage<DateShiftConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DateShiftConfig> _parser = new pb::MessageParser<DateShiftConfig>(() => new DateShiftConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22985,6 +29155,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (UpperBoundDays != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(UpperBoundDays);
@@ -23004,7 +29177,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UpperBoundDays != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(UpperBoundDays);
+      }
+      if (LowerBoundDays != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(LowerBoundDays);
+      }
+      if (context_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Context);
+      }
+      if (methodCase_ == MethodOneofCase.CryptoKey) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CryptoKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -23058,6 +29257,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -23090,7 +29292,46 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UpperBoundDays = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            LowerBoundDays = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            if (context_ == null) {
+              Context = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(Context);
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.CryptoKey subBuilder = new global::Google.Cloud.Dlp.V2.CryptoKey();
+            if (methodCase_ == MethodOneofCase.CryptoKey) {
+              subBuilder.MergeFrom(CryptoKey);
+            }
+            input.ReadMessage(subBuilder);
+            CryptoKey = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -23100,7 +29341,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// transformation is applied to only values that were identified as a specific
   /// info_type.
   /// </summary>
-  public sealed partial class InfoTypeTransformations : pb::IMessage<InfoTypeTransformations> {
+  public sealed partial class InfoTypeTransformations : pb::IMessage<InfoTypeTransformations>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InfoTypeTransformations> _parser = new pb::MessageParser<InfoTypeTransformations>(() => new InfoTypeTransformations());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23182,11 +29427,25 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       transformations_.WriteTo(output, _repeated_transformations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      transformations_.WriteTo(ref output, _repeated_transformations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -23209,6 +29468,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -23221,7 +29483,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            transformations_.AddEntriesFrom(ref input, _repeated_transformations_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the InfoTypeTransformations message type.</summary>
@@ -23231,7 +29512,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// A transformation to apply to text that is identified as a specific
       /// info_type.
       /// </summary>
-      public sealed partial class InfoTypeTransformation : pb::IMessage<InfoTypeTransformation> {
+      public sealed partial class InfoTypeTransformation : pb::IMessage<InfoTypeTransformation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<InfoTypeTransformation> _parser = new pb::MessageParser<InfoTypeTransformation>(() => new InfoTypeTransformation());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23331,6 +29616,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           infoTypes_.WriteTo(output, _repeated_infoTypes_codec);
           if (primitiveTransformation_ != null) {
             output.WriteRawTag(18);
@@ -23339,7 +29627,22 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          infoTypes_.WriteTo(ref output, _repeated_infoTypes_codec);
+          if (primitiveTransformation_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(PrimitiveTransformation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -23371,6 +29674,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -23390,7 +29696,33 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                infoTypes_.AddEntriesFrom(ref input, _repeated_infoTypes_codec);
+                break;
+              }
+              case 18: {
+                if (primitiveTransformation_ == null) {
+                  PrimitiveTransformation = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
+                }
+                input.ReadMessage(PrimitiveTransformation);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -23402,7 +29734,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// The transformation to apply to the field.
   /// </summary>
-  public sealed partial class FieldTransformation : pb::IMessage<FieldTransformation> {
+  public sealed partial class FieldTransformation : pb::IMessage<FieldTransformation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FieldTransformation> _parser = new pb::MessageParser<FieldTransformation>(() => new FieldTransformation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23571,6 +29907,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       fields_.WriteTo(output, _repeated_fields_codec);
       if (condition_ != null) {
         output.WriteRawTag(26);
@@ -23587,7 +29926,30 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      fields_.WriteTo(ref output, _repeated_fields_codec);
+      if (condition_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Condition);
+      }
+      if (transformationCase_ == TransformationOneofCase.PrimitiveTransformation) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PrimitiveTransformation);
+      }
+      if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InfoTypeTransformations);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -23640,6 +30002,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -23677,7 +30042,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
+            break;
+          }
+          case 26: {
+            if (condition_ == null) {
+              Condition = new global::Google.Cloud.Dlp.V2.RecordCondition();
+            }
+            input.ReadMessage(Condition);
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.PrimitiveTransformation subBuilder = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
+            if (transformationCase_ == TransformationOneofCase.PrimitiveTransformation) {
+              subBuilder.MergeFrom(PrimitiveTransformation);
+            }
+            input.ReadMessage(subBuilder);
+            PrimitiveTransformation = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.InfoTypeTransformations subBuilder = new global::Google.Cloud.Dlp.V2.InfoTypeTransformations();
+            if (transformationCase_ == TransformationOneofCase.InfoTypeTransformations) {
+              subBuilder.MergeFrom(InfoTypeTransformations);
+            }
+            input.ReadMessage(subBuilder);
+            InfoTypeTransformations = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -23685,7 +30094,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// A type of transformation that is applied over structured data such as a
   /// table.
   /// </summary>
-  public sealed partial class RecordTransformations : pb::IMessage<RecordTransformations> {
+  public sealed partial class RecordTransformations : pb::IMessage<RecordTransformations>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecordTransformations> _parser = new pb::MessageParser<RecordTransformations>(() => new RecordTransformations());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23783,12 +30196,27 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       fieldTransformations_.WriteTo(output, _repeated_fieldTransformations_codec);
       recordSuppressions_.WriteTo(output, _repeated_recordSuppressions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      fieldTransformations_.WriteTo(ref output, _repeated_fieldTransformations_codec);
+      recordSuppressions_.WriteTo(ref output, _repeated_recordSuppressions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -23813,6 +30241,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -23829,7 +30260,30 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            fieldTransformations_.AddEntriesFrom(ref input, _repeated_fieldTransformations_codec);
+            break;
+          }
+          case 18: {
+            recordSuppressions_.AddEntriesFrom(ref input, _repeated_recordSuppressions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -23837,7 +30291,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Configuration to suppress records whose suppression conditions evaluate to
   /// true.
   /// </summary>
-  public sealed partial class RecordSuppression : pb::IMessage<RecordSuppression> {
+  public sealed partial class RecordSuppression : pb::IMessage<RecordSuppression>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecordSuppression> _parser = new pb::MessageParser<RecordSuppression>(() => new RecordSuppression());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23920,6 +30378,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (condition_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Condition);
@@ -23927,7 +30388,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (condition_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Condition);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -23957,6 +30432,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -23972,7 +30450,29 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (condition_ == null) {
+              Condition = new global::Google.Cloud.Dlp.V2.RecordCondition();
+            }
+            input.ReadMessage(Condition);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -23980,7 +30480,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// A condition for determining whether a transformation should be applied to
   /// a field.
   /// </summary>
-  public sealed partial class RecordCondition : pb::IMessage<RecordCondition> {
+  public sealed partial class RecordCondition : pb::IMessage<RecordCondition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecordCondition> _parser = new pb::MessageParser<RecordCondition>(() => new RecordCondition());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24062,6 +30566,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (expressions_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(Expressions);
@@ -24069,7 +30576,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (expressions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Expressions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -24099,6 +30620,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -24114,7 +30638,29 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            if (expressions_ == null) {
+              Expressions = new global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions();
+            }
+            input.ReadMessage(Expressions);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RecordCondition message type.</summary>
@@ -24141,7 +30687,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// If we fail to compare do to type mismatch, a warning will be given and
       /// the condition will evaluate to false.
       /// </summary>
-      public sealed partial class Condition : pb::IMessage<Condition> {
+      public sealed partial class Condition : pb::IMessage<Condition>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Condition> _parser = new pb::MessageParser<Condition>(() => new Condition());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24257,6 +30807,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (field_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Field);
@@ -24272,7 +30825,29 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (field_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Field);
+          }
+          if (Operator != global::Google.Cloud.Dlp.V2.RelationalOperator.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) Operator);
+          }
+          if (value_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -24317,6 +30892,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -24343,14 +30921,51 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (field_ == null) {
+                  Field = new global::Google.Cloud.Dlp.V2.FieldId();
+                }
+                input.ReadMessage(Field);
+                break;
+              }
+              case 24: {
+                Operator = (global::Google.Cloud.Dlp.V2.RelationalOperator) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                if (value_ == null) {
+                  Value = new global::Google.Cloud.Dlp.V2.Value();
+                }
+                input.ReadMessage(Value);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// A collection of conditions.
       /// </summary>
-      public sealed partial class Conditions : pb::IMessage<Conditions> {
+      public sealed partial class Conditions : pb::IMessage<Conditions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Conditions> _parser = new pb::MessageParser<Conditions>(() => new Conditions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24431,11 +31046,25 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           conditions_.WriteTo(output, _repeated_conditions_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          conditions_.WriteTo(ref output, _repeated_conditions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -24458,6 +31087,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -24470,14 +31102,37 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                conditions_.AddEntriesFrom(ref input, _repeated_conditions_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// An expression, consisting or an operator and conditions.
       /// </summary>
-      public sealed partial class Expressions : pb::IMessage<Expressions> {
+      public sealed partial class Expressions : pb::IMessage<Expressions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Expressions> _parser = new pb::MessageParser<Expressions>(() => new Expressions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24602,6 +31257,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (LogicalOperator != global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) LogicalOperator);
@@ -24613,7 +31271,25 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (LogicalOperator != global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) LogicalOperator);
+          }
+          if (typeCase_ == TypeOneofCase.Conditions) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Conditions);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -24652,6 +31328,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -24673,7 +31352,35 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                LogicalOperator = (global::Google.Cloud.Dlp.V2.RecordCondition.Types.Expressions.Types.LogicalOperator) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                global::Google.Cloud.Dlp.V2.RecordCondition.Types.Conditions subBuilder = new global::Google.Cloud.Dlp.V2.RecordCondition.Types.Conditions();
+                if (typeCase_ == TypeOneofCase.Conditions) {
+                  subBuilder.MergeFrom(Conditions);
+                }
+                input.ReadMessage(subBuilder);
+                Conditions = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the Expressions message type.</summary>
@@ -24706,7 +31413,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Overview of the modifications that occurred.
   /// </summary>
-  public sealed partial class TransformationOverview : pb::IMessage<TransformationOverview> {
+  public sealed partial class TransformationOverview : pb::IMessage<TransformationOverview>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TransformationOverview> _parser = new pb::MessageParser<TransformationOverview>(() => new TransformationOverview());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24804,6 +31515,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TransformedBytes != 0L) {
         output.WriteRawTag(16);
         output.WriteInt64(TransformedBytes);
@@ -24812,7 +31526,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TransformedBytes != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(TransformedBytes);
+      }
+      transformationSummaries_.WriteTo(ref output, _repeated_transformationSummaries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -24841,6 +31570,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -24857,7 +31589,30 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            TransformedBytes = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            transformationSummaries_.AddEntriesFrom(ref input, _repeated_transformationSummaries_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -24866,7 +31621,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Only one of 'transformation', 'field_transformation', or 'record_suppress'
   /// will be set.
   /// </summary>
-  public sealed partial class TransformationSummary : pb::IMessage<TransformationSummary> {
+  public sealed partial class TransformationSummary : pb::IMessage<TransformationSummary>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TransformationSummary> _parser = new pb::MessageParser<TransformationSummary>(() => new TransformationSummary());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25050,6 +31809,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (infoType_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(InfoType);
@@ -25075,7 +31837,39 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (infoType_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InfoType);
+      }
+      if (field_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Field);
+      }
+      if (transformation_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Transformation);
+      }
+      results_.WriteTo(ref output, _repeated_results_codec);
+      fieldTransformations_.WriteTo(ref output, _repeated_fieldTransformations_codec);
+      if (recordSuppress_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RecordSuppress);
+      }
+      if (TransformedBytes != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(TransformedBytes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -25142,6 +31936,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -25190,7 +31987,62 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (infoType_ == null) {
+              InfoType = new global::Google.Cloud.Dlp.V2.InfoType();
+            }
+            input.ReadMessage(InfoType);
+            break;
+          }
+          case 18: {
+            if (field_ == null) {
+              Field = new global::Google.Cloud.Dlp.V2.FieldId();
+            }
+            input.ReadMessage(Field);
+            break;
+          }
+          case 26: {
+            if (transformation_ == null) {
+              Transformation = new global::Google.Cloud.Dlp.V2.PrimitiveTransformation();
+            }
+            input.ReadMessage(Transformation);
+            break;
+          }
+          case 34: {
+            results_.AddEntriesFrom(ref input, _repeated_results_codec);
+            break;
+          }
+          case 42: {
+            fieldTransformations_.AddEntriesFrom(ref input, _repeated_fieldTransformations_codec);
+            break;
+          }
+          case 50: {
+            if (recordSuppress_ == null) {
+              RecordSuppress = new global::Google.Cloud.Dlp.V2.RecordSuppression();
+            }
+            input.ReadMessage(RecordSuppress);
+            break;
+          }
+          case 56: {
+            TransformedBytes = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TransformationSummary message type.</summary>
@@ -25218,7 +32070,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// A collection that informs the user the number of times a particular
       /// `TransformationResultCode` and error details occurred.
       /// </summary>
-      public sealed partial class SummaryResult : pb::IMessage<SummaryResult> {
+      public sealed partial class SummaryResult : pb::IMessage<SummaryResult>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<SummaryResult> _parser = new pb::MessageParser<SummaryResult>(() => new SummaryResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25335,6 +32191,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Count != 0L) {
             output.WriteRawTag(8);
             output.WriteInt64(Count);
@@ -25350,7 +32209,29 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Count != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Count);
+          }
+          if (Code != global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Code);
+          }
+          if (Details.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Details);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -25389,6 +32270,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -25409,7 +32293,34 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Count = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                Code = (global::Google.Cloud.Dlp.V2.TransformationSummary.Types.TransformationResultCode) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Details = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -25421,7 +32332,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Schedule for triggeredJobs.
   /// </summary>
-  public sealed partial class Schedule : pb::IMessage<Schedule> {
+  public sealed partial class Schedule : pb::IMessage<Schedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Schedule> _parser = new pb::MessageParser<Schedule>(() => new Schedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25535,6 +32450,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (optionCase_ == OptionOneofCase.RecurrencePeriodDuration) {
         output.WriteRawTag(10);
         output.WriteMessage(RecurrencePeriodDuration);
@@ -25542,7 +32460,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (optionCase_ == OptionOneofCase.RecurrencePeriodDuration) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RecurrencePeriodDuration);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -25575,6 +32507,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -25592,7 +32527,31 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (optionCase_ == OptionOneofCase.RecurrencePeriodDuration) {
+              subBuilder.MergeFrom(RecurrencePeriodDuration);
+            }
+            input.ReadMessage(subBuilder);
+            RecurrencePeriodDuration = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -25600,7 +32559,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Job trigger option for hybrid jobs. Jobs must be manually created
   /// and finished.
   /// </summary>
-  public sealed partial class Manual : pb::IMessage<Manual> {
+  public sealed partial class Manual : pb::IMessage<Manual>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Manual> _parser = new pb::MessageParser<Manual>(() => new Manual());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25665,10 +32628,23 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -25689,6 +32665,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -25697,7 +32676,22 @@ namespace Google.Cloud.Dlp.V2 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -25707,7 +32701,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// InspectConfig. See https://cloud.google.com/dlp/docs/concepts-templates
   /// to learn more.
   /// </summary>
-  public sealed partial class InspectTemplate : pb::IMessage<InspectTemplate> {
+  public sealed partial class InspectTemplate : pb::IMessage<InspectTemplate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectTemplate> _parser = new pb::MessageParser<InspectTemplate>(() => new InspectTemplate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25878,6 +32876,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -25905,7 +32906,41 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      if (inspectConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(InspectConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -25971,6 +33006,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -26012,7 +33050,55 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            if (inspectConfig_ == null) {
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
+            }
+            input.ReadMessage(InspectConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -26020,7 +33106,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// DeidentifyTemplates contains instructions on how to de-identify content.
   /// See https://cloud.google.com/dlp/docs/concepts-templates to learn more.
   /// </summary>
-  public sealed partial class DeidentifyTemplate : pb::IMessage<DeidentifyTemplate> {
+  public sealed partial class DeidentifyTemplate : pb::IMessage<DeidentifyTemplate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeidentifyTemplate> _parser = new pb::MessageParser<DeidentifyTemplate>(() => new DeidentifyTemplate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26191,6 +33281,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -26218,7 +33311,41 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      if (deidentifyConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DeidentifyConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -26284,6 +33411,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -26325,7 +33455,55 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            if (deidentifyConfig_ == null) {
+              DeidentifyConfig = new global::Google.Cloud.Dlp.V2.DeidentifyConfig();
+            }
+            input.ReadMessage(DeidentifyConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -26333,7 +33511,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Details information about an error encountered during job execution or
   /// the results of an unsuccessful activation of the JobTrigger.
   /// </summary>
-  public sealed partial class Error : pb::IMessage<Error> {
+  public sealed partial class Error : pb::IMessage<Error>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Error> _parser = new pb::MessageParser<Error>(() => new Error());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26431,6 +33613,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (details_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Details);
@@ -26439,7 +33624,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (details_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Details);
+      }
+      timestamps_.WriteTo(ref output, _repeated_timestamps_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -26471,6 +33671,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -26490,7 +33693,33 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (details_ == null) {
+              Details = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Details);
+            break;
+          }
+          case 18: {
+            timestamps_.AddEntriesFrom(ref input, _repeated_timestamps_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -26498,7 +33727,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Contains a configuration to make dlp api calls on a repeating basis.
   /// See https://cloud.google.com/dlp/docs/concepts-job-triggers to learn more.
   /// </summary>
-  public sealed partial class JobTrigger : pb::IMessage<JobTrigger> {
+  public sealed partial class JobTrigger : pb::IMessage<JobTrigger>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<JobTrigger> _parser = new pb::MessageParser<JobTrigger>(() => new JobTrigger());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -26763,6 +33996,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -26800,7 +34036,51 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (jobCase_ == JobOneofCase.InspectJob) {
+        output.WriteRawTag(34);
+        output.WriteMessage(InspectJob);
+      }
+      triggers_.WriteTo(ref output, _repeated_triggers_codec);
+      errors_.WriteTo(ref output, _repeated_errors_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UpdateTime);
+      }
+      if (lastRunTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LastRunTime);
+      }
+      if (Status != global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -26888,6 +34168,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -26950,7 +34233,76 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.InspectJobConfig subBuilder = new global::Google.Cloud.Dlp.V2.InspectJobConfig();
+            if (jobCase_ == JobOneofCase.InspectJob) {
+              subBuilder.MergeFrom(InspectJob);
+            }
+            input.ReadMessage(subBuilder);
+            InspectJob = subBuilder;
+            break;
+          }
+          case 42: {
+            triggers_.AddEntriesFrom(ref input, _repeated_triggers_codec);
+            break;
+          }
+          case 50: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
+            break;
+          }
+          case 58: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 66: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 74: {
+            if (lastRunTime_ == null) {
+              LastRunTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastRunTime);
+            break;
+          }
+          case 80: {
+            Status = (global::Google.Cloud.Dlp.V2.JobTrigger.Types.Status) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the JobTrigger message type.</summary>
@@ -26984,7 +34336,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// What event needs to occur for a new job to be started.
       /// </summary>
-      public sealed partial class Trigger : pb::IMessage<Trigger> {
+      public sealed partial class Trigger : pb::IMessage<Trigger>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Trigger> _parser = new pb::MessageParser<Trigger>(() => new Trigger());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27114,6 +34470,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (triggerCase_ == TriggerOneofCase.Schedule) {
             output.WriteRawTag(10);
             output.WriteMessage(Schedule);
@@ -27125,7 +34484,25 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (triggerCase_ == TriggerOneofCase.Schedule) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Schedule);
+          }
+          if (triggerCase_ == TriggerOneofCase.Manual) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Manual);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -27167,6 +34544,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -27193,7 +34573,40 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Dlp.V2.Schedule subBuilder = new global::Google.Cloud.Dlp.V2.Schedule();
+                if (triggerCase_ == TriggerOneofCase.Schedule) {
+                  subBuilder.MergeFrom(Schedule);
+                }
+                input.ReadMessage(subBuilder);
+                Schedule = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Dlp.V2.Manual subBuilder = new global::Google.Cloud.Dlp.V2.Manual();
+                if (triggerCase_ == TriggerOneofCase.Manual) {
+                  subBuilder.MergeFrom(Manual);
+                }
+                input.ReadMessage(subBuilder);
+                Manual = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -27206,7 +34619,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// A task to execute on the completion of a job.
   /// See https://cloud.google.com/dlp/docs/concepts-actions to learn more.
   /// </summary>
-  public sealed partial class Action : pb::IMessage<Action> {
+  public sealed partial class Action : pb::IMessage<Action>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Action> _parser = new pb::MessageParser<Action>(() => new Action());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27414,6 +34831,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (actionCase_ == ActionOneofCase.SaveFindings) {
         output.WriteRawTag(10);
         output.WriteMessage(SaveFindings);
@@ -27441,7 +34861,41 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (actionCase_ == ActionOneofCase.SaveFindings) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SaveFindings);
+      }
+      if (actionCase_ == ActionOneofCase.PubSub) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PubSub);
+      }
+      if (actionCase_ == ActionOneofCase.PublishSummaryToCscc) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PublishSummaryToCscc);
+      }
+      if (actionCase_ == ActionOneofCase.PublishFindingsToCloudDataCatalog) {
+        output.WriteRawTag(42);
+        output.WriteMessage(PublishFindingsToCloudDataCatalog);
+      }
+      if (actionCase_ == ActionOneofCase.JobNotificationEmails) {
+        output.WriteRawTag(66);
+        output.WriteMessage(JobNotificationEmails);
+      }
+      if (actionCase_ == ActionOneofCase.PublishToStackdriver) {
+        output.WriteRawTag(74);
+        output.WriteMessage(PublishToStackdriver);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -27519,6 +34973,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -27581,7 +35038,76 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.Action.Types.SaveFindings subBuilder = new global::Google.Cloud.Dlp.V2.Action.Types.SaveFindings();
+            if (actionCase_ == ActionOneofCase.SaveFindings) {
+              subBuilder.MergeFrom(SaveFindings);
+            }
+            input.ReadMessage(subBuilder);
+            SaveFindings = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.Action.Types.PublishToPubSub subBuilder = new global::Google.Cloud.Dlp.V2.Action.Types.PublishToPubSub();
+            if (actionCase_ == ActionOneofCase.PubSub) {
+              subBuilder.MergeFrom(PubSub);
+            }
+            input.ReadMessage(subBuilder);
+            PubSub = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.Action.Types.PublishSummaryToCscc subBuilder = new global::Google.Cloud.Dlp.V2.Action.Types.PublishSummaryToCscc();
+            if (actionCase_ == ActionOneofCase.PublishSummaryToCscc) {
+              subBuilder.MergeFrom(PublishSummaryToCscc);
+            }
+            input.ReadMessage(subBuilder);
+            PublishSummaryToCscc = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.Action.Types.PublishFindingsToCloudDataCatalog subBuilder = new global::Google.Cloud.Dlp.V2.Action.Types.PublishFindingsToCloudDataCatalog();
+            if (actionCase_ == ActionOneofCase.PublishFindingsToCloudDataCatalog) {
+              subBuilder.MergeFrom(PublishFindingsToCloudDataCatalog);
+            }
+            input.ReadMessage(subBuilder);
+            PublishFindingsToCloudDataCatalog = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Dlp.V2.Action.Types.JobNotificationEmails subBuilder = new global::Google.Cloud.Dlp.V2.Action.Types.JobNotificationEmails();
+            if (actionCase_ == ActionOneofCase.JobNotificationEmails) {
+              subBuilder.MergeFrom(JobNotificationEmails);
+            }
+            input.ReadMessage(subBuilder);
+            JobNotificationEmails = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.Dlp.V2.Action.Types.PublishToStackdriver subBuilder = new global::Google.Cloud.Dlp.V2.Action.Types.PublishToStackdriver();
+            if (actionCase_ == ActionOneofCase.PublishToStackdriver) {
+              subBuilder.MergeFrom(PublishToStackdriver);
+            }
+            input.ReadMessage(subBuilder);
+            PublishToStackdriver = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Action message type.</summary>
@@ -27593,7 +35119,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// specified.
       /// Compatible with: Inspect, Risk
       /// </summary>
-      public sealed partial class SaveFindings : pb::IMessage<SaveFindings> {
+      public sealed partial class SaveFindings : pb::IMessage<SaveFindings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<SaveFindings> _parser = new pb::MessageParser<SaveFindings>(() => new SaveFindings());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27675,6 +35205,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (outputConfig_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(OutputConfig);
@@ -27682,7 +35215,21 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (outputConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(OutputConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -27712,6 +35259,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -27727,7 +35277,29 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (outputConfig_ == null) {
+                  OutputConfig = new global::Google.Cloud.Dlp.V2.OutputStorageConfig();
+                }
+                input.ReadMessage(OutputConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -27738,7 +35310,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// [`DlpJob.name`](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob).
       /// Compatible with: Inspect, Risk
       /// </summary>
-      public sealed partial class PublishToPubSub : pb::IMessage<PublishToPubSub> {
+      public sealed partial class PublishToPubSub : pb::IMessage<PublishToPubSub>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<PublishToPubSub> _parser = new pb::MessageParser<PublishToPubSub>(() => new PublishToPubSub());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27823,6 +35399,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Topic.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Topic);
@@ -27830,7 +35409,21 @@ namespace Google.Cloud.Dlp.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Topic.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Topic);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -27857,6 +35450,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -27869,7 +35465,26 @@ namespace Google.Cloud.Dlp.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Topic = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -27885,7 +35500,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Only a single instance of this action can be specified.
       /// Compatible with: Inspect
       /// </summary>
-      public sealed partial class PublishSummaryToCscc : pb::IMessage<PublishSummaryToCscc> {
+      public sealed partial class PublishSummaryToCscc : pb::IMessage<PublishSummaryToCscc>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<PublishSummaryToCscc> _parser = new pb::MessageParser<PublishSummaryToCscc>(() => new PublishSummaryToCscc());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -27950,10 +35569,23 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -27974,6 +35606,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -27982,7 +35617,22 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -27998,7 +35648,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// all resources being scanned are BigQuery tables.
       /// Compatible with: Inspect
       /// </summary>
-      public sealed partial class PublishFindingsToCloudDataCatalog : pb::IMessage<PublishFindingsToCloudDataCatalog> {
+      public sealed partial class PublishFindingsToCloudDataCatalog : pb::IMessage<PublishFindingsToCloudDataCatalog>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<PublishFindingsToCloudDataCatalog> _parser = new pb::MessageParser<PublishFindingsToCloudDataCatalog>(() => new PublishFindingsToCloudDataCatalog());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28063,10 +35717,23 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -28087,6 +35754,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -28095,7 +35765,22 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -28103,7 +35788,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// Enable email notification to project owners and editors on jobs's
       /// completion/failure.
       /// </summary>
-      public sealed partial class JobNotificationEmails : pb::IMessage<JobNotificationEmails> {
+      public sealed partial class JobNotificationEmails : pb::IMessage<JobNotificationEmails>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<JobNotificationEmails> _parser = new pb::MessageParser<JobNotificationEmails>(() => new JobNotificationEmails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28168,10 +35857,23 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -28192,6 +35894,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -28200,7 +35905,22 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -28210,7 +35930,11 @@ namespace Google.Cloud.Dlp.V2 {
       /// how many findings were found for it. CustomDetectors will be bucketed
       /// as 'Custom' under the Stackdriver label 'info_type'.
       /// </summary>
-      public sealed partial class PublishToStackdriver : pb::IMessage<PublishToStackdriver> {
+      public sealed partial class PublishToStackdriver : pb::IMessage<PublishToStackdriver>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<PublishToStackdriver> _parser = new pb::MessageParser<PublishToStackdriver>(() => new PublishToStackdriver());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28275,10 +35999,23 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -28299,6 +36036,9 @@ namespace Google.Cloud.Dlp.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -28307,7 +36047,22 @@ namespace Google.Cloud.Dlp.V2 {
                 break;
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -28319,7 +36074,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// Request message for CreateInspectTemplate.
   /// </summary>
-  public sealed partial class CreateInspectTemplateRequest : pb::IMessage<CreateInspectTemplateRequest> {
+  public sealed partial class CreateInspectTemplateRequest : pb::IMessage<CreateInspectTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateInspectTemplateRequest> _parser = new pb::MessageParser<CreateInspectTemplateRequest>(() => new CreateInspectTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28474,6 +36233,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -28493,7 +36255,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (inspectTemplate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InspectTemplate);
+      }
+      if (TemplateId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TemplateId);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -28541,6 +36329,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -28568,14 +36359,52 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inspectTemplate_ == null) {
+              InspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+            }
+            input.ReadMessage(InspectTemplate);
+            break;
+          }
+          case 26: {
+            TemplateId = input.ReadString();
+            break;
+          }
+          case 34: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for UpdateInspectTemplate.
   /// </summary>
-  public sealed partial class UpdateInspectTemplateRequest : pb::IMessage<UpdateInspectTemplateRequest> {
+  public sealed partial class UpdateInspectTemplateRequest : pb::IMessage<UpdateInspectTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateInspectTemplateRequest> _parser = new pb::MessageParser<UpdateInspectTemplateRequest>(() => new UpdateInspectTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28693,6 +36522,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -28708,7 +36540,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (inspectTemplate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InspectTemplate);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -28753,6 +36607,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -28779,14 +36636,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inspectTemplate_ == null) {
+              InspectTemplate = new global::Google.Cloud.Dlp.V2.InspectTemplate();
+            }
+            input.ReadMessage(InspectTemplate);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for GetInspectTemplate.
   /// </summary>
-  public sealed partial class GetInspectTemplateRequest : pb::IMessage<GetInspectTemplateRequest> {
+  public sealed partial class GetInspectTemplateRequest : pb::IMessage<GetInspectTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetInspectTemplateRequest> _parser = new pb::MessageParser<GetInspectTemplateRequest>(() => new GetInspectTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -28870,6 +36764,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -28877,7 +36774,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -28904,6 +36815,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -28916,14 +36830,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for ListInspectTemplates.
   /// </summary>
-  public sealed partial class ListInspectTemplatesRequest : pb::IMessage<ListInspectTemplatesRequest> {
+  public sealed partial class ListInspectTemplatesRequest : pb::IMessage<ListInspectTemplatesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListInspectTemplatesRequest> _parser = new pb::MessageParser<ListInspectTemplatesRequest>(() => new ListInspectTemplatesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29106,6 +37043,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -29129,7 +37069,37 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(OrderBy);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -29180,6 +37150,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -29208,14 +37181,53 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 42: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response message for ListInspectTemplates.
   /// </summary>
-  public sealed partial class ListInspectTemplatesResponse : pb::IMessage<ListInspectTemplatesResponse> {
+  public sealed partial class ListInspectTemplatesResponse : pb::IMessage<ListInspectTemplatesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListInspectTemplatesResponse> _parser = new pb::MessageParser<ListInspectTemplatesResponse>(() => new ListInspectTemplatesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29314,6 +37326,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       inspectTemplates_.WriteTo(output, _repeated_inspectTemplates_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -29322,7 +37337,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      inspectTemplates_.WriteTo(ref output, _repeated_inspectTemplates_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -29351,6 +37381,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -29367,14 +37400,41 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            inspectTemplates_.AddEntriesFrom(ref input, _repeated_inspectTemplates_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for DeleteInspectTemplate.
   /// </summary>
-  public sealed partial class DeleteInspectTemplateRequest : pb::IMessage<DeleteInspectTemplateRequest> {
+  public sealed partial class DeleteInspectTemplateRequest : pb::IMessage<DeleteInspectTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteInspectTemplateRequest> _parser = new pb::MessageParser<DeleteInspectTemplateRequest>(() => new DeleteInspectTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29458,6 +37518,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -29465,7 +37528,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -29492,6 +37569,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -29504,14 +37584,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for CreateJobTrigger.
   /// </summary>
-  public sealed partial class CreateJobTriggerRequest : pb::IMessage<CreateJobTriggerRequest> {
+  public sealed partial class CreateJobTriggerRequest : pb::IMessage<CreateJobTriggerRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateJobTriggerRequest> _parser = new pb::MessageParser<CreateJobTriggerRequest>(() => new CreateJobTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29662,6 +37765,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -29681,7 +37787,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (jobTrigger_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(JobTrigger);
+      }
+      if (TriggerId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TriggerId);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -29729,6 +37861,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -29756,14 +37891,52 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (jobTrigger_ == null) {
+              JobTrigger = new global::Google.Cloud.Dlp.V2.JobTrigger();
+            }
+            input.ReadMessage(JobTrigger);
+            break;
+          }
+          case 26: {
+            TriggerId = input.ReadString();
+            break;
+          }
+          case 34: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for ActivateJobTrigger.
   /// </summary>
-  public sealed partial class ActivateJobTriggerRequest : pb::IMessage<ActivateJobTriggerRequest> {
+  public sealed partial class ActivateJobTriggerRequest : pb::IMessage<ActivateJobTriggerRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ActivateJobTriggerRequest> _parser = new pb::MessageParser<ActivateJobTriggerRequest>(() => new ActivateJobTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -29846,6 +38019,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -29853,7 +38029,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -29880,6 +38070,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -29892,14 +38085,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for UpdateJobTrigger.
   /// </summary>
-  public sealed partial class UpdateJobTriggerRequest : pb::IMessage<UpdateJobTriggerRequest> {
+  public sealed partial class UpdateJobTriggerRequest : pb::IMessage<UpdateJobTriggerRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateJobTriggerRequest> _parser = new pb::MessageParser<UpdateJobTriggerRequest>(() => new UpdateJobTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30016,6 +38232,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -30031,7 +38250,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (jobTrigger_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(JobTrigger);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -30076,6 +38317,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -30102,14 +38346,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (jobTrigger_ == null) {
+              JobTrigger = new global::Google.Cloud.Dlp.V2.JobTrigger();
+            }
+            input.ReadMessage(JobTrigger);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for GetJobTrigger.
   /// </summary>
-  public sealed partial class GetJobTriggerRequest : pb::IMessage<GetJobTriggerRequest> {
+  public sealed partial class GetJobTriggerRequest : pb::IMessage<GetJobTriggerRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetJobTriggerRequest> _parser = new pb::MessageParser<GetJobTriggerRequest>(() => new GetJobTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30192,6 +38473,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -30199,7 +38483,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -30226,6 +38524,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -30238,7 +38539,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -30247,7 +38567,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// jobs such as calculating risk metrics or inspecting Google Cloud
   /// Storage.
   /// </summary>
-  public sealed partial class CreateDlpJobRequest : pb::IMessage<CreateDlpJobRequest> {
+  public sealed partial class CreateDlpJobRequest : pb::IMessage<CreateDlpJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateDlpJobRequest> _parser = new pb::MessageParser<CreateDlpJobRequest>(() => new CreateDlpJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30443,6 +38767,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -30466,7 +38793,37 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (jobCase_ == JobOneofCase.InspectJob) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InspectJob);
+      }
+      if (jobCase_ == JobOneofCase.RiskJob) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RiskJob);
+      }
+      if (JobId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(JobId);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -30526,6 +38883,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -30564,14 +38924,63 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.InspectJobConfig subBuilder = new global::Google.Cloud.Dlp.V2.InspectJobConfig();
+            if (jobCase_ == JobOneofCase.InspectJob) {
+              subBuilder.MergeFrom(InspectJob);
+            }
+            input.ReadMessage(subBuilder);
+            InspectJob = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.RiskAnalysisJobConfig subBuilder = new global::Google.Cloud.Dlp.V2.RiskAnalysisJobConfig();
+            if (jobCase_ == JobOneofCase.RiskJob) {
+              subBuilder.MergeFrom(RiskJob);
+            }
+            input.ReadMessage(subBuilder);
+            RiskJob = subBuilder;
+            break;
+          }
+          case 34: {
+            JobId = input.ReadString();
+            break;
+          }
+          case 42: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for ListJobTriggers.
   /// </summary>
-  public sealed partial class ListJobTriggersRequest : pb::IMessage<ListJobTriggersRequest> {
+  public sealed partial class ListJobTriggersRequest : pb::IMessage<ListJobTriggersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListJobTriggersRequest> _parser = new pb::MessageParser<ListJobTriggersRequest>(() => new ListJobTriggersRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -30792,6 +39201,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -30819,7 +39231,41 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(OrderBy);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -30876,6 +39322,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -30908,14 +39357,57 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 58: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response message for ListJobTriggers.
   /// </summary>
-  public sealed partial class ListJobTriggersResponse : pb::IMessage<ListJobTriggersResponse> {
+  public sealed partial class ListJobTriggersResponse : pb::IMessage<ListJobTriggersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListJobTriggersResponse> _parser = new pb::MessageParser<ListJobTriggersResponse>(() => new ListJobTriggersResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -31014,6 +39506,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       jobTriggers_.WriteTo(output, _repeated_jobTriggers_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -31022,7 +39517,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jobTriggers_.WriteTo(ref output, _repeated_jobTriggers_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -31051,6 +39561,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -31067,14 +39580,41 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            jobTriggers_.AddEntriesFrom(ref input, _repeated_jobTriggers_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for DeleteJobTrigger.
   /// </summary>
-  public sealed partial class DeleteJobTriggerRequest : pb::IMessage<DeleteJobTriggerRequest> {
+  public sealed partial class DeleteJobTriggerRequest : pb::IMessage<DeleteJobTriggerRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteJobTriggerRequest> _parser = new pb::MessageParser<DeleteJobTriggerRequest>(() => new DeleteJobTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -31157,6 +39697,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -31164,7 +39707,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -31191,6 +39748,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -31203,14 +39763,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Controls what and how to inspect for findings.
   /// </summary>
-  public sealed partial class InspectJobConfig : pb::IMessage<InspectJobConfig> {
+  public sealed partial class InspectJobConfig : pb::IMessage<InspectJobConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InspectJobConfig> _parser = new pb::MessageParser<InspectJobConfig>(() => new InspectJobConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -31344,6 +39927,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (storageConfig_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(StorageConfig);
@@ -31360,7 +39946,30 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (storageConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StorageConfig);
+      }
+      if (inspectConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InspectConfig);
+      }
+      if (InspectTemplateName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(InspectTemplateName);
+      }
+      actions_.WriteTo(ref output, _repeated_actions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -31407,6 +40016,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -31437,14 +40049,55 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (storageConfig_ == null) {
+              StorageConfig = new global::Google.Cloud.Dlp.V2.StorageConfig();
+            }
+            input.ReadMessage(StorageConfig);
+            break;
+          }
+          case 18: {
+            if (inspectConfig_ == null) {
+              InspectConfig = new global::Google.Cloud.Dlp.V2.InspectConfig();
+            }
+            input.ReadMessage(InspectConfig);
+            break;
+          }
+          case 26: {
+            InspectTemplateName = input.ReadString();
+            break;
+          }
+          case 34: {
+            actions_.AddEntriesFrom(ref input, _repeated_actions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Combines all of the information about a DLP job.
   /// </summary>
-  public sealed partial class DlpJob : pb::IMessage<DlpJob> {
+  public sealed partial class DlpJob : pb::IMessage<DlpJob>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DlpJob> _parser = new pb::MessageParser<DlpJob>(() => new DlpJob());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -31707,6 +40360,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -31747,7 +40403,54 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (State != global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      if (detailsCase_ == DetailsOneofCase.RiskDetails) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RiskDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.InspectDetails) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InspectDetails);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(CreateTime);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EndTime);
+      }
+      if (JobTriggerName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(JobTriggerName);
+      }
+      errors_.WriteTo(ref output, _repeated_errors_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -31842,6 +40545,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -31909,7 +40615,81 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Cloud.Dlp.V2.DlpJobType) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Dlp.V2.DlpJob.Types.JobState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails subBuilder = new global::Google.Cloud.Dlp.V2.AnalyzeDataSourceRiskDetails();
+            if (detailsCase_ == DetailsOneofCase.RiskDetails) {
+              subBuilder.MergeFrom(RiskDetails);
+            }
+            input.ReadMessage(subBuilder);
+            RiskDetails = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.InspectDataSourceDetails subBuilder = new global::Google.Cloud.Dlp.V2.InspectDataSourceDetails();
+            if (detailsCase_ == DetailsOneofCase.InspectDetails) {
+              subBuilder.MergeFrom(InspectDetails);
+            }
+            input.ReadMessage(subBuilder);
+            InspectDetails = subBuilder;
+            break;
+          }
+          case 50: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 58: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 66: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 82: {
+            JobTriggerName = input.ReadString();
+            break;
+          }
+          case 90: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DlpJob message type.</summary>
@@ -31961,7 +40741,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// <summary>
   /// The request message for [DlpJobs.GetDlpJob][].
   /// </summary>
-  public sealed partial class GetDlpJobRequest : pb::IMessage<GetDlpJobRequest> {
+  public sealed partial class GetDlpJobRequest : pb::IMessage<GetDlpJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetDlpJobRequest> _parser = new pb::MessageParser<GetDlpJobRequest>(() => new GetDlpJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32043,6 +40827,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -32050,7 +40837,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -32077,6 +40878,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -32089,14 +40893,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The request message for listing DLP jobs.
   /// </summary>
-  public sealed partial class ListDlpJobsRequest : pb::IMessage<ListDlpJobsRequest> {
+  public sealed partial class ListDlpJobsRequest : pb::IMessage<ListDlpJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDlpJobsRequest> _parser = new pb::MessageParser<ListDlpJobsRequest>(() => new ListDlpJobsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32334,6 +41161,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Filter.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Filter);
@@ -32365,7 +41195,45 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Filter.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Parent);
+      }
+      if (Type != global::Google.Cloud.Dlp.V2.DlpJobType.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Type);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(OrderBy);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -32428,6 +41296,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -32464,14 +41335,61 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 40: {
+            Type = (global::Google.Cloud.Dlp.V2.DlpJobType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 58: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The response message for listing DLP jobs.
   /// </summary>
-  public sealed partial class ListDlpJobsResponse : pb::IMessage<ListDlpJobsResponse> {
+  public sealed partial class ListDlpJobsResponse : pb::IMessage<ListDlpJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDlpJobsResponse> _parser = new pb::MessageParser<ListDlpJobsResponse>(() => new ListDlpJobsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32569,6 +41487,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       jobs_.WriteTo(output, _repeated_jobs_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -32577,7 +41498,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jobs_.WriteTo(ref output, _repeated_jobs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -32606,6 +41542,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -32622,14 +41561,41 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            jobs_.AddEntriesFrom(ref input, _repeated_jobs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The request message for canceling a DLP job.
   /// </summary>
-  public sealed partial class CancelDlpJobRequest : pb::IMessage<CancelDlpJobRequest> {
+  public sealed partial class CancelDlpJobRequest : pb::IMessage<CancelDlpJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CancelDlpJobRequest> _parser = new pb::MessageParser<CancelDlpJobRequest>(() => new CancelDlpJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32711,6 +41677,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -32718,7 +41687,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -32745,6 +41728,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -32757,14 +41743,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The request message for finishing a DLP hybrid job.
   /// </summary>
-  public sealed partial class FinishDlpJobRequest : pb::IMessage<FinishDlpJobRequest> {
+  public sealed partial class FinishDlpJobRequest : pb::IMessage<FinishDlpJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FinishDlpJobRequest> _parser = new pb::MessageParser<FinishDlpJobRequest>(() => new FinishDlpJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32846,6 +41855,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -32853,7 +41865,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -32880,6 +41906,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -32892,14 +41921,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The request message for deleting a DLP job.
   /// </summary>
-  public sealed partial class DeleteDlpJobRequest : pb::IMessage<DeleteDlpJobRequest> {
+  public sealed partial class DeleteDlpJobRequest : pb::IMessage<DeleteDlpJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteDlpJobRequest> _parser = new pb::MessageParser<DeleteDlpJobRequest>(() => new DeleteDlpJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -32981,6 +42033,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -32988,7 +42043,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -33015,6 +42084,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -33027,14 +42099,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for CreateDeidentifyTemplate.
   /// </summary>
-  public sealed partial class CreateDeidentifyTemplateRequest : pb::IMessage<CreateDeidentifyTemplateRequest> {
+  public sealed partial class CreateDeidentifyTemplateRequest : pb::IMessage<CreateDeidentifyTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateDeidentifyTemplateRequest> _parser = new pb::MessageParser<CreateDeidentifyTemplateRequest>(() => new CreateDeidentifyTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -33189,6 +42284,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -33208,7 +42306,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (deidentifyTemplate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DeidentifyTemplate);
+      }
+      if (TemplateId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TemplateId);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -33256,6 +42380,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -33283,14 +42410,52 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (deidentifyTemplate_ == null) {
+              DeidentifyTemplate = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
+            }
+            input.ReadMessage(DeidentifyTemplate);
+            break;
+          }
+          case 26: {
+            TemplateId = input.ReadString();
+            break;
+          }
+          case 34: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for UpdateDeidentifyTemplate.
   /// </summary>
-  public sealed partial class UpdateDeidentifyTemplateRequest : pb::IMessage<UpdateDeidentifyTemplateRequest> {
+  public sealed partial class UpdateDeidentifyTemplateRequest : pb::IMessage<UpdateDeidentifyTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateDeidentifyTemplateRequest> _parser = new pb::MessageParser<UpdateDeidentifyTemplateRequest>(() => new UpdateDeidentifyTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -33408,6 +42573,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -33423,7 +42591,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (deidentifyTemplate_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DeidentifyTemplate);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -33468,6 +42658,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -33494,14 +42687,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (deidentifyTemplate_ == null) {
+              DeidentifyTemplate = new global::Google.Cloud.Dlp.V2.DeidentifyTemplate();
+            }
+            input.ReadMessage(DeidentifyTemplate);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for GetDeidentifyTemplate.
   /// </summary>
-  public sealed partial class GetDeidentifyTemplateRequest : pb::IMessage<GetDeidentifyTemplateRequest> {
+  public sealed partial class GetDeidentifyTemplateRequest : pb::IMessage<GetDeidentifyTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetDeidentifyTemplateRequest> _parser = new pb::MessageParser<GetDeidentifyTemplateRequest>(() => new GetDeidentifyTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -33585,6 +42815,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -33592,7 +42825,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -33619,6 +42866,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -33631,14 +42881,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for ListDeidentifyTemplates.
   /// </summary>
-  public sealed partial class ListDeidentifyTemplatesRequest : pb::IMessage<ListDeidentifyTemplatesRequest> {
+  public sealed partial class ListDeidentifyTemplatesRequest : pb::IMessage<ListDeidentifyTemplatesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDeidentifyTemplatesRequest> _parser = new pb::MessageParser<ListDeidentifyTemplatesRequest>(() => new ListDeidentifyTemplatesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -33821,6 +43094,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -33844,7 +43120,37 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(OrderBy);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -33895,6 +43201,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -33923,14 +43232,53 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 42: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response message for ListDeidentifyTemplates.
   /// </summary>
-  public sealed partial class ListDeidentifyTemplatesResponse : pb::IMessage<ListDeidentifyTemplatesResponse> {
+  public sealed partial class ListDeidentifyTemplatesResponse : pb::IMessage<ListDeidentifyTemplatesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDeidentifyTemplatesResponse> _parser = new pb::MessageParser<ListDeidentifyTemplatesResponse>(() => new ListDeidentifyTemplatesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -34030,6 +43378,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       deidentifyTemplates_.WriteTo(output, _repeated_deidentifyTemplates_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -34038,7 +43389,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      deidentifyTemplates_.WriteTo(ref output, _repeated_deidentifyTemplates_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -34067,6 +43433,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -34083,14 +43452,41 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            deidentifyTemplates_.AddEntriesFrom(ref input, _repeated_deidentifyTemplates_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for DeleteDeidentifyTemplate.
   /// </summary>
-  public sealed partial class DeleteDeidentifyTemplateRequest : pb::IMessage<DeleteDeidentifyTemplateRequest> {
+  public sealed partial class DeleteDeidentifyTemplateRequest : pb::IMessage<DeleteDeidentifyTemplateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteDeidentifyTemplateRequest> _parser = new pb::MessageParser<DeleteDeidentifyTemplateRequest>(() => new DeleteDeidentifyTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -34174,6 +43570,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -34181,7 +43580,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -34208,6 +43621,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -34220,7 +43636,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -34232,7 +43667,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// location. Consider using `CustomInfoType.Dictionary` for smaller dictionaries
   /// that satisfy the size requirements.
   /// </summary>
-  public sealed partial class LargeCustomDictionaryConfig : pb::IMessage<LargeCustomDictionaryConfig> {
+  public sealed partial class LargeCustomDictionaryConfig : pb::IMessage<LargeCustomDictionaryConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LargeCustomDictionaryConfig> _parser = new pb::MessageParser<LargeCustomDictionaryConfig>(() => new LargeCustomDictionaryConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -34379,6 +43818,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (outputPath_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(OutputPath);
@@ -34394,7 +43836,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (outputPath_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OutputPath);
+      }
+      if (sourceCase_ == SourceOneofCase.CloudStorageFileSet) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CloudStorageFileSet);
+      }
+      if (sourceCase_ == SourceOneofCase.BigQueryField) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BigQueryField);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -34445,6 +43909,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -34478,14 +43945,58 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (outputPath_ == null) {
+              OutputPath = new global::Google.Cloud.Dlp.V2.CloudStoragePath();
+            }
+            input.ReadMessage(OutputPath);
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dlp.V2.CloudStorageFileSet subBuilder = new global::Google.Cloud.Dlp.V2.CloudStorageFileSet();
+            if (sourceCase_ == SourceOneofCase.CloudStorageFileSet) {
+              subBuilder.MergeFrom(CloudStorageFileSet);
+            }
+            input.ReadMessage(subBuilder);
+            CloudStorageFileSet = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.BigQueryField subBuilder = new global::Google.Cloud.Dlp.V2.BigQueryField();
+            if (sourceCase_ == SourceOneofCase.BigQueryField) {
+              subBuilder.MergeFrom(BigQueryField);
+            }
+            input.ReadMessage(subBuilder);
+            BigQueryField = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Summary statistics of a custom dictionary.
   /// </summary>
-  public sealed partial class LargeCustomDictionaryStats : pb::IMessage<LargeCustomDictionaryStats> {
+  public sealed partial class LargeCustomDictionaryStats : pb::IMessage<LargeCustomDictionaryStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LargeCustomDictionaryStats> _parser = new pb::MessageParser<LargeCustomDictionaryStats>(() => new LargeCustomDictionaryStats());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -34567,6 +44078,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ApproxNumPhrases != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(ApproxNumPhrases);
@@ -34574,7 +44088,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ApproxNumPhrases != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(ApproxNumPhrases);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -34601,6 +44129,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -34613,7 +44144,26 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ApproxNumPhrases = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -34622,7 +44172,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// by the user. For more information, see
   /// https://cloud.google.com/dlp/docs/creating-custom-infotypes.
   /// </summary>
-  public sealed partial class StoredInfoTypeConfig : pb::IMessage<StoredInfoTypeConfig> {
+  public sealed partial class StoredInfoTypeConfig : pb::IMessage<StoredInfoTypeConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StoredInfoTypeConfig> _parser = new pb::MessageParser<StoredInfoTypeConfig>(() => new StoredInfoTypeConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -34803,6 +44357,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DisplayName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DisplayName);
@@ -34826,7 +44383,37 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (typeCase_ == TypeOneofCase.LargeCustomDictionary) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LargeCustomDictionary);
+      }
+      if (typeCase_ == TypeOneofCase.Dictionary) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Dictionary);
+      }
+      if (typeCase_ == TypeOneofCase.Regex) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Regex);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -34889,6 +44476,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -34932,14 +44522,68 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dlp.V2.LargeCustomDictionaryConfig subBuilder = new global::Google.Cloud.Dlp.V2.LargeCustomDictionaryConfig();
+            if (typeCase_ == TypeOneofCase.LargeCustomDictionary) {
+              subBuilder.MergeFrom(LargeCustomDictionary);
+            }
+            input.ReadMessage(subBuilder);
+            LargeCustomDictionary = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Dictionary();
+            if (typeCase_ == TypeOneofCase.Dictionary) {
+              subBuilder.MergeFrom(Dictionary);
+            }
+            input.ReadMessage(subBuilder);
+            Dictionary = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex subBuilder = new global::Google.Cloud.Dlp.V2.CustomInfoType.Types.Regex();
+            if (typeCase_ == TypeOneofCase.Regex) {
+              subBuilder.MergeFrom(Regex);
+            }
+            input.ReadMessage(subBuilder);
+            Regex = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Statistics for a StoredInfoType.
   /// </summary>
-  public sealed partial class StoredInfoTypeStats : pb::IMessage<StoredInfoTypeStats> {
+  public sealed partial class StoredInfoTypeStats : pb::IMessage<StoredInfoTypeStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StoredInfoTypeStats> _parser = new pb::MessageParser<StoredInfoTypeStats>(() => new StoredInfoTypeStats());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -35046,6 +44690,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (typeCase_ == TypeOneofCase.LargeCustomDictionary) {
         output.WriteRawTag(10);
         output.WriteMessage(LargeCustomDictionary);
@@ -35053,7 +44700,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (typeCase_ == TypeOneofCase.LargeCustomDictionary) {
+        output.WriteRawTag(10);
+        output.WriteMessage(LargeCustomDictionary);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -35086,6 +44747,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -35103,7 +44767,31 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dlp.V2.LargeCustomDictionaryStats subBuilder = new global::Google.Cloud.Dlp.V2.LargeCustomDictionaryStats();
+            if (typeCase_ == TypeOneofCase.LargeCustomDictionary) {
+              subBuilder.MergeFrom(LargeCustomDictionary);
+            }
+            input.ReadMessage(subBuilder);
+            LargeCustomDictionary = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -35111,7 +44799,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// Version of a StoredInfoType, including the configuration used to build it,
   /// create timestamp, and current state.
   /// </summary>
-  public sealed partial class StoredInfoTypeVersion : pb::IMessage<StoredInfoTypeVersion> {
+  public sealed partial class StoredInfoTypeVersion : pb::IMessage<StoredInfoTypeVersion>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StoredInfoTypeVersion> _parser = new pb::MessageParser<StoredInfoTypeVersion>(() => new StoredInfoTypeVersion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -35274,6 +44966,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (config_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Config);
@@ -35294,7 +44989,34 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (config_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (State != global::Google.Cloud.Dlp.V2.StoredInfoTypeState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) State);
+      }
+      errors_.WriteTo(ref output, _repeated_errors_codec);
+      if (stats_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Stats);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -35350,6 +45072,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -35387,7 +45112,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 24: {
+            State = (global::Google.Cloud.Dlp.V2.StoredInfoTypeState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            errors_.AddEntriesFrom(ref input, _repeated_errors_codec);
+            break;
+          }
+          case 42: {
+            if (stats_ == null) {
+              Stats = new global::Google.Cloud.Dlp.V2.StoredInfoTypeStats();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -35395,7 +45164,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// StoredInfoType resource message that contains information about the current
   /// version and any pending updates.
   /// </summary>
-  public sealed partial class StoredInfoType : pb::IMessage<StoredInfoType> {
+  public sealed partial class StoredInfoType : pb::IMessage<StoredInfoType>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StoredInfoType> _parser = new pb::MessageParser<StoredInfoType>(() => new StoredInfoType());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -35511,6 +45284,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -35523,7 +45299,26 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (currentVersion_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CurrentVersion);
+      }
+      pendingVersions_.WriteTo(ref output, _repeated_pendingVersions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -35561,6 +45356,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -35584,14 +45382,48 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (currentVersion_ == null) {
+              CurrentVersion = new global::Google.Cloud.Dlp.V2.StoredInfoTypeVersion();
+            }
+            input.ReadMessage(CurrentVersion);
+            break;
+          }
+          case 26: {
+            pendingVersions_.AddEntriesFrom(ref input, _repeated_pendingVersions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for CreateStoredInfoType.
   /// </summary>
-  public sealed partial class CreateStoredInfoTypeRequest : pb::IMessage<CreateStoredInfoTypeRequest> {
+  public sealed partial class CreateStoredInfoTypeRequest : pb::IMessage<CreateStoredInfoTypeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateStoredInfoTypeRequest> _parser = new pb::MessageParser<CreateStoredInfoTypeRequest>(() => new CreateStoredInfoTypeRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -35746,6 +45578,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -35765,7 +45600,33 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (config_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Config);
+      }
+      if (StoredInfoTypeId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(StoredInfoTypeId);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -35813,6 +45674,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -35840,14 +45704,52 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 26: {
+            StoredInfoTypeId = input.ReadString();
+            break;
+          }
+          case 34: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for UpdateStoredInfoType.
   /// </summary>
-  public sealed partial class UpdateStoredInfoTypeRequest : pb::IMessage<UpdateStoredInfoTypeRequest> {
+  public sealed partial class UpdateStoredInfoTypeRequest : pb::IMessage<UpdateStoredInfoTypeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateStoredInfoTypeRequest> _parser = new pb::MessageParser<UpdateStoredInfoTypeRequest>(() => new UpdateStoredInfoTypeRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -35967,6 +45869,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -35982,7 +45887,29 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (config_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Config);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -36027,6 +45954,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -36053,14 +45983,51 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Dlp.V2.StoredInfoTypeConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for GetStoredInfoType.
   /// </summary>
-  public sealed partial class GetStoredInfoTypeRequest : pb::IMessage<GetStoredInfoTypeRequest> {
+  public sealed partial class GetStoredInfoTypeRequest : pb::IMessage<GetStoredInfoTypeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetStoredInfoTypeRequest> _parser = new pb::MessageParser<GetStoredInfoTypeRequest>(() => new GetStoredInfoTypeRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36144,6 +46111,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -36151,7 +46121,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -36178,6 +46162,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -36190,14 +46177,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for ListStoredInfoTypes.
   /// </summary>
-  public sealed partial class ListStoredInfoTypesRequest : pb::IMessage<ListStoredInfoTypesRequest> {
+  public sealed partial class ListStoredInfoTypesRequest : pb::IMessage<ListStoredInfoTypesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListStoredInfoTypesRequest> _parser = new pb::MessageParser<ListStoredInfoTypesRequest>(() => new ListStoredInfoTypesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36381,6 +46391,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -36404,7 +46417,37 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(OrderBy);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LocationId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -36455,6 +46498,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -36483,14 +46529,53 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 42: {
+            LocationId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response message for ListStoredInfoTypes.
   /// </summary>
-  public sealed partial class ListStoredInfoTypesResponse : pb::IMessage<ListStoredInfoTypesResponse> {
+  public sealed partial class ListStoredInfoTypesResponse : pb::IMessage<ListStoredInfoTypesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListStoredInfoTypesResponse> _parser = new pb::MessageParser<ListStoredInfoTypesResponse>(() => new ListStoredInfoTypesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36589,6 +46674,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       storedInfoTypes_.WriteTo(output, _repeated_storedInfoTypes_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -36597,7 +46685,22 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      storedInfoTypes_.WriteTo(ref output, _repeated_storedInfoTypes_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -36626,6 +46729,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -36642,14 +46748,41 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            storedInfoTypes_.AddEntriesFrom(ref input, _repeated_storedInfoTypes_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for DeleteStoredInfoType.
   /// </summary>
-  public sealed partial class DeleteStoredInfoTypeRequest : pb::IMessage<DeleteStoredInfoTypeRequest> {
+  public sealed partial class DeleteStoredInfoTypeRequest : pb::IMessage<DeleteStoredInfoTypeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteStoredInfoTypeRequest> _parser = new pb::MessageParser<DeleteStoredInfoTypeRequest>(() => new DeleteStoredInfoTypeRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36733,6 +46866,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -36740,7 +46876,21 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -36767,6 +46917,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -36779,14 +46932,37 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to search for potentially sensitive info in a custom location.
   /// </summary>
-  public sealed partial class HybridInspectJobTriggerRequest : pb::IMessage<HybridInspectJobTriggerRequest> {
+  public sealed partial class HybridInspectJobTriggerRequest : pb::IMessage<HybridInspectJobTriggerRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HybridInspectJobTriggerRequest> _parser = new pb::MessageParser<HybridInspectJobTriggerRequest>(() => new HybridInspectJobTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -36886,6 +47062,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -36897,7 +47076,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (hybridItem_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(HybridItem);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -36933,6 +47130,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -36952,14 +47152,44 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (hybridItem_ == null) {
+              HybridItem = new global::Google.Cloud.Dlp.V2.HybridContentItem();
+            }
+            input.ReadMessage(HybridItem);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to search for potentially sensitive info in a custom location.
   /// </summary>
-  public sealed partial class HybridInspectDlpJobRequest : pb::IMessage<HybridInspectDlpJobRequest> {
+  public sealed partial class HybridInspectDlpJobRequest : pb::IMessage<HybridInspectDlpJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HybridInspectDlpJobRequest> _parser = new pb::MessageParser<HybridInspectDlpJobRequest>(() => new HybridInspectDlpJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37059,6 +47289,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -37070,7 +47303,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (hybridItem_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(HybridItem);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -37106,6 +47357,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -37125,7 +47379,33 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (hybridItem_ == null) {
+              HybridItem = new global::Google.Cloud.Dlp.V2.HybridContentItem();
+            }
+            input.ReadMessage(HybridItem);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -37133,7 +47413,11 @@ namespace Google.Cloud.Dlp.V2 {
   /// An individual hybrid item to inspect. Will be stored temporarily during
   /// processing.
   /// </summary>
-  public sealed partial class HybridContentItem : pb::IMessage<HybridContentItem> {
+  public sealed partial class HybridContentItem : pb::IMessage<HybridContentItem>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HybridContentItem> _parser = new pb::MessageParser<HybridContentItem>(() => new HybridContentItem());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37232,6 +47516,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (item_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Item);
@@ -37243,7 +47530,25 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (item_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Item);
+      }
+      if (findingDetails_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FindingDetails);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -37282,6 +47587,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -37304,14 +47612,47 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (item_ == null) {
+              Item = new global::Google.Cloud.Dlp.V2.ContentItem();
+            }
+            input.ReadMessage(Item);
+            break;
+          }
+          case 18: {
+            if (findingDetails_ == null) {
+              FindingDetails = new global::Google.Cloud.Dlp.V2.HybridFindingDetails();
+            }
+            input.ReadMessage(FindingDetails);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Populate to associate additional data with each finding.
   /// </summary>
-  public sealed partial class HybridFindingDetails : pb::IMessage<HybridFindingDetails> {
+  public sealed partial class HybridFindingDetails : pb::IMessage<HybridFindingDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HybridFindingDetails> _parser = new pb::MessageParser<HybridFindingDetails>(() => new HybridFindingDetails());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37484,6 +47825,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (containerDetails_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(ContainerDetails);
@@ -37504,7 +47848,34 @@ namespace Google.Cloud.Dlp.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (containerDetails_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ContainerDetails);
+      }
+      if (FileOffset != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(FileOffset);
+      }
+      if (RowOffset != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RowOffset);
+      }
+      if (tableOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TableOptions);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -37557,6 +47928,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -37591,14 +47965,59 @@ namespace Google.Cloud.Dlp.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (containerDetails_ == null) {
+              ContainerDetails = new global::Google.Cloud.Dlp.V2.Container();
+            }
+            input.ReadMessage(ContainerDetails);
+            break;
+          }
+          case 16: {
+            FileOffset = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            RowOffset = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (tableOptions_ == null) {
+              TableOptions = new global::Google.Cloud.Dlp.V2.TableOptions();
+            }
+            input.ReadMessage(TableOptions);
+            break;
+          }
+          case 42: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Quota exceeded errors will be thrown once quota has been met.
   /// </summary>
-  public sealed partial class HybridInspectResponse : pb::IMessage<HybridInspectResponse> {
+  public sealed partial class HybridInspectResponse : pb::IMessage<HybridInspectResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HybridInspectResponse> _parser = new pb::MessageParser<HybridInspectResponse>(() => new HybridInspectResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -37663,10 +48082,23 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -37687,6 +48119,9 @@ namespace Google.Cloud.Dlp.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -37695,7 +48130,22 @@ namespace Google.Cloud.Dlp.V2 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 

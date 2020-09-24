@@ -67,7 +67,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Dataset metadata that is specific to image classification.
   /// </summary>
-  public sealed partial class ImageClassificationDatasetMetadata : pb::IMessage<ImageClassificationDatasetMetadata> {
+  public sealed partial class ImageClassificationDatasetMetadata : pb::IMessage<ImageClassificationDatasetMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageClassificationDatasetMetadata> _parser = new pb::MessageParser<ImageClassificationDatasetMetadata>(() => new ImageClassificationDatasetMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,6 +153,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ClassificationType);
@@ -156,7 +163,21 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ClassificationType != global::Google.Cloud.AutoML.V1.ClassificationType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) ClassificationType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -183,6 +204,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -195,14 +219,37 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ClassificationType = (global::Google.Cloud.AutoML.V1.ClassificationType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Dataset metadata specific to image object detection.
   /// </summary>
-  public sealed partial class ImageObjectDetectionDatasetMetadata : pb::IMessage<ImageObjectDetectionDatasetMetadata> {
+  public sealed partial class ImageObjectDetectionDatasetMetadata : pb::IMessage<ImageObjectDetectionDatasetMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageObjectDetectionDatasetMetadata> _parser = new pb::MessageParser<ImageObjectDetectionDatasetMetadata>(() => new ImageObjectDetectionDatasetMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -267,10 +314,23 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -291,6 +351,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -299,14 +362,33 @@ namespace Google.Cloud.AutoML.V1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Model metadata for image classification.
   /// </summary>
-  public sealed partial class ImageClassificationModelMetadata : pb::IMessage<ImageClassificationModelMetadata> {
+  public sealed partial class ImageClassificationModelMetadata : pb::IMessage<ImageClassificationModelMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageClassificationModelMetadata> _parser = new pb::MessageParser<ImageClassificationModelMetadata>(() => new ImageClassificationModelMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -545,6 +627,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (BaseModelId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(BaseModelId);
@@ -576,7 +661,45 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BaseModelId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(BaseModelId);
+      }
+      if (StopReason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StopReason);
+      }
+      if (ModelType.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ModelType);
+      }
+      if (NodeQps != 0D) {
+        output.WriteRawTag(105);
+        output.WriteDouble(NodeQps);
+      }
+      if (NodeCount != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(NodeCount);
+      }
+      if (TrainBudgetMilliNodeHours != 0L) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt64(TrainBudgetMilliNodeHours);
+      }
+      if (TrainCostMilliNodeHours != 0L) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt64(TrainCostMilliNodeHours);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -639,6 +762,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -675,14 +801,61 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            BaseModelId = input.ReadString();
+            break;
+          }
+          case 42: {
+            StopReason = input.ReadString();
+            break;
+          }
+          case 58: {
+            ModelType = input.ReadString();
+            break;
+          }
+          case 105: {
+            NodeQps = input.ReadDouble();
+            break;
+          }
+          case 112: {
+            NodeCount = input.ReadInt64();
+            break;
+          }
+          case 128: {
+            TrainBudgetMilliNodeHours = input.ReadInt64();
+            break;
+          }
+          case 136: {
+            TrainCostMilliNodeHours = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Model metadata specific to image object detection.
   /// </summary>
-  public sealed partial class ImageObjectDetectionModelMetadata : pb::IMessage<ImageObjectDetectionModelMetadata> {
+  public sealed partial class ImageObjectDetectionModelMetadata : pb::IMessage<ImageObjectDetectionModelMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageObjectDetectionModelMetadata> _parser = new pb::MessageParser<ImageObjectDetectionModelMetadata>(() => new ImageObjectDetectionModelMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -891,6 +1064,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ModelType.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ModelType);
@@ -918,7 +1094,41 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ModelType.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ModelType);
+      }
+      if (NodeCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(NodeCount);
+      }
+      if (NodeQps != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(NodeQps);
+      }
+      if (StopReason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StopReason);
+      }
+      if (TrainBudgetMilliNodeHours != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(TrainBudgetMilliNodeHours);
+      }
+      if (TrainCostMilliNodeHours != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(TrainCostMilliNodeHours);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -975,6 +1185,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1007,14 +1220,57 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ModelType = input.ReadString();
+            break;
+          }
+          case 24: {
+            NodeCount = input.ReadInt64();
+            break;
+          }
+          case 33: {
+            NodeQps = input.ReadDouble();
+            break;
+          }
+          case 42: {
+            StopReason = input.ReadString();
+            break;
+          }
+          case 48: {
+            TrainBudgetMilliNodeHours = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            TrainCostMilliNodeHours = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Model deployment metadata specific to Image Classification.
   /// </summary>
-  public sealed partial class ImageClassificationModelDeploymentMetadata : pb::IMessage<ImageClassificationModelDeploymentMetadata> {
+  public sealed partial class ImageClassificationModelDeploymentMetadata : pb::IMessage<ImageClassificationModelDeploymentMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageClassificationModelDeploymentMetadata> _parser = new pb::MessageParser<ImageClassificationModelDeploymentMetadata>(() => new ImageClassificationModelDeploymentMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1101,6 +1357,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeCount != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(NodeCount);
@@ -1108,7 +1367,21 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(NodeCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1135,6 +1408,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1147,14 +1423,37 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NodeCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Model deployment metadata specific to Image Object Detection.
   /// </summary>
-  public sealed partial class ImageObjectDetectionModelDeploymentMetadata : pb::IMessage<ImageObjectDetectionModelDeploymentMetadata> {
+  public sealed partial class ImageObjectDetectionModelDeploymentMetadata : pb::IMessage<ImageObjectDetectionModelDeploymentMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageObjectDetectionModelDeploymentMetadata> _parser = new pb::MessageParser<ImageObjectDetectionModelDeploymentMetadata>(() => new ImageObjectDetectionModelDeploymentMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1241,6 +1540,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NodeCount != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(NodeCount);
@@ -1248,7 +1550,21 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NodeCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(NodeCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1275,6 +1591,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1287,7 +1606,26 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NodeCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

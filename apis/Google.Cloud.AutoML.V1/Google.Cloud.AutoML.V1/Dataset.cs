@@ -71,7 +71,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// A workspace for solving a single, particular machine learning (ML) problem.
   /// A workspace contains examples that may be annotated.
   /// </summary>
-  public sealed partial class Dataset : pb::IMessage<Dataset> {
+  public sealed partial class Dataset : pb::IMessage<Dataset>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Dataset> _parser = new pb::MessageParser<Dataset>(() => new Dataset());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -409,6 +413,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -461,7 +468,66 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(CreateTime);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Etag);
+      }
+      if (ExampleCount != 0) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt32(ExampleCount);
+      }
+      if (datasetMetadataCase_ == DatasetMetadataOneofCase.TranslationDatasetMetadata) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(TranslationDatasetMetadata);
+      }
+      if (datasetMetadataCase_ == DatasetMetadataOneofCase.ImageClassificationDatasetMetadata) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(ImageClassificationDatasetMetadata);
+      }
+      if (datasetMetadataCase_ == DatasetMetadataOneofCase.TextClassificationDatasetMetadata) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(TextClassificationDatasetMetadata);
+      }
+      if (datasetMetadataCase_ == DatasetMetadataOneofCase.ImageObjectDetectionDatasetMetadata) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(ImageObjectDetectionDatasetMetadata);
+      }
+      if (datasetMetadataCase_ == DatasetMetadataOneofCase.TextExtractionDatasetMetadata) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(TextExtractionDatasetMetadata);
+      }
+      if (datasetMetadataCase_ == DatasetMetadataOneofCase.TextSentimentDatasetMetadata) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(TextSentimentDatasetMetadata);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -580,6 +646,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -673,7 +742,107 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 114: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 138: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 168: {
+            ExampleCount = input.ReadInt32();
+            break;
+          }
+          case 186: {
+            global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata subBuilder = new global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata();
+            if (datasetMetadataCase_ == DatasetMetadataOneofCase.TranslationDatasetMetadata) {
+              subBuilder.MergeFrom(TranslationDatasetMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            TranslationDatasetMetadata = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata();
+            if (datasetMetadataCase_ == DatasetMetadataOneofCase.ImageClassificationDatasetMetadata) {
+              subBuilder.MergeFrom(ImageClassificationDatasetMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            ImageClassificationDatasetMetadata = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata subBuilder = new global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata();
+            if (datasetMetadataCase_ == DatasetMetadataOneofCase.TextClassificationDatasetMetadata) {
+              subBuilder.MergeFrom(TextClassificationDatasetMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            TextClassificationDatasetMetadata = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata();
+            if (datasetMetadataCase_ == DatasetMetadataOneofCase.ImageObjectDetectionDatasetMetadata) {
+              subBuilder.MergeFrom(ImageObjectDetectionDatasetMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            ImageObjectDetectionDatasetMetadata = subBuilder;
+            break;
+          }
+          case 226: {
+            global::Google.Cloud.AutoML.V1.TextExtractionDatasetMetadata subBuilder = new global::Google.Cloud.AutoML.V1.TextExtractionDatasetMetadata();
+            if (datasetMetadataCase_ == DatasetMetadataOneofCase.TextExtractionDatasetMetadata) {
+              subBuilder.MergeFrom(TextExtractionDatasetMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            TextExtractionDatasetMetadata = subBuilder;
+            break;
+          }
+          case 242: {
+            global::Google.Cloud.AutoML.V1.TextSentimentDatasetMetadata subBuilder = new global::Google.Cloud.AutoML.V1.TextSentimentDatasetMetadata();
+            if (datasetMetadataCase_ == DatasetMetadataOneofCase.TextSentimentDatasetMetadata) {
+              subBuilder.MergeFrom(TextSentimentDatasetMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            TextSentimentDatasetMetadata = subBuilder;
+            break;
+          }
+          case 314: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

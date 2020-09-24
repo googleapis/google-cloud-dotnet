@@ -189,7 +189,7 @@ namespace Google.Cloud.Dataproc.V1 {
     {
       /// <summary>Creates a new client for JobController</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public JobControllerClient(grpc::Channel channel) : base(channel)
+      public JobControllerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for JobController that uses a custom <c>CallInvoker</c>.</summary>

@@ -110,7 +110,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     {
       /// <summary>Creates a new client for ErrorStatsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ErrorStatsServiceClient(grpc::Channel channel) : base(channel)
+      public ErrorStatsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ErrorStatsService that uses a custom <c>CallInvoker</c>.</summary>

@@ -68,7 +68,7 @@ namespace Google.Cloud.Retail.V2 {
     {
       /// <summary>Creates a new client for PredictionService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public PredictionServiceClient(grpc::Channel channel) : base(channel)
+      public PredictionServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for PredictionService that uses a custom <c>CallInvoker</c>.</summary>

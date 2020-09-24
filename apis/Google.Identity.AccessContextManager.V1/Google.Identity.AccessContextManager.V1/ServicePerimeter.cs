@@ -77,7 +77,11 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// a single Google Cloud project may belong to multiple Service Perimeter
   /// Bridges.
   /// </summary>
-  public sealed partial class ServicePerimeter : pb::IMessage<ServicePerimeter> {
+  public sealed partial class ServicePerimeter : pb::IMessage<ServicePerimeter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ServicePerimeter> _parser = new pb::MessageParser<ServicePerimeter>(() => new ServicePerimeter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -317,6 +321,9 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -356,7 +363,53 @@ namespace Google.Identity.AccessContextManager.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Title);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      if (PerimeterType != global::Google.Identity.AccessContextManager.V1.ServicePerimeter.Types.PerimeterType.Regular) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) PerimeterType);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Status);
+      }
+      if (spec_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Spec);
+      }
+      if (UseExplicitDryRunSpec != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(UseExplicitDryRunSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -443,6 +496,9 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -499,7 +555,70 @@ namespace Google.Identity.AccessContextManager.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Title = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 48: {
+            PerimeterType = (global::Google.Identity.AccessContextManager.V1.ServicePerimeter.Types.PerimeterType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (status_ == null) {
+              Status = new global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 66: {
+            if (spec_ == null) {
+              Spec = new global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig();
+            }
+            input.ReadMessage(Spec);
+            break;
+          }
+          case 72: {
+            UseExplicitDryRunSpec = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ServicePerimeter message type.</summary>
@@ -542,7 +661,11 @@ namespace Google.Identity.AccessContextManager.V1 {
   /// `ServicePerimeterConfig` specifies a set of Google Cloud resources that
   /// describe specific Service Perimeter configuration.
   /// </summary>
-  public sealed partial class ServicePerimeterConfig : pb::IMessage<ServicePerimeterConfig> {
+  public sealed partial class ServicePerimeterConfig : pb::IMessage<ServicePerimeterConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ServicePerimeterConfig> _parser = new pb::MessageParser<ServicePerimeterConfig>(() => new ServicePerimeterConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -683,6 +806,9 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       resources_.WriteTo(output, _repeated_resources_codec);
       accessLevels_.WriteTo(output, _repeated_accessLevels_codec);
       restrictedServices_.WriteTo(output, _repeated_restrictedServices_codec);
@@ -693,7 +819,24 @@ namespace Google.Identity.AccessContextManager.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      resources_.WriteTo(ref output, _repeated_resources_codec);
+      accessLevels_.WriteTo(ref output, _repeated_accessLevels_codec);
+      restrictedServices_.WriteTo(ref output, _repeated_restrictedServices_codec);
+      if (vpcAccessibleServices_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(VpcAccessibleServices);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -729,6 +872,9 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -756,7 +902,41 @@ namespace Google.Identity.AccessContextManager.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            resources_.AddEntriesFrom(ref input, _repeated_resources_codec);
+            break;
+          }
+          case 18: {
+            accessLevels_.AddEntriesFrom(ref input, _repeated_accessLevels_codec);
+            break;
+          }
+          case 34: {
+            restrictedServices_.AddEntriesFrom(ref input, _repeated_restrictedServices_codec);
+            break;
+          }
+          case 82: {
+            if (vpcAccessibleServices_ == null) {
+              VpcAccessibleServices = new global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.VpcAccessibleServices();
+            }
+            input.ReadMessage(VpcAccessibleServices);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ServicePerimeterConfig message type.</summary>
@@ -766,7 +946,11 @@ namespace Google.Identity.AccessContextManager.V1 {
       /// Specifies how APIs are allowed to communicate within the Service
       /// Perimeter.
       /// </summary>
-      public sealed partial class VpcAccessibleServices : pb::IMessage<VpcAccessibleServices> {
+      public sealed partial class VpcAccessibleServices : pb::IMessage<VpcAccessibleServices>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<VpcAccessibleServices> _parser = new pb::MessageParser<VpcAccessibleServices>(() => new VpcAccessibleServices());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -866,6 +1050,9 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (EnableRestriction != false) {
             output.WriteRawTag(8);
             output.WriteBool(EnableRestriction);
@@ -874,7 +1061,22 @@ namespace Google.Identity.AccessContextManager.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnableRestriction != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableRestriction);
+          }
+          allowedServices_.WriteTo(ref output, _repeated_allowedServices_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -903,6 +1105,9 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -919,7 +1124,30 @@ namespace Google.Identity.AccessContextManager.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnableRestriction = input.ReadBool();
+                break;
+              }
+              case 18: {
+                allowedServices_.AddEntriesFrom(ref input, _repeated_allowedServices_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

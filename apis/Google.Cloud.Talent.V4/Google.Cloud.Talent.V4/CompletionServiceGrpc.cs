@@ -69,7 +69,7 @@ namespace Google.Cloud.Talent.V4 {
     {
       /// <summary>Creates a new client for Completion</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CompletionClient(grpc::Channel channel) : base(channel)
+      public CompletionClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Completion that uses a custom <c>CallInvoker</c>.</summary>

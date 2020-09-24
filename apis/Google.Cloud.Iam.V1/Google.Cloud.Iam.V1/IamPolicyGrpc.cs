@@ -141,7 +141,7 @@ namespace Google.Cloud.Iam.V1 {
     {
       /// <summary>Creates a new client for IAMPolicy</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public IAMPolicyClient(grpc::Channel channel) : base(channel)
+      public IAMPolicyClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IAMPolicy that uses a custom <c>CallInvoker</c>.</summary>

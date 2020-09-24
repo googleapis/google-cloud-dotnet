@@ -82,7 +82,11 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
   /// Describes a BigQuery table.
   /// </summary>
-  public sealed partial class BigQueryTableSpec : pb::IMessage<BigQueryTableSpec> {
+  public sealed partial class BigQueryTableSpec : pb::IMessage<BigQueryTableSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BigQueryTableSpec> _parser = new pb::MessageParser<BigQueryTableSpec>(() => new BigQueryTableSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -228,6 +232,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TableSourceType != global::Google.Cloud.DataCatalog.V1.TableSourceType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) TableSourceType);
@@ -243,7 +250,29 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TableSourceType != global::Google.Cloud.DataCatalog.V1.TableSourceType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) TableSourceType);
+      }
+      if (typeSpecCase_ == TypeSpecOneofCase.ViewSpec) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ViewSpec);
+      }
+      if (typeSpecCase_ == TypeSpecOneofCase.TableSpec) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TableSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -291,6 +320,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -321,14 +353,55 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TableSourceType = (global::Google.Cloud.DataCatalog.V1.TableSourceType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.DataCatalog.V1.ViewSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.ViewSpec();
+            if (typeSpecCase_ == TypeSpecOneofCase.ViewSpec) {
+              subBuilder.MergeFrom(ViewSpec);
+            }
+            input.ReadMessage(subBuilder);
+            ViewSpec = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.DataCatalog.V1.TableSpec subBuilder = new global::Google.Cloud.DataCatalog.V1.TableSpec();
+            if (typeSpecCase_ == TypeSpecOneofCase.TableSpec) {
+              subBuilder.MergeFrom(TableSpec);
+            }
+            input.ReadMessage(subBuilder);
+            TableSpec = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Table view specification.
   /// </summary>
-  public sealed partial class ViewSpec : pb::IMessage<ViewSpec> {
+  public sealed partial class ViewSpec : pb::IMessage<ViewSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ViewSpec> _parser = new pb::MessageParser<ViewSpec>(() => new ViewSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -410,6 +483,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ViewQuery.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ViewQuery);
@@ -417,7 +493,21 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ViewQuery.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ViewQuery);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -444,6 +534,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -456,14 +549,37 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ViewQuery = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Normal BigQuery table spec.
   /// </summary>
-  public sealed partial class TableSpec : pb::IMessage<TableSpec> {
+  public sealed partial class TableSpec : pb::IMessage<TableSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TableSpec> _parser = new pb::MessageParser<TableSpec>(() => new TableSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -549,6 +665,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (GroupedEntry.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(GroupedEntry);
@@ -556,7 +675,21 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GroupedEntry.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GroupedEntry);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -583,6 +716,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -595,7 +731,26 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            GroupedEntry = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -604,7 +759,11 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// Context:
   /// https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding
   /// </summary>
-  public sealed partial class BigQueryDateShardedSpec : pb::IMessage<BigQueryDateShardedSpec> {
+  public sealed partial class BigQueryDateShardedSpec : pb::IMessage<BigQueryDateShardedSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BigQueryDateShardedSpec> _parser = new pb::MessageParser<BigQueryDateShardedSpec>(() => new BigQueryDateShardedSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -724,6 +883,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Dataset.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Dataset);
@@ -739,7 +901,29 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Dataset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Dataset);
+      }
+      if (TablePrefix.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(TablePrefix);
+      }
+      if (ShardCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ShardCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -778,6 +962,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -798,7 +985,34 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Dataset = input.ReadString();
+            break;
+          }
+          case 18: {
+            TablePrefix = input.ReadString();
+            break;
+          }
+          case 24: {
+            ShardCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

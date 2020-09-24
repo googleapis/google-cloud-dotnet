@@ -245,7 +245,7 @@ namespace Google.Cloud.Recommender.V1 {
     {
       /// <summary>Creates a new client for Recommender</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public RecommenderClient(grpc::Channel channel) : base(channel)
+      public RecommenderClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Recommender that uses a custom <c>CallInvoker</c>.</summary>

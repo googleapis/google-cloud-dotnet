@@ -68,7 +68,11 @@ namespace Grafeas.V1 {
   /// Common Vulnerability Scoring System version 3.
   /// For details, see https://www.first.org/cvss/specification-document
   /// </summary>
-  public sealed partial class CVSSv3 : pb::IMessage<CVSSv3> {
+  public sealed partial class CVSSv3 : pb::IMessage<CVSSv3>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CVSSv3> _parser = new pb::MessageParser<CVSSv3>(() => new CVSSv3());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -295,6 +299,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (BaseScore != 0F) {
         output.WriteRawTag(13);
         output.WriteFloat(BaseScore);
@@ -342,7 +349,61 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BaseScore != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(BaseScore);
+      }
+      if (ExploitabilityScore != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(ExploitabilityScore);
+      }
+      if (ImpactScore != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(ImpactScore);
+      }
+      if (AttackVector != global::Grafeas.V1.CVSSv3.Types.AttackVector.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) AttackVector);
+      }
+      if (AttackComplexity != global::Grafeas.V1.CVSSv3.Types.AttackComplexity.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) AttackComplexity);
+      }
+      if (PrivilegesRequired != global::Grafeas.V1.CVSSv3.Types.PrivilegesRequired.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) PrivilegesRequired);
+      }
+      if (UserInteraction != global::Grafeas.V1.CVSSv3.Types.UserInteraction.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) UserInteraction);
+      }
+      if (Scope != global::Grafeas.V1.CVSSv3.Types.Scope.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Scope);
+      }
+      if (ConfidentialityImpact != global::Grafeas.V1.CVSSv3.Types.Impact.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ConfidentialityImpact);
+      }
+      if (IntegrityImpact != global::Grafeas.V1.CVSSv3.Types.Impact.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) IntegrityImpact);
+      }
+      if (AvailabilityImpact != global::Grafeas.V1.CVSSv3.Types.Impact.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) AvailabilityImpact);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -429,6 +490,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -481,7 +545,66 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            BaseScore = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            ExploitabilityScore = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            ImpactScore = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            AttackVector = (global::Grafeas.V1.CVSSv3.Types.AttackVector) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            AttackComplexity = (global::Grafeas.V1.CVSSv3.Types.AttackComplexity) input.ReadEnum();
+            break;
+          }
+          case 56: {
+            PrivilegesRequired = (global::Grafeas.V1.CVSSv3.Types.PrivilegesRequired) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            UserInteraction = (global::Grafeas.V1.CVSSv3.Types.UserInteraction) input.ReadEnum();
+            break;
+          }
+          case 72: {
+            Scope = (global::Grafeas.V1.CVSSv3.Types.Scope) input.ReadEnum();
+            break;
+          }
+          case 80: {
+            ConfidentialityImpact = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 88: {
+            IntegrityImpact = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
+            break;
+          }
+          case 96: {
+            AvailabilityImpact = (global::Grafeas.V1.CVSSv3.Types.Impact) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CVSSv3 message type.</summary>

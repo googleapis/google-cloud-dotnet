@@ -103,7 +103,11 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// Billing settings
   /// </summary>
-  public sealed partial class BillingSettings : pb::IMessage<BillingSettings> {
+  public sealed partial class BillingSettings : pb::IMessage<BillingSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BillingSettings> _parser = new pb::MessageParser<BillingSettings>(() => new BillingSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -240,6 +244,9 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (BillingTier != global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BillingTier.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) BillingTier);
@@ -259,7 +266,33 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BillingTier != global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BillingTier.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) BillingTier);
+      }
+      if (BillingType != global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BillingType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) BillingType);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ExpireTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -310,6 +343,9 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -340,7 +376,44 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            BillingTier = (global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BillingTier) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            BillingType = (global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BillingType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

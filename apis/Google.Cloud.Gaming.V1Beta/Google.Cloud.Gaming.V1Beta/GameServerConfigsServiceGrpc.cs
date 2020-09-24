@@ -131,7 +131,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     {
       /// <summary>Creates a new client for GameServerConfigsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public GameServerConfigsServiceClient(grpc::Channel channel) : base(channel)
+      public GameServerConfigsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for GameServerConfigsService that uses a custom <c>CallInvoker</c>.</summary>

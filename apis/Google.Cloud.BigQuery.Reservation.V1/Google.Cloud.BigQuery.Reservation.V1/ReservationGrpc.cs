@@ -552,7 +552,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     {
       /// <summary>Creates a new client for ReservationService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ReservationServiceClient(grpc::Channel channel) : base(channel)
+      public ReservationServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ReservationService that uses a custom <c>CallInvoker</c>.</summary>

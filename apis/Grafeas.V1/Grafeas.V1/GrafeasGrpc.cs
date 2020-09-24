@@ -340,7 +340,7 @@ namespace Grafeas.V1 {
     {
       /// <summary>Creates a new client for Grafeas</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public GrafeasClient(grpc::Channel channel) : base(channel)
+      public GrafeasClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Grafeas that uses a custom <c>CallInvoker</c>.</summary>

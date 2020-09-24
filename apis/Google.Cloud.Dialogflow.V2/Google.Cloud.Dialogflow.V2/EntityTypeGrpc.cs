@@ -254,7 +254,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     {
       /// <summary>Creates a new client for EntityTypes</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public EntityTypesClient(grpc::Channel channel) : base(channel)
+      public EntityTypesClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for EntityTypes that uses a custom <c>CallInvoker</c>.</summary>

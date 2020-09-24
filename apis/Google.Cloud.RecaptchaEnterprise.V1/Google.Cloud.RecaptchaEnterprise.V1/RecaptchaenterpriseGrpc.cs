@@ -187,7 +187,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     {
       /// <summary>Creates a new client for RecaptchaEnterpriseService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public RecaptchaEnterpriseServiceClient(grpc::Channel channel) : base(channel)
+      public RecaptchaEnterpriseServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for RecaptchaEnterpriseService that uses a custom <c>CallInvoker</c>.</summary>

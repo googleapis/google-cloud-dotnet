@@ -67,7 +67,11 @@ namespace Grafeas.V1 {
   /// bash 4.1.2), there will be an Upgrade Note. For Windows, windows_update field
   /// represents the information related to the update.
   /// </summary>
-  public sealed partial class UpgradeNote : pb::IMessage<UpgradeNote> {
+  public sealed partial class UpgradeNote : pb::IMessage<UpgradeNote>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpgradeNote> _parser = new pb::MessageParser<UpgradeNote>(() => new UpgradeNote());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -200,6 +204,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Package.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Package);
@@ -216,7 +223,30 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Package.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Package);
+      }
+      if (version_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Version);
+      }
+      distributions_.WriteTo(ref output, _repeated_distributions_codec);
+      if (windowsUpdate_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(WindowsUpdate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -263,6 +293,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -293,7 +326,44 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Package = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (version_ == null) {
+              Version = new global::Grafeas.V1.Version();
+            }
+            input.ReadMessage(Version);
+            break;
+          }
+          case 26: {
+            distributions_.AddEntriesFrom(ref input, _repeated_distributions_codec);
+            break;
+          }
+          case 34: {
+            if (windowsUpdate_ == null) {
+              WindowsUpdate = new global::Grafeas.V1.WindowsUpdate();
+            }
+            input.ReadMessage(WindowsUpdate);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -302,7 +372,11 @@ namespace Grafeas.V1 {
   /// operating system (CPE). Some distributions have additional metadata around
   /// updates, classifying them into various categories and severities.
   /// </summary>
-  public sealed partial class UpgradeDistribution : pb::IMessage<UpgradeDistribution> {
+  public sealed partial class UpgradeDistribution : pb::IMessage<UpgradeDistribution>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpgradeDistribution> _parser = new pb::MessageParser<UpgradeDistribution>(() => new UpgradeDistribution());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -438,6 +512,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (CpeUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(CpeUri);
@@ -454,7 +531,30 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CpeUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CpeUri);
+      }
+      if (Classification.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Classification);
+      }
+      if (Severity.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Severity);
+      }
+      cve_.WriteTo(ref output, _repeated_cve_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -495,6 +595,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -519,7 +622,38 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CpeUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            Classification = input.ReadString();
+            break;
+          }
+          case 26: {
+            Severity = input.ReadString();
+            break;
+          }
+          case 34: {
+            cve_.AddEntriesFrom(ref input, _repeated_cve_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -529,7 +663,11 @@ namespace Grafeas.V1 {
   /// documented at
   /// https://docs.microsoft.com/en-us/windows/win32/api/wuapi/nn-wuapi-iupdate.
   /// </summary>
-  public sealed partial class WindowsUpdate : pb::IMessage<WindowsUpdate> {
+  public sealed partial class WindowsUpdate : pb::IMessage<WindowsUpdate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WindowsUpdate> _parser = new pb::MessageParser<WindowsUpdate>(() => new WindowsUpdate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -712,6 +850,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (identity_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Identity);
@@ -737,7 +878,39 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (identity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Identity);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Title);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      categories_.WriteTo(ref output, _repeated_categories_codec);
+      kbArticleIds_.WriteTo(ref output, _repeated_kbArticleIds_codec);
+      if (SupportUrl.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SupportUrl);
+      }
+      if (lastPublishedTimestamp_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(LastPublishedTimestamp);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -798,6 +971,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -840,7 +1016,56 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (identity_ == null) {
+              Identity = new global::Grafeas.V1.WindowsUpdate.Types.Identity();
+            }
+            input.ReadMessage(Identity);
+            break;
+          }
+          case 18: {
+            Title = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            categories_.AddEntriesFrom(ref input, _repeated_categories_codec);
+            break;
+          }
+          case 42: {
+            kbArticleIds_.AddEntriesFrom(ref input, _repeated_kbArticleIds_codec);
+            break;
+          }
+          case 50: {
+            SupportUrl = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (lastPublishedTimestamp_ == null) {
+              LastPublishedTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastPublishedTimestamp);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the WindowsUpdate message type.</summary>
@@ -849,7 +1074,11 @@ namespace Grafeas.V1 {
       /// <summary>
       /// The unique identifier of the update.
       /// </summary>
-      public sealed partial class Identity : pb::IMessage<Identity> {
+      public sealed partial class Identity : pb::IMessage<Identity>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Identity> _parser = new pb::MessageParser<Identity>(() => new Identity());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -948,6 +1177,9 @@ namespace Grafeas.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (UpdateId.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(UpdateId);
@@ -959,7 +1191,25 @@ namespace Grafeas.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (UpdateId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(UpdateId);
+          }
+          if (Revision != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(Revision);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -992,6 +1242,9 @@ namespace Grafeas.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1008,14 +1261,41 @@ namespace Grafeas.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                UpdateId = input.ReadString();
+                break;
+              }
+              case 16: {
+                Revision = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// The category to which the update belongs.
       /// </summary>
-      public sealed partial class Category : pb::IMessage<Category> {
+      public sealed partial class Category : pb::IMessage<Category>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Category> _parser = new pb::MessageParser<Category>(() => new Category());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1114,6 +1394,9 @@ namespace Grafeas.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (CategoryId.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(CategoryId);
@@ -1125,7 +1408,25 @@ namespace Grafeas.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (CategoryId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(CategoryId);
+          }
+          if (Name.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Name);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1158,6 +1459,9 @@ namespace Grafeas.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1174,7 +1478,30 @@ namespace Grafeas.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                CategoryId = input.ReadString();
+                break;
+              }
+              case 18: {
+                Name = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1190,7 +1517,11 @@ namespace Grafeas.V1 {
   /// For Windows, both distribution and windows_update contain information for the
   /// Windows update.
   /// </summary>
-  public sealed partial class UpgradeOccurrence : pb::IMessage<UpgradeOccurrence> {
+  public sealed partial class UpgradeOccurrence : pb::IMessage<UpgradeOccurrence>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpgradeOccurrence> _parser = new pb::MessageParser<UpgradeOccurrence>(() => new UpgradeOccurrence());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1326,6 +1657,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Package.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Package);
@@ -1345,7 +1679,33 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Package.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Package);
+      }
+      if (parsedVersion_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ParsedVersion);
+      }
+      if (distribution_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Distribution);
+      }
+      if (windowsUpdate_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(WindowsUpdate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1399,6 +1759,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1432,7 +1795,47 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Package = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (parsedVersion_ == null) {
+              ParsedVersion = new global::Grafeas.V1.Version();
+            }
+            input.ReadMessage(ParsedVersion);
+            break;
+          }
+          case 34: {
+            if (distribution_ == null) {
+              Distribution = new global::Grafeas.V1.UpgradeDistribution();
+            }
+            input.ReadMessage(Distribution);
+            break;
+          }
+          case 42: {
+            if (windowsUpdate_ == null) {
+              WindowsUpdate = new global::Grafeas.V1.WindowsUpdate();
+            }
+            input.ReadMessage(WindowsUpdate);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

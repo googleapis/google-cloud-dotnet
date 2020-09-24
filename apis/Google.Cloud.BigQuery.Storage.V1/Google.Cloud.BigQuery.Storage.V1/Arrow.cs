@@ -52,7 +52,11 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   ///
   /// See code samples on how this message can be deserialized.
   /// </summary>
-  public sealed partial class ArrowSchema : pb::IMessage<ArrowSchema> {
+  public sealed partial class ArrowSchema : pb::IMessage<ArrowSchema>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ArrowSchema> _parser = new pb::MessageParser<ArrowSchema>(() => new ArrowSchema());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -134,6 +138,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SerializedSchema.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(SerializedSchema);
@@ -141,7 +148,21 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SerializedSchema.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(SerializedSchema);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -168,6 +189,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -180,14 +204,37 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SerializedSchema = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Arrow RecordBatch.
   /// </summary>
-  public sealed partial class ArrowRecordBatch : pb::IMessage<ArrowRecordBatch> {
+  public sealed partial class ArrowRecordBatch : pb::IMessage<ArrowRecordBatch>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ArrowRecordBatch> _parser = new pb::MessageParser<ArrowRecordBatch>(() => new ArrowRecordBatch());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -286,6 +333,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SerializedRecordBatch.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(SerializedRecordBatch);
@@ -297,7 +347,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SerializedRecordBatch.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(SerializedRecordBatch);
+      }
+      if (RowCount != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RowCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -330,6 +398,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -346,7 +417,30 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SerializedRecordBatch = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            RowCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
