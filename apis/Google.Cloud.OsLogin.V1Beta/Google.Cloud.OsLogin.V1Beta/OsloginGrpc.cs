@@ -174,7 +174,7 @@ namespace Google.Cloud.OsLogin.V1Beta {
     {
       /// <summary>Creates a new client for OsLoginService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public OsLoginServiceClient(grpc::Channel channel) : base(channel)
+      public OsLoginServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for OsLoginService that uses a custom <c>CallInvoker</c>.</summary>

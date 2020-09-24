@@ -180,7 +180,7 @@ namespace Google.Cloud.Retail.V2 {
     {
       /// <summary>Creates a new client for ProductService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ProductServiceClient(grpc::Channel channel) : base(channel)
+      public ProductServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ProductService that uses a custom <c>CallInvoker</c>.</summary>

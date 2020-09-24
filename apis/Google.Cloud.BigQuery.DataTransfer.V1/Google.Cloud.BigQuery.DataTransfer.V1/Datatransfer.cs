@@ -286,7 +286,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// Thus, whoever uses this api can decide to generate either generic ui,
   /// or custom data source specific forms.
   /// </summary>
-  public sealed partial class DataSourceParameter : pb::IMessage<DataSourceParameter> {
+  public sealed partial class DataSourceParameter : pb::IMessage<DataSourceParameter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DataSourceParameter> _parser = new pb::MessageParser<DataSourceParameter>(() => new DataSourceParameter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -627,6 +631,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ParamId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ParamId);
@@ -686,7 +693,73 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ParamId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParamId);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (Type != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Type);
+      }
+      if (Required != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Required);
+      }
+      if (Repeated != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Repeated);
+      }
+      if (ValidationRegex.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ValidationRegex);
+      }
+      allowedValues_.WriteTo(ref output, _repeated_allowedValues_codec);
+      if (minValue_ != null) {
+        _single_minValue_codec.WriteTagAndValue(ref output, MinValue);
+      }
+      if (maxValue_ != null) {
+        _single_maxValue_codec.WriteTagAndValue(ref output, MaxValue);
+      }
+      fields_.WriteTo(ref output, _repeated_fields_codec);
+      if (ValidationDescription.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(ValidationDescription);
+      }
+      if (ValidationHelpUrl.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ValidationHelpUrl);
+      }
+      if (Immutable != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(Immutable);
+      }
+      if (Recurse != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(Recurse);
+      }
+      if (Deprecated != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(Deprecated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -799,6 +872,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -877,7 +953,92 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ParamId = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 32: {
+            Type = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSourceParameter.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            Required = input.ReadBool();
+            break;
+          }
+          case 48: {
+            Repeated = input.ReadBool();
+            break;
+          }
+          case 58: {
+            ValidationRegex = input.ReadString();
+            break;
+          }
+          case 66: {
+            allowedValues_.AddEntriesFrom(ref input, _repeated_allowedValues_codec);
+            break;
+          }
+          case 74: {
+            double? value = _single_minValue_codec.Read(ref input);
+            if (minValue_ == null || value != 0D) {
+              MinValue = value;
+            }
+            break;
+          }
+          case 82: {
+            double? value = _single_maxValue_codec.Read(ref input);
+            if (maxValue_ == null || value != 0D) {
+              MaxValue = value;
+            }
+            break;
+          }
+          case 90: {
+            fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
+            break;
+          }
+          case 98: {
+            ValidationDescription = input.ReadString();
+            break;
+          }
+          case 106: {
+            ValidationHelpUrl = input.ReadString();
+            break;
+          }
+          case 112: {
+            Immutable = input.ReadBool();
+            break;
+          }
+          case 120: {
+            Recurse = input.ReadBool();
+            break;
+          }
+          case 160: {
+            Deprecated = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DataSourceParameter message type.</summary>
@@ -927,7 +1088,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// Represents data source metadata. Metadata is sufficient to
   /// render UI and request proper OAuth tokens.
   /// </summary>
-  public sealed partial class DataSource : pb::IMessage<DataSource> {
+  public sealed partial class DataSource : pb::IMessage<DataSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DataSource> _parser = new pb::MessageParser<DataSource>(() => new DataSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1312,6 +1477,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1381,7 +1549,83 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DataSourceId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DataSourceId);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ClientId);
+      }
+      scopes_.WriteTo(ref output, _repeated_scopes_codec);
+      if (TransferType != global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) TransferType);
+      }
+      if (SupportsMultipleTransfers != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(SupportsMultipleTransfers);
+      }
+      if (UpdateDeadlineSeconds != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(UpdateDeadlineSeconds);
+      }
+      if (DefaultSchedule.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DefaultSchedule);
+      }
+      if (SupportsCustomSchedule != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(SupportsCustomSchedule);
+      }
+      parameters_.WriteTo(ref output, _repeated_parameters_codec);
+      if (HelpUrl.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(HelpUrl);
+      }
+      if (AuthorizationType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) AuthorizationType);
+      }
+      if (DataRefreshType != global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) DataRefreshType);
+      }
+      if (DefaultDataRefreshWindowDays != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(DefaultDataRefreshWindowDays);
+      }
+      if (ManualRunsDisabled != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(ManualRunsDisabled);
+      }
+      if (minimumScheduleInterval_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(MinimumScheduleInterval);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1505,6 +1749,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1588,7 +1835,97 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DataSourceId = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 42: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 50: {
+            scopes_.AddEntriesFrom(ref input, _repeated_scopes_codec);
+            break;
+          }
+          case 56: {
+            TransferType = (global::Google.Cloud.BigQuery.DataTransfer.V1.TransferType) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            SupportsMultipleTransfers = input.ReadBool();
+            break;
+          }
+          case 72: {
+            UpdateDeadlineSeconds = input.ReadInt32();
+            break;
+          }
+          case 82: {
+            DefaultSchedule = input.ReadString();
+            break;
+          }
+          case 88: {
+            SupportsCustomSchedule = input.ReadBool();
+            break;
+          }
+          case 98: {
+            parameters_.AddEntriesFrom(ref input, _repeated_parameters_codec);
+            break;
+          }
+          case 106: {
+            HelpUrl = input.ReadString();
+            break;
+          }
+          case 112: {
+            AuthorizationType = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.AuthorizationType) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            DataRefreshType = (global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Types.DataRefreshType) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            DefaultDataRefreshWindowDays = input.ReadInt32();
+            break;
+          }
+          case 136: {
+            ManualRunsDisabled = input.ReadBool();
+            break;
+          }
+          case 146: {
+            if (minimumScheduleInterval_ == null) {
+              MinimumScheduleInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MinimumScheduleInterval);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DataSource message type.</summary>
@@ -1650,7 +1987,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// <summary>
   /// A request to get data source info.
   /// </summary>
-  public sealed partial class GetDataSourceRequest : pb::IMessage<GetDataSourceRequest> {
+  public sealed partial class GetDataSourceRequest : pb::IMessage<GetDataSourceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetDataSourceRequest> _parser = new pb::MessageParser<GetDataSourceRequest>(() => new GetDataSourceRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1734,6 +2075,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1741,7 +2085,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1768,6 +2126,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1780,14 +2141,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to list supported data sources and their data transfer settings.
   /// </summary>
-  public sealed partial class ListDataSourcesRequest : pb::IMessage<ListDataSourcesRequest> {
+  public sealed partial class ListDataSourcesRequest : pb::IMessage<ListDataSourcesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDataSourcesRequest> _parser = new pb::MessageParser<ListDataSourcesRequest>(() => new ListDataSourcesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1909,6 +2293,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -1924,7 +2311,29 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1963,6 +2372,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1983,14 +2395,45 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Returns list of supported data sources and their metadata.
   /// </summary>
-  public sealed partial class ListDataSourcesResponse : pb::IMessage<ListDataSourcesResponse> {
+  public sealed partial class ListDataSourcesResponse : pb::IMessage<ListDataSourcesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDataSourcesResponse> _parser = new pb::MessageParser<ListDataSourcesResponse>(() => new ListDataSourcesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2091,6 +2534,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       dataSources_.WriteTo(output, _repeated_dataSources_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -2099,7 +2545,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dataSources_.WriteTo(ref output, _repeated_dataSources_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2128,6 +2589,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2144,7 +2608,30 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dataSources_.AddEntriesFrom(ref input, _repeated_dataSources_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2156,7 +2643,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// authorization code. Otherwise, the transfer configuration will be associated
   /// with the calling user.
   /// </summary>
-  public sealed partial class CreateTransferConfigRequest : pb::IMessage<CreateTransferConfigRequest> {
+  public sealed partial class CreateTransferConfigRequest : pb::IMessage<CreateTransferConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateTransferConfigRequest> _parser = new pb::MessageParser<CreateTransferConfigRequest>(() => new CreateTransferConfigRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2332,6 +2823,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -2355,7 +2849,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (transferConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TransferConfig);
+      }
+      if (AuthorizationCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AuthorizationCode);
+      }
+      if (VersionInfo.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(VersionInfo);
+      }
+      if (ServiceAccountName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ServiceAccountName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2409,6 +2933,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2440,7 +2967,45 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (transferConfig_ == null) {
+              TransferConfig = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
+            }
+            input.ReadMessage(TransferConfig);
+            break;
+          }
+          case 26: {
+            AuthorizationCode = input.ReadString();
+            break;
+          }
+          case 42: {
+            VersionInfo = input.ReadString();
+            break;
+          }
+          case 50: {
+            ServiceAccountName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2448,7 +3013,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// A request to update a transfer configuration. To update the user id of the
   /// transfer configuration, an authorization code needs to be provided.
   /// </summary>
-  public sealed partial class UpdateTransferConfigRequest : pb::IMessage<UpdateTransferConfigRequest> {
+  public sealed partial class UpdateTransferConfigRequest : pb::IMessage<UpdateTransferConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateTransferConfigRequest> _parser = new pb::MessageParser<UpdateTransferConfigRequest>(() => new UpdateTransferConfigRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2622,6 +3191,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (transferConfig_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(TransferConfig);
@@ -2645,7 +3217,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (transferConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TransferConfig);
+      }
+      if (AuthorizationCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AuthorizationCode);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateMask);
+      }
+      if (VersionInfo.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(VersionInfo);
+      }
+      if (ServiceAccountName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ServiceAccountName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2702,6 +3304,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2736,14 +3341,59 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (transferConfig_ == null) {
+              TransferConfig = new global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig();
+            }
+            input.ReadMessage(TransferConfig);
+            break;
+          }
+          case 26: {
+            AuthorizationCode = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 42: {
+            VersionInfo = input.ReadString();
+            break;
+          }
+          case 50: {
+            ServiceAccountName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to get data transfer information.
   /// </summary>
-  public sealed partial class GetTransferConfigRequest : pb::IMessage<GetTransferConfigRequest> {
+  public sealed partial class GetTransferConfigRequest : pb::IMessage<GetTransferConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTransferConfigRequest> _parser = new pb::MessageParser<GetTransferConfigRequest>(() => new GetTransferConfigRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2827,6 +3477,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2834,7 +3487,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2861,6 +3528,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2873,7 +3543,26 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2881,7 +3570,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// A request to delete data transfer information. All associated transfer runs
   /// and log messages will be deleted as well.
   /// </summary>
-  public sealed partial class DeleteTransferConfigRequest : pb::IMessage<DeleteTransferConfigRequest> {
+  public sealed partial class DeleteTransferConfigRequest : pb::IMessage<DeleteTransferConfigRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteTransferConfigRequest> _parser = new pb::MessageParser<DeleteTransferConfigRequest>(() => new DeleteTransferConfigRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2965,6 +3658,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2972,7 +3668,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2999,6 +3709,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3011,14 +3724,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to get data transfer run information.
   /// </summary>
-  public sealed partial class GetTransferRunRequest : pb::IMessage<GetTransferRunRequest> {
+  public sealed partial class GetTransferRunRequest : pb::IMessage<GetTransferRunRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetTransferRunRequest> _parser = new pb::MessageParser<GetTransferRunRequest>(() => new GetTransferRunRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3102,6 +3838,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -3109,7 +3848,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3136,6 +3889,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3148,14 +3904,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to delete data transfer run information.
   /// </summary>
-  public sealed partial class DeleteTransferRunRequest : pb::IMessage<DeleteTransferRunRequest> {
+  public sealed partial class DeleteTransferRunRequest : pb::IMessage<DeleteTransferRunRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteTransferRunRequest> _parser = new pb::MessageParser<DeleteTransferRunRequest>(() => new DeleteTransferRunRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3239,6 +4018,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -3246,7 +4028,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3273,6 +4069,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3285,14 +4084,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to list data transfers configured for a BigQuery project.
   /// </summary>
-  public sealed partial class ListTransferConfigsRequest : pb::IMessage<ListTransferConfigsRequest> {
+  public sealed partial class ListTransferConfigsRequest : pb::IMessage<ListTransferConfigsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListTransferConfigsRequest> _parser = new pb::MessageParser<ListTransferConfigsRequest>(() => new ListTransferConfigsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3430,6 +4252,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -3446,7 +4271,30 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      dataSourceIds_.WriteTo(ref output, _repeated_dataSourceIds_codec);
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3487,6 +4335,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3511,14 +4362,49 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            dataSourceIds_.AddEntriesFrom(ref input, _repeated_dataSourceIds_codec);
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The returned list of pipelines in the project.
   /// </summary>
-  public sealed partial class ListTransferConfigsResponse : pb::IMessage<ListTransferConfigsResponse> {
+  public sealed partial class ListTransferConfigsResponse : pb::IMessage<ListTransferConfigsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListTransferConfigsResponse> _parser = new pb::MessageParser<ListTransferConfigsResponse>(() => new ListTransferConfigsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3619,6 +4505,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       transferConfigs_.WriteTo(output, _repeated_transferConfigs_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -3627,7 +4516,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      transferConfigs_.WriteTo(ref output, _repeated_transferConfigs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3656,6 +4560,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3672,7 +4579,30 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            transferConfigs_.AddEntriesFrom(ref input, _repeated_transferConfigs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3681,7 +4611,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// specific data transfer runs. The data source can use this method to request
   /// all scheduled transfer runs.
   /// </summary>
-  public sealed partial class ListTransferRunsRequest : pb::IMessage<ListTransferRunsRequest> {
+  public sealed partial class ListTransferRunsRequest : pb::IMessage<ListTransferRunsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListTransferRunsRequest> _parser = new pb::MessageParser<ListTransferRunsRequest>(() => new ListTransferRunsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3837,6 +4771,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -3857,7 +4794,34 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      states_.WriteTo(ref output, _repeated_states_codec);
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (RunAttempt != global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) RunAttempt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3904,6 +4868,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3933,7 +4900,43 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            states_.AddEntriesFrom(ref input, _repeated_states_codec);
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            RunAttempt = (global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Types.RunAttempt) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ListTransferRunsRequest message type.</summary>
@@ -3961,7 +4964,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// <summary>
   /// The returned list of pipelines in the project.
   /// </summary>
-  public sealed partial class ListTransferRunsResponse : pb::IMessage<ListTransferRunsResponse> {
+  public sealed partial class ListTransferRunsResponse : pb::IMessage<ListTransferRunsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListTransferRunsResponse> _parser = new pb::MessageParser<ListTransferRunsResponse>(() => new ListTransferRunsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4062,6 +5069,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       transferRuns_.WriteTo(output, _repeated_transferRuns_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -4070,7 +5080,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      transferRuns_.WriteTo(ref output, _repeated_transferRuns_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4099,6 +5124,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4115,14 +5143,41 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            transferRuns_.AddEntriesFrom(ref input, _repeated_transferRuns_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to get user facing log messages associated with data transfer run.
   /// </summary>
-  public sealed partial class ListTransferLogsRequest : pb::IMessage<ListTransferLogsRequest> {
+  public sealed partial class ListTransferLogsRequest : pb::IMessage<ListTransferLogsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListTransferLogsRequest> _parser = new pb::MessageParser<ListTransferLogsRequest>(() => new ListTransferLogsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4261,6 +5316,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -4277,7 +5335,30 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PageSize);
+      }
+      messageTypes_.WriteTo(ref output, _repeated_messageTypes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4318,6 +5399,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4343,14 +5427,50 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 40: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 50:
+          case 48: {
+            messageTypes_.AddEntriesFrom(ref input, _repeated_messageTypes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The returned list transfer run messages.
   /// </summary>
-  public sealed partial class ListTransferLogsResponse : pb::IMessage<ListTransferLogsResponse> {
+  public sealed partial class ListTransferLogsResponse : pb::IMessage<ListTransferLogsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListTransferLogsResponse> _parser = new pb::MessageParser<ListTransferLogsResponse>(() => new ListTransferLogsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4451,6 +5571,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       transferMessages_.WriteTo(output, _repeated_transferMessages_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -4459,7 +5582,22 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      transferMessages_.WriteTo(ref output, _repeated_transferMessages_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4488,6 +5626,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4504,7 +5645,30 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            transferMessages_.AddEntriesFrom(ref input, _repeated_transferMessages_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4516,7 +5680,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// returns false, as it cannot be determined whether the credentials are
   /// already valid merely based on the user id.
   /// </summary>
-  public sealed partial class CheckValidCredsRequest : pb::IMessage<CheckValidCredsRequest> {
+  public sealed partial class CheckValidCredsRequest : pb::IMessage<CheckValidCredsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CheckValidCredsRequest> _parser = new pb::MessageParser<CheckValidCredsRequest>(() => new CheckValidCredsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4600,6 +5768,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -4607,7 +5778,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4634,6 +5819,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4646,14 +5834,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A response indicating whether the credentials exist and are valid.
   /// </summary>
-  public sealed partial class CheckValidCredsResponse : pb::IMessage<CheckValidCredsResponse> {
+  public sealed partial class CheckValidCredsResponse : pb::IMessage<CheckValidCredsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CheckValidCredsResponse> _parser = new pb::MessageParser<CheckValidCredsResponse>(() => new CheckValidCredsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4735,6 +5946,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (HasValidCreds != false) {
         output.WriteRawTag(8);
         output.WriteBool(HasValidCreds);
@@ -4742,7 +5956,21 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasValidCreds != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(HasValidCreds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4769,6 +5997,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4781,14 +6012,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            HasValidCreds = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to schedule transfer runs for a time range.
   /// </summary>
-  public sealed partial class ScheduleTransferRunsRequest : pb::IMessage<ScheduleTransferRunsRequest> {
+  public sealed partial class ScheduleTransferRunsRequest : pb::IMessage<ScheduleTransferRunsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ScheduleTransferRunsRequest> _parser = new pb::MessageParser<ScheduleTransferRunsRequest>(() => new ScheduleTransferRunsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4908,6 +6162,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -4923,7 +6180,29 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4968,6 +6247,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4994,14 +6276,51 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A response to schedule transfer runs for a time range.
   /// </summary>
-  public sealed partial class ScheduleTransferRunsResponse : pb::IMessage<ScheduleTransferRunsResponse> {
+  public sealed partial class ScheduleTransferRunsResponse : pb::IMessage<ScheduleTransferRunsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ScheduleTransferRunsResponse> _parser = new pb::MessageParser<ScheduleTransferRunsResponse>(() => new ScheduleTransferRunsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5082,11 +6401,25 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       runs_.WriteTo(output, _repeated_runs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      runs_.WriteTo(ref output, _repeated_runs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5109,6 +6442,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5121,14 +6457,37 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            runs_.AddEntriesFrom(ref input, _repeated_runs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request to start manual transfer runs.
   /// </summary>
-  public sealed partial class StartManualTransferRunsRequest : pb::IMessage<StartManualTransferRunsRequest> {
+  public sealed partial class StartManualTransferRunsRequest : pb::IMessage<StartManualTransferRunsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StartManualTransferRunsRequest> _parser = new pb::MessageParser<StartManualTransferRunsRequest>(() => new StartManualTransferRunsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5275,6 +6634,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -5290,7 +6652,29 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (timeCase_ == TimeOneofCase.RequestedTimeRange) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestedTimeRange);
+      }
+      if (timeCase_ == TimeOneofCase.RequestedRunTime) {
+        output.WriteRawTag(34);
+        output.WriteMessage(RequestedRunTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5338,6 +6722,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5368,7 +6755,44 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Types.TimeRange subBuilder = new global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Types.TimeRange();
+            if (timeCase_ == TimeOneofCase.RequestedTimeRange) {
+              subBuilder.MergeFrom(RequestedTimeRange);
+            }
+            input.ReadMessage(subBuilder);
+            RequestedTimeRange = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (timeCase_ == TimeOneofCase.RequestedRunTime) {
+              subBuilder.MergeFrom(RequestedRunTime);
+            }
+            input.ReadMessage(subBuilder);
+            RequestedRunTime = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the StartManualTransferRunsRequest message type.</summary>
@@ -5378,7 +6802,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// A specification for a time range, this will request transfer runs with
       /// run_time between start_time (inclusive) and end_time (exclusive).
       /// </summary>
-      public sealed partial class TimeRange : pb::IMessage<TimeRange> {
+      public sealed partial class TimeRange : pb::IMessage<TimeRange>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<TimeRange> _parser = new pb::MessageParser<TimeRange>(() => new TimeRange());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5483,6 +6911,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (startTime_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(StartTime);
@@ -5494,7 +6925,25 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (startTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartTime);
+          }
+          if (endTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(EndTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -5533,6 +6982,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -5555,7 +7007,36 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+              case 18: {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EndTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -5567,7 +7048,11 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// <summary>
   /// A response to start manual transfer runs.
   /// </summary>
-  public sealed partial class StartManualTransferRunsResponse : pb::IMessage<StartManualTransferRunsResponse> {
+  public sealed partial class StartManualTransferRunsResponse : pb::IMessage<StartManualTransferRunsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StartManualTransferRunsResponse> _parser = new pb::MessageParser<StartManualTransferRunsResponse>(() => new StartManualTransferRunsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5648,11 +7133,25 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       runs_.WriteTo(output, _repeated_runs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      runs_.WriteTo(ref output, _repeated_runs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5675,6 +7174,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5687,7 +7189,26 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            runs_.AddEntriesFrom(ref input, _repeated_runs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

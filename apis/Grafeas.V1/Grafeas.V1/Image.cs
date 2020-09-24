@@ -51,7 +51,11 @@ namespace Grafeas.V1 {
   /// <summary>
   /// Layer holds metadata specific to a layer of a Docker image.
   /// </summary>
-  public sealed partial class Layer : pb::IMessage<Layer> {
+  public sealed partial class Layer : pb::IMessage<Layer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Layer> _parser = new pb::MessageParser<Layer>(() => new Layer());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,6 +155,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Directive.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Directive);
@@ -162,7 +169,25 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Directive.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Directive);
+      }
+      if (Arguments.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Arguments);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -195,6 +220,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -211,14 +239,41 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Directive = input.ReadString();
+            break;
+          }
+          case 18: {
+            Arguments = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A set of properties that uniquely identify a given Docker image.
   /// </summary>
-  public sealed partial class Fingerprint : pb::IMessage<Fingerprint> {
+  public sealed partial class Fingerprint : pb::IMessage<Fingerprint>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Fingerprint> _parser = new pb::MessageParser<Fingerprint>(() => new Fingerprint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -337,6 +392,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (V1Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(V1Name);
@@ -349,7 +407,26 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (V1Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(V1Name);
+      }
+      v2Blob_.WriteTo(ref output, _repeated_v2Blob_codec);
+      if (V2Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(V2Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -384,6 +461,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -404,7 +484,34 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            V1Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            v2Blob_.AddEntriesFrom(ref input, _repeated_v2Blob_codec);
+            break;
+          }
+          case 26: {
+            V2Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -415,7 +522,11 @@ namespace Grafeas.V1 {
   ///   FROM &lt;Basis.resource_url>
   /// Or an equivalent reference, e.g., a tag of the resource_url.
   /// </summary>
-  public sealed partial class ImageNote : pb::IMessage<ImageNote> {
+  public sealed partial class ImageNote : pb::IMessage<ImageNote>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageNote> _parser = new pb::MessageParser<ImageNote>(() => new ImageNote());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -515,6 +626,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ResourceUrl.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ResourceUrl);
@@ -526,7 +640,25 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ResourceUrl.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceUrl);
+      }
+      if (fingerprint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Fingerprint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -562,6 +694,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -581,7 +716,33 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ResourceUrl = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (fingerprint_ == null) {
+              Fingerprint = new global::Grafeas.V1.Fingerprint();
+            }
+            input.ReadMessage(Fingerprint);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -590,7 +751,11 @@ namespace Grafeas.V1 {
   /// image would be produced from a Dockerfile with FROM &lt;DockerImage.Basis in
   /// attached Note>.
   /// </summary>
-  public sealed partial class ImageOccurrence : pb::IMessage<ImageOccurrence> {
+  public sealed partial class ImageOccurrence : pb::IMessage<ImageOccurrence>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImageOccurrence> _parser = new pb::MessageParser<ImageOccurrence>(() => new ImageOccurrence());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -726,6 +891,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (fingerprint_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Fingerprint);
@@ -742,7 +910,30 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (fingerprint_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Fingerprint);
+      }
+      if (Distance != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Distance);
+      }
+      layerInfo_.WriteTo(ref output, _repeated_layerInfo_codec);
+      if (BaseResourceUrl.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(BaseResourceUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -786,6 +977,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -813,7 +1007,41 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (fingerprint_ == null) {
+              Fingerprint = new global::Grafeas.V1.Fingerprint();
+            }
+            input.ReadMessage(Fingerprint);
+            break;
+          }
+          case 16: {
+            Distance = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            layerInfo_.AddEntriesFrom(ref input, _repeated_layerInfo_codec);
+            break;
+          }
+          case 34: {
+            BaseResourceUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

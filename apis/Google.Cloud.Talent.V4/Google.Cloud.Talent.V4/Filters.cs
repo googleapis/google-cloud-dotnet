@@ -90,7 +90,11 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// The query required to perform a search query.
   /// </summary>
-  public sealed partial class JobQuery : pb::IMessage<JobQuery> {
+  public sealed partial class JobQuery : pb::IMessage<JobQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<JobQuery> _parser = new pb::MessageParser<JobQuery>(() => new JobQuery());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -496,6 +500,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Query.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Query);
@@ -534,7 +541,52 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Query.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Query);
+      }
+      companies_.WriteTo(ref output, _repeated_companies_codec);
+      locationFilters_.WriteTo(ref output, _repeated_locationFilters_codec);
+      jobCategories_.WriteTo(ref output, _repeated_jobCategories_codec);
+      if (commuteFilter_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CommuteFilter);
+      }
+      companyDisplayNames_.WriteTo(ref output, _repeated_companyDisplayNames_codec);
+      if (compensationFilter_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CompensationFilter);
+      }
+      if (CustomAttributeFilter.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CustomAttributeFilter);
+      }
+      if (DisableSpellCheck != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(DisableSpellCheck);
+      }
+      employmentTypes_.WriteTo(ref output, _repeated_employmentTypes_codec);
+      languageCodes_.WriteTo(ref output, _repeated_languageCodes_codec);
+      if (publishTimeRange_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PublishTimeRange);
+      }
+      excludedJobs_.WriteTo(ref output, _repeated_excludedJobs_codec);
+      if (QueryLanguageCode.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(QueryLanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -620,6 +672,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -695,14 +750,100 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Query = input.ReadString();
+            break;
+          }
+          case 18: {
+            companies_.AddEntriesFrom(ref input, _repeated_companies_codec);
+            break;
+          }
+          case 26: {
+            locationFilters_.AddEntriesFrom(ref input, _repeated_locationFilters_codec);
+            break;
+          }
+          case 34:
+          case 32: {
+            jobCategories_.AddEntriesFrom(ref input, _repeated_jobCategories_codec);
+            break;
+          }
+          case 42: {
+            if (commuteFilter_ == null) {
+              CommuteFilter = new global::Google.Cloud.Talent.V4.CommuteFilter();
+            }
+            input.ReadMessage(CommuteFilter);
+            break;
+          }
+          case 50: {
+            companyDisplayNames_.AddEntriesFrom(ref input, _repeated_companyDisplayNames_codec);
+            break;
+          }
+          case 58: {
+            if (compensationFilter_ == null) {
+              CompensationFilter = new global::Google.Cloud.Talent.V4.CompensationFilter();
+            }
+            input.ReadMessage(CompensationFilter);
+            break;
+          }
+          case 66: {
+            CustomAttributeFilter = input.ReadString();
+            break;
+          }
+          case 72: {
+            DisableSpellCheck = input.ReadBool();
+            break;
+          }
+          case 82:
+          case 80: {
+            employmentTypes_.AddEntriesFrom(ref input, _repeated_employmentTypes_codec);
+            break;
+          }
+          case 90: {
+            languageCodes_.AddEntriesFrom(ref input, _repeated_languageCodes_codec);
+            break;
+          }
+          case 98: {
+            if (publishTimeRange_ == null) {
+              PublishTimeRange = new global::Google.Cloud.Talent.V4.TimestampRange();
+            }
+            input.ReadMessage(PublishTimeRange);
+            break;
+          }
+          case 106: {
+            excludedJobs_.AddEntriesFrom(ref input, _repeated_excludedJobs_codec);
+            break;
+          }
+          case 114: {
+            QueryLanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Geographic region of the search.
   /// </summary>
-  public sealed partial class LocationFilter : pb::IMessage<LocationFilter> {
+  public sealed partial class LocationFilter : pb::IMessage<LocationFilter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LocationFilter> _parser = new pb::MessageParser<LocationFilter>(() => new LocationFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -885,6 +1026,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Address.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Address);
@@ -908,7 +1052,37 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Address.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Address);
+      }
+      if (RegionCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RegionCode);
+      }
+      if (latLng_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LatLng);
+      }
+      if (DistanceInMiles != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(DistanceInMiles);
+      }
+      if (TelecommutePreference != global::Google.Cloud.Talent.V4.LocationFilter.Types.TelecommutePreference.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) TelecommutePreference);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -962,6 +1136,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -993,7 +1170,45 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Address = input.ReadString();
+            break;
+          }
+          case 18: {
+            RegionCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (latLng_ == null) {
+              LatLng = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(LatLng);
+            break;
+          }
+          case 33: {
+            DistanceInMiles = input.ReadDouble();
+            break;
+          }
+          case 40: {
+            TelecommutePreference = (global::Google.Cloud.Talent.V4.LocationFilter.Types.TelecommutePreference) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the LocationFilter message type.</summary>
@@ -1025,7 +1240,11 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Filter on job compensation type and amount.
   /// </summary>
-  public sealed partial class CompensationFilter : pb::IMessage<CompensationFilter> {
+  public sealed partial class CompensationFilter : pb::IMessage<CompensationFilter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CompensationFilter> _parser = new pb::MessageParser<CompensationFilter>(() => new CompensationFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1159,6 +1378,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Type != global::Google.Cloud.Talent.V4.CompensationFilter.Types.FilterType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
@@ -1175,7 +1397,30 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Google.Cloud.Talent.V4.CompensationFilter.Types.FilterType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      units_.WriteTo(ref output, _repeated_units_codec);
+      if (range_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Range);
+      }
+      if (IncludeJobsWithUnspecifiedCompensationRange != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeJobsWithUnspecifiedCompensationRange);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1219,6 +1464,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1247,7 +1495,42 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.Talent.V4.CompensationFilter.Types.FilterType) input.ReadEnum();
+            break;
+          }
+          case 18:
+          case 16: {
+            units_.AddEntriesFrom(ref input, _repeated_units_codec);
+            break;
+          }
+          case 26: {
+            if (range_ == null) {
+              Range = new global::Google.Cloud.Talent.V4.CompensationInfo.Types.CompensationRange();
+            }
+            input.ReadMessage(Range);
+            break;
+          }
+          case 32: {
+            IncludeJobsWithUnspecifiedCompensationRange = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CompensationFilter message type.</summary>
@@ -1313,7 +1596,11 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Parameters needed for commute search.
   /// </summary>
-  public sealed partial class CommuteFilter : pb::IMessage<CommuteFilter> {
+  public sealed partial class CommuteFilter : pb::IMessage<CommuteFilter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CommuteFilter> _parser = new pb::MessageParser<CommuteFilter>(() => new CommuteFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1517,6 +1804,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (CommuteMethod != global::Google.Cloud.Talent.V4.CommuteMethod.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) CommuteMethod);
@@ -1544,7 +1834,41 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CommuteMethod != global::Google.Cloud.Talent.V4.CommuteMethod.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) CommuteMethod);
+      }
+      if (startCoordinates_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartCoordinates);
+      }
+      if (travelDuration_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TravelDuration);
+      }
+      if (AllowImpreciseAddresses != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AllowImpreciseAddresses);
+      }
+      if (trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) RoadTraffic);
+      }
+      if (trafficOptionCase_ == TrafficOptionOneofCase.DepartureTime) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DepartureTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1613,6 +1937,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1657,7 +1984,58 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            CommuteMethod = (global::Google.Cloud.Talent.V4.CommuteMethod) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (startCoordinates_ == null) {
+              StartCoordinates = new global::Google.Type.LatLng();
+            }
+            input.ReadMessage(StartCoordinates);
+            break;
+          }
+          case 26: {
+            if (travelDuration_ == null) {
+              TravelDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TravelDuration);
+            break;
+          }
+          case 32: {
+            AllowImpreciseAddresses = input.ReadBool();
+            break;
+          }
+          case 40: {
+            trafficOption_ = input.ReadEnum();
+            trafficOptionCase_ = TrafficOptionOneofCase.RoadTraffic;
+            break;
+          }
+          case 50: {
+            global::Google.Type.TimeOfDay subBuilder = new global::Google.Type.TimeOfDay();
+            if (trafficOptionCase_ == TrafficOptionOneofCase.DepartureTime) {
+              subBuilder.MergeFrom(DepartureTime);
+            }
+            input.ReadMessage(subBuilder);
+            DepartureTime = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CommuteFilter message type.</summary>

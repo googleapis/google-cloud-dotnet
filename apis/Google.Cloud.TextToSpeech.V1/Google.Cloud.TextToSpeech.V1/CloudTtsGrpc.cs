@@ -90,7 +90,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     {
       /// <summary>Creates a new client for TextToSpeech</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public TextToSpeechClient(grpc::Channel channel) : base(channel)
+      public TextToSpeechClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for TextToSpeech that uses a custom <c>CallInvoker</c>.</summary>

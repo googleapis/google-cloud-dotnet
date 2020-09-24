@@ -52,7 +52,11 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// <summary>
   /// Cloud SCC's Notification
   /// </summary>
-  public sealed partial class NotificationMessage : pb::IMessage<NotificationMessage> {
+  public sealed partial class NotificationMessage : pb::IMessage<NotificationMessage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NotificationMessage> _parser = new pb::MessageParser<NotificationMessage>(() => new NotificationMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -194,6 +198,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (NotificationConfigName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(NotificationConfigName);
@@ -209,7 +216,29 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NotificationConfigName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NotificationConfigName);
+      }
+      if (eventCase_ == EventOneofCase.Finding) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Finding);
+      }
+      if (resource_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Resource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -257,6 +286,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -285,7 +317,42 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NotificationConfigName = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.SecurityCenter.V1.Finding subBuilder = new global::Google.Cloud.SecurityCenter.V1.Finding();
+            if (eventCase_ == EventOneofCase.Finding) {
+              subBuilder.MergeFrom(Finding);
+            }
+            input.ReadMessage(subBuilder);
+            Finding = subBuilder;
+            break;
+          }
+          case 26: {
+            if (resource_ == null) {
+              Resource = new global::Google.Cloud.SecurityCenter.V1.Resource();
+            }
+            input.ReadMessage(Resource);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

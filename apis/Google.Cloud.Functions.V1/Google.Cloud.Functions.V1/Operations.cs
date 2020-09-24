@@ -76,7 +76,11 @@ namespace Google.Cloud.Functions.V1 {
   /// <summary>
   /// Metadata describing an [Operation][google.longrunning.Operation]
   /// </summary>
-  public sealed partial class OperationMetadataV1 : pb::IMessage<OperationMetadataV1> {
+  public sealed partial class OperationMetadataV1 : pb::IMessage<OperationMetadataV1>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OperationMetadataV1> _parser = new pb::MessageParser<OperationMetadataV1>(() => new OperationMetadataV1());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -246,6 +250,9 @@ namespace Google.Cloud.Functions.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Target.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Target);
@@ -273,7 +280,41 @@ namespace Google.Cloud.Functions.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Target.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Target);
+      }
+      if (Type != global::Google.Cloud.Functions.V1.OperationType.OperationUnspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (request_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Request);
+      }
+      if (VersionId != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(VersionId);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      if (BuildId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(BuildId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -336,6 +377,9 @@ namespace Google.Cloud.Functions.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -374,7 +418,52 @@ namespace Google.Cloud.Functions.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Target = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Cloud.Functions.V1.OperationType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (request_ == null) {
+              Request = new global::Google.Protobuf.WellKnownTypes.Any();
+            }
+            input.ReadMessage(Request);
+            break;
+          }
+          case 32: {
+            VersionId = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            BuildId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

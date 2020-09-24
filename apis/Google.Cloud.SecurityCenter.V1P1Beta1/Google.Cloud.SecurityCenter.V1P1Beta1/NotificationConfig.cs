@@ -66,7 +66,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   /// configuration to send notifications for create/update events of findings,
   /// assets and etc.
   /// </summary>
-  public sealed partial class NotificationConfig : pb::IMessage<NotificationConfig> {
+  public sealed partial class NotificationConfig : pb::IMessage<NotificationConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NotificationConfig> _parser = new pb::MessageParser<NotificationConfig>(() => new NotificationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -263,6 +267,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -290,7 +297,41 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (EventType != global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) EventType);
+      }
+      if (PubsubTopic.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PubsubTopic);
+      }
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ServiceAccount);
+      }
+      if (notifyConfigCase_ == NotifyConfigOneofCase.StreamingConfig) {
+        output.WriteRawTag(50);
+        output.WriteMessage(StreamingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -353,6 +394,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -390,7 +434,51 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 24: {
+            EventType = (global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            PubsubTopic = input.ReadString();
+            break;
+          }
+          case 42: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig subBuilder = new global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig();
+            if (notifyConfigCase_ == NotifyConfigOneofCase.StreamingConfig) {
+              subBuilder.MergeFrom(StreamingConfig);
+            }
+            input.ReadMessage(subBuilder);
+            StreamingConfig = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the NotificationConfig message type.</summary>
@@ -414,7 +502,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       /// The config for streaming-based notifications, which send each event as soon
       /// as it is detected.
       /// </summary>
-      public sealed partial class StreamingConfig : pb::IMessage<StreamingConfig> {
+      public sealed partial class StreamingConfig : pb::IMessage<StreamingConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<StreamingConfig> _parser = new pb::MessageParser<StreamingConfig>(() => new StreamingConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -516,6 +608,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Filter.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Filter);
@@ -523,7 +618,21 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Filter.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Filter);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -550,6 +659,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -562,7 +674,26 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Filter = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

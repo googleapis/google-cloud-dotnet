@@ -133,7 +133,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// <summary>
   /// Information about a table restore.
   /// </summary>
-  public sealed partial class RestoreInfo : pb::IMessage<RestoreInfo> {
+  public sealed partial class RestoreInfo : pb::IMessage<RestoreInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RestoreInfo> _parser = new pb::MessageParser<RestoreInfo>(() => new RestoreInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -258,6 +262,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SourceType != global::Google.Cloud.Bigtable.Admin.V2.RestoreSourceType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) SourceType);
@@ -269,7 +276,25 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SourceType != global::Google.Cloud.Bigtable.Admin.V2.RestoreSourceType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SourceType);
+      }
+      if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BackupInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -308,6 +333,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -329,7 +357,35 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SourceType = (global::Google.Cloud.Bigtable.Admin.V2.RestoreSourceType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Bigtable.Admin.V2.BackupInfo subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.BackupInfo();
+            if (sourceInfoCase_ == SourceInfoOneofCase.BackupInfo) {
+              subBuilder.MergeFrom(BackupInfo);
+            }
+            input.ReadMessage(subBuilder);
+            BackupInfo = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -337,7 +393,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// A collection of user data indexed by row, column, and timestamp.
   /// Each table is served using the resources of its parent cluster.
   /// </summary>
-  public sealed partial class Table : pb::IMessage<Table> {
+  public sealed partial class Table : pb::IMessage<Table>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Table> _parser = new pb::MessageParser<Table>(() => new Table());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -498,6 +558,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -515,7 +578,31 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      clusterStates_.WriteTo(ref output, _map_clusterStates_codec);
+      columnFamilies_.WriteTo(ref output, _map_columnFamilies_codec);
+      if (Granularity != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Granularity);
+      }
+      if (restoreInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RestoreInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -561,6 +648,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -592,7 +682,45 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            clusterStates_.AddEntriesFrom(ref input, _map_clusterStates_codec);
+            break;
+          }
+          case 26: {
+            columnFamilies_.AddEntriesFrom(ref input, _map_columnFamilies_codec);
+            break;
+          }
+          case 32: {
+            Granularity = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (restoreInfo_ == null) {
+              RestoreInfo = new global::Google.Cloud.Bigtable.Admin.V2.RestoreInfo();
+            }
+            input.ReadMessage(RestoreInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Table message type.</summary>
@@ -644,7 +772,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <summary>
       /// The state of a table's data in a particular cluster.
       /// </summary>
-      public sealed partial class ClusterState : pb::IMessage<ClusterState> {
+      public sealed partial class ClusterState : pb::IMessage<ClusterState>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ClusterState> _parser = new pb::MessageParser<ClusterState>(() => new ClusterState());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -726,6 +858,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) {
             output.WriteRawTag(8);
             output.WriteEnum((int) ReplicationState);
@@ -733,7 +868,21 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ReplicationState);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -760,6 +909,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -772,7 +924,26 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ReplicationState = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the ClusterState message type.</summary>
@@ -829,7 +1000,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// <summary>
   /// A set of columns within a table which share a common configuration.
   /// </summary>
-  public sealed partial class ColumnFamily : pb::IMessage<ColumnFamily> {
+  public sealed partial class ColumnFamily : pb::IMessage<ColumnFamily>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ColumnFamily> _parser = new pb::MessageParser<ColumnFamily>(() => new ColumnFamily());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -916,6 +1091,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (gcRule_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(GcRule);
@@ -923,7 +1101,21 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (gcRule_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcRule);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -953,6 +1145,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -968,14 +1163,40 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (gcRule_ == null) {
+              GcRule = new global::Google.Cloud.Bigtable.Admin.V2.GcRule();
+            }
+            input.ReadMessage(GcRule);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Rule for determining which cells to delete during garbage collection.
   /// </summary>
-  public sealed partial class GcRule : pb::IMessage<GcRule> {
+  public sealed partial class GcRule : pb::IMessage<GcRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GcRule> _parser = new pb::MessageParser<GcRule>(() => new GcRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1144,6 +1365,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ruleCase_ == RuleOneofCase.MaxNumVersions) {
         output.WriteRawTag(8);
         output.WriteInt32(MaxNumVersions);
@@ -1163,7 +1387,33 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ruleCase_ == RuleOneofCase.MaxNumVersions) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxNumVersions);
+      }
+      if (ruleCase_ == RuleOneofCase.MaxAge) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MaxAge);
+      }
+      if (ruleCase_ == RuleOneofCase.Intersection) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Intersection);
+      }
+      if (ruleCase_ == RuleOneofCase.Union) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Union);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1220,6 +1470,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1259,7 +1512,53 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MaxNumVersions = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            global::Google.Protobuf.WellKnownTypes.Duration subBuilder = new global::Google.Protobuf.WellKnownTypes.Duration();
+            if (ruleCase_ == RuleOneofCase.MaxAge) {
+              subBuilder.MergeFrom(MaxAge);
+            }
+            input.ReadMessage(subBuilder);
+            MaxAge = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection();
+            if (ruleCase_ == RuleOneofCase.Intersection) {
+              subBuilder.MergeFrom(Intersection);
+            }
+            input.ReadMessage(subBuilder);
+            Intersection = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union();
+            if (ruleCase_ == RuleOneofCase.Union) {
+              subBuilder.MergeFrom(Union);
+            }
+            input.ReadMessage(subBuilder);
+            Union = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the GcRule message type.</summary>
@@ -1268,7 +1567,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <summary>
       /// A GcRule which deletes cells matching all of the given rules.
       /// </summary>
-      public sealed partial class Intersection : pb::IMessage<Intersection> {
+      public sealed partial class Intersection : pb::IMessage<Intersection>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Intersection> _parser = new pb::MessageParser<Intersection>(() => new Intersection());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1349,11 +1652,25 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           rules_.WriteTo(output, _repeated_rules_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          rules_.WriteTo(ref output, _repeated_rules_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1376,6 +1693,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1388,14 +1708,37 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                rules_.AddEntriesFrom(ref input, _repeated_rules_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// A GcRule which deletes cells matching any of the given rules.
       /// </summary>
-      public sealed partial class Union : pb::IMessage<Union> {
+      public sealed partial class Union : pb::IMessage<Union>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Union> _parser = new pb::MessageParser<Union>(() => new Union());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1476,11 +1819,25 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           rules_.WriteTo(output, _repeated_rules_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          rules_.WriteTo(ref output, _repeated_rules_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1503,6 +1860,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1515,7 +1875,26 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                rules_.AddEntriesFrom(ref input, _repeated_rules_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1533,7 +1912,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// feature might be changed in backward-incompatible ways and is not recommended
   /// for production use. It is not subject to any SLA or deprecation policy.
   /// </summary>
-  public sealed partial class Snapshot : pb::IMessage<Snapshot> {
+  public sealed partial class Snapshot : pb::IMessage<Snapshot>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1724,6 +2107,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1755,7 +2141,45 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (sourceTable_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SourceTable);
+      }
+      if (DataSizeBytes != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(DataSizeBytes);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DeleteTime);
+      }
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State.NotKnown) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1827,6 +2251,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1872,7 +2299,59 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (sourceTable_ == null) {
+              SourceTable = new global::Google.Cloud.Bigtable.Admin.V2.Table();
+            }
+            input.ReadMessage(SourceTable);
+            break;
+          }
+          case 24: {
+            DataSizeBytes = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Snapshot message type.</summary>
@@ -1906,7 +2385,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// <summary>
   /// A backup of a Cloud Bigtable table.
   /// </summary>
-  public sealed partial class Backup : pb::IMessage<Backup> {
+  public sealed partial class Backup : pb::IMessage<Backup>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Backup> _parser = new pb::MessageParser<Backup>(() => new Backup());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2110,6 +2593,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2141,7 +2627,45 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceTable.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceTable);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ExpireTime);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EndTime);
+      }
+      if (SizeBytes != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(SizeBytes);
+      }
+      if (State != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2213,6 +2737,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2258,7 +2785,59 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceTable = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 34: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 42: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 48: {
+            SizeBytes = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Backup message type.</summary>
@@ -2291,7 +2870,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   /// <summary>
   /// Information about a backup.
   /// </summary>
-  public sealed partial class BackupInfo : pb::IMessage<BackupInfo> {
+  public sealed partial class BackupInfo : pb::IMessage<BackupInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BackupInfo> _parser = new pb::MessageParser<BackupInfo>(() => new BackupInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2426,6 +3009,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Backup.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Backup);
@@ -2445,7 +3031,33 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Backup.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Backup);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndTime);
+      }
+      if (SourceTable.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SourceTable);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2496,6 +3108,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2526,7 +3141,44 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Backup = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 34: {
+            SourceTable = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

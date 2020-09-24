@@ -68,7 +68,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     {
       /// <summary>Creates a new client for Environments</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public EnvironmentsClient(grpc::Channel channel) : base(channel)
+      public EnvironmentsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Environments that uses a custom <c>CallInvoker</c>.</summary>

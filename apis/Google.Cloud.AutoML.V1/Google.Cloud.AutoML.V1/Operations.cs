@@ -96,7 +96,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Metadata used across all long running operations returned by AutoML API.
   /// </summary>
-  public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata> {
+  public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OperationMetadata> _parser = new pb::MessageParser<OperationMetadata>(() => new OperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -434,6 +438,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       partialFailures_.WriteTo(output, _repeated_partialFailures_codec);
       if (createTime_ != null) {
         output.WriteRawTag(26);
@@ -486,7 +493,66 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      partialFailures_.WriteTo(ref output, _repeated_partialFailures_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      if (detailsCase_ == DetailsOneofCase.DeleteDetails) {
+        output.WriteRawTag(66);
+        output.WriteMessage(DeleteDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.CreateModelDetails) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreateModelDetails);
+      }
+      if (ProgressPercent != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(ProgressPercent);
+      }
+      if (detailsCase_ == DetailsOneofCase.ImportDataDetails) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ImportDataDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.BatchPredictDetails) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(BatchPredictDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.ExportDataDetails) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(ExportDataDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.ExportModelDetails) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(ExportModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.DeployModelDetails) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(DeployModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.UndeployModelDetails) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(UndeployModelDetails);
+      }
+      if (detailsCase_ == DetailsOneofCase.CreateDatasetDetails) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(CreateDatasetDetails);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -617,6 +683,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -728,14 +797,136 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            partialFailures_.AddEntriesFrom(ref input, _repeated_partialFailures_codec);
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.AutoML.V1.DeleteOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.DeleteOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.DeleteDetails) {
+              subBuilder.MergeFrom(DeleteDetails);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteDetails = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Google.Cloud.AutoML.V1.CreateModelOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.CreateModelOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.CreateModelDetails) {
+              subBuilder.MergeFrom(CreateModelDetails);
+            }
+            input.ReadMessage(subBuilder);
+            CreateModelDetails = subBuilder;
+            break;
+          }
+          case 104: {
+            ProgressPercent = input.ReadInt32();
+            break;
+          }
+          case 122: {
+            global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ImportDataOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.ImportDataDetails) {
+              subBuilder.MergeFrom(ImportDataDetails);
+            }
+            input.ReadMessage(subBuilder);
+            ImportDataDetails = subBuilder;
+            break;
+          }
+          case 130: {
+            global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.BatchPredictDetails) {
+              subBuilder.MergeFrom(BatchPredictDetails);
+            }
+            input.ReadMessage(subBuilder);
+            BatchPredictDetails = subBuilder;
+            break;
+          }
+          case 170: {
+            global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.ExportDataDetails) {
+              subBuilder.MergeFrom(ExportDataDetails);
+            }
+            input.ReadMessage(subBuilder);
+            ExportDataDetails = subBuilder;
+            break;
+          }
+          case 178: {
+            global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.ExportModelDetails) {
+              subBuilder.MergeFrom(ExportModelDetails);
+            }
+            input.ReadMessage(subBuilder);
+            ExportModelDetails = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.DeployModelOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.DeployModelDetails) {
+              subBuilder.MergeFrom(DeployModelDetails);
+            }
+            input.ReadMessage(subBuilder);
+            DeployModelDetails = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.UndeployModelOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.UndeployModelDetails) {
+              subBuilder.MergeFrom(UndeployModelDetails);
+            }
+            input.ReadMessage(subBuilder);
+            UndeployModelDetails = subBuilder;
+            break;
+          }
+          case 242: {
+            global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata subBuilder = new global::Google.Cloud.AutoML.V1.CreateDatasetOperationMetadata();
+            if (detailsCase_ == DetailsOneofCase.CreateDatasetDetails) {
+              subBuilder.MergeFrom(CreateDatasetDetails);
+            }
+            input.ReadMessage(subBuilder);
+            CreateDatasetDetails = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of operations that perform deletes of any entities.
   /// </summary>
-  public sealed partial class DeleteOperationMetadata : pb::IMessage<DeleteOperationMetadata> {
+  public sealed partial class DeleteOperationMetadata : pb::IMessage<DeleteOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteOperationMetadata> _parser = new pb::MessageParser<DeleteOperationMetadata>(() => new DeleteOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -800,10 +991,23 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -824,6 +1028,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -832,14 +1039,33 @@ namespace Google.Cloud.AutoML.V1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of DeployModel operation.
   /// </summary>
-  public sealed partial class DeployModelOperationMetadata : pb::IMessage<DeployModelOperationMetadata> {
+  public sealed partial class DeployModelOperationMetadata : pb::IMessage<DeployModelOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeployModelOperationMetadata> _parser = new pb::MessageParser<DeployModelOperationMetadata>(() => new DeployModelOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -904,10 +1130,23 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -928,6 +1167,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -936,14 +1178,33 @@ namespace Google.Cloud.AutoML.V1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of UndeployModel operation.
   /// </summary>
-  public sealed partial class UndeployModelOperationMetadata : pb::IMessage<UndeployModelOperationMetadata> {
+  public sealed partial class UndeployModelOperationMetadata : pb::IMessage<UndeployModelOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UndeployModelOperationMetadata> _parser = new pb::MessageParser<UndeployModelOperationMetadata>(() => new UndeployModelOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1008,10 +1269,23 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1032,6 +1306,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1040,14 +1317,33 @@ namespace Google.Cloud.AutoML.V1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of CreateDataset operation.
   /// </summary>
-  public sealed partial class CreateDatasetOperationMetadata : pb::IMessage<CreateDatasetOperationMetadata> {
+  public sealed partial class CreateDatasetOperationMetadata : pb::IMessage<CreateDatasetOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateDatasetOperationMetadata> _parser = new pb::MessageParser<CreateDatasetOperationMetadata>(() => new CreateDatasetOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1112,10 +1408,23 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1136,6 +1445,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1144,14 +1456,33 @@ namespace Google.Cloud.AutoML.V1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of CreateModel operation.
   /// </summary>
-  public sealed partial class CreateModelOperationMetadata : pb::IMessage<CreateModelOperationMetadata> {
+  public sealed partial class CreateModelOperationMetadata : pb::IMessage<CreateModelOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateModelOperationMetadata> _parser = new pb::MessageParser<CreateModelOperationMetadata>(() => new CreateModelOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1216,10 +1547,23 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1240,6 +1584,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1248,14 +1595,33 @@ namespace Google.Cloud.AutoML.V1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of ImportData operation.
   /// </summary>
-  public sealed partial class ImportDataOperationMetadata : pb::IMessage<ImportDataOperationMetadata> {
+  public sealed partial class ImportDataOperationMetadata : pb::IMessage<ImportDataOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImportDataOperationMetadata> _parser = new pb::MessageParser<ImportDataOperationMetadata>(() => new ImportDataOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1320,10 +1686,23 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1344,6 +1723,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1352,14 +1734,33 @@ namespace Google.Cloud.AutoML.V1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of ExportData operation.
   /// </summary>
-  public sealed partial class ExportDataOperationMetadata : pb::IMessage<ExportDataOperationMetadata> {
+  public sealed partial class ExportDataOperationMetadata : pb::IMessage<ExportDataOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExportDataOperationMetadata> _parser = new pb::MessageParser<ExportDataOperationMetadata>(() => new ExportDataOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1441,6 +1842,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (outputInfo_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(OutputInfo);
@@ -1448,7 +1852,21 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (outputInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1478,6 +1896,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1493,7 +1914,29 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (outputInfo_ == null) {
+              OutputInfo = new global::Google.Cloud.AutoML.V1.ExportDataOperationMetadata.Types.ExportDataOutputInfo();
+            }
+            input.ReadMessage(OutputInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ExportDataOperationMetadata message type.</summary>
@@ -1504,7 +1947,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// Supplements
       /// [OutputConfig][google.cloud.automl.v1.OutputConfig].
       /// </summary>
-      public sealed partial class ExportDataOutputInfo : pb::IMessage<ExportDataOutputInfo> {
+      public sealed partial class ExportDataOutputInfo : pb::IMessage<ExportDataOutputInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ExportDataOutputInfo> _parser = new pb::MessageParser<ExportDataOutputInfo>(() => new ExportDataOutputInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1612,6 +2059,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
             output.WriteRawTag(10);
             output.WriteString(GcsOutputDirectory);
@@ -1619,7 +2069,21 @@ namespace Google.Cloud.AutoML.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1649,6 +2113,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1661,7 +2128,26 @@ namespace Google.Cloud.AutoML.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                GcsOutputDirectory = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1673,7 +2159,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of BatchPredict operation.
   /// </summary>
-  public sealed partial class BatchPredictOperationMetadata : pb::IMessage<BatchPredictOperationMetadata> {
+  public sealed partial class BatchPredictOperationMetadata : pb::IMessage<BatchPredictOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BatchPredictOperationMetadata> _parser = new pb::MessageParser<BatchPredictOperationMetadata>(() => new BatchPredictOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1773,6 +2263,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (inputConfig_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(InputConfig);
@@ -1784,7 +2277,25 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (inputConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(InputConfig);
+      }
+      if (outputInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1823,6 +2334,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1845,7 +2359,36 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (inputConfig_ == null) {
+              InputConfig = new global::Google.Cloud.AutoML.V1.BatchPredictInputConfig();
+            }
+            input.ReadMessage(InputConfig);
+            break;
+          }
+          case 18: {
+            if (outputInfo_ == null) {
+              OutputInfo = new global::Google.Cloud.AutoML.V1.BatchPredictOperationMetadata.Types.BatchPredictOutputInfo();
+            }
+            input.ReadMessage(OutputInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the BatchPredictOperationMetadata message type.</summary>
@@ -1857,7 +2400,11 @@ namespace Google.Cloud.AutoML.V1 {
       ///
       /// [BatchPredictOutputConfig][google.cloud.automl.v1.BatchPredictOutputConfig].
       /// </summary>
-      public sealed partial class BatchPredictOutputInfo : pb::IMessage<BatchPredictOutputInfo> {
+      public sealed partial class BatchPredictOutputInfo : pb::IMessage<BatchPredictOutputInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<BatchPredictOutputInfo> _parser = new pb::MessageParser<BatchPredictOutputInfo>(() => new BatchPredictOutputInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1965,6 +2512,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
             output.WriteRawTag(10);
             output.WriteString(GcsOutputDirectory);
@@ -1972,7 +2522,21 @@ namespace Google.Cloud.AutoML.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (outputLocationCase_ == OutputLocationOneofCase.GcsOutputDirectory) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2002,6 +2566,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2014,7 +2581,26 @@ namespace Google.Cloud.AutoML.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                GcsOutputDirectory = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -2026,7 +2612,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Details of ExportModel operation.
   /// </summary>
-  public sealed partial class ExportModelOperationMetadata : pb::IMessage<ExportModelOperationMetadata> {
+  public sealed partial class ExportModelOperationMetadata : pb::IMessage<ExportModelOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExportModelOperationMetadata> _parser = new pb::MessageParser<ExportModelOperationMetadata>(() => new ExportModelOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2109,6 +2699,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (outputInfo_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(OutputInfo);
@@ -2116,7 +2709,21 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (outputInfo_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2146,6 +2753,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2161,7 +2771,29 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (outputInfo_ == null) {
+              OutputInfo = new global::Google.Cloud.AutoML.V1.ExportModelOperationMetadata.Types.ExportModelOutputInfo();
+            }
+            input.ReadMessage(OutputInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ExportModelOperationMetadata message type.</summary>
@@ -2172,7 +2804,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// Supplements
       /// [ModelExportOutputConfig][google.cloud.automl.v1.ModelExportOutputConfig].
       /// </summary>
-      public sealed partial class ExportModelOutputInfo : pb::IMessage<ExportModelOutputInfo> {
+      public sealed partial class ExportModelOutputInfo : pb::IMessage<ExportModelOutputInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ExportModelOutputInfo> _parser = new pb::MessageParser<ExportModelOutputInfo>(() => new ExportModelOutputInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2255,6 +2891,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (GcsOutputDirectory.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(GcsOutputDirectory);
@@ -2262,7 +2901,21 @@ namespace Google.Cloud.AutoML.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (GcsOutputDirectory.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(GcsOutputDirectory);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2289,6 +2942,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2301,7 +2957,26 @@ namespace Google.Cloud.AutoML.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                GcsOutputDirectory = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

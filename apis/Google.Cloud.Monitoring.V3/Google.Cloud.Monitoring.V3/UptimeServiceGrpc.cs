@@ -179,7 +179,7 @@ namespace Google.Cloud.Monitoring.V3 {
     {
       /// <summary>Creates a new client for UptimeCheckService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public UptimeCheckServiceClient(grpc::Channel channel) : base(channel)
+      public UptimeCheckServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for UptimeCheckService that uses a custom <c>CallInvoker</c>.</summary>

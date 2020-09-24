@@ -116,7 +116,7 @@ namespace Google.Cloud.Trace.V1 {
     {
       /// <summary>Creates a new client for TraceService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public TraceServiceClient(grpc::Channel channel) : base(channel)
+      public TraceServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for TraceService that uses a custom <c>CallInvoker</c>.</summary>

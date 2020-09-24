@@ -84,7 +84,11 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// <summary>
   /// Represents a managed Microsoft Active Directory domain.
   /// </summary>
-  public sealed partial class Domain : pb::IMessage<Domain> {
+  public sealed partial class Domain : pb::IMessage<Domain>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Domain> _parser = new pb::MessageParser<Domain>(() => new Domain());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -365,6 +369,9 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -404,7 +411,53 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      authorizedNetworks_.WriteTo(ref output, _repeated_authorizedNetworks_codec);
+      if (ReservedIpRange.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ReservedIpRange);
+      }
+      locations_.WriteTo(ref output, _repeated_locations_codec);
+      if (Admin.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Admin);
+      }
+      if (Fqdn.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Fqdn);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UpdateTime);
+      }
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) State);
+      }
+      if (StatusMessage.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(StatusMessage);
+      }
+      trusts_.WriteTo(ref output, _repeated_trusts_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -487,6 +540,9 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -549,7 +605,76 @@ namespace Google.Cloud.ManagedIdentities.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 26: {
+            authorizedNetworks_.AddEntriesFrom(ref input, _repeated_authorizedNetworks_codec);
+            break;
+          }
+          case 34: {
+            ReservedIpRange = input.ReadString();
+            break;
+          }
+          case 42: {
+            locations_.AddEntriesFrom(ref input, _repeated_locations_codec);
+            break;
+          }
+          case 50: {
+            Admin = input.ReadString();
+            break;
+          }
+          case 82: {
+            Fqdn = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 98: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 104: {
+            State = (global::Google.Cloud.ManagedIdentities.V1.Domain.Types.State) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            StatusMessage = input.ReadString();
+            break;
+          }
+          case 122: {
+            trusts_.AddEntriesFrom(ref input, _repeated_trusts_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Domain message type.</summary>
@@ -603,7 +728,11 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   /// Represents a relationship between two domains. This allows a controller in
   /// one domain to authenticate a user in another domain.
   /// </summary>
-  public sealed partial class Trust : pb::IMessage<Trust> {
+  public sealed partial class Trust : pb::IMessage<Trust>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Trust> _parser = new pb::MessageParser<Trust>(() => new Trust());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -860,6 +989,9 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TargetDomainName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(TargetDomainName);
@@ -904,7 +1036,58 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TargetDomainName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TargetDomainName);
+      }
+      if (TrustType != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) TrustType);
+      }
+      if (TrustDirection != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) TrustDirection);
+      }
+      if (SelectiveAuthentication != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SelectiveAuthentication);
+      }
+      targetDnsIpAddresses_.WriteTo(ref output, _repeated_targetDnsIpAddresses_codec);
+      if (TrustHandshakeSecret.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(TrustHandshakeSecret);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UpdateTime);
+      }
+      if (State != global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) State);
+      }
+      if (StateDescription.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(StateDescription);
+      }
+      if (lastTrustHeartbeatTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(LastTrustHeartbeatTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -996,6 +1179,9 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1057,7 +1243,75 @@ namespace Google.Cloud.ManagedIdentities.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TargetDomainName = input.ReadString();
+            break;
+          }
+          case 16: {
+            TrustType = (global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustType) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            TrustDirection = (global::Google.Cloud.ManagedIdentities.V1.Trust.Types.TrustDirection) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            SelectiveAuthentication = input.ReadBool();
+            break;
+          }
+          case 42: {
+            targetDnsIpAddresses_.AddEntriesFrom(ref input, _repeated_targetDnsIpAddresses_codec);
+            break;
+          }
+          case 50: {
+            TrustHandshakeSecret = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 66: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 72: {
+            State = (global::Google.Cloud.ManagedIdentities.V1.Trust.Types.State) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            StateDescription = input.ReadString();
+            break;
+          }
+          case 98: {
+            if (lastTrustHeartbeatTime_ == null) {
+              LastTrustHeartbeatTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastTrustHeartbeatTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Trust message type.</summary>

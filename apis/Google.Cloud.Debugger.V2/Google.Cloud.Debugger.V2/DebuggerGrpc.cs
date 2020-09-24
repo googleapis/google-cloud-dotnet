@@ -160,7 +160,7 @@ namespace Google.Cloud.Debugger.V2 {
     {
       /// <summary>Creates a new client for Debugger2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public Debugger2Client(grpc::Channel channel) : base(channel)
+      public Debugger2Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Debugger2 that uses a custom <c>CallInvoker</c>.</summary>

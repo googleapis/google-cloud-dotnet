@@ -55,7 +55,11 @@ namespace Google.Cloud.Logging.Type {
   /// defined by the HTTP specification. Product-specific logging
   /// information MUST be defined in a separate message.
   /// </summary>
-  public sealed partial class HttpRequest : pb::IMessage<HttpRequest> {
+  public sealed partial class HttpRequest : pb::IMessage<HttpRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<HttpRequest> _parser = new pb::MessageParser<HttpRequest>(() => new HttpRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -391,6 +395,9 @@ namespace Google.Cloud.Logging.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (RequestMethod.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(RequestMethod);
@@ -454,7 +461,77 @@ namespace Google.Cloud.Logging.Type {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RequestMethod.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RequestMethod);
+      }
+      if (RequestUrl.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RequestUrl);
+      }
+      if (RequestSize != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RequestSize);
+      }
+      if (Status != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Status);
+      }
+      if (ResponseSize != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ResponseSize);
+      }
+      if (UserAgent.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(UserAgent);
+      }
+      if (RemoteIp.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RemoteIp);
+      }
+      if (Referer.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Referer);
+      }
+      if (CacheHit != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(CacheHit);
+      }
+      if (CacheValidatedWithOriginServer != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(CacheValidatedWithOriginServer);
+      }
+      if (CacheLookup != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(CacheLookup);
+      }
+      if (CacheFillBytes != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(CacheFillBytes);
+      }
+      if (ServerIp.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ServerIp);
+      }
+      if (latency_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Latency);
+      }
+      if (Protocol.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Protocol);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -568,6 +645,9 @@ namespace Google.Cloud.Logging.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -639,7 +719,85 @@ namespace Google.Cloud.Logging.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            RequestMethod = input.ReadString();
+            break;
+          }
+          case 18: {
+            RequestUrl = input.ReadString();
+            break;
+          }
+          case 24: {
+            RequestSize = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            Status = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            ResponseSize = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            UserAgent = input.ReadString();
+            break;
+          }
+          case 58: {
+            RemoteIp = input.ReadString();
+            break;
+          }
+          case 66: {
+            Referer = input.ReadString();
+            break;
+          }
+          case 72: {
+            CacheHit = input.ReadBool();
+            break;
+          }
+          case 80: {
+            CacheValidatedWithOriginServer = input.ReadBool();
+            break;
+          }
+          case 88: {
+            CacheLookup = input.ReadBool();
+            break;
+          }
+          case 96: {
+            CacheFillBytes = input.ReadInt64();
+            break;
+          }
+          case 106: {
+            ServerIp = input.ReadString();
+            break;
+          }
+          case 114: {
+            if (latency_ == null) {
+              Latency = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Latency);
+            break;
+          }
+          case 122: {
+            Protocol = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

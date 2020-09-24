@@ -103,7 +103,11 @@ namespace Google.Cloud.Monitoring.V3 {
   /// this state. For an overview of alert policies, see
   /// [Introduction to Alerting](https://cloud.google.com/monitoring/alerts/).
   /// </summary>
-  public sealed partial class AlertPolicy : pb::IMessage<AlertPolicy> {
+  public sealed partial class AlertPolicy : pb::IMessage<AlertPolicy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AlertPolicy> _parser = new pb::MessageParser<AlertPolicy>(() => new AlertPolicy());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -400,6 +404,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -437,7 +444,51 @@ namespace Google.Cloud.Monitoring.V3 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Combiner != global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType.CombineUnspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Combiner);
+      }
+      if (creationRecord_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreationRecord);
+      }
+      if (mutationRecord_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(MutationRecord);
+      }
+      conditions_.WriteTo(ref output, _repeated_conditions_codec);
+      if (documentation_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Documentation);
+      }
+      notificationChannels_.WriteTo(ref output, _repeated_notificationChannels_codec);
+      userLabels_.WriteTo(ref output, _map_userLabels_codec);
+      if (enabled_ != null) {
+        _single_enabled_codec.WriteTagAndValue(ref output, Enabled);
+      }
+      if (validity_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Validity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -526,6 +577,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -593,7 +647,81 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 48: {
+            Combiner = (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            if (creationRecord_ == null) {
+              CreationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+            }
+            input.ReadMessage(CreationRecord);
+            break;
+          }
+          case 90: {
+            if (mutationRecord_ == null) {
+              MutationRecord = new global::Google.Cloud.Monitoring.V3.MutationRecord();
+            }
+            input.ReadMessage(MutationRecord);
+            break;
+          }
+          case 98: {
+            conditions_.AddEntriesFrom(ref input, _repeated_conditions_codec);
+            break;
+          }
+          case 106: {
+            if (documentation_ == null) {
+              Documentation = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation();
+            }
+            input.ReadMessage(Documentation);
+            break;
+          }
+          case 114: {
+            notificationChannels_.AddEntriesFrom(ref input, _repeated_notificationChannels_codec);
+            break;
+          }
+          case 130: {
+            userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
+            break;
+          }
+          case 138: {
+            bool? value = _single_enabled_codec.Read(ref input);
+            if (enabled_ == null || value != false) {
+              Enabled = value;
+            }
+            break;
+          }
+          case 146: {
+            if (validity_ == null) {
+              Validity = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Validity);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the AlertPolicy message type.</summary>
@@ -631,7 +759,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// A content string and a MIME type that describes the content string's
       /// format.
       /// </summary>
-      public sealed partial class Documentation : pb::IMessage<Documentation> {
+      public sealed partial class Documentation : pb::IMessage<Documentation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Documentation> _parser = new pb::MessageParser<Documentation>(() => new Documentation());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -735,6 +867,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Content.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Content);
@@ -746,7 +881,25 @@ namespace Google.Cloud.Monitoring.V3 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Content.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Content);
+          }
+          if (MimeType.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(MimeType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -779,6 +932,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -795,7 +951,30 @@ namespace Google.Cloud.Monitoring.V3 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Content = input.ReadString();
+                break;
+              }
+              case 18: {
+                MimeType = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -804,7 +983,11 @@ namespace Google.Cloud.Monitoring.V3 {
       /// should open an incident. If a condition evaluates to true, it signifies
       /// that something is wrong.
       /// </summary>
-      public sealed partial class Condition : pb::IMessage<Condition> {
+      public sealed partial class Condition : pb::IMessage<Condition>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Condition> _parser = new pb::MessageParser<Condition>(() => new Condition());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -992,6 +1175,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (conditionCase_ == ConditionOneofCase.ConditionThreshold) {
             output.WriteRawTag(10);
             output.WriteMessage(ConditionThreshold);
@@ -1011,7 +1197,33 @@ namespace Google.Cloud.Monitoring.V3 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (conditionCase_ == ConditionOneofCase.ConditionThreshold) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ConditionThreshold);
+          }
+          if (conditionCase_ == ConditionOneofCase.ConditionAbsent) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ConditionAbsent);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(DisplayName);
+          }
+          if (Name.Length != 0) {
+            output.WriteRawTag(98);
+            output.WriteString(Name);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1065,6 +1277,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1099,7 +1314,48 @@ namespace Google.Cloud.Monitoring.V3 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold();
+                if (conditionCase_ == ConditionOneofCase.ConditionThreshold) {
+                  subBuilder.MergeFrom(ConditionThreshold);
+                }
+                input.ReadMessage(subBuilder);
+                ConditionThreshold = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence();
+                if (conditionCase_ == ConditionOneofCase.ConditionAbsent) {
+                  subBuilder.MergeFrom(ConditionAbsent);
+                }
+                input.ReadMessage(subBuilder);
+                ConditionAbsent = subBuilder;
+                break;
+              }
+              case 50: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 98: {
+                Name = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the Condition message type.</summary>
@@ -1109,7 +1365,11 @@ namespace Google.Cloud.Monitoring.V3 {
           /// Specifies how many time series must fail a predicate to trigger a
           /// condition. If not specified, then a `{count: 1}` trigger is used.
           /// </summary>
-          public sealed partial class Trigger : pb::IMessage<Trigger> {
+          public sealed partial class Trigger : pb::IMessage<Trigger>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Trigger> _parser = new pb::MessageParser<Trigger>(() => new Trigger());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1238,6 +1498,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (typeCase_ == TypeOneofCase.Count) {
                 output.WriteRawTag(8);
                 output.WriteInt32(Count);
@@ -1249,7 +1512,25 @@ namespace Google.Cloud.Monitoring.V3 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (typeCase_ == TypeOneofCase.Count) {
+                output.WriteRawTag(8);
+                output.WriteInt32(Count);
+              }
+              if (typeCase_ == TypeOneofCase.Percent) {
+                output.WriteRawTag(17);
+                output.WriteDouble(Percent);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -1285,6 +1566,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -1301,7 +1585,30 @@ namespace Google.Cloud.Monitoring.V3 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    Count = input.ReadInt32();
+                    break;
+                  }
+                  case 17: {
+                    Percent = input.ReadDouble();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -1309,7 +1616,11 @@ namespace Google.Cloud.Monitoring.V3 {
           /// A condition type that compares a collection of time series
           /// against a threshold.
           /// </summary>
-          public sealed partial class MetricThreshold : pb::IMessage<MetricThreshold> {
+          public sealed partial class MetricThreshold : pb::IMessage<MetricThreshold>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<MetricThreshold> _parser = new pb::MessageParser<MetricThreshold>(() => new MetricThreshold());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1563,6 +1874,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (Filter.Length != 0) {
                 output.WriteRawTag(18);
                 output.WriteString(Filter);
@@ -1592,7 +1906,43 @@ namespace Google.Cloud.Monitoring.V3 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Filter.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Filter);
+              }
+              if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
+                output.WriteRawTag(32);
+                output.WriteEnum((int) Comparison);
+              }
+              if (ThresholdValue != 0D) {
+                output.WriteRawTag(41);
+                output.WriteDouble(ThresholdValue);
+              }
+              if (duration_ != null) {
+                output.WriteRawTag(50);
+                output.WriteMessage(Duration);
+              }
+              if (trigger_ != null) {
+                output.WriteRawTag(58);
+                output.WriteMessage(Trigger);
+              }
+              aggregations_.WriteTo(ref output, _repeated_aggregations_codec);
+              if (DenominatorFilter.Length != 0) {
+                output.WriteRawTag(74);
+                output.WriteString(DenominatorFilter);
+              }
+              denominatorAggregations_.WriteTo(ref output, _repeated_denominatorAggregations_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -1659,6 +2009,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -1705,7 +2058,60 @@ namespace Google.Cloud.Monitoring.V3 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 18: {
+                    Filter = input.ReadString();
+                    break;
+                  }
+                  case 32: {
+                    Comparison = (global::Google.Cloud.Monitoring.V3.ComparisonType) input.ReadEnum();
+                    break;
+                  }
+                  case 41: {
+                    ThresholdValue = input.ReadDouble();
+                    break;
+                  }
+                  case 50: {
+                    if (duration_ == null) {
+                      Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(Duration);
+                    break;
+                  }
+                  case 58: {
+                    if (trigger_ == null) {
+                      Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
+                    }
+                    input.ReadMessage(Trigger);
+                    break;
+                  }
+                  case 66: {
+                    aggregations_.AddEntriesFrom(ref input, _repeated_aggregations_codec);
+                    break;
+                  }
+                  case 74: {
+                    DenominatorFilter = input.ReadString();
+                    break;
+                  }
+                  case 82: {
+                    denominatorAggregations_.AddEntriesFrom(ref input, _repeated_denominatorAggregations_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -1716,7 +2122,11 @@ namespace Google.Cloud.Monitoring.V3 {
           /// when a time series for the specified metric of a monitored
           /// resource does not include any data in the specified `duration`.
           /// </summary>
-          public sealed partial class MetricAbsence : pb::IMessage<MetricAbsence> {
+          public sealed partial class MetricAbsence : pb::IMessage<MetricAbsence>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<MetricAbsence> _parser = new pb::MessageParser<MetricAbsence>(() => new MetricAbsence());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1875,6 +2285,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (Filter.Length != 0) {
                 output.WriteRawTag(10);
                 output.WriteString(Filter);
@@ -1891,7 +2304,30 @@ namespace Google.Cloud.Monitoring.V3 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Filter.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Filter);
+              }
+              if (duration_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Duration);
+              }
+              if (trigger_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(Trigger);
+              }
+              aggregations_.WriteTo(ref output, _repeated_aggregations_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -1938,6 +2374,9 @@ namespace Google.Cloud.Monitoring.V3 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -1968,7 +2407,44 @@ namespace Google.Cloud.Monitoring.V3 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Filter = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (duration_ == null) {
+                      Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                    }
+                    input.ReadMessage(Duration);
+                    break;
+                  }
+                  case 26: {
+                    if (trigger_ == null) {
+                      Trigger = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger();
+                    }
+                    input.ReadMessage(Trigger);
+                    break;
+                  }
+                  case 42: {
+                    aggregations_.AddEntriesFrom(ref input, _repeated_aggregations_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 

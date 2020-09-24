@@ -168,7 +168,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// Describes an API diff request.
   /// </summary>
-  public sealed partial class ComputeThreatListDiffRequest : pb::IMessage<ComputeThreatListDiffRequest> {
+  public sealed partial class ComputeThreatListDiffRequest : pb::IMessage<ComputeThreatListDiffRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ComputeThreatListDiffRequest> _parser = new pb::MessageParser<ComputeThreatListDiffRequest>(() => new ComputeThreatListDiffRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -285,6 +289,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) ThreatType);
@@ -300,7 +307,29 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) ThreatType);
+      }
+      if (VersionToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(VersionToken);
+      }
+      if (constraints_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Constraints);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -342,6 +371,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -365,7 +397,37 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ThreatType = (global::Google.Cloud.WebRisk.V1Beta1.ThreatType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            VersionToken = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            if (constraints_ == null) {
+              Constraints = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints();
+            }
+            input.ReadMessage(Constraints);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ComputeThreatListDiffRequest message type.</summary>
@@ -374,7 +436,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// The constraints for this diff.
       /// </summary>
-      public sealed partial class Constraints : pb::IMessage<Constraints> {
+      public sealed partial class Constraints : pb::IMessage<Constraints>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Constraints> _parser = new pb::MessageParser<Constraints>(() => new Constraints());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -493,6 +559,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (MaxDiffEntries != 0) {
             output.WriteRawTag(8);
             output.WriteInt32(MaxDiffEntries);
@@ -505,7 +574,26 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MaxDiffEntries != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MaxDiffEntries);
+          }
+          if (MaxDatabaseEntries != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxDatabaseEntries);
+          }
+          supportedCompressions_.WriteTo(ref output, _repeated_supportedCompressions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -540,6 +628,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -561,7 +652,35 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MaxDiffEntries = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MaxDatabaseEntries = input.ReadInt32();
+                break;
+              }
+              case 26:
+              case 24: {
+                supportedCompressions_.AddEntriesFrom(ref input, _repeated_supportedCompressions_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -570,7 +689,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
   }
 
-  public sealed partial class ComputeThreatListDiffResponse : pb::IMessage<ComputeThreatListDiffResponse> {
+  public sealed partial class ComputeThreatListDiffResponse : pb::IMessage<ComputeThreatListDiffResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ComputeThreatListDiffResponse> _parser = new pb::MessageParser<ComputeThreatListDiffResponse>(() => new ComputeThreatListDiffResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -745,6 +868,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (recommendedNextDiff_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(RecommendedNextDiff);
@@ -772,7 +898,41 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (recommendedNextDiff_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RecommendedNextDiff);
+      }
+      if (ResponseType != global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ResponseType);
+      }
+      if (additions_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Additions);
+      }
+      if (removals_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Removals);
+      }
+      if (NewVersionToken.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteBytes(NewVersionToken);
+      }
+      if (checksum_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Checksum);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -841,6 +1001,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -885,7 +1048,58 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (recommendedNextDiff_ == null) {
+              RecommendedNextDiff = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(RecommendedNextDiff);
+            break;
+          }
+          case 32: {
+            ResponseType = (global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (additions_ == null) {
+              Additions = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions();
+            }
+            input.ReadMessage(Additions);
+            break;
+          }
+          case 50: {
+            if (removals_ == null) {
+              Removals = new global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals();
+            }
+            input.ReadMessage(Removals);
+            break;
+          }
+          case 58: {
+            NewVersionToken = input.ReadBytes();
+            break;
+          }
+          case 66: {
+            if (checksum_ == null) {
+              Checksum = new global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum();
+            }
+            input.ReadMessage(Checksum);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ComputeThreatListDiffResponse message type.</summary>
@@ -914,7 +1128,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// The expected state of a client's local database.
       /// </summary>
-      public sealed partial class Checksum : pb::IMessage<Checksum> {
+      public sealed partial class Checksum : pb::IMessage<Checksum>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Checksum> _parser = new pb::MessageParser<Checksum>(() => new Checksum());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -997,6 +1215,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Sha256.Length != 0) {
             output.WriteRawTag(10);
             output.WriteBytes(Sha256);
@@ -1004,7 +1225,21 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Sha256.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteBytes(Sha256);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1031,6 +1266,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1043,7 +1281,26 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Sha256 = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1055,7 +1312,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// Request to check URI entries against threatLists.
   /// </summary>
-  public sealed partial class SearchUrisRequest : pb::IMessage<SearchUrisRequest> {
+  public sealed partial class SearchUrisRequest : pb::IMessage<SearchUrisRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SearchUrisRequest> _parser = new pb::MessageParser<SearchUrisRequest>(() => new SearchUrisRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1153,6 +1414,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Uri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
@@ -1161,7 +1425,22 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      threatTypes_.WriteTo(ref output, _repeated_threatTypes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1190,6 +1469,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1207,11 +1489,39 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            threatTypes_.AddEntriesFrom(ref input, _repeated_threatTypes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class SearchUrisResponse : pb::IMessage<SearchUrisResponse> {
+  public sealed partial class SearchUrisResponse : pb::IMessage<SearchUrisResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SearchUrisResponse> _parser = new pb::MessageParser<SearchUrisResponse>(() => new SearchUrisResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1293,6 +1603,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (threat_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Threat);
@@ -1300,7 +1613,21 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (threat_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Threat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1330,6 +1657,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1345,7 +1675,29 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (threat_ == null) {
+              Threat = new global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri();
+            }
+            input.ReadMessage(Threat);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the SearchUrisResponse message type.</summary>
@@ -1354,7 +1706,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// Contains threat information on a matching uri.
       /// </summary>
-      public sealed partial class ThreatUri : pb::IMessage<ThreatUri> {
+      public sealed partial class ThreatUri : pb::IMessage<ThreatUri>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ThreatUri> _parser = new pb::MessageParser<ThreatUri>(() => new ThreatUri());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1453,6 +1809,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           threatTypes_.WriteTo(output, _repeated_threatTypes_codec);
           if (expireTime_ != null) {
             output.WriteRawTag(18);
@@ -1461,7 +1820,22 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          threatTypes_.WriteTo(ref output, _repeated_threatTypes_codec);
+          if (expireTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ExpireTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1493,6 +1867,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1513,7 +1890,34 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 8: {
+                threatTypes_.AddEntriesFrom(ref input, _repeated_threatTypes_codec);
+                break;
+              }
+              case 18: {
+                if (expireTime_ == null) {
+                  ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ExpireTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1525,7 +1929,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// <summary>
   /// Request to return full hashes matched by the provided hash prefixes.
   /// </summary>
-  public sealed partial class SearchHashesRequest : pb::IMessage<SearchHashesRequest> {
+  public sealed partial class SearchHashesRequest : pb::IMessage<SearchHashesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SearchHashesRequest> _parser = new pb::MessageParser<SearchHashesRequest>(() => new SearchHashesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1624,6 +2032,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (HashPrefix.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(HashPrefix);
@@ -1632,7 +2043,22 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HashPrefix.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(HashPrefix);
+      }
+      threatTypes_.WriteTo(ref output, _repeated_threatTypes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1661,6 +2087,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1678,11 +2107,39 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            HashPrefix = input.ReadBytes();
+            break;
+          }
+          case 18:
+          case 16: {
+            threatTypes_.AddEntriesFrom(ref input, _repeated_threatTypes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class SearchHashesResponse : pb::IMessage<SearchHashesResponse> {
+  public sealed partial class SearchHashesResponse : pb::IMessage<SearchHashesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SearchHashesResponse> _parser = new pb::MessageParser<SearchHashesResponse>(() => new SearchHashesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1782,6 +2239,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       threats_.WriteTo(output, _repeated_threats_codec);
       if (negativeExpireTime_ != null) {
         output.WriteRawTag(18);
@@ -1790,7 +2250,22 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      threats_.WriteTo(ref output, _repeated_threats_codec);
+      if (negativeExpireTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(NegativeExpireTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1822,6 +2297,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1841,7 +2319,33 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            threats_.AddEntriesFrom(ref input, _repeated_threats_codec);
+            break;
+          }
+          case 18: {
+            if (negativeExpireTime_ == null) {
+              NegativeExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NegativeExpireTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the SearchHashesResponse message type.</summary>
@@ -1850,7 +2354,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <summary>
       /// Contains threat information on a matching hash.
       /// </summary>
-      public sealed partial class ThreatHash : pb::IMessage<ThreatHash> {
+      public sealed partial class ThreatHash : pb::IMessage<ThreatHash>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ThreatHash> _parser = new pb::MessageParser<ThreatHash>(() => new ThreatHash());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1968,6 +2476,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           threatTypes_.WriteTo(output, _repeated_threatTypes_codec);
           if (Hash.Length != 0) {
             output.WriteRawTag(18);
@@ -1980,7 +2491,26 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          threatTypes_.WriteTo(ref output, _repeated_threatTypes_codec);
+          if (Hash.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(Hash);
+          }
+          if (expireTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(ExpireTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2018,6 +2548,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2042,7 +2575,38 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 8: {
+                threatTypes_.AddEntriesFrom(ref input, _repeated_threatTypes_codec);
+                break;
+              }
+              case 18: {
+                Hash = input.ReadBytes();
+                break;
+              }
+              case 26: {
+                if (expireTime_ == null) {
+                  ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(ExpireTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -2055,7 +2619,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// Contains the set of entries to add to a local database.
   /// May contain a combination of compressed and raw data in a single response.
   /// </summary>
-  public sealed partial class ThreatEntryAdditions : pb::IMessage<ThreatEntryAdditions> {
+  public sealed partial class ThreatEntryAdditions : pb::IMessage<ThreatEntryAdditions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ThreatEntryAdditions> _parser = new pb::MessageParser<ThreatEntryAdditions>(() => new ThreatEntryAdditions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2156,6 +2724,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       rawHashes_.WriteTo(output, _repeated_rawHashes_codec);
       if (riceHashes_ != null) {
         output.WriteRawTag(18);
@@ -2164,7 +2735,22 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      rawHashes_.WriteTo(ref output, _repeated_rawHashes_codec);
+      if (riceHashes_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RiceHashes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2196,6 +2782,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2215,14 +2804,44 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            rawHashes_.AddEntriesFrom(ref input, _repeated_rawHashes_codec);
+            break;
+          }
+          case 18: {
+            if (riceHashes_ == null) {
+              RiceHashes = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
+            }
+            input.ReadMessage(RiceHashes);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Contains the set of entries to remove from a local database.
   /// </summary>
-  public sealed partial class ThreatEntryRemovals : pb::IMessage<ThreatEntryRemovals> {
+  public sealed partial class ThreatEntryRemovals : pb::IMessage<ThreatEntryRemovals>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ThreatEntryRemovals> _parser = new pb::MessageParser<ThreatEntryRemovals>(() => new ThreatEntryRemovals());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2324,6 +2943,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (rawIndices_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(RawIndices);
@@ -2335,7 +2957,25 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (rawIndices_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RawIndices);
+      }
+      if (riceIndices_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RiceIndices);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2374,6 +3014,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2396,14 +3039,47 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (rawIndices_ == null) {
+              RawIndices = new global::Google.Cloud.WebRisk.V1Beta1.RawIndices();
+            }
+            input.ReadMessage(RawIndices);
+            break;
+          }
+          case 18: {
+            if (riceIndices_ == null) {
+              RiceIndices = new global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding();
+            }
+            input.ReadMessage(RiceIndices);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A set of raw indices to remove from a local list.
   /// </summary>
-  public sealed partial class RawIndices : pb::IMessage<RawIndices> {
+  public sealed partial class RawIndices : pb::IMessage<RawIndices>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RawIndices> _parser = new pb::MessageParser<RawIndices>(() => new RawIndices());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2484,11 +3160,25 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       indices_.WriteTo(output, _repeated_indices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      indices_.WriteTo(ref output, _repeated_indices_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2511,6 +3201,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2524,7 +3217,27 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            indices_.AddEntriesFrom(ref input, _repeated_indices_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2538,7 +3251,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// compression, or when sending non-4-byte hashes to clients that do support
   /// compression.
   /// </summary>
-  public sealed partial class RawHashes : pb::IMessage<RawHashes> {
+  public sealed partial class RawHashes : pb::IMessage<RawHashes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RawHashes> _parser = new pb::MessageParser<RawHashes>(() => new RawHashes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2640,6 +3357,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PrefixSize != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(PrefixSize);
@@ -2651,7 +3371,25 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PrefixSize != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(PrefixSize);
+      }
+      if (RawHashes_.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(RawHashes_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2684,6 +3422,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2700,7 +3441,30 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PrefixSize = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            RawHashes_ = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2708,7 +3472,11 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   /// The Rice-Golomb encoded data. Used for sending compressed 4-byte hashes or
   /// compressed removal indices.
   /// </summary>
-  public sealed partial class RiceDeltaEncoding : pb::IMessage<RiceDeltaEncoding> {
+  public sealed partial class RiceDeltaEncoding : pb::IMessage<RiceDeltaEncoding>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RiceDeltaEncoding> _parser = new pb::MessageParser<RiceDeltaEncoding>(() => new RiceDeltaEncoding());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2846,6 +3614,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (FirstValue != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(FirstValue);
@@ -2865,7 +3636,33 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FirstValue != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(FirstValue);
+      }
+      if (RiceParameter != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(RiceParameter);
+      }
+      if (EntryCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(EntryCount);
+      }
+      if (EncodedData.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(EncodedData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2910,6 +3707,9 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2934,7 +3734,38 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            FirstValue = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            RiceParameter = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            EntryCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            EncodedData = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

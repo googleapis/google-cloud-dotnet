@@ -240,7 +240,7 @@ namespace Google.Cloud.PubSub.V1 {
     {
       /// <summary>Creates a new client for Publisher</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public PublisherClient(grpc::Channel channel) : base(channel)
+      public PublisherClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Publisher that uses a custom <c>CallInvoker</c>.</summary>
@@ -1170,7 +1170,7 @@ namespace Google.Cloud.PubSub.V1 {
     {
       /// <summary>Creates a new client for Subscriber</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public SubscriberClient(grpc::Channel channel) : base(channel)
+      public SubscriberClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Subscriber that uses a custom <c>CallInvoker</c>.</summary>

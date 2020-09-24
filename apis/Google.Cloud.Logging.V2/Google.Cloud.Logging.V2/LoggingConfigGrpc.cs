@@ -383,7 +383,7 @@ namespace Google.Cloud.Logging.V2 {
     {
       /// <summary>Creates a new client for ConfigServiceV2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ConfigServiceV2Client(grpc::Channel channel) : base(channel)
+      public ConfigServiceV2Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ConfigServiceV2 that uses a custom <c>CallInvoker</c>.</summary>

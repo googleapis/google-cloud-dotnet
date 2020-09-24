@@ -74,7 +74,11 @@ namespace Google.Cloud.Talent.V4Beta1 {
   /// <summary>
   /// Resource that represents a job application record of a candidate.
   /// </summary>
-  public sealed partial class Application : pb::IMessage<Application> {
+  public sealed partial class Application : pb::IMessage<Application>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Application> _parser = new pb::MessageParser<Application>(() => new Application());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -447,6 +451,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -509,7 +516,76 @@ namespace Google.Cloud.Talent.V4Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Profile.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Profile);
+      }
+      if (Job.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Job);
+      }
+      if (Company.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Company);
+      }
+      if (applicationDate_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ApplicationDate);
+      }
+      if (Stage != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) Stage);
+      }
+      if (State != global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) State);
+      }
+      interviews_.WriteTo(ref output, _repeated_interviews_codec);
+      if (referral_ != null) {
+        _single_referral_codec.WriteTagAndValue(ref output, Referral);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(UpdateTime);
+      }
+      if (OutcomeNotes.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(OutcomeNotes);
+      }
+      if (Outcome != global::Google.Cloud.Talent.V4Beta1.Outcome.Unspecified) {
+        output.WriteRawTag(176, 1);
+        output.WriteEnum((int) Outcome);
+      }
+      if (isMatch_ != null) {
+        _single_isMatch_codec.WriteTagAndValue(ref output, IsMatch);
+      }
+      if (JobTitleSnippet.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(JobTitleSnippet);
+      }
+      if (ExternalId.Length != 0) {
+        output.WriteRawTag(250, 1);
+        output.WriteString(ExternalId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -635,6 +711,9 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -722,7 +801,101 @@ namespace Google.Cloud.Talent.V4Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Profile = input.ReadString();
+            break;
+          }
+          case 34: {
+            Job = input.ReadString();
+            break;
+          }
+          case 42: {
+            Company = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (applicationDate_ == null) {
+              ApplicationDate = new global::Google.Type.Date();
+            }
+            input.ReadMessage(ApplicationDate);
+            break;
+          }
+          case 88: {
+            Stage = (global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationStage) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            State = (global::Google.Cloud.Talent.V4Beta1.Application.Types.ApplicationState) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            interviews_.AddEntriesFrom(ref input, _repeated_interviews_codec);
+            break;
+          }
+          case 146: {
+            bool? value = _single_referral_codec.Read(ref input);
+            if (referral_ == null || value != false) {
+              Referral = value;
+            }
+            break;
+          }
+          case 154: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 162: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 170: {
+            OutcomeNotes = input.ReadString();
+            break;
+          }
+          case 176: {
+            Outcome = (global::Google.Cloud.Talent.V4Beta1.Outcome) input.ReadEnum();
+            break;
+          }
+          case 226: {
+            bool? value = _single_isMatch_codec.Read(ref input);
+            if (isMatch_ == null || value != false) {
+              IsMatch = value;
+            }
+            break;
+          }
+          case 234: {
+            JobTitleSnippet = input.ReadString();
+            break;
+          }
+          case 250: {
+            ExternalId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Application message type.</summary>

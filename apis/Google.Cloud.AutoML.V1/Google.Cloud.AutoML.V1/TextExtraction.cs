@@ -54,7 +54,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Annotation for identifying spans of text.
   /// </summary>
-  public sealed partial class TextExtractionAnnotation : pb::IMessage<TextExtractionAnnotation> {
+  public sealed partial class TextExtractionAnnotation : pb::IMessage<TextExtractionAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TextExtractionAnnotation> _parser = new pb::MessageParser<TextExtractionAnnotation>(() => new TextExtractionAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -180,6 +184,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Score != 0F) {
         output.WriteRawTag(13);
         output.WriteFloat(Score);
@@ -191,7 +198,25 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Score != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Score);
+      }
+      if (annotationCase_ == AnnotationOneofCase.TextSegment) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TextSegment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -230,6 +255,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -251,14 +279,46 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            Score = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.AutoML.V1.TextSegment subBuilder = new global::Google.Cloud.AutoML.V1.TextSegment();
+            if (annotationCase_ == AnnotationOneofCase.TextSegment) {
+              subBuilder.MergeFrom(TextSegment);
+            }
+            input.ReadMessage(subBuilder);
+            TextSegment = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Model evaluation metrics for text extraction problems.
   /// </summary>
-  public sealed partial class TextExtractionEvaluationMetrics : pb::IMessage<TextExtractionEvaluationMetrics> {
+  public sealed partial class TextExtractionEvaluationMetrics : pb::IMessage<TextExtractionEvaluationMetrics>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TextExtractionEvaluationMetrics> _parser = new pb::MessageParser<TextExtractionEvaluationMetrics>(() => new TextExtractionEvaluationMetrics());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -357,6 +417,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (AuPrc != 0F) {
         output.WriteRawTag(13);
         output.WriteFloat(AuPrc);
@@ -365,7 +428,22 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AuPrc != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(AuPrc);
+      }
+      confidenceMetricsEntries_.WriteTo(ref output, _repeated_confidenceMetricsEntries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -394,6 +472,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -410,7 +491,30 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            AuPrc = input.ReadFloat();
+            break;
+          }
+          case 18: {
+            confidenceMetricsEntries_.AddEntriesFrom(ref input, _repeated_confidenceMetricsEntries_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TextExtractionEvaluationMetrics message type.</summary>
@@ -419,7 +523,11 @@ namespace Google.Cloud.AutoML.V1 {
       /// <summary>
       /// Metrics for a single confidence threshold.
       /// </summary>
-      public sealed partial class ConfidenceMetricsEntry : pb::IMessage<ConfidenceMetricsEntry> {
+      public sealed partial class ConfidenceMetricsEntry : pb::IMessage<ConfidenceMetricsEntry>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ConfidenceMetricsEntry> _parser = new pb::MessageParser<ConfidenceMetricsEntry>(() => new ConfidenceMetricsEntry());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -554,6 +662,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (ConfidenceThreshold != 0F) {
             output.WriteRawTag(13);
             output.WriteFloat(ConfidenceThreshold);
@@ -573,7 +684,33 @@ namespace Google.Cloud.AutoML.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ConfidenceThreshold != 0F) {
+            output.WriteRawTag(13);
+            output.WriteFloat(ConfidenceThreshold);
+          }
+          if (Recall != 0F) {
+            output.WriteRawTag(29);
+            output.WriteFloat(Recall);
+          }
+          if (Precision != 0F) {
+            output.WriteRawTag(37);
+            output.WriteFloat(Precision);
+          }
+          if (F1Score != 0F) {
+            output.WriteRawTag(45);
+            output.WriteFloat(F1Score);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -618,6 +755,9 @@ namespace Google.Cloud.AutoML.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -642,7 +782,38 @@ namespace Google.Cloud.AutoML.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 13: {
+                ConfidenceThreshold = input.ReadFloat();
+                break;
+              }
+              case 29: {
+                Recall = input.ReadFloat();
+                break;
+              }
+              case 37: {
+                Precision = input.ReadFloat();
+                break;
+              }
+              case 45: {
+                F1Score = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

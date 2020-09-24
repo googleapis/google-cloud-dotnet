@@ -147,7 +147,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     {
       /// <summary>Creates a new client for BigQueryRead</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public BigQueryReadClient(grpc::Channel channel) : base(channel)
+      public BigQueryReadClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for BigQueryRead that uses a custom <c>CallInvoker</c>.</summary>

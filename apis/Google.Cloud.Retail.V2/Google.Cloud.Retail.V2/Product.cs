@@ -74,7 +74,11 @@ namespace Google.Cloud.Retail.V2 {
   /// Product captures all metadata information of items to be recommended or
   /// searched.
   /// </summary>
-  public sealed partial class Product : pb::IMessage<Product> {
+  public sealed partial class Product : pb::IMessage<Product>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Product> _parser = new pb::MessageParser<Product>(() => new Product());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -577,6 +581,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -631,7 +638,68 @@ namespace Google.Cloud.Retail.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Id);
+      }
+      if (PrimaryProductId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PrimaryProductId);
+      }
+      categories_.WriteTo(ref output, _repeated_categories_codec);
+      if (Title.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Title);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(LanguageCode);
+      }
+      attributes_.WriteTo(ref output, _map_attributes_codec);
+      tags_.WriteTo(ref output, _repeated_tags_codec);
+      if (priceInfo_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(PriceInfo);
+      }
+      if (availableTime_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(AvailableTime);
+      }
+      if (Availability != global::Google.Cloud.Retail.V2.Product.Types.Availability.Unspecified) {
+        output.WriteRawTag(152, 1);
+        output.WriteEnum((int) Availability);
+      }
+      if (availableQuantity_ != null) {
+        _single_availableQuantity_codec.WriteTagAndValue(ref output, AvailableQuantity);
+      }
+      if (Uri.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(Uri);
+      }
+      images_.WriteTo(ref output, _repeated_images_codec);
+      if (stockingUnitRetrievableFields_ != null) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(StockingUnitRetrievableFields);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -743,6 +811,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -827,7 +898,98 @@ namespace Google.Cloud.Retail.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Id = input.ReadString();
+            break;
+          }
+          case 34: {
+            PrimaryProductId = input.ReadString();
+            break;
+          }
+          case 58: {
+            categories_.AddEntriesFrom(ref input, _repeated_categories_codec);
+            break;
+          }
+          case 66: {
+            Title = input.ReadString();
+            break;
+          }
+          case 82: {
+            Description = input.ReadString();
+            break;
+          }
+          case 90: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 98: {
+            attributes_.AddEntriesFrom(ref input, _map_attributes_codec);
+            break;
+          }
+          case 106: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 114: {
+            if (priceInfo_ == null) {
+              PriceInfo = new global::Google.Cloud.Retail.V2.PriceInfo();
+            }
+            input.ReadMessage(PriceInfo);
+            break;
+          }
+          case 146: {
+            if (availableTime_ == null) {
+              AvailableTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(AvailableTime);
+            break;
+          }
+          case 152: {
+            Availability = (global::Google.Cloud.Retail.V2.Product.Types.Availability) input.ReadEnum();
+            break;
+          }
+          case 162: {
+            int? value = _single_availableQuantity_codec.Read(ref input);
+            if (availableQuantity_ == null || value != 0) {
+              AvailableQuantity = value;
+            }
+            break;
+          }
+          case 178: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 186: {
+            images_.AddEntriesFrom(ref input, _repeated_images_codec);
+            break;
+          }
+          case 242: {
+            if (stockingUnitRetrievableFields_ == null) {
+              StockingUnitRetrievableFields = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(StockingUnitRetrievableFields);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Product message type.</summary>

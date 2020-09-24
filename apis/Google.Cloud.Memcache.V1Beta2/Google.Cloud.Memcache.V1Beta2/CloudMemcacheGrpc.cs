@@ -201,7 +201,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     {
       /// <summary>Creates a new client for CloudMemcache</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CloudMemcacheClient(grpc::Channel channel) : base(channel)
+      public CloudMemcacheClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudMemcache that uses a custom <c>CallInvoker</c>.</summary>

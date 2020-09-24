@@ -165,7 +165,7 @@ namespace Google.Cloud.Retail.V2 {
     {
       /// <summary>Creates a new client for UserEventService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public UserEventServiceClient(grpc::Channel channel) : base(channel)
+      public UserEventServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for UserEventService that uses a custom <c>CallInvoker</c>.</summary>

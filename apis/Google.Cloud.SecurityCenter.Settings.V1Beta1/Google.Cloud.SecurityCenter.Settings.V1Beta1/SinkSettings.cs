@@ -49,7 +49,11 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   /// <summary>
   /// Sink Settings for Security Command Center
   /// </summary>
-  public sealed partial class SinkSettings : pb::IMessage<SinkSettings> {
+  public sealed partial class SinkSettings : pb::IMessage<SinkSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SinkSettings> _parser = new pb::MessageParser<SinkSettings>(() => new SinkSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,6 +139,9 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (LoggingSinkProject.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(LoggingSinkProject);
@@ -142,7 +149,21 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LoggingSinkProject.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LoggingSinkProject);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -169,6 +190,9 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -181,7 +205,26 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            LoggingSinkProject = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

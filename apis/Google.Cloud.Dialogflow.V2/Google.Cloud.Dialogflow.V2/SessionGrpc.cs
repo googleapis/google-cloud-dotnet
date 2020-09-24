@@ -97,7 +97,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     {
       /// <summary>Creates a new client for Sessions</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public SessionsClient(grpc::Channel channel) : base(channel)
+      public SessionsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Sessions that uses a custom <c>CallInvoker</c>.</summary>

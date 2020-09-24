@@ -140,7 +140,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     {
       /// <summary>Creates a new client for ContainerAnalysis</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ContainerAnalysisClient(grpc::Channel channel) : base(channel)
+      public ContainerAnalysisClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ContainerAnalysis that uses a custom <c>CallInvoker</c>.</summary>

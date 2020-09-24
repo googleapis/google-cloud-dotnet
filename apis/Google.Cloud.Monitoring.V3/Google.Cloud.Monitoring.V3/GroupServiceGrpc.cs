@@ -178,7 +178,7 @@ namespace Google.Cloud.Monitoring.V3 {
     {
       /// <summary>Creates a new client for GroupService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public GroupServiceClient(grpc::Channel channel) : base(channel)
+      public GroupServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for GroupService that uses a custom <c>CallInvoker</c>.</summary>

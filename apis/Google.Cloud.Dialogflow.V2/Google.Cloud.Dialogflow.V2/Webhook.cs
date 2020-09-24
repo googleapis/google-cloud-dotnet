@@ -66,7 +66,11 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// The request message for a webhook call.
   /// </summary>
-  public sealed partial class WebhookRequest : pb::IMessage<WebhookRequest> {
+  public sealed partial class WebhookRequest : pb::IMessage<WebhookRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WebhookRequest> _parser = new pb::MessageParser<WebhookRequest>(() => new WebhookRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -206,6 +210,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ResponseId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ResponseId);
@@ -225,7 +232,33 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ResponseId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResponseId);
+      }
+      if (queryResult_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(QueryResult);
+      }
+      if (originalDetectIntentRequest_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OriginalDetectIntentRequest);
+      }
+      if (Session.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Session);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -276,6 +309,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -306,7 +342,44 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ResponseId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (queryResult_ == null) {
+              QueryResult = new global::Google.Cloud.Dialogflow.V2.QueryResult();
+            }
+            input.ReadMessage(QueryResult);
+            break;
+          }
+          case 26: {
+            if (originalDetectIntentRequest_ == null) {
+              OriginalDetectIntentRequest = new global::Google.Cloud.Dialogflow.V2.OriginalDetectIntentRequest();
+            }
+            input.ReadMessage(OriginalDetectIntentRequest);
+            break;
+          }
+          case 34: {
+            Session = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -326,7 +399,11 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// [Protocol Buffers Language
   /// Guide](https://developers.google.com/protocol-buffers/docs/proto3#json).
   /// </summary>
-  public sealed partial class WebhookResponse : pb::IMessage<WebhookResponse> {
+  public sealed partial class WebhookResponse : pb::IMessage<WebhookResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WebhookResponse> _parser = new pb::MessageParser<WebhookResponse>(() => new WebhookResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -533,6 +610,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (FulfillmentText.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(FulfillmentText);
@@ -555,7 +635,36 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FulfillmentText.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FulfillmentText);
+      }
+      fulfillmentMessages_.WriteTo(ref output, _repeated_fulfillmentMessages_codec);
+      if (Source.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Source);
+      }
+      if (payload_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Payload);
+      }
+      outputContexts_.WriteTo(ref output, _repeated_outputContexts_codec);
+      if (followupEventInput_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(FollowupEventInput);
+      }
+      sessionEntityTypes_.WriteTo(ref output, _repeated_sessionEntityTypes_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -612,6 +721,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -654,7 +766,56 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FulfillmentText = input.ReadString();
+            break;
+          }
+          case 18: {
+            fulfillmentMessages_.AddEntriesFrom(ref input, _repeated_fulfillmentMessages_codec);
+            break;
+          }
+          case 26: {
+            Source = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (payload_ == null) {
+              Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Payload);
+            break;
+          }
+          case 42: {
+            outputContexts_.AddEntriesFrom(ref input, _repeated_outputContexts_codec);
+            break;
+          }
+          case 50: {
+            if (followupEventInput_ == null) {
+              FollowupEventInput = new global::Google.Cloud.Dialogflow.V2.EventInput();
+            }
+            input.ReadMessage(FollowupEventInput);
+            break;
+          }
+          case 82: {
+            sessionEntityTypes_.AddEntriesFrom(ref input, _repeated_sessionEntityTypes_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -662,7 +823,11 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// Represents the contents of the original request that was passed to
   /// the `[Streaming]DetectIntent` call.
   /// </summary>
-  public sealed partial class OriginalDetectIntentRequest : pb::IMessage<OriginalDetectIntentRequest> {
+  public sealed partial class OriginalDetectIntentRequest : pb::IMessage<OriginalDetectIntentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OriginalDetectIntentRequest> _parser = new pb::MessageParser<OriginalDetectIntentRequest>(() => new OriginalDetectIntentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -793,6 +958,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Source.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Source);
@@ -808,7 +976,29 @@ namespace Google.Cloud.Dialogflow.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Source.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Source);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (payload_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Payload);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -850,6 +1040,9 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -873,7 +1066,37 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Source = input.ReadString();
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (payload_ == null) {
+              Payload = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Payload);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

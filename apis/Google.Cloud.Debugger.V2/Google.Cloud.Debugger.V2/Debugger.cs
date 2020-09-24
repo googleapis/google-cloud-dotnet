@@ -112,7 +112,11 @@ namespace Google.Cloud.Debugger.V2 {
   /// <summary>
   /// Request to set a breakpoint
   /// </summary>
-  public sealed partial class SetBreakpointRequest : pb::IMessage<SetBreakpointRequest> {
+  public sealed partial class SetBreakpointRequest : pb::IMessage<SetBreakpointRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetBreakpointRequest> _parser = new pb::MessageParser<SetBreakpointRequest>(() => new SetBreakpointRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -230,6 +234,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DebuggeeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DebuggeeId);
@@ -245,7 +252,29 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DebuggeeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DebuggeeId);
+      }
+      if (breakpoint_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Breakpoint);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClientVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -287,6 +316,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -310,14 +342,48 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DebuggeeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (breakpoint_ == null) {
+              Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
+            }
+            input.ReadMessage(Breakpoint);
+            break;
+          }
+          case 34: {
+            ClientVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response for setting a breakpoint.
   /// </summary>
-  public sealed partial class SetBreakpointResponse : pb::IMessage<SetBreakpointResponse> {
+  public sealed partial class SetBreakpointResponse : pb::IMessage<SetBreakpointResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SetBreakpointResponse> _parser = new pb::MessageParser<SetBreakpointResponse>(() => new SetBreakpointResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -400,6 +466,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (breakpoint_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Breakpoint);
@@ -407,7 +476,21 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (breakpoint_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Breakpoint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -437,6 +520,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -452,14 +538,40 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (breakpoint_ == null) {
+              Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
+            }
+            input.ReadMessage(Breakpoint);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to get breakpoint information.
   /// </summary>
-  public sealed partial class GetBreakpointRequest : pb::IMessage<GetBreakpointRequest> {
+  public sealed partial class GetBreakpointRequest : pb::IMessage<GetBreakpointRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetBreakpointRequest> _parser = new pb::MessageParser<GetBreakpointRequest>(() => new GetBreakpointRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -576,6 +688,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DebuggeeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DebuggeeId);
@@ -591,7 +706,29 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DebuggeeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DebuggeeId);
+      }
+      if (BreakpointId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(BreakpointId);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClientVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -630,6 +767,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -650,14 +790,45 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DebuggeeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            BreakpointId = input.ReadString();
+            break;
+          }
+          case 34: {
+            ClientVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response for getting breakpoint information.
   /// </summary>
-  public sealed partial class GetBreakpointResponse : pb::IMessage<GetBreakpointResponse> {
+  public sealed partial class GetBreakpointResponse : pb::IMessage<GetBreakpointResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetBreakpointResponse> _parser = new pb::MessageParser<GetBreakpointResponse>(() => new GetBreakpointResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -740,6 +911,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (breakpoint_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Breakpoint);
@@ -747,7 +921,21 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (breakpoint_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Breakpoint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -777,6 +965,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -792,14 +983,40 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (breakpoint_ == null) {
+              Breakpoint = new global::Google.Cloud.Debugger.V2.Breakpoint();
+            }
+            input.ReadMessage(Breakpoint);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to delete a breakpoint.
   /// </summary>
-  public sealed partial class DeleteBreakpointRequest : pb::IMessage<DeleteBreakpointRequest> {
+  public sealed partial class DeleteBreakpointRequest : pb::IMessage<DeleteBreakpointRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteBreakpointRequest> _parser = new pb::MessageParser<DeleteBreakpointRequest>(() => new DeleteBreakpointRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -916,6 +1133,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DebuggeeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DebuggeeId);
@@ -931,7 +1151,29 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DebuggeeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DebuggeeId);
+      }
+      if (BreakpointId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(BreakpointId);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ClientVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -970,6 +1212,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -990,14 +1235,45 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DebuggeeId = input.ReadString();
+            break;
+          }
+          case 18: {
+            BreakpointId = input.ReadString();
+            break;
+          }
+          case 26: {
+            ClientVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to list breakpoints.
   /// </summary>
-  public sealed partial class ListBreakpointsRequest : pb::IMessage<ListBreakpointsRequest> {
+  public sealed partial class ListBreakpointsRequest : pb::IMessage<ListBreakpointsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListBreakpointsRequest> _parser = new pb::MessageParser<ListBreakpointsRequest>(() => new ListBreakpointsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1190,6 +1466,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DebuggeeId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(DebuggeeId);
@@ -1221,7 +1500,45 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DebuggeeId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DebuggeeId);
+      }
+      if (IncludeAllUsers != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IncludeAllUsers);
+      }
+      if (IncludeInactive != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IncludeInactive);
+      }
+      if (action_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Action);
+      }
+      if (StripResults != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(StripResults);
+      }
+      if (WaitToken.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(WaitToken);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ClientVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1287,6 +1604,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1326,7 +1646,53 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DebuggeeId = input.ReadString();
+            break;
+          }
+          case 16: {
+            IncludeAllUsers = input.ReadBool();
+            break;
+          }
+          case 24: {
+            IncludeInactive = input.ReadBool();
+            break;
+          }
+          case 34: {
+            if (action_ == null) {
+              Action = new global::Google.Cloud.Debugger.V2.ListBreakpointsRequest.Types.BreakpointActionValue();
+            }
+            input.ReadMessage(Action);
+            break;
+          }
+          case 40: {
+            StripResults = input.ReadBool();
+            break;
+          }
+          case 50: {
+            WaitToken = input.ReadString();
+            break;
+          }
+          case 66: {
+            ClientVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ListBreakpointsRequest message type.</summary>
@@ -1336,7 +1702,11 @@ namespace Google.Cloud.Debugger.V2 {
       /// Wrapper message for `Breakpoint.Action`. Defines a filter on the action
       /// field of breakpoints.
       /// </summary>
-      public sealed partial class BreakpointActionValue : pb::IMessage<BreakpointActionValue> {
+      public sealed partial class BreakpointActionValue : pb::IMessage<BreakpointActionValue>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<BreakpointActionValue> _parser = new pb::MessageParser<BreakpointActionValue>(() => new BreakpointActionValue());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1418,6 +1788,9 @@ namespace Google.Cloud.Debugger.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Value != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Value);
@@ -1425,7 +1798,21 @@ namespace Google.Cloud.Debugger.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Value != global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action.Capture) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1452,6 +1839,9 @@ namespace Google.Cloud.Debugger.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1464,7 +1854,26 @@ namespace Google.Cloud.Debugger.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Value = (global::Google.Cloud.Debugger.V2.Breakpoint.Types.Action) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1476,7 +1885,11 @@ namespace Google.Cloud.Debugger.V2 {
   /// <summary>
   /// Response for listing breakpoints.
   /// </summary>
-  public sealed partial class ListBreakpointsResponse : pb::IMessage<ListBreakpointsResponse> {
+  public sealed partial class ListBreakpointsResponse : pb::IMessage<ListBreakpointsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListBreakpointsResponse> _parser = new pb::MessageParser<ListBreakpointsResponse>(() => new ListBreakpointsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1578,6 +1991,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       breakpoints_.WriteTo(output, _repeated_breakpoints_codec);
       if (NextWaitToken.Length != 0) {
         output.WriteRawTag(18);
@@ -1586,7 +2002,22 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      breakpoints_.WriteTo(ref output, _repeated_breakpoints_codec);
+      if (NextWaitToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextWaitToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1615,6 +2046,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1631,14 +2065,41 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            breakpoints_.AddEntriesFrom(ref input, _repeated_breakpoints_codec);
+            break;
+          }
+          case 18: {
+            NextWaitToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to list debuggees.
   /// </summary>
-  public sealed partial class ListDebuggeesRequest : pb::IMessage<ListDebuggeesRequest> {
+  public sealed partial class ListDebuggeesRequest : pb::IMessage<ListDebuggeesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDebuggeesRequest> _parser = new pb::MessageParser<ListDebuggeesRequest>(() => new ListDebuggeesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1756,6 +2217,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Project.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Project);
@@ -1771,7 +2235,29 @@ namespace Google.Cloud.Debugger.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (IncludeInactive != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IncludeInactive);
+      }
+      if (ClientVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClientVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1810,6 +2296,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1830,14 +2319,45 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 24: {
+            IncludeInactive = input.ReadBool();
+            break;
+          }
+          case 34: {
+            ClientVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response for listing debuggees.
   /// </summary>
-  public sealed partial class ListDebuggeesResponse : pb::IMessage<ListDebuggeesResponse> {
+  public sealed partial class ListDebuggeesResponse : pb::IMessage<ListDebuggeesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListDebuggeesResponse> _parser = new pb::MessageParser<ListDebuggeesResponse>(() => new ListDebuggeesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1921,11 +2441,25 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       debuggees_.WriteTo(output, _repeated_debuggees_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      debuggees_.WriteTo(ref output, _repeated_debuggees_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1948,6 +2482,9 @@ namespace Google.Cloud.Debugger.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1960,7 +2497,26 @@ namespace Google.Cloud.Debugger.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            debuggees_.AddEntriesFrom(ref input, _repeated_debuggees_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

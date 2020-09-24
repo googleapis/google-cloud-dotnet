@@ -161,7 +161,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// <summary>
   /// Metadata common to all Datastore Admin operations.
   /// </summary>
-  public sealed partial class CommonMetadata : pb::IMessage<CommonMetadata> {
+  public sealed partial class CommonMetadata : pb::IMessage<CommonMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CommonMetadata> _parser = new pb::MessageParser<CommonMetadata>(() => new CommonMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -312,6 +316,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (startTime_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(StartTime);
@@ -332,7 +339,34 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (OperationType != global::Google.Cloud.Datastore.Admin.V1.OperationType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) OperationType);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (State != global::Google.Cloud.Datastore.Admin.V1.CommonMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -385,6 +419,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -419,7 +456,48 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 24: {
+            OperationType = (global::Google.Cloud.Datastore.Admin.V1.OperationType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 40: {
+            State = (global::Google.Cloud.Datastore.Admin.V1.CommonMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CommonMetadata message type.</summary>
@@ -473,7 +551,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// <summary>
   /// Measures the progress of a particular metric.
   /// </summary>
-  public sealed partial class Progress : pb::IMessage<Progress> {
+  public sealed partial class Progress : pb::IMessage<Progress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Progress> _parser = new pb::MessageParser<Progress>(() => new Progress());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -574,6 +656,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (WorkCompleted != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(WorkCompleted);
@@ -585,7 +670,25 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WorkCompleted != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(WorkCompleted);
+      }
+      if (WorkEstimated != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(WorkEstimated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -618,6 +721,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -634,7 +740,30 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            WorkCompleted = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            WorkEstimated = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -642,7 +771,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.ExportEntities][google.datastore.admin.v1.DatastoreAdmin.ExportEntities].
   /// </summary>
-  public sealed partial class ExportEntitiesRequest : pb::IMessage<ExportEntitiesRequest> {
+  public sealed partial class ExportEntitiesRequest : pb::IMessage<ExportEntitiesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExportEntitiesRequest> _parser = new pb::MessageParser<ExportEntitiesRequest>(() => new ExportEntitiesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -791,6 +924,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -807,7 +943,30 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (entityFilter_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EntityFilter);
+      }
+      if (OutputUrlPrefix.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(OutputUrlPrefix);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -851,6 +1010,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -878,7 +1040,41 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 26: {
+            if (entityFilter_ == null) {
+              EntityFilter = new global::Google.Cloud.Datastore.Admin.V1.EntityFilter();
+            }
+            input.ReadMessage(EntityFilter);
+            break;
+          }
+          case 34: {
+            OutputUrlPrefix = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -886,7 +1082,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.ImportEntities][google.datastore.admin.v1.DatastoreAdmin.ImportEntities].
   /// </summary>
-  public sealed partial class ImportEntitiesRequest : pb::IMessage<ImportEntitiesRequest> {
+  public sealed partial class ImportEntitiesRequest : pb::IMessage<ImportEntitiesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImportEntitiesRequest> _parser = new pb::MessageParser<ImportEntitiesRequest>(() => new ImportEntitiesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1033,6 +1233,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -1049,7 +1252,30 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (InputUrl.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(InputUrl);
+      }
+      if (entityFilter_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EntityFilter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1093,6 +1319,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1120,7 +1349,41 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 18: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 26: {
+            InputUrl = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (entityFilter_ == null) {
+              EntityFilter = new global::Google.Cloud.Datastore.Admin.V1.EntityFilter();
+            }
+            input.ReadMessage(EntityFilter);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1128,7 +1391,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The response for
   /// [google.datastore.admin.v1.DatastoreAdmin.ExportEntities][google.datastore.admin.v1.DatastoreAdmin.ExportEntities].
   /// </summary>
-  public sealed partial class ExportEntitiesResponse : pb::IMessage<ExportEntitiesResponse> {
+  public sealed partial class ExportEntitiesResponse : pb::IMessage<ExportEntitiesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExportEntitiesResponse> _parser = new pb::MessageParser<ExportEntitiesResponse>(() => new ExportEntitiesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1213,6 +1480,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (OutputUrl.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(OutputUrl);
@@ -1220,7 +1490,21 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OutputUrl.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OutputUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1247,6 +1531,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1259,14 +1546,37 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            OutputUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Metadata for ExportEntities operations.
   /// </summary>
-  public sealed partial class ExportEntitiesMetadata : pb::IMessage<ExportEntitiesMetadata> {
+  public sealed partial class ExportEntitiesMetadata : pb::IMessage<ExportEntitiesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExportEntitiesMetadata> _parser = new pb::MessageParser<ExportEntitiesMetadata>(() => new ExportEntitiesMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1420,6 +1730,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (common_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Common);
@@ -1443,7 +1756,37 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (common_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Common);
+      }
+      if (progressEntities_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ProgressEntities);
+      }
+      if (progressBytes_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ProgressBytes);
+      }
+      if (entityFilter_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EntityFilter);
+      }
+      if (OutputUrlPrefix.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OutputUrlPrefix);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1506,6 +1849,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1546,14 +1892,65 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (common_ == null) {
+              Common = new global::Google.Cloud.Datastore.Admin.V1.CommonMetadata();
+            }
+            input.ReadMessage(Common);
+            break;
+          }
+          case 18: {
+            if (progressEntities_ == null) {
+              ProgressEntities = new global::Google.Cloud.Datastore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressEntities);
+            break;
+          }
+          case 26: {
+            if (progressBytes_ == null) {
+              ProgressBytes = new global::Google.Cloud.Datastore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressBytes);
+            break;
+          }
+          case 34: {
+            if (entityFilter_ == null) {
+              EntityFilter = new global::Google.Cloud.Datastore.Admin.V1.EntityFilter();
+            }
+            input.ReadMessage(EntityFilter);
+            break;
+          }
+          case 42: {
+            OutputUrlPrefix = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Metadata for ImportEntities operations.
   /// </summary>
-  public sealed partial class ImportEntitiesMetadata : pb::IMessage<ImportEntitiesMetadata> {
+  public sealed partial class ImportEntitiesMetadata : pb::IMessage<ImportEntitiesMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ImportEntitiesMetadata> _parser = new pb::MessageParser<ImportEntitiesMetadata>(() => new ImportEntitiesMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1704,6 +2101,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (common_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Common);
@@ -1727,7 +2127,37 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (common_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Common);
+      }
+      if (progressEntities_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ProgressEntities);
+      }
+      if (progressBytes_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ProgressBytes);
+      }
+      if (entityFilter_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EntityFilter);
+      }
+      if (InputUrl.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(InputUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1790,6 +2220,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1830,7 +2263,54 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (common_ == null) {
+              Common = new global::Google.Cloud.Datastore.Admin.V1.CommonMetadata();
+            }
+            input.ReadMessage(Common);
+            break;
+          }
+          case 18: {
+            if (progressEntities_ == null) {
+              ProgressEntities = new global::Google.Cloud.Datastore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressEntities);
+            break;
+          }
+          case 26: {
+            if (progressBytes_ == null) {
+              ProgressBytes = new global::Google.Cloud.Datastore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressBytes);
+            break;
+          }
+          case 34: {
+            if (entityFilter_ == null) {
+              EntityFilter = new global::Google.Cloud.Datastore.Admin.V1.EntityFilter();
+            }
+            input.ReadMessage(EntityFilter);
+            break;
+          }
+          case 42: {
+            InputUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1855,7 +2335,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The entire Baz namespace:
   ///   kinds=[], namespace_ids=['Baz']
   /// </summary>
-  public sealed partial class EntityFilter : pb::IMessage<EntityFilter> {
+  public sealed partial class EntityFilter : pb::IMessage<EntityFilter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<EntityFilter> _parser = new pb::MessageParser<EntityFilter>(() => new EntityFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1958,12 +2442,27 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       kinds_.WriteTo(output, _repeated_kinds_codec);
       namespaceIds_.WriteTo(output, _repeated_namespaceIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      kinds_.WriteTo(ref output, _repeated_kinds_codec);
+      namespaceIds_.WriteTo(ref output, _repeated_namespaceIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1988,6 +2487,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2004,14 +2506,41 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            kinds_.AddEntriesFrom(ref input, _repeated_kinds_codec);
+            break;
+          }
+          case 18: {
+            namespaceIds_.AddEntriesFrom(ref input, _repeated_namespaceIds_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The request for [google.datastore.admin.v1.DatastoreAdmin.GetIndex][google.datastore.admin.v1.DatastoreAdmin.GetIndex].
   /// </summary>
-  public sealed partial class GetIndexRequest : pb::IMessage<GetIndexRequest> {
+  public sealed partial class GetIndexRequest : pb::IMessage<GetIndexRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetIndexRequest> _parser = new pb::MessageParser<GetIndexRequest>(() => new GetIndexRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2110,6 +2639,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -2121,7 +2653,25 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (IndexId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IndexId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2154,6 +2704,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2170,7 +2723,30 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            IndexId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2178,7 +2754,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The request for
   /// [google.datastore.admin.v1.DatastoreAdmin.ListIndexes][google.datastore.admin.v1.DatastoreAdmin.ListIndexes].
   /// </summary>
-  public sealed partial class ListIndexesRequest : pb::IMessage<ListIndexesRequest> {
+  public sealed partial class ListIndexesRequest : pb::IMessage<ListIndexesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListIndexesRequest> _parser = new pb::MessageParser<ListIndexesRequest>(() => new ListIndexesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2309,6 +2889,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ProjectId);
@@ -2328,7 +2911,33 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2373,6 +2982,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2397,7 +3009,38 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2405,7 +3048,11 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   /// The response for
   /// [google.datastore.admin.v1.DatastoreAdmin.ListIndexes][google.datastore.admin.v1.DatastoreAdmin.ListIndexes].
   /// </summary>
-  public sealed partial class ListIndexesResponse : pb::IMessage<ListIndexesResponse> {
+  public sealed partial class ListIndexesResponse : pb::IMessage<ListIndexesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListIndexesResponse> _parser = new pb::MessageParser<ListIndexesResponse>(() => new ListIndexesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2503,6 +3150,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       indexes_.WriteTo(output, _repeated_indexes_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -2511,7 +3161,22 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      indexes_.WriteTo(ref output, _repeated_indexes_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2540,6 +3205,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2556,14 +3224,41 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            indexes_.AddEntriesFrom(ref input, _repeated_indexes_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Metadata for Index operations.
   /// </summary>
-  public sealed partial class IndexOperationMetadata : pb::IMessage<IndexOperationMetadata> {
+  public sealed partial class IndexOperationMetadata : pb::IMessage<IndexOperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IndexOperationMetadata> _parser = new pb::MessageParser<IndexOperationMetadata>(() => new IndexOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2679,6 +3374,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (common_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Common);
@@ -2694,7 +3392,29 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (common_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Common);
+      }
+      if (progressEntities_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ProgressEntities);
+      }
+      if (IndexId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IndexId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2739,6 +3459,9 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2765,7 +3488,40 @@ namespace Google.Cloud.Datastore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (common_ == null) {
+              Common = new global::Google.Cloud.Datastore.Admin.V1.CommonMetadata();
+            }
+            input.ReadMessage(Common);
+            break;
+          }
+          case 18: {
+            if (progressEntities_ == null) {
+              ProgressEntities = new global::Google.Cloud.Datastore.Admin.V1.Progress();
+            }
+            input.ReadMessage(ProgressEntities);
+            break;
+          }
+          case 26: {
+            IndexId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

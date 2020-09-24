@@ -147,7 +147,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     {
       /// <summary>Creates a new client for CompanyService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CompanyServiceClient(grpc::Channel channel) : base(channel)
+      public CompanyServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CompanyService that uses a custom <c>CallInvoker</c>.</summary>

@@ -63,7 +63,11 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
   /// Definition of a software environment that is used to start a notebook
   /// instance.
   /// </summary>
-  public sealed partial class Environment : pb::IMessage<Environment> {
+  public sealed partial class Environment : pb::IMessage<Environment>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Environment> _parser = new pb::MessageParser<Environment>(() => new Environment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -279,6 +283,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -310,7 +317,45 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (imageTypeCase_ == ImageTypeOneofCase.VmImage) {
+        output.WriteRawTag(50);
+        output.WriteMessage(VmImage);
+      }
+      if (imageTypeCase_ == ImageTypeOneofCase.ContainerImage) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ContainerImage);
+      }
+      if (PostStartupScript.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(PostStartupScript);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -385,6 +430,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -434,7 +482,63 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Notebooks.V1Beta1.VmImage subBuilder = new global::Google.Cloud.Notebooks.V1Beta1.VmImage();
+            if (imageTypeCase_ == ImageTypeOneofCase.VmImage) {
+              subBuilder.MergeFrom(VmImage);
+            }
+            input.ReadMessage(subBuilder);
+            VmImage = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Notebooks.V1Beta1.ContainerImage subBuilder = new global::Google.Cloud.Notebooks.V1Beta1.ContainerImage();
+            if (imageTypeCase_ == ImageTypeOneofCase.ContainerImage) {
+              subBuilder.MergeFrom(ContainerImage);
+            }
+            input.ReadMessage(subBuilder);
+            ContainerImage = subBuilder;
+            break;
+          }
+          case 66: {
+            PostStartupScript = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -442,7 +546,11 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
   /// Definition of a custom Compute Engine virtual machine image for starting a
   /// notebook instance with the environment installed directly on the VM.
   /// </summary>
-  public sealed partial class VmImage : pb::IMessage<VmImage> {
+  public sealed partial class VmImage : pb::IMessage<VmImage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<VmImage> _parser = new pb::MessageParser<VmImage>(() => new VmImage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -588,6 +696,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Project.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Project);
@@ -603,7 +714,29 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Project.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Project);
+      }
+      if (imageCase_ == ImageOneofCase.ImageName) {
+        output.WriteRawTag(18);
+        output.WriteString(ImageName);
+      }
+      if (imageCase_ == ImageOneofCase.ImageFamily) {
+        output.WriteRawTag(26);
+        output.WriteString(ImageFamily);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -645,6 +778,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -665,7 +801,34 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Project = input.ReadString();
+            break;
+          }
+          case 18: {
+            ImageName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ImageFamily = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -673,7 +836,11 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
   /// Definition of a container image for starting a notebook instance with the
   /// environment installed in a container.
   /// </summary>
-  public sealed partial class ContainerImage : pb::IMessage<ContainerImage> {
+  public sealed partial class ContainerImage : pb::IMessage<ContainerImage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ContainerImage> _parser = new pb::MessageParser<ContainerImage>(() => new ContainerImage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -774,6 +941,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Repository.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Repository);
@@ -785,7 +955,25 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Repository.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Repository);
+      }
+      if (Tag.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Tag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -818,6 +1006,9 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -834,7 +1025,30 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Repository = input.ReadString();
+            break;
+          }
+          case 18: {
+            Tag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

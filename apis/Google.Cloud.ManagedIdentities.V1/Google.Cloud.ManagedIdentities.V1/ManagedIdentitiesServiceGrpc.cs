@@ -275,7 +275,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
     {
       /// <summary>Creates a new client for ManagedIdentitiesService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ManagedIdentitiesServiceClient(grpc::Channel channel) : base(channel)
+      public ManagedIdentitiesServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ManagedIdentitiesService that uses a custom <c>CallInvoker</c>.</summary>

@@ -64,7 +64,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   /// Cloud Firestore indexes enable simple and complex queries against
   /// documents in a database.
   /// </summary>
-  public sealed partial class Index : pb::IMessage<Index> {
+  public sealed partial class Index : pb::IMessage<Index>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Index> _parser = new pb::MessageParser<Index>(() => new Index());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -215,6 +219,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -231,7 +238,30 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (QueryScope != global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) QueryScope);
+      }
+      fields_.WriteTo(ref output, _repeated_fields_codec);
+      if (State != global::Google.Cloud.Firestore.Admin.V1.Index.Types.State.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -272,6 +302,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -296,7 +329,38 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            QueryScope = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.QueryScope) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            fields_.AddEntriesFrom(ref input, _repeated_fields_codec);
+            break;
+          }
+          case 32: {
+            State = (global::Google.Cloud.Firestore.Admin.V1.Index.Types.State) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Index message type.</summary>
@@ -367,7 +431,11 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// The field_path describes which field is indexed, the value_mode describes
       /// how the field value is indexed.
       /// </summary>
-      public sealed partial class IndexField : pb::IMessage<IndexField> {
+      public sealed partial class IndexField : pb::IMessage<IndexField>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<IndexField> _parser = new pb::MessageParser<IndexField>(() => new IndexField());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -514,6 +582,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (FieldPath.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(FieldPath);
@@ -529,7 +600,29 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FieldPath.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FieldPath);
+          }
+          if (valueModeCase_ == ValueModeOneofCase.Order) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Order);
+          }
+          if (valueModeCase_ == ValueModeOneofCase.ArrayConfig) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) ArrayConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -571,6 +664,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -593,7 +689,36 @@ namespace Google.Cloud.Firestore.Admin.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FieldPath = input.ReadString();
+                break;
+              }
+              case 16: {
+                valueMode_ = input.ReadEnum();
+                valueModeCase_ = ValueModeOneofCase.Order;
+                break;
+              }
+              case 24: {
+                valueMode_ = input.ReadEnum();
+                valueModeCase_ = ValueModeOneofCase.ArrayConfig;
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the IndexField message type.</summary>

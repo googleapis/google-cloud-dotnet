@@ -425,7 +425,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     {
       /// <summary>Creates a new client for BigtableInstanceAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public BigtableInstanceAdminClient(grpc::Channel channel) : base(channel)
+      public BigtableInstanceAdminClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for BigtableInstanceAdmin that uses a custom <c>CallInvoker</c>.</summary>

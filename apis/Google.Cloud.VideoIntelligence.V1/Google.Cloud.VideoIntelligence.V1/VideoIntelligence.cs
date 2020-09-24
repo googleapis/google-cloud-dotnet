@@ -370,7 +370,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
   /// Video annotation request.
   /// </summary>
-  public sealed partial class AnnotateVideoRequest : pb::IMessage<AnnotateVideoRequest> {
+  public sealed partial class AnnotateVideoRequest : pb::IMessage<AnnotateVideoRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AnnotateVideoRequest> _parser = new pb::MessageParser<AnnotateVideoRequest>(() => new AnnotateVideoRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -554,6 +558,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (InputUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(InputUri);
@@ -578,7 +585,38 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InputUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InputUri);
+      }
+      features_.WriteTo(ref output, _repeated_features_codec);
+      if (videoContext_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(VideoContext);
+      }
+      if (OutputUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(OutputUri);
+      }
+      if (LocationId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LocationId);
+      }
+      if (InputContent.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteBytes(InputContent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -634,6 +672,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -670,14 +711,61 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InputUri = input.ReadString();
+            break;
+          }
+          case 18:
+          case 16: {
+            features_.AddEntriesFrom(ref input, _repeated_features_codec);
+            break;
+          }
+          case 26: {
+            if (videoContext_ == null) {
+              VideoContext = new global::Google.Cloud.VideoIntelligence.V1.VideoContext();
+            }
+            input.ReadMessage(VideoContext);
+            break;
+          }
+          case 34: {
+            OutputUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            LocationId = input.ReadString();
+            break;
+          }
+          case 50: {
+            InputContent = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video context and/or feature-specific parameters.
   /// </summary>
-  public sealed partial class VideoContext : pb::IMessage<VideoContext> {
+  public sealed partial class VideoContext : pb::IMessage<VideoContext>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<VideoContext> _parser = new pb::MessageParser<VideoContext>(() => new VideoContext());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -879,6 +967,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       segments_.WriteTo(output, _repeated_segments_codec);
       if (labelDetectionConfig_ != null) {
         output.WriteRawTag(18);
@@ -911,7 +1002,46 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      segments_.WriteTo(ref output, _repeated_segments_codec);
+      if (labelDetectionConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LabelDetectionConfig);
+      }
+      if (shotChangeDetectionConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ShotChangeDetectionConfig);
+      }
+      if (explicitContentDetectionConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ExplicitContentDetectionConfig);
+      }
+      if (faceDetectionConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FaceDetectionConfig);
+      }
+      if (speechTranscriptionConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SpeechTranscriptionConfig);
+      }
+      if (textDetectionConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TextDetectionConfig);
+      }
+      if (objectTrackingConfig_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ObjectTrackingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -997,6 +1127,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1058,14 +1191,86 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            segments_.AddEntriesFrom(ref input, _repeated_segments_codec);
+            break;
+          }
+          case 18: {
+            if (labelDetectionConfig_ == null) {
+              LabelDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig();
+            }
+            input.ReadMessage(LabelDetectionConfig);
+            break;
+          }
+          case 26: {
+            if (shotChangeDetectionConfig_ == null) {
+              ShotChangeDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig();
+            }
+            input.ReadMessage(ShotChangeDetectionConfig);
+            break;
+          }
+          case 34: {
+            if (explicitContentDetectionConfig_ == null) {
+              ExplicitContentDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig();
+            }
+            input.ReadMessage(ExplicitContentDetectionConfig);
+            break;
+          }
+          case 42: {
+            if (faceDetectionConfig_ == null) {
+              FaceDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig();
+            }
+            input.ReadMessage(FaceDetectionConfig);
+            break;
+          }
+          case 50: {
+            if (speechTranscriptionConfig_ == null) {
+              SpeechTranscriptionConfig = new global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig();
+            }
+            input.ReadMessage(SpeechTranscriptionConfig);
+            break;
+          }
+          case 66: {
+            if (textDetectionConfig_ == null) {
+              TextDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig();
+            }
+            input.ReadMessage(TextDetectionConfig);
+            break;
+          }
+          case 106: {
+            if (objectTrackingConfig_ == null) {
+              ObjectTrackingConfig = new global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig();
+            }
+            input.ReadMessage(ObjectTrackingConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Config for LABEL_DETECTION.
   /// </summary>
-  public sealed partial class LabelDetectionConfig : pb::IMessage<LabelDetectionConfig> {
+  public sealed partial class LabelDetectionConfig : pb::IMessage<LabelDetectionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LabelDetectionConfig> _parser = new pb::MessageParser<LabelDetectionConfig>(() => new LabelDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1231,6 +1436,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) LabelDetectionMode);
@@ -1254,7 +1462,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) LabelDetectionMode);
+      }
+      if (StationaryCamera != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(StationaryCamera);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      if (FrameConfidenceThreshold != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(FrameConfidenceThreshold);
+      }
+      if (VideoConfidenceThreshold != 0F) {
+        output.WriteRawTag(45);
+        output.WriteFloat(VideoConfidenceThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1305,6 +1543,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1333,14 +1574,53 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            LabelDetectionMode = (global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            StationaryCamera = input.ReadBool();
+            break;
+          }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+          case 37: {
+            FrameConfidenceThreshold = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            VideoConfidenceThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Config for SHOT_CHANGE_DETECTION.
   /// </summary>
-  public sealed partial class ShotChangeDetectionConfig : pb::IMessage<ShotChangeDetectionConfig> {
+  public sealed partial class ShotChangeDetectionConfig : pb::IMessage<ShotChangeDetectionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ShotChangeDetectionConfig> _parser = new pb::MessageParser<ShotChangeDetectionConfig>(() => new ShotChangeDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1424,6 +1704,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Model.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Model);
@@ -1431,7 +1714,21 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Model.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1458,6 +1755,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1470,14 +1770,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Model = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Config for OBJECT_TRACKING.
   /// </summary>
-  public sealed partial class ObjectTrackingConfig : pb::IMessage<ObjectTrackingConfig> {
+  public sealed partial class ObjectTrackingConfig : pb::IMessage<ObjectTrackingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ObjectTrackingConfig> _parser = new pb::MessageParser<ObjectTrackingConfig>(() => new ObjectTrackingConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1561,6 +1884,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Model.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Model);
@@ -1568,7 +1894,21 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Model.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1595,6 +1935,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1607,14 +1950,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Model = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Config for FACE_DETECTION.
   /// </summary>
-  public sealed partial class FaceDetectionConfig : pb::IMessage<FaceDetectionConfig> {
+  public sealed partial class FaceDetectionConfig : pb::IMessage<FaceDetectionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FaceDetectionConfig> _parser = new pb::MessageParser<FaceDetectionConfig>(() => new FaceDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1715,6 +2081,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Model.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Model);
@@ -1726,7 +2095,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Model.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Model);
+      }
+      if (IncludeBoundingBoxes != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IncludeBoundingBoxes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1759,6 +2146,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1775,14 +2165,41 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Model = input.ReadString();
+            break;
+          }
+          case 16: {
+            IncludeBoundingBoxes = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Config for EXPLICIT_CONTENT_DETECTION.
   /// </summary>
-  public sealed partial class ExplicitContentDetectionConfig : pb::IMessage<ExplicitContentDetectionConfig> {
+  public sealed partial class ExplicitContentDetectionConfig : pb::IMessage<ExplicitContentDetectionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExplicitContentDetectionConfig> _parser = new pb::MessageParser<ExplicitContentDetectionConfig>(() => new ExplicitContentDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1866,6 +2283,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Model.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Model);
@@ -1873,7 +2293,21 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Model.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1900,6 +2334,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1912,14 +2349,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Model = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Config for TEXT_DETECTION.
   /// </summary>
-  public sealed partial class TextDetectionConfig : pb::IMessage<TextDetectionConfig> {
+  public sealed partial class TextDetectionConfig : pb::IMessage<TextDetectionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TextDetectionConfig> _parser = new pb::MessageParser<TextDetectionConfig>(() => new TextDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2023,6 +2483,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       languageHints_.WriteTo(output, _repeated_languageHints_codec);
       if (Model.Length != 0) {
         output.WriteRawTag(18);
@@ -2031,7 +2494,22 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      languageHints_.WriteTo(ref output, _repeated_languageHints_codec);
+      if (Model.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Model);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2060,6 +2538,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2076,14 +2557,41 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            languageHints_.AddEntriesFrom(ref input, _repeated_languageHints_codec);
+            break;
+          }
+          case 18: {
+            Model = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video segment.
   /// </summary>
-  public sealed partial class VideoSegment : pb::IMessage<VideoSegment> {
+  public sealed partial class VideoSegment : pb::IMessage<VideoSegment>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<VideoSegment> _parser = new pb::MessageParser<VideoSegment>(() => new VideoSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2184,6 +2692,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (startTimeOffset_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(StartTimeOffset);
@@ -2195,7 +2706,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTimeOffset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTimeOffset);
+      }
+      if (endTimeOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTimeOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2234,6 +2763,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2256,14 +2788,47 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTimeOffset_ == null) {
+              StartTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(StartTimeOffset);
+            break;
+          }
+          case 18: {
+            if (endTimeOffset_ == null) {
+              EndTimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EndTimeOffset);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video segment level annotation results for label detection.
   /// </summary>
-  public sealed partial class LabelSegment : pb::IMessage<LabelSegment> {
+  public sealed partial class LabelSegment : pb::IMessage<LabelSegment>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LabelSegment> _parser = new pb::MessageParser<LabelSegment>(() => new LabelSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2362,6 +2927,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (segment_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Segment);
@@ -2373,7 +2941,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (segment_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Segment);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2409,6 +2995,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2428,14 +3017,44 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (segment_ == null) {
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+            }
+            input.ReadMessage(Segment);
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video frame level annotation results for label detection.
   /// </summary>
-  public sealed partial class LabelFrame : pb::IMessage<LabelFrame> {
+  public sealed partial class LabelFrame : pb::IMessage<LabelFrame>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LabelFrame> _parser = new pb::MessageParser<LabelFrame>(() => new LabelFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2535,6 +3154,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (timeOffset_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(TimeOffset);
@@ -2546,7 +3168,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (timeOffset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TimeOffset);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2582,6 +3222,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2601,14 +3244,44 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (timeOffset_ == null) {
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TimeOffset);
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Detected entity from video analysis.
   /// </summary>
-  public sealed partial class Entity : pb::IMessage<Entity> {
+  public sealed partial class Entity : pb::IMessage<Entity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2726,6 +3399,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (EntityId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(EntityId);
@@ -2741,7 +3417,29 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EntityId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EntityId);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2780,6 +3478,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2800,14 +3501,45 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EntityId = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Label annotation.
   /// </summary>
-  public sealed partial class LabelAnnotation : pb::IMessage<LabelAnnotation> {
+  public sealed partial class LabelAnnotation : pb::IMessage<LabelAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LabelAnnotation> _parser = new pb::MessageParser<LabelAnnotation>(() => new LabelAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2940,6 +3672,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (entity_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Entity);
@@ -2950,7 +3685,24 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (entity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Entity);
+      }
+      categoryEntities_.WriteTo(ref output, _repeated_categoryEntities_codec);
+      segments_.WriteTo(ref output, _repeated_segments_codec);
+      frames_.WriteTo(ref output, _repeated_frames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2986,6 +3738,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3013,14 +3768,52 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.VideoIntelligence.V1.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 18: {
+            categoryEntities_.AddEntriesFrom(ref input, _repeated_categoryEntities_codec);
+            break;
+          }
+          case 26: {
+            segments_.AddEntriesFrom(ref input, _repeated_segments_codec);
+            break;
+          }
+          case 34: {
+            frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video frame level annotation results for explicit content.
   /// </summary>
-  public sealed partial class ExplicitContentFrame : pb::IMessage<ExplicitContentFrame> {
+  public sealed partial class ExplicitContentFrame : pb::IMessage<ExplicitContentFrame>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExplicitContentFrame> _parser = new pb::MessageParser<ExplicitContentFrame>(() => new ExplicitContentFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3120,6 +3913,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (timeOffset_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(TimeOffset);
@@ -3131,7 +3927,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (timeOffset_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TimeOffset);
+      }
+      if (PornographyLikelihood != global::Google.Cloud.VideoIntelligence.V1.Likelihood.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) PornographyLikelihood);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3167,6 +3981,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3186,7 +4003,33 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (timeOffset_ == null) {
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TimeOffset);
+            break;
+          }
+          case 16: {
+            PornographyLikelihood = (global::Google.Cloud.VideoIntelligence.V1.Likelihood) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3195,7 +4038,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// If no explicit content has been detected in a frame, no annotations are
   /// present for that frame.
   /// </summary>
-  public sealed partial class ExplicitContentAnnotation : pb::IMessage<ExplicitContentAnnotation> {
+  public sealed partial class ExplicitContentAnnotation : pb::IMessage<ExplicitContentAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ExplicitContentAnnotation> _parser = new pb::MessageParser<ExplicitContentAnnotation>(() => new ExplicitContentAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3276,11 +4123,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       frames_.WriteTo(output, _repeated_frames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      frames_.WriteTo(ref output, _repeated_frames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3303,6 +4164,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3315,7 +4179,26 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3324,7 +4207,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// The normalized vertex coordinates are relative to the original image.
   /// Range: [0, 1].
   /// </summary>
-  public sealed partial class NormalizedBoundingBox : pb::IMessage<NormalizedBoundingBox> {
+  public sealed partial class NormalizedBoundingBox : pb::IMessage<NormalizedBoundingBox>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NormalizedBoundingBox> _parser = new pb::MessageParser<NormalizedBoundingBox>(() => new NormalizedBoundingBox());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3457,6 +4344,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Left != 0F) {
         output.WriteRawTag(13);
         output.WriteFloat(Left);
@@ -3476,7 +4366,33 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Left != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Left);
+      }
+      if (Top != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Top);
+      }
+      if (Right != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Right);
+      }
+      if (Bottom != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Bottom);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3521,6 +4437,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3545,14 +4464,49 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            Left = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Top = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Right = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            Bottom = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video segment level annotation results for face detection.
   /// </summary>
-  public sealed partial class FaceSegment : pb::IMessage<FaceSegment> {
+  public sealed partial class FaceSegment : pb::IMessage<FaceSegment>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FaceSegment> _parser = new pb::MessageParser<FaceSegment>(() => new FaceSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3634,6 +4588,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (segment_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Segment);
@@ -3641,7 +4598,21 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (segment_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Segment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3671,6 +4642,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3686,14 +4660,40 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (segment_ == null) {
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+            }
+            input.ReadMessage(Segment);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video frame level annotation results for face detection.
   /// </summary>
-  public sealed partial class FaceFrame : pb::IMessage<FaceFrame> {
+  public sealed partial class FaceFrame : pb::IMessage<FaceFrame>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FaceFrame> _parser = new pb::MessageParser<FaceFrame>(() => new FaceFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3794,6 +4794,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       normalizedBoundingBoxes_.WriteTo(output, _repeated_normalizedBoundingBoxes_codec);
       if (timeOffset_ != null) {
         output.WriteRawTag(18);
@@ -3802,7 +4805,22 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      normalizedBoundingBoxes_.WriteTo(ref output, _repeated_normalizedBoundingBoxes_codec);
+      if (timeOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TimeOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3834,6 +4852,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3853,14 +4874,44 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            normalizedBoundingBoxes_.AddEntriesFrom(ref input, _repeated_normalizedBoundingBoxes_codec);
+            break;
+          }
+          case 18: {
+            if (timeOffset_ == null) {
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TimeOffset);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Face annotation.
   /// </summary>
-  public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation> {
+  public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FaceAnnotation> _parser = new pb::MessageParser<FaceAnnotation>(() => new FaceAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3974,6 +5025,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Thumbnail.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(Thumbnail);
@@ -3983,7 +5037,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Thumbnail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Thumbnail);
+      }
+      segments_.WriteTo(ref output, _repeated_segments_codec);
+      frames_.WriteTo(ref output, _repeated_frames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4014,6 +5084,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4034,7 +5107,34 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Thumbnail = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            segments_.AddEntriesFrom(ref input, _repeated_segments_codec);
+            break;
+          }
+          case 26: {
+            frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4043,7 +5143,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// An object at time_offset with attributes, and located with
   /// normalized_bounding_box.
   /// </summary>
-  public sealed partial class TimestampedObject : pb::IMessage<TimestampedObject> {
+  public sealed partial class TimestampedObject : pb::IMessage<TimestampedObject>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TimestampedObject> _parser = new pb::MessageParser<TimestampedObject>(() => new TimestampedObject());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4175,6 +5279,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (normalizedBoundingBox_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(NormalizedBoundingBox);
@@ -4188,7 +5295,27 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (normalizedBoundingBox_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NormalizedBoundingBox);
+      }
+      if (timeOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TimeOffset);
+      }
+      attributes_.WriteTo(ref output, _repeated_attributes_codec);
+      landmarks_.WriteTo(ref output, _repeated_landmarks_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4231,6 +5358,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4261,14 +5391,55 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (normalizedBoundingBox_ == null) {
+              NormalizedBoundingBox = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox();
+            }
+            input.ReadMessage(NormalizedBoundingBox);
+            break;
+          }
+          case 18: {
+            if (timeOffset_ == null) {
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TimeOffset);
+            break;
+          }
+          case 26: {
+            attributes_.AddEntriesFrom(ref input, _repeated_attributes_codec);
+            break;
+          }
+          case 34: {
+            landmarks_.AddEntriesFrom(ref input, _repeated_landmarks_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A track of an object instance.
   /// </summary>
-  public sealed partial class Track : pb::IMessage<Track> {
+  public sealed partial class Track : pb::IMessage<Track>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Track> _parser = new pb::MessageParser<Track>(() => new Track());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4399,6 +5570,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (segment_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Segment);
@@ -4412,7 +5586,27 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (segment_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Segment);
+      }
+      timestampedObjects_.WriteTo(ref output, _repeated_timestampedObjects_codec);
+      attributes_.WriteTo(ref output, _repeated_attributes_codec);
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4452,6 +5646,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4479,14 +5676,52 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (segment_ == null) {
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+            }
+            input.ReadMessage(Segment);
+            break;
+          }
+          case 18: {
+            timestampedObjects_.AddEntriesFrom(ref input, _repeated_timestampedObjects_codec);
+            break;
+          }
+          case 26: {
+            attributes_.AddEntriesFrom(ref input, _repeated_attributes_codec);
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A generic detected attribute represented by name in string format.
   /// </summary>
-  public sealed partial class DetectedAttribute : pb::IMessage<DetectedAttribute> {
+  public sealed partial class DetectedAttribute : pb::IMessage<DetectedAttribute>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DetectedAttribute> _parser = new pb::MessageParser<DetectedAttribute>(() => new DetectedAttribute());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4604,6 +5839,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -4619,7 +5857,29 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4658,6 +5918,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4678,7 +5941,34 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            Value = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4686,7 +5976,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// A generic detected landmark represented by name in string format and a 2D
   /// location.
   /// </summary>
-  public sealed partial class DetectedLandmark : pb::IMessage<DetectedLandmark> {
+  public sealed partial class DetectedLandmark : pb::IMessage<DetectedLandmark>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DetectedLandmark> _parser = new pb::MessageParser<DetectedLandmark>(() => new DetectedLandmark());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4803,6 +6097,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -4818,7 +6115,29 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (point_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Point);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Confidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4860,6 +6179,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4883,14 +6205,48 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (point_ == null) {
+              Point = new global::Google.Cloud.VideoIntelligence.V1.NormalizedVertex();
+            }
+            input.ReadMessage(Point);
+            break;
+          }
+          case 29: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Annotation results for a single video.
   /// </summary>
-  public sealed partial class VideoAnnotationResults : pb::IMessage<VideoAnnotationResults> {
+  public sealed partial class VideoAnnotationResults : pb::IMessage<VideoAnnotationResults>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<VideoAnnotationResults> _parser = new pb::MessageParser<VideoAnnotationResults>(() => new VideoAnnotationResults());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5215,6 +6571,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (InputUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(InputUri);
@@ -5245,7 +6604,44 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InputUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InputUri);
+      }
+      segmentLabelAnnotations_.WriteTo(ref output, _repeated_segmentLabelAnnotations_codec);
+      shotLabelAnnotations_.WriteTo(ref output, _repeated_shotLabelAnnotations_codec);
+      frameLabelAnnotations_.WriteTo(ref output, _repeated_frameLabelAnnotations_codec);
+      faceAnnotations_.WriteTo(ref output, _repeated_faceAnnotations_codec);
+      shotAnnotations_.WriteTo(ref output, _repeated_shotAnnotations_codec);
+      if (explicitAnnotation_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ExplicitAnnotation);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Error);
+      }
+      if (segment_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Segment);
+      }
+      speechTranscriptions_.WriteTo(ref output, _repeated_speechTranscriptions_codec);
+      textAnnotations_.WriteTo(ref output, _repeated_textAnnotations_codec);
+      objectAnnotations_.WriteTo(ref output, _repeated_objectAnnotations_codec);
+      logoRecognitionAnnotations_.WriteTo(ref output, _repeated_logoRecognitionAnnotations_codec);
+      segmentPresenceLabelAnnotations_.WriteTo(ref output, _repeated_segmentPresenceLabelAnnotations_codec);
+      shotPresenceLabelAnnotations_.WriteTo(ref output, _repeated_shotPresenceLabelAnnotations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5321,6 +6717,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5398,7 +6797,91 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InputUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            segmentLabelAnnotations_.AddEntriesFrom(ref input, _repeated_segmentLabelAnnotations_codec);
+            break;
+          }
+          case 26: {
+            shotLabelAnnotations_.AddEntriesFrom(ref input, _repeated_shotLabelAnnotations_codec);
+            break;
+          }
+          case 34: {
+            frameLabelAnnotations_.AddEntriesFrom(ref input, _repeated_frameLabelAnnotations_codec);
+            break;
+          }
+          case 42: {
+            faceAnnotations_.AddEntriesFrom(ref input, _repeated_faceAnnotations_codec);
+            break;
+          }
+          case 50: {
+            shotAnnotations_.AddEntriesFrom(ref input, _repeated_shotAnnotations_codec);
+            break;
+          }
+          case 58: {
+            if (explicitAnnotation_ == null) {
+              ExplicitAnnotation = new global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation();
+            }
+            input.ReadMessage(ExplicitAnnotation);
+            break;
+          }
+          case 74: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 82: {
+            if (segment_ == null) {
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+            }
+            input.ReadMessage(Segment);
+            break;
+          }
+          case 90: {
+            speechTranscriptions_.AddEntriesFrom(ref input, _repeated_speechTranscriptions_codec);
+            break;
+          }
+          case 98: {
+            textAnnotations_.AddEntriesFrom(ref input, _repeated_textAnnotations_codec);
+            break;
+          }
+          case 114: {
+            objectAnnotations_.AddEntriesFrom(ref input, _repeated_objectAnnotations_codec);
+            break;
+          }
+          case 154: {
+            logoRecognitionAnnotations_.AddEntriesFrom(ref input, _repeated_logoRecognitionAnnotations_codec);
+            break;
+          }
+          case 186: {
+            segmentPresenceLabelAnnotations_.AddEntriesFrom(ref input, _repeated_segmentPresenceLabelAnnotations_codec);
+            break;
+          }
+          case 194: {
+            shotPresenceLabelAnnotations_.AddEntriesFrom(ref input, _repeated_shotPresenceLabelAnnotations_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -5407,7 +6890,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// field of the `Operation` returned by the `GetOperation`
   /// call of the `google::longrunning::Operations` service.
   /// </summary>
-  public sealed partial class AnnotateVideoResponse : pb::IMessage<AnnotateVideoResponse> {
+  public sealed partial class AnnotateVideoResponse : pb::IMessage<AnnotateVideoResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AnnotateVideoResponse> _parser = new pb::MessageParser<AnnotateVideoResponse>(() => new AnnotateVideoResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5488,11 +6975,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       annotationResults_.WriteTo(output, _repeated_annotationResults_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      annotationResults_.WriteTo(ref output, _repeated_annotationResults_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5515,6 +7016,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5527,14 +7031,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            annotationResults_.AddEntriesFrom(ref input, _repeated_annotationResults_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Annotation progress for a single video.
   /// </summary>
-  public sealed partial class VideoAnnotationProgress : pb::IMessage<VideoAnnotationProgress> {
+  public sealed partial class VideoAnnotationProgress : pb::IMessage<VideoAnnotationProgress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<VideoAnnotationProgress> _parser = new pb::MessageParser<VideoAnnotationProgress>(() => new VideoAnnotationProgress());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5705,6 +7232,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (InputUri.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(InputUri);
@@ -5732,7 +7262,41 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InputUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InputUri);
+      }
+      if (ProgressPercent != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ProgressPercent);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      if (Feature != global::Google.Cloud.VideoIntelligence.V1.Feature.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Feature);
+      }
+      if (segment_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Segment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5798,6 +7362,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5839,7 +7406,55 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InputUri = input.ReadString();
+            break;
+          }
+          case 16: {
+            ProgressPercent = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 40: {
+            Feature = (global::Google.Cloud.VideoIntelligence.V1.Feature) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (segment_ == null) {
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+            }
+            input.ReadMessage(Segment);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -5848,7 +7463,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// field of the `Operation` returned by the `GetOperation`
   /// call of the `google::longrunning::Operations` service.
   /// </summary>
-  public sealed partial class AnnotateVideoProgress : pb::IMessage<AnnotateVideoProgress> {
+  public sealed partial class AnnotateVideoProgress : pb::IMessage<AnnotateVideoProgress>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AnnotateVideoProgress> _parser = new pb::MessageParser<AnnotateVideoProgress>(() => new AnnotateVideoProgress());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5929,11 +7548,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       annotationProgress_.WriteTo(output, _repeated_annotationProgress_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      annotationProgress_.WriteTo(ref output, _repeated_annotationProgress_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5956,6 +7589,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5968,14 +7604,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            annotationProgress_.AddEntriesFrom(ref input, _repeated_annotationProgress_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Config for SPEECH_TRANSCRIPTION.
   /// </summary>
-  public sealed partial class SpeechTranscriptionConfig : pb::IMessage<SpeechTranscriptionConfig> {
+  public sealed partial class SpeechTranscriptionConfig : pb::IMessage<SpeechTranscriptionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeechTranscriptionConfig> _parser = new pb::MessageParser<SpeechTranscriptionConfig>(() => new SpeechTranscriptionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6218,6 +7877,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(LanguageCode);
@@ -6251,7 +7913,47 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(LanguageCode);
+      }
+      if (MaxAlternatives != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxAlternatives);
+      }
+      if (FilterProfanity != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(FilterProfanity);
+      }
+      speechContexts_.WriteTo(ref output, _repeated_speechContexts_codec);
+      if (EnableAutomaticPunctuation != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(EnableAutomaticPunctuation);
+      }
+      audioTracks_.WriteTo(ref output, _repeated_audioTracks_codec);
+      if (EnableSpeakerDiarization != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(EnableSpeakerDiarization);
+      }
+      if (DiarizationSpeakerCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DiarizationSpeakerCount);
+      }
+      if (EnableWordConfidence != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(EnableWordConfidence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6318,6 +8020,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6363,7 +8068,59 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 16: {
+            MaxAlternatives = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FilterProfanity = input.ReadBool();
+            break;
+          }
+          case 34: {
+            speechContexts_.AddEntriesFrom(ref input, _repeated_speechContexts_codec);
+            break;
+          }
+          case 40: {
+            EnableAutomaticPunctuation = input.ReadBool();
+            break;
+          }
+          case 50:
+          case 48: {
+            audioTracks_.AddEntriesFrom(ref input, _repeated_audioTracks_codec);
+            break;
+          }
+          case 56: {
+            EnableSpeakerDiarization = input.ReadBool();
+            break;
+          }
+          case 64: {
+            DiarizationSpeakerCount = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            EnableWordConfidence = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -6371,7 +8128,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Provides "hints" to the speech recognizer to favor specific words and phrases
   /// in the results.
   /// </summary>
-  public sealed partial class SpeechContext : pb::IMessage<SpeechContext> {
+  public sealed partial class SpeechContext : pb::IMessage<SpeechContext>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeechContext> _parser = new pb::MessageParser<SpeechContext>(() => new SpeechContext());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6457,11 +8218,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       phrases_.WriteTo(output, _repeated_phrases_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      phrases_.WriteTo(ref output, _repeated_phrases_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6484,6 +8259,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6496,14 +8274,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            phrases_.AddEntriesFrom(ref input, _repeated_phrases_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A speech recognition result corresponding to a portion of the audio.
   /// </summary>
-  public sealed partial class SpeechTranscription : pb::IMessage<SpeechTranscription> {
+  public sealed partial class SpeechTranscription : pb::IMessage<SpeechTranscription>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeechTranscription> _parser = new pb::MessageParser<SpeechTranscription>(() => new SpeechTranscription());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6606,6 +8407,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       alternatives_.WriteTo(output, _repeated_alternatives_codec);
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(18);
@@ -6614,7 +8418,22 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      alternatives_.WriteTo(ref output, _repeated_alternatives_codec);
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6643,6 +8462,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6659,14 +8481,41 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            alternatives_.AddEntriesFrom(ref input, _repeated_alternatives_codec);
+            break;
+          }
+          case 18: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Alternative hypotheses (a.k.a. n-best list).
   /// </summary>
-  public sealed partial class SpeechRecognitionAlternative : pb::IMessage<SpeechRecognitionAlternative> {
+  public sealed partial class SpeechRecognitionAlternative : pb::IMessage<SpeechRecognitionAlternative>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeechRecognitionAlternative> _parser = new pb::MessageParser<SpeechRecognitionAlternative>(() => new SpeechRecognitionAlternative());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6788,6 +8637,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Transcript.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Transcript);
@@ -6800,7 +8652,26 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Transcript.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Transcript);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      words_.WriteTo(ref output, _repeated_words_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6835,6 +8706,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6855,7 +8729,34 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Transcript = input.ReadString();
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            words_.AddEntriesFrom(ref input, _repeated_words_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -6864,7 +8765,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// included in the response when certain request parameters are set, such
   /// as `enable_word_time_offsets`.
   /// </summary>
-  public sealed partial class WordInfo : pb::IMessage<WordInfo> {
+  public sealed partial class WordInfo : pb::IMessage<WordInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WordInfo> _parser = new pb::MessageParser<WordInfo>(() => new WordInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7028,6 +8933,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (startTime_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(StartTime);
@@ -7051,7 +8959,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (Word.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Word);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
+      if (SpeakerTag != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(SpeakerTag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7108,6 +9046,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7142,7 +9083,48 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            Word = input.ReadString();
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            SpeakerTag = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -7151,7 +9133,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// NOTE: the normalized vertex coordinates are relative to the original image
   /// and range from 0 to 1.
   /// </summary>
-  public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex> {
+  public sealed partial class NormalizedVertex : pb::IMessage<NormalizedVertex>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NormalizedVertex> _parser = new pb::MessageParser<NormalizedVertex>(() => new NormalizedVertex());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7250,6 +9236,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (X != 0F) {
         output.WriteRawTag(13);
         output.WriteFloat(X);
@@ -7261,7 +9250,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (X != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(X);
+      }
+      if (Y != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Y);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7294,6 +9301,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7310,7 +9320,30 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            X = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Y = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -7333,7 +9366,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// than 0, or greater than 1 due to trignometric calculations for location of
   /// the box.
   /// </summary>
-  public sealed partial class NormalizedBoundingPoly : pb::IMessage<NormalizedBoundingPoly> {
+  public sealed partial class NormalizedBoundingPoly : pb::IMessage<NormalizedBoundingPoly>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NormalizedBoundingPoly> _parser = new pb::MessageParser<NormalizedBoundingPoly>(() => new NormalizedBoundingPoly());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7414,11 +9451,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       vertices_.WriteTo(output, _repeated_vertices_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      vertices_.WriteTo(ref output, _repeated_vertices_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7441,6 +9492,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7453,14 +9507,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            vertices_.AddEntriesFrom(ref input, _repeated_vertices_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Video segment level annotation results for text detection.
   /// </summary>
-  public sealed partial class TextSegment : pb::IMessage<TextSegment> {
+  public sealed partial class TextSegment : pb::IMessage<TextSegment>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TextSegment> _parser = new pb::MessageParser<TextSegment>(() => new TextSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7576,6 +9653,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (segment_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Segment);
@@ -7588,7 +9668,26 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (segment_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Segment);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      frames_.WriteTo(ref output, _repeated_frames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7626,6 +9725,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7649,7 +9751,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (segment_ == null) {
+              Segment = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+            }
+            input.ReadMessage(Segment);
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -7658,7 +9790,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Contains information regarding timestamp and bounding box locations for the
   /// frames containing detected OCR text snippets.
   /// </summary>
-  public sealed partial class TextFrame : pb::IMessage<TextFrame> {
+  public sealed partial class TextFrame : pb::IMessage<TextFrame>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TextFrame> _parser = new pb::MessageParser<TextFrame>(() => new TextFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7757,6 +9893,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (rotatedBoundingBox_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(RotatedBoundingBox);
@@ -7768,7 +9907,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (rotatedBoundingBox_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RotatedBoundingBox);
+      }
+      if (timeOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TimeOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7807,6 +9964,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7829,7 +9989,36 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (rotatedBoundingBox_ == null) {
+              RotatedBoundingBox = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly();
+            }
+            input.ReadMessage(RotatedBoundingBox);
+            break;
+          }
+          case 18: {
+            if (timeOffset_ == null) {
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TimeOffset);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -7838,7 +10027,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// corresponding text, confidence value, and frame level information for each
   /// detection.
   /// </summary>
-  public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation> {
+  public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TextAnnotation> _parser = new pb::MessageParser<TextAnnotation>(() => new TextAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7936,6 +10129,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Text.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Text);
@@ -7944,7 +10140,22 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Text.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Text);
+      }
+      segments_.WriteTo(ref output, _repeated_segments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7973,6 +10184,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7989,7 +10203,30 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Text = input.ReadString();
+            break;
+          }
+          case 18: {
+            segments_.AddEntriesFrom(ref input, _repeated_segments_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -7997,7 +10234,11 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   /// Video frame level annotations for object detection and tracking. This field
   /// stores per frame location, time offset, and confidence.
   /// </summary>
-  public sealed partial class ObjectTrackingFrame : pb::IMessage<ObjectTrackingFrame> {
+  public sealed partial class ObjectTrackingFrame : pb::IMessage<ObjectTrackingFrame>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ObjectTrackingFrame> _parser = new pb::MessageParser<ObjectTrackingFrame>(() => new ObjectTrackingFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8096,6 +10337,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (normalizedBoundingBox_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(NormalizedBoundingBox);
@@ -8107,7 +10351,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (normalizedBoundingBox_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(NormalizedBoundingBox);
+      }
+      if (timeOffset_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TimeOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8146,6 +10408,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8168,14 +10433,47 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (normalizedBoundingBox_ == null) {
+              NormalizedBoundingBox = new global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox();
+            }
+            input.ReadMessage(NormalizedBoundingBox);
+            break;
+          }
+          case 18: {
+            if (timeOffset_ == null) {
+              TimeOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TimeOffset);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Annotations corresponding to one tracked object.
   /// </summary>
-  public sealed partial class ObjectTrackingAnnotation : pb::IMessage<ObjectTrackingAnnotation> {
+  public sealed partial class ObjectTrackingAnnotation : pb::IMessage<ObjectTrackingAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ObjectTrackingAnnotation> _parser = new pb::MessageParser<ObjectTrackingAnnotation>(() => new ObjectTrackingAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8361,6 +10659,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (entity_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Entity);
@@ -8381,7 +10682,34 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (entity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Entity);
+      }
+      frames_.WriteTo(ref output, _repeated_frames_codec);
+      if (trackInfoCase_ == TrackInfoOneofCase.Segment) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Segment);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
+      if (trackInfoCase_ == TrackInfoOneofCase.TrackId) {
+        output.WriteRawTag(40);
+        output.WriteInt64(TrackId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8437,6 +10765,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8473,14 +10804,61 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.VideoIntelligence.V1.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 18: {
+            frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.VideoIntelligence.V1.VideoSegment subBuilder = new global::Google.Cloud.VideoIntelligence.V1.VideoSegment();
+            if (trackInfoCase_ == TrackInfoOneofCase.Segment) {
+              subBuilder.MergeFrom(Segment);
+            }
+            input.ReadMessage(subBuilder);
+            Segment = subBuilder;
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            TrackId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Annotation corresponding to one detected, tracked and recognized logo class.
   /// </summary>
-  public sealed partial class LogoRecognitionAnnotation : pb::IMessage<LogoRecognitionAnnotation> {
+  public sealed partial class LogoRecognitionAnnotation : pb::IMessage<LogoRecognitionAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LogoRecognitionAnnotation> _parser = new pb::MessageParser<LogoRecognitionAnnotation>(() => new LogoRecognitionAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8597,6 +10975,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (entity_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Entity);
@@ -8606,7 +10987,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (entity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Entity);
+      }
+      tracks_.WriteTo(ref output, _repeated_tracks_codec);
+      segments_.WriteTo(ref output, _repeated_segments_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8640,6 +11037,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8663,7 +11063,37 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (entity_ == null) {
+              Entity = new global::Google.Cloud.VideoIntelligence.V1.Entity();
+            }
+            input.ReadMessage(Entity);
+            break;
+          }
+          case 18: {
+            tracks_.AddEntriesFrom(ref input, _repeated_tracks_codec);
+            break;
+          }
+          case 26: {
+            segments_.AddEntriesFrom(ref input, _repeated_segments_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
