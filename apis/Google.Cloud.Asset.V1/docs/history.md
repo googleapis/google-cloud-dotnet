@@ -1,5 +1,16 @@
 # Version history
 
+# Version 2.5.0-beta01, released 2020-09-24
+
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31.
+
+  Note that the change in gRPC generation is *just possibly* breaking,
+  as it changes a constructor parameter type (to a base type). This is
+  far less likely to break anyone than changing a *method* parameter,
+  as method group conversions aren't involved. It also removes the
+  dependency on Grpc.Core from the generated code.
+- [Commit 6eed2d8](https://github.com/googleapis/google-cloud-dotnet/commit/6eed2d8): feat: added support for per type and partition export for Cloud Asset API.
+
 # Version 2.4.0, released 2020-09-15
 
 - [Commit c9ca107](https://github.com/googleapis/google-cloud-dotnet/commit/c9ca107): Remove AnalyzeIamPolicy and ExportIamPolicyAnalysis RPCs
