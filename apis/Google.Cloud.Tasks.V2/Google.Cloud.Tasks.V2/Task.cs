@@ -66,7 +66,11 @@ namespace Google.Cloud.Tasks.V2 {
   /// <summary>
   /// A unit of scheduled work.
   /// </summary>
-  public sealed partial class Task : pb::IMessage<Task> {
+  public sealed partial class Task : pb::IMessage<Task>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Task> _parser = new pb::MessageParser<Task>(() => new Task());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -410,6 +414,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -457,7 +464,61 @@ namespace Google.Cloud.Tasks.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (messageTypeCase_ == MessageTypeOneofCase.AppEngineHttpRequest) {
+        output.WriteRawTag(18);
+        output.WriteMessage(AppEngineHttpRequest);
+      }
+      if (messageTypeCase_ == MessageTypeOneofCase.HttpRequest) {
+        output.WriteRawTag(26);
+        output.WriteMessage(HttpRequest);
+      }
+      if (scheduleTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ScheduleTime);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
+      if (dispatchDeadline_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(DispatchDeadline);
+      }
+      if (DispatchCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(DispatchCount);
+      }
+      if (ResponseCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(ResponseCount);
+      }
+      if (firstAttempt_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(FirstAttempt);
+      }
+      if (lastAttempt_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LastAttempt);
+      }
+      if (View != global::Google.Cloud.Tasks.V2.Task.Types.View.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) View);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -568,6 +629,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -645,7 +709,91 @@ namespace Google.Cloud.Tasks.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Tasks.V2.AppEngineHttpRequest subBuilder = new global::Google.Cloud.Tasks.V2.AppEngineHttpRequest();
+            if (messageTypeCase_ == MessageTypeOneofCase.AppEngineHttpRequest) {
+              subBuilder.MergeFrom(AppEngineHttpRequest);
+            }
+            input.ReadMessage(subBuilder);
+            AppEngineHttpRequest = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Tasks.V2.HttpRequest subBuilder = new global::Google.Cloud.Tasks.V2.HttpRequest();
+            if (messageTypeCase_ == MessageTypeOneofCase.HttpRequest) {
+              subBuilder.MergeFrom(HttpRequest);
+            }
+            input.ReadMessage(subBuilder);
+            HttpRequest = subBuilder;
+            break;
+          }
+          case 34: {
+            if (scheduleTime_ == null) {
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleTime);
+            break;
+          }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 50: {
+            if (dispatchDeadline_ == null) {
+              DispatchDeadline = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(DispatchDeadline);
+            break;
+          }
+          case 56: {
+            DispatchCount = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            ResponseCount = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            if (firstAttempt_ == null) {
+              FirstAttempt = new global::Google.Cloud.Tasks.V2.Attempt();
+            }
+            input.ReadMessage(FirstAttempt);
+            break;
+          }
+          case 82: {
+            if (lastAttempt_ == null) {
+              LastAttempt = new global::Google.Cloud.Tasks.V2.Attempt();
+            }
+            input.ReadMessage(LastAttempt);
+            break;
+          }
+          case 88: {
+            View = (global::Google.Cloud.Tasks.V2.Task.Types.View) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Task message type.</summary>
@@ -694,7 +842,11 @@ namespace Google.Cloud.Tasks.V2 {
   /// <summary>
   /// The status of a task attempt.
   /// </summary>
-  public sealed partial class Attempt : pb::IMessage<Attempt> {
+  public sealed partial class Attempt : pb::IMessage<Attempt>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Attempt> _parser = new pb::MessageParser<Attempt>(() => new Attempt());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -836,6 +988,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (scheduleTime_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(ScheduleTime);
@@ -855,7 +1010,33 @@ namespace Google.Cloud.Tasks.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (scheduleTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ScheduleTime);
+      }
+      if (dispatchTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DispatchTime);
+      }
+      if (responseTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ResponseTime);
+      }
+      if (responseStatus_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResponseStatus);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -912,6 +1093,9 @@ namespace Google.Cloud.Tasks.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -948,7 +1132,50 @@ namespace Google.Cloud.Tasks.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (scheduleTime_ == null) {
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleTime);
+            break;
+          }
+          case 18: {
+            if (dispatchTime_ == null) {
+              DispatchTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DispatchTime);
+            break;
+          }
+          case 26: {
+            if (responseTime_ == null) {
+              ResponseTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ResponseTime);
+            break;
+          }
+          case 34: {
+            if (responseStatus_ == null) {
+              ResponseStatus = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(ResponseStatus);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

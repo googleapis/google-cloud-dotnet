@@ -87,7 +87,11 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// Currently all plans are monthly budgets so the usage period(s) tracked are
   /// implied (calendar months of usage back-to-back).
   /// </summary>
-  public sealed partial class Budget : pb::IMessage<Budget> {
+  public sealed partial class Budget : pb::IMessage<Budget>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Budget> _parser = new pb::MessageParser<Budget>(() => new Budget());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -278,6 +282,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -306,7 +313,42 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (budgetFilter_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BudgetFilter);
+      }
+      if (amount_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Amount);
+      }
+      thresholdRules_.WriteTo(ref output, _repeated_thresholdRules_codec);
+      if (allUpdatesRule_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AllUpdatesRule);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -374,6 +416,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -419,14 +464,70 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (budgetFilter_ == null) {
+              BudgetFilter = new global::Google.Cloud.Billing.Budgets.V1Beta1.Filter();
+            }
+            input.ReadMessage(BudgetFilter);
+            break;
+          }
+          case 34: {
+            if (amount_ == null) {
+              Amount = new global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount();
+            }
+            input.ReadMessage(Amount);
+            break;
+          }
+          case 42: {
+            thresholdRules_.AddEntriesFrom(ref input, _repeated_thresholdRules_codec);
+            break;
+          }
+          case 50: {
+            if (allUpdatesRule_ == null) {
+              AllUpdatesRule = new global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule();
+            }
+            input.ReadMessage(AllUpdatesRule);
+            break;
+          }
+          case 58: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The budgeted amount for each usage period.
   /// </summary>
-  public sealed partial class BudgetAmount : pb::IMessage<BudgetAmount> {
+  public sealed partial class BudgetAmount : pb::IMessage<BudgetAmount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BudgetAmount> _parser = new pb::MessageParser<BudgetAmount>(() => new BudgetAmount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -556,6 +657,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (budgetAmountCase_ == BudgetAmountOneofCase.SpecifiedAmount) {
         output.WriteRawTag(10);
         output.WriteMessage(SpecifiedAmount);
@@ -567,7 +671,25 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (budgetAmountCase_ == BudgetAmountOneofCase.SpecifiedAmount) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SpecifiedAmount);
+      }
+      if (budgetAmountCase_ == BudgetAmountOneofCase.LastPeriodAmount) {
+        output.WriteRawTag(18);
+        output.WriteMessage(LastPeriodAmount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -609,6 +731,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -635,7 +760,40 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Type.Money subBuilder = new global::Google.Type.Money();
+            if (budgetAmountCase_ == BudgetAmountOneofCase.SpecifiedAmount) {
+              subBuilder.MergeFrom(SpecifiedAmount);
+            }
+            input.ReadMessage(subBuilder);
+            SpecifiedAmount = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount subBuilder = new global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount();
+            if (budgetAmountCase_ == BudgetAmountOneofCase.LastPeriodAmount) {
+              subBuilder.MergeFrom(LastPeriodAmount);
+            }
+            input.ReadMessage(subBuilder);
+            LastPeriodAmount = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -646,7 +804,11 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// Future configuration will be described here (for example, configuring a
   /// percentage of last period's spend).
   /// </summary>
-  public sealed partial class LastPeriodAmount : pb::IMessage<LastPeriodAmount> {
+  public sealed partial class LastPeriodAmount : pb::IMessage<LastPeriodAmount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LastPeriodAmount> _parser = new pb::MessageParser<LastPeriodAmount>(() => new LastPeriodAmount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -711,10 +873,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -735,6 +910,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -743,7 +921,22 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
             break;
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -756,7 +949,11 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// The thresholds here have no effect on notifications sent to anything
   /// configured under `Budget.all_updates_rule`.
   /// </summary>
-  public sealed partial class ThresholdRule : pb::IMessage<ThresholdRule> {
+  public sealed partial class ThresholdRule : pb::IMessage<ThresholdRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ThresholdRule> _parser = new pb::MessageParser<ThresholdRule>(() => new ThresholdRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -858,6 +1055,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ThresholdPercent != 0D) {
         output.WriteRawTag(9);
         output.WriteDouble(ThresholdPercent);
@@ -869,7 +1069,25 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ThresholdPercent != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(ThresholdPercent);
+      }
+      if (SpendBasis != global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Types.Basis.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SpendBasis);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -902,6 +1120,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -918,7 +1139,30 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            ThresholdPercent = input.ReadDouble();
+            break;
+          }
+          case 16: {
+            SpendBasis = (global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Types.Basis) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ThresholdRule message type.</summary>
@@ -952,7 +1196,11 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
   /// AllUpdatesRule defines notifications that are sent based on budget spend
   /// and thresholds.
   /// </summary>
-  public sealed partial class AllUpdatesRule : pb::IMessage<AllUpdatesRule> {
+  public sealed partial class AllUpdatesRule : pb::IMessage<AllUpdatesRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AllUpdatesRule> _parser = new pb::MessageParser<AllUpdatesRule>(() => new AllUpdatesRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1105,6 +1353,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PubsubTopic.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(PubsubTopic);
@@ -1121,7 +1372,30 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PubsubTopic.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PubsubTopic);
+      }
+      if (SchemaVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SchemaVersion);
+      }
+      monitoringNotificationChannels_.WriteTo(ref output, _repeated_monitoringNotificationChannels_codec);
+      if (DisableDefaultIamRecipients != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(DisableDefaultIamRecipients);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1162,6 +1436,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1186,14 +1463,49 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PubsubTopic = input.ReadString();
+            break;
+          }
+          case 18: {
+            SchemaVersion = input.ReadString();
+            break;
+          }
+          case 26: {
+            monitoringNotificationChannels_.AddEntriesFrom(ref input, _repeated_monitoringNotificationChannels_codec);
+            break;
+          }
+          case 32: {
+            DisableDefaultIamRecipients = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A filter for a budget, limiting the scope of the cost to calculate.
   /// </summary>
-  public sealed partial class Filter : pb::IMessage<Filter> {
+  public sealed partial class Filter : pb::IMessage<Filter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1356,6 +1668,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       projects_.WriteTo(output, _repeated_projects_codec);
       services_.WriteTo(output, _repeated_services_codec);
       if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment.Unspecified) {
@@ -1367,7 +1682,25 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      projects_.WriteTo(ref output, _repeated_projects_codec);
+      services_.WriteTo(ref output, _repeated_services_codec);
+      if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) CreditTypesTreatment);
+      }
+      subaccounts_.WriteTo(ref output, _repeated_subaccounts_codec);
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1402,6 +1735,9 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1430,7 +1766,42 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            projects_.AddEntriesFrom(ref input, _repeated_projects_codec);
+            break;
+          }
+          case 26: {
+            services_.AddEntriesFrom(ref input, _repeated_services_codec);
+            break;
+          }
+          case 32: {
+            CreditTypesTreatment = (global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            subaccounts_.AddEntriesFrom(ref input, _repeated_subaccounts_codec);
+            break;
+          }
+          case 50: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Filter message type.</summary>

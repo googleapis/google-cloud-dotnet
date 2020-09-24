@@ -486,7 +486,7 @@ namespace Google.Cloud.Tasks.V2 {
     {
       /// <summary>Creates a new client for CloudTasks</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CloudTasksClient(grpc::Channel channel) : base(channel)
+      public CloudTasksClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudTasks that uses a custom <c>CallInvoker</c>.</summary>

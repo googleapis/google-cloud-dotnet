@@ -72,7 +72,11 @@ namespace Google.Cloud.Scheduler.V1 {
   /// Configuration for a job.
   /// The maximum allowed size for a job is 100KB.
   /// </summary>
-  public sealed partial class Job : pb::IMessage<Job> {
+  public sealed partial class Job : pb::IMessage<Job>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Job> _parser = new pb::MessageParser<Job>(() => new Job());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -467,6 +471,9 @@ namespace Google.Cloud.Scheduler.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -526,7 +533,73 @@ namespace Google.Cloud.Scheduler.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (targetCase_ == TargetOneofCase.PubsubTarget) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PubsubTarget);
+      }
+      if (targetCase_ == TargetOneofCase.AppEngineHttpTarget) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AppEngineHttpTarget);
+      }
+      if (targetCase_ == TargetOneofCase.HttpTarget) {
+        output.WriteRawTag(50);
+        output.WriteMessage(HttpTarget);
+      }
+      if (userUpdateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UserUpdateTime);
+      }
+      if (State != global::Google.Cloud.Scheduler.V1.Job.Types.State.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) State);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Status);
+      }
+      if (scheduleTime_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(ScheduleTime);
+      }
+      if (lastAttemptTime_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(LastAttemptTime);
+      }
+      if (retryConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(RetryConfig);
+      }
+      if (Schedule.Length != 0) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(Schedule);
+      }
+      if (TimeZone.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(TimeZone);
+      }
+      if (attemptDeadline_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(AttemptDeadline);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -661,6 +734,9 @@ namespace Google.Cloud.Scheduler.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -758,7 +834,111 @@ namespace Google.Cloud.Scheduler.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Scheduler.V1.PubsubTarget subBuilder = new global::Google.Cloud.Scheduler.V1.PubsubTarget();
+            if (targetCase_ == TargetOneofCase.PubsubTarget) {
+              subBuilder.MergeFrom(PubsubTarget);
+            }
+            input.ReadMessage(subBuilder);
+            PubsubTarget = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget subBuilder = new global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget();
+            if (targetCase_ == TargetOneofCase.AppEngineHttpTarget) {
+              subBuilder.MergeFrom(AppEngineHttpTarget);
+            }
+            input.ReadMessage(subBuilder);
+            AppEngineHttpTarget = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.Scheduler.V1.HttpTarget subBuilder = new global::Google.Cloud.Scheduler.V1.HttpTarget();
+            if (targetCase_ == TargetOneofCase.HttpTarget) {
+              subBuilder.MergeFrom(HttpTarget);
+            }
+            input.ReadMessage(subBuilder);
+            HttpTarget = subBuilder;
+            break;
+          }
+          case 74: {
+            if (userUpdateTime_ == null) {
+              UserUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UserUpdateTime);
+            break;
+          }
+          case 80: {
+            State = (global::Google.Cloud.Scheduler.V1.Job.Types.State) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (status_ == null) {
+              Status = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 138: {
+            if (scheduleTime_ == null) {
+              ScheduleTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduleTime);
+            break;
+          }
+          case 146: {
+            if (lastAttemptTime_ == null) {
+              LastAttemptTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastAttemptTime);
+            break;
+          }
+          case 154: {
+            if (retryConfig_ == null) {
+              RetryConfig = new global::Google.Cloud.Scheduler.V1.RetryConfig();
+            }
+            input.ReadMessage(RetryConfig);
+            break;
+          }
+          case 162: {
+            Schedule = input.ReadString();
+            break;
+          }
+          case 170: {
+            TimeZone = input.ReadString();
+            break;
+          }
+          case 178: {
+            if (attemptDeadline_ == null) {
+              AttemptDeadline = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(AttemptDeadline);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Job message type.</summary>
@@ -807,7 +987,11 @@ namespace Google.Cloud.Scheduler.V1 {
   /// an acknowledgement is not received from the handler, then it will be retried
   /// with exponential backoff according to the settings in [RetryConfig][google.cloud.scheduler.v1.RetryConfig].
   /// </summary>
-  public sealed partial class RetryConfig : pb::IMessage<RetryConfig> {
+  public sealed partial class RetryConfig : pb::IMessage<RetryConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RetryConfig> _parser = new pb::MessageParser<RetryConfig>(() => new RetryConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1002,6 +1186,9 @@ namespace Google.Cloud.Scheduler.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (RetryCount != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(RetryCount);
@@ -1025,7 +1212,37 @@ namespace Google.Cloud.Scheduler.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RetryCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(RetryCount);
+      }
+      if (maxRetryDuration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(MaxRetryDuration);
+      }
+      if (minBackoffDuration_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(MinBackoffDuration);
+      }
+      if (maxBackoffDuration_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(MaxBackoffDuration);
+      }
+      if (MaxDoublings != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxDoublings);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1085,6 +1302,9 @@ namespace Google.Cloud.Scheduler.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1122,7 +1342,51 @@ namespace Google.Cloud.Scheduler.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RetryCount = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (maxRetryDuration_ == null) {
+              MaxRetryDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxRetryDuration);
+            break;
+          }
+          case 26: {
+            if (minBackoffDuration_ == null) {
+              MinBackoffDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MinBackoffDuration);
+            break;
+          }
+          case 34: {
+            if (maxBackoffDuration_ == null) {
+              MaxBackoffDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(MaxBackoffDuration);
+            break;
+          }
+          case 40: {
+            MaxDoublings = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

@@ -176,7 +176,7 @@ namespace Google.Cloud.Language.V1 {
     {
       /// <summary>Creates a new client for LanguageService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public LanguageServiceClient(grpc::Channel channel) : base(channel)
+      public LanguageServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for LanguageService that uses a custom <c>CallInvoker</c>.</summary>

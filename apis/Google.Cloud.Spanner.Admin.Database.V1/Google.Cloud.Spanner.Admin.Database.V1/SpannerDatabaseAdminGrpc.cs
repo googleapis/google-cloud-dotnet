@@ -471,7 +471,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     {
       /// <summary>Creates a new client for DatabaseAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public DatabaseAdminClient(grpc::Channel channel) : base(channel)
+      public DatabaseAdminClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DatabaseAdmin that uses a custom <c>CallInvoker</c>.</summary>

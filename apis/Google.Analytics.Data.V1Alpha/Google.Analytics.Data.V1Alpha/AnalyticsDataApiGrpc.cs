@@ -162,7 +162,7 @@ namespace Google.Analytics.Data.V1Alpha {
     {
       /// <summary>Creates a new client for AlphaAnalyticsData</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public AlphaAnalyticsDataClient(grpc::Channel channel) : base(channel)
+      public AlphaAnalyticsDataClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AlphaAnalyticsData that uses a custom <c>CallInvoker</c>.</summary>

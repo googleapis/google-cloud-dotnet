@@ -72,7 +72,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     {
       /// <summary>Creates a new client for IamChecker</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public IamCheckerClient(grpc::Channel channel) : base(channel)
+      public IamCheckerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IamChecker that uses a custom <c>CallInvoker</c>.</summary>

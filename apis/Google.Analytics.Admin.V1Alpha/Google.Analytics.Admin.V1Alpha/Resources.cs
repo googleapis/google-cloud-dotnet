@@ -307,7 +307,11 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
   /// A resource message representing a Google Analytics account.
   /// </summary>
-  public sealed partial class Account : pb::IMessage<Account> {
+  public sealed partial class Account : pb::IMessage<Account>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Account> _parser = new pb::MessageParser<Account>(() => new Account());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -478,6 +482,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -505,7 +512,41 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateTime);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DisplayName);
+      }
+      if (CountryCode.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(CountryCode);
+      }
+      if (Deleted != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Deleted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -568,6 +609,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -606,14 +650,63 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 26: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 34: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            CountryCode = input.ReadString();
+            break;
+          }
+          case 48: {
+            Deleted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A resource message representing a Google Analytics App+Web property.
   /// </summary>
-  public sealed partial class Property : pb::IMessage<Property> {
+  public sealed partial class Property : pb::IMessage<Property>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Property> _parser = new pb::MessageParser<Property>(() => new Property());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -852,6 +945,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -891,7 +987,53 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Parent);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
+      }
+      if (IndustryCategory != global::Google.Analytics.Admin.V1Alpha.IndustryCategory.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) IndustryCategory);
+      }
+      if (TimeZone.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(TimeZone);
+      }
+      if (CurrencyCode.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CurrencyCode);
+      }
+      if (Deleted != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(Deleted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -972,6 +1114,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1022,14 +1167,75 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 48: {
+            IndustryCategory = (global::Google.Analytics.Admin.V1Alpha.IndustryCategory) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            TimeZone = input.ReadString();
+            break;
+          }
+          case 66: {
+            CurrencyCode = input.ReadString();
+            break;
+          }
+          case 72: {
+            Deleted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A resource message representing a Google Analytics Android app stream.
   /// </summary>
-  public sealed partial class AndroidAppDataStream : pb::IMessage<AndroidAppDataStream> {
+  public sealed partial class AndroidAppDataStream : pb::IMessage<AndroidAppDataStream>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AndroidAppDataStream> _parser = new pb::MessageParser<AndroidAppDataStream>(() => new AndroidAppDataStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1202,6 +1408,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1229,7 +1438,41 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (FirebaseAppId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FirebaseAppId);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      if (PackageName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PackageName);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1292,6 +1535,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1330,14 +1576,63 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            FirebaseAppId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            PackageName = input.ReadString();
+            break;
+          }
+          case 50: {
+            DisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A resource message representing a Google Analytics IOS app stream.
   /// </summary>
-  public sealed partial class IosAppDataStream : pb::IMessage<IosAppDataStream> {
+  public sealed partial class IosAppDataStream : pb::IMessage<IosAppDataStream>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IosAppDataStream> _parser = new pb::MessageParser<IosAppDataStream>(() => new IosAppDataStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1510,6 +1805,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1537,7 +1835,41 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (FirebaseAppId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FirebaseAppId);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
+      if (BundleId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(BundleId);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1600,6 +1932,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1638,14 +1973,63 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            FirebaseAppId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 42: {
+            BundleId = input.ReadString();
+            break;
+          }
+          case 50: {
+            DisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A resource message representing a Google Analytics web stream.
   /// </summary>
-  public sealed partial class WebDataStream : pb::IMessage<WebDataStream> {
+  public sealed partial class WebDataStream : pb::IMessage<WebDataStream>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WebDataStream> _parser = new pb::MessageParser<WebDataStream>(() => new WebDataStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1836,6 +2220,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1867,7 +2254,45 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (MeasurementId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MeasurementId);
+      }
+      if (FirebaseAppId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FirebaseAppId);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      if (DefaultUri.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(DefaultUri);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1936,6 +2361,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1978,7 +2406,56 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            MeasurementId = input.ReadString();
+            break;
+          }
+          case 26: {
+            FirebaseAppId = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            DefaultUri = input.ReadString();
+            break;
+          }
+          case 58: {
+            DisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1986,7 +2463,11 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// A resource message representing a user's permissions on an Account or
   /// Property resource.
   /// </summary>
-  public sealed partial class UserLink : pb::IMessage<UserLink> {
+  public sealed partial class UserLink : pb::IMessage<UserLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UserLink> _parser = new pb::MessageParser<UserLink>(() => new UserLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2113,6 +2594,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2125,7 +2609,26 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EmailAddress.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EmailAddress);
+      }
+      directRoles_.WriteTo(ref output, _repeated_directRoles_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2160,6 +2663,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2180,14 +2686,45 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EmailAddress = input.ReadString();
+            break;
+          }
+          case 26: {
+            directRoles_.AddEntriesFrom(ref input, _repeated_directRoles_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Read-only resource used to summarize a principal's effective roles.
   /// </summary>
-  public sealed partial class AuditUserLink : pb::IMessage<AuditUserLink> {
+  public sealed partial class AuditUserLink : pb::IMessage<AuditUserLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<AuditUserLink> _parser = new pb::MessageParser<AuditUserLink>(() => new AuditUserLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2326,6 +2863,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2339,7 +2879,27 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EmailAddress.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EmailAddress);
+      }
+      directRoles_.WriteTo(ref output, _repeated_directRoles_codec);
+      effectiveRoles_.WriteTo(ref output, _repeated_effectiveRoles_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2376,6 +2936,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2400,7 +2963,38 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            EmailAddress = input.ReadString();
+            break;
+          }
+          case 26: {
+            directRoles_.AddEntriesFrom(ref input, _repeated_directRoles_codec);
+            break;
+          }
+          case 34: {
+            effectiveRoles_.AddEntriesFrom(ref input, _repeated_effectiveRoles_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2408,7 +3002,11 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// Singleton resource under a WebDataStream, configuring measurement of
   /// additional site interactions and content.
   /// </summary>
-  public sealed partial class EnhancedMeasurementSettings : pb::IMessage<EnhancedMeasurementSettings> {
+  public sealed partial class EnhancedMeasurementSettings : pb::IMessage<EnhancedMeasurementSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<EnhancedMeasurementSettings> _parser = new pb::MessageParser<EnhancedMeasurementSettings>(() => new EnhancedMeasurementSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2800,6 +3398,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2875,7 +3476,89 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (StreamEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(StreamEnabled);
+      }
+      if (PageViewsEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(PageViewsEnabled);
+      }
+      if (ScrollsEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ScrollsEnabled);
+      }
+      if (OutboundClicksEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(OutboundClicksEnabled);
+      }
+      if (ContentViewsEnabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ContentViewsEnabled);
+      }
+      if (SiteSearchEnabled != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(SiteSearchEnabled);
+      }
+      if (FormInteractionsEnabled != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(FormInteractionsEnabled);
+      }
+      if (VideoEngagementEnabled != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(VideoEngagementEnabled);
+      }
+      if (FileDownloadsEnabled != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(FileDownloadsEnabled);
+      }
+      if (DataTaggedElementClicksEnabled != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(DataTaggedElementClicksEnabled);
+      }
+      if (PageLoadsEnabled != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(PageLoadsEnabled);
+      }
+      if (PageChangesEnabled != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(PageChangesEnabled);
+      }
+      if (ArticlesAndBlogsEnabled != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(ArticlesAndBlogsEnabled);
+      }
+      if (ProductsAndEcommerceEnabled != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(ProductsAndEcommerceEnabled);
+      }
+      if (SearchQueryParameter.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(SearchQueryParameter);
+      }
+      if (UrlQueryParameter.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(UrlQueryParameter);
+      }
+      if (ExcludedDomains.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(ExcludedDomains);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3004,6 +3687,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3084,14 +3770,105 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            StreamEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            PageViewsEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            ScrollsEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            OutboundClicksEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            ContentViewsEnabled = input.ReadBool();
+            break;
+          }
+          case 56: {
+            SiteSearchEnabled = input.ReadBool();
+            break;
+          }
+          case 64: {
+            FormInteractionsEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            VideoEngagementEnabled = input.ReadBool();
+            break;
+          }
+          case 80: {
+            FileDownloadsEnabled = input.ReadBool();
+            break;
+          }
+          case 88: {
+            DataTaggedElementClicksEnabled = input.ReadBool();
+            break;
+          }
+          case 96: {
+            PageLoadsEnabled = input.ReadBool();
+            break;
+          }
+          case 104: {
+            PageChangesEnabled = input.ReadBool();
+            break;
+          }
+          case 112: {
+            ArticlesAndBlogsEnabled = input.ReadBool();
+            break;
+          }
+          case 120: {
+            ProductsAndEcommerceEnabled = input.ReadBool();
+            break;
+          }
+          case 130: {
+            SearchQueryParameter = input.ReadString();
+            break;
+          }
+          case 138: {
+            UrlQueryParameter = input.ReadString();
+            break;
+          }
+          case 146: {
+            ExcludedDomains = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A link between an App+Web property and a Firebase project.
   /// </summary>
-  public sealed partial class FirebaseLink : pb::IMessage<FirebaseLink> {
+  public sealed partial class FirebaseLink : pb::IMessage<FirebaseLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FirebaseLink> _parser = new pb::MessageParser<FirebaseLink>(() => new FirebaseLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3231,6 +4008,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -3250,7 +4030,33 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Project.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Project);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (MaximumUserAccess != global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MaximumUserAccess);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3298,6 +4104,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3325,7 +4134,41 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Project = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 32: {
+            MaximumUserAccess = (global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3333,7 +4176,11 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// Read-only resource with the tag for sending data from a website to a
   /// WebDataStream.
   /// </summary>
-  public sealed partial class GlobalSiteTag : pb::IMessage<GlobalSiteTag> {
+  public sealed partial class GlobalSiteTag : pb::IMessage<GlobalSiteTag>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GlobalSiteTag> _parser = new pb::MessageParser<GlobalSiteTag>(() => new GlobalSiteTag());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3416,6 +4263,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Snippet.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Snippet);
@@ -3423,7 +4273,21 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Snippet.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Snippet);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3450,6 +4314,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3462,14 +4329,37 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Snippet = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A link between an App+Web property and a Google Ads account.
   /// </summary>
-  public sealed partial class GoogleAdsLink : pb::IMessage<GoogleAdsLink> {
+  public sealed partial class GoogleAdsLink : pb::IMessage<GoogleAdsLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GoogleAdsLink> _parser = new pb::MessageParser<GoogleAdsLink>(() => new GoogleAdsLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3678,6 +4568,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -3712,7 +4605,48 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Parent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Parent);
+      }
+      if (CustomerId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CustomerId);
+      }
+      if (CanManageClients != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(CanManageClients);
+      }
+      if (adsPersonalizationEnabled_ != null) {
+        _single_adsPersonalizationEnabled_codec.WriteTagAndValue(ref output, AdsPersonalizationEnabled);
+      }
+      if (EmailAddress.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(EmailAddress);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UpdateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3789,6 +4723,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3838,7 +4775,63 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 26: {
+            CustomerId = input.ReadString();
+            break;
+          }
+          case 32: {
+            CanManageClients = input.ReadBool();
+            break;
+          }
+          case 42: {
+            bool? value = _single_adsPersonalizationEnabled_codec.Read(ref input);
+            if (adsPersonalizationEnabled_ == null || value != false) {
+              AdsPersonalizationEnabled = value;
+            }
+            break;
+          }
+          case 50: {
+            EmailAddress = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 66: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3846,7 +4839,11 @@ namespace Google.Analytics.Admin.V1Alpha {
   /// A resource message representing data sharing settings of a Google Analytics
   /// account.
   /// </summary>
-  public sealed partial class DataSharingSettings : pb::IMessage<DataSharingSettings> {
+  public sealed partial class DataSharingSettings : pb::IMessage<DataSharingSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DataSharingSettings> _parser = new pb::MessageParser<DataSharingSettings>(() => new DataSharingSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4019,6 +5016,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -4046,7 +5046,41 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SharingWithGoogleSupportEnabled != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(SharingWithGoogleSupportEnabled);
+      }
+      if (SharingWithGoogleAssignedSalesEnabled != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(SharingWithGoogleAssignedSalesEnabled);
+      }
+      if (SharingWithGoogleAnySalesEnabled != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SharingWithGoogleAnySalesEnabled);
+      }
+      if (SharingWithGoogleProductsEnabled != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(SharingWithGoogleProductsEnabled);
+      }
+      if (SharingWithOthersEnabled != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(SharingWithOthersEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4103,6 +5137,9 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4135,7 +5172,46 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            SharingWithGoogleSupportEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            SharingWithGoogleAssignedSalesEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            SharingWithGoogleAnySalesEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            SharingWithGoogleProductsEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            SharingWithOthersEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

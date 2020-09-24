@@ -456,7 +456,7 @@ namespace Google.Cloud.AutoML.V1 {
     {
       /// <summary>Creates a new client for AutoMl</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public AutoMlClient(grpc::Channel channel) : base(channel)
+      public AutoMlClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AutoMl that uses a custom <c>CallInvoker</c>.</summary>

@@ -161,7 +161,7 @@ namespace Google.Cloud.Logging.V2 {
     {
       /// <summary>Creates a new client for LoggingServiceV2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public LoggingServiceV2Client(grpc::Channel channel) : base(channel)
+      public LoggingServiceV2Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for LoggingServiceV2 that uses a custom <c>CallInvoker</c>.</summary>

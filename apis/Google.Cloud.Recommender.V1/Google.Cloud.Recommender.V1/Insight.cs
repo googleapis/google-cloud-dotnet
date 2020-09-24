@@ -74,7 +74,11 @@ namespace Google.Cloud.Recommender.V1 {
   /// An insight along with the information used to derive the insight. The insight
   /// may have associated recomendations as well.
   /// </summary>
-  public sealed partial class Insight : pb::IMessage<Insight> {
+  public sealed partial class Insight : pb::IMessage<Insight>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Insight> _parser = new pb::MessageParser<Insight>(() => new Insight());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -329,6 +333,9 @@ namespace Google.Cloud.Recommender.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -370,7 +377,55 @@ namespace Google.Cloud.Recommender.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (content_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Content);
+      }
+      if (lastRefreshTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LastRefreshTime);
+      }
+      if (observationPeriod_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ObservationPeriod);
+      }
+      if (stateInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(StateInfo);
+      }
+      if (Category != global::Google.Cloud.Recommender.V1.Insight.Types.Category.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Category);
+      }
+      associatedRecommendations_.WriteTo(ref output, _repeated_associatedRecommendations_codec);
+      targetResources_.WriteTo(ref output, _repeated_targetResources_codec);
+      if (InsightSubtype.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(InsightSubtype);
+      }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Etag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -461,6 +516,9 @@ namespace Google.Cloud.Recommender.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -525,7 +583,78 @@ namespace Google.Cloud.Recommender.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (content_ == null) {
+              Content = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            input.ReadMessage(Content);
+            break;
+          }
+          case 34: {
+            if (lastRefreshTime_ == null) {
+              LastRefreshTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastRefreshTime);
+            break;
+          }
+          case 42: {
+            if (observationPeriod_ == null) {
+              ObservationPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ObservationPeriod);
+            break;
+          }
+          case 50: {
+            if (stateInfo_ == null) {
+              StateInfo = new global::Google.Cloud.Recommender.V1.InsightStateInfo();
+            }
+            input.ReadMessage(StateInfo);
+            break;
+          }
+          case 56: {
+            Category = (global::Google.Cloud.Recommender.V1.Insight.Types.Category) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            associatedRecommendations_.AddEntriesFrom(ref input, _repeated_associatedRecommendations_codec);
+            break;
+          }
+          case 74: {
+            targetResources_.AddEntriesFrom(ref input, _repeated_targetResources_codec);
+            break;
+          }
+          case 82: {
+            InsightSubtype = input.ReadString();
+            break;
+          }
+          case 90: {
+            Etag = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Insight message type.</summary>
@@ -560,7 +689,11 @@ namespace Google.Cloud.Recommender.V1 {
       /// <summary>
       /// Reference to an associated recommendation.
       /// </summary>
-      public sealed partial class RecommendationReference : pb::IMessage<RecommendationReference> {
+      public sealed partial class RecommendationReference : pb::IMessage<RecommendationReference>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<RecommendationReference> _parser = new pb::MessageParser<RecommendationReference>(() => new RecommendationReference());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -643,6 +776,9 @@ namespace Google.Cloud.Recommender.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Recommendation.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Recommendation);
@@ -650,7 +786,21 @@ namespace Google.Cloud.Recommender.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Recommendation.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Recommendation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -677,6 +827,9 @@ namespace Google.Cloud.Recommender.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -689,7 +842,26 @@ namespace Google.Cloud.Recommender.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Recommendation = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -701,7 +873,11 @@ namespace Google.Cloud.Recommender.V1 {
   /// <summary>
   /// Information related to insight state.
   /// </summary>
-  public sealed partial class InsightStateInfo : pb::IMessage<InsightStateInfo> {
+  public sealed partial class InsightStateInfo : pb::IMessage<InsightStateInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<InsightStateInfo> _parser = new pb::MessageParser<InsightStateInfo>(() => new InsightStateInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -799,6 +975,9 @@ namespace Google.Cloud.Recommender.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (State != global::Google.Cloud.Recommender.V1.InsightStateInfo.Types.State.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) State);
@@ -807,7 +986,22 @@ namespace Google.Cloud.Recommender.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != global::Google.Cloud.Recommender.V1.InsightStateInfo.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      stateMetadata_.WriteTo(ref output, _map_stateMetadata_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -836,6 +1030,9 @@ namespace Google.Cloud.Recommender.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -852,7 +1049,30 @@ namespace Google.Cloud.Recommender.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.Recommender.V1.InsightStateInfo.Types.State) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            stateMetadata_.AddEntriesFrom(ref input, _map_stateMetadata_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the InsightStateInfo message type.</summary>

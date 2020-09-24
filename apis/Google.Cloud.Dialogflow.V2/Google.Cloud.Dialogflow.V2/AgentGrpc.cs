@@ -258,7 +258,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     {
       /// <summary>Creates a new client for Agents</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public AgentsClient(grpc::Channel channel) : base(channel)
+      public AgentsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Agents that uses a custom <c>CallInvoker</c>.</summary>

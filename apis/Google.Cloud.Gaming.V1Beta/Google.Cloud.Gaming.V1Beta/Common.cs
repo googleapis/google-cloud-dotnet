@@ -110,7 +110,11 @@ namespace Google.Cloud.Gaming.V1Beta {
   /// <summary>
   /// Represents the metadata of the long-running operation.
   /// </summary>
-  public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata> {
+  public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OperationMetadata> _parser = new pb::MessageParser<OperationMetadata>(() => new OperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -332,6 +336,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (createTime_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(CreateTime);
@@ -365,7 +372,47 @@ namespace Google.Cloud.Gaming.V1Beta {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (createTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CreateTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (Target.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Target);
+      }
+      if (Verb.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Verb);
+      }
+      if (StatusMessage.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StatusMessage);
+      }
+      if (RequestedCancellation != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(RequestedCancellation);
+      }
+      if (ApiVersion.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ApiVersion);
+      }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      operationStatus_.WriteTo(ref output, _map_operationStatus_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -438,6 +485,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -488,11 +538,72 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            Target = input.ReadString();
+            break;
+          }
+          case 34: {
+            Verb = input.ReadString();
+            break;
+          }
+          case 42: {
+            StatusMessage = input.ReadString();
+            break;
+          }
+          case 48: {
+            RequestedCancellation = input.ReadBool();
+            break;
+          }
+          case 58: {
+            ApiVersion = input.ReadString();
+            break;
+          }
+          case 66: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+          case 74: {
+            operationStatus_.AddEntriesFrom(ref input, _map_operationStatus_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class OperationStatus : pb::IMessage<OperationStatus> {
+  public sealed partial class OperationStatus : pb::IMessage<OperationStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OperationStatus> _parser = new pb::MessageParser<OperationStatus>(() => new OperationStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -608,6 +719,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Done != false) {
         output.WriteRawTag(8);
         output.WriteBool(Done);
@@ -623,7 +737,29 @@ namespace Google.Cloud.Gaming.V1Beta {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Done != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Done);
+      }
+      if (ErrorCode != global::Google.Cloud.Gaming.V1Beta.OperationStatus.Types.ErrorCode.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ErrorCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -662,6 +798,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -682,7 +821,34 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Done = input.ReadBool();
+            break;
+          }
+          case 16: {
+            ErrorCode = (global::Google.Cloud.Gaming.V1Beta.OperationStatus.Types.ErrorCode) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the OperationStatus message type.</summary>
@@ -703,7 +869,11 @@ namespace Google.Cloud.Gaming.V1Beta {
   /// <summary>
   /// The label selector, used to group labels on the resources.
   /// </summary>
-  public sealed partial class LabelSelector : pb::IMessage<LabelSelector> {
+  public sealed partial class LabelSelector : pb::IMessage<LabelSelector>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LabelSelector> _parser = new pb::MessageParser<LabelSelector>(() => new LabelSelector());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -784,11 +954,25 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       labels_.WriteTo(output, _map_labels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -811,6 +995,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -823,14 +1010,37 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The realm selector, used to match realm resources.
   /// </summary>
-  public sealed partial class RealmSelector : pb::IMessage<RealmSelector> {
+  public sealed partial class RealmSelector : pb::IMessage<RealmSelector>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RealmSelector> _parser = new pb::MessageParser<RealmSelector>(() => new RealmSelector());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -911,11 +1121,25 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       realms_.WriteTo(output, _repeated_realms_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      realms_.WriteTo(ref output, _repeated_realms_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -938,6 +1162,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -950,7 +1177,26 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            realms_.AddEntriesFrom(ref input, _repeated_realms_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -964,7 +1210,11 @@ namespace Google.Cloud.Gaming.V1Beta {
   ///   start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time
   ///   cron job: cron spec start time + duration
   /// </summary>
-  public sealed partial class Schedule : pb::IMessage<Schedule> {
+  public sealed partial class Schedule : pb::IMessage<Schedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Schedule> _parser = new pb::MessageParser<Schedule>(() => new Schedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1100,6 +1350,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (startTime_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(StartTime);
@@ -1119,7 +1372,33 @@ namespace Google.Cloud.Gaming.V1Beta {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (cronJobDuration_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CronJobDuration);
+      }
+      if (CronSpec.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CronSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1173,6 +1452,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1206,14 +1488,58 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            if (cronJobDuration_ == null) {
+              CronJobDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(CronJobDuration);
+            break;
+          }
+          case 34: {
+            CronSpec = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Encapsulates Agones fleet spec and Agones autoscaler spec sources.
   /// </summary>
-  public sealed partial class SpecSource : pb::IMessage<SpecSource> {
+  public sealed partial class SpecSource : pb::IMessage<SpecSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpecSource> _parser = new pb::MessageParser<SpecSource>(() => new SpecSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1315,6 +1641,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (GameServerConfigName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(GameServerConfigName);
@@ -1326,7 +1655,25 @@ namespace Google.Cloud.Gaming.V1Beta {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GameServerConfigName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameServerConfigName);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1359,6 +1706,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1375,14 +1725,41 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            GameServerConfigName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details about the Agones resources.
   /// </summary>
-  public sealed partial class TargetDetails : pb::IMessage<TargetDetails> {
+  public sealed partial class TargetDetails : pb::IMessage<TargetDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TargetDetails> _parser = new pb::MessageParser<TargetDetails>(() => new TargetDetails());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1501,6 +1878,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (GameServerClusterName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(GameServerClusterName);
@@ -1513,7 +1893,26 @@ namespace Google.Cloud.Gaming.V1Beta {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GameServerClusterName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GameServerClusterName);
+      }
+      if (GameServerDeploymentName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(GameServerDeploymentName);
+      }
+      fleetDetails_.WriteTo(ref output, _repeated_fleetDetails_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1548,6 +1947,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1568,7 +1970,34 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            GameServerClusterName = input.ReadString();
+            break;
+          }
+          case 18: {
+            GameServerDeploymentName = input.ReadString();
+            break;
+          }
+          case 26: {
+            fleetDetails_.AddEntriesFrom(ref input, _repeated_fleetDetails_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TargetDetails message type.</summary>
@@ -1577,7 +2006,11 @@ namespace Google.Cloud.Gaming.V1Beta {
       /// <summary>
       /// Details of the target Agones fleet.
       /// </summary>
-      public sealed partial class TargetFleetDetails : pb::IMessage<TargetFleetDetails> {
+      public sealed partial class TargetFleetDetails : pb::IMessage<TargetFleetDetails>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<TargetFleetDetails> _parser = new pb::MessageParser<TargetFleetDetails>(() => new TargetFleetDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1676,6 +2109,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (fleet_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Fleet);
@@ -1687,7 +2123,25 @@ namespace Google.Cloud.Gaming.V1Beta {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (fleet_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Fleet);
+          }
+          if (autoscaler_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Autoscaler);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1726,6 +2180,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1748,7 +2205,36 @@ namespace Google.Cloud.Gaming.V1Beta {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (fleet_ == null) {
+                  Fleet = new global::Google.Cloud.Gaming.V1Beta.TargetDetails.Types.TargetFleetDetails.Types.TargetFleet();
+                }
+                input.ReadMessage(Fleet);
+                break;
+              }
+              case 18: {
+                if (autoscaler_ == null) {
+                  Autoscaler = new global::Google.Cloud.Gaming.V1Beta.TargetDetails.Types.TargetFleetDetails.Types.TargetFleetAutoscaler();
+                }
+                input.ReadMessage(Autoscaler);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the TargetFleetDetails message type.</summary>
@@ -1757,7 +2243,11 @@ namespace Google.Cloud.Gaming.V1Beta {
           /// <summary>
           /// Target Agones fleet specification.
           /// </summary>
-          public sealed partial class TargetFleet : pb::IMessage<TargetFleet> {
+          public sealed partial class TargetFleet : pb::IMessage<TargetFleet>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<TargetFleet> _parser = new pb::MessageParser<TargetFleet>(() => new TargetFleet());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1857,6 +2347,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (Name.Length != 0) {
                 output.WriteRawTag(10);
                 output.WriteString(Name);
@@ -1868,7 +2361,25 @@ namespace Google.Cloud.Gaming.V1Beta {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Name.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Name);
+              }
+              if (specSource_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(SpecSource);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -1904,6 +2415,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -1923,14 +2437,44 @@ namespace Google.Cloud.Gaming.V1Beta {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Name = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (specSource_ == null) {
+                      SpecSource = new global::Google.Cloud.Gaming.V1Beta.SpecSource();
+                    }
+                    input.ReadMessage(SpecSource);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// Target Agones autoscaler policy reference.
           /// </summary>
-          public sealed partial class TargetFleetAutoscaler : pb::IMessage<TargetFleetAutoscaler> {
+          public sealed partial class TargetFleetAutoscaler : pb::IMessage<TargetFleetAutoscaler>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<TargetFleetAutoscaler> _parser = new pb::MessageParser<TargetFleetAutoscaler>(() => new TargetFleetAutoscaler());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2030,6 +2574,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (Name.Length != 0) {
                 output.WriteRawTag(10);
                 output.WriteString(Name);
@@ -2041,7 +2588,25 @@ namespace Google.Cloud.Gaming.V1Beta {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Name.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Name);
+              }
+              if (specSource_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(SpecSource);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2077,6 +2642,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2096,7 +2664,33 @@ namespace Google.Cloud.Gaming.V1Beta {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Name = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    if (specSource_ == null) {
+                      SpecSource = new global::Google.Cloud.Gaming.V1Beta.SpecSource();
+                    }
+                    input.ReadMessage(SpecSource);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -2113,7 +2707,11 @@ namespace Google.Cloud.Gaming.V1Beta {
   /// <summary>
   /// Encapsulates the Target state.
   /// </summary>
-  public sealed partial class TargetState : pb::IMessage<TargetState> {
+  public sealed partial class TargetState : pb::IMessage<TargetState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TargetState> _parser = new pb::MessageParser<TargetState>(() => new TargetState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2194,11 +2792,25 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       details_.WriteTo(output, _repeated_details_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      details_.WriteTo(ref output, _repeated_details_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2221,6 +2833,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2233,14 +2848,37 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            details_.AddEntriesFrom(ref input, _repeated_details_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Details of the deployed Agones fleet.
   /// </summary>
-  public sealed partial class DeployedFleetDetails : pb::IMessage<DeployedFleetDetails> {
+  public sealed partial class DeployedFleetDetails : pb::IMessage<DeployedFleetDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeployedFleetDetails> _parser = new pb::MessageParser<DeployedFleetDetails>(() => new DeployedFleetDetails());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2339,6 +2977,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (deployedFleet_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(DeployedFleet);
@@ -2350,7 +2991,25 @@ namespace Google.Cloud.Gaming.V1Beta {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (deployedFleet_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DeployedFleet);
+      }
+      if (deployedAutoscaler_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DeployedAutoscaler);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2389,6 +3048,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2411,7 +3073,36 @@ namespace Google.Cloud.Gaming.V1Beta {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (deployedFleet_ == null) {
+              DeployedFleet = new global::Google.Cloud.Gaming.V1Beta.DeployedFleetDetails.Types.DeployedFleet();
+            }
+            input.ReadMessage(DeployedFleet);
+            break;
+          }
+          case 18: {
+            if (deployedAutoscaler_ == null) {
+              DeployedAutoscaler = new global::Google.Cloud.Gaming.V1Beta.DeployedFleetDetails.Types.DeployedFleetAutoscaler();
+            }
+            input.ReadMessage(DeployedAutoscaler);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DeployedFleetDetails message type.</summary>
@@ -2420,7 +3111,11 @@ namespace Google.Cloud.Gaming.V1Beta {
       /// <summary>
       /// Agones fleet specification and details.
       /// </summary>
-      public sealed partial class DeployedFleet : pb::IMessage<DeployedFleet> {
+      public sealed partial class DeployedFleet : pb::IMessage<DeployedFleet>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DeployedFleet> _parser = new pb::MessageParser<DeployedFleet>(() => new DeployedFleet());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2555,6 +3250,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Fleet.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Fleet);
@@ -2574,7 +3272,33 @@ namespace Google.Cloud.Gaming.V1Beta {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Fleet.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Fleet);
+          }
+          if (FleetSpec.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FleetSpec);
+          }
+          if (specSource_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SpecSource);
+          }
+          if (status_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(Status);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2625,6 +3349,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2655,7 +3382,44 @@ namespace Google.Cloud.Gaming.V1Beta {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Fleet = input.ReadString();
+                break;
+              }
+              case 18: {
+                FleetSpec = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (specSource_ == null) {
+                  SpecSource = new global::Google.Cloud.Gaming.V1Beta.SpecSource();
+                }
+                input.ReadMessage(SpecSource);
+                break;
+              }
+              case 42: {
+                if (status_ == null) {
+                  Status = new global::Google.Cloud.Gaming.V1Beta.DeployedFleetDetails.Types.DeployedFleet.Types.DeployedFleetStatus();
+                }
+                input.ReadMessage(Status);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the DeployedFleet message type.</summary>
@@ -2665,7 +3429,11 @@ namespace Google.Cloud.Gaming.V1Beta {
           /// DeployedFleetStatus has details about the Agones fleets such as how many
           /// are running, how many allocated, and so on.
           /// </summary>
-          public sealed partial class DeployedFleetStatus : pb::IMessage<DeployedFleetStatus> {
+          public sealed partial class DeployedFleetStatus : pb::IMessage<DeployedFleetStatus>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<DeployedFleetStatus> _parser = new pb::MessageParser<DeployedFleetStatus>(() => new DeployedFleetStatus());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2800,6 +3568,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (ReadyReplicas != 0L) {
                 output.WriteRawTag(8);
                 output.WriteInt64(ReadyReplicas);
@@ -2819,7 +3590,33 @@ namespace Google.Cloud.Gaming.V1Beta {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (ReadyReplicas != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(ReadyReplicas);
+              }
+              if (AllocatedReplicas != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(AllocatedReplicas);
+              }
+              if (ReservedReplicas != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(ReservedReplicas);
+              }
+              if (Replicas != 0L) {
+                output.WriteRawTag(32);
+                output.WriteInt64(Replicas);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2864,6 +3661,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2888,7 +3688,38 @@ namespace Google.Cloud.Gaming.V1Beta {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    ReadyReplicas = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    AllocatedReplicas = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    ReservedReplicas = input.ReadInt64();
+                    break;
+                  }
+                  case 32: {
+                    Replicas = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -2900,7 +3731,11 @@ namespace Google.Cloud.Gaming.V1Beta {
       /// <summary>
       /// Details about the Agones autoscaler.
       /// </summary>
-      public sealed partial class DeployedFleetAutoscaler : pb::IMessage<DeployedFleetAutoscaler> {
+      public sealed partial class DeployedFleetAutoscaler : pb::IMessage<DeployedFleetAutoscaler>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DeployedFleetAutoscaler> _parser = new pb::MessageParser<DeployedFleetAutoscaler>(() => new DeployedFleetAutoscaler());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3017,6 +3852,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Autoscaler.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Autoscaler);
@@ -3032,7 +3870,29 @@ namespace Google.Cloud.Gaming.V1Beta {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Autoscaler.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Autoscaler);
+          }
+          if (FleetAutoscalerSpec.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(FleetAutoscalerSpec);
+          }
+          if (specSource_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(SpecSource);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3074,6 +3934,9 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3097,7 +3960,37 @@ namespace Google.Cloud.Gaming.V1Beta {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Autoscaler = input.ReadString();
+                break;
+              }
+              case 26: {
+                FleetAutoscalerSpec = input.ReadString();
+                break;
+              }
+              case 34: {
+                if (specSource_ == null) {
+                  SpecSource = new global::Google.Cloud.Gaming.V1Beta.SpecSource();
+                }
+                input.ReadMessage(SpecSource);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

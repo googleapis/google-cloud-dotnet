@@ -422,7 +422,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     {
       /// <summary>Creates a new client for NotebookService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public NotebookServiceClient(grpc::Channel channel) : base(channel)
+      public NotebookServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for NotebookService that uses a custom <c>CallInvoker</c>.</summary>

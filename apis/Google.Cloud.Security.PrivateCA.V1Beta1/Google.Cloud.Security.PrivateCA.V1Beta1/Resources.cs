@@ -358,7 +358,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// A [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] represents an individual Certificate Authority.
   /// A [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] can be used to create [Certificates][google.cloud.security.privateca.v1beta1.Certificate].
   /// </summary>
-  public sealed partial class CertificateAuthority : pb::IMessage<CertificateAuthority> {
+  public sealed partial class CertificateAuthority : pb::IMessage<CertificateAuthority>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CertificateAuthority> _parser = new pb::MessageParser<CertificateAuthority>(() => new CertificateAuthority());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -747,6 +751,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -813,7 +820,80 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Type != global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.Type.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (Tier != global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.Tier.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Tier);
+      }
+      if (config_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Config);
+      }
+      if (lifetime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Lifetime);
+      }
+      if (keySpec_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(KeySpec);
+      }
+      if (certificatePolicy_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CertificatePolicy);
+      }
+      if (issuingOptions_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(IssuingOptions);
+      }
+      pemCaCertificates_.WriteTo(ref output, _repeated_pemCaCertificates_codec);
+      if (State != global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.State.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) State);
+      }
+      caCertificateDescriptions_.WriteTo(ref output, _repeated_caCertificateDescriptions_codec);
+      if (GcsBucket.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(GcsBucket);
+      }
+      if (accessUrls_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(AccessUrls);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(UpdateTime);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(DeleteTime);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (subordinateConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(SubordinateConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -960,6 +1040,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1070,7 +1153,124 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Tier = (global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.Tier) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 42: {
+            if (lifetime_ == null) {
+              Lifetime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Lifetime);
+            break;
+          }
+          case 50: {
+            if (keySpec_ == null) {
+              KeySpec = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.KeyVersionSpec();
+            }
+            input.ReadMessage(KeySpec);
+            break;
+          }
+          case 58: {
+            if (certificatePolicy_ == null) {
+              CertificatePolicy = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.CertificateAuthorityPolicy();
+            }
+            input.ReadMessage(CertificatePolicy);
+            break;
+          }
+          case 66: {
+            if (issuingOptions_ == null) {
+              IssuingOptions = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.IssuingOptions();
+            }
+            input.ReadMessage(IssuingOptions);
+            break;
+          }
+          case 74: {
+            pemCaCertificates_.AddEntriesFrom(ref input, _repeated_pemCaCertificates_codec);
+            break;
+          }
+          case 80: {
+            State = (global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            caCertificateDescriptions_.AddEntriesFrom(ref input, _repeated_caCertificateDescriptions_codec);
+            break;
+          }
+          case 106: {
+            GcsBucket = input.ReadString();
+            break;
+          }
+          case 114: {
+            if (accessUrls_ == null) {
+              AccessUrls = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.AccessUrls();
+            }
+            input.ReadMessage(AccessUrls);
+            break;
+          }
+          case 122: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 130: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 138: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 146: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 154: {
+            if (subordinateConfig_ == null) {
+              SubordinateConfig = new global::Google.Cloud.Security.PrivateCA.V1Beta1.SubordinateConfig();
+            }
+            input.ReadMessage(SubordinateConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CertificateAuthority message type.</summary>
@@ -1179,7 +1379,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <summary>
       /// Options that affect all certificates issued by a [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
       /// </summary>
-      public sealed partial class IssuingOptions : pb::IMessage<IssuingOptions> {
+      public sealed partial class IssuingOptions : pb::IMessage<IssuingOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<IssuingOptions> _parser = new pb::MessageParser<IssuingOptions>(() => new IssuingOptions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1282,6 +1486,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (IncludeCaCertUrl != false) {
             output.WriteRawTag(8);
             output.WriteBool(IncludeCaCertUrl);
@@ -1293,7 +1500,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (IncludeCaCertUrl != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(IncludeCaCertUrl);
+          }
+          if (IncludeCrlAccessUrl != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(IncludeCrlAccessUrl);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1326,6 +1551,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1342,7 +1570,30 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                IncludeCaCertUrl = input.ReadBool();
+                break;
+              }
+              case 16: {
+                IncludeCrlAccessUrl = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1351,7 +1602,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// [Certificates][google.cloud.security.privateca.v1beta1.Certificate] will not be successfully issued from this
       /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] if they violate the policy.
       /// </summary>
-      public sealed partial class CertificateAuthorityPolicy : pb::IMessage<CertificateAuthorityPolicy> {
+      public sealed partial class CertificateAuthorityPolicy : pb::IMessage<CertificateAuthorityPolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CertificateAuthorityPolicy> _parser = new pb::MessageParser<CertificateAuthorityPolicy>(() => new CertificateAuthorityPolicy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1578,6 +1833,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (configPolicyCase_ == ConfigPolicyOneofCase.AllowedConfigList) {
             output.WriteRawTag(10);
             output.WriteMessage(AllowedConfigList);
@@ -1603,7 +1861,39 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (configPolicyCase_ == ConfigPolicyOneofCase.AllowedConfigList) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AllowedConfigList);
+          }
+          if (configPolicyCase_ == ConfigPolicyOneofCase.OverwriteConfigValues) {
+            output.WriteRawTag(18);
+            output.WriteMessage(OverwriteConfigValues);
+          }
+          allowedLocationsAndOrganizations_.WriteTo(ref output, _repeated_allowedLocationsAndOrganizations_codec);
+          allowedCommonNames_.WriteTo(ref output, _repeated_allowedCommonNames_codec);
+          if (allowedSans_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(AllowedSans);
+          }
+          if (maximumLifetime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(MaximumLifetime);
+          }
+          if (allowedIssuanceModes_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(AllowedIssuanceModes);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1676,6 +1966,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1731,13 +2024,79 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList subBuilder = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedConfigList();
+                if (configPolicyCase_ == ConfigPolicyOneofCase.AllowedConfigList) {
+                  subBuilder.MergeFrom(AllowedConfigList);
+                }
+                input.ReadMessage(subBuilder);
+                AllowedConfigList = subBuilder;
+                break;
+              }
+              case 18: {
+                global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigWrapper subBuilder = new global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigWrapper();
+                if (configPolicyCase_ == ConfigPolicyOneofCase.OverwriteConfigValues) {
+                  subBuilder.MergeFrom(OverwriteConfigValues);
+                }
+                input.ReadMessage(subBuilder);
+                OverwriteConfigValues = subBuilder;
+                break;
+              }
+              case 26: {
+                allowedLocationsAndOrganizations_.AddEntriesFrom(ref input, _repeated_allowedLocationsAndOrganizations_codec);
+                break;
+              }
+              case 34: {
+                allowedCommonNames_.AddEntriesFrom(ref input, _repeated_allowedCommonNames_codec);
+                break;
+              }
+              case 42: {
+                if (allowedSans_ == null) {
+                  AllowedSans = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.CertificateAuthorityPolicy.Types.AllowedSubjectAltNames();
+                }
+                input.ReadMessage(AllowedSans);
+                break;
+              }
+              case 50: {
+                if (maximumLifetime_ == null) {
+                  MaximumLifetime = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(MaximumLifetime);
+                break;
+              }
+              case 66: {
+                if (allowedIssuanceModes_ == null) {
+                  AllowedIssuanceModes = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Types.CertificateAuthorityPolicy.Types.IssuanceModes();
+                }
+                input.ReadMessage(AllowedIssuanceModes);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the CertificateAuthorityPolicy message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
-          public sealed partial class AllowedConfigList : pb::IMessage<AllowedConfigList> {
+          public sealed partial class AllowedConfigList : pb::IMessage<AllowedConfigList>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<AllowedConfigList> _parser = new pb::MessageParser<AllowedConfigList>(() => new AllowedConfigList());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1821,11 +2180,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               allowedConfigValues_.WriteTo(output, _repeated_allowedConfigValues_codec);
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              allowedConfigValues_.WriteTo(ref output, _repeated_allowedConfigValues_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -1848,6 +2221,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -1860,7 +2236,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    allowedConfigValues_.AddEntriesFrom(ref input, _repeated_allowedConfigValues_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -1869,7 +2264,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           /// [SubjectAltNames][google.cloud.security.privateca.v1beta1.SubjectAltNames] by the [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] when issuing
           /// [Certificates][google.cloud.security.privateca.v1beta1.Certificate].
           /// </summary>
-          public sealed partial class AllowedSubjectAltNames : pb::IMessage<AllowedSubjectAltNames> {
+          public sealed partial class AllowedSubjectAltNames : pb::IMessage<AllowedSubjectAltNames>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<AllowedSubjectAltNames> _parser = new pb::MessageParser<AllowedSubjectAltNames>(() => new AllowedSubjectAltNames());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2045,6 +2444,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               allowedDnsNames_.WriteTo(output, _repeated_allowedDnsNames_codec);
               allowedUris_.WriteTo(output, _repeated_allowedUris_codec);
               allowedEmailAddresses_.WriteTo(output, _repeated_allowedEmailAddresses_codec);
@@ -2060,7 +2462,29 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              allowedDnsNames_.WriteTo(ref output, _repeated_allowedDnsNames_codec);
+              allowedUris_.WriteTo(ref output, _repeated_allowedUris_codec);
+              allowedEmailAddresses_.WriteTo(ref output, _repeated_allowedEmailAddresses_codec);
+              allowedIps_.WriteTo(ref output, _repeated_allowedIps_codec);
+              if (AllowGlobbingDnsWildcards != false) {
+                output.WriteRawTag(40);
+                output.WriteBool(AllowGlobbingDnsWildcards);
+              }
+              if (AllowCustomSans != false) {
+                output.WriteRawTag(48);
+                output.WriteBool(AllowCustomSans);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2101,6 +2525,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2133,7 +2560,46 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    allowedDnsNames_.AddEntriesFrom(ref input, _repeated_allowedDnsNames_codec);
+                    break;
+                  }
+                  case 18: {
+                    allowedUris_.AddEntriesFrom(ref input, _repeated_allowedUris_codec);
+                    break;
+                  }
+                  case 26: {
+                    allowedEmailAddresses_.AddEntriesFrom(ref input, _repeated_allowedEmailAddresses_codec);
+                    break;
+                  }
+                  case 34: {
+                    allowedIps_.AddEntriesFrom(ref input, _repeated_allowedIps_codec);
+                    break;
+                  }
+                  case 40: {
+                    AllowGlobbingDnsWildcards = input.ReadBool();
+                    break;
+                  }
+                  case 48: {
+                    AllowCustomSans = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -2142,7 +2608,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           /// [Certificates][google.cloud.security.privateca.v1beta1.Certificate] may be requested from this
           /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
           /// </summary>
-          public sealed partial class IssuanceModes : pb::IMessage<IssuanceModes> {
+          public sealed partial class IssuanceModes : pb::IMessage<IssuanceModes>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<IssuanceModes> _parser = new pb::MessageParser<IssuanceModes>(() => new IssuanceModes());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2243,6 +2713,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (AllowCsrBasedIssuance != false) {
                 output.WriteRawTag(8);
                 output.WriteBool(AllowCsrBasedIssuance);
@@ -2254,7 +2727,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (AllowCsrBasedIssuance != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(AllowCsrBasedIssuance);
+              }
+              if (AllowConfigBasedIssuance != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(AllowConfigBasedIssuance);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2287,6 +2778,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2303,7 +2797,30 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    AllowCsrBasedIssuance = input.ReadBool();
+                    break;
+                  }
+                  case 16: {
+                    AllowConfigBasedIssuance = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -2315,7 +2832,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <summary>
       /// URLs where a [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] will publish content.
       /// </summary>
-      public sealed partial class AccessUrls : pb::IMessage<AccessUrls> {
+      public sealed partial class AccessUrls : pb::IMessage<AccessUrls>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<AccessUrls> _parser = new pb::MessageParser<AccessUrls>(() => new AccessUrls());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2416,6 +2937,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (CaCertificateAccessUrl.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(CaCertificateAccessUrl);
@@ -2427,7 +2951,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (CaCertificateAccessUrl.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(CaCertificateAccessUrl);
+          }
+          if (CrlAccessUrl.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CrlAccessUrl);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2460,6 +3002,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2476,14 +3021,41 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                CaCertificateAccessUrl = input.ReadString();
+                break;
+              }
+              case 18: {
+                CrlAccessUrl = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// A Cloud KMS key configuration that a [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] will use.
       /// </summary>
-      public sealed partial class KeyVersionSpec : pb::IMessage<KeyVersionSpec> {
+      public sealed partial class KeyVersionSpec : pb::IMessage<KeyVersionSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<KeyVersionSpec> _parser = new pb::MessageParser<KeyVersionSpec>(() => new KeyVersionSpec());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2615,6 +3187,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion) {
             output.WriteRawTag(10);
             output.WriteString(CloudKmsKeyVersion);
@@ -2626,7 +3201,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (keyVersionCase_ == KeyVersionOneofCase.CloudKmsKeyVersion) {
+            output.WriteRawTag(10);
+            output.WriteString(CloudKmsKeyVersion);
+          }
+          if (keyVersionCase_ == KeyVersionOneofCase.Algorithm) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Algorithm);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2662,6 +3255,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2679,7 +3275,31 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                CloudKmsKeyVersion = input.ReadString();
+                break;
+              }
+              case 16: {
+                keyVersion_ = input.ReadEnum();
+                keyVersionCase_ = KeyVersionOneofCase.Algorithm;
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -2693,7 +3313,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// Revocation List (CRL). A CRL contains the serial numbers of certificates that
   /// should no longer be trusted.
   /// </summary>
-  public sealed partial class CertificateRevocationList : pb::IMessage<CertificateRevocationList> {
+  public sealed partial class CertificateRevocationList : pb::IMessage<CertificateRevocationList>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CertificateRevocationList> _parser = new pb::MessageParser<CertificateRevocationList>(() => new CertificateRevocationList());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2912,6 +3536,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2945,7 +3572,47 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SequenceNumber != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(SequenceNumber);
+      }
+      revokedCertificates_.WriteTo(ref output, _repeated_revokedCertificates_codec);
+      if (PemCrl.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PemCrl);
+      }
+      if (AccessUrl.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AccessUrl);
+      }
+      if (State != global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList.Types.State.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(UpdateTime);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3018,6 +3685,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3068,7 +3738,64 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            SequenceNumber = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            revokedCertificates_.AddEntriesFrom(ref input, _repeated_revokedCertificates_codec);
+            break;
+          }
+          case 34: {
+            PemCrl = input.ReadString();
+            break;
+          }
+          case 42: {
+            AccessUrl = input.ReadString();
+            break;
+          }
+          case 48: {
+            State = (global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList.Types.State) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 66: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 74: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CertificateRevocationList message type.</summary>
@@ -3095,7 +3822,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <summary>
       /// Describes a revoked [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
       /// </summary>
-      public sealed partial class RevokedCertificate : pb::IMessage<RevokedCertificate> {
+      public sealed partial class RevokedCertificate : pb::IMessage<RevokedCertificate>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<RevokedCertificate> _parser = new pb::MessageParser<RevokedCertificate>(() => new RevokedCertificate());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3212,6 +3943,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Certificate.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Certificate);
@@ -3227,7 +3961,29 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Certificate.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Certificate);
+          }
+          if (HexSerialNumber.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(HexSerialNumber);
+          }
+          if (RevocationReason != global::Google.Cloud.Security.PrivateCA.V1Beta1.RevocationReason.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) RevocationReason);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3266,6 +4022,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3286,7 +4045,34 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Certificate = input.ReadString();
+                break;
+              }
+              case 18: {
+                HexSerialNumber = input.ReadString();
+                break;
+              }
+              case 24: {
+                RevocationReason = (global::Google.Cloud.Security.PrivateCA.V1Beta1.RevocationReason) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3299,7 +4085,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// A [Certificate][google.cloud.security.privateca.v1beta1.Certificate] corresponds to a signed X.509 certificate issued by a
   /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
   /// </summary>
-  public sealed partial class Certificate : pb::IMessage<Certificate> {
+  public sealed partial class Certificate : pb::IMessage<Certificate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Certificate> _parser = new pb::MessageParser<Certificate>(() => new Certificate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3584,6 +4374,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -3625,7 +4418,55 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (certificateConfigCase_ == CertificateConfigOneofCase.PemCsr) {
+        output.WriteRawTag(18);
+        output.WriteString(PemCsr);
+      }
+      if (certificateConfigCase_ == CertificateConfigOneofCase.Config) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Config);
+      }
+      if (lifetime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Lifetime);
+      }
+      if (revocationDetails_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(RevocationDetails);
+      }
+      if (PemCertificate.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(PemCertificate);
+      }
+      if (certificateDescription_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CertificateDescription);
+      }
+      pemCertificateChain_.WriteTo(ref output, _repeated_pemCertificateChain_codec);
+      if (createTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(UpdateTime);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3725,6 +4566,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3797,7 +4641,86 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            PemCsr = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateConfig subBuilder = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateConfig();
+            if (certificateConfigCase_ == CertificateConfigOneofCase.Config) {
+              subBuilder.MergeFrom(Config);
+            }
+            input.ReadMessage(subBuilder);
+            Config = subBuilder;
+            break;
+          }
+          case 34: {
+            if (lifetime_ == null) {
+              Lifetime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Lifetime);
+            break;
+          }
+          case 42: {
+            if (revocationDetails_ == null) {
+              RevocationDetails = new global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate.Types.RevocationDetails();
+            }
+            input.ReadMessage(RevocationDetails);
+            break;
+          }
+          case 50: {
+            PemCertificate = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (certificateDescription_ == null) {
+              CertificateDescription = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateDescription();
+            }
+            input.ReadMessage(CertificateDescription);
+            break;
+          }
+          case 66: {
+            pemCertificateChain_.AddEntriesFrom(ref input, _repeated_pemCertificateChain_codec);
+            break;
+          }
+          case 74: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 82: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 90: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Certificate message type.</summary>
@@ -3806,7 +4729,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <summary>
       /// Describes fields that are relavent to the revocation of a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
       /// </summary>
-      public sealed partial class RevocationDetails : pb::IMessage<RevocationDetails> {
+      public sealed partial class RevocationDetails : pb::IMessage<RevocationDetails>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<RevocationDetails> _parser = new pb::MessageParser<RevocationDetails>(() => new RevocationDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3905,6 +4832,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (RevocationState != global::Google.Cloud.Security.PrivateCA.V1Beta1.RevocationReason.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) RevocationState);
@@ -3916,7 +4846,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RevocationState != global::Google.Cloud.Security.PrivateCA.V1Beta1.RevocationReason.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) RevocationState);
+          }
+          if (revocationTime_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(RevocationTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3952,6 +4900,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3971,7 +4922,33 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RevocationState = (global::Google.Cloud.Security.PrivateCA.V1Beta1.RevocationReason) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (revocationTime_ == null) {
+                  RevocationTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(RevocationTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3986,7 +4963,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// the key usage fields, fields specific to CA certificates, certificate policy
   /// extensions and custom extensions.
   /// </summary>
-  public sealed partial class ReusableConfig : pb::IMessage<ReusableConfig> {
+  public sealed partial class ReusableConfig : pb::IMessage<ReusableConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReusableConfig> _parser = new pb::MessageParser<ReusableConfig>(() => new ReusableConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4154,6 +5135,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -4178,7 +5162,38 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (values_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Values);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpdateTime);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4240,6 +5255,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4281,7 +5299,55 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (values_ == null) {
+              Values = new global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigValues();
+            }
+            input.ReadMessage(Values);
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 42: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 50: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4290,7 +5356,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// X.509 certificate, such as the key usage fields, fields specific to CA
   /// certificates, certificate policy extensions and custom extensions.
   /// </summary>
-  public sealed partial class ReusableConfigValues : pb::IMessage<ReusableConfigValues> {
+  public sealed partial class ReusableConfigValues : pb::IMessage<ReusableConfigValues>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReusableConfigValues> _parser = new pb::MessageParser<ReusableConfigValues>(() => new ReusableConfigValues());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4441,6 +5511,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (keyUsage_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(KeyUsage);
@@ -4455,7 +5528,28 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (keyUsage_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(KeyUsage);
+      }
+      if (caOptions_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CaOptions);
+      }
+      policyIds_.WriteTo(ref output, _repeated_policyIds_codec);
+      aiaOcspServers_.WriteTo(ref output, _repeated_aiaOcspServers_codec);
+      additionalExtensions_.WriteTo(ref output, _repeated_additionalExtensions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4500,6 +5594,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4534,7 +5631,48 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (keyUsage_ == null) {
+              KeyUsage = new global::Google.Cloud.Security.PrivateCA.V1Beta1.KeyUsage();
+            }
+            input.ReadMessage(KeyUsage);
+            break;
+          }
+          case 18: {
+            if (caOptions_ == null) {
+              CaOptions = new global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigValues.Types.CaOptions();
+            }
+            input.ReadMessage(CaOptions);
+            break;
+          }
+          case 26: {
+            policyIds_.AddEntriesFrom(ref input, _repeated_policyIds_codec);
+            break;
+          }
+          case 34: {
+            aiaOcspServers_.AddEntriesFrom(ref input, _repeated_aiaOcspServers_codec);
+            break;
+          }
+          case 42: {
+            additionalExtensions_.AddEntriesFrom(ref input, _repeated_additionalExtensions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the ReusableConfigValues message type.</summary>
@@ -4543,7 +5681,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <summary>
       /// Describes values that are relevant in a CA certificate.
       /// </summary>
-      public sealed partial class CaOptions : pb::IMessage<CaOptions> {
+      public sealed partial class CaOptions : pb::IMessage<CaOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CaOptions> _parser = new pb::MessageParser<CaOptions>(() => new CaOptions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4652,6 +5794,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (isCa_ != null) {
             _single_isCa_codec.WriteTagAndValue(output, IsCa);
           }
@@ -4661,7 +5806,23 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (isCa_ != null) {
+            _single_isCa_codec.WriteTagAndValue(ref output, IsCa);
+          }
+          if (maxIssuerPathLength_ != null) {
+            _single_maxIssuerPathLength_codec.WriteTagAndValue(ref output, MaxIssuerPathLength);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -4698,6 +5859,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -4720,7 +5884,36 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                bool? value = _single_isCa_codec.Read(ref input);
+                if (isCa_ == null || value != false) {
+                  IsCa = value;
+                }
+                break;
+              }
+              case 18: {
+                int? value = _single_maxIssuerPathLength_codec.Read(ref input);
+                if (maxIssuerPathLength_ == null || value != 0) {
+                  MaxIssuerPathLength = value;
+                }
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -4733,7 +5926,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// A [ReusableConfigWrapper][google.cloud.security.privateca.v1beta1.ReusableConfigWrapper] describes values that may assist in creating an
   /// X.509 certificate, or a reference to a pre-defined set of values.
   /// </summary>
-  public sealed partial class ReusableConfigWrapper : pb::IMessage<ReusableConfigWrapper> {
+  public sealed partial class ReusableConfigWrapper : pb::IMessage<ReusableConfigWrapper>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReusableConfigWrapper> _parser = new pb::MessageParser<ReusableConfigWrapper>(() => new ReusableConfigWrapper());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4861,6 +6058,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (configValuesCase_ == ConfigValuesOneofCase.ReusableConfig) {
         output.WriteRawTag(10);
         output.WriteString(ReusableConfig);
@@ -4872,7 +6072,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (configValuesCase_ == ConfigValuesOneofCase.ReusableConfig) {
+        output.WriteRawTag(10);
+        output.WriteString(ReusableConfig);
+      }
+      if (configValuesCase_ == ConfigValuesOneofCase.ReusableConfigValues) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReusableConfigValues);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4911,6 +6129,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4932,7 +6153,35 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ReusableConfig = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigValues subBuilder = new global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigValues();
+            if (configValuesCase_ == ConfigValuesOneofCase.ReusableConfigValues) {
+              subBuilder.MergeFrom(ReusableConfigValues);
+            }
+            input.ReadMessage(subBuilder);
+            ReusableConfigValues = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4940,7 +6189,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// Describes a subordinate CA's issuers. This is either a resource path to a
   /// known issuing [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority], or a PEM issuer certificate chain.
   /// </summary>
-  public sealed partial class SubordinateConfig : pb::IMessage<SubordinateConfig> {
+  public sealed partial class SubordinateConfig : pb::IMessage<SubordinateConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SubordinateConfig> _parser = new pb::MessageParser<SubordinateConfig>(() => new SubordinateConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5071,6 +6324,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority) {
         output.WriteRawTag(10);
         output.WriteString(CertificateAuthority);
@@ -5082,7 +6338,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (subordinateConfigCase_ == SubordinateConfigOneofCase.CertificateAuthority) {
+        output.WriteRawTag(10);
+        output.WriteString(CertificateAuthority);
+      }
+      if (subordinateConfigCase_ == SubordinateConfigOneofCase.PemIssuerChain) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PemIssuerChain);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5121,6 +6395,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5142,7 +6419,35 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CertificateAuthority = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Security.PrivateCA.V1Beta1.SubordinateConfig.Types.SubordinateConfigChain subBuilder = new global::Google.Cloud.Security.PrivateCA.V1Beta1.SubordinateConfig.Types.SubordinateConfigChain();
+            if (subordinateConfigCase_ == SubordinateConfigOneofCase.PemIssuerChain) {
+              subBuilder.MergeFrom(PemIssuerChain);
+            }
+            input.ReadMessage(subBuilder);
+            PemIssuerChain = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the SubordinateConfig message type.</summary>
@@ -5152,7 +6457,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// This message describes a subordinate CA's issuer certificate chain. This
       /// wrapper exists for compatibility reasons.
       /// </summary>
-      public sealed partial class SubordinateConfigChain : pb::IMessage<SubordinateConfigChain> {
+      public sealed partial class SubordinateConfigChain : pb::IMessage<SubordinateConfigChain>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<SubordinateConfigChain> _parser = new pb::MessageParser<SubordinateConfigChain>(() => new SubordinateConfigChain());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5233,11 +6542,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           pemCertificates_.WriteTo(output, _repeated_pemCertificates_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          pemCertificates_.WriteTo(ref output, _repeated_pemCertificates_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -5260,6 +6583,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -5272,7 +6598,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                pemCertificates_.AddEntriesFrom(ref input, _repeated_pemCertificates_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -5284,7 +6629,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// <summary>
   /// A [PublicKey][google.cloud.security.privateca.v1beta1.PublicKey] describes a public key.
   /// </summary>
-  public sealed partial class PublicKey : pb::IMessage<PublicKey> {
+  public sealed partial class PublicKey : pb::IMessage<PublicKey>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PublicKey> _parser = new pb::MessageParser<PublicKey>(() => new PublicKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5384,6 +6733,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Type != global::Google.Cloud.Security.PrivateCA.V1Beta1.PublicKey.Types.KeyType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
@@ -5395,7 +6747,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != global::Google.Cloud.Security.PrivateCA.V1Beta1.PublicKey.Types.KeyType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (Key.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Key);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5428,6 +6798,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5444,7 +6817,30 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Cloud.Security.PrivateCA.V1Beta1.PublicKey.Types.KeyType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Key = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the PublicKey message type.</summary>
@@ -5479,7 +6875,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// A [CertificateConfig][google.cloud.security.privateca.v1beta1.CertificateConfig] describes an X.509 certificate or CSR that is to be
   /// created, as an alternative to using ASN.1.
   /// </summary>
-  public sealed partial class CertificateConfig : pb::IMessage<CertificateConfig> {
+  public sealed partial class CertificateConfig : pb::IMessage<CertificateConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CertificateConfig> _parser = new pb::MessageParser<CertificateConfig>(() => new CertificateConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5599,6 +6999,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (subjectConfig_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(SubjectConfig);
@@ -5614,7 +7017,29 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (subjectConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SubjectConfig);
+      }
+      if (reusableConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReusableConfig);
+      }
+      if (publicKey_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PublicKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5662,6 +7087,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5691,7 +7119,43 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (subjectConfig_ == null) {
+              SubjectConfig = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateConfig.Types.SubjectConfig();
+            }
+            input.ReadMessage(SubjectConfig);
+            break;
+          }
+          case 18: {
+            if (reusableConfig_ == null) {
+              ReusableConfig = new global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigWrapper();
+            }
+            input.ReadMessage(ReusableConfig);
+            break;
+          }
+          case 26: {
+            if (publicKey_ == null) {
+              PublicKey = new global::Google.Cloud.Security.PrivateCA.V1Beta1.PublicKey();
+            }
+            input.ReadMessage(PublicKey);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CertificateConfig message type.</summary>
@@ -5701,7 +7165,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// These values are used to create the distinguished name and subject
       /// alternative name fields in an X.509 certificate.
       /// </summary>
-      public sealed partial class SubjectConfig : pb::IMessage<SubjectConfig> {
+      public sealed partial class SubjectConfig : pb::IMessage<SubjectConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<SubjectConfig> _parser = new pb::MessageParser<SubjectConfig>(() => new SubjectConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5817,6 +7285,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (subject_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Subject);
@@ -5832,7 +7303,29 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (subject_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Subject);
+          }
+          if (CommonName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CommonName);
+          }
+          if (subjectAltName_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SubjectAltName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -5877,6 +7370,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -5903,7 +7399,40 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (subject_ == null) {
+                  Subject = new global::Google.Cloud.Security.PrivateCA.V1Beta1.Subject();
+                }
+                input.ReadMessage(Subject);
+                break;
+              }
+              case 18: {
+                CommonName = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (subjectAltName_ == null) {
+                  SubjectAltName = new global::Google.Cloud.Security.PrivateCA.V1Beta1.SubjectAltNames();
+                }
+                input.ReadMessage(SubjectAltName);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -5916,7 +7445,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// A [CertificateDescription][google.cloud.security.privateca.v1beta1.CertificateDescription] describes an X.509 certificate or CSR that has
   /// been issued, as an alternative to using ASN.1 / X.509.
   /// </summary>
-  public sealed partial class CertificateDescription : pb::IMessage<CertificateDescription> {
+  public sealed partial class CertificateDescription : pb::IMessage<CertificateDescription>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CertificateDescription> _parser = new pb::MessageParser<CertificateDescription>(() => new CertificateDescription());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6121,6 +7654,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (subjectDescription_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(SubjectDescription);
@@ -6150,7 +7686,43 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (subjectDescription_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SubjectDescription);
+      }
+      if (configValues_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ConfigValues);
+      }
+      if (publicKey_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PublicKey);
+      }
+      if (subjectKeyId_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(SubjectKeyId);
+      }
+      if (authorityKeyId_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AuthorityKeyId);
+      }
+      crlDistributionPoints_.WriteTo(ref output, _repeated_crlDistributionPoints_codec);
+      aiaIssuingCertificateUrls_.WriteTo(ref output, _repeated_aiaIssuingCertificateUrls_codec);
+      if (certFingerprint_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CertFingerprint);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6229,6 +7801,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6287,7 +7862,72 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (subjectDescription_ == null) {
+              SubjectDescription = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateDescription.Types.SubjectDescription();
+            }
+            input.ReadMessage(SubjectDescription);
+            break;
+          }
+          case 18: {
+            if (configValues_ == null) {
+              ConfigValues = new global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfigValues();
+            }
+            input.ReadMessage(ConfigValues);
+            break;
+          }
+          case 26: {
+            if (publicKey_ == null) {
+              PublicKey = new global::Google.Cloud.Security.PrivateCA.V1Beta1.PublicKey();
+            }
+            input.ReadMessage(PublicKey);
+            break;
+          }
+          case 34: {
+            if (subjectKeyId_ == null) {
+              SubjectKeyId = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateDescription.Types.KeyId();
+            }
+            input.ReadMessage(SubjectKeyId);
+            break;
+          }
+          case 42: {
+            if (authorityKeyId_ == null) {
+              AuthorityKeyId = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateDescription.Types.KeyId();
+            }
+            input.ReadMessage(AuthorityKeyId);
+            break;
+          }
+          case 50: {
+            crlDistributionPoints_.AddEntriesFrom(ref input, _repeated_crlDistributionPoints_codec);
+            break;
+          }
+          case 58: {
+            aiaIssuingCertificateUrls_.AddEntriesFrom(ref input, _repeated_aiaIssuingCertificateUrls_codec);
+            break;
+          }
+          case 66: {
+            if (certFingerprint_ == null) {
+              CertFingerprint = new global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateDescription.Types.CertificateFingerprint();
+            }
+            input.ReadMessage(CertFingerprint);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CertificateDescription message type.</summary>
@@ -6297,7 +7937,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// These values describe fields in an issued X.509 certificate such as the
       /// distinguished name, subject alternative names, serial number, and lifetime.
       /// </summary>
-      public sealed partial class SubjectDescription : pb::IMessage<SubjectDescription> {
+      public sealed partial class SubjectDescription : pb::IMessage<SubjectDescription>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<SubjectDescription> _parser = new pb::MessageParser<SubjectDescription>(() => new SubjectDescription());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6482,6 +8126,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (subject_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Subject);
@@ -6513,7 +8160,45 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (subject_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Subject);
+          }
+          if (CommonName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(CommonName);
+          }
+          if (subjectAltName_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SubjectAltName);
+          }
+          if (HexSerialNumber.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(HexSerialNumber);
+          }
+          if (lifetime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(Lifetime);
+          }
+          if (notBeforeTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(NotBeforeTime);
+          }
+          if (notAfterTime_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(NotAfterTime);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -6591,6 +8276,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -6642,7 +8330,65 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (subject_ == null) {
+                  Subject = new global::Google.Cloud.Security.PrivateCA.V1Beta1.Subject();
+                }
+                input.ReadMessage(Subject);
+                break;
+              }
+              case 18: {
+                CommonName = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (subjectAltName_ == null) {
+                  SubjectAltName = new global::Google.Cloud.Security.PrivateCA.V1Beta1.SubjectAltNames();
+                }
+                input.ReadMessage(SubjectAltName);
+                break;
+              }
+              case 34: {
+                HexSerialNumber = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (lifetime_ == null) {
+                  Lifetime = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(Lifetime);
+                break;
+              }
+              case 50: {
+                if (notBeforeTime_ == null) {
+                  NotBeforeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NotBeforeTime);
+                break;
+              }
+              case 58: {
+                if (notAfterTime_ == null) {
+                  NotAfterTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(NotAfterTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -6650,7 +8396,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// A KeyId identifies a specific public key, usually by hashing the public
       /// key.
       /// </summary>
-      public sealed partial class KeyId : pb::IMessage<KeyId> {
+      public sealed partial class KeyId : pb::IMessage<KeyId>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<KeyId> _parser = new pb::MessageParser<KeyId>(() => new KeyId());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6733,6 +8483,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (KeyId_.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(KeyId_);
@@ -6740,7 +8493,21 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (KeyId_.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KeyId_);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -6767,6 +8534,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -6779,14 +8549,37 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                KeyId_ = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// A group of fingerprints for the x509 certificate.
       /// </summary>
-      public sealed partial class CertificateFingerprint : pb::IMessage<CertificateFingerprint> {
+      public sealed partial class CertificateFingerprint : pb::IMessage<CertificateFingerprint>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CertificateFingerprint> _parser = new pb::MessageParser<CertificateFingerprint>(() => new CertificateFingerprint());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6868,6 +8661,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Sha256Hash.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Sha256Hash);
@@ -6875,7 +8671,21 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Sha256Hash.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Sha256Hash);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -6902,6 +8712,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -6914,7 +8727,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Sha256Hash = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -6927,7 +8759,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// An [ObjectId][google.cloud.security.privateca.v1beta1.ObjectId] specifies an object identifier (OID). These provide context
   /// and describe types in ASN.1 messages.
   /// </summary>
-  public sealed partial class ObjectId : pb::IMessage<ObjectId> {
+  public sealed partial class ObjectId : pb::IMessage<ObjectId>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ObjectId> _parser = new pb::MessageParser<ObjectId>(() => new ObjectId());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7009,11 +8845,25 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       objectIdPath_.WriteTo(output, _repeated_objectIdPath_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      objectIdPath_.WriteTo(ref output, _repeated_objectIdPath_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7036,6 +8886,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7049,7 +8902,27 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            objectIdPath_.AddEntriesFrom(ref input, _repeated_objectIdPath_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -7057,7 +8930,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// An [X509Extension][google.cloud.security.privateca.v1beta1.X509Extension] specifies an X.509 extension, which may be used in
   /// different parts of X.509 objects like certificates, CSRs, and CRLs.
   /// </summary>
-  public sealed partial class X509Extension : pb::IMessage<X509Extension> {
+  public sealed partial class X509Extension : pb::IMessage<X509Extension>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<X509Extension> _parser = new pb::MessageParser<X509Extension>(() => new X509Extension());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7175,6 +9052,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (objectId_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(ObjectId);
@@ -7190,7 +9070,29 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (objectId_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ObjectId);
+      }
+      if (Critical != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Critical);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7232,6 +9134,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7255,7 +9160,37 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (objectId_ == null) {
+              ObjectId = new global::Google.Cloud.Security.PrivateCA.V1Beta1.ObjectId();
+            }
+            input.ReadMessage(ObjectId);
+            break;
+          }
+          case 16: {
+            Critical = input.ReadBool();
+            break;
+          }
+          case 26: {
+            Value = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -7263,7 +9198,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// A [KeyUsage][google.cloud.security.privateca.v1beta1.KeyUsage] describes key usage values that may appear in an X.509
   /// certificate.
   /// </summary>
-  public sealed partial class KeyUsage : pb::IMessage<KeyUsage> {
+  public sealed partial class KeyUsage : pb::IMessage<KeyUsage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<KeyUsage> _parser = new pb::MessageParser<KeyUsage>(() => new KeyUsage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7379,6 +9318,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (baseKeyUsage_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(BaseKeyUsage);
@@ -7391,7 +9333,26 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (baseKeyUsage_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BaseKeyUsage);
+      }
+      if (extendedKeyUsage_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExtendedKeyUsage);
+      }
+      unknownExtendedKeyUsages_.WriteTo(ref output, _repeated_unknownExtendedKeyUsages_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7432,6 +9393,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7458,7 +9422,40 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (baseKeyUsage_ == null) {
+              BaseKeyUsage = new global::Google.Cloud.Security.PrivateCA.V1Beta1.KeyUsage.Types.KeyUsageOptions();
+            }
+            input.ReadMessage(BaseKeyUsage);
+            break;
+          }
+          case 18: {
+            if (extendedKeyUsage_ == null) {
+              ExtendedKeyUsage = new global::Google.Cloud.Security.PrivateCA.V1Beta1.KeyUsage.Types.ExtendedKeyUsageOptions();
+            }
+            input.ReadMessage(ExtendedKeyUsage);
+            break;
+          }
+          case 26: {
+            unknownExtendedKeyUsages_.AddEntriesFrom(ref input, _repeated_unknownExtendedKeyUsages_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the KeyUsage message type.</summary>
@@ -7468,7 +9465,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// [KeyUsage.KeyUsageOptions][google.cloud.security.privateca.v1beta1.KeyUsage.KeyUsageOptions] corresponds to the key usage values
       /// described in https://tools.ietf.org/html/rfc5280#section-4.2.1.3.
       /// </summary>
-      public sealed partial class KeyUsageOptions : pb::IMessage<KeyUsageOptions> {
+      public sealed partial class KeyUsageOptions : pb::IMessage<KeyUsageOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<KeyUsageOptions> _parser = new pb::MessageParser<KeyUsageOptions>(() => new KeyUsageOptions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7687,6 +9688,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (DigitalSignature != false) {
             output.WriteRawTag(8);
             output.WriteBool(DigitalSignature);
@@ -7726,7 +9730,53 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DigitalSignature != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(DigitalSignature);
+          }
+          if (ContentCommitment != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(ContentCommitment);
+          }
+          if (KeyEncipherment != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(KeyEncipherment);
+          }
+          if (DataEncipherment != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(DataEncipherment);
+          }
+          if (KeyAgreement != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(KeyAgreement);
+          }
+          if (CertSign != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(CertSign);
+          }
+          if (CrlSign != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(CrlSign);
+          }
+          if (EncipherOnly != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(EncipherOnly);
+          }
+          if (DecipherOnly != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(DecipherOnly);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -7801,6 +9851,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -7845,7 +9898,58 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                DigitalSignature = input.ReadBool();
+                break;
+              }
+              case 16: {
+                ContentCommitment = input.ReadBool();
+                break;
+              }
+              case 24: {
+                KeyEncipherment = input.ReadBool();
+                break;
+              }
+              case 32: {
+                DataEncipherment = input.ReadBool();
+                break;
+              }
+              case 40: {
+                KeyAgreement = input.ReadBool();
+                break;
+              }
+              case 48: {
+                CertSign = input.ReadBool();
+                break;
+              }
+              case 56: {
+                CrlSign = input.ReadBool();
+                break;
+              }
+              case 64: {
+                EncipherOnly = input.ReadBool();
+                break;
+              }
+              case 72: {
+                DecipherOnly = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -7853,7 +9957,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// [KeyUsage.ExtendedKeyUsageOptions][google.cloud.security.privateca.v1beta1.KeyUsage.ExtendedKeyUsageOptions] has fields that correspond to
       /// certain common OIDs that could be specified as an extended key usage value.
       /// </summary>
-      public sealed partial class ExtendedKeyUsageOptions : pb::IMessage<ExtendedKeyUsageOptions> {
+      public sealed partial class ExtendedKeyUsageOptions : pb::IMessage<ExtendedKeyUsageOptions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ExtendedKeyUsageOptions> _parser = new pb::MessageParser<ExtendedKeyUsageOptions>(() => new ExtendedKeyUsageOptions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8026,6 +10134,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (ServerAuth != false) {
             output.WriteRawTag(8);
             output.WriteBool(ServerAuth);
@@ -8053,7 +10164,41 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ServerAuth != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(ServerAuth);
+          }
+          if (ClientAuth != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(ClientAuth);
+          }
+          if (CodeSigning != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(CodeSigning);
+          }
+          if (EmailProtection != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(EmailProtection);
+          }
+          if (TimeStamping != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(TimeStamping);
+          }
+          if (OcspSigning != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(OcspSigning);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -8110,6 +10255,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -8142,7 +10290,46 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ServerAuth = input.ReadBool();
+                break;
+              }
+              case 16: {
+                ClientAuth = input.ReadBool();
+                break;
+              }
+              case 24: {
+                CodeSigning = input.ReadBool();
+                break;
+              }
+              case 32: {
+                EmailProtection = input.ReadBool();
+                break;
+              }
+              case 40: {
+                TimeStamping = input.ReadBool();
+                break;
+              }
+              case 48: {
+                OcspSigning = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -8155,7 +10342,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// [Subject][google.cloud.security.privateca.v1beta1.Subject] describes parts of a distinguished name that, in turn,
   /// describes the subject of the certificate.
   /// </summary>
-  public sealed partial class Subject : pb::IMessage<Subject> {
+  public sealed partial class Subject : pb::IMessage<Subject>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Subject> _parser = new pb::MessageParser<Subject>(() => new Subject());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8339,6 +10530,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (CountryCode.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(CountryCode);
@@ -8370,7 +10564,45 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CountryCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CountryCode);
+      }
+      if (Organization.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Organization);
+      }
+      if (OrganizationalUnit.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(OrganizationalUnit);
+      }
+      if (Locality.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Locality);
+      }
+      if (Province.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Province);
+      }
+      if (StreetAddress.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(StreetAddress);
+      }
+      if (PostalCode.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(PostalCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8433,6 +10665,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8469,7 +10704,50 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CountryCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            Organization = input.ReadString();
+            break;
+          }
+          case 26: {
+            OrganizationalUnit = input.ReadString();
+            break;
+          }
+          case 34: {
+            Locality = input.ReadString();
+            break;
+          }
+          case 42: {
+            Province = input.ReadString();
+            break;
+          }
+          case 50: {
+            StreetAddress = input.ReadString();
+            break;
+          }
+          case 58: {
+            PostalCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -8478,7 +10756,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   /// the asserted identity is in a certificate (i.e., compared to the "common
   /// name" in the distinguished name).
   /// </summary>
-  public sealed partial class SubjectAltNames : pb::IMessage<SubjectAltNames> {
+  public sealed partial class SubjectAltNames : pb::IMessage<SubjectAltNames>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SubjectAltNames> _parser = new pb::MessageParser<SubjectAltNames>(() => new SubjectAltNames());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8623,6 +10905,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       dnsNames_.WriteTo(output, _repeated_dnsNames_codec);
       uris_.WriteTo(output, _repeated_uris_codec);
       emailAddresses_.WriteTo(output, _repeated_emailAddresses_codec);
@@ -8631,7 +10916,22 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dnsNames_.WriteTo(ref output, _repeated_dnsNames_codec);
+      uris_.WriteTo(ref output, _repeated_uris_codec);
+      emailAddresses_.WriteTo(ref output, _repeated_emailAddresses_codec);
+      ipAddresses_.WriteTo(ref output, _repeated_ipAddresses_codec);
+      customSans_.WriteTo(ref output, _repeated_customSans_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -8662,6 +10962,9 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -8690,7 +10993,42 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dnsNames_.AddEntriesFrom(ref input, _repeated_dnsNames_codec);
+            break;
+          }
+          case 18: {
+            uris_.AddEntriesFrom(ref input, _repeated_uris_codec);
+            break;
+          }
+          case 26: {
+            emailAddresses_.AddEntriesFrom(ref input, _repeated_emailAddresses_codec);
+            break;
+          }
+          case 34: {
+            ipAddresses_.AddEntriesFrom(ref input, _repeated_ipAddresses_codec);
+            break;
+          }
+          case 42: {
+            customSans_.AddEntriesFrom(ref input, _repeated_customSans_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

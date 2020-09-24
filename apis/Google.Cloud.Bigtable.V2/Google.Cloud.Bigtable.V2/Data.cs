@@ -121,7 +121,11 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies the complete (requested) contents of a single row of a table.
   /// Rows which exceed 256MiB in size cannot be read in full.
   /// </summary>
-  public sealed partial class Row : pb::IMessage<Row> {
+  public sealed partial class Row : pb::IMessage<Row>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Row> _parser = new pb::MessageParser<Row>(() => new Row());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -222,6 +226,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Key.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(Key);
@@ -230,7 +237,22 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Key.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Key);
+      }
+      families_.WriteTo(ref output, _repeated_families_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -259,6 +281,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -275,7 +300,30 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Key = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            families_.AddEntriesFrom(ref input, _repeated_families_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -283,7 +331,11 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies (some of) the contents of a single row/column family intersection
   /// of a table.
   /// </summary>
-  public sealed partial class Family : pb::IMessage<Family> {
+  public sealed partial class Family : pb::IMessage<Family>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Family> _parser = new pb::MessageParser<Family>(() => new Family());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -386,6 +438,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -394,7 +449,22 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      columns_.WriteTo(ref output, _repeated_columns_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -423,6 +493,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -439,7 +512,30 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            columns_.AddEntriesFrom(ref input, _repeated_columns_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -447,7 +543,11 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies (some of) the contents of a single row/column intersection of a
   /// table.
   /// </summary>
-  public sealed partial class Column : pb::IMessage<Column> {
+  public sealed partial class Column : pb::IMessage<Column>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Column> _parser = new pb::MessageParser<Column>(() => new Column());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -549,6 +649,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Qualifier.Length != 0) {
         output.WriteRawTag(10);
         output.WriteBytes(Qualifier);
@@ -557,7 +660,22 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Qualifier.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Qualifier);
+      }
+      cells_.WriteTo(ref output, _repeated_cells_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -586,6 +704,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -602,14 +723,41 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Qualifier = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            cells_.AddEntriesFrom(ref input, _repeated_cells_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies (some of) the contents of a single row/column/timestamp of a table.
   /// </summary>
-  public sealed partial class Cell : pb::IMessage<Cell> {
+  public sealed partial class Cell : pb::IMessage<Cell>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Cell> _parser = new pb::MessageParser<Cell>(() => new Cell());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -731,6 +879,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (TimestampMicros != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(TimestampMicros);
@@ -743,7 +894,26 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TimestampMicros != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TimestampMicros);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Value);
+      }
+      labels_.WriteTo(ref output, _repeated_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -778,6 +948,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -798,14 +971,45 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TimestampMicros = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            Value = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies a contiguous range of rows.
   /// </summary>
-  public sealed partial class RowRange : pb::IMessage<RowRange> {
+  public sealed partial class RowRange : pb::IMessage<RowRange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RowRange> _parser = new pb::MessageParser<RowRange>(() => new RowRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -994,6 +1198,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) {
         output.WriteRawTag(10);
         output.WriteBytes(StartKeyClosed);
@@ -1013,7 +1220,33 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) {
+        output.WriteRawTag(10);
+        output.WriteBytes(StartKeyClosed);
+      }
+      if (startKeyCase_ == StartKeyOneofCase.StartKeyOpen) {
+        output.WriteRawTag(18);
+        output.WriteBytes(StartKeyOpen);
+      }
+      if (endKeyCase_ == EndKeyOneofCase.EndKeyOpen) {
+        output.WriteRawTag(26);
+        output.WriteBytes(EndKeyOpen);
+      }
+      if (endKeyCase_ == EndKeyOneofCase.EndKeyClosed) {
+        output.WriteRawTag(34);
+        output.WriteBytes(EndKeyClosed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1064,6 +1297,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1088,14 +1324,49 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            StartKeyClosed = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            StartKeyOpen = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            EndKeyOpen = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            EndKeyClosed = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies a non-contiguous set of rows.
   /// </summary>
-  public sealed partial class RowSet : pb::IMessage<RowSet> {
+  public sealed partial class RowSet : pb::IMessage<RowSet>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RowSet> _parser = new pb::MessageParser<RowSet>(() => new RowSet());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1192,12 +1463,27 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       rowKeys_.WriteTo(output, _repeated_rowKeys_codec);
       rowRanges_.WriteTo(output, _repeated_rowRanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      rowKeys_.WriteTo(ref output, _repeated_rowKeys_codec);
+      rowRanges_.WriteTo(ref output, _repeated_rowRanges_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1222,6 +1508,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1238,7 +1527,30 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            rowKeys_.AddEntriesFrom(ref input, _repeated_rowKeys_codec);
+            break;
+          }
+          case 18: {
+            rowRanges_.AddEntriesFrom(ref input, _repeated_rowRanges_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1248,7 +1560,11 @@ namespace Google.Cloud.Bigtable.V2 {
   /// &amp;lt;column_family&amp;gt;:&amp;lt;end_qualifier&amp;gt;, where both bounds can be either
   /// inclusive or exclusive.
   /// </summary>
-  public sealed partial class ColumnRange : pb::IMessage<ColumnRange> {
+  public sealed partial class ColumnRange : pb::IMessage<ColumnRange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ColumnRange> _parser = new pb::MessageParser<ColumnRange>(() => new ColumnRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1454,6 +1770,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (FamilyName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(FamilyName);
@@ -1477,7 +1796,37 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FamilyName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FamilyName);
+      }
+      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed) {
+        output.WriteRawTag(18);
+        output.WriteBytes(StartQualifierClosed);
+      }
+      if (startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen) {
+        output.WriteRawTag(26);
+        output.WriteBytes(StartQualifierOpen);
+      }
+      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed) {
+        output.WriteRawTag(34);
+        output.WriteBytes(EndQualifierClosed);
+      }
+      if (endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen) {
+        output.WriteRawTag(42);
+        output.WriteBytes(EndQualifierOpen);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1534,6 +1883,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1562,14 +1914,53 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FamilyName = input.ReadString();
+            break;
+          }
+          case 18: {
+            StartQualifierClosed = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            StartQualifierOpen = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            EndQualifierClosed = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            EndQualifierOpen = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specified a contiguous range of microsecond timestamps.
   /// </summary>
-  public sealed partial class TimestampRange : pb::IMessage<TimestampRange> {
+  public sealed partial class TimestampRange : pb::IMessage<TimestampRange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TimestampRange> _parser = new pb::MessageParser<TimestampRange>(() => new TimestampRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1668,6 +2059,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (StartTimestampMicros != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(StartTimestampMicros);
@@ -1679,7 +2073,25 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (StartTimestampMicros != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(StartTimestampMicros);
+      }
+      if (EndTimestampMicros != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EndTimestampMicros);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1712,6 +2124,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1728,14 +2143,41 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            StartTimestampMicros = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            EndTimestampMicros = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specifies a contiguous range of raw byte values.
   /// </summary>
-  public sealed partial class ValueRange : pb::IMessage<ValueRange> {
+  public sealed partial class ValueRange : pb::IMessage<ValueRange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ValueRange> _parser = new pb::MessageParser<ValueRange>(() => new ValueRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1924,6 +2366,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (startValueCase_ == StartValueOneofCase.StartValueClosed) {
         output.WriteRawTag(10);
         output.WriteBytes(StartValueClosed);
@@ -1943,7 +2388,33 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startValueCase_ == StartValueOneofCase.StartValueClosed) {
+        output.WriteRawTag(10);
+        output.WriteBytes(StartValueClosed);
+      }
+      if (startValueCase_ == StartValueOneofCase.StartValueOpen) {
+        output.WriteRawTag(18);
+        output.WriteBytes(StartValueOpen);
+      }
+      if (endValueCase_ == EndValueOneofCase.EndValueClosed) {
+        output.WriteRawTag(26);
+        output.WriteBytes(EndValueClosed);
+      }
+      if (endValueCase_ == EndValueOneofCase.EndValueOpen) {
+        output.WriteRawTag(34);
+        output.WriteBytes(EndValueOpen);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1994,6 +2465,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2018,7 +2492,38 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            StartValueClosed = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            StartValueOpen = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            EndValueClosed = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            EndValueOpen = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2057,7 +2562,11 @@ namespace Google.Cloud.Bigtable.V2 {
   /// exceed 4096 bytes, and RowFilters may not be nested within each other
   /// (in Chains or Interleaves) to a depth of more than 20.
   /// </summary>
-  public sealed partial class RowFilter : pb::IMessage<RowFilter> {
+  public sealed partial class RowFilter : pb::IMessage<RowFilter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RowFilter> _parser = new pb::MessageParser<RowFilter>(() => new RowFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2629,6 +3138,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (filterCase_ == FilterOneofCase.Chain) {
         output.WriteRawTag(10);
         output.WriteMessage(Chain);
@@ -2708,7 +3220,93 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (filterCase_ == FilterOneofCase.Chain) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Chain);
+      }
+      if (filterCase_ == FilterOneofCase.Interleave) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Interleave);
+      }
+      if (filterCase_ == FilterOneofCase.Condition) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Condition);
+      }
+      if (filterCase_ == FilterOneofCase.RowKeyRegexFilter) {
+        output.WriteRawTag(34);
+        output.WriteBytes(RowKeyRegexFilter);
+      }
+      if (filterCase_ == FilterOneofCase.FamilyNameRegexFilter) {
+        output.WriteRawTag(42);
+        output.WriteString(FamilyNameRegexFilter);
+      }
+      if (filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter) {
+        output.WriteRawTag(50);
+        output.WriteBytes(ColumnQualifierRegexFilter);
+      }
+      if (filterCase_ == FilterOneofCase.ColumnRangeFilter) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ColumnRangeFilter);
+      }
+      if (filterCase_ == FilterOneofCase.TimestampRangeFilter) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TimestampRangeFilter);
+      }
+      if (filterCase_ == FilterOneofCase.ValueRegexFilter) {
+        output.WriteRawTag(74);
+        output.WriteBytes(ValueRegexFilter);
+      }
+      if (filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter) {
+        output.WriteRawTag(80);
+        output.WriteInt32(CellsPerRowOffsetFilter);
+      }
+      if (filterCase_ == FilterOneofCase.CellsPerRowLimitFilter) {
+        output.WriteRawTag(88);
+        output.WriteInt32(CellsPerRowLimitFilter);
+      }
+      if (filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter) {
+        output.WriteRawTag(96);
+        output.WriteInt32(CellsPerColumnLimitFilter);
+      }
+      if (filterCase_ == FilterOneofCase.StripValueTransformer) {
+        output.WriteRawTag(104);
+        output.WriteBool(StripValueTransformer);
+      }
+      if (filterCase_ == FilterOneofCase.RowSampleFilter) {
+        output.WriteRawTag(113);
+        output.WriteDouble(RowSampleFilter);
+      }
+      if (filterCase_ == FilterOneofCase.ValueRangeFilter) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ValueRangeFilter);
+      }
+      if (filterCase_ == FilterOneofCase.Sink) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(Sink);
+      }
+      if (filterCase_ == FilterOneofCase.PassAllFilter) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(PassAllFilter);
+      }
+      if (filterCase_ == FilterOneofCase.BlockAllFilter) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(BlockAllFilter);
+      }
+      if (filterCase_ == FilterOneofCase.ApplyLabelTransformer) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(ApplyLabelTransformer);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2864,6 +3462,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2978,7 +3579,128 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain subBuilder = new global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain();
+            if (filterCase_ == FilterOneofCase.Chain) {
+              subBuilder.MergeFrom(Chain);
+            }
+            input.ReadMessage(subBuilder);
+            Chain = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave subBuilder = new global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave();
+            if (filterCase_ == FilterOneofCase.Interleave) {
+              subBuilder.MergeFrom(Interleave);
+            }
+            input.ReadMessage(subBuilder);
+            Interleave = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition subBuilder = new global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition();
+            if (filterCase_ == FilterOneofCase.Condition) {
+              subBuilder.MergeFrom(Condition);
+            }
+            input.ReadMessage(subBuilder);
+            Condition = subBuilder;
+            break;
+          }
+          case 34: {
+            RowKeyRegexFilter = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            FamilyNameRegexFilter = input.ReadString();
+            break;
+          }
+          case 50: {
+            ColumnQualifierRegexFilter = input.ReadBytes();
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Bigtable.V2.ColumnRange subBuilder = new global::Google.Cloud.Bigtable.V2.ColumnRange();
+            if (filterCase_ == FilterOneofCase.ColumnRangeFilter) {
+              subBuilder.MergeFrom(ColumnRangeFilter);
+            }
+            input.ReadMessage(subBuilder);
+            ColumnRangeFilter = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.Bigtable.V2.TimestampRange subBuilder = new global::Google.Cloud.Bigtable.V2.TimestampRange();
+            if (filterCase_ == FilterOneofCase.TimestampRangeFilter) {
+              subBuilder.MergeFrom(TimestampRangeFilter);
+            }
+            input.ReadMessage(subBuilder);
+            TimestampRangeFilter = subBuilder;
+            break;
+          }
+          case 74: {
+            ValueRegexFilter = input.ReadBytes();
+            break;
+          }
+          case 80: {
+            CellsPerRowOffsetFilter = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            CellsPerRowLimitFilter = input.ReadInt32();
+            break;
+          }
+          case 96: {
+            CellsPerColumnLimitFilter = input.ReadInt32();
+            break;
+          }
+          case 104: {
+            StripValueTransformer = input.ReadBool();
+            break;
+          }
+          case 113: {
+            RowSampleFilter = input.ReadDouble();
+            break;
+          }
+          case 122: {
+            global::Google.Cloud.Bigtable.V2.ValueRange subBuilder = new global::Google.Cloud.Bigtable.V2.ValueRange();
+            if (filterCase_ == FilterOneofCase.ValueRangeFilter) {
+              subBuilder.MergeFrom(ValueRangeFilter);
+            }
+            input.ReadMessage(subBuilder);
+            ValueRangeFilter = subBuilder;
+            break;
+          }
+          case 128: {
+            Sink = input.ReadBool();
+            break;
+          }
+          case 136: {
+            PassAllFilter = input.ReadBool();
+            break;
+          }
+          case 144: {
+            BlockAllFilter = input.ReadBool();
+            break;
+          }
+          case 154: {
+            ApplyLabelTransformer = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RowFilter message type.</summary>
@@ -2987,7 +3709,11 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <summary>
       /// A RowFilter which sends rows through several RowFilters in sequence.
       /// </summary>
-      public sealed partial class Chain : pb::IMessage<Chain> {
+      public sealed partial class Chain : pb::IMessage<Chain>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Chain> _parser = new pb::MessageParser<Chain>(() => new Chain());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3070,11 +3796,25 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           filters_.WriteTo(output, _repeated_filters_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          filters_.WriteTo(ref output, _repeated_filters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3097,6 +3837,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3109,7 +3852,26 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                filters_.AddEntriesFrom(ref input, _repeated_filters_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3117,7 +3879,11 @@ namespace Google.Cloud.Bigtable.V2 {
       /// A RowFilter which sends each row to each of several component
       /// RowFilters and interleaves the results.
       /// </summary>
-      public sealed partial class Interleave : pb::IMessage<Interleave> {
+      public sealed partial class Interleave : pb::IMessage<Interleave>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Interleave> _parser = new pb::MessageParser<Interleave>(() => new Interleave());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3222,11 +3988,25 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           filters_.WriteTo(output, _repeated_filters_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          filters_.WriteTo(ref output, _repeated_filters_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3249,6 +4029,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3261,7 +4044,26 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                filters_.AddEntriesFrom(ref input, _repeated_filters_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3274,7 +4076,11 @@ namespace Google.Cloud.Bigtable.V2 {
       /// results. Additionally, Condition filters have poor performance, especially
       /// when filters are set for the false condition.
       /// </summary>
-      public sealed partial class Condition : pb::IMessage<Condition> {
+      public sealed partial class Condition : pb::IMessage<Condition>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Condition> _parser = new pb::MessageParser<Condition>(() => new Condition());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3394,6 +4200,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (predicateFilter_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(PredicateFilter);
@@ -3409,7 +4218,29 @@ namespace Google.Cloud.Bigtable.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (predicateFilter_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(PredicateFilter);
+          }
+          if (trueFilter_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(TrueFilter);
+          }
+          if (falseFilter_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(FalseFilter);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3457,6 +4288,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3486,7 +4320,43 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (predicateFilter_ == null) {
+                  PredicateFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
+                }
+                input.ReadMessage(PredicateFilter);
+                break;
+              }
+              case 18: {
+                if (trueFilter_ == null) {
+                  TrueFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
+                }
+                input.ReadMessage(TrueFilter);
+                break;
+              }
+              case 26: {
+                if (falseFilter_ == null) {
+                  FalseFilter = new global::Google.Cloud.Bigtable.V2.RowFilter();
+                }
+                input.ReadMessage(FalseFilter);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3498,7 +4368,11 @@ namespace Google.Cloud.Bigtable.V2 {
   /// <summary>
   /// Specifies a particular change to be made to the contents of a row.
   /// </summary>
-  public sealed partial class Mutation : pb::IMessage<Mutation> {
+  public sealed partial class Mutation : pb::IMessage<Mutation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Mutation> _parser = new pb::MessageParser<Mutation>(() => new Mutation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3665,6 +4539,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (mutationCase_ == MutationOneofCase.SetCell) {
         output.WriteRawTag(10);
         output.WriteMessage(SetCell);
@@ -3684,7 +4561,33 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (mutationCase_ == MutationOneofCase.SetCell) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SetCell);
+      }
+      if (mutationCase_ == MutationOneofCase.DeleteFromColumn) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DeleteFromColumn);
+      }
+      if (mutationCase_ == MutationOneofCase.DeleteFromFamily) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DeleteFromFamily);
+      }
+      if (mutationCase_ == MutationOneofCase.DeleteFromRow) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DeleteFromRow);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3744,6 +4647,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3788,7 +4694,58 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell subBuilder = new global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell();
+            if (mutationCase_ == MutationOneofCase.SetCell) {
+              subBuilder.MergeFrom(SetCell);
+            }
+            input.ReadMessage(subBuilder);
+            SetCell = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn subBuilder = new global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn();
+            if (mutationCase_ == MutationOneofCase.DeleteFromColumn) {
+              subBuilder.MergeFrom(DeleteFromColumn);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteFromColumn = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromFamily subBuilder = new global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromFamily();
+            if (mutationCase_ == MutationOneofCase.DeleteFromFamily) {
+              subBuilder.MergeFrom(DeleteFromFamily);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteFromFamily = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromRow subBuilder = new global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromRow();
+            if (mutationCase_ == MutationOneofCase.DeleteFromRow) {
+              subBuilder.MergeFrom(DeleteFromRow);
+            }
+            input.ReadMessage(subBuilder);
+            DeleteFromRow = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Mutation message type.</summary>
@@ -3797,7 +4754,11 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <summary>
       /// A Mutation which sets the value of the specified cell.
       /// </summary>
-      public sealed partial class SetCell : pb::IMessage<SetCell> {
+      public sealed partial class SetCell : pb::IMessage<SetCell>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<SetCell> _parser = new pb::MessageParser<SetCell>(() => new SetCell());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3936,6 +4897,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (FamilyName.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(FamilyName);
@@ -3955,7 +4919,33 @@ namespace Google.Cloud.Bigtable.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FamilyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FamilyName);
+          }
+          if (ColumnQualifier.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(ColumnQualifier);
+          }
+          if (TimestampMicros != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(TimestampMicros);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteBytes(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -4000,6 +4990,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -4024,7 +5017,38 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FamilyName = input.ReadString();
+                break;
+              }
+              case 18: {
+                ColumnQualifier = input.ReadBytes();
+                break;
+              }
+              case 24: {
+                TimestampMicros = input.ReadInt64();
+                break;
+              }
+              case 34: {
+                Value = input.ReadBytes();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -4032,7 +5056,11 @@ namespace Google.Cloud.Bigtable.V2 {
       /// A Mutation which deletes cells from the specified column, optionally
       /// restricting the deletions to a given timestamp range.
       /// </summary>
-      public sealed partial class DeleteFromColumn : pb::IMessage<DeleteFromColumn> {
+      public sealed partial class DeleteFromColumn : pb::IMessage<DeleteFromColumn>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DeleteFromColumn> _parser = new pb::MessageParser<DeleteFromColumn>(() => new DeleteFromColumn());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4150,6 +5178,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (FamilyName.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(FamilyName);
@@ -4165,7 +5196,29 @@ namespace Google.Cloud.Bigtable.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FamilyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FamilyName);
+          }
+          if (ColumnQualifier.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteBytes(ColumnQualifier);
+          }
+          if (timeRange_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(TimeRange);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -4207,6 +5260,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -4230,14 +5286,48 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FamilyName = input.ReadString();
+                break;
+              }
+              case 18: {
+                ColumnQualifier = input.ReadBytes();
+                break;
+              }
+              case 26: {
+                if (timeRange_ == null) {
+                  TimeRange = new global::Google.Cloud.Bigtable.V2.TimestampRange();
+                }
+                input.ReadMessage(TimeRange);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// A Mutation which deletes all cells from the specified column family.
       /// </summary>
-      public sealed partial class DeleteFromFamily : pb::IMessage<DeleteFromFamily> {
+      public sealed partial class DeleteFromFamily : pb::IMessage<DeleteFromFamily>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DeleteFromFamily> _parser = new pb::MessageParser<DeleteFromFamily>(() => new DeleteFromFamily());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4320,6 +5410,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (FamilyName.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(FamilyName);
@@ -4327,7 +5420,21 @@ namespace Google.Cloud.Bigtable.V2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FamilyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FamilyName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -4354,6 +5461,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -4366,14 +5476,37 @@ namespace Google.Cloud.Bigtable.V2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FamilyName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// A Mutation which deletes all cells from the containing row.
       /// </summary>
-      public sealed partial class DeleteFromRow : pb::IMessage<DeleteFromRow> {
+      public sealed partial class DeleteFromRow : pb::IMessage<DeleteFromRow>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DeleteFromRow> _parser = new pb::MessageParser<DeleteFromRow>(() => new DeleteFromRow());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4438,10 +5571,23 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -4462,6 +5608,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -4470,7 +5619,22 @@ namespace Google.Cloud.Bigtable.V2 {
                 break;
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -4483,7 +5647,11 @@ namespace Google.Cloud.Bigtable.V2 {
   /// Specifies an atomic read/modify/write operation on the latest value of the
   /// specified column.
   /// </summary>
-  public sealed partial class ReadModifyWriteRule : pb::IMessage<ReadModifyWriteRule> {
+  public sealed partial class ReadModifyWriteRule : pb::IMessage<ReadModifyWriteRule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReadModifyWriteRule> _parser = new pb::MessageParser<ReadModifyWriteRule>(() => new ReadModifyWriteRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4652,6 +5820,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (FamilyName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(FamilyName);
@@ -4671,7 +5842,33 @@ namespace Google.Cloud.Bigtable.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FamilyName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FamilyName);
+      }
+      if (ColumnQualifier.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(ColumnQualifier);
+      }
+      if (ruleCase_ == RuleOneofCase.AppendValue) {
+        output.WriteRawTag(26);
+        output.WriteBytes(AppendValue);
+      }
+      if (ruleCase_ == RuleOneofCase.IncrementAmount) {
+        output.WriteRawTag(32);
+        output.WriteInt64(IncrementAmount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4719,6 +5916,9 @@ namespace Google.Cloud.Bigtable.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4743,7 +5943,38 @@ namespace Google.Cloud.Bigtable.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FamilyName = input.ReadString();
+            break;
+          }
+          case 18: {
+            ColumnQualifier = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            AppendValue = input.ReadBytes();
+            break;
+          }
+          case 32: {
+            IncrementAmount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

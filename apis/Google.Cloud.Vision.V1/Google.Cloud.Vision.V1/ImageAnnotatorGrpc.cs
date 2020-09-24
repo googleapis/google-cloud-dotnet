@@ -149,7 +149,7 @@ namespace Google.Cloud.Vision.V1 {
     {
       /// <summary>Creates a new client for ImageAnnotator</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ImageAnnotatorClient(grpc::Channel channel) : base(channel)
+      public ImageAnnotatorClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ImageAnnotator that uses a custom <c>CallInvoker</c>.</summary>

@@ -101,7 +101,11 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// <summary>
   /// Request message for `CreateReadSession`.
   /// </summary>
-  public sealed partial class CreateReadSessionRequest : pb::IMessage<CreateReadSessionRequest> {
+  public sealed partial class CreateReadSessionRequest : pb::IMessage<CreateReadSessionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateReadSessionRequest> _parser = new pb::MessageParser<CreateReadSessionRequest>(() => new CreateReadSessionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -225,6 +229,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -240,7 +247,29 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (readSession_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ReadSession);
+      }
+      if (MaxStreamCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxStreamCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -282,6 +311,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -305,14 +337,48 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (readSession_ == null) {
+              ReadSession = new global::Google.Cloud.BigQuery.Storage.V1.ReadSession();
+            }
+            input.ReadMessage(ReadSession);
+            break;
+          }
+          case 24: {
+            MaxStreamCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for `ReadRows`.
   /// </summary>
-  public sealed partial class ReadRowsRequest : pb::IMessage<ReadRowsRequest> {
+  public sealed partial class ReadRowsRequest : pb::IMessage<ReadRowsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReadRowsRequest> _parser = new pb::MessageParser<ReadRowsRequest>(() => new ReadRowsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -413,6 +479,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ReadStream.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ReadStream);
@@ -424,7 +493,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ReadStream.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ReadStream);
+      }
+      if (Offset != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Offset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -457,6 +544,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -473,14 +563,41 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ReadStream = input.ReadString();
+            break;
+          }
+          case 16: {
+            Offset = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Information on if the current connection is being throttled.
   /// </summary>
-  public sealed partial class ThrottleState : pb::IMessage<ThrottleState> {
+  public sealed partial class ThrottleState : pb::IMessage<ThrottleState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ThrottleState> _parser = new pb::MessageParser<ThrottleState>(() => new ThrottleState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -563,6 +680,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ThrottlePercent != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(ThrottlePercent);
@@ -570,7 +690,21 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ThrottlePercent != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ThrottlePercent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -597,6 +731,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -609,14 +746,37 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ThrottlePercent = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Estimated stream statistics for a given Stream.
   /// </summary>
-  public sealed partial class StreamStats : pb::IMessage<StreamStats> {
+  public sealed partial class StreamStats : pb::IMessage<StreamStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StreamStats> _parser = new pb::MessageParser<StreamStats>(() => new StreamStats());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -698,6 +858,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (progress_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(Progress);
@@ -705,7 +868,21 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (progress_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Progress);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -735,6 +912,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -750,13 +930,39 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (progress_ == null) {
+              Progress = new global::Google.Cloud.BigQuery.Storage.V1.StreamStats.Types.Progress();
+            }
+            input.ReadMessage(Progress);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the StreamStats message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Progress : pb::IMessage<Progress> {
+      public sealed partial class Progress : pb::IMessage<Progress>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Progress> _parser = new pb::MessageParser<Progress>(() => new Progress());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -867,6 +1073,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (AtResponseStart != 0D) {
             output.WriteRawTag(9);
             output.WriteDouble(AtResponseStart);
@@ -878,7 +1087,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AtResponseStart != 0D) {
+            output.WriteRawTag(9);
+            output.WriteDouble(AtResponseStart);
+          }
+          if (AtResponseEnd != 0D) {
+            output.WriteRawTag(17);
+            output.WriteDouble(AtResponseEnd);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -911,6 +1138,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -927,7 +1157,30 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                AtResponseStart = input.ReadDouble();
+                break;
+              }
+              case 17: {
+                AtResponseEnd = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -940,7 +1193,11 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
   /// Response from calling `ReadRows` may include row data, progress and
   /// throttling information.
   /// </summary>
-  public sealed partial class ReadRowsResponse : pb::IMessage<ReadRowsResponse> {
+  public sealed partial class ReadRowsResponse : pb::IMessage<ReadRowsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ReadRowsResponse> _parser = new pb::MessageParser<ReadRowsResponse>(() => new ReadRowsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1119,6 +1376,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (stats_ != null) {
         output.WriteRawTag(18);
         output.WriteMessage(Stats);
@@ -1142,7 +1402,37 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (stats_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stats);
+      }
+      if (rowsCase_ == RowsOneofCase.AvroRows) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AvroRows);
+      }
+      if (rowsCase_ == RowsOneofCase.ArrowRecordBatch) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ArrowRecordBatch);
+      }
+      if (throttleState_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ThrottleState);
+      }
+      if (RowCount != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(RowCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1208,6 +1498,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1252,14 +1545,69 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (stats_ == null) {
+              Stats = new global::Google.Cloud.BigQuery.Storage.V1.StreamStats();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.BigQuery.Storage.V1.AvroRows subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.AvroRows();
+            if (rowsCase_ == RowsOneofCase.AvroRows) {
+              subBuilder.MergeFrom(AvroRows);
+            }
+            input.ReadMessage(subBuilder);
+            AvroRows = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch subBuilder = new global::Google.Cloud.BigQuery.Storage.V1.ArrowRecordBatch();
+            if (rowsCase_ == RowsOneofCase.ArrowRecordBatch) {
+              subBuilder.MergeFrom(ArrowRecordBatch);
+            }
+            input.ReadMessage(subBuilder);
+            ArrowRecordBatch = subBuilder;
+            break;
+          }
+          case 42: {
+            if (throttleState_ == null) {
+              ThrottleState = new global::Google.Cloud.BigQuery.Storage.V1.ThrottleState();
+            }
+            input.ReadMessage(ThrottleState);
+            break;
+          }
+          case 48: {
+            RowCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request message for `SplitReadStream`.
   /// </summary>
-  public sealed partial class SplitReadStreamRequest : pb::IMessage<SplitReadStreamRequest> {
+  public sealed partial class SplitReadStreamRequest : pb::IMessage<SplitReadStreamRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SplitReadStreamRequest> _parser = new pb::MessageParser<SplitReadStreamRequest>(() => new SplitReadStreamRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1364,6 +1712,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1375,7 +1726,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Fraction != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Fraction);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1408,6 +1777,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1424,14 +1796,41 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 17: {
+            Fraction = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Response message for `SplitReadStream`.
   /// </summary>
-  public sealed partial class SplitReadStreamResponse : pb::IMessage<SplitReadStreamResponse> {
+  public sealed partial class SplitReadStreamResponse : pb::IMessage<SplitReadStreamResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SplitReadStreamResponse> _parser = new pb::MessageParser<SplitReadStreamResponse>(() => new SplitReadStreamResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1533,6 +1932,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (primaryStream_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(PrimaryStream);
@@ -1544,7 +1946,25 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (primaryStream_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PrimaryStream);
+      }
+      if (remainderStream_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RemainderStream);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1583,6 +2003,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1605,7 +2028,36 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (primaryStream_ == null) {
+              PrimaryStream = new global::Google.Cloud.BigQuery.Storage.V1.ReadStream();
+            }
+            input.ReadMessage(PrimaryStream);
+            break;
+          }
+          case 18: {
+            if (remainderStream_ == null) {
+              RemainderStream = new global::Google.Cloud.BigQuery.Storage.V1.ReadStream();
+            }
+            input.ReadMessage(RemainderStream);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

@@ -167,7 +167,7 @@ namespace Google.Cloud.Gaming.V1 {
     {
       /// <summary>Creates a new client for RealmsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public RealmsServiceClient(grpc::Channel channel) : base(channel)
+      public RealmsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for RealmsService that uses a custom <c>CallInvoker</c>.</summary>

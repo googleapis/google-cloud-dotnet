@@ -233,7 +233,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
     {
       /// <summary>Creates a new client for TablesService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public TablesServiceClient(grpc::Channel channel) : base(channel)
+      public TablesServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for TablesService that uses a custom <c>CallInvoker</c>.</summary>

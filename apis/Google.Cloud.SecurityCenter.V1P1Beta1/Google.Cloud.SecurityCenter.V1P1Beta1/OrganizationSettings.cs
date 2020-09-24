@@ -60,7 +60,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
   /// User specified settings that are attached to the Security Command
   /// Center organization.
   /// </summary>
-  public sealed partial class OrganizationSettings : pb::IMessage<OrganizationSettings> {
+  public sealed partial class OrganizationSettings : pb::IMessage<OrganizationSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OrganizationSettings> _parser = new pb::MessageParser<OrganizationSettings>(() => new OrganizationSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -182,6 +186,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -197,7 +204,29 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (EnableAssetDiscovery != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnableAssetDiscovery);
+      }
+      if (assetDiscoveryConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AssetDiscoveryConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -239,6 +268,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -262,7 +294,37 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            EnableAssetDiscovery = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (assetDiscoveryConfig_ == null) {
+              AssetDiscoveryConfig = new global::Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings.Types.AssetDiscoveryConfig();
+            }
+            input.ReadMessage(AssetDiscoveryConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the OrganizationSettings message type.</summary>
@@ -271,7 +333,11 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
       /// <summary>
       /// The configuration used for Asset Discovery runs.
       /// </summary>
-      public sealed partial class AssetDiscoveryConfig : pb::IMessage<AssetDiscoveryConfig> {
+      public sealed partial class AssetDiscoveryConfig : pb::IMessage<AssetDiscoveryConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<AssetDiscoveryConfig> _parser = new pb::MessageParser<AssetDiscoveryConfig>(() => new AssetDiscoveryConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -369,6 +435,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           projectIds_.WriteTo(output, _repeated_projectIds_codec);
           if (InclusionMode != global::Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode.Unspecified) {
             output.WriteRawTag(16);
@@ -377,7 +446,22 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          projectIds_.WriteTo(ref output, _repeated_projectIds_codec);
+          if (InclusionMode != global::Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) InclusionMode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -406,6 +490,9 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -422,7 +509,30 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                projectIds_.AddEntriesFrom(ref input, _repeated_projectIds_codec);
+                break;
+              }
+              case 16: {
+                InclusionMode = (global::Google.Cloud.SecurityCenter.V1P1Beta1.OrganizationSettings.Types.AssetDiscoveryConfig.Types.InclusionMode) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the AssetDiscoveryConfig message type.</summary>

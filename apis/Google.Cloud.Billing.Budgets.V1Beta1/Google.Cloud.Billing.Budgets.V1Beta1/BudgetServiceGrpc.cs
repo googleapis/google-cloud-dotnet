@@ -163,7 +163,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     {
       /// <summary>Creates a new client for BudgetService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public BudgetServiceClient(grpc::Channel channel) : base(channel)
+      public BudgetServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for BudgetService that uses a custom <c>CallInvoker</c>.</summary>

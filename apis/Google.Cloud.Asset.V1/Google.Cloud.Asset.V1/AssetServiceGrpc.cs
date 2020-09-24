@@ -248,7 +248,7 @@ namespace Google.Cloud.Asset.V1 {
     {
       /// <summary>Creates a new client for AssetService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public AssetServiceClient(grpc::Channel channel) : base(channel)
+      public AssetServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AssetService that uses a custom <c>CallInvoker</c>.</summary>

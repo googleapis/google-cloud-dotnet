@@ -274,7 +274,7 @@ namespace Google.Cloud.Redis.V1 {
     {
       /// <summary>Creates a new client for CloudRedis</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CloudRedisClient(grpc::Channel channel) : base(channel)
+      public CloudRedisClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudRedis that uses a custom <c>CallInvoker</c>.</summary>

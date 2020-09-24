@@ -340,7 +340,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     {
       /// <summary>Creates a new client for SecurityCenterSettingsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public SecurityCenterSettingsServiceClient(grpc::Channel channel) : base(channel)
+      public SecurityCenterSettingsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SecurityCenterSettingsService that uses a custom <c>CallInvoker</c>.</summary>

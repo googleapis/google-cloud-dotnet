@@ -68,7 +68,11 @@ namespace Google.Cloud.AutoML.V1 {
   /// <summary>
   /// Evaluation results of a model.
   /// </summary>
-  public sealed partial class ModelEvaluation : pb::IMessage<ModelEvaluation> {
+  public sealed partial class ModelEvaluation : pb::IMessage<ModelEvaluation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ModelEvaluation> _parser = new pb::MessageParser<ModelEvaluation>(() => new ModelEvaluation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -372,6 +376,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -415,7 +422,57 @@ namespace Google.Cloud.AutoML.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (AnnotationSpecId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AnnotationSpecId);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreateTime);
+      }
+      if (EvaluatedExampleCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(EvaluatedExampleCount);
+      }
+      if (metricsCase_ == MetricsOneofCase.ClassificationEvaluationMetrics) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ClassificationEvaluationMetrics);
+      }
+      if (metricsCase_ == MetricsOneofCase.TranslationEvaluationMetrics) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TranslationEvaluationMetrics);
+      }
+      if (metricsCase_ == MetricsOneofCase.TextSentimentEvaluationMetrics) {
+        output.WriteRawTag(90);
+        output.WriteMessage(TextSentimentEvaluationMetrics);
+      }
+      if (metricsCase_ == MetricsOneofCase.ImageObjectDetectionEvaluationMetrics) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ImageObjectDetectionEvaluationMetrics);
+      }
+      if (metricsCase_ == MetricsOneofCase.TextExtractionEvaluationMetrics) {
+        output.WriteRawTag(106);
+        output.WriteMessage(TextExtractionEvaluationMetrics);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -517,6 +574,9 @@ namespace Google.Cloud.AutoML.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -593,7 +653,90 @@ namespace Google.Cloud.AutoML.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            AnnotationSpecId = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 48: {
+            EvaluatedExampleCount = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.AutoML.V1.ClassificationEvaluationMetrics subBuilder = new global::Google.Cloud.AutoML.V1.ClassificationEvaluationMetrics();
+            if (metricsCase_ == MetricsOneofCase.ClassificationEvaluationMetrics) {
+              subBuilder.MergeFrom(ClassificationEvaluationMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            ClassificationEvaluationMetrics = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics subBuilder = new global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics();
+            if (metricsCase_ == MetricsOneofCase.TranslationEvaluationMetrics) {
+              subBuilder.MergeFrom(TranslationEvaluationMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            TranslationEvaluationMetrics = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics subBuilder = new global::Google.Cloud.AutoML.V1.TextSentimentEvaluationMetrics();
+            if (metricsCase_ == MetricsOneofCase.TextSentimentEvaluationMetrics) {
+              subBuilder.MergeFrom(TextSentimentEvaluationMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            TextSentimentEvaluationMetrics = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.AutoML.V1.ImageObjectDetectionEvaluationMetrics subBuilder = new global::Google.Cloud.AutoML.V1.ImageObjectDetectionEvaluationMetrics();
+            if (metricsCase_ == MetricsOneofCase.ImageObjectDetectionEvaluationMetrics) {
+              subBuilder.MergeFrom(ImageObjectDetectionEvaluationMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            ImageObjectDetectionEvaluationMetrics = subBuilder;
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics subBuilder = new global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics();
+            if (metricsCase_ == MetricsOneofCase.TextExtractionEvaluationMetrics) {
+              subBuilder.MergeFrom(TextExtractionEvaluationMetrics);
+            }
+            input.ReadMessage(subBuilder);
+            TextExtractionEvaluationMetrics = subBuilder;
+            break;
+          }
+          case 122: {
+            DisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

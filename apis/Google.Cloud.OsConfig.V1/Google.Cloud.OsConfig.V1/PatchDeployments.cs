@@ -116,7 +116,11 @@ namespace Google.Cloud.OsConfig.V1 {
   /// managing patch deployments, see [Scheduling patch
   /// jobs](https://cloud.google.com/compute/docs/os-patch-management/schedule-patch-jobs).
   /// </summary>
-  public sealed partial class PatchDeployment : pb::IMessage<PatchDeployment> {
+  public sealed partial class PatchDeployment : pb::IMessage<PatchDeployment>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PatchDeployment> _parser = new pb::MessageParser<PatchDeployment>(() => new PatchDeployment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -387,6 +391,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -430,7 +437,57 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (instanceFilter_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InstanceFilter);
+      }
+      if (patchConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(PatchConfig);
+      }
+      if (duration_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Duration);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.OneTimeSchedule) {
+        output.WriteRawTag(50);
+        output.WriteMessage(OneTimeSchedule);
+      }
+      if (scheduleCase_ == ScheduleOneofCase.RecurringSchedule) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RecurringSchedule);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CreateTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(UpdateTime);
+      }
+      if (lastExecuteTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LastExecuteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -538,6 +595,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -614,7 +674,90 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (instanceFilter_ == null) {
+              InstanceFilter = new global::Google.Cloud.OsConfig.V1.PatchInstanceFilter();
+            }
+            input.ReadMessage(InstanceFilter);
+            break;
+          }
+          case 34: {
+            if (patchConfig_ == null) {
+              PatchConfig = new global::Google.Cloud.OsConfig.V1.PatchConfig();
+            }
+            input.ReadMessage(PatchConfig);
+            break;
+          }
+          case 42: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.OsConfig.V1.OneTimeSchedule subBuilder = new global::Google.Cloud.OsConfig.V1.OneTimeSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.OneTimeSchedule) {
+              subBuilder.MergeFrom(OneTimeSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            OneTimeSchedule = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.OsConfig.V1.RecurringSchedule subBuilder = new global::Google.Cloud.OsConfig.V1.RecurringSchedule();
+            if (scheduleCase_ == ScheduleOneofCase.RecurringSchedule) {
+              subBuilder.MergeFrom(RecurringSchedule);
+            }
+            input.ReadMessage(subBuilder);
+            RecurringSchedule = subBuilder;
+            break;
+          }
+          case 66: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 74: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82: {
+            if (lastExecuteTime_ == null) {
+              LastExecuteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastExecuteTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -622,7 +765,11 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Sets the time for a one time patch deployment. Timestamp is in
   /// [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
   /// </summary>
-  public sealed partial class OneTimeSchedule : pb::IMessage<OneTimeSchedule> {
+  public sealed partial class OneTimeSchedule : pb::IMessage<OneTimeSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OneTimeSchedule> _parser = new pb::MessageParser<OneTimeSchedule>(() => new OneTimeSchedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -704,6 +851,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (executeTime_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(ExecuteTime);
@@ -711,7 +861,21 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (executeTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ExecuteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -741,6 +905,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -756,14 +923,40 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (executeTime_ == null) {
+              ExecuteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExecuteTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Sets the time for recurring patch deployments.
   /// </summary>
-  public sealed partial class RecurringSchedule : pb::IMessage<RecurringSchedule> {
+  public sealed partial class RecurringSchedule : pb::IMessage<RecurringSchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecurringSchedule> _parser = new pb::MessageParser<RecurringSchedule>(() => new RecurringSchedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1012,6 +1205,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (timeZone_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(TimeZone);
@@ -1051,7 +1247,53 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (timeZone_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TimeZone);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EndTime);
+      }
+      if (timeOfDay_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TimeOfDay);
+      }
+      if (Frequency != global::Google.Cloud.OsConfig.V1.RecurringSchedule.Types.Frequency.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Frequency);
+      }
+      if (scheduleConfigCase_ == ScheduleConfigOneofCase.Weekly) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Weekly);
+      }
+      if (scheduleConfigCase_ == ScheduleConfigOneofCase.Monthly) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Monthly);
+      }
+      if (lastExecuteTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LastExecuteTime);
+      }
+      if (nextExecuteTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(NextExecuteTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1153,6 +1395,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1225,7 +1470,86 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (timeZone_ == null) {
+              TimeZone = new global::Google.Type.TimeZone();
+            }
+            input.ReadMessage(TimeZone);
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 34: {
+            if (timeOfDay_ == null) {
+              TimeOfDay = new global::Google.Type.TimeOfDay();
+            }
+            input.ReadMessage(TimeOfDay);
+            break;
+          }
+          case 40: {
+            Frequency = (global::Google.Cloud.OsConfig.V1.RecurringSchedule.Types.Frequency) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            global::Google.Cloud.OsConfig.V1.WeeklySchedule subBuilder = new global::Google.Cloud.OsConfig.V1.WeeklySchedule();
+            if (scheduleConfigCase_ == ScheduleConfigOneofCase.Weekly) {
+              subBuilder.MergeFrom(Weekly);
+            }
+            input.ReadMessage(subBuilder);
+            Weekly = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.OsConfig.V1.MonthlySchedule subBuilder = new global::Google.Cloud.OsConfig.V1.MonthlySchedule();
+            if (scheduleConfigCase_ == ScheduleConfigOneofCase.Monthly) {
+              subBuilder.MergeFrom(Monthly);
+            }
+            input.ReadMessage(subBuilder);
+            Monthly = subBuilder;
+            break;
+          }
+          case 74: {
+            if (lastExecuteTime_ == null) {
+              LastExecuteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastExecuteTime);
+            break;
+          }
+          case 82: {
+            if (nextExecuteTime_ == null) {
+              NextExecuteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NextExecuteTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RecurringSchedule message type.</summary>
@@ -1259,7 +1583,11 @@ namespace Google.Cloud.OsConfig.V1 {
   /// <summary>
   /// Represents a weekly schedule.
   /// </summary>
-  public sealed partial class WeeklySchedule : pb::IMessage<WeeklySchedule> {
+  public sealed partial class WeeklySchedule : pb::IMessage<WeeklySchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WeeklySchedule> _parser = new pb::MessageParser<WeeklySchedule>(() => new WeeklySchedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1341,6 +1669,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) DayOfWeek);
@@ -1348,7 +1679,21 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DayOfWeek);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1375,6 +1720,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1387,7 +1735,26 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DayOfWeek = (global::Google.Type.DayOfWeek) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1395,7 +1762,11 @@ namespace Google.Cloud.OsConfig.V1 {
   /// Represents a monthly schedule. An example of a valid monthly schedule is
   /// "on the third Tuesday of the month" or "on the 15th of the month".
   /// </summary>
-  public sealed partial class MonthlySchedule : pb::IMessage<MonthlySchedule> {
+  public sealed partial class MonthlySchedule : pb::IMessage<MonthlySchedule>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<MonthlySchedule> _parser = new pb::MessageParser<MonthlySchedule>(() => new MonthlySchedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1525,6 +1896,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (dayOfMonthCase_ == DayOfMonthOneofCase.WeekDayOfMonth) {
         output.WriteRawTag(10);
         output.WriteMessage(WeekDayOfMonth);
@@ -1536,7 +1910,25 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dayOfMonthCase_ == DayOfMonthOneofCase.WeekDayOfMonth) {
+        output.WriteRawTag(10);
+        output.WriteMessage(WeekDayOfMonth);
+      }
+      if (dayOfMonthCase_ == DayOfMonthOneofCase.MonthDay) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MonthDay);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1575,6 +1967,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1596,14 +1991,46 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.OsConfig.V1.WeekDayOfMonth subBuilder = new global::Google.Cloud.OsConfig.V1.WeekDayOfMonth();
+            if (dayOfMonthCase_ == DayOfMonthOneofCase.WeekDayOfMonth) {
+              subBuilder.MergeFrom(WeekDayOfMonth);
+            }
+            input.ReadMessage(subBuilder);
+            WeekDayOfMonth = subBuilder;
+            break;
+          }
+          case 16: {
+            MonthDay = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Represents one week day in a month. An example is "the 4th Sunday".
   /// </summary>
-  public sealed partial class WeekDayOfMonth : pb::IMessage<WeekDayOfMonth> {
+  public sealed partial class WeekDayOfMonth : pb::IMessage<WeekDayOfMonth>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WeekDayOfMonth> _parser = new pb::MessageParser<WeekDayOfMonth>(() => new WeekDayOfMonth());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1703,6 +2130,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (WeekOrdinal != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(WeekOrdinal);
@@ -1714,7 +2144,25 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WeekOrdinal != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(WeekOrdinal);
+      }
+      if (DayOfWeek != global::Google.Type.DayOfWeek.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) DayOfWeek);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1747,6 +2195,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1763,14 +2214,41 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            WeekOrdinal = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            DayOfWeek = (global::Google.Type.DayOfWeek) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request message for creating a patch deployment.
   /// </summary>
-  public sealed partial class CreatePatchDeploymentRequest : pb::IMessage<CreatePatchDeploymentRequest> {
+  public sealed partial class CreatePatchDeploymentRequest : pb::IMessage<CreatePatchDeploymentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreatePatchDeploymentRequest> _parser = new pb::MessageParser<CreatePatchDeploymentRequest>(() => new CreatePatchDeploymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1892,6 +2370,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -1907,7 +2388,29 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PatchDeploymentId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PatchDeploymentId);
+      }
+      if (patchDeployment_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PatchDeployment);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1949,6 +2452,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1972,14 +2478,48 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            PatchDeploymentId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (patchDeployment_ == null) {
+              PatchDeployment = new global::Google.Cloud.OsConfig.V1.PatchDeployment();
+            }
+            input.ReadMessage(PatchDeployment);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request message for retrieving a patch deployment.
   /// </summary>
-  public sealed partial class GetPatchDeploymentRequest : pb::IMessage<GetPatchDeploymentRequest> {
+  public sealed partial class GetPatchDeploymentRequest : pb::IMessage<GetPatchDeploymentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetPatchDeploymentRequest> _parser = new pb::MessageParser<GetPatchDeploymentRequest>(() => new GetPatchDeploymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2062,6 +2602,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2069,7 +2612,21 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2096,6 +2653,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2108,14 +2668,37 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request message for listing patch deployments.
   /// </summary>
-  public sealed partial class ListPatchDeploymentsRequest : pb::IMessage<ListPatchDeploymentsRequest> {
+  public sealed partial class ListPatchDeploymentsRequest : pb::IMessage<ListPatchDeploymentsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListPatchDeploymentsRequest> _parser = new pb::MessageParser<ListPatchDeploymentsRequest>(() => new ListPatchDeploymentsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2232,6 +2815,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -2247,7 +2833,29 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2286,6 +2894,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2306,14 +2917,45 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A response message for listing patch deployments.
   /// </summary>
-  public sealed partial class ListPatchDeploymentsResponse : pb::IMessage<ListPatchDeploymentsResponse> {
+  public sealed partial class ListPatchDeploymentsResponse : pb::IMessage<ListPatchDeploymentsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListPatchDeploymentsResponse> _parser = new pb::MessageParser<ListPatchDeploymentsResponse>(() => new ListPatchDeploymentsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2412,6 +3054,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       patchDeployments_.WriteTo(output, _repeated_patchDeployments_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -2420,7 +3065,22 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      patchDeployments_.WriteTo(ref output, _repeated_patchDeployments_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2449,6 +3109,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2465,14 +3128,41 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            patchDeployments_.AddEntriesFrom(ref input, _repeated_patchDeployments_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A request message for deleting a patch deployment.
   /// </summary>
-  public sealed partial class DeletePatchDeploymentRequest : pb::IMessage<DeletePatchDeploymentRequest> {
+  public sealed partial class DeletePatchDeploymentRequest : pb::IMessage<DeletePatchDeploymentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeletePatchDeploymentRequest> _parser = new pb::MessageParser<DeletePatchDeploymentRequest>(() => new DeletePatchDeploymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2555,6 +3245,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -2562,7 +3255,21 @@ namespace Google.Cloud.OsConfig.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2589,6 +3296,9 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2601,7 +3311,26 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

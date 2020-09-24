@@ -59,7 +59,11 @@ namespace Google.Cloud.Talent.V4 {
   /// entity that owns job postings, that is, the hiring entity responsible for
   /// employing applicants for the job position.
   /// </summary>
-  public sealed partial class Company : pb::IMessage<Company> {
+  public sealed partial class Company : pb::IMessage<Company>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Company> _parser = new pb::MessageParser<Company>(() => new Company());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -377,6 +381,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -429,7 +436,66 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (ExternalId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ExternalId);
+      }
+      if (Size != global::Google.Cloud.Talent.V4.CompanySize.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Size);
+      }
+      if (HeadquartersAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(HeadquartersAddress);
+      }
+      if (HiringAgency != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(HiringAgency);
+      }
+      if (EeoText.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(EeoText);
+      }
+      if (WebsiteUri.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(WebsiteUri);
+      }
+      if (CareerSiteUri.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(CareerSiteUri);
+      }
+      if (ImageUri.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(ImageUri);
+      }
+      keywordSearchableJobCustomAttributes_.WriteTo(ref output, _repeated_keywordSearchableJobCustomAttributes_codec);
+      if (derivedInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(DerivedInfo);
+      }
+      if (Suspended != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(Suspended);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -527,6 +593,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -590,7 +659,77 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ExternalId = input.ReadString();
+            break;
+          }
+          case 32: {
+            Size = (global::Google.Cloud.Talent.V4.CompanySize) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            HeadquartersAddress = input.ReadString();
+            break;
+          }
+          case 48: {
+            HiringAgency = input.ReadBool();
+            break;
+          }
+          case 58: {
+            EeoText = input.ReadString();
+            break;
+          }
+          case 66: {
+            WebsiteUri = input.ReadString();
+            break;
+          }
+          case 74: {
+            CareerSiteUri = input.ReadString();
+            break;
+          }
+          case 82: {
+            ImageUri = input.ReadString();
+            break;
+          }
+          case 90: {
+            keywordSearchableJobCustomAttributes_.AddEntriesFrom(ref input, _repeated_keywordSearchableJobCustomAttributes_codec);
+            break;
+          }
+          case 98: {
+            if (derivedInfo_ == null) {
+              DerivedInfo = new global::Google.Cloud.Talent.V4.Company.Types.DerivedInfo();
+            }
+            input.ReadMessage(DerivedInfo);
+            break;
+          }
+          case 104: {
+            Suspended = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Company message type.</summary>
@@ -599,7 +738,11 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Derived details about the company.
       /// </summary>
-      public sealed partial class DerivedInfo : pb::IMessage<DerivedInfo> {
+      public sealed partial class DerivedInfo : pb::IMessage<DerivedInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DerivedInfo> _parser = new pb::MessageParser<DerivedInfo>(() => new DerivedInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -683,6 +826,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (headquartersLocation_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(HeadquartersLocation);
@@ -690,7 +836,21 @@ namespace Google.Cloud.Talent.V4 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (headquartersLocation_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(HeadquartersLocation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -720,6 +880,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -735,7 +898,29 @@ namespace Google.Cloud.Talent.V4 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (headquartersLocation_ == null) {
+                  HeadquartersLocation = new global::Google.Cloud.Talent.V4.Location();
+                }
+                input.ReadMessage(HeadquartersLocation);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

@@ -81,7 +81,11 @@ namespace Google.Cloud.DataCatalog.V1 {
   /// A result that appears in the response of a search request. Each result
   /// captures details of one entry that matches the search.
   /// </summary>
-  public sealed partial class SearchCatalogResult : pb::IMessage<SearchCatalogResult> {
+  public sealed partial class SearchCatalogResult : pb::IMessage<SearchCatalogResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SearchCatalogResult> _parser = new pb::MessageParser<SearchCatalogResult>(() => new SearchCatalogResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -290,6 +294,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SearchResultType != global::Google.Cloud.DataCatalog.V1.SearchResultType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) SearchResultType);
@@ -317,7 +324,41 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SearchResultType != global::Google.Cloud.DataCatalog.V1.SearchResultType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SearchResultType);
+      }
+      if (SearchResultSubtype.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SearchResultSubtype);
+      }
+      if (RelativeResourceName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RelativeResourceName);
+      }
+      if (LinkedResource.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LinkedResource);
+      }
+      if (systemCase_ == SystemOneofCase.IntegratedSystem) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) IntegratedSystem);
+      }
+      if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) {
+        output.WriteRawTag(74);
+        output.WriteString(UserSpecifiedSystem);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -377,6 +418,9 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -410,7 +454,47 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SearchResultType = (global::Google.Cloud.DataCatalog.V1.SearchResultType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            SearchResultSubtype = input.ReadString();
+            break;
+          }
+          case 26: {
+            RelativeResourceName = input.ReadString();
+            break;
+          }
+          case 34: {
+            LinkedResource = input.ReadString();
+            break;
+          }
+          case 64: {
+            system_ = input.ReadEnum();
+            systemCase_ = SystemOneofCase.IntegratedSystem;
+            break;
+          }
+          case 74: {
+            UserSpecifiedSystem = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

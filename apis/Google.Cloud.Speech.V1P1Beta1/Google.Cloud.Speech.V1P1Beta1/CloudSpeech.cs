@@ -178,7 +178,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// The top-level message sent by the client for the `Recognize` method.
   /// </summary>
-  public sealed partial class RecognizeRequest : pb::IMessage<RecognizeRequest> {
+  public sealed partial class RecognizeRequest : pb::IMessage<RecognizeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecognizeRequest> _parser = new pb::MessageParser<RecognizeRequest>(() => new RecognizeRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -278,6 +282,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (config_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Config);
@@ -289,7 +296,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (config_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (audio_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -328,6 +353,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -350,7 +378,36 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 18: {
+            if (audio_ == null) {
+              Audio = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
+            }
+            input.ReadMessage(Audio);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -358,7 +415,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// The top-level message sent by the client for the `LongRunningRecognize`
   /// method.
   /// </summary>
-  public sealed partial class LongRunningRecognizeRequest : pb::IMessage<LongRunningRecognizeRequest> {
+  public sealed partial class LongRunningRecognizeRequest : pb::IMessage<LongRunningRecognizeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LongRunningRecognizeRequest> _parser = new pb::MessageParser<LongRunningRecognizeRequest>(() => new LongRunningRecognizeRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -458,6 +519,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (config_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Config);
@@ -469,7 +533,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (config_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (audio_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -508,6 +590,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -530,7 +615,36 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 18: {
+            if (audio_ == null) {
+              Audio = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionAudio();
+            }
+            input.ReadMessage(Audio);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -541,7 +655,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// `audio_content`. All subsequent messages must contain `audio_content` and
   /// must not contain a `streaming_config` message.
   /// </summary>
-  public sealed partial class StreamingRecognizeRequest : pb::IMessage<StreamingRecognizeRequest> {
+  public sealed partial class StreamingRecognizeRequest : pb::IMessage<StreamingRecognizeRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StreamingRecognizeRequest> _parser = new pb::MessageParser<StreamingRecognizeRequest>(() => new StreamingRecognizeRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -677,6 +795,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
         output.WriteRawTag(10);
         output.WriteMessage(StreamingConfig);
@@ -688,7 +809,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StreamingConfig);
+      }
+      if (streamingRequestCase_ == StreamingRequestOneofCase.AudioContent) {
+        output.WriteRawTag(18);
+        output.WriteBytes(AudioContent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -727,6 +866,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -748,7 +890,35 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognitionConfig subBuilder = new global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognitionConfig();
+            if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
+              subBuilder.MergeFrom(StreamingConfig);
+            }
+            input.ReadMessage(subBuilder);
+            StreamingConfig = subBuilder;
+            break;
+          }
+          case 18: {
+            AudioContent = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -756,7 +926,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Provides information to the recognizer that specifies how to process the
   /// request.
   /// </summary>
-  public sealed partial class StreamingRecognitionConfig : pb::IMessage<StreamingRecognitionConfig> {
+  public sealed partial class StreamingRecognitionConfig : pb::IMessage<StreamingRecognitionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StreamingRecognitionConfig> _parser = new pb::MessageParser<StreamingRecognitionConfig>(() => new StreamingRecognitionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -886,6 +1060,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (config_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Config);
@@ -901,7 +1078,29 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (config_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (SingleUtterance != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(SingleUtterance);
+      }
+      if (InterimResults != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(InterimResults);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -943,6 +1142,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -966,7 +1168,37 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (config_ == null) {
+              Config = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+          case 16: {
+            SingleUtterance = input.ReadBool();
+            break;
+          }
+          case 24: {
+            InterimResults = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -974,7 +1206,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Provides information to the recognizer that specifies how to process the
   /// request.
   /// </summary>
-  public sealed partial class RecognitionConfig : pb::IMessage<RecognitionConfig> {
+  public sealed partial class RecognitionConfig : pb::IMessage<RecognitionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecognitionConfig> _parser = new pb::MessageParser<RecognitionConfig>(() => new RecognitionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1475,6 +1711,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Encoding != global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding.EncodingUnspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Encoding);
@@ -1548,7 +1787,87 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Encoding != global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding.EncodingUnspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Encoding);
+      }
+      if (SampleRateHertz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHertz);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LanguageCode);
+      }
+      if (MaxAlternatives != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxAlternatives);
+      }
+      if (ProfanityFilter != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(ProfanityFilter);
+      }
+      speechContexts_.WriteTo(ref output, _repeated_speechContexts_codec);
+      if (AudioChannelCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(AudioChannelCount);
+      }
+      if (EnableWordTimeOffsets != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(EnableWordTimeOffsets);
+      }
+      if (metadata_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Metadata);
+      }
+      if (EnableAutomaticPunctuation != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(EnableAutomaticPunctuation);
+      }
+      if (EnableSeparateRecognitionPerChannel != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(EnableSeparateRecognitionPerChannel);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Model);
+      }
+      if (UseEnhanced != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(UseEnhanced);
+      }
+      if (EnableWordConfidence != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(EnableWordConfidence);
+      }
+      if (EnableSpeakerDiarization != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(EnableSpeakerDiarization);
+      }
+      if (DiarizationSpeakerCount != 0) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt32(DiarizationSpeakerCount);
+      }
+      alternativeLanguageCodes_.WriteTo(ref output, _repeated_alternativeLanguageCodes_codec);
+      if (diarizationConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(DiarizationConfig);
+      }
+      if (adaptation_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(Adaptation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1684,6 +2003,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1777,7 +2099,107 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Encoding = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionConfig.Types.AudioEncoding) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            SampleRateHertz = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 32: {
+            MaxAlternatives = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            ProfanityFilter = input.ReadBool();
+            break;
+          }
+          case 50: {
+            speechContexts_.AddEntriesFrom(ref input, _repeated_speechContexts_codec);
+            break;
+          }
+          case 56: {
+            AudioChannelCount = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            EnableWordTimeOffsets = input.ReadBool();
+            break;
+          }
+          case 74: {
+            if (metadata_ == null) {
+              Metadata = new global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata();
+            }
+            input.ReadMessage(Metadata);
+            break;
+          }
+          case 88: {
+            EnableAutomaticPunctuation = input.ReadBool();
+            break;
+          }
+          case 96: {
+            EnableSeparateRecognitionPerChannel = input.ReadBool();
+            break;
+          }
+          case 106: {
+            Model = input.ReadString();
+            break;
+          }
+          case 112: {
+            UseEnhanced = input.ReadBool();
+            break;
+          }
+          case 120: {
+            EnableWordConfidence = input.ReadBool();
+            break;
+          }
+          case 128: {
+            EnableSpeakerDiarization = input.ReadBool();
+            break;
+          }
+          case 136: {
+            DiarizationSpeakerCount = input.ReadInt32();
+            break;
+          }
+          case 146: {
+            alternativeLanguageCodes_.AddEntriesFrom(ref input, _repeated_alternativeLanguageCodes_codec);
+            break;
+          }
+          case 154: {
+            if (diarizationConfig_ == null) {
+              DiarizationConfig = new global::Google.Cloud.Speech.V1P1Beta1.SpeakerDiarizationConfig();
+            }
+            input.ReadMessage(DiarizationConfig);
+            break;
+          }
+          case 162: {
+            if (adaptation_ == null) {
+              Adaptation = new global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation();
+            }
+            input.ReadMessage(Adaptation);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RecognitionConfig message type.</summary>
@@ -1876,7 +2298,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// <summary>
   /// Config to enable speaker diarization.
   /// </summary>
-  public sealed partial class SpeakerDiarizationConfig : pb::IMessage<SpeakerDiarizationConfig> {
+  public sealed partial class SpeakerDiarizationConfig : pb::IMessage<SpeakerDiarizationConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeakerDiarizationConfig> _parser = new pb::MessageParser<SpeakerDiarizationConfig>(() => new SpeakerDiarizationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2016,6 +2442,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (EnableSpeakerDiarization != false) {
         output.WriteRawTag(8);
         output.WriteBool(EnableSpeakerDiarization);
@@ -2035,7 +2464,33 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EnableSpeakerDiarization != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(EnableSpeakerDiarization);
+      }
+      if (MinSpeakerCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MinSpeakerCount);
+      }
+      if (MaxSpeakerCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxSpeakerCount);
+      }
+      if (SpeakerTag != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(SpeakerTag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2080,6 +2535,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2104,14 +2562,49 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            EnableSpeakerDiarization = input.ReadBool();
+            break;
+          }
+          case 16: {
+            MinSpeakerCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MaxSpeakerCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            SpeakerTag = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Description of audio data to be recognized.
   /// </summary>
-  public sealed partial class RecognitionMetadata : pb::IMessage<RecognitionMetadata> {
+  public sealed partial class RecognitionMetadata : pb::IMessage<RecognitionMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecognitionMetadata> _parser = new pb::MessageParser<RecognitionMetadata>(() => new RecognitionMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2340,6 +2833,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (InteractionType != global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.InteractionType.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) InteractionType);
@@ -2379,7 +2875,53 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InteractionType != global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.InteractionType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) InteractionType);
+      }
+      if (IndustryNaicsCodeOfAudio != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(IndustryNaicsCodeOfAudio);
+      }
+      if (MicrophoneDistance != global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.MicrophoneDistance.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MicrophoneDistance);
+      }
+      if (OriginalMediaType != global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.OriginalMediaType.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) OriginalMediaType);
+      }
+      if (RecordingDeviceType != global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.RecordingDeviceType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) RecordingDeviceType);
+      }
+      if (RecordingDeviceName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(RecordingDeviceName);
+      }
+      if (OriginalMimeType.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(OriginalMimeType);
+      }
+      if (ObfuscatedId != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(ObfuscatedId);
+      }
+      if (AudioTopic.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(AudioTopic);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2454,6 +2996,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2498,7 +3043,58 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            InteractionType = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.InteractionType) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            IndustryNaicsCodeOfAudio = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            MicrophoneDistance = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.MicrophoneDistance) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            OriginalMediaType = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.OriginalMediaType) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            RecordingDeviceType = (global::Google.Cloud.Speech.V1P1Beta1.RecognitionMetadata.Types.RecordingDeviceType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            RecordingDeviceName = input.ReadString();
+            break;
+          }
+          case 66: {
+            OriginalMimeType = input.ReadString();
+            break;
+          }
+          case 72: {
+            ObfuscatedId = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            AudioTopic = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the RecognitionMetadata message type.</summary>
@@ -2639,7 +3235,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// Provides "hints" to the speech recognizer to favor specific words and phrases
   /// in the results.
   /// </summary>
-  public sealed partial class SpeechContext : pb::IMessage<SpeechContext> {
+  public sealed partial class SpeechContext : pb::IMessage<SpeechContext>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeechContext> _parser = new pb::MessageParser<SpeechContext>(() => new SpeechContext());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2755,6 +3355,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       phrases_.WriteTo(output, _repeated_phrases_codec);
       if (Boost != 0F) {
         output.WriteRawTag(37);
@@ -2763,7 +3366,22 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      phrases_.WriteTo(ref output, _repeated_phrases_codec);
+      if (Boost != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Boost);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2792,6 +3410,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2808,7 +3429,30 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            phrases_.AddEntriesFrom(ref input, _repeated_phrases_codec);
+            break;
+          }
+          case 37: {
+            Boost = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -2818,7 +3462,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
   /// See [content limits](https://cloud.google.com/speech-to-text/quotas#content).
   /// </summary>
-  public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio> {
+  public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecognitionAudio> _parser = new pb::MessageParser<RecognitionAudio>(() => new RecognitionAudio());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2954,6 +3602,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (audioSourceCase_ == AudioSourceOneofCase.Content) {
         output.WriteRawTag(10);
         output.WriteBytes(Content);
@@ -2965,7 +3616,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (audioSourceCase_ == AudioSourceOneofCase.Content) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Content);
+      }
+      if (audioSourceCase_ == AudioSourceOneofCase.Uri) {
+        output.WriteRawTag(18);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3001,6 +3670,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3017,7 +3689,30 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Content = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3026,7 +3721,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// contains the result as zero or more sequential `SpeechRecognitionResult`
   /// messages.
   /// </summary>
-  public sealed partial class RecognizeResponse : pb::IMessage<RecognizeResponse> {
+  public sealed partial class RecognizeResponse : pb::IMessage<RecognizeResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<RecognizeResponse> _parser = new pb::MessageParser<RecognizeResponse>(() => new RecognizeResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3108,11 +3807,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       results_.WriteTo(output, _repeated_results_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      results_.WriteTo(ref output, _repeated_results_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3135,6 +3848,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3147,7 +3863,26 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            results_.AddEntriesFrom(ref input, _repeated_results_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3158,7 +3893,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// returned by the `GetOperation` call of the `google::longrunning::Operations`
   /// service.
   /// </summary>
-  public sealed partial class LongRunningRecognizeResponse : pb::IMessage<LongRunningRecognizeResponse> {
+  public sealed partial class LongRunningRecognizeResponse : pb::IMessage<LongRunningRecognizeResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LongRunningRecognizeResponse> _parser = new pb::MessageParser<LongRunningRecognizeResponse>(() => new LongRunningRecognizeResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3240,11 +3979,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       results_.WriteTo(output, _repeated_results_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      results_.WriteTo(ref output, _repeated_results_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3267,6 +4020,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3279,7 +4035,26 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            results_.AddEntriesFrom(ref input, _repeated_results_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3288,7 +4063,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// included in the `metadata` field of the `Operation` returned by the
   /// `GetOperation` call of the `google::longrunning::Operations` service.
   /// </summary>
-  public sealed partial class LongRunningRecognizeMetadata : pb::IMessage<LongRunningRecognizeMetadata> {
+  public sealed partial class LongRunningRecognizeMetadata : pb::IMessage<LongRunningRecognizeMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<LongRunningRecognizeMetadata> _parser = new pb::MessageParser<LongRunningRecognizeMetadata>(() => new LongRunningRecognizeMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3423,6 +4202,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ProgressPercent != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(ProgressPercent);
@@ -3442,7 +4224,33 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProgressPercent != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(ProgressPercent);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(StartTime);
+      }
+      if (lastUpdateTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LastUpdateTime);
+      }
+      if (Uri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Uri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3493,6 +4301,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3523,7 +4334,44 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ProgressPercent = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 26: {
+            if (lastUpdateTime_ == null) {
+              LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastUpdateTime);
+            break;
+          }
+          case 34: {
+            Uri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3578,7 +4426,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   ///     `speech_event_type`, or
   ///     one or more (repeated) `results`.
   /// </summary>
-  public sealed partial class StreamingRecognizeResponse : pb::IMessage<StreamingRecognizeResponse> {
+  public sealed partial class StreamingRecognizeResponse : pb::IMessage<StreamingRecognizeResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StreamingRecognizeResponse> _parser = new pb::MessageParser<StreamingRecognizeResponse>(() => new StreamingRecognizeResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3697,6 +4549,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (error_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Error);
@@ -3709,7 +4564,26 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (error_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Error);
+      }
+      results_.WriteTo(ref output, _repeated_results_codec);
+      if (SpeechEventType != global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse.Types.SpeechEventType.SpeechEventUnspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) SpeechEventType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3747,6 +4621,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3770,7 +4647,37 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 18: {
+            results_.AddEntriesFrom(ref input, _repeated_results_codec);
+            break;
+          }
+          case 32: {
+            SpeechEventType = (global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse.Types.SpeechEventType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the StreamingRecognizeResponse message type.</summary>
@@ -3805,7 +4712,11 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   /// A streaming speech recognition result corresponding to a portion of the audio
   /// that is currently being processed.
   /// </summary>
-  public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult> {
+  public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StreamingRecognitionResult> _parser = new pb::MessageParser<StreamingRecognitionResult>(() => new StreamingRecognitionResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3987,6 +4898,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       alternatives_.WriteTo(output, _repeated_alternatives_codec);
       if (IsFinal != false) {
         output.WriteRawTag(16);
@@ -4011,7 +4925,38 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      alternatives_.WriteTo(ref output, _repeated_alternatives_codec);
+      if (IsFinal != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsFinal);
+      }
+      if (Stability != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Stability);
+      }
+      if (resultEndTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResultEndTime);
+      }
+      if (ChannelTag != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ChannelTag);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4067,6 +5012,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4102,14 +5050,60 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            alternatives_.AddEntriesFrom(ref input, _repeated_alternatives_codec);
+            break;
+          }
+          case 16: {
+            IsFinal = input.ReadBool();
+            break;
+          }
+          case 29: {
+            Stability = input.ReadFloat();
+            break;
+          }
+          case 34: {
+            if (resultEndTime_ == null) {
+              ResultEndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ResultEndTime);
+            break;
+          }
+          case 40: {
+            ChannelTag = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A speech recognition result corresponding to a portion of the audio.
   /// </summary>
-  public sealed partial class SpeechRecognitionResult : pb::IMessage<SpeechRecognitionResult> {
+  public sealed partial class SpeechRecognitionResult : pb::IMessage<SpeechRecognitionResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeechRecognitionResult> _parser = new pb::MessageParser<SpeechRecognitionResult>(() => new SpeechRecognitionResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4231,6 +5225,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       alternatives_.WriteTo(output, _repeated_alternatives_codec);
       if (ChannelTag != 0) {
         output.WriteRawTag(16);
@@ -4243,7 +5240,26 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      alternatives_.WriteTo(ref output, _repeated_alternatives_codec);
+      if (ChannelTag != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ChannelTag);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(LanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4278,6 +5294,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4298,14 +5317,45 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            alternatives_.AddEntriesFrom(ref input, _repeated_alternatives_codec);
+            break;
+          }
+          case 16: {
+            ChannelTag = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Alternative hypotheses (a.k.a. n-best list).
   /// </summary>
-  public sealed partial class SpeechRecognitionAlternative : pb::IMessage<SpeechRecognitionAlternative> {
+  public sealed partial class SpeechRecognitionAlternative : pb::IMessage<SpeechRecognitionAlternative>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SpeechRecognitionAlternative> _parser = new pb::MessageParser<SpeechRecognitionAlternative>(() => new SpeechRecognitionAlternative());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4428,6 +5478,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Transcript.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Transcript);
@@ -4440,7 +5493,26 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Transcript.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Transcript);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      words_.WriteTo(ref output, _repeated_words_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4475,6 +5547,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4495,14 +5570,45 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Transcript = input.ReadString();
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            words_.AddEntriesFrom(ref input, _repeated_words_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Word-specific information for recognized words.
   /// </summary>
-  public sealed partial class WordInfo : pb::IMessage<WordInfo> {
+  public sealed partial class WordInfo : pb::IMessage<WordInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<WordInfo> _parser = new pb::MessageParser<WordInfo>(() => new WordInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4672,6 +5778,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (startTime_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(StartTime);
@@ -4695,7 +5804,37 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
+      }
+      if (Word.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Word);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Confidence);
+      }
+      if (SpeakerTag != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(SpeakerTag);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4752,6 +5891,9 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4786,7 +5928,48 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 18: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 26: {
+            Word = input.ReadString();
+            break;
+          }
+          case 37: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            SpeakerTag = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

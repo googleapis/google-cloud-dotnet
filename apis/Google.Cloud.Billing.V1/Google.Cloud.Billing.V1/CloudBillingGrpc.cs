@@ -308,7 +308,7 @@ namespace Google.Cloud.Billing.V1 {
     {
       /// <summary>Creates a new client for CloudBilling</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CloudBillingClient(grpc::Channel channel) : base(channel)
+      public CloudBillingClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudBilling that uses a custom <c>CallInvoker</c>.</summary>

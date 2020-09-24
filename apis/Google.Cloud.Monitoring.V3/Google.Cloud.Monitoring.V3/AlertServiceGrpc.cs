@@ -157,7 +157,7 @@ namespace Google.Cloud.Monitoring.V3 {
     {
       /// <summary>Creates a new client for AlertPolicyService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public AlertPolicyServiceClient(grpc::Channel channel) : base(channel)
+      public AlertPolicyServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AlertPolicyService that uses a custom <c>CallInvoker</c>.</summary>

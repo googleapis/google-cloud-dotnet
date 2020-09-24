@@ -250,7 +250,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// are allowed up to 4 date ranges, and the union of the ranges can cover up to
   /// 1 year.
   /// </summary>
-  public sealed partial class DateRange : pb::IMessage<DateRange> {
+  public sealed partial class DateRange : pb::IMessage<DateRange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DateRange> _parser = new pb::MessageParser<DateRange>(() => new DateRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -375,6 +379,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (StartDate.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(StartDate);
@@ -390,7 +397,29 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (StartDate.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(StartDate);
+      }
+      if (EndDate.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(EndDate);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -429,6 +458,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -449,14 +481,45 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            StartDate = input.ReadString();
+            break;
+          }
+          case 18: {
+            EndDate = input.ReadString();
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The unique identifier of the property whose events are tracked.
   /// </summary>
-  public sealed partial class Entity : pb::IMessage<Entity> {
+  public sealed partial class Entity : pb::IMessage<Entity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -538,6 +601,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (PropertyId.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(PropertyId);
@@ -545,7 +611,21 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PropertyId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PropertyId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -572,6 +652,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -584,7 +667,26 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PropertyId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -593,7 +695,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// indicates the city, for example, "Paris" or "New York", from which an event
   /// originates. Requests are allowed up to 8 dimensions.
   /// </summary>
-  public sealed partial class Dimension : pb::IMessage<Dimension> {
+  public sealed partial class Dimension : pb::IMessage<Dimension>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Dimension> _parser = new pb::MessageParser<Dimension>(() => new Dimension());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -693,6 +799,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -704,7 +813,25 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (dimensionExpression_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DimensionExpression);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -740,6 +867,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -759,7 +889,33 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (dimensionExpression_ == null) {
+              DimensionExpression = new global::Google.Analytics.Data.V1Alpha.DimensionExpression();
+            }
+            input.ReadMessage(DimensionExpression);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -769,7 +925,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// 1) lower_case(dimension)
   /// 2) concatenate(dimension1, symbol, dimension2).
   /// </summary>
-  public sealed partial class DimensionExpression : pb::IMessage<DimensionExpression> {
+  public sealed partial class DimensionExpression : pb::IMessage<DimensionExpression>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DimensionExpression> _parser = new pb::MessageParser<DimensionExpression>(() => new DimensionExpression());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -917,6 +1077,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (oneExpressionCase_ == OneExpressionOneofCase.LowerCase) {
         output.WriteRawTag(34);
         output.WriteMessage(LowerCase);
@@ -932,7 +1095,29 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (oneExpressionCase_ == OneExpressionOneofCase.LowerCase) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LowerCase);
+      }
+      if (oneExpressionCase_ == OneExpressionOneofCase.UpperCase) {
+        output.WriteRawTag(42);
+        output.WriteMessage(UpperCase);
+      }
+      if (oneExpressionCase_ == OneExpressionOneofCase.Concatenate) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Concatenate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -983,6 +1168,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1018,7 +1206,49 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 34: {
+            global::Google.Analytics.Data.V1Alpha.DimensionExpression.Types.CaseExpression subBuilder = new global::Google.Analytics.Data.V1Alpha.DimensionExpression.Types.CaseExpression();
+            if (oneExpressionCase_ == OneExpressionOneofCase.LowerCase) {
+              subBuilder.MergeFrom(LowerCase);
+            }
+            input.ReadMessage(subBuilder);
+            LowerCase = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Analytics.Data.V1Alpha.DimensionExpression.Types.CaseExpression subBuilder = new global::Google.Analytics.Data.V1Alpha.DimensionExpression.Types.CaseExpression();
+            if (oneExpressionCase_ == OneExpressionOneofCase.UpperCase) {
+              subBuilder.MergeFrom(UpperCase);
+            }
+            input.ReadMessage(subBuilder);
+            UpperCase = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Analytics.Data.V1Alpha.DimensionExpression.Types.ConcatenateExpression subBuilder = new global::Google.Analytics.Data.V1Alpha.DimensionExpression.Types.ConcatenateExpression();
+            if (oneExpressionCase_ == OneExpressionOneofCase.Concatenate) {
+              subBuilder.MergeFrom(Concatenate);
+            }
+            input.ReadMessage(subBuilder);
+            Concatenate = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DimensionExpression message type.</summary>
@@ -1027,7 +1257,11 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// Used to convert a dimension value to a single case.
       /// </summary>
-      public sealed partial class CaseExpression : pb::IMessage<CaseExpression> {
+      public sealed partial class CaseExpression : pb::IMessage<CaseExpression>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CaseExpression> _parser = new pb::MessageParser<CaseExpression>(() => new CaseExpression());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1110,6 +1344,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (DimensionName.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(DimensionName);
@@ -1117,7 +1354,21 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DimensionName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DimensionName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1144,6 +1395,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1156,14 +1410,37 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                DimensionName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Used to combine dimension values to a single dimension.
       /// </summary>
-      public sealed partial class ConcatenateExpression : pb::IMessage<ConcatenateExpression> {
+      public sealed partial class ConcatenateExpression : pb::IMessage<ConcatenateExpression>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ConcatenateExpression> _parser = new pb::MessageParser<ConcatenateExpression>(() => new ConcatenateExpression());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1268,6 +1545,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           dimensionNames_.WriteTo(output, _repeated_dimensionNames_codec);
           if (Delimiter.Length != 0) {
             output.WriteRawTag(18);
@@ -1276,7 +1556,22 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          dimensionNames_.WriteTo(ref output, _repeated_dimensionNames_codec);
+          if (Delimiter.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Delimiter);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1305,6 +1600,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1321,7 +1619,30 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                dimensionNames_.AddEntriesFrom(ref input, _repeated_dimensionNames_codec);
+                break;
+              }
+              case 18: {
+                Delimiter = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1334,7 +1655,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// The quantitative measurements of a report. For example, the metric eventCount
   /// is the total number of events. Requests are allowed up to 10 metrics.
   /// </summary>
-  public sealed partial class Metric : pb::IMessage<Metric> {
+  public sealed partial class Metric : pb::IMessage<Metric>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Metric> _parser = new pb::MessageParser<Metric>(() => new Metric());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1453,6 +1778,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -1468,7 +1796,29 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Expression.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Expression);
+      }
+      if (Invisible != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Invisible);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1507,6 +1857,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1527,7 +1880,34 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Expression = input.ReadString();
+            break;
+          }
+          case 24: {
+            Invisible = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -1536,7 +1916,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// The fields in the same FilterExpression need to be either all dimensions or
   /// all metrics.
   /// </summary>
-  public sealed partial class FilterExpression : pb::IMessage<FilterExpression> {
+  public sealed partial class FilterExpression : pb::IMessage<FilterExpression>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FilterExpression> _parser = new pb::MessageParser<FilterExpression>(() => new FilterExpression());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1705,6 +2089,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (exprCase_ == ExprOneofCase.AndGroup) {
         output.WriteRawTag(10);
         output.WriteMessage(AndGroup);
@@ -1724,7 +2111,33 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (exprCase_ == ExprOneofCase.AndGroup) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AndGroup);
+      }
+      if (exprCase_ == ExprOneofCase.OrGroup) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OrGroup);
+      }
+      if (exprCase_ == ExprOneofCase.NotExpression) {
+        output.WriteRawTag(26);
+        output.WriteMessage(NotExpression);
+      }
+      if (exprCase_ == ExprOneofCase.Filter) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1784,6 +2197,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1828,14 +2244,69 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Analytics.Data.V1Alpha.FilterExpressionList subBuilder = new global::Google.Analytics.Data.V1Alpha.FilterExpressionList();
+            if (exprCase_ == ExprOneofCase.AndGroup) {
+              subBuilder.MergeFrom(AndGroup);
+            }
+            input.ReadMessage(subBuilder);
+            AndGroup = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Analytics.Data.V1Alpha.FilterExpressionList subBuilder = new global::Google.Analytics.Data.V1Alpha.FilterExpressionList();
+            if (exprCase_ == ExprOneofCase.OrGroup) {
+              subBuilder.MergeFrom(OrGroup);
+            }
+            input.ReadMessage(subBuilder);
+            OrGroup = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Analytics.Data.V1Alpha.FilterExpression subBuilder = new global::Google.Analytics.Data.V1Alpha.FilterExpression();
+            if (exprCase_ == ExprOneofCase.NotExpression) {
+              subBuilder.MergeFrom(NotExpression);
+            }
+            input.ReadMessage(subBuilder);
+            NotExpression = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Analytics.Data.V1Alpha.Filter subBuilder = new global::Google.Analytics.Data.V1Alpha.Filter();
+            if (exprCase_ == ExprOneofCase.Filter) {
+              subBuilder.MergeFrom(Filter);
+            }
+            input.ReadMessage(subBuilder);
+            Filter = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A list of filter expressions.
   /// </summary>
-  public sealed partial class FilterExpressionList : pb::IMessage<FilterExpressionList> {
+  public sealed partial class FilterExpressionList : pb::IMessage<FilterExpressionList>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<FilterExpressionList> _parser = new pb::MessageParser<FilterExpressionList>(() => new FilterExpressionList());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1916,11 +2387,25 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       expressions_.WriteTo(output, _repeated_expressions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      expressions_.WriteTo(ref output, _repeated_expressions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1943,6 +2428,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1955,14 +2443,37 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            expressions_.AddEntriesFrom(ref input, _repeated_expressions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// An expression to filter dimension or metric values.
   /// </summary>
-  public sealed partial class Filter : pb::IMessage<Filter> {
+  public sealed partial class Filter : pb::IMessage<Filter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2167,6 +2678,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (FieldName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(FieldName);
@@ -2194,7 +2708,41 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FieldName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(FieldName);
+      }
+      if (oneFilterCase_ == OneFilterOneofCase.NullFilter) {
+        output.WriteRawTag(16);
+        output.WriteBool(NullFilter);
+      }
+      if (oneFilterCase_ == OneFilterOneofCase.StringFilter) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StringFilter);
+      }
+      if (oneFilterCase_ == OneFilterOneofCase.InListFilter) {
+        output.WriteRawTag(34);
+        output.WriteMessage(InListFilter);
+      }
+      if (oneFilterCase_ == OneFilterOneofCase.NumericFilter) {
+        output.WriteRawTag(42);
+        output.WriteMessage(NumericFilter);
+      }
+      if (oneFilterCase_ == OneFilterOneofCase.BetweenFilter) {
+        output.WriteRawTag(50);
+        output.WriteMessage(BetweenFilter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2266,6 +2814,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2318,7 +2869,66 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            FieldName = input.ReadString();
+            break;
+          }
+          case 16: {
+            NullFilter = input.ReadBool();
+            break;
+          }
+          case 26: {
+            global::Google.Analytics.Data.V1Alpha.Filter.Types.StringFilter subBuilder = new global::Google.Analytics.Data.V1Alpha.Filter.Types.StringFilter();
+            if (oneFilterCase_ == OneFilterOneofCase.StringFilter) {
+              subBuilder.MergeFrom(StringFilter);
+            }
+            input.ReadMessage(subBuilder);
+            StringFilter = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Google.Analytics.Data.V1Alpha.Filter.Types.InListFilter subBuilder = new global::Google.Analytics.Data.V1Alpha.Filter.Types.InListFilter();
+            if (oneFilterCase_ == OneFilterOneofCase.InListFilter) {
+              subBuilder.MergeFrom(InListFilter);
+            }
+            input.ReadMessage(subBuilder);
+            InListFilter = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Analytics.Data.V1Alpha.Filter.Types.NumericFilter subBuilder = new global::Google.Analytics.Data.V1Alpha.Filter.Types.NumericFilter();
+            if (oneFilterCase_ == OneFilterOneofCase.NumericFilter) {
+              subBuilder.MergeFrom(NumericFilter);
+            }
+            input.ReadMessage(subBuilder);
+            NumericFilter = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Google.Analytics.Data.V1Alpha.Filter.Types.BetweenFilter subBuilder = new global::Google.Analytics.Data.V1Alpha.Filter.Types.BetweenFilter();
+            if (oneFilterCase_ == OneFilterOneofCase.BetweenFilter) {
+              subBuilder.MergeFrom(BetweenFilter);
+            }
+            input.ReadMessage(subBuilder);
+            BetweenFilter = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Filter message type.</summary>
@@ -2327,7 +2937,11 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// The filter for string
       /// </summary>
-      public sealed partial class StringFilter : pb::IMessage<StringFilter> {
+      public sealed partial class StringFilter : pb::IMessage<StringFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<StringFilter> _parser = new pb::MessageParser<StringFilter>(() => new StringFilter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2443,6 +3057,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (MatchType != global::Google.Analytics.Data.V1Alpha.Filter.Types.StringFilter.Types.MatchType.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) MatchType);
@@ -2458,7 +3075,29 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MatchType != global::Google.Analytics.Data.V1Alpha.Filter.Types.StringFilter.Types.MatchType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) MatchType);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (CaseSensitive != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(CaseSensitive);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2497,6 +3136,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2517,7 +3159,34 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MatchType = (global::Google.Analytics.Data.V1Alpha.Filter.Types.StringFilter.Types.MatchType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+              case 24: {
+                CaseSensitive = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the StringFilter message type.</summary>
@@ -2565,7 +3234,11 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// The result needs to be in a list of string values.
       /// </summary>
-      public sealed partial class InListFilter : pb::IMessage<InListFilter> {
+      public sealed partial class InListFilter : pb::IMessage<InListFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<InListFilter> _parser = new pb::MessageParser<InListFilter>(() => new InListFilter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2664,6 +3337,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           values_.WriteTo(output, _repeated_values_codec);
           if (CaseSensitive != false) {
             output.WriteRawTag(16);
@@ -2672,7 +3348,22 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          values_.WriteTo(ref output, _repeated_values_codec);
+          if (CaseSensitive != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(CaseSensitive);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2701,6 +3392,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2717,14 +3411,41 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                values_.AddEntriesFrom(ref input, _repeated_values_codec);
+                break;
+              }
+              case 16: {
+                CaseSensitive = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Filters for numeric or date values.
       /// </summary>
-      public sealed partial class NumericFilter : pb::IMessage<NumericFilter> {
+      public sealed partial class NumericFilter : pb::IMessage<NumericFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<NumericFilter> _parser = new pb::MessageParser<NumericFilter>(() => new NumericFilter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2823,6 +3544,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Operation != global::Google.Analytics.Data.V1Alpha.Filter.Types.NumericFilter.Types.Operation.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) Operation);
@@ -2834,7 +3558,25 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Operation != global::Google.Analytics.Data.V1Alpha.Filter.Types.NumericFilter.Types.Operation.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Operation);
+          }
+          if (value_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2870,6 +3612,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2889,7 +3634,33 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Operation = (global::Google.Analytics.Data.V1Alpha.Filter.Types.NumericFilter.Types.Operation) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (value_ == null) {
+                  Value = new global::Google.Analytics.Data.V1Alpha.NumericValue();
+                }
+                input.ReadMessage(Value);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the NumericFilter message type.</summary>
@@ -2933,7 +3704,11 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// To express that the result needs to be between two numbers (inclusive).
       /// </summary>
-      public sealed partial class BetweenFilter : pb::IMessage<BetweenFilter> {
+      public sealed partial class BetweenFilter : pb::IMessage<BetweenFilter>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<BetweenFilter> _parser = new pb::MessageParser<BetweenFilter>(() => new BetweenFilter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3032,6 +3807,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (fromValue_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(FromValue);
@@ -3043,7 +3821,25 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (fromValue_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(FromValue);
+          }
+          if (toValue_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(ToValue);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3082,6 +3878,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3104,7 +3903,36 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (fromValue_ == null) {
+                  FromValue = new global::Google.Analytics.Data.V1Alpha.NumericValue();
+                }
+                input.ReadMessage(FromValue);
+                break;
+              }
+              case 18: {
+                if (toValue_ == null) {
+                  ToValue = new global::Google.Analytics.Data.V1Alpha.NumericValue();
+                }
+                input.ReadMessage(ToValue);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3116,7 +3944,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// <summary>
   /// The sort options.
   /// </summary>
-  public sealed partial class OrderBy : pb::IMessage<OrderBy> {
+  public sealed partial class OrderBy : pb::IMessage<OrderBy>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<OrderBy> _parser = new pb::MessageParser<OrderBy>(() => new OrderBy());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3280,6 +4112,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (oneOrderByCase_ == OneOrderByOneofCase.Metric) {
         output.WriteRawTag(10);
         output.WriteMessage(Metric);
@@ -3299,7 +4134,33 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (oneOrderByCase_ == OneOrderByOneofCase.Metric) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Metric);
+      }
+      if (oneOrderByCase_ == OneOrderByOneofCase.Dimension) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Dimension);
+      }
+      if (oneOrderByCase_ == OneOrderByOneofCase.Pivot) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Pivot);
+      }
+      if (Desc != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Desc);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3356,6 +4217,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3395,7 +4259,53 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Analytics.Data.V1Alpha.OrderBy.Types.MetricOrderBy subBuilder = new global::Google.Analytics.Data.V1Alpha.OrderBy.Types.MetricOrderBy();
+            if (oneOrderByCase_ == OneOrderByOneofCase.Metric) {
+              subBuilder.MergeFrom(Metric);
+            }
+            input.ReadMessage(subBuilder);
+            Metric = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Analytics.Data.V1Alpha.OrderBy.Types.DimensionOrderBy subBuilder = new global::Google.Analytics.Data.V1Alpha.OrderBy.Types.DimensionOrderBy();
+            if (oneOrderByCase_ == OneOrderByOneofCase.Dimension) {
+              subBuilder.MergeFrom(Dimension);
+            }
+            input.ReadMessage(subBuilder);
+            Dimension = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Analytics.Data.V1Alpha.OrderBy.Types.PivotOrderBy subBuilder = new global::Google.Analytics.Data.V1Alpha.OrderBy.Types.PivotOrderBy();
+            if (oneOrderByCase_ == OneOrderByOneofCase.Pivot) {
+              subBuilder.MergeFrom(Pivot);
+            }
+            input.ReadMessage(subBuilder);
+            Pivot = subBuilder;
+            break;
+          }
+          case 32: {
+            Desc = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the OrderBy message type.</summary>
@@ -3404,7 +4314,11 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// Sorts by metric values.
       /// </summary>
-      public sealed partial class MetricOrderBy : pb::IMessage<MetricOrderBy> {
+      public sealed partial class MetricOrderBy : pb::IMessage<MetricOrderBy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<MetricOrderBy> _parser = new pb::MessageParser<MetricOrderBy>(() => new MetricOrderBy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3486,6 +4400,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (MetricName.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(MetricName);
@@ -3493,7 +4410,21 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MetricName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MetricName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3520,6 +4451,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3532,14 +4466,37 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                MetricName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Sorts by dimension values.
       /// </summary>
-      public sealed partial class DimensionOrderBy : pb::IMessage<DimensionOrderBy> {
+      public sealed partial class DimensionOrderBy : pb::IMessage<DimensionOrderBy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<DimensionOrderBy> _parser = new pb::MessageParser<DimensionOrderBy>(() => new DimensionOrderBy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3638,6 +4595,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (DimensionName.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(DimensionName);
@@ -3649,7 +4609,25 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DimensionName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DimensionName);
+          }
+          if (OrderType != global::Google.Analytics.Data.V1Alpha.OrderBy.Types.DimensionOrderBy.Types.OrderType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) OrderType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3682,6 +4660,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3698,7 +4679,30 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                DimensionName = input.ReadString();
+                break;
+              }
+              case 16: {
+                OrderType = (global::Google.Analytics.Data.V1Alpha.OrderBy.Types.DimensionOrderBy.Types.OrderType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the DimensionOrderBy message type.</summary>
@@ -3739,7 +4743,11 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// Sorts by a pivot column group.
       /// </summary>
-      public sealed partial class PivotOrderBy : pb::IMessage<PivotOrderBy> {
+      public sealed partial class PivotOrderBy : pb::IMessage<PivotOrderBy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<PivotOrderBy> _parser = new pb::MessageParser<PivotOrderBy>(() => new PivotOrderBy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3841,6 +4849,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (MetricName.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(MetricName);
@@ -3849,7 +4860,22 @@ namespace Google.Analytics.Data.V1Alpha {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MetricName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(MetricName);
+          }
+          pivotSelections_.WriteTo(ref output, _repeated_pivotSelections_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3878,6 +4904,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3894,7 +4923,30 @@ namespace Google.Analytics.Data.V1Alpha {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                MetricName = input.ReadString();
+                break;
+              }
+              case 18: {
+                pivotSelections_.AddEntriesFrom(ref input, _repeated_pivotSelections_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the PivotOrderBy message type.</summary>
@@ -3918,7 +4970,11 @@ namespace Google.Analytics.Data.V1Alpha {
           ///       Canada |    3     |       1        |     4    |        1
           ///     ---------|----------|----------------|----------|----------------
           /// </summary>
-          public sealed partial class PivotSelection : pb::IMessage<PivotSelection> {
+          public sealed partial class PivotSelection : pb::IMessage<PivotSelection>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<PivotSelection> _parser = new pb::MessageParser<PivotSelection>(() => new PivotSelection());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4017,6 +5073,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (DimensionName.Length != 0) {
                 output.WriteRawTag(10);
                 output.WriteString(DimensionName);
@@ -4028,7 +5087,25 @@ namespace Google.Analytics.Data.V1Alpha {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (DimensionName.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(DimensionName);
+              }
+              if (DimensionValue.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(DimensionValue);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -4061,6 +5138,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -4077,7 +5157,30 @@ namespace Google.Analytics.Data.V1Alpha {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    DimensionName = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    DimensionValue = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -4094,7 +5197,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// <summary>
   /// Describes the visible dimension columns and rows in the report response.
   /// </summary>
-  public sealed partial class Pivot : pb::IMessage<Pivot> {
+  public sealed partial class Pivot : pb::IMessage<Pivot>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Pivot> _parser = new pb::MessageParser<Pivot>(() => new Pivot());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4250,6 +5357,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       fieldNames_.WriteTo(output, _repeated_fieldNames_codec);
       orderBys_.WriteTo(output, _repeated_orderBys_codec);
       if (Offset != 0L) {
@@ -4264,7 +5374,28 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      fieldNames_.WriteTo(ref output, _repeated_fieldNames_codec);
+      orderBys_.WriteTo(ref output, _repeated_orderBys_codec);
+      if (Offset != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Offset);
+      }
+      if (Limit != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Limit);
+      }
+      metricAggregations_.WriteTo(ref output, _repeated_metricAggregations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4303,6 +5434,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4332,14 +5466,54 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            fieldNames_.AddEntriesFrom(ref input, _repeated_fieldNames_codec);
+            break;
+          }
+          case 18: {
+            orderBys_.AddEntriesFrom(ref input, _repeated_orderBys_codec);
+            break;
+          }
+          case 24: {
+            Offset = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            Limit = input.ReadInt64();
+            break;
+          }
+          case 42:
+          case 40: {
+            metricAggregations_.AddEntriesFrom(ref input, _repeated_metricAggregations_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Specification for a cohort report.
   /// </summary>
-  public sealed partial class CohortSpec : pb::IMessage<CohortSpec> {
+  public sealed partial class CohortSpec : pb::IMessage<CohortSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CohortSpec> _parser = new pb::MessageParser<CohortSpec>(() => new CohortSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4454,6 +5628,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       cohorts_.WriteTo(output, _repeated_cohorts_codec);
       if (cohortsRange_ != null) {
         output.WriteRawTag(18);
@@ -4466,7 +5643,26 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      cohorts_.WriteTo(ref output, _repeated_cohorts_codec);
+      if (cohortsRange_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CohortsRange);
+      }
+      if (cohortReportSettings_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CohortReportSettings);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4507,6 +5703,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4533,7 +5732,40 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            cohorts_.AddEntriesFrom(ref input, _repeated_cohorts_codec);
+            break;
+          }
+          case 18: {
+            if (cohortsRange_ == null) {
+              CohortsRange = new global::Google.Analytics.Data.V1Alpha.CohortsRange();
+            }
+            input.ReadMessage(CohortsRange);
+            break;
+          }
+          case 26: {
+            if (cohortReportSettings_ == null) {
+              CohortReportSettings = new global::Google.Analytics.Data.V1Alpha.CohortReportSettings();
+            }
+            input.ReadMessage(CohortReportSettings);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4542,7 +5774,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// characteristic. For example, all users with the same acquisition date
   /// belong to the same cohort.
   /// </summary>
-  public sealed partial class Cohort : pb::IMessage<Cohort> {
+  public sealed partial class Cohort : pb::IMessage<Cohort>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Cohort> _parser = new pb::MessageParser<Cohort>(() => new Cohort());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4672,6 +5908,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -4687,7 +5926,29 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Dimension.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Dimension);
+      }
+      if (dateRange_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DateRange);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4729,6 +5990,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4752,14 +6016,48 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Dimension = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (dateRange_ == null) {
+              DateRange = new global::Google.Analytics.Data.V1Alpha.DateRange();
+            }
+            input.ReadMessage(DateRange);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Settings of a cohort report.
   /// </summary>
-  public sealed partial class CohortReportSettings : pb::IMessage<CohortReportSettings> {
+  public sealed partial class CohortReportSettings : pb::IMessage<CohortReportSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CohortReportSettings> _parser = new pb::MessageParser<CohortReportSettings>(() => new CohortReportSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4842,6 +6140,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Accumulate != false) {
         output.WriteRawTag(8);
         output.WriteBool(Accumulate);
@@ -4849,7 +6150,21 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Accumulate != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Accumulate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4876,6 +6191,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4888,14 +6206,37 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Accumulate = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Describes date range for a cohort report.
   /// </summary>
-  public sealed partial class CohortsRange : pb::IMessage<CohortsRange> {
+  public sealed partial class CohortsRange : pb::IMessage<CohortsRange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CohortsRange> _parser = new pb::MessageParser<CohortsRange>(() => new CohortsRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5014,6 +6355,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Granularity != global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Granularity);
@@ -5029,7 +6373,29 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Granularity != global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Granularity);
+      }
+      if (StartOffset != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(StartOffset);
+      }
+      if (EndOffset != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(EndOffset);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5068,6 +6434,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5088,7 +6457,34 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Granularity = (global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            StartOffset = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            EndOffset = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the CohortsRange message type.</summary>
@@ -5124,7 +6520,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// <summary>
   /// Response's metadata carrying additional information about the report content.
   /// </summary>
-  public sealed partial class ResponseMetaData : pb::IMessage<ResponseMetaData> {
+  public sealed partial class ResponseMetaData : pb::IMessage<ResponseMetaData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ResponseMetaData> _parser = new pb::MessageParser<ResponseMetaData>(() => new ResponseMetaData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5207,6 +6607,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (DataLossFromOtherRow != false) {
         output.WriteRawTag(24);
         output.WriteBool(DataLossFromOtherRow);
@@ -5214,7 +6617,21 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DataLossFromOtherRow != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(DataLossFromOtherRow);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5241,6 +6658,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5253,7 +6673,26 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 24: {
+            DataLossFromOtherRow = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -5263,7 +6702,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// used exclusively within filters or expressions do not produce columns in a
   /// report; correspondingly, those dimensions do not produce headers.
   /// </summary>
-  public sealed partial class DimensionHeader : pb::IMessage<DimensionHeader> {
+  public sealed partial class DimensionHeader : pb::IMessage<DimensionHeader>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DimensionHeader> _parser = new pb::MessageParser<DimensionHeader>(() => new DimensionHeader());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5345,6 +6788,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -5352,7 +6798,21 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5379,6 +6839,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5391,7 +6854,26 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -5401,7 +6883,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// metrics used exclusively within filters or expressions do not produce columns
   /// in a report; correspondingly, those metrics do not produce headers.
   /// </summary>
-  public sealed partial class MetricHeader : pb::IMessage<MetricHeader> {
+  public sealed partial class MetricHeader : pb::IMessage<MetricHeader>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<MetricHeader> _parser = new pb::MessageParser<MetricHeader>(() => new MetricHeader());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5500,6 +6986,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -5511,7 +7000,25 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Type != global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5544,6 +7051,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5560,14 +7070,41 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Analytics.Data.V1Alpha.MetricType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Dimensions' values in a single pivot.
   /// </summary>
-  public sealed partial class PivotHeader : pb::IMessage<PivotHeader> {
+  public sealed partial class PivotHeader : pb::IMessage<PivotHeader>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PivotHeader> _parser = new pb::MessageParser<PivotHeader>(() => new PivotHeader());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5666,6 +7203,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       pivotDimensionHeaders_.WriteTo(output, _repeated_pivotDimensionHeaders_codec);
       if (RowCount != 0) {
         output.WriteRawTag(16);
@@ -5674,7 +7214,22 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      pivotDimensionHeaders_.WriteTo(ref output, _repeated_pivotDimensionHeaders_codec);
+      if (RowCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(RowCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5703,6 +7258,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5719,14 +7277,41 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            pivotDimensionHeaders_.AddEntriesFrom(ref input, _repeated_pivotDimensionHeaders_codec);
+            break;
+          }
+          case 16: {
+            RowCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Summarizes dimension values from a row for this pivot.
   /// </summary>
-  public sealed partial class PivotDimensionHeader : pb::IMessage<PivotDimensionHeader> {
+  public sealed partial class PivotDimensionHeader : pb::IMessage<PivotDimensionHeader>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PivotDimensionHeader> _parser = new pb::MessageParser<PivotDimensionHeader>(() => new PivotDimensionHeader());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5807,11 +7392,25 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       dimensionValues_.WriteTo(output, _repeated_dimensionValues_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dimensionValues_.WriteTo(ref output, _repeated_dimensionValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -5834,6 +7433,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -5846,7 +7448,26 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dimensionValues_.AddEntriesFrom(ref input, _repeated_dimensionValues_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -5879,7 +7500,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// }
   /// ```
   /// </summary>
-  public sealed partial class Row : pb::IMessage<Row> {
+  public sealed partial class Row : pb::IMessage<Row>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Row> _parser = new pb::MessageParser<Row>(() => new Row());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5977,12 +7602,27 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       dimensionValues_.WriteTo(output, _repeated_dimensionValues_codec);
       metricValues_.WriteTo(output, _repeated_metricValues_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dimensionValues_.WriteTo(ref output, _repeated_dimensionValues_codec);
+      metricValues_.WriteTo(ref output, _repeated_metricValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6007,6 +7647,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6023,14 +7666,41 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dimensionValues_.AddEntriesFrom(ref input, _repeated_dimensionValues_codec);
+            break;
+          }
+          case 18: {
+            metricValues_.AddEntriesFrom(ref input, _repeated_metricValues_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The value of a dimension.
   /// </summary>
-  public sealed partial class DimensionValue : pb::IMessage<DimensionValue> {
+  public sealed partial class DimensionValue : pb::IMessage<DimensionValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DimensionValue> _parser = new pb::MessageParser<DimensionValue>(() => new DimensionValue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6137,6 +7807,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (oneValueCase_ == OneValueOneofCase.Value) {
         output.WriteRawTag(10);
         output.WriteString(Value);
@@ -6144,7 +7817,21 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (oneValueCase_ == OneValueOneofCase.Value) {
+        output.WriteRawTag(10);
+        output.WriteString(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6174,6 +7861,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6186,14 +7876,37 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Value = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The value of a metric.
   /// </summary>
-  public sealed partial class MetricValue : pb::IMessage<MetricValue> {
+  public sealed partial class MetricValue : pb::IMessage<MetricValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<MetricValue> _parser = new pb::MessageParser<MetricValue>(() => new MetricValue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6300,6 +8013,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (oneValueCase_ == OneValueOneofCase.Value) {
         output.WriteRawTag(34);
         output.WriteString(Value);
@@ -6307,7 +8023,21 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (oneValueCase_ == OneValueOneofCase.Value) {
+        output.WriteRawTag(34);
+        output.WriteString(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6337,6 +8067,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6349,14 +8082,37 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 34: {
+            Value = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// To represent a number.
   /// </summary>
-  public sealed partial class NumericValue : pb::IMessage<NumericValue> {
+  public sealed partial class NumericValue : pb::IMessage<NumericValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<NumericValue> _parser = new pb::MessageParser<NumericValue>(() => new NumericValue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6483,6 +8239,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (oneValueCase_ == OneValueOneofCase.Int64Value) {
         output.WriteRawTag(8);
         output.WriteInt64(Int64Value);
@@ -6494,7 +8253,25 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (oneValueCase_ == OneValueOneofCase.Int64Value) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Int64Value);
+      }
+      if (oneValueCase_ == OneValueOneofCase.DoubleValue) {
+        output.WriteRawTag(17);
+        output.WriteDouble(DoubleValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6530,6 +8307,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6546,7 +8326,30 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Int64Value = input.ReadInt64();
+            break;
+          }
+          case 17: {
+            DoubleValue = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -6555,7 +8358,11 @@ namespace Google.Analytics.Data.V1Alpha {
   /// property is exhausted, all requests to that property will return Resource
   /// Exhausted errors.
   /// </summary>
-  public sealed partial class PropertyQuota : pb::IMessage<PropertyQuota> {
+  public sealed partial class PropertyQuota : pb::IMessage<PropertyQuota>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PropertyQuota> _parser = new pb::MessageParser<PropertyQuota>(() => new PropertyQuota());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6692,6 +8499,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (tokensPerDay_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(TokensPerDay);
@@ -6711,7 +8521,33 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (tokensPerDay_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TokensPerDay);
+      }
+      if (tokensPerHour_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TokensPerHour);
+      }
+      if (concurrentRequests_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ConcurrentRequests);
+      }
+      if (serverErrorsPerProjectPerHour_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ServerErrorsPerProjectPerHour);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6768,6 +8604,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6804,14 +8643,61 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (tokensPerDay_ == null) {
+              TokensPerDay = new global::Google.Analytics.Data.V1Alpha.QuotaStatus();
+            }
+            input.ReadMessage(TokensPerDay);
+            break;
+          }
+          case 18: {
+            if (tokensPerHour_ == null) {
+              TokensPerHour = new global::Google.Analytics.Data.V1Alpha.QuotaStatus();
+            }
+            input.ReadMessage(TokensPerHour);
+            break;
+          }
+          case 26: {
+            if (concurrentRequests_ == null) {
+              ConcurrentRequests = new global::Google.Analytics.Data.V1Alpha.QuotaStatus();
+            }
+            input.ReadMessage(ConcurrentRequests);
+            break;
+          }
+          case 34: {
+            if (serverErrorsPerProjectPerHour_ == null) {
+              ServerErrorsPerProjectPerHour = new global::Google.Analytics.Data.V1Alpha.QuotaStatus();
+            }
+            input.ReadMessage(ServerErrorsPerProjectPerHour);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Current state for a particular quota group.
   /// </summary>
-  public sealed partial class QuotaStatus : pb::IMessage<QuotaStatus> {
+  public sealed partial class QuotaStatus : pb::IMessage<QuotaStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<QuotaStatus> _parser = new pb::MessageParser<QuotaStatus>(() => new QuotaStatus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6910,6 +8796,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Consumed != 0) {
         output.WriteRawTag(8);
         output.WriteInt32(Consumed);
@@ -6921,7 +8810,25 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Consumed != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Consumed);
+      }
+      if (Remaining != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Remaining);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -6954,6 +8861,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -6970,14 +8880,41 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Consumed = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Remaining = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Explains a dimension.
   /// </summary>
-  public sealed partial class DimensionMetadata : pb::IMessage<DimensionMetadata> {
+  public sealed partial class DimensionMetadata : pb::IMessage<DimensionMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DimensionMetadata> _parser = new pb::MessageParser<DimensionMetadata>(() => new DimensionMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7114,6 +9051,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ApiName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ApiName);
@@ -7130,7 +9070,30 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ApiName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApiName);
+      }
+      if (UiName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UiName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      deprecatedApiNames_.WriteTo(ref output, _repeated_deprecatedApiNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7171,6 +9134,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7195,14 +9161,49 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ApiName = input.ReadString();
+            break;
+          }
+          case 18: {
+            UiName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            deprecatedApiNames_.AddEntriesFrom(ref input, _repeated_deprecatedApiNames_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Explains a metric.
   /// </summary>
-  public sealed partial class MetricMetadata : pb::IMessage<MetricMetadata> {
+  public sealed partial class MetricMetadata : pb::IMessage<MetricMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<MetricMetadata> _parser = new pb::MessageParser<MetricMetadata>(() => new MetricMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7375,6 +9376,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ApiName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ApiName);
@@ -7399,7 +9403,38 @@ namespace Google.Analytics.Data.V1Alpha {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ApiName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApiName);
+      }
+      if (UiName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UiName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      deprecatedApiNames_.WriteTo(ref output, _repeated_deprecatedApiNames_codec);
+      if (Type != global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Type);
+      }
+      if (Expression.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Expression);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -7452,6 +9487,9 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -7484,7 +9522,46 @@ namespace Google.Analytics.Data.V1Alpha {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ApiName = input.ReadString();
+            break;
+          }
+          case 18: {
+            UiName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            deprecatedApiNames_.AddEntriesFrom(ref input, _repeated_deprecatedApiNames_codec);
+            break;
+          }
+          case 40: {
+            Type = (global::Google.Analytics.Data.V1Alpha.MetricType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            Expression = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

@@ -415,7 +415,7 @@ namespace Google.Cloud.ServiceDirectory.V1Beta1 {
     {
       /// <summary>Creates a new client for RegistrationService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public RegistrationServiceClient(grpc::Channel channel) : base(channel)
+      public RegistrationServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for RegistrationService that uses a custom <c>CallInvoker</c>.</summary>

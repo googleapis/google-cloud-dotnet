@@ -193,7 +193,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
   /// for collaboration between users and Document Understanding AI to iterate and
   /// optimize for quality.
   /// </summary>
-  public sealed partial class Document : pb::IMessage<Document> {
+  public sealed partial class Document : pb::IMessage<Document>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Document> _parser = new pb::MessageParser<Document>(() => new Document());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -478,6 +482,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (sourceCase_ == SourceOneofCase.Uri) {
         output.WriteRawTag(10);
         output.WriteString(Uri);
@@ -510,7 +517,46 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (sourceCase_ == SourceOneofCase.Uri) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (sourceCase_ == SourceOneofCase.Content) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Content);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MimeType);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Text);
+      }
+      textStyles_.WriteTo(ref output, _repeated_textStyles_codec);
+      pages_.WriteTo(ref output, _repeated_pages_codec);
+      entities_.WriteTo(ref output, _repeated_entities_codec);
+      entityRelations_.WriteTo(ref output, _repeated_entityRelations_codec);
+      if (shardInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ShardInfo);
+      }
+      if (error_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Error);
+      }
+      labels_.WriteTo(ref output, _repeated_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -586,6 +632,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -644,7 +693,72 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            Content = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            MimeType = input.ReadString();
+            break;
+          }
+          case 34: {
+            Text = input.ReadString();
+            break;
+          }
+          case 42: {
+            textStyles_.AddEntriesFrom(ref input, _repeated_textStyles_codec);
+            break;
+          }
+          case 50: {
+            pages_.AddEntriesFrom(ref input, _repeated_pages_codec);
+            break;
+          }
+          case 58: {
+            entities_.AddEntriesFrom(ref input, _repeated_entities_codec);
+            break;
+          }
+          case 66: {
+            entityRelations_.AddEntriesFrom(ref input, _repeated_entityRelations_codec);
+            break;
+          }
+          case 74: {
+            if (shardInfo_ == null) {
+              ShardInfo = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.ShardInfo();
+            }
+            input.ReadMessage(ShardInfo);
+            break;
+          }
+          case 82: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
+          case 90: {
+            labels_.AddEntriesFrom(ref input, _repeated_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Document message type.</summary>
@@ -655,7 +769,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       /// document shards. Each document shard contains this field to detail which
       /// shard it is.
       /// </summary>
-      public sealed partial class ShardInfo : pb::IMessage<ShardInfo> {
+      public sealed partial class ShardInfo : pb::IMessage<ShardInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<ShardInfo> _parser = new pb::MessageParser<ShardInfo>(() => new ShardInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -772,6 +890,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (ShardIndex != 0L) {
             output.WriteRawTag(8);
             output.WriteInt64(ShardIndex);
@@ -787,7 +908,29 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ShardIndex != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(ShardIndex);
+          }
+          if (ShardCount != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(ShardCount);
+          }
+          if (TextOffset != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(TextOffset);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -826,6 +969,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -846,7 +992,34 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ShardIndex = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                ShardCount = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                TextOffset = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -856,7 +1029,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       /// different labels, different instances of the same label created at
       /// different times, or some combination of both.
       /// </summary>
-      public sealed partial class Label : pb::IMessage<Label> {
+      public sealed partial class Label : pb::IMessage<Label>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Label> _parser = new pb::MessageParser<Label>(() => new Label());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1004,6 +1181,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (Name.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(Name);
@@ -1019,7 +1199,29 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (sourceCase_ == SourceOneofCase.AutomlModel) {
+            output.WriteRawTag(18);
+            output.WriteString(AutomlModel);
+          }
+          if (Confidence != 0F) {
+            output.WriteRawTag(29);
+            output.WriteFloat(Confidence);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1061,6 +1263,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1081,7 +1286,34 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                AutomlModel = input.ReadString();
+                break;
+              }
+              case 29: {
+                Confidence = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1089,7 +1321,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       /// Annotation for common text style attributes. This adheres to CSS
       /// conventions as much as possible.
       /// </summary>
-      public sealed partial class Style : pb::IMessage<Style> {
+      public sealed partial class Style : pb::IMessage<Style>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Style> _parser = new pb::MessageParser<Style>(() => new Style());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1277,6 +1513,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (textAnchor_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(TextAnchor);
@@ -1308,7 +1547,45 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (textAnchor_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(TextAnchor);
+          }
+          if (color_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Color);
+          }
+          if (backgroundColor_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(BackgroundColor);
+          }
+          if (FontWeight.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(FontWeight);
+          }
+          if (TextStyle.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(TextStyle);
+          }
+          if (TextDecoration.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(TextDecoration);
+          }
+          if (fontSize_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(FontSize);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1383,6 +1660,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1431,7 +1711,62 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (textAnchor_ == null) {
+                  TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+                }
+                input.ReadMessage(TextAnchor);
+                break;
+              }
+              case 18: {
+                if (color_ == null) {
+                  Color = new global::Google.Type.Color();
+                }
+                input.ReadMessage(Color);
+                break;
+              }
+              case 26: {
+                if (backgroundColor_ == null) {
+                  BackgroundColor = new global::Google.Type.Color();
+                }
+                input.ReadMessage(BackgroundColor);
+                break;
+              }
+              case 34: {
+                FontWeight = input.ReadString();
+                break;
+              }
+              case 42: {
+                TextStyle = input.ReadString();
+                break;
+              }
+              case 50: {
+                TextDecoration = input.ReadString();
+                break;
+              }
+              case 58: {
+                if (fontSize_ == null) {
+                  FontSize = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Style.Types.FontSize();
+                }
+                input.ReadMessage(FontSize);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the Style message type.</summary>
@@ -1440,7 +1775,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// <summary>
           /// Font size with unit.
           /// </summary>
-          public sealed partial class FontSize : pb::IMessage<FontSize> {
+          public sealed partial class FontSize : pb::IMessage<FontSize>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<FontSize> _parser = new pb::MessageParser<FontSize>(() => new FontSize());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1539,6 +1878,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (Size != 0F) {
                 output.WriteRawTag(13);
                 output.WriteFloat(Size);
@@ -1550,7 +1892,25 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Size != 0F) {
+                output.WriteRawTag(13);
+                output.WriteFloat(Size);
+              }
+              if (Unit.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Unit);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -1583,6 +1943,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -1599,7 +1962,30 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 13: {
+                    Size = input.ReadFloat();
+                    break;
+                  }
+                  case 18: {
+                    Unit = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -1611,7 +1997,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       /// <summary>
       /// A page in a [Document][google.cloud.documentai.v1beta2.Document].
       /// </summary>
-      public sealed partial class Page : pb::IMessage<Page> {
+      public sealed partial class Page : pb::IMessage<Page>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Page> _parser = new pb::MessageParser<Page>(() => new Page());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1862,6 +2252,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (PageNumber != 0) {
             output.WriteRawTag(8);
             output.WriteInt32(PageNumber);
@@ -1885,7 +2278,37 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PageNumber != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(PageNumber);
+          }
+          if (dimension_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Dimension);
+          }
+          if (layout_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Layout);
+          }
+          detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+          blocks_.WriteTo(ref output, _repeated_blocks_codec);
+          paragraphs_.WriteTo(ref output, _repeated_paragraphs_codec);
+          lines_.WriteTo(ref output, _repeated_lines_codec);
+          tokens_.WriteTo(ref output, _repeated_tokens_codec);
+          visualElements_.WriteTo(ref output, _repeated_visualElements_codec);
+          tables_.WriteTo(ref output, _repeated_tables_codec);
+          formFields_.WriteTo(ref output, _repeated_formFields_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -1946,6 +2369,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2004,7 +2430,72 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                PageNumber = input.ReadInt32();
+                break;
+              }
+              case 18: {
+                if (dimension_ == null) {
+                  Dimension = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Dimension();
+                }
+                input.ReadMessage(Dimension);
+                break;
+              }
+              case 26: {
+                if (layout_ == null) {
+                  Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                }
+                input.ReadMessage(Layout);
+                break;
+              }
+              case 34: {
+                detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                break;
+              }
+              case 42: {
+                blocks_.AddEntriesFrom(ref input, _repeated_blocks_codec);
+                break;
+              }
+              case 50: {
+                paragraphs_.AddEntriesFrom(ref input, _repeated_paragraphs_codec);
+                break;
+              }
+              case 58: {
+                lines_.AddEntriesFrom(ref input, _repeated_lines_codec);
+                break;
+              }
+              case 66: {
+                tokens_.AddEntriesFrom(ref input, _repeated_tokens_codec);
+                break;
+              }
+              case 74: {
+                visualElements_.AddEntriesFrom(ref input, _repeated_visualElements_codec);
+                break;
+              }
+              case 82: {
+                tables_.AddEntriesFrom(ref input, _repeated_tables_codec);
+                break;
+              }
+              case 90: {
+                formFields_.AddEntriesFrom(ref input, _repeated_formFields_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the Page message type.</summary>
@@ -2013,7 +2504,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// <summary>
           /// Dimension for the page.
           /// </summary>
-          public sealed partial class Dimension : pb::IMessage<Dimension> {
+          public sealed partial class Dimension : pb::IMessage<Dimension>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Dimension> _parser = new pb::MessageParser<Dimension>(() => new Dimension());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2129,6 +2624,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (Width != 0F) {
                 output.WriteRawTag(13);
                 output.WriteFloat(Width);
@@ -2144,7 +2642,29 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Width != 0F) {
+                output.WriteRawTag(13);
+                output.WriteFloat(Width);
+              }
+              if (Height != 0F) {
+                output.WriteRawTag(21);
+                output.WriteFloat(Height);
+              }
+              if (Unit.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(Unit);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2183,6 +2703,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2203,14 +2726,45 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 13: {
+                    Width = input.ReadFloat();
+                    break;
+                  }
+                  case 21: {
+                    Height = input.ReadFloat();
+                    break;
+                  }
+                  case 26: {
+                    Unit = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// Visual element describing a layout unit on a page.
           /// </summary>
-          public sealed partial class Layout : pb::IMessage<Layout> {
+          public sealed partial class Layout : pb::IMessage<Layout>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Layout> _parser = new pb::MessageParser<Layout>(() => new Layout());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2362,6 +2916,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (textAnchor_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(TextAnchor);
@@ -2385,7 +2942,37 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (textAnchor_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(TextAnchor);
+              }
+              if (Confidence != 0F) {
+                output.WriteRawTag(21);
+                output.WriteFloat(Confidence);
+              }
+              if (boundingPoly_ != null) {
+                output.WriteRawTag(26);
+                output.WriteMessage(BoundingPoly);
+              }
+              if (Orientation != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation.Unspecified) {
+                output.WriteRawTag(32);
+                output.WriteEnum((int) Orientation);
+              }
+              if (Id.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(Id);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2442,6 +3029,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2476,7 +3066,48 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (textAnchor_ == null) {
+                      TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+                    }
+                    input.ReadMessage(TextAnchor);
+                    break;
+                  }
+                  case 21: {
+                    Confidence = input.ReadFloat();
+                    break;
+                  }
+                  case 26: {
+                    if (boundingPoly_ == null) {
+                      BoundingPoly = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
+                    }
+                    input.ReadMessage(BoundingPoly);
+                    break;
+                  }
+                  case 32: {
+                    Orientation = (global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout.Types.Orientation) input.ReadEnum();
+                    break;
+                  }
+                  case 42: {
+                    Id = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
             #region Nested types
             /// <summary>Container for nested types declared in the Layout message type.</summary>
@@ -2520,7 +3151,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// A block has a set of lines (collected into paragraphs) that have a
           /// common line-spacing and orientation.
           /// </summary>
-          public sealed partial class Block : pb::IMessage<Block> {
+          public sealed partial class Block : pb::IMessage<Block>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Block> _parser = new pb::MessageParser<Block>(() => new Block());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2618,6 +3253,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (layout_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(Layout);
@@ -2626,7 +3264,22 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2658,6 +3311,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2677,14 +3333,44 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// A collection of lines that a human would perceive as a paragraph.
           /// </summary>
-          public sealed partial class Paragraph : pb::IMessage<Paragraph> {
+          public sealed partial class Paragraph : pb::IMessage<Paragraph>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Paragraph> _parser = new pb::MessageParser<Paragraph>(() => new Paragraph());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2782,6 +3468,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (layout_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(Layout);
@@ -2790,7 +3479,22 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2822,6 +3526,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -2841,7 +3548,33 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -2849,7 +3582,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// A collection of tokens that a human would perceive as a line.
           /// Does not cross column boundaries, can be horizontal, vertical, etc.
           /// </summary>
-          public sealed partial class Line : pb::IMessage<Line> {
+          public sealed partial class Line : pb::IMessage<Line>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Line> _parser = new pb::MessageParser<Line>(() => new Line());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2947,6 +3684,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (layout_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(Layout);
@@ -2955,7 +3695,22 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -2987,6 +3742,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -3006,14 +3764,44 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// A detected token.
           /// </summary>
-          public sealed partial class Token : pb::IMessage<Token> {
+          public sealed partial class Token : pb::IMessage<Token>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Token> _parser = new pb::MessageParser<Token>(() => new Token());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3128,6 +3916,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (layout_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(Layout);
@@ -3140,7 +3931,26 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              if (detectedBreak_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(DetectedBreak);
+              }
+              detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -3181,6 +3991,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -3207,7 +4020,40 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    if (detectedBreak_ == null) {
+                      DetectedBreak = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak();
+                    }
+                    input.ReadMessage(DetectedBreak);
+                    break;
+                  }
+                  case 26: {
+                    detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
             #region Nested types
             /// <summary>Container for nested types declared in the Token message type.</summary>
@@ -3216,7 +4062,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               /// <summary>
               /// Detected break at the end of a [Token][google.cloud.documentai.v1beta2.Document.Page.Token].
               /// </summary>
-              public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak> {
+              public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
                 private static readonly pb::MessageParser<DetectedBreak> _parser = new pb::MessageParser<DetectedBreak>(() => new DetectedBreak());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3298,6 +4148,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
                   if (Type != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
                     output.WriteRawTag(8);
                     output.WriteEnum((int) Type);
@@ -3305,7 +4158,21 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Type != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type.Unspecified) {
+                    output.WriteRawTag(8);
+                    output.WriteEnum((int) Type);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public int CalculateSize() {
@@ -3332,6 +4199,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
                     switch(tag) {
@@ -3344,7 +4214,26 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                       }
                     }
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        Type = (global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Token.Types.DetectedBreak.Types.Type) input.ReadEnum();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
 
                 #region Nested types
                 /// <summary>Container for nested types declared in the DetectedBreak message type.</summary>
@@ -3386,7 +4275,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// Detected non-text visual elements e.g. checkbox, signature etc. on the
           /// page.
           /// </summary>
-          public sealed partial class VisualElement : pb::IMessage<VisualElement> {
+          public sealed partial class VisualElement : pb::IMessage<VisualElement>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<VisualElement> _parser = new pb::MessageParser<VisualElement>(() => new VisualElement());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3501,6 +4394,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (layout_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(Layout);
@@ -3513,7 +4409,26 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              if (Type.Length != 0) {
+                output.WriteRawTag(18);
+                output.WriteString(Type);
+              }
+              detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -3551,6 +4466,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -3574,14 +4492,48 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    Type = input.ReadString();
+                    break;
+                  }
+                  case 26: {
+                    detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// A table representation similar to HTML table structure.
           /// </summary>
-          public sealed partial class Table : pb::IMessage<Table> {
+          public sealed partial class Table : pb::IMessage<Table>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<Table> _parser = new pb::MessageParser<Table>(() => new Table());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3711,6 +4663,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (layout_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(Layout);
@@ -3721,7 +4676,24 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (layout_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(Layout);
+              }
+              headerRows_.WriteTo(ref output, _repeated_headerRows_codec);
+              bodyRows_.WriteTo(ref output, _repeated_bodyRows_codec);
+              detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -3757,6 +4729,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -3784,7 +4759,41 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (layout_ == null) {
+                      Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(Layout);
+                    break;
+                  }
+                  case 18: {
+                    headerRows_.AddEntriesFrom(ref input, _repeated_headerRows_codec);
+                    break;
+                  }
+                  case 26: {
+                    bodyRows_.AddEntriesFrom(ref input, _repeated_bodyRows_codec);
+                    break;
+                  }
+                  case 34: {
+                    detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
             #region Nested types
             /// <summary>Container for nested types declared in the Table message type.</summary>
@@ -3793,7 +4802,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               /// <summary>
               /// A row of table cells.
               /// </summary>
-              public sealed partial class TableRow : pb::IMessage<TableRow> {
+              public sealed partial class TableRow : pb::IMessage<TableRow>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
                 private static readonly pb::MessageParser<TableRow> _parser = new pb::MessageParser<TableRow>(() => new TableRow());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3874,11 +4887,25 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
                   cells_.WriteTo(output, _repeated_cells_codec);
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  cells_.WriteTo(ref output, _repeated_cells_codec);
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public int CalculateSize() {
@@ -3901,6 +4928,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
                     switch(tag) {
@@ -3913,14 +4943,37 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                       }
                     }
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        cells_.AddEntriesFrom(ref input, _repeated_cells_codec);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
 
               }
 
               /// <summary>
               /// A cell representation inside the table.
               /// </summary>
-              public sealed partial class TableCell : pb::IMessage<TableCell> {
+              public sealed partial class TableCell : pb::IMessage<TableCell>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
                 private static readonly pb::MessageParser<TableCell> _parser = new pb::MessageParser<TableCell>(() => new TableCell());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4052,6 +5105,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
                   if (layout_ != null) {
                     output.WriteRawTag(10);
                     output.WriteMessage(Layout);
@@ -4068,7 +5124,30 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   if (_unknownFields != null) {
                     _unknownFields.WriteTo(output);
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (layout_ != null) {
+                    output.WriteRawTag(10);
+                    output.WriteMessage(Layout);
+                  }
+                  if (RowSpan != 0) {
+                    output.WriteRawTag(16);
+                    output.WriteInt32(RowSpan);
+                  }
+                  if (ColSpan != 0) {
+                    output.WriteRawTag(24);
+                    output.WriteInt32(ColSpan);
+                  }
+                  detectedLanguages_.WriteTo(ref output, _repeated_detectedLanguages_codec);
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public int CalculateSize() {
@@ -4112,6 +5191,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
                 public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
                     switch(tag) {
@@ -4139,7 +5221,41 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                       }
                     }
                   }
+                #endif
                 }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        if (layout_ == null) {
+                          Layout = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                        }
+                        input.ReadMessage(Layout);
+                        break;
+                      }
+                      case 16: {
+                        RowSpan = input.ReadInt32();
+                        break;
+                      }
+                      case 24: {
+                        ColSpan = input.ReadInt32();
+                        break;
+                      }
+                      case 34: {
+                        detectedLanguages_.AddEntriesFrom(ref input, _repeated_detectedLanguages_codec);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
 
               }
 
@@ -4151,7 +5267,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// <summary>
           /// A form field detected on the page.
           /// </summary>
-          public sealed partial class FormField : pb::IMessage<FormField> {
+          public sealed partial class FormField : pb::IMessage<FormField>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<FormField> _parser = new pb::MessageParser<FormField>(() => new FormField());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4338,6 +5458,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (fieldName_ != null) {
                 output.WriteRawTag(10);
                 output.WriteMessage(FieldName);
@@ -4363,7 +5486,39 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (fieldName_ != null) {
+                output.WriteRawTag(10);
+                output.WriteMessage(FieldName);
+              }
+              if (fieldValue_ != null) {
+                output.WriteRawTag(18);
+                output.WriteMessage(FieldValue);
+              }
+              nameDetectedLanguages_.WriteTo(ref output, _repeated_nameDetectedLanguages_codec);
+              valueDetectedLanguages_.WriteTo(ref output, _repeated_valueDetectedLanguages_codec);
+              if (ValueType.Length != 0) {
+                output.WriteRawTag(42);
+                output.WriteString(ValueType);
+              }
+              if (CorrectedKeyText.Length != 0) {
+                output.WriteRawTag(50);
+                output.WriteString(CorrectedKeyText);
+              }
+              if (CorrectedValueText.Length != 0) {
+                output.WriteRawTag(58);
+                output.WriteString(CorrectedValueText);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -4424,6 +5579,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -4466,14 +5624,67 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    if (fieldName_ == null) {
+                      FieldName = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(FieldName);
+                    break;
+                  }
+                  case 18: {
+                    if (fieldValue_ == null) {
+                      FieldValue = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.Page.Types.Layout();
+                    }
+                    input.ReadMessage(FieldValue);
+                    break;
+                  }
+                  case 26: {
+                    nameDetectedLanguages_.AddEntriesFrom(ref input, _repeated_nameDetectedLanguages_codec);
+                    break;
+                  }
+                  case 34: {
+                    valueDetectedLanguages_.AddEntriesFrom(ref input, _repeated_valueDetectedLanguages_codec);
+                    break;
+                  }
+                  case 42: {
+                    ValueType = input.ReadString();
+                    break;
+                  }
+                  case 50: {
+                    CorrectedKeyText = input.ReadString();
+                    break;
+                  }
+                  case 58: {
+                    CorrectedValueText = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
           /// <summary>
           /// Detected language for a structural component.
           /// </summary>
-          public sealed partial class DetectedLanguage : pb::IMessage<DetectedLanguage> {
+          public sealed partial class DetectedLanguage : pb::IMessage<DetectedLanguage>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<DetectedLanguage> _parser = new pb::MessageParser<DetectedLanguage>(() => new DetectedLanguage());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4574,6 +5785,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (LanguageCode.Length != 0) {
                 output.WriteRawTag(10);
                 output.WriteString(LanguageCode);
@@ -4585,7 +5799,25 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (LanguageCode.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(LanguageCode);
+              }
+              if (Confidence != 0F) {
+                output.WriteRawTag(21);
+                output.WriteFloat(Confidence);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -4618,6 +5850,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -4634,7 +5869,30 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    LanguageCode = input.ReadString();
+                    break;
+                  }
+                  case 21: {
+                    Confidence = input.ReadFloat();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -4647,7 +5905,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       /// A phrase in the text that is a known entity type, such as a person, an
       /// organization, or location.
       /// </summary>
-      public sealed partial class Entity : pb::IMessage<Entity> {
+      public sealed partial class Entity : pb::IMessage<Entity>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4852,6 +6114,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (textAnchor_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(TextAnchor);
@@ -4887,7 +6152,49 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (textAnchor_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(TextAnchor);
+          }
+          if (Type.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Type);
+          }
+          if (MentionText.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(MentionText);
+          }
+          if (MentionId.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(MentionId);
+          }
+          if (Confidence != 0F) {
+            output.WriteRawTag(45);
+            output.WriteFloat(Confidence);
+          }
+          if (pageAnchor_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(PageAnchor);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(Id);
+          }
+          if (boundingPolyForDemoFrontend_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(BoundingPolyForDemoFrontend);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -4965,6 +6272,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -5014,14 +6324,74 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (textAnchor_ == null) {
+                  TextAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.TextAnchor();
+                }
+                input.ReadMessage(TextAnchor);
+                break;
+              }
+              case 18: {
+                Type = input.ReadString();
+                break;
+              }
+              case 26: {
+                MentionText = input.ReadString();
+                break;
+              }
+              case 34: {
+                MentionId = input.ReadString();
+                break;
+              }
+              case 45: {
+                Confidence = input.ReadFloat();
+                break;
+              }
+              case 50: {
+                if (pageAnchor_ == null) {
+                  PageAnchor = new global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor();
+                }
+                input.ReadMessage(PageAnchor);
+                break;
+              }
+              case 58: {
+                Id = input.ReadString();
+                break;
+              }
+              case 66: {
+                if (boundingPolyForDemoFrontend_ == null) {
+                  BoundingPolyForDemoFrontend = new global::Google.Cloud.DocumentAI.V1Beta2.BoundingPoly();
+                }
+                input.ReadMessage(BoundingPolyForDemoFrontend);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Relationship between [Entities][google.cloud.documentai.v1beta2.Document.Entity].
       /// </summary>
-      public sealed partial class EntityRelation : pb::IMessage<EntityRelation> {
+      public sealed partial class EntityRelation : pb::IMessage<EntityRelation>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<EntityRelation> _parser = new pb::MessageParser<EntityRelation>(() => new EntityRelation());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5137,6 +6507,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (SubjectId.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(SubjectId);
@@ -5152,7 +6525,29 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (SubjectId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(SubjectId);
+          }
+          if (ObjectId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ObjectId);
+          }
+          if (Relation.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Relation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -5191,6 +6586,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -5211,14 +6609,45 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                SubjectId = input.ReadString();
+                break;
+              }
+              case 18: {
+                ObjectId = input.ReadString();
+                break;
+              }
+              case 26: {
+                Relation = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Text reference indexing into the [Document.text][google.cloud.documentai.v1beta2.Document.text].
       /// </summary>
-      public sealed partial class TextAnchor : pb::IMessage<TextAnchor> {
+      public sealed partial class TextAnchor : pb::IMessage<TextAnchor>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<TextAnchor> _parser = new pb::MessageParser<TextAnchor>(() => new TextAnchor());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5299,11 +6728,25 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           textSegments_.WriteTo(output, _repeated_textSegments_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          textSegments_.WriteTo(ref output, _repeated_textSegments_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -5326,6 +6769,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -5338,7 +6784,26 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                textSegments_.AddEntriesFrom(ref input, _repeated_textSegments_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the TextAnchor message type.</summary>
@@ -5349,7 +6814,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// which indicate that the text extends into another document shard for
           /// large sharded documents. See [ShardInfo.text_offset][google.cloud.documentai.v1beta2.Document.ShardInfo.text_offset]
           /// </summary>
-          public sealed partial class TextSegment : pb::IMessage<TextSegment> {
+          public sealed partial class TextSegment : pb::IMessage<TextSegment>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<TextSegment> _parser = new pb::MessageParser<TextSegment>(() => new TextSegment());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5449,6 +6918,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (StartIndex != 0L) {
                 output.WriteRawTag(8);
                 output.WriteInt64(StartIndex);
@@ -5460,7 +6932,25 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (StartIndex != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(StartIndex);
+              }
+              if (EndIndex != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(EndIndex);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -5493,6 +6983,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -5509,7 +7002,30 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    StartIndex = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    EndIndex = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
           }
 
@@ -5521,7 +7037,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
       /// <summary>
       /// Referencing elements in [Document.pages][google.cloud.documentai.v1beta2.Document.pages].
       /// </summary>
-      public sealed partial class PageAnchor : pb::IMessage<PageAnchor> {
+      public sealed partial class PageAnchor : pb::IMessage<PageAnchor>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<PageAnchor> _parser = new pb::MessageParser<PageAnchor>(() => new PageAnchor());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5602,11 +7122,25 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           pageRefs_.WriteTo(output, _repeated_pageRefs_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          pageRefs_.WriteTo(ref output, _repeated_pageRefs_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -5629,6 +7163,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -5641,7 +7178,26 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                pageRefs_.AddEntriesFrom(ref input, _repeated_pageRefs_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the PageAnchor message type.</summary>
@@ -5650,7 +7206,11 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
           /// <summary>
           /// Represents a weak reference to a page element within a document.
           /// </summary>
-          public sealed partial class PageRef : pb::IMessage<PageRef> {
+          public sealed partial class PageRef : pb::IMessage<PageRef>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
             private static readonly pb::MessageParser<PageRef> _parser = new pb::MessageParser<PageRef>(() => new PageRef());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5769,6 +7329,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
               if (Page != 0L) {
                 output.WriteRawTag(8);
                 output.WriteInt64(Page);
@@ -5784,7 +7347,29 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Page != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(Page);
+              }
+              if (LayoutType != global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) LayoutType);
+              }
+              if (LayoutId.Length != 0) {
+                output.WriteRawTag(26);
+                output.WriteString(LayoutId);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
@@ -5823,6 +7408,9 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
                 switch(tag) {
@@ -5843,7 +7431,34 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
                   }
                 }
               }
+            #endif
             }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    Page = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    LayoutType = (global::Google.Cloud.DocumentAI.V1Beta2.Document.Types.PageAnchor.Types.PageRef.Types.LayoutType) input.ReadEnum();
+                    break;
+                  }
+                  case 26: {
+                    LayoutId = input.ReadString();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
 
             #region Nested types
             /// <summary>Container for nested types declared in the PageRef message type.</summary>

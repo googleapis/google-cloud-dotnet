@@ -71,7 +71,11 @@ namespace Google.Cloud.Retail.V2 {
   /// UserEvent captures all metadata information recommendation engine needs to
   /// know about how end users interact with customers' website.
   /// </summary>
-  public sealed partial class UserEvent : pb::IMessage<UserEvent> {
+  public sealed partial class UserEvent : pb::IMessage<UserEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UserEvent> _parser = new pb::MessageParser<UserEvent>(() => new UserEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -504,6 +508,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (EventType.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(EventType);
@@ -559,7 +566,69 @@ namespace Google.Cloud.Retail.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventType.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(EventType);
+      }
+      if (VisitorId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VisitorId);
+      }
+      if (eventTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EventTime);
+      }
+      experimentIds_.WriteTo(ref output, _repeated_experimentIds_codec);
+      if (AttributionToken.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AttributionToken);
+      }
+      productDetails_.WriteTo(ref output, _repeated_productDetails_codec);
+      attributes_.WriteTo(ref output, _map_attributes_codec);
+      if (CartId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CartId);
+      }
+      if (purchaseTransaction_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(PurchaseTransaction);
+      }
+      if (SearchQuery.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(SearchQuery);
+      }
+      pageCategories_.WriteTo(ref output, _repeated_pageCategories_codec);
+      if (userInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UserInfo);
+      }
+      if (Uri.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Uri);
+      }
+      if (ReferrerUri.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(ReferrerUri);
+      }
+      if (PageViewId.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(PageViewId);
+      }
+      if (EventSource.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(EventSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -669,6 +738,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -750,14 +822,106 @@ namespace Google.Cloud.Retail.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            EventType = input.ReadString();
+            break;
+          }
+          case 18: {
+            VisitorId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (eventTime_ == null) {
+              EventTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EventTime);
+            break;
+          }
+          case 34: {
+            experimentIds_.AddEntriesFrom(ref input, _repeated_experimentIds_codec);
+            break;
+          }
+          case 42: {
+            AttributionToken = input.ReadString();
+            break;
+          }
+          case 50: {
+            productDetails_.AddEntriesFrom(ref input, _repeated_productDetails_codec);
+            break;
+          }
+          case 58: {
+            attributes_.AddEntriesFrom(ref input, _map_attributes_codec);
+            break;
+          }
+          case 66: {
+            CartId = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (purchaseTransaction_ == null) {
+              PurchaseTransaction = new global::Google.Cloud.Retail.V2.PurchaseTransaction();
+            }
+            input.ReadMessage(PurchaseTransaction);
+            break;
+          }
+          case 82: {
+            SearchQuery = input.ReadString();
+            break;
+          }
+          case 90: {
+            pageCategories_.AddEntriesFrom(ref input, _repeated_pageCategories_codec);
+            break;
+          }
+          case 98: {
+            if (userInfo_ == null) {
+              UserInfo = new global::Google.Cloud.Retail.V2.UserInfo();
+            }
+            input.ReadMessage(UserInfo);
+            break;
+          }
+          case 106: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 114: {
+            ReferrerUri = input.ReadString();
+            break;
+          }
+          case 122: {
+            PageViewId = input.ReadString();
+            break;
+          }
+          case 130: {
+            EventSource = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Detailed product information associated with a user event.
   /// </summary>
-  public sealed partial class ProductDetail : pb::IMessage<ProductDetail> {
+  public sealed partial class ProductDetail : pb::IMessage<ProductDetail>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ProductDetail> _parser = new pb::MessageParser<ProductDetail>(() => new ProductDetail());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -862,6 +1026,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (product_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Product);
@@ -872,7 +1039,24 @@ namespace Google.Cloud.Retail.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (product_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Product);
+      }
+      if (quantity_ != null) {
+        _single_quantity_codec.WriteTagAndValue(ref output, Quantity);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -910,6 +1094,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -932,14 +1119,47 @@ namespace Google.Cloud.Retail.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (product_ == null) {
+              Product = new global::Google.Cloud.Retail.V2.Product();
+            }
+            input.ReadMessage(Product);
+            break;
+          }
+          case 18: {
+            int? value = _single_quantity_codec.Read(ref input);
+            if (quantity_ == null || value != 0) {
+              Quantity = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A transaction represents the entire purchase transaction.
   /// </summary>
-  public sealed partial class PurchaseTransaction : pb::IMessage<PurchaseTransaction> {
+  public sealed partial class PurchaseTransaction : pb::IMessage<PurchaseTransaction>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PurchaseTransaction> _parser = new pb::MessageParser<PurchaseTransaction>(() => new PurchaseTransaction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1104,6 +1324,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
@@ -1127,7 +1350,37 @@ namespace Google.Cloud.Retail.V2 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Revenue != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Revenue);
+      }
+      if (Tax != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Tax);
+      }
+      if (Cost != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(Cost);
+      }
+      if (CurrencyCode.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(CurrencyCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1178,6 +1431,9 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1206,7 +1462,42 @@ namespace Google.Cloud.Retail.V2 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 21: {
+            Revenue = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            Tax = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            Cost = input.ReadFloat();
+            break;
+          }
+          case 42: {
+            CurrencyCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

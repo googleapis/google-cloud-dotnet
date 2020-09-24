@@ -224,7 +224,11 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Create job request.
   /// </summary>
-  public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest> {
+  public sealed partial class CreateJobRequest : pb::IMessage<CreateJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<CreateJobRequest> _parser = new pb::MessageParser<CreateJobRequest>(() => new CreateJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -326,6 +330,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -337,7 +344,25 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (job_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Job);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -373,6 +398,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -392,14 +420,44 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (job_ == null) {
+              Job = new global::Google.Cloud.Talent.V4.Job();
+            }
+            input.ReadMessage(Job);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Get job request.
   /// </summary>
-  public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest> {
+  public sealed partial class GetJobRequest : pb::IMessage<GetJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<GetJobRequest> _parser = new pb::MessageParser<GetJobRequest>(() => new GetJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -485,6 +543,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -492,7 +553,21 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -519,6 +594,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -531,14 +609,37 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Update job request.
   /// </summary>
-  public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest> {
+  public sealed partial class UpdateJobRequest : pb::IMessage<UpdateJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<UpdateJobRequest> _parser = new pb::MessageParser<UpdateJobRequest>(() => new UpdateJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -643,6 +744,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (job_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Job);
@@ -654,7 +758,25 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (job_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Job);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -693,6 +815,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -715,14 +840,47 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (job_ == null) {
+              Job = new global::Google.Cloud.Talent.V4.Job();
+            }
+            input.ReadMessage(Job);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Delete job request.
   /// </summary>
-  public sealed partial class DeleteJobRequest : pb::IMessage<DeleteJobRequest> {
+  public sealed partial class DeleteJobRequest : pb::IMessage<DeleteJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeleteJobRequest> _parser = new pb::MessageParser<DeleteJobRequest>(() => new DeleteJobRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -808,6 +966,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
@@ -815,7 +976,21 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -842,6 +1017,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -854,14 +1032,37 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// List jobs request.
   /// </summary>
-  public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest> {
+  public sealed partial class ListJobsRequest : pb::IMessage<ListJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListJobsRequest> _parser = new pb::MessageParser<ListJobsRequest>(() => new ListJobsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1038,6 +1239,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -1061,7 +1265,37 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PageSize);
+      }
+      if (JobView != global::Google.Cloud.Talent.V4.JobView.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) JobView);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1112,6 +1346,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1140,14 +1377,53 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 32: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            JobView = (global::Google.Cloud.Talent.V4.JobView) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// List jobs response.
   /// </summary>
-  public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse> {
+  public sealed partial class ListJobsResponse : pb::IMessage<ListJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<ListJobsResponse> _parser = new pb::MessageParser<ListJobsResponse>(() => new ListJobsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1266,6 +1542,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       jobs_.WriteTo(output, _repeated_jobs_codec);
       if (NextPageToken.Length != 0) {
         output.WriteRawTag(18);
@@ -1278,7 +1557,26 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jobs_.WriteTo(ref output, _repeated_jobs_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (metadata_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Metadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -1316,6 +1614,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1339,14 +1640,48 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            jobs_.AddEntriesFrom(ref input, _repeated_jobs_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (metadata_ == null) {
+              Metadata = new global::Google.Cloud.Talent.V4.ResponseMetadata();
+            }
+            input.ReadMessage(Metadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The Request body of the `SearchJobs` call.
   /// </summary>
-  public sealed partial class SearchJobsRequest : pb::IMessage<SearchJobsRequest> {
+  public sealed partial class SearchJobsRequest : pb::IMessage<SearchJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SearchJobsRequest> _parser = new pb::MessageParser<SearchJobsRequest>(() => new SearchJobsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1839,6 +2174,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -1895,7 +2233,70 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (SearchMode != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.SearchMode.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SearchMode);
+      }
+      if (requestMetadata_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RequestMetadata);
+      }
+      if (jobQuery_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(JobQuery);
+      }
+      if (EnableBroadening != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(EnableBroadening);
+      }
+      histogramQueries_.WriteTo(ref output, _repeated_histogramQueries_codec);
+      if (JobView != global::Google.Cloud.Talent.V4.JobView.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) JobView);
+      }
+      if (Offset != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(Offset);
+      }
+      if (MaxPageSize != 0) {
+        output.WriteRawTag(80);
+        output.WriteInt32(MaxPageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(PageToken);
+      }
+      if (OrderBy.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(OrderBy);
+      }
+      if (DiversificationLevel != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.DiversificationLevel.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) DiversificationLevel);
+      }
+      if (customRankingInfo_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(CustomRankingInfo);
+      }
+      if (DisableKeywordMatch != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(DisableKeywordMatch);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2005,6 +2406,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2078,7 +2482,87 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            SearchMode = (global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.SearchMode) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (requestMetadata_ == null) {
+              RequestMetadata = new global::Google.Cloud.Talent.V4.RequestMetadata();
+            }
+            input.ReadMessage(RequestMetadata);
+            break;
+          }
+          case 34: {
+            if (jobQuery_ == null) {
+              JobQuery = new global::Google.Cloud.Talent.V4.JobQuery();
+            }
+            input.ReadMessage(JobQuery);
+            break;
+          }
+          case 40: {
+            EnableBroadening = input.ReadBool();
+            break;
+          }
+          case 58: {
+            histogramQueries_.AddEntriesFrom(ref input, _repeated_histogramQueries_codec);
+            break;
+          }
+          case 64: {
+            JobView = (global::Google.Cloud.Talent.V4.JobView) input.ReadEnum();
+            break;
+          }
+          case 72: {
+            Offset = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            MaxPageSize = input.ReadInt32();
+            break;
+          }
+          case 90: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 98: {
+            OrderBy = input.ReadString();
+            break;
+          }
+          case 104: {
+            DiversificationLevel = (global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.DiversificationLevel) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            if (customRankingInfo_ == null) {
+              CustomRankingInfo = new global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo();
+            }
+            input.ReadMessage(CustomRankingInfo);
+            break;
+          }
+          case 128: {
+            DisableKeywordMatch = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the SearchJobsRequest message type.</summary>
@@ -2142,7 +2626,11 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Custom ranking information for [SearchJobsRequest][google.cloud.talent.v4.SearchJobsRequest].
       /// </summary>
-      public sealed partial class CustomRankingInfo : pb::IMessage<CustomRankingInfo> {
+      public sealed partial class CustomRankingInfo : pb::IMessage<CustomRankingInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CustomRankingInfo> _parser = new pb::MessageParser<CustomRankingInfo>(() => new CustomRankingInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2265,6 +2753,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (ImportanceLevel != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified) {
             output.WriteRawTag(8);
             output.WriteEnum((int) ImportanceLevel);
@@ -2276,7 +2767,25 @@ namespace Google.Cloud.Talent.V4 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ImportanceLevel != global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ImportanceLevel);
+          }
+          if (RankingExpression.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(RankingExpression);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2309,6 +2818,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -2325,7 +2837,30 @@ namespace Google.Cloud.Talent.V4 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ImportanceLevel = (global::Google.Cloud.Talent.V4.SearchJobsRequest.Types.CustomRankingInfo.Types.ImportanceLevel) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                RankingExpression = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
         #region Nested types
         /// <summary>Container for nested types declared in the CustomRankingInfo message type.</summary>
@@ -2390,7 +2925,11 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Response for SearchJob method.
   /// </summary>
-  public sealed partial class SearchJobsResponse : pb::IMessage<SearchJobsResponse> {
+  public sealed partial class SearchJobsResponse : pb::IMessage<SearchJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<SearchJobsResponse> _parser = new pb::MessageParser<SearchJobsResponse>(() => new SearchJobsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2601,6 +3140,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       matchingJobs_.WriteTo(output, _repeated_matchingJobs_codec);
       histogramQueryResults_.WriteTo(output, _repeated_histogramQueryResults_codec);
       if (NextPageToken.Length != 0) {
@@ -2627,7 +3169,40 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      matchingJobs_.WriteTo(ref output, _repeated_matchingJobs_codec);
+      histogramQueryResults_.WriteTo(ref output, _repeated_histogramQueryResults_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(NextPageToken);
+      }
+      locationFilters_.WriteTo(ref output, _repeated_locationFilters_codec);
+      if (TotalSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(TotalSize);
+      }
+      if (metadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Metadata);
+      }
+      if (BroadenedQueryJobsCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(BroadenedQueryJobsCount);
+      }
+      if (spellCorrection_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SpellCorrection);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -2690,6 +3265,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2736,7 +3314,60 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            matchingJobs_.AddEntriesFrom(ref input, _repeated_matchingJobs_codec);
+            break;
+          }
+          case 18: {
+            histogramQueryResults_.AddEntriesFrom(ref input, _repeated_histogramQueryResults_codec);
+            break;
+          }
+          case 26: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            locationFilters_.AddEntriesFrom(ref input, _repeated_locationFilters_codec);
+            break;
+          }
+          case 48: {
+            TotalSize = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            if (metadata_ == null) {
+              Metadata = new global::Google.Cloud.Talent.V4.ResponseMetadata();
+            }
+            input.ReadMessage(Metadata);
+            break;
+          }
+          case 64: {
+            BroadenedQueryJobsCount = input.ReadInt32();
+            break;
+          }
+          case 74: {
+            if (spellCorrection_ == null) {
+              SpellCorrection = new global::Google.Cloud.Talent.V4.SpellingCorrection();
+            }
+            input.ReadMessage(SpellCorrection);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the SearchJobsResponse message type.</summary>
@@ -2745,7 +3376,11 @@ namespace Google.Cloud.Talent.V4 {
       /// <summary>
       /// Job entry with metadata inside [SearchJobsResponse][google.cloud.talent.v4.SearchJobsResponse].
       /// </summary>
-      public sealed partial class MatchingJob : pb::IMessage<MatchingJob> {
+      public sealed partial class MatchingJob : pb::IMessage<MatchingJob>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<MatchingJob> _parser = new pb::MessageParser<MatchingJob>(() => new MatchingJob());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2902,6 +3537,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (job_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(Job);
@@ -2925,7 +3563,37 @@ namespace Google.Cloud.Talent.V4 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (job_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Job);
+          }
+          if (JobSummary.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(JobSummary);
+          }
+          if (JobTitleSnippet.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(JobTitleSnippet);
+          }
+          if (SearchTextSnippet.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(SearchTextSnippet);
+          }
+          if (commuteInfo_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(CommuteInfo);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -2982,6 +3650,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3016,14 +3687,59 @@ namespace Google.Cloud.Talent.V4 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (job_ == null) {
+                  Job = new global::Google.Cloud.Talent.V4.Job();
+                }
+                input.ReadMessage(Job);
+                break;
+              }
+              case 18: {
+                JobSummary = input.ReadString();
+                break;
+              }
+              case 26: {
+                JobTitleSnippet = input.ReadString();
+                break;
+              }
+              case 34: {
+                SearchTextSnippet = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (commuteInfo_ == null) {
+                  CommuteInfo = new global::Google.Cloud.Talent.V4.SearchJobsResponse.Types.CommuteInfo();
+                }
+                input.ReadMessage(CommuteInfo);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
       /// <summary>
       /// Commute details related to this job.
       /// </summary>
-      public sealed partial class CommuteInfo : pb::IMessage<CommuteInfo> {
+      public sealed partial class CommuteInfo : pb::IMessage<CommuteInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<CommuteInfo> _parser = new pb::MessageParser<CommuteInfo>(() => new CommuteInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3125,6 +3841,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (jobLocation_ != null) {
             output.WriteRawTag(10);
             output.WriteMessage(JobLocation);
@@ -3136,7 +3855,25 @@ namespace Google.Cloud.Talent.V4 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (jobLocation_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(JobLocation);
+          }
+          if (travelDuration_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(TravelDuration);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
@@ -3175,6 +3912,9 @@ namespace Google.Cloud.Talent.V4 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -3197,7 +3937,36 @@ namespace Google.Cloud.Talent.V4 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (jobLocation_ == null) {
+                  JobLocation = new global::Google.Cloud.Talent.V4.Location();
+                }
+                input.ReadMessage(JobLocation);
+                break;
+              }
+              case 18: {
+                if (travelDuration_ == null) {
+                  TravelDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(TravelDuration);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -3209,7 +3978,11 @@ namespace Google.Cloud.Talent.V4 {
   /// <summary>
   /// Request to create a batch of jobs.
   /// </summary>
-  public sealed partial class BatchCreateJobsRequest : pb::IMessage<BatchCreateJobsRequest> {
+  public sealed partial class BatchCreateJobsRequest : pb::IMessage<BatchCreateJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BatchCreateJobsRequest> _parser = new pb::MessageParser<BatchCreateJobsRequest>(() => new BatchCreateJobsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3311,6 +4084,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -3319,7 +4095,22 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      jobs_.WriteTo(ref output, _repeated_jobs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3348,6 +4139,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3364,14 +4158,41 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            jobs_.AddEntriesFrom(ref input, _repeated_jobs_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to update a batch of jobs.
   /// </summary>
-  public sealed partial class BatchUpdateJobsRequest : pb::IMessage<BatchUpdateJobsRequest> {
+  public sealed partial class BatchUpdateJobsRequest : pb::IMessage<BatchUpdateJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BatchUpdateJobsRequest> _parser = new pb::MessageParser<BatchUpdateJobsRequest>(() => new BatchUpdateJobsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3503,6 +4324,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -3515,7 +4339,26 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      jobs_.WriteTo(ref output, _repeated_jobs_codec);
+      if (updateMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3553,6 +4396,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3576,14 +4422,48 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            jobs_.AddEntriesFrom(ref input, _repeated_jobs_codec);
+            break;
+          }
+          case 26: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Request to delete a batch of jobs.
   /// </summary>
-  public sealed partial class BatchDeleteJobsRequest : pb::IMessage<BatchDeleteJobsRequest> {
+  public sealed partial class BatchDeleteJobsRequest : pb::IMessage<BatchDeleteJobsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BatchDeleteJobsRequest> _parser = new pb::MessageParser<BatchDeleteJobsRequest>(() => new BatchDeleteJobsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3691,6 +4571,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Parent);
@@ -3699,7 +4582,22 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      names_.WriteTo(ref output, _repeated_names_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3728,6 +4626,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3744,14 +4645,41 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            names_.AddEntriesFrom(ref input, _repeated_names_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Mutation result of a job from a batch operation.
   /// </summary>
-  public sealed partial class JobResult : pb::IMessage<JobResult> {
+  public sealed partial class JobResult : pb::IMessage<JobResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<JobResult> _parser = new pb::MessageParser<JobResult>(() => new JobResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3854,6 +4782,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (job_ != null) {
         output.WriteRawTag(10);
         output.WriteMessage(Job);
@@ -3865,7 +4796,25 @@ namespace Google.Cloud.Talent.V4 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (job_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Job);
+      }
+      if (status_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -3904,6 +4853,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -3926,7 +4878,36 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (job_ == null) {
+              Job = new global::Google.Cloud.Talent.V4.Job();
+            }
+            input.ReadMessage(Job);
+            break;
+          }
+          case 18: {
+            if (status_ == null) {
+              Status = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -3934,7 +4915,11 @@ namespace Google.Cloud.Talent.V4 {
   /// The result of [JobService.BatchCreateJobs][google.cloud.talent.v4.JobService.BatchCreateJobs]. It's used to
   /// replace [google.longrunning.Operation.response][google.longrunning.Operation.response] in case of success.
   /// </summary>
-  public sealed partial class BatchCreateJobsResponse : pb::IMessage<BatchCreateJobsResponse> {
+  public sealed partial class BatchCreateJobsResponse : pb::IMessage<BatchCreateJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BatchCreateJobsResponse> _parser = new pb::MessageParser<BatchCreateJobsResponse>(() => new BatchCreateJobsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4016,11 +5001,25 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       jobResults_.WriteTo(output, _repeated_jobResults_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jobResults_.WriteTo(ref output, _repeated_jobResults_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4043,6 +5042,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4055,7 +5057,26 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            jobResults_.AddEntriesFrom(ref input, _repeated_jobResults_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4063,7 +5084,11 @@ namespace Google.Cloud.Talent.V4 {
   /// The result of [JobService.BatchUpdateJobs][google.cloud.talent.v4.JobService.BatchUpdateJobs]. It's used to
   /// replace [google.longrunning.Operation.response][google.longrunning.Operation.response] in case of success.
   /// </summary>
-  public sealed partial class BatchUpdateJobsResponse : pb::IMessage<BatchUpdateJobsResponse> {
+  public sealed partial class BatchUpdateJobsResponse : pb::IMessage<BatchUpdateJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BatchUpdateJobsResponse> _parser = new pb::MessageParser<BatchUpdateJobsResponse>(() => new BatchUpdateJobsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4145,11 +5170,25 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       jobResults_.WriteTo(output, _repeated_jobResults_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jobResults_.WriteTo(ref output, _repeated_jobResults_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4172,6 +5211,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4184,7 +5226,26 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            jobResults_.AddEntriesFrom(ref input, _repeated_jobResults_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -4192,7 +5253,11 @@ namespace Google.Cloud.Talent.V4 {
   /// The result of [JobService.BatchDeleteJobs][google.cloud.talent.v4.JobService.BatchDeleteJobs]. It's used to
   /// replace [google.longrunning.Operation.response][google.longrunning.Operation.response] in case of success.
   /// </summary>
-  public sealed partial class BatchDeleteJobsResponse : pb::IMessage<BatchDeleteJobsResponse> {
+  public sealed partial class BatchDeleteJobsResponse : pb::IMessage<BatchDeleteJobsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<BatchDeleteJobsResponse> _parser = new pb::MessageParser<BatchDeleteJobsResponse>(() => new BatchDeleteJobsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4274,11 +5339,25 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       jobResults_.WriteTo(output, _repeated_jobResults_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      jobResults_.WriteTo(ref output, _repeated_jobResults_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -4301,6 +5380,9 @@ namespace Google.Cloud.Talent.V4 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -4313,7 +5395,26 @@ namespace Google.Cloud.Talent.V4 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            jobResults_.AddEntriesFrom(ref input, _repeated_jobResults_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

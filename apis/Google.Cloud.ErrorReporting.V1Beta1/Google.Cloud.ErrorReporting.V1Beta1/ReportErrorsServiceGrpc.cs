@@ -77,7 +77,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     {
       /// <summary>Creates a new client for ReportErrorsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ReportErrorsServiceClient(grpc::Channel channel) : base(channel)
+      public ReportErrorsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ReportErrorsService that uses a custom <c>CallInvoker</c>.</summary>

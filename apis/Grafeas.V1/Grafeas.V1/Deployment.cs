@@ -50,7 +50,11 @@ namespace Grafeas.V1 {
   /// <summary>
   /// An artifact that can be deployed in some runtime.
   /// </summary>
-  public sealed partial class DeploymentNote : pb::IMessage<DeploymentNote> {
+  public sealed partial class DeploymentNote : pb::IMessage<DeploymentNote>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeploymentNote> _parser = new pb::MessageParser<DeploymentNote>(() => new DeploymentNote());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -131,11 +135,25 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       resourceUri_.WriteTo(output, _repeated_resourceUri_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      resourceUri_.WriteTo(ref output, _repeated_resourceUri_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -158,6 +176,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -170,14 +191,37 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            resourceUri_.AddEntriesFrom(ref input, _repeated_resourceUri_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// The period during which some deployable was active in a runtime.
   /// </summary>
-  public sealed partial class DeploymentOccurrence : pb::IMessage<DeploymentOccurrence> {
+  public sealed partial class DeploymentOccurrence : pb::IMessage<DeploymentOccurrence>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DeploymentOccurrence> _parser = new pb::MessageParser<DeploymentOccurrence>(() => new DeploymentOccurrence());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -361,6 +405,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (UserEmail.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(UserEmail);
@@ -389,7 +436,42 @@ namespace Grafeas.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserEmail.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserEmail);
+      }
+      if (deployTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DeployTime);
+      }
+      if (undeployTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UndeployTime);
+      }
+      if (Config.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Config);
+      }
+      if (Address.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Address);
+      }
+      resourceUri_.WriteTo(ref output, _repeated_resourceUri_codec);
+      if (Platform != global::Grafeas.V1.DeploymentOccurrence.Types.Platform.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) Platform);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
@@ -454,6 +536,9 @@ namespace Grafeas.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -496,7 +581,56 @@ namespace Grafeas.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UserEmail = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (deployTime_ == null) {
+              DeployTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeployTime);
+            break;
+          }
+          case 26: {
+            if (undeployTime_ == null) {
+              UndeployTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UndeployTime);
+            break;
+          }
+          case 34: {
+            Config = input.ReadString();
+            break;
+          }
+          case 42: {
+            Address = input.ReadString();
+            break;
+          }
+          case 50: {
+            resourceUri_.AddEntriesFrom(ref input, _repeated_resourceUri_codec);
+            break;
+          }
+          case 56: {
+            Platform = (global::Grafeas.V1.DeploymentOccurrence.Types.Platform) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the DeploymentOccurrence message type.</summary>

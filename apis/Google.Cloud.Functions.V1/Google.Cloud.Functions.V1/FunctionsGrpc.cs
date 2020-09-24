@@ -306,7 +306,7 @@ namespace Google.Cloud.Functions.V1 {
     {
       /// <summary>Creates a new client for CloudFunctionsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public CloudFunctionsServiceClient(grpc::Channel channel) : base(channel)
+      public CloudFunctionsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudFunctionsService that uses a custom <c>CallInvoker</c>.</summary>

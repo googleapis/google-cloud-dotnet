@@ -199,7 +199,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     {
       /// <summary>Creates a new client for DatastoreAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public DatastoreAdminClient(grpc::Channel channel) : base(channel)
+      public DatastoreAdminClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DatastoreAdmin that uses a custom <c>CallInvoker</c>.</summary>
