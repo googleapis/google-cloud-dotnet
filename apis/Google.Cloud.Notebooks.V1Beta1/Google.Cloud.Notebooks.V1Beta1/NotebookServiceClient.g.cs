@@ -633,7 +633,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
     /// <summary>NotebookService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// API service for Cloud AI Platform Notebooks.
+    /// API v1beta1 service for Cloud AI Platform Notebooks.
     /// </remarks>
     public abstract partial class NotebookServiceClient
     {
@@ -1601,7 +1601,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
     /// <summary>NotebookService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// API service for Cloud AI Platform Notebooks.
+    /// API v1beta1 service for Cloud AI Platform Notebooks.
     /// </remarks>
     public sealed partial class NotebookServiceClientImpl : NotebookServiceClient
     {
