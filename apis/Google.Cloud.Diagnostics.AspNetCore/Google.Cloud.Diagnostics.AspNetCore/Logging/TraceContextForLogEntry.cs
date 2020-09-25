@@ -14,7 +14,9 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Primitives;
 using System;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -58,6 +60,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             ContextTracerManager.GetCurrentTracer() is IManagedTracer tracer && tracer.GetCurrentTraceId() is string traceId ?
             new TraceContextForLogEntry(traceId, SpanIdToHex(tracer.GetCurrentSpanId())) :
             null;
+
+        internal static TraceContextForLogEntry FromGoogleTraceHeader(IServiceProvider serviceProvider)
+        {
+            if (serviceProvider?.GetService<IHttpContextAccessor>()?
+                .HttpContext.Request.Headers
+                .TryGetValue(TraceHeaderContext.TraceHeader, out StringValues headerValue) == true)
+            {
+                var traceContext = TraceHeaderContext.FromHeader(headerValue);
+                if (traceContext.ShouldTrace == true)
+                {
+                    return new TraceContextForLogEntry(traceContext.TraceId, SpanIdToHex(traceContext.SpanId));
+                }
+            }
+            return null;
+        }
 
         internal static TraceContextForLogEntry FromExternalTrace(IServiceProvider serviceProvider) =>
             serviceProvider?.GetService<IExternalTraceProvider>()?.GetCurrentTraceContext(serviceProvider);
