@@ -16,7 +16,7 @@ using Moq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.Common.Tests.Trace
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class ContextTraceManagerTest
     {
