@@ -60,9 +60,7 @@ namespace Google.Cloud.Firestore
             var sentinels = FindSentinels(fields);
             GaxPreconditions.CheckArgument(!sentinels.Any(sf => sf.IsDelete), nameof(documentData), "Delete sentinels cannot appear in Create calls");
             RemoveSentinels(fields, sentinels);
-            // Force a write if we've not got any sentinel values. Otherwise, we end up with an empty transform instead,
-            // just to specify the precondition.
-            AddUpdateWrites(documentReference, fields, s_emptyFieldPathList, Precondition.MustNotExist, sentinels, forceWrite: sentinels.Count == 0, includeEmptyUpdateMask: false);
+            AddUpdateWrite(documentReference, fields, updatePaths: null, Precondition.MustNotExist, sentinels);
             return this;
         }
 
@@ -137,7 +135,7 @@ namespace Google.Cloud.Firestore
             RemoveSentinels(expanded, sentinels);
 
             var nonDeletes = sentinels.Where(sf => !sf.IsDelete).ToList();
-            AddUpdateWrites(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, nonDeletes, forceWrite: false, includeEmptyUpdateMask: false);
+            AddUpdateWrite(documentReference, expanded, updates.Keys.ToList(), precondition ?? Precondition.MustExist, sentinelFields: nonDeletes);
             return this;
         }
 
@@ -159,7 +157,6 @@ namespace Google.Cloud.Firestore
             var deletes = sentinels.Where(sf => sf.IsDelete).ToList();
             var nonDeletes = sentinels.Where(sf => !sf.IsDelete).ToList();
 
-            bool forceWrite = false;
             IDictionary<FieldPath, Value> updates;
             IReadOnlyList<FieldPath> updatePaths;
             if (options.Merge)
@@ -172,7 +169,6 @@ namespace Google.Cloud.Firestore
                     // - Deletes are allowed anywhere
                     // - All timestamps converted to transforms
                     // - Each top-level entry becomes a FieldPath
-                    forceWrite = fields.Count == 0;
                     RemoveSentinels(fields, nonDeletes);
                     // Work out the update paths after removing server timestamps but before removing deletes,
                     // so that we correctly perform the deletes.
@@ -210,11 +206,10 @@ namespace Google.Cloud.Firestore
                 GaxPreconditions.CheckArgument(deletes.Count == 0, nameof(documentData), "Delete cannot appear in document data when overwriting");
                 RemoveSentinels(fields, nonDeletes);
                 updates = fields.ToDictionary(pair => new FieldPath(pair.Key), pair => pair.Value);
-                updatePaths = s_emptyFieldPathList;
-                forceWrite = true;
+                updatePaths = null;
             }
 
-            AddUpdateWrites(documentReference, ExpandObject(updates), updatePaths, null, nonDeletes, forceWrite, includeEmptyUpdateMask: options.Merge);
+            AddUpdateWrite(documentReference, ExpandObject(updates), updatePaths, precondition: null, sentinelFields: nonDeletes);
             return this;
         }
 
@@ -234,28 +229,13 @@ namespace Google.Cloud.Firestore
                 .ToList();
         }
 
-        private void AddUpdateWrites(
+        private void AddUpdateWrite(
             DocumentReference documentReference,
             IDictionary<string, Value> fields,
-            IReadOnlyList<FieldPath> updatePaths,
+            IReadOnlyList<FieldPath> updatePaths, // Null if an update mask isn't required
             Precondition precondition,
-            IList<SentinelField> sentinelFields,
-            bool forceWrite,
-            bool includeEmptyUpdateMask)
+            IList<SentinelField> sentinelFields)
         {
-            updatePaths = updatePaths.Except(sentinelFields.Select(sf => sf.FieldPath)).ToList();
-            if (!forceWrite && fields.Count == 0 && updatePaths.Count == 0 && sentinelFields.Count == 0)
-            {
-                return;
-            }
-
-            // If we've only got sentinels, but we have a precondition that requires the document to exist,
-            // include the empty update mask, to avoid removing all other data.
-            if (!includeEmptyUpdateMask && fields.Count == 0 && sentinelFields.Count > 0 && precondition?.Exists == true)
-            {
-                includeEmptyUpdateMask = true;
-            }
-
             var write = new Write
             {
                 CurrentDocument = precondition?.Proto,
@@ -264,7 +244,9 @@ namespace Google.Cloud.Firestore
                     Fields = { fields },
                     Name = documentReference.Path,
                 },
-                UpdateMask = includeEmptyUpdateMask || updatePaths.Count > 0 ? new DocumentMask { FieldPaths = { updatePaths.Select(fp => fp.EncodedPath) } } : null,
+                UpdateMask = updatePaths is null
+                    ? null
+                    : new DocumentMask { FieldPaths = { updatePaths.Except(sentinelFields.Select(sf => sf.FieldPath)).Select(fp => fp.EncodedPath) } },
                 UpdateTransforms = { sentinelFields.Select(p => p.ToFieldTransform()) }
             };
             Writes.Add(write);
