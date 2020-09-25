@@ -62,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal static TraceContextForLogEntry FromExternalTrace(IServiceProvider serviceProvider) =>
             serviceProvider?.GetService<IExternalTraceProvider>()?.GetCurrentTraceContext(serviceProvider);
 
-        private static string SpanIdToHex(ulong? spanId) => spanId is null ? null : $"{spanId:x}";
+        private static string SpanIdToHex(ulong? spanId) => spanId is null ? null : $"{spanId:x16}";
 
     }
 }
