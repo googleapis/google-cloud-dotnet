@@ -525,24 +525,6 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ServiceDirectory.V1Beta1"
     },
     {
-      "ServiceDirectory": "google/cloud/servicedirectory/v1",
-      "Name": "servicedirectory.googleapis.com",
-      "Title": "Service Directory API",
-      "Description": "Service Directory is a platform for discovering, publishing, and connecting services.",
-      "ServiceConfigFile": "google/cloud/servicedirectory/v1/servicedirectory_v1.yaml",
-      "Version": "v1",
-      "PackageFromDirectory": "google.cloud.servicedirectory.v1",
-      "PackageFromProtos": "google.cloud.servicedirectory.v1",
-      "ImportDirectories": [
-        "google/api",
-        "google/cloud/servicedirectory/v1",
-        "google/iam/v1",
-        "google/protobuf"
-      ],
-      "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.ServiceDirectory.V1"
-    },
-    {
       "ServiceDirectory": "google/cloud/documentai/v1beta3",
       "Name": "documentai.googleapis.com",
       "Title": "Cloud Document AI API",
