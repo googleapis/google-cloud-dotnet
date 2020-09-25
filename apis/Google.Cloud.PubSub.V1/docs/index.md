@@ -29,6 +29,13 @@ simpler.
 
 [PublisherClient](obj/api/Google.Cloud.PubSub.V1.PublisherClient.yml) and [SubscriberClient](obj/api/Google.Cloud.PubSub.V1.SubscriberClient.yml) provide simpler APIs for message publishing and subscribing. These classes offer considerably higher performance and simplicity, especially when working with higher message throughput.
 
+Note that both `PublisherClient` and `SubscriberClient` expect to
+execute in an environment with continuous processing and continuous
+network access to the Pub/Sub API. In environments such as Cloud Run
+or Cloud Functions, where servers do not use any CPU between requests,
+the `PublisherServiceApiClient` and `SubscriberServiceApiClient` classes
+should be used instead.
+
 # Sample code
 
 Using [PublisherClient](obj/api/Google.Cloud.PubSub.V1.PublisherClient.yml) and [SubscriberClient](obj/api/Google.Cloud.PubSub.V1.SubscriberClient.yml) for message publishing and subscribing:
