@@ -29,6 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -500,7 +501,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 return new object[][]
                 {
                     new object[] { new WebHostBuilder().UseStartup<NoBufferWarningLoggerExternalTraceTestApplication>() },
-                    new object[] { new WebHostBuilder().UseStartup<LoggerNoTracingActivatedTestApplication>() }
+                    new object[] { new WebHostBuilder().UseStartup<ExternalTracingTestApplication>() }
                 };
             }
         }
@@ -564,6 +565,74 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 // The span associated to our entry is the external span, and is the same span number
                 // as the log entry.
                 Assert.All(results, entry => Assert.Equal($"external_span_number{entry.JsonPayload.Fields["message"].StringValue.Last()}", entry.SpanId));
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Trace_GoogleExternal()
+        {
+            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            string testId = IdGenerator.FromGuid();
+
+            string traceId = "105445aa7843bc8bf206b12000100f00";
+            ulong spanId = 0x12D687;
+            // The spanId set on the log entry should confirm to x16
+            // format so that the backend can really associate the log entry
+            // to the span.
+            string expectedSpanId = "000000000012d687";
+
+            string url = $"/Main/Critical/{testId}";
+            var builder = new WebHostBuilder().UseStartup<GoogleTraceAsExternalTracingTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, url);
+                // Set the Google tracing header so that it can be read by the
+                // GoogleTraceProvider. This is the same that GCP would do.
+                // Note that we are actually not creating the trace on Google Trace,
+                // which is fine for the purposes of this test.
+                string traceHeaderValue = $"{traceId}/{spanId};o=1";
+                request.Headers.Add("X-Cloud-Trace-Context", traceHeaderValue);
+                await client.SendAsync(request);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // We only have one log entry.
+                LogEntry entry = Assert.Single(results);
+
+                // And the resource name of the trace associated to it contains the external trace id.
+                Assert.Contains(TestEnvironment.GetTestProjectId(), entry.Trace);
+                Assert.Contains(traceId, entry.Trace);
+
+                // The span associated to our entry is the external span.
+                Assert.Equal(expectedSpanId, entry.SpanId);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Trace_GoogleExternal_NoTraceHeader()
+        {
+            Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            string testId = IdGenerator.FromGuid();
+
+            string url = $"/Main/Critical/{testId}";
+            var builder = new WebHostBuilder().UseStartup<GoogleTraceAsExternalTracingTestApplication>();
+            using (var server = new TestServer(builder))
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync(url);
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                // We only have one log entry.
+                LogEntry entry = Assert.Single(results);
+
+                // The entry does not have any trace information.
+                // These are empty strings instead of null.
+                Assert.Equal("", entry.Trace);
+                Assert.Equal("", entry.SpanId);
             });
         }
 
@@ -744,7 +813,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// <summary>
     /// A simple web application to test the <see cref="GoogleLogger"/> and associated classes.
     /// </summary>
-    public class LoggerNoTracingActivatedTestApplication
+    public abstract class LoggerNoTracingActivatedTestApplication
     {
         protected readonly string _projectId = TestEnvironment.GetTestProjectId();
 
@@ -752,7 +821,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             services.AddHttpContextAccessor();
             services.AddMvc();
-            services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider());
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
@@ -766,6 +834,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             LoggerOptions loggerOptions = LoggerOptions.Create(
                 LogLevel.Warning, null, null, null, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
+        }
+    }
+
+    public class ExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            base.ConfigureServices(services);
+            services.AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>();
+        }
+    }
+
+    public class GoogleTraceAsExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            base.ConfigureServices(services);
+            services.AddSingleton<IExternalTraceProvider, GoogleTraceProvider>();
         }
     }
 
@@ -798,7 +884,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void SetupRoutes(IApplicationBuilder app)
         {
             app.UseGoogleTrace()
-                .UseMvc(routes =>
+               .UseMvc(routes =>
                 {
                     routes.MapRoute(
                         name: "default",
