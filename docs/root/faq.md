@@ -230,3 +230,35 @@ We have now released client libraries (some of them still in beta,
 but most GA) which use GAX 3.x, which depends on Grpc.Core 2.x. If
 you update to the latest version of the client library, that should
 fix the issue.
+
+## Why have the generated gRPC client constructors changed?
+
+Between gRPC 1.x and 2.x, the gRPC protoc plugin changed from
+generating raw gRPC client constructors accepting `Channel` to ones
+accepting its base class of `ChannelBase`. This is a good thing, as
+while `Channel` is part of the `Grpc.Core` package, `ChannelBase` is
+in the (much smaller) `Grpc.Core.Api` package.
+
+Unfortunately when upgrading the Google Cloud Libraries for .NET
+from gRPC 1.x to 2.x as package dependencies, we didn't change the
+generator version we were using.
+
+In terms of whether this counts as a breaking change or not, this is
+in a gray area. As far as we can determine, through pure C# code you
+shouldn't see any changes: code that worked before should work in
+exactly the same way now. While parameter changes can usually be
+breaking due to method group conversions to delegate types, those
+aren't available for constructors anyway. It *can* lead to a
+breaking change via reflection - which is potentially noticeable via
+dependency injection.
+
+We believe this to be *very, very* unlikely to affect customers, as
+it would only affect you if you're using the raw gRPC client instead
+of the "wrapper" provided by libraries *and* doing so by injecting a
+`Channel`, expecting that to be passed as a constructor argument. If
+you run into this situation, changing the `Channel` to `ChannelBase`
+is likely to fix the problem, but we would also like to hear from you:
+we'd be grateful if you'd [open a new
+issue](https://github.com/googleapis/google-cloud-dotnet/issues/new/choose)
+with the details so we can understand the situation better. (Aside
+from anything else, this will help us in future similar decisions.)
