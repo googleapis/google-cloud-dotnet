@@ -1848,7 +1848,8 @@
       "PackageFromProtos": "google.cloud.osconfig.agentendpoint.v1",
       "ImportDirectories": [
         "google/api",
-        "google/cloud/osconfig/agentendpoint/v1"
+        "google/cloud/osconfig/agentendpoint/v1",
+        "google/protobuf"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.Osconfig.Agentendpoint.V1"
