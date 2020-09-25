@@ -28,6 +28,6 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// </summary>
         public static string GetMessage(string message, string id) => $"{message} - {id}";
 
-        public static string SpanIdToHex(ulong? spanId) => spanId is null ? null : string.Format("0x{0:X}", spanId);
+        public static string SpanIdToHex(ulong? spanId) => spanId is null ? null : $"{spanId:x16}";
     }
 }
