@@ -122,6 +122,12 @@ namespace Google.Cloud.Storage.V1
 
                     var headers = new SortedDictionary<string, string>(StringComparer.Ordinal);
                     headers.AddHeader("host", _host);
+                    var effectiveRequestMethod = template.HttpMethod;
+                    if (effectiveRequestMethod == ResumableHttpMethod)
+                    {
+                        effectiveRequestMethod = HttpMethod.Post;
+                        headers.AddHeader("x-goog-resumable", "start");
+                    }
                     headers.AddHeaders(template.RequestHeaders);
                     headers.AddHeaders(template.ContentHeaders);
                     var canonicalHeaders = string.Join("", headers.Select(pair => $"{pair.Key}:{pair.Value}\n"));
@@ -133,13 +139,6 @@ namespace Google.Cloud.Storage.V1
                     queryParameters.AddQueryParameter("X-Goog-Date", timestamp);
                     queryParameters.AddQueryParameter("X-Goog-Expires", expirySeconds.ToString(CultureInfo.InvariantCulture));
                     queryParameters.AddQueryParameter("X-Goog-SignedHeaders", signedHeaders);
-
-                    var effectiveRequestMethod = template.HttpMethod;
-                    if (effectiveRequestMethod == ResumableHttpMethod)
-                    {
-                        effectiveRequestMethod = HttpMethod.Post;
-                        queryParameters.AddQueryParameter("X-Goog-Resumable", "Start");
-                    }
 
                     queryParameters.AddQueryParameters(template.QueryParameters);
 
