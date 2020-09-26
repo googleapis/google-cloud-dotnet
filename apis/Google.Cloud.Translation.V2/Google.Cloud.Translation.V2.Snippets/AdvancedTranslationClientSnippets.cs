@@ -92,7 +92,10 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
 
-            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText);
+            // We skip the <p> element in the check, because sometimes there is a space
+            // separating it from the <strong> element, sometimes there isn't.
+            // https://github.com/googleapis/google-cloud-dotnet/issues/5366
+            Assert.Contains("<strong>Il pleut.</strong>", result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -105,7 +108,10 @@ namespace Google.Cloud.Translation.V2.Snippets
             Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End snippet
 
-            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText);
+            // We skip the <p> element in the check, because sometimes there is a space
+            // separating it from the <strong> element, sometimes there isn't.
+            // https://github.com/googleapis/google-cloud-dotnet/issues/5366
+            Assert.Contains("<strong>Il pleut.</strong>", result.TranslatedText);
             Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
@@ -150,9 +156,12 @@ namespace Google.Cloud.Translation.V2.Snippets
             }
             // End sample
 
-            Assert.Equal("<p> <strong>Il pleut.</strong> </p>", results[0].TranslatedText);
+            // We skip the <p> element in the check, because sometimes there is a space
+            // separating it from the <strong> element, sometimes there isn't.
+            // https://github.com/googleapis/google-cloud-dotnet/issues/5366
+            Assert.Contains("<strong>Il pleut.</strong>", results[0].TranslatedText);
             Assert.Equal("en", results[0].DetectedSourceLanguage);
-            Assert.Equal("<p> <strong>C&#39;est ensoleillé.</strong> </p>", results[1].TranslatedText);
+            Assert.Contains("<strong>C&#39;est ensoleillé.</strong>", results[1].TranslatedText);
             Assert.Equal("en", results[1].DetectedSourceLanguage);
         }
 
