@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.5.0, released 2020-09-28
+
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): feat: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 6eed2d8](https://github.com/googleapis/google-cloud-dotnet/commit/6eed2d8): feat: Added support for per type and partition export for Cloud Asset API
+
 # Version 2.4.0, released 2020-09-15
 
 - [Commit c9ca107](https://github.com/googleapis/google-cloud-dotnet/commit/c9ca107): Remove AnalyzeIamPolicy and ExportIamPolicyAnalysis RPCs
