@@ -36,7 +36,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             "Y2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuRmVhdHVyZUID4EECEkYKDXZp",
             "ZGVvX2NvbnRleHQYAyABKAsyLy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxp",
             "Z2VuY2UudjEuVmlkZW9Db250ZXh0EhcKCm91dHB1dF91cmkYBCABKAlCA+BB",
-            "ARIYCgtsb2NhdGlvbl9pZBgFIAEoCUID4EEBIuYFCgxWaWRlb0NvbnRleHQS",
+            "ARIYCgtsb2NhdGlvbl9pZBgFIAEoCUID4EEBIsEGCgxWaWRlb0NvbnRleHQS",
             "QQoIc2VnbWVudHMYASADKAsyLy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxp",
             "Z2VuY2UudjEuVmlkZW9TZWdtZW50ElcKFmxhYmVsX2RldGVjdGlvbl9jb25m",
             "aWcYAiABKAsyNy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEu",
@@ -51,195 +51,213 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             "Z2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLlNwZWVjaFRyYW5zY3Jp",
             "cHRpb25Db25maWcSVQoVdGV4dF9kZXRlY3Rpb25fY29uZmlnGAggASgLMjYu",
             "Z29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLlRleHREZXRlY3Rp",
-            "b25Db25maWcSVwoWb2JqZWN0X3RyYWNraW5nX2NvbmZpZxgNIAEoCzI3Lmdv",
-            "b2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5PYmplY3RUcmFja2lu",
-            "Z0NvbmZpZyLdAQoUTGFiZWxEZXRlY3Rpb25Db25maWcSUwoUbGFiZWxfZGV0",
-            "ZWN0aW9uX21vZGUYASABKA4yNS5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxp",
-            "Z2VuY2UudjEuTGFiZWxEZXRlY3Rpb25Nb2RlEhkKEXN0YXRpb25hcnlfY2Ft",
-            "ZXJhGAIgASgIEg0KBW1vZGVsGAMgASgJEiIKGmZyYW1lX2NvbmZpZGVuY2Vf",
-            "dGhyZXNob2xkGAQgASgCEiIKGnZpZGVvX2NvbmZpZGVuY2VfdGhyZXNob2xk",
-            "GAUgASgCIioKGVNob3RDaGFuZ2VEZXRlY3Rpb25Db25maWcSDQoFbW9kZWwY",
-            "ASABKAkiJQoUT2JqZWN0VHJhY2tpbmdDb25maWcSDQoFbW9kZWwYASABKAki",
-            "RAoTRmFjZURldGVjdGlvbkNvbmZpZxINCgVtb2RlbBgBIAEoCRIeChZpbmNs",
-            "dWRlX2JvdW5kaW5nX2JveGVzGAIgASgIIi8KHkV4cGxpY2l0Q29udGVudERl",
-            "dGVjdGlvbkNvbmZpZxINCgVtb2RlbBgBIAEoCSI8ChNUZXh0RGV0ZWN0aW9u",
-            "Q29uZmlnEhYKDmxhbmd1YWdlX2hpbnRzGAEgAygJEg0KBW1vZGVsGAIgASgJ",
-            "IngKDFZpZGVvU2VnbWVudBI0ChFzdGFydF90aW1lX29mZnNldBgBIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9lbmRfdGltZV9vZmZzZXQY",
-            "AiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iZAoMTGFiZWxTZWdt",
-            "ZW50EkAKB3NlZ21lbnQYASABKAsyLy5nb29nbGUuY2xvdWQudmlkZW9pbnRl",
-            "bGxpZ2VuY2UudjEuVmlkZW9TZWdtZW50EhIKCmNvbmZpZGVuY2UYAiABKAIi",
-            "UAoKTGFiZWxGcmFtZRIuCgt0aW1lX29mZnNldBgBIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbhISCgpjb25maWRlbmNlGAIgASgCIkcKBkVudGl0",
-            "eRIRCgllbnRpdHlfaWQYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSFQoN",
-            "bGFuZ3VhZ2VfY29kZRgDIAEoCSKUAgoPTGFiZWxBbm5vdGF0aW9uEjkKBmVu",
-            "dGl0eRgBIAEoCzIpLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52",
-            "MS5FbnRpdHkSRAoRY2F0ZWdvcnlfZW50aXRpZXMYAiADKAsyKS5nb29nbGUu",
-            "Y2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuRW50aXR5EkEKCHNlZ21lbnRz",
-            "GAMgAygLMi8uZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkxh",
-            "YmVsU2VnbWVudBI9CgZmcmFtZXMYBCADKAsyLS5nb29nbGUuY2xvdWQudmlk",
-            "ZW9pbnRlbGxpZ2VuY2UudjEuTGFiZWxGcmFtZSKVAQoURXhwbGljaXRDb250",
-            "ZW50RnJhbWUSLgoLdGltZV9vZmZzZXQYASABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24STQoWcG9ybm9ncmFwaHlfbGlrZWxpaG9vZBgCIAEoDjIt",
-            "Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5MaWtlbGlob29k",
-            "ImQKGUV4cGxpY2l0Q29udGVudEFubm90YXRpb24SRwoGZnJhbWVzGAEgAygL",
-            "MjcuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkV4cGxpY2l0",
-            "Q29udGVudEZyYW1lIlEKFU5vcm1hbGl6ZWRCb3VuZGluZ0JveBIMCgRsZWZ0",
+            "b25Db25maWcSWQoXcGVyc29uX2RldGVjdGlvbl9jb25maWcYCyABKAsyOC5n",
+            "b29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuUGVyc29uRGV0ZWN0",
+            "aW9uQ29uZmlnElcKFm9iamVjdF90cmFja2luZ19jb25maWcYDSABKAsyNy5n",
+            "b29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuT2JqZWN0VHJhY2tp",
+            "bmdDb25maWci3QEKFExhYmVsRGV0ZWN0aW9uQ29uZmlnElMKFGxhYmVsX2Rl",
+            "dGVjdGlvbl9tb2RlGAEgASgOMjUuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxs",
+            "aWdlbmNlLnYxLkxhYmVsRGV0ZWN0aW9uTW9kZRIZChFzdGF0aW9uYXJ5X2Nh",
+            "bWVyYRgCIAEoCBINCgVtb2RlbBgDIAEoCRIiChpmcmFtZV9jb25maWRlbmNl",
+            "X3RocmVzaG9sZBgEIAEoAhIiChp2aWRlb19jb25maWRlbmNlX3RocmVzaG9s",
+            "ZBgFIAEoAiIqChlTaG90Q2hhbmdlRGV0ZWN0aW9uQ29uZmlnEg0KBW1vZGVs",
+            "GAEgASgJIiUKFE9iamVjdFRyYWNraW5nQ29uZmlnEg0KBW1vZGVsGAEgASgJ",
+            "ImAKE0ZhY2VEZXRlY3Rpb25Db25maWcSDQoFbW9kZWwYASABKAkSHgoWaW5j",
+            "bHVkZV9ib3VuZGluZ19ib3hlcxgCIAEoCBIaChJpbmNsdWRlX2F0dHJpYnV0",
+            "ZXMYBSABKAgicwoVUGVyc29uRGV0ZWN0aW9uQ29uZmlnEh4KFmluY2x1ZGVf",
+            "Ym91bmRpbmdfYm94ZXMYASABKAgSHgoWaW5jbHVkZV9wb3NlX2xhbmRtYXJr",
+            "cxgCIAEoCBIaChJpbmNsdWRlX2F0dHJpYnV0ZXMYAyABKAgiLwoeRXhwbGlj",
+            "aXRDb250ZW50RGV0ZWN0aW9uQ29uZmlnEg0KBW1vZGVsGAEgASgJIjwKE1Rl",
+            "eHREZXRlY3Rpb25Db25maWcSFgoObGFuZ3VhZ2VfaGludHMYASADKAkSDQoF",
+            "bW9kZWwYAiABKAkieAoMVmlkZW9TZWdtZW50EjQKEXN0YXJ0X3RpbWVfb2Zm",
+            "c2V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKD2VuZF90",
+            "aW1lX29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJk",
+            "CgxMYWJlbFNlZ21lbnQSQAoHc2VnbWVudBgBIAEoCzIvLmdvb2dsZS5jbG91",
+            "ZC52aWRlb2ludGVsbGlnZW5jZS52MS5WaWRlb1NlZ21lbnQSEgoKY29uZmlk",
+            "ZW5jZRgCIAEoAiJQCgpMYWJlbEZyYW1lEi4KC3RpbWVfb2Zmc2V0GAEgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhIKCmNvbmZpZGVuY2UYAiAB",
+            "KAIiRwoGRW50aXR5EhEKCWVudGl0eV9pZBgBIAEoCRITCgtkZXNjcmlwdGlv",
+            "bhgCIAEoCRIVCg1sYW5ndWFnZV9jb2RlGAMgASgJIqUCCg9MYWJlbEFubm90",
+            "YXRpb24SOQoGZW50aXR5GAEgASgLMikuZ29vZ2xlLmNsb3VkLnZpZGVvaW50",
+            "ZWxsaWdlbmNlLnYxLkVudGl0eRJEChFjYXRlZ29yeV9lbnRpdGllcxgCIAMo",
+            "CzIpLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5FbnRpdHkS",
+            "QQoIc2VnbWVudHMYAyADKAsyLy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxp",
+            "Z2VuY2UudjEuTGFiZWxTZWdtZW50Ej0KBmZyYW1lcxgEIAMoCzItLmdvb2ds",
+            "ZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5MYWJlbEZyYW1lEg8KB3Zl",
+            "cnNpb24YBSABKAkilQEKFEV4cGxpY2l0Q29udGVudEZyYW1lEi4KC3RpbWVf",
+            "b2Zmc2V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEk0KFnBv",
+            "cm5vZ3JhcGh5X2xpa2VsaWhvb2QYAiABKA4yLS5nb29nbGUuY2xvdWQudmlk",
+            "ZW9pbnRlbGxpZ2VuY2UudjEuTGlrZWxpaG9vZCJ1ChlFeHBsaWNpdENvbnRl",
+            "bnRBbm5vdGF0aW9uEkcKBmZyYW1lcxgBIAMoCzI3Lmdvb2dsZS5jbG91ZC52",
+            "aWRlb2ludGVsbGlnZW5jZS52MS5FeHBsaWNpdENvbnRlbnRGcmFtZRIPCgd2",
+            "ZXJzaW9uGAIgASgJIlEKFU5vcm1hbGl6ZWRCb3VuZGluZ0JveBIMCgRsZWZ0",
             "GAEgASgCEgsKA3RvcBgCIAEoAhINCgVyaWdodBgDIAEoAhIOCgZib3R0b20Y",
-            "BCABKAIiTwoLRmFjZVNlZ21lbnQSQAoHc2VnbWVudBgBIAEoCzIvLmdvb2ds",
-            "ZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5WaWRlb1NlZ21lbnQimAEK",
-            "CUZhY2VGcmFtZRJbChlub3JtYWxpemVkX2JvdW5kaW5nX2JveGVzGAEgAygL",
-            "MjguZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLk5vcm1hbGl6",
-            "ZWRCb3VuZGluZ0JveBIuCgt0aW1lX29mZnNldBgCIAEoCzIZLmdvb2dsZS5w",
-            "cm90b2J1Zi5EdXJhdGlvbiKjAQoORmFjZUFubm90YXRpb24SEQoJdGh1bWJu",
-            "YWlsGAEgASgMEkAKCHNlZ21lbnRzGAIgAygLMi4uZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvaW50ZWxsaWdlbmNlLnYxLkZhY2VTZWdtZW50EjwKBmZyYW1lcxgDIAMo",
-            "CzIsLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5GYWNlRnJh",
-            "bWUiugIKEVRpbWVzdGFtcGVkT2JqZWN0ElkKF25vcm1hbGl6ZWRfYm91bmRp",
-            "bmdfYm94GAEgASgLMjguZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNl",
-            "LnYxLk5vcm1hbGl6ZWRCb3VuZGluZ0JveBIuCgt0aW1lX29mZnNldBgCIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJNCgphdHRyaWJ1dGVzGAMg",
-            "AygLMjQuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkRldGVj",
-            "dGVkQXR0cmlidXRlQgPgQQESSwoJbGFuZG1hcmtzGAQgAygLMjMuZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkRldGVjdGVkTGFuZG1hcmtC",
-            "A+BBASKEAgoFVHJhY2sSQAoHc2VnbWVudBgBIAEoCzIvLmdvb2dsZS5jbG91",
-            "ZC52aWRlb2ludGVsbGlnZW5jZS52MS5WaWRlb1NlZ21lbnQSUQoTdGltZXN0",
-            "YW1wZWRfb2JqZWN0cxgCIAMoCzI0Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVs",
-            "bGlnZW5jZS52MS5UaW1lc3RhbXBlZE9iamVjdBJNCgphdHRyaWJ1dGVzGAMg",
-            "AygLMjQuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkRldGVj",
-            "dGVkQXR0cmlidXRlQgPgQQESFwoKY29uZmlkZW5jZRgEIAEoAkID4EEBIkQK",
-            "EURldGVjdGVkQXR0cmlidXRlEgwKBG5hbWUYASABKAkSEgoKY29uZmlkZW5j",
-            "ZRgCIAEoAhINCgV2YWx1ZRgDIAEoCSJ4ChBEZXRlY3RlZExhbmRtYXJrEgwK",
-            "BG5hbWUYASABKAkSQgoFcG9pbnQYAiABKAsyMy5nb29nbGUuY2xvdWQudmlk",
-            "ZW9pbnRlbGxpZ2VuY2UudjEuTm9ybWFsaXplZFZlcnRleBISCgpjb25maWRl",
-            "bmNlGAMgASgCIqEJChZWaWRlb0Fubm90YXRpb25SZXN1bHRzEhEKCWlucHV0",
-            "X3VyaRgBIAEoCRJACgdzZWdtZW50GAogASgLMi8uZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvaW50ZWxsaWdlbmNlLnYxLlZpZGVvU2VnbWVudBJVChlzZWdtZW50X2xh",
-            "YmVsX2Fubm90YXRpb25zGAIgAygLMjIuZ29vZ2xlLmNsb3VkLnZpZGVvaW50",
-            "ZWxsaWdlbmNlLnYxLkxhYmVsQW5ub3RhdGlvbhJeCiJzZWdtZW50X3ByZXNl",
-            "bmNlX2xhYmVsX2Fubm90YXRpb25zGBcgAygLMjIuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvaW50ZWxsaWdlbmNlLnYxLkxhYmVsQW5ub3RhdGlvbhJSChZzaG90X2xh",
-            "YmVsX2Fubm90YXRpb25zGAMgAygLMjIuZ29vZ2xlLmNsb3VkLnZpZGVvaW50",
-            "ZWxsaWdlbmNlLnYxLkxhYmVsQW5ub3RhdGlvbhJbCh9zaG90X3ByZXNlbmNl",
-            "X2xhYmVsX2Fubm90YXRpb25zGBggAygLMjIuZ29vZ2xlLmNsb3VkLnZpZGVv",
-            "aW50ZWxsaWdlbmNlLnYxLkxhYmVsQW5ub3RhdGlvbhJTChdmcmFtZV9sYWJl",
-            "bF9hbm5vdGF0aW9ucxgEIAMoCzIyLmdvb2dsZS5jbG91ZC52aWRlb2ludGVs",
-            "bGlnZW5jZS52MS5MYWJlbEFubm90YXRpb24SSwoQZmFjZV9hbm5vdGF0aW9u",
-            "cxgFIAMoCzIxLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5G",
-            "YWNlQW5ub3RhdGlvbhJJChBzaG90X2Fubm90YXRpb25zGAYgAygLMi8uZ29v",
-            "Z2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLlZpZGVvU2VnbWVudBJZ",
-            "ChNleHBsaWNpdF9hbm5vdGF0aW9uGAcgASgLMjwuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvaW50ZWxsaWdlbmNlLnYxLkV4cGxpY2l0Q29udGVudEFubm90YXRpb24S",
-            "VQoVc3BlZWNoX3RyYW5zY3JpcHRpb25zGAsgAygLMjYuZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvaW50ZWxsaWdlbmNlLnYxLlNwZWVjaFRyYW5zY3JpcHRpb24SSwoQ",
-            "dGV4dF9hbm5vdGF0aW9ucxgMIAMoCzIxLmdvb2dsZS5jbG91ZC52aWRlb2lu",
-            "dGVsbGlnZW5jZS52MS5UZXh0QW5ub3RhdGlvbhJXChJvYmplY3RfYW5ub3Rh",
-            "dGlvbnMYDiADKAsyOy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2Uu",
-            "djEuT2JqZWN0VHJhY2tpbmdBbm5vdGF0aW9uEmIKHGxvZ29fcmVjb2duaXRp",
-            "b25fYW5ub3RhdGlvbnMYEyADKAsyPC5nb29nbGUuY2xvdWQudmlkZW9pbnRl",
-            "bGxpZ2VuY2UudjEuTG9nb1JlY29nbml0aW9uQW5ub3RhdGlvbhIhCgVlcnJv",
-            "chgJIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzIm4KFUFubm90YXRlVmlkZW9S",
-            "ZXNwb25zZRJVChJhbm5vdGF0aW9uX3Jlc3VsdHMYASADKAsyOS5nb29nbGUu",
-            "Y2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuVmlkZW9Bbm5vdGF0aW9uUmVz",
-            "dWx0cyKmAgoXVmlkZW9Bbm5vdGF0aW9uUHJvZ3Jlc3MSEQoJaW5wdXRfdXJp",
-            "GAEgASgJEhgKEHByb2dyZXNzX3BlcmNlbnQYAiABKAUSLgoKc3RhcnRfdGlt",
-            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRl",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjsKB2Zl",
-            "YXR1cmUYBSABKA4yKi5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2Uu",
-            "djEuRmVhdHVyZRJACgdzZWdtZW50GAYgASgLMi8uZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvaW50ZWxsaWdlbmNlLnYxLlZpZGVvU2VnbWVudCJwChVBbm5vdGF0ZVZp",
-            "ZGVvUHJvZ3Jlc3MSVwoTYW5ub3RhdGlvbl9wcm9ncmVzcxgBIAMoCzI6Lmdv",
-            "b2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5WaWRlb0Fubm90YXRp",
-            "b25Qcm9ncmVzcyKBAwoZU3BlZWNoVHJhbnNjcmlwdGlvbkNvbmZpZxIaCg1s",
-            "YW5ndWFnZV9jb2RlGAEgASgJQgPgQQISHQoQbWF4X2FsdGVybmF0aXZlcxgC",
-            "IAEoBUID4EEBEh0KEGZpbHRlcl9wcm9mYW5pdHkYAyABKAhCA+BBARJOCg9z",
-            "cGVlY2hfY29udGV4dHMYBCADKAsyMC5nb29nbGUuY2xvdWQudmlkZW9pbnRl",
-            "bGxpZ2VuY2UudjEuU3BlZWNoQ29udGV4dEID4EEBEikKHGVuYWJsZV9hdXRv",
-            "bWF0aWNfcHVuY3R1YXRpb24YBSABKAhCA+BBARIZCgxhdWRpb190cmFja3MY",
-            "BiADKAVCA+BBARInChplbmFibGVfc3BlYWtlcl9kaWFyaXphdGlvbhgHIAEo",
-            "CEID4EEBEiYKGWRpYXJpemF0aW9uX3NwZWFrZXJfY291bnQYCCABKAVCA+BB",
-            "ARIjChZlbmFibGVfd29yZF9jb25maWRlbmNlGAkgASgIQgPgQQEiJQoNU3Bl",
-            "ZWNoQ29udGV4dBIUCgdwaHJhc2VzGAEgAygJQgPgQQEiiAEKE1NwZWVjaFRy",
-            "YW5zY3JpcHRpb24SVQoMYWx0ZXJuYXRpdmVzGAEgAygLMj8uZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLlNwZWVjaFJlY29nbml0aW9uQWx0",
-            "ZXJuYXRpdmUSGgoNbGFuZ3VhZ2VfY29kZRgCIAEoCUID4EEDIowBChxTcGVl",
-            "Y2hSZWNvZ25pdGlvbkFsdGVybmF0aXZlEhIKCnRyYW5zY3JpcHQYASABKAkS",
-            "FwoKY29uZmlkZW5jZRgCIAEoAkID4EEDEj8KBXdvcmRzGAMgAygLMisuZ29v",
-            "Z2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLldvcmRJbmZvQgPgQQMi",
-            "pwEKCFdvcmRJbmZvEi0KCnN0YXJ0X3RpbWUYASABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb24SKwoIZW5kX3RpbWUYAiABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb24SDAoEd29yZBgDIAEoCRIXCgpjb25maWRlbmNlGAQg",
-            "ASgCQgPgQQMSGAoLc3BlYWtlcl90YWcYBSABKAVCA+BBAyIoChBOb3JtYWxp",
-            "emVkVmVydGV4EgkKAXgYASABKAISCQoBeRgCIAEoAiJfChZOb3JtYWxpemVk",
-            "Qm91bmRpbmdQb2x5EkUKCHZlcnRpY2VzGAEgAygLMjMuZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvaW50ZWxsaWdlbmNlLnYxLk5vcm1hbGl6ZWRWZXJ0ZXgioQEKC1Rl",
-            "eHRTZWdtZW50EkAKB3NlZ21lbnQYASABKAsyLy5nb29nbGUuY2xvdWQudmlk",
-            "ZW9pbnRlbGxpZ2VuY2UudjEuVmlkZW9TZWdtZW50EhIKCmNvbmZpZGVuY2UY",
-            "AiABKAISPAoGZnJhbWVzGAMgAygLMiwuZ29vZ2xlLmNsb3VkLnZpZGVvaW50",
-            "ZWxsaWdlbmNlLnYxLlRleHRGcmFtZSKUAQoJVGV4dEZyYW1lElcKFHJvdGF0",
-            "ZWRfYm91bmRpbmdfYm94GAEgASgLMjkuZ29vZ2xlLmNsb3VkLnZpZGVvaW50",
-            "ZWxsaWdlbmNlLnYxLk5vcm1hbGl6ZWRCb3VuZGluZ1BvbHkSLgoLdGltZV9v",
-            "ZmZzZXQYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iYAoOVGV4",
-            "dEFubm90YXRpb24SDAoEdGV4dBgBIAEoCRJACghzZWdtZW50cxgCIAMoCzIu",
-            "Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5UZXh0U2VnbWVu",
-            "dCKgAQoTT2JqZWN0VHJhY2tpbmdGcmFtZRJZChdub3JtYWxpemVkX2JvdW5k",
-            "aW5nX2JveBgBIAEoCzI4Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5j",
+            "BCABKAIiKgoXRmFjZURldGVjdGlvbkFubm90YXRpb24SDwoHdmVyc2lvbhgF",
+            "IAEoCSJmChlQZXJzb25EZXRlY3Rpb25Bbm5vdGF0aW9uEjgKBnRyYWNrcxgB",
+            "IAMoCzIoLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5UcmFj",
+            "axIPCgd2ZXJzaW9uGAIgASgJIk8KC0ZhY2VTZWdtZW50EkAKB3NlZ21lbnQY",
+            "ASABKAsyLy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuVmlk",
+            "ZW9TZWdtZW50IpwBCglGYWNlRnJhbWUSWwoZbm9ybWFsaXplZF9ib3VuZGlu",
+            "Z19ib3hlcxgBIAMoCzI4Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5j",
             "ZS52MS5Ob3JtYWxpemVkQm91bmRpbmdCb3gSLgoLdGltZV9vZmZzZXQYAiAB",
-            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24ilwIKGE9iamVjdFRyYWNr",
-            "aW5nQW5ub3RhdGlvbhJCCgdzZWdtZW50GAMgASgLMi8uZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvaW50ZWxsaWdlbmNlLnYxLlZpZGVvU2VnbWVudEgAEhIKCHRyYWNr",
-            "X2lkGAUgASgDSAASOQoGZW50aXR5GAEgASgLMikuZ29vZ2xlLmNsb3VkLnZp",
-            "ZGVvaW50ZWxsaWdlbmNlLnYxLkVudGl0eRISCgpjb25maWRlbmNlGAQgASgC",
-            "EkYKBmZyYW1lcxgCIAMoCzI2Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGln",
-            "ZW5jZS52MS5PYmplY3RUcmFja2luZ0ZyYW1lQgwKCnRyYWNrX2luZm8i0wEK",
-            "GUxvZ29SZWNvZ25pdGlvbkFubm90YXRpb24SOQoGZW50aXR5GAEgASgLMiku",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkVudGl0eRI4CgZ0",
-            "cmFja3MYAiADKAsyKC5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2Uu",
-            "djEuVHJhY2sSQQoIc2VnbWVudHMYAyADKAsyLy5nb29nbGUuY2xvdWQudmlk",
-            "ZW9pbnRlbGxpZ2VuY2UudjEuVmlkZW9TZWdtZW50Kt8BCgdGZWF0dXJlEhcK",
-            "E0ZFQVRVUkVfVU5TUEVDSUZJRUQQABITCg9MQUJFTF9ERVRFQ1RJT04QARIZ",
-            "ChVTSE9UX0NIQU5HRV9ERVRFQ1RJT04QAhIeChpFWFBMSUNJVF9DT05URU5U",
-            "X0RFVEVDVElPThADEhIKDkZBQ0VfREVURUNUSU9OEAQSGAoUU1BFRUNIX1RS",
-            "QU5TQ1JJUFRJT04QBhISCg5URVhUX0RFVEVDVElPThAHEhMKD09CSkVDVF9U",
-            "UkFDS0lORxAJEhQKEExPR09fUkVDT0dOSVRJT04QDCpyChJMYWJlbERldGVj",
-            "dGlvbk1vZGUSJAogTEFCRUxfREVURUNUSU9OX01PREVfVU5TUEVDSUZJRUQQ",
-            "ABINCglTSE9UX01PREUQARIOCgpGUkFNRV9NT0RFEAISFwoTU0hPVF9BTkRf",
-            "RlJBTUVfTU9ERRADKnQKCkxpa2VsaWhvb2QSGgoWTElLRUxJSE9PRF9VTlNQ",
-            "RUNJRklFRBAAEhEKDVZFUllfVU5MSUtFTFkQARIMCghVTkxJS0VMWRACEgwK",
-            "CFBPU1NJQkxFEAMSCgoGTElLRUxZEAQSDwoLVkVSWV9MSUtFTFkQBTLAAgoY",
-            "VmlkZW9JbnRlbGxpZ2VuY2VTZXJ2aWNlEs0BCg1Bbm5vdGF0ZVZpZGVvEjcu",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkFubm90YXRlVmlk",
-            "ZW9SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJkgtPk",
-            "kwIYIhMvdjEvdmlkZW9zOmFubm90YXRlOgEq2kESaW5wdXRfdXJpLGZlYXR1",
-            "cmVzykEuChVBbm5vdGF0ZVZpZGVvUmVzcG9uc2USFUFubm90YXRlVmlkZW9Q",
-            "cm9ncmVzcxpUykEgdmlkZW9pbnRlbGxpZ2VuY2UuZ29vZ2xlYXBpcy5jb23S",
-            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtQosCCiVjb20uZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYx",
-            "Qh1WaWRlb0ludGVsbGlnZW5jZVNlcnZpY2VQcm90b1ABWlJnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3ZpZGVvaW50ZWxs",
-            "aWdlbmNlL3YxO3ZpZGVvaW50ZWxsaWdlbmNlqgIhR29vZ2xlLkNsb3VkLlZp",
-            "ZGVvSW50ZWxsaWdlbmNlLlYxygIhR29vZ2xlXENsb3VkXFZpZGVvSW50ZWxs",
-            "aWdlbmNlXFYx6gIkR29vZ2xlOjpDbG91ZDo6VmlkZW9JbnRlbGxpZ2VuY2U6",
-            "OlYxYgZwcm90bzM="));
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb246AhgBIqcBCg5GYWNlQW5u",
+            "b3RhdGlvbhIRCgl0aHVtYm5haWwYASABKAwSQAoIc2VnbWVudHMYAiADKAsy",
+            "Li5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuRmFjZVNlZ21l",
+            "bnQSPAoGZnJhbWVzGAMgAygLMiwuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxs",
+            "aWdlbmNlLnYxLkZhY2VGcmFtZToCGAEiugIKEVRpbWVzdGFtcGVkT2JqZWN0",
+            "ElkKF25vcm1hbGl6ZWRfYm91bmRpbmdfYm94GAEgASgLMjguZ29vZ2xlLmNs",
+            "b3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLk5vcm1hbGl6ZWRCb3VuZGluZ0Jv",
+            "eBIuCgt0aW1lX29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbhJNCgphdHRyaWJ1dGVzGAMgAygLMjQuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "aW50ZWxsaWdlbmNlLnYxLkRldGVjdGVkQXR0cmlidXRlQgPgQQESSwoJbGFu",
+            "ZG1hcmtzGAQgAygLMjMuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNl",
+            "LnYxLkRldGVjdGVkTGFuZG1hcmtCA+BBASKEAgoFVHJhY2sSQAoHc2VnbWVu",
+            "dBgBIAEoCzIvLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5W",
+            "aWRlb1NlZ21lbnQSUQoTdGltZXN0YW1wZWRfb2JqZWN0cxgCIAMoCzI0Lmdv",
+            "b2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5UaW1lc3RhbXBlZE9i",
+            "amVjdBJNCgphdHRyaWJ1dGVzGAMgAygLMjQuZ29vZ2xlLmNsb3VkLnZpZGVv",
+            "aW50ZWxsaWdlbmNlLnYxLkRldGVjdGVkQXR0cmlidXRlQgPgQQESFwoKY29u",
+            "ZmlkZW5jZRgEIAEoAkID4EEBIkQKEURldGVjdGVkQXR0cmlidXRlEgwKBG5h",
+            "bWUYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAhINCgV2YWx1ZRgDIAEoCSJ4",
+            "ChBEZXRlY3RlZExhbmRtYXJrEgwKBG5hbWUYASABKAkSQgoFcG9pbnQYAiAB",
+            "KAsyMy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuTm9ybWFs",
+            "aXplZFZlcnRleBISCgpjb25maWRlbmNlGAMgASgCIukKChZWaWRlb0Fubm90",
+            "YXRpb25SZXN1bHRzEhEKCWlucHV0X3VyaRgBIAEoCRJACgdzZWdtZW50GAog",
+            "ASgLMi8uZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLlZpZGVv",
+            "U2VnbWVudBJVChlzZWdtZW50X2xhYmVsX2Fubm90YXRpb25zGAIgAygLMjIu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkxhYmVsQW5ub3Rh",
+            "dGlvbhJeCiJzZWdtZW50X3ByZXNlbmNlX2xhYmVsX2Fubm90YXRpb25zGBcg",
+            "AygLMjIuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkxhYmVs",
+            "QW5ub3RhdGlvbhJSChZzaG90X2xhYmVsX2Fubm90YXRpb25zGAMgAygLMjIu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkxhYmVsQW5ub3Rh",
+            "dGlvbhJbCh9zaG90X3ByZXNlbmNlX2xhYmVsX2Fubm90YXRpb25zGBggAygL",
+            "MjIuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkxhYmVsQW5u",
+            "b3RhdGlvbhJTChdmcmFtZV9sYWJlbF9hbm5vdGF0aW9ucxgEIAMoCzIyLmdv",
+            "b2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5MYWJlbEFubm90YXRp",
+            "b24STwoQZmFjZV9hbm5vdGF0aW9ucxgFIAMoCzIxLmdvb2dsZS5jbG91ZC52",
+            "aWRlb2ludGVsbGlnZW5jZS52MS5GYWNlQW5ub3RhdGlvbkICGAESXgoaZmFj",
+            "ZV9kZXRlY3Rpb25fYW5ub3RhdGlvbnMYDSADKAsyOi5nb29nbGUuY2xvdWQu",
+            "dmlkZW9pbnRlbGxpZ2VuY2UudjEuRmFjZURldGVjdGlvbkFubm90YXRpb24S",
+            "SQoQc2hvdF9hbm5vdGF0aW9ucxgGIAMoCzIvLmdvb2dsZS5jbG91ZC52aWRl",
+            "b2ludGVsbGlnZW5jZS52MS5WaWRlb1NlZ21lbnQSWQoTZXhwbGljaXRfYW5u",
+            "b3RhdGlvbhgHIAEoCzI8Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5j",
+            "ZS52MS5FeHBsaWNpdENvbnRlbnRBbm5vdGF0aW9uElUKFXNwZWVjaF90cmFu",
+            "c2NyaXB0aW9ucxgLIAMoCzI2Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGln",
+            "ZW5jZS52MS5TcGVlY2hUcmFuc2NyaXB0aW9uEksKEHRleHRfYW5ub3RhdGlv",
+            "bnMYDCADKAsyMS5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEu",
+            "VGV4dEFubm90YXRpb24SVwoSb2JqZWN0X2Fubm90YXRpb25zGA4gAygLMjsu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLk9iamVjdFRyYWNr",
+            "aW5nQW5ub3RhdGlvbhJiChxsb2dvX3JlY29nbml0aW9uX2Fubm90YXRpb25z",
+            "GBMgAygLMjwuZ29vZ2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLkxv",
+            "Z29SZWNvZ25pdGlvbkFubm90YXRpb24SYgoccGVyc29uX2RldGVjdGlvbl9h",
+            "bm5vdGF0aW9ucxgUIAMoCzI8Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGln",
+            "ZW5jZS52MS5QZXJzb25EZXRlY3Rpb25Bbm5vdGF0aW9uEiEKBWVycm9yGAkg",
+            "ASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMibgoVQW5ub3RhdGVWaWRlb1Jlc3Bv",
+            "bnNlElUKEmFubm90YXRpb25fcmVzdWx0cxgBIAMoCzI5Lmdvb2dsZS5jbG91",
+            "ZC52aWRlb2ludGVsbGlnZW5jZS52MS5WaWRlb0Fubm90YXRpb25SZXN1bHRz",
+            "IqYCChdWaWRlb0Fubm90YXRpb25Qcm9ncmVzcxIRCglpbnB1dF91cmkYASAB",
+            "KAkSGAoQcHJvZ3Jlc3NfcGVyY2VudBgCIAEoBRIuCgpzdGFydF90aW1lGAMg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASOwoHZmVhdHVy",
+            "ZRgFIAEoDjIqLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5G",
+            "ZWF0dXJlEkAKB3NlZ21lbnQYBiABKAsyLy5nb29nbGUuY2xvdWQudmlkZW9p",
+            "bnRlbGxpZ2VuY2UudjEuVmlkZW9TZWdtZW50InAKFUFubm90YXRlVmlkZW9Q",
+            "cm9ncmVzcxJXChNhbm5vdGF0aW9uX3Byb2dyZXNzGAEgAygLMjouZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLlZpZGVvQW5ub3RhdGlvblBy",
+            "b2dyZXNzIoEDChlTcGVlY2hUcmFuc2NyaXB0aW9uQ29uZmlnEhoKDWxhbmd1",
+            "YWdlX2NvZGUYASABKAlCA+BBAhIdChBtYXhfYWx0ZXJuYXRpdmVzGAIgASgF",
+            "QgPgQQESHQoQZmlsdGVyX3Byb2Zhbml0eRgDIAEoCEID4EEBEk4KD3NwZWVj",
+            "aF9jb250ZXh0cxgEIAMoCzIwLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGln",
+            "ZW5jZS52MS5TcGVlY2hDb250ZXh0QgPgQQESKQocZW5hYmxlX2F1dG9tYXRp",
+            "Y19wdW5jdHVhdGlvbhgFIAEoCEID4EEBEhkKDGF1ZGlvX3RyYWNrcxgGIAMo",
+            "BUID4EEBEicKGmVuYWJsZV9zcGVha2VyX2RpYXJpemF0aW9uGAcgASgIQgPg",
+            "QQESJgoZZGlhcml6YXRpb25fc3BlYWtlcl9jb3VudBgIIAEoBUID4EEBEiMK",
+            "FmVuYWJsZV93b3JkX2NvbmZpZGVuY2UYCSABKAhCA+BBASIlCg1TcGVlY2hD",
+            "b250ZXh0EhQKB3BocmFzZXMYASADKAlCA+BBASKIAQoTU3BlZWNoVHJhbnNj",
+            "cmlwdGlvbhJVCgxhbHRlcm5hdGl2ZXMYASADKAsyPy5nb29nbGUuY2xvdWQu",
+            "dmlkZW9pbnRlbGxpZ2VuY2UudjEuU3BlZWNoUmVjb2duaXRpb25BbHRlcm5h",
+            "dGl2ZRIaCg1sYW5ndWFnZV9jb2RlGAIgASgJQgPgQQMijAEKHFNwZWVjaFJl",
+            "Y29nbml0aW9uQWx0ZXJuYXRpdmUSEgoKdHJhbnNjcmlwdBgBIAEoCRIXCgpj",
+            "b25maWRlbmNlGAIgASgCQgPgQQMSPwoFd29yZHMYAyADKAsyKy5nb29nbGUu",
+            "Y2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuV29yZEluZm9CA+BBAyKnAQoI",
+            "V29yZEluZm8SLQoKc3RhcnRfdGltZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhIrCghlbmRfdGltZRgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbhIMCgR3b3JkGAMgASgJEhcKCmNvbmZpZGVuY2UYBCABKAJC",
+            "A+BBAxIYCgtzcGVha2VyX3RhZxgFIAEoBUID4EEDIigKEE5vcm1hbGl6ZWRW",
+            "ZXJ0ZXgSCQoBeBgBIAEoAhIJCgF5GAIgASgCIl8KFk5vcm1hbGl6ZWRCb3Vu",
+            "ZGluZ1BvbHkSRQoIdmVydGljZXMYASADKAsyMy5nb29nbGUuY2xvdWQudmlk",
+            "ZW9pbnRlbGxpZ2VuY2UudjEuTm9ybWFsaXplZFZlcnRleCKhAQoLVGV4dFNl",
+            "Z21lbnQSQAoHc2VnbWVudBgBIAEoCzIvLmdvb2dsZS5jbG91ZC52aWRlb2lu",
+            "dGVsbGlnZW5jZS52MS5WaWRlb1NlZ21lbnQSEgoKY29uZmlkZW5jZRgCIAEo",
+            "AhI8CgZmcmFtZXMYAyADKAsyLC5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxp",
+            "Z2VuY2UudjEuVGV4dEZyYW1lIpQBCglUZXh0RnJhbWUSVwoUcm90YXRlZF9i",
+            "b3VuZGluZ19ib3gYASABKAsyOS5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxp",
+            "Z2VuY2UudjEuTm9ybWFsaXplZEJvdW5kaW5nUG9seRIuCgt0aW1lX29mZnNl",
+            "dBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJxCg5UZXh0QW5u",
+            "b3RhdGlvbhIMCgR0ZXh0GAEgASgJEkAKCHNlZ21lbnRzGAIgAygLMi4uZ29v",
+            "Z2xlLmNsb3VkLnZpZGVvaW50ZWxsaWdlbmNlLnYxLlRleHRTZWdtZW50Eg8K",
+            "B3ZlcnNpb24YAyABKAkioAEKE09iamVjdFRyYWNraW5nRnJhbWUSWQoXbm9y",
+            "bWFsaXplZF9ib3VuZGluZ19ib3gYASABKAsyOC5nb29nbGUuY2xvdWQudmlk",
+            "ZW9pbnRlbGxpZ2VuY2UudjEuTm9ybWFsaXplZEJvdW5kaW5nQm94Ei4KC3Rp",
+            "bWVfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIqgC",
+            "ChhPYmplY3RUcmFja2luZ0Fubm90YXRpb24SQgoHc2VnbWVudBgDIAEoCzIv",
+            "Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5WaWRlb1NlZ21l",
+            "bnRIABISCgh0cmFja19pZBgFIAEoA0gAEjkKBmVudGl0eRgBIAEoCzIpLmdv",
+            "b2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5FbnRpdHkSEgoKY29u",
+            "ZmlkZW5jZRgEIAEoAhJGCgZmcmFtZXMYAiADKAsyNi5nb29nbGUuY2xvdWQu",
+            "dmlkZW9pbnRlbGxpZ2VuY2UudjEuT2JqZWN0VHJhY2tpbmdGcmFtZRIPCgd2",
+            "ZXJzaW9uGAYgASgJQgwKCnRyYWNrX2luZm8i0wEKGUxvZ29SZWNvZ25pdGlv",
+            "bkFubm90YXRpb24SOQoGZW50aXR5GAEgASgLMikuZ29vZ2xlLmNsb3VkLnZp",
+            "ZGVvaW50ZWxsaWdlbmNlLnYxLkVudGl0eRI4CgZ0cmFja3MYAiADKAsyKC5n",
+            "b29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2UudjEuVHJhY2sSQQoIc2Vn",
+            "bWVudHMYAyADKAsyLy5nb29nbGUuY2xvdWQudmlkZW9pbnRlbGxpZ2VuY2Uu",
+            "djEuVmlkZW9TZWdtZW50KvUBCgdGZWF0dXJlEhcKE0ZFQVRVUkVfVU5TUEVD",
+            "SUZJRUQQABITCg9MQUJFTF9ERVRFQ1RJT04QARIZChVTSE9UX0NIQU5HRV9E",
+            "RVRFQ1RJT04QAhIeChpFWFBMSUNJVF9DT05URU5UX0RFVEVDVElPThADEhIK",
+            "DkZBQ0VfREVURUNUSU9OEAQSGAoUU1BFRUNIX1RSQU5TQ1JJUFRJT04QBhIS",
+            "Cg5URVhUX0RFVEVDVElPThAHEhMKD09CSkVDVF9UUkFDS0lORxAJEhQKEExP",
+            "R09fUkVDT0dOSVRJT04QDBIUChBQRVJTT05fREVURUNUSU9OEA4qcgoSTGFi",
+            "ZWxEZXRlY3Rpb25Nb2RlEiQKIExBQkVMX0RFVEVDVElPTl9NT0RFX1VOU1BF",
+            "Q0lGSUVEEAASDQoJU0hPVF9NT0RFEAESDgoKRlJBTUVfTU9ERRACEhcKE1NI",
+            "T1RfQU5EX0ZSQU1FX01PREUQAyp0CgpMaWtlbGlob29kEhoKFkxJS0VMSUhP",
+            "T0RfVU5TUEVDSUZJRUQQABIRCg1WRVJZX1VOTElLRUxZEAESDAoIVU5MSUtF",
+            "TFkQAhIMCghQT1NTSUJMRRADEgoKBkxJS0VMWRAEEg8KC1ZFUllfTElLRUxZ",
+            "EAUywAIKGFZpZGVvSW50ZWxsaWdlbmNlU2VydmljZRLNAQoNQW5ub3RhdGVW",
+            "aWRlbxI3Lmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGlnZW5jZS52MS5Bbm5v",
+            "dGF0ZVZpZGVvUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24iZILT5JMCGCITL3YxL3ZpZGVvczphbm5vdGF0ZToBKtpBEmlucHV0X3Vy",
+            "aSxmZWF0dXJlc8pBLgoVQW5ub3RhdGVWaWRlb1Jlc3BvbnNlEhVBbm5vdGF0",
+            "ZVZpZGVvUHJvZ3Jlc3MaVMpBIHZpZGVvaW50ZWxsaWdlbmNlLmdvb2dsZWFw",
+            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZC1wbGF0Zm9ybUKLAgolY29tLmdvb2dsZS5jbG91ZC52aWRlb2ludGVsbGln",
+            "ZW5jZS52MUIdVmlkZW9JbnRlbGxpZ2VuY2VTZXJ2aWNlUHJvdG9QAVpSZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92aWRl",
+            "b2ludGVsbGlnZW5jZS92MTt2aWRlb2ludGVsbGlnZW5jZaoCIUdvb2dsZS5D",
+            "bG91ZC5WaWRlb0ludGVsbGlnZW5jZS5WMcoCIUdvb2dsZVxDbG91ZFxWaWRl",
+            "b0ludGVsbGlnZW5jZVxWMeoCJEdvb2dsZTo6Q2xvdWQ6OlZpZGVvSW50ZWxs",
+            "aWdlbmNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.VideoIntelligence.V1.Feature), typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode), typeof(global::Google.Cloud.VideoIntelligence.V1.Likelihood), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoRequest.Parser, new[]{ "InputUri", "InputContent", "Features", "VideoContext", "OutputUri", "LocationId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoContext), global::Google.Cloud.VideoIntelligence.V1.VideoContext.Parser, new[]{ "Segments", "LabelDetectionConfig", "ShotChangeDetectionConfig", "ExplicitContentDetectionConfig", "FaceDetectionConfig", "SpeechTranscriptionConfig", "TextDetectionConfig", "ObjectTrackingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoContext), global::Google.Cloud.VideoIntelligence.V1.VideoContext.Parser, new[]{ "Segments", "LabelDetectionConfig", "ShotChangeDetectionConfig", "ExplicitContentDetectionConfig", "FaceDetectionConfig", "SpeechTranscriptionConfig", "TextDetectionConfig", "PersonDetectionConfig", "ObjectTrackingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig.Parser, new[]{ "LabelDetectionMode", "StationaryCamera", "Model", "FrameConfidenceThreshold", "VideoConfidenceThreshold" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig.Parser, new[]{ "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig.Parser, new[]{ "Model" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig.Parser, new[]{ "Model", "IncludeBoundingBoxes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig.Parser, new[]{ "Model", "IncludeBoundingBoxes", "IncludeAttributes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig.Parser, new[]{ "IncludeBoundingBoxes", "IncludePoseLandmarks", "IncludeAttributes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig.Parser, new[]{ "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig), global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig.Parser, new[]{ "LanguageHints", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoSegment), global::Google.Cloud.VideoIntelligence.V1.VideoSegment.Parser, new[]{ "StartTimeOffset", "EndTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelSegment), global::Google.Cloud.VideoIntelligence.V1.LabelSegment.Parser, new[]{ "Segment", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelFrame), global::Google.Cloud.VideoIntelligence.V1.LabelFrame.Parser, new[]{ "TimeOffset", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.Entity), global::Google.Cloud.VideoIntelligence.V1.Entity.Parser, new[]{ "EntityId", "Description", "LanguageCode" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation), global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation.Parser, new[]{ "Entity", "CategoryEntities", "Segments", "Frames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation), global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation.Parser, new[]{ "Entity", "CategoryEntities", "Segments", "Frames", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentFrame), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentFrame.Parser, new[]{ "TimeOffset", "PornographyLikelihood" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation.Parser, new[]{ "Frames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation), global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation.Parser, new[]{ "Frames", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox), global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox.Parser, new[]{ "Left", "Top", "Right", "Bottom" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation), global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation.Parser, new[]{ "Version" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation), global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation.Parser, new[]{ "Tracks", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceSegment), global::Google.Cloud.VideoIntelligence.V1.FaceSegment.Parser, new[]{ "Segment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceFrame), global::Google.Cloud.VideoIntelligence.V1.FaceFrame.Parser, new[]{ "NormalizedBoundingBoxes", "TimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation), global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation.Parser, new[]{ "Thumbnail", "Segments", "Frames" }, null, null, null, null),
@@ -247,7 +265,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.Track), global::Google.Cloud.VideoIntelligence.V1.Track.Parser, new[]{ "Segment", "TimestampedObjects", "Attributes", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.DetectedAttribute), global::Google.Cloud.VideoIntelligence.V1.DetectedAttribute.Parser, new[]{ "Name", "Confidence", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.DetectedLandmark), global::Google.Cloud.VideoIntelligence.V1.DetectedLandmark.Parser, new[]{ "Name", "Point", "Confidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults), global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults.Parser, new[]{ "InputUri", "Segment", "SegmentLabelAnnotations", "SegmentPresenceLabelAnnotations", "ShotLabelAnnotations", "ShotPresenceLabelAnnotations", "FrameLabelAnnotations", "FaceAnnotations", "ShotAnnotations", "ExplicitAnnotation", "SpeechTranscriptions", "TextAnnotations", "ObjectAnnotations", "LogoRecognitionAnnotations", "Error" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults), global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults.Parser, new[]{ "InputUri", "Segment", "SegmentLabelAnnotations", "SegmentPresenceLabelAnnotations", "ShotLabelAnnotations", "ShotPresenceLabelAnnotations", "FrameLabelAnnotations", "FaceAnnotations", "FaceDetectionAnnotations", "ShotAnnotations", "ExplicitAnnotation", "SpeechTranscriptions", "TextAnnotations", "ObjectAnnotations", "LogoRecognitionAnnotations", "PersonDetectionAnnotations", "Error" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoResponse.Parser, new[]{ "AnnotationResults" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationProgress), global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationProgress.Parser, new[]{ "InputUri", "ProgressPercent", "StartTime", "UpdateTime", "Feature", "Segment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress), global::Google.Cloud.VideoIntelligence.V1.AnnotateVideoProgress.Parser, new[]{ "AnnotationProgress" }, null, null, null, null),
@@ -260,9 +278,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly), global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly.Parser, new[]{ "Vertices" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextSegment), global::Google.Cloud.VideoIntelligence.V1.TextSegment.Parser, new[]{ "Segment", "Confidence", "Frames" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextFrame), global::Google.Cloud.VideoIntelligence.V1.TextFrame.Parser, new[]{ "RotatedBoundingBox", "TimeOffset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextAnnotation), global::Google.Cloud.VideoIntelligence.V1.TextAnnotation.Parser, new[]{ "Text", "Segments" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.TextAnnotation), global::Google.Cloud.VideoIntelligence.V1.TextAnnotation.Parser, new[]{ "Text", "Segments", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingFrame), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingFrame.Parser, new[]{ "NormalizedBoundingBox", "TimeOffset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation.Parser, new[]{ "Segment", "TrackId", "Entity", "Confidence", "Frames" }, new[]{ "TrackInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation), global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation.Parser, new[]{ "Segment", "TrackId", "Entity", "Confidence", "Frames", "Version" }, new[]{ "TrackInfo" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.VideoIntelligence.V1.LogoRecognitionAnnotation), global::Google.Cloud.VideoIntelligence.V1.LogoRecognitionAnnotation.Parser, new[]{ "Entity", "Tracks", "Segments" }, null, null, null, null)
           }));
     }
@@ -291,7 +309,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// </summary>
     [pbr::OriginalName("EXPLICIT_CONTENT_DETECTION")] ExplicitContentDetection = 3,
     /// <summary>
-    /// Human face detection and tracking.
+    /// Human face detection.
     /// </summary>
     [pbr::OriginalName("FACE_DETECTION")] FaceDetection = 4,
     /// <summary>
@@ -310,6 +328,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Logo detection, tracking, and recognition.
     /// </summary>
     [pbr::OriginalName("LOGO_RECOGNITION")] LogoRecognition = 12,
+    /// <summary>
+    /// Person detection.
+    /// </summary>
+    [pbr::OriginalName("PERSON_DETECTION")] PersonDetection = 14,
   }
 
   /// <summary>
@@ -418,15 +440,16 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private string inputUri_ = "";
     /// <summary>
     /// Input video location. Currently, only
-    /// [Google Cloud Storage](https://cloud.google.com/storage/) URIs are
-    /// supported, which must be specified in the following format:
+    /// [Cloud Storage](https://cloud.google.com/storage/) URIs are
+    /// supported. URIs must be specified in the following format:
     /// `gs://bucket-id/object-id` (other URI formats return
-    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-    /// [Request URIs](https://cloud.google.com/storage/docs/request-endpoints).
-    /// A video URI may include wildcards in `object-id`, and thus identify
-    /// multiple videos. Supported wildcards: '*' to match 0 or more characters;
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
+    /// more information, see [Request
+    /// URIs](https://cloud.google.com/storage/docs/request-endpoints). To identify
+    /// multiple videos, a video URI may include wildcards in the `object-id`.
+    /// Supported wildcards: '*' to match 0 or more characters;
     /// '?' to match 1 character. If unset, the input video should be embedded
-    /// in the request as `input_content`. If set, `input_content` should be unset.
+    /// in the request as `input_content`. If set, `input_content` must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InputUri {
@@ -441,8 +464,8 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private pb::ByteString inputContent_ = pb::ByteString.Empty;
     /// <summary>
     /// The video data bytes.
-    /// If unset, the input video(s) should be specified via `input_uri`.
-    /// If set, `input_uri` should be unset.
+    /// If unset, the input video(s) should be specified via the `input_uri`.
+    /// If set, `input_uri` must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString InputContent {
@@ -484,11 +507,12 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private string outputUri_ = "";
     /// <summary>
     /// Optional. Location where the output (in JSON format) should be stored.
-    /// Currently, only [Google Cloud Storage](https://cloud.google.com/storage/)
-    /// URIs are supported, which must be specified in the following format:
+    /// Currently, only [Cloud Storage](https://cloud.google.com/storage/)
+    /// URIs are supported. These must be specified in the following format:
     /// `gs://bucket-id/object-id` (other URI formats return
-    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-    /// [Request URIs](https://cloud.google.com/storage/docs/request-endpoints).
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
+    /// more information, see [Request
+    /// URIs](https://cloud.google.com/storage/docs/request-endpoints).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OutputUri {
@@ -503,8 +527,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private string locationId_ = "";
     /// <summary>
     /// Optional. Cloud region where annotation should take place. Supported cloud
-    /// regions: `us-east1`, `us-west1`, `europe-west1`, `asia-east1`. If no region
-    /// is specified, a region will be determined based on video file location.
+    /// regions are: `us-east1`, `us-west1`, `europe-west1`, `asia-east1`. If no
+    /// region is specified, the region will be determined based on video file
+    /// location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LocationId {
@@ -797,6 +822,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       faceDetectionConfig_ = other.faceDetectionConfig_ != null ? other.faceDetectionConfig_.Clone() : null;
       speechTranscriptionConfig_ = other.speechTranscriptionConfig_ != null ? other.speechTranscriptionConfig_.Clone() : null;
       textDetectionConfig_ = other.textDetectionConfig_ != null ? other.textDetectionConfig_.Clone() : null;
+      personDetectionConfig_ = other.personDetectionConfig_ != null ? other.personDetectionConfig_.Clone() : null;
       objectTrackingConfig_ = other.objectTrackingConfig_ != null ? other.objectTrackingConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -905,6 +931,20 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
     }
 
+    /// <summary>Field number for the "person_detection_config" field.</summary>
+    public const int PersonDetectionConfigFieldNumber = 11;
+    private global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig personDetectionConfig_;
+    /// <summary>
+    /// Config for PERSON_DETECTION.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig PersonDetectionConfig {
+      get { return personDetectionConfig_; }
+      set {
+        personDetectionConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "object_tracking_config" field.</summary>
     public const int ObjectTrackingConfigFieldNumber = 13;
     private global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig objectTrackingConfig_;
@@ -939,6 +979,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (!object.Equals(FaceDetectionConfig, other.FaceDetectionConfig)) return false;
       if (!object.Equals(SpeechTranscriptionConfig, other.SpeechTranscriptionConfig)) return false;
       if (!object.Equals(TextDetectionConfig, other.TextDetectionConfig)) return false;
+      if (!object.Equals(PersonDetectionConfig, other.PersonDetectionConfig)) return false;
       if (!object.Equals(ObjectTrackingConfig, other.ObjectTrackingConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -953,6 +994,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (faceDetectionConfig_ != null) hash ^= FaceDetectionConfig.GetHashCode();
       if (speechTranscriptionConfig_ != null) hash ^= SpeechTranscriptionConfig.GetHashCode();
       if (textDetectionConfig_ != null) hash ^= TextDetectionConfig.GetHashCode();
+      if (personDetectionConfig_ != null) hash ^= PersonDetectionConfig.GetHashCode();
       if (objectTrackingConfig_ != null) hash ^= ObjectTrackingConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -995,6 +1037,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(TextDetectionConfig);
       }
+      if (personDetectionConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PersonDetectionConfig);
+      }
       if (objectTrackingConfig_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(ObjectTrackingConfig);
@@ -1033,6 +1079,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(TextDetectionConfig);
       }
+      if (personDetectionConfig_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PersonDetectionConfig);
+      }
       if (objectTrackingConfig_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(ObjectTrackingConfig);
@@ -1064,6 +1114,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (textDetectionConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextDetectionConfig);
+      }
+      if (personDetectionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PersonDetectionConfig);
       }
       if (objectTrackingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ObjectTrackingConfig);
@@ -1115,6 +1168,12 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           TextDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig();
         }
         TextDetectionConfig.MergeFrom(other.TextDetectionConfig);
+      }
+      if (other.personDetectionConfig_ != null) {
+        if (personDetectionConfig_ == null) {
+          PersonDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig();
+        }
+        PersonDetectionConfig.MergeFrom(other.PersonDetectionConfig);
       }
       if (other.objectTrackingConfig_ != null) {
         if (objectTrackingConfig_ == null) {
@@ -1182,6 +1241,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             input.ReadMessage(TextDetectionConfig);
             break;
           }
+          case 90: {
+            if (personDetectionConfig_ == null) {
+              PersonDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig();
+            }
+            input.ReadMessage(PersonDetectionConfig);
+            break;
+          }
           case 106: {
             if (objectTrackingConfig_ == null) {
               ObjectTrackingConfig = new global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig();
@@ -1247,6 +1313,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
               TextDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig();
             }
             input.ReadMessage(TextDetectionConfig);
+            break;
+          }
+          case 90: {
+            if (personDetectionConfig_ == null) {
+              PersonDetectionConfig = new global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig();
+            }
+            input.ReadMessage(PersonDetectionConfig);
             break;
           }
           case 106: {
@@ -1328,9 +1401,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public const int StationaryCameraFieldNumber = 2;
     private bool stationaryCamera_;
     /// <summary>
-    /// Whether the video has been shot from a stationary (i.e. non-moving) camera.
-    /// When set to true, might improve detection accuracy for moving objects.
-    /// Should be used with `SHOT_AND_FRAME_MODE` enabled.
+    /// Whether the video has been shot from a stationary (i.e., non-moving)
+    /// camera. When set to true, might improve detection accuracy for moving
+    /// objects. Should be used with `SHOT_AND_FRAME_MODE` enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool StationaryCamera {
@@ -1364,7 +1437,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// frame-level detection. If not set, it is set to 0.4 by default. The valid
     /// range for this threshold is [0.1, 0.9]. Any value set outside of this
     /// range will be clipped.
-    /// Note: for best results please follow the default threshold. We will update
+    /// Note: For best results, follow the default threshold. We will update
     /// the default threshold everytime when we release a new model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1380,10 +1453,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private float videoConfidenceThreshold_;
     /// <summary>
     /// The confidence threshold we perform filtering on the labels from
-    /// video-level and shot-level detections. If not set, it is set to 0.3 by
+    /// video-level and shot-level detections. If not set, it's set to 0.3 by
     /// default. The valid range for this threshold is [0.1, 0.9]. Any value set
     /// outside of this range will be clipped.
-    /// Note: for best results please follow the default threshold. We will update
+    /// Note: For best results, follow the default threshold. We will update
     /// the default threshold everytime when we release a new model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2007,6 +2080,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public FaceDetectionConfig(FaceDetectionConfig other) : this() {
       model_ = other.model_;
       includeBoundingBoxes_ = other.includeBoundingBoxes_;
+      includeAttributes_ = other.includeAttributes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2035,13 +2109,28 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public const int IncludeBoundingBoxesFieldNumber = 2;
     private bool includeBoundingBoxes_;
     /// <summary>
-    /// Whether bounding boxes be included in the face annotation output.
+    /// Whether bounding boxes are included in the face annotation output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IncludeBoundingBoxes {
       get { return includeBoundingBoxes_; }
       set {
         includeBoundingBoxes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_attributes" field.</summary>
+    public const int IncludeAttributesFieldNumber = 5;
+    private bool includeAttributes_;
+    /// <summary>
+    /// Whether to enable face attributes detection, such as glasses, dark_glasses,
+    /// mouth_open etc. Ignored if 'include_bounding_boxes' is set to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IncludeAttributes {
+      get { return includeAttributes_; }
+      set {
+        includeAttributes_ = value;
       }
     }
 
@@ -2060,6 +2149,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (Model != other.Model) return false;
       if (IncludeBoundingBoxes != other.IncludeBoundingBoxes) return false;
+      if (IncludeAttributes != other.IncludeAttributes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2068,6 +2158,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       int hash = 1;
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (IncludeBoundingBoxes != false) hash ^= IncludeBoundingBoxes.GetHashCode();
+      if (IncludeAttributes != false) hash ^= IncludeAttributes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2092,6 +2183,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(16);
         output.WriteBool(IncludeBoundingBoxes);
       }
+      if (IncludeAttributes != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IncludeAttributes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2109,6 +2204,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(16);
         output.WriteBool(IncludeBoundingBoxes);
       }
+      if (IncludeAttributes != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IncludeAttributes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2122,6 +2221,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
       if (IncludeBoundingBoxes != false) {
+        size += 1 + 1;
+      }
+      if (IncludeAttributes != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2140,6 +2242,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (other.IncludeBoundingBoxes != false) {
         IncludeBoundingBoxes = other.IncludeBoundingBoxes;
+      }
+      if (other.IncludeAttributes != false) {
+        IncludeAttributes = other.IncludeAttributes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2161,6 +2266,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 16: {
             IncludeBoundingBoxes = input.ReadBool();
+            break;
+          }
+          case 40: {
+            IncludeAttributes = input.ReadBool();
             break;
           }
         }
@@ -2185,6 +2294,271 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             IncludeBoundingBoxes = input.ReadBool();
             break;
           }
+          case 40: {
+            IncludeAttributes = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Config for PERSON_DETECTION.
+  /// </summary>
+  public sealed partial class PersonDetectionConfig : pb::IMessage<PersonDetectionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PersonDetectionConfig> _parser = new pb::MessageParser<PersonDetectionConfig>(() => new PersonDetectionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PersonDetectionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonDetectionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonDetectionConfig(PersonDetectionConfig other) : this() {
+      includeBoundingBoxes_ = other.includeBoundingBoxes_;
+      includePoseLandmarks_ = other.includePoseLandmarks_;
+      includeAttributes_ = other.includeAttributes_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonDetectionConfig Clone() {
+      return new PersonDetectionConfig(this);
+    }
+
+    /// <summary>Field number for the "include_bounding_boxes" field.</summary>
+    public const int IncludeBoundingBoxesFieldNumber = 1;
+    private bool includeBoundingBoxes_;
+    /// <summary>
+    /// Whether bounding boxes are included in the person detection annotation
+    /// output.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IncludeBoundingBoxes {
+      get { return includeBoundingBoxes_; }
+      set {
+        includeBoundingBoxes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_pose_landmarks" field.</summary>
+    public const int IncludePoseLandmarksFieldNumber = 2;
+    private bool includePoseLandmarks_;
+    /// <summary>
+    /// Whether to enable pose landmarks detection. Ignored if
+    /// 'include_bounding_boxes' is set to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IncludePoseLandmarks {
+      get { return includePoseLandmarks_; }
+      set {
+        includePoseLandmarks_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_attributes" field.</summary>
+    public const int IncludeAttributesFieldNumber = 3;
+    private bool includeAttributes_;
+    /// <summary>
+    /// Whether to enable person attributes detection, such as cloth color (black,
+    /// blue, etc), type (coat, dress, etc), pattern (plain, floral, etc), hair,
+    /// etc.
+    /// Ignored if 'include_bounding_boxes' is set to false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IncludeAttributes {
+      get { return includeAttributes_; }
+      set {
+        includeAttributes_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PersonDetectionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PersonDetectionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (IncludeBoundingBoxes != other.IncludeBoundingBoxes) return false;
+      if (IncludePoseLandmarks != other.IncludePoseLandmarks) return false;
+      if (IncludeAttributes != other.IncludeAttributes) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (IncludeBoundingBoxes != false) hash ^= IncludeBoundingBoxes.GetHashCode();
+      if (IncludePoseLandmarks != false) hash ^= IncludePoseLandmarks.GetHashCode();
+      if (IncludeAttributes != false) hash ^= IncludeAttributes.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (IncludeBoundingBoxes != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IncludeBoundingBoxes);
+      }
+      if (IncludePoseLandmarks != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IncludePoseLandmarks);
+      }
+      if (IncludeAttributes != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IncludeAttributes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IncludeBoundingBoxes != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(IncludeBoundingBoxes);
+      }
+      if (IncludePoseLandmarks != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IncludePoseLandmarks);
+      }
+      if (IncludeAttributes != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(IncludeAttributes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (IncludeBoundingBoxes != false) {
+        size += 1 + 1;
+      }
+      if (IncludePoseLandmarks != false) {
+        size += 1 + 1;
+      }
+      if (IncludeAttributes != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PersonDetectionConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.IncludeBoundingBoxes != false) {
+        IncludeBoundingBoxes = other.IncludeBoundingBoxes;
+      }
+      if (other.IncludePoseLandmarks != false) {
+        IncludePoseLandmarks = other.IncludePoseLandmarks;
+      }
+      if (other.IncludeAttributes != false) {
+        IncludeAttributes = other.IncludeAttributes;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            IncludeBoundingBoxes = input.ReadBool();
+            break;
+          }
+          case 16: {
+            IncludePoseLandmarks = input.ReadBool();
+            break;
+          }
+          case 24: {
+            IncludeAttributes = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            IncludeBoundingBoxes = input.ReadBool();
+            break;
+          }
+          case 16: {
+            IncludePoseLandmarks = input.ReadBool();
+            break;
+          }
+          case 24: {
+            IncludeAttributes = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -2207,7 +2581,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2387,7 +2761,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2599,7 +2973,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2836,7 +3210,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3062,7 +3436,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3289,7 +3663,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3337,7 +3711,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// Textual description, e.g. `Fixed-gear bicycle`.
+    /// Textual description, e.g., `Fixed-gear bicycle`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -3547,7 +3921,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3568,6 +3942,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       categoryEntities_ = other.categoryEntities_.Clone();
       segments_ = other.segments_.Clone();
       frames_ = other.frames_.Clone();
+      version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3597,9 +3972,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Entity> categoryEntities_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Entity>();
     /// <summary>
     /// Common categories for the detected entity.
-    /// E.g. when the label is `Terrier` the category is likely `dog`. And in some
-    /// cases there might be more than one categories e.g. `Terrier` could also be
-    /// a `pet`.
+    /// For example, when the label is `Terrier`, the category is likely `dog`. And
+    /// in some cases there might be more than one categories e.g., `Terrier` could
+    /// also be a `pet`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Entity> CategoryEntities {
@@ -3632,6 +4007,20 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       get { return frames_; }
     }
 
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 5;
+    private string version_ = "";
+    /// <summary>
+    /// Feature version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as LabelAnnotation);
@@ -3649,6 +4038,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if(!categoryEntities_.Equals(other.categoryEntities_)) return false;
       if(!segments_.Equals(other.segments_)) return false;
       if(!frames_.Equals(other.frames_)) return false;
+      if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3659,6 +4049,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       hash ^= categoryEntities_.GetHashCode();
       hash ^= segments_.GetHashCode();
       hash ^= frames_.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3682,6 +4073,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       categoryEntities_.WriteTo(output, _repeated_categoryEntities_codec);
       segments_.WriteTo(output, _repeated_segments_codec);
       frames_.WriteTo(output, _repeated_frames_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3698,6 +4093,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       categoryEntities_.WriteTo(ref output, _repeated_categoryEntities_codec);
       segments_.WriteTo(ref output, _repeated_segments_codec);
       frames_.WriteTo(ref output, _repeated_frames_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3713,6 +4112,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       size += categoryEntities_.CalculateSize(_repeated_categoryEntities_codec);
       size += segments_.CalculateSize(_repeated_segments_codec);
       size += frames_.CalculateSize(_repeated_frames_codec);
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3733,6 +4135,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       categoryEntities_.Add(other.categoryEntities_);
       segments_.Add(other.segments_);
       frames_.Add(other.frames_);
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3764,6 +4169,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 34: {
             frames_.AddEntriesFrom(input, _repeated_frames_codec);
+            break;
+          }
+          case 42: {
+            Version = input.ReadString();
             break;
           }
         }
@@ -3799,6 +4208,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
             break;
           }
+          case 42: {
+            Version = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3821,7 +4234,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4050,7 +4463,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4068,6 +4481,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ExplicitContentAnnotation(ExplicitContentAnnotation other) : this() {
       frames_ = other.frames_.Clone();
+      version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4089,6 +4503,20 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       get { return frames_; }
     }
 
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 2;
+    private string version_ = "";
+    /// <summary>
+    /// Feature version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ExplicitContentAnnotation);
@@ -4103,6 +4531,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         return true;
       }
       if(!frames_.Equals(other.frames_)) return false;
+      if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4110,6 +4539,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= frames_.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4127,6 +4557,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       output.WriteRawMessage(this);
     #else
       frames_.WriteTo(output, _repeated_frames_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4137,6 +4571,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       frames_.WriteTo(ref output, _repeated_frames_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4147,6 +4585,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public int CalculateSize() {
       int size = 0;
       size += frames_.CalculateSize(_repeated_frames_codec);
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4159,6 +4600,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         return;
       }
       frames_.Add(other.frames_);
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4177,6 +4621,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             frames_.AddEntriesFrom(input, _repeated_frames_codec);
             break;
           }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4193,6 +4641,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             break;
           case 10: {
             frames_.AddEntriesFrom(ref input, _repeated_frames_codec);
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
             break;
           }
         }
@@ -4219,7 +4671,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4500,6 +4952,390 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   }
 
   /// <summary>
+  /// Face detection annotation.
+  /// </summary>
+  public sealed partial class FaceDetectionAnnotation : pb::IMessage<FaceDetectionAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FaceDetectionAnnotation> _parser = new pb::MessageParser<FaceDetectionAnnotation>(() => new FaceDetectionAnnotation());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FaceDetectionAnnotation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FaceDetectionAnnotation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FaceDetectionAnnotation(FaceDetectionAnnotation other) : this() {
+      version_ = other.version_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FaceDetectionAnnotation Clone() {
+      return new FaceDetectionAnnotation(this);
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 5;
+    private string version_ = "";
+    /// <summary>
+    /// Feature version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FaceDetectionAnnotation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FaceDetectionAnnotation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Version != other.Version) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Version.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Version.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FaceDetectionAnnotation other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 42: {
+            Version = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 42: {
+            Version = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Person detection annotation per video.
+  /// </summary>
+  public sealed partial class PersonDetectionAnnotation : pb::IMessage<PersonDetectionAnnotation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PersonDetectionAnnotation> _parser = new pb::MessageParser<PersonDetectionAnnotation>(() => new PersonDetectionAnnotation());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PersonDetectionAnnotation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonDetectionAnnotation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonDetectionAnnotation(PersonDetectionAnnotation other) : this() {
+      tracks_ = other.tracks_.Clone();
+      version_ = other.version_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PersonDetectionAnnotation Clone() {
+      return new PersonDetectionAnnotation(this);
+    }
+
+    /// <summary>Field number for the "tracks" field.</summary>
+    public const int TracksFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1.Track> _repeated_tracks_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.VideoIntelligence.V1.Track.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Track> tracks_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Track>();
+    /// <summary>
+    /// The detected tracks of a person.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Track> Tracks {
+      get { return tracks_; }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 2;
+    private string version_ = "";
+    /// <summary>
+    /// Feature version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PersonDetectionAnnotation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PersonDetectionAnnotation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!tracks_.Equals(other.tracks_)) return false;
+      if (Version != other.Version) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= tracks_.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      tracks_.WriteTo(output, _repeated_tracks_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      tracks_.WriteTo(ref output, _repeated_tracks_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += tracks_.CalculateSize(_repeated_tracks_codec);
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PersonDetectionAnnotation other) {
+      if (other == null) {
+        return;
+      }
+      tracks_.Add(other.tracks_);
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            tracks_.AddEntriesFrom(input, _repeated_tracks_codec);
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            tracks_.AddEntriesFrom(ref input, _repeated_tracks_codec);
+            break;
+          }
+          case 18: {
+            Version = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Video segment level annotation results for face detection.
   /// </summary>
   public sealed partial class FaceSegment : pb::IMessage<FaceSegment>
@@ -4514,7 +5350,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4687,8 +5523,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   }
 
   /// <summary>
-  /// Video frame level annotation results for face detection.
+  /// Deprecated. No effect.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class FaceFrame : pb::IMessage<FaceFrame>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4701,7 +5538,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4905,8 +5742,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
   }
 
   /// <summary>
-  /// Face annotation.
+  /// Deprecated. No effect.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -4919,7 +5757,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4982,6 +5820,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// <summary>
     /// All video frames where a face was detected.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceFrame> Frames {
       get { return frames_; }
@@ -5155,7 +5994,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5447,7 +6286,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5729,7 +6568,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5761,7 +6600,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The name of the attribute, i.e. glasses, dark_glasses, mouth_open etc.
+    /// The name of the attribute, for example, glasses, dark_glasses, mouth_open.
     /// A full list of supported type names will be provided in the document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5988,7 +6827,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6020,7 +6859,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The name of this landmark, i.e. left_hand, right_shoulder.
+    /// The name of this landmark, for example, left_hand, right_shoulder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -6254,7 +7093,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6279,12 +7118,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       shotPresenceLabelAnnotations_ = other.shotPresenceLabelAnnotations_.Clone();
       frameLabelAnnotations_ = other.frameLabelAnnotations_.Clone();
       faceAnnotations_ = other.faceAnnotations_.Clone();
+      faceDetectionAnnotations_ = other.faceDetectionAnnotations_.Clone();
       shotAnnotations_ = other.shotAnnotations_.Clone();
       explicitAnnotation_ = other.explicitAnnotation_ != null ? other.explicitAnnotation_.Clone() : null;
       speechTranscriptions_ = other.speechTranscriptions_.Clone();
       textAnnotations_ = other.textAnnotations_.Clone();
       objectAnnotations_ = other.objectAnnotations_.Clone();
       logoRecognitionAnnotations_ = other.logoRecognitionAnnotations_.Clone();
+      personDetectionAnnotations_ = other.personDetectionAnnotations_.Clone();
       error_ = other.error_ != null ? other.error_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -6299,7 +7140,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private string inputUri_ = "";
     /// <summary>
     /// Video file location in
-    /// [Google Cloud Storage](https://cloud.google.com/storage/).
+    /// [Cloud Storage](https://cloud.google.com/storage/).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InputUri {
@@ -6329,7 +7170,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation> segmentLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation>();
     /// <summary>
-    /// Topical label annotations on video level or user specified segment level.
+    /// Topical label annotations on video level or user-specified segment level.
     /// There is exactly one element for each unique label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6343,7 +7184,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         = pb::FieldCodec.ForMessage(186, global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation> segmentPresenceLabelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation>();
     /// <summary>
-    /// Presence label annotations on video level or user specified segment level.
+    /// Presence label annotations on video level or user-specified segment level.
     /// There is exactly one element for each unique label. Compared to the
     /// existing topical `segment_label_annotations`, this field presents more
     /// fine-grained, segment-level labels detected in video content and is made
@@ -6406,11 +7247,25 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation> faceAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation>();
     /// <summary>
-    /// Face annotations. There is exactly one element for each unique face.
+    /// Deprecated. Please use `face_detection_annotations` instead.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation> FaceAnnotations {
       get { return faceAnnotations_; }
+    }
+
+    /// <summary>Field number for the "face_detection_annotations" field.</summary>
+    public const int FaceDetectionAnnotationsFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation> _repeated_faceDetectionAnnotations_codec
+        = pb::FieldCodec.ForMessage(106, global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation> faceDetectionAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation>();
+    /// <summary>
+    /// Face detection annotations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation> FaceDetectionAnnotations {
+      get { return faceDetectionAnnotations_; }
     }
 
     /// <summary>Field number for the "shot_annotations" field.</summary>
@@ -6494,6 +7349,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       get { return logoRecognitionAnnotations_; }
     }
 
+    /// <summary>Field number for the "person_detection_annotations" field.</summary>
+    public const int PersonDetectionAnnotationsFieldNumber = 20;
+    private static readonly pb::FieldCodec<global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation> _repeated_personDetectionAnnotations_codec
+        = pb::FieldCodec.ForMessage(162, global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation> personDetectionAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation>();
+    /// <summary>
+    /// Person detection annotations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation> PersonDetectionAnnotations {
+      get { return personDetectionAnnotations_; }
+    }
+
     /// <summary>Field number for the "error" field.</summary>
     public const int ErrorFieldNumber = 9;
     private global::Google.Rpc.Status error_;
@@ -6530,12 +7398,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if(!shotPresenceLabelAnnotations_.Equals(other.shotPresenceLabelAnnotations_)) return false;
       if(!frameLabelAnnotations_.Equals(other.frameLabelAnnotations_)) return false;
       if(!faceAnnotations_.Equals(other.faceAnnotations_)) return false;
+      if(!faceDetectionAnnotations_.Equals(other.faceDetectionAnnotations_)) return false;
       if(!shotAnnotations_.Equals(other.shotAnnotations_)) return false;
       if (!object.Equals(ExplicitAnnotation, other.ExplicitAnnotation)) return false;
       if(!speechTranscriptions_.Equals(other.speechTranscriptions_)) return false;
       if(!textAnnotations_.Equals(other.textAnnotations_)) return false;
       if(!objectAnnotations_.Equals(other.objectAnnotations_)) return false;
       if(!logoRecognitionAnnotations_.Equals(other.logoRecognitionAnnotations_)) return false;
+      if(!personDetectionAnnotations_.Equals(other.personDetectionAnnotations_)) return false;
       if (!object.Equals(Error, other.Error)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6551,12 +7421,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       hash ^= shotPresenceLabelAnnotations_.GetHashCode();
       hash ^= frameLabelAnnotations_.GetHashCode();
       hash ^= faceAnnotations_.GetHashCode();
+      hash ^= faceDetectionAnnotations_.GetHashCode();
       hash ^= shotAnnotations_.GetHashCode();
       if (explicitAnnotation_ != null) hash ^= ExplicitAnnotation.GetHashCode();
       hash ^= speechTranscriptions_.GetHashCode();
       hash ^= textAnnotations_.GetHashCode();
       hash ^= objectAnnotations_.GetHashCode();
       hash ^= logoRecognitionAnnotations_.GetHashCode();
+      hash ^= personDetectionAnnotations_.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6597,8 +7469,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       speechTranscriptions_.WriteTo(output, _repeated_speechTranscriptions_codec);
       textAnnotations_.WriteTo(output, _repeated_textAnnotations_codec);
+      faceDetectionAnnotations_.WriteTo(output, _repeated_faceDetectionAnnotations_codec);
       objectAnnotations_.WriteTo(output, _repeated_objectAnnotations_codec);
       logoRecognitionAnnotations_.WriteTo(output, _repeated_logoRecognitionAnnotations_codec);
+      personDetectionAnnotations_.WriteTo(output, _repeated_personDetectionAnnotations_codec);
       segmentPresenceLabelAnnotations_.WriteTo(output, _repeated_segmentPresenceLabelAnnotations_codec);
       shotPresenceLabelAnnotations_.WriteTo(output, _repeated_shotPresenceLabelAnnotations_codec);
       if (_unknownFields != null) {
@@ -6633,8 +7507,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       speechTranscriptions_.WriteTo(ref output, _repeated_speechTranscriptions_codec);
       textAnnotations_.WriteTo(ref output, _repeated_textAnnotations_codec);
+      faceDetectionAnnotations_.WriteTo(ref output, _repeated_faceDetectionAnnotations_codec);
       objectAnnotations_.WriteTo(ref output, _repeated_objectAnnotations_codec);
       logoRecognitionAnnotations_.WriteTo(ref output, _repeated_logoRecognitionAnnotations_codec);
+      personDetectionAnnotations_.WriteTo(ref output, _repeated_personDetectionAnnotations_codec);
       segmentPresenceLabelAnnotations_.WriteTo(ref output, _repeated_segmentPresenceLabelAnnotations_codec);
       shotPresenceLabelAnnotations_.WriteTo(ref output, _repeated_shotPresenceLabelAnnotations_codec);
       if (_unknownFields != null) {
@@ -6658,6 +7534,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       size += shotPresenceLabelAnnotations_.CalculateSize(_repeated_shotPresenceLabelAnnotations_codec);
       size += frameLabelAnnotations_.CalculateSize(_repeated_frameLabelAnnotations_codec);
       size += faceAnnotations_.CalculateSize(_repeated_faceAnnotations_codec);
+      size += faceDetectionAnnotations_.CalculateSize(_repeated_faceDetectionAnnotations_codec);
       size += shotAnnotations_.CalculateSize(_repeated_shotAnnotations_codec);
       if (explicitAnnotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExplicitAnnotation);
@@ -6666,6 +7543,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       size += textAnnotations_.CalculateSize(_repeated_textAnnotations_codec);
       size += objectAnnotations_.CalculateSize(_repeated_objectAnnotations_codec);
       size += logoRecognitionAnnotations_.CalculateSize(_repeated_logoRecognitionAnnotations_codec);
+      size += personDetectionAnnotations_.CalculateSize(_repeated_personDetectionAnnotations_codec);
       if (error_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
       }
@@ -6695,6 +7573,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       shotPresenceLabelAnnotations_.Add(other.shotPresenceLabelAnnotations_);
       frameLabelAnnotations_.Add(other.frameLabelAnnotations_);
       faceAnnotations_.Add(other.faceAnnotations_);
+      faceDetectionAnnotations_.Add(other.faceDetectionAnnotations_);
       shotAnnotations_.Add(other.shotAnnotations_);
       if (other.explicitAnnotation_ != null) {
         if (explicitAnnotation_ == null) {
@@ -6706,6 +7585,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       textAnnotations_.Add(other.textAnnotations_);
       objectAnnotations_.Add(other.objectAnnotations_);
       logoRecognitionAnnotations_.Add(other.logoRecognitionAnnotations_);
+      personDetectionAnnotations_.Add(other.personDetectionAnnotations_);
       if (other.error_ != null) {
         if (error_ == null) {
           Error = new global::Google.Rpc.Status();
@@ -6779,12 +7659,20 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             textAnnotations_.AddEntriesFrom(input, _repeated_textAnnotations_codec);
             break;
           }
+          case 106: {
+            faceDetectionAnnotations_.AddEntriesFrom(input, _repeated_faceDetectionAnnotations_codec);
+            break;
+          }
           case 114: {
             objectAnnotations_.AddEntriesFrom(input, _repeated_objectAnnotations_codec);
             break;
           }
           case 154: {
             logoRecognitionAnnotations_.AddEntriesFrom(input, _repeated_logoRecognitionAnnotations_codec);
+            break;
+          }
+          case 162: {
+            personDetectionAnnotations_.AddEntriesFrom(input, _repeated_personDetectionAnnotations_codec);
             break;
           }
           case 186: {
@@ -6862,12 +7750,20 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             textAnnotations_.AddEntriesFrom(ref input, _repeated_textAnnotations_codec);
             break;
           }
+          case 106: {
+            faceDetectionAnnotations_.AddEntriesFrom(ref input, _repeated_faceDetectionAnnotations_codec);
+            break;
+          }
           case 114: {
             objectAnnotations_.AddEntriesFrom(ref input, _repeated_objectAnnotations_codec);
             break;
           }
           case 154: {
             logoRecognitionAnnotations_.AddEntriesFrom(ref input, _repeated_logoRecognitionAnnotations_codec);
+            break;
+          }
+          case 162: {
+            personDetectionAnnotations_.AddEntriesFrom(ref input, _repeated_personDetectionAnnotations_codec);
             break;
           }
           case 186: {
@@ -6902,7 +7798,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7069,7 +7965,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7105,7 +8001,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private string inputUri_ = "";
     /// <summary>
     /// Video file location in
-    /// [Google Cloud Storage](https://cloud.google.com/storage/).
+    /// [Cloud Storage](https://cloud.google.com/storage/).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InputUri {
@@ -7163,7 +8059,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private global::Google.Cloud.VideoIntelligence.V1.Feature feature_ = global::Google.Cloud.VideoIntelligence.V1.Feature.Unspecified;
     /// <summary>
     /// Specifies which feature is being tracked if the request contains more than
-    /// one features.
+    /// one feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.VideoIntelligence.V1.Feature Feature {
@@ -7178,7 +8074,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private global::Google.Cloud.VideoIntelligence.V1.VideoSegment segment_;
     /// <summary>
     /// Specifies which segment is being tracked if the request contains more than
-    /// one segments.
+    /// one segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
@@ -7475,7 +8371,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7642,7 +8538,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7783,7 +8679,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// the top alternative of the recognition result using a speaker_tag provided
     /// in the WordInfo.
     /// Note: When this is true, we send all the words from the beginning of the
-    /// audio for the top alternative in every consecutive responses.
+    /// audio for the top alternative in every consecutive response.
     /// This is done in order to improve our speaker tags as our models learn to
     /// identify the speakers in the conversation over time.
     /// </summary>
@@ -7799,9 +8695,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public const int DiarizationSpeakerCountFieldNumber = 8;
     private int diarizationSpeakerCount_;
     /// <summary>
-    /// Optional. If set, specifies the estimated number of speakers in the conversation.
-    /// If not set, defaults to '2'.
-    /// Ignored unless enable_speaker_diarization is set to true.
+    /// Optional. If set, specifies the estimated number of speakers in the
+    /// conversation. If not set, defaults to '2'. Ignored unless
+    /// enable_speaker_diarization is set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int DiarizationSpeakerCount {
@@ -8140,7 +9036,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8312,7 +9208,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8359,9 +9255,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public const int LanguageCodeFieldNumber = 2;
     private string languageCode_ = "";
     /// <summary>
-    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag of
-    /// the language in this result. This language code was detected to have the
-    /// most likelihood of being spoken in the audio.
+    /// Output only. The [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+    /// language tag of the language in this result. This language code was
+    /// detected to have the most likelihood of being spoken in the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -8523,7 +9419,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8591,8 +9487,8 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.WordInfo> words_ = new pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.WordInfo>();
     /// <summary>
     /// Output only. A list of word-specific information for each recognized word.
-    /// Note: When `enable_speaker_diarization` is true, you will see all the words
-    /// from the beginning of the audio.
+    /// Note: When `enable_speaker_diarization` is set to true, you will see all
+    /// the words from the beginning of the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.WordInfo> Words {
@@ -8777,7 +9673,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9145,7 +10041,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9378,7 +10274,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9545,7 +10441,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9802,7 +10698,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10039,7 +10935,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10058,6 +10954,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     public TextAnnotation(TextAnnotation other) : this() {
       text_ = other.text_;
       segments_ = other.segments_.Clone();
+      version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10093,6 +10990,20 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       get { return segments_; }
     }
 
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 3;
+    private string version_ = "";
+    /// <summary>
+    /// Feature version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TextAnnotation);
@@ -10108,6 +11019,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       }
       if (Text != other.Text) return false;
       if(!segments_.Equals(other.segments_)) return false;
+      if (Version != other.Version) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10116,6 +11028,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
       hash ^= segments_.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10137,6 +11050,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteString(Text);
       }
       segments_.WriteTo(output, _repeated_segments_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10151,6 +11068,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteString(Text);
       }
       segments_.WriteTo(ref output, _repeated_segments_codec);
+      if (Version.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10164,6 +11085,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
       size += segments_.CalculateSize(_repeated_segments_codec);
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10179,6 +11103,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         Text = other.Text;
       }
       segments_.Add(other.segments_);
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10201,6 +11128,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             segments_.AddEntriesFrom(input, _repeated_segments_codec);
             break;
           }
+          case 26: {
+            Version = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -10221,6 +11152,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
           }
           case 18: {
             segments_.AddEntriesFrom(ref input, _repeated_segments_codec);
+            break;
+          }
+          case 26: {
+            Version = input.ReadString();
             break;
           }
         }
@@ -10246,7 +11181,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10481,7 +11416,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10501,6 +11436,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       entity_ = other.entity_ != null ? other.entity_.Clone() : null;
       confidence_ = other.confidence_;
       frames_ = other.frames_.Clone();
+      version_ = other.version_;
       switch (other.TrackInfoCase) {
         case TrackInfoOneofCase.Segment:
           Segment = other.Segment.Clone();
@@ -10596,6 +11532,20 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       get { return frames_; }
     }
 
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 6;
+    private string version_ = "";
+    /// <summary>
+    /// Feature version.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Version {
+      get { return version_; }
+      set {
+        version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object trackInfo_;
     /// <summary>Enum of possible cases for the "track_info" oneof.</summary>
     public enum TrackInfoOneofCase {
@@ -10633,6 +11583,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (!object.Equals(Entity, other.Entity)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
       if(!frames_.Equals(other.frames_)) return false;
+      if (Version != other.Version) return false;
       if (TrackInfoCase != other.TrackInfoCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -10645,6 +11596,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
       if (entity_ != null) hash ^= Entity.GetHashCode();
       if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
       hash ^= frames_.GetHashCode();
+      if (Version.Length != 0) hash ^= Version.GetHashCode();
       hash ^= (int) trackInfoCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10679,6 +11631,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(40);
         output.WriteInt64(TrackId);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10705,6 +11661,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         output.WriteRawTag(40);
         output.WriteInt64(TrackId);
       }
+      if (Version.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Version);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10727,6 +11687,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         size += 1 + 4;
       }
       size += frames_.CalculateSize(_repeated_frames_codec);
+      if (Version.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10748,6 +11711,9 @@ namespace Google.Cloud.VideoIntelligence.V1 {
         Confidence = other.Confidence;
       }
       frames_.Add(other.frames_);
+      if (other.Version.Length != 0) {
+        Version = other.Version;
+      }
       switch (other.TrackInfoCase) {
         case TrackInfoOneofCase.Segment:
           if (Segment == null) {
@@ -10802,6 +11768,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             TrackId = input.ReadInt64();
             break;
           }
+          case 50: {
+            Version = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -10844,6 +11814,10 @@ namespace Google.Cloud.VideoIntelligence.V1 {
             TrackId = input.ReadInt64();
             break;
           }
+          case 50: {
+            Version = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -10866,7 +11840,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
