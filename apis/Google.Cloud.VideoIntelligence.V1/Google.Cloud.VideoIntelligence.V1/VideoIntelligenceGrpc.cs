@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.VideoIntelligence.V1 {
   /// <summary>
-  /// Service that implements Google Cloud Video Intelligence API.
+  /// Service that implements the Video Intelligence API.
   /// </summary>
   public static partial class VideoIntelligenceService
   {

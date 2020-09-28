@@ -152,7 +152,7 @@ namespace Google.Cloud.VideoIntelligence.V1
 
     /// <summary>VideoIntelligenceService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service that implements Google Cloud Video Intelligence API.
+    /// Service that implements the Video Intelligence API.
     /// </remarks>
     public abstract partial class VideoIntelligenceServiceClient
     {
@@ -303,15 +303,16 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </summary>
         /// <param name="inputUri">
         /// Input video location. Currently, only
-        /// [Google Cloud Storage](https://cloud.google.com/storage/) URIs are
-        /// supported, which must be specified in the following format:
+        /// [Cloud Storage](https://cloud.google.com/storage/) URIs are
+        /// supported. URIs must be specified in the following format:
         /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-        /// [Request URIs](https://cloud.google.com/storage/docs/request-endpoints).
-        /// A video URI may include wildcards in `object-id`, and thus identify
-        /// multiple videos. Supported wildcards: '*' to match 0 or more characters;
+        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
+        /// more information, see [Request
+        /// URIs](https://cloud.google.com/storage/docs/request-endpoints). To identify
+        /// multiple videos, a video URI may include wildcards in the `object-id`.
+        /// Supported wildcards: '*' to match 0 or more characters;
         /// '?' to match 1 character. If unset, the input video should be embedded
-        /// in the request as `input_content`. If set, `input_content` should be unset.
+        /// in the request as `input_content`. If set, `input_content` must be unset.
         /// </param>
         /// <param name="features">
         /// Required. Requested video annotation features.
@@ -336,15 +337,16 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </summary>
         /// <param name="inputUri">
         /// Input video location. Currently, only
-        /// [Google Cloud Storage](https://cloud.google.com/storage/) URIs are
-        /// supported, which must be specified in the following format:
+        /// [Cloud Storage](https://cloud.google.com/storage/) URIs are
+        /// supported. URIs must be specified in the following format:
         /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-        /// [Request URIs](https://cloud.google.com/storage/docs/request-endpoints).
-        /// A video URI may include wildcards in `object-id`, and thus identify
-        /// multiple videos. Supported wildcards: '*' to match 0 or more characters;
+        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
+        /// more information, see [Request
+        /// URIs](https://cloud.google.com/storage/docs/request-endpoints). To identify
+        /// multiple videos, a video URI may include wildcards in the `object-id`.
+        /// Supported wildcards: '*' to match 0 or more characters;
         /// '?' to match 1 character. If unset, the input video should be embedded
-        /// in the request as `input_content`. If set, `input_content` should be unset.
+        /// in the request as `input_content`. If set, `input_content` must be unset.
         /// </param>
         /// <param name="features">
         /// Required. Requested video annotation features.
@@ -369,15 +371,16 @@ namespace Google.Cloud.VideoIntelligence.V1
         /// </summary>
         /// <param name="inputUri">
         /// Input video location. Currently, only
-        /// [Google Cloud Storage](https://cloud.google.com/storage/) URIs are
-        /// supported, which must be specified in the following format:
+        /// [Cloud Storage](https://cloud.google.com/storage/) URIs are
+        /// supported. URIs must be specified in the following format:
         /// `gs://bucket-id/object-id` (other URI formats return
-        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-        /// [Request URIs](https://cloud.google.com/storage/docs/request-endpoints).
-        /// A video URI may include wildcards in `object-id`, and thus identify
-        /// multiple videos. Supported wildcards: '*' to match 0 or more characters;
+        /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For
+        /// more information, see [Request
+        /// URIs](https://cloud.google.com/storage/docs/request-endpoints). To identify
+        /// multiple videos, a video URI may include wildcards in the `object-id`.
+        /// Supported wildcards: '*' to match 0 or more characters;
         /// '?' to match 1 character. If unset, the input video should be embedded
-        /// in the request as `input_content`. If set, `input_content` should be unset.
+        /// in the request as `input_content`. If set, `input_content` must be unset.
         /// </param>
         /// <param name="features">
         /// Required. Requested video annotation features.
@@ -390,7 +393,7 @@ namespace Google.Cloud.VideoIntelligence.V1
 
     /// <summary>VideoIntelligenceService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service that implements Google Cloud Video Intelligence API.
+    /// Service that implements the Video Intelligence API.
     /// </remarks>
     public sealed partial class VideoIntelligenceServiceClientImpl : VideoIntelligenceServiceClient
     {
