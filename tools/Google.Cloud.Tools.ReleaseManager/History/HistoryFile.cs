@@ -112,24 +112,9 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
                 Lines.Add($"# Version {Version}, released {release.ReleaseDate:yyyy-MM-dd}");
                 Lines.Add("");
-                // TODO(early 2021): Remove this hack (gRPC constructors) once everything has been released with new tooling.
-                bool addGrpcConstructorFaqEntryLink = false;
                 foreach (var commit in release.Commits)
                 {
-                    if (commit.Hash == "0ca05f5")
-                    {
-                        addGrpcConstructorFaqEntryLink = true;
-                        continue;
-                    }
                     Lines.AddRange(commit.GetHistoryLines());
-                }
-                if (addGrpcConstructorFaqEntryLink)
-                {
-                    Lines.Add("");
-                    Lines.Add("Additionally, this release included the regeneration of protobuf and gRPC types using new tooling.");
-                    Lines.Add("This introduces a change that has a very small chance of breaking customers. Please see");
-                    Lines.Add("the [FAQ entry](https://googleapis.github.io/google-cloud-dotnet/docs/faq.html#why-have-the generated-grpc-client-constructors-changed)");
-                    Lines.Add("for more details.");
                 }
                 Lines.Add("");
             }

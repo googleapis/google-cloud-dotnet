@@ -36,15 +36,9 @@ namespace Google.Cloud.Tools.VersionCompat
             var oWithNested = olderTypes.WithNested().ToImmutableList();
             var nWithNested = newerTypes.WithNested().ToImmutableList();
 
-            var diffs = TopLevel.Diffs(oWithNested, nWithNested).Where(diff => !IsGrpcConstructorRemoval(diff)).ToImmutableList();
+            var diffs = TopLevel.Diffs(oWithNested, nWithNested).ToImmutableList();
 
             return new DiffResult(diffs);
-
-            // Ignore the gRPC constructor parameter Channel -> ChannelBase change. We're treating it as non-breaking.
-            // TODO(early 2021): When we've released all APIs that have this change, we can remove this hack.
-            bool IsGrpcConstructorRemoval(Diff diff) =>
-                diff.Cause == Cause.CtorRemoved &&
-                diff.ToString(FormatDetail.Brief).Contains("'void .ctor(Channel channel)'");
         }
 
         public static DiffResult Compare(AssemblyDefinition older, AssemblyDefinition newer, string testNamespace)
