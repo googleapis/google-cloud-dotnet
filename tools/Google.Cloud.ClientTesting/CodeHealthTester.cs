@@ -67,5 +67,30 @@ namespace Google.Cloud.ClientTesting
             // Force output to show the bad types
             Assert.Equal(new string[0], badTypes.ToList());
         }
+
+        /// <summary>
+        /// Asserts that the assembly containing the given type does not define the disallowed namespaces.
+        /// </summary>
+        public static void AssertNoDisallowedNamespaces(Type sampleType, params string[] disallowedNamespaces)
+        {
+            var badTypes = sampleType.Assembly.DefinedTypes
+                .Where(t => disallowedNamespaces.Contains(t.Namespace))
+                .Select(t => t.FullName);
+
+            Assert.Empty(badTypes);
+        }
+
+        /// <summary>
+        /// Asserts that the assembly containing the given type only defines the allowed namespaces.
+        /// </summary>
+        public static void AssertOnlyAllowedNamespaces(Type sampleType, params string[] allowedNamespaces)
+        {
+            var badTypes = sampleType.Assembly.DefinedTypes
+                .Where(t => !allowedNamespaces.Contains(t.Namespace))
+                .Select(t => t.FullName);
+
+            // Force output to show the bad namespaces.
+            Assert.Empty(badTypes);
+        }
     }
 }
