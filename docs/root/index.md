@@ -38,7 +38,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.0.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.Dataproc.V1](Google.Cloud.Dataproc.V1/index.html) | 3.0.0-beta00 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
 | [Google.Cloud.Datastore.Admin.V1](Google.Cloud.Datastore.Admin.V1/index.html) | 1.0.0-beta01 | Cloud Datastore API |
-| [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html) | 3.0.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
+| [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html) | 3.1.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Debugger.V2](Google.Cloud.Debugger.V2/index.html) | 2.0.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](Google.Cloud.DevTools.Common/index.html) | 2.0.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](Google.Cloud.DevTools.ContainerAnalysis.V1/index.html) | 2.0.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
