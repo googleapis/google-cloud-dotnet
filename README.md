@@ -22,7 +22,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.AssuredWorkloads.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.AssuredWorkloads.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Assured Workloads API](https://cloud.google.com/assured-workloads/docs) |
 | [Google.Cloud.AutoML.V1](https://googleapis.dev/dotnet/Google.Cloud.AutoML.V1/2.0.0) | 2.0.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.Connection.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Connection.V1/1.0.0) | 1.0.0 | [BigQuery Connection API](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
-| [Google.Cloud.BigQuery.DataTransfer.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.DataTransfer.V1/2.0.0) | 2.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
+| [Google.Cloud.BigQuery.DataTransfer.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.DataTransfer.V1/3.0.0) | 3.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
 | [Google.Cloud.BigQuery.Reservation.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Reservation.V1/1.0.0) | 1.0.0 | [BigQuery Reservation API](https://cloud.google.com/bigquery/docs/reference/reservations) |
 | [Google.Cloud.BigQuery.V2](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.V2/2.1.0) | 2.1.0 | [Google BigQuery](https://cloud.google.com/bigquery/) |
 | [Google.Cloud.BigQuery.Storage.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Storage.V1/2.0.0) | 2.0.0 | [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) |
