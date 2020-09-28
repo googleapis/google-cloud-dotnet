@@ -100,7 +100,8 @@ namespace Google.Cloud.Datastore.V1
                     Endpoint = environment[s_emulatorHostVariable],
                     Settings = Settings,
                     ProjectId = ProjectId ?? environment[s_emulatorProjectVariable],
-                    NamespaceId = NamespaceId
+                    NamespaceId = NamespaceId,
+                    ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
                 }.PrepareBuilder();
             }
             GaxPreconditions.CheckState(!string.IsNullOrEmpty(ProjectId), "The project ID must be configured");
