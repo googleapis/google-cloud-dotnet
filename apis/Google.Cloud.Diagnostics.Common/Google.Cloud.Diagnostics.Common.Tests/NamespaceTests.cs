@@ -12,29 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Linq;
-using System.Reflection;
+using Google.Cloud.ClientTesting;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
+    // We have files organized in Logging, Trace and ErrorReporting folders
+    // but we really only have one namespace Google.Cloud.Diagnostics.Common.
+    // When using VisualStudio to add new files to these folders it's easy to
+    // forget to remove the folder names from the generated namespace.
+    // We have already merged some tests with the wrong namespace, which is not a problem.
+    // But if we ever merge production code in the wrong namespace then we have to carry
+    // that over until the next major version bump.
     public class NamespaceTests
     {
         [Fact]
-        public void Library_OnlyCommonNamespace()
-        {
-            var diagCommonAssembly = Assembly.GetAssembly(typeof(IConsumer<>));
-
-            // We have files organized in Logging, Trace and ErrorReporting folders
-            // but we really only have one namespace Google.Cloud.Diagnostics.Common.
-            // When using VisualStudio to add new files to these folders it's easy to
-            // forget to remove the folder names from the generated namespace.
-            // We have already merged some tests with the wrong namespace, which is not a problem.
-            // But if we ever merge production code in the wrong namespace then we have to carry
-            // that over until the next major version bump.
-
-            string ns = Assert.Single(diagCommonAssembly.GetTypes().Select(t => t.Namespace).Distinct());
-            Assert.Equal("Google.Cloud.Diagnostics.Common", ns);
-        }
+        public void Library_OnlyCommonNamespace() =>
+            CodeHealthTester.AssertOnlyAllowedNamespaces(
+                typeof(IConsumer<>), "Google.Cloud.Diagnostics.Common");
+        
+        [Fact]
+        public void Library_NoComponentSpecificNamespaces() =>
+            // Note: If this test fails, the other one in this file will fail as well
+            // but let's have the double protection.
+            CodeHealthTester.AssertNoDisallowedNamespaces(
+                typeof(IConsumer<>),
+                "Google.Cloud.Diagnostics.Common.ErrorReporting",
+                "Google.Cloud.Diagnostics.Common.Logging",
+                "Google.Cloud.Diagnostics.Common.Trace");
     }
 }
