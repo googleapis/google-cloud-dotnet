@@ -1,5 +1,12 @@
 # Version history
 
+# Version 4.2.0-beta01, released 2020-09-29
+
+- [Commit 5710321](https://github.com/googleapis/google-cloud-dotnet/commit/5710321): feat: Adds GoogleTraceProvider to be used by Logging when Tracing is not configured. Closes [issue 5359](https://github.com/googleapis/google-cloud-dotnet/issues/5359).
+- [Commit f46b1c6](https://github.com/googleapis/google-cloud-dotnet/commit/f46b1c6): fix: Corrects Span ID format for adding to Log Entries. Fixes [issue 5358](https://github.com/googleapis/google-cloud-dotnet/issues/5358).
+- [Commit 924c503](https://github.com/googleapis/google-cloud-dotnet/commit/924c503): docs: Adds documentation about environments that limit background activities. Closes [issue 5275](https://github.com/googleapis/google-cloud-dotnet/issues/5275).
+- [Commit 7480149](https://github.com/googleapis/google-cloud-dotnet/commit/7480149): fix: Sets LogEntry.TraceSampled to true if tracing information is adding to the entry. Fixes [issue 5307](https://github.com/googleapis/google-cloud-dotnet/issues/5307).
+
 # Version 4.1.0, released 2020-08-18
 
 No changes compared with 4.1.0-beta01

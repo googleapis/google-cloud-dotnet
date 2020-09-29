@@ -39,8 +39,8 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Debugger.V2](https://googleapis.dev/dotnet/Google.Cloud.Debugger.V2/2.0.0) | 2.0.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/2.0.0) | 2.0.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
 | [Google.Cloud.DevTools.ContainerAnalysis.V1](https://googleapis.dev/dotnet/Google.Cloud.DevTools.ContainerAnalysis.V1/2.0.0) | 2.0.0 | [Google Container Analysis](https://cloud.google.com/container-registry/docs/container-analysis/) |
-| [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/4.1.0) | 4.1.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
-| [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/4.1.0) | 4.1.0 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
+| [Google.Cloud.Diagnostics.AspNetCore](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore/4.2.0-beta01) | 4.2.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core |
+| [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/4.2.0-beta01) | 4.2.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.V2](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.V2/3.0.0) | 3.0.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
 | [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/3.0.0) | 3.0.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
 | [Google.Cloud.DocumentAI.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.DocumentAI.V1Beta2/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Document AI](https://cloud.google.com/solutions/document-ai) |
