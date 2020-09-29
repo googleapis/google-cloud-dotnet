@@ -28,7 +28,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Tests
                 AnnotationResults =
                 {
                     new VideoAnnotationResults { ExplicitAnnotation = new ExplicitContentAnnotation() },
-                    new VideoAnnotationResults { FaceAnnotations = { new FaceAnnotation() } }
+                    new VideoAnnotationResults { FaceDetectionAnnotations = { new FaceDetectionAnnotation() } }
                 }
             };
             Assert.Same(response, response.ThrowOnAnyError());
@@ -41,7 +41,7 @@ namespace Google.Cloud.VideoIntelligence.V1.Tests
             {
                 AnnotationResults =
                 {
-                    new VideoAnnotationResults { FaceAnnotations = { new FaceAnnotation() } },
+                    new VideoAnnotationResults { FaceDetectionAnnotations = { new FaceDetectionAnnotation() } },
                     new VideoAnnotationResults { Error = new Rpc.Status { Message = "Bang" } }
                 }
             };
