@@ -1,5 +1,10 @@
 # Version history
 
+# Version 3.4.0-beta01, released 2020-09-30
+
+- [Commit 572976f](https://github.com/googleapis/google-cloud-dotnet/commit/572976f): Update Google.Apis.Storage.v1 dependency.
+- [Commit 7b6edc0](https://github.com/googleapis/google-cloud-dotnet/commit/7b6edc0): fix: Makes V4 signature include x-goog-resumable header. Fixes [issue 5361](https://github.com/googleapis/google-cloud-dotnet/issues/5361)
+
 # Version 3.3.0, released 2020-09-01
 
 No API surface changes; just updated dependencies. In particular,
