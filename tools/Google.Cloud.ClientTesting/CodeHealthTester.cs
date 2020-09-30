@@ -31,6 +31,12 @@ namespace Google.Cloud.ClientTesting
             "DataOnStack.MethodToken"
         };
 
+        private static readonly List<string> s_exemptedNamespacePrefixs = new List<string>
+        {
+            // Used for code coverage on some CI jobs.
+            "JetBrains",
+        };
+
         /// <summary>
         /// Asserts that all the fields in the assembly containing the given type are private,
         /// other than for constants.
@@ -86,10 +92,10 @@ namespace Google.Cloud.ClientTesting
         public static void AssertOnlyAllowedNamespaces(Type sampleType, params string[] allowedNamespaces)
         {
             var badTypes = sampleType.Assembly.DefinedTypes
-                .Where(t => !allowedNamespaces.Contains(t.Namespace))
+                .Where(t => !allowedNamespaces.Contains(t.Namespace) &&
+                            !s_exemptedNamespacePrefixs.Any(prefix => t.Namespace.StartsWith(prefix)))
                 .Select(t => t.FullName);
 
-            // Force output to show the bad namespaces.
             Assert.Empty(badTypes);
         }
     }
