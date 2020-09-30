@@ -63,7 +63,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Api.Gax.Testing", DefaultGaxVersion },
             { "Google.Api.Gax.Grpc.Testing", DefaultGaxVersion },
             { GrpcPackage, GrpcVersion },
-            { "Grpc.Core.Testing", GrpcVersion }
+            { "Grpc.Core.Testing", GrpcVersion },
+            { "Grpc.Core.Api", GrpcVersion },
+            { "Google.Api.CommonProtos", "2.2.0" },
+            { "Google.Protobuf", "3.13.0" }
         };
 
         // Hard-coded versions for all analyzer projects.
@@ -173,6 +176,45 @@ namespace Google.Cloud.Tools.ReleaseManager
             var root = DirectoryLayout.ForRootDocs().DocsSourceDirectory;
             var indexPath = Path.Combine(root, "index.md");
             RewriteApiTable(indexPath, catalog, api => $"{api.Id}/index.html");
+        }
+
+        /// <summary>
+        /// Updates the dependencies in an API for known packages, but only if the default
+        /// version is later than the current one.
+        /// </summary>
+        public static void UpdateDependencies(ApiMetadata api)
+        {
+            UpdateDependencyDictionary(api.Dependencies, "dependencies");
+            UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
+
+            void UpdateDependencyDictionary(SortedDictionary<string, string> dependencies, string jsonName)
+            {
+                if (dependencies.Count == 0)
+                {
+                    return;
+                }
+                foreach (var package in dependencies.Keys.ToList())
+                {
+                    if (DefaultPackageVersions.TryGetValue(package, out var defaultVersion))
+                    {
+                        var currentVersion = dependencies[package];
+                        if (defaultVersion == currentVersion)
+                        {
+                            continue;
+                        }
+                        var structuredDefaultVersion = StructuredVersion.FromString(defaultVersion);
+                        var structuredCurrentVersion = StructuredVersion.FromString(currentVersion);
+                        if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0)
+                        {
+                            dependencies[package] = defaultVersion;
+                        }
+                    }
+                }
+                if (api.Json is object)
+                {
+                    api.Json[jsonName] = new JObject(dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
+                }
+            }
         }
 
         /// <summary>

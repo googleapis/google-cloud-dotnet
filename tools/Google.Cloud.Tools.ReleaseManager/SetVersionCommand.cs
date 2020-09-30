@@ -35,6 +35,10 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             string oldVersion = api.Version;
             api.Version = version;
+            if (api.StructuredVersion.Patch == 0)
+            {
+                GenerateProjectsCommand.UpdateDependencies(api);
+            }
             var layout = DirectoryLayout.ForApi(id);
             var apiNames = catalog.CreateIdHashSet();
             GenerateProjectsCommand.GenerateMetadataFile(layout.SourceDirectory, api);
