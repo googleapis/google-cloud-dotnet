@@ -2696,6 +2696,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Firestore.V1"
     },
     {
+      "ServiceDirectory": "google/home/enterprise/sdm/v1",
+      "Name": "smartdevicemanagement.googleapis.com",
+      "Title": "Smart Device Management API",
+      "Description": "Allow select enterprise partners to access, control, and manage Google and Nest devices programmatically.",
+      "ServiceConfigFile": "google/home/enterprise/sdm/v1/smartdevicemanagement_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.home.enterprise.sdm.v1",
+      "PackageFromProtos": "google.home.enterprise.sdm.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/home/enterprise/sdm/v1",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Home.Enterprise.Sdm.V1"
+    },
+    {
       "ServiceDirectory": "google/home/graph/v1",
       "Name": "homegraph.googleapis.com",
       "Title": "HomeGraph API",
