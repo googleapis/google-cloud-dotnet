@@ -27,38 +27,751 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
             "Cjxnb29nbGUvZGV2dG9vbHMvY29udGFpbmVyYW5hbHlzaXMvdjEvY29udGFp",
             "bmVyYW5hbHlzaXMucHJvdG8SJGdvb2dsZS5kZXZ0b29scy5jb250YWluZXJh",
             "bmFseXNpcy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29v",
-            "Z2xlL2FwaS9jbGllbnQucHJvdG8aHmdvb2dsZS9pYW0vdjEvaWFtX3BvbGlj",
-            "eS5wcm90bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3kucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8ykQYKEUNvbnRhaW5lckFuYWx5c2lz",
-            "EtIBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBvbGlj",
-            "eVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSKGAYLT5JMCbiIuL3Yx",
-            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL25vdGVzLyp9OnNldElhbVBvbGljeToB",
-            "Klo5IjQvdjEve3Jlc291cmNlPXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn06",
-            "c2V0SWFtUG9saWN5OgEq2kEPcmVzb3VyY2UscG9saWN5EsoBCgxHZXRJYW1Q",
-            "b2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5n",
-            "b29nbGUuaWFtLnYxLlBvbGljeSJ/gtPkkwJuIi4vdjEve3Jlc291cmNlPXBy",
-            "b2plY3RzLyovbm90ZXMvKn06Z2V0SWFtUG9saWN5OgEqWjkiNC92MS97cmVz",
-            "b3VyY2U9cHJvamVjdHMvKi9vY2N1cnJlbmNlcy8qfTpnZXRJYW1Qb2xpY3k6",
-            "ASraQQhyZXNvdXJjZRKDAgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xl",
-            "LmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlh",
-            "bS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSKXAYLT5JMCeiI0L3Yx",
-            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL25vdGVzLyp9OnRlc3RJYW1QZXJtaXNz",
-            "aW9uczoBKlo/IjovdjEve3Jlc291cmNlPXByb2plY3RzLyovb2NjdXJyZW5j",
-            "ZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3VyY2UscGVybWlz",
-            "c2lvbnMaVMpBIGNvbnRhaW5lcmFuYWx5c2lzLmdvb2dsZWFwaXMuY29t0kEu",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bULUAQofY29tLmdvb2dsZS5jb250YWluZXJhbmFseXNpcy52MVABWlVnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRvb2xzL2Nv",
-            "bnRhaW5lcmFuYWx5c2lzL3YxO2NvbnRhaW5lcmFuYWx5c2lzogIDR0NBqgIq",
-            "R29vZ2xlLkNsb3VkLkRldlRvb2xzLkNvbnRhaW5lckFuYWx5c2lzLlYx6gIk",
-            "R29vZ2xlOjpDbG91ZDo6Q29udGFpbmVyQW5hbHlzaXM6OlYxYgZwcm90bzM="));
+            "Z2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
+            "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9p",
+            "YW0vdjEvaWFtX3BvbGljeS5wcm90bxoaZ29vZ2xlL2lhbS92MS9wb2xpY3ku",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdyYWZl",
+            "YXMvdjEvdnVsbmVyYWJpbGl0eS5wcm90byKAAQopR2V0VnVsbmVyYWJpbGl0",
+            "eU9jY3VycmVuY2VzU3VtbWFyeVJlcXVlc3QSQwoGcGFyZW50GAEgASgJQjP6",
+            "QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2pl",
+            "Y3TgQQISDgoGZmlsdGVyGAIgASgJIpACCh9WdWxuZXJhYmlsaXR5T2NjdXJy",
+            "ZW5jZXNTdW1tYXJ5EmoKBmNvdW50cxgBIAMoCzJaLmdvb2dsZS5kZXZ0b29s",
+            "cy5jb250YWluZXJhbmFseXNpcy52MS5WdWxuZXJhYmlsaXR5T2NjdXJyZW5j",
+            "ZXNTdW1tYXJ5LkZpeGFibGVUb3RhbEJ5RGlnZXN0GoABChRGaXhhYmxlVG90",
+            "YWxCeURpZ2VzdBIUCgxyZXNvdXJjZV91cmkYASABKAkSJgoIc2V2ZXJpdHkY",
+            "AiABKA4yFC5ncmFmZWFzLnYxLlNldmVyaXR5EhUKDWZpeGFibGVfY291bnQY",
+            "AyABKAMSEwoLdG90YWxfY291bnQYBCABKAMyoggKEUNvbnRhaW5lckFuYWx5",
+            "c2lzEtIBCgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNldElhbVBv",
+            "bGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSKGAYLT5JMCbiIu",
+            "L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL25vdGVzLyp9OnNldElhbVBvbGlj",
+            "eToBKlo5IjQvdjEve3Jlc291cmNlPXByb2plY3RzLyovb2NjdXJyZW5jZXMv",
+            "Kn06c2V0SWFtUG9saWN5OgEq2kEPcmVzb3VyY2UscG9saWN5EsoBCgxHZXRJ",
+            "YW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3Qa",
+            "FS5nb29nbGUuaWFtLnYxLlBvbGljeSJ/gtPkkwJuIi4vdjEve3Jlc291cmNl",
+            "PXByb2plY3RzLyovbm90ZXMvKn06Z2V0SWFtUG9saWN5OgEqWjkiNC92MS97",
+            "cmVzb3VyY2U9cHJvamVjdHMvKi9vY2N1cnJlbmNlcy8qfTpnZXRJYW1Qb2xp",
+            "Y3k6ASraQQhyZXNvdXJjZRKDAgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29v",
+            "Z2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xl",
+            "LmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSKXAYLT5JMCeiI0",
+            "L3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL25vdGVzLyp9OnRlc3RJYW1QZXJt",
+            "aXNzaW9uczoBKlo/IjovdjEve3Jlc291cmNlPXByb2plY3RzLyovb2NjdXJy",
+            "ZW5jZXMvKn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3VyY2UscGVy",
+            "bWlzc2lvbnMSjgIKIkdldFZ1bG5lcmFiaWxpdHlPY2N1cnJlbmNlc1N1bW1h",
+            "cnkSTy5nb29nbGUuZGV2dG9vbHMuY29udGFpbmVyYW5hbHlzaXMudjEuR2V0",
+            "VnVsbmVyYWJpbGl0eU9jY3VycmVuY2VzU3VtbWFyeVJlcXVlc3QaRS5nb29n",
+            "bGUuZGV2dG9vbHMuY29udGFpbmVyYW5hbHlzaXMudjEuVnVsbmVyYWJpbGl0",
+            "eU9jY3VycmVuY2VzU3VtbWFyeSJQgtPkkwI6EjgvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qfS9vY2N1cnJlbmNlczp2dWxuZXJhYmlsaXR5U3VtbWFyedpBDXBh",
+            "cmVudCxmaWx0ZXIaVMpBIGNvbnRhaW5lcmFuYWx5c2lzLmdvb2dsZWFwaXMu",
+            "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybULUAQofY29tLmdvb2dsZS5jb250YWluZXJhbmFseXNpcy52MVAB",
+            "WlVnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldnRv",
+            "b2xzL2NvbnRhaW5lcmFuYWx5c2lzL3YxO2NvbnRhaW5lcmFuYWx5c2lzogID",
+            "R0NBqgIqR29vZ2xlLkNsb3VkLkRldlRvb2xzLkNvbnRhaW5lckFuYWx5c2lz",
+            "LlYx6gIkR29vZ2xlOjpDbG91ZDo6Q29udGFpbmVyQW5hbHlzaXM6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, null));
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.VulnerabilityReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest), global::Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest.Parser, new[]{ "Parent", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary), global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Parser, new[]{ "Counts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest), global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest.Parser, new[]{ "ResourceUri", "Severity", "FixableCount", "TotalCount" }, null, null, null, null)})
+          }));
     }
     #endregion
 
   }
+  #region Messages
+  /// <summary>
+  /// Request to get a vulnerability summary for some set of occurrences.
+  /// </summary>
+  public sealed partial class GetVulnerabilityOccurrencesSummaryRequest : pb::IMessage<GetVulnerabilityOccurrencesSummaryRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetVulnerabilityOccurrencesSummaryRequest> _parser = new pb::MessageParser<GetVulnerabilityOccurrencesSummaryRequest>(() => new GetVulnerabilityOccurrencesSummaryRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetVulnerabilityOccurrencesSummaryRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DevTools.ContainerAnalysis.V1.ContaineranalysisReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetVulnerabilityOccurrencesSummaryRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetVulnerabilityOccurrencesSummaryRequest(GetVulnerabilityOccurrencesSummaryRequest other) : this() {
+      parent_ = other.parent_;
+      filter_ = other.filter_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetVulnerabilityOccurrencesSummaryRequest Clone() {
+      return new GetVulnerabilityOccurrencesSummaryRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// The name of the project to get a vulnerability summary for in the form of
+    /// `projects/[PROJECT_ID]`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private string filter_ = "";
+    /// <summary>
+    /// The filter expression.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetVulnerabilityOccurrencesSummaryRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetVulnerabilityOccurrencesSummaryRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Filter != other.Filter) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetVulnerabilityOccurrencesSummaryRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A summary of how many vulnerability occurrences there are per resource and
+  /// severity type.
+  /// </summary>
+  public sealed partial class VulnerabilityOccurrencesSummary : pb::IMessage<VulnerabilityOccurrencesSummary>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VulnerabilityOccurrencesSummary> _parser = new pb::MessageParser<VulnerabilityOccurrencesSummary>(() => new VulnerabilityOccurrencesSummary());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<VulnerabilityOccurrencesSummary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DevTools.ContainerAnalysis.V1.ContaineranalysisReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public VulnerabilityOccurrencesSummary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public VulnerabilityOccurrencesSummary(VulnerabilityOccurrencesSummary other) : this() {
+      counts_ = other.counts_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public VulnerabilityOccurrencesSummary Clone() {
+      return new VulnerabilityOccurrencesSummary(this);
+    }
+
+    /// <summary>Field number for the "counts" field.</summary>
+    public const int CountsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest> _repeated_counts_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest> counts_ = new pbc::RepeatedField<global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest>();
+    /// <summary>
+    /// A listing by resource of the number of fixable and total vulnerabilities.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest> Counts {
+      get { return counts_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as VulnerabilityOccurrencesSummary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(VulnerabilityOccurrencesSummary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!counts_.Equals(other.counts_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= counts_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      counts_.WriteTo(output, _repeated_counts_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      counts_.WriteTo(ref output, _repeated_counts_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += counts_.CalculateSize(_repeated_counts_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(VulnerabilityOccurrencesSummary other) {
+      if (other == null) {
+        return;
+      }
+      counts_.Add(other.counts_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            counts_.AddEntriesFrom(input, _repeated_counts_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            counts_.AddEntriesFrom(ref input, _repeated_counts_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the VulnerabilityOccurrencesSummary message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Per resource and severity counts of fixable and total vulnerabilities.
+      /// </summary>
+      public sealed partial class FixableTotalByDigest : pb::IMessage<FixableTotalByDigest>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FixableTotalByDigest> _parser = new pb::MessageParser<FixableTotalByDigest>(() => new FixableTotalByDigest());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<FixableTotalByDigest> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FixableTotalByDigest() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FixableTotalByDigest(FixableTotalByDigest other) : this() {
+          resourceUri_ = other.resourceUri_;
+          severity_ = other.severity_;
+          fixableCount_ = other.fixableCount_;
+          totalCount_ = other.totalCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public FixableTotalByDigest Clone() {
+          return new FixableTotalByDigest(this);
+        }
+
+        /// <summary>Field number for the "resource_uri" field.</summary>
+        public const int ResourceUriFieldNumber = 1;
+        private string resourceUri_ = "";
+        /// <summary>
+        /// The affected resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string ResourceUri {
+          get { return resourceUri_; }
+          set {
+            resourceUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "severity" field.</summary>
+        public const int SeverityFieldNumber = 2;
+        private global::Grafeas.V1.Severity severity_ = global::Grafeas.V1.Severity.Unspecified;
+        /// <summary>
+        /// The severity for this count. SEVERITY_UNSPECIFIED indicates total across
+        /// all severities.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Grafeas.V1.Severity Severity {
+          get { return severity_; }
+          set {
+            severity_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "fixable_count" field.</summary>
+        public const int FixableCountFieldNumber = 3;
+        private long fixableCount_;
+        /// <summary>
+        /// The number of fixable vulnerabilities associated with this resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public long FixableCount {
+          get { return fixableCount_; }
+          set {
+            fixableCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "total_count" field.</summary>
+        public const int TotalCountFieldNumber = 4;
+        private long totalCount_;
+        /// <summary>
+        /// The total number of vulnerabilities associated with this resource.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public long TotalCount {
+          get { return totalCount_; }
+          set {
+            totalCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as FixableTotalByDigest);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(FixableTotalByDigest other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ResourceUri != other.ResourceUri) return false;
+          if (Severity != other.Severity) return false;
+          if (FixableCount != other.FixableCount) return false;
+          if (TotalCount != other.TotalCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ResourceUri.Length != 0) hash ^= ResourceUri.GetHashCode();
+          if (Severity != global::Grafeas.V1.Severity.Unspecified) hash ^= Severity.GetHashCode();
+          if (FixableCount != 0L) hash ^= FixableCount.GetHashCode();
+          if (TotalCount != 0L) hash ^= TotalCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ResourceUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ResourceUri);
+          }
+          if (Severity != global::Grafeas.V1.Severity.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Severity);
+          }
+          if (FixableCount != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(FixableCount);
+          }
+          if (TotalCount != 0L) {
+            output.WriteRawTag(32);
+            output.WriteInt64(TotalCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ResourceUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ResourceUri);
+          }
+          if (Severity != global::Grafeas.V1.Severity.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Severity);
+          }
+          if (FixableCount != 0L) {
+            output.WriteRawTag(24);
+            output.WriteInt64(FixableCount);
+          }
+          if (TotalCount != 0L) {
+            output.WriteRawTag(32);
+            output.WriteInt64(TotalCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (ResourceUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceUri);
+          }
+          if (Severity != global::Grafeas.V1.Severity.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
+          }
+          if (FixableCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(FixableCount);
+          }
+          if (TotalCount != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(FixableTotalByDigest other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ResourceUri.Length != 0) {
+            ResourceUri = other.ResourceUri;
+          }
+          if (other.Severity != global::Grafeas.V1.Severity.Unspecified) {
+            Severity = other.Severity;
+          }
+          if (other.FixableCount != 0L) {
+            FixableCount = other.FixableCount;
+          }
+          if (other.TotalCount != 0L) {
+            TotalCount = other.TotalCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ResourceUri = input.ReadString();
+                break;
+              }
+              case 16: {
+                Severity = (global::Grafeas.V1.Severity) input.ReadEnum();
+                break;
+              }
+              case 24: {
+                FixableCount = input.ReadInt64();
+                break;
+              }
+              case 32: {
+                TotalCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ResourceUri = input.ReadString();
+                break;
+              }
+              case 16: {
+                Severity = (global::Grafeas.V1.Severity) input.ReadEnum();
+                break;
+              }
+              case 24: {
+                FixableCount = input.ReadInt64();
+                break;
+              }
+              case 32: {
+                TotalCount = input.ReadInt64();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  #endregion
+
 }
 
 #endregion Designer generated code
