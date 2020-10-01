@@ -452,8 +452,7 @@
         "Grpc.Core": "2.31.0",
         "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
         "Microsoft.AspNetCore.Http": "2.1.1",
-        "Microsoft.AspNetCore.Http.Extensions": "2.1.1",
-        "Microsoft.Extensions.Logging": "2.1.1"
+        "Microsoft.AspNetCore.Http.Extensions": "2.1.1"
       },
       "testDependencies": {
         "Google.Cloud.Diagnostics.Common.Tests": "project",
@@ -473,7 +472,7 @@
       "version": "4.2.0-beta01",
       "type": "other",
       "targetFrameworks": "netstandard2.0",
-      "testTargetFrameworks": "netcoreapp2.1;net461",
+      "testTargetFrameworks": "netcoreapp2.1;netcoreapp3.1;net461",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
       "tags": [
         "Error",
@@ -487,13 +486,11 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
         "Google.Cloud.Logging.V2": "3.0.0",
         "Google.Cloud.Trace.V1": "2.0.0",
-        "Microsoft.AspNetCore.Http.Abstractions": "2.1.1",
         "Microsoft.Extensions.Http": "2.1.1",
         "System.Diagnostics.StackTrace": "4.3.0"
       },
       "testDependencies": {
-        "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta02",
-        "Microsoft.AspNetCore.Http": "2.1.1"
+        "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta02"
       },
       "noVersionHistory": true
     },
