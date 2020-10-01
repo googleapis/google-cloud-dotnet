@@ -96,3 +96,8 @@ the request and want to put work into it.
 
 - Issue: [#3335](https://github.com/googleapis/google-cloud-dotnet/issues/3335)
 - Status: Waiting for demand on this. We have some ideas, but little *customer* input.
+
+# Diagnostics: Associate trace information to log entries even if the trace is not sampled.
+
+- Issue: [#5384](https://github.com/googleapis/google-cloud-dotnet/issues/5384)
+- Status: Semantic breaking change. To be considered for a major version if and when we plan for one.
