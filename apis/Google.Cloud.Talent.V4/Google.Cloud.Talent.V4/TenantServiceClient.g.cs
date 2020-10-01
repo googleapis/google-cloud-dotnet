@@ -569,16 +569,13 @@ namespace Google.Cloud.Talent.V4
         /// Updates specified tenant.
         /// </summary>
         /// <param name="tenant">
-        /// Required. The tenant resource to replace the current resource in the
-        /// system.
+        /// Required. The tenant resource to replace the current resource in the system.
         /// </param>
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is
-        /// provided, only the specified fields in
-        /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated.
-        /// Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is provided, only the specified fields in
+        /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated. Otherwise all the fields are updated.
         /// 
         /// A field mask to specify the tenant fields to be updated. Only
         /// top level fields of [Tenant][google.cloud.talent.v4.Tenant] are supported.
@@ -596,16 +593,13 @@ namespace Google.Cloud.Talent.V4
         /// Updates specified tenant.
         /// </summary>
         /// <param name="tenant">
-        /// Required. The tenant resource to replace the current resource in the
-        /// system.
+        /// Required. The tenant resource to replace the current resource in the system.
         /// </param>
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is
-        /// provided, only the specified fields in
-        /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated.
-        /// Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is provided, only the specified fields in
+        /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated. Otherwise all the fields are updated.
         /// 
         /// A field mask to specify the tenant fields to be updated. Only
         /// top level fields of [Tenant][google.cloud.talent.v4.Tenant] are supported.
@@ -623,16 +617,13 @@ namespace Google.Cloud.Talent.V4
         /// Updates specified tenant.
         /// </summary>
         /// <param name="tenant">
-        /// Required. The tenant resource to replace the current resource in the
-        /// system.
+        /// Required. The tenant resource to replace the current resource in the system.
         /// </param>
         /// <param name="updateMask">
         /// Strongly recommended for the best service experience.
         /// 
-        /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is
-        /// provided, only the specified fields in
-        /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated.
-        /// Otherwise all the fields are updated.
+        /// If [update_mask][google.cloud.talent.v4.UpdateTenantRequest.update_mask] is provided, only the specified fields in
+        /// [tenant][google.cloud.talent.v4.UpdateTenantRequest.tenant] are updated. Otherwise all the fields are updated.
         /// 
         /// A field mask to specify the tenant fields to be updated. Only
         /// top level fields of [Tenant][google.cloud.talent.v4.Tenant] are supported.

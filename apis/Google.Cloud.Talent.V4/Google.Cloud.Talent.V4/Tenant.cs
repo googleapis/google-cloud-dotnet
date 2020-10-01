@@ -25,16 +25,16 @@ namespace Google.Cloud.Talent.V4 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvdGFsZW50L3Y0L3RlbmFudC5wcm90bxIWZ29vZ2xl",
-            "LmNsb3VkLnRhbGVudC52NBocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
-            "bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
-            "aS9yZXNvdXJjZS5wcm90byJ2CgZUZW5hbnQSDAoEbmFtZRgBIAEoCRIYCgtl",
+            "LmNsb3VkLnRhbGVudC52NBofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
+            "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxocZ29vZ2xlL2FwaS9h",
+            "bm5vdGF0aW9ucy5wcm90byJ2CgZUZW5hbnQSDAoEbmFtZRgBIAEoCRIYCgtl",
             "eHRlcm5hbF9pZBgCIAEoCUID4EECOkTqQUEKGmpvYnMuZ29vZ2xlYXBpcy5j",
             "b20vVGVuYW50EiNwcm9qZWN0cy97cHJvamVjdH0vdGVuYW50cy97dGVuYW50",
             "fUJvChpjb20uZ29vZ2xlLmNsb3VkLnRhbGVudC52NEILVGVuYW50UHJvdG9Q",
             "AVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
             "ZC90YWxlbnQvdjQ7dGFsZW50ogIDQ1RTYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Tenant), global::Google.Cloud.Talent.V4.Tenant.Parser, new[]{ "Name", "ExternalId" }, null, null, null, null)
           }));
@@ -112,8 +112,7 @@ namespace Google.Cloud.Talent.V4 {
     public const int ExternalIdFieldNumber = 2;
     private string externalId_ = "";
     /// <summary>
-    /// Required. Client side tenant identifier, used to uniquely identify the
-    /// tenant.
+    /// Required. Client side tenant identifier, used to uniquely identify the tenant.
     ///
     /// The maximum number of allowed characters is 255.
     /// </summary>

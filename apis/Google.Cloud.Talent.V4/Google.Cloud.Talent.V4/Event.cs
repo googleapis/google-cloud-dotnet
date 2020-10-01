@@ -25,9 +25,9 @@ namespace Google.Cloud.Talent.V4 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvdGFsZW50L3Y0L2V2ZW50LnByb3RvEhZnb29nbGUu",
-            "Y2xvdWQudGFsZW50LnY0Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
-            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIsMBCgtDbGllbnRFdmVudBISCgpyZXF1",
+            "Y2xvdWQudGFsZW50LnY0Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUv",
+            "YXBpL2Fubm90YXRpb25zLnByb3RvIsMBCgtDbGllbnRFdmVudBISCgpyZXF1",
             "ZXN0X2lkGAEgASgJEhUKCGV2ZW50X2lkGAIgASgJQgPgQQISNAoLY3JlYXRl",
             "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQIS",
             "NQoJam9iX2V2ZW50GAUgASgLMiAuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5K",
@@ -47,7 +47,7 @@ namespace Google.Cloud.Talent.V4 {
             "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdGFsZW50L3Y0O3RhbGVudKIC",
             "A0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.ClientEvent), global::Google.Cloud.Talent.V4.ClientEvent.Parser, new[]{ "RequestId", "EventId", "CreateTime", "JobEvent", "EventNotes" }, new[]{ "Event" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.JobEvent), global::Google.Cloud.Talent.V4.JobEvent.Parser, new[]{ "Type", "Jobs" }, null, new[]{ typeof(global::Google.Cloud.Talent.V4.JobEvent.Types.JobEventType) }, null, null)
@@ -497,8 +497,7 @@ namespace Google.Cloud.Talent.V4 {
     public const int TypeFieldNumber = 1;
     private global::Google.Cloud.Talent.V4.JobEvent.Types.JobEventType type_ = global::Google.Cloud.Talent.V4.JobEvent.Types.JobEventType.Unspecified;
     /// <summary>
-    /// Required. The type of the event (see
-    /// [JobEventType][google.cloud.talent.v4.JobEvent.JobEventType]).
+    /// Required. The type of the event (see [JobEventType][google.cloud.talent.v4.JobEvent.JobEventType]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4.JobEvent.Types.JobEventType Type {
@@ -514,13 +513,11 @@ namespace Google.Cloud.Talent.V4 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> jobs_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. The [job name(s)][google.cloud.talent.v4.Job.name] associated
-    /// with this event. For example, if this is an
-    /// [impression][google.cloud.talent.v4.JobEvent.JobEventType.IMPRESSION]
-    /// event, this field contains the identifiers of all jobs shown to the job
-    /// seeker. If this was a
-    /// [view][google.cloud.talent.v4.JobEvent.JobEventType.VIEW] event, this field
-    /// contains the identifier of the viewed job.
+    /// Required. The [job name(s)][google.cloud.talent.v4.Job.name] associated with this event.
+    /// For example, if this is an [impression][google.cloud.talent.v4.JobEvent.JobEventType.IMPRESSION] event,
+    /// this field contains the identifiers of all jobs shown to the job seeker.
+    /// If this was a [view][google.cloud.talent.v4.JobEvent.JobEventType.VIEW] event, this field contains the
+    /// identifier of the viewed job.
     ///
     /// The format is
     /// "projects/{project_id}/tenants/{tenant_id}/jobs/{job_id}", for
@@ -715,9 +712,7 @@ namespace Google.Cloud.Talent.V4 {
         /// submitted an application for a job with a single click without
         /// entering information. If a job seeker performs this action, send only
         /// this event to the service. Do not also send
-        /// [JobEventType.APPLICATION_START][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_START]
-        /// or
-        /// [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_FINISH]
+        /// [JobEventType.APPLICATION_START][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_START] or [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_FINISH]
         /// events.
         /// </summary>
         [pbr::OriginalName("APPLICATION_QUICK_SUBMISSION")] ApplicationQuickSubmission = 6,
@@ -740,11 +735,8 @@ namespace Google.Cloud.Talent.V4 {
         /// (without viewing the details of the job posting), and is redirected
         /// to a different website to complete the application. If a candidate
         /// performs this action, send only this event to the service. Do not also
-        /// send
-        /// [JobEventType.APPLICATION_START][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_START],
-        /// [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_FINISH]
-        /// or [JobEventType.VIEW][google.cloud.talent.v4.JobEvent.JobEventType.VIEW]
-        /// events.
+        /// send [JobEventType.APPLICATION_START][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_START],
+        /// [JobEventType.APPLICATION_FINISH][google.cloud.talent.v4.JobEvent.JobEventType.APPLICATION_FINISH] or [JobEventType.VIEW][google.cloud.talent.v4.JobEvent.JobEventType.VIEW] events.
         /// </summary>
         [pbr::OriginalName("APPLICATION_REDIRECT_FROM_SEARCH")] ApplicationRedirectFromSearch = 9,
         /// <summary>

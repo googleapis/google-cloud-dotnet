@@ -25,10 +25,10 @@ namespace Google.Cloud.Talent.V4 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRnb29nbGUvY2xvdWQvdGFsZW50L3Y0L2NvbXBhbnkucHJvdG8SFmdvb2ds",
-            "ZS5jbG91ZC50YWxlbnQudjQaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
-            "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91ZC90YWxlbnQvdjQvY29t",
-            "bW9uLnByb3RvIsQECgdDb21wYW55EgwKBG5hbWUYASABKAkSGQoMZGlzcGxh",
+            "ZS5jbG91ZC50YWxlbnQudjQaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91",
+            "ZC90YWxlbnQvdjQvY29tbW9uLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
+            "b25zLnByb3RvIsQECgdDb21wYW55EgwKBG5hbWUYASABKAkSGQoMZGlzcGxh",
             "eV9uYW1lGAIgASgJQgPgQQISGAoLZXh0ZXJuYWxfaWQYAyABKAlCA+BBAhIx",
             "CgRzaXplGAQgASgOMiMuZ29vZ2xlLmNsb3VkLnRhbGVudC52NC5Db21wYW55",
             "U2l6ZRIcChRoZWFkcXVhcnRlcnNfYWRkcmVzcxgFIAEoCRIVCg1oaXJpbmdf",
@@ -45,7 +45,7 @@ namespace Google.Cloud.Talent.V4 {
             "eVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
             "aXMvY2xvdWQvdGFsZW50L3Y0O3RhbGVudKICA0NUU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Talent.V4.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Company), global::Google.Cloud.Talent.V4.Company.Parser, new[]{ "Name", "DisplayName", "ExternalId", "Size", "HeadquartersAddress", "HiringAgency", "EeoText", "WebsiteUri", "CareerSiteUri", "ImageUri", "KeywordSearchableJobCustomAttributes", "DerivedInfo", "Suspended" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Talent.V4.Company.Types.DerivedInfo), global::Google.Cloud.Talent.V4.Company.Types.DerivedInfo.Parser, new[]{ "HeadquartersLocation" }, null, null, null, null)})
           }));
@@ -182,8 +182,7 @@ namespace Google.Cloud.Talent.V4 {
     /// The street address of the company's main headquarters, which may be
     /// different from the job location. The service attempts
     /// to geolocate the provided address, and populates a more specific
-    /// location wherever possible in
-    /// [DerivedInfo.headquarters_location][google.cloud.talent.v4.Company.DerivedInfo.headquarters_location].
+    /// location wherever possible in [DerivedInfo.headquarters_location][google.cloud.talent.v4.Company.DerivedInfo.headquarters_location].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string HeadquartersAddress {
@@ -280,9 +279,8 @@ namespace Google.Cloud.Talent.V4 {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> keywordSearchableJobCustomAttributes_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// A list of keys of filterable
-    /// [Job.custom_attributes][google.cloud.talent.v4.Job.custom_attributes],
-    /// whose corresponding `string_values` are used in keyword searches. Jobs with
+    /// A list of keys of filterable [Job.custom_attributes][google.cloud.talent.v4.Job.custom_attributes], whose
+    /// corresponding `string_values` are used in keyword searches. Jobs with
     /// `string_values` under these specified field keys are returned if any
     /// of the values match the search keyword. Custom field values with
     /// parenthesis, brackets and special symbols are not searchable as-is,
@@ -781,8 +779,7 @@ namespace Google.Cloud.Talent.V4 {
         private global::Google.Cloud.Talent.V4.Location headquartersLocation_;
         /// <summary>
         /// A structured headquarters location of the company, resolved from
-        /// [Company.headquarters_address][google.cloud.talent.v4.Company.headquarters_address]
-        /// if provided.
+        /// [Company.headquarters_address][google.cloud.talent.v4.Company.headquarters_address] if provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Talent.V4.Location HeadquartersLocation {
