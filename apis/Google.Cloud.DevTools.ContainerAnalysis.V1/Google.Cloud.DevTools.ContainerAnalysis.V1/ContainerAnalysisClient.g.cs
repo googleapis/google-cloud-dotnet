@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -47,6 +48,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            GetVulnerabilityOccurrencesSummarySettings = existing.GetVulnerabilityOccurrencesSummarySettings;
             OnCopy(existing);
         }
 
@@ -88,6 +90,19 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContainerAnalysisClient.GetVulnerabilityOccurrencesSummary</c> and
+        /// <c>ContainerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetVulnerabilityOccurrencesSummarySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ContainerAnalysisSettings"/> object.</returns>
@@ -848,6 +863,139 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VulnerabilityOccurrencesSummary GetVulnerabilityOccurrencesSummary(GetVulnerabilityOccurrencesSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(GetVulnerabilityOccurrencesSummaryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(GetVulnerabilityOccurrencesSummaryRequest request, st::CancellationToken cancellationToken) =>
+            GetVulnerabilityOccurrencesSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the project to get a vulnerability summary for in the form of
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="filter">
+        /// The filter expression.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VulnerabilityOccurrencesSummary GetVulnerabilityOccurrencesSummary(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            GetVulnerabilityOccurrencesSummary(new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the project to get a vulnerability summary for in the form of
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="filter">
+        /// The filter expression.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(string parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            GetVulnerabilityOccurrencesSummaryAsync(new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the project to get a vulnerability summary for in the form of
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="filter">
+        /// The filter expression.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(string parent, string filter, st::CancellationToken cancellationToken) =>
+            GetVulnerabilityOccurrencesSummaryAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the project to get a vulnerability summary for in the form of
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="filter">
+        /// The filter expression.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VulnerabilityOccurrencesSummary GetVulnerabilityOccurrencesSummary(gagr::ProjectName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            GetVulnerabilityOccurrencesSummary(new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the project to get a vulnerability summary for in the form of
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="filter">
+        /// The filter expression.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(gagr::ProjectName parent, string filter, gaxgrpc::CallSettings callSettings = null) =>
+            GetVulnerabilityOccurrencesSummaryAsync(new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Filter = filter ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="parent">
+        /// The name of the project to get a vulnerability summary for in the form of
+        /// `projects/[PROJECT_ID]`.
+        /// </param>
+        /// <param name="filter">
+        /// The filter expression.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(gagr::ProjectName parent, string filter, st::CancellationToken cancellationToken) =>
+            GetVulnerabilityOccurrencesSummaryAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ContainerAnalysis client wrapper implementation, for convenient use.</summary>
@@ -874,6 +1022,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
+        private readonly gaxgrpc::ApiCall<GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary> _callGetVulnerabilityOccurrencesSummary;
+
         /// <summary>
         /// Constructs a client wrapper for the ContainerAnalysis service, with the specified gRPC client and settings.
         /// </summary>
@@ -893,6 +1043,9 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callGetVulnerabilityOccurrencesSummary = clientHelper.BuildApiCall<GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary>(grpcClient.GetVulnerabilityOccurrencesSummaryAsync, grpcClient.GetVulnerabilityOccurrencesSummary, effectiveSettings.GetVulnerabilityOccurrencesSummarySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callGetVulnerabilityOccurrencesSummary);
+            Modify_GetVulnerabilityOccurrencesSummaryApiCall(ref _callGetVulnerabilityOccurrencesSummary);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -904,6 +1057,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_GetVulnerabilityOccurrencesSummaryApiCall(ref gaxgrpc::ApiCall<GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary> call);
+
         partial void OnConstruction(ContainerAnalysis.ContainerAnalysisClient grpcClient, ContainerAnalysisSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ContainerAnalysis client</summary>
@@ -914,6 +1069,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetVulnerabilityOccurrencesSummaryRequest(ref GetVulnerabilityOccurrencesSummaryRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Sets the access control policy on the specified note or occurrence.
@@ -1025,6 +1182,30 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VulnerabilityOccurrencesSummary GetVulnerabilityOccurrencesSummary(GetVulnerabilityOccurrencesSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetVulnerabilityOccurrencesSummaryRequest(ref request, ref callSettings);
+            return _callGetVulnerabilityOccurrencesSummary.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a summary of the number and severity of occurrences.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(GetVulnerabilityOccurrencesSummaryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetVulnerabilityOccurrencesSummaryRequest(ref request, ref callSettings);
+            return _callGetVulnerabilityOccurrencesSummary.Async(request, callSettings);
         }
     }
 }

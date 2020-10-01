@@ -18,6 +18,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
 {
     using Grafeas.V1;
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
     using System.Collections.Generic;
     using System.Threading.Tasks;
@@ -297,6 +298,99 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await containerAnalysisClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVulnerabilityOccurrencesSummary</summary>
+        public void GetVulnerabilityOccurrencesSummaryRequestObject()
+        {
+            // Snippet: GetVulnerabilityOccurrencesSummary(GetVulnerabilityOccurrencesSummaryRequest, CallSettings)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
+            // Initialize request argument(s)
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            VulnerabilityOccurrencesSummary response = containerAnalysisClient.GetVulnerabilityOccurrencesSummary(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVulnerabilityOccurrencesSummaryAsync</summary>
+        public async Task GetVulnerabilityOccurrencesSummaryRequestObjectAsync()
+        {
+            // Snippet: GetVulnerabilityOccurrencesSummaryAsync(GetVulnerabilityOccurrencesSummaryRequest, CallSettings)
+            // Additional: GetVulnerabilityOccurrencesSummaryAsync(GetVulnerabilityOccurrencesSummaryRequest, CancellationToken)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = await ContainerAnalysisClient.CreateAsync();
+            // Initialize request argument(s)
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
+            };
+            // Make the request
+            VulnerabilityOccurrencesSummary response = await containerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVulnerabilityOccurrencesSummary</summary>
+        public void GetVulnerabilityOccurrencesSummary()
+        {
+            // Snippet: GetVulnerabilityOccurrencesSummary(string, string, CallSettings)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string filter = "";
+            // Make the request
+            VulnerabilityOccurrencesSummary response = containerAnalysisClient.GetVulnerabilityOccurrencesSummary(parent, filter);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVulnerabilityOccurrencesSummaryAsync</summary>
+        public async Task GetVulnerabilityOccurrencesSummaryAsync()
+        {
+            // Snippet: GetVulnerabilityOccurrencesSummaryAsync(string, string, CallSettings)
+            // Additional: GetVulnerabilityOccurrencesSummaryAsync(string, string, CancellationToken)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = await ContainerAnalysisClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            string filter = "";
+            // Make the request
+            VulnerabilityOccurrencesSummary response = await containerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync(parent, filter);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVulnerabilityOccurrencesSummary</summary>
+        public void GetVulnerabilityOccurrencesSummaryResourceNames()
+        {
+            // Snippet: GetVulnerabilityOccurrencesSummary(ProjectName, string, CallSettings)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            string filter = "";
+            // Make the request
+            VulnerabilityOccurrencesSummary response = containerAnalysisClient.GetVulnerabilityOccurrencesSummary(parent, filter);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetVulnerabilityOccurrencesSummaryAsync</summary>
+        public async Task GetVulnerabilityOccurrencesSummaryResourceNamesAsync()
+        {
+            // Snippet: GetVulnerabilityOccurrencesSummaryAsync(ProjectName, string, CallSettings)
+            // Additional: GetVulnerabilityOccurrencesSummaryAsync(ProjectName, string, CancellationToken)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = await ContainerAnalysisClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            string filter = "";
+            // Make the request
+            VulnerabilityOccurrencesSummary response = await containerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync(parent, filter);
             // End snippet
         }
     }
