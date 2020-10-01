@@ -16,7 +16,6 @@
 
 namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Snippets
 {
-    using Grafeas.V1;
     using Google.Api.Gax;
     using Google.Cloud.Iam.V1;
     using System.Collections.Generic;
