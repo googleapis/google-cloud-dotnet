@@ -49,7 +49,7 @@ the request and want to put work into it.
 
 - Issue: [#500](https://github.com/googleapis/google-cloud-dotnet/issues/500)
 - Status: No customer requests for this yet; can implement when
-  reqiured.
+  required.
 
 ## Improve handling of Markdown from protos
 
@@ -70,7 +70,7 @@ the request and want to put work into it.
 ## Create an unmanaged tracer in Google.Cloud.Diagnostic.Common
 
 - Issue: [#2166](https://github.com/googleapis/google-cloud-dotnet/issues/2166)
-- Status: We haven't received intereset for this feature.
+- Status: We haven't received interest for this feature.
 
 ## Expose Tracing, Error Reporting and Logging common parts in a consumable way.
 
