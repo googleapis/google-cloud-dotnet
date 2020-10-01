@@ -2373,7 +2373,8 @@
       "ImportDirectories": [
         "google/api",
         "google/iam/v1",
-        "google/protobuf"
+        "google/protobuf",
+        "grafeas/v1"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.DevTools.ContainerAnalysis.V1"
