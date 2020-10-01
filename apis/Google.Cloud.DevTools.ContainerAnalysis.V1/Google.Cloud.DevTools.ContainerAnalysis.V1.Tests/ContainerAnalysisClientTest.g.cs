@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
@@ -495,6 +496,150 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1.Tests
             gciv::TestIamPermissionsResponse responseCallSettings = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::TestIamPermissionsResponse responseCancellationToken = await client.TestIamPermissionsAsync(request.ResourceAsResourceName, request.Permissions, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetVulnerabilityOccurrencesSummaryRequestObject()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            VulnerabilityOccurrencesSummary expectedResponse = new VulnerabilityOccurrencesSummary
+            {
+                Counts =
+                {
+                    new VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            VulnerabilityOccurrencesSummary response = client.GetVulnerabilityOccurrencesSummary(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetVulnerabilityOccurrencesSummaryRequestObjectAsync()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            VulnerabilityOccurrencesSummary expectedResponse = new VulnerabilityOccurrencesSummary
+            {
+                Counts =
+                {
+                    new VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityOccurrencesSummary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            VulnerabilityOccurrencesSummary responseCallSettings = await client.GetVulnerabilityOccurrencesSummaryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            VulnerabilityOccurrencesSummary responseCancellationToken = await client.GetVulnerabilityOccurrencesSummaryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetVulnerabilityOccurrencesSummary()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            VulnerabilityOccurrencesSummary expectedResponse = new VulnerabilityOccurrencesSummary
+            {
+                Counts =
+                {
+                    new VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            VulnerabilityOccurrencesSummary response = client.GetVulnerabilityOccurrencesSummary(request.Parent, request.Filter);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetVulnerabilityOccurrencesSummaryAsync()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            VulnerabilityOccurrencesSummary expectedResponse = new VulnerabilityOccurrencesSummary
+            {
+                Counts =
+                {
+                    new VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityOccurrencesSummary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            VulnerabilityOccurrencesSummary responseCallSettings = await client.GetVulnerabilityOccurrencesSummaryAsync(request.Parent, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            VulnerabilityOccurrencesSummary responseCancellationToken = await client.GetVulnerabilityOccurrencesSummaryAsync(request.Parent, request.Filter, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetVulnerabilityOccurrencesSummaryResourceNames()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            VulnerabilityOccurrencesSummary expectedResponse = new VulnerabilityOccurrencesSummary
+            {
+                Counts =
+                {
+                    new VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummary(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            VulnerabilityOccurrencesSummary response = client.GetVulnerabilityOccurrencesSummary(request.ParentAsProjectName, request.Filter);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetVulnerabilityOccurrencesSummaryResourceNamesAsync()
+        {
+            moq::Mock<ContainerAnalysis.ContainerAnalysisClient> mockGrpcClient = new moq::Mock<ContainerAnalysis.ContainerAnalysisClient>(moq::MockBehavior.Strict);
+            GetVulnerabilityOccurrencesSummaryRequest request = new GetVulnerabilityOccurrencesSummaryRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+                Filter = "filtere47ac9b2",
+            };
+            VulnerabilityOccurrencesSummary expectedResponse = new VulnerabilityOccurrencesSummary
+            {
+                Counts =
+                {
+                    new VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetVulnerabilityOccurrencesSummaryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<VulnerabilityOccurrencesSummary>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContainerAnalysisClient client = new ContainerAnalysisClientImpl(mockGrpcClient.Object, null);
+            VulnerabilityOccurrencesSummary responseCallSettings = await client.GetVulnerabilityOccurrencesSummaryAsync(request.ParentAsProjectName, request.Filter, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            VulnerabilityOccurrencesSummary responseCancellationToken = await client.GetVulnerabilityOccurrencesSummaryAsync(request.ParentAsProjectName, request.Filter, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
