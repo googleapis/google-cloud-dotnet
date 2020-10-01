@@ -544,8 +544,7 @@ namespace Google.Cloud.Talent.V4 {
     public const int CompanyFieldNumber = 1;
     private global::Google.Cloud.Talent.V4.Company company_;
     /// <summary>
-    /// Required. The company resource to replace the current resource in the
-    /// system.
+    /// Required. The company resource to replace the current resource in the system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4.Company Company {
@@ -561,14 +560,11 @@ namespace Google.Cloud.Talent.V4 {
     /// <summary>
     /// Strongly recommended for the best service experience.
     ///
-    /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask]
-    /// is provided, only the specified fields in
-    /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated.
-    /// Otherwise all the fields are updated.
+    /// If [update_mask][google.cloud.talent.v4.UpdateCompanyRequest.update_mask] is provided, only the specified fields in
+    /// [company][google.cloud.talent.v4.UpdateCompanyRequest.company] are updated. Otherwise all the fields are updated.
     ///
     /// A field mask to specify the company fields to be updated. Only
-    /// top level fields of [Company][google.cloud.talent.v4.Company] are
-    /// supported.
+    /// top level fields of [Company][google.cloud.talent.v4.Company] are supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -1023,9 +1019,8 @@ namespace Google.Cloud.Talent.V4 {
     ///
     /// Defaults to false.
     ///
-    /// If true, at most
-    /// [page_size][google.cloud.talent.v4.ListCompaniesRequest.page_size] of
-    /// companies are fetched, among which only those with open jobs are returned.
+    /// If true, at most [page_size][google.cloud.talent.v4.ListCompaniesRequest.page_size] of companies are fetched, among which
+    /// only those with open jobs are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RequireOpenJobs {

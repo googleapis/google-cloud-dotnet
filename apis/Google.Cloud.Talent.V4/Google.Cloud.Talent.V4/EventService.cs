@@ -116,8 +116,8 @@ namespace Google.Cloud.Talent.V4 {
     public const int ClientEventFieldNumber = 2;
     private global::Google.Cloud.Talent.V4.ClientEvent clientEvent_;
     /// <summary>
-    /// Required. Events issued when end user interacts with customer's application
-    /// that uses Cloud Talent Solution.
+    /// Required. Events issued when end user interacts with customer's application that
+    /// uses Cloud Talent Solution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Talent.V4.ClientEvent ClientEvent {

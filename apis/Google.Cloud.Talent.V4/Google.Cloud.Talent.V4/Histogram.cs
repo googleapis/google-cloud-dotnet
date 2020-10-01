@@ -93,9 +93,7 @@ namespace Google.Cloud.Talent.V4 {
     /// An expression specifies a histogram request against matching jobs for
     /// searches.
     ///
-    /// See
-    /// [SearchJobsRequest.histogram_queries][google.cloud.talent.v4.SearchJobsRequest.histogram_queries]
-    /// for details about syntax.
+    /// See [SearchJobsRequest.histogram_queries][google.cloud.talent.v4.SearchJobsRequest.histogram_queries] for details about syntax.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string HistogramQuery_ {
@@ -229,9 +227,7 @@ namespace Google.Cloud.Talent.V4 {
   }
 
   /// <summary>
-  /// Histogram result that matches
-  /// [HistogramQuery][google.cloud.talent.v4.HistogramQuery] specified in
-  /// searches.
+  /// Histogram result that matches [HistogramQuery][google.cloud.talent.v4.HistogramQuery] specified in searches.
   /// </summary>
   public sealed partial class HistogramQueryResult : pb::IMessage<HistogramQueryResult>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
