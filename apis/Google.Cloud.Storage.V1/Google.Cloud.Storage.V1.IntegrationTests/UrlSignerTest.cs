@@ -196,6 +196,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     var encryptingClient = StorageClient.Create(encryptionKey: key);
                     encryptingClient.UploadObject(bucket, name, "application/octet-stream", new MemoryStream(content));
 
+                    // We don't need to specify the encryption key headers explicitly in the signer template.
+                    // The request message we are using in the template already has them set 
+                    // (by key.ModifyRequest(request)) and the signer will extract them from there.
                     var request = createGetRequest();
                     var requestTemplate = RequestTemplate
                         .FromBucket(bucket)
@@ -477,6 +480,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 s_duration,
                 beforeDelay: async duration =>
                 {
+                    // We don't need to specify the encryption key headers explicitly in the signer template.
+                    // The request message we are using in the template already has them set 
+                    // (by key.ModifyRequest(request)) and the signer will extract them from there.
                     var request = createPutRequest();
                     var requestTemplate = RequestTemplate
                         .FromBucket(bucket)
@@ -669,6 +675,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private static void ResumableUploadWithCustomerSuppliedEncryptionKeysTest_Common(StorageFixture fixture, SigningVersion signingVersion, [CallerMemberName] string caller = null)
         {
+            EncryptionKey key = EncryptionKey.Generate();
+
             var bucket = fixture.SingleVersionBucket;
             var name = IdGenerator.FromGuid();
             var requestTemplate = RequestTemplate
@@ -677,12 +685,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 .WithHttpMethod(ResumableHttpMethod)
                 .WithRequestHeaders( new Dictionary<string, IEnumerable<string>> 
                 {
-                    { "x-goog-encryption-algorithm", new [] { "AES256" } }
+                    { "x-goog-encryption-algorithm", new [] { "AES256" } },
+                    { "x-goog-encryption-key-sha256", new [] { key.Base64Hash } },
+                    { "x-goog-encryption-key", new [] { key.Base64Key } }
                 });
-            var content = fixture.SmallContent;
-            string url = null;
 
-            EncryptionKey key = EncryptionKey.Generate();
+            
+            var content = fixture.SmallContent;
+            string url = null;            
 
             fixture.RegisterDelayTest(
                 s_duration,
