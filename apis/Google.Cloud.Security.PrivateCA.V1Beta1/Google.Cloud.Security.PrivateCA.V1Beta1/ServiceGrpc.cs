@@ -52,19 +52,15 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_RestoreCertificateAuthorityRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ScheduleDeleteCertificateAuthorityRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateAuthorityRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest> __Marshaller_google_cloud_security_privateca_v1beta1_CreateCertificateRevocationListRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest> __Marshaller_google_cloud_security_privateca_v1beta1_GetCertificateRevocationListRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList> __Marshaller_google_cloud_security_privateca_v1beta1_CertificateRevocationList = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateRevocationListsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateRevocationListsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest> __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateRevocationListRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest> __Marshaller_google_cloud_security_privateca_v1beta1_CreateReusableConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest> __Marshaller_google_cloud_security_privateca_v1beta1_DeleteReusableConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest> __Marshaller_google_cloud_security_privateca_v1beta1_GetReusableConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig> __Marshaller_google_cloud_security_privateca_v1beta1_ReusableConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ListReusableConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse> __Marshaller_google_cloud_security_privateca_v1beta1_ListReusableConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest> __Marshaller_google_cloud_security_privateca_v1beta1_UpdateReusableConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> __Method_CreateCertificate = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate>(
         grpc::MethodType.Unary,
@@ -171,13 +167,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
-    static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest, global::Google.LongRunning.Operation> __Method_CreateCertificateRevocationList = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateCertificateRevocationList",
-        __Marshaller_google_cloud_security_privateca_v1beta1_CreateCertificateRevocationListRequest,
-        __Marshaller_google_longrunning_Operation);
-
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList> __Method_GetCertificateRevocationList = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -199,20 +188,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateRevocationListRequest,
         __Marshaller_google_longrunning_Operation);
 
-    static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest, global::Google.LongRunning.Operation> __Method_CreateReusableConfig = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "CreateReusableConfig",
-        __Marshaller_google_cloud_security_privateca_v1beta1_CreateReusableConfigRequest,
-        __Marshaller_google_longrunning_Operation);
-
-    static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest, global::Google.LongRunning.Operation> __Method_DeleteReusableConfig = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "DeleteReusableConfig",
-        __Marshaller_google_cloud_security_privateca_v1beta1_DeleteReusableConfigRequest,
-        __Marshaller_google_longrunning_Operation);
-
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig> __Method_GetReusableConfig = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -226,13 +201,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         "ListReusableConfigs",
         __Marshaller_google_cloud_security_privateca_v1beta1_ListReusableConfigsRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_ListReusableConfigsResponse);
-
-    static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateReusableConfig = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "UpdateReusableConfig",
-        __Marshaller_google_cloud_security_privateca_v1beta1_UpdateReusableConfigRequest,
-        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -290,7 +258,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       }
 
       /// <summary>
-      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+      /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -422,18 +391,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       }
 
       /// <summary>
-      /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-      /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -467,28 +424,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       }
 
       /// <summary>
-      /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Returns a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -506,17 +441,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse> ListReusableConfigs(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -727,7 +651,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_RevokeCertificate, null, options, request);
       }
       /// <summary>
-      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+      /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -739,7 +664,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         return UpdateCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+      /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -749,7 +675,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCertificate, null, options, request);
       }
       /// <summary>
-      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+      /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -761,7 +688,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         return UpdateCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+      /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+      /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1255,54 +1183,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCertificateAuthority, null, options, request);
       }
       /// <summary>
-      /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-      /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateCertificateRevocationList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-      /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateCertificateRevocationList, null, options, request);
-      }
-      /// <summary>
-      /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-      /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCertificateRevocationListAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateCertificateRevocationListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-      /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCertificateRevocationListAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateCertificateRevocationList, null, options, request);
-      }
-      /// <summary>
       /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1435,94 +1315,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCertificateRevocationList, null, options, request);
       }
       /// <summary>
-      /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateReusableConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_CreateReusableConfig, null, options, request);
-      }
-      /// <summary>
-      /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return CreateReusableConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_CreateReusableConfig, null, options, request);
-      }
-      /// <summary>
-      /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation DeleteReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteReusableConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation DeleteReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteReusableConfig, null, options, request);
-      }
-      /// <summary>
-      /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DeleteReusableConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteReusableConfig, null, options, request);
-      }
-      /// <summary>
       /// Returns a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1610,50 +1402,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListReusableConfigs, null, options, request);
       }
-      /// <summary>
-      /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateReusableConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateReusableConfig, null, options, request);
-      }
-      /// <summary>
-      /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateReusableConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateReusableConfig, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override CertificateAuthorityServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -1681,15 +1429,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
           .AddMethod(__Method_RestoreCertificateAuthority, serviceImpl.RestoreCertificateAuthority)
           .AddMethod(__Method_ScheduleDeleteCertificateAuthority, serviceImpl.ScheduleDeleteCertificateAuthority)
           .AddMethod(__Method_UpdateCertificateAuthority, serviceImpl.UpdateCertificateAuthority)
-          .AddMethod(__Method_CreateCertificateRevocationList, serviceImpl.CreateCertificateRevocationList)
           .AddMethod(__Method_GetCertificateRevocationList, serviceImpl.GetCertificateRevocationList)
           .AddMethod(__Method_ListCertificateRevocationLists, serviceImpl.ListCertificateRevocationLists)
           .AddMethod(__Method_UpdateCertificateRevocationList, serviceImpl.UpdateCertificateRevocationList)
-          .AddMethod(__Method_CreateReusableConfig, serviceImpl.CreateReusableConfig)
-          .AddMethod(__Method_DeleteReusableConfig, serviceImpl.DeleteReusableConfig)
           .AddMethod(__Method_GetReusableConfig, serviceImpl.GetReusableConfig)
-          .AddMethod(__Method_ListReusableConfigs, serviceImpl.ListReusableConfigs)
-          .AddMethod(__Method_UpdateReusableConfig, serviceImpl.UpdateReusableConfig).Build();
+          .AddMethod(__Method_ListReusableConfigs, serviceImpl.ListReusableConfigs).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1713,15 +1457,11 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       serviceBinder.AddMethod(__Method_RestoreCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest, global::Google.LongRunning.Operation>(serviceImpl.RestoreCertificateAuthority));
       serviceBinder.AddMethod(__Method_ScheduleDeleteCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest, global::Google.LongRunning.Operation>(serviceImpl.ScheduleDeleteCertificateAuthority));
       serviceBinder.AddMethod(__Method_UpdateCertificateAuthority, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCertificateAuthority));
-      serviceBinder.AddMethod(__Method_CreateCertificateRevocationList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRevocationListRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateCertificateRevocationList));
       serviceBinder.AddMethod(__Method_GetCertificateRevocationList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList>(serviceImpl.GetCertificateRevocationList));
       serviceBinder.AddMethod(__Method_ListCertificateRevocationLists, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse>(serviceImpl.ListCertificateRevocationLists));
       serviceBinder.AddMethod(__Method_UpdateCertificateRevocationList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateCertificateRevocationList));
-      serviceBinder.AddMethod(__Method_CreateReusableConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateReusableConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateReusableConfig));
-      serviceBinder.AddMethod(__Method_DeleteReusableConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.DeleteReusableConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteReusableConfig));
       serviceBinder.AddMethod(__Method_GetReusableConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig>(serviceImpl.GetReusableConfig));
       serviceBinder.AddMethod(__Method_ListReusableConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse>(serviceImpl.ListReusableConfigs));
-      serviceBinder.AddMethod(__Method_UpdateReusableConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateReusableConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateReusableConfig));
     }
 
   }

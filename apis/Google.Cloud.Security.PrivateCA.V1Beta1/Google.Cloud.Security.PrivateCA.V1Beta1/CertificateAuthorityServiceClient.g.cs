@@ -71,20 +71,12 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             ScheduleDeleteCertificateAuthorityOperationsSettings = existing.ScheduleDeleteCertificateAuthorityOperationsSettings.Clone();
             UpdateCertificateAuthoritySettings = existing.UpdateCertificateAuthoritySettings;
             UpdateCertificateAuthorityOperationsSettings = existing.UpdateCertificateAuthorityOperationsSettings.Clone();
-            CreateCertificateRevocationListSettings = existing.CreateCertificateRevocationListSettings;
-            CreateCertificateRevocationListOperationsSettings = existing.CreateCertificateRevocationListOperationsSettings.Clone();
             GetCertificateRevocationListSettings = existing.GetCertificateRevocationListSettings;
             ListCertificateRevocationListsSettings = existing.ListCertificateRevocationListsSettings;
             UpdateCertificateRevocationListSettings = existing.UpdateCertificateRevocationListSettings;
             UpdateCertificateRevocationListOperationsSettings = existing.UpdateCertificateRevocationListOperationsSettings.Clone();
-            CreateReusableConfigSettings = existing.CreateReusableConfigSettings;
-            CreateReusableConfigOperationsSettings = existing.CreateReusableConfigOperationsSettings.Clone();
-            DeleteReusableConfigSettings = existing.DeleteReusableConfigSettings;
-            DeleteReusableConfigOperationsSettings = existing.DeleteReusableConfigOperationsSettings.Clone();
             GetReusableConfigSettings = existing.GetReusableConfigSettings;
             ListReusableConfigsSettings = existing.ListReusableConfigsSettings;
-            UpdateReusableConfigSettings = existing.UpdateReusableConfigSettings;
-            UpdateReusableConfigOperationsSettings = existing.UpdateReusableConfigOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -462,41 +454,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>CertificateAuthorityServiceClient.CreateCertificateRevocationList</c> and
-        /// <c>CertificateAuthorityServiceClient.CreateCertificateRevocationListAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateCertificateRevocationListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to
-        /// <c>CertificateAuthorityServiceClient.CreateCertificateRevocationList</c> and
-        /// <c>CertificateAuthorityServiceClient.CreateCertificateRevocationListAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings CreateCertificateRevocationListOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CertificateAuthorityServiceClient.GetCertificateRevocationList</c> and
         /// <c>CertificateAuthorityServiceClient.GetCertificateRevocationListAsync</c>.
         /// </summary>
@@ -564,74 +521,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>CertificateAuthorityServiceClient.CreateReusableConfig</c> and
-        /// <c>CertificateAuthorityServiceClient.CreateReusableConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings CreateReusableConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to <c>CertificateAuthorityServiceClient.CreateReusableConfig</c>
-        /// and <c>CertificateAuthorityServiceClient.CreateReusableConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings CreateReusableConfigOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>CertificateAuthorityServiceClient.DeleteReusableConfig</c> and
-        /// <c>CertificateAuthorityServiceClient.DeleteReusableConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings DeleteReusableConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to <c>CertificateAuthorityServiceClient.DeleteReusableConfig</c>
-        /// and <c>CertificateAuthorityServiceClient.DeleteReusableConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings DeleteReusableConfigOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CertificateAuthorityServiceClient.GetReusableConfig</c> and
         /// <c>CertificateAuthorityServiceClient.GetReusableConfigAsync</c>.
         /// </summary>
@@ -661,40 +550,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListReusableConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>CertificateAuthorityServiceClient.UpdateReusableConfig</c> and
-        /// <c>CertificateAuthorityServiceClient.UpdateReusableConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: Unlimited</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings UpdateReusableConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
-
-        /// <summary>
-        /// Long Running Operation settings for calls to <c>CertificateAuthorityServiceClient.UpdateReusableConfig</c>
-        /// and <c>CertificateAuthorityServiceClient.UpdateReusableConfigAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// Uses default <see cref="gax::PollSettings"/> of:
-        /// <list type="bullet">
-        /// <item><description>Initial delay: 20 seconds.</description></item>
-        /// <item><description>Delay multiplier: 1.5</description></item>
-        /// <item><description>Maximum delay: 45 seconds.</description></item>
-        /// <item><description>Total timeout: 24 hours.</description></item>
-        /// </list>
-        /// </remarks>
-        public lro::OperationsSettings UpdateReusableConfigOperationsSettings { get; set; } = new lro::OperationsSettings
-        {
-            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
-        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CertificateAuthorityServiceSettings"/> object.</returns>
@@ -887,7 +742,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`. This field is required when using a
+        /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][google.cloud.security.privateca.v1beta1.CertificateAuthority.Tier],
         /// but is optional and its value is ignored otherwise.
         /// </param>
@@ -915,7 +770,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`. This field is required when using a
+        /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][google.cloud.security.privateca.v1beta1.CertificateAuthority.Tier],
         /// but is optional and its value is ignored otherwise.
         /// </param>
@@ -943,7 +798,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`. This field is required when using a
+        /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][google.cloud.security.privateca.v1beta1.CertificateAuthority.Tier],
         /// but is optional and its value is ignored otherwise.
         /// </param>
@@ -966,7 +821,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`. This field is required when using a
+        /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][google.cloud.security.privateca.v1beta1.CertificateAuthority.Tier],
         /// but is optional and its value is ignored otherwise.
         /// </param>
@@ -994,7 +849,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`. This field is required when using a
+        /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][google.cloud.security.privateca.v1beta1.CertificateAuthority.Tier],
         /// but is optional and its value is ignored otherwise.
         /// </param>
@@ -1022,7 +877,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateId">
         /// Optional. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`. This field is required when using a
+        /// expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a
         /// [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority] in the Enterprise [CertificateAuthority.Tier][google.cloud.security.privateca.v1beta1.CertificateAuthority.Tier],
         /// but is optional and its value is ignored otherwise.
         /// </param>
@@ -1370,7 +1225,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             RevokeCertificateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1379,7 +1235,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1388,7 +1245,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1397,7 +1255,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             UpdateCertificateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="certificate">
         /// Required. [Certificate][google.cloud.security.privateca.v1beta1.Certificate] with updated values.
@@ -1415,7 +1274,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="certificate">
         /// Required. [Certificate][google.cloud.security.privateca.v1beta1.Certificate] with updated values.
@@ -1433,7 +1293,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="certificate">
         /// Required. [Certificate][google.cloud.security.privateca.v1beta1.Certificate] with updated values.
@@ -1696,7 +1557,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
+        /// expression `[a-zA-Z0-9_-]{1,63}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1721,7 +1582,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
+        /// expression `[a-zA-Z0-9_-]{1,63}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1746,7 +1607,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
+        /// expression `[a-zA-Z0-9_-]{1,63}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1766,7 +1627,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
+        /// expression `[a-zA-Z0-9_-]{1,63}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1791,7 +1652,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
+        /// expression `[a-zA-Z0-9_-]{1,63}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1816,7 +1677,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         /// </param>
         /// <param name="certificateAuthorityId">
         /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
+        /// expression `[a-zA-Z0-9_-]{1,63}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2878,209 +2739,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             UpdateCertificateAuthorityAsync(certificateAuthority, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<CertificateRevocationList, OperationMetadata> CreateCertificateRevocationList(CreateCertificateRevocationListRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> CreateCertificateRevocationListAsync(CreateCertificateRevocationListRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> CreateCertificateRevocationListAsync(CreateCertificateRevocationListRequest request, st::CancellationToken cancellationToken) =>
-            CreateCertificateRevocationListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>CreateCertificateRevocationList</c>.</summary>
-        public virtual lro::OperationsClient CreateCertificateRevocationListOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>CreateCertificateRevocationList</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<CertificateRevocationList, OperationMetadata> PollOnceCreateCertificateRevocationList(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<CertificateRevocationList, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCertificateRevocationListOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>CreateCertificateRevocationList</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> PollOnceCreateCertificateRevocationListAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<CertificateRevocationList, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateCertificateRevocationListOperationsClient, callSettings);
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location and [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority]
-        /// associated with the [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/certificateAuthorities/*`.
-        /// </param>
-        /// <param name="certificateRevocationList">
-        /// Required. A [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] with initial field values.
-        /// </param>
-        /// <param name="certificateRevocationListId">
-        /// Required. It must be unique within a location and match the regular expression
-        /// `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<CertificateRevocationList, OperationMetadata> CreateCertificateRevocationList(string parent, CertificateRevocationList certificateRevocationList, string certificateRevocationListId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateCertificateRevocationList(new CreateCertificateRevocationListRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                CertificateRevocationListId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateRevocationListId, nameof(certificateRevocationListId)),
-                CertificateRevocationList = gax::GaxPreconditions.CheckNotNull(certificateRevocationList, nameof(certificateRevocationList)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location and [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority]
-        /// associated with the [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/certificateAuthorities/*`.
-        /// </param>
-        /// <param name="certificateRevocationList">
-        /// Required. A [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] with initial field values.
-        /// </param>
-        /// <param name="certificateRevocationListId">
-        /// Required. It must be unique within a location and match the regular expression
-        /// `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> CreateCertificateRevocationListAsync(string parent, CertificateRevocationList certificateRevocationList, string certificateRevocationListId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateCertificateRevocationListAsync(new CreateCertificateRevocationListRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                CertificateRevocationListId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateRevocationListId, nameof(certificateRevocationListId)),
-                CertificateRevocationList = gax::GaxPreconditions.CheckNotNull(certificateRevocationList, nameof(certificateRevocationList)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location and [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority]
-        /// associated with the [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/certificateAuthorities/*`.
-        /// </param>
-        /// <param name="certificateRevocationList">
-        /// Required. A [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] with initial field values.
-        /// </param>
-        /// <param name="certificateRevocationListId">
-        /// Required. It must be unique within a location and match the regular expression
-        /// `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> CreateCertificateRevocationListAsync(string parent, CertificateRevocationList certificateRevocationList, string certificateRevocationListId, st::CancellationToken cancellationToken) =>
-            CreateCertificateRevocationListAsync(parent, certificateRevocationList, certificateRevocationListId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location and [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority]
-        /// associated with the [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/certificateAuthorities/*`.
-        /// </param>
-        /// <param name="certificateRevocationList">
-        /// Required. A [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] with initial field values.
-        /// </param>
-        /// <param name="certificateRevocationListId">
-        /// Required. It must be unique within a location and match the regular expression
-        /// `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<CertificateRevocationList, OperationMetadata> CreateCertificateRevocationList(CertificateAuthorityName parent, CertificateRevocationList certificateRevocationList, string certificateRevocationListId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateCertificateRevocationList(new CreateCertificateRevocationListRequest
-            {
-                ParentAsCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                CertificateRevocationListId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateRevocationListId, nameof(certificateRevocationListId)),
-                CertificateRevocationList = gax::GaxPreconditions.CheckNotNull(certificateRevocationList, nameof(certificateRevocationList)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location and [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority]
-        /// associated with the [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/certificateAuthorities/*`.
-        /// </param>
-        /// <param name="certificateRevocationList">
-        /// Required. A [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] with initial field values.
-        /// </param>
-        /// <param name="certificateRevocationListId">
-        /// Required. It must be unique within a location and match the regular expression
-        /// `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> CreateCertificateRevocationListAsync(CertificateAuthorityName parent, CertificateRevocationList certificateRevocationList, string certificateRevocationListId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateCertificateRevocationListAsync(new CreateCertificateRevocationListRequest
-            {
-                ParentAsCertificateAuthorityName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                CertificateRevocationListId = gax::GaxPreconditions.CheckNotNullOrEmpty(certificateRevocationListId, nameof(certificateRevocationListId)),
-                CertificateRevocationList = gax::GaxPreconditions.CheckNotNull(certificateRevocationList, nameof(certificateRevocationList)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location and [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority]
-        /// associated with the [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList], in the format
-        /// `projects/*/locations/*/certificateAuthorities/*`.
-        /// </param>
-        /// <param name="certificateRevocationList">
-        /// Required. A [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] with initial field values.
-        /// </param>
-        /// <param name="certificateRevocationListId">
-        /// Required. It must be unique within a location and match the regular expression
-        /// `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> CreateCertificateRevocationListAsync(CertificateAuthorityName parent, CertificateRevocationList certificateRevocationList, string certificateRevocationListId, st::CancellationToken cancellationToken) =>
-            CreateCertificateRevocationListAsync(parent, certificateRevocationList, certificateRevocationListId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3418,338 +3076,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             UpdateCertificateRevocationListAsync(certificateRevocationList, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ReusableConfig, OperationMetadata> CreateReusableConfig(CreateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> CreateReusableConfigAsync(CreateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> CreateReusableConfigAsync(CreateReusableConfigRequest request, st::CancellationToken cancellationToken) =>
-            CreateReusableConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>CreateReusableConfig</c>.</summary>
-        public virtual lro::OperationsClient CreateReusableConfigOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateReusableConfig</c>
-        /// .
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<ReusableConfig, OperationMetadata> PollOnceCreateReusableConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<ReusableConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateReusableConfigOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>CreateReusableConfig</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> PollOnceCreateReusableConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<ReusableConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateReusableConfigOperationsClient, callSettings);
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location associated with the
-        /// [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig], in the format
-        /// `projects/*/locations/*`.
-        /// </param>
-        /// <param name="reusableConfig">
-        /// Required. A [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with initial field values.
-        /// </param>
-        /// <param name="reusableConfigId">
-        /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ReusableConfig, OperationMetadata> CreateReusableConfig(string parent, ReusableConfig reusableConfig, string reusableConfigId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateReusableConfig(new CreateReusableConfigRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                ReusableConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(reusableConfigId, nameof(reusableConfigId)),
-                ReusableConfig = gax::GaxPreconditions.CheckNotNull(reusableConfig, nameof(reusableConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location associated with the
-        /// [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig], in the format
-        /// `projects/*/locations/*`.
-        /// </param>
-        /// <param name="reusableConfig">
-        /// Required. A [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with initial field values.
-        /// </param>
-        /// <param name="reusableConfigId">
-        /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> CreateReusableConfigAsync(string parent, ReusableConfig reusableConfig, string reusableConfigId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateReusableConfigAsync(new CreateReusableConfigRequest
-            {
-                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                ReusableConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(reusableConfigId, nameof(reusableConfigId)),
-                ReusableConfig = gax::GaxPreconditions.CheckNotNull(reusableConfig, nameof(reusableConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location associated with the
-        /// [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig], in the format
-        /// `projects/*/locations/*`.
-        /// </param>
-        /// <param name="reusableConfig">
-        /// Required. A [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with initial field values.
-        /// </param>
-        /// <param name="reusableConfigId">
-        /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> CreateReusableConfigAsync(string parent, ReusableConfig reusableConfig, string reusableConfigId, st::CancellationToken cancellationToken) =>
-            CreateReusableConfigAsync(parent, reusableConfig, reusableConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location associated with the
-        /// [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig], in the format
-        /// `projects/*/locations/*`.
-        /// </param>
-        /// <param name="reusableConfig">
-        /// Required. A [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with initial field values.
-        /// </param>
-        /// <param name="reusableConfigId">
-        /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ReusableConfig, OperationMetadata> CreateReusableConfig(gagr::LocationName parent, ReusableConfig reusableConfig, string reusableConfigId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateReusableConfig(new CreateReusableConfigRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                ReusableConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(reusableConfigId, nameof(reusableConfigId)),
-                ReusableConfig = gax::GaxPreconditions.CheckNotNull(reusableConfig, nameof(reusableConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location associated with the
-        /// [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig], in the format
-        /// `projects/*/locations/*`.
-        /// </param>
-        /// <param name="reusableConfig">
-        /// Required. A [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with initial field values.
-        /// </param>
-        /// <param name="reusableConfigId">
-        /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> CreateReusableConfigAsync(gagr::LocationName parent, ReusableConfig reusableConfig, string reusableConfigId, gaxgrpc::CallSettings callSettings = null) =>
-            CreateReusableConfigAsync(new CreateReusableConfigRequest
-            {
-                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                ReusableConfigId = gax::GaxPreconditions.CheckNotNullOrEmpty(reusableConfigId, nameof(reusableConfigId)),
-                ReusableConfig = gax::GaxPreconditions.CheckNotNull(reusableConfig, nameof(reusableConfig)),
-            }, callSettings);
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name of the location associated with the
-        /// [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig], in the format
-        /// `projects/*/locations/*`.
-        /// </param>
-        /// <param name="reusableConfig">
-        /// Required. A [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with initial field values.
-        /// </param>
-        /// <param name="reusableConfigId">
-        /// Required. It must be unique within a location and match the regular
-        /// expression `[a-zA-Z0-9-]{1,63}`
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> CreateReusableConfigAsync(gagr::LocationName parent, ReusableConfig reusableConfig, string reusableConfigId, st::CancellationToken cancellationToken) =>
-            CreateReusableConfigAsync(parent, reusableConfig, reusableConfigId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteReusableConfig(DeleteReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteReusableConfigAsync(DeleteReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteReusableConfigAsync(DeleteReusableConfigRequest request, st::CancellationToken cancellationToken) =>
-            DeleteReusableConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>DeleteReusableConfig</c>.</summary>
-        public virtual lro::OperationsClient DeleteReusableConfigOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteReusableConfig</c>
-        /// .
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteReusableConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteReusableConfigOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>DeleteReusableConfig</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteReusableConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteReusableConfigOperationsClient, callSettings);
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name for this [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in the format
-        /// `projects/*/locations/*/reusableConfigs/*`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteReusableConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteReusableConfig(new DeleteReusableConfigRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name for this [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in the format
-        /// `projects/*/locations/*/reusableConfigs/*`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteReusableConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteReusableConfigAsync(new DeleteReusableConfigRequest
-            {
-                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name for this [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in the format
-        /// `projects/*/locations/*/reusableConfigs/*`.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteReusableConfigAsync(string name, st::CancellationToken cancellationToken) =>
-            DeleteReusableConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name for this [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in the format
-        /// `projects/*/locations/*/reusableConfigs/*`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteReusableConfig(ReusableConfigName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteReusableConfig(new DeleteReusableConfigRequest
-            {
-                ReusableConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name for this [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in the format
-        /// `projects/*/locations/*/reusableConfigs/*`.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteReusableConfigAsync(ReusableConfigName name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteReusableConfigAsync(new DeleteReusableConfigRequest
-            {
-                ReusableConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-            }, callSettings);
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="name">
-        /// Required. The resource name for this [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in the format
-        /// `projects/*/locations/*/reusableConfigs/*`.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteReusableConfigAsync(ReusableConfigName name, st::CancellationToken cancellationToken) =>
-            DeleteReusableConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
         /// Returns a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3975,110 +3301,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ReusableConfig, OperationMetadata> UpdateReusableConfig(UpdateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> UpdateReusableConfigAsync(UpdateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> UpdateReusableConfigAsync(UpdateReusableConfigRequest request, st::CancellationToken cancellationToken) =>
-            UpdateReusableConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>The long-running operations client for <c>UpdateReusableConfig</c>.</summary>
-        public virtual lro::OperationsClient UpdateReusableConfigOperationsClient => throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateReusableConfig</c>
-        /// .
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The result of polling the operation.</returns>
-        public virtual lro::Operation<ReusableConfig, OperationMetadata> PollOnceUpdateReusableConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<ReusableConfig, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateReusableConfigOperationsClient, callSettings);
-
-        /// <summary>
-        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
-        /// <c>UpdateReusableConfig</c>.
-        /// </summary>
-        /// <param name="operationName">
-        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A task representing the result of polling the operation.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> PollOnceUpdateReusableConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
-            lro::Operation<ReusableConfig, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateReusableConfigOperationsClient, callSettings);
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="reusableConfig">
-        /// Required. [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with updated values.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. A list of fields to be updated in this request.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<ReusableConfig, OperationMetadata> UpdateReusableConfig(ReusableConfig reusableConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateReusableConfig(new UpdateReusableConfigRequest
-            {
-                ReusableConfig = gax::GaxPreconditions.CheckNotNull(reusableConfig, nameof(reusableConfig)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="reusableConfig">
-        /// Required. [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with updated values.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. A list of fields to be updated in this request.
-        /// </param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> UpdateReusableConfigAsync(ReusableConfig reusableConfig, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
-            UpdateReusableConfigAsync(new UpdateReusableConfigRequest
-            {
-                ReusableConfig = gax::GaxPreconditions.CheckNotNull(reusableConfig, nameof(reusableConfig)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
-            }, callSettings);
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="reusableConfig">
-        /// Required. [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] with updated values.
-        /// </param>
-        /// <param name="updateMask">
-        /// Required. A list of fields to be updated in this request.
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> UpdateReusableConfigAsync(ReusableConfig reusableConfig, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
-            UpdateReusableConfigAsync(reusableConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CertificateAuthorityService client wrapper implementation, for convenient use.</summary>
@@ -4118,23 +3340,15 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
 
         private readonly gaxgrpc::ApiCall<UpdateCertificateAuthorityRequest, lro::Operation> _callUpdateCertificateAuthority;
 
-        private readonly gaxgrpc::ApiCall<CreateCertificateRevocationListRequest, lro::Operation> _callCreateCertificateRevocationList;
-
         private readonly gaxgrpc::ApiCall<GetCertificateRevocationListRequest, CertificateRevocationList> _callGetCertificateRevocationList;
 
         private readonly gaxgrpc::ApiCall<ListCertificateRevocationListsRequest, ListCertificateRevocationListsResponse> _callListCertificateRevocationLists;
 
         private readonly gaxgrpc::ApiCall<UpdateCertificateRevocationListRequest, lro::Operation> _callUpdateCertificateRevocationList;
 
-        private readonly gaxgrpc::ApiCall<CreateReusableConfigRequest, lro::Operation> _callCreateReusableConfig;
-
-        private readonly gaxgrpc::ApiCall<DeleteReusableConfigRequest, lro::Operation> _callDeleteReusableConfig;
-
         private readonly gaxgrpc::ApiCall<GetReusableConfigRequest, ReusableConfig> _callGetReusableConfig;
 
         private readonly gaxgrpc::ApiCall<ListReusableConfigsRequest, ListReusableConfigsResponse> _callListReusableConfigs;
-
-        private readonly gaxgrpc::ApiCall<UpdateReusableConfigRequest, lro::Operation> _callUpdateReusableConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the CertificateAuthorityService service, with the specified gRPC client and
@@ -4156,11 +3370,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             RestoreCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreCertificateAuthorityOperationsSettings);
             ScheduleDeleteCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ScheduleDeleteCertificateAuthorityOperationsSettings);
             UpdateCertificateAuthorityOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateAuthorityOperationsSettings);
-            CreateCertificateRevocationListOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateCertificateRevocationListOperationsSettings);
             UpdateCertificateRevocationListOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateCertificateRevocationListOperationsSettings);
-            CreateReusableConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateReusableConfigOperationsSettings);
-            DeleteReusableConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteReusableConfigOperationsSettings);
-            UpdateReusableConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateReusableConfigOperationsSettings);
             _callCreateCertificate = clientHelper.BuildApiCall<CreateCertificateRequest, Certificate>(grpcClient.CreateCertificateAsync, grpcClient.CreateCertificate, effectiveSettings.CreateCertificateSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCertificate);
             Modify_CreateCertificateApiCall(ref _callCreateCertificate);
@@ -4206,9 +3416,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             _callUpdateCertificateAuthority = clientHelper.BuildApiCall<UpdateCertificateAuthorityRequest, lro::Operation>(grpcClient.UpdateCertificateAuthorityAsync, grpcClient.UpdateCertificateAuthority, effectiveSettings.UpdateCertificateAuthoritySettings).WithGoogleRequestParam("certificate_authority.name", request => request.CertificateAuthority?.Name);
             Modify_ApiCall(ref _callUpdateCertificateAuthority);
             Modify_UpdateCertificateAuthorityApiCall(ref _callUpdateCertificateAuthority);
-            _callCreateCertificateRevocationList = clientHelper.BuildApiCall<CreateCertificateRevocationListRequest, lro::Operation>(grpcClient.CreateCertificateRevocationListAsync, grpcClient.CreateCertificateRevocationList, effectiveSettings.CreateCertificateRevocationListSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callCreateCertificateRevocationList);
-            Modify_CreateCertificateRevocationListApiCall(ref _callCreateCertificateRevocationList);
             _callGetCertificateRevocationList = clientHelper.BuildApiCall<GetCertificateRevocationListRequest, CertificateRevocationList>(grpcClient.GetCertificateRevocationListAsync, grpcClient.GetCertificateRevocationList, effectiveSettings.GetCertificateRevocationListSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetCertificateRevocationList);
             Modify_GetCertificateRevocationListApiCall(ref _callGetCertificateRevocationList);
@@ -4218,21 +3425,12 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             _callUpdateCertificateRevocationList = clientHelper.BuildApiCall<UpdateCertificateRevocationListRequest, lro::Operation>(grpcClient.UpdateCertificateRevocationListAsync, grpcClient.UpdateCertificateRevocationList, effectiveSettings.UpdateCertificateRevocationListSettings).WithGoogleRequestParam("certificate_revocation_list.name", request => request.CertificateRevocationList?.Name);
             Modify_ApiCall(ref _callUpdateCertificateRevocationList);
             Modify_UpdateCertificateRevocationListApiCall(ref _callUpdateCertificateRevocationList);
-            _callCreateReusableConfig = clientHelper.BuildApiCall<CreateReusableConfigRequest, lro::Operation>(grpcClient.CreateReusableConfigAsync, grpcClient.CreateReusableConfig, effectiveSettings.CreateReusableConfigSettings).WithGoogleRequestParam("parent", request => request.Parent);
-            Modify_ApiCall(ref _callCreateReusableConfig);
-            Modify_CreateReusableConfigApiCall(ref _callCreateReusableConfig);
-            _callDeleteReusableConfig = clientHelper.BuildApiCall<DeleteReusableConfigRequest, lro::Operation>(grpcClient.DeleteReusableConfigAsync, grpcClient.DeleteReusableConfig, effectiveSettings.DeleteReusableConfigSettings).WithGoogleRequestParam("name", request => request.Name);
-            Modify_ApiCall(ref _callDeleteReusableConfig);
-            Modify_DeleteReusableConfigApiCall(ref _callDeleteReusableConfig);
             _callGetReusableConfig = clientHelper.BuildApiCall<GetReusableConfigRequest, ReusableConfig>(grpcClient.GetReusableConfigAsync, grpcClient.GetReusableConfig, effectiveSettings.GetReusableConfigSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReusableConfig);
             Modify_GetReusableConfigApiCall(ref _callGetReusableConfig);
             _callListReusableConfigs = clientHelper.BuildApiCall<ListReusableConfigsRequest, ListReusableConfigsResponse>(grpcClient.ListReusableConfigsAsync, grpcClient.ListReusableConfigs, effectiveSettings.ListReusableConfigsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListReusableConfigs);
             Modify_ListReusableConfigsApiCall(ref _callListReusableConfigs);
-            _callUpdateReusableConfig = clientHelper.BuildApiCall<UpdateReusableConfigRequest, lro::Operation>(grpcClient.UpdateReusableConfigAsync, grpcClient.UpdateReusableConfig, effectiveSettings.UpdateReusableConfigSettings).WithGoogleRequestParam("reusable_config.name", request => request.ReusableConfig?.Name);
-            Modify_ApiCall(ref _callUpdateReusableConfig);
-            Modify_UpdateReusableConfigApiCall(ref _callUpdateReusableConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4268,23 +3466,15 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
 
         partial void Modify_UpdateCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<UpdateCertificateAuthorityRequest, lro::Operation> call);
 
-        partial void Modify_CreateCertificateRevocationListApiCall(ref gaxgrpc::ApiCall<CreateCertificateRevocationListRequest, lro::Operation> call);
-
         partial void Modify_GetCertificateRevocationListApiCall(ref gaxgrpc::ApiCall<GetCertificateRevocationListRequest, CertificateRevocationList> call);
 
         partial void Modify_ListCertificateRevocationListsApiCall(ref gaxgrpc::ApiCall<ListCertificateRevocationListsRequest, ListCertificateRevocationListsResponse> call);
 
         partial void Modify_UpdateCertificateRevocationListApiCall(ref gaxgrpc::ApiCall<UpdateCertificateRevocationListRequest, lro::Operation> call);
 
-        partial void Modify_CreateReusableConfigApiCall(ref gaxgrpc::ApiCall<CreateReusableConfigRequest, lro::Operation> call);
-
-        partial void Modify_DeleteReusableConfigApiCall(ref gaxgrpc::ApiCall<DeleteReusableConfigRequest, lro::Operation> call);
-
         partial void Modify_GetReusableConfigApiCall(ref gaxgrpc::ApiCall<GetReusableConfigRequest, ReusableConfig> call);
 
         partial void Modify_ListReusableConfigsApiCall(ref gaxgrpc::ApiCall<ListReusableConfigsRequest, ListReusableConfigsResponse> call);
-
-        partial void Modify_UpdateReusableConfigApiCall(ref gaxgrpc::ApiCall<UpdateReusableConfigRequest, lro::Operation> call);
 
         partial void OnConstruction(CertificateAuthorityService.CertificateAuthorityServiceClient grpcClient, CertificateAuthorityServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4321,23 +3511,15 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
 
         partial void Modify_UpdateCertificateAuthorityRequest(ref UpdateCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_CreateCertificateRevocationListRequest(ref CreateCertificateRevocationListRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_GetCertificateRevocationListRequest(ref GetCertificateRevocationListRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListCertificateRevocationListsRequest(ref ListCertificateRevocationListsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateCertificateRevocationListRequest(ref UpdateCertificateRevocationListRequest request, ref gaxgrpc::CallSettings settings);
 
-        partial void Modify_CreateReusableConfigRequest(ref CreateReusableConfigRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_DeleteReusableConfigRequest(ref DeleteReusableConfigRequest request, ref gaxgrpc::CallSettings settings);
-
         partial void Modify_GetReusableConfigRequest(ref GetReusableConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListReusableConfigsRequest(ref ListReusableConfigsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_UpdateReusableConfigRequest(ref UpdateReusableConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Create a new [Certificate][google.cloud.security.privateca.v1beta1.Certificate] in a given Project, Location from a particular
@@ -4438,7 +3620,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         }
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4450,7 +3633,8 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         }
 
         /// <summary>
-        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate].
+        /// Update a [Certificate][google.cloud.security.privateca.v1beta1.Certificate]. Currently, the only field you can update is the
+        /// [labels][google.cloud.security.privateca.v1beta1.Certificate.labels] field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4744,35 +3928,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             return new lro::Operation<CertificateAuthority, OperationMetadata>(await _callUpdateCertificateAuthority.Async(request, callSettings).ConfigureAwait(false), UpdateCertificateAuthorityOperationsClient);
         }
 
-        /// <summary>The long-running operations client for <c>CreateCertificateRevocationList</c>.</summary>
-        public override lro::OperationsClient CreateCertificateRevocationListOperationsClient { get; }
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override lro::Operation<CertificateRevocationList, OperationMetadata> CreateCertificateRevocationList(CreateCertificateRevocationListRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateCertificateRevocationListRequest(ref request, ref callSettings);
-            return new lro::Operation<CertificateRevocationList, OperationMetadata>(_callCreateCertificateRevocationList.Sync(request, callSettings), CreateCertificateRevocationListOperationsClient);
-        }
-
-        /// <summary>
-        /// Create a new [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList] in a given Project, Location
-        /// for a particular [CertificateAuthority][google.cloud.security.privateca.v1beta1.CertificateAuthority].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<CertificateRevocationList, OperationMetadata>> CreateCertificateRevocationListAsync(CreateCertificateRevocationListRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateCertificateRevocationListRequest(ref request, ref callSettings);
-            return new lro::Operation<CertificateRevocationList, OperationMetadata>(await _callCreateCertificateRevocationList.Async(request, callSettings).ConfigureAwait(false), CreateCertificateRevocationListOperationsClient);
-        }
-
         /// <summary>
         /// Returns a [CertificateRevocationList][google.cloud.security.privateca.v1beta1.CertificateRevocationList].
         /// </summary>
@@ -4848,60 +4003,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
             return new lro::Operation<CertificateRevocationList, OperationMetadata>(await _callUpdateCertificateRevocationList.Async(request, callSettings).ConfigureAwait(false), UpdateCertificateRevocationListOperationsClient);
         }
 
-        /// <summary>The long-running operations client for <c>CreateReusableConfig</c>.</summary>
-        public override lro::OperationsClient CreateReusableConfigOperationsClient { get; }
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override lro::Operation<ReusableConfig, OperationMetadata> CreateReusableConfig(CreateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateReusableConfigRequest(ref request, ref callSettings);
-            return new lro::Operation<ReusableConfig, OperationMetadata>(_callCreateReusableConfig.Sync(request, callSettings), CreateReusableConfigOperationsClient);
-        }
-
-        /// <summary>
-        /// Create a new [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig] in a given Project and Location.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> CreateReusableConfigAsync(CreateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_CreateReusableConfigRequest(ref request, ref callSettings);
-            return new lro::Operation<ReusableConfig, OperationMetadata>(await _callCreateReusableConfig.Async(request, callSettings).ConfigureAwait(false), CreateReusableConfigOperationsClient);
-        }
-
-        /// <summary>The long-running operations client for <c>DeleteReusableConfig</c>.</summary>
-        public override lro::OperationsClient DeleteReusableConfigOperationsClient { get; }
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteReusableConfig(DeleteReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteReusableConfigRequest(ref request, ref callSettings);
-            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteReusableConfig.Sync(request, callSettings), DeleteReusableConfigOperationsClient);
-        }
-
-        /// <summary>
-        /// DeleteReusableConfig deletes a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteReusableConfigAsync(DeleteReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_DeleteReusableConfigRequest(ref request, ref callSettings);
-            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteReusableConfig.Async(request, callSettings).ConfigureAwait(false), DeleteReusableConfigOperationsClient);
-        }
-
         /// <summary>
         /// Returns a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
         /// </summary>
@@ -4948,33 +4049,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         {
             Modify_ListReusableConfigsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReusableConfigsRequest, ListReusableConfigsResponse, ReusableConfig>(_callListReusableConfigs, request, callSettings);
-        }
-
-        /// <summary>The long-running operations client for <c>UpdateReusableConfig</c>.</summary>
-        public override lro::OperationsClient UpdateReusableConfigOperationsClient { get; }
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override lro::Operation<ReusableConfig, OperationMetadata> UpdateReusableConfig(UpdateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateReusableConfigRequest(ref request, ref callSettings);
-            return new lro::Operation<ReusableConfig, OperationMetadata>(_callUpdateReusableConfig.Sync(request, callSettings), UpdateReusableConfigOperationsClient);
-        }
-
-        /// <summary>
-        /// Update a [ReusableConfig][google.cloud.security.privateca.v1beta1.ReusableConfig].
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override async stt::Task<lro::Operation<ReusableConfig, OperationMetadata>> UpdateReusableConfigAsync(UpdateReusableConfigRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_UpdateReusableConfigRequest(ref request, ref callSettings);
-            return new lro::Operation<ReusableConfig, OperationMetadata>(await _callUpdateReusableConfig.Async(request, callSettings).ConfigureAwait(false), UpdateReusableConfigOperationsClient);
         }
     }
 
