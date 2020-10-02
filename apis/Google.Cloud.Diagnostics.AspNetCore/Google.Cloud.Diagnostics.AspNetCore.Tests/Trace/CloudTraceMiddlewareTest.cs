@@ -14,7 +14,6 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -22,7 +21,13 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
+#else
+#error unknown target framework
+#endif
 {
     public class CloudTraceMiddlewareTest
     {
@@ -49,7 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         private static HttpContext CreateHttpContext()
         {
             var context = new DefaultHttpContext();
-            var request = new DefaultHttpRequest(context);
+            var request = context.Request;
             request.Path = new PathString("/api/trace");
             return context;
         }

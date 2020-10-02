@@ -15,19 +15,26 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
+#else
+#error unknown target framework
+#endif
 {
+    using static IntegrationTests.TestServerHelpers;
+
     [SnippetOutputCollector]
     public class ErrorReportingSnippetsTests : IDisposable
     {
@@ -42,8 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             _testId = IdGenerator.FromDateTime();
 
-            var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
-            _server = new TestServer(builder);
+            _server = GetTestServer<ErrorReportingTestApplication.Startup>();
             _client = _server.CreateClient();
         }
 
@@ -100,6 +106,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         public const string Version = EntryData.Version;
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
+        // To hide some implementation details from the
+        // sample code, like how we are overriding the methods.
+        internal class Startup : BaseStartup
+        {
+            private readonly ErrorReportingTestApplication application = new ErrorReportingTestApplication();
+
+            public override void ConfigureServices(IServiceCollection services)
+            {
+                application.ConfigureServices(services);
+                base.ConfigureServices(services);
+            }
+
+            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+            {
+                application.Configure(app);
+                base.Configure(app, loggerFactory);
+            }
+        }
+
         // Sample: ReportUnhandledExceptions
         public void ConfigureServices(IServiceCollection services)
         {
@@ -113,9 +138,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 options.Version = Version;
             });
 
-            // ...any other services your application requires.
+            // Add any other services your application requires, for instance,
+            // depending on the version of ASP.NET Core you are using, you may
+            // need one of the following:
 
-            services.AddMvc();
+            // services.AddMvc();
+
+            // services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app)
@@ -123,14 +152,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Use before handling any requests to ensure all unhandled exceptions are reported.
             app.UseGoogleExceptionLogging();
 
-            // ...any other configuration your application requires.
+            // Add any other configuration your application requires, for instance,
+            // depending on the verson of ASP.NET Core you are using, you may
+            // need one of the following:
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
+
+            //app.UseRouting();
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //    endpoints.MapRazorPages();
+            //});
         }
         // End sample
     }

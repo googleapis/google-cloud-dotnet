@@ -15,10 +15,10 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Net;
@@ -26,8 +26,16 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
+#else
+#error unknown target framework
+#endif
 {
+    using static TestServerHelpers;
+
     public class ErrorReportingTest : IDisposable
     {
         private static readonly ErrorEventEntryPolling s_polling = new ErrorEventEntryPolling();
@@ -41,8 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             _testId = IdGenerator.FromDateTime();
 
-            var builder = new WebHostBuilder().UseStartup<ErrorReportingTestApplication>();
-            _server = new TestServer(builder);
+            _server = GetTestServer<ErrorReportingTestApplication>();
             _client = _server.CreateClient();
         }
 
@@ -102,29 +109,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// A simple web application base to test the <see cref="GoogleExceptionLogger"/>
         /// and associated classes.
         /// </summary>
-        private class ErrorReportingTestApplication
+        private class ErrorReportingTestApplication : BaseStartup
         {
-            public void ConfigureServices(IServiceCollection services)
-            {
-                services.AddGoogleExceptionLogging(options =>
+            public override void ConfigureServices(IServiceCollection services) =>
+                base.ConfigureServices(services.AddGoogleExceptionLogging(options =>
                 {
                     options.ProjectId = TestEnvironment.GetTestProjectId();
                     options.ServiceName = EntryData.Service;
                     options.Version = EntryData.Version;
-                })
-                .AddMvc();
-            }
+                }));
 
-            public void Configure(IApplicationBuilder app)
-            {
-                app.UseGoogleExceptionLogging()
-                    .UseMvc(routes =>
-                    {
-                        routes.MapRoute(
-                            name: "default",
-                            template: "{controller=ErrorReporting}/{action=Index}/{id}");
-                    });
-            }
+            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+                base.Configure(app.UseGoogleExceptionLogging(), loggerFactory);
         }
     }
 
