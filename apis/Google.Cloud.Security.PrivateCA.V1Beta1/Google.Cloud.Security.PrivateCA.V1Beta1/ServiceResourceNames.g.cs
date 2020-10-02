@@ -175,18 +175,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         }
     }
 
-    public partial class CreateCertificateRevocationListRequest
-    {
-        /// <summary>
-        /// <see cref="CertificateAuthorityName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public CertificateAuthorityName ParentAsCertificateAuthorityName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : CertificateAuthorityName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
     public partial class GetCertificateRevocationListRequest
     {
         /// <summary>
@@ -209,30 +197,6 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1
         {
             get => string.IsNullOrEmpty(Parent) ? null : CertificateAuthorityName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class CreateReusableConfigRequest
-    {
-        /// <summary>
-        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
-        /// </summary>
-        public gagr::LocationName ParentAsLocationName
-        {
-            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
-            set => Parent = value?.ToString() ?? "";
-        }
-    }
-
-    public partial class DeleteReusableConfigRequest
-    {
-        /// <summary>
-        /// <see cref="gcspv::ReusableConfigName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gcspv::ReusableConfigName ReusableConfigName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gcspv::ReusableConfigName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
         }
     }
 
