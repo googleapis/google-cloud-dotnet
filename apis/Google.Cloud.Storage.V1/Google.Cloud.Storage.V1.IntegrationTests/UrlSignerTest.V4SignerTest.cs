@@ -42,7 +42,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             public async Task GetTest() => await _fixture.FinishDelayTest(GetTestName());
             private void GetTest_InitDelayTest() => GetTest_Common(_fixture, SigningVersion.V4);
 
-            [Fact(Skip = "Currently only works with lower-case x-goog headers; fix is on its way")]
+            [Fact]
             public async Task GetBucketTest() => await _fixture.FinishDelayTest(GetTestName());
             private void GetBucketTest_InitDelayTest() => GetBucketTest_Common(_fixture, SigningVersion.V4);
 
@@ -50,7 +50,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             public async Task GetObjectWithSpacesTest() => await _fixture.FinishDelayTest(GetTestName());
             private void GetObjectWithSpacesTest_InitDelayTest() => GetObjectWithSpacesTest_Common(_fixture, SigningVersion.V4);
 
-            [Fact(Skip = "Currently fails due to CSEK headers")]
+            [Fact]
             public async Task GetWithCustomerSuppliedEncryptionKeysTest() => await _fixture.FinishDelayTest(GetTestName());
             private void GetWithCustomerSuppliedEncryptionKeysTest_InitDelayTest() => GetWithCustomerSuppliedEncryptionKeysTest_Common(_fixture, SigningVersion.V4);
 
@@ -78,7 +78,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             public async Task PutTest() => await _fixture.FinishDelayTest(GetTestName());
             private void PutTest_InitDelayTest() => PutTest_Common(_fixture, SigningVersion.V4);
 
-            [Fact(Skip = "Currently fails due to CSEK headers")]
+            [Fact]
             public async Task PutWithCustomerSuppliedEncryptionKeysTest() => await _fixture.FinishDelayTest(GetTestName());
             private void PutWithCustomerSuppliedEncryptionKeysTest_InitDelayTest() => PutWithCustomerSuppliedEncryptionKeysTest_Common(_fixture, SigningVersion.V4);
 
