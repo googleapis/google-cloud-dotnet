@@ -50,67 +50,74 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             "b25uZWN0aW9uLnYxLkNvbm5lY3Rpb25CA+BBAhI0Cgt1cGRhdGVfbWFzaxgD",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiJdChdEZWxl",
             "dGVDb25uZWN0aW9uUmVxdWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLGJp",
-            "Z3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlzLmNvbS9Db25uZWN0aW9uIvEC",
+            "Z3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlzLmNvbS9Db25uZWN0aW9uIrQD",
             "CgpDb25uZWN0aW9uEgwKBG5hbWUYASABKAkSFQoNZnJpZW5kbHlfbmFtZRgC",
             "IAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRJMCgljbG91ZF9zcWwYBCABKAsy",
             "Ny5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5DbG91ZFNx",
-            "bFByb3BlcnRpZXNIABIaCg1jcmVhdGlvbl90aW1lGAUgASgDQgPgQQMSHwoS",
-            "bGFzdF9tb2RpZmllZF90aW1lGAYgASgDQgPgQQMSGwoOaGFzX2NyZWRlbnRp",
-            "YWwYByABKAhCA+BBAzpz6kFwCixiaWdxdWVyeWNvbm5lY3Rpb24uZ29vZ2xl",
-            "YXBpcy5jb20vQ29ubmVjdGlvbhJAcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2Nvbm5lY3Rpb25zL3tjb25uZWN0aW9ufUIMCgpw",
-            "cm9wZXJ0aWVzIqkCChJDbG91ZFNxbFByb3BlcnRpZXMSEwoLaW5zdGFuY2Vf",
-            "aWQYASABKAkSEAoIZGF0YWJhc2UYAiABKAkSUgoEdHlwZRgDIAEoDjJELmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNsb3VkU3FsUHJv",
-            "cGVydGllcy5EYXRhYmFzZVR5cGUSUAoKY3JlZGVudGlhbBgEIAEoCzI3Lmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNsb3VkU3FsQ3Jl",
-            "ZGVudGlhbEID4EEEIkYKDERhdGFiYXNlVHlwZRIdChlEQVRBQkFTRV9UWVBF",
-            "X1VOU1BFQ0lGSUVEEAASDAoIUE9TVEdSRVMQARIJCgVNWVNRTBACIjgKEkNs",
-            "b3VkU3FsQ3JlZGVudGlhbBIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29y",
-            "ZBgCIAEoCTLMDQoRQ29ubmVjdGlvblNlcnZpY2US6AEKEENyZWF0ZUNvbm5l",
-            "Y3Rpb24SPC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5D",
-            "cmVhdGVDb25uZWN0aW9uUmVxdWVzdBovLmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5jb25uZWN0aW9uLnYxLkNvbm5lY3Rpb24iZYLT5JMCPSIvL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vY29ubmVjdGlvbnM6CmNvbm5l",
-            "Y3Rpb27aQR9wYXJlbnQsY29ubmVjdGlvbixjb25uZWN0aW9uX2lkErsBCg1H",
-            "ZXRDb25uZWN0aW9uEjkuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rp",
-            "b24udjEuR2V0Q29ubmVjdGlvblJlcXVlc3QaLy5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkuY29ubmVjdGlvbi52MS5Db25uZWN0aW9uIj6C0+STAjESLy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp92kEE",
-            "bmFtZRLOAQoPTGlzdENvbm5lY3Rpb25zEjsuZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LmNvbm5lY3Rpb24udjEuTGlzdENvbm5lY3Rpb25zUmVxdWVzdBo8Lmdv",
-            "b2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkxpc3RDb25uZWN0",
-            "aW9uc1Jlc3BvbnNlIkCC0+STAjESLy92MS97cGFyZW50PXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyp9L2Nvbm5lY3Rpb25z2kEGcGFyZW50EuQBChBVcGRhdGVD",
-            "b25uZWN0aW9uEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24u",
-            "djEuVXBkYXRlQ29ubmVjdGlvblJlcXVlc3QaLy5nb29nbGUuY2xvdWQuYmln",
-            "cXVlcnkuY29ubmVjdGlvbi52MS5Db25uZWN0aW9uImGC0+STAj0yLy92MS97",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9Ogpj",
-            "b25uZWN0aW9u2kEbbmFtZSxjb25uZWN0aW9uLHVwZGF0ZV9tYXNrEqgBChBE",
-            "ZWxldGVDb25uZWN0aW9uEjwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5l",
-            "Y3Rpb24udjEuRGVsZXRlQ29ubmVjdGlvblJlcXVlc3QaFi5nb29nbGUucHJv",
-            "dG9idWYuRW1wdHkiPoLT5JMCMSovL3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovY29ubmVjdGlvbnMvKn3aQQRuYW1lEqkBCgxHZXRJYW1Qb2xp",
-            "Y3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5nb29n",
-            "bGUuaWFtLnYxLlBvbGljeSJegtPkkwJFIkAvdjEve3Jlc291cmNlPXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMvKn06Z2V0SWFtUG9saWN5",
-            "OgEq2kEQcmVzb3VyY2Usb3B0aW9ucxKoAQoMU2V0SWFtUG9saWN5EiIuZ29v",
-            "Z2xlLmlhbS52MS5TZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52",
-            "MS5Qb2xpY3kiXYLT5JMCRSJAL3YxL3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2Nvbm5lY3Rpb25zLyp9OnNldElhbVBvbGljeToBKtpBD3Jl",
-            "c291cmNlLHBvbGljeRLTAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xl",
-            "LmlhbS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlh",
-            "bS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSJogtPkkwJLIkYvdjEv",
-            "e3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMv",
-            "Kn06dGVzdElhbVBlcm1pc3Npb25zOgEq2kEUcmVzb3VyY2UscGVybWlzc2lv",
-            "bnMafspBIWJpZ3F1ZXJ5Y29ubmVjdGlvbi5nb29nbGVhcGlzLmNvbdJBV2h0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvYmlncXVlcnksaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULGAQon",
-            "Y29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxUAFaTWdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmln",
-            "cXVlcnkvY29ubmVjdGlvbi92MTtjb25uZWN0aW9uqgIjR29vZ2xlLkNsb3Vk",
-            "LkJpZ1F1ZXJ5LkNvbm5lY3Rpb24uVjHKAiNHb29nbGVcQ2xvdWRcQmlnUXVl",
-            "cnlcQ29ubmVjdGlvblxWMWIGcHJvdG8z"));
+            "bFByb3BlcnRpZXNIABJBCgNhd3MYCCABKAsyMi5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuY29ubmVjdGlvbi52MS5Bd3NQcm9wZXJ0aWVzSAASGgoNY3JlYXRp",
+            "b25fdGltZRgFIAEoA0ID4EEDEh8KEmxhc3RfbW9kaWZpZWRfdGltZRgGIAEo",
+            "A0ID4EEDEhsKDmhhc19jcmVkZW50aWFsGAcgASgIQgPgQQM6c+pBcAosYmln",
+            "cXVlcnljb25uZWN0aW9uLmdvb2dsZWFwaXMuY29tL0Nvbm5lY3Rpb24SQHBy",
+            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb25uZWN0",
+            "aW9ucy97Y29ubmVjdGlvbn1CDAoKcHJvcGVydGllcyKpAgoSQ2xvdWRTcWxQ",
+            "cm9wZXJ0aWVzEhMKC2luc3RhbmNlX2lkGAEgASgJEhAKCGRhdGFiYXNlGAIg",
+            "ASgJElIKBHR5cGUYAyABKA4yRC5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29u",
+            "bmVjdGlvbi52MS5DbG91ZFNxbFByb3BlcnRpZXMuRGF0YWJhc2VUeXBlElAK",
+            "CmNyZWRlbnRpYWwYBCABKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29u",
+            "bmVjdGlvbi52MS5DbG91ZFNxbENyZWRlbnRpYWxCA+BBBCJGCgxEYXRhYmFz",
+            "ZVR5cGUSHQoZREFUQUJBU0VfVFlQRV9VTlNQRUNJRklFRBAAEgwKCFBPU1RH",
+            "UkVTEAESCQoFTVlTUUwQAiI4ChJDbG91ZFNxbENyZWRlbnRpYWwSEAoIdXNl",
+            "cm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiABKAkigAEKDUF3c1Byb3BlcnRp",
+            "ZXMSVgoSY3Jvc3NfYWNjb3VudF9yb2xlGAIgASgLMjguZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuQXdzQ3Jvc3NBY2NvdW50Um9sZUgA",
+            "QhcKFWF1dGhlbnRpY2F0aW9uX21ldGhvZCJeChNBd3NDcm9zc0FjY291bnRS",
+            "b2xlEhMKC2lhbV9yb2xlX2lkGAEgASgJEhgKC2lhbV91c2VyX2lkGAIgASgJ",
+            "QgPgQQMSGAoLZXh0ZXJuYWxfaWQYAyABKAlCA+BBAzLMDQoRQ29ubmVjdGlv",
+            "blNlcnZpY2US6AEKEENyZWF0ZUNvbm5lY3Rpb24SPC5nb29nbGUuY2xvdWQu",
+            "YmlncXVlcnkuY29ubmVjdGlvbi52MS5DcmVhdGVDb25uZWN0aW9uUmVxdWVz",
+            "dBovLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5jb25uZWN0aW9uLnYxLkNvbm5l",
+            "Y3Rpb24iZYLT5JMCPSIvL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKn0vY29ubmVjdGlvbnM6CmNvbm5lY3Rpb27aQR9wYXJlbnQsY29ubmVj",
+            "dGlvbixjb25uZWN0aW9uX2lkErsBCg1HZXRDb25uZWN0aW9uEjkuZ29vZ2xl",
+            "LmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuR2V0Q29ubmVjdGlvblJl",
+            "cXVlc3QaLy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5D",
+            "b25uZWN0aW9uIj6C0+STAjESLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2Nvbm5lY3Rpb25zLyp92kEEbmFtZRLOAQoPTGlzdENvbm5lY3Rp",
+            "b25zEjsuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuTGlz",
+            "dENvbm5lY3Rpb25zUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5j",
+            "b25uZWN0aW9uLnYxLkxpc3RDb25uZWN0aW9uc1Jlc3BvbnNlIkCC0+STAjES",
+            "Ly92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2Nvbm5lY3Rp",
+            "b25z2kEGcGFyZW50EuQBChBVcGRhdGVDb25uZWN0aW9uEjwuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuVXBkYXRlQ29ubmVjdGlvblJl",
+            "cXVlc3QaLy5nb29nbGUuY2xvdWQuYmlncXVlcnkuY29ubmVjdGlvbi52MS5D",
+            "b25uZWN0aW9uImGC0+STAj0yLy92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2Nvbm5lY3Rpb25zLyp9Ogpjb25uZWN0aW9u2kEbbmFtZSxjb25u",
+            "ZWN0aW9uLHVwZGF0ZV9tYXNrEqgBChBEZWxldGVDb25uZWN0aW9uEjwuZ29v",
+            "Z2xlLmNsb3VkLmJpZ3F1ZXJ5LmNvbm5lY3Rpb24udjEuRGVsZXRlQ29ubmVj",
+            "dGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiPoLT5JMCMSov",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29ubmVjdGlvbnMv",
+            "Kn3aQQRuYW1lEqkBCgxHZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLkdl",
+            "dElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSJegtPk",
+            "kwJFIkAvdjEve3Jlc291cmNlPXByb2plY3RzLyovbG9jYXRpb25zLyovY29u",
+            "bmVjdGlvbnMvKn06Z2V0SWFtUG9saWN5OgEq2kEQcmVzb3VyY2Usb3B0aW9u",
+            "cxKoAQoMU2V0SWFtUG9saWN5EiIuZ29vZ2xlLmlhbS52MS5TZXRJYW1Qb2xp",
+            "Y3lSZXF1ZXN0GhUuZ29vZ2xlLmlhbS52MS5Qb2xpY3kiXYLT5JMCRSJAL3Yx",
+            "L3tyZXNvdXJjZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2Nvbm5lY3Rpb25z",
+            "Lyp9OnNldElhbVBvbGljeToBKtpBD3Jlc291cmNlLHBvbGljeRLTAQoSVGVz",
+            "dElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlz",
+            "c2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFtUGVybWlzc2lv",
+            "bnNSZXNwb25zZSJogtPkkwJLIkYvdjEve3Jlc291cmNlPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovY29ubmVjdGlvbnMvKn06dGVzdElhbVBlcm1pc3Npb25z",
+            "OgEq2kEUcmVzb3VyY2UscGVybWlzc2lvbnMafspBIWJpZ3F1ZXJ5Y29ubmVj",
+            "dGlvbi5nb29nbGVhcGlzLmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvYmlncXVlcnksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9jbG91ZC1wbGF0Zm9ybULGAQonY29tLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5jb25uZWN0aW9uLnYxUAFaTWdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvY29ubmVjdGlvbi92MTtj",
+            "b25uZWN0aW9uqgIjR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LkNvbm5lY3Rpb24u",
+            "VjHKAiNHb29nbGVcQ2xvdWRcQmlnUXVlcnlcQ29ubmVjdGlvblxWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -120,9 +127,11 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse), global::Google.Cloud.BigQuery.Connection.V1.ListConnectionsResponse.Parser, new[]{ "NextPageToken", "Connections" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.UpdateConnectionRequest.Parser, new[]{ "Name", "Connection", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest), global::Google.Cloud.BigQuery.Connection.V1.DeleteConnectionRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.Connection), global::Google.Cloud.BigQuery.Connection.V1.Connection.Parser, new[]{ "Name", "FriendlyName", "Description", "CloudSql", "Aws", "CreationTime", "LastModifiedTime", "HasCredential" }, new[]{ "Properties" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Parser, new[]{ "InstanceId", "Database", "Type", "Credential" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties.Types.DatabaseType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential.Parser, new[]{ "Username", "Password" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential), global::Google.Cloud.BigQuery.Connection.V1.CloudSqlCredential.Parser, new[]{ "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsProperties), global::Google.Cloud.BigQuery.Connection.V1.AwsProperties.Parser, new[]{ "CrossAccountRole" }, new[]{ "AuthenticationMethod" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole), global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole.Parser, new[]{ "IamRoleId", "IamUserId", "ExternalId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1534,6 +1543,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         case PropertiesOneofCase.CloudSql:
           CloudSql = other.CloudSql.Clone();
           break;
+        case PropertiesOneofCase.Aws:
+          Aws = other.Aws.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1601,6 +1613,20 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
     }
 
+    /// <summary>Field number for the "aws" field.</summary>
+    public const int AwsFieldNumber = 8;
+    /// <summary>
+    /// Amazon Web Services (AWS) properties.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.Connection.V1.AwsProperties Aws {
+      get { return propertiesCase_ == PropertiesOneofCase.Aws ? (global::Google.Cloud.BigQuery.Connection.V1.AwsProperties) properties_ : null; }
+      set {
+        properties_ = value;
+        propertiesCase_ = value == null ? PropertiesOneofCase.None : PropertiesOneofCase.Aws;
+      }
+    }
+
     /// <summary>Field number for the "creation_time" field.</summary>
     public const int CreationTimeFieldNumber = 5;
     private long creationTime_;
@@ -1648,6 +1674,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
     public enum PropertiesOneofCase {
       None = 0,
       CloudSql = 4,
+      Aws = 8,
     }
     private PropertiesOneofCase propertiesCase_ = PropertiesOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1678,6 +1705,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (FriendlyName != other.FriendlyName) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(CloudSql, other.CloudSql)) return false;
+      if (!object.Equals(Aws, other.Aws)) return false;
       if (CreationTime != other.CreationTime) return false;
       if (LastModifiedTime != other.LastModifiedTime) return false;
       if (HasCredential != other.HasCredential) return false;
@@ -1692,6 +1720,7 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       if (FriendlyName.Length != 0) hash ^= FriendlyName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (propertiesCase_ == PropertiesOneofCase.CloudSql) hash ^= CloudSql.GetHashCode();
+      if (propertiesCase_ == PropertiesOneofCase.Aws) hash ^= Aws.GetHashCode();
       if (CreationTime != 0L) hash ^= CreationTime.GetHashCode();
       if (LastModifiedTime != 0L) hash ^= LastModifiedTime.GetHashCode();
       if (HasCredential != false) hash ^= HasCredential.GetHashCode();
@@ -1740,6 +1769,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(56);
         output.WriteBool(HasCredential);
       }
+      if (propertiesCase_ == PropertiesOneofCase.Aws) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Aws);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1777,6 +1810,10 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
         output.WriteRawTag(56);
         output.WriteBool(HasCredential);
       }
+      if (propertiesCase_ == PropertiesOneofCase.Aws) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Aws);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1797,6 +1834,9 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
       }
       if (propertiesCase_ == PropertiesOneofCase.CloudSql) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudSql);
+      }
+      if (propertiesCase_ == PropertiesOneofCase.Aws) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Aws);
       }
       if (CreationTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreationTime);
@@ -1842,6 +1882,12 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             CloudSql = new global::Google.Cloud.BigQuery.Connection.V1.CloudSqlProperties();
           }
           CloudSql.MergeFrom(other.CloudSql);
+          break;
+        case PropertiesOneofCase.Aws:
+          if (Aws == null) {
+            Aws = new global::Google.Cloud.BigQuery.Connection.V1.AwsProperties();
+          }
+          Aws.MergeFrom(other.Aws);
           break;
       }
 
@@ -1892,6 +1938,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
             HasCredential = input.ReadBool();
             break;
           }
+          case 66: {
+            global::Google.Cloud.BigQuery.Connection.V1.AwsProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.AwsProperties();
+            if (propertiesCase_ == PropertiesOneofCase.Aws) {
+              subBuilder.MergeFrom(Aws);
+            }
+            input.ReadMessage(subBuilder);
+            Aws = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1937,6 +1992,15 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
           }
           case 56: {
             HasCredential = input.ReadBool();
+            break;
+          }
+          case 66: {
+            global::Google.Cloud.BigQuery.Connection.V1.AwsProperties subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.AwsProperties();
+            if (propertiesCase_ == PropertiesOneofCase.Aws) {
+              subBuilder.MergeFrom(Aws);
+            }
+            input.ReadMessage(subBuilder);
+            Aws = subBuilder;
             break;
           }
         }
@@ -2483,6 +2547,486 @@ namespace Google.Cloud.BigQuery.Connection.V1 {
           }
           case 18: {
             Password = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Connection properties specific to Amazon Web Services (AWS).
+  /// </summary>
+  public sealed partial class AwsProperties : pb::IMessage<AwsProperties>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsProperties> _parser = new pb::MessageParser<AwsProperties>(() => new AwsProperties());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AwsProperties> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Connection.V1.ConnectionReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AwsProperties() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AwsProperties(AwsProperties other) : this() {
+      switch (other.AuthenticationMethodCase) {
+        case AuthenticationMethodOneofCase.CrossAccountRole:
+          CrossAccountRole = other.CrossAccountRole.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AwsProperties Clone() {
+      return new AwsProperties(this);
+    }
+
+    /// <summary>Field number for the "cross_account_role" field.</summary>
+    public const int CrossAccountRoleFieldNumber = 2;
+    /// <summary>
+    /// Authentication using Google owned AWS IAM user's access key to assume
+    /// into customer's AWS IAM Role.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole CrossAccountRole {
+      get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.CrossAccountRole ? (global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole) authenticationMethod_ : null; }
+      set {
+        authenticationMethod_ = value;
+        authenticationMethodCase_ = value == null ? AuthenticationMethodOneofCase.None : AuthenticationMethodOneofCase.CrossAccountRole;
+      }
+    }
+
+    private object authenticationMethod_;
+    /// <summary>Enum of possible cases for the "authentication_method" oneof.</summary>
+    public enum AuthenticationMethodOneofCase {
+      None = 0,
+      CrossAccountRole = 2,
+    }
+    private AuthenticationMethodOneofCase authenticationMethodCase_ = AuthenticationMethodOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AuthenticationMethodOneofCase AuthenticationMethodCase {
+      get { return authenticationMethodCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearAuthenticationMethod() {
+      authenticationMethodCase_ = AuthenticationMethodOneofCase.None;
+      authenticationMethod_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AwsProperties);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AwsProperties other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CrossAccountRole, other.CrossAccountRole)) return false;
+      if (AuthenticationMethodCase != other.AuthenticationMethodCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.CrossAccountRole) hash ^= CrossAccountRole.GetHashCode();
+      hash ^= (int) authenticationMethodCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.CrossAccountRole) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CrossAccountRole);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.CrossAccountRole) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CrossAccountRole);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (authenticationMethodCase_ == AuthenticationMethodOneofCase.CrossAccountRole) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CrossAccountRole);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AwsProperties other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.AuthenticationMethodCase) {
+        case AuthenticationMethodOneofCase.CrossAccountRole:
+          if (CrossAccountRole == null) {
+            CrossAccountRole = new global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole();
+          }
+          CrossAccountRole.MergeFrom(other.CrossAccountRole);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole();
+            if (authenticationMethodCase_ == AuthenticationMethodOneofCase.CrossAccountRole) {
+              subBuilder.MergeFrom(CrossAccountRole);
+            }
+            input.ReadMessage(subBuilder);
+            CrossAccountRole = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole subBuilder = new global::Google.Cloud.BigQuery.Connection.V1.AwsCrossAccountRole();
+            if (authenticationMethodCase_ == AuthenticationMethodOneofCase.CrossAccountRole) {
+              subBuilder.MergeFrom(CrossAccountRole);
+            }
+            input.ReadMessage(subBuilder);
+            CrossAccountRole = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Authentication method for Amazon Web Services (AWS) that uses Google owned
+  /// AWS IAM user's access key to assume into customer's AWS IAM Role.
+  /// </summary>
+  public sealed partial class AwsCrossAccountRole : pb::IMessage<AwsCrossAccountRole>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AwsCrossAccountRole> _parser = new pb::MessageParser<AwsCrossAccountRole>(() => new AwsCrossAccountRole());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AwsCrossAccountRole> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Connection.V1.ConnectionReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AwsCrossAccountRole() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AwsCrossAccountRole(AwsCrossAccountRole other) : this() {
+      iamRoleId_ = other.iamRoleId_;
+      iamUserId_ = other.iamUserId_;
+      externalId_ = other.externalId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AwsCrossAccountRole Clone() {
+      return new AwsCrossAccountRole(this);
+    }
+
+    /// <summary>Field number for the "iam_role_id" field.</summary>
+    public const int IamRoleIdFieldNumber = 1;
+    private string iamRoleId_ = "";
+    /// <summary>
+    /// The user’s AWS IAM Role that trusts the Google-owned AWS IAM user
+    /// Connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string IamRoleId {
+      get { return iamRoleId_; }
+      set {
+        iamRoleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "iam_user_id" field.</summary>
+    public const int IamUserIdFieldNumber = 2;
+    private string iamUserId_ = "";
+    /// <summary>
+    /// Output only. Google-owned AWS IAM User for a Connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string IamUserId {
+      get { return iamUserId_; }
+      set {
+        iamUserId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "external_id" field.</summary>
+    public const int ExternalIdFieldNumber = 3;
+    private string externalId_ = "";
+    /// <summary>
+    /// Output only. A Google-generated id for representing Connection’s identity in AWS.
+    /// External Id is also used for preventing the Confused Deputy Problem. See
+    /// https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ExternalId {
+      get { return externalId_; }
+      set {
+        externalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AwsCrossAccountRole);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AwsCrossAccountRole other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (IamRoleId != other.IamRoleId) return false;
+      if (IamUserId != other.IamUserId) return false;
+      if (ExternalId != other.ExternalId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (IamRoleId.Length != 0) hash ^= IamRoleId.GetHashCode();
+      if (IamUserId.Length != 0) hash ^= IamUserId.GetHashCode();
+      if (ExternalId.Length != 0) hash ^= ExternalId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (IamRoleId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(IamRoleId);
+      }
+      if (IamUserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(IamUserId);
+      }
+      if (ExternalId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ExternalId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IamRoleId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(IamRoleId);
+      }
+      if (IamUserId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(IamUserId);
+      }
+      if (ExternalId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ExternalId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (IamRoleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IamRoleId);
+      }
+      if (IamUserId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IamUserId);
+      }
+      if (ExternalId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExternalId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AwsCrossAccountRole other) {
+      if (other == null) {
+        return;
+      }
+      if (other.IamRoleId.Length != 0) {
+        IamRoleId = other.IamRoleId;
+      }
+      if (other.IamUserId.Length != 0) {
+        IamUserId = other.IamUserId;
+      }
+      if (other.ExternalId.Length != 0) {
+        ExternalId = other.ExternalId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            IamRoleId = input.ReadString();
+            break;
+          }
+          case 18: {
+            IamUserId = input.ReadString();
+            break;
+          }
+          case 26: {
+            ExternalId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            IamRoleId = input.ReadString();
+            break;
+          }
+          case 18: {
+            IamUserId = input.ReadString();
+            break;
+          }
+          case 26: {
+            ExternalId = input.ReadString();
             break;
           }
         }
