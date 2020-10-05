@@ -4,6 +4,18 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+# Version 2.1.0, released 2020-10-05
+
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit afbd7c4](https://github.com/googleapis/google-cloud-dotnet/commit/afbd7c4): feat: firestore: add `!=` support
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit c39c12c](https://github.com/googleapis/google-cloud-dotnet/commit/c39c12c): chore: add BatchWrite to service config
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Regenerate all APIs with generator changes (fixes retries)
+- [Commit 71492d2](https://github.com/googleapis/google-cloud-dotnet/commit/71492d2): feat: retry CommitRequests that fail with UNAVAILABLE
+- [Commit 8264d69](https://github.com/googleapis/google-cloud-dotnet/commit/8264d69): feat: add BatchWrite and PartitionQuery ([issue 5013](https://github.com/googleapis/google-cloud-dotnet/issues/5013))
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+
 # Version 2.0.0, released 2020-05-12
 
 No API surface changes.
