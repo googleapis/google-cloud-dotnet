@@ -367,7 +367,7 @@ namespace Google.Cloud.Firestore
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
-        /// a field present in the document, with a value which is one of the values <paramref name="values"/>.
+        /// a field present in the document, with a value which is one of the values in <paramref name="values"/>.
         /// </summary>
         /// <remarks>
         /// This call adds additional filters to any previously-specified ones.
@@ -380,7 +380,7 @@ namespace Google.Cloud.Firestore
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
-        /// a field present in the document, with a value which is one of the values <paramref name="values"/>.
+        /// a field present in the document, with a value which is one of the values in <paramref name="values"/>.
         /// </summary>
         /// <remarks>
         /// This call adds additional filters to any previously-specified ones.
@@ -393,7 +393,7 @@ namespace Google.Cloud.Firestore
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
-        /// a field present in the document, with a value which is not one of the values <paramref name="values"/>.
+        /// a field present in the document, with a value which is not one of the values in <paramref name="values"/>.
         /// </summary>
         /// <remarks>
         /// This call adds additional filters to any previously-specified ones.
@@ -406,7 +406,7 @@ namespace Google.Cloud.Firestore
 
         /// <summary>
         /// Returns a query with a filter specifying that <paramref name="fieldPath"/> must be
-        /// a field present in the document, with a value which is not one of the values <paramref name="values"/>.
+        /// a field present in the document, with a value which is not one of the values in <paramref name="values"/>.
         /// </summary>
         /// <remarks>
         /// This call adds additional filters to any previously-specified ones.
