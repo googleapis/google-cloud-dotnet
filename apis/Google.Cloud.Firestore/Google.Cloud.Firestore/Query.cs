@@ -183,6 +183,32 @@ namespace Google.Cloud.Firestore
             Where(fieldPath, FieldOp.Equal, value);
 
         /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must not be
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The dot-separated field path to filter on. Must not be null or empty.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereNotEqualTo(string fieldPath, object value) =>
+            Where(fieldPath, FieldOp.NotEqual, value);
+
+        /// <summary>
+        /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must not be
+        /// equal to <paramref name="value"/>.
+        /// </summary>
+        /// <remarks>
+        /// This call adds additional filters to any previously-specified ones.
+        /// </remarks>
+        /// <param name="fieldPath">The field path to filter on. Must not be null.</param>
+        /// <param name="value">The value to compare in the filter.</param>
+        /// <returns>A new query based on the current one, but with the additional specified filter applied.</returns>
+        public Query WhereNotEqualTo(FieldPath fieldPath, object value) =>
+            Where(fieldPath, FieldOp.NotEqual, value);
+
+        /// <summary>
         /// Returns a query with a filter specifying that the value in <paramref name="fieldPath"/> must be less than
         /// <paramref name="value"/>.
         /// </summary>
@@ -1048,17 +1074,10 @@ namespace Google.Cloud.Firestore
             internal static InternalFilter Create(SerializationContext context, FieldPath fieldPath, FieldOp op, object value)
             {
                 GaxPreconditions.CheckNotNull(fieldPath, nameof(fieldPath));
-                var unaryOperator = GetUnaryOperator(value);
+                var unaryOperator = GetUnaryOperator(value, op);
                 if (unaryOperator != UnaryOp.Unspecified)
                 {
-                    if (op == FieldOp.Equal)
-                    {
-                        return new InternalFilter(fieldPath, (int) unaryOperator, null);
-                    }
-                    else
-                    {
-                        throw new ArgumentException("null and NaN values can only be used with the Equal operator", nameof(value));
-                    }
+                    return new InternalFilter(fieldPath, (int) unaryOperator, null);
                 }
                 else
                 {
@@ -1068,15 +1087,25 @@ namespace Google.Cloud.Firestore
                 }
             }
 
-            private static UnaryOp GetUnaryOperator(object value)
+            private static UnaryOp GetUnaryOperator(object value, FieldOp op)
             {
                 switch (value)
                 {
                     case null:
-                        return UnaryOp.IsNull;
+                        return op switch
+                        {
+                            FieldOp.Equal => UnaryOp.IsNull,
+                            FieldOp.NotEqual => UnaryOp.IsNotNull,
+                            _ => throw new ArgumentException("Null values can only be used with the Equal/NotEqual operators", nameof(value))
+                        };
                     case double d when double.IsNaN(d):
                     case float f when float.IsNaN(f):
-                        return UnaryOp.IsNan;
+                        return op switch
+                        {
+                            FieldOp.Equal => UnaryOp.IsNan,
+                            FieldOp.NotEqual => UnaryOp.IsNotNan,
+                            _ => throw new ArgumentException("Not-a-number values can only be used with the Equal/NotEqual operators", nameof(value))
+                        };
                     default:
                         return UnaryOp.Unspecified;
                 }

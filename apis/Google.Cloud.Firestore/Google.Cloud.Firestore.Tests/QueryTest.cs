@@ -73,6 +73,30 @@ namespace Google.Cloud.Firestore.Tests
         }
 
         [Fact]
+        public void Where_NotEqualTo_String()
+        {
+            var query = GetEmptyQuery().WhereNotEqualTo("a.b", "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotEqual, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_NotEqualTo_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereNotEqualTo(new FieldPath("a", "b"), "x");
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotEqual, Value = CreateValue("x") }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
         public void Where_LessThan_String()
         {
             var query = GetEmptyQuery().WhereLessThan("a.b", "x");
@@ -213,6 +237,32 @@ namespace Google.Cloud.Firestore.Tests
             var expected = new StructuredQuery
             {
                 Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNull }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Theory]
+        [InlineData(double.NaN)]
+        [InlineData(float.NaN)]
+        public void Where_NotSingleNaNFilter(object value)
+        {
+            var query = GetEmptyQuery().WhereNotEqualTo("a.b", value);
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNotNan }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void Where_NotSingleNullFilter()
+        {
+            var query = GetEmptyQuery().WhereNotEqualTo("a.b", null);
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new UnaryFilter { Field = Field("a.b"), Op = UnaryFilter.Types.Operator.IsNotNull }),
                 From = { new CollectionSelector { CollectionId = "col" } }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
