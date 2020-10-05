@@ -311,6 +311,30 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Equal(expected, query.ToStructuredQuery());
         }
 
+        [Fact]
+        public void WhereNotIn_String()
+        {
+            var query = GetEmptyQuery().WhereNotIn("a.b", new[] { 10, 20 });
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotIn, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
+        [Fact]
+        public void WhereNotIn_FieldPath()
+        {
+            var query = GetEmptyQuery().WhereNotIn(new FieldPath("a", "b"), new[] { 10, 20 });
+            var expected = new StructuredQuery
+            {
+                Where = Filter(new FieldFilter { Field = Field("a.b"), Op = FieldFilter.Types.Operator.NotIn, Value = CreateArray(CreateValue(10), CreateValue(20)) }),
+                From = { new CollectionSelector { CollectionId = "col" } }
+            };
+            Assert.Equal(expected, query.ToStructuredQuery());
+        }
+
         // See comments in WhereIn for details.
         [Fact]
         public void WhereIn_StringPath_StringValueThrows()
@@ -333,6 +357,42 @@ namespace Google.Cloud.Firestore.Tests
             Assert.Throws<ArgumentNullException>(() => empty.WhereIn("a.b", null));
         }
 
+        [Fact]
+        public void WhereIn_FieldPath_NullValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentNullException>(() => empty.WhereIn(new FieldPath("a", "b"), null));
+        }
+
+        [Fact]
+        public void WhereNotIn_StringPath_StringValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentException>(() => empty.WhereNotIn("a.b", "value"));
+        }
+
+        [Fact]
+        public void WhereNotIn_FieldPath_StringValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentException>(() => empty.WhereNotIn(new FieldPath("a", "b"), "value"));
+        }
+
+        [Fact]
+        public void WhereNotIn_StringPath_NullValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentNullException>(() => empty.WhereNotIn("a.b", null));
+        }
+
+        [Fact]
+        public void WhereNotIn_FieldPath_NullValueThrows()
+        {
+            var empty = GetEmptyQuery();
+            Assert.Throws<ArgumentNullException>(() => empty.WhereNotIn(new FieldPath("a", "b"), null));
+        }
+
+        // Note: no corresponding NotIn query as it's all in the same path anyway.
         [Fact]
         public void WhereIn_NotInOrdering()
         {
@@ -357,13 +417,6 @@ namespace Google.Cloud.Firestore.Tests
                 StartAt = new Cursor { Values = { CreateValue(collection.Document("doc")) }, Before = true }
             };
             Assert.Equal(expected, query.ToStructuredQuery());
-        }
-
-        [Fact]
-        public void WhereIn_FieldPath_NullValueThrows()
-        {
-            var empty = GetEmptyQuery();
-            Assert.Throws<ArgumentNullException>(() => empty.WhereIn(new FieldPath("a", "b"), null));
         }
 
         [Fact]

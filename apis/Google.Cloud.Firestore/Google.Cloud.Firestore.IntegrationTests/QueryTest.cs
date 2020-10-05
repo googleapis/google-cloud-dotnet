@@ -340,6 +340,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
             batch.Set(collection.Document("d"), new { zip = new[] { 98101 } });
             batch.Set(collection.Document("e"), new { zip = new object[] { 98101, new { zip = 98101 } } });
             batch.Set(collection.Document("f"), new { zip = new { code = 500 } });
+            batch.Set(collection.Document("g"), new { notZip = new { code = 500 } });
             await batch.CommitAsync();
 
             var querySnapshot = await collection.WhereIn("zip", new[] { 98101, 98103 }).GetSnapshotAsync();
@@ -387,6 +388,27 @@ namespace Google.Cloud.Firestore.IntegrationTests
             }).GetSnapshotAsync();
             var ids = querySnapshot.Select(d => d.Id).ToList();
             Assert.Equal(new[] { "ab", "cd" }, ids);
+        }
+
+        [Fact]
+        public async Task WhereNotIn()
+        {
+            var db = _fixture.FirestoreDb;
+            var collection = _fixture.CreateUniqueCollection();
+            var batch = db.StartBatch();
+            batch.Set(collection.Document("a"), new { zip = 98101 });
+            batch.Set(collection.Document("b"), new { zip = 91102 });
+            batch.Set(collection.Document("c"), new { zip = 98103 });
+            batch.Set(collection.Document("d"), new { zip = new[] { 98101 } });
+            batch.Set(collection.Document("e"), new { zip = new object[] { 98101, new { zip = 98101 } } });
+            batch.Set(collection.Document("f"), new { zip = new { code = 500 } });
+            batch.Set(collection.Document("g"), new { notZip = new { code = 500 } });
+            await batch.CommitAsync();
+
+            var querySnapshot = await collection.WhereNotIn("zip", new[] { 98101, 98103 }).GetSnapshotAsync();
+            var ids = querySnapshot.Select(d => d.Id).ToList();
+            // Note: g is not in the list, because the "zip" field doesn't exist there at all.
+            Assert.Equal(new[] { "b", "d", "e", "f" }, ids);
         }
 
         [Fact]
