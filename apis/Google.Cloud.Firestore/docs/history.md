@@ -1,5 +1,16 @@
 # Version history
 
+# Version 2.2.0, released 2020-10-05
+
+- [Commit 8698c6e](https://github.com/googleapis/google-cloud-dotnet/commit/8698c6e): docs: Improve "where in/not-in" documentation slightly
+- [Commit e35d18b](https://github.com/googleapis/google-cloud-dotnet/commit/e35d18b): feat: Add "where not in" Firestore query support
+- [Commit 1f3168e](https://github.com/googleapis/google-cloud-dotnet/commit/1f3168e): feat: Add "where not equal" support for Firestore
+- [Commit ef55349](https://github.com/googleapis/google-cloud-dotnet/commit/ef55349): chore: Simplify WriteBatch implementation in line with internal guidance
+- [Commit 310a1cb](https://github.com/googleapis/google-cloud-dotnet/commit/310a1cb): chore: Refactor WriteBatch now that every update is just a single Write
+- [Commit 94375e9](https://github.com/googleapis/google-cloud-dotnet/commit/94375e9): chore: Fix conformance tests, by using update transforms
+- [Commit eddc395](https://github.com/googleapis/google-cloud-dotnet/commit/eddc395): fix: Fix WhereIn filters being used in implicit orderings
+- [Commit bb09597](https://github.com/googleapis/google-cloud-dotnet/commit/bb09597): feat: Allow general iterable objects to be serialized (but not deserialized) in Firestore
+
 # Version 2.1.0, released 2020-06-02
 
 - [Commit 48cef0e](https://github.com/googleapis/google-cloud-dotnet/commit/48cef0e): Allow nested arrays to be constructed client-side, relying on server-side validation
