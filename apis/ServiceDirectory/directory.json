@@ -685,6 +685,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Billing.Budgets.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/billing/budgets/v1",
+      "Name": "billingbudgets.googleapis.com",
+      "Title": "Cloud Billing Budget API",
+      "Description": "The Cloud Billing Budget API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
+      "ServiceConfigFile": "google/cloud/billing/budgets/v1/billingbudgets.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.billing.budgets.v1",
+      "PackageFromProtos": "google.cloud.billing.budgets.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/billing/budgets/v1",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Billing.Budgets.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/billing/budgets/v1alpha1",
       "Name": "billingbudgets.googleapis.com",
       "Title": "Cloud Billing Budget API",
