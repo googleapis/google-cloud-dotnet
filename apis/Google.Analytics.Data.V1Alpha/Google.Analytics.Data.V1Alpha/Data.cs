@@ -7157,7 +7157,9 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int RowCountFieldNumber = 2;
     private int rowCount_;
     /// <summary>
-    /// The cardinality of the pivot as if offset = 0 and limit = -1.
+    /// The cardinality of the pivot as if offset = 0 and limit = -1. The total
+    /// number of rows for this pivot's fields regardless of how the parameters
+    /// offset and limit are specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int RowCount {

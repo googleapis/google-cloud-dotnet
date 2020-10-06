@@ -221,90 +221,30 @@ namespace Google.Analytics.Data.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetMetadata</summary>
-        public void GetMetadataRequestObject()
+        /// <summary>Snippet for GetUniversalMetadata</summary>
+        public void GetUniversalMetadataRequestObject()
         {
-            // Snippet: GetMetadata(GetMetadataRequest, CallSettings)
+            // Snippet: GetUniversalMetadata(GetUniversalMetadataRequest, CallSettings)
             // Create client
             AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
             // Initialize request argument(s)
-            GetMetadataRequest request = new GetMetadataRequest
-            {
-                MetadataName = MetadataName.FromMetadata(),
-            };
+            GetUniversalMetadataRequest request = new GetUniversalMetadataRequest { };
             // Make the request
-            Metadata response = alphaAnalyticsDataClient.GetMetadata(request);
+            UniversalMetadata response = alphaAnalyticsDataClient.GetUniversalMetadata(request);
             // End snippet
         }
 
-        /// <summary>Snippet for GetMetadataAsync</summary>
-        public async Task GetMetadataRequestObjectAsync()
+        /// <summary>Snippet for GetUniversalMetadataAsync</summary>
+        public async Task GetUniversalMetadataRequestObjectAsync()
         {
-            // Snippet: GetMetadataAsync(GetMetadataRequest, CallSettings)
-            // Additional: GetMetadataAsync(GetMetadataRequest, CancellationToken)
+            // Snippet: GetUniversalMetadataAsync(GetUniversalMetadataRequest, CallSettings)
+            // Additional: GetUniversalMetadataAsync(GetUniversalMetadataRequest, CancellationToken)
             // Create client
             AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
             // Initialize request argument(s)
-            GetMetadataRequest request = new GetMetadataRequest
-            {
-                MetadataName = MetadataName.FromMetadata(),
-            };
+            GetUniversalMetadataRequest request = new GetUniversalMetadataRequest { };
             // Make the request
-            Metadata response = await alphaAnalyticsDataClient.GetMetadataAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetMetadata</summary>
-        public void GetMetadata()
-        {
-            // Snippet: GetMetadata(string, CallSettings)
-            // Create client
-            AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
-            // Initialize request argument(s)
-            string name = "metadata";
-            // Make the request
-            Metadata response = alphaAnalyticsDataClient.GetMetadata(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetMetadataAsync</summary>
-        public async Task GetMetadataAsync()
-        {
-            // Snippet: GetMetadataAsync(string, CallSettings)
-            // Additional: GetMetadataAsync(string, CancellationToken)
-            // Create client
-            AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "metadata";
-            // Make the request
-            Metadata response = await alphaAnalyticsDataClient.GetMetadataAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetMetadata</summary>
-        public void GetMetadataResourceNames()
-        {
-            // Snippet: GetMetadata(MetadataName, CallSettings)
-            // Create client
-            AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
-            // Initialize request argument(s)
-            MetadataName name = MetadataName.FromMetadata();
-            // Make the request
-            Metadata response = alphaAnalyticsDataClient.GetMetadata(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetMetadataAsync</summary>
-        public async Task GetMetadataResourceNamesAsync()
-        {
-            // Snippet: GetMetadataAsync(MetadataName, CallSettings)
-            // Additional: GetMetadataAsync(MetadataName, CancellationToken)
-            // Create client
-            AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
-            // Initialize request argument(s)
-            MetadataName name = MetadataName.FromMetadata();
-            // Make the request
-            Metadata response = await alphaAnalyticsDataClient.GetMetadataAsync(name);
+            UniversalMetadata response = await alphaAnalyticsDataClient.GetUniversalMetadataAsync(request);
             // End snippet
         }
     }
