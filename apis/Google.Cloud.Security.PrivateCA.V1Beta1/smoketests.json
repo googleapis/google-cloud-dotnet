@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListReusableConfigs",
+    "client": "CertificateAuthorityServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListCertificateAuthorities",
+    "client": "CertificateAuthorityServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
