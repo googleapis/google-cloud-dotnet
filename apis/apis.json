@@ -101,7 +101,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.Connection.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "BigQuery Connection API",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/bigqueryconnection",
