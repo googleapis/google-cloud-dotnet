@@ -1,5 +1,16 @@
 # Version history
 
+# Version 2.1.0, released 2020-10-07
+
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Regenerate all APIs with generator changes (fixes timeouts)
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+- [Commit 3e2a816](https://github.com/googleapis/google-cloud-dotnet/commit/3e2a816): docs: Remove raw html from proto comments as this breaks client library documentation generators.
+
+In addition, dependencies have been updated.
+
 # Version 2.0.0, released 2020-03-17
 
 No API surface changes compared with 2.0.0-beta01, just dependencies

@@ -23,7 +23,7 @@ Each package name links to the documentation for that package.
 | [Google.Area120.Tables.V1Alpha1](Google.Area120.Tables.V1Alpha1/index.html) | 1.0.0-alpha01 | Google Area 120 Tables API |
 | [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.5.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AssuredWorkloads.V1Beta1](Google.Cloud.AssuredWorkloads.V1Beta1/index.html) | 1.0.0-beta01 | [Assured Workloads API](https://cloud.google.com/assured-workloads/docs) |
-| [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html) | 2.0.0 | [Google AutoML](https://cloud.google.com/automl/) |
+| [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html) | 2.1.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.Connection.V1](Google.Cloud.BigQuery.Connection.V1/index.html) | 1.0.0 | [BigQuery Connection API](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html) | 3.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
 | [Google.Cloud.BigQuery.Reservation.V1](Google.Cloud.BigQuery.Reservation.V1/index.html) | 1.0.0 | [BigQuery Reservation API](https://cloud.google.com/bigquery/docs/reference/reservations) |
