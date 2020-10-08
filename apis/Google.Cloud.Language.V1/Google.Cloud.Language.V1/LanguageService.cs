@@ -276,7 +276,6 @@ namespace Google.Cloud.Language.V1 {
 
   #region Messages
   /// <summary>
-  /// ################################################################ #
   ///
   /// Represents the input to API methods.
   /// </summary>
