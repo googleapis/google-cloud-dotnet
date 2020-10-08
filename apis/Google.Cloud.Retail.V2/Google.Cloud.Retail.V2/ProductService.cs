@@ -42,7 +42,7 @@ namespace Google.Cloud.Retail.V2 {
             "dWN0GAEgASgLMh8uZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0QgPg",
             "QQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
             "bGRNYXNrIksKFERlbGV0ZVByb2R1Y3RSZXF1ZXN0EjMKBG5hbWUYASABKAlC",
-            "JeBBAvpBHwodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3Qy+goKDlBy",
+            "JeBBAvpBHwodcmV0YWlsLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3Qy7ggKDlBy",
             "b2R1Y3RTZXJ2aWNlEs8BCg1DcmVhdGVQcm9kdWN0EiwuZ29vZ2xlLmNsb3Vk",
             "LnJldGFpbC52Mi5DcmVhdGVQcm9kdWN0UmVxdWVzdBofLmdvb2dsZS5jbG91",
             "ZC5yZXRhaWwudjIuUHJvZHVjdCJvgtPkkwJNIkIvdjIve3BhcmVudD1wcm9q",
@@ -60,25 +60,19 @@ namespace Google.Cloud.Retail.V2 {
             "Lmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuRGVsZXRlUHJvZHVjdFJlcXVlc3Qa",
             "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiUoLT5JMCRSpDL3YyL3tuYW1lPXBy",
             "b2plY3RzLyovbG9jYXRpb25zLyovY2F0YWxvZ3MvKi9icmFuY2hlcy8qL3By",
-            "b2R1Y3RzLyoqfdpBBG5hbWUSiQIKDVB1cmdlUHJvZHVjdHMSLC5nb29nbGUu",
-            "Y2xvdWQucmV0YWlsLnYyLlB1cmdlUHJvZHVjdHNSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKqAYLT5JMCTSJIL3YyL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyp9",
-            "L3Byb2R1Y3RzOnB1cmdlOgEqykFUCixnb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LlB1cmdlUHJvZHVjdHNSZXNwb25zZRIkZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5QdXJnZU1ldGFkYXRhEo4CCg5JbXBvcnRQcm9kdWN0cxItLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuSW1wb3J0UHJvZHVjdHNSZXF1ZXN0Gh0uZ29vZ2xl",
-            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiKtAYLT5JMCTiJJL3YyL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jYXRhbG9ncy8qL2JyYW5jaGVzLyp9",
-            "L3Byb2R1Y3RzOmltcG9ydDoBKspBVgotZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5JbXBvcnRQcm9kdWN0c1Jlc3BvbnNlEiVnb29nbGUuY2xvdWQucmV0YWls",
-            "LnYyLkltcG9ydE1ldGFkYXRhGknKQRVyZXRhaWwuZ29vZ2xlYXBpcy5jb23S",
-            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtQsgBChpjb20uZ29vZ2xlLmNsb3VkLnJldGFpbC52MkITUHJvZHVjdFNl",
-            "cnZpY2VQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29n",
-            "bGUuQ2xvdWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoC",
-            "GUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6VjJiBnByb3RvMw=="));
+            "b2R1Y3RzLyoqfdpBBG5hbWUSjgIKDkltcG9ydFByb2R1Y3RzEi0uZ29vZ2xl",
+            "LmNsb3VkLnJldGFpbC52Mi5JbXBvcnRQcm9kdWN0c1JlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIq0BgtPkkwJOIkkvdjIve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2NhdGFsb2dzLyovYnJhbmNoZXMv",
+            "Kn0vcHJvZHVjdHM6aW1wb3J0OgEqykFWCi1nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLkltcG9ydFByb2R1Y3RzUmVzcG9uc2USJWdvb2dsZS5jbG91ZC5yZXRh",
+            "aWwudjIuSW1wb3J0TWV0YWRhdGEaScpBFXJldGFpbC5nb29nbGVhcGlzLmNv",
+            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm1CyAEKGmNvbS5nb29nbGUuY2xvdWQucmV0YWlsLnYyQhNQcm9kdWN0",
+            "U2VydmljZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvcmV0YWlsL3YyO3JldGFpbKICBlJFVEFJTKoCFkdv",
+            "b2dsZS5DbG91ZC5SZXRhaWwuVjLKAhZHb29nbGVcQ2xvdWRcUmV0YWlsXFYy",
+            "6gIZR29vZ2xlOjpDbG91ZDo6UmV0YWlsOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ImportConfigReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -182,8 +176,8 @@ namespace Google.Cloud.Retail.V2 {
     /// [parent][google.cloud.retail.v2.CreateProductRequest.parent]. Otherwise, an
     /// ALREADY_EXISTS error is returned.
     ///
-    /// This field must be a UTF-8 encoded string with a length limit of 128 bytes.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// This field must be a UTF-8 encoded string with a length limit of 128
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProductId {

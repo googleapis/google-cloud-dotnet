@@ -137,7 +137,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent eventStore resource name, such as
+    /// Required. The parent catalog resource name, such as
     /// "projects/1234/locations/global/catalogs/default_catalog".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -366,7 +366,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent eventStore name, such as
+    /// Required. The parent catalog name, such as
     /// "projects/1234/locations/global/catalogs/default_catalog".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -381,7 +381,8 @@ namespace Google.Cloud.Retail.V2 {
     public const int UserEventFieldNumber = 2;
     private string userEvent_ = "";
     /// <summary>
-    /// Required. URL encoded UserEvent proto.
+    /// Required. URL encoded UserEvent proto with a length limit of 2,000,000
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserEvent {
@@ -395,10 +396,10 @@ namespace Google.Cloud.Retail.V2 {
     public const int UriFieldNumber = 3;
     private string uri_ = "";
     /// <summary>
-    /// The url including cgi-parameters but excluding the hash fragment. The URL
-    /// must be truncated to 1.5K bytes to conservatively be under the 2K bytes.
-    /// This is often more useful than the referer url, because many browsers only
-    /// send the domain for 3rd party requests.
+    /// The url including cgi-parameters but excluding the hash fragment with a
+    /// length limit of 5,000 characters. This is often more useful than the
+    /// referer url, because many browsers only send the domain for 3rd party
+    /// requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {

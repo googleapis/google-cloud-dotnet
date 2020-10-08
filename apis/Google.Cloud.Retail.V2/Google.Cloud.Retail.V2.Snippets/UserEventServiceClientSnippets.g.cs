@@ -108,7 +108,6 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 Parent = "",
                 Filter = "",
-                Force = false,
             };
             // Make the request
             Operation<PurgeUserEventsResponse, PurgeMetadata> response = userEventServiceClient.PurgeUserEvents(request);
@@ -143,7 +142,6 @@ namespace Google.Cloud.Retail.V2.Snippets
             {
                 Parent = "",
                 Filter = "",
-                Force = false,
             };
             // Make the request
             Operation<PurgeUserEventsResponse, PurgeMetadata> response = await userEventServiceClient.PurgeUserEventsAsync(request);

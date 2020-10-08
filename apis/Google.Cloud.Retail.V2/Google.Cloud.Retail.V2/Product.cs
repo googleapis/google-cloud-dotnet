@@ -28,40 +28,39 @@ namespace Google.Cloud.Retail.V2 {
             "ZS5jbG91ZC5yZXRhaWwudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJv",
             "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9jbG91ZC9yZXRhaWwvdjIvY29t",
-            "bW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdv",
-            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMu",
-            "cHJvdG8irQcKB1Byb2R1Y3QSEQoEbmFtZRgBIAEoCUID4EEFEg8KAmlkGAIg",
-            "ASgJQgPgQQUSGgoScHJpbWFyeV9wcm9kdWN0X2lkGAQgASgJEhcKCmNhdGVn",
-            "b3JpZXMYByADKAlCA+BBAhISCgV0aXRsZRgIIAEoCUID4EECEhMKC2Rlc2Ny",
-            "aXB0aW9uGAogASgJEhUKDWxhbmd1YWdlX2NvZGUYCyABKAkSQwoKYXR0cmli",
-            "dXRlcxgMIAMoCzIvLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdC5B",
-            "dHRyaWJ1dGVzRW50cnkSDAoEdGFncxgNIAMoCRI1CgpwcmljZV9pbmZvGA4g",
-            "ASgLMiEuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5QcmljZUluZm8SMgoOYXZh",
-            "aWxhYmxlX3RpbWUYEiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "EkIKDGF2YWlsYWJpbGl0eRgTIAEoDjIsLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuUHJvZHVjdC5BdmFpbGFiaWxpdHkSNwoSYXZhaWxhYmxlX3F1YW50aXR5",
-            "GBQgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSCwoDdXJpGBYg",
-            "ASgJEi0KBmltYWdlcxgXIAMoCzIdLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "SW1hZ2USRAogc3RvY2tpbmdfdW5pdF9yZXRyaWV2YWJsZV9maWVsZHMYHiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrGloKD0F0dHJpYnV0ZXNF",
-            "bnRyeRILCgNrZXkYASABKAkSNgoFdmFsdWUYAiABKAsyJy5nb29nbGUuY2xv",
-            "dWQucmV0YWlsLnYyLkN1c3RvbUF0dHJpYnV0ZToCOAEiaQoMQXZhaWxhYmls",
-            "aXR5EhwKGEFWQUlMQUJJTElUWV9VTlNQRUNJRklFRBAAEgwKCElOX1NUT0NL",
-            "EAESEAoMT1VUX09GX1NUT0NLEAISDAoIUFJFT1JERVIQAxINCglCQUNLT1JE",
-            "RVIQBDqEAepBgAEKHXJldGFpbC5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0El9w",
-            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY2F0YWxv",
-            "Z3Mve2NhdGFsb2d9L2JyYW5jaGVzL3ticmFuY2h9L3Byb2R1Y3RzL3twcm9k",
-            "dWN0fUKwAgoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCDFByb2R1Y3RQ",
-            "cm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL3JldGFpbC92MjtyZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xv",
-            "dWQuUmV0YWlsLlYyygIWR29vZ2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2ds",
-            "ZTo6Q2xvdWQ6OlJldGFpbDo6VjLqQWwKHHJldGFpbC5nb29nbGVhcGlzLmNv",
-            "bS9CcmFuY2gSTHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9jYXRhbG9ncy97Y2F0YWxvZ30vYnJhbmNoZXMve2JyYW5jaH1iBnBy",
-            "b3RvMw=="));
+            "bW9uLnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
+            "YnVmL3dyYXBwZXJzLnByb3RvIq0HCgdQcm9kdWN0EhEKBG5hbWUYASABKAlC",
+            "A+BBBRIPCgJpZBgCIAEoCUID4EEFEhoKEnByaW1hcnlfcHJvZHVjdF9pZBgE",
+            "IAEoCRIXCgpjYXRlZ29yaWVzGAcgAygJQgPgQQISEgoFdGl0bGUYCCABKAlC",
+            "A+BBAhITCgtkZXNjcmlwdGlvbhgKIAEoCRIVCg1sYW5ndWFnZV9jb2RlGAsg",
+            "ASgJEkMKCmF0dHJpYnV0ZXMYDCADKAsyLy5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLlByb2R1Y3QuQXR0cmlidXRlc0VudHJ5EgwKBHRhZ3MYDSADKAkSNQoK",
+            "cHJpY2VfaW5mbxgOIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJp",
+            "Y2VJbmZvEjIKDmF2YWlsYWJsZV90aW1lGBIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBJCCgxhdmFpbGFiaWxpdHkYEyABKA4yLC5nb29nbGUu",
+            "Y2xvdWQucmV0YWlsLnYyLlByb2R1Y3QuQXZhaWxhYmlsaXR5EjcKEmF2YWls",
+            "YWJsZV9xdWFudGl0eRgUIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZh",
+            "bHVlEgsKA3VyaRgWIAEoCRItCgZpbWFnZXMYFyADKAsyHS5nb29nbGUuY2xv",
+            "dWQucmV0YWlsLnYyLkltYWdlEkQKIHN0b2NraW5nX3VuaXRfcmV0cmlldmFi",
+            "bGVfZmllbGRzGB4gASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxpa",
+            "Cg9BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEjYKBXZhbHVlGAIgASgL",
+            "MicuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5DdXN0b21BdHRyaWJ1dGU6AjgB",
+            "ImkKDEF2YWlsYWJpbGl0eRIcChhBVkFJTEFCSUxJVFlfVU5TUEVDSUZJRUQQ",
+            "ABIMCghJTl9TVE9DSxABEhAKDE9VVF9PRl9TVE9DSxACEgwKCFBSRU9SREVS",
+            "EAMSDQoJQkFDS09SREVSEAQ6hAHqQYABCh1yZXRhaWwuZ29vZ2xlYXBpcy5j",
+            "b20vUHJvZHVjdBJfcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2NhdGFsb2dzL3tjYXRhbG9nfS9icmFuY2hlcy97YnJhbmNofS9w",
+            "cm9kdWN0cy97cHJvZHVjdH1CsAIKGmNvbS5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyQgxQcm9kdWN0UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwvdjI7cmV0YWlsogIGUkVUQUlM",
+            "qgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRh",
+            "aWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRhaWw6OlYy6kFsChxyZXRhaWwu",
+            "Z29vZ2xlYXBpcy5jb20vQnJhbmNoEkxwcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vY2F0YWxvZ3Mve2NhdGFsb2d9L2JyYW5jaGVz",
+            "L3ticmFuY2h9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.Product), global::Google.Cloud.Retail.V2.Product.Parser, new[]{ "Name", "Id", "PrimaryProductId", "Categories", "Title", "Description", "LanguageCode", "Attributes", "Tags", "PriceInfo", "AvailableTime", "Availability", "AvailableQuantity", "Uri", "Images", "StockingUnitRetrievableFields" }, null, new[]{ typeof(global::Google.Cloud.Retail.V2.Product.Types.Availability) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -156,8 +155,8 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/id_1".
     ///
-    /// This field must be a UTF-8 encoded string with a length limit of 128 bytes.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// This field must be a UTF-8 encoded string with a length limit of 128
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
     /// [id](https://support.google.com/merchants/answer/6324405).
@@ -184,7 +183,7 @@ namespace Google.Cloud.Retail.V2 {
     /// error is returned.
     ///
     /// Should only be set for [Type.VARIANT][]
-    /// [Product][google.cloud.retail.v2.Product]s. A maximum of 1000 products are
+    /// [Product][google.cloud.retail.v2.Product]s. A maximum of 2000 products are
     /// allowed to share the same [Type.PRIMARY][]
     /// [Product][google.cloud.retail.v2.Product]. Otherwise, an INVALID_ARGUMENT
     /// error is returned.
@@ -236,8 +235,8 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// At most 250 values are allowed per
     /// [Product][google.cloud.retail.v2.Product]. Empty values are not allowed.
-    /// Each value must be a UTF-8 encoded string with a length limit of 5 KiB.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// Each value must be a UTF-8 encoded string with a length limit of 5,000
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
     ///
@@ -256,8 +255,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. Product title.
     ///
-    /// This field must be a UTF-8 encoded string with a length limit of 128 bytes.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// This field must be a UTF-8 encoded string with a length limit of 128
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
     /// [title](https://support.google.com/merchants/answer/6324415). Schema.org
@@ -277,8 +276,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Product description.
     ///
-    /// This field must be a UTF-8 encoded string with a length limit of 5 KiB.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// This field must be a UTF-8 encoded string with a length limit of 5,000
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
     /// [description](https://support.google.com/merchants/answer/6324468).
@@ -356,8 +355,8 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// At most 250 values are allowed per
     /// [Product][google.cloud.retail.v2.Product]. This value must be a UTF-8
-    /// encoded string with a length limit of 1 KiB. Otherwise, an INVALID_ARGUMENT
-    /// error is returned.
+    /// encoded string with a length limit of 1,000 characters. Otherwise, an
+    /// INVALID_ARGUMENT error is returned.
     ///
     /// This tag can be used for filtering recommendation results by passing the
     /// tag as part of the
@@ -445,8 +444,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Canonical URL directly linking to the product detail page.
     ///
-    /// This field must be a UTF-8 encoded string with a length limit of 5 KiB.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// This field must be a UTF-8 encoded string with a length limit of 5,000
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
     /// [link](https://support.google.com/merchants/answer/6324416).

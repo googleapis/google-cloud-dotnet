@@ -15,7 +15,6 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
-using gcrv = Google.Cloud.Retail.V2;
 using sys = System;
 
 namespace Google.Cloud.Retail.V2
@@ -212,17 +211,5 @@ namespace Google.Cloud.Retail.V2
 
         /// <inheritdoc/>
         public static bool operator !=(OperationName a, OperationName b) => !(a == b);
-    }
-
-    public partial class ImportMetadata
-    {
-        /// <summary>
-        /// <see cref="gcrv::OperationName"/>-typed view over the <see cref="Name"/> resource name property.
-        /// </summary>
-        public gcrv::OperationName OperationName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gcrv::OperationName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
     }
 }

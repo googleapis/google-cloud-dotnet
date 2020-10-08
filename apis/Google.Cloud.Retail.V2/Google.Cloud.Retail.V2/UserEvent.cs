@@ -156,8 +156,8 @@ namespace Google.Cloud.Retail.V2 {
     /// identify a visitor on a single device. This unique identifier should not
     /// change if the visitor log in/out of the website.
     ///
-    /// The field must be a UTF-8 encoded string with a length limit of 128 bytes.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// The field must be a UTF-8 encoded string with a length limit of 128
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VisitorId {
@@ -314,8 +314,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// The user's search query.
     ///
-    /// The value must be a UTF-8 encoded string with a length limit of 5 KiB.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// The value must be a UTF-8 encoded string with a length limit of 5,000
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Required for `search` events. Other event types should not set this field.
     /// Otherwise, an INVALID_ARGUMENT error is returned.
@@ -372,7 +372,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Complete url (window.location.href) of the user's current page.
     /// When using the client side event reporting with JavaScript pixel and Google
-    /// Tag Manager, this value is filled in automatically. Maximum length 5KB.
+    /// Tag Manager, this value is filled in automatically. Maximum length 5,000
+    /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
@@ -961,7 +962,8 @@ namespace Google.Cloud.Retail.V2 {
     private global::Google.Cloud.Retail.V2.Product product_;
     /// <summary>
     /// Required. [Product][google.cloud.retail.v2.Product] information.
-    /// Only [Product][id] field must to be set.
+    /// Only [Product][id] field is used when ingesting an event, all other product
+    /// fields are ignored as we will look them up from the catalog.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Retail.V2.Product Product {
@@ -1201,7 +1203,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// The transaction ID with a length limit of 128 bytes.
+    /// The transaction ID with a length limit of 128 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
