@@ -105,12 +105,12 @@ namespace Google.Cloud.Retail.V2 {
     /// "green"]` when the key is "color".
     ///
     /// At most 400 values are allowed. Empty values are not allowed. Each value
-    /// must be a UTF-8 encoded string with a length limit of 256 bytes. Otherwise,
-    /// an INVALID_ARGUMENT error is returned.
+    /// must be a UTF-8 encoded string with a length limit of 256 characters.
+    /// Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Exactly one of [text][google.cloud.retail.v2.CustomAttribute.text] or
     /// [numbers][google.cloud.retail.v2.CustomAttribute.numbers] should be set.
-    /// Otherwise, a FAILED_PRECONDITION error is returned.
+    /// Otherwise, a INVALID_ARGUMENT error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Text {
@@ -131,7 +131,7 @@ namespace Google.Cloud.Retail.V2 {
     ///
     /// Exactly one of [text][google.cloud.retail.v2.CustomAttribute.text] or
     /// [numbers][google.cloud.retail.v2.CustomAttribute.numbers] should be set.
-    /// Otherwise, a FAILED_PRECONDITION error is returned.
+    /// Otherwise, a INVALID_ARGUMENT error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<double> Numbers {
@@ -316,8 +316,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. URI of the image.
     ///
-    /// This field must be a valid UTF-8 encoded URI with a length limit of 5 KiB.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// This field must be a valid UTF-8 encoded URI with a length limit of 5,000
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// Google Merchant Center property
     /// [image_link](https://support.google.com/merchants/answer/6324350).
@@ -899,8 +899,8 @@ namespace Google.Cloud.Retail.V2 {
     /// Highly recommended for logged-in users. Unique identifier for logged-in
     /// user, such as a user name.
     ///
-    /// The field must be a UTF-8 encoded string with a length limit of 128 bytes.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// The field must be a UTF-8 encoded string with a length limit of 128
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserId {
@@ -941,8 +941,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// User agent as included in the HTTP header.
     ///
-    /// The field must be a UTF-8 encoded string with a length limit of 1 KiB.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// The field must be a UTF-8 encoded string with a length limit of 1,000
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     ///
     /// This should not be set when using the client side event reporting with
     /// GTM or JavaScript tag in

@@ -26,33 +26,21 @@ namespace Google.Cloud.Retail.V2 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvcmV0YWlsL3YyL3B1cmdlX2NvbmZpZy5wcm90bxIW",
             "Z29vZ2xlLmNsb3VkLnJldGFpbC52MhocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxokZ29v",
-            "Z2xlL2Nsb3VkL3JldGFpbC92Mi9wcm9kdWN0LnByb3RvGidnb29nbGUvY2xv",
-            "dWQvcmV0YWlsL3YyL3VzZXJfZXZlbnQucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8iUwoNUHVyZ2VNZXRhZGF0YRIRCglvcGVyYXRp",
-            "b24YASABKAkSLwoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wIk8KFFB1cmdlUHJvZHVjdHNSZXF1ZXN0EhMKBnBhcmVu",
-            "dBgBIAEoCUID4EECEhMKBmZpbHRlchgCIAEoCUID4EECEg0KBWZvcmNlGAMg",
-            "ASgIImcKFVB1cmdlUHJvZHVjdHNSZXNwb25zZRIUCgxwdXJnZWRfY291bnQY",
-            "ASABKAMSOAoPcHJvZHVjdHNfc2FtcGxlGAIgAygLMh8uZ29vZ2xlLmNsb3Vk",
-            "LnJldGFpbC52Mi5Qcm9kdWN0IlEKFlB1cmdlVXNlckV2ZW50c1JlcXVlc3QS",
-            "EwoGcGFyZW50GAEgASgJQgPgQQISEwoGZmlsdGVyGAIgASgJQgPgQQISDQoF",
-            "Zm9yY2UYAyABKAgidQoXUHVyZ2VVc2VyRXZlbnRzUmVzcG9uc2USGwoTcHVy",
-            "Z2VkX2V2ZW50c19jb3VudBgBIAEoAxI9ChJ1c2VyX2V2ZW50c19zYW1wbGUY",
-            "AiADKAsyIS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJFdmVudELFAQoa",
-            "Y29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCEFB1cmdlQ29uZmlnUHJvdG9Q",
-            "AVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
-            "ZC9yZXRhaWwvdjI7cmV0YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJl",
-            "dGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNs",
-            "b3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
+            "cy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90byIPCg1Q",
+            "dXJnZU1ldGFkYXRhIkIKFlB1cmdlVXNlckV2ZW50c1JlcXVlc3QSEwoGcGFy",
+            "ZW50GAEgASgJQgPgQQISEwoGZmlsdGVyGAIgASgJQgPgQQIiNgoXUHVyZ2VV",
+            "c2VyRXZlbnRzUmVzcG9uc2USGwoTcHVyZ2VkX2V2ZW50c19jb3VudBgBIAEo",
+            "A0LFAQoaY29tLmdvb2dsZS5jbG91ZC5yZXRhaWwudjJCEFB1cmdlQ29uZmln",
+            "UHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9yZXRhaWwvdjI7cmV0YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNs",
+            "b3VkLlJldGFpbC5WMsoCFkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29n",
+            "bGU6OkNsb3VkOjpSZXRhaWw6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeMetadata), global::Google.Cloud.Retail.V2.PurgeMetadata.Parser, new[]{ "Operation", "CreateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeProductsRequest), global::Google.Cloud.Retail.V2.PurgeProductsRequest.Parser, new[]{ "Parent", "Filter", "Force" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeProductsResponse), global::Google.Cloud.Retail.V2.PurgeProductsResponse.Parser, new[]{ "PurgedCount", "ProductsSample" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeUserEventsRequest), global::Google.Cloud.Retail.V2.PurgeUserEventsRequest.Parser, new[]{ "Parent", "Filter", "Force" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeUserEventsResponse), global::Google.Cloud.Retail.V2.PurgeUserEventsResponse.Parser, new[]{ "PurgedEventsCount", "UserEventsSample" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeMetadata), global::Google.Cloud.Retail.V2.PurgeMetadata.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeUserEventsRequest), global::Google.Cloud.Retail.V2.PurgeUserEventsRequest.Parser, new[]{ "Parent", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.PurgeUserEventsResponse), global::Google.Cloud.Retail.V2.PurgeUserEventsResponse.Parser, new[]{ "PurgedEventsCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -92,42 +80,12 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PurgeMetadata(PurgeMetadata other) : this() {
-      operation_ = other.operation_;
-      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PurgeMetadata Clone() {
       return new PurgeMetadata(this);
-    }
-
-    /// <summary>Field number for the "operation" field.</summary>
-    public const int OperationFieldNumber = 1;
-    private string operation_ = "";
-    /// <summary>
-    /// The ID of the request / operation.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Operation {
-      get { return operation_; }
-      set {
-        operation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 2;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
-    /// <summary>
-    /// Operation create time.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
-      get { return createTime_; }
-      set {
-        createTime_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -143,16 +101,12 @@ namespace Google.Cloud.Retail.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Operation != other.Operation) return false;
-      if (!object.Equals(CreateTime, other.CreateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Operation.Length != 0) hash ^= Operation.GetHashCode();
-      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,14 +123,6 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Operation.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Operation);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(CreateTime);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,14 +132,6 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Operation.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Operation);
-      }
-      if (createTime_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(CreateTime);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -203,12 +141,6 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Operation.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Operation);
-      }
-      if (createTime_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -220,15 +152,6 @@ namespace Google.Cloud.Retail.V2 {
       if (other == null) {
         return;
       }
-      if (other.Operation.Length != 0) {
-        Operation = other.Operation;
-      }
-      if (other.createTime_ != null) {
-        if (createTime_ == null) {
-          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        CreateTime.MergeFrom(other.CreateTime);
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -243,17 +166,6 @@ namespace Google.Cloud.Retail.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Operation = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
         }
       }
     #endif
@@ -268,488 +180,6 @@ namespace Google.Cloud.Retail.V2 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Operation = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (createTime_ == null) {
-              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreateTime);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Request message for PurgeProducts method.
-  /// </summary>
-  public sealed partial class PurgeProductsRequest : pb::IMessage<PurgeProductsRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PurgeProductsRequest> _parser = new pb::MessageParser<PurgeProductsRequest>(() => new PurgeProductsRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PurgeProductsRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PurgeProductsRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PurgeProductsRequest(PurgeProductsRequest other) : this() {
-      parent_ = other.parent_;
-      filter_ = other.filter_;
-      force_ = other.force_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PurgeProductsRequest Clone() {
-      return new PurgeProductsRequest(this);
-    }
-
-    /// <summary>Field number for the "parent" field.</summary>
-    public const int ParentFieldNumber = 1;
-    private string parent_ = "";
-    /// <summary>
-    /// Required. The resource name of the catalog under which the products are
-    /// created. The format is
-    /// "projects/${projectId}/locations/global/catalogs/${catalogId}"
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Parent {
-      get { return parent_; }
-      set {
-        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "filter" field.</summary>
-    public const int FilterFieldNumber = 2;
-    private string filter_ = "";
-    /// <summary>
-    /// Required. Filter matching the products to be purged. Only supported value
-    /// at the moment is "*" (all items).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Filter {
-      get { return filter_; }
-      set {
-        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "force" field.</summary>
-    public const int ForceFieldNumber = 3;
-    private bool force_;
-    /// <summary>
-    /// The default value is false. Override this flag to true to
-    /// actually perform the purge. If the field is not set to true, a sampling of
-    /// products to be deleted will be returned.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Force {
-      get { return force_; }
-      set {
-        force_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PurgeProductsRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PurgeProductsRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Parent != other.Parent) return false;
-      if (Filter != other.Filter) return false;
-      if (Force != other.Force) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
-      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
-      if (Force != false) hash ^= Force.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Parent.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Parent);
-      }
-      if (Filter.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Filter);
-      }
-      if (Force != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(Force);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Parent.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Parent);
-      }
-      if (Filter.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Filter);
-      }
-      if (Force != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(Force);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Parent.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
-      }
-      if (Filter.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
-      }
-      if (Force != false) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PurgeProductsRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Parent.Length != 0) {
-        Parent = other.Parent;
-      }
-      if (other.Filter.Length != 0) {
-        Filter = other.Filter;
-      }
-      if (other.Force != false) {
-        Force = other.Force;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Parent = input.ReadString();
-            break;
-          }
-          case 18: {
-            Filter = input.ReadString();
-            break;
-          }
-          case 24: {
-            Force = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Parent = input.ReadString();
-            break;
-          }
-          case 18: {
-            Filter = input.ReadString();
-            break;
-          }
-          case 24: {
-            Force = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Response of the PurgeProductsRequest. If the long running operation is
-  /// successfully done, then this message is returned by the
-  /// google.longrunning.Operations.response field.
-  /// </summary>
-  public sealed partial class PurgeProductsResponse : pb::IMessage<PurgeProductsResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<PurgeProductsResponse> _parser = new pb::MessageParser<PurgeProductsResponse>(() => new PurgeProductsResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PurgeProductsResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PurgeProductsResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PurgeProductsResponse(PurgeProductsResponse other) : this() {
-      purgedCount_ = other.purgedCount_;
-      productsSample_ = other.productsSample_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PurgeProductsResponse Clone() {
-      return new PurgeProductsResponse(this);
-    }
-
-    /// <summary>Field number for the "purged_count" field.</summary>
-    public const int PurgedCountFieldNumber = 1;
-    private long purgedCount_;
-    /// <summary>
-    /// The total count of products purged as a result of the operation.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long PurgedCount {
-      get { return purgedCount_; }
-      set {
-        purgedCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "products_sample" field.</summary>
-    public const int ProductsSampleFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.Product> _repeated_productsSample_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.Product.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> productsSample_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product>();
-    /// <summary>
-    /// A random sampling of products deleted (or will be deleted) depending
-    /// on the `force` property in the request. Max of 500 items will be returned.
-    /// Currently, this is only populated if force=false.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> ProductsSample {
-      get { return productsSample_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PurgeProductsResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PurgeProductsResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (PurgedCount != other.PurgedCount) return false;
-      if(!productsSample_.Equals(other.productsSample_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (PurgedCount != 0L) hash ^= PurgedCount.GetHashCode();
-      hash ^= productsSample_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (PurgedCount != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(PurgedCount);
-      }
-      productsSample_.WriteTo(output, _repeated_productsSample_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PurgedCount != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(PurgedCount);
-      }
-      productsSample_.WriteTo(ref output, _repeated_productsSample_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (PurgedCount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(PurgedCount);
-      }
-      size += productsSample_.CalculateSize(_repeated_productsSample_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PurgeProductsResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.PurgedCount != 0L) {
-        PurgedCount = other.PurgedCount;
-      }
-      productsSample_.Add(other.productsSample_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            PurgedCount = input.ReadInt64();
-            break;
-          }
-          case 18: {
-            productsSample_.AddEntriesFrom(input, _repeated_productsSample_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            PurgedCount = input.ReadInt64();
-            break;
-          }
-          case 18: {
-            productsSample_.AddEntriesFrom(ref input, _repeated_productsSample_codec);
-            break;
-          }
         }
       }
     }
@@ -772,7 +202,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -791,7 +221,6 @@ namespace Google.Cloud.Retail.V2 {
     public PurgeUserEventsRequest(PurgeUserEventsRequest other) : this() {
       parent_ = other.parent_;
       filter_ = other.filter_;
-      force_ = other.force_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -804,10 +233,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the event_store under which the events are
+    /// Required. The resource name of the catalog under which the events are
     /// created. The format is
-    ///
-    /// "projects/${projectId}/locations/global/catalogs/${catalogId}/eventStores/${eventStoreId}"
+    /// "projects/${projectId}/locations/global/catalogs/${catalogId}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -821,9 +249,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    /// Required. The filter string to specify the events to be deleted. Empty
-    /// string filter is not allowed. The eligible fields
-    /// for filtering are:
+    /// Required. The filter string to specify the events to be deleted with a
+    /// length limit of 5,000 characters. Empty string filter is not allowed. The
+    /// eligible fields for filtering are:
     ///
     /// * `eventType`: UserEvent.eventType field of type string.
     /// * `eventTime`: in ISO 8601 "zulu" format.
@@ -852,22 +280,6 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
-    /// <summary>Field number for the "force" field.</summary>
-    public const int ForceFieldNumber = 3;
-    private bool force_;
-    /// <summary>
-    /// The default value is false. Override this flag to true to
-    /// actually perform the purge. If the field is not set to true, a sampling of
-    /// events to be deleted will be returned.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Force {
-      get { return force_; }
-      set {
-        force_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PurgeUserEventsRequest);
@@ -883,7 +295,6 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (Parent != other.Parent) return false;
       if (Filter != other.Filter) return false;
-      if (Force != other.Force) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -892,7 +303,6 @@ namespace Google.Cloud.Retail.V2 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
-      if (Force != false) hash ^= Force.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -917,10 +327,6 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(18);
         output.WriteString(Filter);
       }
-      if (Force != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(Force);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -938,10 +344,6 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(18);
         output.WriteString(Filter);
       }
-      if (Force != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(Force);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -956,9 +358,6 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (Filter.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
-      }
-      if (Force != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -976,9 +375,6 @@ namespace Google.Cloud.Retail.V2 {
       }
       if (other.Filter.Length != 0) {
         Filter = other.Filter;
-      }
-      if (other.Force != false) {
-        Force = other.Force;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1002,10 +398,6 @@ namespace Google.Cloud.Retail.V2 {
             Filter = input.ReadString();
             break;
           }
-          case 24: {
-            Force = input.ReadBool();
-            break;
-          }
         }
       }
     #endif
@@ -1026,10 +418,6 @@ namespace Google.Cloud.Retail.V2 {
           }
           case 18: {
             Filter = input.ReadString();
-            break;
-          }
-          case 24: {
-            Force = input.ReadBool();
             break;
           }
         }
@@ -1056,7 +444,7 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Retail.V2.PurgeConfigReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1074,7 +462,6 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PurgeUserEventsResponse(PurgeUserEventsResponse other) : this() {
       purgedEventsCount_ = other.purgedEventsCount_;
-      userEventsSample_ = other.userEventsSample_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1097,20 +484,6 @@ namespace Google.Cloud.Retail.V2 {
       }
     }
 
-    /// <summary>Field number for the "user_events_sample" field.</summary>
-    public const int UserEventsSampleFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Retail.V2.UserEvent> _repeated_userEventsSample_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Retail.V2.UserEvent.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.UserEvent> userEventsSample_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.UserEvent>();
-    /// <summary>
-    /// A sampling of events deleted (or will be deleted) depending on the `force`
-    /// property in the request. Max of 500 items will be returned.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Retail.V2.UserEvent> UserEventsSample {
-      get { return userEventsSample_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PurgeUserEventsResponse);
@@ -1125,7 +498,6 @@ namespace Google.Cloud.Retail.V2 {
         return true;
       }
       if (PurgedEventsCount != other.PurgedEventsCount) return false;
-      if(!userEventsSample_.Equals(other.userEventsSample_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1133,7 +505,6 @@ namespace Google.Cloud.Retail.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (PurgedEventsCount != 0L) hash ^= PurgedEventsCount.GetHashCode();
-      hash ^= userEventsSample_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1154,7 +525,6 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(8);
         output.WriteInt64(PurgedEventsCount);
       }
-      userEventsSample_.WriteTo(output, _repeated_userEventsSample_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1168,7 +538,6 @@ namespace Google.Cloud.Retail.V2 {
         output.WriteRawTag(8);
         output.WriteInt64(PurgedEventsCount);
       }
-      userEventsSample_.WriteTo(ref output, _repeated_userEventsSample_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1181,7 +550,6 @@ namespace Google.Cloud.Retail.V2 {
       if (PurgedEventsCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(PurgedEventsCount);
       }
-      size += userEventsSample_.CalculateSize(_repeated_userEventsSample_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1196,7 +564,6 @@ namespace Google.Cloud.Retail.V2 {
       if (other.PurgedEventsCount != 0L) {
         PurgedEventsCount = other.PurgedEventsCount;
       }
-      userEventsSample_.Add(other.userEventsSample_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1215,10 +582,6 @@ namespace Google.Cloud.Retail.V2 {
             PurgedEventsCount = input.ReadInt64();
             break;
           }
-          case 18: {
-            userEventsSample_.AddEntriesFrom(input, _repeated_userEventsSample_codec);
-            break;
-          }
         }
       }
     #endif
@@ -1235,10 +598,6 @@ namespace Google.Cloud.Retail.V2 {
             break;
           case 8: {
             PurgedEventsCount = input.ReadInt64();
-            break;
-          }
-          case 18: {
-            userEventsSample_.AddEntriesFrom(ref input, _repeated_userEventsSample_codec);
             break;
           }
         }

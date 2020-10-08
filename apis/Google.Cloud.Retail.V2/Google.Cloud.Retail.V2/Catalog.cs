@@ -364,8 +364,8 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. Immutable. The catalog display name.
     ///
-    /// This field must be a UTF-8 encoded string with a length limit of 128 bytes.
-    /// Otherwise, an INVALID_ARGUMENT error is returned.
+    /// This field must be a UTF-8 encoded string with a length limit of 128
+    /// characters. Otherwise, an INVALID_ARGUMENT error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DisplayName {

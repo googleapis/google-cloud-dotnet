@@ -37,9 +37,8 @@ namespace Google.Cloud.Retail.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateProductRequest> __Marshaller_google_cloud_retail_v2_UpdateProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.UpdateProductRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.DeleteProductRequest> __Marshaller_google_cloud_retail_v2_DeleteProductRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.DeleteProductRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.PurgeProductsRequest> __Marshaller_google_cloud_retail_v2_PurgeProductsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.PurgeProductsRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ImportProductsRequest> __Marshaller_google_cloud_retail_v2_ImportProductsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Retail.V2.ImportProductsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.CreateProductRequest, global::Google.Cloud.Retail.V2.Product> __Method_CreateProduct = new grpc::Method<global::Google.Cloud.Retail.V2.CreateProductRequest, global::Google.Cloud.Retail.V2.Product>(
         grpc::MethodType.Unary,
@@ -68,13 +67,6 @@ namespace Google.Cloud.Retail.V2 {
         "DeleteProduct",
         __Marshaller_google_cloud_retail_v2_DeleteProductRequest,
         __Marshaller_google_protobuf_Empty);
-
-    static readonly grpc::Method<global::Google.Cloud.Retail.V2.PurgeProductsRequest, global::Google.LongRunning.Operation> __Method_PurgeProducts = new grpc::Method<global::Google.Cloud.Retail.V2.PurgeProductsRequest, global::Google.LongRunning.Operation>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "PurgeProducts",
-        __Marshaller_google_cloud_retail_v2_PurgeProductsRequest,
-        __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.ImportProductsRequest, global::Google.LongRunning.Operation> __Method_ImportProducts = new grpc::Method<global::Google.Cloud.Retail.V2.ImportProductsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
@@ -134,24 +126,6 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProduct(global::Google.Cloud.Retail.V2.DeleteProductRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Permanently deletes all [Product][google.cloud.retail.v2.Product]s under a
-      /// branch.
-      ///
-      /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
-      /// operation could take hours to complete. To get a sample of
-      /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
-      /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
-      /// to false.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PurgeProducts(global::Google.Cloud.Retail.V2.PurgeProductsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -379,78 +353,6 @@ namespace Google.Cloud.Retail.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteProduct, null, options, request);
       }
       /// <summary>
-      /// Permanently deletes all [Product][google.cloud.retail.v2.Product]s under a
-      /// branch.
-      ///
-      /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
-      /// operation could take hours to complete. To get a sample of
-      /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
-      /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
-      /// to false.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation PurgeProducts(global::Google.Cloud.Retail.V2.PurgeProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return PurgeProducts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Permanently deletes all [Product][google.cloud.retail.v2.Product]s under a
-      /// branch.
-      ///
-      /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
-      /// operation could take hours to complete. To get a sample of
-      /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
-      /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
-      /// to false.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation PurgeProducts(global::Google.Cloud.Retail.V2.PurgeProductsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_PurgeProducts, null, options, request);
-      }
-      /// <summary>
-      /// Permanently deletes all [Product][google.cloud.retail.v2.Product]s under a
-      /// branch.
-      ///
-      /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
-      /// operation could take hours to complete. To get a sample of
-      /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
-      /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
-      /// to false.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeProductsAsync(global::Google.Cloud.Retail.V2.PurgeProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return PurgeProductsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Permanently deletes all [Product][google.cloud.retail.v2.Product]s under a
-      /// branch.
-      ///
-      /// Depending on the number of [Product][google.cloud.retail.v2.Product]s, this
-      /// operation could take hours to complete. To get a sample of
-      /// [Product][google.cloud.retail.v2.Product]s that would be deleted, set
-      /// [PurgeProductsRequest.force][google.cloud.retail.v2.PurgeProductsRequest.force]
-      /// to false.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeProductsAsync(global::Google.Cloud.Retail.V2.PurgeProductsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_PurgeProducts, null, options, request);
-      }
-      /// <summary>
       /// Bulk import of multiple [Product][google.cloud.retail.v2.Product]s.
       ///
       /// Request processing may be synchronous. No partial updating is supported.
@@ -534,7 +436,6 @@ namespace Google.Cloud.Retail.V2 {
           .AddMethod(__Method_GetProduct, serviceImpl.GetProduct)
           .AddMethod(__Method_UpdateProduct, serviceImpl.UpdateProduct)
           .AddMethod(__Method_DeleteProduct, serviceImpl.DeleteProduct)
-          .AddMethod(__Method_PurgeProducts, serviceImpl.PurgeProducts)
           .AddMethod(__Method_ImportProducts, serviceImpl.ImportProducts).Build();
     }
 
@@ -548,7 +449,6 @@ namespace Google.Cloud.Retail.V2 {
       serviceBinder.AddMethod(__Method_GetProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.GetProductRequest, global::Google.Cloud.Retail.V2.Product>(serviceImpl.GetProduct));
       serviceBinder.AddMethod(__Method_UpdateProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.UpdateProductRequest, global::Google.Cloud.Retail.V2.Product>(serviceImpl.UpdateProduct));
       serviceBinder.AddMethod(__Method_DeleteProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.DeleteProductRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteProduct));
-      serviceBinder.AddMethod(__Method_PurgeProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.PurgeProductsRequest, global::Google.LongRunning.Operation>(serviceImpl.PurgeProducts));
       serviceBinder.AddMethod(__Method_ImportProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.ImportProductsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportProducts));
     }
 

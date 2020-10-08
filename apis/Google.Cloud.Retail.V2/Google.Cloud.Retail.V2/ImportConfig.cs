@@ -35,52 +35,52 @@ namespace Google.Cloud.Retail.V2 {
             "KAlCA+BBAhITCgtkYXRhX3NjaGVtYRgCIAEoCSKCAQoOQmlnUXVlcnlTb3Vy",
             "Y2USEgoKcHJvamVjdF9pZBgFIAEoCRIXCgpkYXRhc2V0X2lkGAEgASgJQgPg",
             "QQISFQoIdGFibGVfaWQYAiABKAlCA+BBAhIXCg9nY3Nfc3RhZ2luZ19kaXIY",
-            "AyABKAkSEwoLZGF0YV9zY2hlbWEYBCABKAkiSAoTUHJvZHVjdElubGluZVNv",
-            "dXJjZRIxCghwcm9kdWN0cxgBIAMoCzIfLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
-            "djIuUHJvZHVjdCJPChVVc2VyRXZlbnRJbmxpbmVTb3VyY2USNgoLdXNlcl9l",
-            "dmVudHMYASADKAsyIS5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJFdmVu",
-            "dCI5ChJJbXBvcnRFcnJvcnNDb25maWcSFAoKZ2NzX3ByZWZpeBgBIAEoCUgA",
-            "Qg0KC2Rlc3RpbmF0aW9uIucBChVJbXBvcnRQcm9kdWN0c1JlcXVlc3QSEwoG",
-            "cGFyZW50GAEgASgJQgPgQQISRQoMaW5wdXRfY29uZmlnGAIgASgLMiouZ29v",
-            "Z2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0SW5wdXRDb25maWdCA+BBAhJB",
-            "Cg1lcnJvcnNfY29uZmlnGAMgASgLMiouZ29vZ2xlLmNsb3VkLnJldGFpbC52",
-            "Mi5JbXBvcnRFcnJvcnNDb25maWcSLwoLdXBkYXRlX21hc2sYBCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrIroBChdJbXBvcnRVc2VyRXZlbnRz",
-            "UmVxdWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJHCgxpbnB1dF9jb25maWcY",
-            "AiABKAsyLC5nb29nbGUuY2xvdWQucmV0YWlsLnYyLlVzZXJFdmVudElucHV0",
-            "Q29uZmlnQgPgQQISQQoNZXJyb3JzX2NvbmZpZxgDIAEoCzIqLmdvb2dsZS5j",
-            "bG91ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29uZmlnIukBChJQcm9kdWN0",
-            "SW5wdXRDb25maWcSTAoVcHJvZHVjdF9pbmxpbmVfc291cmNlGAEgASgLMisu",
-            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Qcm9kdWN0SW5saW5lU291cmNlSAAS",
-            "NwoKZ2NzX3NvdXJjZRgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIu",
-            "R2NzU291cmNlSAASQgoQYmlnX3F1ZXJ5X3NvdXJjZRgDIAEoCzImLmdvb2ds",
-            "ZS5jbG91ZC5yZXRhaWwudjIuQmlnUXVlcnlTb3VyY2VIAEIICgZzb3VyY2Ui",
-            "/wEKFFVzZXJFdmVudElucHV0Q29uZmlnElYKGHVzZXJfZXZlbnRfaW5saW5l",
-            "X3NvdXJjZRgBIAEoCzItLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuVXNlckV2",
-            "ZW50SW5saW5lU291cmNlQgPgQQJIABI8CgpnY3Nfc291cmNlGAIgASgLMiEu",
-            "Z29vZ2xlLmNsb3VkLnJldGFpbC52Mi5HY3NTb3VyY2VCA+BBAkgAEkcKEGJp",
-            "Z19xdWVyeV9zb3VyY2UYAyABKAsyJi5nb29nbGUuY2xvdWQucmV0YWlsLnYy",
-            "LkJpZ1F1ZXJ5U291cmNlQgPgQQJIAEIICgZzb3VyY2Ui7AEKDkltcG9ydE1l",
-            "dGFkYXRhEgwKBG5hbWUYASABKAkSLwoLY3JlYXRlX3RpbWUYAiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAMgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIVCg1zdWNjZXNzX2NvdW50",
-            "GAQgASgDEhUKDWZhaWx1cmVfY291bnQYBSABKAM6POpBOQofcmV0YWlsLmdv",
-            "b2dsZWFwaXMuY29tL09wZXJhdGlvbhIWb3BlcmF0aW9ucy97b3BlcmF0aW9u",
-            "fSKGAQoWSW1wb3J0UHJvZHVjdHNSZXNwb25zZRIpCg1lcnJvcl9zYW1wbGVz",
+            "AyABKAkSEwoLZGF0YV9zY2hlbWEYBCABKAkiTQoTUHJvZHVjdElubGluZVNv",
+            "dXJjZRI2Cghwcm9kdWN0cxgBIAMoCzIfLmdvb2dsZS5jbG91ZC5yZXRhaWwu",
+            "djIuUHJvZHVjdEID4EECIlQKFVVzZXJFdmVudElubGluZVNvdXJjZRI7Cgt1",
+            "c2VyX2V2ZW50cxgBIAMoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuVXNl",
+            "ckV2ZW50QgPgQQIiOQoSSW1wb3J0RXJyb3JzQ29uZmlnEhQKCmdjc19wcmVm",
+            "aXgYASABKAlIAEINCgtkZXN0aW5hdGlvbiLnAQoVSW1wb3J0UHJvZHVjdHNS",
+            "ZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEkUKDGlucHV0X2NvbmZpZxgC",
+            "IAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdElucHV0Q29u",
+            "ZmlnQgPgQQISQQoNZXJyb3JzX2NvbmZpZxgDIAEoCzIqLmdvb2dsZS5jbG91",
+            "ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29uZmlnEi8KC3VwZGF0ZV9tYXNr",
+            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayK6AQoXSW1wb3J0",
+            "VXNlckV2ZW50c1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISRwoMaW5w",
+            "dXRfY29uZmlnGAIgASgLMiwuZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5Vc2Vy",
+            "RXZlbnRJbnB1dENvbmZpZ0ID4EECEkEKDWVycm9yc19jb25maWcYAyABKAsy",
+            "Ki5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydEVycm9yc0NvbmZpZyLp",
+            "AQoSUHJvZHVjdElucHV0Q29uZmlnEkwKFXByb2R1Y3RfaW5saW5lX3NvdXJj",
+            "ZRgBIAEoCzIrLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuUHJvZHVjdElubGlu",
+            "ZVNvdXJjZUgAEjcKCmdjc19zb3VyY2UYAiABKAsyIS5nb29nbGUuY2xvdWQu",
+            "cmV0YWlsLnYyLkdjc1NvdXJjZUgAEkIKEGJpZ19xdWVyeV9zb3VyY2UYAyAB",
+            "KAsyJi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkJpZ1F1ZXJ5U291cmNlSABC",
+            "CAoGc291cmNlIv8BChRVc2VyRXZlbnRJbnB1dENvbmZpZxJWChh1c2VyX2V2",
+            "ZW50X2lubGluZV9zb3VyY2UYASABKAsyLS5nb29nbGUuY2xvdWQucmV0YWls",
+            "LnYyLlVzZXJFdmVudElubGluZVNvdXJjZUID4EECSAASPAoKZ2NzX3NvdXJj",
+            "ZRgCIAEoCzIhLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuR2NzU291cmNlQgPg",
+            "QQJIABJHChBiaWdfcXVlcnlfc291cmNlGAMgASgLMiYuZ29vZ2xlLmNsb3Vk",
+            "LnJldGFpbC52Mi5CaWdRdWVyeVNvdXJjZUID4EECSABCCAoGc291cmNlIt4B",
+            "Cg5JbXBvcnRNZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLdXBkYXRlX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDXN1Y2Nlc3NfY291bnQYAyAB",
+            "KAMSFQoNZmFpbHVyZV9jb3VudBgEIAEoAzo86kE5Ch9yZXRhaWwuZ29vZ2xl",
+            "YXBpcy5jb20vT3BlcmF0aW9uEhZvcGVyYXRpb25zL3tvcGVyYXRpb259IoYB",
+            "ChZJbXBvcnRQcm9kdWN0c1Jlc3BvbnNlEikKDWVycm9yX3NhbXBsZXMYASAD",
+            "KAsyEi5nb29nbGUucnBjLlN0YXR1cxJBCg1lcnJvcnNfY29uZmlnGAIgASgL",
+            "MiouZ29vZ2xlLmNsb3VkLnJldGFpbC52Mi5JbXBvcnRFcnJvcnNDb25maWci",
+            "0AEKGEltcG9ydFVzZXJFdmVudHNSZXNwb25zZRIpCg1lcnJvcl9zYW1wbGVz",
             "GAEgAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXMSQQoNZXJyb3JzX2NvbmZpZxgC",
             "IAEoCzIqLmdvb2dsZS5jbG91ZC5yZXRhaWwudjIuSW1wb3J0RXJyb3JzQ29u",
-            "ZmlnItABChhJbXBvcnRVc2VyRXZlbnRzUmVzcG9uc2USKQoNZXJyb3Jfc2Ft",
-            "cGxlcxgBIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzEkEKDWVycm9yc19jb25m",
-            "aWcYAiABKAsyKi5nb29nbGUuY2xvdWQucmV0YWlsLnYyLkltcG9ydEVycm9y",
-            "c0NvbmZpZxJGCg5pbXBvcnRfc3VtbWFyeRgDIAEoCzIuLmdvb2dsZS5jbG91",
-            "ZC5yZXRhaWwudjIuVXNlckV2ZW50SW1wb3J0U3VtbWFyeSJUChZVc2VyRXZl",
-            "bnRJbXBvcnRTdW1tYXJ5EhsKE2pvaW5lZF9ldmVudHNfY291bnQYASABKAMS",
-            "HQoVdW5qb2luZWRfZXZlbnRzX2NvdW50GAIgASgDQsYBChpjb20uZ29vZ2xl",
-            "LmNsb3VkLnJldGFpbC52MkIRSW1wb3J0Q29uZmlnUHJvdG9QAVo8Z29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9yZXRhaWwv",
-            "djI7cmV0YWlsogIGUkVUQUlMqgIWR29vZ2xlLkNsb3VkLlJldGFpbC5WMsoC",
-            "Fkdvb2dsZVxDbG91ZFxSZXRhaWxcVjLqAhlHb29nbGU6OkNsb3VkOjpSZXRh",
-            "aWw6OlYyYgZwcm90bzM="));
+            "ZmlnEkYKDmltcG9ydF9zdW1tYXJ5GAMgASgLMi4uZ29vZ2xlLmNsb3VkLnJl",
+            "dGFpbC52Mi5Vc2VyRXZlbnRJbXBvcnRTdW1tYXJ5IlQKFlVzZXJFdmVudElt",
+            "cG9ydFN1bW1hcnkSGwoTam9pbmVkX2V2ZW50c19jb3VudBgBIAEoAxIdChV1",
+            "bmpvaW5lZF9ldmVudHNfY291bnQYAiABKANCxgEKGmNvbS5nb29nbGUuY2xv",
+            "dWQucmV0YWlsLnYyQhFJbXBvcnRDb25maWdQcm90b1ABWjxnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3JldGFpbC92Mjty",
+            "ZXRhaWyiAgZSRVRBSUyqAhZHb29nbGUuQ2xvdWQuUmV0YWlsLlYyygIWR29v",
+            "Z2xlXENsb3VkXFJldGFpbFxWMuoCGUdvb2dsZTo6Q2xvdWQ6OlJldGFpbDo6",
+            "VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Retail.V2.ProductReflection.Descriptor, global::Google.Cloud.Retail.V2.UserEventReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,7 +93,7 @@ namespace Google.Cloud.Retail.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportUserEventsRequest), global::Google.Cloud.Retail.V2.ImportUserEventsRequest.Parser, new[]{ "Parent", "InputConfig", "ErrorsConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ProductInputConfig), global::Google.Cloud.Retail.V2.ProductInputConfig.Parser, new[]{ "ProductInlineSource", "GcsSource", "BigQuerySource" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEventInputConfig), global::Google.Cloud.Retail.V2.UserEventInputConfig.Parser, new[]{ "UserEventInlineSource", "GcsSource", "BigQuerySource" }, new[]{ "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportMetadata), global::Google.Cloud.Retail.V2.ImportMetadata.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "SuccessCount", "FailureCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportMetadata), global::Google.Cloud.Retail.V2.ImportMetadata.Parser, new[]{ "CreateTime", "UpdateTime", "SuccessCount", "FailureCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportProductsResponse), global::Google.Cloud.Retail.V2.ImportProductsResponse.Parser, new[]{ "ErrorSamples", "ErrorsConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.ImportUserEventsResponse), global::Google.Cloud.Retail.V2.ImportUserEventsResponse.Parser, new[]{ "ErrorSamples", "ErrorsConfig", "ImportSummary" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Retail.V2.UserEventImportSummary), global::Google.Cloud.Retail.V2.UserEventImportSummary.Parser, new[]{ "JoinedEventsCount", "UnjoinedEventsCount" }, null, null, null, null)
@@ -383,8 +383,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int ProjectIdFieldNumber = 5;
     private string projectId_ = "";
     /// <summary>
-    /// The project id (can be project # or id) that the BigQuery source is in. If
-    /// not specified, inherits the project id from the parent request.
+    /// The project id (can be project # or id) that the BigQuery source is in with
+    /// a length limit of 128 characters. If not specified, inherits the project
+    /// id from the parent request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -398,7 +399,8 @@ namespace Google.Cloud.Retail.V2 {
     public const int DatasetIdFieldNumber = 1;
     private string datasetId_ = "";
     /// <summary>
-    /// Required. The BigQuery data set to copy the data from.
+    /// Required. The BigQuery data set to copy the data from with a length limit
+    /// of 1,024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DatasetId {
@@ -412,7 +414,8 @@ namespace Google.Cloud.Retail.V2 {
     public const int TableIdFieldNumber = 2;
     private string tableId_ = "";
     /// <summary>
-    /// Required. The BigQuery table to copy the data from.
+    /// Required. The BigQuery table to copy the data from with a length limit of
+    /// 1,024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TableId {
@@ -426,9 +429,9 @@ namespace Google.Cloud.Retail.V2 {
     public const int GcsStagingDirFieldNumber = 3;
     private string gcsStagingDir_ = "";
     /// <summary>
-    /// Intermediate Cloud Storage directory used for the import. Can be specified
-    /// if one wants to have the BigQuery export to a specific Cloud Storage
-    /// directory.
+    /// Intermediate Cloud Storage directory used for the import with a length
+    /// limit of 2,000 characters. Can be specified if one wants to have the
+    /// BigQuery export to a specific Cloud Storage directory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GcsStagingDir {
@@ -736,7 +739,8 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Retail.V2.Product.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> products_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product>();
     /// <summary>
-    /// A list of products to update/create. Recommended max of 10k items.
+    /// Required. A list of products to update/create. Recommended max of 10k
+    /// items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Retail.V2.Product> Products {
@@ -903,7 +907,7 @@ namespace Google.Cloud.Retail.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Retail.V2.UserEvent.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Retail.V2.UserEvent> userEvents_ = new pbc::RepeatedField<global::Google.Cloud.Retail.V2.UserEvent>();
     /// <summary>
-    /// A list of user events to import. Recommended max of 10k items.
+    /// Required. A list of user events to import. Recommended max of 10k items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Retail.V2.UserEvent> UserEvents {
@@ -1634,7 +1638,8 @@ namespace Google.Cloud.Retail.V2 {
     public const int ErrorsConfigFieldNumber = 3;
     private global::Google.Cloud.Retail.V2.ImportErrorsConfig errorsConfig_;
     /// <summary>
-    /// The desired location of errors incurred during the Import.
+    /// The desired location of errors incurred during the Import. Cannot be set
+    /// for inline user event imports.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Retail.V2.ImportErrorsConfig ErrorsConfig {
@@ -2524,7 +2529,6 @@ namespace Google.Cloud.Retail.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImportMetadata(ImportMetadata other) : this() {
-      name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       successCount_ = other.successCount_;
@@ -2537,22 +2541,8 @@ namespace Google.Cloud.Retail.V2 {
       return new ImportMetadata(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Name of the operation.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "create_time" field.</summary>
-    public const int CreateTimeFieldNumber = 2;
+    public const int CreateTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
     /// Operation create time.
@@ -2566,7 +2556,7 @@ namespace Google.Cloud.Retail.V2 {
     }
 
     /// <summary>Field number for the "update_time" field.</summary>
-    public const int UpdateTimeFieldNumber = 3;
+    public const int UpdateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// Operation last update time. If the operation is done, this is also the
@@ -2581,7 +2571,7 @@ namespace Google.Cloud.Retail.V2 {
     }
 
     /// <summary>Field number for the "success_count" field.</summary>
-    public const int SuccessCountFieldNumber = 4;
+    public const int SuccessCountFieldNumber = 3;
     private long successCount_;
     /// <summary>
     /// Count of entries that were processed successfully.
@@ -2595,7 +2585,7 @@ namespace Google.Cloud.Retail.V2 {
     }
 
     /// <summary>Field number for the "failure_count" field.</summary>
-    public const int FailureCountFieldNumber = 5;
+    public const int FailureCountFieldNumber = 4;
     private long failureCount_;
     /// <summary>
     /// Count of entries that encountered errors while processing.
@@ -2621,7 +2611,6 @@ namespace Google.Cloud.Retail.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (SuccessCount != other.SuccessCount) return false;
@@ -2632,7 +2621,6 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (SuccessCount != 0L) hash ^= SuccessCount.GetHashCode();
@@ -2653,24 +2641,20 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
       if (createTime_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(CreateTime);
       }
       if (updateTime_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(UpdateTime);
       }
       if (SuccessCount != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt64(SuccessCount);
       }
       if (FailureCount != 0L) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteInt64(FailureCount);
       }
       if (_unknownFields != null) {
@@ -2682,24 +2666,20 @@ namespace Google.Cloud.Retail.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
       if (createTime_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(CreateTime);
       }
       if (updateTime_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(UpdateTime);
       }
       if (SuccessCount != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt64(SuccessCount);
       }
       if (FailureCount != 0L) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteInt64(FailureCount);
       }
       if (_unknownFields != null) {
@@ -2711,9 +2691,6 @@ namespace Google.Cloud.Retail.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
@@ -2736,9 +2713,6 @@ namespace Google.Cloud.Retail.V2 {
     public void MergeFrom(ImportMetadata other) {
       if (other == null) {
         return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -2773,28 +2747,24 @@ namespace Google.Cloud.Retail.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
             break;
           }
-          case 26: {
+          case 18: {
             if (updateTime_ == null) {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
             break;
           }
-          case 32: {
+          case 24: {
             SuccessCount = input.ReadInt64();
             break;
           }
-          case 40: {
+          case 32: {
             FailureCount = input.ReadInt64();
             break;
           }
@@ -2813,28 +2783,24 @@ namespace Google.Cloud.Retail.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
             if (createTime_ == null) {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
             break;
           }
-          case 26: {
+          case 18: {
             if (updateTime_ == null) {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
             break;
           }
-          case 32: {
+          case 24: {
             SuccessCount = input.ReadInt64();
             break;
           }
-          case 40: {
+          case 32: {
             FailureCount = input.ReadInt64();
             break;
           }
