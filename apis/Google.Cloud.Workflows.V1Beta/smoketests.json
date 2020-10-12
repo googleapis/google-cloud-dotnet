@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListWorkflows",
+    "client": "WorkflowsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
