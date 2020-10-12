@@ -232,15 +232,15 @@
       "protoPath": "google/bigtable/v2",
       "productName": "Google Bigtable",
       "productUrl": "https://cloud.google.com/bigtable/",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Bigtable API.",
       "tags": [
         "Bigtable"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
         "Google.Api.Gax.Grpc.Gcp": "3.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
         "Google.Cloud.Bigtable.Common.V2": "2.0.0",
         "Grpc.Core": "2.31.0"
       },
