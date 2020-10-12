@@ -16,7 +16,13 @@ using Google.Cloud.Logging.Type;
 using Microsoft.Extensions.Logging;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
+#else
+#error unknown target framework
+#endif
 {
     public class LogUtilsTest
     {

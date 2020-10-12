@@ -23,7 +23,14 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Xml;
 
+
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
+#else
+#error unknown target framework
+#endif
 {
     /// <summary>
     /// A fixture that allows logging validation to be deferred until disposal.

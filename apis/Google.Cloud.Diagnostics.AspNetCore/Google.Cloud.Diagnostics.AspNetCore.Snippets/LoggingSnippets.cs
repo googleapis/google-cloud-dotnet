@@ -30,9 +30,24 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
+using System.Collections.Generic;
+#if NETCOREAPP3_1
+using Microsoft.Extensions.Hosting;
+#elif NETCOREAPP2_1 || NET461
+#else
+#error unknown target framework
+#endif
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
+#else
+#error unknown target framework
+#endif
 {
+    using static IntegrationTests.TestServerHelpers;
+
     [SnippetOutputCollector]
     public class LoggingSnippetsTests
     {
@@ -62,7 +77,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
                 // No need to make an actual call to the controller. Just starting up the server
                 // creates several loggers.
-                using (TestServer server = new TestServer(GetUrlWriterHostBuilder())) { }
+                using (TestServer server = GetTestServer(GetUrlWriterHostBuilder())) { }
 
                 writtenInfo = writer.ToString();
 
@@ -84,34 +99,30 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.DoesNotContain("organizationId=", url);
         }
 
-        /// <summary>
-        /// Test for RegisterGoogleLogger, RegisterGoogleLogger2 and UseGoogleLogger snippets.
-        /// The RegisterGoogleLogger and RegisterGoogleLogger2 snippets are configuration snippets
-        /// so the best way to test it is by checking if logging works properly.
-        /// </summary>
-        [Fact]
-        public async Task Logs_Information()
+        public static IEnumerable<object[]> BasicTestServers
         {
-            using (TestServer server = new TestServer(GetSimpleHostBuilder()))
-            using (HttpClient client = server.CreateClient())
+            get
             {
-                await client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
+                yield return new object[] { GetTestServer(GetSimpleHostBuilder()) };
+                yield return new object[] { GetTestServer<LoggingTestApplication.Startup>() };
+                yield return new object[] { GetTestServer(GetSimpleHostBuilder2()) };
             }
-
-            PollAndVerifyLog(_startTime, _testId);
         }
 
         /// <summary>
-        /// Test for RegisterGoogleLogger3 snippet.
+        /// Test for RegisterGoogleLogger, RegisterGoogleLogger2, RegisterGoogleLogger3 and UseGoogleLogger snippets.
+        /// The RegisterGoogleLogger, RegisterGoogleLogger2, RegisterGoogleLogger3 snippets are configuration snippets
+        /// so the best way to test it is by checking if logging works properly.
         /// </summary>
-        [Fact]
-        public async Task Logs_Information2()
+        [Theory]
+        [MemberData(nameof(BasicTestServers))]
+        public async Task Logs_Information(TestServer server)
         {
-            using (TestServer server = new TestServer(GetSimpleHostBuilder2()))
             using (HttpClient client = server.CreateClient())
             {
                 await client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
             }
+            server.Dispose();
 
             PollAndVerifyLog(_startTime, _testId);
         }
@@ -126,11 +137,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             var aggregateEx = await Assert.ThrowsAsync<AggregateException>(async () =>
             {
-                using (TestServer server = new TestServer(GetExceptionPropagatingHostBuilder()))
-                using (HttpClient client = server.CreateClient())
-                {
-                    await client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
-                }
+                using TestServer server = GetTestServer(GetExceptionPropagatingHostBuilder());
+                using HttpClient client = server.CreateClient();
+                await client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
             });
 
             var rpcException = (RpcException) aggregateEx.InnerException;
@@ -150,9 +159,73 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.Contains(testId, logEntry.JsonPayload?.Fields["message"]?.StringValue);
         }
 
-        private IWebHostBuilder GetSimpleHostBuilder()
+#if NETCOREAPP3_1
+        private static IHostBuilder GetSimpleHostBuilder()
         {
             string projectId = TestEnvironment.GetTestProjectId();
+
+            // Sample: RegisterGoogleLogger2_Core3
+            var hostBuilder = Host.CreateDefaultBuilder()
+                .ConfigureWebHostDefaults(webBuilder => webBuilder
+                    // Replace projectId with your Google Cloud Project ID.
+                    .ConfigureServices(services => services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, projectId)))
+                    .UseStartup<Startup>());
+            // End sample
+            return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
+        }
+
+        private static IHostBuilder GetSimpleHostBuilder2()
+        {
+            string projectId = TestEnvironment.GetTestProjectId();
+
+            // Sample: RegisterGoogleLogger3_Core3
+            var hostBuilder = Host.CreateDefaultBuilder()
+                .ConfigureWebHostDefaults(webBuilder => webBuilder
+                    // Replace projectId with your Google Cloud Project ID.
+                    .ConfigureLogging(builder => builder.AddProvider(GoogleLoggerProvider.Create(serviceProvider: null, projectId)))
+                    .UseStartup<Startup>());
+            // End sample
+            return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
+        }
+
+        private static IHostBuilder GetExceptionPropagatingHostBuilder()
+        {
+            string projectId = "non-existent-project-id";
+
+            // Sample: RegisterGoogleLoggerPropagateExceptions_Core3
+            // Explicitly create logger options that will propagate any exceptions thrown
+            // during logging.
+            RetryOptions retryOptions = RetryOptions.NoRetry(ExceptionHandling.Propagate);
+            // Also set the no buffer option so that writing the logs is attempted immediately.
+            BufferOptions bufferOptions = BufferOptions.NoBuffer();
+            LoggerOptions loggerOptions = LoggerOptions.Create(bufferOptions: bufferOptions, retryOptions: retryOptions);
+            var hostBuilder = Host.CreateDefaultBuilder()
+                .ConfigureWebHostDefaults(webBuilder => webBuilder
+                    // Replace projectId with your Google Cloud Project ID.
+                    .UseGoogleDiagnostics(projectId, loggerOptions: loggerOptions)
+                    .UseStartup<Startup>());
+            // End sample
+            return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
+        }
+
+        private static IHostBuilder GetUrlWriterHostBuilder()
+        {
+            string projectId = TestEnvironment.GetTestProjectId();
+
+            // Sample: RegisterGoogleLoggerWriteUrl_Core3
+            var hostBuilder = Host.CreateDefaultBuilder()
+                .ConfigureWebHostDefaults(webBuilder => webBuilder
+                    // Replace projectId with your Google Cloud Project ID.
+                    .UseGoogleDiagnostics(projectId, loggerOptions: LoggerOptions.Create(loggerDiagnosticsOutput: Console.Out))
+                    .UseStartup<Startup>());
+            // End sample
+            return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
+        }
+#elif NETCOREAPP2_1 || NET461
+        private static IWebHostBuilder GetSimpleHostBuilder()
+        {
+            string projectId = TestEnvironment.GetTestProjectId();
+
             // Sample: RegisterGoogleLogger2
             return new WebHostBuilder()
                 .ConfigureServices(services =>
@@ -164,9 +237,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // End sample
         }
 
-        private IWebHostBuilder GetSimpleHostBuilder2()
+        private static IWebHostBuilder GetSimpleHostBuilder2()
         {
             string projectId = TestEnvironment.GetTestProjectId();
+
             // Sample: RegisterGoogleLogger3
             return new WebHostBuilder()
                 .ConfigureLogging(builder => builder.AddProvider(GoogleLoggerProvider.Create(serviceProvider: null, projectId)))
@@ -174,7 +248,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // End sample
         }
 
-        private IWebHostBuilder GetExceptionPropagatingHostBuilder()
+        private static IWebHostBuilder GetExceptionPropagatingHostBuilder()
         {
             string projectId = "non-existent-project-id";
             // Sample: RegisterGoogleLoggerPropagateExceptions
@@ -190,7 +264,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // End sample
         }
 
-        private IWebHostBuilder GetUrlWriterHostBuilder()
+        private static IWebHostBuilder GetUrlWriterHostBuilder()
         {
             string projectId = TestEnvironment.GetTestProjectId();
 
@@ -200,6 +274,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 .UseStartup<Startup>();
             // End sample
         }
+#else
+#error unknown target framework
+#endif
     }
 
     /// <summary>
@@ -210,10 +287,37 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     {
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
+        // To hide some implementation details from the
+        // sample code, like how we are overriding the methods.
+        internal class Startup : BaseStartup
+        {
+            private readonly LoggingTestApplication application = new LoggingTestApplication();
+
+            public override void ConfigureServices(IServiceCollection services)
+            {
+                application.ConfigureServices(services);
+                base.ConfigureServices(services);
+            }
+
+            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+            {
+                application.Configure(app, loggerFactory);
+                base.Configure(app, loggerFactory);
+            }
+        }
+
         // Sample: RegisterGoogleLogger
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            // No specific services are needed to use Google Logging.
+
+            // Add any services your application requires, for instance,
+            // depending on the version of ASP.NET Core you are using, you may
+            // need one of the following:
+
+            // services.AddMvc();
+
+            // services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
@@ -221,14 +325,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Replace ProjectId with your Google Cloud Project ID.
             loggerFactory.AddGoogle(app.ApplicationServices, ProjectId);
 
-            // ...any other configuration your application requires.
+            // Add any other configuration your application requires, for instance,
+            // depending on the verson of ASP.NET Core you are using, you may
+            // need one of the following:
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
+
+            //app.UseRouting();
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //    endpoints.MapRazorPages();
+            //});
         }
         // End sample
     }

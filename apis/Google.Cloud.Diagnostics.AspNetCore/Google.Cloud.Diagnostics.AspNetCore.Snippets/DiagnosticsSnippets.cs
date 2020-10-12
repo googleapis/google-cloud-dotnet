@@ -23,9 +23,23 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
+#if NETCOREAPP3_1
+using Microsoft.Extensions.Hosting;
+#elif NETCOREAPP2_1 || NET461
+#else
+#error unknown target framework
+#endif
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
+#else
+#error unknown target framework
+#endif
 {
+    using static IntegrationTests.TestServerHelpers;
+
     [SnippetOutputCollector]
     public class DiagnosticsSnippetsTests : IDisposable
     {
@@ -45,16 +59,30 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         public DiagnosticsSnippetsTests()
         {
+#if NETCOREAPP3_1
+            // Sample: UseGoogleDiagnostics_Core3
+            var hostBuilder = Host.CreateDefaultBuilder()
+                .ConfigureWebHostDefaults(webBuilder => webBuilder
+                    // Replace ProjectId with your Google Cloud Project ID.
+                    // Replace Service with a name or identifier for the service.
+                    // Replace Version with a version for the service.
+                    .UseGoogleDiagnostics(ProjectId, Service, Version)
+                    .UseStartup<Startup>());
+            // End sample
+            hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
+#elif NETCOREAPP2_1 || NET461
             // Sample: UseGoogleDiagnostics
-            var webHostBuilder = new WebHostBuilder()
+            var hostBuilder = new WebHostBuilder()
                 // Replace ProjectId with your Google Cloud Project ID.
                 // Replace Service with a name or identifier for the service.
                 // Replace Version with a version for the service.
                 .UseGoogleDiagnostics(ProjectId, Service, Version)
                 .UseStartup<Startup>();
             // End sample
-
-            _server = new TestServer(webHostBuilder);
+#else
+#error unknown target framework
+#endif
+            _server = GetTestServer(hostBuilder);
             _client = _server.CreateClient();
 
             _testId = IdGenerator.FromDateTime();

@@ -17,19 +17,26 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
+#else
+#error unknown target framework
+#endif
 {
+    using static IntegrationTests.TestServerHelpers;
+
     [SnippetOutputCollector]
     public class TraceSnippetsTests : IDisposable
     {
@@ -46,8 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             _testId = IdGenerator.FromDateTime();
 
-            var builder = new WebHostBuilder().UseStartup<TraceTestApplication>();
-            _server = new TestServer(builder);
+            _server = GetTestServer<TraceTestApplication.Startup>();
             _client = _server.CreateClient();
 
             _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
@@ -133,19 +139,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoingClientFactory)}/{_testId}";
 
-            var builder = new WebHostBuilder().UseStartup<TraceClientFactoryTestApplication>();
-            using(var server = new TestServer(builder))
-            using(var client = server.CreateClient())
-            {
-                var response = await client.GetAsync(uri);
+            using var server = GetTestServer<TraceClientFactoryTestApplication.Startup>();
+            using var client = server.CreateClient();
+            var response = await client.GetAsync(uri);
 
-                var trace = s_polling.GetTrace(uri, _startTime);
+            var trace = s_polling.GetTrace(uri, _startTime);
 
-                TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "https://weather.com/");
-                TraceEntryVerifiers.AssertSpanLabelsContains(
-                    trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
-                Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
-            }
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "https://weather.com/");
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
         private void Troubleshooting()
@@ -176,6 +179,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     {
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
 
+        // To hide some implementation details from the
+        // sample code, like how we are overriding the methods.
+        internal class Startup : BaseStartup
+        {
+            private readonly TraceTestApplication application = new TraceTestApplication();
+
+            public override void ConfigureServices(IServiceCollection services)
+            {
+                application.ConfigureServices(services);
+                base.ConfigureServices(services);
+            }
+
+            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+            {
+                application.Configure(app);
+                base.Configure(app, loggerFactory);
+            }
+        }
+
         // Sample: RegisterGoogleTracer
         public void ConfigureServices(IServiceCollection services)
         {
@@ -188,7 +210,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 options.ProjectId = ProjectId;
             });
 
-            services.AddMvc();
+            // Add any other services your application requires, for instance,
+            // depending on the version of ASP.NET Core you are using, you may
+            // need one of the following:
+
+            // services.AddMvc();
+
+            // services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app)
@@ -196,14 +224,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Use at the start of the request pipeline to ensure the entire request is traced.
             app.UseGoogleTrace();
 
-            // ...any other configuration your application requires.
+            // Add any other configuration your application requires, for instance,
+            // depending on the verson of ASP.NET Core you are using, you may
+            // need one of the following:
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
+
+            //app.UseRouting();
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //    endpoints.MapRazorPages();
+            //});
         }
         // End sample
     }
@@ -211,6 +250,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     internal class TraceClientFactoryTestApplication
     {
         private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
+
+        // To hide some implementation details from the
+        // sample code, like how we are overriding the methods.
+        internal class Startup : BaseStartup
+        {
+            private readonly TraceClientFactoryTestApplication application = new TraceClientFactoryTestApplication();
+
+            public override void ConfigureServices(IServiceCollection services)
+            {
+                application.ConfigureServices(services);
+                base.ConfigureServices(services);
+            }
+
+            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+            {
+                application.Configure(app);
+                base.Configure(app, loggerFactory);
+            }
+        }
 
         // Sample: ConfigureHttpClient
         public void ConfigureServices(IServiceCollection services)
@@ -230,7 +288,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 // requests that are already being traced.
                 .AddOutgoingGoogleTraceHandler();
 
-            services.AddMvc();
+            // Add any other services your application requires, for instance,
+            // depending on the version of ASP.NET Core you are using, you may
+            // need one of the following:
+
+            // services.AddMvc();
+
+            // services.AddControllersWithViews();
         }
 
         public void Configure(IApplicationBuilder app)
@@ -238,14 +302,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Use at the start of the request pipeline to ensure the entire request is traced.
             app.UseGoogleTrace();
 
-            // ...any other configuration your application requires.
+            // Add any other configuration your application requires, for instance,
+            // depending on the verson of ASP.NET Core you are using, you may
+            // need one of the following:
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller=Home}/{action=Index}/{id?}");
+            //});
+
+            //app.UseRouting();
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //    endpoints.MapRazorPages();
+            //});
         }
         // End sample
     }
@@ -300,11 +375,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         /// </summary>
         public async Task<HttpResponseMessage> TraceOutgoing([FromServices] TraceHeaderPropagatingHandler traceHeaderHandler)
         {
-            using (var httpClient = new HttpClient(traceHeaderHandler))
-            {
-                // Any code that makes outgoing requests.
-                return await httpClient.GetAsync("https://weather.com/");
-            }
+            using var httpClient = new HttpClient(traceHeaderHandler);
+            // Any code that makes outgoing requests.
+            return await httpClient.GetAsync("https://weather.com/");
         }
         // End sample
 

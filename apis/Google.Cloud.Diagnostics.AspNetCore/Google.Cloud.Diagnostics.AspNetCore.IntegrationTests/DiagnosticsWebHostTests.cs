@@ -18,10 +18,8 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
 using Google.Protobuf.WellKnownTypes;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -31,8 +29,16 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
+#else
+#error unknown target framework
+#endif
 {
+    using static TestServerHelpers;
+
     public class DiagnosticsWebHostTests
     {
         public DiagnosticsWebHostTests()
@@ -46,26 +52,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public void UseGoogleDiagnostics_ConfiguresServices()
         {
-            var webHostBuilder = new WebHostBuilder()
-                .Configure(app => { })
-                .UseGoogleDiagnostics("tmp", "app", "1.0.0");
+            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder.UseGoogleDiagnostics("tmp", "app", "1.0.0"));
 
-            using (var server = new TestServer(webHostBuilder))
-            {
-                var services = server.Host.Services;
+            using var server = GetTestServer(hostBuilder);
+            var services = GetServices(server);
 
-                // Test Google diagnostics startup filter
-                var startupFilters = services.GetServices<IStartupFilter>();
-                Assert.NotNull(startupFilters.FirstOrDefault(r => r is GoogleDiagnosticsStartupFilter));
+            // Test Google diagnostics startup filter
+            var startupFilters = services.GetServices<IStartupFilter>();
+            Assert.NotNull(startupFilters.FirstOrDefault(r => r is GoogleDiagnosticsStartupFilter));
 
-                // Test tracing
-                Assert.NotNull(services.GetService<IHttpContextAccessor>());
-                Assert.NotNull(services.GetService<IManagedTracer>());
+            // Test tracing
+            Assert.NotNull(services.GetService<IHttpContextAccessor>());
+            Assert.NotNull(services.GetService<IManagedTracer>());
 
-                // Test exception logging
-                Assert.NotNull(services.GetService<IExceptionLogger>());
-                Assert.NotNull(services.GetService<IContextExceptionLogger>());
-            }
+            // Test exception logging
+            Assert.NotNull(services.GetService<IExceptionLogger>());
+            Assert.NotNull(services.GetService<IContextExceptionLogger>());
         }
 
         [Fact]
@@ -86,18 +88,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             };
             // We won't be able to detect the right monitored resource, so specify it explicitly.
             var loggerOptions = LoggerOptions.Create(monitoredResource: resource);
-            var webHostBuilder = new WebHostBuilder()
-                .ConfigureServices(services => services.AddMvcCore())
-                .Configure(app => app.UseMvcWithDefaultRoute())
-                .UseGoogleDiagnostics(TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version, loggerOptions);
+            var hostBuilder = GetHostBuilder(
+                webHostBuilder => webHostBuilder.UseGoogleDiagnostics(
+                    TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version, loggerOptions));
 
-            using (var server = new TestServer(webHostBuilder))
-            using (var client = server.CreateClient())
-            {
-                await TestTrace(testId, startTime, client);
-                await TestLogging(testId, startTime, client);
-                await TestErrorReporting(testId, client);
-            }
+            using var server = GetTestServer(hostBuilder);
+            using var client = server.CreateClient();
+            await TestTrace(testId, startTime, client);
+            await TestLogging(testId, startTime, client);
+            await TestErrorReporting(testId, client);
         }
 
         [Fact]
@@ -112,27 +111,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 { "version_id", EntryData.Version }
             };
 
-            var configuration = new ConfigurationBuilder()
-                .AddInMemoryCollection(configurationData)
-                .Build();
+            var hostBuilder = GetHostBuilder(webHostBuilder => 
+                webHostBuilder.UseGoogleDiagnostics(
+                    ctx => ctx.Configuration["project_id"], ctx => ctx.Configuration["module_id"], ctx => ctx.Configuration["version_id"]))
+                .ConfigureAppConfiguration((hostContext, configBuilder) => 
+                    configBuilder.AddInMemoryCollection(configurationData));
 
-            var webHostBuilder = new WebHostBuilder()
-                .UseConfiguration(configuration)
-                .ConfigureServices(services => services.AddMvcCore())
-                .Configure(app => app.UseMvcWithDefaultRoute())
-                .UseGoogleDiagnostics(
-                    ctx => ctx.Configuration["project_id"],
-                    ctx => ctx.Configuration["module_id"],
-                    ctx => ctx.Configuration["version_id"]
-                );
-
-            using (var server = new TestServer(webHostBuilder))
-            using (var client = server.CreateClient())
-            {
-                await TestTrace(testId, startTime, client);
-                await TestLogging(testId, startTime, client);
-                await TestErrorReporting(testId, client);
-            }
+            using var server = GetTestServer(hostBuilder);
+            using var client = server.CreateClient();
+            await TestTrace(testId, startTime, client);
+            await TestLogging(testId, startTime, client);
+            await TestErrorReporting(testId, client);
         }
 
         private static async Task TestLogging(string testId, DateTime startTime, HttpClient client)

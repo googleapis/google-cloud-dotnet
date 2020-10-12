@@ -35,8 +35,16 @@ using System.Threading.Tasks;
 using Xunit;
 using DateTime = System.DateTime;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
+#else
+#error unknown target framework
+#endif
 {
+    using static TestServerHelpers;
+
     public class LoggingTest : IClassFixture<LogValidatingFixture>
     {
         // Used in tests that check logs are properly associated to traces.
@@ -61,8 +69,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string testId = IdGenerator.FromGuid();
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (TestServer server = new TestServer(builder))
+            using (TestServer server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Debug/{testId}");
@@ -87,8 +94,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string testId = IdGenerator.FromGuid();
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (TestServer server = new TestServer(builder))
+            using (TestServer server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 for (int i = 0; i < 250; i++)
@@ -120,8 +126,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string testId = IdGenerator.FromDateTime();
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
-            using (TestServer server = new TestServer(builder))
+            using (TestServer server = GetTestServer<NoBufferResourceLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Warning/{testId}");
@@ -145,8 +150,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Scope/{testId}");
@@ -166,8 +170,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/FormatParameters/{testId}");
@@ -191,8 +194,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string testId = IdGenerator.FromGuid();
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/ScopeFormatParameters/{testId}");
@@ -225,8 +227,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             ulong spanId = s_spanIdFactory.NextId();
             string testId = IdGenerator.FromGuid();
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
@@ -263,8 +264,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             ulong spanId = s_spanIdFactory.NextId();
             string testId = IdGenerator.FromGuid();
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
@@ -303,8 +303,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             ulong spanId = s_spanIdFactory.NextId();
             string testId = IdGenerator.FromGuid();
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader,
@@ -367,8 +366,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
 
             string url = $"/Main/Critical/{testId}";
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTracesAllTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTracesAllTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync(url);
@@ -403,8 +401,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
 
             string spanPrefix;
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTracesAllTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTracesAllTestApplication>())
             using (var client = server.CreateClient())
             {
                 spanPrefix = await client.GetStringAsync($"/Main/{nameof(MainController.LogsInOneSpan)}/{testId}");
@@ -439,8 +436,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
 
             string spanPrefix;
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTracesAllTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningLoggerTracesAllTestApplication>())
             using (var client = server.CreateClient())
             {
                 spanPrefix = await client.GetStringAsync($"/Main/{nameof(MainController.LogsInDifferentSpans)}/{testId}");
@@ -500,25 +496,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 return new object[][]
                 {
-                    new object[] { new WebHostBuilder().UseStartup<NoBufferWarningLoggerExternalTraceTestApplication>() },
-                    new object[] { new WebHostBuilder().UseStartup<ExternalTracingTestApplication>() }
+                    new object[] { GetTestServer<NoBufferWarningLoggerExternalTraceTestApplication>() },
+                    new object[] { GetTestServer<ExternalTracingTestApplication>() }
                 };
             }
         }
 
         [Theory]
         [MemberData(nameof(ExternalTraceBuilders))]
-        public async Task Logging_Trace_External_OneEntry(IWebHostBuilder builder)
+        public async Task Logging_Trace_External_OneEntry(TestServer server)
         {
             Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
             string testId = IdGenerator.FromGuid();
 
             string url = $"/Main/Critical/{testId}";
-            using (var server = new TestServer(builder))
             using (var client = server.CreateClient())
             {
                 await client.GetAsync(url);
             }
+            server.Dispose();
 
             _fixture.AddValidator(testId, results =>
             {
@@ -536,17 +532,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         [Theory]
         [MemberData(nameof(ExternalTraceBuilders))]
-        public async Task Logging_Trace_External_MultipleEntries(IWebHostBuilder builder)
+        public async Task Logging_Trace_External_MultipleEntries(TestServer server)
         {
             Timestamp startTime = Timestamp.FromDateTime(DateTime.UtcNow);
             string testId = IdGenerator.FromGuid();
 
             string url = $"/Main/LogsThreeEntries/{testId}";
-            using (var server = new TestServer(builder))
             using (var client = server.CreateClient())
             {
                 await client.GetAsync(url);
             }
+            server.Dispose();
 
             _fixture.AddValidator(testId, results =>
             {
@@ -582,8 +578,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string expectedSpanId = "000000000012d687";
 
             string url = $"/Main/Critical/{testId}";
-            var builder = new WebHostBuilder().UseStartup<GoogleTraceAsExternalTracingTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<GoogleTraceAsExternalTracingTestApplication>())
             using (var client = server.CreateClient())
             {
                 var request = new HttpRequestMessage(HttpMethod.Get, url);
@@ -617,8 +612,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
 
             string url = $"/Main/Critical/{testId}";
-            var builder = new WebHostBuilder().UseStartup<GoogleTraceAsExternalTracingTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<GoogleTraceAsExternalTracingTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync(url);
@@ -642,8 +636,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<WarningWithLabelsLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<WarningWithLabelsLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Warning/{testId}");
@@ -662,14 +655,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task Logging_DiagnosticsOutput()
         {
-            var writer = new StringWriter();
-            // This is an odd way to pass in a value, but it works...
-            var builder = new WebHostBuilder()
-                .ConfigureServices(service => service.AddSingleton<TextWriter>(writer))
-                .UseStartup<DiagnosticsOutputLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            StringWriter writer;
+            using (var server = GetTestServer<DiagnosticsOutputLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
+                writer = GetServices(server).GetRequiredService<TextWriter>() as StringWriter;
+                Assert.NotNull(writer);
+
                 await client.GetAsync($"/Main/Warning/{IdGenerator.FromGuid()}");
                 await client.GetAsync($"/Main/Warning/{IdGenerator.FromGuid()}");
                 await client.GetAsync($"/Main/Warning/{IdGenerator.FromGuid()}");
@@ -688,15 +680,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string testId = IdGenerator.FromDateTime();
 
-            var builder = new WebHostBuilder()
-                .ConfigureLogging(loggingBuilder =>
+            var builder = GetHostBuilder<VanillaApplication>(webHostBuilder =>
+                webHostBuilder.ConfigureLogging(loggingBuilder =>
                 {
                     var projectId = TestEnvironment.GetTestProjectId();
                     var provider = GoogleLoggerProvider.Create(serviceProvider: null, projectId, LoggerOptions.Create(LogLevel.Warning));
                     loggingBuilder.AddProvider(provider);
-                })
-                .UseStartup<VanillaApplication>();
-            using (TestServer server = new TestServer(builder))
+                }));
+            using (TestServer server = GetTestServer(builder))
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Warning/{testId}");
@@ -719,8 +710,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningServiceContextLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Warning/{testId}");
@@ -740,8 +730,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningServiceContextLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Exception/{testId}");
@@ -761,8 +750,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextServiceNameOnlyLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningServiceContextServiceNameOnlyLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Exception/{testId}");
@@ -782,8 +770,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferWarningServiceContextVersionOnlyLoggerTestApplication>();
-            using (var server = new TestServer(builder))
+            using (var server = GetTestServer<NoBufferWarningServiceContextVersionOnlyLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Exception/{testId}");
@@ -801,64 +788,39 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// <summary>
     /// Application that doesn't perform any diagnostic configuration itself.
     /// </summary>
-    public class VanillaApplication
-    {
-        public virtual void ConfigureServices(IServiceCollection services) =>
-            services.AddMvc();
-
-        public void Configure(IApplicationBuilder app) =>
-            app.UseMvc(routes => routes.MapRoute(name: "default", template: "{controller=Main}/{action=Index}/{id}"));
-    }
+    public class VanillaApplication : BaseStartup
+    { }
 
     /// <summary>
     /// A simple web application to test the <see cref="GoogleLogger"/> and associated classes.
     /// </summary>
-    public abstract class LoggerNoTracingActivatedTestApplication
+    public abstract class LoggerNoTracingActivatedTestApplication : BaseStartup
     {
         protected readonly string _projectId = TestEnvironment.GetTestProjectId();
 
-        public virtual void ConfigureServices(IServiceCollection services)
-        {
-            services.AddHttpContextAccessor();
-            services.AddMvc();
-        }
+        public override void ConfigureServices(IServiceCollection services) => base.ConfigureServices(services.AddHttpContextAccessor());
 
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Main}/{action=Index}/{id}");
-            });
-            LoggerOptions loggerOptions = LoggerOptions.Create(
-                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
     }
 
     public class ExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
     {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-            base.ConfigureServices(services);
-            services.AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>();
-        }
+        public override void ConfigureServices(IServiceCollection services) =>
+            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>());
     }
 
     public class GoogleTraceAsExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
     {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-            base.ConfigureServices(services);
-            services.AddSingleton<IExternalTraceProvider, GoogleTraceProvider>();
-        }
+        public override void ConfigureServices(IServiceCollection services) =>
+            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider, GoogleTraceProvider>());
     }
 
     /// <summary>
     /// A simple web application to test the <see cref="GoogleLogger"/> and associated classes.
     /// </summary>
-    public abstract class LoggerTestApplication
+    public abstract class LoggerTestApplication : BaseStartup
     {
         protected readonly string _projectId = TestEnvironment.GetTestProjectId();
         protected readonly double _traceQps;
@@ -870,27 +832,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public LoggerTestApplication(double traceQps) => _traceQps = traceQps;
 
-        public virtual void ConfigureServices(IServiceCollection services)
-        {
-            services.AddHttpContextAccessor();
-            services.AddGoogleTrace(options =>
-            {
-                options.ProjectId = _projectId;
-                options.Options = TraceOptions.Create(_traceQps, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate));
-            });
-            services.AddMvc();
-        }
-
-        public void SetupRoutes(IApplicationBuilder app)
-        {
-            app.UseGoogleTrace()
-               .UseMvc(routes =>
+        public override void ConfigureServices(IServiceCollection services) =>
+            base.ConfigureServices(services
+                .AddHttpContextAccessor()
+                .AddGoogleTrace(options =>
                 {
-                    routes.MapRoute(
-                        name: "default",
-                        template: "{controller=Main}/{action=Index}/{id}");
-                });
-        }
+                    options.ProjectId = _projectId;
+                    options.Options = TraceOptions.Create(_traceQps, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate));
+                }));
+
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app.UseGoogleTrace(), loggerFactory);
     }
 
     /// <summary>
@@ -907,13 +859,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             : base(traceQps)
         { }
 
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(
-                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
     }
 
     public class NoBufferWarningLoggerTracesAllTestApplication : NoBufferWarningLoggerTestApplication
@@ -925,11 +873,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     public class NoBufferWarningLoggerExternalTraceTestApplication : NoBufferWarningLoggerTestApplication
     {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-            base.ConfigureServices(services);
-            services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider());
-        }
+        public override void ConfigureServices(IServiceCollection services) =>
+            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider()));
     }
 
     /// <summary>
@@ -948,13 +893,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
         };
 
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(
-                LogLevel.Warning, null, null, Resource, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices,
+                _projectId,
+                LoggerOptions.Create(logLevel: LogLevel.Warning, monitoredResource: Resource, bufferOptions: BufferOptions.NoBuffer())));
     }
 
     /// <summary>
@@ -963,32 +906,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class WarningWithLabelsLoggerTestApplication : LoggerTestApplication
     {
-        public override void ConfigureServices(IServiceCollection services)
-        {
-            base.ConfigureServices(services);
-            services.AddLogEntryLabelProvider<FooLogEntryLabelProvider>();
-            services.AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>();
-        }
+        public override void ConfigureServices(IServiceCollection services) =>
+            base.ConfigureServices(services
+                .AddLogEntryLabelProvider<FooLogEntryLabelProvider>()
+                .AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>());
 
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
-            SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(
-                LogLevel.Warning, null, labels, null, BufferOptions.NoBuffer());
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices,
+                _projectId,
+                LoggerOptions.Create(
+                    logLevel: LogLevel.Warning,
+                    labels: new Dictionary<string, string> { { "some-key", "some-value" } },
+                    bufferOptions: BufferOptions.NoBuffer())));
     }
 
     public class DiagnosticsOutputLoggerTestApplication : LoggerTestApplication
     {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            var writer = app.ApplicationServices.GetRequiredService<TextWriter>();
-            LoggerOptions loggerOptions = LoggerOptions.Create(loggerDiagnosticsOutput: writer);
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void ConfigureServices(IServiceCollection services) =>
+            base.ConfigureServices(services.AddSingleton<TextWriter, StringWriter>());
+
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices, _projectId, LoggerOptions.Create(loggerDiagnosticsOutput: app.ApplicationServices.GetRequiredService<TextWriter>())));
     }
 
     /// <summary>
@@ -998,14 +938,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningServiceContextLoggerTestApplication : LoggerTestApplication
     {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
-                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
-                serviceName:"my.test.service", version:"v1.0.0-alpha01");
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices,
+                _projectId,
+                LoggerOptions.CreateWithServiceContext(
+                    logLevel: LogLevel.Warning,
+                    bufferOptions: BufferOptions.NoBuffer(),
+                    serviceName: "my.test.service",
+                    version: "v1.0.0-alpha01")));
     }
 
     /// <summary>
@@ -1015,14 +956,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningServiceContextServiceNameOnlyLoggerTestApplication : LoggerTestApplication
     {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
-                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
-                serviceName: "my.test.service");
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices,
+                _projectId,
+                LoggerOptions.CreateWithServiceContext(
+                    logLevel: LogLevel.Warning,
+                    bufferOptions: BufferOptions.NoBuffer(),
+                    serviceName: "my.test.service")));
     }
 
     /// <summary>
@@ -1032,14 +973,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningServiceContextVersionOnlyLoggerTestApplication : LoggerTestApplication
     {
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.CreateWithServiceContext(
-                LogLevel.Warning, null, null, null, BufferOptions.NoBuffer(),
-                version: "v1.0.0-alpha01");
-            loggerFactory.AddGoogle(app.ApplicationServices, _projectId, loggerOptions);
-        }
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices,
+                _projectId,
+                LoggerOptions.CreateWithServiceContext(
+                    logLevel: LogLevel.Warning,
+                    bufferOptions: BufferOptions.NoBuffer(),
+                    version: "v1.0.0-alpha01")));
     }
 
     /// <summary>
