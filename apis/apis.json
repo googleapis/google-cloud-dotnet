@@ -1724,6 +1724,20 @@
       ]
     },
     {
+      "id": "Google.Cloud.Workflows.Executions.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Workflow Executions API",
+      "productUrl": "https://cloud.google.com/workflows/docs/apis",
+      "description": "Recommended Google client library to access the Google Cloud Workflow Executions API v1beta, used to manage user-provided workflows.",
+      "tags": [
+        "workflows"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/workflows/executions/v1beta"
+    },
+    {
       "id": "Google.Cloud.Workflows.V1Beta",
       "version": "1.0.0-beta00",
       "type": "grpc",
