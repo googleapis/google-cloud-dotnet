@@ -22,11 +22,16 @@ for api in $apis
 do  
   if [[ -d tmpgit/apis/$api/$api && -d apis/$api/$api ]]
   then
+    targetVersion="netstandard2.0"
+    if [[ $api == "Google.Cloud.Diagnostics.AspNetCore3" ]]
+    then
+      targetVersion="netcoreapp3.1"
+    fi
     log_header "Building $api"
     apidir=apis/$api/$api
-    dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false tmpgit/$apidir 
-    dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $apidir
-    asm=apis/$api/$api/bin/Release/netstandard2.0/$api.dll
+    dotnet build -c Release -f $targetVersion -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false tmpgit/$apidir 
+    dotnet build -c Release -f $targetVersion -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $apidir
+    asm=apis/$api/$api/bin/Release/$targetVersion/$api.dll
     cp tmpgit/$asm tmpgit/old
     cp $asm tmpgit/new
   fi
