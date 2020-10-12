@@ -1,5 +1,9 @@
 # Version history
 
+# Version 4.2.0-beta02, released 2020-10-12
+
+- [Commit 1cd4ee6](https://github.com/googleapis/google-cloud-dotnet/commit/1cd4ee6): build: Removes ASP.NET Core unused dependencies from Diagnostics* packages. Towards [issue 4750](https://github.com/googleapis/google-cloud-dotnet/issues/4750).
+
 # Version 4.2.0-beta01, released 2020-09-29
 
 - [Commit 5710321](https://github.com/googleapis/google-cloud-dotnet/commit/5710321): feat: Adds GoogleTraceProvider to be used by Logging when Tracing is not configured. Closes [issue 5359](https://github.com/googleapis/google-cloud-dotnet/issues/5359).
