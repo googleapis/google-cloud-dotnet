@@ -120,9 +120,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-        [Fact]
+        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5425")]
         public async Task Traces_Outgoing()
         {
+            Skip.If(TestEnvironment.IsWindows(), "https://github.com/googleapis/google-cloud-dotnet/issues/5425");
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoing)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
@@ -134,9 +135,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-        [Fact]
+        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5425")]
         public async Task Traces_OutgoingClientFactory()
         {
+            Skip.If(TestEnvironment.IsWindows(), "https://github.com/googleapis/google-cloud-dotnet/issues/5425");
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoingClientFactory)}/{_testId}";
 
             using var server = GetTestServer<TraceClientFactoryTestApplication.Startup>();
