@@ -18,6 +18,7 @@ namespace Google.Cloud.Workflows.V1Beta.Snippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.Cloud.Workflows.Common.V1Beta;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;

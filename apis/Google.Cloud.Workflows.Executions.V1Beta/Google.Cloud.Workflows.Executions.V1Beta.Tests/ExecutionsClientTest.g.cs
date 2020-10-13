@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -33,7 +34,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             moq::Mock<Executions.ExecutionsClient> mockGrpcClient = new moq::Mock<Executions.ExecutionsClient>(moq::MockBehavior.Strict);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
-                ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Execution = new Execution(),
             };
             Execution expectedResponse = new Execution
@@ -60,7 +61,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             moq::Mock<Executions.ExecutionsClient> mockGrpcClient = new moq::Mock<Executions.ExecutionsClient>(moq::MockBehavior.Strict);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
-                ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Execution = new Execution(),
             };
             Execution expectedResponse = new Execution
@@ -89,7 +90,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             moq::Mock<Executions.ExecutionsClient> mockGrpcClient = new moq::Mock<Executions.ExecutionsClient>(moq::MockBehavior.Strict);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
-                ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Execution = new Execution(),
             };
             Execution expectedResponse = new Execution
@@ -116,7 +117,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             moq::Mock<Executions.ExecutionsClient> mockGrpcClient = new moq::Mock<Executions.ExecutionsClient>(moq::MockBehavior.Strict);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
-                ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Execution = new Execution(),
             };
             Execution expectedResponse = new Execution
@@ -145,7 +146,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             moq::Mock<Executions.ExecutionsClient> mockGrpcClient = new moq::Mock<Executions.ExecutionsClient>(moq::MockBehavior.Strict);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
-                ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Execution = new Execution(),
             };
             Execution expectedResponse = new Execution
@@ -172,7 +173,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta.Tests
             moq::Mock<Executions.ExecutionsClient> mockGrpcClient = new moq::Mock<Executions.ExecutionsClient>(moq::MockBehavior.Strict);
             CreateExecutionRequest request = new CreateExecutionRequest
             {
-                ParentAsWorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                ParentAsWorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Execution = new Execution(),
             };
             Execution expectedResponse = new Execution

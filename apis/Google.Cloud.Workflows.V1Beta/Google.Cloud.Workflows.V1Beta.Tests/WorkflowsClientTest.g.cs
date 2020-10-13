@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -35,11 +36,11 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowRequest request = new GetWorkflowRequest
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
             };
             Workflow expectedResponse = new Workflow
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Description = "description2cf9da67",
                 State = Workflow.Types.State.Unspecified,
                 RevisionId = "revision_id8d9ae05d",
@@ -70,11 +71,11 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowRequest request = new GetWorkflowRequest
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
             };
             Workflow expectedResponse = new Workflow
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Description = "description2cf9da67",
                 State = Workflow.Types.State.Unspecified,
                 RevisionId = "revision_id8d9ae05d",
@@ -107,11 +108,11 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowRequest request = new GetWorkflowRequest
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
             };
             Workflow expectedResponse = new Workflow
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Description = "description2cf9da67",
                 State = Workflow.Types.State.Unspecified,
                 RevisionId = "revision_id8d9ae05d",
@@ -142,11 +143,11 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowRequest request = new GetWorkflowRequest
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
             };
             Workflow expectedResponse = new Workflow
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Description = "description2cf9da67",
                 State = Workflow.Types.State.Unspecified,
                 RevisionId = "revision_id8d9ae05d",
@@ -179,11 +180,11 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowRequest request = new GetWorkflowRequest
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
             };
             Workflow expectedResponse = new Workflow
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Description = "description2cf9da67",
                 State = Workflow.Types.State.Unspecified,
                 RevisionId = "revision_id8d9ae05d",
@@ -214,11 +215,11 @@ namespace Google.Cloud.Workflows.V1Beta.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetWorkflowRequest request = new GetWorkflowRequest
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
             };
             Workflow expectedResponse = new Workflow
             {
-                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+                WorkflowName = gcwcv::WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
                 Description = "description2cf9da67",
                 State = Workflow.Types.State.Unspecified,
                 RevisionId = "revision_id8d9ae05d",

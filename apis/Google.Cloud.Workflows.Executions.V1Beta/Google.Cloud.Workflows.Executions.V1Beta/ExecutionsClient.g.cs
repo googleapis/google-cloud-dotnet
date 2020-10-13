@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -344,7 +345,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(WorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedEnumerable<ListExecutionsResponse, Execution> ListExecutions(gcwcv::WorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListExecutions(new ListExecutionsRequest
             {
                 ParentAsWorkflowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -372,7 +373,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Execution"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(WorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual gax::PagedAsyncEnumerable<ListExecutionsResponse, Execution> ListExecutionsAsync(gcwcv::WorkflowName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListExecutionsAsync(new ListExecutionsRequest
             {
                 ParentAsWorkflowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -476,7 +477,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Execution CreateExecution(WorkflowName parent, Execution execution, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Execution CreateExecution(gcwcv::WorkflowName parent, Execution execution, gaxgrpc::CallSettings callSettings = null) =>
             CreateExecution(new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -496,7 +497,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Execution> CreateExecutionAsync(WorkflowName parent, Execution execution, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Execution> CreateExecutionAsync(gcwcv::WorkflowName parent, Execution execution, gaxgrpc::CallSettings callSettings = null) =>
             CreateExecutionAsync(new CreateExecutionRequest
             {
                 ParentAsWorkflowName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -516,7 +517,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Execution> CreateExecutionAsync(WorkflowName parent, Execution execution, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Execution> CreateExecutionAsync(gcwcv::WorkflowName parent, Execution execution, st::CancellationToken cancellationToken) =>
             CreateExecutionAsync(parent, execution, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>

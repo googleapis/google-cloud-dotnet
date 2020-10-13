@@ -17,6 +17,7 @@
 namespace Google.Cloud.Workflows.Executions.V1Beta.Snippets
 {
     using Google.Api.Gax;
+    using Google.Cloud.Workflows.Common.V1Beta;
     using System;
     using System.Linq;
     using System.Threading.Tasks;

@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -520,7 +521,7 @@ namespace Google.Cloud.Workflows.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Workflow GetWorkflow(WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Workflow GetWorkflow(gcwcv::WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
             GetWorkflow(new GetWorkflowRequest
             {
                 WorkflowName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -535,7 +536,7 @@ namespace Google.Cloud.Workflows.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Workflow> GetWorkflowAsync(WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Workflow> GetWorkflowAsync(gcwcv::WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
             GetWorkflowAsync(new GetWorkflowRequest
             {
                 WorkflowName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -550,7 +551,7 @@ namespace Google.Cloud.Workflows.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Workflow> GetWorkflowAsync(WorkflowName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Workflow> GetWorkflowAsync(gcwcv::WorkflowName name, st::CancellationToken cancellationToken) =>
             GetWorkflowAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -912,7 +913,7 @@ namespace Google.Cloud.Workflows.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWorkflow(WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteWorkflow(gcwcv::WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteWorkflow(new DeleteWorkflowRequest
             {
                 WorkflowName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -929,7 +930,7 @@ namespace Google.Cloud.Workflows.V1Beta
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWorkflowAsync(WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWorkflowAsync(gcwcv::WorkflowName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteWorkflowAsync(new DeleteWorkflowRequest
             {
                 WorkflowName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -946,7 +947,7 @@ namespace Google.Cloud.Workflows.V1Beta
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWorkflowAsync(WorkflowName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteWorkflowAsync(gcwcv::WorkflowName name, st::CancellationToken cancellationToken) =>
             DeleteWorkflowAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
