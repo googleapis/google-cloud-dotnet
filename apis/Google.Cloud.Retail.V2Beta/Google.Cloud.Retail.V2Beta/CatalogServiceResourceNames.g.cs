@@ -14,16 +14,18 @@
 
 // Generated code. DO NOT EDIT!
 
+using gagr = Google.Api.Gax.ResourceNames;
+
 namespace Google.Cloud.Retail.V2Beta
 {
     public partial class ListCatalogsRequest
     {
         /// <summary>
-        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
-        public LocationName ParentAsLocationName
+        public gagr::LocationName ParentAsLocationName
         {
-            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
     }
