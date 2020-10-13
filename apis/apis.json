@@ -1746,6 +1746,20 @@
       ]
     },
     {
+      "id": "Google.Cloud.Workflows.Common.V1Beta",
+      "type": "other",
+      "targetFrameworks": "netstandard2.0;net461",
+      "version": "1.0.0-beta00",
+      "description": "Common resource names used by all Workflows V1Beta APIs",
+      "tags": [
+        "Spanner"
+      ],
+      "dependencies": {
+        "Google.Api.Gax": "3.2.0"
+      },
+      "noVersionHistory": true
+    },
+    {
       "id": "Google.Cloud.Workflows.Executions.V1Beta",
       "version": "1.0.0-beta00",
       "type": "grpc",
@@ -1755,7 +1769,9 @@
       "tags": [
         "workflows"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Cloud.Workflows.Common.V1Beta": "project"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/workflows/executions/v1beta"
     },
@@ -1770,6 +1786,7 @@
         "workflows"
       ],
       "dependencies": {
+        "Google.Cloud.Workflows.Common.V1Beta": "project",
         "Google.LongRunning": "2.0.0"
       },
       "generator": "micro",
