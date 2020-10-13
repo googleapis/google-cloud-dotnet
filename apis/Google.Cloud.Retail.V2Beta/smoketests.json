@@ -1,5 +1,6 @@
 [
   {
+    "skip": "Currently fails; beta API is not live",
     "method": "ListCatalogs",
     "client": "CatalogServiceClient",
     "arguments": {
