@@ -48,6 +48,11 @@ namespace Google.Cloud.Tools.ReleaseManager
         public Dictionary<string, JToken> Arguments { get; set; } = new Dictionary<string, JToken>();
 
         /// <summary>
+        /// If non-null, the test is skipped - and the value should be the reason why it's skipped.
+        /// </summary>
+        public string Skip { get; set; }
+
+        /// <summary>
         /// Executes a smoke test.
         /// </summary>
         /// <param name="assembly">The assembly of the client library being tests.</param>
@@ -59,6 +64,11 @@ namespace Google.Cloud.Tools.ReleaseManager
             var arguments = ConvertArguments(method, projectId);
             var clientInstance = client.GetMethod("Create", BindingFlags.Static | BindingFlags.Public).Invoke(null, null);
 
+            if (Skip is object)
+            {
+                Console.WriteLine($"*** Skipping test for {client.Name}.{Method}: {Skip} ***");
+                return;
+            }
             Console.WriteLine($"Running test for {client.Name}.{Method}");
             var result = method.Invoke(clientInstance, arguments);
             DisplayResult(result);
