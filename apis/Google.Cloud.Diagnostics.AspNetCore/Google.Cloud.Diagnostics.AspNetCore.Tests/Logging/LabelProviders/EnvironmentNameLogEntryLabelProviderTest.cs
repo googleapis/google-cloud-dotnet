@@ -16,10 +16,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
+#if NETCOREAPP3_1
+using Microsoft.Extensions.Hosting;
+#elif NETCOREAPP2_1 || NET461
+#else
+#error unknown target framework
+#endif
 using Moq;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
+#else
+#error unknown target framework
+#endif
 {
     public class EnvironmentNameLogEntryLabelProviderTest
     {
@@ -35,8 +47,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void AddsEnvironmentNameLabel()
         {
             // Arrange
+#if NETCOREAPP3_1
+            var hostingEnvironmentMock = new Mock<IWebHostEnvironment>();
+            string expectedEnvironment = Environments.Production;
+#elif NETCOREAPP2_1 || NET461
             var hostingEnvironmentMock = new Mock<IHostingEnvironment>();
-            hostingEnvironmentMock.Setup(x => x.EnvironmentName).Returns(EnvironmentName.Production);
+            string expectedEnvironment = EnvironmentName.Production;
+#else
+#error unknown target framework
+#endif
+
+            hostingEnvironmentMock.Setup(x => x.EnvironmentName).Returns(expectedEnvironment);
 
             var instance = new EnvironmentNameLogEntryLabelProvider(hostingEnvironmentMock.Object);
             var labels = new Dictionary<string, string>();
@@ -48,7 +69,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Single(labels);
             var label = labels.Single();
             Assert.Equal("aspnetcore_environment", label.Key);
-            Assert.Equal(EnvironmentName.Production, label.Value);
+            Assert.Equal(expectedEnvironment, label.Value);
         }
 
         [Theory]
@@ -57,7 +78,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void SkipsNullOrEmptyEnvironmentName(string label)
         {
             // Arrange
+#if NETCOREAPP3_1
+            var hostingEnvironmentMock = new Mock<IWebHostEnvironment>();
+#elif NETCOREAPP2_1 || NET461
             var hostingEnvironmentMock = new Mock<IHostingEnvironment>();
+#else
+#error unknown target framework
+#endif
             hostingEnvironmentMock.Setup(x => x.EnvironmentName).Returns(label);
 
             var instance = new EnvironmentNameLogEntryLabelProvider(hostingEnvironmentMock.Object);

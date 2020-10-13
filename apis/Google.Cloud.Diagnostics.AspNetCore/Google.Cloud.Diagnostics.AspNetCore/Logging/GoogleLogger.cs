@@ -24,7 +24,13 @@ using System.IO;
 using System.Linq;
 using static System.FormattableString;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3
+#elif NETSTANDARD2_0
 namespace Google.Cloud.Diagnostics.AspNetCore
+#else
+#error unknown target framework
+#endif
 {
     /// <summary>
     /// <see cref="ILogger"/> for Google Stackdriver Logging.

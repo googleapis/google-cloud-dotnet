@@ -17,23 +17,40 @@ using System.Collections.Generic;
 using Google.Api.Gax;
 using Microsoft.AspNetCore.Hosting;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3
+#elif NETSTANDARD2_0
 namespace Google.Cloud.Diagnostics.AspNetCore
+#else
+#error unknown target framework
+#endif
 {
     /// <summary>
     /// A <see cref="ILogEntryLabelProvider"/> implementation which adds the <see cref="IHostingEnvironment.EnvironmentName"/> to the log entry labels.
     /// </summary>
     public class EnvironmentNameLogEntryLabelProvider : ILogEntryLabelProvider
     {
+#if NETCOREAPP3_1
+        private readonly IWebHostEnvironment _hostingEnvironment;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnvironmentNameLogEntryLabelProvider"/> class.
+        /// </summary>
+        /// <param name="hostingEnvironment">The <see cref="IWebHostEnvironment"/> instance to retrieve the environment name from.</param>
+        public EnvironmentNameLogEntryLabelProvider(IWebHostEnvironment hostingEnvironment) =>
+            _hostingEnvironment = GaxPreconditions.CheckNotNull(hostingEnvironment, nameof(hostingEnvironment));
+#elif NETSTANDARD2_0
         private readonly IHostingEnvironment _hostingEnvironment;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvironmentNameLogEntryLabelProvider"/> class.
         /// </summary>
         /// <param name="hostingEnvironment">The <see cref="IHostingEnvironment"/> instance to retrieve the environment name from.</param>
-        public EnvironmentNameLogEntryLabelProvider(IHostingEnvironment hostingEnvironment)
-        {
+        public EnvironmentNameLogEntryLabelProvider(IHostingEnvironment hostingEnvironment) =>
             _hostingEnvironment = GaxPreconditions.CheckNotNull(hostingEnvironment, nameof(hostingEnvironment));
-        }
+#else
+#error unknown target framework
+#endif
 
         /// <inheritdoc/>
         public void Invoke(Dictionary<string, string> labels)

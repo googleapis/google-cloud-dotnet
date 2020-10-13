@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3", "Google.Cloud.Diagnostics.AspNetCore3\Google.Cloud.Diagnostics.AspNetCore3.csproj", "{136251C3-9B75-4C80-B8E7-DA099EB390D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj", "{57FB1697-B2DE-4659-BE54-1C613B1DCB03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3.Tests", "Google.Cloud.Diagnostics.AspNetCore3.Tests\Google.Cloud.Diagnostics.AspNetCore3.Tests.csproj", "{5D5B94DB-D898-4625-91EA-F5E693EA4D0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.Tests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj", "{760B0C66-BDBF-464A-8150-3DB6F84BD7DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.IntegrationTests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj", "{4F94C56B-C208-4607-AF45-AB298B58ED5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests", "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.csproj", "{55ADEA18-CC4A-4D59-B45E-019EB2556321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.AspNetCore3.Snippets", "Google.Cloud.Diagnostics.AspNetCore3.Snippets\Google.Cloud.Diagnostics.AspNetCore3.Snippets.csproj", "{4E2ABCC6-9E0F-4072-BFE2-4FCF2F3ECD55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{E674FE57-7F07-4F3D-AF76-4A9FB5737129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{136251C3-9B75-4C80-B8E7-DA099EB390D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136251C3-9B75-4C80-B8E7-DA099EB390D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136251C3-9B75-4C80-B8E7-DA099EB390D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136251C3-9B75-4C80-B8E7-DA099EB390D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57FB1697-B2DE-4659-BE54-1C613B1DCB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57FB1697-B2DE-4659-BE54-1C613B1DCB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57FB1697-B2DE-4659-BE54-1C613B1DCB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57FB1697-B2DE-4659-BE54-1C613B1DCB03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5B94DB-D898-4625-91EA-F5E693EA4D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5B94DB-D898-4625-91EA-F5E693EA4D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5B94DB-D898-4625-91EA-F5E693EA4D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5B94DB-D898-4625-91EA-F5E693EA4D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{760B0C66-BDBF-464A-8150-3DB6F84BD7DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760B0C66-BDBF-464A-8150-3DB6F84BD7DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760B0C66-BDBF-464A-8150-3DB6F84BD7DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760B0C66-BDBF-464A-8150-3DB6F84BD7DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F94C56B-C208-4607-AF45-AB298B58ED5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F94C56B-C208-4607-AF45-AB298B58ED5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F94C56B-C208-4607-AF45-AB298B58ED5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F94C56B-C208-4607-AF45-AB298B58ED5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55ADEA18-CC4A-4D59-B45E-019EB2556321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55ADEA18-CC4A-4D59-B45E-019EB2556321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55ADEA18-CC4A-4D59-B45E-019EB2556321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55ADEA18-CC4A-4D59-B45E-019EB2556321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2ABCC6-9E0F-4072-BFE2-4FCF2F3ECD55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2ABCC6-9E0F-4072-BFE2-4FCF2F3ECD55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2ABCC6-9E0F-4072-BFE2-4FCF2F3ECD55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2ABCC6-9E0F-4072-BFE2-4FCF2F3ECD55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E674FE57-7F07-4F3D-AF76-4A9FB5737129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E674FE57-7F07-4F3D-AF76-4A9FB5737129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E674FE57-7F07-4F3D-AF76-4A9FB5737129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E674FE57-7F07-4F3D-AF76-4A9FB5737129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A98AB4A-D97C-4507-AA47-ED2BB9DDF27A}
+	EndGlobalSection
+EndGlobal

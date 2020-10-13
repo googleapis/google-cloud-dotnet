@@ -12,29 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Snippets
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
+#else
+#error unknown target framework
+#endif
 {
+    using static IntegrationTests.TestServerHelpers;
+
     /// <summary>
     /// A simple web application to use as a default Startup.
     /// </summary>
-    internal class Startup
-    {
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddMvc();
-        }
-
-        public void Configure(IApplicationBuilder app)
-        {
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
-        }
-    }
+    internal class Startup : BaseStartup
+    { }
 }

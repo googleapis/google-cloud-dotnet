@@ -13,21 +13,21 @@
 // limitations under the License.
 
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
 using System;
 using Xunit;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
+#else
+#error unknown target framework
+#endif
 {
     public class TraceDecisionPredicateTest
     {
-        private HttpRequest CreateRequest(string path)
-        {
-            return new DefaultHttpRequest(new DefaultHttpContext())
-            {
-                Path = path
-            };
-        }
+        private HttpRequest CreateRequest(string path) =>
+            new DefaultHttpContext { Request = { Path = path } }.Request;
 
         [Fact]
         public void ShouldTrace_HealthCheck_NoFallback_Null()

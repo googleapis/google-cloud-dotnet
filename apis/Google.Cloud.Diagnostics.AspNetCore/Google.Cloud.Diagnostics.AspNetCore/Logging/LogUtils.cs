@@ -15,7 +15,13 @@
 using Google.Cloud.Logging.Type;
 using Microsoft.Extensions.Logging;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3
+#elif NETSTANDARD2_0
 namespace Google.Cloud.Diagnostics.AspNetCore
+#else
+#error unknown target framework
+#endif
 {
     internal static class LogUtils
     {

@@ -16,7 +16,13 @@ using Google.Api.Gax;
 using System;
 using System.Threading;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3
+#elif NETSTANDARD2_0
 namespace Google.Cloud.Diagnostics.AspNetCore
+#else
+#error unknown target framework
+#endif
 {
     /// <summary>Scope for the <see cref="GoogleLogger"/>.</summary>
     internal class GoogleLoggerScope : IDisposable

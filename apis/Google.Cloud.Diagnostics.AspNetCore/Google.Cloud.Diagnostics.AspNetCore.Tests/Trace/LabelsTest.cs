@@ -14,12 +14,17 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
 using Xunit;
 
 using LabelsCommon = Google.Cloud.Diagnostics.Common.TraceLabels;
 
+#if NETCOREAPP3_1
+namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
+#elif NETCOREAPP2_1 || NET461
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
+#else
+#error unknown target framework
+#endif
 {
     public class LabelsTest
     {
@@ -35,7 +40,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void FromDefaultHttpRequest()
         {
-            var request = new DefaultHttpRequest(new DefaultHttpContext { TraceIdentifier = "trace-id" });
+            
+            var request = (new DefaultHttpContext { TraceIdentifier = "trace-id" }).Request;
             request.ContentLength = 123;
             request.Host = new HostString("google.com");
             request.Method = "PUT";
@@ -51,7 +57,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void FromDefaultHttpResponse()
         {
-            var response = new DefaultHttpResponse(new DefaultHttpContext());
+            var response = new DefaultHttpContext().Response;
             response.StatusCode = 404;
 
             var labels = Labels.FromHttpResponse(response);
