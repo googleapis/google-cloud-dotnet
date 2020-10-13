@@ -6046,7 +6046,8 @@ namespace Google.Cloud.Dlp.V2 {
         public const int StartTimeFieldNumber = 1;
         private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
         /// <summary>
-        /// Exclude files or rows older than this value.
+        /// Exclude files, tables, or rows older than this value.
+        /// If not set, no lower time limit is applied.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -6060,8 +6061,8 @@ namespace Google.Cloud.Dlp.V2 {
         public const int EndTimeFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
         /// <summary>
-        /// Exclude files or rows newer than this value.
-        /// If set to zero, no upper time limit is applied.
+        /// Exclude files, tables, or rows newer than this value.
+        /// If not set, no upper time limit is applied.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -6079,16 +6080,19 @@ namespace Google.Cloud.Dlp.V2 {
         /// Used for data sources like Datastore and BigQuery.
         ///
         /// For BigQuery:
-        /// Required to filter out rows based on the given start and
-        /// end times. If not specified and the table was modified between the given
-        /// start and end times, the entire table will be scanned.
-        /// The valid data types of the timestamp field are: `INTEGER`, `DATE`,
-        /// `TIMESTAMP`, or `DATETIME` BigQuery column.
+        /// If this value is not specified and the table was modified between the
+        /// given start and end times, the entire table will be scanned. If this
+        /// value is specified, then rows are filtered based on the given start and
+        /// end times. Rows with a `NULL` value in the provided BigQuery column are
+        /// skipped.
+        /// Valid data types of the provided BigQuery column are: `INTEGER`, `DATE`,
+        /// `TIMESTAMP`, and `DATETIME`.
         ///
-        /// For Datastore.
-        /// Valid data types of the timestamp field are: `TIMESTAMP`.
-        /// Datastore entity will be scanned if the timestamp property does not
-        /// exist or its value is empty or invalid.
+        /// For Datastore:
+        /// If this value is specified, then entities are filtered based on the given
+        /// start and end times. If an entity does not contain the provided timestamp
+        /// property or contains empty or invalid values, then it is included.
+        /// Valid data types of the provided timestamp property are: `TIMESTAMP`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Dlp.V2.FieldId TimestampField {
