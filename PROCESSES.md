@@ -185,17 +185,17 @@ the files afterwards to check they contain everything you want to
 include in the history. (The filenames are displayed as the output
 of this command.)
 
-5. Assuming you're only releasing a single package, run
+5. If you're only releasing a single package, run
 `./prepare-release.sh commit`. This will commit all the current
 changes, with a message taken from the version history for the
 package. Use `git commit --amend` to change the commit message if
-you need to. If you're releasing more than one package, commit the
-changes manually with a suitable message.
-  - When using `./prepare-release push` below, make sure the
-    commit contains lines formatted as  
-    `- Release XYZ version ABC`  
-    with one such line per package. That will allow for automatic
-    tagging later.
+you need to.
+
+    If you're releasing more than one package, use
+    `./prepare-release.sh commit-multiple <commit title>`, e.g.
+    `./prepare-release.sh commit-multiple "Release Spanner libraries version 3.3.0"`.
+    Alternatively, create the commit manually, including one line per package of the form
+    `- Release XYZ version ABC`.
 
 6. Run `./prepare-release push` to push the current branch and
 create a pull request with the `autorelease: pending` tag. Note that
