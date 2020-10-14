@@ -72,6 +72,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             foreach (var (diff, history) in diffHistoryPairs)
             {
                 lines.Add($"Changes in {diff.Id} version {diff.NewVersion}:");
+                lines.Add("");
                 var section = history.Sections.FirstOrDefault(s => s.Version?.ToString() == diff.NewVersion);
                 if (section is null)
                 {
@@ -84,7 +85,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             lines.Add("Packages in this release:");
             foreach (var diff in diffs)
             {
-                lines.Add($"Release {diff.Id} version {diff.NewVersion}");
+                lines.Add($"- Release {diff.Id} version {diff.NewVersion}");
             }
 
             var message = string.Join("\n", lines);
