@@ -10,6 +10,7 @@
     <PackageReference Include="Octokit" Version="0.32.0" />
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj" />
+    <EmbeddedResource Include="History/*.json" />
   </ItemGroup>
 
 </Project>
