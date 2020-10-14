@@ -105,6 +105,9 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Vision.V1](https://googleapis.dev/dotnet/Google.Cloud.Vision.V1/2.0.0) | 2.0.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.WebRisk.V1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1/1.0.0) | 1.0.0 | [Google Cloud Web Risk (V1 API)](https://cloud.google.com/web-risk/) |
 | [Google.Cloud.WebRisk.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Web Risk (V1Beta1 API)](https://cloud.google.com/web-risk/) |
+| [Google.Cloud.Workflows.Common.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Common.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | Common resource names used by all Workflows V1Beta APIs |
+| [Google.Cloud.Workflows.Executions.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Executions.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflow Executions API](https://cloud.google.com/workflows/docs/apis) |
+| [Google.Cloud.Workflows.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflows API](https://cloud.google.com/workflows/docs/apis) |
 | [Google.Identity.AccessContextManager.Type](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.Type/1.0.0) | 1.0.0 | Version-agnostic types for the Google Identity Access Context Manager API |
 | [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.0.0) | 1.0.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](https://googleapis.dev/dotnet/Google.LongRunning/2.0.0) | 2.0.0 | Support for the Long-Running Operations API pattern |
