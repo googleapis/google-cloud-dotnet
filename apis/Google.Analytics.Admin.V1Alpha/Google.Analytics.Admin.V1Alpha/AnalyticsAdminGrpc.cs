@@ -39,6 +39,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateAccountRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateAccountRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.UpdateAccountRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketRequest> __Marshaller_google_analytics_admin_v1alpha_ProvisionAccountTicketRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketResponse> __Marshaller_google_analytics_admin_v1alpha_ProvisionAccountTicketResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest> __Marshaller_google_analytics_admin_v1alpha_ListAccountSummariesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse> __Marshaller_google_analytics_admin_v1alpha_ListAccountSummariesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetPropertyRequest> __Marshaller_google_analytics_admin_v1alpha_GetPropertyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.GetPropertyRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.Property> __Marshaller_google_analytics_admin_v1alpha_Property = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.Property.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListPropertiesRequest> __Marshaller_google_analytics_admin_v1alpha_ListPropertiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Admin.V1Alpha.ListPropertiesRequest.Parser.ParseFrom);
@@ -137,6 +139,13 @@ namespace Google.Analytics.Admin.V1Alpha {
         "ProvisionAccountTicket",
         __Marshaller_google_analytics_admin_v1alpha_ProvisionAccountTicketRequest,
         __Marshaller_google_analytics_admin_v1alpha_ProvisionAccountTicketResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest, global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse> __Method_ListAccountSummaries = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest, global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAccountSummaries",
+        __Marshaller_google_analytics_admin_v1alpha_ListAccountSummariesRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListAccountSummariesResponse);
 
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetPropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property> __Method_GetProperty = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetPropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(
         grpc::MethodType.Unary,
@@ -509,6 +518,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketResponse> ProvisionAccountTicket(global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns summaries of all accounts accessible by the caller.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse> ListAccountSummaries(global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1343,6 +1363,50 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketResponse> ProvisionAccountTicketAsync(global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ProvisionAccountTicket, null, options, request);
+      }
+      /// <summary>
+      /// Returns summaries of all accounts accessible by the caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse ListAccountSummaries(global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAccountSummaries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns summaries of all accounts accessible by the caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse ListAccountSummaries(global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAccountSummaries, null, options, request);
+      }
+      /// <summary>
+      /// Returns summaries of all accounts accessible by the caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse> ListAccountSummariesAsync(global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAccountSummariesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns summaries of all accounts accessible by the caller.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse> ListAccountSummariesAsync(global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAccountSummaries, null, options, request);
       }
       /// <summary>
       /// Lookup for a single "App+Web" Property.
@@ -3449,6 +3513,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_DeleteAccount, serviceImpl.DeleteAccount)
           .AddMethod(__Method_UpdateAccount, serviceImpl.UpdateAccount)
           .AddMethod(__Method_ProvisionAccountTicket, serviceImpl.ProvisionAccountTicket)
+          .AddMethod(__Method_ListAccountSummaries, serviceImpl.ListAccountSummaries)
           .AddMethod(__Method_GetProperty, serviceImpl.GetProperty)
           .AddMethod(__Method_ListProperties, serviceImpl.ListProperties)
           .AddMethod(__Method_CreateProperty, serviceImpl.CreateProperty)
@@ -3504,6 +3569,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAccount));
       serviceBinder.AddMethod(__Method_UpdateAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(serviceImpl.UpdateAccount));
       serviceBinder.AddMethod(__Method_ProvisionAccountTicket, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketRequest, global::Google.Analytics.Admin.V1Alpha.ProvisionAccountTicketResponse>(serviceImpl.ProvisionAccountTicket));
+      serviceBinder.AddMethod(__Method_ListAccountSummaries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesRequest, global::Google.Analytics.Admin.V1Alpha.ListAccountSummariesResponse>(serviceImpl.ListAccountSummaries));
       serviceBinder.AddMethod(__Method_GetProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetPropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.GetProperty));
       serviceBinder.AddMethod(__Method_ListProperties, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListPropertiesRequest, global::Google.Analytics.Admin.V1Alpha.ListPropertiesResponse>(serviceImpl.ListProperties));
       serviceBinder.AddMethod(__Method_CreateProperty, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreatePropertyRequest, global::Google.Analytics.Admin.V1Alpha.Property>(serviceImpl.CreateProperty));
