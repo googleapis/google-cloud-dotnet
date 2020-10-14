@@ -1180,21 +1180,6 @@
       ]
     },
     {
-      "id": "Google.Cloud.Retail.V2Beta",
-      "version": "1.0.0-beta00",
-      "type": "grpc",
-      "productName": "Cloud Retail Solution",
-      "description": "Recommended Google client library to access the Google Cloud Retail API (v2beta).",
-      "tags": [
-        "retail"
-      ],
-      "dependencies": {
-        "Google.LongRunning": "2.0.0"
-      },
-      "generator": "micro",
-      "protoPath": "google/cloud/retail/v2beta"
-    },
-    {
       "id": "Google.Cloud.Scheduler.V1",
       "generator": "micro",
       "protoPath": "google/cloud/scheduler/v1",
