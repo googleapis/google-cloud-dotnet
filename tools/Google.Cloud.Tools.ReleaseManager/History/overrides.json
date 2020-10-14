@@ -1,0 +1,11 @@
+﻿// This file maps commit hashes (first 7 characters) to the message
+// that should appear in the history file (after the commit link).
+// A message of "skip" indicates that the commit should be skipped.
+{
+  "0790924": "fix: Add gRPC compatibility constructors",
+  "0ca05f5": "chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31",
+  "6bde7a3": "docs: Regenerate all APIs with service comments in client documentation",
+  "f83bdf1": "fix: Apply timeouts to RPCs without retry",
+  "947a573": "docs: Regenerate all clients with more explicit documentation",
+  "0b0773d": "skip", // enum generation change
+}

@@ -13,7 +13,10 @@
 // limitations under the License.
 
 using LibGit2Sharp;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -25,7 +28,18 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     internal class GitCommit
     {
+        private static Lazy<Dictionary<string, string>> s_overrides = new Lazy<Dictionary<string, string>>(LoadOverrides);
+
         private const string AutosynthEmail = "yoshi-automation@google.com";
+        /// <summary>
+        /// A commit line consisting of just "Version history:" indicates that all the lines
+        /// following that should be treated as the version history entries.
+        /// </summary>
+        private const string VersionHistoryOverride = "Version history:";
+        /// <summary>
+        /// Message to use in order to skip a commit entirely.
+        /// </summary>
+        private const string SkipMessage = "skip";
 
         private readonly Commit _libGit2Commit;
 
@@ -47,7 +61,10 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// </summary>
         internal IEnumerable<string> GetHistoryLines()
         {
-            var messageLines = _libGit2Commit.Message.Replace("\r", "").Split('\n')
+            // Use the override if one has been provided for this commit, or the commit message otherwise.
+            string message = s_overrides.Value.GetValueOrDefault(Hash, _libGit2Commit.Message);
+
+            var messageLines = message.Replace("\r", "").Split('\n')
                 // Blank lines aren't helpful. It's slightly annoying that if the commit originally
                 // contained multiple consecutive lines that were intended to be a single paragraph,
                 // that won't come out nicely - we may want to try to detect that later.
@@ -60,6 +77,21 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             if (_libGit2Commit.Author.Email == AutosynthEmail)
             {
                 messageLines = messageLines.TakeWhile(line => !line.StartsWith("PiperOrigin-RevId")).ToList();
+            }
+
+            // Allow the version history to be overridden by a line on its own of "Version history:"
+            // followed by all the lines that should be in version history.
+            int overrideIndex = messageLines.IndexOf(VersionHistoryOverride);
+            if (overrideIndex != -1)
+            {
+                messageLines = messageLines.Skip(overrideIndex + 1).ToList();
+            }
+
+            // A single line of "skip" (usually from an override, either in the commit or in the overrides file)
+            // means we skip the commit entirely.
+            if (messageLines.Count == 1 && messageLines[0].Equals(SkipMessage, StringComparison.OrdinalIgnoreCase))
+            {
+                yield break;
             }
 
             // Common commit format: "Meaningful text [linebreak] Fixes #5000". Put that all on one line.
@@ -91,6 +123,14 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
             string AddIssueLink(string line) =>
                 IssuePattern.Replace(line, "[issue $1](https://github.com/googleapis/google-cloud-dotnet/issues/$1)");
+        }
+
+        private static Dictionary<string, string> LoadOverrides()
+        {
+            using var stream = typeof(GitCommit).Assembly.GetManifestResourceStream(typeof(GitCommit), "overrides.json");
+            using var reader = new StreamReader(stream);
+            string json = reader.ReadToEnd();
+            return JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
         }
     }
 }
