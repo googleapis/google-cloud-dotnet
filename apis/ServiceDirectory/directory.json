@@ -130,7 +130,7 @@
     {
       "ServiceDirectory": "google/analytics/admin/v1alpha",
       "Name": "analyticsadmin.googleapis.com",
-      "Title": "Analytics Admin API",
+      "Title": "Google Analytics Admin API",
       "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
       "ServiceConfigFile": "google/analytics/admin/v1alpha/analyticsadmin_v1alpha.yaml",
       "Version": "v1alpha",
