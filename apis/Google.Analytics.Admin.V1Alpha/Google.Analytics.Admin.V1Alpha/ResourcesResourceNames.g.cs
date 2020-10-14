@@ -2494,6 +2494,216 @@ namespace Google.Analytics.Admin.V1Alpha
         public static bool operator !=(DataSharingSettingsName a, DataSharingSettingsName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AccountSummary</c> resource.</summary>
+    public sealed partial class AccountSummaryName : gax::IResourceName, sys::IEquatable<AccountSummaryName>
+    {
+        /// <summary>The possible contents of <see cref="AccountSummaryName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>accountSummaries/{account_summary}</c>.</summary>
+            AccountSummary = 1,
+        }
+
+        private static gax::PathTemplate s_accountSummary = new gax::PathTemplate("accountSummaries/{account_summary}");
+
+        /// <summary>Creates a <see cref="AccountSummaryName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AccountSummaryName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AccountSummaryName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AccountSummaryName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AccountSummaryName"/> with the pattern <c>accountSummaries/{account_summary}</c>.
+        /// </summary>
+        /// <param name="accountSummaryId">The <c>AccountSummary</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AccountSummaryName"/> constructed from the provided ids.</returns>
+        public static AccountSummaryName FromAccountSummary(string accountSummaryId) =>
+            new AccountSummaryName(ResourceNameType.AccountSummary, accountSummaryId: gax::GaxPreconditions.CheckNotNullOrEmpty(accountSummaryId, nameof(accountSummaryId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccountSummaryName"/> with pattern
+        /// <c>accountSummaries/{account_summary}</c>.
+        /// </summary>
+        /// <param name="accountSummaryId">The <c>AccountSummary</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccountSummaryName"/> with pattern
+        /// <c>accountSummaries/{account_summary}</c>.
+        /// </returns>
+        public static string Format(string accountSummaryId) => FormatAccountSummary(accountSummaryId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AccountSummaryName"/> with pattern
+        /// <c>accountSummaries/{account_summary}</c>.
+        /// </summary>
+        /// <param name="accountSummaryId">The <c>AccountSummary</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AccountSummaryName"/> with pattern
+        /// <c>accountSummaries/{account_summary}</c>.
+        /// </returns>
+        public static string FormatAccountSummary(string accountSummaryId) =>
+            s_accountSummary.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(accountSummaryId, nameof(accountSummaryId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AccountSummaryName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accountSummaries/{account_summary}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="accountSummaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AccountSummaryName"/> if successful.</returns>
+        public static AccountSummaryName Parse(string accountSummaryName) => Parse(accountSummaryName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AccountSummaryName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accountSummaries/{account_summary}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="accountSummaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AccountSummaryName"/> if successful.</returns>
+        public static AccountSummaryName Parse(string accountSummaryName, bool allowUnparsed) =>
+            TryParse(accountSummaryName, allowUnparsed, out AccountSummaryName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AccountSummaryName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accountSummaries/{account_summary}</c></description></item>
+        /// </list>
+        /// </remarks>
+        /// <param name="accountSummaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AccountSummaryName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string accountSummaryName, out AccountSummaryName result) =>
+            TryParse(accountSummaryName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AccountSummaryName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item><description><c>accountSummaries/{account_summary}</c></description></item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="accountSummaryName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AccountSummaryName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string accountSummaryName, bool allowUnparsed, out AccountSummaryName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(accountSummaryName, nameof(accountSummaryName));
+            gax::TemplatedResourceName resourceName;
+            if (s_accountSummary.TryParseName(accountSummaryName, out resourceName))
+            {
+                result = FromAccountSummary(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(accountSummaryName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AccountSummaryName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string accountSummaryId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AccountSummaryId = accountSummaryId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AccountSummaryName"/> class from the component parts of pattern
+        /// <c>accountSummaries/{account_summary}</c>
+        /// </summary>
+        /// <param name="accountSummaryId">The <c>AccountSummary</c> ID. Must not be <c>null</c> or empty.</param>
+        public AccountSummaryName(string accountSummaryId) : this(ResourceNameType.AccountSummary, accountSummaryId: gax::GaxPreconditions.CheckNotNullOrEmpty(accountSummaryId, nameof(accountSummaryId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AccountSummary</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string AccountSummaryId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.AccountSummary: return s_accountSummary.Expand(AccountSummaryId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AccountSummaryName);
+
+        /// <inheritdoc/>
+        public bool Equals(AccountSummaryName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(AccountSummaryName a, AccountSummaryName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(AccountSummaryName a, AccountSummaryName b) => !(a == b);
+    }
+
     public partial class Account
     {
         /// <summary>
@@ -2612,6 +2822,39 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::DataSharingSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AccountSummary
+    {
+        /// <summary>
+        /// <see cref="gaav::AccountSummaryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::AccountSummaryName AccountSummaryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::AccountSummaryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Account"/> resource name property.
+        /// </summary>
+        public AccountName AccountAsAccountName
+        {
+            get => string.IsNullOrEmpty(Account) ? null : AccountName.Parse(Account, allowUnparsed: true);
+            set => Account = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PropertySummary
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Property"/> resource name property.
+        /// </summary>
+        public PropertyName PropertyAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
+            set => Property = value?.ToString() ?? "";
         }
     }
 }

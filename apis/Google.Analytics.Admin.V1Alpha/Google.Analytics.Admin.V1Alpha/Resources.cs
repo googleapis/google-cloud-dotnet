@@ -117,26 +117,35 @@ namespace Google.Analytics.Admin.V1Alpha {
             "cm9kdWN0c19lbmFibGVkGAUgASgIEiMKG3NoYXJpbmdfd2l0aF9vdGhlcnNf",
             "ZW5hYmxlZBgGIAEoCDpe6kFbCjFhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlz",
             "LmNvbS9EYXRhU2hhcmluZ1NldHRpbmdzEiZhY2NvdW50cy97YWNjb3VudH0v",
-            "ZGF0YVNoYXJpbmdTZXR0aW5ncyqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1J",
-            "TkRVU1RSWV9DQVRFR09SWV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQ",
-            "ARIjCh9CVVNJTkVTU19BTkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklO",
-            "QU5DRRADEg4KCkhFQUxUSENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJB",
-            "VkVMEAYSCQoFT1RIRVIQBxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgS",
-            "FgoSQkVBVVRZX0FORF9GSVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRV",
-            "UkUQChISCg5GT09EX0FORF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklF",
-            "U19BTkRfTEVJU1VSRRANEhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVS",
-            "TkVUX0FORF9URUxFQ09NEA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoE",
-            "TkVXUxAREhYKEk9OTElORV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRf",
-            "U09DSUVUWRATEhQKEFBFVFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFU",
-            "RRAVEg0KCVJFRkVSRU5DRRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIW",
-            "ChJKT0JTX0FORF9FRFVDQVRJT04QGRIMCghTSE9QUElORxAaKqcBChFNYXhp",
-            "bXVtVXNlckFjY2VzcxIjCh9NQVhJTVVNX1VTRVJfQUNDRVNTX1VOU1BFQ0lG",
-            "SUVEEAASDQoJTk9fQUNDRVNTEAESFAoQUkVBRF9BTkRfQU5BTFlaRRACEiIK",
-            "HkVESVRPUl9XSVRIT1VUX0xJTktfTUFOQUdFTUVOVBADEiQKIEVESVRPUl9J",
-            "TkNMVURJTkdfTElOS19NQU5BR0VNRU5UEARCewoiY29tLmdvb2dsZS5hbmFs",
-            "eXRpY3MuYWRtaW4udjFhbHBoYUIOUmVzb3VyY2VzUHJvdG9QAVpDZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvYWRt",
-            "aW4vdjFhbHBoYTthZG1pbmIGcHJvdG8z"));
+            "ZGF0YVNoYXJpbmdTZXR0aW5ncyKVAgoOQWNjb3VudFN1bW1hcnkSDAoEbmFt",
+            "ZRgBIAEoCRI7CgdhY2NvdW50GAIgASgJQir6QScKJWFuYWx5dGljc2FkbWlu",
+            "Lmdvb2dsZWFwaXMuY29tL0FjY291bnQSFAoMZGlzcGxheV9uYW1lGAMgASgJ",
+            "EksKEnByb3BlcnR5X3N1bW1hcmllcxgEIAMoCzIvLmdvb2dsZS5hbmFseXRp",
+            "Y3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eVN1bW1hcnk6VepBUgosYW5hbHl0",
+            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjb3VudFN1bW1hcnkSImFjY291",
+            "bnRTdW1tYXJpZXMve2FjY291bnRfc3VtbWFyeX0iZgoPUHJvcGVydHlTdW1t",
+            "YXJ5Ej0KCHByb3BlcnR5GAEgASgJQiv6QSgKJmFuYWx5dGljc2FkbWluLmdv",
+            "b2dsZWFwaXMuY29tL1Byb3BlcnR5EhQKDGRpc3BsYXlfbmFtZRgCIAEoCSqq",
+            "BAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRFR09SWV9VTlNQ",
+            "RUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVTU19BTkRfSU5E",
+            "VVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhFQUxUSENBUkUQ",
+            "BBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RIRVIQBxIaChZB",
+            "UlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FORF9GSVRORVNT",
+            "EAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09EX0FORF9EUklO",
+            "SxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VSRRANEhMKD0hP",
+            "TUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxFQ09NEA8SFgoS",
+            "TEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9OTElORV9DT01N",
+            "VU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQKEFBFVFNfQU5E",
+            "X0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVSRU5DRRAWEgsK",
+            "B1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9FRFVDQVRJT04Q",
+            "GRIMCghTSE9QUElORxAaKqcBChFNYXhpbXVtVXNlckFjY2VzcxIjCh9NQVhJ",
+            "TVVNX1VTRVJfQUNDRVNTX1VOU1BFQ0lGSUVEEAASDQoJTk9fQUNDRVNTEAES",
+            "FAoQUkVBRF9BTkRfQU5BTFlaRRACEiIKHkVESVRPUl9XSVRIT1VUX0xJTktf",
+            "TUFOQUdFTUVOVBADEiQKIEVESVRPUl9JTkNMVURJTkdfTElOS19NQU5BR0VN",
+            "RU5UEARCewoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIO",
+            "UmVzb3VyY2VzUHJvdG9QAVpDZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFhbHBoYTthZG1pbmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -151,7 +160,9 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.FirebaseLink), global::Google.Analytics.Admin.V1Alpha.FirebaseLink.Parser, new[]{ "Name", "Project", "CreateTime", "MaximumUserAccess" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag), global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag.Parser, new[]{ "Snippet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink), global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink.Parser, new[]{ "Name", "Parent", "CustomerId", "CanManageClients", "AdsPersonalizationEnabled", "EmailAddress", "CreateTime", "UpdateTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataSharingSettings), global::Google.Analytics.Admin.V1Alpha.DataSharingSettings.Parser, new[]{ "Name", "SharingWithGoogleSupportEnabled", "SharingWithGoogleAssignedSalesEnabled", "SharingWithGoogleAnySalesEnabled", "SharingWithGoogleProductsEnabled", "SharingWithOthersEnabled" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataSharingSettings), global::Google.Analytics.Admin.V1Alpha.DataSharingSettings.Parser, new[]{ "Name", "SharingWithGoogleSupportEnabled", "SharingWithGoogleAssignedSalesEnabled", "SharingWithGoogleAnySalesEnabled", "SharingWithGoogleProductsEnabled", "SharingWithOthersEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccountSummary), global::Google.Analytics.Admin.V1Alpha.AccountSummary.Parser, new[]{ "Name", "Account", "DisplayName", "PropertySummaries" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5206,6 +5217,514 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 48: {
             SharingWithOthersEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A virtual resource representing an overview of an account and
+  /// all its child App+Web properties.
+  /// </summary>
+  public sealed partial class AccountSummary : pb::IMessage<AccountSummary>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AccountSummary> _parser = new pb::MessageParser<AccountSummary>(() => new AccountSummary());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AccountSummary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AccountSummary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AccountSummary(AccountSummary other) : this() {
+      name_ = other.name_;
+      account_ = other.account_;
+      displayName_ = other.displayName_;
+      propertySummaries_ = other.propertySummaries_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AccountSummary Clone() {
+      return new AccountSummary(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Resource name for this account summary.
+    /// Format: accountSummaries/{account_id}
+    /// Example: "accountSummaries/1000"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 2;
+    private string account_ = "";
+    /// <summary>
+    /// Resource name of account referred to by this account summary
+    /// Format: accounts/{account_id}
+    /// Example: "accounts/1000"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private string displayName_ = "";
+    /// <summary>
+    /// Display name for the account referred to in this account summary.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "property_summaries" field.</summary>
+    public const int PropertySummariesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Admin.V1Alpha.PropertySummary> _repeated_propertySummaries_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.PropertySummary> propertySummaries_ = new pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.PropertySummary>();
+    /// <summary>
+    /// List of summaries for child accounts of this account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.PropertySummary> PropertySummaries {
+      get { return propertySummaries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AccountSummary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AccountSummary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Account != other.Account) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if(!propertySummaries_.Equals(other.propertySummaries_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Account.Length != 0) hash ^= Account.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      hash ^= propertySummaries_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Account);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      propertySummaries_.WriteTo(output, _repeated_propertySummaries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Account);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      propertySummaries_.WriteTo(ref output, _repeated_propertySummaries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Account);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      size += propertySummaries_.CalculateSize(_repeated_propertySummaries_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AccountSummary other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Account.Length != 0) {
+        Account = other.Account;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      propertySummaries_.Add(other.propertySummaries_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Account = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            propertySummaries_.AddEntriesFrom(input, _repeated_propertySummaries_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Account = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            propertySummaries_.AddEntriesFrom(ref input, _repeated_propertySummaries_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A virtual resource representing metadata for an App+Web property.
+  /// </summary>
+  public sealed partial class PropertySummary : pb::IMessage<PropertySummary>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PropertySummary> _parser = new pb::MessageParser<PropertySummary>(() => new PropertySummary());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PropertySummary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PropertySummary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PropertySummary(PropertySummary other) : this() {
+      property_ = other.property_;
+      displayName_ = other.displayName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PropertySummary Clone() {
+      return new PropertySummary(this);
+    }
+
+    /// <summary>Field number for the "property" field.</summary>
+    public const int PropertyFieldNumber = 1;
+    private string property_ = "";
+    /// <summary>
+    /// Resource name of property referred to by this property summary
+    /// Format: properties/{property_id}
+    /// Example: "properties/1000"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Property {
+      get { return property_; }
+      set {
+        property_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Display name for the property referred to in this account summary.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PropertySummary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PropertySummary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Property != other.Property) return false;
+      if (DisplayName != other.DisplayName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Property.Length != 0) hash ^= Property.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Property.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Property);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Property.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Property);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Property.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Property);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PropertySummary other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Property.Length != 0) {
+        Property = other.Property;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Property = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Property = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
             break;
           }
         }

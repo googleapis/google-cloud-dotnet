@@ -52,6 +52,7 @@ namespace Google.Analytics.Admin.V1Alpha
             DeleteAccountSettings = existing.DeleteAccountSettings;
             UpdateAccountSettings = existing.UpdateAccountSettings;
             ProvisionAccountTicketSettings = existing.ProvisionAccountTicketSettings;
+            ListAccountSummariesSettings = existing.ListAccountSummariesSettings;
             GetPropertySettings = existing.GetPropertySettings;
             ListPropertiesSettings = existing.ListPropertiesSettings;
             CreatePropertySettings = existing.CreatePropertySettings;
@@ -159,6 +160,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ProvisionAccountTicketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.ListAccountSummaries</c> and
+        /// <c>AnalyticsAdminServiceClient.ListAccountSummariesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAccountSummariesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1335,6 +1352,24 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ProvisionAccountTicketResponse> ProvisionAccountTicketAsync(ProvisionAccountTicketRequest request, st::CancellationToken cancellationToken) =>
             ProvisionAccountTicketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns summaries of all accounts accessible by the caller.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccountSummary"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAccountSummariesResponse, AccountSummary> ListAccountSummaries(ListAccountSummariesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns summaries of all accounts accessible by the caller.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccountSummary"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAccountSummariesResponse, AccountSummary> ListAccountSummariesAsync(ListAccountSummariesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lookup for a single "App+Web" Property.
@@ -5913,6 +5948,8 @@ namespace Google.Analytics.Admin.V1Alpha
 
         private readonly gaxgrpc::ApiCall<ProvisionAccountTicketRequest, ProvisionAccountTicketResponse> _callProvisionAccountTicket;
 
+        private readonly gaxgrpc::ApiCall<ListAccountSummariesRequest, ListAccountSummariesResponse> _callListAccountSummaries;
+
         private readonly gaxgrpc::ApiCall<GetPropertyRequest, Property> _callGetProperty;
 
         private readonly gaxgrpc::ApiCall<ListPropertiesRequest, ListPropertiesResponse> _callListProperties;
@@ -6023,6 +6060,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callProvisionAccountTicket = clientHelper.BuildApiCall<ProvisionAccountTicketRequest, ProvisionAccountTicketResponse>(grpcClient.ProvisionAccountTicketAsync, grpcClient.ProvisionAccountTicket, effectiveSettings.ProvisionAccountTicketSettings);
             Modify_ApiCall(ref _callProvisionAccountTicket);
             Modify_ProvisionAccountTicketApiCall(ref _callProvisionAccountTicket);
+            _callListAccountSummaries = clientHelper.BuildApiCall<ListAccountSummariesRequest, ListAccountSummariesResponse>(grpcClient.ListAccountSummariesAsync, grpcClient.ListAccountSummaries, effectiveSettings.ListAccountSummariesSettings);
+            Modify_ApiCall(ref _callListAccountSummaries);
+            Modify_ListAccountSummariesApiCall(ref _callListAccountSummaries);
             _callGetProperty = clientHelper.BuildApiCall<GetPropertyRequest, Property>(grpcClient.GetPropertyAsync, grpcClient.GetProperty, effectiveSettings.GetPropertySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetProperty);
             Modify_GetPropertyApiCall(ref _callGetProperty);
@@ -6164,6 +6204,8 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_ProvisionAccountTicketApiCall(ref gaxgrpc::ApiCall<ProvisionAccountTicketRequest, ProvisionAccountTicketResponse> call);
 
+        partial void Modify_ListAccountSummariesApiCall(ref gaxgrpc::ApiCall<ListAccountSummariesRequest, ListAccountSummariesResponse> call);
+
         partial void Modify_GetPropertyApiCall(ref gaxgrpc::ApiCall<GetPropertyRequest, Property> call);
 
         partial void Modify_ListPropertiesApiCall(ref gaxgrpc::ApiCall<ListPropertiesRequest, ListPropertiesResponse> call);
@@ -6262,6 +6304,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_UpdateAccountRequest(ref UpdateAccountRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ProvisionAccountTicketRequest(ref ProvisionAccountTicketRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAccountSummariesRequest(ref ListAccountSummariesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetPropertyRequest(ref GetPropertyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6497,6 +6541,30 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_ProvisionAccountTicketRequest(ref request, ref callSettings);
             return _callProvisionAccountTicket.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns summaries of all accounts accessible by the caller.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AccountSummary"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAccountSummariesResponse, AccountSummary> ListAccountSummaries(ListAccountSummariesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAccountSummariesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAccountSummariesRequest, ListAccountSummariesResponse, AccountSummary>(_callListAccountSummaries, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns summaries of all accounts accessible by the caller.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AccountSummary"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAccountSummariesResponse, AccountSummary> ListAccountSummariesAsync(ListAccountSummariesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAccountSummariesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAccountSummariesRequest, ListAccountSummariesResponse, AccountSummary>(_callListAccountSummaries, request, callSettings);
         }
 
         /// <summary>
@@ -7632,6 +7700,10 @@ namespace Google.Analytics.Admin.V1Alpha
     {
     }
 
+    public partial class ListAccountSummariesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListPropertiesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -7664,6 +7736,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Account> GetEnumerator() => Accounts.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAccountSummariesResponse : gaxgrpc::IPageResponse<AccountSummary>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AccountSummary> GetEnumerator() => AccountSummaries.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
