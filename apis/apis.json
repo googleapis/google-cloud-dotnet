@@ -381,7 +381,7 @@
       "protoPath": "google/devtools/clouddebugger/v2",
       "productName": "Google Cloud Debugger",
       "productUrl": "https://cloud.google.com/debugger/",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Debugger API.",
       "tags": [
