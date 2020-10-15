@@ -1,0 +1,10 @@
+[
+  {
+    "method": "ListServices",
+    "client": "ServiceManagerClient",
+    "arguments": {
+      "producerProjectId": "${PROJECT_ID}",
+      "consumerId": ""
+    }
+  }
+]
