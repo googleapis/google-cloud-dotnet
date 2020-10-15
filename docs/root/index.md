@@ -63,6 +63,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Logging.Type](Google.Cloud.Logging.Type/index.html) | 3.0.0 | Version-agnostic types for the Google Cloud Logging API |
 | [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html) | 3.0.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](Google.Cloud.ManagedIdentities.V1/index.html) | 2.0.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
+| [Google.Cloud.MediaTranslation.V1Beta1](Google.Cloud.MediaTranslation.V1Beta1/index.html) | 1.0.0-beta01 | [Media Translation API](https://cloud.google.com/media-translation) |
 | [Google.Cloud.Memcache.V1Beta2](Google.Cloud.Memcache.V1Beta2/index.html) | 1.0.0-beta02 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html) | 2.1.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
 | [Google.Cloud.Notebooks.V1Beta1](Google.Cloud.Notebooks.V1Beta1/index.html) | 1.0.0-beta01 | [AI Platform Notebooks API](https://cloud.google.com/ai-platform-notebooks) |
