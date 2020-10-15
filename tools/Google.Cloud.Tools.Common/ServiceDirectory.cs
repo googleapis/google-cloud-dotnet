@@ -30,10 +30,14 @@ namespace Google.Cloud.Tools.Common
         private static readonly Regex ServiceVersionPattern = new Regex(@"^v\d+.*");
         public List<Service> Services { get; set; }
 
-        internal static ServiceDirectory FromServiceConfigs(string googleapisRoot, IEnumerable<ServiceConfig> configs)
-        {
-            return new ServiceDirectory { Services = configs.Select(config => Service.FromServiceConfig(googleapisRoot, config)).ToList() };
-        }
+        internal static ServiceDirectory FromServiceConfigs(string googleapisRoot, IEnumerable<ServiceConfig> configs) =>
+            new ServiceDirectory
+            {
+                Services = configs
+                    .Select(config => Service.FromServiceConfig(googleapisRoot, config))
+                    .OrderBy(config => config.ServiceDirectory, StringComparer.Ordinal)
+                    .ToList() 
+            };
 
         /// <summary>
         /// Loads the service directory from service config files in the "googleapis"
