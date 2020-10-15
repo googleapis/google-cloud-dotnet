@@ -742,7 +742,7 @@
     },
     {
       "id": "Google.Cloud.Iot.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud IoT API",
       "productUrl": "https://cloud.google.com/iot/docs/reference/cloudiot/rest",

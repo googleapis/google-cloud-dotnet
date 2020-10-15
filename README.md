@@ -53,6 +53,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Gaming.V1](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1/1.0.0-beta01) | 1.0.0-beta01 | [Game Services API](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta05) | 1.0.0-beta05 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](https://googleapis.dev/dotnet/Google.Cloud.Iam.V1/2.0.0) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
+| [Google.Cloud.Iot.V1](https://googleapis.dev/dotnet/Google.Cloud.Iot.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud IoT API](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
 | [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.0.0) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](https://googleapis.dev/dotnet/Google.Cloud.Language.V1/2.0.0) | 2.0.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.Logging.Log4Net](https://googleapis.dev/dotnet/Google.Cloud.Logging.Log4Net/3.1.0) | 3.1.0 | Log4Net client library for the Google Cloud Logging API |
