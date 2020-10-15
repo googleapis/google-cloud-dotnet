@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListDeviceRegistries",
+    "client": "DeviceManagerClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  }
+]
