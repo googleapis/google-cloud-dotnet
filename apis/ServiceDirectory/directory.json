@@ -1549,7 +1549,7 @@
         "google/rpc"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2alpha"
+      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2Alpha"
     },
     {
       "ServiceDirectory": "google/cloud/retail/v2beta",
@@ -1568,7 +1568,7 @@
         "google/rpc"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2beta"
+      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2Beta"
     },
     {
       "ServiceDirectory": "google/cloud/scheduler/v1",
