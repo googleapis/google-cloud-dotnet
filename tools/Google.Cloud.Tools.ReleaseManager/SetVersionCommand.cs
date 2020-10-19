@@ -37,7 +37,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             api.Version = version;
             if (api.StructuredVersion.Patch == 0)
             {
-                GenerateProjectsCommand.UpdateDependencies(api);
+                GenerateProjectsCommand.UpdateDependencies(catalog, api);
             }
             var layout = DirectoryLayout.ForApi(id);
             var apiNames = catalog.CreateIdHashSet();

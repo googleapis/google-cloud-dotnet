@@ -180,9 +180,9 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         /// <summary>
         /// Updates the dependencies in an API for known packages, but only if the default
-        /// version is later than the current one.
+        /// version is later than the current one, with the same major version number.
         /// </summary>
-        public static void UpdateDependencies(ApiMetadata api)
+        public static void UpdateDependencies(ApiCatalog catalog, ApiMetadata api)
         {
             UpdateDependencyDictionary(api.Dependencies, "dependencies");
             UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
@@ -193,18 +193,28 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     return;
                 }
+
+                // We want to update any dependencies to "external" packages as listed in DefaultPackageVersions,
+                // but also "internal" packages such as Google.LongRunning.
+                Dictionary<string, string> allDefaultPackageVersions = DefaultPackageVersions
+                    .Concat(catalog.Apis.Select(api => new KeyValuePair<string, string>(api.Id, api.Version)))
+                    .ToDictionary(pair => pair.Key, pair => pair.Value);
+
                 foreach (var package in dependencies.Keys.ToList())
                 {
-                    if (DefaultPackageVersions.TryGetValue(package, out var defaultVersion))
+                    if (allDefaultPackageVersions.TryGetValue(package, out var defaultVersion))
                     {
                         var currentVersion = dependencies[package];
-                        if (defaultVersion == currentVersion)
+                        if (currentVersion == DefaultVersionValue ||
+                            currentVersion == ProjectVersionValue ||
+                            defaultVersion == currentVersion)
                         {
                             continue;
                         }
                         var structuredDefaultVersion = StructuredVersion.FromString(defaultVersion);
                         var structuredCurrentVersion = StructuredVersion.FromString(currentVersion);
-                        if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0)
+                        if (structuredDefaultVersion.CompareTo(structuredCurrentVersion) > 0 &&
+                            structuredDefaultVersion.Major == structuredCurrentVersion.Major)
                         {
                             dependencies[package] = defaultVersion;
                         }
