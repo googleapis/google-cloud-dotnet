@@ -43,7 +43,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Diagnostics.AspNetCore3](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.AspNetCore3/4.0.0-beta01) | 4.0.0-beta01 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries for ASP.NET Core 3 |
 | [Google.Cloud.Diagnostics.Common](https://googleapis.dev/dotnet/Google.Cloud.Diagnostics.Common/4.2.0-beta02) | 4.2.0-beta02 | Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components |
 | [Google.Cloud.Dialogflow.V2](https://googleapis.dev/dotnet/Google.Cloud.Dialogflow.V2/3.1.0) | 3.1.0 | [Google Cloud Dialogflow](https://cloud.google.com/dialogflow-enterprise/) |
-| [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/3.0.0) | 3.0.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
+| [Google.Cloud.Dlp.V2](https://googleapis.dev/dotnet/Google.Cloud.Dlp.V2/3.1.0) | 3.1.0 | [Google Cloud Data Loss Prevention](https://cloud.google.com/dlp/) |
 | [Google.Cloud.DocumentAI.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.DocumentAI.V1Beta2/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Document AI](https://cloud.google.com/solutions/document-ai) |
 | [Google.Cloud.ErrorReporting.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ErrorReporting.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Error Reporting](https://cloud.google.com/error-reporting/) |
 | [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.0.0) | 2.0.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |

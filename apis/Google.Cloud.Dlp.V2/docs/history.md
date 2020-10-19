@@ -1,5 +1,20 @@
 # Version history
 
+# Version 3.1.0, released 2020-10-19
+
+- [Commit 18f5adb](https://github.com/googleapis/google-cloud-dotnet/commit/18f5adb): Fix: retrieve job config for risk analysis jobs. Docs: clarify timespan config for BigQuery and Datastore.
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 381929c](https://github.com/googleapis/google-cloud-dotnet/commit/381929c): docs: correct the links for parent fields
+- [Commit 2722f39](https://github.com/googleapis/google-cloud-dotnet/commit/2722f39): docs: expand parent field format, and BigQuery sampling options. Also describing which transformations are allowed for ReidentifyContent API calls, and the custom alphabet allowed for format-preserving encryption (FPE).
+- [Commit f38e102](https://github.com/googleapis/google-cloud-dotnet/commit/f38e102):
+  - feat: Add CSV and TSV to file types.
+  - fix: Cleaned up resource_reference annotations for correct semantics and improved client library generation
+  - fix: BucketingConfig.replacement_value marked as required ([issue 5153](https://github.com/googleapis/google-cloud-dotnet/issues/5153))
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Apply timeouts to RPCs without retry
+- [Commit f4f2b5f](https://github.com/googleapis/google-cloud-dotnet/commit/f4f2b5f): docs: fix several broken links in the docs.
+
 # Version 3.0.0, released 2020-06-01
 
 - [Commit dee878e](https://github.com/googleapis/google-cloud-dotnet/commit/dee878e): Fix routing by including location resource names
