@@ -55,7 +55,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Functions.V1](Google.Cloud.Functions.V1/index.html) | 1.0.0 | [Cloud Functions API](https://cloud.google.com/functions) |
 | [Google.Cloud.Gaming.V1](Google.Cloud.Gaming.V1/index.html) | 1.0.0-beta01 | [Game Services API](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](Google.Cloud.Gaming.V1Beta/index.html) | 1.0.0-beta05 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
-| [Google.Cloud.Iam.V1](Google.Cloud.Iam.V1/index.html) | 2.0.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
+| [Google.Cloud.Iam.V1](Google.Cloud.Iam.V1/index.html) | 2.1.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
 | [Google.Cloud.Iot.V1](Google.Cloud.Iot.V1/index.html) | 1.0.0-beta01 | [Cloud IoT API](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
 | [Google.Cloud.Kms.V1](Google.Cloud.Kms.V1/index.html) | 2.0.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html) | 2.0.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
