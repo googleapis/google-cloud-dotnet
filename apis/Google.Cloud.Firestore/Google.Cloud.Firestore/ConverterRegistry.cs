@@ -37,7 +37,7 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// Adds the given converter to the registry.
         /// </summary>
-        /// <typeparam name="T">The </typeparam>
+        /// <typeparam name="T">The type that <paramref name="converter"/> converts to/from.</typeparam>
         /// <param name="converter">The converter to add.</param>
         /// <exception cref="ArgumentException">There is already a converter in the registry for the given type.</exception>
         public void Add<T>(IFirestoreConverter<T> converter)

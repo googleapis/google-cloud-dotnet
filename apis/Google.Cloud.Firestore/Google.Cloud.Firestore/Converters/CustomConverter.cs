@@ -56,23 +56,42 @@ namespace Google.Cloud.Firestore.Converters
     internal sealed class CustomConverter<T> : IFirestoreInternalConverter
     {
         private readonly IFirestoreConverter<T> _wrappedConverter;
+        private readonly IReadOnlyList<FirestoreDeserializationConfigurationAttribute> _configurationAttributes;
 
         internal CustomConverter(IFirestoreConverter<T> wrappedConverter)
         {
             _wrappedConverter = wrappedConverter;
+            var interfaceMapping = wrappedConverter.GetType().GetInterfaceMap(typeof(IFirestoreConverter<T>));
+            var methodIndex = Array.FindIndex(interfaceMapping.InterfaceMethods, method => method.Name == nameof(IFirestoreConverter<T>.FromFirestore));
+            var targetMethod = interfaceMapping.TargetMethods[methodIndex];
+
+            _configurationAttributes = targetMethod
+                .GetCustomAttributes<FirestoreDeserializationConfigurationAttribute>()
+                .ToList()
+                .AsReadOnly();
         }
 
         public object DeserializeMap(DeserializationContext context, IDictionary<string, Value> values)
         {
             var poco = ValueDeserializer.DeserializeMap(context, values, typeof(Dictionary<string, object>));
-            var converted = _wrappedConverter.FromFirestore(poco);
-            GaxPreconditions.CheckState(converted != null, "Converter deserialized to null value");
-            return converted;
+            return ApplyConversionToPoco(context, poco);
         }
 
         public object DeserializeValue(DeserializationContext context, Value value)
         {
             var poco = ValueDeserializer.Deserialize(context, value, typeof(object));
+            return ApplyConversionToPoco(context, poco);
+        }
+
+        private object ApplyConversionToPoco(DeserializationContext context, object poco)
+        {
+            if (poco is Dictionary<string, object> dictionary)
+            {
+                foreach (var attribute in _configurationAttributes)
+                {
+                    attribute.ApplyContext(context, dictionary);
+                }
+            }
             var converted = _wrappedConverter.FromFirestore(poco);
             GaxPreconditions.CheckState(converted != null, "Converter deserialized to null value");
             return converted;
