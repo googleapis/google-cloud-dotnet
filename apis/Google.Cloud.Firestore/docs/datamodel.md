@@ -228,7 +228,16 @@ value will be stored as a 64-bit integer in the same way as an `int`
 property in an attributed type, or an `int` value within a dictionary.
 
 The `FromFirestore` method receives the deserialized value using the
-default mapping, as shown in the earlier table.
+default mapping, as shown in the earlier table. However, if the
+`[FirestoreDeserializationConfigurationAttribute]` attribute is
+applied to the method, and if the value received is a dictionary
+(such as for the top-level document deserialization) then additional
+keys may be populated in the dictionary, representing the document
+ID or create/update/read timestamps. This attribute provides the
+equivalent functionality to the `[FirestoreDocumentId]`,
+`[FirestoreDocumentCreateTimestamp]`,
+`[FirestoreDocumentUpdateTimestamp]` and `[FirestoreDocumentReadTimestamp]`
+attributes, but for custom converters.
 
 ### Applying a converter to a type
 

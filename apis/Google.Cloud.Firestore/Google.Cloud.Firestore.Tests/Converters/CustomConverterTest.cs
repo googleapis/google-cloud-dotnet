@@ -46,10 +46,64 @@ namespace Google.Cloud.Firestore.Tests.Converters
             Assert.Throws<InvalidOperationException>(() => CustomConverter.ForConverterType(typeof(NullReturningConverter), typeof(int)));
         }
 
+        [Fact]
+        public void DeserializeMap_ServerReturnedProperties()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var context = new DeserializationContext(GetSampleSnapshot(db, "doc1"));
+            context.Snapshot.Document.Fields["doc-field"] = ProtoHelpers.CreateValue("FieldValue");
+            var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverter), typeof(DictionaryHolder));
+            var holder = (DictionaryHolder) converter.DeserializeMap(context, context.Snapshot.Document.Fields);
+            var dictionary = holder.Dictionary;
+            // The regular field deserialized from the document
+            Assert.Equal("FieldValue", dictionary["doc-field"]);
+
+            // The server-provided values
+            Assert.Equal(context.DocumentReference, dictionary["DocumentId"]);
+            Assert.Equal(context.Snapshot.CreateTime, dictionary["CreateTime"]);
+            Assert.Equal(context.Snapshot.UpdateTime, dictionary["UpdateTime"]);
+            Assert.Equal(context.Snapshot.ReadTime, dictionary["ReadTime"]);
+        }
+
+        [Fact]
+        public void DeserializeValue_WhenMap_ServerReturnedProperties()
+        {
+            var db = FirestoreDb.Create("proj", "db", new FakeFirestoreClient());
+            var context = new DeserializationContext(GetSampleSnapshot(db, "doc1"));
+            var value = ProtoHelpers.CreateMap(("key1", ProtoHelpers.CreateValue("value1")), ("key2", ProtoHelpers.CreateValue("value2")));
+            var converter = CustomConverter.ForConverterType(typeof(DictionaryHolderConverter), typeof(DictionaryHolder));
+            var holder = (DictionaryHolder) converter.DeserializeValue(context, value);
+            var dictionary = holder.Dictionary;
+            // The regular fields deserialized from the map
+            Assert.Equal("value1", dictionary["key1"]);
+            Assert.Equal("value2", dictionary["key2"]);
+
+            // The server-provided values
+            Assert.Equal(context.DocumentReference, dictionary["DocumentId"]);
+            Assert.Equal(context.Snapshot.CreateTime, dictionary["CreateTime"]);
+            Assert.Equal(context.Snapshot.UpdateTime, dictionary["UpdateTime"]);
+            Assert.Equal(context.Snapshot.ReadTime, dictionary["ReadTime"]);
+        }
+
         public class NullReturningConverter : IFirestoreConverter<string>
         {
             public string FromFirestore(object value) => null;
             public object ToFirestore(string value) => null;
+        }
+
+        public class DictionaryHolder
+        {
+            public Dictionary<string, object> Dictionary { get; set; }
+        }
+
+        public class DictionaryHolderConverter : IFirestoreConverter<DictionaryHolder>
+        {
+            [FirestoreDeserializationConfiguration(DocumentIdKey = "DocumentId", CreateTimestampKey = "CreateTime", UpdateTimestampKey = "UpdateTime", ReadTimestampKey = "ReadTime")]
+            public DictionaryHolder FromFirestore(object value) =>
+                new DictionaryHolder { Dictionary = (Dictionary<string, object>) value };
+
+            public object ToFirestore(DictionaryHolder value) =>
+                throw new NotImplementedException();
         }
     }
 }
