@@ -137,6 +137,7 @@ namespace Google.Cloud.Spanner.Data
             Mode = mode;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             TimestampBound = timestampBound;
+            ReturnCommitStats = connection.ReturnCommitStats;
         }
 
         /// <summary>
@@ -160,6 +161,13 @@ namespace Google.Cloud.Spanner.Data
             get => _disposeBehavior;
             set => _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
         }
+
+        /// <summary>
+        /// Specifies whether this transaction should request commit statistics from the backend.
+        /// This property is by default equal to the value set on the SpannerConnection of this
+        /// transaction, but can be overridden for a specific transaction.
+        /// </summary>
+        public bool ReturnCommitStats { get; set; }
 
         /// <summary>
         /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements within this transaction.
@@ -321,7 +329,7 @@ namespace Google.Cloud.Spanner.Data
         public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-            var request = new CommitRequest { Mutations = { _mutations } };
+            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = ReturnCommitStats };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
@@ -330,7 +338,8 @@ namespace Google.Cloud.Spanner.Data
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
                 }
-                return response.CommitTimestamp.ToDateTime();
+                SpannerConnection.LastCommitResponse = new CommitResponse { Proto = response };
+                return SpannerConnection.LastCommitResponse.CommitTimestamp;
             },
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }

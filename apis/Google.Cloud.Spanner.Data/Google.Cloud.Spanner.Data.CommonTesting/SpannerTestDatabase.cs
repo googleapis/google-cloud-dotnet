@@ -115,7 +115,12 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             string value = Environment.GetEnvironmentVariable(name);
             return string.IsNullOrEmpty(value) ? defaultValue : value;
         }
-        
-        public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);        
+
+        public SpannerConnection GetConnection()
+        {
+            var conn = new SpannerConnection(ConnectionString);
+            conn.ReturnCommitStats = true;
+            return conn;
+        }
     }
 }

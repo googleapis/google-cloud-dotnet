@@ -42,10 +42,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string key = _fixture.CreateTestRows();
             int calls = 0;
             int rowsAffected;
+            long mutationCount;
             using (var connection = _fixture.GetConnection())
             {
                 rowsAffected = await connection.RunWithRetriableTransactionAsync(
                     transaction => WorkAsync(connection, transaction));
+                mutationCount = connection.LastCommitResponse.MutationCount;
             }
 
             async Task<int> WorkAsync(SpannerConnection connection, SpannerTransaction transaction)
@@ -70,6 +72,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             Assert.Equal(8, rowsAffected);
             Assert.Equal(1, calls);
+            Assert.Equal(22, mutationCount);
 
             var actual = _fixture.FetchValues(key);
             var expected = new Dictionary<int, int>

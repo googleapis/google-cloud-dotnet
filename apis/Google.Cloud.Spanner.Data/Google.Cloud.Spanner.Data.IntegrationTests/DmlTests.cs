@@ -44,6 +44,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         command.Parameters.Add("key", SpannerDbType.String, key);
                         Assert.Equal(2, command.ExecuteNonQuery());
+                        Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                     }
                 });
             }
@@ -73,6 +74,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         command.Parameters.Add("key", SpannerDbType.String, key);
                         Assert.Equal(2, await command.ExecuteNonQueryAsync());
+                        Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                     }
                 });
             }
@@ -101,6 +103,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         command.Parameters.Add("key", SpannerDbType.String, key);
                         Assert.Equal(2, command.ExecuteNonQuery());
+                        // Delete mutations are counted as 1 per row.
+                        Assert.Equal(2, connection.LastCommitResponse.MutationCount);
                     }
                 });
             }
@@ -132,6 +136,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                         command.Parameters.Add("ov2", SpannerDbType.Int64, 6);
                         command.Parameters.Add("v2", SpannerDbType.Int64, 20);
                         Assert.Equal(2, command.ExecuteNonQuery());
+                        Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                     }
                 });
             }
@@ -163,6 +168,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         command.Parameters.Add("key", SpannerDbType.String, key);
                         Assert.Equal(2, command.ExecuteNonQuery());
+                        Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                     }
                 });
             }
@@ -253,6 +259,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             command.CommandText = $"UPDATE {_fixture.TableName} SET Value = Value * 2 WHERE UpdateMe AND Key=@key";
                             Assert.Equal(2, command.ExecuteNonQuery());
                             transaction.Commit();
+                            Assert.Equal(12, connection.LastCommitResponse.MutationCount);
                         }
                     }
                 });
@@ -283,6 +290,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         command.Parameters.Add("key", SpannerDbType.String, key);
                         Assert.Equal(2, command.ExecuteNonQuery());
+                        Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                     }
                     
                     string dml2 = $"UPDATE {_fixture.TableName} SET Value = Value * 2 WHERE KEY=@Key AND OriginalValue > 10";
@@ -290,6 +298,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     {
                         command.Parameters.Add("key", SpannerDbType.String, key);
                         Assert.Equal(2, command.ExecuteNonQuery());
+                        Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                     }
                 });
             }
@@ -328,6 +337,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             Assert.Equal(2, command.ExecuteNonQuery());
                             fetchedWithinTransaction = _fixture.FetchValues(key, transaction);
                             transaction.Commit();
+                            Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                         }
                     }
                 });
@@ -409,6 +419,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             Assert.Equal(1, command.ExecuteNonQuery());
                         }
                         transaction.Commit();
+                        Assert.Equal(6, connection.LastCommitResponse.MutationCount);
                     }
                 });
             }

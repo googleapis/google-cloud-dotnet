@@ -37,6 +37,15 @@ namespace Google.Cloud.Spanner.Data
             _transactionOptions = transactionOptions;
         }
 
+        private void beforeWriteStatement(SpannerTransaction transaction, int timeoutSeconds)
+        {
+            transaction.ReturnCommitStats = _connection.ReturnCommitStats;
+            // Importantly, we need to set timeout on the transaction, because
+            // ExecuteMutations on SpannerTransaction doesnt actually hit the network
+            // until you commit or rollback.
+            transaction.CommitTimeout = timeoutSeconds;
+        }
+
         public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteDmlAsync", _connection.Logger);
@@ -45,7 +54,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
-                    transaction.CommitTimeout = timeoutSeconds;
+                    beforeWriteStatement(transaction, timeoutSeconds);
                     while (true)
                     {
                         try
@@ -84,8 +93,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
-                    transaction.CommitTimeout = timeoutSeconds;
-
+                    beforeWriteStatement(transaction, timeoutSeconds);
                     IEnumerable<long> result;
 
                     result = await ((ISpannerTransaction)transaction)
@@ -117,10 +125,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
-                    // Importantly, we need to set timeout on the transaction, because
-                    // ExecuteMutations on SpannerTransaction doesnt actually hit the network
-                    // until you commit or rollback.
-                    transaction.CommitTimeout = timeoutSeconds;
+                    beforeWriteStatement(transaction, timeoutSeconds);
                     int count = await ((ISpannerTransaction)transaction)
                         .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
                         .ConfigureAwait(false);

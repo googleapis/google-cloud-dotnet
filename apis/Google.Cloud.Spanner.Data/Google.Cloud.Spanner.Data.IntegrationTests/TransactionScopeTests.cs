@@ -112,6 +112,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     await connection.OpenAsync();
                     scope.Complete();
+                    Assert.Equal(0, connection.LastCommitResponse.MutationCount);
                 }
             }
         }
@@ -125,6 +126,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 {
                     connection.Open();
                     scope.Complete();
+                    Assert.Equal(0, connection.LastCommitResponse.MutationCount);
                 }
             }
         }
@@ -206,6 +208,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await writeConnection.OpenAsync();
                 await UpdateValueAsync(writeConnection);
                 scope.Complete();
+                Assert.Equal(2, writeConnection.LastCommitResponse.MutationCount);
             }
         }
 
@@ -218,6 +221,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 writeConnection.Open();
                 UpdateValue(writeConnection);
                 scope.Complete();
+                Assert.Equal(2, writeConnection.LastCommitResponse.MutationCount);
             }
         }
 
@@ -315,9 +319,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             string key = IdGenerator.FromGuid();
             RetryHelpers.ExecuteWithRetry(() =>
             {
-                using (var scope = new TransactionScope())
+                using (var connection = _fixture.GetConnection())
                 {
-                    using (var connection = _fixture.GetConnection())
+                    using (var scope = new TransactionScope())
                     {
                         connection.Open();
                         using (var cmd1 = connection.CreateInsertCommand(_fixture.TableName))
@@ -333,9 +337,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
                             cmd2.ExecuteNonQuery();
                         }
+                        scope.Complete();
                     }
-
-                    scope.Complete();
+                    Assert.Equal(4, connection.LastCommitResponse.MutationCount);
                 }
             });
 
