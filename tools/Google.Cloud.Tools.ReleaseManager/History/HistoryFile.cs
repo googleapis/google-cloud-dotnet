@@ -16,6 +16,7 @@ using Google.Cloud.Tools.Common;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.ReleaseManager.History
@@ -69,8 +70,11 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// Merges the given list of releases into the file, ignoring releases that are already present.
         /// </summary>
         /// <param name="releases">The list of releases to merge, in reverse-chronological order (so latest first).</param>
-        internal void MergeReleases(List<Release> releases)
+        /// <returns>The new sections inserted into the history.</returns>
+        internal List<Section> MergeReleases(List<Release> releases)
         {
+            List<Section> sectionsInserted = new List<Section>();
+
             int latestExistingVersionIndex = Sections.FindIndex(s => s.Version != null);
 
             var latestExistingVersion = latestExistingVersionIndex == -1 ? null : Sections[latestExistingVersionIndex].Version;
@@ -85,8 +89,10 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 }
                 Section section = new Section(release);
                 Sections.Insert(insertIndex, section);
+                sectionsInserted.Add(section);
                 insertIndex++;
             }
+            return sectionsInserted;
         }
 
         public sealed class Section

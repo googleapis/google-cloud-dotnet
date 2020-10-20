@@ -64,12 +64,21 @@ namespace Google.Cloud.Tools.ReleaseManager
                     File.WriteAllText(historyFilePath, "# Version history\r\n\r\n");
                 }
                 var historyFile = HistoryFile.Load(historyFilePath);
-                historyFile.MergeReleases(releases);
-                historyFile.Save(historyFilePath);
+                var sectionsInserted = historyFile.MergeReleases(releases);
+                if (sectionsInserted.Count != 0)
+                {
+                    historyFile.Save(historyFilePath);
+                    var relativePath = Path.GetRelativePath(DirectoryLayout.DetermineRootDirectory(), historyFilePath)
+                        .Replace('\\', '/');
+                    Console.WriteLine($"Updated version history file: {relativePath}");
+                    Console.WriteLine("New content:");
+                    Console.WriteLine();
+                    foreach (var line in sectionsInserted.SelectMany(section => section.Lines))
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
             }
-            var relativePath = Path.GetRelativePath(DirectoryLayout.DetermineRootDirectory(), historyFilePath)
-                .Replace('\\', '/');
-            Console.WriteLine($"Updated version history file: {relativePath}");
         }
 
         private static IEnumerable<Release> LoadReleases(Repository repo, ApiMetadata api)
