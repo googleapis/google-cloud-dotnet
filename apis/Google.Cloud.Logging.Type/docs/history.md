@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.1.0, released 2020-10-20
+
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+
 # Version 3.0.0, released 2020-03-18
 
 No API surface changes compared with 3.0.0-beta01, just dependency
