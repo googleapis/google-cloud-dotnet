@@ -142,12 +142,15 @@ namespace Google.Analytics.Data.V1Alpha {
             "YXRhLnYxYWxwaGEuTWV0cmljVHlwZRISCgpleHByZXNzaW9uGAYgASgJKmcK",
             "EU1ldHJpY0FnZ3JlZ2F0aW9uEiIKHk1FVFJJQ19BR0dSRUdBVElPTl9VTlNQ",
             "RUNJRklFRBAAEgkKBVRPVEFMEAESCwoHTUlOSU1VTRAFEgsKB01BWElNVU0Q",
-            "BhIJCgVDT1VOVBAEKnAKCk1ldHJpY1R5cGUSGwoXTUVUUklDX1RZUEVfVU5T",
-            "UEVDSUZJRUQQABIQCgxUWVBFX0lOVEVHRVIQARIOCgpUWVBFX0ZMT0FUEAIS",
-            "EAoMVFlQRV9TRUNPTkRTEAQSEQoNVFlQRV9DVVJSRU5DWRAJQnsKIWNvbS5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYUIRUmVwb3J0aW5nQXBpUHJv",
-            "dG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
-            "bmFseXRpY3MvZGF0YS92MWFscGhhO2RhdGFiBnByb3RvMw=="));
+            "BhIJCgVDT1VOVBAEKoECCgpNZXRyaWNUeXBlEhsKF01FVFJJQ19UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASEAoMVFlQRV9JTlRFR0VSEAESDgoKVFlQRV9GTE9BVBAC",
+            "EhAKDFRZUEVfU0VDT05EUxAEEhUKEVRZUEVfTUlMTElTRUNPTkRTEAUSEAoM",
+            "VFlQRV9NSU5VVEVTEAYSDgoKVFlQRV9IT1VSUxAHEhEKDVRZUEVfU1RBTkRB",
+            "UkQQCBIRCg1UWVBFX0NVUlJFTkNZEAkSDQoJVFlQRV9GRUVUEAoSDgoKVFlQ",
+            "RV9NSUxFUxALEg8KC1RZUEVfTUVURVJTEAwSEwoPVFlQRV9LSUxPTUVURVJT",
+            "EA1CewohY29tLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhQhFSZXBv",
+            "cnRpbmdBcGlQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2FuYWx5dGljcy9kYXRhL3YxYWxwaGE7ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Alpha.MetricAggregation), typeof(global::Google.Analytics.Data.V1Alpha.MetricType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -237,9 +240,41 @@ namespace Google.Analytics.Data.V1Alpha {
     /// </summary>
     [pbr::OriginalName("TYPE_SECONDS")] TypeSeconds = 4,
     /// <summary>
+    /// A duration in milliseconds; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_MILLISECONDS")] TypeMilliseconds = 5,
+    /// <summary>
+    /// A duration in minutes; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_MINUTES")] TypeMinutes = 6,
+    /// <summary>
+    /// A duration in hours; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_HOURS")] TypeHours = 7,
+    /// <summary>
+    /// A custom metric of standard type; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_STANDARD")] TypeStandard = 8,
+    /// <summary>
     /// An amount of money; a special floating point type.
     /// </summary>
     [pbr::OriginalName("TYPE_CURRENCY")] TypeCurrency = 9,
+    /// <summary>
+    /// A length in feet; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_FEET")] TypeFeet = 10,
+    /// <summary>
+    /// A length in miles; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_MILES")] TypeMiles = 11,
+    /// <summary>
+    /// A length in meters; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_METERS")] TypeMeters = 12,
+    /// <summary>
+    /// A length in kilometers; a special floating point type.
+    /// </summary>
+    [pbr::OriginalName("TYPE_KILOMETERS")] TypeKilometers = 13,
   }
 
   #endregion

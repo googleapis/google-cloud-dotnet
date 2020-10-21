@@ -353,5 +353,173 @@ namespace Google.Analytics.Data.V1Alpha.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void GetMetadataRequestObject()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            Metadata expectedResponse = new Metadata
+            {
+                Dimensions =
+                {
+                    new DimensionMetadata(),
+                },
+                Metrics =
+                {
+                    new MetricMetadata(),
+                },
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            Metadata response = client.GetMetadata(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetadataRequestObjectAsync()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            Metadata expectedResponse = new Metadata
+            {
+                Dimensions =
+                {
+                    new DimensionMetadata(),
+                },
+                Metrics =
+                {
+                    new MetricMetadata(),
+                },
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metadata>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            Metadata responseCallSettings = await client.GetMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Metadata responseCancellationToken = await client.GetMetadataAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMetadata()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            Metadata expectedResponse = new Metadata
+            {
+                Dimensions =
+                {
+                    new DimensionMetadata(),
+                },
+                Metrics =
+                {
+                    new MetricMetadata(),
+                },
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            Metadata response = client.GetMetadata(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetadataAsync()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            Metadata expectedResponse = new Metadata
+            {
+                Dimensions =
+                {
+                    new DimensionMetadata(),
+                },
+                Metrics =
+                {
+                    new MetricMetadata(),
+                },
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metadata>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            Metadata responseCallSettings = await client.GetMetadataAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Metadata responseCancellationToken = await client.GetMetadataAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMetadataResourceNames()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            Metadata expectedResponse = new Metadata
+            {
+                Dimensions =
+                {
+                    new DimensionMetadata(),
+                },
+                Metrics =
+                {
+                    new MetricMetadata(),
+                },
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetadata(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            Metadata response = client.GetMetadata(request.MetadataName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetadataResourceNamesAsync()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            Metadata expectedResponse = new Metadata
+            {
+                Dimensions =
+                {
+                    new DimensionMetadata(),
+                },
+                Metrics =
+                {
+                    new MetricMetadata(),
+                },
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetadataAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metadata>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            Metadata responseCallSettings = await client.GetMetadataAsync(request.MetadataName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Metadata responseCancellationToken = await client.GetMetadataAsync(request.MetadataName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

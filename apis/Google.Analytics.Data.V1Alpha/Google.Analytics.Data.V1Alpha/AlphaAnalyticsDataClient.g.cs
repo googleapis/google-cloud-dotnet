@@ -48,6 +48,7 @@ namespace Google.Analytics.Data.V1Alpha
             BatchRunReportsSettings = existing.BatchRunReportsSettings;
             BatchRunPivotReportsSettings = existing.BatchRunPivotReportsSettings;
             GetUniversalMetadataSettings = existing.GetUniversalMetadataSettings;
+            GetMetadataSettings = existing.GetMetadataSettings;
             OnCopy(existing);
         }
 
@@ -117,6 +118,21 @@ namespace Google.Analytics.Data.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetUniversalMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlphaAnalyticsDataClient.GetMetadata</c> and <c>AlphaAnalyticsDataClient.GetMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AlphaAnalyticsDataSettings"/> object.</returns>
@@ -451,6 +467,216 @@ namespace Google.Analytics.Data.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<UniversalMetadata> GetUniversalMetadataAsync(GetUniversalMetadataRequest request, st::CancellationToken cancellationToken) =>
             GetUniversalMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Metadata GetMetadata(GetMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metadata> GetMetadataAsync(GetMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metadata> GetMetadataAsync(GetMetadataRequest request, st::CancellationToken cancellationToken) =>
+            GetMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata to retrieve. This name field is
+        /// specified in the URL path and not URL parameters. Property is a numeric
+        /// Google Analytics App + Web Property identifier.
+        /// 
+        /// Example: properties/1234/metadata
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Metadata GetMetadata(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadata(new GetMetadataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata to retrieve. This name field is
+        /// specified in the URL path and not URL parameters. Property is a numeric
+        /// Google Analytics App + Web Property identifier.
+        /// 
+        /// Example: properties/1234/metadata
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metadata> GetMetadataAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataAsync(new GetMetadataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata to retrieve. This name field is
+        /// specified in the URL path and not URL parameters. Property is a numeric
+        /// Google Analytics App + Web Property identifier.
+        /// 
+        /// Example: properties/1234/metadata
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metadata> GetMetadataAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata to retrieve. This name field is
+        /// specified in the URL path and not URL parameters. Property is a numeric
+        /// Google Analytics App + Web Property identifier.
+        /// 
+        /// Example: properties/1234/metadata
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Metadata GetMetadata(MetadataName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadata(new GetMetadataRequest
+            {
+                MetadataName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata to retrieve. This name field is
+        /// specified in the URL path and not URL parameters. Property is a numeric
+        /// Google Analytics App + Web Property identifier.
+        /// 
+        /// Example: properties/1234/metadata
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metadata> GetMetadataAsync(MetadataName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetadataAsync(new GetMetadataRequest
+            {
+                MetadataName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the metadata to retrieve. This name field is
+        /// specified in the URL path and not URL parameters. Property is a numeric
+        /// Google Analytics App + Web Property identifier.
+        /// 
+        /// Example: properties/1234/metadata
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metadata> GetMetadataAsync(MetadataName name, st::CancellationToken cancellationToken) =>
+            GetMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AlphaAnalyticsData client wrapper implementation, for convenient use.</summary>
@@ -468,6 +694,8 @@ namespace Google.Analytics.Data.V1Alpha
         private readonly gaxgrpc::ApiCall<BatchRunPivotReportsRequest, BatchRunPivotReportsResponse> _callBatchRunPivotReports;
 
         private readonly gaxgrpc::ApiCall<GetUniversalMetadataRequest, UniversalMetadata> _callGetUniversalMetadata;
+
+        private readonly gaxgrpc::ApiCall<GetMetadataRequest, Metadata> _callGetMetadata;
 
         /// <summary>
         /// Constructs a client wrapper for the AlphaAnalyticsData service, with the specified gRPC client and settings.
@@ -494,6 +722,9 @@ namespace Google.Analytics.Data.V1Alpha
             _callGetUniversalMetadata = clientHelper.BuildApiCall<GetUniversalMetadataRequest, UniversalMetadata>(grpcClient.GetUniversalMetadataAsync, grpcClient.GetUniversalMetadata, effectiveSettings.GetUniversalMetadataSettings);
             Modify_ApiCall(ref _callGetUniversalMetadata);
             Modify_GetUniversalMetadataApiCall(ref _callGetUniversalMetadata);
+            _callGetMetadata = clientHelper.BuildApiCall<GetMetadataRequest, Metadata>(grpcClient.GetMetadataAsync, grpcClient.GetMetadata, effectiveSettings.GetMetadataSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMetadata);
+            Modify_GetMetadataApiCall(ref _callGetMetadata);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -509,6 +740,8 @@ namespace Google.Analytics.Data.V1Alpha
 
         partial void Modify_GetUniversalMetadataApiCall(ref gaxgrpc::ApiCall<GetUniversalMetadataRequest, UniversalMetadata> call);
 
+        partial void Modify_GetMetadataApiCall(ref gaxgrpc::ApiCall<GetMetadataRequest, Metadata> call);
+
         partial void OnConstruction(AlphaAnalyticsData.AlphaAnalyticsDataClient grpcClient, AlphaAnalyticsDataSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AlphaAnalyticsData client</summary>
@@ -523,6 +756,8 @@ namespace Google.Analytics.Data.V1Alpha
         partial void Modify_BatchRunPivotReportsRequest(ref BatchRunPivotReportsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetUniversalMetadataRequest(ref GetUniversalMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMetadataRequest(ref GetMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns a customized report of your Google Analytics event data. Reports
@@ -676,6 +911,48 @@ namespace Google.Analytics.Data.V1Alpha
         {
             Modify_GetUniversalMetadataRequest(ref request, ref callSettings);
             return _callGetUniversalMetadata.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Metadata GetMetadata(GetMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetadataRequest(ref request, ref callSettings);
+            return _callGetMetadata.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns metadata for dimensions and metrics available in reporting methods.
+        /// Used to explore the dimensions and metrics. In this method, a Google
+        /// Analytics App + Web Property Identifier is specified in the request, and
+        /// the metadata response includes Custom dimensions and metrics as well as
+        /// Universal metadata.
+        /// 
+        /// For example if a custom metric with parameter name `levels_unlocked` is
+        /// registered to a property, the Metadata response will contain
+        /// `customEvent:levels_unlocked`. Universal metadata are dimensions and
+        /// metrics applicable to any property such as `country` and `totalUsers`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Metadata> GetMetadataAsync(GetMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetadataRequest(ref request, ref callSettings);
+            return _callGetMetadata.Async(request, callSettings);
         }
     }
 }
