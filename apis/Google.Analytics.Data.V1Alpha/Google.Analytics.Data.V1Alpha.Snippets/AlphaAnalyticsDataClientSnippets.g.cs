@@ -247,5 +247,92 @@ namespace Google.Analytics.Data.V1Alpha.Snippets
             UniversalMetadata response = await alphaAnalyticsDataClient.GetUniversalMetadataAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for GetMetadata</summary>
+        public void GetMetadataRequestObject()
+        {
+            // Snippet: GetMetadata(GetMetadataRequest, CallSettings)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
+            // Initialize request argument(s)
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            Metadata response = alphaAnalyticsDataClient.GetMetadata(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataAsync</summary>
+        public async Task GetMetadataRequestObjectAsync()
+        {
+            // Snippet: GetMetadataAsync(GetMetadataRequest, CallSettings)
+            // Additional: GetMetadataAsync(GetMetadataRequest, CancellationToken)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMetadataRequest request = new GetMetadataRequest
+            {
+                MetadataName = MetadataName.FromProperty("[PROPERTY]"),
+            };
+            // Make the request
+            Metadata response = await alphaAnalyticsDataClient.GetMetadataAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadata</summary>
+        public void GetMetadata()
+        {
+            // Snippet: GetMetadata(string, CallSettings)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/metadata";
+            // Make the request
+            Metadata response = alphaAnalyticsDataClient.GetMetadata(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataAsync</summary>
+        public async Task GetMetadataAsync()
+        {
+            // Snippet: GetMetadataAsync(string, CallSettings)
+            // Additional: GetMetadataAsync(string, CancellationToken)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "properties/[PROPERTY]/metadata";
+            // Make the request
+            Metadata response = await alphaAnalyticsDataClient.GetMetadataAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadata</summary>
+        public void GetMetadataResourceNames()
+        {
+            // Snippet: GetMetadata(MetadataName, CallSettings)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
+            // Initialize request argument(s)
+            MetadataName name = MetadataName.FromProperty("[PROPERTY]");
+            // Make the request
+            Metadata response = alphaAnalyticsDataClient.GetMetadata(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetadataAsync</summary>
+        public async Task GetMetadataResourceNamesAsync()
+        {
+            // Snippet: GetMetadataAsync(MetadataName, CallSettings)
+            // Additional: GetMetadataAsync(MetadataName, CancellationToken)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
+            // Initialize request argument(s)
+            MetadataName name = MetadataName.FromProperty("[PROPERTY]");
+            // Make the request
+            Metadata response = await alphaAnalyticsDataClient.GetMetadataAsync(name);
+            // End snippet
+        }
     }
 }
