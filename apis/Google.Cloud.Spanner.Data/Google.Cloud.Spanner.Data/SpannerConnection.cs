@@ -61,8 +61,8 @@ namespace Google.Cloud.Spanner.Data
         // State used for TransactionScope-based transactions.
         private VolatileResourceManager _volatileResourceManager;
 
-        // The response for the last commit on this connection.
-        private CommitResponse _commitResponse;
+        // The response for the last commit (explicit or implicit) on this connection.
+        private CommitResponse _lastCommitResponse;
 
         /// <inheritdoc />
         public override string ConnectionString
@@ -127,12 +127,17 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// The response of the last commit on this connection. This includes the
-        /// response of any implicit commits by commands without a transaction.
+        /// commit response of any implicit commits by commands that are executed
+        /// without a transaction.
+        ///
+        /// The property is null after the execution of a command that uses a
+        /// transaction, and will return the commit response of that transaction
+        /// when the transaction is committed.
         /// </summary>
         public CommitResponse LastCommitResponse
         {
-            get => _commitResponse;
-            internal set => _commitResponse = value;
+            get => _lastCommitResponse;
+            internal set => _lastCommitResponse = value;
         }
 
         /// <summary>
@@ -303,7 +308,7 @@ namespace Google.Cloud.Spanner.Data
         public async Task<TResult> RunWithRetriableTransactionAsync<TResult>(Func<SpannerTransaction, Task<TResult>> asyncWork, CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckNotNull(asyncWork, nameof(asyncWork));
-
+            
             await OpenAsync(cancellationToken).ConfigureAwait(false);
             RetriableTransaction transaction = new RetriableTransaction(
                 this,
@@ -809,7 +814,7 @@ namespace Google.Cloud.Spanner.Data
         private Action GetTransactionEnlister()
         {
             Transaction current = Transaction.Current;
-            return current == null ? (Action)null : () => EnlistTransaction(current);
+            return current == null ? (Action) null : () => EnlistTransaction(current);
         }
 
         /// <summary>

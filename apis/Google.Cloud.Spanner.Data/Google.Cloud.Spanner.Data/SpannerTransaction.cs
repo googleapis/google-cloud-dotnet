@@ -338,8 +338,9 @@ namespace Google.Cloud.Spanner.Data
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
                 }
-                SpannerConnection.LastCommitResponse = new CommitResponse { Proto = response };
-                return SpannerConnection.LastCommitResponse.CommitTimestamp;
+                var commitResponse = new CommitResponse(response);
+                SpannerConnection.LastCommitResponse = commitResponse;
+                return commitResponse.CommitTimestamp;
             },
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }

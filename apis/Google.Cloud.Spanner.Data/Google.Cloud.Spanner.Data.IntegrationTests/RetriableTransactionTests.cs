@@ -72,7 +72,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             Assert.Equal(8, rowsAffected);
             Assert.Equal(1, calls);
-            Assert.Equal(22, mutationCount);
+            Assert.Equal(28, mutationCount);
 
             var actual = _fixture.FetchValues(key);
             var expected = new Dictionary<int, int>

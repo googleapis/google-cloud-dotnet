@@ -24,13 +24,18 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class CommitResponse
     {
-        private const string MISSING_COMMIT_STATS = "The transaction did not return any CommitStats. Set Transaction.ReturnCommitStats=true to request commit statistics.";
+        private const string MISSING_COMMIT_STATS = "The transaction did not return any CommitStats. Set SpannerConnection.ReturnCommitStats=true to request commit statistics.";
+
+        internal CommitResponse(V1.CommitResponse proto)
+        {
+            Proto = GaxPreconditions.CheckNotNull(proto, nameof(proto));
+        }
 
         /// <summary>
         /// The proto representation of the commit response. Must not be mutated
         /// or exposed publicly.
         /// </summary>
-        internal V1.CommitResponse Proto { get; set; }
+        internal V1.CommitResponse Proto { get; }
 
         /// <summary>
         /// The commit timestamp of the transaction.
