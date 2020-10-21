@@ -1549,7 +1549,7 @@
         "google/rpc"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2alpha"
+      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2Alpha"
     },
     {
       "ServiceDirectory": "google/cloud/retail/v2beta",
@@ -1568,7 +1568,7 @@
         "google/rpc"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2beta"
+      "CSharpNamespaceFromProtos": "Google.Cloud.Retail.V2Beta"
     },
     {
       "ServiceDirectory": "google/cloud/scheduler/v1",
@@ -2342,7 +2342,7 @@
     {
       "ServiceDirectory": "google/devtools/clouderrorreporting/v1beta1",
       "Name": "clouderrorreporting.googleapis.com",
-      "Title": "Stackdriver Error Reporting API",
+      "Title": "Cloud Error Reporting API",
       "Description": "Groups and counts similar errors from cloud services and applications, reports new errors, and provides access to error groups and their associated errors.",
       "ServiceConfigFile": "google/devtools/clouderrorreporting/v1beta1/clouderrorreporting_v1beta1.yaml",
       "Version": "v1beta1",
