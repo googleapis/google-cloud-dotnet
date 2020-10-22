@@ -1,5 +1,12 @@
 # Version history
 
+# Version 2.2.0, released 2020-10-22
+
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Apply timeouts to RPCs without retry
+
 # Version 2.1.0, released 2020-06-15
 
 - [Commit 4389faa](https://github.com/googleapis/google-cloud-dotnet/commit/4389faa): docs: Change relative URLs to absolute URLs to fix broken links.
