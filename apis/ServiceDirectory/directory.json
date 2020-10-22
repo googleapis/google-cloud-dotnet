@@ -2307,6 +2307,25 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Datastore.V1"
     },
     {
+      "ServiceDirectory": "google/devtools/artifactregistry/v1beta2",
+      "Name": "artifactregistry.googleapis.com",
+      "Title": "Artifact Registry API",
+      "Description": "Store and manage build artifacts in a scalable and integrated service built on Google infrastructure.",
+      "ServiceConfigFile": "google/devtools/artifactregistry/v1beta2/artifactregistry_v1beta2.yaml",
+      "Version": "v1beta2",
+      "PackageFromDirectory": "google.devtools.artifactregistry.v1beta2",
+      "PackageFromProtos": "google.devtools.artifactregistry.v1beta2",
+      "ImportDirectories": [
+        "google/api",
+        "google/devtools/artifactregistry/v1beta2",
+        "google/iam/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.ArtifactRegistry.V1Beta2"
+    },
+    {
       "ServiceDirectory": "google/devtools/build/v1",
       "Name": "buildeventservice.googleapis.com",
       "Title": "Build Event Service Backend API",
