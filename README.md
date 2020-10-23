@@ -73,7 +73,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.PhishingProtection.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
 | [Google.Cloud.PolicyTroubleshooter.V1](https://googleapis.dev/dotnet/Google.Cloud.PolicyTroubleshooter.V1/1.0.0-beta01) | 1.0.0-beta01 | [Policy Troubleshooter API](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
 | [Google.Cloud.PubSub.V1](https://googleapis.dev/dotnet/Google.Cloud.PubSub.V1/2.1.0) | 2.1.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
-| [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.0.0) | 1.0.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
+| [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.1.0) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecaptchaEnterprise.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Google Cloud reCAPTCHA Enterprise (V1Beta1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.Recommender.V1](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/2.1.0) | 2.1.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
 | [Google.Cloud.Redis.V1](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1/2.0.0) | 2.0.0 | [Google Cloud Memorystore for Redis (V1 API)](https://cloud.google.com/memorystore/) |
