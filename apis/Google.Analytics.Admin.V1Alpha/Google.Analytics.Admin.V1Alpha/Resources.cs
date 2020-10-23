@@ -711,7 +711,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a Google Analytics App+Web property.
+  /// A resource message representing a Google Analytics GA4 property.
   /// </summary>
   public sealed partial class Property : pb::IMessage<Property>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3873,7 +3873,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between an App+Web property and a Firebase project.
+  /// A link between an GA4 property and a Firebase project.
   /// </summary>
   public sealed partial class FirebaseLink : pb::IMessage<FirebaseLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3968,7 +3968,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int MaximumUserAccessFieldNumber = 4;
     private global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess maximumUserAccess_ = global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess.Unspecified;
     /// <summary>
-    /// Maximum user access to the App + Web property allowed to admins of
+    /// Maximum user access to the GA4 property allowed to admins of
     /// the linked Firebase project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4364,7 +4364,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between an App+Web property and a Google Ads account.
+  /// A link between an GA4 property and a Google Ads account.
   /// </summary>
   public sealed partial class GoogleAdsLink : pb::IMessage<GoogleAdsLink>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5228,7 +5228,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
   /// <summary>
   /// A virtual resource representing an overview of an account and
-  /// all its child App+Web properties.
+  /// all its child GA4 properties.
   /// </summary>
   public sealed partial class AccountSummary : pb::IMessage<AccountSummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5516,7 +5516,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A virtual resource representing metadata for an App+Web property.
+  /// A virtual resource representing metadata for an GA4 property.
   /// </summary>
   public sealed partial class PropertySummary : pb::IMessage<PropertySummary>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

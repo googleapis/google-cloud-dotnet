@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
-  /// Service Interface for the Analytics Admin API (App+Web).
+  /// Service Interface for the Analytics Admin API (GA4).
   /// </summary>
   public static partial class AnalyticsAdminService
   {
@@ -467,7 +467,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have App+Web properties.
+      /// Note that these accounts might not currently have GA4 properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -534,10 +534,10 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Lookup for a single "App+Web" Property.
+      /// Lookup for a single "GA4" Property.
       ///
       /// Throws "Target not found" if no such property found, if property is not
-      /// of the type "App+Web", or if caller does not have permissions to access it.
+      /// of the type "GA4", or if caller does not have permissions to access it.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -550,7 +550,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "App+Web" properties will be returned.
+      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -564,7 +564,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Creates an "App+Web" property with the specified location and attributes.
+      /// Creates an "GA4" property with the specified location and attributes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -585,7 +585,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an App+Web Property.
+      /// Returns an error if the target is not found, or is not an GA4 Property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1135,7 +1135,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have App+Web properties.
+      /// Note that these accounts might not currently have GA4 properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1151,7 +1151,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have App+Web properties.
+      /// Note that these accounts might not currently have GA4 properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1165,7 +1165,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have App+Web properties.
+      /// Note that these accounts might not currently have GA4 properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1181,7 +1181,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have App+Web properties.
+      /// Note that these accounts might not currently have GA4 properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1409,10 +1409,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListAccountSummaries, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "App+Web" Property.
+      /// Lookup for a single "GA4" Property.
       ///
       /// Throws "Target not found" if no such property found, if property is not
-      /// of the type "App+Web", or if caller does not have permissions to access it.
+      /// of the type "GA4", or if caller does not have permissions to access it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1424,10 +1424,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "App+Web" Property.
+      /// Lookup for a single "GA4" Property.
       ///
       /// Throws "Target not found" if no such property found, if property is not
-      /// of the type "App+Web", or if caller does not have permissions to access it.
+      /// of the type "GA4", or if caller does not have permissions to access it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1437,10 +1437,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_GetProperty, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "App+Web" Property.
+      /// Lookup for a single "GA4" Property.
       ///
       /// Throws "Target not found" if no such property found, if property is not
-      /// of the type "App+Web", or if caller does not have permissions to access it.
+      /// of the type "GA4", or if caller does not have permissions to access it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1452,10 +1452,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetPropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "App+Web" Property.
+      /// Lookup for a single "GA4" Property.
       ///
       /// Throws "Target not found" if no such property found, if property is not
-      /// of the type "App+Web", or if caller does not have permissions to access it.
+      /// of the type "GA4", or if caller does not have permissions to access it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1467,7 +1467,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "App+Web" properties will be returned.
+      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1484,7 +1484,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "App+Web" properties will be returned.
+      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1499,7 +1499,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "App+Web" properties will be returned.
+      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1516,7 +1516,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "App+Web" properties will be returned.
+      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1529,7 +1529,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListProperties, null, options, request);
       }
       /// <summary>
-      /// Creates an "App+Web" property with the specified location and attributes.
+      /// Creates an "GA4" property with the specified location and attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1541,7 +1541,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CreateProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "App+Web" property with the specified location and attributes.
+      /// Creates an "GA4" property with the specified location and attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1551,7 +1551,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_CreateProperty, null, options, request);
       }
       /// <summary>
-      /// Creates an "App+Web" property with the specified location and attributes.
+      /// Creates an "GA4" property with the specified location and attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1563,7 +1563,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CreatePropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "App+Web" property with the specified location and attributes.
+      /// Creates an "GA4" property with the specified location and attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1583,7 +1583,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an App+Web Property.
+      /// Returns an error if the target is not found, or is not an GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1605,7 +1605,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an App+Web Property.
+      /// Returns an error if the target is not found, or is not an GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1625,7 +1625,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an App+Web Property.
+      /// Returns an error if the target is not found, or is not an GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1647,7 +1647,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not an App+Web Property.
+      /// Returns an error if the target is not found, or is not an GA4 Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
