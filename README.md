@@ -75,7 +75,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.PubSub.V1](https://googleapis.dev/dotnet/Google.Cloud.PubSub.V1/2.1.0) | 2.1.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
 | [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.1.0) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecaptchaEnterprise.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Google Cloud reCAPTCHA Enterprise (V1Beta1 API)](https://cloud.google.com/recaptcha-enterprise/) |
-| [Google.Cloud.Recommender.V1](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/2.1.0) | 2.1.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
+| [Google.Cloud.Recommender.V1](https://googleapis.dev/dotnet/Google.Cloud.Recommender.V1/2.2.0) | 2.2.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
 | [Google.Cloud.Redis.V1](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1/2.0.0) | 2.0.0 | [Google Cloud Memorystore for Redis (V1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Redis.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Redis.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Memorystore for Redis (V1Beta1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Scheduler.V1](https://googleapis.dev/dotnet/Google.Cloud.Scheduler.V1/2.0.0) | 2.0.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |

@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.2.0, released 2020-10-26
+
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+
 # Version 2.1.0, released 2020-07-09
 
 - [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: include service description in documentation for client classes
