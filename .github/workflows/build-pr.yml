@@ -1,0 +1,49 @@
+name: Build and test PR (changed APIs only)
+
+on: [pull_request]	
+
+jobs:	
+
+  build:	
+    runs-on: ubuntu-18.04	
+    env:	
+      DOTNET_NOLOGO: true	
+    strategy:	
+      matrix:	
+        regex: ["'Google\\.Cloud\\.[A-L].*'", "'Google\\.Cloud\\.[M-Z].*'", "'!Google\\.Cloud'"]	
+    steps:	
+    - uses: actions/checkout@v2	
+      with:	
+        submodules: true	
+        fetch-depth: 100	
+
+    # We use the .NET Core 2.1 runtime for testing most packages
+    - name: Setup .NET Core 2.1	
+      uses: actions/setup-dotnet@v1	
+      with:	
+        dotnet-version: 2.1.x	
+
+    # We build with .NET Core 3.1 SDK	
+    - name: Setup .NET Core 3.1	
+      uses: actions/setup-dotnet@v1	
+      with:	
+        dotnet-version: 3.1.x
+
+    - name: Setup Python	
+      uses: actions/setup-python@v2	
+      with:	
+        python-version: 3.x	
+
+    # The GitHub checkout action leaves the repo in a slightly awkward
+    # state. This tidies it up.
+    - name: Set up git branches
+      run: |
+        git checkout -b pr-head
+        git checkout -b master ${{ github.event.pull_request.base.sha }}
+        git checkout pr-head
+
+    - name: Build and test	
+      run: |
+        touch build_timing_log.txt	
+        ./build.sh --diff --regex ${{ matrix.regex }}	
+        ./processbuildtiminglog.sh	

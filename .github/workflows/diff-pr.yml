@@ -1,0 +1,40 @@
+name: Detect differences (PR only)
+
+on: [pull_request]
+
+jobs:
+
+  diff:
+    runs-on: ubuntu-18.04
+    env:	
+      DOTNET_NOLOGO: true	
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+        # TODO: Try depth 100. We diff against master, and we don't know
+        # how far back that is... there may be a better approach
+        fetch-depth: 0
+        
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+        
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+        
+    # The GitHub checkout action leaves the repo in a slightly awkward
+    # state. This tidies it up.
+    - name: Set up git branches
+      run: |
+        git checkout -b pr-head
+        git checkout -b master ${{ github.event.pull_request.base.sha }}
+        git checkout pr-head
+
+    - name: Detect PR changes
+      run: |
+        ./detect-pr-changes.sh
