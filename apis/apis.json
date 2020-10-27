@@ -250,12 +250,28 @@
       }
     },
     {
+      "id": "Google.Cloud.Billing.Budgets.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Billing Budget API",
+      "productUrl": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
+      "description": "Recommended Google client library to access the Cloud Billing Budget API v1. This API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
+      "tags": [
+        "billing",
+        "budgets",
+        "budget"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/billing/budgets/v1"
+    },
+    {
       "id": "Google.Cloud.Billing.Budgets.V1Beta1",
       "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Billing Budget API",
       "productUrl": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
-      "description": "Recommended Google client library to access thee Cloud Billing Budget API. This API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
+      "description": "Recommended Google client library to access the Cloud Billing Budget API v1beta1. This API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
       "tags": [
         "billing",
         "budgets",
