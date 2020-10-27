@@ -28,6 +28,7 @@ runtests=true
 runcoverage=false
 apiregex=
 nobuild=false
+diff=false
 while (( "$#" )); do
   if [[ "$1" == "--notests" ]]
   then 
@@ -35,6 +36,7 @@ while (( "$#" )); do
   elif [[ "$1" == "--diff" ]]
   then
     apis+=($(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
+    diff=true
   elif [[ "$1" == "--regex" ]]
   then
     shift
@@ -57,7 +59,7 @@ done
 [[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
 
 # If no APIs were specified explicitly, build all of them (and tools on Windows)
-if [[ ${#apis[@]} -eq 0 ]]
+if [[ ${#apis[@]} -eq 0 && $diff == false ]]
 then
   apis=(${tools} $($PYTHON3 tools/listapis.py apis/apis.json))
 fi
