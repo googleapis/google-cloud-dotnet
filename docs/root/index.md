@@ -32,7 +32,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Bigtable.Admin.V2](Google.Cloud.Bigtable.Admin.V2/index.html) | 2.2.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Bigtable.Common.V2](Google.Cloud.Bigtable.Common.V2/index.html) | 2.0.0 | Common code used by Bigtable V2 APIs |
 | [Google.Cloud.Bigtable.V2](Google.Cloud.Bigtable.V2/index.html) | 2.1.0 | [Google Bigtable](https://cloud.google.com/bigtable/) |
-| [Google.Cloud.Billing.Budgets.V1Beta1](Google.Cloud.Billing.Budgets.V1Beta1/index.html) | 1.0.0-beta01 | [Cloud Billing Budget API](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
+| [Google.Cloud.Billing.Budgets.V1Beta1](Google.Cloud.Billing.Budgets.V1Beta1/index.html) | 1.0.0-beta01 | [Cloud Billing Budget API (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html) | 2.1.0 | [Google Cloud Billing API](https://cloud.google.com/billing/docs/) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.1.0 | [Google Kubernetes Engine API](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
