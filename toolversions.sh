@@ -176,17 +176,18 @@ clean_grpc() {
   find $1 -name libgrpc_csharp_ext86.dylib | xargs rm
 
   # Now the x64 files we're not using on the current system
-  linux*)
-    find $1 -name grpc_csharp_ext.x64.dll | xargs rm
-    find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
-    ;;
-  darwin*)
-    find $1 -name libgrpc_csharp_ext64.so | xargs rm
-    find $1 -name grpc_csharp_ext.x64.dll | xargs rm
-    ;;
-  win* | msys* | cygwin*)
-    find $1 -name libgrpc_csharp_ext64.so | xargs rm
-    find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
-    ;;
-  *)
+  case "$OSTYPE" in
+    linux*)
+      find $1 -name grpc_csharp_ext.x64.dll | xargs rm
+      find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
+      ;;
+    darwin*)
+      find $1 -name libgrpc_csharp_ext64.so | xargs rm
+      find $1 -name grpc_csharp_ext.x64.dll | xargs rm
+      ;;
+    win* | msys* | cygwin*)
+      find $1 -name libgrpc_csharp_ext64.so | xargs rm
+      find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
+      ;;
+  esac
 }
