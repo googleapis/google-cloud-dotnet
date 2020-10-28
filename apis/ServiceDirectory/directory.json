@@ -1517,8 +1517,8 @@
     {
       "ServiceDirectory": "google/cloud/retail/v2",
       "Name": "retail.googleapis.com",
-      "Title": "Cloud Retail Solution",
-      "Description": "TBD",
+      "Title": "Cloud Retail",
+      "Description": "Cloud Retail service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.",
       "ServiceConfigFile": "google/cloud/retail/v2/retail_v2.yaml",
       "Version": "v2",
       "PackageFromDirectory": "google.cloud.retail.v2",
@@ -1536,8 +1536,8 @@
     {
       "ServiceDirectory": "google/cloud/retail/v2alpha",
       "Name": "retail.googleapis.com",
-      "Title": "Cloud Retail Solution",
-      "Description": "TBD",
+      "Title": "Cloud Retail",
+      "Description": "Cloud Retail service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.",
       "ServiceConfigFile": "google/cloud/retail/v2alpha/retail_v2alpha.yaml",
       "Version": "v2alpha",
       "PackageFromDirectory": "google.cloud.retail.v2alpha",
@@ -1555,8 +1555,8 @@
     {
       "ServiceDirectory": "google/cloud/retail/v2beta",
       "Name": "retail.googleapis.com",
-      "Title": "Cloud Retail Solution",
-      "Description": "TBD",
+      "Title": "Cloud Retail",
+      "Description": "Cloud Retail service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.",
       "ServiceConfigFile": "google/cloud/retail/v2beta/retail_v2beta.yaml",
       "Version": "v2beta",
       "PackageFromDirectory": "google.cloud.retail.v2beta",
