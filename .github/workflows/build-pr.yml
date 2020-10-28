@@ -10,7 +10,7 @@ jobs:
       DOTNET_NOLOGO: true	
     strategy:	
       matrix:	
-        regex: ["'Google\\.Cloud\\.[A-L].*'", "'Google\\.Cloud\\.[M-Z].*'", "'!Google\\.Cloud'"]	
+        regex: ["'Google\\.Cloud\\.[A-F].*'", "'Google\\.Cloud\\.[G-L].*'", "'Google\\.Cloud\\.[M-R].*'","'Google\\.Cloud\\.[S-Z].*'", "'!Google\\.Cloud'"]	
     steps:	
     - uses: actions/checkout@v2	
       with:	
@@ -41,9 +41,11 @@ jobs:
         git checkout -b pr-head
         git checkout -b master ${{ github.event.pull_request.base.sha }}
         git checkout pr-head
+        echo "Disk space at start of run:"
+        df -k
 
     - name: Build and test	
       run: |
         touch build_timing_log.txt	
-        ./build.sh --diff --regex ${{ matrix.regex }}	
+        ./build.sh --regex ${{ matrix.regex }}	
         ./processbuildtiminglog.sh	

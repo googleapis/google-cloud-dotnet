@@ -143,6 +143,8 @@ do
     continue
   fi
 
+  echo "Disk space"
+  df -k
   log_build_action "Building $apidir"
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
 
@@ -162,7 +164,9 @@ then
   log_build_action "(Start) Unit tests"
   # Could use xargs, but this is more flexible
   while read testproject
-  do  
+  do
+    echo "Disk space"
+    df -k
     testdir=$(dirname $testproject)
     log_build_action "Testing $testdir"
     if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
