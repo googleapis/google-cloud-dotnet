@@ -51,20 +51,21 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             "YnN1Yl90b3BpYxgBIAEoCUID4EEBEhsKDnNjaGVtYV92ZXJzaW9uGAIgASgJ",
             "QgPgQQESLQogbW9uaXRvcmluZ19ub3RpZmljYXRpb25fY2hhbm5lbHMYAyAD",
             "KAlCA+BBARIrCh5kaXNhYmxlX2RlZmF1bHRfaWFtX3JlY2lwaWVudHMYBCAB",
-            "KAhCA+BBASK6AwoGRmlsdGVyEhUKCHByb2plY3RzGAEgAygJQgPgQQESYQoW",
-            "Y3JlZGl0X3R5cGVzX3RyZWF0bWVudBgEIAEoDjI8Lmdvb2dsZS5jbG91ZC5i",
-            "aWxsaW5nLmJ1ZGdldHMudjEuRmlsdGVyLkNyZWRpdFR5cGVzVHJlYXRtZW50",
-            "QgPgQQESFQoIc2VydmljZXMYAyADKAlCA+BBARIYCgtzdWJhY2NvdW50cxgF",
-            "IAMoCUID4EEBEkgKBmxhYmVscxgGIAMoCzIzLmdvb2dsZS5jbG91ZC5iaWxs",
-            "aW5nLmJ1ZGdldHMudjEuRmlsdGVyLkxhYmVsc0VudHJ5QgPgQQEaSQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLkxpc3RWYWx1ZToCOAEicAoUQ3JlZGl0VHlwZXNUcmVhdG1l",
-            "bnQSJgoiQ1JFRElUX1RZUEVTX1RSRUFUTUVOVF9VTlNQRUNJRklFRBAAEhcK",
-            "E0lOQ0xVREVfQUxMX0NSRURJVFMQARIXChNFWENMVURFX0FMTF9DUkVESVRT",
-            "EAJCgQEKI2NvbS5nb29nbGUuY2xvdWQuYmlsbGluZy5idWRnZXRzLnYxQhBC",
-            "dWRnZXRNb2RlbFByb3RvUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvYmlsbGluZy9idWRnZXRzL3YxO2J1ZGdldHNi",
-            "BnByb3RvMw=="));
+            "KAhCA+BBASL1AwoGRmlsdGVyEhUKCHByb2plY3RzGAEgAygJQgPgQQESGQoM",
+            "Y3JlZGl0X3R5cGVzGAcgAygJQgPgQQESYQoWY3JlZGl0X3R5cGVzX3RyZWF0",
+            "bWVudBgEIAEoDjI8Lmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjEu",
+            "RmlsdGVyLkNyZWRpdFR5cGVzVHJlYXRtZW50QgPgQQESFQoIc2VydmljZXMY",
+            "AyADKAlCA+BBARIYCgtzdWJhY2NvdW50cxgFIAMoCUID4EEBEkgKBmxhYmVs",
+            "cxgGIAMoCzIzLmdvb2dsZS5jbG91ZC5iaWxsaW5nLmJ1ZGdldHMudjEuRmls",
+            "dGVyLkxhYmVsc0VudHJ5QgPgQQEaSQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEikKBXZhbHVlGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkxpc3RWYWx1",
+            "ZToCOAEijwEKFENyZWRpdFR5cGVzVHJlYXRtZW50EiYKIkNSRURJVF9UWVBF",
+            "U19UUkVBVE1FTlRfVU5TUEVDSUZJRUQQABIXChNJTkNMVURFX0FMTF9DUkVE",
+            "SVRTEAESFwoTRVhDTFVERV9BTExfQ1JFRElUUxACEh0KGUlOQ0xVREVfU1BF",
+            "Q0lGSUVEX0NSRURJVFMQA0KBAQojY29tLmdvb2dsZS5jbG91ZC5iaWxsaW5n",
+            "LmJ1ZGdldHMudjFCEEJ1ZGdldE1vZGVsUHJvdG9QAVpGZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9iaWxsaW5nL2J1ZGdl",
+            "dHMvdjE7YnVkZ2V0c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -73,7 +74,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.LastPeriodAmount), global::Google.Cloud.Billing.Budgets.V1.LastPeriodAmount.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.ThresholdRule), global::Google.Cloud.Billing.Budgets.V1.ThresholdRule.Parser, new[]{ "ThresholdPercent", "SpendBasis" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1.ThresholdRule.Types.Basis) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.NotificationsRule), global::Google.Cloud.Billing.Budgets.V1.NotificationsRule.Parser, new[]{ "PubsubTopic", "SchemaVersion", "MonitoringNotificationChannels", "DisableDefaultIamRecipients" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.Filter), global::Google.Cloud.Billing.Budgets.V1.Filter.Parser, new[]{ "Projects", "CreditTypesTreatment", "Services", "Subaccounts", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Billing.Budgets.V1.Filter), global::Google.Cloud.Billing.Budgets.V1.Filter.Parser, new[]{ "Projects", "CreditTypes", "CreditTypesTreatment", "Services", "Subaccounts", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Billing.Budgets.V1.Filter.Types.CreditTypesTreatment) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -209,7 +210,8 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     public const int NotificationsRuleFieldNumber = 6;
     private global::Google.Cloud.Billing.Budgets.V1.NotificationsRule notificationsRule_;
     /// <summary>
-    /// Optional. Rules to apply to notifications sent based on budget spend and thresholds.
+    /// Optional. Rules to apply to notifications sent based on budget spend and
+    /// thresholds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Billing.Budgets.V1.NotificationsRule NotificationsRule {
@@ -1240,10 +1242,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     public const int PubsubTopicFieldNumber = 1;
     private string pubsubTopic_ = "";
     /// <summary>
-    /// Optional. The name of the Pub/Sub topic where budget related messages will be
-    /// published, in the form `projects/{project_id}/topics/{topic_id}`. Updates
-    /// are sent at regular intervals to the topic.
-    /// The topic needs to be created before the budget is created; see
+    /// Optional. The name of the Pub/Sub topic where budget related messages will
+    /// be published, in the form `projects/{project_id}/topics/{topic_id}`.
+    /// Updates are sent at regular intervals to the topic. The topic needs to be
+    /// created before the budget is created; see
     /// https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications
     /// for more details.
     /// Caller is expected to have
@@ -1282,10 +1284,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> monitoringNotificationChannels_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Targets to send notifications to when a threshold is exceeded. This is in
-    /// addition to default recipients who have billing account IAM roles.
-    /// The value is the full REST resource name of a monitoring notification
-    /// channel with the form
+    /// Optional. Targets to send notifications to when a threshold is exceeded.
+    /// This is in addition to default recipients who have billing account IAM
+    /// roles. The value is the full REST resource name of a monitoring
+    /// notification channel with the form
     /// `projects/{project_id}/notificationChannels/{channel_id}`. A maximum of 5
     /// channels are allowed. See
     /// https://cloud.google.com/billing/docs/how-to/budgets-notification-recipients
@@ -1300,9 +1302,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     public const int DisableDefaultIamRecipientsFieldNumber = 4;
     private bool disableDefaultIamRecipients_;
     /// <summary>
-    /// Optional. When set to true, disables default notifications sent when a threshold is
-    /// exceeded. Default notifications are sent to those with Billing Account
-    /// Administrator and Billing Account User IAM roles for the target account.
+    /// Optional. When set to true, disables default notifications sent when a
+    /// threshold is exceeded. Default notifications are sent to those with Billing
+    /// Account Administrator and Billing Account User IAM roles for the target
+    /// account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool DisableDefaultIamRecipients {
@@ -1530,6 +1533,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Filter(Filter other) : this() {
       projects_ = other.projects_.Clone();
+      creditTypes_ = other.creditTypes_.Clone();
       creditTypesTreatment_ = other.creditTypesTreatment_;
       services_ = other.services_.Clone();
       subaccounts_ = other.subaccounts_.Clone();
@@ -1557,6 +1561,25 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Projects {
       get { return projects_; }
+    }
+
+    /// <summary>Field number for the "credit_types" field.</summary>
+    public const int CreditTypesFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_creditTypes_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> creditTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. A list of credit types to be subtracted from gross cost to
+    /// determine the spend for threshold calculations if and only if
+    /// credit_types_treatment is INCLUDE_SPECIFIED_CREDITS. If
+    /// credit_types_treatment is not INCLUDE_SPECIFIED_CREDITS, this field must be
+    /// empty. See credits.type on
+    /// https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#data-schema
+    /// for a list of acceptable credit type values in this field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> CreditTypes {
+      get { return creditTypes_; }
     }
 
     /// <summary>Field number for the "credit_types_treatment" field.</summary>
@@ -1597,9 +1620,9 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> subaccounts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. A set of subaccounts of the form `billingAccounts/{account_id}`, specifying
-    /// that usage from only this set of subaccounts should be included in the
-    /// budget. If a subaccount is set to the name of the parent account,
+    /// Optional. A set of subaccounts of the form `billingAccounts/{account_id}`,
+    /// specifying that usage from only this set of subaccounts should be included
+    /// in the budget. If a subaccount is set to the name of the parent account,
     /// usage from the parent account will be included. If the field is omitted,
     /// the report will include usage from the parent account and all subaccounts,
     /// if they exist.
@@ -1615,10 +1638,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.ListValue.Parser), 50);
     private readonly pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue> labels_ = new pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue>();
     /// <summary>
-    /// Optional. A single label and value pair specifying that usage from only this set of
-    /// labeled resources should be included in the budget. Currently, multiple
-    /// entries or multiple values per entry are not allowed. If omitted, the
-    /// report will include all labeled and unlabeled usage.
+    /// Optional. A single label and value pair specifying that usage from only
+    /// this set of labeled resources should be included in the budget. Currently,
+    /// multiple entries or multiple values per entry are not allowed. If omitted,
+    /// the report will include all labeled and unlabeled usage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue> Labels {
@@ -1639,6 +1662,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         return true;
       }
       if(!projects_.Equals(other.projects_)) return false;
+      if(!creditTypes_.Equals(other.creditTypes_)) return false;
       if (CreditTypesTreatment != other.CreditTypesTreatment) return false;
       if(!services_.Equals(other.services_)) return false;
       if(!subaccounts_.Equals(other.subaccounts_)) return false;
@@ -1650,6 +1674,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= projects_.GetHashCode();
+      hash ^= creditTypes_.GetHashCode();
       if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1.Filter.Types.CreditTypesTreatment.Unspecified) hash ^= CreditTypesTreatment.GetHashCode();
       hash ^= services_.GetHashCode();
       hash ^= subaccounts_.GetHashCode();
@@ -1678,6 +1703,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       }
       subaccounts_.WriteTo(output, _repeated_subaccounts_codec);
       labels_.WriteTo(output, _map_labels_codec);
+      creditTypes_.WriteTo(output, _repeated_creditTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1695,6 +1721,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       }
       subaccounts_.WriteTo(ref output, _repeated_subaccounts_codec);
       labels_.WriteTo(ref output, _map_labels_codec);
+      creditTypes_.WriteTo(ref output, _repeated_creditTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1705,6 +1732,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     public int CalculateSize() {
       int size = 0;
       size += projects_.CalculateSize(_repeated_projects_codec);
+      size += creditTypes_.CalculateSize(_repeated_creditTypes_codec);
       if (CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1.Filter.Types.CreditTypesTreatment.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CreditTypesTreatment);
       }
@@ -1723,6 +1751,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         return;
       }
       projects_.Add(other.projects_);
+      creditTypes_.Add(other.creditTypes_);
       if (other.CreditTypesTreatment != global::Google.Cloud.Billing.Budgets.V1.Filter.Types.CreditTypesTreatment.Unspecified) {
         CreditTypesTreatment = other.CreditTypesTreatment;
       }
@@ -1763,6 +1792,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 58: {
+            creditTypes_.AddEntriesFrom(input, _repeated_creditTypes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1797,6 +1830,10 @@ namespace Google.Cloud.Billing.Budgets.V1 {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 58: {
+            creditTypes_.AddEntriesFrom(ref input, _repeated_creditTypes_codec);
+            break;
+          }
         }
       }
     }
@@ -1825,6 +1862,11 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         /// threshold calculations.
         /// </summary>
         [pbr::OriginalName("EXCLUDE_ALL_CREDITS")] ExcludeAllCredits = 2,
+        /// <summary>
+        /// Credit types specified in the credit_types field are subtracted from the
+        /// gross cost to determine the spend for threshold calculations.
+        /// </summary>
+        [pbr::OriginalName("INCLUDE_SPECIFIED_CREDITS")] IncludeSpecifiedCredits = 3,
       }
 
     }
