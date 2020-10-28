@@ -19,6 +19,25 @@ using gcbcv = Google.Cloud.Bigtable.Common.V2;
 
 namespace Google.Cloud.Bigtable.Admin.V2
 {
+    public partial class RestoreTableRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateTableRequest
     {
         /// <summary>
