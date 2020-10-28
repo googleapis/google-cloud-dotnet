@@ -155,6 +155,14 @@ do
       echo "$testproject" >> AllTests.txt
     fi
   done
+  
+  # If we're not going to test the desktop .NET builds, let's remove them
+  # entirely. This saves a huge amount of disk space, as the desktop framework
+  # builds include copies of gRPC.
+  if [[ ! "$OS" == "Windows_NT" ]]
+  then
+    rm -rf $apidir/*/bin/Release/net[0-9]*
+  fi
 done
 
 if [[ "$runtests" = true ]]
@@ -162,7 +170,7 @@ then
   log_build_action "(Start) Unit tests"
   # Could use xargs, but this is more flexible
   while read testproject
-  do  
+  do
     testdir=$(dirname $testproject)
     log_build_action "Testing $testdir"
     if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
