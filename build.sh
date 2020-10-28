@@ -149,7 +149,7 @@ do
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
 
   # Remove gRPC files we don't need, to save disk space.
-  clean_grpc $apidir
+  # clean_grpc $apidir
 
   # On Linux, we don't have desktop .NET, so any projects which only
   # support desktop .NET are going to be broken. Just don't add them.
@@ -160,6 +160,14 @@ do
       echo "$testproject" >> AllTests.txt
     fi
   done
+  
+  # If we're not going to test the desktop .NET builds, let's remove them
+  # entirely. This saves a huge amount of disk space, as the desktop framework
+  # builds include copies of gRPC.
+  if [[ ! "$OS" == "Windows_NT" ]]
+  then
+    rm -rf $apidir/*/bin/Release/net[0-9]*
+  fi
 done
 
 if [[ "$runtests" = true ]]

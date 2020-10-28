@@ -8,9 +8,7 @@ jobs:
     runs-on: ubuntu-18.04	
     env:	
       DOTNET_NOLOGO: true	
-    strategy:	
-      matrix:	
-        regex: ["'Google\\.Cloud\\.[A-F].*'", "'Google\\.Cloud\\.[G-L].*'", "'Google\\.Cloud\\.[M-R].*'","'Google\\.Cloud\\.[S-Z].*'", "'!Google\\.Cloud'"]	
+
     steps:	
     - uses: actions/checkout@v2	
       with:	
@@ -47,5 +45,5 @@ jobs:
     - name: Build and test	
       run: |
         touch build_timing_log.txt	
-        ./build.sh --regex ${{ matrix.regex }}	
+        ./build.sh
         ./processbuildtiminglog.sh	
