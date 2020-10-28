@@ -148,6 +148,9 @@ do
   log_build_action "Building $apidir"
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
 
+  # Remove gRPC files we don't need, to save disk space.
+  clean_grpc $apidir
+
   # On Linux, we don't have desktop .NET, so any projects which only
   # support desktop .NET are going to be broken. Just don't add them.
   for testproject in $apidir/*.Tests/*.csproj

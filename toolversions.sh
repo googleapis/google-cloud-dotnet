@@ -167,3 +167,26 @@ log_build_action() {
   echo -e "\e[1;35m$1\e[0m"
   echo "$(date -u -Iseconds) $1" >> $REPO_ROOT/build_timing_log.txt
 }
+
+# Cleans all the gRPC native files underneath the specified directory
+clean_grpc() {
+  # Clean x86 files we never use
+  find $1 -name libgrpc_csharp_ext86.so | xargs rm
+  find $1 -name grpc_csharp_ext.x86.dll | xargs rm
+  find $1 -name libgrpc_csharp_ext86.dylib | xargs rm
+
+  # Now the x64 files we're not using on the current system
+  linux*)
+    find $1 -name grpc_csharp_ext.x64.dll | xargs rm
+    find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
+    ;;
+  darwin*)
+    find $1 -name libgrpc_csharp_ext64.so | xargs rm
+    find $1 -name grpc_csharp_ext.x64.dll | xargs rm
+    ;;
+  win* | msys* | cygwin*)
+    find $1 -name libgrpc_csharp_ext64.so | xargs rm
+    find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
+    ;;
+  *)
+}
