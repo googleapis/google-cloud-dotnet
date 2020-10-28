@@ -420,14 +420,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Starts creating a new Cloud Bigtable Backup. The returned backup
+      /// Starts creating a new Cloud Bigtable Backup.  The returned backup
       /// [long-running operation][google.longrunning.Operation] can be used to
       /// track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
-      /// returned operation will stop the creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -484,11 +484,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
       /// <summary>
       /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same instance as the instance containing the backup. The
+      /// must be in the same instance as the instance containing the backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
-      /// be used to track the progress of the operation, and to cancel it. The
+      /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata]. The
+      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -501,7 +501,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Gets the access control policy for a resource.
+      /// Gets the access control policy for a Table or Backup resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -526,7 +526,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
-      /// Returns permissions that the caller has on the specified table resource.
+      /// Returns permissions that the caller has on the specified Table or Backup resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1310,14 +1310,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSnapshot, null, options, request);
       }
       /// <summary>
-      /// Starts creating a new Cloud Bigtable Backup. The returned backup
+      /// Starts creating a new Cloud Bigtable Backup.  The returned backup
       /// [long-running operation][google.longrunning.Operation] can be used to
       /// track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
-      /// returned operation will stop the creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1329,14 +1329,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CreateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Starts creating a new Cloud Bigtable Backup. The returned backup
+      /// Starts creating a new Cloud Bigtable Backup.  The returned backup
       /// [long-running operation][google.longrunning.Operation] can be used to
       /// track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
-      /// returned operation will stop the creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1346,14 +1346,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBackup, null, options, request);
       }
       /// <summary>
-      /// Starts creating a new Cloud Bigtable Backup. The returned backup
+      /// Starts creating a new Cloud Bigtable Backup.  The returned backup
       /// [long-running operation][google.longrunning.Operation] can be used to
       /// track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
-      /// returned operation will stop the creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1365,14 +1365,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CreateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Starts creating a new Cloud Bigtable Backup. The returned backup
+      /// Starts creating a new Cloud Bigtable Backup.  The returned backup
       /// [long-running operation][google.longrunning.Operation] can be used to
       /// track creation of the backup. The
       /// [metadata][google.longrunning.Operation.metadata] field type is
       /// [CreateBackupMetadata][google.bigtable.admin.v2.CreateBackupMetadata]. The
       /// [response][google.longrunning.Operation.response] field type is
-      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the
-      /// returned operation will stop the creation and delete the backup.
+      /// [Backup][google.bigtable.admin.v2.Backup], if successful. Cancelling the returned operation will stop the
+      /// creation and delete the backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1563,11 +1563,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same instance as the instance containing the backup. The
+      /// must be in the same instance as the instance containing the backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
-      /// be used to track the progress of the operation, and to cancel it. The
+      /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata]. The
+      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1582,11 +1582,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same instance as the instance containing the backup. The
+      /// must be in the same instance as the instance containing the backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
-      /// be used to track the progress of the operation, and to cancel it. The
+      /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata]. The
+      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1599,11 +1599,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same instance as the instance containing the backup. The
+      /// must be in the same instance as the instance containing the backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
-      /// be used to track the progress of the operation, and to cancel it. The
+      /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata]. The
+      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1618,11 +1618,11 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Create a new table by restoring from a completed backup. The new table
-      /// must be in the same instance as the instance containing the backup. The
+      /// must be in the same instance as the instance containing the backup.  The
       /// returned table [long-running operation][google.longrunning.Operation] can
-      /// be used to track the progress of the operation, and to cancel it. The
+      /// be used to track the progress of the operation, and to cancel it.  The
       /// [metadata][google.longrunning.Operation.metadata] field type is
-      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata]. The
+      /// [RestoreTableMetadata][google.bigtable.admin.RestoreTableMetadata].  The
       /// [response][google.longrunning.Operation.response] type is
       /// [Table][google.bigtable.admin.v2.Table], if successful.
       /// </summary>
@@ -1634,7 +1634,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreTable, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a resource.
+      /// Gets the access control policy for a Table or Backup resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -1648,7 +1648,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a resource.
+      /// Gets the access control policy for a Table or Backup resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -1660,7 +1660,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets the access control policy for a resource.
+      /// Gets the access control policy for a Table or Backup resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -1674,7 +1674,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets the access control policy for a resource.
+      /// Gets the access control policy for a Table or Backup resource.
       /// Returns an empty policy if the resource exists but does not have a policy
       /// set.
       /// </summary>
@@ -1734,7 +1734,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified table resource.
+      /// Returns permissions that the caller has on the specified Table or Backup resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1746,7 +1746,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified table resource.
+      /// Returns permissions that the caller has on the specified Table or Backup resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1756,7 +1756,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified table resource.
+      /// Returns permissions that the caller has on the specified Table or Backup resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1768,7 +1768,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns permissions that the caller has on the specified table resource.
+      /// Returns permissions that the caller has on the specified Table or Backup resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

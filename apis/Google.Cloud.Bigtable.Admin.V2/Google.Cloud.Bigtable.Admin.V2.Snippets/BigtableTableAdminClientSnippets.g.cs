@@ -2489,9 +2489,9 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // Initialize request argument(s)
             RestoreTableRequest request = new RestoreTableRequest
             {
-                Parent = "",
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "",
-                Backup = "",
+                BackupAsBackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
             };
             // Make the request
             Operation<Table, RestoreTableMetadata> response = bigtableTableAdminClient.RestoreTable(request);
@@ -2524,9 +2524,9 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
             // Initialize request argument(s)
             RestoreTableRequest request = new RestoreTableRequest
             {
-                Parent = "",
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 TableId = "",
-                Backup = "",
+                BackupAsBackupName = BackupName.FromProjectInstanceClusterBackup("[PROJECT]", "[INSTANCE]", "[CLUSTER]", "[BACKUP]"),
             };
             // Make the request
             Operation<Table, RestoreTableMetadata> response = await bigtableTableAdminClient.RestoreTableAsync(request);
