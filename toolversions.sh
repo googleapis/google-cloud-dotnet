@@ -171,23 +171,23 @@ log_build_action() {
 # Cleans all the gRPC native files underneath the specified directory
 clean_grpc() {
   # Clean x86 files we never use
-  find $1 -name libgrpc_csharp_ext86.so | xargs rm
-  find $1 -name grpc_csharp_ext.x86.dll | xargs rm
-  find $1 -name libgrpc_csharp_ext86.dylib | xargs rm
+  find $1 -name libgrpc_csharp_ext86.so | xargs rm -f
+  find $1 -name grpc_csharp_ext.x86.dll | xargs rm -f
+  find $1 -name libgrpc_csharp_ext86.dylib | xargs rm -f
 
   # Now the x64 files we're not using on the current system
   case "$OSTYPE" in
     linux*)
-      find $1 -name grpc_csharp_ext.x64.dll | xargs rm
-      find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
+      find $1 -name grpc_csharp_ext.x64.dll | xargs rm -f
+      find $1 -name libgrpc_csharp_ext64.dylib | xargs rm -f
       ;;
     darwin*)
-      find $1 -name libgrpc_csharp_ext64.so | xargs rm
-      find $1 -name grpc_csharp_ext.x64.dll | xargs rm
+      find $1 -name libgrpc_csharp_ext64.so | xargs rm -f
+      find $1 -name grpc_csharp_ext.x64.dll | xargs rm -f
       ;;
     win* | msys* | cygwin*)
-      find $1 -name libgrpc_csharp_ext64.so | xargs rm
-      find $1 -name libgrpc_csharp_ext64.dylib | xargs rm
+      find $1 -name libgrpc_csharp_ext64.so | xargs rm -f
+      find $1 -name libgrpc_csharp_ext64.dylib | xargs rm -f
       ;;
   esac
 }
