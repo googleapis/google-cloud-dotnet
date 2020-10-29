@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0-beta01, released 2020-10-29
+
+- [Commit 126529d](https://github.com/googleapis/google-cloud-dotnet/commit/126529d): Mechanism for passing server-provided fields to custom type converters. Fixes [issue 5470](https://github.com/googleapis/google-cloud-dotnet/issues/5470).
+
 # Version 2.2.0, released 2020-10-05
 
 - [Commit 8698c6e](https://github.com/googleapis/google-cloud-dotnet/commit/8698c6e): docs: Improve "where in/not-in" documentation slightly
