@@ -57,6 +57,9 @@ namespace Google.Cloud.Asset.V1
             DeleteFeedSettings = existing.DeleteFeedSettings;
             SearchAllResourcesSettings = existing.SearchAllResourcesSettings;
             SearchAllIamPoliciesSettings = existing.SearchAllIamPoliciesSettings;
+            AnalyzeIamPolicySettings = existing.AnalyzeIamPolicySettings;
+            AnalyzeIamPolicyLongrunningSettings = existing.AnalyzeIamPolicyLongrunningSettings;
+            AnalyzeIamPolicyLongrunningOperationsSettings = existing.AnalyzeIamPolicyLongrunningOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -205,6 +208,52 @@ namespace Google.Cloud.Asset.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SearchAllIamPoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.AnalyzeIamPolicy</c> and <c>AssetServiceClient.AnalyzeIamPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AnalyzeIamPolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AssetServiceClient.AnalyzeIamPolicyLongrunning</c> and
+        /// <c>AssetServiceClient.AnalyzeIamPolicyLongrunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AnalyzeIamPolicyLongrunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AssetServiceClient.AnalyzeIamPolicyLongrunning</c> and
+        /// <c>AssetServiceClient.AnalyzeIamPolicyLongrunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AnalyzeIamPolicyLongrunningOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AssetServiceSettings"/> object.</returns>
@@ -1302,6 +1351,114 @@ namespace Google.Cloud.Asset.V1
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Analyzes IAM policies to answer which identities have what accesses on
+        /// which resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalyzeIamPolicyResponse AnalyzeIamPolicy(AnalyzeIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Analyzes IAM policies to answer which identities have what accesses on
+        /// which resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalyzeIamPolicyResponse> AnalyzeIamPolicyAsync(AnalyzeIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Analyzes IAM policies to answer which identities have what accesses on
+        /// which resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalyzeIamPolicyResponse> AnalyzeIamPolicyAsync(AnalyzeIamPolicyRequest request, st::CancellationToken cancellationToken) =>
+            AnalyzeIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Analyzes IAM policies asynchronously to answer which identities have what
+        /// accesses on which resources, and writes the analysis results to a Google
+        /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+        /// output format is the JSON format that represents a
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// request to help callers to map responses to requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> AnalyzeIamPolicyLongrunning(AnalyzeIamPolicyLongrunningRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Analyzes IAM policies asynchronously to answer which identities have what
+        /// accesses on which resources, and writes the analysis results to a Google
+        /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+        /// output format is the JSON format that represents a
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// request to help callers to map responses to requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>> AnalyzeIamPolicyLongrunningAsync(AnalyzeIamPolicyLongrunningRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Analyzes IAM policies asynchronously to answer which identities have what
+        /// accesses on which resources, and writes the analysis results to a Google
+        /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+        /// output format is the JSON format that represents a
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// request to help callers to map responses to requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>> AnalyzeIamPolicyLongrunningAsync(AnalyzeIamPolicyLongrunningRequest request, st::CancellationToken cancellationToken) =>
+            AnalyzeIamPolicyLongrunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AnalyzeIamPolicyLongrunning</c>.</summary>
+        public virtual lro::OperationsClient AnalyzeIamPolicyLongrunningOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AnalyzeIamPolicyLongrunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> PollOnceAnalyzeIamPolicyLongrunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AnalyzeIamPolicyLongrunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AnalyzeIamPolicyLongrunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>> PollOnceAnalyzeIamPolicyLongrunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AnalyzeIamPolicyLongrunningOperationsClient, callSettings);
     }
 
     /// <summary>AssetService client wrapper implementation, for convenient use.</summary>
@@ -1328,6 +1485,10 @@ namespace Google.Cloud.Asset.V1
 
         private readonly gaxgrpc::ApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse> _callSearchAllIamPolicies;
 
+        private readonly gaxgrpc::ApiCall<AnalyzeIamPolicyRequest, AnalyzeIamPolicyResponse> _callAnalyzeIamPolicy;
+
+        private readonly gaxgrpc::ApiCall<AnalyzeIamPolicyLongrunningRequest, lro::Operation> _callAnalyzeIamPolicyLongrunning;
+
         /// <summary>
         /// Constructs a client wrapper for the AssetService service, with the specified gRPC client and settings.
         /// </summary>
@@ -1339,6 +1500,7 @@ namespace Google.Cloud.Asset.V1
             AssetServiceSettings effectiveSettings = settings ?? AssetServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             ExportAssetsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportAssetsOperationsSettings);
+            AnalyzeIamPolicyLongrunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AnalyzeIamPolicyLongrunningOperationsSettings);
             _callExportAssets = clientHelper.BuildApiCall<ExportAssetsRequest, lro::Operation>(grpcClient.ExportAssetsAsync, grpcClient.ExportAssets, effectiveSettings.ExportAssetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callExportAssets);
             Modify_ExportAssetsApiCall(ref _callExportAssets);
@@ -1366,6 +1528,12 @@ namespace Google.Cloud.Asset.V1
             _callSearchAllIamPolicies = clientHelper.BuildApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse>(grpcClient.SearchAllIamPoliciesAsync, grpcClient.SearchAllIamPolicies, effectiveSettings.SearchAllIamPoliciesSettings).WithGoogleRequestParam("scope", request => request.Scope);
             Modify_ApiCall(ref _callSearchAllIamPolicies);
             Modify_SearchAllIamPoliciesApiCall(ref _callSearchAllIamPolicies);
+            _callAnalyzeIamPolicy = clientHelper.BuildApiCall<AnalyzeIamPolicyRequest, AnalyzeIamPolicyResponse>(grpcClient.AnalyzeIamPolicyAsync, grpcClient.AnalyzeIamPolicy, effectiveSettings.AnalyzeIamPolicySettings).WithGoogleRequestParam("analysis_query.scope", request => request.AnalysisQuery?.Scope);
+            Modify_ApiCall(ref _callAnalyzeIamPolicy);
+            Modify_AnalyzeIamPolicyApiCall(ref _callAnalyzeIamPolicy);
+            _callAnalyzeIamPolicyLongrunning = clientHelper.BuildApiCall<AnalyzeIamPolicyLongrunningRequest, lro::Operation>(grpcClient.AnalyzeIamPolicyLongrunningAsync, grpcClient.AnalyzeIamPolicyLongrunning, effectiveSettings.AnalyzeIamPolicyLongrunningSettings).WithGoogleRequestParam("analysis_query.scope", request => request.AnalysisQuery?.Scope);
+            Modify_ApiCall(ref _callAnalyzeIamPolicyLongrunning);
+            Modify_AnalyzeIamPolicyLongrunningApiCall(ref _callAnalyzeIamPolicyLongrunning);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1389,6 +1557,10 @@ namespace Google.Cloud.Asset.V1
 
         partial void Modify_SearchAllIamPoliciesApiCall(ref gaxgrpc::ApiCall<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse> call);
 
+        partial void Modify_AnalyzeIamPolicyApiCall(ref gaxgrpc::ApiCall<AnalyzeIamPolicyRequest, AnalyzeIamPolicyResponse> call);
+
+        partial void Modify_AnalyzeIamPolicyLongrunningApiCall(ref gaxgrpc::ApiCall<AnalyzeIamPolicyLongrunningRequest, lro::Operation> call);
+
         partial void OnConstruction(AssetService.AssetServiceClient grpcClient, AssetServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AssetService client</summary>
@@ -1411,6 +1583,10 @@ namespace Google.Cloud.Asset.V1
         partial void Modify_SearchAllResourcesRequest(ref SearchAllResourcesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchAllIamPoliciesRequest(ref SearchAllIamPoliciesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AnalyzeIamPolicyRequest(ref AnalyzeIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AnalyzeIamPolicyLongrunningRequest(ref AnalyzeIamPolicyLongrunningRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>ExportAssets</c>.</summary>
         public override lro::OperationsClient ExportAssetsOperationsClient { get; }
@@ -1673,6 +1849,75 @@ namespace Google.Cloud.Asset.V1
         {
             Modify_SearchAllIamPoliciesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchAllIamPoliciesRequest, SearchAllIamPoliciesResponse, IamPolicySearchResult>(_callSearchAllIamPolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Analyzes IAM policies to answer which identities have what accesses on
+        /// which resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnalyzeIamPolicyResponse AnalyzeIamPolicy(AnalyzeIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnalyzeIamPolicyRequest(ref request, ref callSettings);
+            return _callAnalyzeIamPolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Analyzes IAM policies to answer which identities have what accesses on
+        /// which resources.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnalyzeIamPolicyResponse> AnalyzeIamPolicyAsync(AnalyzeIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnalyzeIamPolicyRequest(ref request, ref callSettings);
+            return _callAnalyzeIamPolicy.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>AnalyzeIamPolicyLongrunning</c>.</summary>
+        public override lro::OperationsClient AnalyzeIamPolicyLongrunningOperationsClient { get; }
+
+        /// <summary>
+        /// Analyzes IAM policies asynchronously to answer which identities have what
+        /// accesses on which resources, and writes the analysis results to a Google
+        /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+        /// output format is the JSON format that represents a
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// request to help callers to map responses to requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> AnalyzeIamPolicyLongrunning(AnalyzeIamPolicyLongrunningRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnalyzeIamPolicyLongrunningRequest(ref request, ref callSettings);
+            return new lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>(_callAnalyzeIamPolicyLongrunning.Sync(request, callSettings), AnalyzeIamPolicyLongrunningOperationsClient);
+        }
+
+        /// <summary>
+        /// Analyzes IAM policies asynchronously to answer which identities have what
+        /// accesses on which resources, and writes the analysis results to a Google
+        /// Cloud Storage or a BigQuery destination. For Cloud Storage destination, the
+        /// output format is the JSON format that represents a
+        /// [AnalyzeIamPolicyResponse][google.cloud.asset.v1.AnalyzeIamPolicyResponse]. This method implements the
+        /// [google.longrunning.Operation][google.longrunning.Operation], which allows you to track the operation
+        /// status. We recommend intervals of at least 2 seconds with exponential
+        /// backoff retry to poll the operation result. The metadata contains the
+        /// request to help callers to map responses to requests.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>> AnalyzeIamPolicyLongrunningAsync(AnalyzeIamPolicyLongrunningRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnalyzeIamPolicyLongrunningRequest(ref request, ref callSettings);
+            return new lro::Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest>(await _callAnalyzeIamPolicyLongrunning.Async(request, callSettings).ConfigureAwait(false), AnalyzeIamPolicyLongrunningOperationsClient);
         }
     }
 

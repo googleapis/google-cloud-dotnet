@@ -100,47 +100,109 @@ namespace Google.Cloud.Asset.V1 {
             "CUID4EEBEhYKCXBhZ2Vfc2l6ZRgDIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
             "BCABKAlCA+BBASJ2ChxTZWFyY2hBbGxJYW1Qb2xpY2llc1Jlc3BvbnNlEj0K",
             "B3Jlc3VsdHMYASADKAsyLC5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9s",
-            "aWN5U2VhcmNoUmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSpsCgtD",
-            "b250ZW50VHlwZRIcChhDT05URU5UX1RZUEVfVU5TUEVDSUZJRUQQABIMCghS",
-            "RVNPVVJDRRABEg4KCklBTV9QT0xJQ1kQAhIOCgpPUkdfUE9MSUNZEAQSEQoN",
-            "QUNDRVNTX1BPTElDWRAFMvALCgxBc3NldFNlcnZpY2US3gEKDEV4cG9ydEFz",
-            "c2V0cxIqLmdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKCAYLT5JMCIiId",
-            "L3YxL3twYXJlbnQ9Ki8qfTpleHBvcnRBc3NldHM6ASrKQVcKKmdvb2dsZS5j",
-            "bG91ZC5hc3NldC52MS5FeHBvcnRBc3NldHNSZXNwb25zZRIpZ29vZ2xlLmNs",
-            "b3VkLmFzc2V0LnYxLkV4cG9ydEFzc2V0c1JlcXVlc3QSsgEKFUJhdGNoR2V0",
-            "QXNzZXRzSGlzdG9yeRIzLmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdl",
-            "dEFzc2V0c0hpc3RvcnlSZXF1ZXN0GjQuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
-            "LkJhdGNoR2V0QXNzZXRzSGlzdG9yeVJlc3BvbnNlIi6C0+STAigSJi92MS97",
-            "cGFyZW50PSovKn06YmF0Y2hHZXRBc3NldHNIaXN0b3J5En8KCkNyZWF0ZUZl",
-            "ZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuQ3JlYXRlRmVlZFJlcXVlc3Qa",
-            "Gy5nb29nbGUuY2xvdWQuYXNzZXQudjEuRmVlZCIqgtPkkwIbIhYvdjEve3Bh",
-            "cmVudD0qLyp9L2ZlZWRzOgEq2kEGcGFyZW50EnQKB0dldEZlZWQSJS5nb29n",
-            "bGUuY2xvdWQuYXNzZXQudjEuR2V0RmVlZFJlcXVlc3QaGy5nb29nbGUuY2xv",
-            "dWQuYXNzZXQudjEuRmVlZCIlgtPkkwIYEhYvdjEve25hbWU9Ki8qL2ZlZWRz",
-            "Lyp92kEEbmFtZRKHAQoJTGlzdEZlZWRzEicuZ29vZ2xlLmNsb3VkLmFzc2V0",
-            "LnYxLkxpc3RGZWVkc1JlcXVlc3QaKC5nb29nbGUuY2xvdWQuYXNzZXQudjEu",
-            "TGlzdEZlZWRzUmVzcG9uc2UiJ4LT5JMCGBIWL3YxL3twYXJlbnQ9Ki8qfS9m",
-            "ZWVkc9pBBnBhcmVudBKCAQoKVXBkYXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5h",
-            "c3NldC52MS5VcGRhdGVGZWVkUmVxdWVzdBobLmdvb2dsZS5jbG91ZC5hc3Nl",
-            "dC52MS5GZWVkIi2C0+STAiAyGy92MS97ZmVlZC5uYW1lPSovKi9mZWVkcy8q",
-            "fToBKtpBBGZlZWQSdQoKRGVsZXRlRmVlZBIoLmdvb2dsZS5jbG91ZC5hc3Nl",
-            "dC52MS5EZWxldGVGZWVkUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSIlgtPkkwIYKhYvdjEve25hbWU9Ki8qL2ZlZWRzLyp92kEEbmFtZRK/AQoS",
-            "U2VhcmNoQWxsUmVzb3VyY2VzEjAuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNl",
-            "YXJjaEFsbFJlc291cmNlc1JlcXVlc3QaMS5nb29nbGUuY2xvdWQuYXNzZXQu",
-            "djEuU2VhcmNoQWxsUmVzb3VyY2VzUmVzcG9uc2UiRILT5JMCJBIiL3YxL3tz",
-            "Y29wZT0qLyp9OnNlYXJjaEFsbFJlc291cmNlc9pBF3Njb3BlLHF1ZXJ5LGFz",
-            "c2V0X3R5cGVzErsBChRTZWFyY2hBbGxJYW1Qb2xpY2llcxIyLmdvb2dsZS5j",
-            "bG91ZC5hc3NldC52MS5TZWFyY2hBbGxJYW1Qb2xpY2llc1JlcXVlc3QaMy5n",
-            "b29nbGUuY2xvdWQuYXNzZXQudjEuU2VhcmNoQWxsSWFtUG9saWNpZXNSZXNw",
-            "b25zZSI6gtPkkwImEiQvdjEve3Njb3BlPSovKn06c2VhcmNoQWxsSWFtUG9s",
-            "aWNpZXPaQQtzY29wZSxxdWVyeRpNykEZY2xvdWRhc3NldC5nb29nbGVhcGlz",
-            "LmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQt",
-            "cGxhdGZvcm1CnAEKGWNvbS5nb29nbGUuY2xvdWQuYXNzZXQudjFCEUFzc2V0",
-            "U2VydmljZVByb3RvUAFaOmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvYXNzZXQvdjE7YXNzZXSqAhVHb29nbGUuQ2xvdWQu",
-            "QXNzZXQuVjHKAhVHb29nbGVcQ2xvdWRcQXNzZXRcVjFiBnByb3RvMw=="));
+            "aWN5U2VhcmNoUmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKQBgoW",
+            "SWFtUG9saWN5QW5hbHlzaXNRdWVyeRISCgVzY29wZRgBIAEoCUID4EECEl4K",
+            "EXJlc291cmNlX3NlbGVjdG9yGAIgASgLMj4uZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLklhbVBvbGljeUFuYWx5c2lzUXVlcnkuUmVzb3VyY2VTZWxlY3RvckID",
+            "4EEBEl4KEWlkZW50aXR5X3NlbGVjdG9yGAMgASgLMj4uZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUXVlcnkuSWRlbnRpdHlTZWxl",
+            "Y3RvckID4EEBEloKD2FjY2Vzc19zZWxlY3RvchgEIAEoCzI8Lmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1F1ZXJ5LkFjY2Vzc1Nl",
+            "bGVjdG9yQgPgQQESSwoHb3B0aW9ucxgFIAEoCzI1Lmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1F1ZXJ5Lk9wdGlvbnNCA+BBARoz",
+            "ChBSZXNvdXJjZVNlbGVjdG9yEh8KEmZ1bGxfcmVzb3VyY2VfbmFtZRgBIAEo",
+            "CUID4EECGikKEElkZW50aXR5U2VsZWN0b3ISFQoIaWRlbnRpdHkYASABKAlC",
+            "A+BBAho+Cg5BY2Nlc3NTZWxlY3RvchISCgVyb2xlcxgBIAMoCUID4EEBEhgK",
+            "C3Blcm1pc3Npb25zGAIgAygJQgPgQQEa2AEKB09wdGlvbnMSGgoNZXhwYW5k",
+            "X2dyb3VwcxgBIAEoCEID4EEBEhkKDGV4cGFuZF9yb2xlcxgCIAEoCEID4EEB",
+            "Eh0KEGV4cGFuZF9yZXNvdXJjZXMYAyABKAhCA+BBARIiChVvdXRwdXRfcmVz",
+            "b3VyY2VfZWRnZXMYBCABKAhCA+BBARIfChJvdXRwdXRfZ3JvdXBfZWRnZXMY",
+            "BSABKAhCA+BBARIyCiVhbmFseXplX3NlcnZpY2VfYWNjb3VudF9pbXBlcnNv",
+            "bmF0aW9uGAYgASgIQgPgQQEioAEKF0FuYWx5emVJYW1Qb2xpY3lSZXF1ZXN0",
+            "EkoKDmFuYWx5c2lzX3F1ZXJ5GAEgASgLMi0uZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLklhbVBvbGljeUFuYWx5c2lzUXVlcnlCA+BBAhI5ChFleGVjdXRpb25f",
+            "dGltZW91dBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEB",
+            "IooEChhBbmFseXplSWFtUG9saWN5UmVzcG9uc2USWAoNbWFpbl9hbmFseXNp",
+            "cxgBIAEoCzJBLmdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXplSWFtUG9s",
+            "aWN5UmVzcG9uc2UuSWFtUG9saWN5QW5hbHlzaXMScQomc2VydmljZV9hY2Nv",
+            "dW50X2ltcGVyc29uYXRpb25fYW5hbHlzaXMYAiADKAsyQS5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlc3BvbnNlLklhbVBvbGlj",
+            "eUFuYWx5c2lzEhYKDmZ1bGx5X2V4cGxvcmVkGAMgASgIGogCChFJYW1Qb2xp",
+            "Y3lBbmFseXNpcxJFCg5hbmFseXNpc19xdWVyeRgBIAEoCzItLmdvb2dsZS5j",
+            "bG91ZC5hc3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1F1ZXJ5EkgKEGFuYWx5",
+            "c2lzX3Jlc3VsdHMYAiADKAsyLi5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFt",
+            "UG9saWN5QW5hbHlzaXNSZXN1bHQSFgoOZnVsbHlfZXhwbG9yZWQYAyABKAgS",
+            "SgoTbm9uX2NyaXRpY2FsX2Vycm9ycxgFIAMoCzItLmdvb2dsZS5jbG91ZC5h",
+            "c3NldC52MS5JYW1Qb2xpY3lBbmFseXNpc1N0YXRlIrQECh1JYW1Qb2xpY3lB",
+            "bmFseXNpc091dHB1dENvbmZpZxJeCg9nY3NfZGVzdGluYXRpb24YASABKAsy",
+            "Qy5nb29nbGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5hbHlzaXNPdXRw",
+            "dXRDb25maWcuR2NzRGVzdGluYXRpb25IABJoChRiaWdxdWVyeV9kZXN0aW5h",
+            "dGlvbhgCIAEoCzJILmdvb2dsZS5jbG91ZC5hc3NldC52MS5JYW1Qb2xpY3lB",
+            "bmFseXNpc091dHB1dENvbmZpZy5CaWdRdWVyeURlc3RpbmF0aW9uSAAaIgoO",
+            "R2NzRGVzdGluYXRpb24SEAoDdXJpGAEgASgJQgPgQQIalQIKE0JpZ1F1ZXJ5",
+            "RGVzdGluYXRpb24SFAoHZGF0YXNldBgBIAEoCUID4EECEhkKDHRhYmxlX3By",
+            "ZWZpeBgCIAEoCUID4EECEmwKDXBhcnRpdGlvbl9rZXkYAyABKA4yVS5nb29n",
+            "bGUuY2xvdWQuYXNzZXQudjEuSWFtUG9saWN5QW5hbHlzaXNPdXRwdXRDb25m",
+            "aWcuQmlnUXVlcnlEZXN0aW5hdGlvbi5QYXJ0aXRpb25LZXkSHgoRd3JpdGVf",
+            "ZGlzcG9zaXRpb24YBCABKAlCA+BBASI/CgxQYXJ0aXRpb25LZXkSHQoZUEFS",
+            "VElUSU9OX0tFWV9VTlNQRUNJRklFRBAAEhAKDFJFUVVFU1RfVElNRRABQg0K",
+            "C2Rlc3RpbmF0aW9uIsIBCiJBbmFseXplSWFtUG9saWN5TG9uZ3J1bm5pbmdS",
+            "ZXF1ZXN0EkoKDmFuYWx5c2lzX3F1ZXJ5GAEgASgLMi0uZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLklhbVBvbGljeUFuYWx5c2lzUXVlcnlCA+BBAhJQCg1vdXRw",
+            "dXRfY29uZmlnGAIgASgLMjQuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLklhbVBv",
+            "bGljeUFuYWx5c2lzT3V0cHV0Q29uZmlnQgPgQQIiJQojQW5hbHl6ZUlhbVBv",
+            "bGljeUxvbmdydW5uaW5nUmVzcG9uc2UqbAoLQ29udGVudFR5cGUSHAoYQ09O",
+            "VEVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDAoIUkVTT1VSQ0UQARIOCgpJQU1f",
+            "UE9MSUNZEAISDgoKT1JHX1BPTElDWRAEEhEKDUFDQ0VTU19QT0xJQ1kQBTLZ",
+            "DwoMQXNzZXRTZXJ2aWNlEt4BCgxFeHBvcnRBc3NldHMSKi5nb29nbGUuY2xv",
+            "dWQuYXNzZXQudjEuRXhwb3J0QXNzZXRzUmVxdWVzdBodLmdvb2dsZS5sb25n",
+            "cnVubmluZy5PcGVyYXRpb24iggGC0+STAiIiHS92MS97cGFyZW50PSovKn06",
+            "ZXhwb3J0QXNzZXRzOgEqykFXCipnb29nbGUuY2xvdWQuYXNzZXQudjEuRXhw",
+            "b3J0QXNzZXRzUmVzcG9uc2USKWdvb2dsZS5jbG91ZC5hc3NldC52MS5FeHBv",
+            "cnRBc3NldHNSZXF1ZXN0ErIBChVCYXRjaEdldEFzc2V0c0hpc3RvcnkSMy5n",
+            "b29nbGUuY2xvdWQuYXNzZXQudjEuQmF0Y2hHZXRBc3NldHNIaXN0b3J5UmVx",
+            "dWVzdBo0Lmdvb2dsZS5jbG91ZC5hc3NldC52MS5CYXRjaEdldEFzc2V0c0hp",
+            "c3RvcnlSZXNwb25zZSIugtPkkwIoEiYvdjEve3BhcmVudD0qLyp9OmJhdGNo",
+            "R2V0QXNzZXRzSGlzdG9yeRJ/CgpDcmVhdGVGZWVkEiguZ29vZ2xlLmNsb3Vk",
+            "LmFzc2V0LnYxLkNyZWF0ZUZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkZlZWQiKoLT5JMCGyIWL3YxL3twYXJlbnQ9Ki8qfS9mZWVkczoB",
+            "KtpBBnBhcmVudBJ0CgdHZXRGZWVkEiUuZ29vZ2xlLmNsb3VkLmFzc2V0LnYx",
+            "LkdldEZlZWRSZXF1ZXN0GhsuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkZlZWQi",
+            "JYLT5JMCGBIWL3YxL3tuYW1lPSovKi9mZWVkcy8qfdpBBG5hbWUShwEKCUxp",
+            "c3RGZWVkcxInLmdvb2dsZS5jbG91ZC5hc3NldC52MS5MaXN0RmVlZHNSZXF1",
+            "ZXN0GiguZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLkxpc3RGZWVkc1Jlc3BvbnNl",
+            "IieC0+STAhgSFi92MS97cGFyZW50PSovKn0vZmVlZHPaQQZwYXJlbnQSggEK",
+            "ClVwZGF0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuVXBkYXRlRmVl",
+            "ZFJlcXVlc3QaGy5nb29nbGUuY2xvdWQuYXNzZXQudjEuRmVlZCItgtPkkwIg",
+            "MhsvdjEve2ZlZWQubmFtZT0qLyovZmVlZHMvKn06ASraQQRmZWVkEnUKCkRl",
+            "bGV0ZUZlZWQSKC5nb29nbGUuY2xvdWQuYXNzZXQudjEuRGVsZXRlRmVlZFJl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJYLT5JMCGCoWL3YxL3tu",
+            "YW1lPSovKi9mZWVkcy8qfdpBBG5hbWUSvwEKElNlYXJjaEFsbFJlc291cmNl",
+            "cxIwLmdvb2dsZS5jbG91ZC5hc3NldC52MS5TZWFyY2hBbGxSZXNvdXJjZXNS",
+            "ZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLmFzc2V0LnYxLlNlYXJjaEFsbFJlc291",
+            "cmNlc1Jlc3BvbnNlIkSC0+STAiQSIi92MS97c2NvcGU9Ki8qfTpzZWFyY2hB",
+            "bGxSZXNvdXJjZXPaQRdzY29wZSxxdWVyeSxhc3NldF90eXBlcxK7AQoUU2Vh",
+            "cmNoQWxsSWFtUG9saWNpZXMSMi5nb29nbGUuY2xvdWQuYXNzZXQudjEuU2Vh",
+            "cmNoQWxsSWFtUG9saWNpZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLmFzc2V0",
+            "LnYxLlNlYXJjaEFsbElhbVBvbGljaWVzUmVzcG9uc2UiOoLT5JMCJhIkL3Yx",
+            "L3tzY29wZT0qLyp9OnNlYXJjaEFsbElhbVBvbGljaWVz2kELc2NvcGUscXVl",
+            "cnkSrAEKEEFuYWx5emVJYW1Qb2xpY3kSLi5nb29nbGUuY2xvdWQuYXNzZXQu",
+            "djEuQW5hbHl6ZUlhbVBvbGljeVJlcXVlc3QaLy5nb29nbGUuY2xvdWQuYXNz",
+            "ZXQudjEuQW5hbHl6ZUlhbVBvbGljeVJlc3BvbnNlIjeC0+STAjESLy92MS97",
+            "YW5hbHlzaXNfcXVlcnkuc2NvcGU9Ki8qfTphbmFseXplSWFtUG9saWN5ErcC",
+            "ChtBbmFseXplSWFtUG9saWN5TG9uZ3J1bm5pbmcSOS5nb29nbGUuY2xvdWQu",
+            "YXNzZXQudjEuQW5hbHl6ZUlhbVBvbGljeUxvbmdydW5uaW5nUmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ivQGC0+STAj8iOi92MS97",
+            "YW5hbHlzaXNfcXVlcnkuc2NvcGU9Ki8qfTphbmFseXplSWFtUG9saWN5TG9u",
+            "Z3J1bm5pbmc6ASrKQXUKOWdvb2dsZS5jbG91ZC5hc3NldC52MS5BbmFseXpl",
+            "SWFtUG9saWN5TG9uZ3J1bm5pbmdSZXNwb25zZRI4Z29vZ2xlLmNsb3VkLmFz",
+            "c2V0LnYxLkFuYWx5emVJYW1Qb2xpY3lMb25ncnVubmluZ1JlcXVlc3QaTcpB",
+            "GWNsb3VkYXNzZXQuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQpwBChljb20uZ29vZ2xl",
+            "LmNsb3VkLmFzc2V0LnYxQhFBc3NldFNlcnZpY2VQcm90b1ABWjpnb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Fzc2V0L3Yx",
+            "O2Fzc2V0qgIVR29vZ2xlLkNsb3VkLkFzc2V0LlYxygIVR29vZ2xlXENsb3Vk",
+            "XEFzc2V0XFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Asset.V1.AssetsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.ExprReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Asset.V1.ContentType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,7 +228,17 @@ namespace Google.Cloud.Asset.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllResourcesRequest), global::Google.Cloud.Asset.V1.SearchAllResourcesRequest.Parser, new[]{ "Scope", "Query", "AssetTypes", "PageSize", "PageToken", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllResourcesResponse), global::Google.Cloud.Asset.V1.SearchAllResourcesResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest), global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest.Parser, new[]{ "Scope", "Query", "PageSize", "PageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse), global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse), global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery), global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Parser, new[]{ "Scope", "ResourceSelector", "IdentitySelector", "AccessSelector", "Options" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.ResourceSelector), global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.ResourceSelector.Parser, new[]{ "FullResourceName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.IdentitySelector), global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.IdentitySelector.Parser, new[]{ "Identity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.AccessSelector), global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.AccessSelector.Parser, new[]{ "Roles", "Permissions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.Options), global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.Options.Parser, new[]{ "ExpandGroups", "ExpandRoles", "ExpandResources", "OutputResourceEdges", "OutputGroupEdges", "AnalyzeServiceAccountImpersonation" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest.Parser, new[]{ "AnalysisQuery", "ExecutionTimeout" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Parser, new[]{ "MainAnalysis", "ServiceAccountImpersonationAnalysis", "FullyExplored" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis.Parser, new[]{ "AnalysisQuery", "AnalysisResults", "FullyExplored", "NonCriticalErrors" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig), global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Parser, new[]{ "GcsDestination", "BigqueryDestination" }, new[]{ "Destination" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination), global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination), global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Parser, new[]{ "Dataset", "TablePrefix", "PartitionKey", "WriteDisposition" }, null, new[]{ typeof(global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest.Parser, new[]{ "AnalysisQuery", "OutputConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningResponse), global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -6051,6 +6123,3371 @@ namespace Google.Cloud.Asset.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// IAM policy analysis query message.
+  /// </summary>
+  public sealed partial class IamPolicyAnalysisQuery : pb::IMessage<IamPolicyAnalysisQuery>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IamPolicyAnalysisQuery> _parser = new pb::MessageParser<IamPolicyAnalysisQuery>(() => new IamPolicyAnalysisQuery());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IamPolicyAnalysisQuery> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IamPolicyAnalysisQuery() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IamPolicyAnalysisQuery(IamPolicyAnalysisQuery other) : this() {
+      scope_ = other.scope_;
+      resourceSelector_ = other.resourceSelector_ != null ? other.resourceSelector_.Clone() : null;
+      identitySelector_ = other.identitySelector_ != null ? other.identitySelector_.Clone() : null;
+      accessSelector_ = other.accessSelector_ != null ? other.accessSelector_.Clone() : null;
+      options_ = other.options_ != null ? other.options_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IamPolicyAnalysisQuery Clone() {
+      return new IamPolicyAnalysisQuery(this);
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 1;
+    private string scope_ = "";
+    /// <summary>
+    /// Required. The relative name of the root asset. Only resources and IAM policies within
+    /// the scope will be analyzed.
+    ///
+    /// This can only be an organization number (such as "organizations/123"), a
+    /// folder number (such as "folders/123"), a project ID (such as
+    /// "projects/my-project-id"), or a project number (such as "projects/12345").
+    ///
+    /// To know how to get organization id, visit [here
+    /// ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
+    ///
+    /// To know how to get folder or project id, visit [here
+    /// ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Scope {
+      get { return scope_; }
+      set {
+        scope_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "resource_selector" field.</summary>
+    public const int ResourceSelectorFieldNumber = 2;
+    private global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.ResourceSelector resourceSelector_;
+    /// <summary>
+    /// Optional. Specifies a resource for analysis.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.ResourceSelector ResourceSelector {
+      get { return resourceSelector_; }
+      set {
+        resourceSelector_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "identity_selector" field.</summary>
+    public const int IdentitySelectorFieldNumber = 3;
+    private global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.IdentitySelector identitySelector_;
+    /// <summary>
+    /// Optional. Specifies an identity for analysis.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.IdentitySelector IdentitySelector {
+      get { return identitySelector_; }
+      set {
+        identitySelector_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "access_selector" field.</summary>
+    public const int AccessSelectorFieldNumber = 4;
+    private global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.AccessSelector accessSelector_;
+    /// <summary>
+    /// Optional. Specifies roles or permissions for analysis. This is optional.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.AccessSelector AccessSelector {
+      get { return accessSelector_; }
+      set {
+        accessSelector_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "options" field.</summary>
+    public const int OptionsFieldNumber = 5;
+    private global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.Options options_;
+    /// <summary>
+    /// Optional. The query options.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.Options Options {
+      get { return options_; }
+      set {
+        options_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IamPolicyAnalysisQuery);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IamPolicyAnalysisQuery other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Scope != other.Scope) return false;
+      if (!object.Equals(ResourceSelector, other.ResourceSelector)) return false;
+      if (!object.Equals(IdentitySelector, other.IdentitySelector)) return false;
+      if (!object.Equals(AccessSelector, other.AccessSelector)) return false;
+      if (!object.Equals(Options, other.Options)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Scope.Length != 0) hash ^= Scope.GetHashCode();
+      if (resourceSelector_ != null) hash ^= ResourceSelector.GetHashCode();
+      if (identitySelector_ != null) hash ^= IdentitySelector.GetHashCode();
+      if (accessSelector_ != null) hash ^= AccessSelector.GetHashCode();
+      if (options_ != null) hash ^= Options.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (resourceSelector_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ResourceSelector);
+      }
+      if (identitySelector_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(IdentitySelector);
+      }
+      if (accessSelector_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AccessSelector);
+      }
+      if (options_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Options);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Scope.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Scope);
+      }
+      if (resourceSelector_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ResourceSelector);
+      }
+      if (identitySelector_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(IdentitySelector);
+      }
+      if (accessSelector_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AccessSelector);
+      }
+      if (options_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Options);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Scope.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
+      }
+      if (resourceSelector_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceSelector);
+      }
+      if (identitySelector_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IdentitySelector);
+      }
+      if (accessSelector_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessSelector);
+      }
+      if (options_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IamPolicyAnalysisQuery other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Scope.Length != 0) {
+        Scope = other.Scope;
+      }
+      if (other.resourceSelector_ != null) {
+        if (resourceSelector_ == null) {
+          ResourceSelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.ResourceSelector();
+        }
+        ResourceSelector.MergeFrom(other.ResourceSelector);
+      }
+      if (other.identitySelector_ != null) {
+        if (identitySelector_ == null) {
+          IdentitySelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.IdentitySelector();
+        }
+        IdentitySelector.MergeFrom(other.IdentitySelector);
+      }
+      if (other.accessSelector_ != null) {
+        if (accessSelector_ == null) {
+          AccessSelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.AccessSelector();
+        }
+        AccessSelector.MergeFrom(other.AccessSelector);
+      }
+      if (other.options_ != null) {
+        if (options_ == null) {
+          Options = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.Options();
+        }
+        Options.MergeFrom(other.Options);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (resourceSelector_ == null) {
+              ResourceSelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.ResourceSelector();
+            }
+            input.ReadMessage(ResourceSelector);
+            break;
+          }
+          case 26: {
+            if (identitySelector_ == null) {
+              IdentitySelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.IdentitySelector();
+            }
+            input.ReadMessage(IdentitySelector);
+            break;
+          }
+          case 34: {
+            if (accessSelector_ == null) {
+              AccessSelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.AccessSelector();
+            }
+            input.ReadMessage(AccessSelector);
+            break;
+          }
+          case 42: {
+            if (options_ == null) {
+              Options = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.Options();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Scope = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (resourceSelector_ == null) {
+              ResourceSelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.ResourceSelector();
+            }
+            input.ReadMessage(ResourceSelector);
+            break;
+          }
+          case 26: {
+            if (identitySelector_ == null) {
+              IdentitySelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.IdentitySelector();
+            }
+            input.ReadMessage(IdentitySelector);
+            break;
+          }
+          case 34: {
+            if (accessSelector_ == null) {
+              AccessSelector = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.AccessSelector();
+            }
+            input.ReadMessage(AccessSelector);
+            break;
+          }
+          case 42: {
+            if (options_ == null) {
+              Options = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Types.Options();
+            }
+            input.ReadMessage(Options);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the IamPolicyAnalysisQuery message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies the resource to analyze for access policies, which may be set
+      /// directly on the resource, or on ancestors such as organizations, folders or
+      /// projects.
+      /// </summary>
+      public sealed partial class ResourceSelector : pb::IMessage<ResourceSelector>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ResourceSelector> _parser = new pb::MessageParser<ResourceSelector>(() => new ResourceSelector());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ResourceSelector> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ResourceSelector() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ResourceSelector(ResourceSelector other) : this() {
+          fullResourceName_ = other.fullResourceName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ResourceSelector Clone() {
+          return new ResourceSelector(this);
+        }
+
+        /// <summary>Field number for the "full_resource_name" field.</summary>
+        public const int FullResourceNameFieldNumber = 1;
+        private string fullResourceName_ = "";
+        /// <summary>
+        /// Required. The [full resource name]
+        /// (https://cloud.google.com/asset-inventory/docs/resource-name-format)
+        /// of a resource of [supported resource
+        /// types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#analyzable_asset_types).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FullResourceName {
+          get { return fullResourceName_; }
+          set {
+            fullResourceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ResourceSelector);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ResourceSelector other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (FullResourceName != other.FullResourceName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (FullResourceName.Length != 0) hash ^= FullResourceName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (FullResourceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FullResourceName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (FullResourceName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(FullResourceName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (FullResourceName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FullResourceName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ResourceSelector other) {
+          if (other == null) {
+            return;
+          }
+          if (other.FullResourceName.Length != 0) {
+            FullResourceName = other.FullResourceName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                FullResourceName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                FullResourceName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Specifies an identity for which to determine resource access, based on
+      /// roles assigned either directly to them or to the groups they belong to,
+      /// directly or indirectly.
+      /// </summary>
+      public sealed partial class IdentitySelector : pb::IMessage<IdentitySelector>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IdentitySelector> _parser = new pb::MessageParser<IdentitySelector>(() => new IdentitySelector());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<IdentitySelector> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IdentitySelector() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IdentitySelector(IdentitySelector other) : this() {
+          identity_ = other.identity_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IdentitySelector Clone() {
+          return new IdentitySelector(this);
+        }
+
+        /// <summary>Field number for the "identity" field.</summary>
+        public const int IdentityFieldNumber = 1;
+        private string identity_ = "";
+        /// <summary>
+        /// Required. The identity appear in the form of members in
+        /// [IAM policy
+        /// binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
+        ///
+        /// The examples of supported forms are:
+        /// "user:mike@example.com",
+        /// "group:admins@example.com",
+        /// "domain:google.com",
+        /// "serviceAccount:my-project-id@appspot.gserviceaccount.com".
+        ///
+        /// Notice that wildcard characters (such as * and ?) are not supported.
+        /// You must give a specific identity.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Identity {
+          get { return identity_; }
+          set {
+            identity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as IdentitySelector);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(IdentitySelector other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Identity != other.Identity) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Identity.Length != 0) hash ^= Identity.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Identity.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Identity);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Identity.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Identity);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Identity.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Identity);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(IdentitySelector other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Identity.Length != 0) {
+            Identity = other.Identity;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Identity = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Identity = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Specifies roles and/or permissions to analyze, to determine both the
+      /// identities possessing them and the resources they control. If multiple
+      /// values are specified, results will include roles or permissions matching
+      /// any of them. The total number of roles and permissions should be equal or
+      /// less than 10.
+      /// </summary>
+      public sealed partial class AccessSelector : pb::IMessage<AccessSelector>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AccessSelector> _parser = new pb::MessageParser<AccessSelector>(() => new AccessSelector());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<AccessSelector> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public AccessSelector() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public AccessSelector(AccessSelector other) : this() {
+          roles_ = other.roles_.Clone();
+          permissions_ = other.permissions_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public AccessSelector Clone() {
+          return new AccessSelector(this);
+        }
+
+        /// <summary>Field number for the "roles" field.</summary>
+        public const int RolesFieldNumber = 1;
+        private static readonly pb::FieldCodec<string> _repeated_roles_codec
+            = pb::FieldCodec.ForString(10);
+        private readonly pbc::RepeatedField<string> roles_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. The roles to appear in result.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<string> Roles {
+          get { return roles_; }
+        }
+
+        /// <summary>Field number for the "permissions" field.</summary>
+        public const int PermissionsFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_permissions_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> permissions_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. The permissions to appear in result.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<string> Permissions {
+          get { return permissions_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as AccessSelector);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(AccessSelector other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!roles_.Equals(other.roles_)) return false;
+          if(!permissions_.Equals(other.permissions_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= roles_.GetHashCode();
+          hash ^= permissions_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          roles_.WriteTo(output, _repeated_roles_codec);
+          permissions_.WriteTo(output, _repeated_permissions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          roles_.WriteTo(ref output, _repeated_roles_codec);
+          permissions_.WriteTo(ref output, _repeated_permissions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          size += roles_.CalculateSize(_repeated_roles_codec);
+          size += permissions_.CalculateSize(_repeated_permissions_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(AccessSelector other) {
+          if (other == null) {
+            return;
+          }
+          roles_.Add(other.roles_);
+          permissions_.Add(other.permissions_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                roles_.AddEntriesFrom(input, _repeated_roles_codec);
+                break;
+              }
+              case 18: {
+                permissions_.AddEntriesFrom(input, _repeated_permissions_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                roles_.AddEntriesFrom(ref input, _repeated_roles_codec);
+                break;
+              }
+              case 18: {
+                permissions_.AddEntriesFrom(ref input, _repeated_permissions_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Contains query options.
+      /// </summary>
+      public sealed partial class Options : pb::IMessage<Options>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Options> _parser = new pb::MessageParser<Options>(() => new Options());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Options> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Options() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Options(Options other) : this() {
+          expandGroups_ = other.expandGroups_;
+          expandRoles_ = other.expandRoles_;
+          expandResources_ = other.expandResources_;
+          outputResourceEdges_ = other.outputResourceEdges_;
+          outputGroupEdges_ = other.outputGroupEdges_;
+          analyzeServiceAccountImpersonation_ = other.analyzeServiceAccountImpersonation_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Options Clone() {
+          return new Options(this);
+        }
+
+        /// <summary>Field number for the "expand_groups" field.</summary>
+        public const int ExpandGroupsFieldNumber = 1;
+        private bool expandGroups_;
+        /// <summary>
+        /// Optional. If true, the identities section of the result will expand any
+        /// Google groups appearing in an IAM policy binding.
+        ///
+        /// If [IamPolicyAnalysisQuery.identity_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.identity_selector] is specified, the
+        /// identity in the result will be determined by the selector, and this flag
+        /// is not allowed to set.
+        ///
+        /// Default is false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool ExpandGroups {
+          get { return expandGroups_; }
+          set {
+            expandGroups_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "expand_roles" field.</summary>
+        public const int ExpandRolesFieldNumber = 2;
+        private bool expandRoles_;
+        /// <summary>
+        /// Optional. If true, the access section of result will expand any roles
+        /// appearing in IAM policy bindings to include their permissions.
+        ///
+        /// If [IamPolicyAnalysisQuery.access_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.access_selector] is specified, the access
+        /// section of the result will be determined by the selector, and this flag
+        /// is not allowed to set.
+        ///
+        /// Default is false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool ExpandRoles {
+          get { return expandRoles_; }
+          set {
+            expandRoles_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "expand_resources" field.</summary>
+        public const int ExpandResourcesFieldNumber = 3;
+        private bool expandResources_;
+        /// <summary>
+        /// Optional. If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is not
+        /// specified, the resource section of the result will expand any resource
+        /// attached to an IAM policy to include resources lower in the resource
+        /// hierarchy.
+        ///
+        /// For example, if the request analyzes for which resources user A has
+        /// permission P, and the results include an IAM policy with P on a GCP
+        /// folder, the results will also include resources in that folder with
+        /// permission P.
+        ///
+        /// If true and [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector] is specified,
+        /// the resource section of the result will expand the specified resource to
+        /// include resources lower in the resource hierarchy. Only project or
+        /// lower resources are supported. Folder and organization resource cannot be
+        /// used together with this option.
+        ///
+        /// For example, if the request analyzes for which users have permission P on
+        /// a GCP project with this option enabled, the results will include all
+        /// users who have permission P on that project or any lower resource.
+        ///
+        /// Default is false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool ExpandResources {
+          get { return expandResources_; }
+          set {
+            expandResources_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "output_resource_edges" field.</summary>
+        public const int OutputResourceEdgesFieldNumber = 4;
+        private bool outputResourceEdges_;
+        /// <summary>
+        /// Optional. If true, the result will output resource edges, starting
+        /// from the policy attached resource, to any expanded resources.
+        /// Default is false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool OutputResourceEdges {
+          get { return outputResourceEdges_; }
+          set {
+            outputResourceEdges_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "output_group_edges" field.</summary>
+        public const int OutputGroupEdgesFieldNumber = 5;
+        private bool outputGroupEdges_;
+        /// <summary>
+        /// Optional. If true, the result will output group identity edges, starting
+        /// from the binding's group members, to any expanded identities.
+        /// Default is false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool OutputGroupEdges {
+          get { return outputGroupEdges_; }
+          set {
+            outputGroupEdges_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "analyze_service_account_impersonation" field.</summary>
+        public const int AnalyzeServiceAccountImpersonationFieldNumber = 6;
+        private bool analyzeServiceAccountImpersonation_;
+        /// <summary>
+        /// Optional. If true, the response will include access analysis from identities to
+        /// resources via service account impersonation. This is a very expensive
+        /// operation, because many derived queries will be executed. We highly
+        /// recommend you use [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning] rpc
+        /// instead.
+        ///
+        /// For example, if the request analyzes for which resources user A has
+        /// permission P, and there's an IAM policy states user A has
+        /// iam.serviceAccounts.getAccessToken permission to a service account SA,
+        /// and there's another IAM policy states service account SA has permission P
+        /// to a GCP folder F, then user A potentially has access to the GCP folder
+        /// F. And those advanced analysis results will be included in
+        /// [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
+        ///
+        /// Another example, if the request analyzes for who has
+        /// permission P to a GCP folder F, and there's an IAM policy states user A
+        /// has iam.serviceAccounts.actAs permission to a service account SA, and
+        /// there's another IAM policy states service account SA has permission P to
+        /// the GCP folder F, then user A potentially has access to the GCP folder
+        /// F. And those advanced analysis results will be included in
+        /// [AnalyzeIamPolicyResponse.service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis].
+        ///
+        /// Default is false.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool AnalyzeServiceAccountImpersonation {
+          get { return analyzeServiceAccountImpersonation_; }
+          set {
+            analyzeServiceAccountImpersonation_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Options);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Options other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ExpandGroups != other.ExpandGroups) return false;
+          if (ExpandRoles != other.ExpandRoles) return false;
+          if (ExpandResources != other.ExpandResources) return false;
+          if (OutputResourceEdges != other.OutputResourceEdges) return false;
+          if (OutputGroupEdges != other.OutputGroupEdges) return false;
+          if (AnalyzeServiceAccountImpersonation != other.AnalyzeServiceAccountImpersonation) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ExpandGroups != false) hash ^= ExpandGroups.GetHashCode();
+          if (ExpandRoles != false) hash ^= ExpandRoles.GetHashCode();
+          if (ExpandResources != false) hash ^= ExpandResources.GetHashCode();
+          if (OutputResourceEdges != false) hash ^= OutputResourceEdges.GetHashCode();
+          if (OutputGroupEdges != false) hash ^= OutputGroupEdges.GetHashCode();
+          if (AnalyzeServiceAccountImpersonation != false) hash ^= AnalyzeServiceAccountImpersonation.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ExpandGroups != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(ExpandGroups);
+          }
+          if (ExpandRoles != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(ExpandRoles);
+          }
+          if (ExpandResources != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(ExpandResources);
+          }
+          if (OutputResourceEdges != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(OutputResourceEdges);
+          }
+          if (OutputGroupEdges != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(OutputGroupEdges);
+          }
+          if (AnalyzeServiceAccountImpersonation != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(AnalyzeServiceAccountImpersonation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ExpandGroups != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(ExpandGroups);
+          }
+          if (ExpandRoles != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(ExpandRoles);
+          }
+          if (ExpandResources != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(ExpandResources);
+          }
+          if (OutputResourceEdges != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(OutputResourceEdges);
+          }
+          if (OutputGroupEdges != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(OutputGroupEdges);
+          }
+          if (AnalyzeServiceAccountImpersonation != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(AnalyzeServiceAccountImpersonation);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (ExpandGroups != false) {
+            size += 1 + 1;
+          }
+          if (ExpandRoles != false) {
+            size += 1 + 1;
+          }
+          if (ExpandResources != false) {
+            size += 1 + 1;
+          }
+          if (OutputResourceEdges != false) {
+            size += 1 + 1;
+          }
+          if (OutputGroupEdges != false) {
+            size += 1 + 1;
+          }
+          if (AnalyzeServiceAccountImpersonation != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Options other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ExpandGroups != false) {
+            ExpandGroups = other.ExpandGroups;
+          }
+          if (other.ExpandRoles != false) {
+            ExpandRoles = other.ExpandRoles;
+          }
+          if (other.ExpandResources != false) {
+            ExpandResources = other.ExpandResources;
+          }
+          if (other.OutputResourceEdges != false) {
+            OutputResourceEdges = other.OutputResourceEdges;
+          }
+          if (other.OutputGroupEdges != false) {
+            OutputGroupEdges = other.OutputGroupEdges;
+          }
+          if (other.AnalyzeServiceAccountImpersonation != false) {
+            AnalyzeServiceAccountImpersonation = other.AnalyzeServiceAccountImpersonation;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ExpandGroups = input.ReadBool();
+                break;
+              }
+              case 16: {
+                ExpandRoles = input.ReadBool();
+                break;
+              }
+              case 24: {
+                ExpandResources = input.ReadBool();
+                break;
+              }
+              case 32: {
+                OutputResourceEdges = input.ReadBool();
+                break;
+              }
+              case 40: {
+                OutputGroupEdges = input.ReadBool();
+                break;
+              }
+              case 48: {
+                AnalyzeServiceAccountImpersonation = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ExpandGroups = input.ReadBool();
+                break;
+              }
+              case 16: {
+                ExpandRoles = input.ReadBool();
+                break;
+              }
+              case 24: {
+                ExpandResources = input.ReadBool();
+                break;
+              }
+              case 32: {
+                OutputResourceEdges = input.ReadBool();
+                break;
+              }
+              case 40: {
+                OutputGroupEdges = input.ReadBool();
+                break;
+              }
+              case 48: {
+                AnalyzeServiceAccountImpersonation = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A request message for [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
+  /// </summary>
+  public sealed partial class AnalyzeIamPolicyRequest : pb::IMessage<AnalyzeIamPolicyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeIamPolicyRequest> _parser = new pb::MessageParser<AnalyzeIamPolicyRequest>(() => new AnalyzeIamPolicyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AnalyzeIamPolicyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyRequest(AnalyzeIamPolicyRequest other) : this() {
+      analysisQuery_ = other.analysisQuery_ != null ? other.analysisQuery_.Clone() : null;
+      executionTimeout_ = other.executionTimeout_ != null ? other.executionTimeout_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyRequest Clone() {
+      return new AnalyzeIamPolicyRequest(this);
+    }
+
+    /// <summary>Field number for the "analysis_query" field.</summary>
+    public const int AnalysisQueryFieldNumber = 1;
+    private global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery analysisQuery_;
+    /// <summary>
+    /// Required. The request query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery AnalysisQuery {
+      get { return analysisQuery_; }
+      set {
+        analysisQuery_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "execution_timeout" field.</summary>
+    public const int ExecutionTimeoutFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Duration executionTimeout_;
+    /// <summary>
+    /// Optional. Amount of time executable has to complete.  See JSON representation of
+    /// [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json).
+    ///
+    /// If this field is set with a value less than the RPC deadline, and the
+    /// execution of your query hasn't finished in the specified
+    /// execution timeout,  you will get a response with partial result.
+    /// Otherwise, your query's execution will continue until the RPC deadline.
+    /// If it's not finished until then, you will get a  DEADLINE_EXCEEDED error.
+    ///
+    /// Default is empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration ExecutionTimeout {
+      get { return executionTimeout_; }
+      set {
+        executionTimeout_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeIamPolicyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AnalyzeIamPolicyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AnalysisQuery, other.AnalysisQuery)) return false;
+      if (!object.Equals(ExecutionTimeout, other.ExecutionTimeout)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (analysisQuery_ != null) hash ^= AnalysisQuery.GetHashCode();
+      if (executionTimeout_ != null) hash ^= ExecutionTimeout.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (analysisQuery_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AnalysisQuery);
+      }
+      if (executionTimeout_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExecutionTimeout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (analysisQuery_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AnalysisQuery);
+      }
+      if (executionTimeout_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ExecutionTimeout);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (analysisQuery_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AnalysisQuery);
+      }
+      if (executionTimeout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExecutionTimeout);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AnalyzeIamPolicyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.analysisQuery_ != null) {
+        if (analysisQuery_ == null) {
+          AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+        }
+        AnalysisQuery.MergeFrom(other.AnalysisQuery);
+      }
+      if (other.executionTimeout_ != null) {
+        if (executionTimeout_ == null) {
+          ExecutionTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        ExecutionTimeout.MergeFrom(other.ExecutionTimeout);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (analysisQuery_ == null) {
+              AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+            }
+            input.ReadMessage(AnalysisQuery);
+            break;
+          }
+          case 18: {
+            if (executionTimeout_ == null) {
+              ExecutionTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ExecutionTimeout);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (analysisQuery_ == null) {
+              AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+            }
+            input.ReadMessage(AnalysisQuery);
+            break;
+          }
+          case 18: {
+            if (executionTimeout_ == null) {
+              ExecutionTimeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(ExecutionTimeout);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A response message for [AssetService.AnalyzeIamPolicy][google.cloud.asset.v1.AssetService.AnalyzeIamPolicy].
+  /// </summary>
+  public sealed partial class AnalyzeIamPolicyResponse : pb::IMessage<AnalyzeIamPolicyResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeIamPolicyResponse> _parser = new pb::MessageParser<AnalyzeIamPolicyResponse>(() => new AnalyzeIamPolicyResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AnalyzeIamPolicyResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyResponse(AnalyzeIamPolicyResponse other) : this() {
+      mainAnalysis_ = other.mainAnalysis_ != null ? other.mainAnalysis_.Clone() : null;
+      serviceAccountImpersonationAnalysis_ = other.serviceAccountImpersonationAnalysis_.Clone();
+      fullyExplored_ = other.fullyExplored_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyResponse Clone() {
+      return new AnalyzeIamPolicyResponse(this);
+    }
+
+    /// <summary>Field number for the "main_analysis" field.</summary>
+    public const int MainAnalysisFieldNumber = 1;
+    private global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis mainAnalysis_;
+    /// <summary>
+    /// The main analysis that matches the original request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis MainAnalysis {
+      get { return mainAnalysis_; }
+      set {
+        mainAnalysis_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_account_impersonation_analysis" field.</summary>
+    public const int ServiceAccountImpersonationAnalysisFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis> _repeated_serviceAccountImpersonationAnalysis_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis> serviceAccountImpersonationAnalysis_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis>();
+    /// <summary>
+    /// The service account impersonation analysis if
+    /// [AnalyzeIamPolicyRequest.analyze_service_account_impersonation][] is
+    /// enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis> ServiceAccountImpersonationAnalysis {
+      get { return serviceAccountImpersonationAnalysis_; }
+    }
+
+    /// <summary>Field number for the "fully_explored" field.</summary>
+    public const int FullyExploredFieldNumber = 3;
+    private bool fullyExplored_;
+    /// <summary>
+    /// Represents whether all entries in the [main_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.main_analysis] and
+    /// [service_account_impersonation_analysis][google.cloud.asset.v1.AnalyzeIamPolicyResponse.service_account_impersonation_analysis] have been fully explored to
+    /// answer the query in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool FullyExplored {
+      get { return fullyExplored_; }
+      set {
+        fullyExplored_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeIamPolicyResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AnalyzeIamPolicyResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(MainAnalysis, other.MainAnalysis)) return false;
+      if(!serviceAccountImpersonationAnalysis_.Equals(other.serviceAccountImpersonationAnalysis_)) return false;
+      if (FullyExplored != other.FullyExplored) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (mainAnalysis_ != null) hash ^= MainAnalysis.GetHashCode();
+      hash ^= serviceAccountImpersonationAnalysis_.GetHashCode();
+      if (FullyExplored != false) hash ^= FullyExplored.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (mainAnalysis_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MainAnalysis);
+      }
+      serviceAccountImpersonationAnalysis_.WriteTo(output, _repeated_serviceAccountImpersonationAnalysis_codec);
+      if (FullyExplored != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(FullyExplored);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (mainAnalysis_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MainAnalysis);
+      }
+      serviceAccountImpersonationAnalysis_.WriteTo(ref output, _repeated_serviceAccountImpersonationAnalysis_codec);
+      if (FullyExplored != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(FullyExplored);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (mainAnalysis_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MainAnalysis);
+      }
+      size += serviceAccountImpersonationAnalysis_.CalculateSize(_repeated_serviceAccountImpersonationAnalysis_codec);
+      if (FullyExplored != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AnalyzeIamPolicyResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.mainAnalysis_ != null) {
+        if (mainAnalysis_ == null) {
+          MainAnalysis = new global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis();
+        }
+        MainAnalysis.MergeFrom(other.MainAnalysis);
+      }
+      serviceAccountImpersonationAnalysis_.Add(other.serviceAccountImpersonationAnalysis_);
+      if (other.FullyExplored != false) {
+        FullyExplored = other.FullyExplored;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (mainAnalysis_ == null) {
+              MainAnalysis = new global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis();
+            }
+            input.ReadMessage(MainAnalysis);
+            break;
+          }
+          case 18: {
+            serviceAccountImpersonationAnalysis_.AddEntriesFrom(input, _repeated_serviceAccountImpersonationAnalysis_codec);
+            break;
+          }
+          case 24: {
+            FullyExplored = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (mainAnalysis_ == null) {
+              MainAnalysis = new global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Types.IamPolicyAnalysis();
+            }
+            input.ReadMessage(MainAnalysis);
+            break;
+          }
+          case 18: {
+            serviceAccountImpersonationAnalysis_.AddEntriesFrom(ref input, _repeated_serviceAccountImpersonationAnalysis_codec);
+            break;
+          }
+          case 24: {
+            FullyExplored = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnalyzeIamPolicyResponse message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// An analysis message to group the query and results.
+      /// </summary>
+      public sealed partial class IamPolicyAnalysis : pb::IMessage<IamPolicyAnalysis>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<IamPolicyAnalysis> _parser = new pb::MessageParser<IamPolicyAnalysis>(() => new IamPolicyAnalysis());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<IamPolicyAnalysis> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IamPolicyAnalysis() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IamPolicyAnalysis(IamPolicyAnalysis other) : this() {
+          analysisQuery_ = other.analysisQuery_ != null ? other.analysisQuery_.Clone() : null;
+          analysisResults_ = other.analysisResults_.Clone();
+          fullyExplored_ = other.fullyExplored_;
+          nonCriticalErrors_ = other.nonCriticalErrors_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IamPolicyAnalysis Clone() {
+          return new IamPolicyAnalysis(this);
+        }
+
+        /// <summary>Field number for the "analysis_query" field.</summary>
+        public const int AnalysisQueryFieldNumber = 1;
+        private global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery analysisQuery_;
+        /// <summary>
+        /// The analysis query.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery AnalysisQuery {
+          get { return analysisQuery_; }
+          set {
+            analysisQuery_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "analysis_results" field.</summary>
+        public const int AnalysisResultsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult> _repeated_analysisResults_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult> analysisResults_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult>();
+        /// <summary>
+        /// A list of [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult] that matches the analysis query, or
+        /// empty if no result is found.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisResult> AnalysisResults {
+          get { return analysisResults_; }
+        }
+
+        /// <summary>Field number for the "fully_explored" field.</summary>
+        public const int FullyExploredFieldNumber = 3;
+        private bool fullyExplored_;
+        /// <summary>
+        /// Represents whether all entries in the [analysis_results][google.cloud.asset.v1.AnalyzeIamPolicyResponse.IamPolicyAnalysis.analysis_results] have been
+        /// fully explored to answer the query.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool FullyExplored {
+          get { return fullyExplored_; }
+          set {
+            fullyExplored_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "non_critical_errors" field.</summary>
+        public const int NonCriticalErrorsFieldNumber = 5;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Asset.V1.IamPolicyAnalysisState> _repeated_nonCriticalErrors_codec
+            = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Asset.V1.IamPolicyAnalysisState.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisState> nonCriticalErrors_ = new pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisState>();
+        /// <summary>
+        /// A list of non-critical errors happened during the query handling.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Asset.V1.IamPolicyAnalysisState> NonCriticalErrors {
+          get { return nonCriticalErrors_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as IamPolicyAnalysis);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(IamPolicyAnalysis other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(AnalysisQuery, other.AnalysisQuery)) return false;
+          if(!analysisResults_.Equals(other.analysisResults_)) return false;
+          if (FullyExplored != other.FullyExplored) return false;
+          if(!nonCriticalErrors_.Equals(other.nonCriticalErrors_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (analysisQuery_ != null) hash ^= AnalysisQuery.GetHashCode();
+          hash ^= analysisResults_.GetHashCode();
+          if (FullyExplored != false) hash ^= FullyExplored.GetHashCode();
+          hash ^= nonCriticalErrors_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (analysisQuery_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AnalysisQuery);
+          }
+          analysisResults_.WriteTo(output, _repeated_analysisResults_codec);
+          if (FullyExplored != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(FullyExplored);
+          }
+          nonCriticalErrors_.WriteTo(output, _repeated_nonCriticalErrors_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (analysisQuery_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AnalysisQuery);
+          }
+          analysisResults_.WriteTo(ref output, _repeated_analysisResults_codec);
+          if (FullyExplored != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(FullyExplored);
+          }
+          nonCriticalErrors_.WriteTo(ref output, _repeated_nonCriticalErrors_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (analysisQuery_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AnalysisQuery);
+          }
+          size += analysisResults_.CalculateSize(_repeated_analysisResults_codec);
+          if (FullyExplored != false) {
+            size += 1 + 1;
+          }
+          size += nonCriticalErrors_.CalculateSize(_repeated_nonCriticalErrors_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(IamPolicyAnalysis other) {
+          if (other == null) {
+            return;
+          }
+          if (other.analysisQuery_ != null) {
+            if (analysisQuery_ == null) {
+              AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+            }
+            AnalysisQuery.MergeFrom(other.AnalysisQuery);
+          }
+          analysisResults_.Add(other.analysisResults_);
+          if (other.FullyExplored != false) {
+            FullyExplored = other.FullyExplored;
+          }
+          nonCriticalErrors_.Add(other.nonCriticalErrors_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (analysisQuery_ == null) {
+                  AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+                }
+                input.ReadMessage(AnalysisQuery);
+                break;
+              }
+              case 18: {
+                analysisResults_.AddEntriesFrom(input, _repeated_analysisResults_codec);
+                break;
+              }
+              case 24: {
+                FullyExplored = input.ReadBool();
+                break;
+              }
+              case 42: {
+                nonCriticalErrors_.AddEntriesFrom(input, _repeated_nonCriticalErrors_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (analysisQuery_ == null) {
+                  AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+                }
+                input.ReadMessage(AnalysisQuery);
+                break;
+              }
+              case 18: {
+                analysisResults_.AddEntriesFrom(ref input, _repeated_analysisResults_codec);
+                break;
+              }
+              case 24: {
+                FullyExplored = input.ReadBool();
+                break;
+              }
+              case 42: {
+                nonCriticalErrors_.AddEntriesFrom(ref input, _repeated_nonCriticalErrors_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Output configuration for export IAM policy analysis destination.
+  /// </summary>
+  public sealed partial class IamPolicyAnalysisOutputConfig : pb::IMessage<IamPolicyAnalysisOutputConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IamPolicyAnalysisOutputConfig> _parser = new pb::MessageParser<IamPolicyAnalysisOutputConfig>(() => new IamPolicyAnalysisOutputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IamPolicyAnalysisOutputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IamPolicyAnalysisOutputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IamPolicyAnalysisOutputConfig(IamPolicyAnalysisOutputConfig other) : this() {
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          GcsDestination = other.GcsDestination.Clone();
+          break;
+        case DestinationOneofCase.BigqueryDestination:
+          BigqueryDestination = other.BigqueryDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IamPolicyAnalysisOutputConfig Clone() {
+      return new IamPolicyAnalysisOutputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_destination" field.</summary>
+    public const int GcsDestinationFieldNumber = 1;
+    /// <summary>
+    /// Destination on Cloud Storage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination GcsDestination {
+      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.GcsDestination;
+      }
+    }
+
+    /// <summary>Field number for the "bigquery_destination" field.</summary>
+    public const int BigqueryDestinationFieldNumber = 2;
+    /// <summary>
+    /// Destination on BigQuery.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination BigqueryDestination {
+      get { return destinationCase_ == DestinationOneofCase.BigqueryDestination ? (global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.BigqueryDestination;
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      GcsDestination = 1,
+      BigqueryDestination = 2,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IamPolicyAnalysisOutputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IamPolicyAnalysisOutputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
+      if (!object.Equals(BigqueryDestination, other.BigqueryDestination)) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
+      if (destinationCase_ == DestinationOneofCase.BigqueryDestination) hash ^= BigqueryDestination.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BigqueryDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+        output.WriteRawTag(18);
+        output.WriteMessage(BigqueryDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
+      }
+      if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryDestination);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IamPolicyAnalysisOutputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          if (GcsDestination == null) {
+            GcsDestination = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination();
+          }
+          GcsDestination.MergeFrom(other.GcsDestination);
+          break;
+        case DestinationOneofCase.BigqueryDestination:
+          if (BigqueryDestination == null) {
+            BigqueryDestination = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination();
+          }
+          BigqueryDestination.MergeFrom(other.BigqueryDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination subBuilder = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination subBuilder = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination();
+            if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+              subBuilder.MergeFrom(BigqueryDestination);
+            }
+            input.ReadMessage(subBuilder);
+            BigqueryDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination subBuilder = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination subBuilder = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination();
+            if (destinationCase_ == DestinationOneofCase.BigqueryDestination) {
+              subBuilder.MergeFrom(BigqueryDestination);
+            }
+            input.ReadMessage(subBuilder);
+            BigqueryDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the IamPolicyAnalysisOutputConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// A Cloud Storage location.
+      /// </summary>
+      public sealed partial class GcsDestination : pb::IMessage<GcsDestination>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<GcsDestination> _parser = new pb::MessageParser<GcsDestination>(() => new GcsDestination());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<GcsDestination> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public GcsDestination() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public GcsDestination(GcsDestination other) : this() {
+          uri_ = other.uri_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public GcsDestination Clone() {
+          return new GcsDestination(this);
+        }
+
+        /// <summary>Field number for the "uri" field.</summary>
+        public const int UriFieldNumber = 1;
+        private string uri_ = "";
+        /// <summary>
+        /// Required. The uri of the Cloud Storage object. It's the same uri that is used by
+        /// gsutil. For example: "gs://bucket_name/object_name". See
+        /// [Quickstart: Using the gsutil tool]
+        /// (https://cloud.google.com/storage/docs/quickstart-gsutil) for examples.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Uri {
+          get { return uri_; }
+          set {
+            uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as GcsDestination);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(GcsDestination other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Uri != other.Uri) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Uri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Uri);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Uri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(GcsDestination other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Uri.Length != 0) {
+            Uri = other.Uri;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Uri = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A BigQuery destination.
+      /// </summary>
+      public sealed partial class BigQueryDestination : pb::IMessage<BigQueryDestination>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<BigQueryDestination> _parser = new pb::MessageParser<BigQueryDestination>(() => new BigQueryDestination());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<BigQueryDestination> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public BigQueryDestination() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public BigQueryDestination(BigQueryDestination other) : this() {
+          dataset_ = other.dataset_;
+          tablePrefix_ = other.tablePrefix_;
+          partitionKey_ = other.partitionKey_;
+          writeDisposition_ = other.writeDisposition_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public BigQueryDestination Clone() {
+          return new BigQueryDestination(this);
+        }
+
+        /// <summary>Field number for the "dataset" field.</summary>
+        public const int DatasetFieldNumber = 1;
+        private string dataset_ = "";
+        /// <summary>
+        /// Required. The BigQuery dataset in format "projects/projectId/datasets/datasetId",
+        /// to which the analysis results should be exported. If this dataset does
+        /// not exist, the export call will return an INVALID_ARGUMENT error.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Dataset {
+          get { return dataset_; }
+          set {
+            dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "table_prefix" field.</summary>
+        public const int TablePrefixFieldNumber = 2;
+        private string tablePrefix_ = "";
+        /// <summary>
+        /// Required. The prefix of the BigQuery tables to which the analysis results will be
+        /// written. Tables will be created based on this table_prefix if not exist:
+        /// * &lt;table_prefix>_analysis table will contain export operation's metadata.
+        /// * &lt;table_prefix>_analysis_result will contain all the
+        ///   [IamPolicyAnalysisResult][google.cloud.asset.v1.IamPolicyAnalysisResult].
+        /// When [partition_key] is specified, both tables will be partitioned based
+        /// on the [partition_key].
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string TablePrefix {
+          get { return tablePrefix_; }
+          set {
+            tablePrefix_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "partition_key" field.</summary>
+        public const int PartitionKeyFieldNumber = 3;
+        private global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey partitionKey_ = global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey.Unspecified;
+        /// <summary>
+        /// The partition key for BigQuery partitioned table.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey PartitionKey {
+          get { return partitionKey_; }
+          set {
+            partitionKey_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "write_disposition" field.</summary>
+        public const int WriteDispositionFieldNumber = 4;
+        private string writeDisposition_ = "";
+        /// <summary>
+        /// Optional. Specifies the action that occurs if the destination table or partition
+        /// already exists. The following values are supported:
+        ///
+        /// * WRITE_TRUNCATE: If the table or partition already exists, BigQuery
+        /// overwrites the entire table or all the partitions data.
+        /// * WRITE_APPEND: If the table or partition already exists, BigQuery
+        /// appends the data to the table or the latest partition.
+        /// * WRITE_EMPTY: If the table already exists and contains data, an error is
+        /// returned.
+        ///
+        /// The default value is WRITE_APPEND. Each action is atomic and only occurs
+        /// if BigQuery is able to complete the job successfully. Details are at
+        /// https://cloud.google.com/bigquery/docs/loading-data-local#appending_to_or_overwriting_a_table_using_a_local_file.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string WriteDisposition {
+          get { return writeDisposition_; }
+          set {
+            writeDisposition_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as BigQueryDestination);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(BigQueryDestination other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Dataset != other.Dataset) return false;
+          if (TablePrefix != other.TablePrefix) return false;
+          if (PartitionKey != other.PartitionKey) return false;
+          if (WriteDisposition != other.WriteDisposition) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
+          if (TablePrefix.Length != 0) hash ^= TablePrefix.GetHashCode();
+          if (PartitionKey != global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey.Unspecified) hash ^= PartitionKey.GetHashCode();
+          if (WriteDisposition.Length != 0) hash ^= WriteDisposition.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Dataset.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Dataset);
+          }
+          if (TablePrefix.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(TablePrefix);
+          }
+          if (PartitionKey != global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) PartitionKey);
+          }
+          if (WriteDisposition.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(WriteDisposition);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Dataset.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Dataset);
+          }
+          if (TablePrefix.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(TablePrefix);
+          }
+          if (PartitionKey != global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) PartitionKey);
+          }
+          if (WriteDisposition.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(WriteDisposition);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Dataset.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+          }
+          if (TablePrefix.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TablePrefix);
+          }
+          if (PartitionKey != global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PartitionKey);
+          }
+          if (WriteDisposition.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(WriteDisposition);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(BigQueryDestination other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Dataset.Length != 0) {
+            Dataset = other.Dataset;
+          }
+          if (other.TablePrefix.Length != 0) {
+            TablePrefix = other.TablePrefix;
+          }
+          if (other.PartitionKey != global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey.Unspecified) {
+            PartitionKey = other.PartitionKey;
+          }
+          if (other.WriteDisposition.Length != 0) {
+            WriteDisposition = other.WriteDisposition;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Dataset = input.ReadString();
+                break;
+              }
+              case 18: {
+                TablePrefix = input.ReadString();
+                break;
+              }
+              case 24: {
+                PartitionKey = (global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                WriteDisposition = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Dataset = input.ReadString();
+                break;
+              }
+              case 18: {
+                TablePrefix = input.ReadString();
+                break;
+              }
+              case 24: {
+                PartitionKey = (global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig.Types.BigQueryDestination.Types.PartitionKey) input.ReadEnum();
+                break;
+              }
+              case 34: {
+                WriteDisposition = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the BigQueryDestination message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// This enum determines the partition key column for the bigquery tables.
+          /// Partitioning can improve query performance and reduce query cost by
+          /// filtering partitions. Refer to
+          /// https://cloud.google.com/bigquery/docs/partitioned-tables for details.
+          /// </summary>
+          public enum PartitionKey {
+            /// <summary>
+            /// Unspecified partition key. Tables won't be partitioned using this
+            /// option.
+            /// </summary>
+            [pbr::OriginalName("PARTITION_KEY_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The time when the request is received. If specified as partition key,
+            /// the result table(s) is partitoned by the RequestTime column, an
+            /// additional timestamp column representing when the request was received.
+            /// </summary>
+            [pbr::OriginalName("REQUEST_TIME")] RequestTime = 1,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// A request message for [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
+  /// </summary>
+  public sealed partial class AnalyzeIamPolicyLongrunningRequest : pb::IMessage<AnalyzeIamPolicyLongrunningRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeIamPolicyLongrunningRequest> _parser = new pb::MessageParser<AnalyzeIamPolicyLongrunningRequest>(() => new AnalyzeIamPolicyLongrunningRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AnalyzeIamPolicyLongrunningRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyLongrunningRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyLongrunningRequest(AnalyzeIamPolicyLongrunningRequest other) : this() {
+      analysisQuery_ = other.analysisQuery_ != null ? other.analysisQuery_.Clone() : null;
+      outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyLongrunningRequest Clone() {
+      return new AnalyzeIamPolicyLongrunningRequest(this);
+    }
+
+    /// <summary>Field number for the "analysis_query" field.</summary>
+    public const int AnalysisQueryFieldNumber = 1;
+    private global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery analysisQuery_;
+    /// <summary>
+    /// Required. The request query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery AnalysisQuery {
+      get { return analysisQuery_; }
+      set {
+        analysisQuery_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "output_config" field.</summary>
+    public const int OutputConfigFieldNumber = 2;
+    private global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig outputConfig_;
+    /// <summary>
+    /// Required. Output configuration indicating where the results will be output to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig OutputConfig {
+      get { return outputConfig_; }
+      set {
+        outputConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeIamPolicyLongrunningRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AnalyzeIamPolicyLongrunningRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AnalysisQuery, other.AnalysisQuery)) return false;
+      if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (analysisQuery_ != null) hash ^= AnalysisQuery.GetHashCode();
+      if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (analysisQuery_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AnalysisQuery);
+      }
+      if (outputConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (analysisQuery_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AnalysisQuery);
+      }
+      if (outputConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OutputConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (analysisQuery_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AnalysisQuery);
+      }
+      if (outputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AnalyzeIamPolicyLongrunningRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.analysisQuery_ != null) {
+        if (analysisQuery_ == null) {
+          AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+        }
+        AnalysisQuery.MergeFrom(other.AnalysisQuery);
+      }
+      if (other.outputConfig_ != null) {
+        if (outputConfig_ == null) {
+          OutputConfig = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig();
+        }
+        OutputConfig.MergeFrom(other.OutputConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (analysisQuery_ == null) {
+              AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+            }
+            input.ReadMessage(AnalysisQuery);
+            break;
+          }
+          case 18: {
+            if (outputConfig_ == null) {
+              OutputConfig = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig();
+            }
+            input.ReadMessage(OutputConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (analysisQuery_ == null) {
+              AnalysisQuery = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisQuery();
+            }
+            input.ReadMessage(AnalysisQuery);
+            break;
+          }
+          case 18: {
+            if (outputConfig_ == null) {
+              OutputConfig = new global::Google.Cloud.Asset.V1.IamPolicyAnalysisOutputConfig();
+            }
+            input.ReadMessage(OutputConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A response message for [AssetService.AnalyzeIamPolicyLongrunning][google.cloud.asset.v1.AssetService.AnalyzeIamPolicyLongrunning].
+  /// </summary>
+  public sealed partial class AnalyzeIamPolicyLongrunningResponse : pb::IMessage<AnalyzeIamPolicyLongrunningResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnalyzeIamPolicyLongrunningResponse> _parser = new pb::MessageParser<AnalyzeIamPolicyLongrunningResponse>(() => new AnalyzeIamPolicyLongrunningResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AnalyzeIamPolicyLongrunningResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Asset.V1.AssetServiceReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyLongrunningResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyLongrunningResponse(AnalyzeIamPolicyLongrunningResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AnalyzeIamPolicyLongrunningResponse Clone() {
+      return new AnalyzeIamPolicyLongrunningResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AnalyzeIamPolicyLongrunningResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AnalyzeIamPolicyLongrunningResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AnalyzeIamPolicyLongrunningResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }
