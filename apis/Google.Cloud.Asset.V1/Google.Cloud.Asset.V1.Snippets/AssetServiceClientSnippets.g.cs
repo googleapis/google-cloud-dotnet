@@ -870,5 +870,107 @@ namespace Google.Cloud.Asset.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for AnalyzeIamPolicy</summary>
+        public void AnalyzeIamPolicyRequestObject()
+        {
+            // Snippet: AnalyzeIamPolicy(AnalyzeIamPolicyRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeIamPolicyRequest request = new AnalyzeIamPolicyRequest
+            {
+                AnalysisQuery = new IamPolicyAnalysisQuery(),
+                ExecutionTimeout = new Duration(),
+            };
+            // Make the request
+            AnalyzeIamPolicyResponse response = assetServiceClient.AnalyzeIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeIamPolicyAsync</summary>
+        public async Task AnalyzeIamPolicyRequestObjectAsync()
+        {
+            // Snippet: AnalyzeIamPolicyAsync(AnalyzeIamPolicyRequest, CallSettings)
+            // Additional: AnalyzeIamPolicyAsync(AnalyzeIamPolicyRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeIamPolicyRequest request = new AnalyzeIamPolicyRequest
+            {
+                AnalysisQuery = new IamPolicyAnalysisQuery(),
+                ExecutionTimeout = new Duration(),
+            };
+            // Make the request
+            AnalyzeIamPolicyResponse response = await assetServiceClient.AnalyzeIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeIamPolicyLongrunning</summary>
+        public void AnalyzeIamPolicyLongrunningRequestObject()
+        {
+            // Snippet: AnalyzeIamPolicyLongrunning(AnalyzeIamPolicyLongrunningRequest, CallSettings)
+            // Create client
+            AssetServiceClient assetServiceClient = AssetServiceClient.Create();
+            // Initialize request argument(s)
+            AnalyzeIamPolicyLongrunningRequest request = new AnalyzeIamPolicyLongrunningRequest
+            {
+                AnalysisQuery = new IamPolicyAnalysisQuery(),
+                OutputConfig = new IamPolicyAnalysisOutputConfig(),
+            };
+            // Make the request
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> response = assetServiceClient.AnalyzeIamPolicyLongrunning(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AnalyzeIamPolicyLongrunningResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> retrievedResponse = assetServiceClient.PollOnceAnalyzeIamPolicyLongrunning(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnalyzeIamPolicyLongrunningResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeIamPolicyLongrunningAsync</summary>
+        public async Task AnalyzeIamPolicyLongrunningRequestObjectAsync()
+        {
+            // Snippet: AnalyzeIamPolicyLongrunningAsync(AnalyzeIamPolicyLongrunningRequest, CallSettings)
+            // Additional: AnalyzeIamPolicyLongrunningAsync(AnalyzeIamPolicyLongrunningRequest, CancellationToken)
+            // Create client
+            AssetServiceClient assetServiceClient = await AssetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AnalyzeIamPolicyLongrunningRequest request = new AnalyzeIamPolicyLongrunningRequest
+            {
+                AnalysisQuery = new IamPolicyAnalysisQuery(),
+                OutputConfig = new IamPolicyAnalysisOutputConfig(),
+            };
+            // Make the request
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> response = await assetServiceClient.AnalyzeIamPolicyLongrunningAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AnalyzeIamPolicyLongrunningResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AnalyzeIamPolicyLongrunningResponse, AnalyzeIamPolicyLongrunningRequest> retrievedResponse = await assetServiceClient.PollOnceAnalyzeIamPolicyLongrunningAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AnalyzeIamPolicyLongrunningResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
