@@ -15,6 +15,7 @@
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -473,5 +474,58 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
         // [END spanner_test_strong_read_concurrent_updates]
+
+        // [START spanner_get_commit_stats]
+        /// <summary>
+        /// Simple extension of DefaultLogger that also keeps a reference to the last logged CommitResponse.
+        /// </summary>
+        internal class CommitStatsCapturerLogger : DefaultLogger
+        {
+            internal V1.CommitResponse LastCommitResponse { get; private set; }
+
+            public override void LogCommitStats(V1.CommitRequest request, V1.CommitResponse response)
+            {
+                LastCommitResponse = response;
+                base.LogCommitStats(request, response);
+            }
+        }
+
+        [Fact]
+        public async Task ReturnCommitStats()
+        {
+            CommitStatsCapturerLogger logger = new CommitStatsCapturerLogger();
+            string key = IdGenerator.FromGuid();
+            await RetryHelpers.ExecuteWithRetryAsync(async () =>
+            {
+                using (var connection = _fixture.GetConnection(logger))
+                {
+                    await connection.OpenAsync();
+                    using (var transaction = connection.BeginTransaction())
+                    {
+                        transaction.LogCommitStats = true;
+                        using (var cmd1 = connection.CreateInsertCommand(_fixture.TableName))
+                        {
+                            cmd1.Transaction = transaction;
+                            cmd1.Parameters.Add("K", SpannerDbType.String).Value = key;
+                            cmd1.Parameters.Add("StringValue", SpannerDbType.String).Value = "text";
+                            await cmd1.ExecuteNonQueryAsync();
+                        }
+                
+                        using (var cmd2 = connection.CreateInsertCommand(_fixture.TableName2))
+                        {
+                            cmd2.Transaction = transaction;
+                            cmd2.Parameters.Add("K", SpannerDbType.String).Value = key;
+                            cmd2.Parameters.Add("Int64Value", SpannerDbType.Int64).Value = 50;
+                            await cmd2.ExecuteNonQueryAsync();
+                        }
+                
+                        await transaction.CommitAsync();
+                        // MutationCount == 4, as we inserted 2 rows with 2 columns each.
+                        Assert.Equal(4, logger.LastCommitResponse?.CommitStats?.MutationCount);
+                    }
+                }
+            });
+        }
+        // [END spanner_get_commit_stats]
     }
 }

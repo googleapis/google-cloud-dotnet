@@ -14,6 +14,7 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Common.V1;
+using Google.Cloud.Spanner.V1.Internal.Logging;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
 {
@@ -33,6 +34,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
         public DatabaseName DatabaseName => Database.DatabaseName;
         public SpannerConnection GetConnection() => Database.GetConnection();
         public string ConnectionString => Database.ConnectionString;
+        public SpannerConnection GetConnection(Logger logger) => Database.GetConnection(logger);
         public bool RunningOnEmulator => SpannerClientCreationOptions.UsesEmulator;
         internal SpannerClientCreationOptions SpannerClientCreationOptions => Database.SpannerClientCreationOptions;
     }

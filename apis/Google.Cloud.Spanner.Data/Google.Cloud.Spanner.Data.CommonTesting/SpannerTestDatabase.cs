@@ -116,6 +116,10 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             return string.IsNullOrEmpty(value) ? defaultValue : value;
         }
         
-        public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);        
+        public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);
+
+        // Creates a SpannerConnection with a specific logger.
+        public SpannerConnection GetConnection(Logger logger) =>
+            new SpannerConnection(new SpannerConnectionStringBuilder(ConnectionString) { SessionPoolManager = SessionPoolManager.Create(new V1.SessionPoolOptions(), logger) });
     }
 }

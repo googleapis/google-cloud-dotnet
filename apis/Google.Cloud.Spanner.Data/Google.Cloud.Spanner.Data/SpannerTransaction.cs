@@ -162,6 +162,13 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Specifies whether this transaction should request commit statistics from the backend
+        /// and log these. This property is by default equal to the value set on the SpannerConnection
+        /// of this transaction, but can be overridden for a specific transaction.
+        /// </summary>
+        public bool LogCommitStats { get; set; }
+
+        /// <summary>
         /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements within this transaction.
         /// You can add commands to the batch by using <see cref="SpannerBatchCommand.Add(SpannerCommand)"/>,
         /// <see cref="SpannerBatchCommand.Add(SpannerCommandTextBuilder, SpannerParameterCollection)"/>
@@ -321,7 +328,7 @@ namespace Google.Cloud.Spanner.Data
         public Task<DateTime> CommitAsync(CancellationToken cancellationToken = default)
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
-            var request = new CommitRequest { Mutations = { _mutations } };
+            var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
@@ -329,6 +336,10 @@ namespace Google.Cloud.Spanner.Data
                 if (response.CommitTimestamp == null)
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
+                }
+                if (LogCommitStats)
+                {
+                    SpannerConnection.Logger.LogCommitStats(request, response);
                 }
                 return response.CommitTimestamp.ToDateTime();
             },
