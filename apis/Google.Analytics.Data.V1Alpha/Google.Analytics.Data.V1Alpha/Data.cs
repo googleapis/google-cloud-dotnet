@@ -592,7 +592,7 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int PropertyIdFieldNumber = 1;
     private string propertyId_ = "";
     /// <summary>
-    /// A Google Analytics App + Web property id.
+    /// A Google Analytics 4 (GA4) property id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PropertyId {
