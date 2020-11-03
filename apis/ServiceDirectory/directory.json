@@ -811,6 +811,26 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Dataproc.V1Beta2"
     },
     {
+      "ServiceDirectory": "google/cloud/dialogflow/cx/v3",
+      "Name": "dialogflow.googleapis.com",
+      "Title": "Dialogflow API",
+      "Description": "Builds conversational interfaces (for example, chatbots, and voice-powered apps and devices).",
+      "ServiceConfigFile": "google/cloud/dialogflow/cx/v3/dialogflow_v3.yaml",
+      "Version": "v3",
+      "PackageFromDirectory": "google.cloud.dialogflow.cx.v3",
+      "PackageFromProtos": "google.cloud.dialogflow.cx.v3",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/dialogflow/cx/v3",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Dialogflow.Cx.V3"
+    },
+    {
       "ServiceDirectory": "google/cloud/dialogflow/cx/v3beta1",
       "Name": "dialogflow.googleapis.com",
       "Title": "Dialogflow API",
