@@ -3663,7 +3663,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// <summary>
     /// Required. The resource name of the metadata to retrieve. This name field is
     /// specified in the URL path and not URL parameters. Property is a numeric
-    /// Google Analytics App + Web Property identifier.
+    /// Google Analytics 4 (GA4) Property identifier.
     ///
     /// Example: properties/1234/metadata
     /// </summary>
