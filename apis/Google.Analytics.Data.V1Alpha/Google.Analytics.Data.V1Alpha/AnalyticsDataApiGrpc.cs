@@ -42,6 +42,8 @@ namespace Google.Analytics.Data.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.UniversalMetadata> __Marshaller_google_analytics_data_v1alpha_UniversalMetadata = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.UniversalMetadata.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest> __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.Metadata> __Marshaller_google_analytics_data_v1alpha_Metadata = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.Metadata.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse> __Method_RunReport = new grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse>(
         grpc::MethodType.Unary,
@@ -84,6 +86,13 @@ namespace Google.Analytics.Data.V1Alpha {
         "GetMetadata",
         __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest,
         __Marshaller_google_analytics_data_v1alpha_Metadata);
+
+    static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> __Method_RunRealtimeReport = new grpc::Method<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunRealtimeReport",
+        __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportRequest,
+        __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -183,6 +192,19 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.Metadata> GetMetadata(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// The Google Analytics Realtime API returns a customized report of realtime
+      /// event data for your property. These reports show events and usage from the
+      /// last 30 minutes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> RunRealtimeReport(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -580,6 +602,58 @@ namespace Google.Analytics.Data.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMetadata, null, options, request);
       }
+      /// <summary>
+      /// The Google Analytics Realtime API returns a customized report of realtime
+      /// event data for your property. These reports show events and usage from the
+      /// last 30 minutes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse RunRealtimeReport(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunRealtimeReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// The Google Analytics Realtime API returns a customized report of realtime
+      /// event data for your property. These reports show events and usage from the
+      /// last 30 minutes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse RunRealtimeReport(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunRealtimeReport, null, options, request);
+      }
+      /// <summary>
+      /// The Google Analytics Realtime API returns a customized report of realtime
+      /// event data for your property. These reports show events and usage from the
+      /// last 30 minutes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> RunRealtimeReportAsync(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunRealtimeReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// The Google Analytics Realtime API returns a customized report of realtime
+      /// event data for your property. These reports show events and usage from the
+      /// last 30 minutes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> RunRealtimeReportAsync(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunRealtimeReport, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override AlphaAnalyticsDataClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -597,7 +671,8 @@ namespace Google.Analytics.Data.V1Alpha {
           .AddMethod(__Method_BatchRunReports, serviceImpl.BatchRunReports)
           .AddMethod(__Method_BatchRunPivotReports, serviceImpl.BatchRunPivotReports)
           .AddMethod(__Method_GetUniversalMetadata, serviceImpl.GetUniversalMetadata)
-          .AddMethod(__Method_GetMetadata, serviceImpl.GetMetadata).Build();
+          .AddMethod(__Method_GetMetadata, serviceImpl.GetMetadata)
+          .AddMethod(__Method_RunRealtimeReport, serviceImpl.RunRealtimeReport).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -612,6 +687,7 @@ namespace Google.Analytics.Data.V1Alpha {
       serviceBinder.AddMethod(__Method_BatchRunPivotReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse>(serviceImpl.BatchRunPivotReports));
       serviceBinder.AddMethod(__Method_GetUniversalMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest, global::Google.Analytics.Data.V1Alpha.UniversalMetadata>(serviceImpl.GetUniversalMetadata));
       serviceBinder.AddMethod(__Method_GetMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata>(serviceImpl.GetMetadata));
+      serviceBinder.AddMethod(__Method_RunRealtimeReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse>(serviceImpl.RunRealtimeReport));
     }
 
   }

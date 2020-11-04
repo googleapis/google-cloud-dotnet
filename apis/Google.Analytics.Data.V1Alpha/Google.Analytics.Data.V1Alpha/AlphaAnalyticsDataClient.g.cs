@@ -49,6 +49,7 @@ namespace Google.Analytics.Data.V1Alpha
             BatchRunPivotReportsSettings = existing.BatchRunPivotReportsSettings;
             GetUniversalMetadataSettings = existing.GetUniversalMetadataSettings;
             GetMetadataSettings = existing.GetMetadataSettings;
+            RunRealtimeReportSettings = existing.RunRealtimeReportSettings;
             OnCopy(existing);
         }
 
@@ -133,6 +134,22 @@ namespace Google.Analytics.Data.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlphaAnalyticsDataClient.RunRealtimeReport</c> and <c>AlphaAnalyticsDataClient.RunRealtimeReportAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RunRealtimeReportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="AlphaAnalyticsDataSettings"/> object.</returns>
@@ -677,6 +694,39 @@ namespace Google.Analytics.Data.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Metadata> GetMetadataAsync(MetadataName name, st::CancellationToken cancellationToken) =>
             GetMetadataAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// The Google Analytics Realtime API returns a customized report of realtime
+        /// event data for your property. These reports show events and usage from the
+        /// last 30 minutes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RunRealtimeReportResponse RunRealtimeReport(RunRealtimeReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// The Google Analytics Realtime API returns a customized report of realtime
+        /// event data for your property. These reports show events and usage from the
+        /// last 30 minutes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunRealtimeReportResponse> RunRealtimeReportAsync(RunRealtimeReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// The Google Analytics Realtime API returns a customized report of realtime
+        /// event data for your property. These reports show events and usage from the
+        /// last 30 minutes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunRealtimeReportResponse> RunRealtimeReportAsync(RunRealtimeReportRequest request, st::CancellationToken cancellationToken) =>
+            RunRealtimeReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>AlphaAnalyticsData client wrapper implementation, for convenient use.</summary>
@@ -696,6 +746,8 @@ namespace Google.Analytics.Data.V1Alpha
         private readonly gaxgrpc::ApiCall<GetUniversalMetadataRequest, UniversalMetadata> _callGetUniversalMetadata;
 
         private readonly gaxgrpc::ApiCall<GetMetadataRequest, Metadata> _callGetMetadata;
+
+        private readonly gaxgrpc::ApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse> _callRunRealtimeReport;
 
         /// <summary>
         /// Constructs a client wrapper for the AlphaAnalyticsData service, with the specified gRPC client and settings.
@@ -725,6 +777,9 @@ namespace Google.Analytics.Data.V1Alpha
             _callGetMetadata = clientHelper.BuildApiCall<GetMetadataRequest, Metadata>(grpcClient.GetMetadataAsync, grpcClient.GetMetadata, effectiveSettings.GetMetadataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetadata);
             Modify_GetMetadataApiCall(ref _callGetMetadata);
+            _callRunRealtimeReport = clientHelper.BuildApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse>(grpcClient.RunRealtimeReportAsync, grpcClient.RunRealtimeReport, effectiveSettings.RunRealtimeReportSettings).WithGoogleRequestParam("property", request => request.Property);
+            Modify_ApiCall(ref _callRunRealtimeReport);
+            Modify_RunRealtimeReportApiCall(ref _callRunRealtimeReport);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -742,6 +797,8 @@ namespace Google.Analytics.Data.V1Alpha
 
         partial void Modify_GetMetadataApiCall(ref gaxgrpc::ApiCall<GetMetadataRequest, Metadata> call);
 
+        partial void Modify_RunRealtimeReportApiCall(ref gaxgrpc::ApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse> call);
+
         partial void OnConstruction(AlphaAnalyticsData.AlphaAnalyticsDataClient grpcClient, AlphaAnalyticsDataSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC AlphaAnalyticsData client</summary>
@@ -758,6 +815,8 @@ namespace Google.Analytics.Data.V1Alpha
         partial void Modify_GetUniversalMetadataRequest(ref GetUniversalMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetMetadataRequest(ref GetMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RunRealtimeReportRequest(ref RunRealtimeReportRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns a customized report of your Google Analytics event data. Reports
@@ -953,6 +1012,34 @@ namespace Google.Analytics.Data.V1Alpha
         {
             Modify_GetMetadataRequest(ref request, ref callSettings);
             return _callGetMetadata.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// The Google Analytics Realtime API returns a customized report of realtime
+        /// event data for your property. These reports show events and usage from the
+        /// last 30 minutes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RunRealtimeReportResponse RunRealtimeReport(RunRealtimeReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunRealtimeReportRequest(ref request, ref callSettings);
+            return _callRunRealtimeReport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// The Google Analytics Realtime API returns a customized report of realtime
+        /// event data for your property. These reports show events and usage from the
+        /// last 30 minutes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RunRealtimeReportResponse> RunRealtimeReportAsync(RunRealtimeReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RunRealtimeReportRequest(ref request, ref callSettings);
+            return _callRunRealtimeReport.Async(request, callSettings);
         }
     }
 }
