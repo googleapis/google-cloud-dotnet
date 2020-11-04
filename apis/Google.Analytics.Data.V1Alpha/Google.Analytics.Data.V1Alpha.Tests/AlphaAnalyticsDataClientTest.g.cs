@@ -521,5 +521,87 @@ namespace Google.Analytics.Data.V1Alpha.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void RunRealtimeReportRequestObject()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            RunRealtimeReportRequest request = new RunRealtimeReportRequest
+            {
+                Property = "propertyc9b48d1a",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                Limit = 7494001492025909162L,
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                MetricAggregations =
+                {
+                    MetricAggregation.Minimum,
+                },
+                OrderBys = { new OrderBy(), },
+                ReturnPropertyQuota = true,
+            };
+            RunRealtimeReportResponse expectedResponse = new RunRealtimeReportResponse
+            {
+                DimensionHeaders =
+                {
+                    new DimensionHeader(),
+                },
+                MetricHeaders = { new MetricHeader(), },
+                Rows = { new Row(), },
+                Totals = { new Row(), },
+                Maximums = { new Row(), },
+                Minimums = { new Row(), },
+                RowCount = 743251772,
+                PropertyQuota = new PropertyQuota(),
+            };
+            mockGrpcClient.Setup(x => x.RunRealtimeReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            RunRealtimeReportResponse response = client.RunRealtimeReport(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunRealtimeReportRequestObjectAsync()
+        {
+            moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient> mockGrpcClient = new moq::Mock<AlphaAnalyticsData.AlphaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            RunRealtimeReportRequest request = new RunRealtimeReportRequest
+            {
+                Property = "propertyc9b48d1a",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                Limit = 7494001492025909162L,
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                MetricAggregations =
+                {
+                    MetricAggregation.Minimum,
+                },
+                OrderBys = { new OrderBy(), },
+                ReturnPropertyQuota = true,
+            };
+            RunRealtimeReportResponse expectedResponse = new RunRealtimeReportResponse
+            {
+                DimensionHeaders =
+                {
+                    new DimensionHeader(),
+                },
+                MetricHeaders = { new MetricHeader(), },
+                Rows = { new Row(), },
+                Totals = { new Row(), },
+                Maximums = { new Row(), },
+                Minimums = { new Row(), },
+                RowCount = 743251772,
+                PropertyQuota = new PropertyQuota(),
+            };
+            mockGrpcClient.Setup(x => x.RunRealtimeReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunRealtimeReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AlphaAnalyticsDataClient client = new AlphaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            RunRealtimeReportResponse responseCallSettings = await client.RunRealtimeReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RunRealtimeReportResponse responseCancellationToken = await client.RunRealtimeReportAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

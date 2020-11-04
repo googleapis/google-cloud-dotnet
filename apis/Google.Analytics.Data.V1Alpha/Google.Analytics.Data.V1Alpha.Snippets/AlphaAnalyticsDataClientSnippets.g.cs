@@ -334,5 +334,60 @@ namespace Google.Analytics.Data.V1Alpha.Snippets
             Metadata response = await alphaAnalyticsDataClient.GetMetadataAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for RunRealtimeReport</summary>
+        public void RunRealtimeReportRequestObject()
+        {
+            // Snippet: RunRealtimeReport(RunRealtimeReportRequest, CallSettings)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
+            // Initialize request argument(s)
+            RunRealtimeReportRequest request = new RunRealtimeReportRequest
+            {
+                Property = "",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                Limit = 0L,
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                MetricAggregations =
+                {
+                    MetricAggregation.Unspecified,
+                },
+                OrderBys = { new OrderBy(), },
+                ReturnPropertyQuota = false,
+            };
+            // Make the request
+            RunRealtimeReportResponse response = alphaAnalyticsDataClient.RunRealtimeReport(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunRealtimeReportAsync</summary>
+        public async Task RunRealtimeReportRequestObjectAsync()
+        {
+            // Snippet: RunRealtimeReportAsync(RunRealtimeReportRequest, CallSettings)
+            // Additional: RunRealtimeReportAsync(RunRealtimeReportRequest, CancellationToken)
+            // Create client
+            AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
+            // Initialize request argument(s)
+            RunRealtimeReportRequest request = new RunRealtimeReportRequest
+            {
+                Property = "",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                Limit = 0L,
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                MetricAggregations =
+                {
+                    MetricAggregation.Unspecified,
+                },
+                OrderBys = { new OrderBy(), },
+                ReturnPropertyQuota = false,
+            };
+            // Make the request
+            RunRealtimeReportResponse response = await alphaAnalyticsDataClient.RunRealtimeReportAsync(request);
+            // End snippet
+        }
     }
 }

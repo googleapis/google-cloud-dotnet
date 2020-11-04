@@ -103,36 +103,62 @@ namespace Google.Analytics.Data.V1Alpha {
             "LmRhdGEudjFhbHBoYS5EaW1lbnNpb25NZXRhZGF0YRI+CgdtZXRyaWNzGAIg",
             "AygLMi0uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuTWV0cmljTWV0",
             "YWRhdGEiUQoSR2V0TWV0YWRhdGFSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBB",
-            "AvpBJwolYW5hbHl0aWNzZGF0YS5nb29nbGVhcGlzLmNvbS9NZXRhZGF0YTL5",
-            "CAoSQWxwaGFBbmFseXRpY3NEYXRhEo0BCglSdW5SZXBvcnQSLy5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFhbHBoYS5SdW5SZXBvcnRSZXF1ZXN0GjAuZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuUnVuUmVwb3J0UmVzcG9uc2Ui",
-            "HYLT5JMCFyISL3YxYWxwaGE6cnVuUmVwb3J0OgEqEqEBCg5SdW5QaXZvdFJl",
-            "cG9ydBI0Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLlJ1blBpdm90",
-            "UmVwb3J0UmVxdWVzdBo1Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhh",
-            "LlJ1blBpdm90UmVwb3J0UmVzcG9uc2UiIoLT5JMCHCIXL3YxYWxwaGE6cnVu",
-            "UGl2b3RSZXBvcnQ6ASoSpQEKD0JhdGNoUnVuUmVwb3J0cxI1Lmdvb2dsZS5h",
-            "bmFseXRpY3MuZGF0YS52MWFscGhhLkJhdGNoUnVuUmVwb3J0c1JlcXVlc3Qa",
-            "Ni5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5CYXRjaFJ1blJlcG9y",
-            "dHNSZXNwb25zZSIjgtPkkwIdIhgvdjFhbHBoYTpiYXRjaFJ1blJlcG9ydHM6",
-            "ASoSuQEKFEJhdGNoUnVuUGl2b3RSZXBvcnRzEjouZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYWxwaGEuQmF0Y2hSdW5QaXZvdFJlcG9ydHNSZXF1ZXN0Gjsu",
-            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuQmF0Y2hSdW5QaXZvdFJl",
-            "cG9ydHNSZXNwb25zZSIogtPkkwIiIh0vdjFhbHBoYTpiYXRjaFJ1blBpdm90",
-            "UmVwb3J0czoBKhKoAQoUR2V0VW5pdmVyc2FsTWV0YWRhdGESOi5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFhbHBoYS5HZXRVbml2ZXJzYWxNZXRhZGF0YVJl",
-            "cXVlc3QaMC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5Vbml2ZXJz",
-            "YWxNZXRhZGF0YSIigtPkkwIcEhovdjFhbHBoYS91bml2ZXJzYWxNZXRhZGF0",
-            "YRKfAQoLR2V0TWV0YWRhdGESMS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
-            "bHBoYS5HZXRNZXRhZGF0YVJlcXVlc3QaJy5nb29nbGUuYW5hbHl0aWNzLmRh",
-            "dGEudjFhbHBoYS5NZXRhZGF0YSI0gtPkkwInEiUvdjFhbHBoYS97bmFtZT1w",
-            "cm9wZXJ0aWVzLyovbWV0YWRhdGF92kEEbmFtZRp+ykEcYW5hbHl0aWNzZGF0",
-            "YS5nb29nbGVhcGlzLmNvbdJBXGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvYW5hbHl0aWNzLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvYW5hbHl0aWNzLnJlYWRvbmx5Qn8KIWNvbS5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFhbHBoYUIVQW5hbHl0aWNzRGF0YUFwaVByb3RvUAFaQWdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYW5hbHl0aWNzL2Rh",
-            "dGEvdjFhbHBoYTtkYXRhYgZwcm90bzM="));
+            "AvpBJwolYW5hbHl0aWNzZGF0YS5nb29nbGVhcGlzLmNvbS9NZXRhZGF0YSLt",
+            "AwoYUnVuUmVhbHRpbWVSZXBvcnRSZXF1ZXN0EhAKCHByb3BlcnR5GAEgASgJ",
+            "EjwKCmRpbWVuc2lvbnMYAiADKAsyKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
+            "djFhbHBoYS5EaW1lbnNpb24SNgoHbWV0cmljcxgDIAMoCzIlLmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWFscGhhLk1ldHJpYxINCgVsaW1pdBgEIAEoAxJJ",
+            "ChBkaW1lbnNpb25fZmlsdGVyGAUgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYWxwaGEuRmlsdGVyRXhwcmVzc2lvbhJGCg1tZXRyaWNfZmlsdGVy",
+            "GAYgASgLMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuRmlsdGVy",
+            "RXhwcmVzc2lvbhJNChNtZXRyaWNfYWdncmVnYXRpb25zGAcgAygOMjAuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuTWV0cmljQWdncmVnYXRpb24S",
+            "OQoJb3JkZXJfYnlzGAggAygLMiYuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYx",
+            "YWxwaGEuT3JkZXJCeRIdChVyZXR1cm5fcHJvcGVydHlfcXVvdGEYCSABKAgi",
+            "1gMKGVJ1blJlYWx0aW1lUmVwb3J0UmVzcG9uc2USSQoRZGltZW5zaW9uX2hl",
+            "YWRlcnMYASADKAsyLi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5E",
+            "aW1lbnNpb25IZWFkZXISQwoObWV0cmljX2hlYWRlcnMYAiADKAsyKy5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5NZXRyaWNIZWFkZXISMAoEcm93",
+            "cxgDIAMoCzIiLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLlJvdxIy",
+            "CgZ0b3RhbHMYBCADKAsyIi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBo",
+            "YS5Sb3cSNAoIbWF4aW11bXMYBSADKAsyIi5nb29nbGUuYW5hbHl0aWNzLmRh",
+            "dGEudjFhbHBoYS5Sb3cSNAoIbWluaW11bXMYBiADKAsyIi5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFhbHBoYS5Sb3cSEQoJcm93X2NvdW50GAcgASgFEkQK",
+            "DnByb3BlcnR5X3F1b3RhGAggASgLMiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYWxwaGEuUHJvcGVydHlRdW90YTLBCgoSQWxwaGFBbmFseXRpY3NEYXRh",
+            "Eo0BCglSdW5SZXBvcnQSLy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBo",
+            "YS5SdW5SZXBvcnRSZXF1ZXN0GjAuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYx",
+            "YWxwaGEuUnVuUmVwb3J0UmVzcG9uc2UiHYLT5JMCFyISL3YxYWxwaGE6cnVu",
+            "UmVwb3J0OgEqEqEBCg5SdW5QaXZvdFJlcG9ydBI0Lmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWFscGhhLlJ1blBpdm90UmVwb3J0UmVxdWVzdBo1Lmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLlJ1blBpdm90UmVwb3J0UmVzcG9u",
+            "c2UiIoLT5JMCHCIXL3YxYWxwaGE6cnVuUGl2b3RSZXBvcnQ6ASoSpQEKD0Jh",
+            "dGNoUnVuUmVwb3J0cxI1Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhh",
+            "LkJhdGNoUnVuUmVwb3J0c1JlcXVlc3QaNi5nb29nbGUuYW5hbHl0aWNzLmRh",
+            "dGEudjFhbHBoYS5CYXRjaFJ1blJlcG9ydHNSZXNwb25zZSIjgtPkkwIdIhgv",
+            "djFhbHBoYTpiYXRjaFJ1blJlcG9ydHM6ASoSuQEKFEJhdGNoUnVuUGl2b3RS",
+            "ZXBvcnRzEjouZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuQmF0Y2hS",
+            "dW5QaXZvdFJlcG9ydHNSZXF1ZXN0GjsuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYWxwaGEuQmF0Y2hSdW5QaXZvdFJlcG9ydHNSZXNwb25zZSIogtPkkwIi",
+            "Ih0vdjFhbHBoYTpiYXRjaFJ1blBpdm90UmVwb3J0czoBKhKoAQoUR2V0VW5p",
+            "dmVyc2FsTWV0YWRhdGESOi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBo",
+            "YS5HZXRVbml2ZXJzYWxNZXRhZGF0YVJlcXVlc3QaMC5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFhbHBoYS5Vbml2ZXJzYWxNZXRhZGF0YSIigtPkkwIcEhov",
+            "djFhbHBoYS91bml2ZXJzYWxNZXRhZGF0YRKfAQoLR2V0TWV0YWRhdGESMS5n",
+            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5HZXRNZXRhZGF0YVJlcXVl",
+            "c3QaJy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5NZXRhZGF0YSI0",
+            "gtPkkwInEiUvdjFhbHBoYS97bmFtZT1wcm9wZXJ0aWVzLyovbWV0YWRhdGF9",
+            "2kEEbmFtZRLFAQoRUnVuUmVhbHRpbWVSZXBvcnQSNy5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFhbHBoYS5SdW5SZWFsdGltZVJlcG9ydFJlcXVlc3QaOC5n",
+            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFhbHBoYS5SdW5SZWFsdGltZVJlcG9y",
+            "dFJlc3BvbnNlIj2C0+STAjciMi92MWFscGhhL3twcm9wZXJ0eT1wcm9wZXJ0",
+            "aWVzLyp9OnJ1blJlYWx0aW1lUmVwb3J0OgEqGn7KQRxhbmFseXRpY3NkYXRh",
+            "Lmdvb2dsZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
+            "YXV0aC9hbmFseXRpY3MsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9hbmFseXRpY3MucmVhZG9ubHlCfwohY29tLmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWFscGhhQhVBbmFseXRpY3NEYXRhQXBpUHJvdG9QAVpBZ29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvZGF0",
+            "YS92MWFscGhhO2RhdGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -147,7 +173,9 @@ namespace Google.Analytics.Data.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser, new[]{ "PivotReports" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest), global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.UniversalMetadata), global::Google.Analytics.Data.V1Alpha.UniversalMetadata.Parser, new[]{ "Dimensions", "Metrics" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest), global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest), global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest), global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "Limit", "DimensionFilter", "MetricFilter", "MetricAggregations", "OrderBys", "ReturnPropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse), global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "PropertyQuota" }, null, null, null, null)
           }));
     }
     #endregion
@@ -217,7 +245,7 @@ namespace Google.Analytics.Data.V1Alpha {
         = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Alpha.DimensionMetadata.Parser);
     private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionMetadata> dimensions_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionMetadata>();
     /// <summary>
-    /// The dimensions descriptions.
+    /// The dimension descriptions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionMetadata> Dimensions {
@@ -3789,6 +3817,882 @@ namespace Google.Analytics.Data.V1Alpha {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request to generate a realtime report.
+  /// </summary>
+  public sealed partial class RunRealtimeReportRequest : pb::IMessage<RunRealtimeReportRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RunRealtimeReportRequest> _parser = new pb::MessageParser<RunRealtimeReportRequest>(() => new RunRealtimeReportRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RunRealtimeReportRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RunRealtimeReportRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RunRealtimeReportRequest(RunRealtimeReportRequest other) : this() {
+      property_ = other.property_;
+      dimensions_ = other.dimensions_.Clone();
+      metrics_ = other.metrics_.Clone();
+      limit_ = other.limit_;
+      dimensionFilter_ = other.dimensionFilter_ != null ? other.dimensionFilter_.Clone() : null;
+      metricFilter_ = other.metricFilter_ != null ? other.metricFilter_.Clone() : null;
+      metricAggregations_ = other.metricAggregations_.Clone();
+      orderBys_ = other.orderBys_.Clone();
+      returnPropertyQuota_ = other.returnPropertyQuota_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RunRealtimeReportRequest Clone() {
+      return new RunRealtimeReportRequest(this);
+    }
+
+    /// <summary>Field number for the "property" field.</summary>
+    public const int PropertyFieldNumber = 1;
+    private string property_ = "";
+    /// <summary>
+    /// A Google Analytics GA4 property identifier whose events are tracked.
+    /// Specified in the URL path and not the body. To learn more, see [where to
+    /// find your Property
+    /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+    ///
+    /// Example: properties/1234
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Property {
+      get { return property_; }
+      set {
+        property_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dimensions" field.</summary>
+    public const int DimensionsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.Dimension> _repeated_dimensions_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Analytics.Data.V1Alpha.Dimension.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Dimension> dimensions_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Dimension>();
+    /// <summary>
+    /// The dimensions requested and displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Dimension> Dimensions {
+      get { return dimensions_; }
+    }
+
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.Metric> _repeated_metrics_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Analytics.Data.V1Alpha.Metric.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Metric> metrics_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Metric>();
+    /// <summary>
+    /// The metrics requested and displayed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Metric> Metrics {
+      get { return metrics_; }
+    }
+
+    /// <summary>Field number for the "limit" field.</summary>
+    public const int LimitFieldNumber = 4;
+    private long limit_;
+    /// <summary>
+    /// The number of rows to return. If unspecified, 10 rows are returned. If
+    /// -1, all rows are returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Limit {
+      get { return limit_; }
+      set {
+        limit_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dimension_filter" field.</summary>
+    public const int DimensionFilterFieldNumber = 5;
+    private global::Google.Analytics.Data.V1Alpha.FilterExpression dimensionFilter_;
+    /// <summary>
+    /// The filter clause of dimensions. Dimensions must be requested to be used in
+    /// this filter. Metrics cannot be used in this filter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Alpha.FilterExpression DimensionFilter {
+      get { return dimensionFilter_; }
+      set {
+        dimensionFilter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metric_filter" field.</summary>
+    public const int MetricFilterFieldNumber = 6;
+    private global::Google.Analytics.Data.V1Alpha.FilterExpression metricFilter_;
+    /// <summary>
+    /// The filter clause of metrics. Applied at post aggregation phase, similar to
+    /// SQL having-clause. Metrics must be requested to be used in this filter.
+    /// Dimensions cannot be used in this filter.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Alpha.FilterExpression MetricFilter {
+      get { return metricFilter_; }
+      set {
+        metricFilter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "metric_aggregations" field.</summary>
+    public const int MetricAggregationsFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.MetricAggregation> _repeated_metricAggregations_codec
+        = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::Google.Analytics.Data.V1Alpha.MetricAggregation) x);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricAggregation> metricAggregations_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricAggregation>();
+    /// <summary>
+    /// Aggregation of metrics. Aggregated metric values will be shown in rows
+    /// where the dimension_values are set to "RESERVED_(MetricAggregation)".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricAggregation> MetricAggregations {
+      get { return metricAggregations_; }
+    }
+
+    /// <summary>Field number for the "order_bys" field.</summary>
+    public const int OrderBysFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.OrderBy> _repeated_orderBys_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Analytics.Data.V1Alpha.OrderBy.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.OrderBy> orderBys_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.OrderBy>();
+    /// <summary>
+    /// Specifies how rows are ordered in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.OrderBy> OrderBys {
+      get { return orderBys_; }
+    }
+
+    /// <summary>Field number for the "return_property_quota" field.</summary>
+    public const int ReturnPropertyQuotaFieldNumber = 9;
+    private bool returnPropertyQuota_;
+    /// <summary>
+    /// Toggles whether to return the current state of this Analytics Property's
+    /// Realtime quota. Quota is returned in [PropertyQuota](#PropertyQuota).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ReturnPropertyQuota {
+      get { return returnPropertyQuota_; }
+      set {
+        returnPropertyQuota_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RunRealtimeReportRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RunRealtimeReportRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Property != other.Property) return false;
+      if(!dimensions_.Equals(other.dimensions_)) return false;
+      if(!metrics_.Equals(other.metrics_)) return false;
+      if (Limit != other.Limit) return false;
+      if (!object.Equals(DimensionFilter, other.DimensionFilter)) return false;
+      if (!object.Equals(MetricFilter, other.MetricFilter)) return false;
+      if(!metricAggregations_.Equals(other.metricAggregations_)) return false;
+      if(!orderBys_.Equals(other.orderBys_)) return false;
+      if (ReturnPropertyQuota != other.ReturnPropertyQuota) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Property.Length != 0) hash ^= Property.GetHashCode();
+      hash ^= dimensions_.GetHashCode();
+      hash ^= metrics_.GetHashCode();
+      if (Limit != 0L) hash ^= Limit.GetHashCode();
+      if (dimensionFilter_ != null) hash ^= DimensionFilter.GetHashCode();
+      if (metricFilter_ != null) hash ^= MetricFilter.GetHashCode();
+      hash ^= metricAggregations_.GetHashCode();
+      hash ^= orderBys_.GetHashCode();
+      if (ReturnPropertyQuota != false) hash ^= ReturnPropertyQuota.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Property.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Property);
+      }
+      dimensions_.WriteTo(output, _repeated_dimensions_codec);
+      metrics_.WriteTo(output, _repeated_metrics_codec);
+      if (Limit != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Limit);
+      }
+      if (dimensionFilter_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DimensionFilter);
+      }
+      if (metricFilter_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MetricFilter);
+      }
+      metricAggregations_.WriteTo(output, _repeated_metricAggregations_codec);
+      orderBys_.WriteTo(output, _repeated_orderBys_codec);
+      if (ReturnPropertyQuota != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(ReturnPropertyQuota);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Property.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Property);
+      }
+      dimensions_.WriteTo(ref output, _repeated_dimensions_codec);
+      metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      if (Limit != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(Limit);
+      }
+      if (dimensionFilter_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DimensionFilter);
+      }
+      if (metricFilter_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MetricFilter);
+      }
+      metricAggregations_.WriteTo(ref output, _repeated_metricAggregations_codec);
+      orderBys_.WriteTo(ref output, _repeated_orderBys_codec);
+      if (ReturnPropertyQuota != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(ReturnPropertyQuota);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Property.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Property);
+      }
+      size += dimensions_.CalculateSize(_repeated_dimensions_codec);
+      size += metrics_.CalculateSize(_repeated_metrics_codec);
+      if (Limit != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Limit);
+      }
+      if (dimensionFilter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DimensionFilter);
+      }
+      if (metricFilter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MetricFilter);
+      }
+      size += metricAggregations_.CalculateSize(_repeated_metricAggregations_codec);
+      size += orderBys_.CalculateSize(_repeated_orderBys_codec);
+      if (ReturnPropertyQuota != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RunRealtimeReportRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Property.Length != 0) {
+        Property = other.Property;
+      }
+      dimensions_.Add(other.dimensions_);
+      metrics_.Add(other.metrics_);
+      if (other.Limit != 0L) {
+        Limit = other.Limit;
+      }
+      if (other.dimensionFilter_ != null) {
+        if (dimensionFilter_ == null) {
+          DimensionFilter = new global::Google.Analytics.Data.V1Alpha.FilterExpression();
+        }
+        DimensionFilter.MergeFrom(other.DimensionFilter);
+      }
+      if (other.metricFilter_ != null) {
+        if (metricFilter_ == null) {
+          MetricFilter = new global::Google.Analytics.Data.V1Alpha.FilterExpression();
+        }
+        MetricFilter.MergeFrom(other.MetricFilter);
+      }
+      metricAggregations_.Add(other.metricAggregations_);
+      orderBys_.Add(other.orderBys_);
+      if (other.ReturnPropertyQuota != false) {
+        ReturnPropertyQuota = other.ReturnPropertyQuota;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Property = input.ReadString();
+            break;
+          }
+          case 18: {
+            dimensions_.AddEntriesFrom(input, _repeated_dimensions_codec);
+            break;
+          }
+          case 26: {
+            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+          case 32: {
+            Limit = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            if (dimensionFilter_ == null) {
+              DimensionFilter = new global::Google.Analytics.Data.V1Alpha.FilterExpression();
+            }
+            input.ReadMessage(DimensionFilter);
+            break;
+          }
+          case 50: {
+            if (metricFilter_ == null) {
+              MetricFilter = new global::Google.Analytics.Data.V1Alpha.FilterExpression();
+            }
+            input.ReadMessage(MetricFilter);
+            break;
+          }
+          case 58:
+          case 56: {
+            metricAggregations_.AddEntriesFrom(input, _repeated_metricAggregations_codec);
+            break;
+          }
+          case 66: {
+            orderBys_.AddEntriesFrom(input, _repeated_orderBys_codec);
+            break;
+          }
+          case 72: {
+            ReturnPropertyQuota = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Property = input.ReadString();
+            break;
+          }
+          case 18: {
+            dimensions_.AddEntriesFrom(ref input, _repeated_dimensions_codec);
+            break;
+          }
+          case 26: {
+            metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
+            break;
+          }
+          case 32: {
+            Limit = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            if (dimensionFilter_ == null) {
+              DimensionFilter = new global::Google.Analytics.Data.V1Alpha.FilterExpression();
+            }
+            input.ReadMessage(DimensionFilter);
+            break;
+          }
+          case 50: {
+            if (metricFilter_ == null) {
+              MetricFilter = new global::Google.Analytics.Data.V1Alpha.FilterExpression();
+            }
+            input.ReadMessage(MetricFilter);
+            break;
+          }
+          case 58:
+          case 56: {
+            metricAggregations_.AddEntriesFrom(ref input, _repeated_metricAggregations_codec);
+            break;
+          }
+          case 66: {
+            orderBys_.AddEntriesFrom(ref input, _repeated_orderBys_codec);
+            break;
+          }
+          case 72: {
+            ReturnPropertyQuota = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response realtime report table corresponding to a request.
+  /// </summary>
+  public sealed partial class RunRealtimeReportResponse : pb::IMessage<RunRealtimeReportResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RunRealtimeReportResponse> _parser = new pb::MessageParser<RunRealtimeReportResponse>(() => new RunRealtimeReportResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RunRealtimeReportResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.AnalyticsDataApiReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RunRealtimeReportResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RunRealtimeReportResponse(RunRealtimeReportResponse other) : this() {
+      dimensionHeaders_ = other.dimensionHeaders_.Clone();
+      metricHeaders_ = other.metricHeaders_.Clone();
+      rows_ = other.rows_.Clone();
+      totals_ = other.totals_.Clone();
+      maximums_ = other.maximums_.Clone();
+      minimums_ = other.minimums_.Clone();
+      rowCount_ = other.rowCount_;
+      propertyQuota_ = other.propertyQuota_ != null ? other.propertyQuota_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RunRealtimeReportResponse Clone() {
+      return new RunRealtimeReportResponse(this);
+    }
+
+    /// <summary>Field number for the "dimension_headers" field.</summary>
+    public const int DimensionHeadersFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.DimensionHeader> _repeated_dimensionHeaders_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Alpha.DimensionHeader.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> dimensionHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader>();
+    /// <summary>
+    /// Describes dimension columns. The number of DimensionHeaders and ordering of
+    /// DimensionHeaders matches the dimensions present in rows.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.DimensionHeader> DimensionHeaders {
+      get { return dimensionHeaders_; }
+    }
+
+    /// <summary>Field number for the "metric_headers" field.</summary>
+    public const int MetricHeadersFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.MetricHeader> _repeated_metricHeaders_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Analytics.Data.V1Alpha.MetricHeader.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader> metricHeaders_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader>();
+    /// <summary>
+    /// Describes metric columns. The number of MetricHeaders and ordering of
+    /// MetricHeaders matches the metrics present in rows.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.MetricHeader> MetricHeaders {
+      get { return metricHeaders_; }
+    }
+
+    /// <summary>Field number for the "rows" field.</summary>
+    public const int RowsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.Row> _repeated_rows_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Analytics.Data.V1Alpha.Row.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> rows_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row>();
+    /// <summary>
+    /// Rows of dimension value combinations and metric values in the report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> Rows {
+      get { return rows_; }
+    }
+
+    /// <summary>Field number for the "totals" field.</summary>
+    public const int TotalsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.Row> _repeated_totals_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Analytics.Data.V1Alpha.Row.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> totals_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row>();
+    /// <summary>
+    /// If requested, the totaled values of metrics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> Totals {
+      get { return totals_; }
+    }
+
+    /// <summary>Field number for the "maximums" field.</summary>
+    public const int MaximumsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.Row> _repeated_maximums_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Analytics.Data.V1Alpha.Row.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> maximums_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row>();
+    /// <summary>
+    /// If requested, the maximum values of metrics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> Maximums {
+      get { return maximums_; }
+    }
+
+    /// <summary>Field number for the "minimums" field.</summary>
+    public const int MinimumsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Alpha.Row> _repeated_minimums_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Analytics.Data.V1Alpha.Row.Parser);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> minimums_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row>();
+    /// <summary>
+    /// If requested, the minimum values of metrics.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Row> Minimums {
+      get { return minimums_; }
+    }
+
+    /// <summary>Field number for the "row_count" field.</summary>
+    public const int RowCountFieldNumber = 7;
+    private int rowCount_;
+    /// <summary>
+    /// The total number of rows in the query result, regardless of the number of
+    /// rows returned in the response. For example if a query returns 175 rows and
+    /// includes limit = 50 in the API request, the response will contain row_count
+    /// = 175 but only 50 rows.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int RowCount {
+      get { return rowCount_; }
+      set {
+        rowCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "property_quota" field.</summary>
+    public const int PropertyQuotaFieldNumber = 8;
+    private global::Google.Analytics.Data.V1Alpha.PropertyQuota propertyQuota_;
+    /// <summary>
+    /// This Analytics Property's Realtime quota state including this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Alpha.PropertyQuota PropertyQuota {
+      get { return propertyQuota_; }
+      set {
+        propertyQuota_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RunRealtimeReportResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RunRealtimeReportResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!dimensionHeaders_.Equals(other.dimensionHeaders_)) return false;
+      if(!metricHeaders_.Equals(other.metricHeaders_)) return false;
+      if(!rows_.Equals(other.rows_)) return false;
+      if(!totals_.Equals(other.totals_)) return false;
+      if(!maximums_.Equals(other.maximums_)) return false;
+      if(!minimums_.Equals(other.minimums_)) return false;
+      if (RowCount != other.RowCount) return false;
+      if (!object.Equals(PropertyQuota, other.PropertyQuota)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= dimensionHeaders_.GetHashCode();
+      hash ^= metricHeaders_.GetHashCode();
+      hash ^= rows_.GetHashCode();
+      hash ^= totals_.GetHashCode();
+      hash ^= maximums_.GetHashCode();
+      hash ^= minimums_.GetHashCode();
+      if (RowCount != 0) hash ^= RowCount.GetHashCode();
+      if (propertyQuota_ != null) hash ^= PropertyQuota.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      dimensionHeaders_.WriteTo(output, _repeated_dimensionHeaders_codec);
+      metricHeaders_.WriteTo(output, _repeated_metricHeaders_codec);
+      rows_.WriteTo(output, _repeated_rows_codec);
+      totals_.WriteTo(output, _repeated_totals_codec);
+      maximums_.WriteTo(output, _repeated_maximums_codec);
+      minimums_.WriteTo(output, _repeated_minimums_codec);
+      if (RowCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(RowCount);
+      }
+      if (propertyQuota_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PropertyQuota);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dimensionHeaders_.WriteTo(ref output, _repeated_dimensionHeaders_codec);
+      metricHeaders_.WriteTo(ref output, _repeated_metricHeaders_codec);
+      rows_.WriteTo(ref output, _repeated_rows_codec);
+      totals_.WriteTo(ref output, _repeated_totals_codec);
+      maximums_.WriteTo(ref output, _repeated_maximums_codec);
+      minimums_.WriteTo(ref output, _repeated_minimums_codec);
+      if (RowCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(RowCount);
+      }
+      if (propertyQuota_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PropertyQuota);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += dimensionHeaders_.CalculateSize(_repeated_dimensionHeaders_codec);
+      size += metricHeaders_.CalculateSize(_repeated_metricHeaders_codec);
+      size += rows_.CalculateSize(_repeated_rows_codec);
+      size += totals_.CalculateSize(_repeated_totals_codec);
+      size += maximums_.CalculateSize(_repeated_maximums_codec);
+      size += minimums_.CalculateSize(_repeated_minimums_codec);
+      if (RowCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RowCount);
+      }
+      if (propertyQuota_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyQuota);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RunRealtimeReportResponse other) {
+      if (other == null) {
+        return;
+      }
+      dimensionHeaders_.Add(other.dimensionHeaders_);
+      metricHeaders_.Add(other.metricHeaders_);
+      rows_.Add(other.rows_);
+      totals_.Add(other.totals_);
+      maximums_.Add(other.maximums_);
+      minimums_.Add(other.minimums_);
+      if (other.RowCount != 0) {
+        RowCount = other.RowCount;
+      }
+      if (other.propertyQuota_ != null) {
+        if (propertyQuota_ == null) {
+          PropertyQuota = new global::Google.Analytics.Data.V1Alpha.PropertyQuota();
+        }
+        PropertyQuota.MergeFrom(other.PropertyQuota);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            dimensionHeaders_.AddEntriesFrom(input, _repeated_dimensionHeaders_codec);
+            break;
+          }
+          case 18: {
+            metricHeaders_.AddEntriesFrom(input, _repeated_metricHeaders_codec);
+            break;
+          }
+          case 26: {
+            rows_.AddEntriesFrom(input, _repeated_rows_codec);
+            break;
+          }
+          case 34: {
+            totals_.AddEntriesFrom(input, _repeated_totals_codec);
+            break;
+          }
+          case 42: {
+            maximums_.AddEntriesFrom(input, _repeated_maximums_codec);
+            break;
+          }
+          case 50: {
+            minimums_.AddEntriesFrom(input, _repeated_minimums_codec);
+            break;
+          }
+          case 56: {
+            RowCount = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            if (propertyQuota_ == null) {
+              PropertyQuota = new global::Google.Analytics.Data.V1Alpha.PropertyQuota();
+            }
+            input.ReadMessage(PropertyQuota);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dimensionHeaders_.AddEntriesFrom(ref input, _repeated_dimensionHeaders_codec);
+            break;
+          }
+          case 18: {
+            metricHeaders_.AddEntriesFrom(ref input, _repeated_metricHeaders_codec);
+            break;
+          }
+          case 26: {
+            rows_.AddEntriesFrom(ref input, _repeated_rows_codec);
+            break;
+          }
+          case 34: {
+            totals_.AddEntriesFrom(ref input, _repeated_totals_codec);
+            break;
+          }
+          case 42: {
+            maximums_.AddEntriesFrom(ref input, _repeated_maximums_codec);
+            break;
+          }
+          case 50: {
+            minimums_.AddEntriesFrom(ref input, _repeated_minimums_codec);
+            break;
+          }
+          case 56: {
+            RowCount = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            if (propertyQuota_ == null) {
+              PropertyQuota = new global::Google.Analytics.Data.V1Alpha.PropertyQuota();
+            }
+            input.ReadMessage(PropertyQuota);
             break;
           }
         }
