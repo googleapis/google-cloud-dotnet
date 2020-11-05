@@ -1330,7 +1330,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Pubsublite.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.PubSubLite.V1"
     },
     {
       "ServiceDirectory": "google/cloud/recaptchaenterprise/v1",
