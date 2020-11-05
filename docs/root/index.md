@@ -89,6 +89,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.SecurityCenter.Settings.V1Beta1](Google.Cloud.SecurityCenter.Settings.V1Beta1/index.html) | 1.0.0-beta01 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](Google.Cloud.SecurityCenter.V1/index.html) | 2.0.0 | [Google Cloud Security Command Center (V1 API)](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1P1Beta1](Google.Cloud.SecurityCenter.V1P1Beta1/index.html) | 2.0.0-beta03 | [Google Cloud Security Command Center (V1P1Beta1 API)](https://cloud.google.com/security-command-center/) |
+| [Google.Cloud.ServiceControl.V1](Google.Cloud.ServiceControl.V1/index.html) | 1.0.0-beta01 | [Service Control API](https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc) |
 | [Google.Cloud.ServiceDirectory.V1Beta1](Google.Cloud.ServiceDirectory.V1Beta1/index.html) | 1.0.0-beta02 | [Service Directory](https://cloud.google.com/service-directory/) |
 | [Google.Cloud.ServiceManagement.V1](Google.Cloud.ServiceManagement.V1/index.html) | 1.0.0-beta01 | [Service Management API](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc) |
 | [Google.Cloud.Spanner.Admin.Database.V1](Google.Cloud.Spanner.Admin.Database.V1/index.html) | 3.3.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
