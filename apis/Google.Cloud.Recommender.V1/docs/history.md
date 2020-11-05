@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2020-11-05
+
+- [Commit f3bc7f4](https://github.com/googleapis/google-cloud-dotnet/commit/f3bc7f4): fix: updating the v1 retry params name for ListInsights, GetInsight, and MarkInsightAccepted.
+
 # Version 2.2.0, released 2020-10-26
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
