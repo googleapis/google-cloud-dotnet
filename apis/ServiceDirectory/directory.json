@@ -668,7 +668,7 @@
         "google/protobuf"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Binaryauthorization.V1Beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.BinaryAuthorization.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/datacatalog/v1",
