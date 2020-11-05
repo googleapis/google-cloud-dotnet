@@ -157,7 +157,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
             "YmV0YTJCDURvY3VtZW50UHJvdG9QAVpJZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
             "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kb2N1bWVudGFpL3YxYmV0YTI7ZG9j",
             "dW1lbnRhaaoCH0dvb2dsZS5DbG91ZC5Eb2N1bWVudEFJLlYxQmV0YTLKAh9H",
-            "b29nbGVcQ2xvdWRcRG9jdW1lbnRBaVxWMWJldGEy6gIiR29vZ2xlOjpDbG91",
+            "b29nbGVcQ2xvdWRcRG9jdW1lbnRBSVxWMWJldGEy6gIiR29vZ2xlOjpDbG91",
             "ZDo6RG9jdW1lbnRBSTo6VjFiZXRhMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DocumentAI.V1Beta2.GeometryReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
