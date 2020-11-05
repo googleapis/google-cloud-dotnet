@@ -915,7 +915,7 @@
         "google/type"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.DocumentAI.v1beta3"
+      "CSharpNamespaceFromProtos": "Google.Cloud.DocumentAI.V1Beta3"
     },
     {
       "ServiceDirectory": "google/cloud/domains/v1alpha2",
