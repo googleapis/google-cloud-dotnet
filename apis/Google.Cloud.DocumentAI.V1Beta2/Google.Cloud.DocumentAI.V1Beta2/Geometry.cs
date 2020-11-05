@@ -35,7 +35,7 @@ namespace Google.Cloud.DocumentAI.V1Beta2 {
             "dWQuZG9jdW1lbnRhaS52MWJldGEyQg1HZW9tZXRyeVByb3RvUAFaSWdvb2ds",
             "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZG9jdW1l",
             "bnRhaS92MWJldGEyO2RvY3VtZW50YWmqAh9Hb29nbGUuQ2xvdWQuRG9jdW1l",
-            "bnRBSS5WMUJldGEyygIfR29vZ2xlXENsb3VkXERvY3VtZW50QWlcVjFiZXRh",
+            "bnRBSS5WMUJldGEyygIfR29vZ2xlXENsb3VkXERvY3VtZW50QUlcVjFiZXRh",
             "MuoCIkdvb2dsZTo6Q2xvdWQ6OkRvY3VtZW50QUk6OlYxYmV0YTJiBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
