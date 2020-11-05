@@ -89,7 +89,7 @@
         "google/rpc"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Api.Servicecontrol.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.ServiceControl.V1"
     },
     {
       "ServiceDirectory": "google/api/servicemanagement/v1",
