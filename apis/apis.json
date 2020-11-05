@@ -300,6 +300,24 @@
       ]
     },
     {
+      "id": "Google.Cloud.BinaryAuthorization.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Binary Authorization API",
+      "productUrl": "https://cloud.google.com/binary-authorization/docs/reference/rpc",
+      "description": "The management interface for Binary Authorization, a system providing policy control for images deployed to Kubernetes Engine clusters.",
+      "tags": [
+        "binary",
+        "authorization",
+        "policy",
+        "control",
+        "kubernetes"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/binaryauthorization/v1beta1"
+    },
+    {
       "id": "Google.Cloud.Container.V1",
       "generator": "micro",
       "protoPath": "google/container/v1",
