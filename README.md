@@ -32,6 +32,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Billing.Budgets.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Billing Budget API (V1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.Budgets.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Billing Budget API (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.V1/2.1.0) | 2.1.0 | [Google Cloud Billing API](https://cloud.google.com/billing/docs/) |
+| [Google.Cloud.BinaryAuthorization.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.BinaryAuthorization.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Binary Authorization API](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
 | [Google.Cloud.Container.V1](https://googleapis.dev/dotnet/Google.Cloud.Container.V1/2.1.0) | 2.1.0 | [Google Kubernetes Engine API](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](https://googleapis.dev/dotnet/Google.Cloud.DataCatalog.V1/1.1.0) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.Dataproc.V1](https://googleapis.dev/dotnet/Google.Cloud.Dataproc.V1/3.0.0-beta00) | 3.0.0-beta00 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
