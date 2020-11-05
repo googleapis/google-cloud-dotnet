@@ -15,7 +15,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha01) | 1.0.0-alpha01 | Analytics Admin API |
+| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | Analytics Admin API |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha01) | 1.0.0-alpha01 | Google Analytics Data API |
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha01) | 1.0.0-alpha01 | Google Area 120 Tables API |
 | [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.5.0) | 2.5.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
