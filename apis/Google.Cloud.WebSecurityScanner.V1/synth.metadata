@@ -1,0 +1,11 @@
+{
+  "sources": [
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "1f22d1e9654a2588aa32f3802156d965d8d1f10f"        
+      }
+    }
+  ]
+}
