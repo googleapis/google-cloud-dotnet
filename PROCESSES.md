@@ -201,14 +201,14 @@ you need to.
     Alternatively, create the commit manually, including one line per package of the form
     `- Release XYZ version ABC`.
 
-6. Run `./prepare-release push` to push the current branch and
+6. Run `./prepare-release.sh push` to push the current branch and
 create a pull request with the `autorelease: pending` tag. Note that
 this checks that there are no project references from
 APIs being released now to APIs that *aren't* being released.
 Without this check, it's possible for a released version to depend
 on unreleased changes. This uses the `GITHUB_ACCESS_TOKEN`
 environment variable to authenticate with the API, so make this is
-set beforehand.
+set beforehand. The access token should include the `repo` scope.
 
 Sample session when releasing Google.Cloud.Speech.V1:
 
