@@ -1368,6 +1368,23 @@
       ]
     },
     {
+      "id": "Google.Cloud.ServiceControl.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Service Control API",
+      "productUrl": "https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc",
+      "description": "Recommended Google client library to access the Google Cloud Service Control API, which provides control plane functionality to managed services, such as logging, monitoring, and status checks.",
+      "tags": [
+        "control",
+        "services"
+      ],
+      "dependencies": {
+        "Google.Cloud.Logging.Type": "3.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/api/servicecontrol/v1"
+    },
+    {
       "id": "Google.Cloud.ServiceDirectory.V1Beta1",
       "generator": "micro",
       "protoPath": "google/cloud/servicedirectory/v1beta1",
