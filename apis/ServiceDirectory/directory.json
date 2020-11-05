@@ -2160,7 +2160,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Websecurityscanner.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.WebSecurityScanner.V1"
     },
     {
       "ServiceDirectory": "google/cloud/websecurityscanner/v1alpha",
@@ -2194,7 +2194,7 @@
         "google/protobuf"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Websecurityscanner.V1Beta"
+      "CSharpNamespaceFromProtos": "Google.Cloud.WebSecurityScanner.V1Beta"
     },
     {
       "ServiceDirectory": "google/cloud/workflows/executions/v1beta",
