@@ -1818,6 +1818,21 @@
       ]
     },
     {
+      "id": "Google.Cloud.WebSecurityScanner.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Web Security Scanner API",
+      "productUrl": "https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview",
+      "description": "Recommended Google client library to access the Google Cloud Web Security Scanner API, which scans your Compute and App Engine apps for common web vulnerabilities.",
+      "tags": [
+        "security",
+        "scanner"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/websecurityscanner/v1"
+    },
+    {
       "id": "Google.Cloud.Workflows.Common.V1Beta",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
