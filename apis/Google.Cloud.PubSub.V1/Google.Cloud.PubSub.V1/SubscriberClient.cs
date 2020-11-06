@@ -89,6 +89,12 @@ namespace Google.Cloud.PubSub.V1
             public FlowControlSettings FlowControlSettings { get; set; }
 
             /// <summary>
+            /// If set to true, disables enforcing flow control settings at the Cloud PubSub server
+            /// and uses the less accurate method of only enforcing flow control at the client side.
+            /// </summary>
+            public bool UseLegacyFlowControl { get; set; } = false;
+
+            /// <summary>
             /// The lease time before which a message must either be ACKed
             /// or have its lease extended. This is truncated to the nearest second.
             /// If <c>null</c>, uses the default of <see cref="DefaultAckDeadline"/>.
@@ -381,6 +387,7 @@ namespace Google.Cloud.PubSub.V1
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
             _taskHelper = GaxPreconditions.CheckNotNull(taskHelper, nameof(taskHelper));
             _flowControlSettings = settings.FlowControlSettings ?? DefaultFlowControlSettings;
+            _useLegacyFlowControl = settings.UseLegacyFlowControl;
             _maxAckExtendQueue = (int)Math.Min(_flowControlSettings.MaxOutstandingElementCount ?? long.MaxValue, 20_000);
         }
 
@@ -394,6 +401,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly IScheduler _scheduler;
         private readonly TaskHelper _taskHelper;
         private readonly FlowControlSettings _flowControlSettings;
+        private readonly bool _useLegacyFlowControl;
 
         private TaskCompletionSource<int> _mainTcs;
         private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
@@ -424,7 +432,7 @@ namespace Google.Cloud.PubSub.V1
             // Start all subscribers
             var subscriberTasks = _clients.Select(client =>
             {
-                var singleChannel = new SingleChannel(this, client, handlerAsync, flow, registerTask);
+                var singleChannel = new SingleChannel(this, client, handlerAsync, flow, _useLegacyFlowControl, registerTask);
                 return _taskHelper.Run(() => singleChannel.StartAsync());
             }).ToArray();
             // Set up finish task; code that executes when this subscriber is being shutdown (for whatever reason).
@@ -821,7 +829,7 @@ namespace Google.Cloud.PubSub.V1
 
             internal SingleChannel(SubscriberClientImpl subscriber,
                 SubscriberServiceApiClient client, Func<PubsubMessage, CancellationToken, Task<Reply>> handlerAsync,
-                Flow flow,
+                Flow flow, bool useLegacyFlowControl,
                 Action<Task> registerTaskFn)
             {
                 _registerTaskFn = registerTaskFn;
@@ -841,6 +849,7 @@ namespace Google.Cloud.PubSub.V1
                 _maxAckExtendSendCount = Math.Max(10, subscriber._maxAckExtendQueue / 4);
                 _maxConcurrentPush = 3; // Fairly arbitrary.
                 _flow = flow;
+                _useLegacyFlowControl = useLegacyFlowControl;
                 _eventPush = new AsyncAutoResetEvent(subscriber._taskHelper);
                 _continuationQueue = new AsyncSingleRecvQueue<TaskNextAction>(subscriber._taskHelper);
             }
@@ -864,6 +873,7 @@ namespace Google.Cloud.PubSub.V1
             private readonly int _maxConcurrentPush; // Mamimum number (slightly soft) of concurrent ack/nack/extend push RPCs.
 
             private readonly Flow _flow;
+            private readonly bool _useLegacyFlowControl;
             private readonly AsyncAutoResetEvent _eventPush;
             private readonly AsyncSingleRecvQueue<TaskNextAction> _continuationQueue;
             private readonly RequeueableQueue<TimedId> _extendQueue = new RequeueableQueue<TimedId>();
@@ -992,8 +1002,8 @@ namespace Google.Cloud.PubSub.V1
                 {
                     SubscriptionAsSubscriptionName = _subscriptionName,
                     StreamAckDeadlineSeconds = _modifyDeadlineSeconds,
-                    MaxOutstandingMessages = _flow.MaxOutstandingElementCount,
-                    MaxOutstandingBytes = _flow.MaxOutstandingByteCount
+                    MaxOutstandingMessages = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingElementCount,
+                    MaxOutstandingBytes = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingByteCount
                 });
                 Add(initTask, Next(true, () => HandlePullMoveNext(initTask)));
             }
