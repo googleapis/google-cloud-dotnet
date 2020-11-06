@@ -125,30 +125,30 @@ namespace Google.Analytics.Admin.V1Alpha {
             "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjb3VudFN1bW1hcnkSImFjY291",
             "bnRTdW1tYXJpZXMve2FjY291bnRfc3VtbWFyeX0iZgoPUHJvcGVydHlTdW1t",
             "YXJ5Ej0KCHByb3BlcnR5GAEgASgJQiv6QSgKJmFuYWx5dGljc2FkbWluLmdv",
-            "b2dsZWFwaXMuY29tL1Byb3BlcnR5EhQKDGRpc3BsYXlfbmFtZRgCIAEoCSqq",
-            "BAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRFR09SWV9VTlNQ",
-            "RUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVTU19BTkRfSU5E",
-            "VVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhFQUxUSENBUkUQ",
-            "BBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RIRVIQBxIaChZB",
-            "UlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FORF9GSVRORVNT",
-            "EAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09EX0FORF9EUklO",
-            "SxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VSRRANEhMKD0hP",
-            "TUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxFQ09NEA8SFgoS",
-            "TEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9OTElORV9DT01N",
-            "VU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQKEFBFVFNfQU5E",
-            "X0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVSRU5DRRAWEgsK",
-            "B1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9FRFVDQVRJT04Q",
-            "GRIMCghTSE9QUElORxAaKqcBChFNYXhpbXVtVXNlckFjY2VzcxIjCh9NQVhJ",
-            "TVVNX1VTRVJfQUNDRVNTX1VOU1BFQ0lGSUVEEAASDQoJTk9fQUNDRVNTEAES",
-            "FAoQUkVBRF9BTkRfQU5BTFlaRRACEiIKHkVESVRPUl9XSVRIT1VUX0xJTktf",
-            "TUFOQUdFTUVOVBADEiQKIEVESVRPUl9JTkNMVURJTkdfTElOS19NQU5BR0VN",
-            "RU5UEARCewoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIO",
+            "b2dsZWFwaXMuY29tL1Byb3BlcnR5EhQKDGRpc3BsYXlfbmFtZRgCIAEoCSqn",
+            "AQoRTWF4aW11bVVzZXJBY2Nlc3MSIwofTUFYSU1VTV9VU0VSX0FDQ0VTU19V",
+            "TlNQRUNJRklFRBAAEg0KCU5PX0FDQ0VTUxABEhQKEFJFQURfQU5EX0FOQUxZ",
+            "WkUQAhIiCh5FRElUT1JfV0lUSE9VVF9MSU5LX01BTkFHRU1FTlQQAxIkCiBF",
+            "RElUT1JfSU5DTFVESU5HX0xJTktfTUFOQUdFTUVOVBAEKqoEChBJbmR1c3Ry",
+            "eUNhdGVnb3J5EiEKHUlORFVTVFJZX0NBVEVHT1JZX1VOU1BFQ0lGSUVEEAAS",
+            "DgoKQVVUT01PVElWRRABEiMKH0JVU0lORVNTX0FORF9JTkRVU1RSSUFMX01B",
+            "UktFVFMQAhILCgdGSU5BTkNFEAMSDgoKSEVBTFRIQ0FSRRAEEg4KClRFQ0hO",
+            "T0xPR1kQBRIKCgZUUkFWRUwQBhIJCgVPVEhFUhAHEhoKFkFSVFNfQU5EX0VO",
+            "VEVSVEFJTk1FTlQQCBIWChJCRUFVVFlfQU5EX0ZJVE5FU1MQCRIYChRCT09L",
+            "U19BTkRfTElURVJBVFVSRRAKEhIKDkZPT0RfQU5EX0RSSU5LEAsSCQoFR0FN",
+            "RVMQDBIXChNIT0JCSUVTX0FORF9MRUlTVVJFEA0SEwoPSE9NRV9BTkRfR0FS",
+            "REVOEA4SGAoUSU5URVJORVRfQU5EX1RFTEVDT00QDxIWChJMQVdfQU5EX0dP",
+            "VkVSTk1FTlQQEBIICgRORVdTEBESFgoST05MSU5FX0NPTU1VTklUSUVTEBIS",
+            "FgoSUEVPUExFX0FORF9TT0NJRVRZEBMSFAoQUEVUU19BTkRfQU5JTUFMUxAU",
+            "Eg8KC1JFQUxfRVNUQVRFEBUSDQoJUkVGRVJFTkNFEBYSCwoHU0NJRU5DRRAX",
+            "EgoKBlNQT1JUUxAYEhYKEkpPQlNfQU5EX0VEVUNBVElPThAZEgwKCFNIT1BQ",
+            "SU5HEBpCewoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYUIO",
             "UmVzb3VyY2VzUHJvdG9QAVpDZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
             "Z29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFhbHBoYTthZG1pbmIGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess), typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "CountryCode", "Deleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "Deleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream), global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream.Parser, new[]{ "Name", "FirebaseAppId", "CreateTime", "UpdateTime", "PackageName", "DisplayName" }, null, null, null, null),
@@ -169,6 +169,35 @@ namespace Google.Analytics.Admin.V1Alpha {
 
   }
   #region Enums
+  /// <summary>
+  /// Maximum access settings that Firebase user receive on the linked Analytics
+  /// property.
+  /// </summary>
+  public enum MaximumUserAccess {
+    /// <summary>
+    /// Unspecified maximum user access.
+    /// </summary>
+    [pbr::OriginalName("MAXIMUM_USER_ACCESS_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Firebase users have no access to the Analytics property.
+    /// </summary>
+    [pbr::OriginalName("NO_ACCESS")] NoAccess = 1,
+    /// <summary>
+    /// Firebase users have Read &amp; Analyze access to the Analytics property.
+    /// </summary>
+    [pbr::OriginalName("READ_AND_ANALYZE")] ReadAndAnalyze = 2,
+    /// <summary>
+    /// Firebase users have edit access to the Analytics property, but may not
+    /// manage the Firebase link.
+    /// </summary>
+    [pbr::OriginalName("EDITOR_WITHOUT_LINK_MANAGEMENT")] EditorWithoutLinkManagement = 3,
+    /// <summary>
+    /// Firebase users have edit access to the Analytics property and may manage
+    /// the Firebase link.
+    /// </summary>
+    [pbr::OriginalName("EDITOR_INCLUDING_LINK_MANAGEMENT")] EditorIncludingLinkManagement = 4,
+  }
+
   /// <summary>
   /// The category selected for this property, used for industry benchmarking.
   /// </summary>
@@ -283,35 +312,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     [pbr::OriginalName("SHOPPING")] Shopping = 26,
   }
 
-  /// <summary>
-  /// Maximum access settings that Firebase user receive on the linked Analytics
-  /// property.
-  /// </summary>
-  public enum MaximumUserAccess {
-    /// <summary>
-    /// Unspecified maximum user access.
-    /// </summary>
-    [pbr::OriginalName("MAXIMUM_USER_ACCESS_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// Firebase users have no access to the Analytics property.
-    /// </summary>
-    [pbr::OriginalName("NO_ACCESS")] NoAccess = 1,
-    /// <summary>
-    /// Firebase users have Read &amp; Analyze access to the Analytics property.
-    /// </summary>
-    [pbr::OriginalName("READ_AND_ANALYZE")] ReadAndAnalyze = 2,
-    /// <summary>
-    /// Firebase users have edit access to the Analytics property, but may not
-    /// manage the Firebase link.
-    /// </summary>
-    [pbr::OriginalName("EDITOR_WITHOUT_LINK_MANAGEMENT")] EditorWithoutLinkManagement = 3,
-    /// <summary>
-    /// Firebase users have edit access to the Analytics property and may manage
-    /// the Firebase link.
-    /// </summary>
-    [pbr::OriginalName("EDITOR_INCLUDING_LINK_MANAGEMENT")] EditorIncludingLinkManagement = 4,
-  }
-
   #endregion
 
   #region Messages
@@ -424,7 +424,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     private string countryCode_ = "";
     /// <summary>
     /// Country of business. Must be a non-deprecated code for a UN M.49 region.
-    /// https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html
+    ///
+    /// https:
+    /// //unicode.org/cldr/charts/latest/supplem
+    /// // ental/territory_containment_un_m_49.html
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CountryCode {
@@ -3074,6 +3077,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// <summary>
     /// Output only. Resource name of this Data Stream.
     /// Format:
+    ///
     /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
     /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
     /// </summary>

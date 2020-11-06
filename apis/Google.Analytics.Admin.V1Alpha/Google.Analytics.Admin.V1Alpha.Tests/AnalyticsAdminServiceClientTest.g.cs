@@ -1319,7 +1319,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             BatchCreateUserLinksRequest request = new BatchCreateUserLinksRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 NotifyNewUsers = false,
                 Requests =
                 {
@@ -1343,7 +1343,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             BatchCreateUserLinksRequest request = new BatchCreateUserLinksRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 NotifyNewUsers = false,
                 Requests =
                 {
@@ -1469,7 +1469,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             BatchUpdateUserLinksRequest request = new BatchUpdateUserLinksRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new UpdateUserLinkRequest(),
@@ -1492,7 +1492,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             BatchUpdateUserLinksRequest request = new BatchUpdateUserLinksRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new UpdateUserLinkRequest(),
@@ -1610,7 +1610,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             BatchDeleteUserLinksRequest request = new BatchDeleteUserLinksRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new DeleteUserLinkRequest(),
@@ -1629,7 +1629,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
             BatchDeleteUserLinksRequest request = new BatchDeleteUserLinksRequest
             {
-                Parent = "parent7858e4d0",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new DeleteUserLinkRequest(),
