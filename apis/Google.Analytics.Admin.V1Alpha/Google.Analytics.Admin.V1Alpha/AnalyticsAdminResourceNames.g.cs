@@ -267,6 +267,96 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class BatchCreateUserLinksRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateUserLinksRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteUserLinkRequest
     {
         /// <summary>
@@ -276,6 +366,51 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::UserLinkName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchDeleteUserLinksRequest
+    {
+        /// <summary>
+        /// <see cref="AccountName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public AccountName ParentAsAccountName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AccountName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (AccountName.TryParse(Parent, out AccountName account))
+                {
+                    return account;
+                }
+                if (PropertyName.TryParse(Parent, out PropertyName property))
+                {
+                    return property;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
         }
     }
 

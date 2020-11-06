@@ -1597,7 +1597,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             BatchCreateUserLinksRequest request = new BatchCreateUserLinksRequest
             {
-                Parent = "",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 NotifyNewUsers = false,
                 Requests =
                 {
@@ -1619,7 +1619,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             BatchCreateUserLinksRequest request = new BatchCreateUserLinksRequest
             {
-                Parent = "",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 NotifyNewUsers = false,
                 Requests =
                 {
@@ -1700,7 +1700,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             BatchUpdateUserLinksRequest request = new BatchUpdateUserLinksRequest
             {
-                Parent = "",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new UpdateUserLinkRequest(),
@@ -1721,7 +1721,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             BatchUpdateUserLinksRequest request = new BatchUpdateUserLinksRequest
             {
-                Parent = "",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new UpdateUserLinkRequest(),
@@ -1828,7 +1828,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             BatchDeleteUserLinksRequest request = new BatchDeleteUserLinksRequest
             {
-                Parent = "",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new DeleteUserLinkRequest(),
@@ -1849,7 +1849,7 @@ namespace Google.Analytics.Admin.V1Alpha.Snippets
             // Initialize request argument(s)
             BatchDeleteUserLinksRequest request = new BatchDeleteUserLinksRequest
             {
-                Parent = "",
+                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 Requests =
                 {
                     new DeleteUserLinkRequest(),

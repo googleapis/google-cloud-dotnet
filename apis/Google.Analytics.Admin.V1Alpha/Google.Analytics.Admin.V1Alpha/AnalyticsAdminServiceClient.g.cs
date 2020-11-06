@@ -4599,6 +4599,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
+        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4618,6 +4619,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
+        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4637,6 +4639,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
+        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4653,6 +4656,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
+        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4672,6 +4676,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
+        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4691,6 +4696,7 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
+        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
