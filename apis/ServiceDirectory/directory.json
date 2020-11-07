@@ -723,7 +723,7 @@
         "google/rpc"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Datalabeling.V1Beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.DataLabeling.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/dataproc/v1",
