@@ -1,5 +1,10 @@
 # Version history
 
+# Version 1.2.0, released 2020-11-09
+
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+
 # Version 1.1.0, released 2020-09-10
 
 - [Commit 45c0cff](https://github.com/googleapis/google-cloud-dotnet/commit/45c0cff): New feature: customer managed encryption keys
