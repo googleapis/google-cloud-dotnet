@@ -1128,7 +1128,7 @@
     },
     {
       "id": "Google.Cloud.PolicyTroubleshooter.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Policy Troubleshooter API",
       "productUrl": "https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest",
@@ -1138,7 +1138,9 @@
         "diagnostics"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "2.0.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Cloud.Iam.V1": "2.1.0",
+        "Grpc.Core": "2.31.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/policytroubleshooter/v1"
