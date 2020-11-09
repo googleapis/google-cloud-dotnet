@@ -1,0 +1,183 @@
+// Copyright 2020 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+package google.tools.apiindex.v1;
+
+option csharp_namespace = "Google.Cloud.Tools.ApiIndex.V1";
+
+// The overall API index. The index file
+// is a JSON representation of this message.
+// See the glossary for more details about the
+// terminology used in this schema.
+message Index {
+  // All the known APIs, ordered lexicographically by ID.
+  repeated Api apis = 1;
+  
+  // Metadata about the current API index.
+  IndexMetadata metadata = 2;
+}
+
+// Information about a single versioned API.
+message Api {
+  // The ID of the API, identical to the protobuf package
+  // ending with a version number.
+  // Example: "google.cloud.translate.v3"
+  string id = 1;
+  
+  // The directory containing the API within googelapis.
+  // This is the directory that corresponds to the ID;
+  // if an API contains protos in multiple directories,
+  // this is the root directory.
+  // Example: "google/cloud/translate/v3"
+  string directory = 2;
+  
+  // The full version inferred from the end of the ID.
+  // Examples: "v3", "v2beta1", "v1beta"
+  string version = 3;
+
+  // The major version part of the full version. An API
+  // is stable if `version` and `major_version` have the same value.
+  // Example: "v2" (from versions of "v2beta1", "v2alpha" or "v2")  
+  string major_version = 4;
+  
+  // The "name" within the service config file.
+  // (A "service config file" represents a google.api.Service,
+  // not an API within the API Index terminology.)
+  // Example: "translate.googleapis.com"
+  string host_name = 5;
+  
+  // The title of the API.
+  // Example: "Cloud Translation API"
+  string title = 6;
+  
+  // The description of the API.
+  // Example: "Integrates text translation into your website or application."
+  string description = 7;
+
+  // The directories from which protos are imported, ordered
+  // lexicographically. If there are multiple imports for protos in
+  // the same directory, that directory only appears once.
+  repeated string import_directories = 8;
+
+  // The values for a specific option from across all protos contributing
+  // to this API. The option name itself is the key in the `Api.options`
+  // field.
+  message OptionValues {
+    // Map from "a value for the option" to "the number of protos in
+    // which that value occurred". Where an option is omitted entirely in
+    // one or more protos (but does occur in other ones), the key is an
+    // empty string. (The API Index does not differentiate between an
+    // absent option and one which is present with an empty value.)
+    map<string, int32> value_counts = 1;
+  }
+
+  // The options from all protos in the API. The key in this map is
+  // the option name (such as `csharp_namespace`) and the value is
+  // an OptionValues message indicating the values and how often each one
+  // appears within the protos. (Inconsistency isn't always a problem,
+  // but often is, depending on the option.)
+  // The following options are not included, as they aren't useful
+  // and clutter the index:
+  // - Any uninterpreted options
+  // - java_outer_classname
+  // - optimize_for
+  map<string, OptionValues> options = 9;
+  
+  // The services within the API, ordered lexicographically by
+  // full name.
+  repeated Service services = 10;
+}
+
+// A service within an API.
+message Service {
+  // The short name of the service, which is the name used to
+  // declare it within the proto file. This is usually, but not
+  // absolutely necessarily, unique within an API.
+  // Example: "TranslationService"
+  string short_name = 1;
+  
+  // The full name of the service, which is the short name qualified
+  // by the package of the proto in which it is declared.
+  // This is globally unique.
+  // Example: "google.cloud.translate.v3.TranslationService"
+  string full_name = 2;
+
+  // The methods within the API, ordered lexicographically by short name.
+  repeated Method methods = 3;
+}
+
+// A method within a service.
+message Method {
+  // The short name of the method, which is the name used to
+  // declare it within the proto file. This is unique within the service,
+  // but may not be unique within the API.
+  string short_name = 1;
+  
+  // The full name of the method, which is the short name qualified
+  // by the full name of the service in which it is declared.
+  // This is globally unique.
+  string full_name = 2;
+  
+  // Modes for methods.
+  enum Mode {
+    // The mode has not been specified. Consumers should never see this value.
+    MODE_UNSPECIFIED = 0;
+    
+    // Unary method: a single request with a single response.
+    UNARY = 1;
+    
+    // Client-side streaming: multiple requests with a single request.
+    CLIENT_STREAMING = 2;
+    
+    // Server-side streaming: a single request with multiple responses.
+    SERVER_STREAMING = 3;
+    
+    // Bidirectional streaming: multiple requests and responses.
+    BIDIRECTIONAL_STREAMING = 4;
+  }
+  
+  // The mode of the method.
+  Mode mode = 3;
+}
+
+// Metadata about the schema and information.
+message IndexMetadata {
+  // Version of the schema used in this file.
+  // Example: "v1".
+  string schema_version = 1;
+  
+  // The stability of this schema.
+  SchemaStability schema_stability = 2;
+}
+
+// The stability of the schema representing this file.
+enum SchemaStability {
+  // The stability has not been specified. Consumers
+  // should never see this value.
+  SCHEMA_STABILITY_UNSPECIFIED = 0;
+  
+  // The schema is currently unstable; there may be breaking changes
+  // before it becomes stable.
+  UNSTABLE = 1;
+  
+  // The schema is stable, and will only be updated with
+  // non-breaking changes.
+  STABLE = 2;
+  
+  // The schema is deprecated and may be removed in the future.
+  // Tooling observing this value should issue an appropriate warning so that
+  // it can be updated to a stable schema.
+  DEPRECATED = 3;
+}
