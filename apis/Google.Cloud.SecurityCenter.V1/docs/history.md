@@ -1,5 +1,17 @@
 # Version history
 
+# Version 2.1.0, released 2020-11-10
+
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 3cc0bc8](https://github.com/googleapis/google-cloud-dotnet/commit/3cc0bc8): docs: Clarified that event_time can also be considered as the "update time" for a Finding. It also captures when a Finding was updated. The previous wording could've been interpreted as only the creation time.
+- [Commit ccb9c33](https://github.com/googleapis/google-cloud-dotnet/commit/ccb9c33): fix: correct securitycenter grpc_service_configs
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Apply timeouts to RPCs without retry
+- [Commit d545bad](https://github.com/googleapis/google-cloud-dotnet/commit/d545bad): Specify allowed fields for UpdateNotificationConfig
+- [Commit 4c52b95](https://github.com/googleapis/google-cloud-dotnet/commit/4c52b95): feat: Add Resource to the v1 NotificationMessage, which contains resource-related fields associated to the Finding notification. docs: Adjusted wording from Cloud SCC to Security Command Center, and updated filtering docs for List APIs.
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+
 # Version 2.0.0, released 2020-03-19
 
 No API surface changes compared with 2.0.0-beta02, just dependency
