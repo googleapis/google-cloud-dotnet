@@ -59,7 +59,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 Id = id,
                 ProtoPath = service.ServiceDirectory,
-                ProductName = service.Title,
+                ProductName = service.Title.EndsWith(" API") ? service.Title[..^4] : service.Title,
                 Description = service.Description,
                 Version = "1.0.0-beta00",
                 Type = ApiType.Grpc,

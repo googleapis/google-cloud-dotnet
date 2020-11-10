@@ -4,7 +4,7 @@
       "id": "Google.Analytics.Admin.V1Alpha",
       "version": "1.0.0-alpha02",
       "type": "grpc",
-      "productName": "Analytics Admin API",
+      "productName": "Analytics Admin",
       "description": "Recommended Google client library to access the Analytics Admin API",
       "tags": [
         "analytics"
@@ -17,7 +17,7 @@
       "id": "Google.Analytics.Data.V1Alpha",
       "version": "1.0.0-alpha02",
       "type": "grpc",
-      "productName": "Google Analytics Data API",
+      "productName": "Google Analytics Data",
       "description": "Recommended Google client library to access the Analytics Data API",
       "tags": [
         "analytics"
@@ -30,7 +30,7 @@
       "id": "Google.Area120.Tables.V1Alpha1",
       "version": "1.0.0-alpha01",
       "type": "grpc",
-      "productName": "Google Area 120 Tables API",
+      "productName": "Google Area 120 Tables",
       "description": "Recommended Google client library to access the Area 120 Tables API",
       "tags": [
         "tables"
@@ -67,7 +67,7 @@
       "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Assured Workloads API",
+      "productName": "Assured Workloads",
       "productUrl": "https://cloud.google.com/assured-workloads/docs",
       "description": "Recommended Google client library to access the Google Cloud Assured Workloads API (v1beta1)",
       "tags": [
@@ -103,7 +103,7 @@
       "id": "Google.Cloud.BigQuery.Connection.V1",
       "version": "1.1.0",
       "type": "grpc",
-      "productName": "BigQuery Connection API",
+      "productName": "BigQuery Connection",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/bigqueryconnection",
       "description": "Recommended Google client library to access the BigQuery connection API, which allows users to manage BigQuery connections to external data sources.",
       "tags": [
@@ -140,7 +140,7 @@
       "id": "Google.Cloud.BigQuery.Reservation.V1",
       "version": "1.1.0",
       "type": "grpc",
-      "productName": "BigQuery Reservation API",
+      "productName": "BigQuery Reservation",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/reservations",
       "description": "Recommended Google client library to access the BigQuery Reservation API, which allows you to modify your BigQuery flat-rate reservations.",
       "tags": [
@@ -253,7 +253,7 @@
       "id": "Google.Cloud.Billing.Budgets.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Cloud Billing Budget API",
+      "productName": "Cloud Billing Budget",
       "productUrl": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
       "description": "Recommended Google client library to access the Cloud Billing Budget API v1. This API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
       "tags": [
@@ -269,7 +269,7 @@
       "id": "Google.Cloud.Billing.Budgets.V1Beta1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Cloud Billing Budget API",
+      "productName": "Cloud Billing Budget",
       "productUrl": "https://cloud.google.com/billing/docs/how-to/budget-api-overview",
       "description": "Recommended Google client library to access the Cloud Billing Budget API v1beta1. This API stores Cloud Billing budgets, which define a budget plan and the rules to execute as spend is tracked against that plan.",
       "tags": [
@@ -285,7 +285,7 @@
       "id": "Google.Cloud.Billing.V1",
       "generator": "micro",
       "protoPath": "google/cloud/billing/v1",
-      "productName": "Google Cloud Billing API",
+      "productName": "Google Cloud Billing",
       "productUrl": "https://cloud.google.com/billing/docs/",
       "version": "2.1.0",
       "type": "grpc",
@@ -303,7 +303,7 @@
       "id": "Google.Cloud.BinaryAuthorization.V1Beta1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Binary Authorization API",
+      "productName": "Binary Authorization",
       "productUrl": "https://cloud.google.com/binary-authorization/docs/reference/rpc",
       "description": "Recommended Google client library to access the Google Cloud Binary Authorization API v1beta1, providing policy control for images deployed to Kubernetes Engine clusters.",
       "tags": [
@@ -321,7 +321,7 @@
       "id": "Google.Cloud.Container.V1",
       "generator": "micro",
       "protoPath": "google/container/v1",
-      "productName": "Google Kubernetes Engine API",
+      "productName": "Google Kubernetes Engine",
       "productUrl": "https://cloud.google.com/kubernetes-engine/docs/reference/rest/",
       "version": "2.1.0",
       "type": "grpc",
@@ -376,7 +376,7 @@
       "id": "Google.Cloud.Datastore.Admin.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Cloud Datastore API",
+      "productName": "Cloud Datastore",
       "description": "Recommended Google client library to access the Google Cloud Datastore Admin API. This accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.",
       "tags": [
         "datastore",
@@ -708,7 +708,7 @@
       "id": "Google.Cloud.Functions.V1",
       "version": "1.0.0",
       "type": "grpc",
-      "productName": "Cloud Functions API",
+      "productName": "Cloud Functions",
       "productUrl": "https://cloud.google.com/functions",
       "description": "Recommended Google client library to access the Google Cloud Functions API, which manages lightweight user-provided functions executed in response to events.",
       "tags": [
@@ -727,7 +727,7 @@
       "id": "Google.Cloud.Gaming.V1",
       "version": "1.0.0",
       "type": "grpc",
-      "productName": "Game Services API",
+      "productName": "Game Services",
       "productUrl": "https://cloud.google.com/solutions/gaming",
       "description": "Recommended Google client ilbrary to access the Google Cloud Gaming API version v1, which allows you to deploy and manage infrastructure for global multiplayer gaming experiences.",
       "tags": [
@@ -782,7 +782,7 @@
       "id": "Google.Cloud.Iot.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Cloud IoT API",
+      "productName": "Cloud IoT",
       "productUrl": "https://cloud.google.com/iot/docs/reference/cloudiot/rest",
       "description": "Recommended Google client library to access the Google Cloud IoT API, which registers and manages IoT devices that connect to the Google Cloud Platform.",
       "tags": [
@@ -954,7 +954,7 @@
       "id": "Google.Cloud.MediaTranslation.V1Beta1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Media Translation API",
+      "productName": "Media Translation",
       "productUrl": "https://cloud.google.com/media-translation",
       "description": "Recommended Google client library to access the Google Media Translation API, version v1beta1.",
       "tags": [
@@ -1008,7 +1008,7 @@
       "id": "Google.Cloud.Notebooks.V1Beta1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "AI Platform Notebooks API",
+      "productName": "AI Platform Notebooks",
       "productUrl": "https://cloud.google.com/ai-platform-notebooks",
       "description": "Recommended Google client library to access the AI Platform Notebooks API (beta), which is used to manage notebook resources in Google Cloud.",
       "tags": [
@@ -1038,7 +1038,7 @@
       "id": "Google.Cloud.OsConfig.V1",
       "generator": "micro",
       "protoPath": "google/cloud/osconfig/v1",
-      "productName": "Google Cloud OS Config API",
+      "productName": "Google Cloud OS Config",
       "productUrl": "https://cloud.google.com/compute/docs/osconfig/rest",
       "version": "1.1.0",
       "type": "grpc",
@@ -1130,7 +1130,7 @@
       "id": "Google.Cloud.PolicyTroubleshooter.V1",
       "version": "1.0.0",
       "type": "grpc",
-      "productName": "Policy Troubleshooter API",
+      "productName": "Policy Troubleshooter",
       "productUrl": "https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest",
       "description": "Recommended Google client library to access the Google IAM Policy Troubleshooter API.",
       "tags": [
@@ -1329,7 +1329,7 @@
       "id": "Google.Cloud.Security.PrivateCA.V1Beta1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Certificate Authority API",
+      "productName": "Certificate Authority",
       "productUrl": "https://cloud.google.com/certificate-authority-service/",
       "description": "Recommended Google client library to access the Certificate Authority Service API version v1beta1",
       "tags": [
@@ -1408,7 +1408,7 @@
       "id": "Google.Cloud.ServiceControl.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Service Control API",
+      "productName": "Service Control",
       "productUrl": "https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc",
       "description": "Recommended Google client library to access the Google Cloud Service Control API, which provides control plane functionality to managed services, such as logging, monitoring, and status checks.",
       "tags": [
@@ -1441,7 +1441,7 @@
       "id": "Google.Cloud.ServiceManagement.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Service Management API",
+      "productName": "Service Management",
       "productUrl": "https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc",
       "description": "Recommended Google client library to access the Service Management API, which allows service producers to publish their services on Google Cloud Platform so that they can be discovered and used by service consumers.",
       "tags": [
@@ -1858,7 +1858,7 @@
       "id": "Google.Cloud.WebSecurityScanner.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Web Security Scanner API",
+      "productName": "Web Security Scanner",
       "productUrl": "https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview",
       "description": "Recommended Google client library to access the Google Cloud Web Security Scanner API, which scans your Compute and App Engine apps for common web vulnerabilities.",
       "tags": [
@@ -1887,7 +1887,7 @@
       "id": "Google.Cloud.Workflows.Executions.V1Beta",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Workflow Executions API",
+      "productName": "Workflow Executions",
       "productUrl": "https://cloud.google.com/workflows/docs/apis",
       "description": "Recommended Google client library to access the Google Cloud Workflow Executions API v1beta, used to manage user-provided workflows.",
       "tags": [
@@ -1903,7 +1903,7 @@
       "id": "Google.Cloud.Workflows.V1Beta",
       "version": "1.0.0-beta01",
       "type": "grpc",
-      "productName": "Workflows API",
+      "productName": "Workflows",
       "productUrl": "https://cloud.google.com/workflows/docs/apis",
       "description": "Recommended Google client library to access the Google Cloud Workflows API v1beta.",
       "tags": [
