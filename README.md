@@ -15,28 +15,28 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | Analytics Admin API |
-| [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | Google Analytics Data API |
-| [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha01) | 1.0.0-alpha01 | Google Area 120 Tables API |
+| [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | Analytics Admin |
+| [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | Google Analytics Data |
+| [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha01) | 1.0.0-alpha01 | Google Area 120 Tables |
 | [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.5.0) | 2.5.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
-| [Google.Cloud.AssuredWorkloads.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.AssuredWorkloads.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Assured Workloads API](https://cloud.google.com/assured-workloads/docs) |
+| [Google.Cloud.AssuredWorkloads.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.AssuredWorkloads.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
 | [Google.Cloud.AutoML.V1](https://googleapis.dev/dotnet/Google.Cloud.AutoML.V1/2.1.0) | 2.1.0 | [Google AutoML](https://cloud.google.com/automl/) |
-| [Google.Cloud.BigQuery.Connection.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Connection.V1/1.1.0) | 1.1.0 | [BigQuery Connection API](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
+| [Google.Cloud.BigQuery.Connection.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Connection.V1/1.1.0) | 1.1.0 | [BigQuery Connection](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.DataTransfer.V1/3.0.0) | 3.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
-| [Google.Cloud.BigQuery.Reservation.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Reservation.V1/1.1.0) | 1.1.0 | [BigQuery Reservation API](https://cloud.google.com/bigquery/docs/reference/reservations) |
+| [Google.Cloud.BigQuery.Reservation.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Reservation.V1/1.1.0) | 1.1.0 | [BigQuery Reservation](https://cloud.google.com/bigquery/docs/reference/reservations) |
 | [Google.Cloud.BigQuery.V2](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.V2/2.1.0) | 2.1.0 | [Google BigQuery](https://cloud.google.com/bigquery/) |
 | [Google.Cloud.BigQuery.Storage.V1](https://googleapis.dev/dotnet/Google.Cloud.BigQuery.Storage.V1/2.1.0) | 2.1.0 | [Google BigQuery Storage](https://cloud.google.com/bigquery/docs/reference/storage/) |
 | [Google.Cloud.Bigtable.Admin.V2](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.Admin.V2/2.2.0) | 2.2.0 | [Google Cloud Bigtable Administration](https://cloud.google.com/bigtable/) |
 | [Google.Cloud.Bigtable.Common.V2](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.Common.V2/2.0.0) | 2.0.0 | Common code used by Bigtable V2 APIs |
 | [Google.Cloud.Bigtable.V2](https://googleapis.dev/dotnet/Google.Cloud.Bigtable.V2/2.1.0) | 2.1.0 | [Google Bigtable](https://cloud.google.com/bigtable/) |
-| [Google.Cloud.Billing.Budgets.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Billing Budget API (V1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
-| [Google.Cloud.Billing.Budgets.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Billing Budget API (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
-| [Google.Cloud.Billing.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.V1/2.1.0) | 2.1.0 | [Google Cloud Billing API](https://cloud.google.com/billing/docs/) |
-| [Google.Cloud.BinaryAuthorization.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.BinaryAuthorization.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Binary Authorization API](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
-| [Google.Cloud.Container.V1](https://googleapis.dev/dotnet/Google.Cloud.Container.V1/2.1.0) | 2.1.0 | [Google Kubernetes Engine API](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
+| [Google.Cloud.Billing.Budgets.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Billing Budget (V1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
+| [Google.Cloud.Billing.Budgets.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
+| [Google.Cloud.Billing.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.V1/2.1.0) | 2.1.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
+| [Google.Cloud.BinaryAuthorization.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.BinaryAuthorization.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
+| [Google.Cloud.Container.V1](https://googleapis.dev/dotnet/Google.Cloud.Container.V1/2.1.0) | 2.1.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](https://googleapis.dev/dotnet/Google.Cloud.DataCatalog.V1/1.1.0) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.Dataproc.V1](https://googleapis.dev/dotnet/Google.Cloud.Dataproc.V1/3.0.0-beta00) | 3.0.0-beta00 | [Google Cloud Dataproc](https://cloud.google.com/dataproc/docs/concepts/overview) |
-| [Google.Cloud.Datastore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Datastore.Admin.V1/1.0.0-beta01) | 1.0.0-beta01 | Cloud Datastore API |
+| [Google.Cloud.Datastore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Datastore.Admin.V1/1.0.0-beta01) | 1.0.0-beta01 | Cloud Datastore |
 | [Google.Cloud.Datastore.V1](https://googleapis.dev/dotnet/Google.Cloud.Datastore.V1/3.1.0) | 3.1.0 | [Google Cloud Datastore](https://cloud.google.com/datastore/docs/concepts/overview) |
 | [Google.Cloud.Debugger.V2](https://googleapis.dev/dotnet/Google.Cloud.Debugger.V2/2.1.0) | 2.1.0 | [Google Cloud Debugger](https://cloud.google.com/debugger/) |
 | [Google.Cloud.DevTools.Common](https://googleapis.dev/dotnet/Google.Cloud.DevTools.Common/2.0.0) | 2.0.0 | Common Protocol Buffer messages for Google Cloud Developer Tools APIs |
@@ -51,11 +51,11 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Firestore.Admin.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.Admin.V1/2.0.0) | 2.0.0 | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
 | [Google.Cloud.Firestore](https://googleapis.dev/dotnet/Google.Cloud.Firestore/2.3.0-beta01) | 2.3.0-beta01 | [Firestore high-level library](https://firebase.google.com/docs/firestore/) |
 | [Google.Cloud.Firestore.V1](https://googleapis.dev/dotnet/Google.Cloud.Firestore.V1/2.1.0) | 2.1.0 | [Firestore low-level API access](https://firebase.google.com) |
-| [Google.Cloud.Functions.V1](https://googleapis.dev/dotnet/Google.Cloud.Functions.V1/1.0.0) | 1.0.0 | [Cloud Functions API](https://cloud.google.com/functions) |
-| [Google.Cloud.Gaming.V1](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1/1.0.0) | 1.0.0 | [Game Services API](https://cloud.google.com/solutions/gaming) |
+| [Google.Cloud.Functions.V1](https://googleapis.dev/dotnet/Google.Cloud.Functions.V1/1.0.0) | 1.0.0 | [Cloud Functions](https://cloud.google.com/functions) |
+| [Google.Cloud.Gaming.V1](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1/1.0.0) | 1.0.0 | [Game Services](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Gaming.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Gaming.V1Beta/1.0.0-beta05) | 1.0.0-beta05 | [Google Cloud for Games](https://cloud.google.com/solutions/gaming) |
 | [Google.Cloud.Iam.V1](https://googleapis.dev/dotnet/Google.Cloud.Iam.V1/2.1.0) | 2.1.0 | [Google Cloud Identity and Access Management (IAM)](https://cloud.google.com/iam/) |
-| [Google.Cloud.Iot.V1](https://googleapis.dev/dotnet/Google.Cloud.Iot.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud IoT API](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
+| [Google.Cloud.Iot.V1](https://googleapis.dev/dotnet/Google.Cloud.Iot.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud IoT](https://cloud.google.com/iot/docs/reference/cloudiot/rest) |
 | [Google.Cloud.Kms.V1](https://googleapis.dev/dotnet/Google.Cloud.Kms.V1/2.1.0) | 2.1.0 | [Google Cloud Key Management Service](https://cloud.google.com/kms/) |
 | [Google.Cloud.Language.V1](https://googleapis.dev/dotnet/Google.Cloud.Language.V1/2.1.0) | 2.1.0 | [Google Cloud Natural Language](https://cloud.google.com/natural-language) |
 | [Google.Cloud.Logging.Log4Net](https://googleapis.dev/dotnet/Google.Cloud.Logging.Log4Net/3.1.0) | 3.1.0 | Log4Net client library for the Google Cloud Logging API |
@@ -63,17 +63,17 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Logging.Type](https://googleapis.dev/dotnet/Google.Cloud.Logging.Type/3.1.0) | 3.1.0 | Version-agnostic types for the Google Cloud Logging API |
 | [Google.Cloud.Logging.V2](https://googleapis.dev/dotnet/Google.Cloud.Logging.V2/3.1.0) | 3.1.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/2.1.0) | 2.1.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
-| [Google.Cloud.MediaTranslation.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.MediaTranslation.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Media Translation API](https://cloud.google.com/media-translation) |
+| [Google.Cloud.MediaTranslation.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.MediaTranslation.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Media Translation](https://cloud.google.com/media-translation) |
 | [Google.Cloud.Memcache.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.Memcache.V1Beta2/1.0.0-beta02) | 1.0.0-beta02 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Monitoring.V3](https://googleapis.dev/dotnet/Google.Cloud.Monitoring.V3/2.2.0) | 2.2.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
-| [Google.Cloud.Notebooks.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Notebooks.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [AI Platform Notebooks API](https://cloud.google.com/ai-platform-notebooks) |
+| [Google.Cloud.Notebooks.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Notebooks.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [AI Platform Notebooks](https://cloud.google.com/ai-platform-notebooks) |
 | [Google.Cloud.OrgPolicy.V1](https://googleapis.dev/dotnet/Google.Cloud.OrgPolicy.V1/2.0.0) | 2.0.0 | OrgPolicy API messages |
-| [Google.Cloud.OsConfig.V1](https://googleapis.dev/dotnet/Google.Cloud.OsConfig.V1/1.1.0) | 1.1.0 | [Google Cloud OS Config API](https://cloud.google.com/compute/docs/osconfig/rest) |
+| [Google.Cloud.OsConfig.V1](https://googleapis.dev/dotnet/Google.Cloud.OsConfig.V1/1.1.0) | 1.1.0 | [Google Cloud OS Config](https://cloud.google.com/compute/docs/osconfig/rest) |
 | [Google.Cloud.OsLogin.Common](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.Common/2.0.0) | 2.0.0 | Version-agnostic types for the Google OS Login API |
 | [Google.Cloud.OsLogin.V1](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1/2.0.0) | 2.0.0 | [Google Cloud OS Login (V1 API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
 | [Google.Cloud.OsLogin.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1Beta/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud OS Login (V1Beta API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
 | [Google.Cloud.PhishingProtection.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
-| [Google.Cloud.PolicyTroubleshooter.V1](https://googleapis.dev/dotnet/Google.Cloud.PolicyTroubleshooter.V1/1.0.0) | 1.0.0 | [Policy Troubleshooter API](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
+| [Google.Cloud.PolicyTroubleshooter.V1](https://googleapis.dev/dotnet/Google.Cloud.PolicyTroubleshooter.V1/1.0.0) | 1.0.0 | [Policy Troubleshooter](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
 | [Google.Cloud.PubSub.V1](https://googleapis.dev/dotnet/Google.Cloud.PubSub.V1/2.1.0) | 2.1.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
 | [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.1.0) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
 | [Google.Cloud.RecaptchaEnterprise.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Google Cloud reCAPTCHA Enterprise (V1Beta1 API)](https://cloud.google.com/recaptcha-enterprise/) |
@@ -84,13 +84,13 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Scheduler.V1](https://googleapis.dev/dotnet/Google.Cloud.Scheduler.V1/2.1.0) | 2.1.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
 | [Google.Cloud.SecretManager.V1](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1/1.2.0) | 1.2.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecretManager.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecretManager.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
-| [Google.Cloud.Security.PrivateCA.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Security.PrivateCA.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Certificate Authority API](https://cloud.google.com/certificate-authority-service/) |
+| [Google.Cloud.Security.PrivateCA.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Security.PrivateCA.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Certificate Authority](https://cloud.google.com/certificate-authority-service/) |
 | [Google.Cloud.SecurityCenter.Settings.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.Settings.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1/2.0.0) | 2.0.0 | [Google Cloud Security Command Center (V1 API)](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1P1Beta1](https://googleapis.dev/dotnet/Google.Cloud.SecurityCenter.V1P1Beta1/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud Security Command Center (V1P1Beta1 API)](https://cloud.google.com/security-command-center/) |
-| [Google.Cloud.ServiceControl.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceControl.V1/1.0.0-beta01) | 1.0.0-beta01 | [Service Control API](https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc) |
+| [Google.Cloud.ServiceControl.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceControl.V1/1.0.0-beta01) | 1.0.0-beta01 | [Service Control](https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc) |
 | [Google.Cloud.ServiceDirectory.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.ServiceDirectory.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Service Directory](https://cloud.google.com/service-directory/) |
-| [Google.Cloud.ServiceManagement.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceManagement.V1/1.0.0-beta01) | 1.0.0-beta01 | [Service Management API](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc) |
+| [Google.Cloud.ServiceManagement.V1](https://googleapis.dev/dotnet/Google.Cloud.ServiceManagement.V1/1.0.0-beta01) | 1.0.0-beta01 | [Service Management](https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc) |
 | [Google.Cloud.Spanner.Admin.Database.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Admin.Database.V1/3.3.0) | 3.3.0 | [Google Cloud Spanner Database Administration](https://cloud.google.com/spanner/) |
 | [Google.Cloud.Spanner.Admin.Instance.V1](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Admin.Instance.V1/3.3.0) | 3.3.0 | [Google Cloud Spanner Instance Administration](https://cloud.google.com/spanner/) |
 | [Google.Cloud.Spanner.Data](https://googleapis.dev/dotnet/Google.Cloud.Spanner.Data/3.3.0) | 3.3.0 | Google ADO.NET Provider for Google Cloud Spanner |
@@ -112,10 +112,10 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Vision.V1](https://googleapis.dev/dotnet/Google.Cloud.Vision.V1/2.0.0) | 2.0.0 | [Google Cloud Vision](https://cloud.google.com/vision) |
 | [Google.Cloud.WebRisk.V1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1/1.0.0) | 1.0.0 | [Google Cloud Web Risk (V1 API)](https://cloud.google.com/web-risk/) |
 | [Google.Cloud.WebRisk.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Web Risk (V1Beta1 API)](https://cloud.google.com/web-risk/) |
-| [Google.Cloud.WebSecurityScanner.V1](https://googleapis.dev/dotnet/Google.Cloud.WebSecurityScanner.V1/1.0.0-beta01) | 1.0.0-beta01 | [Web Security Scanner API](https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview) |
+| [Google.Cloud.WebSecurityScanner.V1](https://googleapis.dev/dotnet/Google.Cloud.WebSecurityScanner.V1/1.0.0-beta01) | 1.0.0-beta01 | [Web Security Scanner](https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview) |
 | [Google.Cloud.Workflows.Common.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Common.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | Common resource names used by all Workflows V1Beta APIs |
-| [Google.Cloud.Workflows.Executions.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Executions.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflow Executions API](https://cloud.google.com/workflows/docs/apis) |
-| [Google.Cloud.Workflows.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflows API](https://cloud.google.com/workflows/docs/apis) |
+| [Google.Cloud.Workflows.Executions.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Executions.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflow Executions](https://cloud.google.com/workflows/docs/apis) |
+| [Google.Cloud.Workflows.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflows](https://cloud.google.com/workflows/docs/apis) |
 | [Google.Identity.AccessContextManager.Type](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.Type/1.0.0) | 1.0.0 | Version-agnostic types for the Google Identity Access Context Manager API |
 | [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.0.0) | 1.0.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](https://googleapis.dev/dotnet/Google.LongRunning/2.1.0) | 2.1.0 | Support for the Long-Running Operations API pattern |
