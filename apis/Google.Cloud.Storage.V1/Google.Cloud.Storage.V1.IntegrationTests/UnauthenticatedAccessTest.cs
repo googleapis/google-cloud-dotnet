@@ -41,7 +41,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(7903, stream.Length);
         }
 
-        [SkippableFact]
+        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5548")]
         public void ListPublicData()
         {
             TestEnvironment.SkipIfVpcSc();
