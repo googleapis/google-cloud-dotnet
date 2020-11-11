@@ -741,24 +741,6 @@
     {
       "ServiceDirectory": "google/cloud/dataproc/v1",
       "Name": "dataproc.googleapis.com",
-      "Title": "Google Cloud Dataproc API",
-      "Description": "Manages Hadoop-based clusters and jobs on Google Cloud Platform.",
-      "ServiceConfigFile": "google/cloud/dataproc/v1/dataproc.yaml",
-      "Version": "v1",
-      "PackageFromDirectory": "google.cloud.dataproc.v1",
-      "PackageFromProtos": "google.cloud.dataproc.v1",
-      "ImportDirectories": [
-        "google/api",
-        "google/cloud/dataproc/v1",
-        "google/longrunning",
-        "google/protobuf"
-      ],
-      "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Dataproc.V1"
-    },
-    {
-      "ServiceDirectory": "google/cloud/dataproc/v1",
-      "Name": "dataproc.googleapis.com",
       "Title": "Cloud Dataproc API",
       "Description": "Manages Hadoop-based clusters and jobs on Google Cloud Platform.",
       "ServiceConfigFile": "google/cloud/dataproc/v1/dataproc_v1.yaml",
@@ -773,24 +755,6 @@
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.Dataproc.V1"
-    },
-    {
-      "ServiceDirectory": "google/cloud/dataproc/v1beta2",
-      "Name": "dataproc.googleapis.com",
-      "Title": "Google Cloud Dataproc API",
-      "Description": "Manages Hadoop-based clusters and jobs on Google Cloud Platform.",
-      "ServiceConfigFile": "google/cloud/dataproc/v1beta2/dataproc.yaml",
-      "Version": "v1beta2",
-      "PackageFromDirectory": "google.cloud.dataproc.v1beta2",
-      "PackageFromProtos": "google.cloud.dataproc.v1beta2",
-      "ImportDirectories": [
-        "google/api",
-        "google/cloud/dataproc/v1beta2",
-        "google/longrunning",
-        "google/protobuf"
-      ],
-      "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Dataproc.V1Beta2"
     },
     {
       "ServiceDirectory": "google/cloud/dataproc/v1beta2",
@@ -2484,24 +2448,6 @@
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Devtools.Containeranalysis.V1Beta1"
-    },
-    {
-      "ServiceDirectory": "google/devtools/remoteworkers/v1test2",
-      "Name": "remoteworkers.googleapis.com",
-      "Title": "Remote Workers API",
-      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
-      "ServiceConfigFile": "google/devtools/remoteworkers/v1test2/remoteworkers.yaml",
-      "Version": "v1test2",
-      "PackageFromDirectory": "google.devtools.remoteworkers.v1test2",
-      "PackageFromProtos": "google.devtools.remoteworkers.v1test2",
-      "ImportDirectories": [
-        "google/api",
-        "google/devtools/remoteworkers/v1test2",
-        "google/protobuf",
-        "google/rpc"
-      ],
-      "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.DevTools.RemoteWorkers.V1Test2"
     },
     {
       "ServiceDirectory": "google/devtools/remoteworkers/v1test2",
