@@ -106,7 +106,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Tasks.V2Beta3](https://googleapis.dev/dotnet/Google.Cloud.Tasks.V2Beta3/2.0.0-beta02) | 2.0.0-beta02 | [Google Cloud Tasks (V2Beta3 API)](https://cloud.google.com/tasks/) |
 | [Google.Cloud.TextToSpeech.V1](https://googleapis.dev/dotnet/Google.Cloud.TextToSpeech.V1/2.1.0) | 2.1.0 | [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech) |
 | [Google.Cloud.Trace.V1](https://googleapis.dev/dotnet/Google.Cloud.Trace.V1/2.1.0) | 2.1.0 | [Google Cloud Trace (V1 API)](https://cloud.google.com/trace/) |
-| [Google.Cloud.Trace.V2](https://googleapis.dev/dotnet/Google.Cloud.Trace.V2/2.0.0) | 2.0.0 | [Google Cloud Trace (V2 API)](https://cloud.google.com/trace/) |
+| [Google.Cloud.Trace.V2](https://googleapis.dev/dotnet/Google.Cloud.Trace.V2/2.1.0) | 2.1.0 | [Google Cloud Trace (V2 API)](https://cloud.google.com/trace/) |
 | [Google.Cloud.Translate.V3](https://googleapis.dev/dotnet/Google.Cloud.Translate.V3/2.0.0) | 2.0.0 | [Google Cloud Translation (V3 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.Translation.V2](https://googleapis.dev/dotnet/Google.Cloud.Translation.V2/2.0.0) | 2.0.0 | [Google Cloud Translation (V2 API)](https://cloud.google.com/translate/) |
 | [Google.Cloud.VideoIntelligence.V1](https://googleapis.dev/dotnet/Google.Cloud.VideoIntelligence.V1/2.1.0) | 2.1.0 | [Google Cloud Video Intelligence](https://cloud.google.com/video-intelligence) |
