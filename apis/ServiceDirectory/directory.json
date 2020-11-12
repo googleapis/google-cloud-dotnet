@@ -1,6 +1,31 @@
 {
   "Services": [
     {
+      "ServiceDirectory": "google/actions/sdk/v2",
+      "Name": "actions.googleapis.com",
+      "Title": "Actions API",
+      "Description": "A RESTful service for the Actions API.",
+      "ServiceConfigFile": "google/actions/sdk/v2/actions_v2.yaml",
+      "Version": "v2",
+      "PackageFromDirectory": "google.actions.sdk.v2",
+      "PackageFromProtos": "google.actions.sdk.v2",
+      "ImportDirectories": [
+        "google/actions/sdk/v2",
+        "google/actions/sdk/v2/conversation",
+        "google/actions/sdk/v2/conversation/prompt",
+        "google/actions/sdk/v2/conversation/prompt/content",
+        "google/actions/sdk/v2/interactionmodel",
+        "google/actions/sdk/v2/interactionmodel/prompt",
+        "google/actions/sdk/v2/interactionmodel/type",
+        "google/api",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Actions.Sdk.V2"
+    },
+    {
       "ServiceDirectory": "google/ads/googleads/v3",
       "Name": "googleads.googleapis.com",
       "Title": "Google Ads API",
