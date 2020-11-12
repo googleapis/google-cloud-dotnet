@@ -1384,7 +1384,7 @@
         "google/type"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "<AMBIGUOUS: Google.Cloud.RecommendationEngine.V1Beta1, Google.Cloud.Recommendationengine.V1Beta1>"
+      "CSharpNamespaceFromProtos": "Google.Cloud.RecommendationEngine.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/recommender/logging/v1",
