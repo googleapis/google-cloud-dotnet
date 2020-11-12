@@ -26,142 +26,150 @@ namespace Google.Cloud.OsConfig.V1 {
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvb3Njb25maWcvdjEvcGF0Y2hfam9icy5wcm90bxIY",
             "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
-            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29n",
-            "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8i0AIKFkV4ZWN1dGVQYXRjaEpvYlJlcXVlc3QSQwoG",
-            "cGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL1Byb2plY3QSEwoLZGVzY3JpcHRpb24YAiABKAkSSwoP",
-            "aW5zdGFuY2VfZmlsdGVyGAcgASgLMi0uZ29vZ2xlLmNsb3VkLm9zY29uZmln",
-            "LnYxLlBhdGNoSW5zdGFuY2VGaWx0ZXJCA+BBAhI7CgxwYXRjaF9jb25maWcY",
-            "BCABKAsyJS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuUGF0Y2hDb25maWcS",
-            "KwoIZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24S",
-            "DwoHZHJ5X3J1bhgGIAEoCBIUCgxkaXNwbGF5X25hbWUYCCABKAkiTAoSR2V0",
-            "UGF0Y2hKb2JSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgogb3Njb25m",
-            "aWcuZ29vZ2xlYXBpcy5jb20vUGF0Y2hKb2IilQEKIkxpc3RQYXRjaEpvYklu",
-            "c3RhbmNlRGV0YWlsc1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIK",
-            "IG9zY29uZmlnLmdvb2dsZWFwaXMuY29tL1BhdGNoSm9iEhEKCXBhZ2Vfc2l6",
-            "ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCSKV",
-            "AQojTGlzdFBhdGNoSm9iSW5zdGFuY2VEZXRhaWxzUmVzcG9uc2USVQoacGF0",
-            "Y2hfam9iX2luc3RhbmNlX2RldGFpbHMYASADKAsyMS5nb29nbGUuY2xvdWQu",
-            "b3Njb25maWcudjEuUGF0Y2hKb2JJbnN0YW5jZURldGFpbHMSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJItYBChdQYXRjaEpvYkluc3RhbmNlRGV0YWlscxIy",
-            "CgRuYW1lGAEgASgJQiT6QSEKH2NvbXB1dGUuZ29vZ2xlYXBpcy5jb20vSW5z",
-            "dGFuY2USGgoSaW5zdGFuY2Vfc3lzdGVtX2lkGAIgASgJEjwKBXN0YXRlGAMg",
-            "ASgOMi0uZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkluc3RhbmNlLlBhdGNo",
-            "U3RhdGUSFgoOZmFpbHVyZV9yZWFzb24YBCABKAkSFQoNYXR0ZW1wdF9jb3Vu",
-            "dBgFIAEoAyKSAQoUTGlzdFBhdGNoSm9ic1JlcXVlc3QSQwoGcGFyZW50GAEg",
-            "ASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMu",
-            "Y29tL1Byb2plY3QSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4Y",
-            "AyABKAkSDgoGZmlsdGVyGAQgASgJImgKFUxpc3RQYXRjaEpvYnNSZXNwb25z",
-            "ZRI2CgpwYXRjaF9qb2JzGAEgAygLMiIuZ29vZ2xlLmNsb3VkLm9zY29uZmln",
-            "LnYxLlBhdGNoSm9iEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKjCwoIUGF0",
-            "Y2hKb2ISDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYDiABKAkSEwoL",
-            "ZGVzY3JpcHRpb24YAiABKAkSLwoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAQgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3CgVzdGF0ZRgFIAEoDjIoLmdv",
-            "b2dsZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaEpvYi5TdGF0ZRJGCg9pbnN0",
-            "YW5jZV9maWx0ZXIYDSABKAsyLS5nb29nbGUuY2xvdWQub3Njb25maWcudjEu",
-            "UGF0Y2hJbnN0YW5jZUZpbHRlchI7CgxwYXRjaF9jb25maWcYByABKAsyJS5n",
-            "b29nbGUuY2xvdWQub3Njb25maWcudjEuUGF0Y2hDb25maWcSKwoIZHVyYXRp",
-            "b24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SWwoYaW5zdGFu",
-            "Y2VfZGV0YWlsc19zdW1tYXJ5GAkgASgLMjkuZ29vZ2xlLmNsb3VkLm9zY29u",
-            "ZmlnLnYxLlBhdGNoSm9iLkluc3RhbmNlRGV0YWlsc1N1bW1hcnkSDwoHZHJ5",
-            "X3J1bhgKIAEoCBIVCg1lcnJvcl9tZXNzYWdlGAsgASgJEhgKEHBlcmNlbnRf",
-            "Y29tcGxldGUYDCABKAESSQoQcGF0Y2hfZGVwbG95bWVudBgPIAEoCUIv4EED",
-            "+kEpCidvc2NvbmZpZy5nb29nbGVhcGlzLmNvbS9QYXRjaERlcGxveW1lbnQa",
-            "vQQKFkluc3RhbmNlRGV0YWlsc1N1bW1hcnkSHgoWcGVuZGluZ19pbnN0YW5j",
-            "ZV9jb3VudBgBIAEoAxIfChdpbmFjdGl2ZV9pbnN0YW5jZV9jb3VudBgCIAEo",
-            "AxIfChdub3RpZmllZF9pbnN0YW5jZV9jb3VudBgDIAEoAxIeChZzdGFydGVk",
-            "X2luc3RhbmNlX2NvdW50GAQgASgDEioKImRvd25sb2FkaW5nX3BhdGNoZXNf",
-            "aW5zdGFuY2VfY291bnQYBSABKAMSJwofYXBwbHlpbmdfcGF0Y2hlc19pbnN0",
-            "YW5jZV9jb3VudBgGIAEoAxIgChhyZWJvb3RpbmdfaW5zdGFuY2VfY291bnQY",
-            "ByABKAMSIAoYc3VjY2VlZGVkX2luc3RhbmNlX2NvdW50GAggASgDEjAKKHN1",
-            "Y2NlZWRlZF9yZWJvb3RfcmVxdWlyZWRfaW5zdGFuY2VfY291bnQYCSABKAMS",
-            "HQoVZmFpbGVkX2luc3RhbmNlX2NvdW50GAogASgDEhwKFGFja2VkX2luc3Rh",
-            "bmNlX2NvdW50GAsgASgDEiAKGHRpbWVkX291dF9pbnN0YW5jZV9jb3VudBgM",
-            "IAEoAxIlCh1wcmVfcGF0Y2hfc3RlcF9pbnN0YW5jZV9jb3VudBgNIAEoAxIm",
-            "Ch5wb3N0X3BhdGNoX3N0ZXBfaW5zdGFuY2VfY291bnQYDiABKAMSKAogbm9f",
-            "YWdlbnRfZGV0ZWN0ZWRfaW5zdGFuY2VfY291bnQYDyABKAMilQEKBVN0YXRl",
-            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHU1RBUlRFRBABEhMKD0lOU1RB",
-            "TkNFX0xPT0tVUBACEgwKCFBBVENISU5HEAMSDQoJU1VDQ0VFREVEEAQSGQoV",
-            "Q09NUExFVEVEX1dJVEhfRVJST1JTEAUSDAoIQ0FOQ0VMRUQQBhINCglUSU1F",
-            "RF9PVVQQBzpP6kFMCiBvc2NvbmZpZy5nb29nbGVhcGlzLmNvbS9QYXRjaEpv",
-            "YhIocHJvamVjdHMve3Byb2plY3R9L3BhdGNoSm9icy97cGF0Y2hfam9ifSK3",
-            "BAoLUGF0Y2hDb25maWcSSQoNcmVib290X2NvbmZpZxgBIAEoDjIyLmdvb2ds",
-            "ZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaENvbmZpZy5SZWJvb3RDb25maWcS",
-            "MgoDYXB0GAMgASgLMiUuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkFwdFNl",
-            "dHRpbmdzEjIKA3l1bRgEIAEoCzIlLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
-            "MS5ZdW1TZXR0aW5ncxIyCgNnb28YBSABKAsyJS5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjEuR29vU2V0dGluZ3MSOAoGenlwcGVyGAYgASgLMiguZ29vZ2xl",
-            "LmNsb3VkLm9zY29uZmlnLnYxLlp5cHBlclNldHRpbmdzEkcKDndpbmRvd3Nf",
-            "dXBkYXRlGAcgASgLMi8uZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLldpbmRv",
-            "d3NVcGRhdGVTZXR0aW5ncxI0CghwcmVfc3RlcBgIIAEoCzIiLmdvb2dsZS5j",
-            "bG91ZC5vc2NvbmZpZy52MS5FeGVjU3RlcBI1Cglwb3N0X3N0ZXAYCSABKAsy",
-            "Ii5nb29nbGUuY2xvdWQub3Njb25maWcudjEuRXhlY1N0ZXAiUQoMUmVib290",
-            "Q29uZmlnEh0KGVJFQk9PVF9DT05GSUdfVU5TUEVDSUZJRUQQABILCgdERUZB",
-            "VUxUEAESCgoGQUxXQVlTEAISCQoFTkVWRVIQAyLOAgoISW5zdGFuY2UiwQIK",
-            "ClBhdGNoU3RhdGUSGwoXUEFUQ0hfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQ",
-            "RU5ESU5HEAESDAoISU5BQ1RJVkUQAhIMCghOT1RJRklFRBADEgsKB1NUQVJU",
-            "RUQQBBIXChNET1dOTE9BRElOR19QQVRDSEVTEAUSFAoQQVBQTFlJTkdfUEFU",
-            "Q0hFUxAGEg0KCVJFQk9PVElORxAHEg0KCVNVQ0NFRURFRBAIEh0KGVNVQ0NF",
-            "RURFRF9SRUJPT1RfUkVRVUlSRUQQCRIKCgZGQUlMRUQQChIJCgVBQ0tFRBAL",
-            "Eg0KCVRJTUVEX09VVBAMEhoKFlJVTk5JTkdfUFJFX1BBVENIX1NURVAQDRIb",
-            "ChdSVU5OSU5HX1BPU1RfUEFUQ0hfU1RFUBAOEhUKEU5PX0FHRU5UX0RFVEVD",
-            "VEVEEA8iTwoVQ2FuY2VsUGF0Y2hKb2JSZXF1ZXN0EjYKBG5hbWUYASABKAlC",
-            "KOBBAvpBIgogb3Njb25maWcuZ29vZ2xlYXBpcy5jb20vUGF0Y2hKb2IiqgEK",
-            "C0FwdFNldHRpbmdzEjgKBHR5cGUYASABKA4yKi5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjEuQXB0U2V0dGluZ3MuVHlwZRIQCghleGNsdWRlcxgCIAMoCRIa",
-            "ChJleGNsdXNpdmVfcGFja2FnZXMYAyADKAkiMwoEVHlwZRIUChBUWVBFX1VO",
-            "U1BFQ0lGSUVEEAASCAoERElTVBABEgsKB1VQR1JBREUQAiJeCgtZdW1TZXR0",
-            "aW5ncxIQCghzZWN1cml0eRgBIAEoCBIPCgdtaW5pbWFsGAIgASgIEhAKCGV4",
-            "Y2x1ZGVzGAMgAygJEhoKEmV4Y2x1c2l2ZV9wYWNrYWdlcxgEIAMoCSINCgtH",
-            "b29TZXR0aW5ncyKRAQoOWnlwcGVyU2V0dGluZ3MSFQoNd2l0aF9vcHRpb25h",
-            "bBgBIAEoCBITCgt3aXRoX3VwZGF0ZRgCIAEoCBISCgpjYXRlZ29yaWVzGAMg",
-            "AygJEhIKCnNldmVyaXRpZXMYBCADKAkSEAoIZXhjbHVkZXMYBSADKAkSGQoR",
-            "ZXhjbHVzaXZlX3BhdGNoZXMYBiADKAki1QIKFVdpbmRvd3NVcGRhdGVTZXR0",
-            "aW5ncxJXCg9jbGFzc2lmaWNhdGlvbnMYASADKA4yPi5nb29nbGUuY2xvdWQu",
-            "b3Njb25maWcudjEuV2luZG93c1VwZGF0ZVNldHRpbmdzLkNsYXNzaWZpY2F0",
-            "aW9uEhAKCGV4Y2x1ZGVzGAIgAygJEhkKEWV4Y2x1c2l2ZV9wYXRjaGVzGAMg",
-            "AygJIrUBCg5DbGFzc2lmaWNhdGlvbhIeChpDTEFTU0lGSUNBVElPTl9VTlNQ",
-            "RUNJRklFRBAAEgwKCENSSVRJQ0FMEAESDAoIU0VDVVJJVFkQAhIOCgpERUZJ",
-            "TklUSU9OEAMSCgoGRFJJVkVSEAQSEAoMRkVBVFVSRV9QQUNLEAUSEAoMU0VS",
-            "VklDRV9QQUNLEAYSCAoEVE9PTBAHEhEKDVVQREFURV9ST0xMVVAQCBIKCgZV",
-            "UERBVEUQCSKgAQoIRXhlY1N0ZXASSAoWbGludXhfZXhlY19zdGVwX2NvbmZp",
-            "ZxgBIAEoCzIoLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5FeGVjU3RlcENv",
-            "bmZpZxJKChh3aW5kb3dzX2V4ZWNfc3RlcF9jb25maWcYAiABKAsyKC5nb29n",
-            "bGUuY2xvdWQub3Njb25maWcudjEuRXhlY1N0ZXBDb25maWcioAIKDkV4ZWNT",
-            "dGVwQ29uZmlnEhQKCmxvY2FsX3BhdGgYASABKAlIABI5CgpnY3Nfb2JqZWN0",
-            "GAIgASgLMiMuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkdjc09iamVjdEgA",
-            "Eh0KFWFsbG93ZWRfc3VjY2Vzc19jb2RlcxgDIAMoBRJJCgtpbnRlcnByZXRl",
-            "chgEIAEoDjI0Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5FeGVjU3RlcENv",
-            "bmZpZy5JbnRlcnByZXRlciJFCgtJbnRlcnByZXRlchIbChdJTlRFUlBSRVRF",
-            "Ul9VTlNQRUNJRklFRBAAEgkKBVNIRUxMEAESDgoKUE9XRVJTSEVMTBACQgwK",
-            "CmV4ZWN1dGFibGUiVQoJR2NzT2JqZWN0EhMKBmJ1Y2tldBgBIAEoCUID4EEC",
-            "EhMKBm9iamVjdBgCIAEoCUID4EECEh4KEWdlbmVyYXRpb25fbnVtYmVyGAMg",
-            "ASgDQgPgQQIiyAIKE1BhdGNoSW5zdGFuY2VGaWx0ZXISCwoDYWxsGAEgASgI",
-            "Ek4KDGdyb3VwX2xhYmVscxgCIAMoCzI4Lmdvb2dsZS5jbG91ZC5vc2NvbmZp",
-            "Zy52MS5QYXRjaEluc3RhbmNlRmlsdGVyLkdyb3VwTGFiZWwSDQoFem9uZXMY",
-            "AyADKAkSEQoJaW5zdGFuY2VzGAQgAygJEh4KFmluc3RhbmNlX25hbWVfcHJl",
-            "Zml4ZXMYBSADKAkakQEKCkdyb3VwTGFiZWwSVAoGbGFiZWxzGAEgAygLMkQu",
-            "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLlBhdGNoSW5zdGFuY2VGaWx0ZXIu",
-            "R3JvdXBMYWJlbC5MYWJlbHNFbnRyeRotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQr8BChxjb20uZ29vZ2xlLmNsb3Vk",
-            "Lm9zY29uZmlnLnYxQglQYXRjaEpvYnNaQGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvb3Njb25maWcvdjE7b3Njb25maWeq",
-            "AhhHb29nbGUuQ2xvdWQuT3NDb25maWcuVjHKAhhHb29nbGVcQ2xvdWRcT3ND",
-            "b25maWdcVjHqAhtHb29nbGU6OkNsb3VkOjpPc0NvbmZpZzo6VjFiBnByb3Rv",
-            "Mw=="));
+            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGi5nb29n",
+            "bGUvY2xvdWQvb3Njb25maWcvdjEvb3Njb25maWdfY29tbW9uLnByb3RvGh5n",
+            "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
+            "Zi90aW1lc3RhbXAucHJvdG8iiQMKFkV4ZWN1dGVQYXRjaEpvYlJlcXVlc3QS",
+            "QwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEwoLZGVzY3JpcHRpb24YAiABKAkS",
+            "SwoPaW5zdGFuY2VfZmlsdGVyGAcgASgLMi0uZ29vZ2xlLmNsb3VkLm9zY29u",
+            "ZmlnLnYxLlBhdGNoSW5zdGFuY2VGaWx0ZXJCA+BBAhI7CgxwYXRjaF9jb25m",
+            "aWcYBCABKAsyJS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuUGF0Y2hDb25m",
+            "aWcSKwoIZHVyYXRpb24YBSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b24SDwoHZHJ5X3J1bhgGIAEoCBIUCgxkaXNwbGF5X25hbWUYCCABKAkSNwoH",
+            "cm9sbG91dBgJIAEoCzImLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRj",
+            "aFJvbGxvdXQiTAoSR2V0UGF0Y2hKb2JSZXF1ZXN0EjYKBG5hbWUYASABKAlC",
+            "KOBBAvpBIgogb3Njb25maWcuZ29vZ2xlYXBpcy5jb20vUGF0Y2hKb2IilQEK",
+            "Ikxpc3RQYXRjaEpvYkluc3RhbmNlRGV0YWlsc1JlcXVlc3QSOAoGcGFyZW50",
+            "GAEgASgJQijgQQL6QSIKIG9zY29uZmlnLmdvb2dsZWFwaXMuY29tL1BhdGNo",
+            "Sm9iEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4K",
+            "BmZpbHRlchgEIAEoCSKVAQojTGlzdFBhdGNoSm9iSW5zdGFuY2VEZXRhaWxz",
+            "UmVzcG9uc2USVQoacGF0Y2hfam9iX2luc3RhbmNlX2RldGFpbHMYASADKAsy",
+            "MS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuUGF0Y2hKb2JJbnN0YW5jZURl",
+            "dGFpbHMSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJItYBChdQYXRjaEpvYklu",
+            "c3RhbmNlRGV0YWlscxIyCgRuYW1lGAEgASgJQiT6QSEKH2NvbXB1dGUuZ29v",
+            "Z2xlYXBpcy5jb20vSW5zdGFuY2USGgoSaW5zdGFuY2Vfc3lzdGVtX2lkGAIg",
+            "ASgJEjwKBXN0YXRlGAMgASgOMi0uZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
+            "Lkluc3RhbmNlLlBhdGNoU3RhdGUSFgoOZmFpbHVyZV9yZWFzb24YBCABKAkS",
+            "FQoNYXR0ZW1wdF9jb3VudBgFIAEoAyKSAQoUTGlzdFBhdGNoSm9ic1JlcXVl",
+            "c3QSQwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3QSEQoJcGFnZV9zaXplGAIgASgF",
+            "EhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJImgKFUxpc3RQ",
+            "YXRjaEpvYnNSZXNwb25zZRI2CgpwYXRjaF9qb2JzGAEgAygLMiIuZ29vZ2xl",
+            "LmNsb3VkLm9zY29uZmlnLnYxLlBhdGNoSm9iEhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCSLcCwoIUGF0Y2hKb2ISDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5",
+            "X25hbWUYDiABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSLwoLY3JlYXRlX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0",
+            "ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI3CgVz",
+            "dGF0ZRgFIAEoDjIoLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaEpv",
+            "Yi5TdGF0ZRJGCg9pbnN0YW5jZV9maWx0ZXIYDSABKAsyLS5nb29nbGUuY2xv",
+            "dWQub3Njb25maWcudjEuUGF0Y2hJbnN0YW5jZUZpbHRlchI7CgxwYXRjaF9j",
+            "b25maWcYByABKAsyJS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuUGF0Y2hD",
+            "b25maWcSKwoIZHVyYXRpb24YCCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
+            "YXRpb24SWwoYaW5zdGFuY2VfZGV0YWlsc19zdW1tYXJ5GAkgASgLMjkuZ29v",
+            "Z2xlLmNsb3VkLm9zY29uZmlnLnYxLlBhdGNoSm9iLkluc3RhbmNlRGV0YWls",
+            "c1N1bW1hcnkSDwoHZHJ5X3J1bhgKIAEoCBIVCg1lcnJvcl9tZXNzYWdlGAsg",
+            "ASgJEhgKEHBlcmNlbnRfY29tcGxldGUYDCABKAESSQoQcGF0Y2hfZGVwbG95",
+            "bWVudBgPIAEoCUIv4EED+kEpCidvc2NvbmZpZy5nb29nbGVhcGlzLmNvbS9Q",
+            "YXRjaERlcGxveW1lbnQSNwoHcm9sbG91dBgQIAEoCzImLmdvb2dsZS5jbG91",
+            "ZC5vc2NvbmZpZy52MS5QYXRjaFJvbGxvdXQavQQKFkluc3RhbmNlRGV0YWls",
+            "c1N1bW1hcnkSHgoWcGVuZGluZ19pbnN0YW5jZV9jb3VudBgBIAEoAxIfChdp",
+            "bmFjdGl2ZV9pbnN0YW5jZV9jb3VudBgCIAEoAxIfChdub3RpZmllZF9pbnN0",
+            "YW5jZV9jb3VudBgDIAEoAxIeChZzdGFydGVkX2luc3RhbmNlX2NvdW50GAQg",
+            "ASgDEioKImRvd25sb2FkaW5nX3BhdGNoZXNfaW5zdGFuY2VfY291bnQYBSAB",
+            "KAMSJwofYXBwbHlpbmdfcGF0Y2hlc19pbnN0YW5jZV9jb3VudBgGIAEoAxIg",
+            "ChhyZWJvb3RpbmdfaW5zdGFuY2VfY291bnQYByABKAMSIAoYc3VjY2VlZGVk",
+            "X2luc3RhbmNlX2NvdW50GAggASgDEjAKKHN1Y2NlZWRlZF9yZWJvb3RfcmVx",
+            "dWlyZWRfaW5zdGFuY2VfY291bnQYCSABKAMSHQoVZmFpbGVkX2luc3RhbmNl",
+            "X2NvdW50GAogASgDEhwKFGFja2VkX2luc3RhbmNlX2NvdW50GAsgASgDEiAK",
+            "GHRpbWVkX291dF9pbnN0YW5jZV9jb3VudBgMIAEoAxIlCh1wcmVfcGF0Y2hf",
+            "c3RlcF9pbnN0YW5jZV9jb3VudBgNIAEoAxImCh5wb3N0X3BhdGNoX3N0ZXBf",
+            "aW5zdGFuY2VfY291bnQYDiABKAMSKAogbm9fYWdlbnRfZGV0ZWN0ZWRfaW5z",
+            "dGFuY2VfY291bnQYDyABKAMilQEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASCwoHU1RBUlRFRBABEhMKD0lOU1RBTkNFX0xPT0tVUBACEgwKCFBB",
+            "VENISU5HEAMSDQoJU1VDQ0VFREVEEAQSGQoVQ09NUExFVEVEX1dJVEhfRVJS",
+            "T1JTEAUSDAoIQ0FOQ0VMRUQQBhINCglUSU1FRF9PVVQQBzpP6kFMCiBvc2Nv",
+            "bmZpZy5nb29nbGVhcGlzLmNvbS9QYXRjaEpvYhIocHJvamVjdHMve3Byb2pl",
+            "Y3R9L3BhdGNoSm9icy97cGF0Y2hfam9ifSK3BAoLUGF0Y2hDb25maWcSSQoN",
+            "cmVib290X2NvbmZpZxgBIAEoDjIyLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
+            "MS5QYXRjaENvbmZpZy5SZWJvb3RDb25maWcSMgoDYXB0GAMgASgLMiUuZ29v",
+            "Z2xlLmNsb3VkLm9zY29uZmlnLnYxLkFwdFNldHRpbmdzEjIKA3l1bRgEIAEo",
+            "CzIlLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5ZdW1TZXR0aW5ncxIyCgNn",
+            "b28YBSABKAsyJS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuR29vU2V0dGlu",
+            "Z3MSOAoGenlwcGVyGAYgASgLMiguZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
+            "Llp5cHBlclNldHRpbmdzEkcKDndpbmRvd3NfdXBkYXRlGAcgASgLMi8uZ29v",
+            "Z2xlLmNsb3VkLm9zY29uZmlnLnYxLldpbmRvd3NVcGRhdGVTZXR0aW5ncxI0",
+            "CghwcmVfc3RlcBgIIAEoCzIiLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5F",
+            "eGVjU3RlcBI1Cglwb3N0X3N0ZXAYCSABKAsyIi5nb29nbGUuY2xvdWQub3Nj",
+            "b25maWcudjEuRXhlY1N0ZXAiUQoMUmVib290Q29uZmlnEh0KGVJFQk9PVF9D",
+            "T05GSUdfVU5TUEVDSUZJRUQQABILCgdERUZBVUxUEAESCgoGQUxXQVlTEAIS",
+            "CQoFTkVWRVIQAyLOAgoISW5zdGFuY2UiwQIKClBhdGNoU3RhdGUSGwoXUEFU",
+            "Q0hfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESDAoISU5BQ1RJ",
+            "VkUQAhIMCghOT1RJRklFRBADEgsKB1NUQVJURUQQBBIXChNET1dOTE9BRElO",
+            "R19QQVRDSEVTEAUSFAoQQVBQTFlJTkdfUEFUQ0hFUxAGEg0KCVJFQk9PVElO",
+            "RxAHEg0KCVNVQ0NFRURFRBAIEh0KGVNVQ0NFRURFRF9SRUJPT1RfUkVRVUlS",
+            "RUQQCRIKCgZGQUlMRUQQChIJCgVBQ0tFRBALEg0KCVRJTUVEX09VVBAMEhoK",
+            "FlJVTk5JTkdfUFJFX1BBVENIX1NURVAQDRIbChdSVU5OSU5HX1BPU1RfUEFU",
+            "Q0hfU1RFUBAOEhUKEU5PX0FHRU5UX0RFVEVDVEVEEA8iTwoVQ2FuY2VsUGF0",
+            "Y2hKb2JSZXF1ZXN0EjYKBG5hbWUYASABKAlCKOBBAvpBIgogb3Njb25maWcu",
+            "Z29vZ2xlYXBpcy5jb20vUGF0Y2hKb2IiqgEKC0FwdFNldHRpbmdzEjgKBHR5",
+            "cGUYASABKA4yKi5nb29nbGUuY2xvdWQub3Njb25maWcudjEuQXB0U2V0dGlu",
+            "Z3MuVHlwZRIQCghleGNsdWRlcxgCIAMoCRIaChJleGNsdXNpdmVfcGFja2Fn",
+            "ZXMYAyADKAkiMwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCAoERElT",
+            "VBABEgsKB1VQR1JBREUQAiJeCgtZdW1TZXR0aW5ncxIQCghzZWN1cml0eRgB",
+            "IAEoCBIPCgdtaW5pbWFsGAIgASgIEhAKCGV4Y2x1ZGVzGAMgAygJEhoKEmV4",
+            "Y2x1c2l2ZV9wYWNrYWdlcxgEIAMoCSINCgtHb29TZXR0aW5ncyKRAQoOWnlw",
+            "cGVyU2V0dGluZ3MSFQoNd2l0aF9vcHRpb25hbBgBIAEoCBITCgt3aXRoX3Vw",
+            "ZGF0ZRgCIAEoCBISCgpjYXRlZ29yaWVzGAMgAygJEhIKCnNldmVyaXRpZXMY",
+            "BCADKAkSEAoIZXhjbHVkZXMYBSADKAkSGQoRZXhjbHVzaXZlX3BhdGNoZXMY",
+            "BiADKAki1QIKFVdpbmRvd3NVcGRhdGVTZXR0aW5ncxJXCg9jbGFzc2lmaWNh",
+            "dGlvbnMYASADKA4yPi5nb29nbGUuY2xvdWQub3Njb25maWcudjEuV2luZG93",
+            "c1VwZGF0ZVNldHRpbmdzLkNsYXNzaWZpY2F0aW9uEhAKCGV4Y2x1ZGVzGAIg",
+            "AygJEhkKEWV4Y2x1c2l2ZV9wYXRjaGVzGAMgAygJIrUBCg5DbGFzc2lmaWNh",
+            "dGlvbhIeChpDTEFTU0lGSUNBVElPTl9VTlNQRUNJRklFRBAAEgwKCENSSVRJ",
+            "Q0FMEAESDAoIU0VDVVJJVFkQAhIOCgpERUZJTklUSU9OEAMSCgoGRFJJVkVS",
+            "EAQSEAoMRkVBVFVSRV9QQUNLEAUSEAoMU0VSVklDRV9QQUNLEAYSCAoEVE9P",
+            "TBAHEhEKDVVQREFURV9ST0xMVVAQCBIKCgZVUERBVEUQCSKgAQoIRXhlY1N0",
+            "ZXASSAoWbGludXhfZXhlY19zdGVwX2NvbmZpZxgBIAEoCzIoLmdvb2dsZS5j",
+            "bG91ZC5vc2NvbmZpZy52MS5FeGVjU3RlcENvbmZpZxJKChh3aW5kb3dzX2V4",
+            "ZWNfc3RlcF9jb25maWcYAiABKAsyKC5nb29nbGUuY2xvdWQub3Njb25maWcu",
+            "djEuRXhlY1N0ZXBDb25maWcioAIKDkV4ZWNTdGVwQ29uZmlnEhQKCmxvY2Fs",
+            "X3BhdGgYASABKAlIABI5CgpnY3Nfb2JqZWN0GAIgASgLMiMuZ29vZ2xlLmNs",
+            "b3VkLm9zY29uZmlnLnYxLkdjc09iamVjdEgAEh0KFWFsbG93ZWRfc3VjY2Vz",
+            "c19jb2RlcxgDIAMoBRJJCgtpbnRlcnByZXRlchgEIAEoDjI0Lmdvb2dsZS5j",
+            "bG91ZC5vc2NvbmZpZy52MS5FeGVjU3RlcENvbmZpZy5JbnRlcnByZXRlciJF",
+            "CgtJbnRlcnByZXRlchIbChdJTlRFUlBSRVRFUl9VTlNQRUNJRklFRBAAEgkK",
+            "BVNIRUxMEAESDgoKUE9XRVJTSEVMTBACQgwKCmV4ZWN1dGFibGUiVQoJR2Nz",
+            "T2JqZWN0EhMKBmJ1Y2tldBgBIAEoCUID4EECEhMKBm9iamVjdBgCIAEoCUID",
+            "4EECEh4KEWdlbmVyYXRpb25fbnVtYmVyGAMgASgDQgPgQQIiyAIKE1BhdGNo",
+            "SW5zdGFuY2VGaWx0ZXISCwoDYWxsGAEgASgIEk4KDGdyb3VwX2xhYmVscxgC",
+            "IAMoCzI4Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaEluc3RhbmNl",
+            "RmlsdGVyLkdyb3VwTGFiZWwSDQoFem9uZXMYAyADKAkSEQoJaW5zdGFuY2Vz",
+            "GAQgAygJEh4KFmluc3RhbmNlX25hbWVfcHJlZml4ZXMYBSADKAkakQEKCkdy",
+            "b3VwTGFiZWwSVAoGbGFiZWxzGAEgAygLMkQuZ29vZ2xlLmNsb3VkLm9zY29u",
+            "ZmlnLnYxLlBhdGNoSW5zdGFuY2VGaWx0ZXIuR3JvdXBMYWJlbC5MYWJlbHNF",
+            "bnRyeRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBItQBCgxQYXRjaFJvbGxvdXQSOQoEbW9kZRgBIAEoDjIrLmdvb2ds",
+            "ZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaFJvbGxvdXQuTW9kZRJDChFkaXNy",
+            "dXB0aW9uX2J1ZGdldBgCIAEoCzIoLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
+            "MS5GaXhlZE9yUGVyY2VudCJECgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQ",
+            "ABIQCgxaT05FX0JZX1pPTkUQARIUChBDT05DVVJSRU5UX1pPTkVTEAJCvwEK",
+            "HGNvbS5nb29nbGUuY2xvdWQub3Njb25maWcudjFCCVBhdGNoSm9ic1pAZ29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9vc2Nv",
+            "bmZpZy92MTtvc2NvbmZpZ6oCGEdvb2dsZS5DbG91ZC5Pc0NvbmZpZy5WMcoC",
+            "GEdvb2dsZVxDbG91ZFxPc0NvbmZpZ1xWMeoCG0dvb2dsZTo6Q2xvdWQ6Ok9z",
+            "Q29uZmlnOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsConfig.V1.OsconfigCommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest), global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest.Parser, new[]{ "Parent", "Description", "InstanceFilter", "PatchConfig", "Duration", "DryRun", "DisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest), global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest.Parser, new[]{ "Parent", "Description", "InstanceFilter", "PatchConfig", "Duration", "DryRun", "DisplayName", "Rollout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.GetPatchJobRequest), global::Google.Cloud.OsConfig.V1.GetPatchJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsRequest), global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsResponse), global::Google.Cloud.OsConfig.V1.ListPatchJobInstanceDetailsResponse.Parser, new[]{ "PatchJobInstanceDetails", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchJobInstanceDetails), global::Google.Cloud.OsConfig.V1.PatchJobInstanceDetails.Parser, new[]{ "Name", "InstanceSystemId", "State", "FailureReason", "AttemptCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ListPatchJobsRequest), global::Google.Cloud.OsConfig.V1.ListPatchJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ListPatchJobsResponse), global::Google.Cloud.OsConfig.V1.ListPatchJobsResponse.Parser, new[]{ "PatchJobs", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchJob), global::Google.Cloud.OsConfig.V1.PatchJob.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "State", "InstanceFilter", "PatchConfig", "Duration", "InstanceDetailsSummary", "DryRun", "ErrorMessage", "PercentComplete", "PatchDeployment" }, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1.PatchJob.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchJob.Types.InstanceDetailsSummary), global::Google.Cloud.OsConfig.V1.PatchJob.Types.InstanceDetailsSummary.Parser, new[]{ "PendingInstanceCount", "InactiveInstanceCount", "NotifiedInstanceCount", "StartedInstanceCount", "DownloadingPatchesInstanceCount", "ApplyingPatchesInstanceCount", "RebootingInstanceCount", "SucceededInstanceCount", "SucceededRebootRequiredInstanceCount", "FailedInstanceCount", "AckedInstanceCount", "TimedOutInstanceCount", "PrePatchStepInstanceCount", "PostPatchStepInstanceCount", "NoAgentDetectedInstanceCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchJob), global::Google.Cloud.OsConfig.V1.PatchJob.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "State", "InstanceFilter", "PatchConfig", "Duration", "InstanceDetailsSummary", "DryRun", "ErrorMessage", "PercentComplete", "PatchDeployment", "Rollout" }, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1.PatchJob.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchJob.Types.InstanceDetailsSummary), global::Google.Cloud.OsConfig.V1.PatchJob.Types.InstanceDetailsSummary.Parser, new[]{ "PendingInstanceCount", "InactiveInstanceCount", "NotifiedInstanceCount", "StartedInstanceCount", "DownloadingPatchesInstanceCount", "ApplyingPatchesInstanceCount", "RebootingInstanceCount", "SucceededInstanceCount", "SucceededRebootRequiredInstanceCount", "FailedInstanceCount", "AckedInstanceCount", "TimedOutInstanceCount", "PrePatchStepInstanceCount", "PostPatchStepInstanceCount", "NoAgentDetectedInstanceCount" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchConfig), global::Google.Cloud.OsConfig.V1.PatchConfig.Parser, new[]{ "RebootConfig", "Apt", "Yum", "Goo", "Zypper", "WindowsUpdate", "PreStep", "PostStep" }, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1.PatchConfig.Types.RebootConfig) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Instance), global::Google.Cloud.OsConfig.V1.Instance.Parser, null, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1.Instance.Types.PatchState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.CancelPatchJobRequest), global::Google.Cloud.OsConfig.V1.CancelPatchJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -173,7 +181,8 @@ namespace Google.Cloud.OsConfig.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ExecStep), global::Google.Cloud.OsConfig.V1.ExecStep.Parser, new[]{ "LinuxExecStepConfig", "WindowsExecStepConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ExecStepConfig), global::Google.Cloud.OsConfig.V1.ExecStepConfig.Parser, new[]{ "LocalPath", "GcsObject", "AllowedSuccessCodes", "Interpreter" }, new[]{ "Executable" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1.ExecStepConfig.Types.Interpreter) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.GcsObject), global::Google.Cloud.OsConfig.V1.GcsObject.Parser, new[]{ "Bucket", "Object", "GenerationNumber" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchInstanceFilter), global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Parser, new[]{ "All", "GroupLabels", "Zones", "Instances", "InstanceNamePrefixes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel), global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel.Parser, new[]{ "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchInstanceFilter), global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Parser, new[]{ "All", "GroupLabels", "Zones", "Instances", "InstanceNamePrefixes" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel), global::Google.Cloud.OsConfig.V1.PatchInstanceFilter.Types.GroupLabel.Parser, new[]{ "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchRollout), global::Google.Cloud.OsConfig.V1.PatchRollout.Parser, new[]{ "Mode", "DisruptionBudget" }, null, new[]{ typeof(global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode) }, null, null)
           }));
     }
     #endregion
@@ -220,6 +229,7 @@ namespace Google.Cloud.OsConfig.V1 {
       duration_ = other.duration_ != null ? other.duration_.Clone() : null;
       dryRun_ = other.dryRun_;
       displayName_ = other.displayName_;
+      rollout_ = other.rollout_ != null ? other.rollout_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -261,8 +271,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int InstanceFilterFieldNumber = 7;
     private global::Google.Cloud.OsConfig.V1.PatchInstanceFilter instanceFilter_;
     /// <summary>
-    /// Required. Instances to patch, either explicitly or filtered by some criteria such
-    /// as zone or labels.
+    /// Required. Instances to patch, either explicitly or filtered by some
+    /// criteria such as zone or labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.OsConfig.V1.PatchInstanceFilter InstanceFilter {
@@ -331,6 +341,20 @@ namespace Google.Cloud.OsConfig.V1 {
       }
     }
 
+    /// <summary>Field number for the "rollout" field.</summary>
+    public const int RolloutFieldNumber = 9;
+    private global::Google.Cloud.OsConfig.V1.PatchRollout rollout_;
+    /// <summary>
+    /// Rollout strategy of the patch job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1.PatchRollout Rollout {
+      get { return rollout_; }
+      set {
+        rollout_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ExecutePatchJobRequest);
@@ -351,6 +375,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (!object.Equals(Duration, other.Duration)) return false;
       if (DryRun != other.DryRun) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (!object.Equals(Rollout, other.Rollout)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -364,6 +389,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (duration_ != null) hash ^= Duration.GetHashCode();
       if (DryRun != false) hash ^= DryRun.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (rollout_ != null) hash ^= Rollout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -408,6 +434,10 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(66);
         output.WriteString(DisplayName);
       }
+      if (rollout_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Rollout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -445,6 +475,10 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(66);
         output.WriteString(DisplayName);
       }
+      if (rollout_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Rollout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -474,6 +508,9 @@ namespace Google.Cloud.OsConfig.V1 {
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (rollout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rollout);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -515,6 +552,12 @@ namespace Google.Cloud.OsConfig.V1 {
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      if (other.rollout_ != null) {
+        if (rollout_ == null) {
+          Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+        }
+        Rollout.MergeFrom(other.Rollout);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -567,6 +610,13 @@ namespace Google.Cloud.OsConfig.V1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 74: {
+            if (rollout_ == null) {
+              Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+            }
+            input.ReadMessage(Rollout);
+            break;
+          }
         }
       }
     #endif
@@ -616,6 +666,13 @@ namespace Google.Cloud.OsConfig.V1 {
           }
           case 66: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (rollout_ == null) {
+              Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+            }
+            input.ReadMessage(Rollout);
             break;
           }
         }
@@ -851,7 +908,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.
+    /// Required. The parent for the instances are in the form of
+    /// `projects/*/patchJobs/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2153,7 +2211,7 @@ namespace Google.Cloud.OsConfig.V1 {
   /// A high level representation of a patch job that is either in progress
   /// or has completed.
   ///
-  /// Instances details are not included in the job. To paginate through instance
+  /// Instance details are not included in the job. To paginate through instance
   /// details, use ListPatchJobInstanceDetails.
   ///
   /// For more information about patch jobs, see
@@ -2203,6 +2261,7 @@ namespace Google.Cloud.OsConfig.V1 {
       errorMessage_ = other.errorMessage_;
       percentComplete_ = other.percentComplete_;
       patchDeployment_ = other.patchDeployment_;
+      rollout_ = other.rollout_ != null ? other.rollout_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2287,7 +2346,7 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int StateFieldNumber = 5;
     private global::Google.Cloud.OsConfig.V1.PatchJob.Types.State state_ = global::Google.Cloud.OsConfig.V1.PatchJob.Types.State.Unspecified;
     /// <summary>
-    /// The current state of the PatchJob .
+    /// The current state of the PatchJob.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.OsConfig.V1.PatchJob.Types.State State {
@@ -2413,6 +2472,20 @@ namespace Google.Cloud.OsConfig.V1 {
       }
     }
 
+    /// <summary>Field number for the "rollout" field.</summary>
+    public const int RolloutFieldNumber = 16;
+    private global::Google.Cloud.OsConfig.V1.PatchRollout rollout_;
+    /// <summary>
+    /// Rollout strategy being applied.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1.PatchRollout Rollout {
+      get { return rollout_; }
+      set {
+        rollout_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PatchJob);
@@ -2440,6 +2513,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (ErrorMessage != other.ErrorMessage) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentComplete, other.PercentComplete)) return false;
       if (PatchDeployment != other.PatchDeployment) return false;
+      if (!object.Equals(Rollout, other.Rollout)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2460,6 +2534,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (PercentComplete != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentComplete);
       if (PatchDeployment.Length != 0) hash ^= PatchDeployment.GetHashCode();
+      if (rollout_ != null) hash ^= Rollout.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2532,6 +2607,10 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(122);
         output.WriteString(PatchDeployment);
       }
+      if (rollout_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Rollout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2597,6 +2676,10 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(122);
         output.WriteString(PatchDeployment);
       }
+      if (rollout_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Rollout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2647,6 +2730,9 @@ namespace Google.Cloud.OsConfig.V1 {
       }
       if (PatchDeployment.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PatchDeployment);
+      }
+      if (rollout_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Rollout);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2718,6 +2804,12 @@ namespace Google.Cloud.OsConfig.V1 {
       }
       if (other.PatchDeployment.Length != 0) {
         PatchDeployment = other.PatchDeployment;
+      }
+      if (other.rollout_ != null) {
+        if (rollout_ == null) {
+          Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+        }
+        Rollout.MergeFrom(other.Rollout);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2807,6 +2899,13 @@ namespace Google.Cloud.OsConfig.V1 {
             PatchDeployment = input.ReadString();
             break;
           }
+          case 130: {
+            if (rollout_ == null) {
+              Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+            }
+            input.ReadMessage(Rollout);
+            break;
+          }
         }
       }
     #endif
@@ -2893,6 +2992,13 @@ namespace Google.Cloud.OsConfig.V1 {
           }
           case 122: {
             PatchDeployment = input.ReadString();
+            break;
+          }
+          case 130: {
+            if (rollout_ == null) {
+              Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+            }
+            input.ReadMessage(Rollout);
             break;
           }
         }
@@ -7273,6 +7379,285 @@ namespace Google.Cloud.OsConfig.V1 {
         }
         #endif
 
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Patch rollout configuration specifications. Contains details on the
+  /// concurrency control when applying patch(es) to all targeted VMs.
+  /// </summary>
+  public sealed partial class PatchRollout : pb::IMessage<PatchRollout>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PatchRollout> _parser = new pb::MessageParser<PatchRollout>(() => new PatchRollout());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PatchRollout> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OsConfig.V1.PatchJobsReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PatchRollout() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PatchRollout(PatchRollout other) : this() {
+      mode_ = other.mode_;
+      disruptionBudget_ = other.disruptionBudget_ != null ? other.disruptionBudget_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PatchRollout Clone() {
+      return new PatchRollout(this);
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 1;
+    private global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode mode_ = global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode.Unspecified;
+    /// <summary>
+    /// Mode of the patch rollout.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "disruption_budget" field.</summary>
+    public const int DisruptionBudgetFieldNumber = 2;
+    private global::Google.Cloud.OsConfig.V1.FixedOrPercent disruptionBudget_;
+    /// <summary>
+    /// The maximum number (or percentage) of VMs per zone to disrupt at any given
+    /// moment. The number of VMs calculated from multiplying the percentage by the
+    /// total number of VMs in a zone is rounded up.
+    ///
+    /// During patching, a VM is considered disrupted from the time the agent is
+    /// notified to begin until patching has completed. This disruption time
+    /// includes the time to complete reboot and any post-patch steps.
+    ///
+    /// A VM contributes to the disruption budget if its patching operation fails
+    /// either when applying the patches, running pre or post patch steps, or if it
+    /// fails to respond with a success notification before timing out. VMs that
+    /// are not running or do not have an active agent do not count toward this
+    /// disruption budget.
+    ///
+    /// For zone-by-zone rollouts, if the disruption budget in a zone is exceeded,
+    /// the patch job stops, because continuing to the next zone requires
+    /// completion of the patch process in the previous zone.
+    ///
+    /// For example, if the disruption budget has a fixed value of `10`, and 8 VMs
+    /// fail to patch in the current zone, the patch job continues to patch 2 VMs
+    /// at a time until the zone is completed. When that zone is completed
+    /// successfully, patching begins with 10 VMs at a time in the next zone. If 10
+    /// VMs in the next zone fail to patch, the patch job stops.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1.FixedOrPercent DisruptionBudget {
+      get { return disruptionBudget_; }
+      set {
+        disruptionBudget_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PatchRollout);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PatchRollout other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mode != other.Mode) return false;
+      if (!object.Equals(DisruptionBudget, other.DisruptionBudget)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mode != global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
+      if (disruptionBudget_ != null) hash ^= DisruptionBudget.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mode != global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (disruptionBudget_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DisruptionBudget);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mode != global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (disruptionBudget_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DisruptionBudget);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mode != global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (disruptionBudget_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisruptionBudget);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PatchRollout other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mode != global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode.Unspecified) {
+        Mode = other.Mode;
+      }
+      if (other.disruptionBudget_ != null) {
+        if (disruptionBudget_ == null) {
+          DisruptionBudget = new global::Google.Cloud.OsConfig.V1.FixedOrPercent();
+        }
+        DisruptionBudget.MergeFrom(other.DisruptionBudget);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Mode = (global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (disruptionBudget_ == null) {
+              DisruptionBudget = new global::Google.Cloud.OsConfig.V1.FixedOrPercent();
+            }
+            input.ReadMessage(DisruptionBudget);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Mode = (global::Google.Cloud.OsConfig.V1.PatchRollout.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (disruptionBudget_ == null) {
+              DisruptionBudget = new global::Google.Cloud.OsConfig.V1.FixedOrPercent();
+            }
+            input.ReadMessage(DisruptionBudget);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PatchRollout message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Type of the rollout.
+      /// </summary>
+      public enum Mode {
+        /// <summary>
+        /// Mode must be specified.
+        /// </summary>
+        [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Patches are applied one zone at a time. The patch job begins in the
+        /// region with the lowest number of targeted VMs. Within the region,
+        /// patching begins in the zone with the lowest number of targeted VMs. If
+        /// multiple regions (or zones within a region) have the same number of
+        /// targeted VMs, a tie-breaker is achieved by sorting the regions or zones
+        /// in alphabetical order.
+        /// </summary>
+        [pbr::OriginalName("ZONE_BY_ZONE")] ZoneByZone = 1,
+        /// <summary>
+        /// Patches are applied to VMs in all zones at the same time.
+        /// </summary>
+        [pbr::OriginalName("CONCURRENT_ZONES")] ConcurrentZones = 2,
       }
 
     }

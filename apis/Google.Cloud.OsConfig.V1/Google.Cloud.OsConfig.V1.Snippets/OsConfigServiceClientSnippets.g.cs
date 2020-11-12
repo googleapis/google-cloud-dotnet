@@ -42,6 +42,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
                 DryRun = false,
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "",
+                Rollout = new PatchRollout(),
             };
             // Make the request
             PatchJob response = osConfigServiceClient.ExecutePatchJob(request);
@@ -65,6 +66,7 @@ namespace Google.Cloud.OsConfig.V1.Snippets
                 DryRun = false,
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "",
+                Rollout = new PatchRollout(),
             };
             // Make the request
             PatchJob response = await osConfigServiceClient.ExecutePatchJobAsync(request);

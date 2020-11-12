@@ -41,6 +41,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 DryRun = true,
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
+                Rollout = new PatchRollout(),
             };
             PatchJob expectedResponse = new PatchJob
             {
@@ -58,6 +59,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.ExecutePatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -79,6 +81,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 DryRun = true,
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
+                Rollout = new PatchRollout(),
             };
             PatchJob expectedResponse = new PatchJob
             {
@@ -96,6 +99,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.ExecutePatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -130,6 +134,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -162,6 +167,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -196,6 +202,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -228,6 +235,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -262,6 +270,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -294,6 +303,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -328,6 +338,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CancelPatchJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -360,6 +371,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 InstanceFilter = new PatchInstanceFilter(),
                 DisplayName = "display_name137f65c2",
                 PatchDeploymentAsPatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CancelPatchJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -392,6 +404,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -422,6 +435,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -454,6 +468,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -484,6 +499,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -516,6 +532,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -546,6 +563,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -576,6 +594,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -604,6 +623,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -634,6 +654,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -662,6 +683,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -692,6 +714,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -720,6 +743,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
