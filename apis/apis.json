@@ -1077,7 +1077,7 @@
       "id": "Google.Cloud.OsLogin.Common",
       "generator": "micro",
       "protoPath": "google/cloud/oslogin/common",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
       "description": "Version-agnostic types for the Google OS Login API.",
@@ -1088,7 +1088,8 @@
       "dependencies": {
         "Google.Api.CommonProtos": "2.2.0",
         "Google.Api.Gax": "3.2.0"
-      }
+      },
+      "noVersionHistory": true
     },
     {
       "id": "Google.Cloud.OsLogin.V1",
@@ -1096,7 +1097,7 @@
       "protoPath": "google/cloud/oslogin/v1",
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "description": "Recommended Google client library to manage OS login configuration for Google account users.",
       "tags": [
@@ -1115,7 +1116,7 @@
       "protoPath": "google/cloud/oslogin/v1beta",
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
-      "version": "2.0.0-beta02",
+      "version": "2.0.0-beta03",
       "releaseLevelOverride": "beta",
       "type": "grpc",
       "description": "Recommended Google client library to manages OS login configuration for Google account users.",
