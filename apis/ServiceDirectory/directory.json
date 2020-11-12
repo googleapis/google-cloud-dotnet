@@ -1192,7 +1192,7 @@
     {
       "ServiceDirectory": "google/cloud/osconfig/v1",
       "Name": "osconfig.googleapis.com",
-      "Title": "Cloud OS Config API",
+      "Title": "OS Config API",
       "Description": "OS management tools that can be used for patch management, patch compliance, and configuration management on VM instances.",
       "ServiceConfigFile": "google/cloud/osconfig/v1/osconfig_v1.yaml",
       "Version": "v1",
