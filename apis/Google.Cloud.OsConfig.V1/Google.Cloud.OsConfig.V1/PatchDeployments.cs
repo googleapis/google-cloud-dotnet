@@ -31,7 +31,7 @@ namespace Google.Cloud.OsConfig.V1 {
             "Hmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
             "YnVmL3RpbWVzdGFtcC5wcm90bxoaZ29vZ2xlL3R5cGUvZGF0ZXRpbWUucHJv",
             "dG8aG2dvb2dsZS90eXBlL2RheW9md2Vlay5wcm90bxobZ29vZ2xlL3R5cGUv",
-            "dGltZW9mZGF5LnByb3RvIrEFCg9QYXRjaERlcGxveW1lbnQSDAoEbmFtZRgB",
+            "dGltZW9mZGF5LnByb3RvIu8FCg9QYXRjaERlcGxveW1lbnQSDAoEbmFtZRgB",
             "IAEoCRIYCgtkZXNjcmlwdGlvbhgCIAEoCUID4EEBEksKD2luc3RhbmNlX2Zp",
             "bHRlchgDIAEoCzItLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaElu",
             "c3RhbmNlRmlsdGVyQgPgQQISQAoMcGF0Y2hfY29uZmlnGAQgASgLMiUuZ29v",
@@ -44,55 +44,57 @@ namespace Google.Cloud.OsConfig.V1 {
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUY",
             "CSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOgoRbGFz",
             "dF9leGVjdXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQM6ZOpBYQonb3Njb25maWcuZ29vZ2xlYXBpcy5jb20vUGF0Y2hE",
-            "ZXBsb3ltZW50EjZwcm9qZWN0cy97cHJvamVjdH0vcGF0Y2hEZXBsb3ltZW50",
-            "cy97cGF0Y2hfZGVwbG95bWVudH1CCgoIc2NoZWR1bGUiSAoPT25lVGltZVNj",
-            "aGVkdWxlEjUKDGV4ZWN1dGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAiL7BAoRUmVjdXJyaW5nU2NoZWR1bGUSLQoJdGlt",
-            "ZV96b25lGAEgASgLMhUuZ29vZ2xlLnR5cGUuVGltZVpvbmVCA+BBAhIzCgpz",
-            "dGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEBEjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEBEjAKC3RpbWVfb2ZfZGF5GAQgASgLMhYuZ29vZ2xlLnR5cGUu",
-            "VGltZU9mRGF5QgPgQQISTQoJZnJlcXVlbmN5GAUgASgOMjUuZ29vZ2xlLmNs",
-            "b3VkLm9zY29uZmlnLnYxLlJlY3VycmluZ1NjaGVkdWxlLkZyZXF1ZW5jeUID",
-            "4EECEj8KBndlZWtseRgGIAEoCzIoLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52",
-            "MS5XZWVrbHlTY2hlZHVsZUID4EECSAASQQoHbW9udGhseRgHIAEoCzIpLmdv",
-            "b2dsZS5jbG91ZC5vc2NvbmZpZy52MS5Nb250aGx5U2NoZWR1bGVCA+BBAkgA",
-            "EjoKEWxhc3RfZXhlY3V0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEjoKEW5leHRfZXhlY3V0ZV90aW1lGAogASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIj8KCUZyZXF1ZW5jeRIZ",
-            "ChVGUkVRVUVOQ1lfVU5TUEVDSUZJRUQQABIKCgZXRUVLTFkQARILCgdNT05U",
-            "SExZEAJCEQoPc2NoZWR1bGVfY29uZmlnIkIKDldlZWtseVNjaGVkdWxlEjAK",
-            "C2RheV9vZl93ZWVrGAEgASgOMhYuZ29vZ2xlLnR5cGUuRGF5T2ZXZWVrQgPg",
-            "QQIihwEKD01vbnRobHlTY2hlZHVsZRJKChF3ZWVrX2RheV9vZl9tb250aBgB",
-            "IAEoCzIoLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5XZWVrRGF5T2ZNb250",
-            "aEID4EECSAASGAoJbW9udGhfZGF5GAIgASgFQgPgQQJIAEIOCgxkYXlfb2Zf",
-            "bW9udGgiXQoOV2Vla0RheU9mTW9udGgSGQoMd2Vla19vcmRpbmFsGAEgASgF",
-            "QgPgQQISMAoLZGF5X29mX3dlZWsYAiABKA4yFi5nb29nbGUudHlwZS5EYXlP",
-            "ZldlZWtCA+BBAiLPAQocQ3JlYXRlUGF0Y2hEZXBsb3ltZW50UmVxdWVzdBJD",
-            "CgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vUHJvamVjdBIgChNwYXRjaF9kZXBsb3ltZW50X2lk",
-            "GAIgASgJQgPgQQISSAoQcGF0Y2hfZGVwbG95bWVudBgDIAEoCzIpLmdvb2ds",
-            "ZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaERlcGxveW1lbnRCA+BBAiJaChlH",
-            "ZXRQYXRjaERlcGxveW1lbnRSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpB",
-            "KQonb3Njb25maWcuZ29vZ2xlYXBpcy5jb20vUGF0Y2hEZXBsb3ltZW50IpMB",
-            "ChtMaXN0UGF0Y2hEZXBsb3ltZW50c1JlcXVlc3QSQwoGcGFyZW50GAEgASgJ",
-            "QjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L1Byb2plY3QSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
-            "bhgDIAEoCUID4EEBIn0KHExpc3RQYXRjaERlcGxveW1lbnRzUmVzcG9uc2US",
-            "RAoRcGF0Y2hfZGVwbG95bWVudHMYASADKAsyKS5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjEuUGF0Y2hEZXBsb3ltZW50EhcKD25leHRfcGFnZV90b2tlbhgC",
-            "IAEoCSJdChxEZWxldGVQYXRjaERlcGxveW1lbnRSZXF1ZXN0Ej0KBG5hbWUY",
-            "ASABKAlCL+BBAvpBKQonb3Njb25maWcuZ29vZ2xlYXBpcy5jb20vUGF0Y2hE",
-            "ZXBsb3ltZW50QsYBChxjb20uZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxQhBQ",
-            "YXRjaERlcGxveW1lbnRzWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2Nsb3VkL29zY29uZmlnL3YxO29zY29uZmlnqgIYR29vZ2xl",
-            "LkNsb3VkLk9zQ29uZmlnLlYxygIYR29vZ2xlXENsb3VkXE9zQ29uZmlnXFYx",
-            "6gIbR29vZ2xlOjpDbG91ZDo6T3NDb25maWc6OlYxYgZwcm90bzM="));
+            "YW1wQgPgQQMSPAoHcm9sbG91dBgLIAEoCzImLmdvb2dsZS5jbG91ZC5vc2Nv",
+            "bmZpZy52MS5QYXRjaFJvbGxvdXRCA+BBATpk6kFhCidvc2NvbmZpZy5nb29n",
+            "bGVhcGlzLmNvbS9QYXRjaERlcGxveW1lbnQSNnByb2plY3RzL3twcm9qZWN0",
+            "fS9wYXRjaERlcGxveW1lbnRzL3twYXRjaF9kZXBsb3ltZW50fUIKCghzY2hl",
+            "ZHVsZSJICg9PbmVUaW1lU2NoZWR1bGUSNQoMZXhlY3V0ZV90aW1lGAEgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECIvsEChFSZWN1cnJp",
+            "bmdTY2hlZHVsZRItCgl0aW1lX3pvbmUYASABKAsyFS5nb29nbGUudHlwZS5U",
+            "aW1lWm9uZUID4EECEjMKCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQESMQoIZW5kX3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESMAoLdGltZV9vZl9kYXkYBCAB",
+            "KAsyFi5nb29nbGUudHlwZS5UaW1lT2ZEYXlCA+BBAhJNCglmcmVxdWVuY3kY",
+            "BSABKA4yNS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuUmVjdXJyaW5nU2No",
+            "ZWR1bGUuRnJlcXVlbmN5QgPgQQISPwoGd2Vla2x5GAYgASgLMiguZ29vZ2xl",
+            "LmNsb3VkLm9zY29uZmlnLnYxLldlZWtseVNjaGVkdWxlQgPgQQJIABJBCgdt",
+            "b250aGx5GAcgASgLMikuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLk1vbnRo",
+            "bHlTY2hlZHVsZUID4EECSAASOgoRbGFzdF9leGVjdXRlX3RpbWUYCSABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOgoRbmV4dF9leGVj",
+            "dXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMiPwoJRnJlcXVlbmN5EhkKFUZSRVFVRU5DWV9VTlNQRUNJRklFRBAAEgoK",
+            "BldFRUtMWRABEgsKB01PTlRITFkQAkIRCg9zY2hlZHVsZV9jb25maWciQgoO",
+            "V2Vla2x5U2NoZWR1bGUSMAoLZGF5X29mX3dlZWsYASABKA4yFi5nb29nbGUu",
+            "dHlwZS5EYXlPZldlZWtCA+BBAiKHAQoPTW9udGhseVNjaGVkdWxlEkoKEXdl",
+            "ZWtfZGF5X29mX21vbnRoGAEgASgLMiguZ29vZ2xlLmNsb3VkLm9zY29uZmln",
+            "LnYxLldlZWtEYXlPZk1vbnRoQgPgQQJIABIYCgltb250aF9kYXkYAiABKAVC",
+            "A+BBAkgAQg4KDGRheV9vZl9tb250aCJdCg5XZWVrRGF5T2ZNb250aBIZCgx3",
+            "ZWVrX29yZGluYWwYASABKAVCA+BBAhIwCgtkYXlfb2Zfd2VlaxgCIAEoDjIW",
+            "Lmdvb2dsZS50eXBlLkRheU9mV2Vla0ID4EECIs8BChxDcmVhdGVQYXRjaERl",
+            "cGxveW1lbnRSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtCitjbG91",
+            "ZHJlc291cmNlbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EiAKE3Bh",
+            "dGNoX2RlcGxveW1lbnRfaWQYAiABKAlCA+BBAhJIChBwYXRjaF9kZXBsb3lt",
+            "ZW50GAMgASgLMikuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLlBhdGNoRGVw",
+            "bG95bWVudEID4EECIloKGUdldFBhdGNoRGVwbG95bWVudFJlcXVlc3QSPQoE",
+            "bmFtZRgBIAEoCUIv4EEC+kEpCidvc2NvbmZpZy5nb29nbGVhcGlzLmNvbS9Q",
+            "YXRjaERlcGxveW1lbnQikwEKG0xpc3RQYXRjaERlcGxveW1lbnRzUmVxdWVz",
+            "dBJDCgZwYXJlbnQYASABKAlCM+BBAvpBLQorY2xvdWRyZXNvdXJjZW1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vUHJvamVjdBIWCglwYWdlX3NpemUYAiABKAVC",
+            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEifQocTGlzdFBhdGNoRGVw",
+            "bG95bWVudHNSZXNwb25zZRJEChFwYXRjaF9kZXBsb3ltZW50cxgBIAMoCzIp",
+            "Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5QYXRjaERlcGxveW1lbnQSFwoP",
+            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIl0KHERlbGV0ZVBhdGNoRGVwbG95bWVu",
+            "dFJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EEC+kEpCidvc2NvbmZpZy5nb29n",
+            "bGVhcGlzLmNvbS9QYXRjaERlcGxveW1lbnRCxgEKHGNvbS5nb29nbGUuY2xv",
+            "dWQub3Njb25maWcudjFCEFBhdGNoRGVwbG95bWVudHNaQGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvb3Njb25maWcvdjE7",
+            "b3Njb25maWeqAhhHb29nbGUuQ2xvdWQuT3NDb25maWcuVjHKAhhHb29nbGVc",
+            "Q2xvdWRcT3NDb25maWdcVjHqAhtHb29nbGU6OkNsb3VkOjpPc0NvbmZpZzo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OsConfig.V1.PatchJobsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchDeployment), global::Google.Cloud.OsConfig.V1.PatchDeployment.Parser, new[]{ "Name", "Description", "InstanceFilter", "PatchConfig", "Duration", "OneTimeSchedule", "RecurringSchedule", "CreateTime", "UpdateTime", "LastExecuteTime" }, new[]{ "Schedule" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.PatchDeployment), global::Google.Cloud.OsConfig.V1.PatchDeployment.Parser, new[]{ "Name", "Description", "InstanceFilter", "PatchConfig", "Duration", "OneTimeSchedule", "RecurringSchedule", "CreateTime", "UpdateTime", "LastExecuteTime", "Rollout" }, new[]{ "Schedule" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.OneTimeSchedule), global::Google.Cloud.OsConfig.V1.OneTimeSchedule.Parser, new[]{ "ExecuteTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.RecurringSchedule), global::Google.Cloud.OsConfig.V1.RecurringSchedule.Parser, new[]{ "TimeZone", "StartTime", "EndTime", "TimeOfDay", "Frequency", "Weekly", "Monthly", "LastExecuteTime", "NextExecuteTime" }, new[]{ "ScheduleConfig" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1.RecurringSchedule.Types.Frequency) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.WeeklySchedule), global::Google.Cloud.OsConfig.V1.WeeklySchedule.Parser, new[]{ "DayOfWeek" }, null, null, null, null),
@@ -153,6 +155,7 @@ namespace Google.Cloud.OsConfig.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       lastExecuteTime_ = other.lastExecuteTime_ != null ? other.lastExecuteTime_.Clone() : null;
+      rollout_ = other.rollout_ != null ? other.rollout_.Clone() : null;
       switch (other.ScheduleCase) {
         case ScheduleOneofCase.OneTimeSchedule:
           OneTimeSchedule = other.OneTimeSchedule.Clone();
@@ -191,8 +194,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// Optional. Description of the patch deployment. Length of the description is limited
-    /// to 1024 characters.
+    /// Optional. Description of the patch deployment. Length of the description is
+    /// limited to 1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -234,7 +237,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int DurationFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Duration duration_;
     /// <summary>
-    /// Optional. Duration of the patch. After the duration ends, the patch times out.
+    /// Optional. Duration of the patch. After the duration ends, the patch times
+    /// out.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration Duration {
@@ -318,6 +322,20 @@ namespace Google.Cloud.OsConfig.V1 {
       }
     }
 
+    /// <summary>Field number for the "rollout" field.</summary>
+    public const int RolloutFieldNumber = 11;
+    private global::Google.Cloud.OsConfig.V1.PatchRollout rollout_;
+    /// <summary>
+    /// Optional. Rollout strategy of the patch job.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1.PatchRollout Rollout {
+      get { return rollout_; }
+      set {
+        rollout_ = value;
+      }
+    }
+
     private object schedule_;
     /// <summary>Enum of possible cases for the "schedule" oneof.</summary>
     public enum ScheduleOneofCase {
@@ -360,6 +378,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(LastExecuteTime, other.LastExecuteTime)) return false;
+      if (!object.Equals(Rollout, other.Rollout)) return false;
       if (ScheduleCase != other.ScheduleCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -377,6 +396,7 @@ namespace Google.Cloud.OsConfig.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (lastExecuteTime_ != null) hash ^= LastExecuteTime.GetHashCode();
+      if (rollout_ != null) hash ^= Rollout.GetHashCode();
       hash ^= (int) scheduleCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -434,6 +454,10 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(LastExecuteTime);
       }
+      if (rollout_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Rollout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -483,6 +507,10 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(LastExecuteTime);
       }
+      if (rollout_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(Rollout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -521,6 +549,9 @@ namespace Google.Cloud.OsConfig.V1 {
       }
       if (lastExecuteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastExecuteTime);
+      }
+      if (rollout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rollout);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -574,6 +605,12 @@ namespace Google.Cloud.OsConfig.V1 {
           LastExecuteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastExecuteTime.MergeFrom(other.LastExecuteTime);
+      }
+      if (other.rollout_ != null) {
+        if (rollout_ == null) {
+          Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+        }
+        Rollout.MergeFrom(other.Rollout);
       }
       switch (other.ScheduleCase) {
         case ScheduleOneofCase.OneTimeSchedule:
@@ -672,6 +709,13 @@ namespace Google.Cloud.OsConfig.V1 {
             input.ReadMessage(LastExecuteTime);
             break;
           }
+          case 90: {
+            if (rollout_ == null) {
+              Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+            }
+            input.ReadMessage(Rollout);
+            break;
+          }
         }
       }
     #endif
@@ -752,6 +796,13 @@ namespace Google.Cloud.OsConfig.V1 {
               LastExecuteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(LastExecuteTime);
+            break;
+          }
+          case 90: {
+            if (rollout_ == null) {
+              Rollout = new global::Google.Cloud.OsConfig.V1.PatchRollout();
+            }
+            input.ReadMessage(Rollout);
             break;
           }
         }
@@ -1039,8 +1090,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int EndTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Optional. The end time at which a recurring patch deployment schedule is no longer
-    /// active.
+    /// Optional. The end time at which a recurring patch deployment schedule is no
+    /// longer active.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -1825,10 +1876,10 @@ namespace Google.Cloud.OsConfig.V1 {
     /// <summary>Field number for the "month_day" field.</summary>
     public const int MonthDayFieldNumber = 2;
     /// <summary>
-    /// Required. One day of the month. 1-31 indicates the 1st to the 31st day. -1
-    /// indicates the last day of the month.
-    /// Months without the target day will be skipped. For example, a schedule to
-    /// run "every month on the 31st" will not run in February, April, June, etc.
+    /// Required. One day of the month. 1-31 indicates the 1st to the 31st day.
+    /// -1 indicates the last day of the month. Months without the target day
+    /// will be skipped. For example, a schedule to run "every month on the 31st"
+    /// will not run in February, April, June, etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MonthDay {
@@ -2069,8 +2120,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int WeekOrdinalFieldNumber = 1;
     private int weekOrdinal_;
     /// <summary>
-    /// Required. Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1
-    /// indicates the last week of the month.
+    /// Required. Week number in a month. 1-4 indicates the 1st to 4th week of the
+    /// month. -1 indicates the last week of the month.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int WeekOrdinal {
@@ -2288,7 +2339,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The project to apply this patch deployment to in the form `projects/*`.
+    /// Required. The project to apply this patch deployment to in the form
+    /// `projects/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -2302,8 +2354,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int PatchDeploymentIdFieldNumber = 2;
     private string patchDeploymentId_ = "";
     /// <summary>
-    /// Required. A name for the patch deployment in the project. When creating a name
-    /// the following rules apply:
+    /// Required. A name for the patch deployment in the project. When creating a
+    /// name the following rules apply:
     /// * Must contain only lowercase letters, numbers, and hyphens.
     /// * Must start with a letter.
     /// * Must be between 1-63 characters.
@@ -2752,7 +2804,8 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of patch deployments to return. Default is 100.
+    /// Optional. The maximum number of patch deployments to return. Default is
+    /// 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -2766,8 +2819,9 @@ namespace Google.Cloud.OsConfig.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional. A pagination token returned from a previous call to ListPatchDeployments
-    /// that indicates where this listing should continue from.
+    /// Optional. A pagination token returned from a previous call to
+    /// ListPatchDeployments that indicates where this listing should continue
+    /// from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {

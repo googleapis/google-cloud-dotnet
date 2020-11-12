@@ -652,7 +652,8 @@ namespace Google.Cloud.OsConfig.V1
         /// Get a list of instance details for a given patch job.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.
+        /// Required. The parent for the instances are in the form of
+        /// `projects/*/patchJobs/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -676,7 +677,8 @@ namespace Google.Cloud.OsConfig.V1
         /// Get a list of instance details for a given patch job.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.
+        /// Required. The parent for the instances are in the form of
+        /// `projects/*/patchJobs/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -700,7 +702,8 @@ namespace Google.Cloud.OsConfig.V1
         /// Get a list of instance details for a given patch job.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.
+        /// Required. The parent for the instances are in the form of
+        /// `projects/*/patchJobs/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -724,7 +727,8 @@ namespace Google.Cloud.OsConfig.V1
         /// Get a list of instance details for a given patch job.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent for the instances are in the form of `projects/*/patchJobs/*`.
+        /// Required. The parent for the instances are in the form of
+        /// `projects/*/patchJobs/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -775,14 +779,15 @@ namespace Google.Cloud.OsConfig.V1
         /// Create an OS Config patch deployment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to apply this patch deployment to in the form `projects/*`.
+        /// Required. The project to apply this patch deployment to in the form
+        /// `projects/*`.
         /// </param>
         /// <param name="patchDeployment">
         /// Required. The patch deployment to create.
         /// </param>
         /// <param name="patchDeploymentId">
-        /// Required. A name for the patch deployment in the project. When creating a name
-        /// the following rules apply:
+        /// Required. A name for the patch deployment in the project. When creating a
+        /// name the following rules apply:
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
         /// * Must be between 1-63 characters.
@@ -803,14 +808,15 @@ namespace Google.Cloud.OsConfig.V1
         /// Create an OS Config patch deployment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to apply this patch deployment to in the form `projects/*`.
+        /// Required. The project to apply this patch deployment to in the form
+        /// `projects/*`.
         /// </param>
         /// <param name="patchDeployment">
         /// Required. The patch deployment to create.
         /// </param>
         /// <param name="patchDeploymentId">
-        /// Required. A name for the patch deployment in the project. When creating a name
-        /// the following rules apply:
+        /// Required. A name for the patch deployment in the project. When creating a
+        /// name the following rules apply:
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
         /// * Must be between 1-63 characters.
@@ -831,14 +837,15 @@ namespace Google.Cloud.OsConfig.V1
         /// Create an OS Config patch deployment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to apply this patch deployment to in the form `projects/*`.
+        /// Required. The project to apply this patch deployment to in the form
+        /// `projects/*`.
         /// </param>
         /// <param name="patchDeployment">
         /// Required. The patch deployment to create.
         /// </param>
         /// <param name="patchDeploymentId">
-        /// Required. A name for the patch deployment in the project. When creating a name
-        /// the following rules apply:
+        /// Required. A name for the patch deployment in the project. When creating a
+        /// name the following rules apply:
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
         /// * Must be between 1-63 characters.
@@ -854,14 +861,15 @@ namespace Google.Cloud.OsConfig.V1
         /// Create an OS Config patch deployment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to apply this patch deployment to in the form `projects/*`.
+        /// Required. The project to apply this patch deployment to in the form
+        /// `projects/*`.
         /// </param>
         /// <param name="patchDeployment">
         /// Required. The patch deployment to create.
         /// </param>
         /// <param name="patchDeploymentId">
-        /// Required. A name for the patch deployment in the project. When creating a name
-        /// the following rules apply:
+        /// Required. A name for the patch deployment in the project. When creating a
+        /// name the following rules apply:
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
         /// * Must be between 1-63 characters.
@@ -882,14 +890,15 @@ namespace Google.Cloud.OsConfig.V1
         /// Create an OS Config patch deployment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to apply this patch deployment to in the form `projects/*`.
+        /// Required. The project to apply this patch deployment to in the form
+        /// `projects/*`.
         /// </param>
         /// <param name="patchDeployment">
         /// Required. The patch deployment to create.
         /// </param>
         /// <param name="patchDeploymentId">
-        /// Required. A name for the patch deployment in the project. When creating a name
-        /// the following rules apply:
+        /// Required. A name for the patch deployment in the project. When creating a
+        /// name the following rules apply:
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
         /// * Must be between 1-63 characters.
@@ -910,14 +919,15 @@ namespace Google.Cloud.OsConfig.V1
         /// Create an OS Config patch deployment.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project to apply this patch deployment to in the form `projects/*`.
+        /// Required. The project to apply this patch deployment to in the form
+        /// `projects/*`.
         /// </param>
         /// <param name="patchDeployment">
         /// Required. The patch deployment to create.
         /// </param>
         /// <param name="patchDeploymentId">
-        /// Required. A name for the patch deployment in the project. When creating a name
-        /// the following rules apply:
+        /// Required. A name for the patch deployment in the project. When creating a
+        /// name the following rules apply:
         /// * Must contain only lowercase letters, numbers, and hyphens.
         /// * Must start with a letter.
         /// * Must be between 1-63 characters.
