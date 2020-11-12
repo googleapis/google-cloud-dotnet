@@ -7,6 +7,8 @@
 - [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
 - [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
 
+(Note - this took multiple attempts to release, leading to separate commits with this history in the description.)
+
 # Version 2.0.0, released 2020-03-18
 
 No API surface changes compared with 2.0.0-beta01, just dependency
