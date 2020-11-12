@@ -221,33 +221,6 @@ namespace Google.Analytics.Data.V1Alpha.Snippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetUniversalMetadata</summary>
-        public void GetUniversalMetadataRequestObject()
-        {
-            // Snippet: GetUniversalMetadata(GetUniversalMetadataRequest, CallSettings)
-            // Create client
-            AlphaAnalyticsDataClient alphaAnalyticsDataClient = AlphaAnalyticsDataClient.Create();
-            // Initialize request argument(s)
-            GetUniversalMetadataRequest request = new GetUniversalMetadataRequest { };
-            // Make the request
-            UniversalMetadata response = alphaAnalyticsDataClient.GetUniversalMetadata(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetUniversalMetadataAsync</summary>
-        public async Task GetUniversalMetadataRequestObjectAsync()
-        {
-            // Snippet: GetUniversalMetadataAsync(GetUniversalMetadataRequest, CallSettings)
-            // Additional: GetUniversalMetadataAsync(GetUniversalMetadataRequest, CancellationToken)
-            // Create client
-            AlphaAnalyticsDataClient alphaAnalyticsDataClient = await AlphaAnalyticsDataClient.CreateAsync();
-            // Initialize request argument(s)
-            GetUniversalMetadataRequest request = new GetUniversalMetadataRequest { };
-            // Make the request
-            UniversalMetadata response = await alphaAnalyticsDataClient.GetUniversalMetadataAsync(request);
-            // End snippet
-        }
-
         /// <summary>Snippet for GetMetadata</summary>
         public void GetMetadataRequestObject()
         {

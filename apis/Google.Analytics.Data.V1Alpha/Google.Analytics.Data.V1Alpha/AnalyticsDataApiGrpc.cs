@@ -38,8 +38,6 @@ namespace Google.Analytics.Data.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest> __Marshaller_google_analytics_data_v1alpha_GetUniversalMetadataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.UniversalMetadata> __Marshaller_google_analytics_data_v1alpha_UniversalMetadata = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.UniversalMetadata.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest> __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.Metadata> __Marshaller_google_analytics_data_v1alpha_Metadata = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.Metadata.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest.Parser.ParseFrom);
@@ -72,13 +70,6 @@ namespace Google.Analytics.Data.V1Alpha {
         "BatchRunPivotReports",
         __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest,
         __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse);
-
-    static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest, global::Google.Analytics.Data.V1Alpha.UniversalMetadata> __Method_GetUniversalMetadata = new grpc::Method<global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest, global::Google.Analytics.Data.V1Alpha.UniversalMetadata>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetUniversalMetadata",
-        __Marshaller_google_analytics_data_v1alpha_GetUniversalMetadataRequest,
-        __Marshaller_google_analytics_data_v1alpha_UniversalMetadata);
 
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata> __Method_GetMetadata = new grpc::Method<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata>(
         grpc::MethodType.Unary,
@@ -162,24 +153,8 @@ namespace Google.Analytics.Data.V1Alpha {
 
       /// <summary>
       /// Returns metadata for dimensions and metrics available in reporting methods.
-      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-      /// mostly added over time, but renames and deletions may occur.
-      ///
-      /// This method returns Universal Metadata. Universal Metadata are dimensions
-      /// and metrics applicable to any property such as `country` and `totalUsers`.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.UniversalMetadata> GetUniversalMetadata(global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Returns metadata for dimensions and metrics available in reporting methods.
       /// Used to explore the dimensions and metrics. In this method, a Google
-      /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+      /// Analytics GA4 Property Identifier is specified in the request, and
       /// the metadata response includes Custom dimensions and metrics as well as
       /// Universal metadata.
       ///
@@ -460,72 +435,8 @@ namespace Google.Analytics.Data.V1Alpha {
       }
       /// <summary>
       /// Returns metadata for dimensions and metrics available in reporting methods.
-      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-      /// mostly added over time, but renames and deletions may occur.
-      ///
-      /// This method returns Universal Metadata. Universal Metadata are dimensions
-      /// and metrics applicable to any property such as `country` and `totalUsers`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Data.V1Alpha.UniversalMetadata GetUniversalMetadata(global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetUniversalMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns metadata for dimensions and metrics available in reporting methods.
-      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-      /// mostly added over time, but renames and deletions may occur.
-      ///
-      /// This method returns Universal Metadata. Universal Metadata are dimensions
-      /// and metrics applicable to any property such as `country` and `totalUsers`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Analytics.Data.V1Alpha.UniversalMetadata GetUniversalMetadata(global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetUniversalMetadata, null, options, request);
-      }
-      /// <summary>
-      /// Returns metadata for dimensions and metrics available in reporting methods.
-      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-      /// mostly added over time, but renames and deletions may occur.
-      ///
-      /// This method returns Universal Metadata. Universal Metadata are dimensions
-      /// and metrics applicable to any property such as `country` and `totalUsers`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.UniversalMetadata> GetUniversalMetadataAsync(global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetUniversalMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns metadata for dimensions and metrics available in reporting methods.
-      /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-      /// mostly added over time, but renames and deletions may occur.
-      ///
-      /// This method returns Universal Metadata. Universal Metadata are dimensions
-      /// and metrics applicable to any property such as `country` and `totalUsers`.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.UniversalMetadata> GetUniversalMetadataAsync(global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetUniversalMetadata, null, options, request);
-      }
-      /// <summary>
-      /// Returns metadata for dimensions and metrics available in reporting methods.
       /// Used to explore the dimensions and metrics. In this method, a Google
-      /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+      /// Analytics GA4 Property Identifier is specified in the request, and
       /// the metadata response includes Custom dimensions and metrics as well as
       /// Universal metadata.
       ///
@@ -546,7 +457,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// Returns metadata for dimensions and metrics available in reporting methods.
       /// Used to explore the dimensions and metrics. In this method, a Google
-      /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+      /// Analytics GA4 Property Identifier is specified in the request, and
       /// the metadata response includes Custom dimensions and metrics as well as
       /// Universal metadata.
       ///
@@ -565,7 +476,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// Returns metadata for dimensions and metrics available in reporting methods.
       /// Used to explore the dimensions and metrics. In this method, a Google
-      /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+      /// Analytics GA4 Property Identifier is specified in the request, and
       /// the metadata response includes Custom dimensions and metrics as well as
       /// Universal metadata.
       ///
@@ -586,7 +497,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <summary>
       /// Returns metadata for dimensions and metrics available in reporting methods.
       /// Used to explore the dimensions and metrics. In this method, a Google
-      /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+      /// Analytics GA4 Property Identifier is specified in the request, and
       /// the metadata response includes Custom dimensions and metrics as well as
       /// Universal metadata.
       ///
@@ -670,7 +581,6 @@ namespace Google.Analytics.Data.V1Alpha {
           .AddMethod(__Method_RunPivotReport, serviceImpl.RunPivotReport)
           .AddMethod(__Method_BatchRunReports, serviceImpl.BatchRunReports)
           .AddMethod(__Method_BatchRunPivotReports, serviceImpl.BatchRunPivotReports)
-          .AddMethod(__Method_GetUniversalMetadata, serviceImpl.GetUniversalMetadata)
           .AddMethod(__Method_GetMetadata, serviceImpl.GetMetadata)
           .AddMethod(__Method_RunRealtimeReport, serviceImpl.RunRealtimeReport).Build();
     }
@@ -685,7 +595,6 @@ namespace Google.Analytics.Data.V1Alpha {
       serviceBinder.AddMethod(__Method_RunPivotReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest, global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse>(serviceImpl.RunPivotReport));
       serviceBinder.AddMethod(__Method_BatchRunReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse>(serviceImpl.BatchRunReports));
       serviceBinder.AddMethod(__Method_BatchRunPivotReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse>(serviceImpl.BatchRunPivotReports));
-      serviceBinder.AddMethod(__Method_GetUniversalMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.GetUniversalMetadataRequest, global::Google.Analytics.Data.V1Alpha.UniversalMetadata>(serviceImpl.GetUniversalMetadata));
       serviceBinder.AddMethod(__Method_GetMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata>(serviceImpl.GetMetadata));
       serviceBinder.AddMethod(__Method_RunRealtimeReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse>(serviceImpl.RunRealtimeReport));
     }
