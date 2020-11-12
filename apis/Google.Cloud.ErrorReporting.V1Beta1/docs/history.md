@@ -1,5 +1,14 @@
 # Version history
 
+# Version 2.0.0-beta03, released 2020-11-12
+
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Apply timeouts to RPCs without retry
+- [Commit 326231e](https://github.com/googleapis/google-cloud-dotnet/commit/326231e): chore: set Ruby namespace in proto options
+- [Commit fc1d3a0](https://github.com/googleapis/google-cloud-dotnet/commit/fc1d3a0): docs: fix several broken links in the docs.
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+
 # Version 2.0.0-beta02, released 2020-03-18
 
 No API surface changes compared with 2.0.0-beta01, just dependency
