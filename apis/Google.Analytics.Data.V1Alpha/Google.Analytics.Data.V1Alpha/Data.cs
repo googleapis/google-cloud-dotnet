@@ -282,8 +282,7 @@ namespace Google.Analytics.Data.V1Alpha {
   #region Messages
   /// <summary>
   /// A contiguous set of days: startDate, startDate + 1, ..., endDate. Requests
-  /// are allowed up to 4 date ranges, and the union of the ranges can cover up to
-  /// 1 year.
+  /// are allowed up to 4 date ranges.
   /// </summary>
   public sealed partial class DateRange : pb::IMessage<DateRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

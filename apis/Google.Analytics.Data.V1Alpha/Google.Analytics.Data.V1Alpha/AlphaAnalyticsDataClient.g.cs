@@ -47,7 +47,6 @@ namespace Google.Analytics.Data.V1Alpha
             RunPivotReportSettings = existing.RunPivotReportSettings;
             BatchRunReportsSettings = existing.BatchRunReportsSettings;
             BatchRunPivotReportsSettings = existing.BatchRunPivotReportsSettings;
-            GetUniversalMetadataSettings = existing.GetUniversalMetadataSettings;
             GetMetadataSettings = existing.GetMetadataSettings;
             RunRealtimeReportSettings = existing.RunRealtimeReportSettings;
             OnCopy(existing);
@@ -103,22 +102,6 @@ namespace Google.Analytics.Data.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchRunPivotReportsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
-
-        /// <summary>
-        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
-        /// <c>AlphaAnalyticsDataClient.GetUniversalMetadata</c> and
-        /// <c>AlphaAnalyticsDataClient.GetUniversalMetadataAsync</c>.
-        /// </summary>
-        /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
-        /// <item><description>Retry delay multiplier: 1.3</description></item>
-        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
-        /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
-        /// </list>
-        /// </remarks>
-        public gaxgrpc::CallSettings GetUniversalMetadataSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -445,50 +428,8 @@ namespace Google.Analytics.Data.V1Alpha
 
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
-        /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-        /// mostly added over time, but renames and deletions may occur.
-        /// 
-        /// This method returns Universal Metadata. Universal Metadata are dimensions
-        /// and metrics applicable to any property such as `country` and `totalUsers`.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual UniversalMetadata GetUniversalMetadata(GetUniversalMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns metadata for dimensions and metrics available in reporting methods.
-        /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-        /// mostly added over time, but renames and deletions may occur.
-        /// 
-        /// This method returns Universal Metadata. Universal Metadata are dimensions
-        /// and metrics applicable to any property such as `country` and `totalUsers`.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UniversalMetadata> GetUniversalMetadataAsync(GetUniversalMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
-            throw new sys::NotImplementedException();
-
-        /// <summary>
-        /// Returns metadata for dimensions and metrics available in reporting methods.
-        /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-        /// mostly added over time, but renames and deletions may occur.
-        /// 
-        /// This method returns Universal Metadata. Universal Metadata are dimensions
-        /// and metrics applicable to any property such as `country` and `totalUsers`.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<UniversalMetadata> GetUniversalMetadataAsync(GetUniversalMetadataRequest request, st::CancellationToken cancellationToken) =>
-            GetUniversalMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -506,7 +447,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -524,7 +465,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -542,7 +483,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -554,9 +495,15 @@ namespace Google.Analytics.Data.V1Alpha
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics 4 (GA4) Property identifier.
+        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// your Property
+        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
         /// 
         /// Example: properties/1234/metadata
+        /// 
+        /// Set the Property ID to 0 for dimensions and metrics common to all
+        /// properties. In this special mode, this method will not return custom
+        /// dimensions and metrics.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -569,7 +516,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -581,9 +528,15 @@ namespace Google.Analytics.Data.V1Alpha
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics 4 (GA4) Property identifier.
+        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// your Property
+        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
         /// 
         /// Example: properties/1234/metadata
+        /// 
+        /// Set the Property ID to 0 for dimensions and metrics common to all
+        /// properties. In this special mode, this method will not return custom
+        /// dimensions and metrics.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -596,7 +549,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -608,9 +561,15 @@ namespace Google.Analytics.Data.V1Alpha
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics 4 (GA4) Property identifier.
+        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// your Property
+        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
         /// 
         /// Example: properties/1234/metadata
+        /// 
+        /// Set the Property ID to 0 for dimensions and metrics common to all
+        /// properties. In this special mode, this method will not return custom
+        /// dimensions and metrics.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -620,7 +579,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -632,9 +591,15 @@ namespace Google.Analytics.Data.V1Alpha
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics 4 (GA4) Property identifier.
+        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// your Property
+        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
         /// 
         /// Example: properties/1234/metadata
+        /// 
+        /// Set the Property ID to 0 for dimensions and metrics common to all
+        /// properties. In this special mode, this method will not return custom
+        /// dimensions and metrics.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -647,7 +612,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -659,9 +624,15 @@ namespace Google.Analytics.Data.V1Alpha
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics 4 (GA4) Property identifier.
+        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// your Property
+        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
         /// 
         /// Example: properties/1234/metadata
+        /// 
+        /// Set the Property ID to 0 for dimensions and metrics common to all
+        /// properties. In this special mode, this method will not return custom
+        /// dimensions and metrics.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -674,7 +645,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -686,9 +657,15 @@ namespace Google.Analytics.Data.V1Alpha
         /// <param name="name">
         /// Required. The resource name of the metadata to retrieve. This name field is
         /// specified in the URL path and not URL parameters. Property is a numeric
-        /// Google Analytics 4 (GA4) Property identifier.
+        /// Google Analytics GA4 Property identifier. To learn more, see [where to find
+        /// your Property
+        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
         /// 
         /// Example: properties/1234/metadata
+        /// 
+        /// Set the Property ID to 0 for dimensions and metrics common to all
+        /// properties. In this special mode, this method will not return custom
+        /// dimensions and metrics.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -743,8 +720,6 @@ namespace Google.Analytics.Data.V1Alpha
 
         private readonly gaxgrpc::ApiCall<BatchRunPivotReportsRequest, BatchRunPivotReportsResponse> _callBatchRunPivotReports;
 
-        private readonly gaxgrpc::ApiCall<GetUniversalMetadataRequest, UniversalMetadata> _callGetUniversalMetadata;
-
         private readonly gaxgrpc::ApiCall<GetMetadataRequest, Metadata> _callGetMetadata;
 
         private readonly gaxgrpc::ApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse> _callRunRealtimeReport;
@@ -771,9 +746,6 @@ namespace Google.Analytics.Data.V1Alpha
             _callBatchRunPivotReports = clientHelper.BuildApiCall<BatchRunPivotReportsRequest, BatchRunPivotReportsResponse>(grpcClient.BatchRunPivotReportsAsync, grpcClient.BatchRunPivotReports, effectiveSettings.BatchRunPivotReportsSettings);
             Modify_ApiCall(ref _callBatchRunPivotReports);
             Modify_BatchRunPivotReportsApiCall(ref _callBatchRunPivotReports);
-            _callGetUniversalMetadata = clientHelper.BuildApiCall<GetUniversalMetadataRequest, UniversalMetadata>(grpcClient.GetUniversalMetadataAsync, grpcClient.GetUniversalMetadata, effectiveSettings.GetUniversalMetadataSettings);
-            Modify_ApiCall(ref _callGetUniversalMetadata);
-            Modify_GetUniversalMetadataApiCall(ref _callGetUniversalMetadata);
             _callGetMetadata = clientHelper.BuildApiCall<GetMetadataRequest, Metadata>(grpcClient.GetMetadataAsync, grpcClient.GetMetadata, effectiveSettings.GetMetadataSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetadata);
             Modify_GetMetadataApiCall(ref _callGetMetadata);
@@ -793,8 +765,6 @@ namespace Google.Analytics.Data.V1Alpha
 
         partial void Modify_BatchRunPivotReportsApiCall(ref gaxgrpc::ApiCall<BatchRunPivotReportsRequest, BatchRunPivotReportsResponse> call);
 
-        partial void Modify_GetUniversalMetadataApiCall(ref gaxgrpc::ApiCall<GetUniversalMetadataRequest, UniversalMetadata> call);
-
         partial void Modify_GetMetadataApiCall(ref gaxgrpc::ApiCall<GetMetadataRequest, Metadata> call);
 
         partial void Modify_RunRealtimeReportApiCall(ref gaxgrpc::ApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse> call);
@@ -811,8 +781,6 @@ namespace Google.Analytics.Data.V1Alpha
         partial void Modify_BatchRunReportsRequest(ref BatchRunReportsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchRunPivotReportsRequest(ref BatchRunPivotReportsRequest request, ref gaxgrpc::CallSettings settings);
-
-        partial void Modify_GetUniversalMetadataRequest(ref GetUniversalMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetMetadataRequest(ref GetMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -940,42 +908,8 @@ namespace Google.Analytics.Data.V1Alpha
 
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
-        /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-        /// mostly added over time, but renames and deletions may occur.
-        /// 
-        /// This method returns Universal Metadata. Universal Metadata are dimensions
-        /// and metrics applicable to any property such as `country` and `totalUsers`.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override UniversalMetadata GetUniversalMetadata(GetUniversalMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetUniversalMetadataRequest(ref request, ref callSettings);
-            return _callGetUniversalMetadata.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns metadata for dimensions and metrics available in reporting methods.
-        /// Used to explore the dimensions and metrics. Dimensions and metrics will be
-        /// mostly added over time, but renames and deletions may occur.
-        /// 
-        /// This method returns Universal Metadata. Universal Metadata are dimensions
-        /// and metrics applicable to any property such as `country` and `totalUsers`.
-        /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<UniversalMetadata> GetUniversalMetadataAsync(GetUniversalMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
-        {
-            Modify_GetUniversalMetadataRequest(ref request, ref callSettings);
-            return _callGetUniversalMetadata.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
@@ -996,7 +930,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// <summary>
         /// Returns metadata for dimensions and metrics available in reporting methods.
         /// Used to explore the dimensions and metrics. In this method, a Google
-        /// Analytics 4 (GA4) Property Identifier is specified in the request, and
+        /// Analytics GA4 Property Identifier is specified in the request, and
         /// the metadata response includes Custom dimensions and metrics as well as
         /// Universal metadata.
         /// 
