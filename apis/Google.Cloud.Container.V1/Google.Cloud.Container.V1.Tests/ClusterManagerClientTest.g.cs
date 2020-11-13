@@ -247,6 +247,9 @@ namespace Google.Cloud.Container.V1.Tests
                 PrivateClusterConfig = new PrivateClusterConfig(),
                 DatabaseEncryption = new DatabaseEncryption(),
                 VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                ShieldedNodes = new ShieldedNodes(),
+                ReleaseChannel = new ReleaseChannel(),
+                WorkloadIdentityConfig = new WorkloadIdentityConfig(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -259,7 +262,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 CreateTime = "create_time65626ab1",
                 Status = Cluster.Types.Status.Reconciling,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 NodeIpv4CidrSize = -278265782,
                 ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
 #pragma warning disable CS0612
@@ -343,6 +348,9 @@ namespace Google.Cloud.Container.V1.Tests
                 PrivateClusterConfig = new PrivateClusterConfig(),
                 DatabaseEncryption = new DatabaseEncryption(),
                 VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                ShieldedNodes = new ShieldedNodes(),
+                ReleaseChannel = new ReleaseChannel(),
+                WorkloadIdentityConfig = new WorkloadIdentityConfig(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -355,7 +363,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 CreateTime = "create_time65626ab1",
                 Status = Cluster.Types.Status.Reconciling,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 NodeIpv4CidrSize = -278265782,
                 ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
 #pragma warning disable CS0612
@@ -440,6 +450,9 @@ namespace Google.Cloud.Container.V1.Tests
                 PrivateClusterConfig = new PrivateClusterConfig(),
                 DatabaseEncryption = new DatabaseEncryption(),
                 VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                ShieldedNodes = new ShieldedNodes(),
+                ReleaseChannel = new ReleaseChannel(),
+                WorkloadIdentityConfig = new WorkloadIdentityConfig(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -452,7 +465,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 CreateTime = "create_time65626ab1",
                 Status = Cluster.Types.Status.Reconciling,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 NodeIpv4CidrSize = -278265782,
                 ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
 #pragma warning disable CS0612
@@ -537,6 +552,9 @@ namespace Google.Cloud.Container.V1.Tests
                 PrivateClusterConfig = new PrivateClusterConfig(),
                 DatabaseEncryption = new DatabaseEncryption(),
                 VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                ShieldedNodes = new ShieldedNodes(),
+                ReleaseChannel = new ReleaseChannel(),
+                WorkloadIdentityConfig = new WorkloadIdentityConfig(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -549,7 +567,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 CreateTime = "create_time65626ab1",
                 Status = Cluster.Types.Status.Reconciling,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 NodeIpv4CidrSize = -278265782,
                 ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
 #pragma warning disable CS0612
@@ -634,6 +654,9 @@ namespace Google.Cloud.Container.V1.Tests
                 PrivateClusterConfig = new PrivateClusterConfig(),
                 DatabaseEncryption = new DatabaseEncryption(),
                 VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                ShieldedNodes = new ShieldedNodes(),
+                ReleaseChannel = new ReleaseChannel(),
+                WorkloadIdentityConfig = new WorkloadIdentityConfig(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -646,7 +669,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 CreateTime = "create_time65626ab1",
                 Status = Cluster.Types.Status.Reconciling,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 NodeIpv4CidrSize = -278265782,
                 ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
 #pragma warning disable CS0612
@@ -725,6 +750,9 @@ namespace Google.Cloud.Container.V1.Tests
                 PrivateClusterConfig = new PrivateClusterConfig(),
                 DatabaseEncryption = new DatabaseEncryption(),
                 VerticalPodAutoscaling = new VerticalPodAutoscaling(),
+                ShieldedNodes = new ShieldedNodes(),
+                ReleaseChannel = new ReleaseChannel(),
+                WorkloadIdentityConfig = new WorkloadIdentityConfig(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -737,7 +765,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 CreateTime = "create_time65626ab1",
                 Status = Cluster.Types.Status.Reconciling,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 NodeIpv4CidrSize = -278265782,
                 ServicesIpv4Cidr = "services_ipv4_cidrbf6e6907",
 #pragma warning disable CS0612
@@ -795,6 +825,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -839,6 +870,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -884,6 +916,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -929,6 +962,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -975,6 +1009,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1015,6 +1050,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1062,6 +1098,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1107,6 +1144,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1153,6 +1191,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1199,6 +1238,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1245,6 +1285,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1285,6 +1326,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1318,6 +1360,12 @@ namespace Google.Cloud.Container.V1.Tests
                 NodeVersion = "node_version322edae3",
                 ImageType = "image_typef66746e9",
                 Name = "name1c9368b0",
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                WorkloadMetadataConfig = new WorkloadMetadataConfig(),
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1334,6 +1382,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1365,6 +1414,12 @@ namespace Google.Cloud.Container.V1.Tests
                 NodeVersion = "node_version322edae3",
                 ImageType = "image_typef66746e9",
                 Name = "name1c9368b0",
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
+                WorkloadMetadataConfig = new WorkloadMetadataConfig(),
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1381,6 +1436,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1429,6 +1485,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1475,6 +1532,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1522,6 +1580,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1567,6 +1626,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1613,6 +1673,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1659,6 +1720,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1705,6 +1767,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1745,6 +1808,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1792,6 +1856,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1837,6 +1902,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1883,6 +1949,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1929,6 +1996,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -1975,6 +2043,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2015,6 +2084,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2062,6 +2132,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2107,6 +2178,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2153,6 +2225,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2199,6 +2272,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2245,6 +2319,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2285,6 +2360,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2335,6 +2411,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2383,6 +2460,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2432,6 +2510,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2481,6 +2560,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2530,6 +2610,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2573,6 +2654,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2620,6 +2702,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2665,6 +2748,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2711,6 +2795,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2757,6 +2842,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2803,6 +2889,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2843,6 +2930,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2891,6 +2979,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2937,6 +3026,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -2983,6 +3073,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3027,6 +3118,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3072,6 +3164,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3117,6 +3210,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3162,6 +3256,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3201,6 +3296,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3363,6 +3459,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3407,6 +3504,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3426,7 +3524,7 @@ namespace Google.Cloud.Container.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void GetOperation()
+        public void GetOperation1()
         {
             moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetOperationRequest request = new GetOperationRequest
@@ -3452,6 +3550,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3471,7 +3570,7 @@ namespace Google.Cloud.Container.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public async stt::Task GetOperationAsync()
+        public async stt::Task GetOperation1Async()
         {
             moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
             GetOperationRequest request = new GetOperationRequest
@@ -3497,6 +3596,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -3515,6 +3615,88 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning disable CS0612
             Operation responseCancellationToken = await client.GetOperationAsync(request.ProjectId, request.Zone, request.OperationId, st::CancellationToken.None);
 #pragma warning restore CS0612
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetOperation2()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+#pragma warning disable CS0612
+                Zone = "zone255f4ea8",
+#pragma warning restore CS0612
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation response = client.GetOperation(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetOperation2Async()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetOperationRequest request = new GetOperationRequest
+            {
+                Name = "name1c9368b0",
+            };
+            Operation expectedResponse = new Operation
+            {
+                Name = "name1c9368b0",
+#pragma warning disable CS0612
+                Zone = "zone255f4ea8",
+#pragma warning restore CS0612
+                OperationType = Operation.Types.Type.UpdateCluster,
+                Status = Operation.Types.Status.Aborting,
+                StatusMessage = "status_message2c618f86",
+                SelfLink = "self_link7e87f12d",
+                TargetLink = "target_link9b435dc0",
+                Detail = "detailb7a61d95",
+                Location = "locatione09d18d5",
+                StartTime = "start_timebd8dd9c4",
+                EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
+                ClusterConditions =
+                {
+                    new StatusCondition(),
+                },
+                NodepoolConditions =
+                {
+                    new StatusCondition(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            Operation responseCallSettings = await client.GetOperationAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Operation responseCancellationToken = await client.GetOperationAsync(request.Name, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -3662,6 +3844,10 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "valid_master_versionsb8edf3fb",
                 },
+                Channels =
+                {
+                    new ServerConfig.Types.ReleaseChannelConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3697,6 +3883,10 @@ namespace Google.Cloud.Container.V1.Tests
                 ValidMasterVersions =
                 {
                     "valid_master_versionsb8edf3fb",
+                },
+                Channels =
+                {
+                    new ServerConfig.Types.ReleaseChannelConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.GetServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3735,6 +3925,10 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "valid_master_versionsb8edf3fb",
                 },
+                Channels =
+                {
+                    new ServerConfig.Types.ReleaseChannelConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3771,6 +3965,10 @@ namespace Google.Cloud.Container.V1.Tests
                 ValidMasterVersions =
                 {
                     "valid_master_versionsb8edf3fb",
+                },
+                Channels =
+                {
+                    new ServerConfig.Types.ReleaseChannelConfig(),
                 },
             };
             mockGrpcClient.Setup(x => x.GetServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3810,6 +4008,10 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "valid_master_versionsb8edf3fb",
                 },
+                Channels =
+                {
+                    new ServerConfig.Types.ReleaseChannelConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetServerConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3842,12 +4044,50 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "valid_master_versionsb8edf3fb",
                 },
+                Channels =
+                {
+                    new ServerConfig.Types.ReleaseChannelConfig(),
+                },
             };
             mockGrpcClient.Setup(x => x.GetServerConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServerConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
             ServerConfig responseCallSettings = await client.GetServerConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             ServerConfig responseCancellationToken = await client.GetServerConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetJSONWebKeysRequestObject()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetJSONWebKeysRequest request = new GetJSONWebKeysRequest
+            {
+                Parent = "parent7858e4d0",
+            };
+            GetJSONWebKeysResponse expectedResponse = new GetJSONWebKeysResponse { Keys = { new Jwk(), }, };
+            mockGrpcClient.Setup(x => x.GetJSONWebKeys(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            GetJSONWebKeysResponse response = client.GetJSONWebKeys(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetJSONWebKeysRequestObjectAsync()
+        {
+            moq::Mock<ClusterManager.ClusterManagerClient> mockGrpcClient = new moq::Mock<ClusterManager.ClusterManagerClient>(moq::MockBehavior.Strict);
+            GetJSONWebKeysRequest request = new GetJSONWebKeysRequest
+            {
+                Parent = "parent7858e4d0",
+            };
+            GetJSONWebKeysResponse expectedResponse = new GetJSONWebKeysResponse { Keys = { new Jwk(), }, };
+            mockGrpcClient.Setup(x => x.GetJSONWebKeysAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GetJSONWebKeysResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
+            GetJSONWebKeysResponse responseCallSettings = await client.GetJSONWebKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            GetJSONWebKeysResponse responseCancellationToken = await client.GetJSONWebKeysAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -4019,6 +4259,10 @@ namespace Google.Cloud.Container.V1.Tests
                 Management = new NodeManagement(),
                 MaxPodsConstraint = new MaxPodsConstraint(),
                 PodIpv4CidrSize = -551223211,
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4026,11 +4270,14 @@ namespace Google.Cloud.Container.V1.Tests
                     "instance_group_urlsbc2a92b9",
                 },
                 Status = NodePool.Types.Status.RunningWithError,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 Conditions =
                 {
                     new StatusCondition(),
                 },
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             mockGrpcClient.Setup(x => x.GetNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4062,6 +4309,10 @@ namespace Google.Cloud.Container.V1.Tests
                 Management = new NodeManagement(),
                 MaxPodsConstraint = new MaxPodsConstraint(),
                 PodIpv4CidrSize = -551223211,
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4069,11 +4320,14 @@ namespace Google.Cloud.Container.V1.Tests
                     "instance_group_urlsbc2a92b9",
                 },
                 Status = NodePool.Types.Status.RunningWithError,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 Conditions =
                 {
                     new StatusCondition(),
                 },
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             mockGrpcClient.Setup(x => x.GetNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4106,6 +4360,10 @@ namespace Google.Cloud.Container.V1.Tests
                 Management = new NodeManagement(),
                 MaxPodsConstraint = new MaxPodsConstraint(),
                 PodIpv4CidrSize = -551223211,
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4113,11 +4371,14 @@ namespace Google.Cloud.Container.V1.Tests
                     "instance_group_urlsbc2a92b9",
                 },
                 Status = NodePool.Types.Status.RunningWithError,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 Conditions =
                 {
                     new StatusCondition(),
                 },
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             mockGrpcClient.Setup(x => x.GetNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4150,6 +4411,10 @@ namespace Google.Cloud.Container.V1.Tests
                 Management = new NodeManagement(),
                 MaxPodsConstraint = new MaxPodsConstraint(),
                 PodIpv4CidrSize = -551223211,
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4157,11 +4422,14 @@ namespace Google.Cloud.Container.V1.Tests
                     "instance_group_urlsbc2a92b9",
                 },
                 Status = NodePool.Types.Status.RunningWithError,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 Conditions =
                 {
                     new StatusCondition(),
                 },
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             mockGrpcClient.Setup(x => x.GetNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4193,6 +4461,10 @@ namespace Google.Cloud.Container.V1.Tests
                 Management = new NodeManagement(),
                 MaxPodsConstraint = new MaxPodsConstraint(),
                 PodIpv4CidrSize = -551223211,
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4200,11 +4472,14 @@ namespace Google.Cloud.Container.V1.Tests
                     "instance_group_urlsbc2a92b9",
                 },
                 Status = NodePool.Types.Status.RunningWithError,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 Conditions =
                 {
                     new StatusCondition(),
                 },
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             mockGrpcClient.Setup(x => x.GetNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4230,6 +4505,10 @@ namespace Google.Cloud.Container.V1.Tests
                 Management = new NodeManagement(),
                 MaxPodsConstraint = new MaxPodsConstraint(),
                 PodIpv4CidrSize = -551223211,
+                Locations =
+                {
+                    "locationsc7b6c0b4",
+                },
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4237,11 +4516,14 @@ namespace Google.Cloud.Container.V1.Tests
                     "instance_group_urlsbc2a92b9",
                 },
                 Status = NodePool.Types.Status.RunningWithError,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 Conditions =
                 {
                     new StatusCondition(),
                 },
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             mockGrpcClient.Setup(x => x.GetNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodePool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4281,6 +4563,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4326,6 +4609,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4372,6 +4656,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4418,6 +4703,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4464,6 +4750,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4504,6 +4791,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4551,6 +4839,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4596,6 +4885,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4642,6 +4932,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4688,6 +4979,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4733,6 +5025,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4772,6 +5065,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4819,6 +5113,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4864,6 +5159,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4910,6 +5206,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -4956,6 +5253,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5001,6 +5299,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5040,6 +5339,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5088,6 +5388,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5134,6 +5435,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5188,6 +5490,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5240,6 +5543,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5287,6 +5591,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5332,6 +5637,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5378,6 +5684,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5424,6 +5731,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5470,6 +5778,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5510,6 +5819,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5557,6 +5867,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5602,6 +5913,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5647,6 +5959,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5692,6 +6005,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5737,6 +6051,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5776,6 +6091,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5822,6 +6138,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5866,6 +6183,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5911,6 +6229,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -5956,6 +6275,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6001,6 +6321,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6040,6 +6361,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6088,6 +6410,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6134,6 +6457,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6181,6 +6505,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6226,6 +6551,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6272,6 +6598,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6318,6 +6645,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6364,6 +6692,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6404,6 +6733,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6449,6 +6779,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6492,6 +6823,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6536,6 +6868,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6578,6 +6911,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6620,6 +6954,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),
@@ -6660,6 +6995,7 @@ namespace Google.Cloud.Container.V1.Tests
                 Location = "locatione09d18d5",
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
+                Progress = new OperationProgress(),
                 ClusterConditions =
                 {
                     new StatusCondition(),

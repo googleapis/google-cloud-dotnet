@@ -397,6 +397,9 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodeVersion = "",
                 ImageType = "",
                 Name = "",
+                Locations = { "", },
+                WorkloadMetadataConfig = new WorkloadMetadataConfig(),
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -416,6 +419,9 @@ namespace Google.Cloud.Container.V1.Snippets
                 NodeVersion = "",
                 ImageType = "",
                 Name = "",
+                Locations = { "", },
+                WorkloadMetadataConfig = new WorkloadMetadataConfig(),
+                UpgradeSettings = new NodePool.Types.UpgradeSettings(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
@@ -1148,7 +1154,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetOperation</summary>
-        public void GetOperation()
+        public void GetOperation1()
         {
             // Snippet: GetOperation(string, string, string, CallSettings)
             // Create client
@@ -1163,7 +1169,7 @@ namespace Google.Cloud.Container.V1.Snippets
         }
 
         /// <summary>Snippet for GetOperationAsync</summary>
-        public async Task GetOperationAsync()
+        public async Task GetOperation1Async()
         {
             // Snippet: GetOperationAsync(string, string, string, CallSettings)
             // Additional: GetOperationAsync(string, string, string, CancellationToken)
@@ -1175,6 +1181,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string operationId = "";
             // Make the request
             Operation response = await clusterManagerClient.GetOperationAsync(projectId, zone, operationId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOperation</summary>
+        public void GetOperation2()
+        {
+            // Snippet: GetOperation(string, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = clusterManagerClient.GetOperation(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetOperationAsync</summary>
+        public async Task GetOperation2Async()
+        {
+            // Snippet: GetOperationAsync(string, CallSettings)
+            // Additional: GetOperationAsync(string, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "";
+            // Make the request
+            Operation response = await clusterManagerClient.GetOperationAsync(name);
             // End snippet
         }
 
@@ -1343,6 +1376,33 @@ namespace Google.Cloud.Container.V1.Snippets
             string name = "";
             // Make the request
             ServerConfig response = await clusterManagerClient.GetServerConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJSONWebKeys</summary>
+        public void GetJSONWebKeysRequestObject()
+        {
+            // Snippet: GetJSONWebKeys(GetJSONWebKeysRequest, CallSettings)
+            // Create client
+            ClusterManagerClient clusterManagerClient = ClusterManagerClient.Create();
+            // Initialize request argument(s)
+            GetJSONWebKeysRequest request = new GetJSONWebKeysRequest { Parent = "", };
+            // Make the request
+            GetJSONWebKeysResponse response = clusterManagerClient.GetJSONWebKeys(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetJSONWebKeysAsync</summary>
+        public async Task GetJSONWebKeysRequestObjectAsync()
+        {
+            // Snippet: GetJSONWebKeysAsync(GetJSONWebKeysRequest, CallSettings)
+            // Additional: GetJSONWebKeysAsync(GetJSONWebKeysRequest, CancellationToken)
+            // Create client
+            ClusterManagerClient clusterManagerClient = await ClusterManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            GetJSONWebKeysRequest request = new GetJSONWebKeysRequest { Parent = "", };
+            // Make the request
+            GetJSONWebKeysResponse response = await clusterManagerClient.GetJSONWebKeysAsync(request);
             // End snippet
         }
 
