@@ -3,7 +3,7 @@
 //     source: google/container/v1/cluster_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2020 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -54,6 +53,8 @@ namespace Google.Cloud.Container.V1 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetServerConfigRequest> __Marshaller_google_container_v1_GetServerConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetServerConfigRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ServerConfig> __Marshaller_google_container_v1_ServerConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ServerConfig.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetJSONWebKeysRequest> __Marshaller_google_container_v1_GetJSONWebKeysRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetJSONWebKeysRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetJSONWebKeysResponse> __Marshaller_google_container_v1_GetJSONWebKeysResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetJSONWebKeysResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListNodePoolsRequest> __Marshaller_google_container_v1_ListNodePoolsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListNodePoolsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.ListNodePoolsResponse> __Marshaller_google_container_v1_ListNodePoolsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.ListNodePoolsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Container.V1.GetNodePoolRequest> __Marshaller_google_container_v1_GetNodePoolRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Container.V1.GetNodePoolRequest.Parser.ParseFrom);
@@ -191,6 +192,13 @@ namespace Google.Cloud.Container.V1 {
         __Marshaller_google_container_v1_GetServerConfigRequest,
         __Marshaller_google_container_v1_ServerConfig);
 
+    static readonly grpc::Method<global::Google.Cloud.Container.V1.GetJSONWebKeysRequest, global::Google.Cloud.Container.V1.GetJSONWebKeysResponse> __Method_GetJSONWebKeys = new grpc::Method<global::Google.Cloud.Container.V1.GetJSONWebKeysRequest, global::Google.Cloud.Container.V1.GetJSONWebKeysResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetJSONWebKeys",
+        __Marshaller_google_container_v1_GetJSONWebKeysRequest,
+        __Marshaller_google_container_v1_GetJSONWebKeysResponse);
+
     static readonly grpc::Method<global::Google.Cloud.Container.V1.ListNodePoolsRequest, global::Google.Cloud.Container.V1.ListNodePoolsResponse> __Method_ListNodePools = new grpc::Method<global::Google.Cloud.Container.V1.ListNodePoolsRequest, global::Google.Cloud.Container.V1.ListNodePoolsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -327,7 +335,8 @@ namespace Google.Cloud.Container.V1 {
       /// Compute Engine instances.
       ///
       /// By default, the cluster is created in the project's
-      /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
+      /// [default
+      /// network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
       /// the Kubelet creates routes for each node to allow the containers
@@ -413,6 +422,9 @@ namespace Google.Cloud.Container.V1 {
 
       /// <summary>
       /// Sets the locations for a specific cluster.
+      /// Deprecated. Use
+      /// [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
+      /// instead.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -505,6 +517,20 @@ namespace Google.Cloud.Container.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.ServerConfig> GetServerConfig(global::Google.Cloud.Container.V1.GetServerConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// This API is not yet intended for general use, and is not available for all
+      /// clusters.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Container.V1.GetJSONWebKeysResponse> GetJSONWebKeys(global::Google.Cloud.Container.V1.GetJSONWebKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -786,7 +812,8 @@ namespace Google.Cloud.Container.V1 {
       /// Compute Engine instances.
       ///
       /// By default, the cluster is created in the project's
-      /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
+      /// [default
+      /// network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
       /// the Kubelet creates routes for each node to allow the containers
@@ -810,7 +837,8 @@ namespace Google.Cloud.Container.V1 {
       /// Compute Engine instances.
       ///
       /// By default, the cluster is created in the project's
-      /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
+      /// [default
+      /// network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
       /// the Kubelet creates routes for each node to allow the containers
@@ -832,7 +860,8 @@ namespace Google.Cloud.Container.V1 {
       /// Compute Engine instances.
       ///
       /// By default, the cluster is created in the project's
-      /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
+      /// [default
+      /// network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
       /// the Kubelet creates routes for each node to allow the containers
@@ -856,7 +885,8 @@ namespace Google.Cloud.Container.V1 {
       /// Compute Engine instances.
       ///
       /// By default, the cluster is created in the project's
-      /// [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
+      /// [default
+      /// network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
       ///
       /// One firewall is added for the cluster. After cluster creation,
       /// the Kubelet creates routes for each node to allow the containers
@@ -1139,6 +1169,9 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Sets the locations for a specific cluster.
+      /// Deprecated. Use
+      /// [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
+      /// instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1151,6 +1184,9 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Sets the locations for a specific cluster.
+      /// Deprecated. Use
+      /// [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
+      /// instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1161,6 +1197,9 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Sets the locations for a specific cluster.
+      /// Deprecated. Use
+      /// [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
+      /// instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1173,6 +1212,9 @@ namespace Google.Cloud.Container.V1 {
       }
       /// <summary>
       /// Sets the locations for a specific cluster.
+      /// Deprecated. Use
+      /// [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
+      /// instead.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1528,6 +1570,62 @@ namespace Google.Cloud.Container.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.ServerConfig> GetServerConfigAsync(global::Google.Cloud.Container.V1.GetServerConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetServerConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// This API is not yet intended for general use, and is not available for all
+      /// clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Container.V1.GetJSONWebKeysResponse GetJSONWebKeys(global::Google.Cloud.Container.V1.GetJSONWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetJSONWebKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// This API is not yet intended for general use, and is not available for all
+      /// clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Container.V1.GetJSONWebKeysResponse GetJSONWebKeys(global::Google.Cloud.Container.V1.GetJSONWebKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetJSONWebKeys, null, options, request);
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// This API is not yet intended for general use, and is not available for all
+      /// clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.GetJSONWebKeysResponse> GetJSONWebKeysAsync(global::Google.Cloud.Container.V1.GetJSONWebKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetJSONWebKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the public component of the cluster signing keys in
+      /// JSON Web Key format.
+      /// This API is not yet intended for general use, and is not available for all
+      /// clusters.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Container.V1.GetJSONWebKeysResponse> GetJSONWebKeysAsync(global::Google.Cloud.Container.V1.GetJSONWebKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetJSONWebKeys, null, options, request);
       }
       /// <summary>
       /// Lists the node pools for a cluster.
@@ -2178,6 +2276,7 @@ namespace Google.Cloud.Container.V1 {
           .AddMethod(__Method_GetOperation, serviceImpl.GetOperation)
           .AddMethod(__Method_CancelOperation, serviceImpl.CancelOperation)
           .AddMethod(__Method_GetServerConfig, serviceImpl.GetServerConfig)
+          .AddMethod(__Method_GetJSONWebKeys, serviceImpl.GetJSONWebKeys)
           .AddMethod(__Method_ListNodePools, serviceImpl.ListNodePools)
           .AddMethod(__Method_GetNodePool, serviceImpl.GetNodePool)
           .AddMethod(__Method_CreateNodePool, serviceImpl.CreateNodePool)
@@ -2217,6 +2316,7 @@ namespace Google.Cloud.Container.V1 {
       serviceBinder.AddMethod(__Method_GetOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetOperationRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.GetOperation));
       serviceBinder.AddMethod(__Method_CancelOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelOperation));
       serviceBinder.AddMethod(__Method_GetServerConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetServerConfigRequest, global::Google.Cloud.Container.V1.ServerConfig>(serviceImpl.GetServerConfig));
+      serviceBinder.AddMethod(__Method_GetJSONWebKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetJSONWebKeysRequest, global::Google.Cloud.Container.V1.GetJSONWebKeysResponse>(serviceImpl.GetJSONWebKeys));
       serviceBinder.AddMethod(__Method_ListNodePools, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.ListNodePoolsRequest, global::Google.Cloud.Container.V1.ListNodePoolsResponse>(serviceImpl.ListNodePools));
       serviceBinder.AddMethod(__Method_GetNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.GetNodePoolRequest, global::Google.Cloud.Container.V1.NodePool>(serviceImpl.GetNodePool));
       serviceBinder.AddMethod(__Method_CreateNodePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Container.V1.CreateNodePoolRequest, global::Google.Cloud.Container.V1.Operation>(serviceImpl.CreateNodePool));
