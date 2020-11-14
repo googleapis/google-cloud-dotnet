@@ -203,7 +203,8 @@ namespace Google.Cloud.Logging.Type {
     private string remoteIp_ = "";
     /// <summary>
     /// The IP address (IPv4 or IPv6) of the client that issued the HTTP
-    /// request. Examples: `"192.168.1.1"`, `"FE80::0202:B3FF:FE1E:8329"`.
+    /// request. This field can include port information. Examples:
+    /// `"192.168.1.1"`, `"10.0.0.1:80"`, `"FE80::0202:B3FF:FE1E:8329"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RemoteIp {
@@ -218,7 +219,8 @@ namespace Google.Cloud.Logging.Type {
     private string serverIp_ = "";
     /// <summary>
     /// The IP address (IPv4 or IPv6) of the origin server that the request was
-    /// sent to.
+    /// sent to. This field can include port information. Examples:
+    /// `"192.168.1.1"`, `"10.0.0.1:80"`, `"FE80::0202:B3FF:FE1E:8329"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ServerIp {
