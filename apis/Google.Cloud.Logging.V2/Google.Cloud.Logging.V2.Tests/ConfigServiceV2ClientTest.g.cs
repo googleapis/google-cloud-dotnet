@@ -43,6 +43,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Description = "description2cf9da67",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
             };
@@ -67,6 +68,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Description = "description2cf9da67",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
             };
@@ -75,6 +77,62 @@ namespace Google.Cloud.Logging.V2.Tests
             LogBucket responseCallSettings = await client.GetBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogBucket responseCancellationToken = await client.GetBucketAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateBucketRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateBucketRequest request = new CreateBucketRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BucketId = "bucket_ida571c84e",
+                Bucket = new LogBucket(),
+            };
+            LogBucket expectedResponse = new LogBucket
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Locked = true,
+                RetentionDays = -710726207,
+                LifecycleState = LifecycleState.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogBucket response = client.CreateBucket(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateBucketRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateBucketRequest request = new CreateBucketRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BucketId = "bucket_ida571c84e",
+                Bucket = new LogBucket(),
+            };
+            LogBucket expectedResponse = new LogBucket
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Locked = true,
+                RetentionDays = -710726207,
+                LifecycleState = LifecycleState.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.CreateBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogBucket>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogBucket responseCallSettings = await client.CreateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogBucket responseCancellationToken = await client.CreateBucketAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -95,6 +153,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Description = "description2cf9da67",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
             };
@@ -121,6 +180,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 Description = "description2cf9da67",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Locked = true,
                 RetentionDays = -710726207,
                 LifecycleState = LifecycleState.Unspecified,
             };
@@ -130,6 +190,251 @@ namespace Google.Cloud.Logging.V2.Tests
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             LogBucket responseCancellationToken = await client.UpdateBucketAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteBucketRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteBucketRequest request = new DeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteBucket(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteBucketRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteBucketRequest request = new DeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteBucketAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UndeleteBucketRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UndeleteBucketRequest request = new UndeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.UndeleteBucket(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.UndeleteBucket(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UndeleteBucketRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UndeleteBucketRequest request = new UndeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.UndeleteBucketAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.UndeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.UndeleteBucketAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetViewRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetViewRequest request = new GetViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            LogView expectedResponse = new LogView
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Filter = "filtere47ac9b2",
+            };
+            mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogView response = client.GetView(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetViewRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            GetViewRequest request = new GetViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            LogView expectedResponse = new LogView
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Filter = "filtere47ac9b2",
+            };
+            mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogView responseCallSettings = await client.GetViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogView responseCancellationToken = await client.GetViewAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateViewRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                Parent = "parent7858e4d0",
+                ViewId = "view_id98131a2e",
+                View = new LogView(),
+            };
+            LogView expectedResponse = new LogView
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Filter = "filtere47ac9b2",
+            };
+            mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogView response = client.CreateView(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateViewRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                Parent = "parent7858e4d0",
+                ViewId = "view_id98131a2e",
+                View = new LogView(),
+            };
+            LogView expectedResponse = new LogView
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Filter = "filtere47ac9b2",
+            };
+            mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogView responseCallSettings = await client.CreateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogView responseCancellationToken = await client.CreateViewAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateViewRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                Name = "name1c9368b0",
+                View = new LogView(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogView expectedResponse = new LogView
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Filter = "filtere47ac9b2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogView response = client.UpdateView(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateViewRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                Name = "name1c9368b0",
+                View = new LogView(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            LogView expectedResponse = new LogView
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+                Description = "description2cf9da67",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Filter = "filtere47ac9b2",
+            };
+            mockGrpcClient.Setup(x => x.UpdateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<LogView>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            LogView responseCallSettings = await client.UpdateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            LogView responseCancellationToken = await client.UpdateViewAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteViewRequestObject()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            client.DeleteView(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteViewRequestObjectAsync()
+        {
+            moq::Mock<ConfigServiceV2.ConfigServiceV2Client> mockGrpcClient = new moq::Mock<ConfigServiceV2.ConfigServiceV2Client>(moq::MockBehavior.Strict);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ConfigServiceV2Client client = new ConfigServiceV2ClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteViewAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
 
@@ -154,6 +459,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -185,6 +491,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -218,6 +525,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -249,6 +557,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -282,6 +591,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -313,6 +623,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -348,6 +659,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -381,6 +693,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -415,6 +728,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -447,6 +761,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -481,6 +796,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -513,6 +829,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -547,6 +864,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -579,6 +897,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -613,6 +932,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -645,6 +965,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -679,6 +1000,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -711,6 +1033,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -747,6 +1070,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -781,6 +1105,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -816,6 +1141,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -849,6 +1175,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -884,6 +1211,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -917,6 +1245,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -951,6 +1280,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -983,6 +1313,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -1017,6 +1348,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
@@ -1049,6 +1381,7 @@ namespace Google.Cloud.Logging.V2.Tests
                 BigqueryOptions = new BigQueryOptions(),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                Exclusions = { new LogExclusion(), },
                 Description = "description2cf9da67",
                 Disabled = false,
             };
