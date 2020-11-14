@@ -605,6 +605,43 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateBucket</summary>
+        public void CreateBucketRequestObject()
+        {
+            // Snippet: CreateBucket(CreateBucketRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            CreateBucketRequest request = new CreateBucketRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BucketId = "",
+                Bucket = new LogBucket(),
+            };
+            // Make the request
+            LogBucket response = configServiceV2Client.CreateBucket(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateBucketAsync</summary>
+        public async Task CreateBucketRequestObjectAsync()
+        {
+            // Snippet: CreateBucketAsync(CreateBucketRequest, CallSettings)
+            // Additional: CreateBucketAsync(CreateBucketRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            CreateBucketRequest request = new CreateBucketRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                BucketId = "",
+                Bucket = new LogBucket(),
+            };
+            // Make the request
+            LogBucket response = await configServiceV2Client.CreateBucketAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateBucket</summary>
         public void UpdateBucketRequestObject()
         {
@@ -639,6 +676,392 @@ namespace Google.Cloud.Logging.V2.Snippets
             };
             // Make the request
             LogBucket response = await configServiceV2Client.UpdateBucketAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBucket</summary>
+        public void DeleteBucketRequestObject()
+        {
+            // Snippet: DeleteBucket(DeleteBucketRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            DeleteBucketRequest request = new DeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            configServiceV2Client.DeleteBucket(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteBucketAsync</summary>
+        public async Task DeleteBucketRequestObjectAsync()
+        {
+            // Snippet: DeleteBucketAsync(DeleteBucketRequest, CallSettings)
+            // Additional: DeleteBucketAsync(DeleteBucketRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            DeleteBucketRequest request = new DeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            await configServiceV2Client.DeleteBucketAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeleteBucket</summary>
+        public void UndeleteBucketRequestObject()
+        {
+            // Snippet: UndeleteBucket(UndeleteBucketRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UndeleteBucketRequest request = new UndeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            configServiceV2Client.UndeleteBucket(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UndeleteBucketAsync</summary>
+        public async Task UndeleteBucketRequestObjectAsync()
+        {
+            // Snippet: UndeleteBucketAsync(UndeleteBucketRequest, CallSettings)
+            // Additional: UndeleteBucketAsync(UndeleteBucketRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UndeleteBucketRequest request = new UndeleteBucketRequest
+            {
+                LogBucketName = LogBucketName.FromProjectLocationBucket("[PROJECT]", "[LOCATION]", "[BUCKET]"),
+            };
+            // Make the request
+            await configServiceV2Client.UndeleteBucketAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViews</summary>
+        public void ListViewsRequestObject()
+        {
+            // Snippet: ListViews(ListViewsRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListViewsRequest request = new ListViewsRequest { Parent = "", };
+            // Make the request
+            PagedEnumerable<ListViewsResponse, LogView> response = configServiceV2Client.ListViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViews</summary>
+        public async Task ListViewsRequestObjectAsync()
+        {
+            // Snippet: ListViewsAsync(ListViewsRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ListViewsRequest request = new ListViewsRequest { Parent = "", };
+            // Make the request
+            PagedAsyncEnumerable<ListViewsResponse, LogView> response = configServiceV2Client.ListViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViews</summary>
+        public void ListViews()
+        {
+            // Snippet: ListViews(string, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedEnumerable<ListViewsResponse, LogView> response = configServiceV2Client.ListViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViews</summary>
+        public async Task ListViewsAsync()
+        {
+            // Snippet: ListViewsAsync(string, string, int?, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedAsyncEnumerable<ListViewsResponse, LogView> response = configServiceV2Client.ListViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetView</summary>
+        public void GetViewRequestObject()
+        {
+            // Snippet: GetView(GetViewRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            GetViewRequest request = new GetViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            // Make the request
+            LogView response = configServiceV2Client.GetView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViewAsync</summary>
+        public async Task GetViewRequestObjectAsync()
+        {
+            // Snippet: GetViewAsync(GetViewRequest, CallSettings)
+            // Additional: GetViewAsync(GetViewRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            GetViewRequest request = new GetViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            // Make the request
+            LogView response = await configServiceV2Client.GetViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateView</summary>
+        public void CreateViewRequestObject()
+        {
+            // Snippet: CreateView(CreateViewRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            CreateViewRequest request = new CreateViewRequest
+            {
+                Parent = "",
+                ViewId = "",
+                View = new LogView(),
+            };
+            // Make the request
+            LogView response = configServiceV2Client.CreateView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateViewAsync</summary>
+        public async Task CreateViewRequestObjectAsync()
+        {
+            // Snippet: CreateViewAsync(CreateViewRequest, CallSettings)
+            // Additional: CreateViewAsync(CreateViewRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            CreateViewRequest request = new CreateViewRequest
+            {
+                Parent = "",
+                ViewId = "",
+                View = new LogView(),
+            };
+            // Make the request
+            LogView response = await configServiceV2Client.CreateViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateView</summary>
+        public void UpdateViewRequestObject()
+        {
+            // Snippet: UpdateView(UpdateViewRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                Name = "",
+                View = new LogView(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            LogView response = configServiceV2Client.UpdateView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateViewAsync</summary>
+        public async Task UpdateViewRequestObjectAsync()
+        {
+            // Snippet: UpdateViewAsync(UpdateViewRequest, CallSettings)
+            // Additional: UpdateViewAsync(UpdateViewRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                Name = "",
+                View = new LogView(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            LogView response = await configServiceV2Client.UpdateViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteView</summary>
+        public void DeleteViewRequestObject()
+        {
+            // Snippet: DeleteView(DeleteViewRequest, CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            // Make the request
+            configServiceV2Client.DeleteView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteViewAsync</summary>
+        public async Task DeleteViewRequestObjectAsync()
+        {
+            // Snippet: DeleteViewAsync(DeleteViewRequest, CallSettings)
+            // Additional: DeleteViewAsync(DeleteViewRequest, CancellationToken)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                LogViewName = LogViewName.FromProjectLocationBucketView("[PROJECT]", "[LOCATION]", "[BUCKET]", "[VIEW]"),
+            };
+            // Make the request
+            await configServiceV2Client.DeleteViewAsync(request);
             // End snippet
         }
 

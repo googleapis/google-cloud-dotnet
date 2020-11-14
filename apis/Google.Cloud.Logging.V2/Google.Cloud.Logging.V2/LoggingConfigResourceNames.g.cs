@@ -414,6 +414,448 @@ namespace Google.Cloud.Logging.V2
         public static bool operator !=(LogBucketName a, LogBucketName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>LogView</c> resource.</summary>
+    public sealed partial class LogViewName : gax::IResourceName, sys::IEquatable<LogViewName>
+    {
+        /// <summary>The possible contents of <see cref="LogViewName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c>
+            /// .
+            /// </summary>
+            ProjectLocationBucketView = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+            /// </summary>
+            OrganizationLocationBucketView = 2,
+
+            /// <summary>
+            /// A resource name with pattern <c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+            /// </summary>
+            FolderLocationBucketView = 3,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+            /// </summary>
+            BillingAccountLocationBucketView = 4,
+        }
+
+        private static gax::PathTemplate s_projectLocationBucketView = new gax::PathTemplate("projects/{project}/locations/{location}/buckets/{bucket}/views/{view}");
+
+        private static gax::PathTemplate s_organizationLocationBucketView = new gax::PathTemplate("organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}");
+
+        private static gax::PathTemplate s_folderLocationBucketView = new gax::PathTemplate("folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}");
+
+        private static gax::PathTemplate s_billingAccountLocationBucketView = new gax::PathTemplate("billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}");
+
+        /// <summary>Creates a <see cref="LogViewName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="LogViewName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static LogViewName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new LogViewName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="LogViewName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LogViewName"/> constructed from the provided ids.</returns>
+        public static LogViewName FromProjectLocationBucketView(string projectId, string locationId, string bucketId, string viewId) =>
+            new LogViewName(ResourceNameType.ProjectLocationBucketView, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), viewId: gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>
+        /// Creates a <see cref="LogViewName"/> with the pattern
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LogViewName"/> constructed from the provided ids.</returns>
+        public static LogViewName FromOrganizationLocationBucketView(string organizationId, string locationId, string bucketId, string viewId) =>
+            new LogViewName(ResourceNameType.OrganizationLocationBucketView, organizationId: gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), viewId: gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>
+        /// Creates a <see cref="LogViewName"/> with the pattern
+        /// <c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LogViewName"/> constructed from the provided ids.</returns>
+        public static LogViewName FromFolderLocationBucketView(string folderId, string locationId, string bucketId, string viewId) =>
+            new LogViewName(ResourceNameType.FolderLocationBucketView, folderId: gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), viewId: gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>
+        /// Creates a <see cref="LogViewName"/> with the pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="billingAccountId">The <c>BillingAccount</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LogViewName"/> constructed from the provided ids.</returns>
+        public static LogViewName FromBillingAccountLocationBucketView(string billingAccountId, string locationId, string bucketId, string viewId) =>
+            new LogViewName(ResourceNameType.BillingAccountLocationBucketView, billingAccountId: gax::GaxPreconditions.CheckNotNullOrEmpty(billingAccountId, nameof(billingAccountId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), viewId: gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string bucketId, string viewId) =>
+            FormatProjectLocationBucketView(projectId, locationId, bucketId, viewId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </returns>
+        public static string FormatProjectLocationBucketView(string projectId, string locationId, string bucketId, string viewId) =>
+            s_projectLocationBucketView.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="organizationId">The <c>Organization</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </returns>
+        public static string FormatOrganizationLocationBucketView(string organizationId, string locationId, string bucketId, string viewId) =>
+            s_organizationLocationBucketView.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="folderId">The <c>Folder</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </returns>
+        public static string FormatFolderLocationBucketView(string folderId, string locationId, string bucketId, string viewId) =>
+            s_folderLocationBucketView.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(folderId, nameof(folderId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </summary>
+        /// <param name="billingAccountId">The <c>BillingAccount</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LogViewName"/> with pattern
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>.
+        /// </returns>
+        public static string FormatBillingAccountLocationBucketView(string billingAccountId, string locationId, string bucketId, string viewId) =>
+            s_billingAccountLocationBucketView.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(billingAccountId, nameof(billingAccountId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="LogViewName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="logViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LogViewName"/> if successful.</returns>
+        public static LogViewName Parse(string logViewName) => Parse(logViewName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="LogViewName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="logViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="LogViewName"/> if successful.</returns>
+        public static LogViewName Parse(string logViewName, bool allowUnparsed) =>
+            TryParse(logViewName, allowUnparsed, out LogViewName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="LogViewName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="logViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LogViewName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string logViewName, out LogViewName result) => TryParse(logViewName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="LogViewName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>organizations/{organization}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description><c>folders/{folder}/locations/{location}/buckets/{bucket}/views/{view}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>billingAccounts/{billing_account}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="logViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LogViewName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string logViewName, bool allowUnparsed, out LogViewName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(logViewName, nameof(logViewName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationBucketView.TryParseName(logViewName, out resourceName))
+            {
+                result = FromProjectLocationBucketView(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (s_organizationLocationBucketView.TryParseName(logViewName, out resourceName))
+            {
+                result = FromOrganizationLocationBucketView(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (s_folderLocationBucketView.TryParseName(logViewName, out resourceName))
+            {
+                result = FromFolderLocationBucketView(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (s_billingAccountLocationBucketView.TryParseName(logViewName, out resourceName))
+            {
+                result = FromBillingAccountLocationBucketView(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(logViewName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private LogViewName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string billingAccountId = null, string bucketId = null, string folderId = null, string locationId = null, string organizationId = null, string projectId = null, string viewId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            BillingAccountId = billingAccountId;
+            BucketId = bucketId;
+            FolderId = folderId;
+            LocationId = locationId;
+            OrganizationId = organizationId;
+            ProjectId = projectId;
+            ViewId = viewId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="LogViewName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/buckets/{bucket}/views/{view}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="viewId">The <c>View</c> ID. Must not be <c>null</c> or empty.</param>
+        public LogViewName(string projectId, string locationId, string bucketId, string viewId) : this(ResourceNameType.ProjectLocationBucketView, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), viewId: gax::GaxPreconditions.CheckNotNullOrEmpty(viewId, nameof(viewId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>BillingAccount</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string BillingAccountId { get; }
+
+        /// <summary>
+        /// The <c>Bucket</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string BucketId { get; }
+
+        /// <summary>
+        /// The <c>Folder</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string FolderId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Organization</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string OrganizationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>View</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string ViewId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationBucketView: return s_projectLocationBucketView.Expand(ProjectId, LocationId, BucketId, ViewId);
+                case ResourceNameType.OrganizationLocationBucketView: return s_organizationLocationBucketView.Expand(OrganizationId, LocationId, BucketId, ViewId);
+                case ResourceNameType.FolderLocationBucketView: return s_folderLocationBucketView.Expand(FolderId, LocationId, BucketId, ViewId);
+                case ResourceNameType.BillingAccountLocationBucketView: return s_billingAccountLocationBucketView.Expand(BillingAccountId, LocationId, BucketId, ViewId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as LogViewName);
+
+        /// <inheritdoc/>
+        public bool Equals(LogViewName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(LogViewName a, LogViewName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(LogViewName a, LogViewName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>LogSink</c> resource.</summary>
     public sealed partial class LogSinkName : gax::IResourceName, sys::IEquatable<LogSinkName>
     {
@@ -2136,6 +2578,18 @@ namespace Google.Cloud.Logging.V2
         }
     }
 
+    public partial class LogView
+    {
+        /// <summary>
+        /// <see cref="gclv::LogViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LogViewName LogViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LogViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class LogSink
     {
         /// <summary>
@@ -2228,6 +2682,77 @@ namespace Google.Cloud.Logging.V2
         }
     }
 
+    public partial class CreateBucketRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="OrganizationLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public OrganizationLocationName ParentAsOrganizationLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : OrganizationLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="FolderLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public FolderLocationName ParentAsFolderLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : FolderLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="BillingAccountLocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public BillingAccountLocationName ParentAsBillingAccountLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BillingAccountLocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (gagr::LocationName.TryParse(Parent, out gagr::LocationName location))
+                {
+                    return location;
+                }
+                if (OrganizationLocationName.TryParse(Parent, out OrganizationLocationName organizationLocation))
+                {
+                    return organizationLocation;
+                }
+                if (FolderLocationName.TryParse(Parent, out FolderLocationName folderLocation))
+                {
+                    return folderLocation;
+                }
+                if (BillingAccountLocationName.TryParse(Parent, out BillingAccountLocationName billingAccountLocation))
+                {
+                    return billingAccountLocation;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class UpdateBucketRequest
     {
         /// <summary>
@@ -2248,6 +2773,54 @@ namespace Google.Cloud.Logging.V2
         public gclv::LogBucketName LogBucketName
         {
             get => string.IsNullOrEmpty(Name) ? null : gclv::LogBucketName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteBucketRequest
+    {
+        /// <summary>
+        /// <see cref="gclv::LogBucketName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LogBucketName LogBucketName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LogBucketName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UndeleteBucketRequest
+    {
+        /// <summary>
+        /// <see cref="gclv::LogBucketName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LogBucketName LogBucketName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LogBucketName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetViewRequest
+    {
+        /// <summary>
+        /// <see cref="gclv::LogViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LogViewName LogViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LogViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteViewRequest
+    {
+        /// <summary>
+        /// <see cref="gclv::LogViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gclv::LogViewName LogViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gclv::LogViewName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

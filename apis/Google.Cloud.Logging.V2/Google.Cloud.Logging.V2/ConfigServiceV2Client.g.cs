@@ -48,7 +48,15 @@ namespace Google.Cloud.Logging.V2
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListBucketsSettings = existing.ListBucketsSettings;
             GetBucketSettings = existing.GetBucketSettings;
+            CreateBucketSettings = existing.CreateBucketSettings;
             UpdateBucketSettings = existing.UpdateBucketSettings;
+            DeleteBucketSettings = existing.DeleteBucketSettings;
+            UndeleteBucketSettings = existing.UndeleteBucketSettings;
+            ListViewsSettings = existing.ListViewsSettings;
+            GetViewSettings = existing.GetViewSettings;
+            CreateViewSettings = existing.CreateViewSettings;
+            UpdateViewSettings = existing.UpdateViewSettings;
+            DeleteViewSettings = existing.DeleteViewSettings;
             ListSinksSettings = existing.ListSinksSettings;
             GetSinkSettings = existing.GetSinkSettings;
             CreateSinkSettings = existing.CreateSinkSettings;
@@ -92,6 +100,18 @@ namespace Google.Cloud.Logging.V2
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.CreateBucket</c> and <c>ConfigServiceV2Client.CreateBucketAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ConfigServiceV2Client.UpdateBucket</c> and <c>ConfigServiceV2Client.UpdateBucketAsync</c>.
         /// </summary>
         /// <remarks>
@@ -101,6 +121,90 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.DeleteBucket</c> and <c>ConfigServiceV2Client.DeleteBucketAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.UndeleteBucket</c> and <c>ConfigServiceV2Client.UndeleteBucketAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UndeleteBucketSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.ListViews</c> and <c>ConfigServiceV2Client.ListViewsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListViewsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.GetView</c> and <c>ConfigServiceV2Client.GetViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.CreateView</c> and <c>ConfigServiceV2Client.CreateViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.UpdateView</c> and <c>ConfigServiceV2Client.UpdateViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConfigServiceV2Client.DeleteView</c> and <c>ConfigServiceV2Client.DeleteViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -417,7 +521,7 @@ namespace Google.Cloud.Logging.V2
         public virtual ConfigServiceV2.ConfigServiceV2Client GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -426,7 +530,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -435,7 +539,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -468,7 +572,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -501,7 +605,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -534,7 +638,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -567,7 +671,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -600,7 +704,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -633,7 +737,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -666,7 +770,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -699,7 +803,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -732,7 +836,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource whose buckets are to be listed:
@@ -765,7 +869,7 @@ namespace Google.Cloud.Logging.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a bucket (Beta).
+        /// Gets a bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -774,7 +878,7 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a bucket (Beta).
+        /// Gets a bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -783,13 +887,43 @@ namespace Google.Cloud.Logging.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a bucket (Beta).
+        /// Gets a bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<LogBucket> GetBucketAsync(GetBucketRequest request, st::CancellationToken cancellationToken) =>
             GetBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a bucket that can be used to store log entries. Once a bucket has
+        /// been created, the region cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LogBucket CreateBucket(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a bucket that can be used to store log entries. Once a bucket has
+        /// been created, the region cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogBucket> CreateBucketAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a bucket that can be used to store log entries. Once a bucket has
+        /// been created, the region cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogBucket> CreateBucketAsync(CreateBucketRequest request, st::CancellationToken cancellationToken) =>
+            CreateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates a bucket. This method replaces the following fields in the
@@ -802,7 +936,6 @@ namespace Google.Cloud.Logging.V2
         /// will be returned.
         /// 
         /// A buckets region may not be modified after it is created.
-        /// This method is in Beta.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -821,7 +954,6 @@ namespace Google.Cloud.Logging.V2
         /// will be returned.
         /// 
         /// A buckets region may not be modified after it is created.
-        /// This method is in Beta.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -840,13 +972,262 @@ namespace Google.Cloud.Logging.V2
         /// will be returned.
         /// 
         /// A buckets region may not be modified after it is created.
-        /// This method is in Beta.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<LogBucket> UpdateBucketAsync(UpdateBucketRequest request, st::CancellationToken cancellationToken) =>
             UpdateBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a bucket.
+        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
+        /// bucket will be purged and all logs in the bucket will be permanently
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteBucket(DeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a bucket.
+        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
+        /// bucket will be purged and all logs in the bucket will be permanently
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBucketAsync(DeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a bucket.
+        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
+        /// bucket will be purged and all logs in the bucket will be permanently
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteBucketAsync(DeleteBucketRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
+        /// the grace period of 7 days.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void UndeleteBucket(UndeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
+        /// the grace period of 7 days.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task UndeleteBucketAsync(UndeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
+        /// the grace period of 7 days.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task UndeleteBucketAsync(UndeleteBucketRequest request, st::CancellationToken cancellationToken) =>
+            UndeleteBucketAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists views on a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListViewsResponse, LogView> ListViews(ListViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists views on a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, LogView> ListViewsAsync(ListViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists views on a bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket whose views are to be listed:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListViewsResponse, LogView> ListViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListViews(new ListViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists views on a bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket whose views are to be listed:
+        /// 
+        /// "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListViewsResponse, LogView> ListViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListViewsAsync(new ListViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LogView GetView(GetViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogView> GetViewAsync(GetViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogView> GetViewAsync(GetViewRequest request, st::CancellationToken cancellationToken) =>
+            GetViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
+        /// 50 views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LogView CreateView(CreateViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
+        /// 50 views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogView> CreateViewAsync(CreateViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
+        /// 50 views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogView> CreateViewAsync(CreateViewRequest request, st::CancellationToken cancellationToken) =>
+            CreateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a view. This method replaces the following fields in the existing
+        /// view with values from the new view: `filter`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LogView UpdateView(UpdateViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a view. This method replaces the following fields in the existing
+        /// view with values from the new view: `filter`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogView> UpdateViewAsync(UpdateViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a view. This method replaces the following fields in the existing
+        /// view with values from the new view: `filter`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogView> UpdateViewAsync(UpdateViewRequest request, st::CancellationToken cancellationToken) =>
+            UpdateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a view from a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteView(DeleteViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a view from a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteViewAsync(DeleteViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a view from a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteViewAsync(DeleteViewRequest request, st::CancellationToken cancellationToken) =>
+            DeleteViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists sinks.
@@ -3810,7 +4191,23 @@ namespace Google.Cloud.Logging.V2
 
         private readonly gaxgrpc::ApiCall<GetBucketRequest, LogBucket> _callGetBucket;
 
+        private readonly gaxgrpc::ApiCall<CreateBucketRequest, LogBucket> _callCreateBucket;
+
         private readonly gaxgrpc::ApiCall<UpdateBucketRequest, LogBucket> _callUpdateBucket;
+
+        private readonly gaxgrpc::ApiCall<DeleteBucketRequest, wkt::Empty> _callDeleteBucket;
+
+        private readonly gaxgrpc::ApiCall<UndeleteBucketRequest, wkt::Empty> _callUndeleteBucket;
+
+        private readonly gaxgrpc::ApiCall<ListViewsRequest, ListViewsResponse> _callListViews;
+
+        private readonly gaxgrpc::ApiCall<GetViewRequest, LogView> _callGetView;
+
+        private readonly gaxgrpc::ApiCall<CreateViewRequest, LogView> _callCreateView;
+
+        private readonly gaxgrpc::ApiCall<UpdateViewRequest, LogView> _callUpdateView;
+
+        private readonly gaxgrpc::ApiCall<DeleteViewRequest, wkt::Empty> _callDeleteView;
 
         private readonly gaxgrpc::ApiCall<ListSinksRequest, ListSinksResponse> _callListSinks;
 
@@ -3852,9 +4249,33 @@ namespace Google.Cloud.Logging.V2
             _callGetBucket = clientHelper.BuildApiCall<GetBucketRequest, LogBucket>(grpcClient.GetBucketAsync, grpcClient.GetBucket, effectiveSettings.GetBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBucket);
             Modify_GetBucketApiCall(ref _callGetBucket);
+            _callCreateBucket = clientHelper.BuildApiCall<CreateBucketRequest, LogBucket>(grpcClient.CreateBucketAsync, grpcClient.CreateBucket, effectiveSettings.CreateBucketSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBucket);
+            Modify_CreateBucketApiCall(ref _callCreateBucket);
             _callUpdateBucket = clientHelper.BuildApiCall<UpdateBucketRequest, LogBucket>(grpcClient.UpdateBucketAsync, grpcClient.UpdateBucket, effectiveSettings.UpdateBucketSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateBucket);
             Modify_UpdateBucketApiCall(ref _callUpdateBucket);
+            _callDeleteBucket = clientHelper.BuildApiCall<DeleteBucketRequest, wkt::Empty>(grpcClient.DeleteBucketAsync, grpcClient.DeleteBucket, effectiveSettings.DeleteBucketSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBucket);
+            Modify_DeleteBucketApiCall(ref _callDeleteBucket);
+            _callUndeleteBucket = clientHelper.BuildApiCall<UndeleteBucketRequest, wkt::Empty>(grpcClient.UndeleteBucketAsync, grpcClient.UndeleteBucket, effectiveSettings.UndeleteBucketSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUndeleteBucket);
+            Modify_UndeleteBucketApiCall(ref _callUndeleteBucket);
+            _callListViews = clientHelper.BuildApiCall<ListViewsRequest, ListViewsResponse>(grpcClient.ListViewsAsync, grpcClient.ListViews, effectiveSettings.ListViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListViews);
+            Modify_ListViewsApiCall(ref _callListViews);
+            _callGetView = clientHelper.BuildApiCall<GetViewRequest, LogView>(grpcClient.GetViewAsync, grpcClient.GetView, effectiveSettings.GetViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetView);
+            Modify_GetViewApiCall(ref _callGetView);
+            _callCreateView = clientHelper.BuildApiCall<CreateViewRequest, LogView>(grpcClient.CreateViewAsync, grpcClient.CreateView, effectiveSettings.CreateViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateView);
+            Modify_CreateViewApiCall(ref _callCreateView);
+            _callUpdateView = clientHelper.BuildApiCall<UpdateViewRequest, LogView>(grpcClient.UpdateViewAsync, grpcClient.UpdateView, effectiveSettings.UpdateViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callUpdateView);
+            Modify_UpdateViewApiCall(ref _callUpdateView);
+            _callDeleteView = clientHelper.BuildApiCall<DeleteViewRequest, wkt::Empty>(grpcClient.DeleteViewAsync, grpcClient.DeleteView, effectiveSettings.DeleteViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteView);
+            Modify_DeleteViewApiCall(ref _callDeleteView);
             _callListSinks = clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(grpcClient.ListSinksAsync, grpcClient.ListSinks, effectiveSettings.ListSinksSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSinks);
             Modify_ListSinksApiCall(ref _callListSinks);
@@ -3900,7 +4321,23 @@ namespace Google.Cloud.Logging.V2
 
         partial void Modify_GetBucketApiCall(ref gaxgrpc::ApiCall<GetBucketRequest, LogBucket> call);
 
+        partial void Modify_CreateBucketApiCall(ref gaxgrpc::ApiCall<CreateBucketRequest, LogBucket> call);
+
         partial void Modify_UpdateBucketApiCall(ref gaxgrpc::ApiCall<UpdateBucketRequest, LogBucket> call);
+
+        partial void Modify_DeleteBucketApiCall(ref gaxgrpc::ApiCall<DeleteBucketRequest, wkt::Empty> call);
+
+        partial void Modify_UndeleteBucketApiCall(ref gaxgrpc::ApiCall<UndeleteBucketRequest, wkt::Empty> call);
+
+        partial void Modify_ListViewsApiCall(ref gaxgrpc::ApiCall<ListViewsRequest, ListViewsResponse> call);
+
+        partial void Modify_GetViewApiCall(ref gaxgrpc::ApiCall<GetViewRequest, LogView> call);
+
+        partial void Modify_CreateViewApiCall(ref gaxgrpc::ApiCall<CreateViewRequest, LogView> call);
+
+        partial void Modify_UpdateViewApiCall(ref gaxgrpc::ApiCall<UpdateViewRequest, LogView> call);
+
+        partial void Modify_DeleteViewApiCall(ref gaxgrpc::ApiCall<DeleteViewRequest, wkt::Empty> call);
 
         partial void Modify_ListSinksApiCall(ref gaxgrpc::ApiCall<ListSinksRequest, ListSinksResponse> call);
 
@@ -3935,7 +4372,23 @@ namespace Google.Cloud.Logging.V2
 
         partial void Modify_GetBucketRequest(ref GetBucketRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateBucketRequest(ref CreateBucketRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateBucketRequest(ref UpdateBucketRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBucketRequest(ref DeleteBucketRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UndeleteBucketRequest(ref UndeleteBucketRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListViewsRequest(ref ListViewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetViewRequest(ref GetViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateViewRequest(ref CreateViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateViewRequest(ref UpdateViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteViewRequest(ref DeleteViewRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSinksRequest(ref ListSinksRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3962,7 +4415,7 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_UpdateCmekSettingsRequest(ref UpdateCmekSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3974,7 +4427,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists buckets (Beta).
+        /// Lists buckets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3986,7 +4439,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets a bucket (Beta).
+        /// Gets a bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3998,7 +4451,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Gets a bucket (Beta).
+        /// Gets a bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4007,6 +4460,32 @@ namespace Google.Cloud.Logging.V2
         {
             Modify_GetBucketRequest(ref request, ref callSettings);
             return _callGetBucket.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a bucket that can be used to store log entries. Once a bucket has
+        /// been created, the region cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LogBucket CreateBucket(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBucketRequest(ref request, ref callSettings);
+            return _callCreateBucket.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a bucket that can be used to store log entries. Once a bucket has
+        /// been created, the region cannot be changed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LogBucket> CreateBucketAsync(CreateBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBucketRequest(ref request, ref callSettings);
+            return _callCreateBucket.Async(request, callSettings);
         }
 
         /// <summary>
@@ -4020,7 +4499,6 @@ namespace Google.Cloud.Logging.V2
         /// will be returned.
         /// 
         /// A buckets region may not be modified after it is created.
-        /// This method is in Beta.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4042,7 +4520,6 @@ namespace Google.Cloud.Logging.V2
         /// will be returned.
         /// 
         /// A buckets region may not be modified after it is created.
-        /// This method is in Beta.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4051,6 +4528,186 @@ namespace Google.Cloud.Logging.V2
         {
             Modify_UpdateBucketRequest(ref request, ref callSettings);
             return _callUpdateBucket.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a bucket.
+        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
+        /// bucket will be purged and all logs in the bucket will be permanently
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteBucket(DeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBucketRequest(ref request, ref callSettings);
+            _callDeleteBucket.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a bucket.
+        /// Moves the bucket to the DELETE_REQUESTED state. After 7 days, the
+        /// bucket will be purged and all logs in the bucket will be permanently
+        /// deleted.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteBucketAsync(DeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBucketRequest(ref request, ref callSettings);
+            return _callDeleteBucket.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
+        /// the grace period of 7 days.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void UndeleteBucket(UndeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeleteBucketRequest(ref request, ref callSettings);
+            _callUndeleteBucket.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Undeletes a bucket. A bucket that has been deleted may be undeleted within
+        /// the grace period of 7 days.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task UndeleteBucketAsync(UndeleteBucketRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UndeleteBucketRequest(ref request, ref callSettings);
+            return _callUndeleteBucket.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists views on a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogView"/> resources.</returns>
+        public override gax::PagedEnumerable<ListViewsResponse, LogView> ListViews(ListViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListViewsRequest, ListViewsResponse, LogView>(_callListViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists views on a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogView"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListViewsResponse, LogView> ListViewsAsync(ListViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListViewsRequest, ListViewsResponse, LogView>(_callListViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LogView GetView(GetViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetViewRequest(ref request, ref callSettings);
+            return _callGetView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LogView> GetViewAsync(GetViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetViewRequest(ref request, ref callSettings);
+            return _callGetView.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
+        /// 50 views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LogView CreateView(CreateViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateViewRequest(ref request, ref callSettings);
+            return _callCreateView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a view over logs in a bucket. A bucket may contain a maximum of
+        /// 50 views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LogView> CreateViewAsync(CreateViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateViewRequest(ref request, ref callSettings);
+            return _callCreateView.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a view. This method replaces the following fields in the existing
+        /// view with values from the new view: `filter`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LogView UpdateView(UpdateViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateViewRequest(ref request, ref callSettings);
+            return _callUpdateView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a view. This method replaces the following fields in the existing
+        /// view with values from the new view: `filter`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LogView> UpdateViewAsync(UpdateViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateViewRequest(ref request, ref callSettings);
+            return _callUpdateView.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a view from a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteView(DeleteViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteViewRequest(ref request, ref callSettings);
+            _callDeleteView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a view from a bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteViewAsync(DeleteViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteViewRequest(ref request, ref callSettings);
+            return _callDeleteView.Async(request, callSettings);
         }
 
         /// <summary>
@@ -4410,6 +5067,10 @@ namespace Google.Cloud.Logging.V2
     {
     }
 
+    public partial class ListViewsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListSinksRequest : gaxgrpc::IPageRequest
     {
     }
@@ -4422,6 +5083,14 @@ namespace Google.Cloud.Logging.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<LogBucket> GetEnumerator() => Buckets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListViewsResponse : gaxgrpc::IPageResponse<LogView>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<LogView> GetEnumerator() => Views.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
