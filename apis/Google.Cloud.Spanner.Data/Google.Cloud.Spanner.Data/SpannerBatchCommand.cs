@@ -98,6 +98,18 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        // Request options for this command. Only the relevant properties are publicly exposed.
+        internal RequestOptions _requestOptions = RequestOptions.Empty;
+
+        /// <summary>
+        /// The statement tag to send to Cloud Spanner for this command.
+        /// </summary>
+        public string RequestTag
+        {
+            get => _requestOptions.RequestTag;
+            set => _requestOptions = _requestOptions.WithRequestTag(value);
+        }
+
         /// <summary>
         /// The RPC priority to use for this command. The default priority is Unspecified.
         /// </summary>

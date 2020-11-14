@@ -229,6 +229,18 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Priority Priority { get; set; }
 
+        // Request options for this command. Only the relevant properties are publicly exposed.
+        internal RequestOptions _requestOptions = RequestOptions.Empty;
+
+        /// <summary>
+        /// The statement tag to send to Cloud Spanner for this command.
+        /// </summary>
+        public string RequestTag
+        {
+            get => _requestOptions.RequestTag;
+            set => _requestOptions = _requestOptions.WithRequestTag(value);
+        }
+
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -269,6 +281,7 @@ namespace Google.Cloud.Spanner.Data
             CommandTimeout = CommandTimeout,
             QueryOptions = QueryOptions,
             Priority = Priority
+            _requestOptions = _requestOptions
         };
 
         /// <inheritdoc />
