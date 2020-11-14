@@ -800,6 +800,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Dataproc.V1Beta2"
     },
     {
+      "ServiceDirectory": "google/cloud/dataqna/v1alpha",
+      "Name": "dataqna.googleapis.com",
+      "Title": "Data QnA API",
+      "Description": "Data QnA is a natural language question and answer service for BigQuery data.",
+      "ServiceConfigFile": "google/cloud/dataqna/v1alpha/dataqna_v1alpha.yaml",
+      "Version": "v1alpha",
+      "PackageFromDirectory": "google.cloud.dataqna.v1alpha",
+      "PackageFromProtos": "google.cloud.dataqna.v1alpha",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/dataqna/v1alpha",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.DataQnA.V1Alpha"
+    },
+    {
       "ServiceDirectory": "google/cloud/dialogflow/cx/v3",
       "Name": "dialogflow.googleapis.com",
       "Title": "Dialogflow API",
