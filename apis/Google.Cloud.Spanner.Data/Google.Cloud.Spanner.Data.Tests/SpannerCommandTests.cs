@@ -109,9 +109,13 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void CommandHasConnectionQueryOptions()
         {
-            const string connOptimizerVersion = "1";
-            Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(connOptimizerVersion);
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
 
+            const string connOptimizerVersion = "1";
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
             connection.QueryOptions = queryOptions;
@@ -119,20 +123,28 @@ namespace Google.Cloud.Spanner.Data.Tests
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             using (var reader = command.ExecuteReader())
             {
-                // Do nothing.
+                Assert.True(reader.HasRows);
             }
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimizerVersion == connOptimizerVersion),
+                It.IsAny<CallSettings>()), Times.Once());
         }
 
         [Fact]
         public void CommandHasOptimizerVersionFromEnvironment()
         {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
+
             const string envOptimizerVersion = "2";
             RunActionWithEnvOptimizerVersion(() =>
             {
                 // Optimizer version set through environment variable has higher
                 // precedence than version set through connection.
-                Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(envOptimizerVersion);
-
                 const string connOptimizerVersion = "1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
                 var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
@@ -141,24 +153,31 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 using (var reader = command.ExecuteReader())
                 {
-                    // Do nothing.
+                    Assert.True(reader.HasRows);
                 }
             }, envOptimizerVersion);
 
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimizerVersion == envOptimizerVersion),
+                It.IsAny<CallSettings>()), Times.Once());
         }
 
         [Fact]
         public void CommandHasOptimizerVersionSetOnCommand()
         {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
+
+            var cmdOptimizerVersion = "3";
+            // Optimizer version set at a command level has higher precedence
+            // than version set through the connection or the environment
+            // variable.
             const string envOptimizerVersion = "2";
             RunActionWithEnvOptimizerVersion(() =>
             {
-                var cmdOptimizerVersion = "3";
-                // Optimizer version set at a command level has higher precedence
-                // than version set through the connection or the environment
-                // variable.
-                Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(cmdOptimizerVersion);
-
                 const string connOptimizerVersion = "1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
                 var queryOptions = QueryOptions.Empty.WithOptimizerVersion(connOptimizerVersion);
@@ -168,9 +187,13 @@ namespace Google.Cloud.Spanner.Data.Tests
                 command.QueryOptions = QueryOptions.Empty.WithOptimizerVersion(cmdOptimizerVersion);
                 using (var reader = command.ExecuteReader())
                 {
-                    // Do nothing.
+                    Assert.True(reader.HasRows);
                 }
             }, envOptimizerVersion);
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimizerVersion == cmdOptimizerVersion),
+                It.IsAny<CallSettings>()), Times.Once());
         }
 
         [Fact]
@@ -254,19 +277,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Verify(client => client.ExecuteStreamingSql(
                 It.IsAny<ExecuteSqlRequest>(),
                 It.IsAny<CallSettings>()), Times.Exactly(3));
-        }
-
-        private Mock<SpannerClient> SetupExecuteStreamingSql(string optimizerVersion = "")
-        {
-            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
-                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
-            spannerClientMock
-                .SetupBatchCreateSessionsAsync()
-                .Setup(client => client.ExecuteStreamingSql(
-                    It.Is<ExecuteSqlRequest>(request => request.QueryOptions.OptimizerVersion == optimizerVersion),
-                    It.IsAny<CallSettings>()))
-                .Returns<ExecuteSqlRequest, CallSettings>((request, _) => null);
-            return spannerClientMock;
         }
 
         private SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)
