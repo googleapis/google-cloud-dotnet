@@ -256,7 +256,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
 
-        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5548")]
+        [SkippableFact]
         public void DownloadGzippedFile()
         {
             TestEnvironment.SkipIfVpcSc();
@@ -272,7 +272,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         // See https://github.com/googleapis/google-cloud-dotnet/issues/1784 for the background to
         // the following two tests.
-        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5548 and https://github.com/googleapis/google-cloud-dotnet/issues/1784")]
+        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/1784")]
         public void DownloadGzippedFile_NoClientDecompression()
         {
             TestEnvironment.SkipIfVpcSc();
@@ -290,7 +290,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(expected, actual);
         }
         
-        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5548")]
+        [SkippableFact]
         public void DownloadGzippedFile_NoClientDecompression_IgnoreHash()
         {
             TestEnvironment.SkipIfVpcSc();
