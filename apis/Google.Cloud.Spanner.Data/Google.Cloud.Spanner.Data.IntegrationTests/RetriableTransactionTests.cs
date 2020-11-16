@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -91,59 +92,81 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
             Skip.If(_fixture.RunningOnEmulator, "Requires multiple read/write transactions");
             string key = _fixture.CreateTestRows();
-            int calls = 0;
-            int rowsUpdated;
+
+            ManualResetEventSlim firstTaskUpdateAttempted = new ManualResetEventSlim(false);
+            ManualResetEventSlim secondTaskUpdateAttempted = new ManualResetEventSlim(false);
+
+            int firstTaskCallCount = 0;
+            int secondTaskCallCount = 0;
+
+            int[] rowsUpdatedByTask;
+
             using (var connection = _fixture.GetConnection())
             {
-                rowsUpdated = await connection.RunWithRetriableTransactionAsync(transaction => WorkAsync(connection, transaction));
+                // Start two tasks that attempt the same update.
+                // Guarantee that the first attempted updates on each task are concurrent using events.
+                var firstUpdateTask = connection.RunWithRetriableTransactionAsync(transaction => WorkAsync(connection, transaction, firstTaskUpdateAttempted, secondTaskUpdateAttempted, () => firstTaskCallCount++));
+                var secondUpdateTask = connection.RunWithRetriableTransactionAsync(transaction => WorkAsync(connection, transaction, secondTaskUpdateAttempted, firstTaskUpdateAttempted, () => secondTaskCallCount++));
+
+                rowsUpdatedByTask = await Task.WhenAll(firstUpdateTask, secondUpdateTask);
             }
 
-            async Task<int> WorkAsync(SpannerConnection connection, SpannerTransaction transaction)
+            async Task<int> WorkAsync(SpannerConnection connection, SpannerTransaction transaction, ManualResetEventSlim thisUpdateDone, ManualResetEventSlim otherUpdateDone, Action callStart)
             {
-                calls++;
+                // Just to count how many times this method was called.
+                // We can't have ref parameters in async methods.
+                callStart();
 
-                // Let's update some data with the retriable transaction.
-                int rows = await DmlUpdateFixtureData(key, connection, transaction);
-
-                // The first time let's update the data again using a different transaction.
-                // This will cause the retriable transaction to abort.
-                if (calls == 1)
+                int rows;
+                try
                 {
-                    try
-                    {
-                        using (var conflictingTransaction = await connection.BeginTransactionAsync())
-                        {
-                            int conflictingRows = await DmlUpdateFixtureData(key, connection, conflictingTransaction);
-                            await conflictingTransaction.CommitAsync();
-                            Assert.Equal(2, conflictingRows);
-                        }
-                    }
-                    catch (SpannerException e)
-                    {
-                        // If there is an exception catched here we just want to propagate it,
-                        // and make the test fail. We need to wrap it so it doesn't trigger
-                        // the retry.
-                        throw new Exception("This shouldn't have happened.", e);
-                    }
+                    // Let's update some data with the retriable transaction that we received as paremeter.
+                    // This can fail with a status of "aborted" if the other task update went in first
+                    // and this update detects the write locks already out of sync.
+                    rows = await DmlUpdateFixtureData(key, connection, transaction);
+                }
+                finally
+                {
+                    // We attempted an update.
+                    // Whether it succeeded or aborted, we signal the task performing the
+                    // other concurrent update that we're done with our own update.
+                    thisUpdateDone.Set();
+                    // We don't need to reset the event because we only need 
+                    // one concurrent update to test the retriable transaction.
+                    // If both tasks execute more than once, we can let them compete
+                    // naturally, the retry transaction has already been guaranteed
+                    // to have retried at least once in one task.
                 }
 
+                // Wait on the other task to attempt their concurrent update.
+                // That's how we make sure that updates happened concurrently.
+                otherUpdateDone.Wait();
+
                 return rows;
-                // And now that we are done, the retriable transaction should be committed.
-                // On the first time this method is called, the commit will abort because our 
-                // update was on now stale data and the retry should be triggered.
+
+                // The commit will be attempted now, and if it fails with a status of "aborted",
+                // the retriable transaction should retry this whole method.
             }
 
-            Assert.Equal(2, rowsUpdated);
-            Assert.Equal(2, calls);
+            // Each task should have updated the same two rows.
+            Assert.Equal(new int[] { 2, 2 }, rowsUpdatedByTask);
+
+            // Each task should have been called at least once.
+            Assert.True(firstTaskCallCount >= 1);
+            Assert.True(secondTaskCallCount >= 1);
+
+            // One task should have been called at least twice (that's the retried task).
+            // They might have been called more than twice because of other possible abort causes.
+            Assert.True(firstTaskCallCount >= 2 || secondTaskCallCount >= 2);
 
             var actual = _fixture.FetchValues(key);
             var expected = new Dictionary<int, int>
             {
                 { 0, 0 }, // Not updated
-                { 1, 3 }, // Updated twice, once by the conflicting transaction, once by the main work.
+                { 1, 3 }, // Updated twice, once by each task.
                 { 2, 2 }, // Not updated
                 { 3, 3 }, // Not updated
-                { 4, 6 }  // Updated twice, once by the conflicting transaction, once by the main work.
+                { 4, 6 }  // Updated twice, once by each task.
             };
 
             Assert.Equal(expected, actual);
