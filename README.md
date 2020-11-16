@@ -18,6 +18,7 @@ Each package name links to the documentation for that package.
 | [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | Analytics Admin |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha02) | 1.0.0-alpha02 | Google Analytics Data |
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha01) | 1.0.0-alpha01 | Google Area 120 Tables |
+| [Google.Cloud.ArtifactRegistry.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.ArtifactRegistry.V1Beta2/1.0.0-beta01) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.5.0) | 2.5.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AssuredWorkloads.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.AssuredWorkloads.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
 | [Google.Cloud.AutoML.V1](https://googleapis.dev/dotnet/Google.Cloud.AutoML.V1/2.1.0) | 2.1.0 | [Google AutoML](https://cloud.google.com/automl/) |
