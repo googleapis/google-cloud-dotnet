@@ -1459,6 +1459,22 @@
       "protoPath": "google/api/servicecontrol/v1"
     },
     {
+      "id": "Google.Cloud.ServiceDirectory.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Service Directory",
+      "productUrl": "https://cloud.google.com/service-directory/",
+      "description": "Recommended Google client library to access the Service Directory API version v1, which provides a platform for discovering, publishing, and connecting services.",
+      "tags": [
+        "services"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/servicedirectory/v1"
+    },
+    {
       "id": "Google.Cloud.ServiceDirectory.V1Beta1",
       "generator": "micro",
       "protoPath": "google/cloud/servicedirectory/v1beta1",
