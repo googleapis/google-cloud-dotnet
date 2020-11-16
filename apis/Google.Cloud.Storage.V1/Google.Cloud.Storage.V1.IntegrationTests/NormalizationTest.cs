@@ -27,7 +27,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     [FileLoggerBeforeAfterTest]
     public class NormalizationTest
     {
-        [SkippableTheory(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5548")]
+        [SkippableTheory]
         // Normalization Form C: a single character for e-acute.
         // URL should end with Caf%C3%A9
         [InlineData("Caf\u00e9", "Normalization Form C")]
