@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.6.0, released 2020-11-17
+
+- [Commit 3733849](https://github.com/googleapis/google-cloud-dotnet/commit/3733849): feat: added support OSInventory in Assets. docs: updated existing docs.
+- [Commit c42363f](https://github.com/googleapis/google-cloud-dotnet/commit/c42363f): feat: add AnalyzeIamPolicy and AnalyzeIamPolicyLongrunning RPCs
+
 # Version 2.5.0, released 2020-09-28
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
