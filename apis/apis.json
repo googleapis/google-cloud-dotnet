@@ -74,6 +74,7 @@
         "Google.LongRunning": "2.0.0",
         "Google.Cloud.Iam.V1": "2.0.0",
         "Google.Cloud.OrgPolicy.V1": "2.0.0",
+        "Google.Cloud.OsConfig.V1": "1.2.0",
         "Grpc.Core": "2.31.0"
       },
       "tags": [
