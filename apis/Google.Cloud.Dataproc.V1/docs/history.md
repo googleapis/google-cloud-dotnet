@@ -1,5 +1,18 @@
 # Version history
 
+# Version 3.0.0, released 2020-11-17
+
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit baae3ab](https://github.com/googleapis/google-cloud-dotnet/commit/baae3ab): docs: change relative URLs to absolute URLs to fix broken links.
+- [Commit 0ceb9e8](https://github.com/googleapis/google-cloud-dotnet/commit/0ceb9e8): feat: Additional fields for the `ClusterConfig` and `InstanceGroupConfig` messages.
+- [Commit 9724a7a](https://github.com/googleapis/google-cloud-dotnet/commit/9724a7a): fix!: fix LRO annotations for method `DiagnoseCluster`.
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Apply timeouts to RPCs without retry
+- [Commit bdd321b](https://github.com/googleapis/google-cloud-dotnet/commit/bdd321b): docs: change relative URLs to absolute URLs to fix broken links.
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+
+Please note the breaking change compared with 2.1.0, in terms of long-running operation response/metadata types.
+
 # Version 2.1.0, released 2020-05-04
 
 - [Commit cdd7342](https://github.com/googleapis/google-cloud-dotnet/commit/cdd7342): docs: change relative URLs to absolute URLs to fix broken links.
