@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.2.0, released 2020-11-17
+
+- [Commit 696b75f](https://github.com/googleapis/google-cloud-dotnet/commit/696b75f):
+  - feat: Added PatchRollout feature to PatchDeployments
+  - feat: Added Inventory proto definitions for VM Manager Inventory.
+
 # Version 1.1.0, released 2020-10-23
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
