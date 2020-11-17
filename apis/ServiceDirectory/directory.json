@@ -286,6 +286,7 @@
         "google/api",
         "google/cloud/asset/v1",
         "google/cloud/orgpolicy/v1",
+        "google/cloud/osconfig/v1",
         "google/iam/v1",
         "google/identity/accesscontextmanager/v1",
         "google/longrunning",
