@@ -97,6 +97,8 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
         public sealed class Section
         {
+            private static readonly StructuredVersion s_expectedInitialReleaseVersion = StructuredVersion.FromString("1.0.0-beta01");
+
             public StructuredVersion Version { get; }
 
             /// <summary>
@@ -118,11 +120,18 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
                 Lines.Add($"# Version {Version}, released {release.ReleaseDate:yyyy-MM-dd}");
                 Lines.Add("");
-                foreach (var commit in release.Commits)
+                if (Version.Equals(s_expectedInitialReleaseVersion))
                 {
-                    Lines.AddRange(commit.GetHistoryLines());
+                    Lines.Add("Initial release.");
                 }
-                Lines.Add("");
+                else
+                {
+                    foreach (var commit in release.Commits)
+                    {
+                        Lines.AddRange(commit.GetHistoryLines());
+                    }
+                    Lines.Add("");
+                }
             }
         }
     }
