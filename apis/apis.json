@@ -954,7 +954,7 @@
       "protoPath": "google/logging/v2",
       "productName": "Google Cloud Logging",
       "productUrl": "https://cloud.google.com/logging/",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Logging API, which writes log entries and manages your logs, log sinks, and logs-based metrics.",
       "tags": [
@@ -963,7 +963,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Google.Cloud.Logging.Type": "3.1.0",
+        "Google.Cloud.Logging.Type": "3.2.0",
         "Grpc.Core": "2.31.0"
       }
     },
