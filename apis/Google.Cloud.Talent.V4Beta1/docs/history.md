@@ -1,5 +1,13 @@
 # Version history
 
+# Version 2.0.0-beta04, released 2020-11-18
+
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
+- [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Apply timeouts to RPCs without retry
+- [Commit 8381822](https://github.com/googleapis/google-cloud-dotnet/commit/8381822): docs: Remove a broken link from the documentation.
+- [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
+
 # Version 2.0.0-beta03, released 2020-04-14
 
 - [Commit 28bdca8](https://github.com/googleapis/google-cloud-dotnet/commit/28bdca8): Fix (breaking change): reorder Company and Job resources in talent API to be consistent with old gapic config.
