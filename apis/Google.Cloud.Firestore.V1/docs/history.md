@@ -4,6 +4,11 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+# Version 2.2.0, released 2020-11-18
+
+- [Commit 9f32781](https://github.com/googleapis/google-cloud-dotnet/commit/9f32781): fix: retry PartitionQuery for INTERNAL and DEADLINE_EXCEEDED
+- [Commit 91989e0](https://github.com/googleapis/google-cloud-dotnet/commit/91989e0): fix: give PartitionQuery retry/timeout config
+
 # Version 2.1.0, released 2020-10-05
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
