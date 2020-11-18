@@ -74,7 +74,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.OsLogin.Common](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.Common/2.1.0) | 2.1.0 | Version-agnostic types for the Google OS Login API |
 | [Google.Cloud.OsLogin.V1](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1/2.1.0) | 2.1.0 | [Google Cloud OS Login (V1 API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
 | [Google.Cloud.OsLogin.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.OsLogin.V1Beta/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud OS Login (V1Beta API)](https://cloud.google.com/compute/docs/instances/managing-instance-access) |
-| [Google.Cloud.PhishingProtection.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
+| [Google.Cloud.PhishingProtection.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.PhishingProtection.V1Beta1/1.0.0-beta03) | 1.0.0-beta03 | [Cloud Phishing Protection](https://cloud.google.com/phishing-protection/) |
 | [Google.Cloud.PolicyTroubleshooter.V1](https://googleapis.dev/dotnet/Google.Cloud.PolicyTroubleshooter.V1/1.0.0) | 1.0.0 | [Policy Troubleshooter](https://cloud.google.com/iam/docs/reference/policytroubleshooter/rest) |
 | [Google.Cloud.PubSub.V1](https://googleapis.dev/dotnet/Google.Cloud.PubSub.V1/2.1.0) | 2.1.0 | [Cloud Pub/Sub](https://cloud.google.com/pubsub/) |
 | [Google.Cloud.RecaptchaEnterprise.V1](https://googleapis.dev/dotnet/Google.Cloud.RecaptchaEnterprise.V1/1.1.0) | 1.1.0 | [Google Cloud reCAPTCHA Enterprise (V1 API)](https://cloud.google.com/recaptcha-enterprise/) |
