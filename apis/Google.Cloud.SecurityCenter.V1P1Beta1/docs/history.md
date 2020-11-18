@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.0.0-beta04, released 2020-11-18
+
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+- [Commit 28fa21a](https://github.com/googleapis/google-cloud-dotnet/commit/28fa21a): docs: updated description of finding severity field
+- [Commit 6696f32](https://github.com/googleapis/google-cloud-dotnet/commit/6696f32): docs: Clarified that event_time can also be considered as the "update time" for a Finding. It also captures when a Finding was updated. The previous wording could've been interpreted as only the creation time.
+
 # Version 2.0.0-beta03, released 2020-08-17
 
 - [Commit 95b05fe](https://github.com/googleapis/google-cloud-dotnet/commit/95b05fe):
