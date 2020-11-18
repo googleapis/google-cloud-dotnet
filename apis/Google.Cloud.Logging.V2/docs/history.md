@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.2.0, released 2020-11-18
+
+- [Commit 23bc620](https://github.com/googleapis/google-cloud-dotnet/commit/23bc620): feat: Makes remaining LogBucket and LogViews methods public
+
 # Version 3.1.0, released 2020-10-21
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
