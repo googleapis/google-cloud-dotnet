@@ -1639,7 +1639,7 @@
       "protoPath": "google/cloud/speech/v1p1beta1",
       "productName": "Google Cloud Speech",
       "productUrl": "https://cloud.google.com/speech",
-      "version": "2.0.0-beta02",
+      "version": "2.0.0-beta03",
       "releaseLevelOverride": "beta",
       "type": "grpc",
       "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
@@ -1647,7 +1647,7 @@
         "Speech"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.0.0"
+        "Google.LongRunning": "2.1.0"
       }
     },
     {
