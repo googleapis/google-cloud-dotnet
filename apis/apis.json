@@ -1495,7 +1495,7 @@
     },
     {
       "id": "Google.Cloud.ServiceManagement.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Service Management",
       "productUrl": "https://cloud.google.com/service-infrastructure/docs/service-management/reference/rpc",
@@ -1506,7 +1506,9 @@
         "management"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.0.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.LongRunning": "2.1.0",
+        "Grpc.Core": "2.31.0"
       },
       "generator": "micro",
       "protoPath": "google/api/servicemanagement/v1"
