@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.3.0, released 2020-11-18
+
+No API surface change - just dependencies, and a GA release of the new serialization attribute from 2.3.0-beta01.
+
 # Version 2.3.0-beta01, released 2020-10-29
 
 - [Commit 126529d](https://github.com/googleapis/google-cloud-dotnet/commit/126529d): Mechanism for passing server-provided fields to custom type converters. Fixes [issue 5470](https://github.com/googleapis/google-cloud-dotnet/issues/5470).
