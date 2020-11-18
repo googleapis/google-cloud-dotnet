@@ -726,7 +726,7 @@
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
       "listingDescription": "Firestore low-level API access",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "type": "grpc",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -737,7 +737,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Google.LongRunning": "2.0.0",
+        "Google.LongRunning": "2.1.0",
         "Grpc.Core": "2.31.0"
       }
     },
