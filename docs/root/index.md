@@ -88,7 +88,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html) | 2.0.0-beta03 | [Google Cloud Memorystore for Redis (V1Beta1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Scheduler.V1](Google.Cloud.Scheduler.V1/index.html) | 2.1.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
 | [Google.Cloud.SecretManager.V1](Google.Cloud.SecretManager.V1/index.html) | 1.2.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
-| [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html) | 2.0.0-beta02 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
+| [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html) | 2.0.0-beta03 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.Security.PrivateCA.V1Beta1](Google.Cloud.Security.PrivateCA.V1Beta1/index.html) | 1.0.0-beta01 | [Certificate Authority](https://cloud.google.com/certificate-authority-service/) |
 | [Google.Cloud.SecurityCenter.Settings.V1Beta1](Google.Cloud.SecurityCenter.Settings.V1Beta1/index.html) | 1.0.0-beta01 | [Google Cloud Security Command Center Settings](https://cloud.google.com/security-command-center/) |
 | [Google.Cloud.SecurityCenter.V1](Google.Cloud.SecurityCenter.V1/index.html) | 2.1.0 | [Google Cloud Security Command Center (V1 API)](https://cloud.google.com/security-command-center/) |
