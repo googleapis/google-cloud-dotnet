@@ -78,6 +78,16 @@ By default no extra metadata is logged. `withMetaData` specifies which extra met
 ```
 Allows custom labels to be added to the metadata of log entries.
 
+### UsePatternWithinCustomLabels
+
+```xml
+<usePatternWithinCustomLabels value="true"/>
+```
+
+Defaults to `false`. Setting this to `true` enables `PatternLayout` use in custom labels.
+All the standard patterns documented for Log4Net `PatternLayout` are available.
+Custom pattern conversions are not possible.
+
 ### resourceType
 
 ```xml
@@ -131,6 +141,27 @@ So, for example, a complete configuration might look like this:
   </appender>
 </log4net>
 ```
+### Configuration example: Translating Log4Net properties to Google Cloud Logging labels
+
+If you wanted to transalate Log4Net properties to Google Cloud Logging labels, you can do as follows:
+
+Create a `log4net` configuration file (`log4net.xml`):
+
+[!code-xml[](obj/snippets/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.txt#log4net_custom_labels_template)]
+
+Edit the file replacing `PROJECT_ID` with your Google Cloud Project
+ID, and `LOG_ID` with an identifier for your application.
+
+Use this file to configure `log4net` and then set Log4Net properties per scopes and log as normal.
+If a property referenced in a custom label doesn't have a value for a given entry, the value will be
+`(null)`.
+
+{{sample:GoogleStackdriverAppender.Custom_Labels}}
+
+If executing on [Google App Engine (GAE)](https://cloud.google.com/appengine/),
+[Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/),
+or [Google Compute Engine (GCE)](https://cloud.google.com/compute/),
+then the `<projectId value="PROJECT_ID" />` configuration setting can be omitted; it will be auto-detected from the platform at run-time.
 
 ## Local queuing configuration
 

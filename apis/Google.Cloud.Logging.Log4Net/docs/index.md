@@ -1,6 +1,6 @@
 {{title}}
 
-`Google.Cloud.Logging.Log4Net` is a .NET client library to integrate  [Google Stackdriver
+`Google.Cloud.Logging.Log4Net` is a .NET client library to integrate  [Google Cloud
 Logging](https://cloud.google.com/logging/) with
 [log4net](https://logging.apache.org/log4net/).
 
