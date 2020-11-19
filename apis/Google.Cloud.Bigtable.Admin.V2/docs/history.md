@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.3.0, released 2020-11-19
+
+- [Commit 532b6ae](https://github.com/googleapis/google-cloud-dotnet/commit/532b6ae):
+  - feat: Update BigtableTableAdmin GetIamPolicy to include the additional binding for Backup.
+  - feat: Change DeleteAppProfileRequest.ignore_warnings to REQUIRED.
+
 # Version 2.2.0, released 2020-10-08
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
