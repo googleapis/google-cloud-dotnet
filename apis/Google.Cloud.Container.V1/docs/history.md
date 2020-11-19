@@ -1,5 +1,32 @@
 # Version history
 
+# Version 2.2.0, released 2020-11-19
+
+- [Commit 3a8598f](https://github.com/googleapis/google-cloud-dotnet/commit/3a8598f):
+  - fix: deprecate SetLocations; use UpdateCluster
+  - refactor: provide name alias for GetOperation (as method signature annotation)
+  - feat: support for GetJSONWebKeys
+  - feat: support for Workload Identity
+  - feat: support for Gvisor in nodes
+  - feat: support for node reservation affinity
+  - feat: support for Customer Managed Encryption in nodes
+  - fix: deprecate basic auth fields (removed in 1.19 clusters)
+  - feat: support for NodeLocalDNS
+  - feat: support for ConfigConnector
+  - feat: support for private cluster VPC peering
+  - feat: support for CloudRun load balancers
+  - feat: support using routes for pod IPs
+  - feat: support for Shielded Nodes
+  - feat: support for release channels
+  - fix: deprecated Cluster/NodePool.status_message; use conditions
+  - feat: support for disabling default sNAT
+  - feat: operations now store more granular progress
+  - feat: support for node Surge Upgrades
+  - feat: support for updating node pool locations.
+  - feat: support for Node Auto Provisioning
+  - feat: support for specifying node disk size and type
+  - docs: many minor documentation clarifications
+
 # Version 2.1.0, released 2020-10-14
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
