@@ -916,7 +916,7 @@
     },
     {
       "id": "Google.Cloud.Logging.NLog",
-      "version": "3.0.1",
+      "version": "3.1.0",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
@@ -927,11 +927,11 @@
         "Stackdriver"
       ],
       "dependencies": {
-        "NLog": "4.5.11",
         "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Google.Cloud.Logging.V2": "3.0.0",
         "Google.Cloud.DevTools.Common": "2.0.0",
-        "Grpc.Core": "2.31.0"
+        "Google.Cloud.Logging.V2": "3.2.0",
+        "Grpc.Core": "2.31.0",
+        "NLog": "4.5.11"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "3.2.0"
