@@ -18,7 +18,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Analytics.Admin.V1Alpha](Google.Analytics.Admin.V1Alpha/index.html) | 1.0.0-alpha02 | Analytics Admin |
+| [Google.Analytics.Admin.V1Alpha](Google.Analytics.Admin.V1Alpha/index.html) | 1.0.0-alpha03 | Analytics Admin |
 | [Google.Analytics.Data.V1Alpha](Google.Analytics.Data.V1Alpha/index.html) | 1.0.0-alpha02 | Google Analytics Data |
 | [Google.Area120.Tables.V1Alpha1](Google.Area120.Tables.V1Alpha1/index.html) | 1.0.0-alpha02 | Google Area 120 Tables |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](Google.Cloud.ArtifactRegistry.V1Beta2/index.html) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
