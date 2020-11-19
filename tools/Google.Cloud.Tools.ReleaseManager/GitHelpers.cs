@@ -22,6 +22,7 @@ namespace Google.Cloud.Tools.ReleaseManager
     {
         /// <summary>
         /// Creates a predicate which determines whether or not a commit affects an API.
+        /// Note that this does *not* observe commit overrides with "skip" (yet).
         /// </summary>
         /// <param name="id">The ID of the API to create a predicate for.</param>
         /// <returns>The predicate.</returns>
@@ -57,5 +58,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         internal static DateTimeOffset GetDate(this Commit commit) =>
             (commit.Author ?? commit.Committer).When;
+
+        internal static string GetHashPrefix(this Commit commit) => commit.Sha.Substring(0, 7);
     }
 }
