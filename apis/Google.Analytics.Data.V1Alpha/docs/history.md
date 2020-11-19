@@ -1,5 +1,13 @@
 # Version history
 
+# Version 1.0.0-alpha03, released 2020-11-19
+
+- [Commit 92d988e](https://github.com/googleapis/google-cloud-dotnet/commit/92d988e):
+  - fix!: GetUniversalMetadata method removed from the API, GetMetadata method should be used instead feat: reporting requests now support date ranges longer than one year docs: minor documentation updates ([issue 5556](https://github.com/googleapis/google-cloud-dotnet/issues/5556))
+  - fix!: GetUniversalMetadata method removed from the API, GetMetadata method should be used instead
+  - feat: reporting requests now support date ranges longer than one year
+  - docs: minor documentation updates ([issue 5556](https://github.com/googleapis/google-cloud-dotnet/issues/5556))
+
 # Version 1.0.0-alpha02, released 2020-11-05
 
 - [Commit b85cd73](https://github.com/googleapis/google-cloud-dotnet/commit/b85cd73):
