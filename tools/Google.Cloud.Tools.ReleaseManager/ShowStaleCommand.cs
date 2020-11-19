@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Google.Cloud.Tools.ReleaseManager.History;
 using LibGit2Sharp;
 using System;
 using System.Collections.Generic;
@@ -56,7 +57,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
 
             var laterCommits = repo.Commits.TakeWhile(commit => commit.Sha != latestRelease.Target.Sha);
-            var relevantCommits = laterCommits.Where(GitHelpers.CreateCommitPredicate(repo, api.Id)).ToList();
+            var relevantCommits = laterCommits
+                .Where(GitHelpers.CreateCommitPredicate(repo, api.Id))
+                .Where(commit => !CommitOverrides.IsSkipped(commit))
+                .ToList();
 
             // No changes
             if (relevantCommits.Count == 0)

@@ -28,8 +28,6 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     internal class GitCommit
     {
-        private static Lazy<Dictionary<string, string>> s_overrides = new Lazy<Dictionary<string, string>>(LoadOverrides);
-
         private const string AutosynthEmail = "yoshi-automation@google.com";
         /// <summary>
         /// A commit line consisting of just "Version history:" indicates that all the lines
@@ -49,7 +47,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         internal GitCommit(Commit libGit2Commit)
         {
             _libGit2Commit = libGit2Commit;
-            Hash = _libGit2Commit.Sha.Substring(0, 7);
+            Hash = _libGit2Commit.GetHashPrefix();
             Url = $"https://github.com/googleapis/google-cloud-dotnet/commit/{Hash}";
         }
 
@@ -62,7 +60,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         internal IEnumerable<string> GetHistoryLines()
         {
             // Use the override if one has been provided for this commit, or the commit message otherwise.
-            string message = s_overrides.Value.GetValueOrDefault(Hash, _libGit2Commit.Message);
+            string message = CommitOverrides.HashPrefixToMessageMap.GetValueOrDefault(Hash, _libGit2Commit.Message);
 
             var messageLines = message.Replace("\r", "").Split('\n')
                 // Blank lines aren't helpful. It's slightly annoying that if the commit originally
@@ -89,7 +87,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
             // A single line of "skip" (usually from an override, either in the commit or in the overrides file)
             // means we skip the commit entirely.
-            if (messageLines.Count == 1 && messageLines[0].Equals(SkipMessage, StringComparison.OrdinalIgnoreCase))
+            if (messageLines.Count == 1 && messageLines[0].Equals(CommitOverrides.SkipMessage, StringComparison.OrdinalIgnoreCase))
             {
                 yield break;
             }
@@ -123,14 +121,6 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
             string AddIssueLink(string line) =>
                 IssuePattern.Replace(line, "[issue $1](https://github.com/googleapis/google-cloud-dotnet/issues/$1)");
-        }
-
-        private static Dictionary<string, string> LoadOverrides()
-        {
-            using var stream = typeof(GitCommit).Assembly.GetManifestResourceStream(typeof(GitCommit), "overrides.json");
-            using var reader = new StreamReader(stream);
-            string json = reader.ReadToEnd();
-            return JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
         }
     }
 }
