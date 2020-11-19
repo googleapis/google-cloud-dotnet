@@ -1,5 +1,11 @@
 # Version history
 
+# Version 3.1.0, released 2020-11-19
+
+- [Commit cbaa00a](https://github.com/googleapis/google-cloud-dotnet/commit/cbaa00a): Renormalize line endings
+- [Commit 02e2ddc](https://github.com/googleapis/google-cloud-dotnet/commit/02e2ddc): NLog GoogleStackDriverTarget skip reflection on Stream-objects ([issue 5230](https://github.com/googleapis/google-cloud-dotnet/issues/5230))
+- [Commit 0e6d135](https://github.com/googleapis/google-cloud-dotnet/commit/0e6d135): NLog GoogleStackdriverTarget improve handling of System.Reflection (MemberInfo is better than MethodInfo)
+
 # Version 3.0.1, released 2020-04-20
 
 - [Commit ced67e4](https://github.com/googleapis/google-cloud-dotnet/commit/ced67e4): Fix: Improve handling of System.Reflection objects that will dump all types in the application-assembly.
