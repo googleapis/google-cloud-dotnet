@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.0.0-alpha03, released 2020-11-19
+
+- [Commit 766a6d0](https://github.com/googleapis/google-cloud-dotnet/commit/766a6d0):
+  - fix: 'requests' field of CreateUserLink, UpdateUserLink, DeleteUserLink methods is now required
+  - docs: minor documentation updates
+
 # Version 1.0.0-alpha02, released 2020-11-05
 
 - [Commit 667e40f](https://github.com/googleapis/google-cloud-dotnet/commit/667e40f): docs: renamed App + Web to Google Analytics 4 (GA4) in public documentation
