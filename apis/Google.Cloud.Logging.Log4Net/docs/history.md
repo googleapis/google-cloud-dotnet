@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.2.0, released 2020-11-19
+
+No API surface changes, but this release updates dependencies.
+
 # Version 3.1.0, released 2020-04-16
 
 - [Commit 51d65fa](https://github.com/googleapis/google-cloud-dotnet/commit/51d65fa): Feature: Allow GoogleStackdriverAppender to be configured to create JSON payloads
