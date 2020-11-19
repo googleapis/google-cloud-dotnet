@@ -183,7 +183,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 // Optimizer version set at a command level has higher precedence
                 // than version set through the connection or the environment
                 // variable.
-                Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql("foo"); //, cmdOptimizerVersion);
+                Mock<SpannerClient> spannerClientMock = SetupExecuteStreamingSql(cmdOptimizerVersion);
 
                 const string connOptimizerVersion = "1";
                 SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
@@ -574,13 +574,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            try
-            {
-                // Try to set the transaction tag.
-                transaction.TransactionTag = transactionTag;
-                Assert.True(false, "Missing expected exception");
-            }
-            catch (InvalidOperationException) { }
+            Assert.Throws<InvalidOperationException>(() => transaction.TransactionTag = transactionTag);
 
             transaction.Commit();
 
@@ -590,6 +584,19 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Verify(client => client.CommitAsync(
                 It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
                 It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void TransactionTagCannotBeSetForReadOnlyTransaction()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
+            Assert.Throws<InvalidOperationException>(() => transaction.TransactionTag = "transaction-tag-1");
         }
 
         [Fact]

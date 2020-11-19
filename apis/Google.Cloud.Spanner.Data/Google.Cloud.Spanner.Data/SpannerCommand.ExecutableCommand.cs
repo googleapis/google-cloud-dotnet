@@ -385,12 +385,12 @@ namespace Google.Cloud.Spanner.Data
                     return Partition.ExecuteSqlRequest;
                 }
 
+                RequestOptions.TransactionTag = Transaction?.TransactionTag ?? "";
                 var request = new ExecuteSqlRequest
                 {
                     Sql = CommandTextBuilder.ToString(),
                     QueryOptions = GetEffectiveQueryOptions(),
                     RequestOptions = BuildRequestOptions()
-                    //RequestOptions = RequestOptions.ToProto()
                 };
 
                 // See comment at the start of GetMutations.

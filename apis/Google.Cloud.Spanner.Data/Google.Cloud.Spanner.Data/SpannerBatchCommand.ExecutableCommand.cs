@@ -91,10 +91,11 @@ namespace Google.Cloud.Spanner.Data
 
             private ExecuteBatchDmlRequest GetExecuteBatchDmlRequest()
             {
+                RequestOptions.TransactionTag = Transaction.TransactionTag ?? "";
                 var request = new ExecuteBatchDmlRequest
                 {
                     RequestOptions = BuildRequestOptions()
-                    // RequestOptions = RequestOptions.ToProto()
+                    RequestOptions = RequestOptions
                 };
                 foreach (var command in Commands)
                 {
