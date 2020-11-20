@@ -14,6 +14,10 @@
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using Xunit;
 
@@ -34,10 +38,105 @@ namespace Google.Cloud.Logging.Console.Tests
             Assert.Equal(expectedJson, actualJson);
         }
 
+        [Fact]
+        public void InvalidLogLevel_Throws()
+        {
+            var formatter = CreateFormatter();
+            var logEntry = new LogEntry<string>((LogLevel)8, "LogCategory", new EventId(1), "test", exception: null, (state, exception) => state);
+            var writer = new StringWriter { NewLine = "\n" };
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => formatter.Write(logEntry, scopeProvider: null, writer));
+        }
+
+        [Fact]
+        public void NoMessageAndNoException_Nothing()
+        {
+            var formatter = CreateFormatter();
+            var logEntry = new LogEntry<string>((LogLevel)8, "LogCategory", new EventId(1), null, exception: null, (state, exception) => state);
+            var writer = new StringWriter { NewLine = "\n" };
+            formatter.Write(logEntry, scopeProvider: null, writer);
+
+            var expectedJson = "";
+            var actualJson = writer.ToString();
+
+            Assert.Equal(expectedJson, actualJson);
+        }
+
+        [Fact]
+        public void Log_CorrectScopeInformation()
+        {
+            var formatter = CreateFormatter(new GoogleCloudConsoleFormatterOptions() { IncludeScopes = true });
+
+            var logEntry = new LogEntry<string>(LogLevel.Information, "LogCategory", new EventId(1), "test", exception: null, (state, exception) => state);
+            var writer = new StringWriter { NewLine = "\n" };
+
+            var scopeProvider = new LoggerExternalScopeProvider();
+
+            formatter.Write(logEntry, scopeProvider: scopeProvider, writer);
+            var expectedJson = "{\"message\":\"test\",\"severity\":\"INFO\",\"scopes\":[]}\n";
+            var actualJson = writer.ToString();
+
+            Assert.Equal(expectedJson, actualJson);
+        }
+
+
+        [Fact]
+        public void Log_KeyValuePair()
+        {
+            var formatter = CreateFormatter();
+
+            var _state = new ReadOnlyCollection<KeyValuePair<string, object>>(new List<KeyValuePair<string, object>>()
+            {
+                new KeyValuePair<string, object>("A","Sample value 1"),
+                new KeyValuePair<string, object>("B","Sample value 2"),
+            });
+
+            var logEntry = new LogEntry<IReadOnlyCollection<KeyValuePair<string, object>>>(LogLevel.Information, "LogCategory", new EventId(1), _state, exception: null, (state, exception) => state.ToString());
+            var writer = new StringWriter { NewLine = "\n" };
+
+            formatter.Write(logEntry, scopeProvider: null, writer);
+            
+            var actualJson = writer.ToString();
+
+            Assert.Contains("Sample value 1", actualJson);
+            Assert.Contains("Sample value 2", actualJson);
+        }
+
+        [Fact]
+        public void ConsoleLoggerOptions_OptionChange_IsReloaded()
+        {
+            var monitor = new TestFormatterOptionsMonitor<GoogleCloudConsoleFormatterOptions>(new GoogleCloudConsoleFormatterOptions());
+            var formatter = CreateFormatterWithOptionMonitor(monitor);
+            var scopeProvider = new LoggerExternalScopeProvider();
+
+            var logEntry = new LogEntry<string>(LogLevel.Information, "LogCategory", new EventId(1), "test", exception: null, (state, exception) => state);
+            var writer = new StringWriter { NewLine = "\n" };
+            formatter.Write(logEntry, scopeProvider: scopeProvider, writer);
+            var expectedJson = "{\"message\":\"test\",\"severity\":\"INFO\"}\n";
+            var actualJson = writer.ToString();
+
+            Assert.Equal(expectedJson, actualJson);
+
+            monitor.Set(new GoogleCloudConsoleFormatterOptions() { IncludeScopes = true });
+
+            var writerScope = new StringWriter { NewLine = "\n" };
+            formatter.Write(logEntry, scopeProvider: scopeProvider, writerScope);
+            var actualJsonWithScope = writerScope.ToString();
+            var expectedJsonWithScope = "{\"message\":\"test\",\"severity\":\"INFO\",\"scopes\":[]}\n";
+
+            Assert.Equal(expectedJsonWithScope, actualJsonWithScope);
+        }
+
         private static GoogleCloudConsoleFormatter CreateFormatter(GoogleCloudConsoleFormatterOptions options = null)
         {
             options ??= new GoogleCloudConsoleFormatterOptions();
             return new GoogleCloudConsoleFormatter(options);
+        }
+
+        private static GoogleCloudConsoleFormatter CreateFormatterWithOptionMonitor(IOptionsMonitor<GoogleCloudConsoleFormatterOptions> optionsMonitor = null)
+        {
+            optionsMonitor ??= new TestFormatterOptionsMonitor<GoogleCloudConsoleFormatterOptions>(new GoogleCloudConsoleFormatterOptions());
+            return new GoogleCloudConsoleFormatter(optionsMonitor);
         }
     }
 }
