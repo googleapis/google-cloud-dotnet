@@ -31,7 +31,7 @@ namespace Google.Cloud.Logging.Console.Tests
             var expectedJson = "{\"message\":\"test\",\"severity\":\"INFO\"}\n";
             var actualJson = writer.ToString();
 
-            Assert.Equal(actualJson, expectedJson);
+            Assert.Equal(expectedJson, actualJson);
         }
 
         private static GoogleCloudConsoleFormatter CreateFormatter(GoogleCloudConsoleFormatterOptions options = null)
