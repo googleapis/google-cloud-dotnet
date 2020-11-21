@@ -2134,25 +2134,6 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Vision.V1P4Beta1"
     },
     {
-      "ServiceDirectory": "google/cloud/visualinspection/v1beta1",
-      "Name": "visualinspection.googleapis.com",
-      "Title": "Visual Inspection AI API",
-      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
-      "ServiceConfigFile": "google/cloud/visualinspection/v1beta1/visualinspection_v1beta1.yaml",
-      "Version": "v1beta1",
-      "PackageFromDirectory": "google.cloud.visualinspection.v1beta1",
-      "PackageFromProtos": "google.cloud.visualinspection.v1beta1",
-      "ImportDirectories": [
-        "google/api",
-        "google/cloud/visualinspection/v1beta1",
-        "google/longrunning",
-        "google/protobuf",
-        "google/type"
-      ],
-      "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.VisualInspection.V1Beta1"
-    },
-    {
       "ServiceDirectory": "google/cloud/webrisk/v1",
       "Name": "webrisk.googleapis.com",
       "Title": "Web Risk API",
