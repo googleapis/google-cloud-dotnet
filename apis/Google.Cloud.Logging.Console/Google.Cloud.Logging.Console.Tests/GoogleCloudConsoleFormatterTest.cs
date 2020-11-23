@@ -15,6 +15,7 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -72,6 +73,25 @@ namespace Google.Cloud.Logging.Console.Tests
 
             var scopeProvider = new LoggerExternalScopeProvider();
 
+            scopeProvider.Push("Inner Scope");
+
+            formatter.Write(logEntry, scopeProvider: scopeProvider, writer);
+            var expectedJson = "{\"message\":\"test\",\"severity\":\"INFO\",\"scopes\":[\"Inner Scope\"]}\n";
+            var actualJson = writer.ToString();
+
+            Assert.Equal(expectedJson, actualJson);
+        }
+
+        [Fact]
+        public void Log_EmptyScopeWithoutInfo()
+        {
+            var formatter = CreateFormatter(new GoogleCloudConsoleFormatterOptions { IncludeScopes = true });
+
+            var logEntry = new LogEntry<string>(LogLevel.Information, "LogCategory", new EventId(1), "test", exception: null, (state, exception) => state);
+            var writer = new StringWriter { NewLine = "\n" };
+
+            var scopeProvider = new LoggerExternalScopeProvider();
+
             formatter.Write(logEntry, scopeProvider: scopeProvider, writer);
             var expectedJson = "{\"message\":\"test\",\"severity\":\"INFO\",\"scopes\":[]}\n";
             var actualJson = writer.ToString();
@@ -98,8 +118,14 @@ namespace Google.Cloud.Logging.Console.Tests
             
             var actualJson = writer.ToString();
 
+            dynamic actualState = JsonConvert.DeserializeObject(actualJson);
+
             Assert.Contains("Sample value 1", actualJson);
             Assert.Contains("Sample value 2", actualJson);
+            Assert.NotNull(actualState.state.A);
+            Assert.NotNull(actualState.state.B);
+            Assert.Equal("Sample value 1", actualState.state.A.Value);
+            Assert.Equal("Sample value 2", actualState.state.B.Value);
         }
 
         [Fact]
