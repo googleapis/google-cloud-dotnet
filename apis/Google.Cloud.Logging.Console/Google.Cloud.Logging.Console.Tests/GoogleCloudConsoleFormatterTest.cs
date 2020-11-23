@@ -85,10 +85,10 @@ namespace Google.Cloud.Logging.Console.Tests
         {
             var formatter = CreateFormatter();
 
-            var _state = new ReadOnlyCollection<KeyValuePair<string, object>>(new List<KeyValuePair<string, object>>()
+            var _state = new ReadOnlyCollection<KeyValuePair<string, object>>(new List<KeyValuePair<string, object>>
             {
-                new KeyValuePair<string, object>("A","Sample value 1"),
-                new KeyValuePair<string, object>("B","Sample value 2"),
+                new KeyValuePair<string, object>("A", "Sample value 1"),
+                new KeyValuePair<string, object>("B", "Sample value 2"),
             });
 
             var logEntry = new LogEntry<IReadOnlyCollection<KeyValuePair<string, object>>>(LogLevel.Information, "LogCategory", new EventId(1), _state, exception: null, (state, exception) => state.ToString());
