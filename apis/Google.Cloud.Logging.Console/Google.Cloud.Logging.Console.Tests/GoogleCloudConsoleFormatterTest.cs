@@ -14,8 +14,7 @@
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
+using System.Text.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -118,21 +117,21 @@ namespace Google.Cloud.Logging.Console.Tests
             
             var actualJson = writer.ToString();
 
-            dynamic actualState = JsonConvert.DeserializeObject(actualJson);
+            var actualState = JsonDocument.Parse(actualJson);
+            var actualValueA = actualState.RootElement.GetProperty("state").GetProperty("A").GetString();
+            var actualValueB = actualState.RootElement.GetProperty("state").GetProperty("B").GetString();
 
             Assert.Contains("Sample value 1", actualJson);
             Assert.Contains("Sample value 2", actualJson);
-            Assert.NotNull(actualState.state.A);
-            Assert.NotNull(actualState.state.B);
-            Assert.Equal("Sample value 1", actualState.state.A.Value);
-            Assert.Equal("Sample value 2", actualState.state.B.Value);
+            Assert.Equal("Sample value 1", actualValueA);
+            Assert.Equal("Sample value 2", actualValueB);
         }
 
         [Fact]
         public void ConsoleLoggerOptions_OptionChange_IsReloaded()
         {
             var monitor = new TestFormatterOptionsMonitor<GoogleCloudConsoleFormatterOptions>(new GoogleCloudConsoleFormatterOptions());
-            var formatter = CreateFormatterWithOptionMonitor(monitor);
+            var formatter = new GoogleCloudConsoleFormatter(monitor);
             var scopeProvider = new LoggerExternalScopeProvider();
 
             var logEntry = new LogEntry<string>(LogLevel.Information, "LogCategory", new EventId(1), "test", exception: null, (state, exception) => state);
@@ -157,12 +156,6 @@ namespace Google.Cloud.Logging.Console.Tests
         {
             options ??= new GoogleCloudConsoleFormatterOptions();
             return new GoogleCloudConsoleFormatter(options);
-        }
-
-        private static GoogleCloudConsoleFormatter CreateFormatterWithOptionMonitor(IOptionsMonitor<GoogleCloudConsoleFormatterOptions> optionsMonitor = null)
-        {
-            optionsMonitor ??= new TestFormatterOptionsMonitor<GoogleCloudConsoleFormatterOptions>(new GoogleCloudConsoleFormatterOptions());
-            return new GoogleCloudConsoleFormatter(optionsMonitor);
         }
     }
 }
