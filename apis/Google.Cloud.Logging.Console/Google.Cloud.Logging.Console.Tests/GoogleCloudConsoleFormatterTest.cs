@@ -117,7 +117,7 @@ namespace Google.Cloud.Logging.Console.Tests
 
             Assert.Equal(expectedJson, actualJson);
 
-            monitor.Set(new GoogleCloudConsoleFormatterOptions() { IncludeScopes = true });
+            monitor.Set(new GoogleCloudConsoleFormatterOptions { IncludeScopes = true });
 
             var writerScope = new StringWriter { NewLine = "\n" };
             formatter.Write(logEntry, scopeProvider: scopeProvider, writerScope);
