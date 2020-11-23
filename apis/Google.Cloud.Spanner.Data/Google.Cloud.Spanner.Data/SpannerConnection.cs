@@ -119,7 +119,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Request CommitStats for all read/write transactions throughout the
         /// lifetime of the connection and log these. This value is set as the
-        /// default for read/write transaction created by this connection, and
+        /// default for read/write transactions created by this connection, and
         /// is used for statements that are executed on this connection without
         /// a transaction.
         /// </summary>
