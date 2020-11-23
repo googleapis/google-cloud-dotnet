@@ -65,7 +65,7 @@ namespace Google.Cloud.Logging.Console.Tests
         [Fact]
         public void Log_CorrectScopeInformation()
         {
-            var formatter = CreateFormatter(new GoogleCloudConsoleFormatterOptions() { IncludeScopes = true });
+            var formatter = CreateFormatter(new GoogleCloudConsoleFormatterOptions { IncludeScopes = true });
 
             var logEntry = new LogEntry<string>(LogLevel.Information, "LogCategory", new EventId(1), "test", exception: null, (state, exception) => state);
             var writer = new StringWriter { NewLine = "\n" };
