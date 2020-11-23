@@ -26,6 +26,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using Google.Api.Gax.Testing;
 
 namespace Google.Cloud.Spanner.Data.Tests
 {
@@ -597,6 +598,71 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
             Assert.Throws<InvalidOperationException>(() => transaction.TransactionTag = "transaction-tag-1");
+        }
+
+        [Fact]
+        public void TagsCanBeSetToNull()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            transaction.TransactionTag = null;
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            command.RequestTag = null;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void RunWithRetryableTransactionWithTransactionTag()
+        {
+            var transactionTag = "retryable-tx-tag";
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync_Fails(1, StatusCode.Aborted, exceptionRetryDelay: TimeSpan.FromMilliseconds(0))
+                .SetupRollbackAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            connection.Builder.SessionPoolManager.SpannerSettings.Scheduler = new NoOpScheduler();
+
+            connection.RunWithRetriableTransaction(tx =>
+            {
+                tx.TransactionTag = transactionTag;
+                var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+                command.Transaction = tx;
+                command.RequestTag = null;
+                using (var reader = command.ExecuteReader())
+                {
+                    Assert.True(reader.HasRows);
+                }
+            });
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
+                It.IsAny<CallSettings>()), Times.Exactly(2));
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.TransactionTag == transactionTag),
+                It.IsAny<CallSettings>()), Times.Exactly(2));
         }
 
         [Fact]
