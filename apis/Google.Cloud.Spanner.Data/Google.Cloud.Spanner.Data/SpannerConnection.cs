@@ -117,7 +117,7 @@ namespace Google.Cloud.Spanner.Data
         public QueryOptions QueryOptions { get; set; }
 
         /// <summary>
-        /// Request CommitStats for all read/write transactions throughout the
+        /// Request commit statistics for all read/write transactions throughout the
         /// lifetime of the connection and log these. This value is set as the
         /// default for read/write transactions created by this connection, and
         /// is used for statements that are executed on this connection without
