@@ -292,11 +292,11 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// Request CommitStats for all read/write transactions throughout the
+        /// Request commit statistics for all read/write transactions throughout the
         /// lifetime of the connection and log these.
         /// </summary>
         /// <remarks>
-        /// CommitStats that are returned for a transaction are logged using the
+        /// Commit statistics that are returned for a transaction are logged using the
         /// logger of the connection. Applications can set a custom logger on the
         /// connection to log the output to a different destination.
         /// <see cref="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogCommitStats(CommitRequest, CommitResponse)"/>
