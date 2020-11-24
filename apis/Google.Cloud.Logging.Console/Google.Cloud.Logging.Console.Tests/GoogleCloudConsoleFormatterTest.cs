@@ -14,11 +14,11 @@
 
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using System.Text.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Text.Json;
 using Xunit;
 
 namespace Google.Cloud.Logging.Console.Tests
@@ -121,8 +121,6 @@ namespace Google.Cloud.Logging.Console.Tests
             var actualValueA = actualState.RootElement.GetProperty("state").GetProperty("A").GetString();
             var actualValueB = actualState.RootElement.GetProperty("state").GetProperty("B").GetString();
 
-            Assert.Contains("Sample value 1", actualJson);
-            Assert.Contains("Sample value 2", actualJson);
             Assert.Equal("Sample value 1", actualValueA);
             Assert.Equal("Sample value 2", actualValueB);
         }
