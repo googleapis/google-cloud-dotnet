@@ -911,7 +911,7 @@
         "Console"
       ],
       "dependencies": {
-        "Microsoft.Extensions.Logging.Console": "5.0.0-preview.8.20365.13"
+        "Microsoft.Extensions.Logging.Console": "5.0.0"
       }
     },
     {
