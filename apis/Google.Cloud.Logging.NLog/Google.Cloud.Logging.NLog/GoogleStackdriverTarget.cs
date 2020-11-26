@@ -491,43 +491,55 @@ namespace Google.Cloud.Logging.NLog
             if (SendJsonPayload)
             {
                 var jsonStruct = new Struct();
-                jsonStruct.Fields.Add("message", Value.ForString(RenderLogEvent(Layout, loggingEvent)));
-                if (ServiceContextName != null)
+                if (EnableJsonLayout)
                 {
-                    var serviceName = RenderLogEvent(ServiceContextName, loggingEvent);
-                    if (!string.IsNullOrEmpty(serviceName))
+                    foreach (var jToken in JObject.Parse(RenderLogEvent(Layout, loggingEvent)))
                     {
-                        // Include ServiceContext to allow errors to be automatically forwarded
-                        var serviceVersion = RenderLogEvent(ServiceContextVersion, loggingEvent);
-                        if (string.IsNullOrEmpty(serviceVersion))
-                        {
-                            serviceVersion = "0.0.0.0";
-                        }
-
-                        var serviceContext = new Struct();
-                        jsonStruct.Fields.Add("serviceContext", Value.ForStruct(serviceContext));
-                        serviceContext.Fields.Add("service", Value.ForString(serviceName));
-                        serviceContext.Fields.Add("version", Value.ForString(serviceVersion));
+                        jsonStruct.Fields.Add(jToken.Key, _jsonConvertFunction(jToken.Value));
                     }
                 }
-
-                var propertiesStruct = new Struct();
-                jsonStruct.Fields.Add("properties", Value.ForStruct(propertiesStruct));
-
-                foreach (var combinedProperty in GetAllProperties(loggingEvent).Where(x => !string.IsNullOrEmpty(x.Key)))
+                else
                 {
-                    Value jsonValue;
-                    try
+                    jsonStruct.Fields.Add("message", Value.ForString(RenderLogEvent(Layout, loggingEvent)));
+                    
+                    if (ServiceContextName != null)
                     {
-                        jsonValue = _jsonConvertFunction(combinedProperty.Value);
+                        var serviceName = RenderLogEvent(ServiceContextName, loggingEvent);
+                        if (!string.IsNullOrEmpty(serviceName))
+                        {
+                            // Include ServiceContext to allow errors to be automatically forwarded
+                            var serviceVersion = RenderLogEvent(ServiceContextVersion, loggingEvent);
+                            if (string.IsNullOrEmpty(serviceVersion))
+                            {
+                                serviceVersion = "0.0.0.0";
+                            }
+
+                            var serviceContext = new Struct();
+                            jsonStruct.Fields.Add("serviceContext", Value.ForStruct(serviceContext));
+                            serviceContext.Fields.Add("service", Value.ForString(serviceName));
+                            serviceContext.Fields.Add("version", Value.ForString(serviceVersion));
+                        }
                     }
-                    catch (Exception ex)
+
+                    var propertiesStruct = new Struct();
+                    jsonStruct.Fields.Add("properties", Value.ForStruct(propertiesStruct));
+
+                    foreach (var combinedProperty in GetAllProperties(loggingEvent).Where(x => !string.IsNullOrEmpty(x.Key)))
                     {
-                        InternalLogger.Warn(ex,
-                            "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
-                        jsonValue = Value.ForString($"<Exception: '{ex.Message}'>");
+                        Value jsonValue;
+                        try
+                        {
+                            jsonValue = _jsonConvertFunction(combinedProperty.Value);
+                        }
+                        catch (Exception ex)
+                        {
+                            InternalLogger.Warn(ex,
+                                "GoogleStackdriver(Name={0}): Exception at BuildLogEntry with Key={1}", Name, combinedProperty.Key);
+                            jsonValue = Value.ForString($"<Exception: '{ex.Message}'>");
+                        }
+
+                        propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
                     }
-                    propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
                 }
                 logEntry.JsonPayload = jsonStruct;
             }
