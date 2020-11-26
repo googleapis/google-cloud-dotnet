@@ -117,10 +117,17 @@ namespace Google.Cloud.Logging.NLog
 
         /// <summary>
         /// Fills <see cref="LogEntry.JsonPayload"/> instead of <see cref="LogEntry.TextPayload"/>.
-        /// JSON serialization can be customed using <see cref="JsonConverterTypeName"/> and <see cref="JsonConverterMethodName"/>,
+        /// JSON values serialization can be customized using <see cref="JsonConverterTypeName"/> and <see cref="JsonConverterMethodName"/>,
         /// or <see cref="JsonConverter"/>.
         /// </summary>
         public bool SendJsonPayload { get; set; }
+
+        /// <summary>
+        /// Fills <see cref="LogEntry.JsonPayload"/> in specified by user way with <see cref="T:NLog.Layouts.JsonLayout"/> layout type.
+        /// JSON values serialization can be customized using <see cref="JsonConverterTypeName"/> and <see cref="JsonConverterMethodName"/>,
+        /// or <see cref="JsonConverter"/>.
+        /// </summary>
+        public bool EnableJsonLayout { get; set; }
 
         /// <summary>
         /// When <see cref="SendJsonPayload"/> is <c>true</c>, a custom JSON serialization method may be specified by

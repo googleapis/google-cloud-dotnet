@@ -350,6 +350,84 @@ namespace Google.Cloud.Logging.NLog.Tests
             Assert.Equal("Ocean", properties.Fields["PlanetType"].StringValue);
         }
 
+        [Fact]
+        public async Task SingleLogEntryWithCustomJsonLayoutAllowingToCreateAttributesAtSameLevelAndNestedOnes()
+        {
+            var customAttributeAtSameLevel = "value of test attribute";
+            var nestedAttributeValue = @"{ ""nestedAttributeAttribute"": ""value of nested attribute"" }";
+            var useCustomJsonLayout = true;
+
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.ContextProperties.Add(new TargetPropertyWithContext { Name = "Galaxy", Layout = "Milky way" });
+                    googleTarget.Layout = new JsonLayout
+                    {
+                        Attributes =
+                        {
+                            new JsonAttribute("message", new SimpleLayout("${message}")), //${message} placeholder is for use of message passed directly to log entry
+                            new JsonAttribute("propertyAtSameLevelAsMessage", new SimpleLayout(customAttributeAtSameLevel)),
+                            new JsonAttribute("nestedAttribute", new JsonLayout
+                            {
+                                Attributes = { new JsonAttribute("nestedAttributeAttribute", new SimpleLayout("value of nested attribute"))}
+                            })
+                        }
+                    };
+                    LogManager.GetLogger("testlogger").Info("Hello {Planet}, width: {Radius} km, life: {Habitable}, type: {PlanetType}", "Earth", 6371, true, PlanetType.Ocean);
+                    return Task.FromResult(0);
+                }, includeEventProperties: true,
+                configFn: googleTarget =>
+                    googleTarget.SendJsonPayload = googleTarget.EnableJsonLayout = useCustomJsonLayout
+                );
+            Assert.Single(uploadedEntries);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
+            Assert.Equal("Hello \"Earth\", width: 6371 km, life: true, type: Ocean", entry0.JsonPayload.Fields["message"].StringValue);
+            Assert.Equal(customAttributeAtSameLevel, entry0.JsonPayload.Fields["propertyAtSameLevelAsMessage"].StringValue);
+            Assert.Equal(nestedAttributeValue, entry0.JsonPayload.Fields["nestedAttribute"].StringValue);
+
+            var properties = entry0.JsonPayload.Fields.Keys.FirstOrDefault( key => key == "properties" );
+            Assert.Null(properties);
+        }
+
+        [Fact]
+        public async Task SingleLogEntryWithCustomJsonLayoutAndCustomJsonConverter()
+        {
+            var customAttributeAtSameLevel = "value of test attribute";
+            var useCustomJsonLayout = true;
+
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.ContextProperties.Add(new TargetPropertyWithContext {Name = "Galaxy", Layout = "Milky way"});
+                    googleTarget.Layout = new JsonLayout
+                    {
+                        Attributes =
+                        {
+                            new JsonAttribute("message", new SimpleLayout("${message}")), //${message} placeholder is for use of message passed directly to log entry
+                            new JsonAttribute("propertyAtSameLevelAsMessage", new SimpleLayout(customAttributeAtSameLevel)),
+                            new JsonAttribute("nestedAttribute", new JsonLayout
+                            {
+                                Attributes = {new JsonAttribute("nestedAttributeAttribute", new SimpleLayout("value of nested attribute"))}
+                            })
+                        }
+                    };
+                    LogManager.GetLogger("testlogger").Info("Hello {Planet}, width: {Radius} km, life: {Habitable}, type: {PlanetType}", "Earth", 6371, true, PlanetType.Ocean);
+                    return Task.FromResult(0);
+                }, includeEventProperties: true,
+                configFn: googleTarget =>{
+                    googleTarget.SendJsonPayload = googleTarget.EnableJsonLayout = useCustomJsonLayout;
+                    googleTarget.JsonConverter = o => Value.ForString("\"CustomJsonConverterValue\"");}
+                );
+            Assert.Single(uploadedEntries);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal("", entry0.TextPayload?.Trim() ?? "");
+            Assert.Equal("\"CustomJsonConverterValue\"", entry0.JsonPayload.Fields["message"].StringValue);
+
+            var properties = entry0.JsonPayload.Fields.Keys.FirstOrDefault( key => key == "properties" );
+            Assert.Null(properties);
+        }
+
         private async Task<Struct> LogSingleEntryWithProblemType<T>() where T : ProblemTypeBase, new()
         {
             var uploadedEntries = await RunTestWorkingServer(
