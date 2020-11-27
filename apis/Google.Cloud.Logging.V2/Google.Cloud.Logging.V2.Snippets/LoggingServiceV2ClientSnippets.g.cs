@@ -18,7 +18,9 @@ namespace Google.Cloud.Logging.V2.Snippets
 {
     using Google.Api;
     using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
+    using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -929,6 +931,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ResourceNames = { "", },
             };
             // Make the request
             PagedEnumerable<ListLogsResponse, string> response = loggingServiceV2Client.ListLogs(request);
@@ -977,6 +980,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             ListLogsRequest request = new ListLogsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                ResourceNames = { "", },
             };
             // Make the request
             PagedAsyncEnumerable<ListLogsResponse, string> response = loggingServiceV2Client.ListLogsAsync(request);
@@ -1462,6 +1466,55 @@ namespace Google.Cloud.Logging.V2.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for TailLogEntries</summary>
+        public async Task TailLogEntries()
+        {
+            // Snippet: TailLogEntries(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize streaming call, retrieving the stream object
+            LoggingServiceV2Client.TailLogEntriesStream response = loggingServiceV2Client.TailLogEntries();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<TailLogEntriesResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    TailLogEntriesResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                TailLogEntriesRequest request = new TailLogEntriesRequest
+                {
+                    ResourceNames = { "", },
+                    Filter = "",
+                    BufferWindow = new Duration(),
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
             // End snippet
         }
     }

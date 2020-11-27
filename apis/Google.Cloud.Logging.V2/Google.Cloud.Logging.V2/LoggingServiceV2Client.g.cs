@@ -52,6 +52,8 @@ namespace Google.Cloud.Logging.V2
             ListLogEntriesSettings = existing.ListLogEntriesSettings;
             ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings;
             ListLogsSettings = existing.ListLogsSettings;
+            TailLogEntriesSettings = existing.TailLogEntriesSettings;
+            TailLogEntriesStreamingSettings = existing.TailLogEntriesStreamingSettings;
             OnCopy(existing);
         }
 
@@ -132,6 +134,20 @@ namespace Google.Cloud.Logging.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListLogsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LoggingServiceV2Client.TailLogEntries</c> and <c>LoggingServiceV2Client.TailLogEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 3600 seconds.</remarks>
+        public gaxgrpc::CallSettings TailLogEntriesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to <c>LoggingServiceV2Client.TailLogEntries</c>
+        ///  and <c>LoggingServiceV2Client.TailLogEntriesAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings TailLogEntriesStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="LoggingServiceV2Settings"/> object.</returns>
@@ -1064,6 +1080,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1122,6 +1143,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1180,6 +1206,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1238,6 +1269,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1296,6 +1332,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1354,6 +1395,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1412,6 +1458,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1470,6 +1521,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1528,6 +1584,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1586,6 +1647,11 @@ namespace Google.Cloud.Logging.V2
         /// "billingAccounts/[BILLING_ACCOUNT_ID]"
         /// "folders/[FOLDER_ID]"
         /// 
+        /// May alternatively be one or more views
+        /// projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// organization/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
+        /// folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_ID]
         /// 
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -1968,6 +2034,24 @@ namespace Google.Cloud.Logging.V2
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="TailLogEntries(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class TailLogEntriesStream : gaxgrpc::BidirectionalStreamingBase<TailLogEntriesRequest, TailLogEntriesResponse>
+        {
+        }
+
+        /// <summary>
+        /// Streaming read of log entries as they are ingested. Until the stream is
+        /// terminated, it will continue reading logs.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual TailLogEntriesStream TailLogEntries(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>LoggingServiceV2 client wrapper implementation, for convenient use.</summary>
@@ -1985,6 +2069,8 @@ namespace Google.Cloud.Logging.V2
         private readonly gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
 
         private readonly gaxgrpc::ApiCall<ListLogsRequest, ListLogsResponse> _callListLogs;
+
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<TailLogEntriesRequest, TailLogEntriesResponse> _callTailLogEntries;
 
         /// <summary>
         /// Constructs a client wrapper for the LoggingServiceV2 service, with the specified gRPC client and settings.
@@ -2011,10 +2097,15 @@ namespace Google.Cloud.Logging.V2
             _callListLogs = clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>(grpcClient.ListLogsAsync, grpcClient.ListLogs, effectiveSettings.ListLogsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListLogs);
             Modify_ListLogsApiCall(ref _callListLogs);
+            _callTailLogEntries = clientHelper.BuildApiCall<TailLogEntriesRequest, TailLogEntriesResponse>(grpcClient.TailLogEntries, effectiveSettings.TailLogEntriesSettings, effectiveSettings.TailLogEntriesStreamingSettings);
+            Modify_ApiCall(ref _callTailLogEntries);
+            Modify_TailLogEntriesApiCall(ref _callTailLogEntries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiBidirectionalStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_DeleteLogApiCall(ref gaxgrpc::ApiCall<DeleteLogRequest, wkt::Empty> call);
 
@@ -2025,6 +2116,8 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_ListMonitoredResourceDescriptorsApiCall(ref gaxgrpc::ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> call);
 
         partial void Modify_ListLogsApiCall(ref gaxgrpc::ApiCall<ListLogsRequest, ListLogsResponse> call);
+
+        partial void Modify_TailLogEntriesApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<TailLogEntriesRequest, TailLogEntriesResponse> call);
 
         partial void OnConstruction(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2040,6 +2133,10 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListLogsRequest(ref ListLogsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TailLogEntriesRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TailLogEntriesRequestRequest(ref TailLogEntriesRequest request);
 
         /// <summary>
         /// Deletes all the log entries in a log. The log reappears if it receives new
@@ -2187,6 +2284,67 @@ namespace Google.Cloud.Logging.V2
         {
             Modify_ListLogsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLogsRequest, ListLogsResponse, string>(_callListLogs, request, callSettings);
+        }
+
+        internal sealed partial class TailLogEntriesStreamImpl : TailLogEntriesStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>TailLogEntries</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{TailLogEntriesRequest}"/> instance associated with
+            /// this streaming call.
+            /// </param>
+            public TailLogEntriesStreamImpl(LoggingServiceV2ClientImpl service, grpccore::AsyncDuplexStreamingCall<TailLogEntriesRequest, TailLogEntriesResponse> call, gaxgrpc::BufferedClientStreamWriter<TailLogEntriesRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private LoggingServiceV2ClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<TailLogEntriesRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<TailLogEntriesRequest, TailLogEntriesResponse> GrpcCall { get; }
+
+            private TailLogEntriesRequest ModifyRequest(TailLogEntriesRequest request)
+            {
+                _service.Modify_TailLogEntriesRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(TailLogEntriesRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(TailLogEntriesRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(TailLogEntriesRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(TailLogEntriesRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Streaming read of log entries as they are ingested. Until the stream is
+        /// terminated, it will continue reading logs.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override LoggingServiceV2Client.TailLogEntriesStream TailLogEntries(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_TailLogEntriesRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callTailLogEntries.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<TailLogEntriesRequest, TailLogEntriesResponse> call = _callTailLogEntries.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<TailLogEntriesRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<TailLogEntriesRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new TailLogEntriesStreamImpl(this, call, writeBuffer);
         }
     }
 
