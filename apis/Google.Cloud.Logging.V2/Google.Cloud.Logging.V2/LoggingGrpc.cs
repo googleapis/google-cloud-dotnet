@@ -40,6 +40,8 @@ namespace Google.Cloud.Logging.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsRequest> __Marshaller_google_logging_v2_ListLogsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsResponse> __Marshaller_google_logging_v2_ListLogsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.TailLogEntriesRequest> __Marshaller_google_logging_v2_TailLogEntriesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.TailLogEntriesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.TailLogEntriesResponse> __Marshaller_google_logging_v2_TailLogEntriesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.TailLogEntriesResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteLog = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
@@ -75,6 +77,13 @@ namespace Google.Cloud.Logging.V2 {
         "ListLogs",
         __Marshaller_google_logging_v2_ListLogsRequest,
         __Marshaller_google_logging_v2_ListLogsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse> __Method_TailLogEntries = new grpc::Method<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "TailLogEntries",
+        __Marshaller_google_logging_v2_TailLogEntriesRequest,
+        __Marshaller_google_logging_v2_TailLogEntriesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -150,6 +159,19 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Streaming read of log entries as they are ingested. Until the stream is
+      /// terminated, it will continue reading logs.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      public virtual global::System.Threading.Tasks.Task TailLogEntries(grpc::IAsyncStreamReader<global::Google.Cloud.Logging.V2.TailLogEntriesRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Logging.V2.TailLogEntriesResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -451,6 +473,28 @@ namespace Google.Cloud.Logging.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogs, null, options, request);
       }
+      /// <summary>
+      /// Streaming read of log entries as they are ingested. Until the stream is
+      /// terminated, it will continue reading logs.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse> TailLogEntries(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TailLogEntries(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Streaming read of log entries as they are ingested. Until the stream is
+      /// terminated, it will continue reading logs.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse> TailLogEntries(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_TailLogEntries, null, options);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override LoggingServiceV2Client NewInstance(ClientBaseConfiguration configuration)
       {
@@ -467,7 +511,8 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_WriteLogEntries, serviceImpl.WriteLogEntries)
           .AddMethod(__Method_ListLogEntries, serviceImpl.ListLogEntries)
           .AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl.ListMonitoredResourceDescriptors)
-          .AddMethod(__Method_ListLogs, serviceImpl.ListLogs).Build();
+          .AddMethod(__Method_ListLogs, serviceImpl.ListLogs)
+          .AddMethod(__Method_TailLogEntries, serviceImpl.TailLogEntries).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -481,6 +526,7 @@ namespace Google.Cloud.Logging.V2 {
       serviceBinder.AddMethod(__Method_ListLogEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListLogEntriesRequest, global::Google.Cloud.Logging.V2.ListLogEntriesResponse>(serviceImpl.ListLogEntries));
       serviceBinder.AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse>(serviceImpl.ListMonitoredResourceDescriptors));
       serviceBinder.AddMethod(__Method_ListLogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse>(serviceImpl.ListLogs));
+      serviceBinder.AddMethod(__Method_TailLogEntries, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse>(serviceImpl.TailLogEntries));
     }
 
   }
