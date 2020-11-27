@@ -2276,7 +2276,8 @@
       "PackageFromProtos": "google.container.v1beta1",
       "ImportDirectories": [
         "google/api",
-        "google/protobuf"
+        "google/protobuf",
+        "google/rpc"
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Cloud.Container.V1Beta1"
