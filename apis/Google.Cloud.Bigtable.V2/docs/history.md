@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.1.1, released 2020-12-02
+
+- [Commit ef17912](https://github.com/googleapis/google-cloud-dotnet/commit/ef17912): feat: Reduce the gRPC keepalive time from 1 minute to 30 seconds
+
+This change may improve reliability (and makes this library consistent with other languages) but does not affect the API surface.
+
 # Version 2.1.0, released 2020-10-12
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
