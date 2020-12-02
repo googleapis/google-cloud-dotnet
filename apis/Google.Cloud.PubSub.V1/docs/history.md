@@ -1,5 +1,19 @@
 # Version history
 
+# Version 2.2.0, released 2020-12-02
+
+- [Commit 0ce91bb](https://github.com/googleapis/google-cloud-dotnet/commit/0ce91bb): feat: Enable server side flow control by default with the option to turn it off (see below)
+- [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
+- [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
+
+As of this release, flow control settings are enforced at the client
+and are also sent to the Cloud Pub/Sub server but not enforced on
+the server side yet. Server side flow control is on track to be
+enabled by the 2nd week of December 2020. Users that face issues
+with server side flow control can disable it by setting
+`SubscriberClient.Settings.UseLegacyFlowControl`# to `true` which
+will result in the enforcement of client side flow control only.
+
 # Version 2.1.0, released 2020-08-03
 
 - [Commit 330b04e](https://github.com/googleapis/google-cloud-dotnet/commit/330b04e): Fix: PubSub methods will now be retried appropriately. Fixes [issue 5225](https://github.com/googleapis/google-cloud-dotnet/issues/5225)
