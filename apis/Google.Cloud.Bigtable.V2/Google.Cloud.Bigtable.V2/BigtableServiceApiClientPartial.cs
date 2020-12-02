@@ -170,6 +170,7 @@ namespace Google.Cloud.Bigtable.V2
                 .WithPrimaryUserAgent(BigtableClient.UserAgent)
                 .WithMaxSendMessageSize(-1)
                 .WithMaxReceiveMessageSize(-1)
+                .WithKeepAliveTime(TimeSpan.FromSeconds(30))
                 .WithCustomOption(GcpCallInvoker.ApiConfigChannelArg, apiConfig.ToString());
         }
     }
