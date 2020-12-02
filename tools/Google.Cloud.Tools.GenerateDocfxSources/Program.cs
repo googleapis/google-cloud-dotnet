@@ -281,7 +281,7 @@ Authentication](https://cloud.google.com/docs/authentication/getting-started) gu
 
             var exampleClient = clients.FirstOrDefault();
             string clientConstruction =
-$@"Create a client instance by calling the static `Create` method. Alternatively,
+$@"Create a client instance by calling the static `Create` or `CreateAsync` methods. Alternatively,
 use the builder class associated with each client class (e.g. {exampleClient}Builder for {exampleClient})
 as an easy way of specifying custom credentials, settings, or a custom endpoint. Clients are thread-safe,
 and we recommend using a single instance across your entire application unless you have a particular need
