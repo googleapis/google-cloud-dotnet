@@ -891,7 +891,7 @@
         "Google.Cloud.DevTools.Common": "2.0.0",
         "Google.Cloud.Logging.V2": "3.2.0",
         "Grpc.Core": "2.31.0",
-        "log4net": "2.0.8"
+        "log4net": "2.0.12"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "3.2.0"
