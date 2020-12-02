@@ -28,8 +28,8 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// <summary>
     /// Command that looks at all the RPCs in a client library and considers which ones might be suitable for smoke tests.
     /// (This is currently very simplistic, but can become more sophisticated over time.)
-    /// The smoke tests are not written to disk automatically, as they should definitely be checked by hand. For example,
-    /// the Vision API's ProductSearchClient has a PurgeProducts parameterless method - we can't easily tell that that's
+    /// The smoke tests are written to disk automatically (if the file doesn't already exist) but they should definitely be checked by hand.
+    /// For example, the Vision API's ProductSearchClient has a PurgeProducts parameterless method - we can't easily tell that that's
     /// dangerous whereas other parameterless RPCs are safe. (A really sophisticated version of this tool might examine
     /// the HTTP bindings for the RPC and only allow GET requests...)
     /// </summary>
@@ -62,7 +62,19 @@ namespace Google.Cloud.Tools.ReleaseManager
                     Converters = { new StringEnumConverter(new CamelCaseNamingStrategy()) },
                     ContractResolver = new DefaultContractResolver { NamingStrategy = new CamelCaseNamingStrategy() }
                 };
-                Console.WriteLine(JsonConvert.SerializeObject(tests, Formatting.Indented, serializerSettings));
+                string testJson = JsonConvert.SerializeObject(tests, Formatting.Indented, serializerSettings);
+                Console.WriteLine(testJson);
+                Console.WriteLine();
+                var smokeTestsFile = Path.Combine(DirectoryLayout.ForApi(id).SourceDirectory, "smoketests.json");
+                if (File.Exists(smokeTestsFile))
+                {
+                    Console.WriteLine("smoketests.json already exists, so it has been left alone.");
+                }
+                else
+                {
+                    File.WriteAllText(smokeTestsFile, testJson);
+                    Console.WriteLine("Written suggested smoke tests to smoketests.json. Please review the tests carefully before committing.");
+                }
             }
         }
 
