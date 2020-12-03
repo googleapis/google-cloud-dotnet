@@ -155,7 +155,7 @@ namespace Google.Cloud.Spanner.Data
         /// The transaction tag to use for this transaction. This can only be set for read/write transactions,
         /// and must be set before any statements are executed on the transaction.
         /// </summary>
-        public string TransactionTag
+        public string Tag
         {
             get => CommitRequestOptions.TransactionTag;
             set

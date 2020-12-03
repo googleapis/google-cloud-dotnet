@@ -385,7 +385,7 @@ namespace Google.Cloud.Spanner.Data
                     return Partition.ExecuteSqlRequest;
                 }
 
-                RequestOptions.TransactionTag = Transaction?.TransactionTag ?? "";
+                RequestOptions.TransactionTag = Transaction?.Tag ?? "";
                 var request = new ExecuteSqlRequest
                 {
                     Sql = CommandTextBuilder.ToString(),

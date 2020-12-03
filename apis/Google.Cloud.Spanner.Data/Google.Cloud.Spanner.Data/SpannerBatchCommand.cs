@@ -104,7 +104,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The statement tag to send to Cloud Spanner for this command.
         /// </summary>
-        public string RequestTag
+        public string Tag
         {
             get => RequestOptions.RequestTag;
             set => RequestOptions.RequestTag = value ?? "";

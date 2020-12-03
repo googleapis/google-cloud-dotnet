@@ -469,11 +469,11 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-            command.RequestTag = "tag-1";
+            command.Tag = "tag-1";
             var command2 = (SpannerCommand)command.Clone();
             Assert.Same(command.SpannerConnection, command2.SpannerConnection);
             Assert.Equal(command.CommandText, command2.CommandText);
-            Assert.Equal(command.RequestTag, command2.RequestTag);
+            Assert.Equal(command.Tag, command2.Tag);
         }
 
         [Fact]
@@ -488,7 +488,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
-            command.RequestTag = tag;
+            command.Tag = tag;
             using (var reader = command.ExecuteReader())
             {
                 Assert.True(reader.HasRows);
@@ -513,11 +513,11 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.TransactionTag = transactionTag;
+            transaction.Tag = transactionTag;
 
             var command1 = connection.CreateSelectCommand("SELECT * FROM FOO");
             command1.Transaction = transaction;
-            command1.RequestTag = requestTag1;
+            command1.Tag = requestTag1;
             using (var reader = command1.ExecuteReader())
             {
                 Assert.True(reader.HasRows);
@@ -525,7 +525,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             var command2 = connection.CreateSelectCommand("SELECT * FROM FOO");
             command2.Transaction = transaction;
-            command2.RequestTag = requestTag2;
+            command2.Tag = requestTag2;
             using (var reader = command2.ExecuteReader())
             {
                 Assert.True(reader.HasRows);
@@ -575,7 +575,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            Assert.Throws<InvalidOperationException>(() => transaction.TransactionTag = transactionTag);
+            Assert.Throws<InvalidOperationException>(() => transaction.Tag = transactionTag);
 
             transaction.Commit();
 
@@ -597,7 +597,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupBeginTransactionAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginReadOnlyTransaction();
-            Assert.Throws<InvalidOperationException>(() => transaction.TransactionTag = "transaction-tag-1");
+            Assert.Throws<InvalidOperationException>(() => transaction.Tag = "transaction-tag-1");
         }
 
         [Fact]
@@ -612,11 +612,11 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.TransactionTag = null;
+            transaction.Tag = null;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             command.Transaction = transaction;
-            command.RequestTag = null;
+            command.Tag = null;
             using (var reader = command.ExecuteReader())
             {
                 Assert.True(reader.HasRows);
@@ -648,10 +648,10 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             connection.RunWithRetriableTransaction(tx =>
             {
-                tx.TransactionTag = transactionTag;
+                tx.Tag = transactionTag;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
-                command.RequestTag = null;
+                command.Tag = null;
                 using (var reader = command.ExecuteReader())
                 {
                     Assert.True(reader.HasRows);
