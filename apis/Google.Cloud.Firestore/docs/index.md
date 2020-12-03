@@ -51,5 +51,5 @@ otherwise connect to the production environment.
 {{sample:Index.EmulatorDetection}}
 
 See the
-[EmulatorDetection](obj/api/Google.Cloud.Firestore.EmulatorDetection.yml)
-enum for details of the other possible values.
+[EmulatorDetection property](obj/api/Google.Cloud.Firestore.FirestoreDbBuilder.yml#Google_Cloud_Firestore_FirestoreDbBuilder_EmulatorDetection)
+for more details.
