@@ -22,7 +22,7 @@ namespace Google.Cloud.Spanner.Data
     internal interface ISpannerTransaction
     {
         // Note: mutations is guaranteed not to be null here.
-        Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds);
+        Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds, Priority priority);
 
         // Note: this returns Task<long> to reflect the results from Spanner faithfully. The caller can then decide what to
         // do if they need to return an int result type.

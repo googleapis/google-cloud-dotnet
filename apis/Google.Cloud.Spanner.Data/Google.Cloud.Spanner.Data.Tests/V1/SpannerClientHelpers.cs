@@ -218,6 +218,32 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
+        internal static Mock<SpannerClient> SetupExecuteStreamingSqlForPdml(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .SetupSequence(client => client.ExecuteStreamingSql(
+                    It.IsAny<ExecuteSqlRequest>(),
+                    It.IsAny<CallSettings>()))
+                .Returns(() =>
+                {
+                    IEnumerable<PartialResultSet> results = new string[] { "token1" }
+                    .Select((resumeToken, index) => new PartialResultSet
+                    {
+                        ResumeToken = ByteString.CopyFromUtf8(resumeToken),
+                        Stats = new ResultSetStats
+                        {
+                            RowCountLowerBound = 100
+                        }
+                    })
+                    .ToList();
+                    var asyncResults = new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default));
+                    var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
+                        Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
+                    return new ExecuteStreamingSqlStreamImpl(call);
+                });
+            return spannerClientMock;
+        }
+
         internal static Mock<SpannerClient> SetupExecuteStreamingSqlForDmlThrowingEosError(this Mock<SpannerClient> spannerClientMock)
         {
             const string eosError = "Received unexpected EOS on DATA frame from server";

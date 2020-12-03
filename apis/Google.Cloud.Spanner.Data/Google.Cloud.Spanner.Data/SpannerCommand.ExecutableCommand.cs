@@ -62,6 +62,7 @@ namespace Google.Cloud.Spanner.Data
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
             internal QueryOptions QueryOptions { get; }
+            internal V1.RequestOptions RequestOptions { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -72,6 +73,7 @@ namespace Google.Cloud.Spanner.Data
                 Parameters = command.Parameters;
                 Transaction = command._transaction;
                 QueryOptions = command.QueryOptions;
+                RequestOptions = command.RequestOptions;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -289,7 +291,7 @@ namespace Google.Cloud.Spanner.Data
                 var mutations = GetMutations();
                 var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions);
                 // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
-                await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout).ConfigureAwait(false);
+                await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout, PriorityConverter.FromProto(RequestOptions.Priority)).ConfigureAwait(false);
                 // Return the number of records affected.
                 return mutations.Count;
             }
@@ -381,7 +383,8 @@ namespace Google.Cloud.Spanner.Data
                 var request = new ExecuteSqlRequest
                 {
                     Sql = CommandTextBuilder.ToString(),
-                    QueryOptions = GetEffectiveQueryOptions()
+                    QueryOptions = GetEffectiveQueryOptions(),
+                    RequestOptions = RequestOptions
                 };
 
                 // See comment at the start of GetMutations.

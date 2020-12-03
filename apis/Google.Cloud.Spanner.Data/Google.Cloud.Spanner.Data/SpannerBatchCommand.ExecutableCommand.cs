@@ -42,6 +42,7 @@ namespace Google.Cloud.Spanner.Data
             internal IList<SpannerCommand> Commands { get; }
             internal int CommandTimeout { get; }
             internal SpannerBatchCommandType CommandType { get; }
+            internal V1.RequestOptions RequestOptions { get; }
 
             public ExecutableCommand(SpannerBatchCommand command)
             {
@@ -50,6 +51,7 @@ namespace Google.Cloud.Spanner.Data
                 Commands = command.Commands.ToList();
                 CommandTimeout = command.CommandTimeout;
                 CommandType = command.CommandType;
+                RequestOptions = command.RequestOptions;
             }
 
             /// <summary>
@@ -87,7 +89,10 @@ namespace Google.Cloud.Spanner.Data
 
             private ExecuteBatchDmlRequest GetExecuteBatchDmlRequest()
             {
-                var request = new ExecuteBatchDmlRequest();
+                var request = new ExecuteBatchDmlRequest
+                {
+                    RequestOptions = RequestOptions
+                };
                 foreach (var command in Commands)
                 {
                     var statement = new Statement { Sql = command.CommandText };
