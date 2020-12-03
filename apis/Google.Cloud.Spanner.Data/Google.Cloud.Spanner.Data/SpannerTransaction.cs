@@ -125,6 +125,7 @@ namespace Google.Cloud.Spanner.Data
                 }
             }
         }
+
         // Request options for the commit request of this transaction. Only the relevant properties are exposed publicly.
         private V1.RequestOptions CommitRequestOptions { get; } = new V1.RequestOptions();
 
