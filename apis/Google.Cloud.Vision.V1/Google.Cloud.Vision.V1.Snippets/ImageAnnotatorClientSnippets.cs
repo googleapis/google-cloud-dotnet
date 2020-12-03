@@ -204,7 +204,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Not exhaustive, but let's check certain basic labels.
             var descriptions = labels.Select(l => l.Description).ToList();
             Assert.Contains("flower", descriptions, StringComparer.OrdinalIgnoreCase);
-            Assert.Contains("plant", descriptions, StringComparer.OrdinalIgnoreCase);
+            Assert.Contains("petal", descriptions, StringComparer.OrdinalIgnoreCase);
             Assert.Contains("vase", descriptions, StringComparer.OrdinalIgnoreCase);
         }
 
