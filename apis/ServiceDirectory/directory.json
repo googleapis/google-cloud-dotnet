@@ -710,6 +710,25 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.BinaryAuthorization.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/channel/v1",
+      "Name": "cloudchannel.googleapis.com",
+      "Title": "Cloud Channel API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/channel/v1/cloudchannel_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.channel.v1",
+      "PackageFromProtos": "google.cloud.channel.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/channel/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Channel.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/datacatalog/v1",
       "Name": "datacatalog.googleapis.com",
       "Title": "Google Cloud Data Catalog API",
