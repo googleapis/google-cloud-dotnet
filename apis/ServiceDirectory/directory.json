@@ -251,7 +251,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Accessapproval.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.AccessApproval.V1"
     },
     {
       "ServiceDirectory": "google/cloud/aiplatform/v1beta1",
