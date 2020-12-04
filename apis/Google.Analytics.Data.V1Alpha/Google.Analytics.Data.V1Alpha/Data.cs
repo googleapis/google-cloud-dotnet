@@ -103,13 +103,13 @@ namespace Google.Analytics.Data.V1Alpha {
             "ZXR0aW5ncxgDIAEoCzIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhh",
             "LkNvaG9ydFJlcG9ydFNldHRpbmdzImcKBkNvaG9ydBIMCgRuYW1lGAEgASgJ",
             "EhEKCWRpbWVuc2lvbhgCIAEoCRI8CgpkYXRlX3JhbmdlGAMgASgLMiguZ29v",
-            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuRGF0ZVJhbmdlIioKFENvaG9y",
-            "dFJlcG9ydFNldHRpbmdzEhIKCmFjY3VtdWxhdGUYASABKAgi1gEKDENvaG9y",
-            "dHNSYW5nZRJMCgtncmFudWxhcml0eRgBIAEoDjI3Lmdvb2dsZS5hbmFseXRp",
-            "Y3MuZGF0YS52MWFscGhhLkNvaG9ydHNSYW5nZS5HcmFudWxhcml0eRIUCgxz",
-            "dGFydF9vZmZzZXQYAiABKAUSEgoKZW5kX29mZnNldBgDIAEoBSJOCgtHcmFu",
-            "dWxhcml0eRIbChdHUkFOVUxBUklUWV9VTlNQRUNJRklFRBAAEgkKBURBSUxZ",
-            "EAESCgoGV0VFS0xZEAISCwoHTU9OVEhMWRADIjQKEFJlc3BvbnNlTWV0YURh",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYWxwaGEuRGF0ZVJhbmdlItYBCgxDb2hv",
+            "cnRzUmFuZ2USTAoLZ3JhbnVsYXJpdHkYASABKA4yNy5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFhbHBoYS5Db2hvcnRzUmFuZ2UuR3JhbnVsYXJpdHkSFAoM",
+            "c3RhcnRfb2Zmc2V0GAIgASgFEhIKCmVuZF9vZmZzZXQYAyABKAUiTgoLR3Jh",
+            "bnVsYXJpdHkSGwoXR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIJCgVEQUlM",
+            "WRABEgoKBldFRUtMWRACEgsKB01PTlRITFkQAyIqChRDb2hvcnRSZXBvcnRT",
+            "ZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIjQKEFJlc3BvbnNlTWV0YURh",
             "dGESIAoYZGF0YV9sb3NzX2Zyb21fb3RoZXJfcm93GAMgASgIIh8KD0RpbWVu",
             "c2lvbkhlYWRlchIMCgRuYW1lGAEgASgJIlUKDE1ldHJpY0hlYWRlchIMCgRu",
             "YW1lGAEgASgJEjcKBHR5cGUYAiABKA4yKS5nb29nbGUuYW5hbHl0aWNzLmRh",
@@ -133,24 +133,26 @@ namespace Google.Analytics.Data.V1Alpha {
             "MWFscGhhLlF1b3RhU3RhdHVzElYKInNlcnZlcl9lcnJvcnNfcGVyX3Byb2pl",
             "Y3RfcGVyX2hvdXIYBCABKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
             "bHBoYS5RdW90YVN0YXR1cyIyCgtRdW90YVN0YXR1cxIQCghjb25zdW1lZBgB",
-            "IAEoBRIRCglyZW1haW5pbmcYAiABKAUiaQoRRGltZW5zaW9uTWV0YWRhdGES",
-            "EAoIYXBpX25hbWUYASABKAkSDwoHdWlfbmFtZRgCIAEoCRITCgtkZXNjcmlw",
-            "dGlvbhgDIAEoCRIcChRkZXByZWNhdGVkX2FwaV9uYW1lcxgEIAMoCSKzAQoO",
-            "TWV0cmljTWV0YWRhdGESEAoIYXBpX25hbWUYASABKAkSDwoHdWlfbmFtZRgC",
-            "IAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRIcChRkZXByZWNhdGVkX2FwaV9u",
-            "YW1lcxgEIAMoCRI3CgR0eXBlGAUgASgOMikuZ29vZ2xlLmFuYWx5dGljcy5k",
-            "YXRhLnYxYWxwaGEuTWV0cmljVHlwZRISCgpleHByZXNzaW9uGAYgASgJKmcK",
-            "EU1ldHJpY0FnZ3JlZ2F0aW9uEiIKHk1FVFJJQ19BR0dSRUdBVElPTl9VTlNQ",
-            "RUNJRklFRBAAEgkKBVRPVEFMEAESCwoHTUlOSU1VTRAFEgsKB01BWElNVU0Q",
-            "BhIJCgVDT1VOVBAEKoECCgpNZXRyaWNUeXBlEhsKF01FVFJJQ19UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASEAoMVFlQRV9JTlRFR0VSEAESDgoKVFlQRV9GTE9BVBAC",
-            "EhAKDFRZUEVfU0VDT05EUxAEEhUKEVRZUEVfTUlMTElTRUNPTkRTEAUSEAoM",
-            "VFlQRV9NSU5VVEVTEAYSDgoKVFlQRV9IT1VSUxAHEhEKDVRZUEVfU1RBTkRB",
-            "UkQQCBIRCg1UWVBFX0NVUlJFTkNZEAkSDQoJVFlQRV9GRUVUEAoSDgoKVFlQ",
-            "RV9NSUxFUxALEg8KC1RZUEVfTUVURVJTEAwSEwoPVFlQRV9LSUxPTUVURVJT",
-            "EA1CewohY29tLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhQhFSZXBv",
-            "cnRpbmdBcGlQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
-            "b29nbGVhcGlzL2FuYWx5dGljcy9kYXRhL3YxYWxwaGE7ZGF0YWIGcHJvdG8z"));
+            "IAEoBRIRCglyZW1haW5pbmcYAiABKAUihAEKEURpbWVuc2lvbk1ldGFkYXRh",
+            "EhAKCGFwaV9uYW1lGAEgASgJEg8KB3VpX25hbWUYAiABKAkSEwoLZGVzY3Jp",
+            "cHRpb24YAyABKAkSHAoUZGVwcmVjYXRlZF9hcGlfbmFtZXMYBCADKAkSGQoR",
+            "Y3VzdG9tX2RlZmluaXRpb24YBSABKAgizgEKDk1ldHJpY01ldGFkYXRhEhAK",
+            "CGFwaV9uYW1lGAEgASgJEg8KB3VpX25hbWUYAiABKAkSEwoLZGVzY3JpcHRp",
+            "b24YAyABKAkSHAoUZGVwcmVjYXRlZF9hcGlfbmFtZXMYBCADKAkSNwoEdHlw",
+            "ZRgFIAEoDjIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWFscGhhLk1ldHJp",
+            "Y1R5cGUSEgoKZXhwcmVzc2lvbhgGIAEoCRIZChFjdXN0b21fZGVmaW5pdGlv",
+            "bhgHIAEoCCpnChFNZXRyaWNBZ2dyZWdhdGlvbhIiCh5NRVRSSUNfQUdHUkVH",
+            "QVRJT05fVU5TUEVDSUZJRUQQABIJCgVUT1RBTBABEgsKB01JTklNVU0QBRIL",
+            "CgdNQVhJTVVNEAYSCQoFQ09VTlQQBCqBAgoKTWV0cmljVHlwZRIbChdNRVRS",
+            "SUNfVFlQRV9VTlNQRUNJRklFRBAAEhAKDFRZUEVfSU5URUdFUhABEg4KClRZ",
+            "UEVfRkxPQVQQAhIQCgxUWVBFX1NFQ09ORFMQBBIVChFUWVBFX01JTExJU0VD",
+            "T05EUxAFEhAKDFRZUEVfTUlOVVRFUxAGEg4KClRZUEVfSE9VUlMQBxIRCg1U",
+            "WVBFX1NUQU5EQVJEEAgSEQoNVFlQRV9DVVJSRU5DWRAJEg0KCVRZUEVfRkVF",
+            "VBAKEg4KClRZUEVfTUlMRVMQCxIPCgtUWVBFX01FVEVSUxAMEhMKD1RZUEVf",
+            "S0lMT01FVEVSUxANQnsKIWNvbS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFh",
+            "bHBoYUIRUmVwb3J0aW5nQXBpUHJvdG9QAVpBZ29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvZGF0YS92MWFscGhhO2Rh",
+            "dGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Alpha.MetricAggregation), typeof(global::Google.Analytics.Data.V1Alpha.MetricType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -172,8 +174,8 @@ namespace Google.Analytics.Data.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.Pivot), global::Google.Analytics.Data.V1Alpha.Pivot.Parser, new[]{ "FieldNames", "OrderBys", "Offset", "Limit", "MetricAggregations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortSpec), global::Google.Analytics.Data.V1Alpha.CohortSpec.Parser, new[]{ "Cohorts", "CohortsRange", "CohortReportSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.Cohort), global::Google.Analytics.Data.V1Alpha.Cohort.Parser, new[]{ "Name", "Dimension", "DateRange" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortReportSettings), global::Google.Analytics.Data.V1Alpha.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortsRange), global::Google.Analytics.Data.V1Alpha.CohortsRange.Parser, new[]{ "Granularity", "StartOffset", "EndOffset" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.CohortReportSettings), global::Google.Analytics.Data.V1Alpha.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.ResponseMetaData), global::Google.Analytics.Data.V1Alpha.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.DimensionHeader), global::Google.Analytics.Data.V1Alpha.DimensionHeader.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.MetricHeader), global::Google.Analytics.Data.V1Alpha.MetricHeader.Parser, new[]{ "Name", "Type" }, null, null, null, null),
@@ -185,8 +187,8 @@ namespace Google.Analytics.Data.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.NumericValue), global::Google.Analytics.Data.V1Alpha.NumericValue.Parser, new[]{ "Int64Value", "DoubleValue" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.PropertyQuota), global::Google.Analytics.Data.V1Alpha.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.QuotaStatus), global::Google.Analytics.Data.V1Alpha.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.DimensionMetadata), global::Google.Analytics.Data.V1Alpha.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.MetricMetadata), global::Google.Analytics.Data.V1Alpha.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.DimensionMetadata), global::Google.Analytics.Data.V1Alpha.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "CustomDefinition" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Alpha.MetricMetadata), global::Google.Analytics.Data.V1Alpha.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition" }, null, null, null, null)
           }));
     }
     #endregion
@@ -593,7 +595,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// <summary>
     /// A Google Analytics GA4 property id. To learn more, see [where to find your
     /// Property
-    /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PropertyId {
@@ -776,7 +778,7 @@ namespace Google.Analytics.Data.V1Alpha {
     private string name_ = "";
     /// <summary>
     /// The name of the dimension. See the [API
-    /// Dimensions](https://developers.google.com/analytics/trusted-testing/analytics-data/api-schema#dimensions)
+    /// Dimensions](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#dimensions)
     /// for the list of dimension names.
     ///
     /// If `dimensionExpression` is specified, `name` can be any string that you
@@ -1747,7 +1749,7 @@ namespace Google.Analytics.Data.V1Alpha {
     private string name_ = "";
     /// <summary>
     /// The name of the metric. See the [API
-    /// Metrics](https://developers.google.com/analytics/trusted-testing/analytics-data/api-schema#metrics)
+    /// Metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#metrics)
     /// for the list of metric names.
     ///
     /// If `expression` is specified, `name` can be any string that you would like.
@@ -5566,7 +5568,18 @@ namespace Google.Analytics.Data.V1Alpha {
   }
 
   /// <summary>
-  /// Specification for a cohort report.
+  /// Specification of cohorts for a cohort report.
+  /// Cohort reports can be used for example to create a time series of user
+  /// retention for the cohort. For example, you could select the cohort of users
+  /// that were acquired in the first week of September and follow that cohort for
+  /// the next six weeks. Selecting the users acquired in the first week of
+  /// September cohort is specified in the `cohort` object. Following that
+  /// cohort for the next six weeks is specified in the `cohortsRange` object.
+  ///
+  /// The report response could show a weekly time series where say your app has
+  /// retained 60% of this cohort after three weeks and 25% of this cohort after
+  /// six weeks. These two percentages can be calculated by the metric
+  /// `cohortActiveUsers/cohortTotalUsers` and will be separate rows in the report.
   /// </summary>
   public sealed partial class CohortSpec : pb::IMessage<CohortSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5614,7 +5627,10 @@ namespace Google.Analytics.Data.V1Alpha {
         = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Alpha.Cohort.Parser);
     private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Cohort> cohorts_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Cohort>();
     /// <summary>
-    /// The definition for the cohorts.
+    /// Defines the selection criteria to group users into cohorts.
+    ///
+    /// Most cohort reports define only a single cohort. If multiple cohorts are
+    /// specified, each cohort can be recognized in the report by their name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Analytics.Data.V1Alpha.Cohort> Cohorts {
@@ -5625,7 +5641,8 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int CohortsRangeFieldNumber = 2;
     private global::Google.Analytics.Data.V1Alpha.CohortsRange cohortsRange_;
     /// <summary>
-    /// The data ranges of cohorts.
+    /// Cohort reports follow cohorts over an extended reporting date range. This
+    /// range specifies an offset duration to follow the cohorts over.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.CohortsRange CohortsRange {
@@ -5639,7 +5656,7 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int CohortReportSettingsFieldNumber = 3;
     private global::Google.Analytics.Data.V1Alpha.CohortReportSettings cohortReportSettings_;
     /// <summary>
-    /// Settings of a cohort report.
+    /// Optional settings for a cohort report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.CohortReportSettings CohortReportSettings {
@@ -5829,8 +5846,8 @@ namespace Google.Analytics.Data.V1Alpha {
   }
 
   /// <summary>
-  /// Defines a cohort. A cohort is a group of users who share a common
-  /// characteristic. For example, all users with the same acquisition date
+  /// Defines a cohort selection criteria. A cohort is a group of users who share
+  /// a common characteristic. For example, users with the same `firstTouchDate`
   /// belong to the same cohort.
   /// </summary>
   public sealed partial class Cohort : pb::IMessage<Cohort>
@@ -5894,8 +5911,7 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int DimensionFieldNumber = 2;
     private string dimension_ = "";
     /// <summary>
-    /// The dimension used by cohort. Only supports `firstTouchDate` for retention
-    /// report.
+    /// Dimension used by the cohort. Required and only supports `firstTouchDate`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Dimension {
@@ -5909,17 +5925,22 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int DateRangeFieldNumber = 3;
     private global::Google.Analytics.Data.V1Alpha.DateRange dateRange_;
     /// <summary>
-    /// The cohort selects users whose first visit date is between start date
-    /// and end date defined in the `dateRange`. In a cohort request, this
-    /// `dateRange` is required and the `dateRanges` in the `RunReportRequest` or
-    /// `RunPivotReportRequest` must be unspecified.
+    /// The cohort selects users whose first touch date is between start date and
+    /// end date defined in the `dateRange`. This `dateRange` does not specify the
+    /// full date range of event data that is present in a cohort report. In a
+    /// cohort report, this `dateRange` is extended by the granularity and offset
+    /// present in the `cohortsRange`; event data for the extended reporting date
+    /// range is present in a cohort report.
     ///
-    /// The date range should be aligned with the cohort's granularity. If
-    /// CohortsRange uses daily granularity, the date range can be aligned to any
-    /// day. If CohortsRange uses weekly granularity, the date range should be
-    /// aligned to the week boundary, starting at Sunday and ending Saturday. If
-    /// CohortsRange uses monthly granularity, the date range should be aligned to
-    /// the month, starting at the first and ending on the last day of the month.
+    /// In a cohort request, this `dateRange` is required and the `dateRanges` in
+    /// the `RunReportRequest` or `RunPivotReportRequest` must be unspecified.
+    ///
+    /// This `dateRange` should generally be aligned with the cohort's granularity.
+    /// If `CohortsRange` uses daily granularity, this `dateRange` can be a single
+    /// day. If `CohortsRange` uses weekly granularity, this `dateRange` can be
+    /// aligned to a week boundary, starting at Sunday and ending Saturday. If
+    /// `CohortsRange` uses monthly granularity, this `dateRange` can be aligned to
+    /// a month, starting at the first and ending on the last day of the month.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.DateRange DateRange {
@@ -6110,186 +6131,8 @@ namespace Google.Analytics.Data.V1Alpha {
   }
 
   /// <summary>
-  /// Settings of a cohort report.
-  /// </summary>
-  public sealed partial class CohortReportSettings : pb::IMessage<CohortReportSettings>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<CohortReportSettings> _parser = new pb::MessageParser<CohortReportSettings>(() => new CohortReportSettings());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CohortReportSettings> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[12]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CohortReportSettings() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CohortReportSettings(CohortReportSettings other) : this() {
-      accumulate_ = other.accumulate_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CohortReportSettings Clone() {
-      return new CohortReportSettings(this);
-    }
-
-    /// <summary>Field number for the "accumulate" field.</summary>
-    public const int AccumulateFieldNumber = 1;
-    private bool accumulate_;
-    /// <summary>
-    /// If true, accumulates the result from first visit day to the end day. Not
-    /// supported in `RunReportRequest`.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Accumulate {
-      get { return accumulate_; }
-      set {
-        accumulate_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as CohortReportSettings);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CohortReportSettings other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Accumulate != other.Accumulate) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Accumulate != false) hash ^= Accumulate.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Accumulate != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(Accumulate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Accumulate != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(Accumulate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Accumulate != false) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CohortReportSettings other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Accumulate != false) {
-        Accumulate = other.Accumulate;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Accumulate = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Accumulate = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
-  /// Describes date range for a cohort report.
+  /// Configures the extended reporting date range for a cohort report. Specifies
+  /// an offset duration to follow the cohorts over.
   /// </summary>
   public sealed partial class CohortsRange : pb::IMessage<CohortsRange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6303,7 +6146,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6335,8 +6178,8 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int GranularityFieldNumber = 1;
     private global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity granularity_ = global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity.Unspecified;
     /// <summary>
-    /// Reporting date range for each cohort is calculated based on these three
-    /// fields.
+    /// The granularity used to interpret the `startOffset` and `endOffset` for the
+    /// extended reporting date range for a cohort report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Analytics.Data.V1Alpha.CohortsRange.Types.Granularity Granularity {
@@ -6350,8 +6193,18 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int StartOffsetFieldNumber = 2;
     private int startOffset_;
     /// <summary>
-    /// For daily cohorts, this will be the start day offset.
-    /// For weekly cohorts, this will be the week offset.
+    /// `startOffset` specifies the start date of the extended reporting date range
+    /// for a cohort report. `startOffset` is commonly set to 0 so that reports
+    /// contain data from the acquisition of the cohort forward.
+    ///
+    /// If `granularity` is `DAILY`, the `startDate` of the extended reporting date
+    /// range is `startDate` of the cohort plus `startOffset` days.
+    ///
+    /// If `granularity` is `WEEKLY`, the `startDate` of the extended reporting
+    /// date range is `startDate` of the cohort plus `startOffset * 7` days.
+    ///
+    /// If `granularity` is `MONTHLY`, the `startDate` of the extended reporting
+    /// date range is `startDate` of the cohort plus `startOffset * 30` days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int StartOffset {
@@ -6365,8 +6218,19 @@ namespace Google.Analytics.Data.V1Alpha {
     public const int EndOffsetFieldNumber = 3;
     private int endOffset_;
     /// <summary>
-    /// For daily cohorts, this will be the end day offset.
-    /// For weekly cohorts, this will be the week offset.
+    /// `endOffset` specifies the end date of the extended reporting date range
+    /// for a cohort report. `endOffset` can be any positive integer but is
+    /// commonly set to 5 to 10 so that reports contain data on the cohort for the
+    /// next several granularity time periods.
+    ///
+    /// If `granularity` is `DAILY`, the `endDate` of the extended reporting date
+    /// range is `endDate` of the cohort plus `endOffset` days.
+    ///
+    /// If `granularity` is `WEEKLY`, the `endDate` of the extended reporting date
+    /// range is `endDate` of the cohort plus `endOffset * 7` days.
+    ///
+    /// If `granularity` is `MONTHLY`, the `endDate` of the extended reporting date
+    /// range is `endDate` of the cohort plus `endOffset * 30` days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int EndOffset {
@@ -6550,29 +6414,213 @@ namespace Google.Analytics.Data.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// Reporting granularity for the cohorts.
+      /// The granularity used to interpret the `startOffset` and `endOffset` for the
+      /// extended reporting date range for a cohort report.
       /// </summary>
       public enum Granularity {
         /// <summary>
-        /// Unspecified.
+        /// Should never be specified.
         /// </summary>
         [pbr::OriginalName("GRANULARITY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Daily
+        /// Daily granularity. Commonly used if the cohort's `dateRange` is a single
+        /// day and the request contains `cohortNthDay`.
         /// </summary>
         [pbr::OriginalName("DAILY")] Daily = 1,
         /// <summary>
-        /// Weekly
+        /// Weekly granularity. Commonly used if the cohort's `dateRange` is a week
+        /// in duration (starting on Sunday and ending on Saturday) and the request
+        /// contains `cohortNthWeek`.
         /// </summary>
         [pbr::OriginalName("WEEKLY")] Weekly = 2,
         /// <summary>
-        /// Monthly
+        /// Monthly granularity. Commonly used if the cohort's `dateRange` is a month
+        /// in duration and the request contains `cohortNthMonth`.
         /// </summary>
         [pbr::OriginalName("MONTHLY")] Monthly = 3,
       }
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Optional settings of a cohort report.
+  /// </summary>
+  public sealed partial class CohortReportSettings : pb::IMessage<CohortReportSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CohortReportSettings> _parser = new pb::MessageParser<CohortReportSettings>(() => new CohortReportSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CohortReportSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Alpha.DataReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CohortReportSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CohortReportSettings(CohortReportSettings other) : this() {
+      accumulate_ = other.accumulate_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CohortReportSettings Clone() {
+      return new CohortReportSettings(this);
+    }
+
+    /// <summary>Field number for the "accumulate" field.</summary>
+    public const int AccumulateFieldNumber = 1;
+    private bool accumulate_;
+    /// <summary>
+    /// If true, accumulates the result from first touch day to the end day. Not
+    /// supported in `RunReportRequest`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Accumulate {
+      get { return accumulate_; }
+      set {
+        accumulate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CohortReportSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CohortReportSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Accumulate != other.Accumulate) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Accumulate != false) hash ^= Accumulate.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Accumulate != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Accumulate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Accumulate != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Accumulate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Accumulate != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CohortReportSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Accumulate != false) {
+        Accumulate = other.Accumulate;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Accumulate = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Accumulate = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -9018,6 +9066,7 @@ namespace Google.Analytics.Data.V1Alpha {
       uiName_ = other.uiName_;
       description_ = other.description_;
       deprecatedApiNames_ = other.deprecatedApiNames_.Clone();
+      customDefinition_ = other.customDefinition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9086,6 +9135,20 @@ namespace Google.Analytics.Data.V1Alpha {
       get { return deprecatedApiNames_; }
     }
 
+    /// <summary>Field number for the "custom_definition" field.</summary>
+    public const int CustomDefinitionFieldNumber = 5;
+    private bool customDefinition_;
+    /// <summary>
+    /// True if the dimension is a custom dimension for this property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool CustomDefinition {
+      get { return customDefinition_; }
+      set {
+        customDefinition_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DimensionMetadata);
@@ -9103,6 +9166,7 @@ namespace Google.Analytics.Data.V1Alpha {
       if (UiName != other.UiName) return false;
       if (Description != other.Description) return false;
       if(!deprecatedApiNames_.Equals(other.deprecatedApiNames_)) return false;
+      if (CustomDefinition != other.CustomDefinition) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9113,6 +9177,7 @@ namespace Google.Analytics.Data.V1Alpha {
       if (UiName.Length != 0) hash ^= UiName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= deprecatedApiNames_.GetHashCode();
+      if (CustomDefinition != false) hash ^= CustomDefinition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9142,6 +9207,10 @@ namespace Google.Analytics.Data.V1Alpha {
         output.WriteString(Description);
       }
       deprecatedApiNames_.WriteTo(output, _repeated_deprecatedApiNames_codec);
+      if (CustomDefinition != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(CustomDefinition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9164,6 +9233,10 @@ namespace Google.Analytics.Data.V1Alpha {
         output.WriteString(Description);
       }
       deprecatedApiNames_.WriteTo(ref output, _repeated_deprecatedApiNames_codec);
+      if (CustomDefinition != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(CustomDefinition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9183,6 +9256,9 @@ namespace Google.Analytics.Data.V1Alpha {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
       }
       size += deprecatedApiNames_.CalculateSize(_repeated_deprecatedApiNames_codec);
+      if (CustomDefinition != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9204,6 +9280,9 @@ namespace Google.Analytics.Data.V1Alpha {
         Description = other.Description;
       }
       deprecatedApiNames_.Add(other.deprecatedApiNames_);
+      if (other.CustomDefinition != false) {
+        CustomDefinition = other.CustomDefinition;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9234,6 +9313,10 @@ namespace Google.Analytics.Data.V1Alpha {
             deprecatedApiNames_.AddEntriesFrom(input, _repeated_deprecatedApiNames_codec);
             break;
           }
+          case 40: {
+            CustomDefinition = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -9262,6 +9345,10 @@ namespace Google.Analytics.Data.V1Alpha {
           }
           case 34: {
             deprecatedApiNames_.AddEntriesFrom(ref input, _repeated_deprecatedApiNames_codec);
+            break;
+          }
+          case 40: {
+            CustomDefinition = input.ReadBool();
             break;
           }
         }
@@ -9309,6 +9396,7 @@ namespace Google.Analytics.Data.V1Alpha {
       deprecatedApiNames_ = other.deprecatedApiNames_.Clone();
       type_ = other.type_;
       expression_ = other.expression_;
+      customDefinition_ = other.customDefinition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9407,6 +9495,20 @@ namespace Google.Analytics.Data.V1Alpha {
       }
     }
 
+    /// <summary>Field number for the "custom_definition" field.</summary>
+    public const int CustomDefinitionFieldNumber = 7;
+    private bool customDefinition_;
+    /// <summary>
+    /// True if the metric is a custom metric for this property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool CustomDefinition {
+      get { return customDefinition_; }
+      set {
+        customDefinition_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MetricMetadata);
@@ -9426,6 +9528,7 @@ namespace Google.Analytics.Data.V1Alpha {
       if(!deprecatedApiNames_.Equals(other.deprecatedApiNames_)) return false;
       if (Type != other.Type) return false;
       if (Expression != other.Expression) return false;
+      if (CustomDefinition != other.CustomDefinition) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9438,6 +9541,7 @@ namespace Google.Analytics.Data.V1Alpha {
       hash ^= deprecatedApiNames_.GetHashCode();
       if (Type != global::Google.Analytics.Data.V1Alpha.MetricType.Unspecified) hash ^= Type.GetHashCode();
       if (Expression.Length != 0) hash ^= Expression.GetHashCode();
+      if (CustomDefinition != false) hash ^= CustomDefinition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9475,6 +9579,10 @@ namespace Google.Analytics.Data.V1Alpha {
         output.WriteRawTag(50);
         output.WriteString(Expression);
       }
+      if (CustomDefinition != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(CustomDefinition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9505,6 +9613,10 @@ namespace Google.Analytics.Data.V1Alpha {
         output.WriteRawTag(50);
         output.WriteString(Expression);
       }
+      if (CustomDefinition != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(CustomDefinition);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9529,6 +9641,9 @@ namespace Google.Analytics.Data.V1Alpha {
       }
       if (Expression.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Expression);
+      }
+      if (CustomDefinition != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9556,6 +9671,9 @@ namespace Google.Analytics.Data.V1Alpha {
       }
       if (other.Expression.Length != 0) {
         Expression = other.Expression;
+      }
+      if (other.CustomDefinition != false) {
+        CustomDefinition = other.CustomDefinition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9595,6 +9713,10 @@ namespace Google.Analytics.Data.V1Alpha {
             Expression = input.ReadString();
             break;
           }
+          case 56: {
+            CustomDefinition = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -9631,6 +9753,10 @@ namespace Google.Analytics.Data.V1Alpha {
           }
           case 50: {
             Expression = input.ReadString();
+            break;
+          }
+          case 56: {
+            CustomDefinition = input.ReadBool();
             break;
           }
         }
