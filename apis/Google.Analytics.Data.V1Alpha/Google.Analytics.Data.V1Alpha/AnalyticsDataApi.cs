@@ -525,7 +525,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// The row count of the start row. The first row is counted as row 0.
     ///
     /// To learn more about this pagination parameter, see
-    /// [Pagination](basics#pagination).
+    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Offset {
@@ -543,7 +543,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// -1, all rows are returned.
     ///
     /// To learn more about this pagination parameter, see
-    /// [Pagination](basics#pagination).
+    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Limit {
@@ -1234,7 +1234,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// = 175 but only 50 rows.
     ///
     /// To learn more about this pagination parameter, see
-    /// [Pagination](basics#pagination).
+    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int RowCount {
@@ -3358,7 +3358,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// specified in the URL path and not URL parameters. Property is a numeric
     /// Google Analytics GA4 Property identifier. To learn more, see [where to find
     /// your Property
-    /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
     ///
     /// Example: properties/1234/metadata
     ///
@@ -3553,7 +3553,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// A Google Analytics GA4 property identifier whose events are tracked.
     /// Specified in the URL path and not the body. To learn more, see [where to
     /// find your Property
-    /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+    /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
     ///
     /// Example: properties/1234
     /// </summary>

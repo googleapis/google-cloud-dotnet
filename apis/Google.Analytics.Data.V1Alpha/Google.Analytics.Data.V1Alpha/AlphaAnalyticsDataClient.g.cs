@@ -497,7 +497,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// specified in the URL path and not URL parameters. Property is a numeric
         /// Google Analytics GA4 Property identifier. To learn more, see [where to find
         /// your Property
-        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+        /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
         /// Example: properties/1234/metadata
         /// 
@@ -530,7 +530,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// specified in the URL path and not URL parameters. Property is a numeric
         /// Google Analytics GA4 Property identifier. To learn more, see [where to find
         /// your Property
-        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+        /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
         /// Example: properties/1234/metadata
         /// 
@@ -563,7 +563,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// specified in the URL path and not URL parameters. Property is a numeric
         /// Google Analytics GA4 Property identifier. To learn more, see [where to find
         /// your Property
-        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+        /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
         /// Example: properties/1234/metadata
         /// 
@@ -593,7 +593,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// specified in the URL path and not URL parameters. Property is a numeric
         /// Google Analytics GA4 Property identifier. To learn more, see [where to find
         /// your Property
-        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+        /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
         /// Example: properties/1234/metadata
         /// 
@@ -626,7 +626,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// specified in the URL path and not URL parameters. Property is a numeric
         /// Google Analytics GA4 Property identifier. To learn more, see [where to find
         /// your Property
-        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+        /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
         /// Example: properties/1234/metadata
         /// 
@@ -659,7 +659,7 @@ namespace Google.Analytics.Data.V1Alpha
         /// specified in the URL path and not URL parameters. Property is a numeric
         /// Google Analytics GA4 Property identifier. To learn more, see [where to find
         /// your Property
-        /// ID](https://developers.google.com/analytics/trusted-testing/analytics-data/property-id).
+        /// ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id).
         /// 
         /// Example: properties/1234/metadata
         /// 
