@@ -237,6 +237,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -249,6 +253,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -261,6 +269,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -273,6 +285,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
@@ -287,6 +303,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// For more information, see the [API interactions
         /// guide](https://cloud.google.com/dialogflow/docs/api-overview).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -312,6 +332,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
@@ -326,6 +350,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// For more information, see the [API interactions
         /// guide](https://cloud.google.com/dialogflow/docs/api-overview).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -351,6 +379,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
@@ -365,6 +397,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// For more information, see the [API interactions
         /// guide](https://cloud.google.com/dialogflow/docs/api-overview).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -386,6 +422,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
@@ -400,6 +440,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// For more information, see the [API interactions
         /// guide](https://cloud.google.com/dialogflow/docs/api-overview).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -425,6 +469,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
@@ -439,6 +487,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// For more information, see the [API interactions
         /// guide](https://cloud.google.com/dialogflow/docs/api-overview).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -464,6 +516,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="session">
         /// Required. The name of the session this query is sent to. Format:
@@ -478,6 +534,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// 
         /// For more information, see the [API interactions
         /// guide](https://cloud.google.com/dialogflow/docs/api-overview).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </param>
         /// <param name="queryInput">
         /// Required. The input specification. It can be set to:
@@ -506,6 +566,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// Processes a natural language query in audio format in a streaming fashion
         /// and returns structured, actionable data as a result. This method is only
         /// available via the gRPC API (not REST).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -570,6 +634,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -585,6 +653,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// as a result. This method is not idempotent, because it may cause contexts
         /// and session entity types to be updated, which in turn might affect
         /// results of future queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -644,6 +716,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// Processes a natural language query in audio format in a streaming fashion
         /// and returns structured, actionable data as a result. This method is only
         /// available via the gRPC API (not REST).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>

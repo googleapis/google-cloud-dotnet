@@ -51,7 +51,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -85,7 +87,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -121,7 +125,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -155,7 +161,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -191,7 +199,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -225,7 +235,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -262,7 +274,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -297,7 +311,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -330,7 +346,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
@@ -361,7 +379,9 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 Description = "description2cf9da67",
                 AvatarUri = "avatar_urie1767db7",
                 EnableLogging = false,
+#pragma warning disable CS0612
                 MatchMode = Agent.Types.MatchMode.MlOnly,
+#pragma warning restore CS0612
                 ClassificationThreshold = -7.6869614E+17F,
                 ApiVersion = Agent.Types.ApiVersion.V2Beta1,
                 Tier = Agent.Types.Tier.Standard,
