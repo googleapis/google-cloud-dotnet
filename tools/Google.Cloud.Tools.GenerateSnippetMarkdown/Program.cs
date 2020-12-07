@@ -140,7 +140,14 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
 
             DirectoryLayout layout = api == "root" ? DirectoryLayout.ForRootDocs() : DirectoryLayout.ForApi(api);
-            string snippetsSource = Directory.GetDirectories(layout.SourceDirectory, "*.Snippets").FirstOrDefault();
+
+            // Hack: the ASP.NET Core 3 snippets are in the Google.Cloud.Diagnostics.AspNetCore directory.
+            string sourceDirectory = layout.SourceDirectory;
+            if (sourceDirectory.EndsWith("Google.Cloud.Diagnostics.AspNetCore3"))
+            {
+                sourceDirectory = DirectoryLayout.ForApi("Google.Cloud.Diagnostics.AspNetCore").SourceDirectory;
+            }
+            string snippetsSource = Directory.GetDirectories(sourceDirectory, "*.Snippets").FirstOrDefault();
             if (snippetsSource == null)
             {
                 Console.WriteLine($"Unable to find snippets within API {api}. Ignoring this API.");
@@ -163,7 +170,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             var memberLookup = LoadMembersByType(layout.DocfxMetadataDirectory);
             Console.WriteLine($"Loaded {memberLookup.Count} types with {memberLookup.Sum(x => x.Count())} members");
             List<string> errors = new List<string>();
-            var snippets = LoadAllSnippets(snippetsSource, errors);
+            var snippets = LoadAllSnippets(snippetsSource, api, errors);
             Console.WriteLine($"Loaded {snippets.Sum(x => x.Count())} snippets");
 
             foreach (var entry in snippets)
@@ -273,14 +280,10 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
         }
 
-        private static ILookup<string, Snippet> LoadAllSnippets(string snippetSourceDir, List<string> errors)
+        private static ILookup<string, Snippet> LoadAllSnippets(string snippetSourceDir, string api, List<string> errors)
         {
-            var canonicalName = Path.GetFullPath(snippetSourceDir);
-            var projectName = TrimSuffix(Path.GetFileName(canonicalName), ".Snippets");
-            // Experimental libraries will be in non-experimental namespaces.
-            projectName = TrimSuffix(projectName, ".Experimental");
             var query = from sourceFile in Directory.GetFiles(snippetSourceDir, "*.cs")
-                        let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), SnippetFileSuffixes)
+                        let type = api + "." + TrimSuffix(Path.GetFileName(sourceFile), SnippetFileSuffixes)
                         from snippet in LoadFileSnippets(sourceFile, errors)
                         select new { Type = type, Snippet = snippet };
             return query.ToLookup(item => item.Type, item => item.Snippet);
