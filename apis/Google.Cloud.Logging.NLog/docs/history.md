@@ -1,5 +1,10 @@
 # Version history
 
+# Version 3.2.0, released 2020-12-07
+
+- [Commit a0f7730](https://github.com/googleapis/google-cloud-dotnet/commit/a0f7730): docs: Move NLog configuration into docs directory and expand it
+- [Commit 932a8d1](https://github.com/googleapis/google-cloud-dotnet/commit/932a8d1): feat: Adds EnableJsonLayout option to use custom jsonLayout
+
 # Version 3.1.0, released 2020-11-19
 
 - [Commit cbaa00a](https://github.com/googleapis/google-cloud-dotnet/commit/cbaa00a): Renormalize line endings
