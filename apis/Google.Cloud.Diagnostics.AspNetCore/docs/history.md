@@ -1,5 +1,9 @@
 # Version history
 
+# Version 4.2.0, released 2020-12-07
+
+No API changes since 4.2.0-beta02; just a stable release of the changes since 4.1.0.
+
 # Version 4.2.0-beta02, released 2020-10-12
 
 - [Commit 1cd4ee6](https://github.com/googleapis/google-cloud-dotnet/commit/1cd4ee6): build: Removes ASP.NET Core unused dependencies from Diagnostics* packages. Towards [issue 4750](https://github.com/googleapis/google-cloud-dotnet/issues/4750).
