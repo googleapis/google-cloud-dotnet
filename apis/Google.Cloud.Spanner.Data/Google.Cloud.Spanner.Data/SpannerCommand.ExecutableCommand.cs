@@ -62,7 +62,7 @@ namespace Google.Cloud.Spanner.Data
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
             internal QueryOptions QueryOptions { get; }
-            internal V1.RequestOptions RequestOptions { get; }
+            internal Priority Priority { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
@@ -73,7 +73,7 @@ namespace Google.Cloud.Spanner.Data
                 Parameters = command.Parameters;
                 Transaction = command._transaction;
                 QueryOptions = command.QueryOptions;
-                RequestOptions = command.RequestOptions;
+                Priority = command.Priority;
             }
 
             // ExecuteScalar is simply implemented in terms of ExecuteReader.
@@ -119,7 +119,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     throw new InvalidOperationException("singleUseReadSettings cannot be used within another transaction.");
                 }
-                effectiveTransaction = effectiveTransaction ?? new EphemeralTransaction(Connection, null);
+                effectiveTransaction = effectiveTransaction ?? new EphemeralTransaction(Connection, null, Priority);
 
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
 
@@ -188,7 +188,7 @@ namespace Google.Cloud.Spanner.Data
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
 
-                var transaction = new EphemeralTransaction(Connection, s_partitionedDmlTransactionOptions);
+                var transaction = new EphemeralTransaction(Connection, s_partitionedDmlTransactionOptions, Priority);
                 // Note: no commit here. PDML transactions are implicitly committed as they go along.
                 return await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
             }
@@ -202,7 +202,7 @@ namespace Google.Cloud.Spanner.Data
             private async Task<int> ExecuteDmlAsync(CancellationToken cancellationToken)
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
                 ExecuteSqlRequest request = GetExecuteSqlRequest();
                 long count = await transaction.ExecuteDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // This cannot currently exceed int.MaxValue due to Spanner commit limitations anyway.
@@ -289,9 +289,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
                 var mutations = GetMutations();
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, s_readWriteOptions, Priority);
                 // Make the request. This will commit immediately or not depending on whether a transaction was explicitly created.
-                await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout, PriorityConverter.FromProto(RequestOptions.Priority)).ConfigureAwait(false);
+                await transaction.ExecuteMutationsAsync(mutations, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 // Return the number of records affected.
                 return mutations.Count;
             }
@@ -373,6 +373,11 @@ namespace Google.Cloud.Spanner.Data
                 return queryOptionsProto;
             }
 
+            private RequestOptions BuildRequestOptions()
+            {
+                return new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
+            }
+
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {
                 if (Partition != null)
@@ -384,7 +389,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     Sql = CommandTextBuilder.ToString(),
                     QueryOptions = GetEffectiveQueryOptions(),
-                    RequestOptions = RequestOptions
+                    RequestOptions = BuildRequestOptions()
                 };
 
                 // See comment at the start of GetMutations.

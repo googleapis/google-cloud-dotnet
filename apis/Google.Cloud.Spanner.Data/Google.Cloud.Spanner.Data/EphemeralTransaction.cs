@@ -30,11 +30,13 @@ namespace Google.Cloud.Spanner.Data
     {
         private readonly SpannerConnection _connection;
         private readonly TransactionOptions _transactionOptions;
+        private readonly Priority _commitPriority;
 
-        internal EphemeralTransaction(SpannerConnection connection, TransactionOptions transactionOptions)
+        internal EphemeralTransaction(SpannerConnection connection, TransactionOptions transactionOptions, Priority commitPriority)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _transactionOptions = transactionOptions;
+            _commitPriority = commitPriority;
         }
 
         public Task<long> ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)
@@ -46,6 +48,7 @@ namespace Google.Cloud.Spanner.Data
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.CommitTimeout = timeoutSeconds;
+                    transaction.CommitPriority = _commitPriority;
                     while (true)
                     {
                         try
@@ -85,6 +88,7 @@ namespace Google.Cloud.Spanner.Data
                 using (var transaction = await _connection.BeginTransactionImplAsync(_transactionOptions, TransactionMode.ReadWrite, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.CommitTimeout = timeoutSeconds;
+                    transaction.CommitPriority = _commitPriority;
 
                     IEnumerable<long> result;
 
@@ -108,9 +112,8 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="mutations">The list of changes to apply.</param>
         /// <param name="cancellationToken">A cancellation token used for this task.</param>
         /// <param name="timeoutSeconds">The timeout which will apply to the commit part of this method.</param>
-        /// <param name="priority">The priority that will be used for the commit request.</param>
         /// <returns>The number of rows modified.</returns>
-        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds, Priority priority)
+        public Task<int> ExecuteMutationsAsync(List<Mutation> mutations, CancellationToken cancellationToken, int timeoutSeconds)
         {
             return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteMutationsAsync", _connection.Logger);
 
@@ -122,9 +125,9 @@ namespace Google.Cloud.Spanner.Data
                     // ExecuteMutations on SpannerTransaction doesnt actually hit the network
                     // until you commit or rollback.
                     transaction.CommitTimeout = timeoutSeconds;
-                    transaction.CommitPriority = priority;
+                    transaction.CommitPriority = _commitPriority;
                     int count = await ((ISpannerTransaction)transaction)
-                        .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds, priority)
+                        .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)
                         .ConfigureAwait(false);
                     await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);
                     return count;

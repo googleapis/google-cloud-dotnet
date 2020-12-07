@@ -39,15 +39,7 @@ namespace Google.Cloud.Spanner.Data
 
     internal class PriorityConverter
     {
-        internal static Priority FromProto(V1.RequestOptions.Types.Priority proto)
-        {
-            return (Priority)System.Enum.Parse(typeof(Priority), proto.ToString());
-        }
-
-        internal static V1.RequestOptions.Types.Priority ToProto(Priority priority)
-        {
-            return (V1.RequestOptions.Types.Priority)System.Enum.Parse(typeof(V1.RequestOptions.Types.Priority), priority.ToString());
-        }
+        internal static V1.RequestOptions.Types.Priority ToProto(Priority priority) => (V1.RequestOptions.Types.Priority)(int)priority;
     }
 
 }

@@ -98,17 +98,10 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        // Request options for this command. Only the relevant properties are publicly exposed.
-        private V1.RequestOptions RequestOptions { get; } = new V1.RequestOptions();
-
         /// <summary>
         /// The RPC priority to use for this command.
         /// </summary>
-        public Priority Priority
-        {
-            get => PriorityConverter.FromProto(RequestOptions.Priority);
-            set => RequestOptions.Priority = PriorityConverter.ToProto(value);
-        }
+        public Priority Priority { get; set; }
 
         /// <summary>
         /// Adds a command to the collection of batch commands to be executed by this <see cref="SpannerBatchCommand"/>.

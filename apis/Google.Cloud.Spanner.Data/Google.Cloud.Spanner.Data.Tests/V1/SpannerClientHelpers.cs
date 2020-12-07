@@ -218,8 +218,17 @@ namespace Google.Cloud.Spanner.V1.Tests
             return spannerClientMock;
         }
 
-        internal static Mock<SpannerClient> SetupExecuteStreamingSqlForPdml(this Mock<SpannerClient> spannerClientMock)
+        internal static Mock<SpannerClient> SetupExecuteStreamingSqlForDml(this Mock<SpannerClient> spannerClientMock, ResultSetStats.RowCountOneofCase type)
         {
+            ResultSetStats stats = new ResultSetStats();
+            if (type == ResultSetStats.RowCountOneofCase.RowCountExact)
+            {
+                stats.RowCountExact = 10;
+            }
+            else
+            {
+                stats.RowCountLowerBound = 100;
+            }
             spannerClientMock
                 .SetupSequence(client => client.ExecuteStreamingSql(
                     It.IsAny<ExecuteSqlRequest>(),
@@ -230,10 +239,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                     .Select((resumeToken, index) => new PartialResultSet
                     {
                         ResumeToken = ByteString.CopyFromUtf8(resumeToken),
-                        Stats = new ResultSetStats
-                        {
-                            RowCountLowerBound = 100
-                        }
+                        Stats = stats
                     })
                     .ToList();
                     var asyncResults = new AsyncStreamAdapter<PartialResultSet>(results.ToAsyncEnumerable().GetAsyncEnumerator(default));

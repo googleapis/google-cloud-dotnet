@@ -178,6 +178,32 @@ namespace Google.Cloud.Spanner.Data.Tests
                 It.IsAny<CallSettings>()), Times.Once());
         }
 
+        [Fact]
+        public void EphemeralTransactionIncludesPriorityOnBatchDmlAndCommit()
+        {
+            var priority = Priority.Medium;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteBatchDmlAsync()
+                .SetupCommitAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateBatchDmlCommand();
+            command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
+            command.Priority = priority;
+            command.ExecuteNonQuery();
+
+            spannerClientMock.Verify(client => client.ExecuteBatchDmlAsync(
+                It.Is<ExecuteBatchDmlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
         private class FakeSessionPool : SessionPool.ISessionPool
         {
             public SpannerClient Client => throw new NotImplementedException();

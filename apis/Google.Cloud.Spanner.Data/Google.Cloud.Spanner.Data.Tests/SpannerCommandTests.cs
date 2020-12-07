@@ -399,7 +399,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock
                 .SetupBatchCreateSessionsAsync()
                 .SetupBeginTransactionAsync()
-                .SetupExecuteStreamingSqlForPdml();
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.RowCountLowerBound);
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
             var command = connection.CreateDmlCommand("DELETE FROM Users WHERE Active=False");
@@ -408,6 +408,31 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             spannerClientMock.Verify(client => client.ExecuteStreamingSql(
                 It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == RequestOptions.Types.Priority.Low),
+                It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void EphemeralTransactionIncludesPriorityOnDmlCommandAndCommit()
+        {
+            var priority = Priority.Medium;
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.RowCountExact)
+                .SetupCommitAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+
+            var command = connection.CreateDmlCommand("UPDATE FOO SET BAR=1 WHERE ID=1");
+            command.Priority = priority;
+            command.ExecuteNonQuery();
+
+            spannerClientMock.Verify(client => client.ExecuteStreamingSql(
+                It.Is<ExecuteSqlRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
+                It.IsAny<CallSettings>()), Times.Once());
+            spannerClientMock.Verify(client => client.CommitAsync(
+                It.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
                 It.IsAny<CallSettings>()), Times.Once());
         }
 

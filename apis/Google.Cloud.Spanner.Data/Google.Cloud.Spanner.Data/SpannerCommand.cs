@@ -224,17 +224,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public QueryOptions QueryOptions { get; set; }
 
-        // Request options for this command. Only the relevant properties are publicly exposed.
-        private V1.RequestOptions RequestOptions = new V1.RequestOptions();
-
         /// <summary>
         /// The RPC priority to use for this command.
         /// </summary>
-        public Priority Priority
-        {
-            get => PriorityConverter.FromProto(RequestOptions.Priority);
-            set => RequestOptions.Priority = PriorityConverter.ToProto(value);
-        }
+        public Priority Priority { get; set; }
 
         /// <inheritdoc />
         protected override DbConnection DbConnection
@@ -275,7 +268,7 @@ namespace Google.Cloud.Spanner.Data
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
             CommandTimeout = CommandTimeout,
             QueryOptions = QueryOptions,
-            RequestOptions = RequestOptions.Clone()
+            Priority = Priority
         };
 
         /// <inheritdoc />
