@@ -7,7 +7,9 @@
   </extensions>
   
   <targets async="true">
-    <target name="stackdriver" xsi:type="GoogleStackdriver" projectId="PROJECT_ID" logId="LOG_ID" />
+    <target name="stackdriver" xsi:type="GoogleStackdriver" projectId="PROJECT_ID" logId="LOG_ID">
+      <!-- Potentially additional configuration -->
+    </target>
     <target name="console" xsi:type="Console" />
   </targets>
 

@@ -7,7 +7,10 @@
   </extensions>
   
   <targets async="true">
-    <target type="GoogleStackdriver" projectId="PROJECT_ID" logId="LOG_ID" name="stackdriver" resourceType="container" sendJsonPayload="true" enableJsonLayout="true" includeCallSite ="true" includeCallSiteStackTrace="true" IncludeEventProperties="false" IncludeMdlc="true">
+    <target type="GoogleStackdriver" name="stackdriver"
+            projectId="PROJECT_ID" logId="LOG_ID" resourceType="container"
+            includeCallSite ="true" includeCallSiteStackTrace="true" includeEventProperties="false" includeMdlc="true"
+            sendJsonPayload="true" enableJsonLayout="true">
       <contextproperty name="contextProp" layout="propContextLayout" />
       <layout xsi:type="JsonLayout" includeAllProperties="true">
         <attribute name="someProp" layout="prop" />

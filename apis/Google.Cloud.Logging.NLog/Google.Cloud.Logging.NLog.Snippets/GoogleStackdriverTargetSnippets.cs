@@ -16,12 +16,10 @@ using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Logging.V2;
 using NLog;
-using NLog.Config;
 using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Xml;
 using Xunit;
@@ -35,6 +33,8 @@ namespace Google.Cloud.Logging.NLog.Snippets
         private readonly NLogSnippetFixture _fixture;
 
         public GoogleStackdriverTargetSnippets(NLogSnippetFixture fixture) => _fixture = fixture;
+
+        // Resource: nlog-jsonTemplate.xml nlog_jsonTemplate
 
         [Fact]
         public void Overview()
