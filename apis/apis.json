@@ -40,6 +40,21 @@
       "protoPath": "google/area120/tables/v1alpha1"
     },
     {
+      "id": "Google.Cloud.AccessApproval.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Access Approval",
+      "productUrl": "https://cloud.google.com/access-approval/docs/",
+      "description": "An API for controlling access to data by Google personnel.",
+      "tags": [
+        "access",
+        "approval"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/accessapproval/v1"
+    },
+    {
       "id": "Google.Cloud.ArtifactRegistry.V1Beta2",
       "version": "1.0.0-beta01",
       "type": "grpc",
