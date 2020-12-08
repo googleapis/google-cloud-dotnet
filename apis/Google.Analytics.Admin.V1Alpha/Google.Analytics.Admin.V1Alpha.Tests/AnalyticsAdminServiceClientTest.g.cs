@@ -4006,6 +4006,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
                 Snippet = "snippet5e4cde54",
+                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4025,6 +4026,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
                 Snippet = "snippet5e4cde54",
+                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4046,6 +4048,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
                 Snippet = "snippet5e4cde54",
+                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4065,6 +4068,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
                 Snippet = "snippet5e4cde54",
+                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4086,6 +4090,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
                 Snippet = "snippet5e4cde54",
+                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4105,6 +4110,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
                 Snippet = "snippet5e4cde54",
+                GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
