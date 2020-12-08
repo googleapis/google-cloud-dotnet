@@ -106,6 +106,18 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                         ["filter"] = "filterConfig.yml",
                         ["properties"] = new JObject { ["TargetFramework"] = "net461" }
                     },
+                    // Simple "just the API itself" output in bareapi
+                    new JObject
+                    {
+                        ["src"] = new JObject
+                        {
+                            ["files"] = new JArray { $"{rootApi.Id}/{rootApi.Id}.csproj" },
+                            ["cwd"] = $"../../../apis/{rootApi.Id}"
+                        },
+                        ["dest"] = "obj/bareapi",
+                        ["filter"] = "filterConfig.yml",
+                        ["properties"] = new JObject { ["TargetFramework"] = "net461" }
+                    },
                 },
                 ["build"] = new JObject {
                     ["content"] = new JArray {
