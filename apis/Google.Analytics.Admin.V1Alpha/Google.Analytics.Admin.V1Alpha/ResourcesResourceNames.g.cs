@@ -2801,6 +2801,18 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
+    public partial class GlobalSiteTag
+    {
+        /// <summary>
+        /// <see cref="gaav::GlobalSiteTagName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::GlobalSiteTagName GlobalSiteTagName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::GlobalSiteTagName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GoogleAdsLink
     {
         /// <summary>
