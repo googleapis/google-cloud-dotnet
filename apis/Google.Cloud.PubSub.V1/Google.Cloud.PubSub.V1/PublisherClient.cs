@@ -225,24 +225,6 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
-        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="PublisherServiceApiClient"/>s must have their
-        /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
-        /// possibly causing a deadlock.
-        /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth
-        /// (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
-        /// settings may need changing.
-        /// </summary>
-        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
-        /// <param name="clients">The <see cref="PublisherServiceApiClient"/>s to use in a <see cref="PublisherClient"/>.
-        /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
-        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
-        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
-        internal static PublisherClient Create(TopicName topicName, IEnumerable<PublisherServiceApiClient> clients, Settings settings = null) =>
-            // No need to clone clients, it's synchronously used to initialise a Queue<T> in the constructor
-            new PublisherClientImpl(topicName, clients, settings?.Clone() ?? new Settings(), null);
-
-        /// <summary>
         /// The associated <see cref="TopicName"/>. 
         /// </summary>
         public virtual TopicName TopicName => throw new NotImplementedException();

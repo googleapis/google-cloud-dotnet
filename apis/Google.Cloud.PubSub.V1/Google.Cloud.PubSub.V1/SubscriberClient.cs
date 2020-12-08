@@ -291,23 +291,6 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.
-        /// The gRPC <see cref="Channel"/>s underlying the provided <see cref="SubscriberServiceApiClient"/>s must have their
-        /// maximum send and maximum receive sizes set to unlimited, otherwise performance will be severly affected,
-        /// possibly causing a deadlock.
-        /// The default <paramref name="settings"/> are suitable for machines with high network bandwidth (e.g. Google
-        /// Compute Engine instances). If running with more limited network bandwidth, some settings may need changing;
-        /// especially <see cref="Settings.AckDeadline"/>.
-        /// </summary>
-        /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
-        /// <param name="clients">The <see cref="SubscriberServiceApiClient"/>s to use in a <see cref="SubscriberClient"/>.
-        /// For high performance, these should all use distinct <see cref="Channel"/>s.</param>
-        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
-        /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        internal static SubscriberClient Create(SubscriptionName subscriptionName, IEnumerable<SubscriberServiceApiClient> clients, Settings settings = null) =>
-            new SubscriberClientImpl(subscriptionName, clients, settings?.Clone() ?? new Settings(), null);
-
-        /// <summary>
         /// The associated <see cref="SubscriptionName"/>.
         /// </summary>
         public virtual SubscriptionName SubscriptionName => throw new NotImplementedException();
