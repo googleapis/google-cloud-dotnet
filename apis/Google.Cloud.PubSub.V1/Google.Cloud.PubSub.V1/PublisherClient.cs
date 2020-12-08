@@ -38,6 +38,10 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public abstract class PublisherClient
     {
+        private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
+            .WithMaxReceiveMessageSize(-1)
+            .WithMaxSendMessageSize(-1);
+
         // TODO: Logging
 
         /// <summary>
@@ -114,12 +118,43 @@ namespace Google.Cloud.PubSub.V1
                 PublisherServiceApiSettings publisherServiceApiSettings = null,
                 ChannelCredentials credentials = null,
                 string serviceEndpoint = null)
+                : this(clientCount, publisherServiceApiSettings, credentials, serviceEndpoint, EmulatorDetection.None)
+            {
+            }
+
+            private ClientCreationSettings(
+                int? clientCount,
+                PublisherServiceApiSettings publisherServiceApiSettings,
+                ChannelCredentials credentials,
+                string serviceEndpoint,
+                EmulatorDetection emulatorDetection)
             {
                 ClientCount = clientCount;
                 PublisherServiceApiSettings = publisherServiceApiSettings;
                 Credentials = credentials;
                 ServiceEndpoint = serviceEndpoint;
+                EmulatorDetection = emulatorDetection;
             }
+
+            /// <summary>
+            /// Creates a new instance of this type with the specified emulator detection value.
+            /// </summary>
+            /// <param name="emulatorDetection">Determines how and whether to detect the emulator.</param>
+            /// <returns>The new instance</returns>
+            public ClientCreationSettings WithEmulatorDetection(EmulatorDetection emulatorDetection)
+            {
+                GaxPreconditions.CheckEnumValue(emulatorDetection, nameof(emulatorDetection));
+                return new ClientCreationSettings(ClientCount, PublisherServiceApiSettings, Credentials, ServiceEndpoint, emulatorDetection);
+            }
+
+            /// <summary>
+            /// Specifies how to respond to the presence of emulator environment variables.
+            /// </summary>
+            /// <remarks>
+            /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that
+            /// environment variables are ignored.
+            /// </remarks>
+            public EmulatorDetection EmulatorDetection { get; }
 
             /// <summary>
             /// The number of <see cref="PublisherServiceApiClient"/>s to create and use within a <see cref="PublisherClient"/> instance.
@@ -204,15 +239,23 @@ namespace Google.Cloud.PubSub.V1
             var shutdowns = new Func<Task>[clientCount];
             for (int i = 0; i < clientCount; i++)
             {
-                var channelOptions = new[]
+                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
+                var grpcChannelOptions = s_unlimitedSendReceiveChannelOptions
+                    .WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
+
+                // First builder to handle any endpoint detection etc. We build a gRPC channel
+                // with this.
+                var builder = new PublisherServiceApiClientBuilder
                 {
-                    // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
-                    new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
-                    new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
-                    // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-                    new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
+                    EmulatorDetection = clientCreationSettings?.EmulatorDetection ?? EmulatorDetection.None,
+                    Endpoint = clientCreationSettings?.ServiceEndpoint,
+                    ChannelCredentials = clientCreationSettings?.Credentials,
+                    Settings = clientCreationSettings?.PublisherServiceApiSettings,
+                    ChannelOptions = grpcChannelOptions
                 };
-                var channel = new Channel(endpoint, channelCredentials, channelOptions);
+                var channel = await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false);
+
+                // Second builder doesn't need to do much, as we can build a call invoker from the channel.
                 clients[i] = new PublisherServiceApiClientBuilder
                 {
                     CallInvoker = channel.CreateCallInvoker(),

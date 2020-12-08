@@ -45,6 +45,10 @@ namespace Google.Cloud.PubSub.V1
     /// </remarks>
     public abstract class SubscriberClient
     {
+        private static readonly GrpcChannelOptions s_unlimitedSendReceiveChannelOptions = GrpcChannelOptions.Empty
+            .WithMaxReceiveMessageSize(-1)
+            .WithMaxSendMessageSize(-1);
+
         /// <summary>
         /// Reply from a message handler; whether to <see cref="Ack"/>
         /// or <see cref="Nack"/> the message to the server. 
@@ -158,11 +162,42 @@ namespace Google.Cloud.PubSub.V1
                 SubscriberServiceApiSettings subscriberServiceApiSettings = null,
                 ChannelCredentials credentials = null,
                 string serviceEndpoint = null)
+                : this(clientCount, subscriberServiceApiSettings, credentials, serviceEndpoint, EmulatorDetection.None)
+            {
+            }
+
+            private ClientCreationSettings(
+                int? clientCount,
+                SubscriberServiceApiSettings subscriberServiceApiSettings,
+                ChannelCredentials credentials,
+                string serviceEndpoint,
+                EmulatorDetection emulatorDetection)
             {
                 ClientCount = clientCount;
                 SubscriberServiceApiSettings = subscriberServiceApiSettings;
                 Credentials = credentials;
                 ServiceEndpoint = serviceEndpoint;
+                EmulatorDetection = emulatorDetection;
+            }
+
+            /// <summary>
+            /// Specifies how to respond to the presence of emulator environment variables.
+            /// </summary>
+            /// <remarks>
+            /// This property defaults to <see cref="EmulatorDetection.None"/>, meaning that
+            /// environment variables are ignored.
+            /// </remarks>
+            public EmulatorDetection EmulatorDetection { get; }
+
+            /// <summary>
+            /// Creates a new instance of this type with the specified emulator detection value.
+            /// </summary>
+            /// <param name="emulatorDetection">Determines how and whether to detect the emulator.</param>
+            /// <returns>The new instance</returns>
+            public ClientCreationSettings WithEmulatorDetection(EmulatorDetection emulatorDetection)
+            {
+                GaxPreconditions.CheckEnumValue(emulatorDetection, nameof(emulatorDetection));
+                return new ClientCreationSettings(ClientCount, SubscriberServiceApiSettings, Credentials, ServiceEndpoint, emulatorDetection);
             }
 
             /// <summary>
@@ -252,33 +287,29 @@ namespace Google.Cloud.PubSub.V1
             // Clone settings, just in case user modifies them and an await happens in this method
             settings = settings?.Clone() ?? new Settings();
             var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
-            var channelCredentials = clientCreationSettings?.Credentials;
-            // Use default credentials if none given.
-            if (channelCredentials == null)
-            {
-                var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
-                if (credentials.IsCreateScopedRequired)
-                {
-                    credentials = credentials.CreateScoped(SubscriberServiceApiClient.DefaultScopes);
-                }
-                channelCredentials = credentials.ToChannelCredentials();
-            }
+
             // Create the channels and clients, and register shutdown functions for each channel
-            var endpoint = clientCreationSettings?.ServiceEndpoint ?? SubscriberServiceApiClient.DefaultEndpoint;
             var clients = new SubscriberServiceApiClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
             for (int i = 0; i < clientCount; i++)
             {
-                // TODO: Use GrpcChannelOptions, and expose a way of setting custom options in the client builder.
-                var channelOptions = new[]
+                // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
+                var grpcChannelOptions = s_unlimitedSendReceiveChannelOptions
+                    .WithCustomOption("sub-channel-separator", Guid.NewGuid().ToString());
+
+                // First builder to handle any endpoint detection etc. We build a gRPC channel
+                // with this.
+                var builder = new SubscriberServiceApiClientBuilder
                 {
-                    // Set channel send/recv message size to unlimited. It defaults to ~4Mb which causes failures.
-                    new ChannelOption(ChannelOptions.MaxSendMessageLength, -1),
-                    new ChannelOption(ChannelOptions.MaxReceiveMessageLength, -1),
-                    // Use a random arg to prevent sub-channel re-use in gRPC, so each channel uses its own connection.
-                    new ChannelOption("sub-channel-separator", Guid.NewGuid().ToString())
+                    EmulatorDetection = clientCreationSettings?.EmulatorDetection ?? EmulatorDetection.None,
+                    Endpoint = clientCreationSettings?.ServiceEndpoint,
+                    ChannelCredentials = clientCreationSettings?.Credentials,
+                    Settings = clientCreationSettings?.SubscriberServiceApiSettings,
+                    ChannelOptions = grpcChannelOptions
                 };
-                var channel = new Channel(endpoint, channelCredentials, channelOptions);
+                var channel = await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false);
+
+                // Second builder doesn't need to do much, as we can build a call invoker from the channel.
                 clients[i] = new SubscriberServiceApiClientBuilder
                 {
                     CallInvoker = channel.CreateCallInvoker(),

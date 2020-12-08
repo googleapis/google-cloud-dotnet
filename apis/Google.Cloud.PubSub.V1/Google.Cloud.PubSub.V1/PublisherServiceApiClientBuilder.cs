@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
+using Grpc.Core;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,6 +24,14 @@ namespace Google.Cloud.PubSub.V1
 
     public partial class PublisherServiceApiClientBuilder
     {
+        /// <summary>
+        /// Additional channel options to use, if any.
+        /// </summary>
+        internal GrpcChannelOptions ChannelOptions { get; set; }
+
+        /// <inheritdoc />
+        protected override GrpcChannelOptions GetChannelOptions() => base.GetChannelOptions().MergedWith(ChannelOptions ?? GrpcChannelOptions.Empty);
+
         /// <summary>
         /// Specifies how the builder responds to the presence of emulator environment variables.
         /// </summary>
@@ -53,8 +63,23 @@ namespace Google.Cloud.PubSub.V1
                 {
                     Settings = Settings,
                     Endpoint = emulatorEnvironment[s_emulatorHostEnvironmentVariable],
-                    ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure
+                    ChannelCredentials = ChannelCredentials.Insecure,
+                    ChannelOptions = ChannelOptions
                 };
+        }
+
+        /// <summary>
+        /// Creates a channel for this builder, observing any emulator configuration that has been set.
+        /// This method is used by PublisherClient, which needs the channel for shutdown purposes.
+        /// </summary>
+        internal async Task<ChannelBase> CreateChannelAsync(CancellationToken cancellationToken)
+        {
+            // Note: no need to try to detect the channel pool here, as we know we don't want to use it.
+            var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
+            var endpoint = effectiveBuilder.Endpoint ?? GetDefaultEndpoint();
+            var credentials = await effectiveBuilder.GetChannelCredentialsAsync(cancellationToken).ConfigureAwait(false);
+            var grpcAdapter = GrpcAdapter ?? DefaultGrpcAdapter;
+            return grpcAdapter.CreateChannel(endpoint, credentials, effectiveBuilder.GetChannelOptions());
         }
     }
 }
