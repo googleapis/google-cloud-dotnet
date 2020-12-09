@@ -377,7 +377,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
         }
 
         [Theory]
-        [InlineData(10_000, 1_000, 2)]
+        [InlineData(10_000, 1_000, 4)]
         [InlineData(2_000, 100, 6)]
         [InlineData(10, 0.1, 4)]
         public async Task StopStartSubscriber(int totalMessageCount, double publisherFrequencyHz, double subscriberLifetimeSeconds)
@@ -451,7 +451,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                         noRecvCount = 0;
                     }
                     // It can take a while for the last few messages to be received.
-                    Assert.True(noRecvCount < 50, "No message has been recvied for too long; failing test.");
+                    Assert.True(noRecvCount < 50, $"No message has been received for too long; failing test. Received {recvCount} messages out of {totalMessageCount}");
                 }
             });
             Console.WriteLine("Waiting for pub+sub to complete.");
