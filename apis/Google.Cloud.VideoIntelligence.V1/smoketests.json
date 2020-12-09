@@ -1,5 +1,6 @@
 [
   {
+    "client": "VideoIntelligenceServiceClient",
     "method": "AnnotateVideo",
     "arguments": {
       "inputUri": "gs://cloud-samples-data/video/cat.mp4",

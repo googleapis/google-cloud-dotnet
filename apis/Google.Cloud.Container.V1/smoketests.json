@@ -1,5 +1,6 @@
 [
   {
+    "client": "ClusterManagerClient",
     "method": "ListClusters",
     "arguments": {
       "request": {

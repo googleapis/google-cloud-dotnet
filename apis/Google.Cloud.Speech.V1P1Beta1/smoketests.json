@@ -1,5 +1,6 @@
 [
   {
+    "client": "SpeechClient",
     "method": "Recognize",
     "arguments": {
       "config": {
