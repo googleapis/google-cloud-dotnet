@@ -35,7 +35,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         /// <summary>
         /// The name of the client class, assumed to be in the same namespace as the package ID,
-        /// e.g. "PublisherClient". This is optional if the package only contains a single client.
+        /// e.g. "PublisherClient".
         /// </summary>
         public string Client { get; set; }
 
@@ -76,27 +76,15 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private Type FindClient(Assembly assembly)
         {
-            if (Client is object)
+            if (Client is null)
             {
-                // Assume the namespace is the same as the assembly name.
-                string ns = assembly.GetName().Name;
-                var typeName = $"{ns}.{Client}";
-                var type = assembly.GetType(typeName);
-                return type ?? throw new UserErrorException($"No such client type {typeName} in assembly");
+                throw new UserErrorException($"Smoke test configuration error: no client specified for method {Method}");
             }
-
-            // This is crude, but probably good enough.
-            var clients = assembly.GetTypes()
-                .Where(t => t.Name.EndsWith("Client"))
-                // Check that FooClient has FooSettings
-                .Where(t => assembly.GetType(t.FullName[..^6] + "Settings") is object)
-                .ToList();
-            return clients.Count switch
-            {
-                0 => throw new UserErrorException("Assembly contains no recognized API client classes"),
-                1 => clients[0],
-                _ => throw new UserErrorException($"Assembly contains multiple API clients: {string.Join(", ", clients.Select(c => c.Name))}")
-            };
+            // Assume the namespace is the same as the assembly name.
+            string ns = assembly.GetName().Name;
+            var typeName = $"{ns}.{Client}";
+            var type = assembly.GetType(typeName);
+            return type ?? throw new UserErrorException($"No such client type {typeName} in assembly");
         }
 
 
