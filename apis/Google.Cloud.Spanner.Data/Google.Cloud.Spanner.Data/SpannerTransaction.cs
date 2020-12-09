@@ -364,11 +364,8 @@ namespace Google.Cloud.Spanner.Data
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
 
-        private RequestOptions BuildCommitRequestOptions()
-        {
-            return new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority) };
-        }
-
+        private RequestOptions BuildCommitRequestOptions() =>
+            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority) };
         /// <inheritdoc />
         public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();
 
