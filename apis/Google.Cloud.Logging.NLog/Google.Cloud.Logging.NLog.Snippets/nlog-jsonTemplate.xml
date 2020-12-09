@@ -8,10 +8,7 @@
   
   <targets async="true">
     <target type="GoogleStackdriver" name="stackdriver"
-            projectId="PROJECT_ID" logId="LOG_ID" resourceType="container"
-            includeCallSite ="true" includeCallSiteStackTrace="true" includeEventProperties="false" includeMdlc="true"
-            sendJsonPayload="true" enableJsonLayout="true">
-      <contextproperty name="contextProp" layout="propContextLayout" />
+            projectId="PROJECT_ID" logId="LOG_ID" resourceType="container" sendJsonPayload="true" enableJsonLayout="true">
       <layout xsi:type="JsonLayout" includeAllProperties="true">
         <attribute name="someProp" layout="prop" />
         <attribute name="nestedProp" encode="false">

@@ -49,6 +49,14 @@ then the `projectId="PROJECT_ID"` configuration setting can be omitted; it will 
 - `EnableJsonLayout` - Uses NLog's native JSON layout to format JSON payloads, completely replacing the default layout.
 - `JsonConverter` or `JsonConverterTypeName`/`JsonConverterMethodName` - Configures a custom conversion for individual values within a JSON payload.
 
-Many of the options above are used to configure the JSON payload within the emitted log entries. The configuration file below uses a JSON layout via NLog configuration to completely replace the payload.
+## Sending JsonPayload
+
+Enabling `SendJsonPayload` will capture structured logging properties in JSON format (instead of saving them as resource labels).
+
+[!code-xml[](obj/snippets/Google.Cloud.Logging.NLog.GoogleStackdriverTarget.txt#nlog_jsonPayload)]
+
+## Custom JsonPayload
+
+Enabling `EnableJsonLayout` will override the standard JSON format, and instead depend on the output from NLog JsonLayout. This will completely replace the JSON payload, but has a performance penalty because of additional parsing.
 
 [!code-xml[](obj/snippets/Google.Cloud.Logging.NLog.GoogleStackdriverTarget.txt#nlog_jsonTemplate)]
