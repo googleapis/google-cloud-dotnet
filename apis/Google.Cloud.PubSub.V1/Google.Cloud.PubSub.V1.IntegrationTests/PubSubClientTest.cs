@@ -43,14 +43,35 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         private readonly PubsubFixture _fixture;
 
+        // Factory methods for clients, as a centralized place to apply default settings.
+        private static Task<PublisherServiceApiClient> CreatePublisherServiceApiClientAsync() =>
+            new PublisherServiceApiClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.BuildAsync();
+
+        private static Task<SubscriberServiceApiClient> CreateSubscriberServiceApiClientAsync() =>
+            new SubscriberServiceApiClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.BuildAsync();
+
+        private static Task<PublisherClient> CreatePublisherClientAsync(TopicName topicName, PublisherClient.ClientCreationSettings clientCreationSettings = null, PublisherClient.Settings settings = null)
+        {
+            clientCreationSettings ??= new PublisherClient.ClientCreationSettings();
+            clientCreationSettings = clientCreationSettings.WithEmulatorDetection(EmulatorDetection.EmulatorOrProduction);
+            return PublisherClient.CreateAsync(topicName, clientCreationSettings, settings);
+        }
+
+        private static Task<SubscriberClient> CreateSubscriberClientAsync(SubscriptionName subscriptionName, SubscriberClient.ClientCreationSettings clientCreationSettings = null, SubscriberClient.Settings settings = null)
+        {
+            clientCreationSettings ??= new SubscriberClient.ClientCreationSettings();
+            clientCreationSettings = clientCreationSettings.WithEmulatorDetection(EmulatorDetection.EmulatorOrProduction);
+            return SubscriberClient.CreateAsync(subscriptionName, clientCreationSettings, settings);
+        }
+
         private async Task CreateTopicAndSubscription(TopicName topicName, SubscriptionName subscriptionName)
         {
             // Create topic
-            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
 
             // Subscribe to the topic
-            var subscriberApi = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var subscriberApi = await CreateSubscriberServiceApiClientAsync().ConfigureAwait(false);
             await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
         }
 
@@ -92,7 +113,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             minMessageSize = Math.Max(4, minMessageSize);
 
             // Create PublisherClient and SubscriberClient
-            var publisher = await PublisherClient.CreateAsync(topicName,
+            var publisher = await CreatePublisherClientAsync(topicName,
                 clientCreationSettings: new PublisherClient.ClientCreationSettings(
                     clientCount: publisherChannelCount,
                     publisherServiceApiSettings: timeouts == null ? null : new PublisherServiceApiSettings
@@ -107,7 +128,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                             .WithTimeout(timeouts.Value)
                     }
                 )).ConfigureAwait(false);
-            var subscriber = await SubscriberClient.CreateAsync(subscriptionName,
+            var subscriber = await CreateSubscriberClientAsync(subscriptionName,
                 clientCreationSettings: new SubscriberClient.ClientCreationSettings(clientCount: clientCount),
                 settings: new SubscriberClient.Settings
                 {
@@ -303,10 +324,10 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var topicId = _fixture.CreateTopicId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
             // Create Publisher
-            var publisher = await PublisherClient.CreateAsync(topicName).ConfigureAwait(false);
+            var publisher = await CreatePublisherClientAsync(topicName).ConfigureAwait(false);
             // Create oversized message
             Random rnd = new Random(1234);
             byte[] msg = new byte[10_000_001];
@@ -328,14 +349,14 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var topicId = _fixture.CreateTopicId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
             // Create Publisher, with no retry
             var batchingSettings = new BatchingSettings(PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold,
                 PublisherClient.ApiMaxBatchingSettings.ByteCountThreshold, TimeSpan.FromSeconds(4));
             var publisherServiceApiSettings = PublisherServiceApiSettings.GetDefault();
             publisherServiceApiSettings.PublishSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(60)));
-            var publisher = await PublisherClient.CreateAsync(topicName,
+            var publisher = await CreatePublisherClientAsync(topicName,
                 new PublisherClient.ClientCreationSettings(clientCount: 1, publisherServiceApiSettings: publisherServiceApiSettings),
                 new PublisherClient.Settings { BatchingSettings = batchingSettings }).ConfigureAwait(false);
             var msgCount = PublisherClient.ApiMaxBatchingSettings.ElementCountThreshold.Value;
@@ -375,14 +396,14 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var subscriptionId = _fixture.CreateSubscriptionId();
             // Create topic
             var topicName = new TopicName(_fixture.ProjectId, topicId);
-            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
             // Subscribe to the topic
             var subscriptionName = new SubscriptionName(_fixture.ProjectId, subscriptionId);
-            var subscriberApi = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var subscriberApi = await CreateSubscriberServiceApiClientAsync().ConfigureAwait(false);
             await subscriberApi.CreateSubscriptionAsync(subscriptionName, topicName, null, 60).ConfigureAwait(false);
             // Create publisher, and start publishing messages
-            var publisher = await PublisherClient.CreateAsync(topicName).ConfigureAwait(false);
+            var publisher = await CreatePublisherClientAsync(topicName).ConfigureAwait(false);
             var publishTask = Task.Run(async () =>
             {
                 Console.WriteLine($"Starting to publish {totalMessageCount} messages.");
@@ -406,7 +427,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 while (recvedMsgs.Locked(() => recvedMsgs.Count) < totalMessageCount)
                 {
                     Console.WriteLine("Starting subscriber");
-                    var subscriber = await SubscriberClient.CreateAsync(subscriptionName).ConfigureAwait(false);
+                    var subscriber = await CreateSubscriberClientAsync(subscriptionName).ConfigureAwait(false);
                     var subscribeTask = subscriber.StartAsync(async (msg, ct) =>
                     {
                         recvedMsgs.Locked(() => recvedMsgs.Add(msg.Data.ToStringUtf8()));
@@ -486,7 +507,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             var dlqSubscriptionName = new SubscriptionName(_fixture.ProjectId, dlqSubscriptionId);
 
             // Create topics.
-            var publisherApi = await PublisherServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var publisherApi = await CreatePublisherServiceApiClientAsync().ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(topicName).ConfigureAwait(false);
             await publisherApi.CreateTopicAsync(dlqTopicName).ConfigureAwait(false);
             // Allow pubsub-managed service account to publish to the DLQ topic.
@@ -503,7 +524,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
             }).ConfigureAwait(false);
 
             // Subscribe to the topics.
-            var subscriberApi = await SubscriberServiceApiClient.CreateAsync().ConfigureAwait(false);
+            var subscriberApi = await CreateSubscriberServiceApiClientAsync().ConfigureAwait(false);
             await subscriberApi.CreateSubscriptionAsync(dlqSubscriptionName, dlqTopicName, null, 60).ConfigureAwait(false);
             await subscriberApi.CreateSubscriptionAsync(new Subscription
             {
@@ -529,9 +550,9 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 }
             }).ConfigureAwait(false);
 
-            var pub = await PublisherClient.CreateAsync(topicName, new PublisherClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
-            var sub = await SubscriberClient.CreateAsync(subscriptionName, new SubscriberClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
-            var dlqSub = await SubscriberClient.CreateAsync(dlqSubscriptionName, new SubscriberClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
+            var pub = await CreatePublisherClientAsync(topicName, new PublisherClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
+            var sub = await CreateSubscriberClientAsync(subscriptionName, new SubscriberClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
+            var dlqSub = await CreateSubscriberClientAsync(dlqSubscriptionName, new SubscriberClient.ClientCreationSettings(clientCount: 1)).ConfigureAwait(false);
 
             var result = new List<(int? deliveryAttempt, bool isDlq)>();
 
