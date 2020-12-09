@@ -58,9 +58,9 @@ namespace Google.Cloud.AccessApproval.V1 {
   ///
   /// If a request is not approved or dismissed, we call it pending.
   /// </summary>
-  public static partial class AccessApprovalService
+  public static partial class AccessApproval
   {
-    static readonly string __ServiceName = "google.cloud.accessapproval.v1.AccessApprovalService";
+    static readonly string __ServiceName = "google.cloud.accessapproval.v1.AccessApproval";
 
     static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage> __Marshaller_google_cloud_accessapproval_v1_ListApprovalRequestsMessage = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse> __Marshaller_google_cloud_accessapproval_v1_ListApprovalRequestsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse.Parser.ParseFrom);
@@ -129,9 +129,9 @@ namespace Google.Cloud.AccessApproval.V1 {
       get { return global::Google.Cloud.AccessApproval.V1.AccessapprovalReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of AccessApprovalService</summary>
-    [grpc::BindServiceMethod(typeof(AccessApprovalService), "BindService")]
-    public abstract partial class AccessApprovalServiceBase
+    /// <summary>Base class for server-side implementations of AccessApproval</summary>
+    [grpc::BindServiceMethod(typeof(AccessApproval), "BindService")]
+    public abstract partial class AccessApprovalBase
     {
       /// <summary>
       /// Lists approval requests associated with a project, folder, or organization.
@@ -232,26 +232,26 @@ namespace Google.Cloud.AccessApproval.V1 {
 
     }
 
-    /// <summary>Client for AccessApprovalService</summary>
-    public partial class AccessApprovalServiceClient : grpc::ClientBase<AccessApprovalServiceClient>
+    /// <summary>Client for AccessApproval</summary>
+    public partial class AccessApprovalClient : grpc::ClientBase<AccessApprovalClient>
     {
-      /// <summary>Creates a new client for AccessApprovalService</summary>
+      /// <summary>Creates a new client for AccessApproval</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public AccessApprovalServiceClient(grpc::ChannelBase channel) : base(channel)
+      public AccessApprovalClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for AccessApprovalService that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for AccessApproval that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public AccessApprovalServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public AccessApprovalClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected AccessApprovalServiceClient() : base()
+      protected AccessApprovalClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected AccessApprovalServiceClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected AccessApprovalClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -644,15 +644,15 @@ namespace Google.Cloud.AccessApproval.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAccessApprovalSettings, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override AccessApprovalServiceClient NewInstance(ClientBaseConfiguration configuration)
+      protected override AccessApprovalClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new AccessApprovalServiceClient(configuration);
+        return new AccessApprovalClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(AccessApprovalServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(AccessApprovalBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListApprovalRequests, serviceImpl.ListApprovalRequests)
@@ -668,7 +668,7 @@ namespace Google.Cloud.AccessApproval.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, AccessApprovalServiceBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, AccessApprovalBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListApprovalRequests, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsMessage, global::Google.Cloud.AccessApproval.V1.ListApprovalRequestsResponse>(serviceImpl.ListApprovalRequests));
       serviceBinder.AddMethod(__Method_GetApprovalRequest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AccessApproval.V1.GetApprovalRequestMessage, global::Google.Cloud.AccessApproval.V1.ApprovalRequest>(serviceImpl.GetApprovalRequest));
