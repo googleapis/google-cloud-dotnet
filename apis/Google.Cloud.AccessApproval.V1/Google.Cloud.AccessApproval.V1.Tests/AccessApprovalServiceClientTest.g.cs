@@ -30,7 +30,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void GetApprovalRequestRequestObject()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -57,7 +57,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetApprovalRequestRequestObjectAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -86,7 +86,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void GetApprovalRequest()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -113,7 +113,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetApprovalRequestAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetApprovalRequestMessage request = new GetApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -142,7 +142,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void ApproveApprovalRequestRequestObject()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -170,7 +170,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task ApproveApprovalRequestRequestObjectAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             ApproveApprovalRequestMessage request = new ApproveApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -200,7 +200,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void DismissApprovalRequestRequestObject()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DismissApprovalRequestMessage request = new DismissApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -227,7 +227,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DismissApprovalRequestRequestObjectAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DismissApprovalRequestMessage request = new DismissApprovalRequestMessage
             {
                 Name = "name1c9368b0",
@@ -256,7 +256,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void GetAccessApprovalSettingsRequestObject()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
@@ -284,7 +284,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetAccessApprovalSettingsRequestObjectAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
@@ -314,7 +314,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void GetAccessApprovalSettings()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
@@ -342,7 +342,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task GetAccessApprovalSettingsAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             GetAccessApprovalSettingsMessage request = new GetAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
@@ -372,7 +372,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void UpdateAccessApprovalSettingsRequestObject()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
                 Settings = new AccessApprovalSettings(),
@@ -401,7 +401,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task UpdateAccessApprovalSettingsRequestObjectAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
                 Settings = new AccessApprovalSettings(),
@@ -432,7 +432,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void UpdateAccessApprovalSettings()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
                 Settings = new AccessApprovalSettings(),
@@ -461,7 +461,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task UpdateAccessApprovalSettingsAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             UpdateAccessApprovalSettingsMessage request = new UpdateAccessApprovalSettingsMessage
             {
                 Settings = new AccessApprovalSettings(),
@@ -492,7 +492,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void DeleteAccessApprovalSettingsRequestObject()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
@@ -507,7 +507,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteAccessApprovalSettingsRequestObjectAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
@@ -523,7 +523,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public void DeleteAccessApprovalSettings()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
@@ -538,7 +538,7 @@ namespace Google.Cloud.AccessApproval.V1.Tests
         [xunit::FactAttribute]
         public async stt::Task DeleteAccessApprovalSettingsAsync()
         {
-            moq::Mock<AccessApprovalService.AccessApprovalServiceClient> mockGrpcClient = new moq::Mock<AccessApprovalService.AccessApprovalServiceClient>(moq::MockBehavior.Strict);
+            moq::Mock<AccessApproval.AccessApprovalClient> mockGrpcClient = new moq::Mock<AccessApproval.AccessApprovalClient>(moq::MockBehavior.Strict);
             DeleteAccessApprovalSettingsMessage request = new DeleteAccessApprovalSettingsMessage
             {
                 Name = "name1c9368b0",
