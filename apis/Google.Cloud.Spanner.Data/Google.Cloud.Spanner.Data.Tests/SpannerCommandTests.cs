@@ -210,6 +210,27 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void CommandPriorityDefaultsToUnspecified()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            Assert.Equal(Priority.Unspecified, command.Priority);
+        }
+
+        [Fact]
+        public void CommitPriorityDefaultsToUnspecified()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync();
+            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            Assert.Equal(Priority.Unspecified, transaction.CommitPriority);
+        }
+
+        [Fact]
         public void CommandIncludesPriority()
         {
             var priority = Priority.High;

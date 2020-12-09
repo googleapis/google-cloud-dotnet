@@ -225,7 +225,7 @@ namespace Google.Cloud.Spanner.Data
         public QueryOptions QueryOptions { get; set; }
 
         /// <summary>
-        /// The RPC priority to use for this command.
+        /// The RPC priority to use for this command. The default priority is Unspecified.
         /// </summary>
         public Priority Priority { get; set; }
 

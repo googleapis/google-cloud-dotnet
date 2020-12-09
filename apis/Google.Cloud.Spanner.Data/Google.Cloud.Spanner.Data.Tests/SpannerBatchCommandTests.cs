@@ -154,6 +154,20 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void CommandPriorityDefaultsToUnspecified()
+        {
+            Mock<SpannerClient> spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger, MockBehavior.Strict);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync();
+            SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+            SpannerTransaction transaction = connection.BeginTransaction();
+            var command = transaction.CreateBatchDmlCommand();
+            Assert.Equal(Priority.Unspecified, command.Priority);
+        }
+
+        [Fact]
         public void CommandIncludesPriority()
         {
             var priority = Priority.High;

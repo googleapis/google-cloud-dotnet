@@ -99,7 +99,7 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The RPC priority to use for this command.
+        /// The RPC priority to use for this command. The default priority is Unspecified.
         /// </summary>
         public Priority Priority { get; set; }
 

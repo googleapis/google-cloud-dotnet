@@ -131,7 +131,7 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// The RPC priority to use for the commit RPC of this transaction. This can only be set for read/write transactions.
         /// This priority is not used for commands that are executed on this transaction. Use <see cref="SpannerCommand.Priority"/>
-        /// to set the priority of commands.
+        /// to set the priority of commands. The default priority is Unspecified.
         /// </summary>
         public Priority CommitPriority 
         {
