@@ -103,10 +103,8 @@ namespace Google.Cloud.Spanner.Data
                 return request;
             }
 
-            private RequestOptions BuildRequestOptions()
-            {
-                return new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
-            }
+            private RequestOptions BuildRequestOptions() =>
+                RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
 
             private void ValidateConnectionAndCommandCount()
             {

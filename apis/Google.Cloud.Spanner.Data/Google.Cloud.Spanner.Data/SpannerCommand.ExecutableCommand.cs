@@ -373,10 +373,8 @@ namespace Google.Cloud.Spanner.Data
                 return queryOptionsProto;
             }
 
-            private RequestOptions BuildRequestOptions()
-            {
-                return new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
-            }
+            private RequestOptions BuildRequestOptions() =>
+                new RequestOptions { Priority = PriorityConverter.ToProto(Priority) };
 
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {
