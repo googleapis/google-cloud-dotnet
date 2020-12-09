@@ -34,6 +34,7 @@ namespace Google.Cloud.Logging.NLog.Snippets
 
         public GoogleStackdriverTargetSnippets(NLogSnippetFixture fixture) => _fixture = fixture;
 
+        // Resource: nlog-jsonPayload.xml nlog_jsonPayload
         // Resource: nlog-jsonTemplate.xml nlog_jsonTemplate
 
         [Fact]
