@@ -228,6 +228,16 @@ project:
 Note that this assumes you have application default credentials
 configured for the specified project.
 
+If the smoke test fails first time, it's worth looking into. In
+particular, if it's an RPC with a *location* path segment, we
+default to putting "us-east1" as the location, for want of anything
+better. Look at the documentation of the API to see if there's a
+list of valid locations, or another call you can make to find valid
+locations. You might also try "global" as the location segment, if
+you can't find a specific location. Simply edit the
+`smoketests.json` file that was written out by the tool, edit the
+argument accordingly, then rerun the smoke tests.
+
 Assuming the smoke tests pass, add and commit them:
 
 ```sh
