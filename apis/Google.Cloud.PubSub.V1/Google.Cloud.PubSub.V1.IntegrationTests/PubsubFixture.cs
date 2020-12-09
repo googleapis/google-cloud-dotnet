@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.ResourceNames;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.CloudResourceManager.v1;
@@ -56,7 +57,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
         public override void Dispose()
         {
-            var subscriber = SubscriberServiceApiClient.Create();
+            var subscriber = new SubscriberServiceApiClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
             var subscriptions = subscriber.ListSubscriptions(new ProjectName(ProjectId))
                 .Where(sub => sub.SubscriptionName.SubscriptionId.StartsWith(SubscriptionPrefix))
                 .ToList();
@@ -65,7 +66,7 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
                 subscriber.DeleteSubscription(sub.SubscriptionName);
             }
 
-            var publisher = PublisherServiceApiClient.Create();
+            var publisher = new PublisherServiceApiClientBuilder { EmulatorDetection = EmulatorDetection.EmulatorOrProduction }.Build();
             var topics = publisher.ListTopics(new ProjectName(ProjectId))
                 .Where(topic => topic.TopicName.TopicId.StartsWith(TopicPrefix))
                 .ToList();
