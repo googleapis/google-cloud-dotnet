@@ -1202,6 +1202,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Metastore.V1Alpha"
     },
     {
+      "ServiceDirectory": "google/cloud/networkconnectivity/v1alpha1",
+      "Name": "networkconnectivity.googleapis.com",
+      "Title": "Network Connectivity API",
+      "Description": "The Network Connectivity API will be home to various services which provide information pertaining to network connectivity.",
+      "ServiceConfigFile": "google/cloud/networkconnectivity/v1alpha1/networkconnectivity_v1alpha1.yaml",
+      "Version": "v1alpha1",
+      "PackageFromDirectory": "google.cloud.networkconnectivity.v1alpha1",
+      "PackageFromProtos": "google.cloud.networkconnectivity.v1alpha1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Networkconnectivity.V1Alpha1"
+    },
+    {
       "ServiceDirectory": "google/cloud/notebooks/v1beta1",
       "Name": "notebooks.googleapis.com",
       "Title": "Notebooks API",
