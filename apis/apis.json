@@ -1345,6 +1345,20 @@
       ]
     },
     {
+      "id": "Google.Cloud.Retail.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Retail",
+      "productUrl": "https://cloud.google.com/retail",
+      "description": "Cloud Retail service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.",
+      "tags": ["retail"],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/retail/v2"
+    },
+    {
       "id": "Google.Cloud.Scheduler.V1",
       "generator": "micro",
       "protoPath": "google/cloud/scheduler/v1",
