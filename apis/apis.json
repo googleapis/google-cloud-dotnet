@@ -1351,7 +1351,9 @@
       "productName": "Retail",
       "productUrl": "https://cloud.google.com/retail",
       "description": "Cloud Retail service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.",
-      "tags": ["retail"],
+      "tags": [
+        "retail"
+      ],
       "dependencies": {
         "Google.LongRunning": "2.1.0"
       },
