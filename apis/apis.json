@@ -1349,7 +1349,7 @@
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Retail",
-      "productUrl": "https://cloud.google.com/retail",
+      "productUrl": "https://cloud.google.com/retail/docs",
       "description": "Cloud Retail service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.",
       "tags": [
         "retail"
