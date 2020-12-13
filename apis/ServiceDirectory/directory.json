@@ -298,25 +298,6 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Asset.V1"
     },
     {
-      "ServiceDirectory": "google/cloud/asset/v1beta1",
-      "Name": "cloudasset.googleapis.com",
-      "Title": "Cloud Asset API",
-      "Description": "The cloud asset API manages the history and inventory of cloud resources.",
-      "ServiceConfigFile": "google/cloud/asset/v1beta1/cloudasset_v1beta1.yaml",
-      "Version": "v1beta1",
-      "PackageFromDirectory": "google.cloud.asset.v1beta1",
-      "PackageFromProtos": "google.cloud.asset.v1beta1",
-      "ImportDirectories": [
-        "google/api",
-        "google/cloud/asset/v1beta1",
-        "google/iam/v1",
-        "google/longrunning",
-        "google/protobuf"
-      ],
-      "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Asset.V1Beta1"
-    },
-    {
       "ServiceDirectory": "google/cloud/asset/v1p1beta1",
       "Name": "cloudasset.googleapis.com",
       "Title": "Cloud Asset API",
