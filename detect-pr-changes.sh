@@ -7,7 +7,8 @@ log_header() {
   echo -e "\e[1;35m$1\e[0m"
 }
 
-apis=$(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq)
+# Find the APIs that have changed, excluding ServiceDirectory (which isn't a real API)
+apis=$(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | grep -v '^ServiceDirectory$' | uniq)
 
 if [[ "$apis" == "" ]]
 then
