@@ -698,7 +698,9 @@
       "productName": "Cloud Domains",
       "productUrl": "https://cloud.google.com/domains/",
       "description": "Enables management and configuration of domain names.",
-      "tags": ["domains"],
+      "tags": [
+        "domains"
+      ],
       "dependencies": {
         "Google.LongRunning": "2.1.0"
       },
