@@ -148,8 +148,7 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        // Request options for the commit request of this transaction. Only the relevant properties are exposed publicly.
-        private V1.RequestOptions CommitRequestOptions { get; } = new V1.RequestOptions();
+        private string _tag;
 
         /// <summary>
         /// The transaction tag to use for this transaction. This can only be set for read/write transactions,
@@ -157,12 +156,12 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public string Tag
         {
-            get => CommitRequestOptions.TransactionTag;
+            get => _tag;
             set
             {
                 GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "Transaction tag cannot be set on a read-only transaction");
                 GaxPreconditions.CheckState(!_hasExecutedStatements, "Transaction tag can only be set before any statements have been executed on the transaction");
-                CommitRequestOptions.TransactionTag = value ?? "";
+                _tag = value;
             }
         }
 
@@ -374,7 +373,6 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot commit a readonly transaction.");
             var request = new CommitRequest { Mutations = { _mutations }, ReturnCommitStats = LogCommitStats, RequestOptions = BuildCommitRequestOptions() };
-            var request = new CommitRequest { Mutations = { _mutations }, RequestOptions = CommitRequestOptions };
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
@@ -391,6 +389,8 @@ namespace Google.Cloud.Spanner.Data
             },
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
+        private RequestOptions BuildCommitRequestOptions() =>
+            new RequestOptions { TransactionTag = _tag ?? "" };
 
         private RequestOptions BuildCommitRequestOptions() =>
             new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority) };

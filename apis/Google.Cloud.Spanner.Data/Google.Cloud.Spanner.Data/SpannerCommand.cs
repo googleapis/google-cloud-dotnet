@@ -229,17 +229,10 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public Priority Priority { get; set; }
 
-        // Request options for this command. Only the relevant properties are publicly exposed.
-        private V1.RequestOptions RequestOptions = new V1.RequestOptions();
-
         /// <summary>
         /// The statement tag to send to Cloud Spanner for this command.
         /// </summary>
-        public string Tag
-        {
-            get => RequestOptions.RequestTag;
-            set => RequestOptions.RequestTag = value ?? "";
-        }
+        public string Tag { get; set; }
 
         /// <inheritdoc />
         protected override DbConnection DbConnection
@@ -281,7 +274,7 @@ namespace Google.Cloud.Spanner.Data
             CommandTimeout = CommandTimeout,
             QueryOptions = QueryOptions,
             Priority = Priority
-            RequestOptions = RequestOptions.Clone()
+            Tag = Tag
         };
 
         /// <inheritdoc />
