@@ -692,6 +692,20 @@
       }
     },
     {
+      "id": "Google.Cloud.Domains.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Domains",
+      "productUrl": "https://cloud.google.com/domains/",
+      "description": "Enables management and configuration of domain names.",
+      "tags": ["domains"],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/domains/v1beta1"
+    },
+    {
       "id": "Google.Cloud.ErrorReporting.V1Beta1",
       "generator": "micro",
       "protoPath": "google/devtools/clouderrorreporting/v1beta1",
