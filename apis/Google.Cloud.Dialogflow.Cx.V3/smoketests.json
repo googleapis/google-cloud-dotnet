@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListAgents",
+    "client": "AgentsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us"
+    }
+  },
+  {
+    "method": "ListSecuritySettings",
+    "client": "SecuritySettingsServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us"
+    }
+  }
+]
