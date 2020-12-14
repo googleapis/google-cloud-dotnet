@@ -835,6 +835,23 @@
       }
     },
     {
+      "id": "Google.Cloud.Iam.Credentials.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "IAM Service Account Credentials",
+      "productUrl": "https://cloud.google.com/iam/docs/reference/credentials/rest",
+      "description": "Recommended Google client library to access the Google IAM Service Account Credentials API, which creates short-lived, limited-privilege credentials for IAM service accounts.",
+      "tags": [
+        "iam",
+        "credentials",
+        "access",
+        "account"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/iam/credentials/v1"
+    },
+    {
       "id": "Google.Cloud.Iam.V1",
       "generator": "protogrpc",
       "protoPath": "google/iam/v1",
