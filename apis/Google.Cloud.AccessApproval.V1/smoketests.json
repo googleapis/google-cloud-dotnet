@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListApprovalRequests",
+    "client": "AccessApprovalServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
