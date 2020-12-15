@@ -28,8 +28,8 @@ request, upload the package somewhere etc.
 ## Operating system
 
 We mostly develop on Windows and Linux. When building on Linux, we
-don't build libraries targeting the full desktop .NET framework; that
-may change when reference assemblies are no longer in preview.
+don't test the full desktop .NET framework version, although we
+build it using reference assemblies.
 
 On Windows, please run scripts under the version of `bash` that comes
 with Git for Windows.
@@ -57,3 +57,4 @@ The following common tools are expected to be available:
 - `bash`
 - `git`
 - `curl`
+- `unzip`
