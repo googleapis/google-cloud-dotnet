@@ -98,24 +98,41 @@ To log *all* events from the message handler, you can set the `LogEvents` proper
 Some APIs (such as Datastore and PubSub) provide emulators in the
 [Cloud SDK](https://cloud.google.com/sdk/). Client libraries in some
 other languages automatically use emulators if specific environment
-variables are set, but the Google Cloud Libraries for .NET do not do
-this in GA libraries.
+variables are set, but the Google Cloud Libraries for .NET
+deliberately do not do this, to avoid accidentally using an emulator
+when production was expected or vice versa.
 
-However, it is quite simple to manually create the appropriate
-client for gRPC-based APIs, by first creating a channel and then
-passing that to the static `Create` method of the relevant client
-class. Note that in current emulator implementations, the channel
-credentials must be set to `ChannelCredentials.Insecure`.
+Where emulators are directly supported by the libraries, the client
+builder type has an `EmulatorDetection` property which can be set to
+one of the following values:
+
+- `None` (the default): Ignores the presence or absence of emulator configuration.
+- `ProductionOnly`: Always connects to the production servers, but
+   throws an exception if an emulator configuration is detected that would suggest connecting to
+   an emulator is expected.
+- `EmulatorOnly`: Always connect to the emulator, throwing an exception if no emulator
+   configuration is detected.
+- `EmulatorOrProduction`: Connect to the emulator if an emulator configuration is detected,
+  or production otherwise. This is a convenient option, but risks damage to
+  production databases or running up unexpected bills if tests are accidentally
+  run in production due to the emulator configuration being absent unexpectedly.
+  (Using separate projects for production and testing is a best practice for
+  preventing the first issue, but may be unrealistic for small or hobby projects.)
+
+Here emulator configuration presence is usually interpreted as
+"appropriate environment variables being set", but it is possible
+that in the future there will be other conventions for
+configuring emulators.
+
+If you need to connect to an emulator directly (for example because
+it is not yet supported in the library for the API you're using),
+simply use the appropriate client builder, set the endpoint to the
+host and port the emulator is listening on, and set the credentials to
+to `ChannelCredentials.Insecure`.
 
 Example for PubSub:
 
 [!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#Emulator)]
-
-### Beta support for Datastore emulator detection
-
-From 2.2.0-beta02, the Datastore library has support for detecting
-and using the emulator. See the [Datastore API documentation](Google.Cloud.Datastore.V1/)
-for more details and an example.
 
 ## Why aren't the gRPC native libraries being found?
 

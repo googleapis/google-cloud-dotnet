@@ -46,3 +46,19 @@ Using [PublisherServiceApiClient](obj/api/Google.Cloud.PubSub.V1.PublisherServic
 [SubscriberServiceApiClient](obj/api/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.yml) only:
 
 {{sample:SubscriberServiceApiClient.Overview}}
+
+# Using the emulator
+
+To connect to a [Pub/Sub
+Emulator](https://cloud.google.com/pubsub/docs/emulator), set the
+`EmulatorDetection` property in the appropriate class depending on
+which client type you are constructing:
+
+- `PublisherClient.ClientCreationSettings` (for `PublisherClient`)
+- `SubscriberClient.ClientCreationSettings` (for `SubscriberClient`)
+- `PublisherServiceApiClientBuilder` (for `PublisherServiceApiClient`)
+- `SubscriberServiceApiClientBuilder` (for `SubscriberServiceApiClient`)
+
+See the [FAQ
+entry](https://googleapis.github.io/google-cloud-dotnet/docs/faq.html#how-can-i-use-emulators)
+for more details.
