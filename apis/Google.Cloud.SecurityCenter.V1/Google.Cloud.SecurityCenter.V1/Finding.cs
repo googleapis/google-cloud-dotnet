@@ -30,7 +30,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjNnb29nbGUvY2xv",
             "dWQvc2VjdXJpdHljZW50ZXIvdjEvc2VjdXJpdHlfbWFya3MucHJvdG8aHGdv",
             "b2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8ipAUKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZw",
+            "aW1lc3RhbXAucHJvdG8iuwYKB0ZpbmRpbmcSDAoEbmFtZRgBIAEoCRIOCgZw",
             "YXJlbnQYAiABKAkSFQoNcmVzb3VyY2VfbmFtZRgDIAEoCRI8CgVzdGF0ZRgE",
             "IAEoDjItLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MS5GaW5kaW5n",
             "LlN0YXRlEhAKCGNhdGVnb3J5GAUgASgJEhQKDGV4dGVybmFsX3VyaRgGIAEo",
@@ -39,22 +39,25 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "eRJKCg5zZWN1cml0eV9tYXJrcxgIIAEoCzItLmdvb2dsZS5jbG91ZC5zZWN1",
             "cml0eWNlbnRlci52MS5TZWN1cml0eU1hcmtzQgPgQQMSLgoKZXZlbnRfdGlt",
             "ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRl",
-            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGk8KFVNv",
-            "dXJjZVByb3BlcnRpZXNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiAB",
-            "KAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6AjgBIjgKBVN0YXRlEhUKEVNU",
-            "QVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAjps",
-            "6kFpCiVzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBv",
-            "cmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0v",
-            "ZmluZGluZ3Mve2ZpbmRpbmd9QtoBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3Vy",
-            "aXR5Y2VudGVyLnYxUAFaTGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2VjdXJpdHljZW50",
-            "ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVc",
-            "Q2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1",
-            "cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
+            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIKCHNl",
+            "dmVyaXR5GAwgASgOMjAuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
+            "LkZpbmRpbmcuU2V2ZXJpdHkaTwoVU291cmNlUHJvcGVydGllc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5W",
+            "YWx1ZToCOAEiOAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZB",
+            "Q1RJVkUQARIMCghJTkFDVElWRRACIlEKCFNldmVyaXR5EhgKFFNFVkVSSVRZ",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQ1JJVElDQUwQARIICgRISUdIEAISCgoGTUVE",
+            "SVVNEAMSBwoDTE9XEAQ6bOpBaQolc2VjdXJpdHljZW50ZXIuZ29vZ2xlYXBp",
+            "cy5jb20vRmluZGluZxJAb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9z",
+            "b3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5kaW5nfULaAQoiY29tLmdv",
+            "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MVABWkxnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2VudGVy",
+            "L3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2Vu",
+            "dGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIhR29v",
+            "Z2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -109,6 +112,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       securityMarks_ = other.securityMarks_ != null ? other.securityMarks_.Clone() : null;
       eventTime_ = other.eventTime_ != null ? other.eventTime_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      severity_ = other.severity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -281,6 +285,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "severity" field.</summary>
+    public const int SeverityFieldNumber = 12;
+    private global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity severity_ = global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified;
+    /// <summary>
+    /// The severity of the finding. This field is managed by the source that
+    /// writes the finding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity Severity {
+      get { return severity_; }
+      set {
+        severity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Finding);
@@ -304,6 +323,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (!object.Equals(SecurityMarks, other.SecurityMarks)) return false;
       if (!object.Equals(EventTime, other.EventTime)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (Severity != other.Severity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -320,6 +340,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (securityMarks_ != null) hash ^= SecurityMarks.GetHashCode();
       if (eventTime_ != null) hash ^= EventTime.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (Severity != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified) hash ^= Severity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -373,6 +394,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(CreateTime);
       }
+      if (Severity != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Severity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -419,6 +444,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(CreateTime);
       }
+      if (Severity != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Severity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -455,6 +484,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (Severity != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -503,6 +535,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.Severity != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified) {
+        Severity = other.Severity;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -565,6 +600,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
               CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CreateTime);
+            break;
+          }
+          case 96: {
+            Severity = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity) input.ReadEnum();
             break;
           }
         }
@@ -630,6 +669,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             input.ReadMessage(CreateTime);
             break;
           }
+          case 96: {
+            Severity = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -656,6 +699,73 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// and is no longer active.
         /// </summary>
         [pbr::OriginalName("INACTIVE")] Inactive = 2,
+      }
+
+      /// <summary>
+      /// The severity of the finding.
+      /// </summary>
+      public enum Severity {
+        /// <summary>
+        /// This value is used for findings when a source doesn't write a severity
+        /// value.
+        /// </summary>
+        [pbr::OriginalName("SEVERITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Vulnerability:
+        /// A critical vulnerability is easily discoverable by an external actor,
+        /// exploitable, and results in the direct ability to execute arbitrary code,
+        /// exfiltrate data, and otherwise gain additional access and privileges to
+        /// cloud resources and workloads. Examples include publicly accessible
+        /// unprotected user data, public SSH access with weak or no passwords, etc.
+        ///
+        /// Threat:
+        /// Indicates a threat that is able to access, modify, or delete data or
+        /// execute unauthorized code within existing resources.
+        /// </summary>
+        [pbr::OriginalName("CRITICAL")] Critical = 1,
+        /// <summary>
+        /// Vulnerability:
+        /// A high risk vulnerability can be easily discovered and exploited in
+        /// combination with other vulnerabilities in order to gain direct access and
+        /// the ability to execute arbitrary code, exfiltrate data, and otherwise
+        /// gain additional access and privileges to cloud resources and workloads.
+        /// An example is a database with weak or no passwords that is only
+        /// accessible internally. This database could easily be compromised by an
+        /// actor that had access to the internal network.
+        ///
+        /// Threat:
+        /// Indicates a threat that is able to create new computational resources in
+        /// an environment but not able to access data or execute code in existing
+        /// resources.
+        /// </summary>
+        [pbr::OriginalName("HIGH")] High = 2,
+        /// <summary>
+        /// Vulnerability:
+        /// A medium risk vulnerability could be used by an actor to gain access to
+        /// resources or privileges that enable them to eventually (through multiple
+        /// steps or a complex exploit) gain access and the ability to execute
+        /// arbitrary code or exfiltrate data. An example is a service account with
+        /// access to more projects than it should have. If an actor gains access to
+        /// the service account, they could potentially use that access to manipulate
+        /// a project the service account was not intended to.
+        ///
+        /// Threat:
+        /// Indicates a threat that is able to cause operational impact but may not
+        /// access data or execute unauthorized code.
+        /// </summary>
+        [pbr::OriginalName("MEDIUM")] Medium = 3,
+        /// <summary>
+        /// Vulnerability:
+        /// A low risk vulnerability hampers a security organization’s ability to
+        /// detect vulnerabilities or active threats in their deployment, or prevents
+        /// the root cause investigation of security issues. An example is monitoring
+        /// and logs being disabled for resource configurations and access.
+        ///
+        /// Threat:
+        /// Indicates a threat that has obtained minimal access to an environment but
+        /// is not able to access data, execute code, or create resources.
+        /// </summary>
+        [pbr::OriginalName("LOW")] Low = 4,
       }
 
     }
