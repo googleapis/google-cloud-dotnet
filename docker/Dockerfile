@@ -3,6 +3,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic
 
 RUN apt-get update
 RUN apt-get install -y git
+RUN apt-get install -y unzip
 RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN python3 -m pip install --upgrade pip

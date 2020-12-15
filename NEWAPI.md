@@ -34,10 +34,14 @@ Step 1: Fork google-cloud-dotnet on github
 Our process is to merge from user-owned forks, so first fork this
 repo and clone it locally, using an https URL (rather than SSH).
 
+When you clone, use the `--recursive` flag to ensure that you initialize the submodules too.
+
 We tend to use named branches on the forks, although that's not
-*strictly* necessary. So for example:
+*strictly* necessary. So for example, you might run:
 
 ```sh
+git clone https://github.com/YOUR-GITHUB-USERNAME/google-cloud-dotnet.git --recursive
+cd google-cloud-dotnet
 git checkout -b add-new-api-package
 ```
 
@@ -56,8 +60,16 @@ API, e.g.
 ```
 
 The generation tooling *does* clone the repo for you. This will also
-validate that your environment is working. That command should end
-with:
+validate that your environment is working, as well as fetching and
+building the C# microgenerator. By generating an existing API, you
+can isolate any possible problems with the new API from any possible
+environmental issues.
+
+Note that the first run can take a few minutes, due to cloning
+repositories, restoring packages and building the microgenerator.
+Subsequent runs should be significantly quicker.
+
+That command should end with:
 
 ```text
 Generating Google.Cloud.Speech.V1
@@ -96,7 +108,10 @@ The API should be present in the googleapis repo, including:
 
 Check that these files all exist, and check that the C# namespace is
 appropriate. The protos should contain `csharp_namespace` options
-unless the default capitalization produces the correct result.
+unless the default capitalization produces the correct result, which
+it usually does so long as every package segment is a single word.
+In general, you can try step 4, and if `./prepare-release.sh add`
+works with your expected package ID, it's fine.
 
 If anything doesn't match your expectations, please file an issue in
 this repo and we'll get it sorted. (There are complexities here around internal processes.)
@@ -111,14 +126,16 @@ example, if you wanted to add the Google.Cloud.Dialogflow.Cx.V3
 package, you'd run:
 
 ```sh
-./prepare-release.sh Google.Cloud.Dialogflow.Cx.V3
+./prepare-release.sh add Google.Cloud.Dialogflow.Cx.V3
 ```
 
 This will modify the API catalog (`apis/apis.json`) and show you the
 entry it's added. Note that currently there are two aspects which
 are not automatically populated:
 
-- Tags
+- Tags (which are associated with the NuGet packages for discoverability;
+  "Google" and "Cloud" are included automatically, so just add any words
+  that are particularly relevant to the API)
 - The product URL (for documentation)
 
 These should be edited into apis.json by hand at some point before
@@ -182,6 +199,7 @@ you can now commit everything:
 ```sh
 git add --all
 git commit -m "Generate Google.Cloud.Dialogflow.Cx.V3"
+```
 
 Step 6: Add smoke tests (where suitable)
 ----------------------------------------
@@ -222,7 +240,7 @@ run them with release manager. To run the smoke tests, use the
 project:
 
 ```sh
-./prepare-release smoke-test Google.Cloud.Dialogflow.Cx.V3 my-project-id
+./prepare-release.sh smoke-test Google.Cloud.Dialogflow.Cx.V3 my-project-id
 ```
 
 Note that this assumes you have application default credentials
@@ -244,6 +262,10 @@ Assuming the smoke tests pass, add and commit them:
 git add --all
 git commit -m "Add smoke tests for Google.Cloud.Dialogflow.Cx.V3"
 ```
+
+If you have enabled the API in your own project for the smoke tests,
+please also enable it in our continuous integration project. Details
+of this project are in the internal playbook.
 
 Step 7: Create a pull request
 -----------------------------
