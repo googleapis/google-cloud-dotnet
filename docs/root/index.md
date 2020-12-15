@@ -89,6 +89,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Recommender.V1](Google.Cloud.Recommender.V1/index.html) | 2.3.0 | [Google Cloud Recommender](https://cloud.google.com/recommender/) |
 | [Google.Cloud.Redis.V1](Google.Cloud.Redis.V1/index.html) | 2.1.0 | [Google Cloud Memorystore for Redis (V1 API)](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Redis.V1Beta1](Google.Cloud.Redis.V1Beta1/index.html) | 2.0.0-beta03 | [Google Cloud Memorystore for Redis (V1Beta1 API)](https://cloud.google.com/memorystore/) |
+| [Google.Cloud.Retail.V2](Google.Cloud.Retail.V2/index.html) | 1.0.0-beta01 | [Retail](https://cloud.google.com/retail/docs) |
 | [Google.Cloud.Scheduler.V1](Google.Cloud.Scheduler.V1/index.html) | 2.1.0 | [Google Cloud Scheduler](https://cloud.google.com/scheduler/) |
 | [Google.Cloud.SecretManager.V1](Google.Cloud.SecretManager.V1/index.html) | 1.2.0 | [Secret Manager (V1 API)](https://cloud.google.com/secret-manager) |
 | [Google.Cloud.SecretManager.V1Beta1](Google.Cloud.SecretManager.V1Beta1/index.html) | 2.0.0-beta03 | [Secret Manager (V1Beta1 API)](https://cloud.google.com/secret-manager) |
