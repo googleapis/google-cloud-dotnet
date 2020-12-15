@@ -119,7 +119,6 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
             if (response.CommitStats != null)
             {
                 Info(() => $"Transaction {request.TransactionId?.ToBase64() ?? ""} mutation count: {response.CommitStats.MutationCount}");
-                Info(() => $"Transaction {request.TransactionId?.ToBase64() ?? ""} overload delay: {response.CommitStats.OverloadDelay}");
             }
         }
 
