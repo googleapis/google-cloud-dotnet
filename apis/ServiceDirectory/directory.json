@@ -1029,6 +1029,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Gaming.V1Beta"
     },
     {
+      "ServiceDirectory": "google/cloud/gkehub/v1beta1",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1beta1/gkehub_v1beta1.yaml",
+      "Version": "v1beta1",
+      "PackageFromDirectory": "google.cloud.gkehub.v1beta1",
+      "PackageFromProtos": "google.cloud.gkehub.v1beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Gkehub.V1Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/iot/v1",
       "Name": "cloudiot.googleapis.com",
       "Title": "Cloud IoT API",
