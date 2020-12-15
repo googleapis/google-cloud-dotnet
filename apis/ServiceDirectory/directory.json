@@ -2650,7 +2650,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Iam.Credentials.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.Iam.Credentials.V1"
     },
     {
       "ServiceDirectory": "google/iam/v1",
