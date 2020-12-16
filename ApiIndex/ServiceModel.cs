@@ -13,8 +13,8 @@
 // limitations under the License.
 
 using Google.Protobuf.Reflection;
+using System.Collections.Generic;
 using System.Linq;
-using static Google.Cloud.Tools.ApiIndex.V1.Method.Types;
 
 namespace Google.Cloud.Tools.ApiIndex
 {
@@ -23,29 +23,25 @@ namespace Google.Cloud.Tools.ApiIndex
     /// </summary>
     public class ServiceModel
     {
-        private ServiceDescriptor service;
+        private ServiceDescriptor _service;
+
+        public IReadOnlyList<MethodModel> Methods { get; }
 
         public ServiceModel(ServiceDescriptor service)
         {
-            this.service = service;
+            this._service = service;
+            Methods = service.Methods
+                .OrderBy(method => method.Name)
+                .Select(method => new MethodModel(method))
+                .ToList()
+                .AsReadOnly();
         }
 
         public V1.Service ToV1Service() => new V1.Service
         {
-            FullName = service.FullName,
-            ShortName = service.Name,
-            Methods = { service.Methods.OrderBy(method => method.Name).Select(ConvertMethod) }
-        };
-
-        private static V1.Method ConvertMethod(MethodDescriptor method) => new V1.Method
-        {
-            FullName = method.FullName,
-            ShortName = method.Name,
-            Mode = method.IsClientStreaming && method.IsServerStreaming ? Mode.BidirectionalStreaming
-               : method.IsClientStreaming ? Mode.ClientStreaming
-               : method.IsServerStreaming ? Mode.ServerStreaming
-               : Mode.Unary            
-        };
-        
+            FullName = _service.FullName,
+            ShortName = _service.Name,
+            Methods = { Methods.Select(m => m.ToV1Method()) }
+        };        
     }
 }
