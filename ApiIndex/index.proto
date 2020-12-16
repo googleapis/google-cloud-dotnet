@@ -150,6 +150,20 @@ message Method {
   
   // The mode of the method.
   Mode mode = 3;
+  
+  // An HTTP binding for a method.
+  // This is a much-simplified view of google.api.HttpRule.
+  message HttpBinding {
+    // The HTTP method (e.g. "GET", "POST", PUT, "DELETE", "PATCH").
+    // Note that this is a string rather than an enum to simplify potential extensibility
+    // and to allow for the "custom" option in HttpRule.
+    string http_method = 1;
+    // The path, as a pattern (e.g. "/v1/{name=messages/*}")
+    string path = 2;
+  }
+
+  // The bindings of the method.
+  repeated HttpBinding bindings = 4;
 }
 
 // Metadata about the schema and information.
