@@ -41,17 +41,20 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
             "Z2xlLnRvb2xzLmFwaWluZGV4LnYxLkFwaS5PcHRpb25WYWx1ZXM6AjgBImMK",
             "B1NlcnZpY2USEgoKc2hvcnRfbmFtZRgBIAEoCRIRCglmdWxsX25hbWUYAiAB",
             "KAkSMQoHbWV0aG9kcxgDIAMoCzIgLmdvb2dsZS50b29scy5hcGlpbmRleC52",
-            "MS5NZXRob2Qi1gEKBk1ldGhvZBISCgpzaG9ydF9uYW1lGAEgASgJEhEKCWZ1",
+            "MS5NZXRob2QiyAIKBk1ldGhvZBISCgpzaG9ydF9uYW1lGAEgASgJEhEKCWZ1",
             "bGxfbmFtZRgCIAEoCRIzCgRtb2RlGAMgASgOMiUuZ29vZ2xlLnRvb2xzLmFw",
-            "aWluZGV4LnYxLk1ldGhvZC5Nb2RlInAKBE1vZGUSFAoQTU9ERV9VTlNQRUNJ",
-            "RklFRBAAEgkKBVVOQVJZEAESFAoQQ0xJRU5UX1NUUkVBTUlORxACEhQKEFNF",
-            "UlZFUl9TVFJFQU1JTkcQAxIbChdCSURJUkVDVElPTkFMX1NUUkVBTUlORxAE",
-            "ImwKDUluZGV4TWV0YWRhdGESFgoOc2NoZW1hX3ZlcnNpb24YASABKAkSQwoQ",
-            "c2NoZW1hX3N0YWJpbGl0eRgCIAEoDjIpLmdvb2dsZS50b29scy5hcGlpbmRl",
-            "eC52MS5TY2hlbWFTdGFiaWxpdHkqXQoPU2NoZW1hU3RhYmlsaXR5EiAKHFND",
-            "SEVNQV9TVEFCSUxJVFlfVU5TUEVDSUZJRUQQABIMCghVTlNUQUJMRRABEgoK",
-            "BlNUQUJMRRACEg4KCkRFUFJFQ0FURUQQA0IhqgIeR29vZ2xlLkNsb3VkLlRv",
-            "b2xzLkFwaUluZGV4LlYxYgZwcm90bzM="));
+            "aWluZGV4LnYxLk1ldGhvZC5Nb2RlEj4KCGJpbmRpbmdzGAQgAygLMiwuZ29v",
+            "Z2xlLnRvb2xzLmFwaWluZGV4LnYxLk1ldGhvZC5IdHRwQmluZGluZxowCgtI",
+            "dHRwQmluZGluZxITCgtodHRwX21ldGhvZBgBIAEoCRIMCgRwYXRoGAIgASgJ",
+            "InAKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEgkKBVVOQVJZEAESFAoQ",
+            "Q0xJRU5UX1NUUkVBTUlORxACEhQKEFNFUlZFUl9TVFJFQU1JTkcQAxIbChdC",
+            "SURJUkVDVElPTkFMX1NUUkVBTUlORxAEImwKDUluZGV4TWV0YWRhdGESFgoO",
+            "c2NoZW1hX3ZlcnNpb24YASABKAkSQwoQc2NoZW1hX3N0YWJpbGl0eRgCIAEo",
+            "DjIpLmdvb2dsZS50b29scy5hcGlpbmRleC52MS5TY2hlbWFTdGFiaWxpdHkq",
+            "XQoPU2NoZW1hU3RhYmlsaXR5EiAKHFNDSEVNQV9TVEFCSUxJVFlfVU5TUEVD",
+            "SUZJRUQQABIMCghVTlNUQUJMRRABEgoKBlNUQUJMRRACEg4KCkRFUFJFQ0FU",
+            "RUQQA0IhqgIeR29vZ2xlLkNsb3VkLlRvb2xzLkFwaUluZGV4LlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tools.ApiIndex.V1.SchemaStability), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -59,7 +62,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api), global::Google.Cloud.Tools.ApiIndex.V1.Api.Parser, new[]{ "Id", "Directory", "Version", "MajorVersion", "HostName", "Title", "Description", "ImportDirectories", "Options", "Services" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues), global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues.Parser, new[]{ "ValueCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Service), global::Google.Cloud.Tools.ApiIndex.V1.Service.Parser, new[]{ "ShortName", "FullName", "Methods" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method), global::Google.Cloud.Tools.ApiIndex.V1.Method.Parser, new[]{ "ShortName", "FullName", "Mode" }, null, new[]{ typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method), global::Google.Cloud.Tools.ApiIndex.V1.Method.Parser, new[]{ "ShortName", "FullName", "Mode", "Bindings" }, null, new[]{ typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding), global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding.Parser, new[]{ "HttpMethod", "Path" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.IndexMetadata), global::Google.Cloud.Tools.ApiIndex.V1.IndexMetadata.Parser, new[]{ "SchemaVersion", "SchemaStability" }, null, null, null, null)
           }));
     }
@@ -1303,6 +1306,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       shortName_ = other.shortName_;
       fullName_ = other.fullName_;
       mode_ = other.mode_;
+      bindings_ = other.bindings_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1357,6 +1361,19 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       }
     }
 
+    /// <summary>Field number for the "bindings" field.</summary>
+    public const int BindingsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding> _repeated_bindings_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding> bindings_ = new pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding>();
+    /// <summary>
+    /// The bindings of the method.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding> Bindings {
+      get { return bindings_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Method);
@@ -1373,6 +1390,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (ShortName != other.ShortName) return false;
       if (FullName != other.FullName) return false;
       if (Mode != other.Mode) return false;
+      if(!bindings_.Equals(other.bindings_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1382,6 +1400,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (ShortName.Length != 0) hash ^= ShortName.GetHashCode();
       if (FullName.Length != 0) hash ^= FullName.GetHashCode();
       if (Mode != global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
+      hash ^= bindings_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1410,6 +1429,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Mode);
       }
+      bindings_.WriteTo(output, _repeated_bindings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1431,6 +1451,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         output.WriteRawTag(24);
         output.WriteEnum((int) Mode);
       }
+      bindings_.WriteTo(ref output, _repeated_bindings_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1449,6 +1470,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (Mode != global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
+      size += bindings_.CalculateSize(_repeated_bindings_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1469,6 +1491,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (other.Mode != global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode.Unspecified) {
         Mode = other.Mode;
       }
+      bindings_.Add(other.bindings_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1495,6 +1518,10 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
             Mode = (global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode) input.ReadEnum();
             break;
           }
+          case 34: {
+            bindings_.AddEntriesFrom(input, _repeated_bindings_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1519,6 +1546,10 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
           }
           case 24: {
             Mode = (global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            bindings_.AddEntriesFrom(ref input, _repeated_bindings_codec);
             break;
           }
         }
@@ -1554,6 +1585,224 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         /// Bidirectional streaming: multiple requests and responses.
         /// </summary>
         [pbr::OriginalName("BIDIRECTIONAL_STREAMING")] BidirectionalStreaming = 4,
+      }
+
+      /// <summary>
+      /// An HTTP binding for a method.
+      /// This is a much-simplified view of google.api.HttpRule.
+      /// </summary>
+      public sealed partial class HttpBinding : pb::IMessage<HttpBinding>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<HttpBinding> _parser = new pb::MessageParser<HttpBinding>(() => new HttpBinding());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<HttpBinding> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Tools.ApiIndex.V1.Method.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public HttpBinding() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public HttpBinding(HttpBinding other) : this() {
+          httpMethod_ = other.httpMethod_;
+          path_ = other.path_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public HttpBinding Clone() {
+          return new HttpBinding(this);
+        }
+
+        /// <summary>Field number for the "http_method" field.</summary>
+        public const int HttpMethodFieldNumber = 1;
+        private string httpMethod_ = "";
+        /// <summary>
+        /// The HTTP method (e.g. "GET", "POST", PUT, "DELETE", "PATCH")
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string HttpMethod {
+          get { return httpMethod_; }
+          set {
+            httpMethod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "path" field.</summary>
+        public const int PathFieldNumber = 2;
+        private string path_ = "";
+        /// <summary>
+        /// The path, as a pattern (e.g. "/v1/{name=messages/*}")
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Path {
+          get { return path_; }
+          set {
+            path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as HttpBinding);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(HttpBinding other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (HttpMethod != other.HttpMethod) return false;
+          if (Path != other.Path) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HttpMethod.Length != 0) hash ^= HttpMethod.GetHashCode();
+          if (Path.Length != 0) hash ^= Path.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HttpMethod.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(HttpMethod);
+          }
+          if (Path.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Path);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HttpMethod.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(HttpMethod);
+          }
+          if (Path.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Path);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (HttpMethod.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(HttpMethod);
+          }
+          if (Path.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(HttpBinding other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HttpMethod.Length != 0) {
+            HttpMethod = other.HttpMethod;
+          }
+          if (other.Path.Length != 0) {
+            Path = other.Path;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                HttpMethod = input.ReadString();
+                break;
+              }
+              case 18: {
+                Path = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                HttpMethod = input.ReadString();
+                break;
+              }
+              case 18: {
+                Path = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
