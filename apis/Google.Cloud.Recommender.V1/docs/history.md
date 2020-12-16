@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2020-12-16
+
+- [Commit a13645c](https://github.com/googleapis/google-cloud-dotnet/commit/a13645c): feat: Add support for "billingAccounts" as another parent resource name for recommendations and insights APIs.
+
 # Version 2.3.0, released 2020-11-05
 
 - [Commit f3bc7f4](https://github.com/googleapis/google-cloud-dotnet/commit/f3bc7f4): fix: updating the v1 retry params name for ListInsights, GetInsight, and MarkInsightAccepted.
