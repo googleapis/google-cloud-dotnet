@@ -346,6 +346,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// INSIGHT_TYPE_ID refers to supported insight types:
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -378,6 +380,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// INSIGHT_TYPE_ID refers to supported insight types:
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -410,6 +414,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// INSIGHT_TYPE_ID refers to supported insight types:
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -442,6 +448,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// INSIGHT_TYPE_ID refers to supported insight types:
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -820,6 +828,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -852,6 +862,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -884,6 +896,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -916,6 +930,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -948,6 +964,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
@@ -986,6 +1004,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
@@ -1024,6 +1044,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
@@ -1062,6 +1084,8 @@ namespace Google.Cloud.Recommender.V1
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
+        /// RECOMMENDER_ID refers to supported recommenders:
+        /// https://cloud.google.com/recommender/docs/recommenders.
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
