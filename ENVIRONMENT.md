@@ -25,6 +25,26 @@ you to make changes (e.g. generating an API or building a NuGet
 package) and then use your regular environment to create a pull
 request, upload the package somewhere etc.
 
+### Working with git and Docker
+
+If you're using the Docker container for work that will eventually
+involve a pull request, you may run into issues if you try creating
+some commits within the container and some outside the container in
+your regular environment:
+
+- Once you've created a commit within the container, you may run
+  into permissions issues when you try to create a commit outside the
+  cnotainer.
+- The container doesn't have access to your normal git configuration,
+  so won't be able to access your name and email address for the
+  commit author.
+
+If you're creating commits manually, we recommend you do this
+outside the container, so you can use all the configuration and
+tooling you're normally used to. If you're creating a release commit
+using `prepare-release.sh commit`, we recommend that you configure
+git within the container.
+
 ## Operating system
 
 We mostly develop on Windows and Linux. When building on Linux, we

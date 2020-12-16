@@ -201,6 +201,11 @@ you need to.
     Alternatively, create the commit manually, including one line per package of the form
     `- Release XYZ version ABC`.
 
+    **Note:** If you're using the Dockerfile described in
+    [ENVIRONMENT.md](ENVIRONMENT.md), please read the notes there
+    around commiting to git "inside" vs "outside" the container.
+
+
 6. Run `./prepare-release.sh push` to push the current branch and
 create a pull request with the `autorelease: pending` tag. Note that
 this checks that there are no project references from

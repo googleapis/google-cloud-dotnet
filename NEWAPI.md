@@ -150,6 +150,10 @@ message, e.g.
 git commit -a -m "Add Google.Cloud.Dialogflow.Cx.V3 to the API catalog"
 ```
 
+**Note:** If you're using the Dockerfile described in
+[ENVIRONMENT.md](ENVIRONMENT.md), please read the notes there around
+commiting to git "inside" vs "outside" the container.
+
 Step 5: Generate and build the source code and projects
 -------------------------------------------------------
 
