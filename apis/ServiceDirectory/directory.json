@@ -274,6 +274,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Aiplatform.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/apigateway/v1",
+      "Name": "apigateway.googleapis.com",
+      "Title": "API Gateway API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/apigateway/v1/apigateway_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.apigateway.v1",
+      "PackageFromProtos": "google.cloud.apigateway.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/apigateway/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Apigateway.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/asset/v1",
       "Name": "cloudasset.googleapis.com",
       "Title": "Cloud Asset API",
