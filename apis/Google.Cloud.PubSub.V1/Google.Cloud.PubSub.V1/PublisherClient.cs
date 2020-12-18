@@ -22,7 +22,6 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -286,10 +285,10 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="orderingKey">The ordering key to use for this message.</param>
         /// <param name="message">The string to publish.</param>
         /// <param name="encoding">The encoding for string to byte conversion.
-        /// If <c>null</c>, defaults to <see cref="Encoding.UTF8"/>.</param>
+        /// If <c>null</c>, defaults to <see cref="System.Text.Encoding.UTF8"/>.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public virtual Task<string> PublishAsync(string orderingKey, string message, Encoding encoding = null) =>
+        public virtual Task<string> PublishAsync(string orderingKey, string message, System.Text.Encoding encoding = null) =>
             PublishAsync(new PubsubMessage
             {
                 OrderingKey = orderingKey ?? "",
@@ -301,10 +300,10 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="message">The string to publish.</param>
         /// <param name="encoding">The encoding for string to byte conversion.
-        /// If <c>null</c>, defaults to <see cref="Encoding.UTF8"/>.</param>
+        /// If <c>null</c>, defaults to <see cref="System.Text.Encoding.UTF8"/>.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public virtual Task<string> PublishAsync(string message, Encoding encoding = null) => PublishAsync("", message, encoding);
+        public virtual Task<string> PublishAsync(string message, System.Text.Encoding encoding = null) => PublishAsync("", message, encoding);
 
         /// <summary>
         /// Publish a message to the topic specified in <see cref="TopicName"/>.
