@@ -2910,7 +2910,8 @@
       "PackageFromProtos": "google.pubsub.v1",
       "ImportDirectories": [
         "google/api",
-        "google/protobuf"
+        "google/protobuf",
+        "google/pubsub/v1"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.PubSub.V1"
