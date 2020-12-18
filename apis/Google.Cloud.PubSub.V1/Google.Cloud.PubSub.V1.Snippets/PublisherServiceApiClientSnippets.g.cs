@@ -40,6 +40,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Labels = { { "", "" }, },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             // Make the request
             Topic response = publisherServiceApiClient.CreateTopic(request);
@@ -60,6 +62,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 Labels = { { "", "" }, },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             // Make the request
             Topic response = await publisherServiceApiClient.CreateTopicAsync(request);

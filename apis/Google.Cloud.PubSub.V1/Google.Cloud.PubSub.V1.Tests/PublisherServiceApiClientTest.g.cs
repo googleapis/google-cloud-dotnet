@@ -43,6 +43,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             Topic expectedResponse = new Topic
             {
@@ -56,6 +58,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -80,6 +84,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             Topic expectedResponse = new Topic
             {
@@ -93,6 +99,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -123,6 +131,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -151,6 +161,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -181,6 +193,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -209,6 +223,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.CreateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -240,6 +256,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -269,6 +287,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.UpdateTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -461,6 +481,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -489,6 +511,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -519,6 +543,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -547,6 +573,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -577,6 +605,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopic(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);
@@ -605,6 +635,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                 },
                 MessageStoragePolicy = new MessageStoragePolicy(),
                 KmsKeyName = "kms_key_name06bd122b",
+                SchemaSettings = new SchemaSettings(),
+                SatisfiesPzs = false,
             };
             mockGrpcClient.Setup(x => x.GetTopicAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Topic>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             PublisherServiceApiClient client = new PublisherServiceApiClientImpl(mockGrpcClient.Object, null);

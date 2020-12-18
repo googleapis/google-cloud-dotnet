@@ -700,6 +700,16 @@ namespace Google.Cloud.PubSub.V1
         public static bool operator !=(SnapshotName a, SnapshotName b) => !(a == b);
     }
 
+    public partial class SchemaSettings
+    {
+        /// <summary><see cref="SchemaName"/>-typed view over the <see cref="Schema"/> resource name property.</summary>
+        public SchemaName SchemaAsSchemaName
+        {
+            get => string.IsNullOrEmpty(Schema) ? null : SchemaName.Parse(Schema, allowUnparsed: true);
+            set => Schema = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Topic
     {
         /// <summary>
