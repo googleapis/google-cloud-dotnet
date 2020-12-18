@@ -348,8 +348,8 @@ namespace Google.Cloud.PubSub.V1
         public virtual Publisher.PublisherClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -358,8 +358,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -368,8 +368,8 @@ namespace Google.Cloud.PubSub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -378,8 +378,8 @@ namespace Google.Cloud.PubSub.V1
             CreateTopicAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -398,8 +398,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -418,8 +418,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -435,8 +435,8 @@ namespace Google.Cloud.PubSub.V1
             CreateTopicAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -455,8 +455,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -475,8 +475,8 @@ namespace Google.Cloud.PubSub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="name">
         /// Required. The name of the topic. It must have the format
@@ -1458,8 +1458,8 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_DetachSubscriptionRequest(ref DetachSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1471,8 +1471,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Creates the given topic with the given name. See the [resource name rules](
-        /// https://cloud.google.com/pubsub/docs/admin#resource_names).
+        /// Creates the given topic with the given name. See the [resource name rules]
+        /// (https://cloud.google.com/pubsub/docs/admin#resource_names).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
