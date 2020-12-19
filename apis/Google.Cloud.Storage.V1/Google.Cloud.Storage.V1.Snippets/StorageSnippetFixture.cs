@@ -13,15 +13,13 @@
 // limitations under the License.
 using Google.Apis.Storage.v1.Data;
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Iam.V1;
 using Google.Cloud.PubSub.V1;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using Xunit;
+using Encoding = System.Text.Encoding;
 
 namespace Google.Cloud.Storage.V1.Snippets
 {

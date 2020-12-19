@@ -18,11 +18,11 @@ using Google.Cloud.PubSub.V1;
 using System;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 using Object = Google.Apis.Storage.v1.Data.Object;
+using Encoding = System.Text.Encoding;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {

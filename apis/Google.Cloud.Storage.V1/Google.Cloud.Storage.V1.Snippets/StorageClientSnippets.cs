@@ -24,9 +24,9 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Encoding = System.Text.Encoding;
 using Policy = Google.Apis.Storage.v1.Data.Policy;
 
 namespace Google.Cloud.Storage.V1.Snippets
