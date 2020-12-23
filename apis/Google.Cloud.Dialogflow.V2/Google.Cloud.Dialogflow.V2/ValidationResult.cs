@@ -318,7 +318,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// </summary>
         [pbr::OriginalName("SEVERITY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The agent doesn't follow Dialogflow best practicies.
+        /// The agent doesn't follow Dialogflow best practices.
         /// </summary>
         [pbr::OriginalName("INFO")] Info = 1,
         /// <summary>
