@@ -268,6 +268,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// as a result. This method is not idempotent, because it may cause session
         /// entity types to be updated, which in turn might affect results of future
         /// queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -280,6 +284,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// as a result. This method is not idempotent, because it may cause session
         /// entity types to be updated, which in turn might affect results of future
         /// queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -292,6 +300,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// as a result. This method is not idempotent, because it may cause session
         /// entity types to be updated, which in turn might affect results of future
         /// queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -311,6 +323,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Processes a natural language query in audio format in a streaming fashion
         /// and returns structured, actionable data as a result. This method is only
         /// available via the gRPC API (not REST).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -455,6 +471,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// as a result. This method is not idempotent, because it may cause session
         /// entity types to be updated, which in turn might affect results of future
         /// queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -470,6 +490,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// as a result. This method is not idempotent, because it may cause session
         /// entity types to be updated, which in turn might affect results of future
         /// queries.
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -529,6 +553,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Processes a natural language query in audio format in a streaming fashion
         /// and returns structured, actionable data as a result. This method is only
         /// available via the gRPC API (not REST).
+        /// 
+        /// Note: Always use agent versions for production traffic.
+        /// See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
