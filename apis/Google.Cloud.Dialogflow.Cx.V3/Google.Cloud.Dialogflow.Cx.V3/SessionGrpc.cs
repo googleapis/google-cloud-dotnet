@@ -84,6 +84,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// as a result. This method is not idempotent, because it may cause session
       /// entity types to be updated, which in turn might affect results of future
       /// queries.
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -97,6 +101,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// Processes a natural language query in audio format in a streaming fashion
       /// and returns structured, actionable data as a result. This method is only
       /// available via the gRPC API (not REST).
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="requestStream">Used for reading requests from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -162,6 +170,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// as a result. This method is not idempotent, because it may cause session
       /// entity types to be updated, which in turn might affect results of future
       /// queries.
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -177,6 +189,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// as a result. This method is not idempotent, because it may cause session
       /// entity types to be updated, which in turn might affect results of future
       /// queries.
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -190,6 +206,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// as a result. This method is not idempotent, because it may cause session
       /// entity types to be updated, which in turn might affect results of future
       /// queries.
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -205,6 +225,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// as a result. This method is not idempotent, because it may cause session
       /// entity types to be updated, which in turn might affect results of future
       /// queries.
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -217,6 +241,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// Processes a natural language query in audio format in a streaming fashion
       /// and returns structured, actionable data as a result. This method is only
       /// available via the gRPC API (not REST).
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
@@ -230,6 +258,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// Processes a natural language query in audio format in a streaming fashion
       /// and returns structured, actionable data as a result. This method is only
       /// available via the gRPC API (not REST).
+      ///
+      /// Note: Always use agent versions for production traffic.
+      /// See [Versions and
+      /// environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
