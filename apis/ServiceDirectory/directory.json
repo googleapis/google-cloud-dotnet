@@ -164,7 +164,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Appengine.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.AppEngine.V1"
     },
     {
       "ServiceDirectory": "google/area120/tables/v1alpha1",
