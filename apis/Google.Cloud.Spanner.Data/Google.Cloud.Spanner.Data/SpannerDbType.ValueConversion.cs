@@ -173,6 +173,13 @@ namespace Google.Cloud.Spanner.Data
                         StringValue = XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc)
                     };
                 case TypeCode.Date:
+                    if (value is DateTime date && date.Kind == DateTimeKind.Local)
+                    {
+                        // If the DateTime is local the value should be changed to unspecified
+                        // before serializing it as UTC to prevent accidentally changing to a
+                        // different date.
+                        value = new DateTime(date.Year, date.Month, date.Day);
+                    }
                     return new Value
                     {
                         StringValue = StripTimePart(
