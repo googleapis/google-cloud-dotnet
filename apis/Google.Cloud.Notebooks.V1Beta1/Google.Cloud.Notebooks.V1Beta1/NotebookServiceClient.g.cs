@@ -1,4 +1,4 @@
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -633,7 +633,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
     /// <summary>NotebookService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// API v1beta1 service for Cloud AI Platform Notebooks.
+    /// API service for Cloud AI Platform Notebooks.
     /// </remarks>
     public abstract partial class NotebookServiceClient
     {
@@ -1601,7 +1601,7 @@ namespace Google.Cloud.Notebooks.V1Beta1
 
     /// <summary>NotebookService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// API v1beta1 service for Cloud AI Platform Notebooks.
+    /// API service for Cloud AI Platform Notebooks.
     /// </remarks>
     public sealed partial class NotebookServiceClientImpl : NotebookServiceClient
     {

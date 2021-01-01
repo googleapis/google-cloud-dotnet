@@ -1,4 +1,4 @@
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,10 +51,10 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
                 AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
-                State = Instance.Types.State.Initializing,
+                State = Instance.Types.State.Deleted,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
-                BootDiskType = Instance.Types.DiskType.PdSsd,
+                BootDiskType = Instance.Types.DiskType.PdStandard,
                 BootDiskSizeGb = -3633932070397520346L,
                 DiskEncryption = Instance.Types.DiskEncryption.Cmek,
                 KmsKey = "kms_key0b21601b",
@@ -78,7 +78,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                DataDiskType = Instance.Types.DiskType.Unspecified,
+                DataDiskType = Instance.Types.DiskType.PdSsd,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
             };
@@ -112,10 +112,10 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 ServiceAccount = "service_accounta3c1b923",
                 MachineType = "machine_type68ce40fa",
                 AcceleratorConfig = new Instance.Types.AcceleratorConfig(),
-                State = Instance.Types.State.Initializing,
+                State = Instance.Types.State.Deleted,
                 InstallGpuDriver = true,
                 CustomGpuDriverPath = "custom_gpu_driver_path24577c2a",
-                BootDiskType = Instance.Types.DiskType.PdSsd,
+                BootDiskType = Instance.Types.DiskType.PdStandard,
                 BootDiskSizeGb = -3633932070397520346L,
                 DiskEncryption = Instance.Types.DiskEncryption.Cmek,
                 KmsKey = "kms_key0b21601b",
@@ -139,7 +139,7 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                DataDiskType = Instance.Types.DiskType.Unspecified,
+                DataDiskType = Instance.Types.DiskType.PdSsd,
                 DataDiskSizeGb = 8597103336273737467L,
                 NoRemoveDataDisk = true,
             };
@@ -165,7 +165,6 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
             {
                 Upgradeable = false,
                 UpgradeVersion = "upgrade_version716e0863",
-                UpgradeInfo = "upgrade_info29eca0a2",
             };
             mockGrpcClient.Setup(x => x.IsInstanceUpgradeable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
@@ -187,7 +186,6 @@ namespace Google.Cloud.Notebooks.V1Beta1.Tests
             {
                 Upgradeable = false,
                 UpgradeVersion = "upgrade_version716e0863",
-                UpgradeInfo = "upgrade_info29eca0a2",
             };
             mockGrpcClient.Setup(x => x.IsInstanceUpgradeableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IsInstanceUpgradeableResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NotebookServiceClient client = new NotebookServiceClientImpl(mockGrpcClient.Object, null);
