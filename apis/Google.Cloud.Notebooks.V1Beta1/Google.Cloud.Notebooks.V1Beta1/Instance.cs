@@ -29,7 +29,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxowZ29vZ2xlL2Nsb3VkL25vdGVib29rcy92MWJldGExL2Vudmlyb25t",
             "ZW50LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxn",
-            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIvgPCghJbnN0YW5jZRIRCgRu",
+            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIrwQCghJbnN0YW5jZRIRCgRu",
             "YW1lGAEgASgJQgPgQQMSOwoIdm1faW1hZ2UYAiABKAsyJy5nb29nbGUuY2xv",
             "dWQubm90ZWJvb2tzLnYxYmV0YTEuVm1JbWFnZUgAEkkKD2NvbnRhaW5lcl9p",
             "bWFnZRgDIAEoCzIuLmdvb2dsZS5jbG91ZC5ub3RlYm9va3MudjFiZXRhMS5D",
@@ -67,20 +67,21 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
             "AxITCg9OVklESUFfVEVTTEFfUDQQBBITCg9OVklESUFfVEVTTEFfVDQQBRIX",
             "ChNOVklESUFfVEVTTEFfVDRfVldTEAgSGQoVTlZJRElBX1RFU0xBX1AxMDBf",
             "VldTEAkSFwoTTlZJRElBX1RFU0xBX1A0X1ZXUxAKEgoKBlRQVV9WMhAGEgoK",
-            "BlRQVV9WMxAHInIKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
-            "U1RBUlRJTkcQARIQCgxQUk9WSVNJT05JTkcQAhIKCgZBQ1RJVkUQAxIMCghT",
-            "VE9QUElORxAEEgsKB1NUT1BQRUQQBRILCgdERUxFVEVEEAYiQgoIRGlza1R5",
-            "cGUSGQoVRElTS19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLUERfU1RBTkRBUkQQ",
-            "ARIKCgZQRF9TU0QQAiJFCg5EaXNrRW5jcnlwdGlvbhIfChtESVNLX0VOQ1JZ",
-            "UFRJT05fVU5TUEVDSUZJRUQQABIICgRHTUVLEAESCAoEQ01FSxACOk/qQUwK",
-            "IW5vdGVib29rcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMv",
-            "e3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFuY2V9Qg0KC2Vudmlyb25tZW50",
-            "QuQBCiJjb20uZ29vZ2xlLmNsb3VkLm5vdGVib29rcy52MWJldGExQg1JbnN0",
-            "YW5jZVByb3RvUAFaR2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvY2xvdWQvbm90ZWJvb2tzL3YxYmV0YTE7bm90ZWJvb2tzqgIeR29v",
-            "Z2xlLkNsb3VkLk5vdGVib29rcy5WMUJldGExygIeR29vZ2xlXENsb3VkXE5v",
-            "dGVib29rc1xWMUJldGEx6gIhR29vZ2xlOjpDbG91ZDo6Tm90ZWJvb2tzOjpW",
-            "MWJldGExYgZwcm90bzM="));
+            "BlRQVV9WMxAHIqQBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
+            "CFNUQVJUSU5HEAESEAoMUFJPVklTSU9OSU5HEAISCgoGQUNUSVZFEAMSDAoI",
+            "U1RPUFBJTkcQBBILCgdTVE9QUEVEEAUSCwoHREVMRVRFRBAGEg0KCVVQR1JB",
+            "RElORxAHEhAKDElOSVRJQUxJWklORxAIEg8KC1JFR0lTVEVSSU5HEAkiUwoI",
+            "RGlza1R5cGUSGQoVRElTS19UWVBFX1VOU1BFQ0lGSUVEEAASDwoLUERfU1RB",
+            "TkRBUkQQARIKCgZQRF9TU0QQAhIPCgtQRF9CQUxBTkNFRBADIkUKDkRpc2tF",
+            "bmNyeXB0aW9uEh8KG0RJU0tfRU5DUllQVElPTl9VTlNQRUNJRklFRBAAEggK",
+            "BEdNRUsQARIICgRDTUVLEAI6T+pBTAohbm90ZWJvb2tzLmdvb2dsZWFwaXMu",
+            "Y29tL0luc3RhbmNlEidwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tp",
+            "bnN0YW5jZX1CDQoLZW52aXJvbm1lbnRC5AEKImNvbS5nb29nbGUuY2xvdWQu",
+            "bm90ZWJvb2tzLnYxYmV0YTFCDUluc3RhbmNlUHJvdG9QAVpHZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9ub3RlYm9va3Mv",
+            "djFiZXRhMTtub3RlYm9va3OqAh5Hb29nbGUuQ2xvdWQuTm90ZWJvb2tzLlYx",
+            "QmV0YTHKAh5Hb29nbGVcQ2xvdWRcTm90ZWJvb2tzXFYxYmV0YTHqAiFHb29n",
+            "bGU6OkNsb3VkOjpOb3RlYm9va3M6OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Notebooks.V1Beta1.EnvironmentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1460,6 +1461,18 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// The instance is deleted.
         /// </summary>
         [pbr::OriginalName("DELETED")] Deleted = 6,
+        /// <summary>
+        /// The instance is upgrading.
+        /// </summary>
+        [pbr::OriginalName("UPGRADING")] Upgrading = 7,
+        /// <summary>
+        /// The instance is being created.
+        /// </summary>
+        [pbr::OriginalName("INITIALIZING")] Initializing = 8,
+        /// <summary>
+        /// The instance is getting registered.
+        /// </summary>
+        [pbr::OriginalName("REGISTERING")] Registering = 9,
       }
 
       /// <summary>
@@ -1478,6 +1491,10 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// SSD persistent disk type.
         /// </summary>
         [pbr::OriginalName("PD_SSD")] PdSsd = 2,
+        /// <summary>
+        /// Balanced persistent disk type.
+        /// </summary>
+        [pbr::OriginalName("PD_BALANCED")] PdBalanced = 3,
       }
 
       /// <summary>

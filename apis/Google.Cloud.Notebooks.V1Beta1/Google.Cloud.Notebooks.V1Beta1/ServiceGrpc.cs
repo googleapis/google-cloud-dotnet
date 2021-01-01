@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Notebooks.V1Beta1 {
   /// <summary>
-  /// API service for Cloud AI Platform Notebooks.
+  /// API v1beta1 service for Cloud AI Platform Notebooks.
   /// </summary>
   public static partial class NotebookService
   {
