@@ -1,0 +1,11 @@
+[
+  {
+    "method": "ListBuilds",
+    "client": "CloudBuildClient",
+    "arguments": {
+      "request": {
+        "projectId": "${PROJECT_ID}"
+      }
+    }
+  }
+]
