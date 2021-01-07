@@ -22,6 +22,7 @@ Each package name links to the documentation for that package.
 | [Google.Analytics.Data.V1Alpha](Google.Analytics.Data.V1Alpha/index.html) | 1.0.0-alpha03 | Google Analytics Data |
 | [Google.Area120.Tables.V1Alpha1](Google.Area120.Tables.V1Alpha1/index.html) | 1.0.0-alpha02 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](Google.Cloud.AccessApproval.V1/index.html) | 1.0.0-beta02 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
+| [Google.Cloud.AppEngine.V1](Google.Cloud.AppEngine.V1/index.html) | 1.0.0-beta01 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](Google.Cloud.ArtifactRegistry.V1Beta2/index.html) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.6.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AssuredWorkloads.V1Beta1](Google.Cloud.AssuredWorkloads.V1Beta1/index.html) | 1.0.0-beta02 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
@@ -38,6 +39,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Billing.Budgets.V1Beta1](Google.Cloud.Billing.Budgets.V1Beta1/index.html) | 1.0.0-beta02 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html) | 2.1.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
 | [Google.Cloud.BinaryAuthorization.V1Beta1](Google.Cloud.BinaryAuthorization.V1Beta1/index.html) | 1.0.0-beta01 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
+| [Google.Cloud.CloudBuild.V1](Google.Cloud.CloudBuild.V1/index.html) | 1.0.0-beta01 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.2.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataLabeling.V1Beta1](Google.Cloud.DataLabeling.V1Beta1/index.html) | 1.0.0-beta01 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |

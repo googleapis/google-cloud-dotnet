@@ -55,6 +55,24 @@
       "protoPath": "google/cloud/accessapproval/v1"
     },
     {
+      "id": "Google.Cloud.AppEngine.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "App Engine Audit Data",
+      "productUrl": "https://cloud.google.com/appengine",
+      "description": "Recommended Google client library to access the App Engine API, which provisions and manages developers' App Engine applications.",
+      "tags": [
+        "app",
+        "engine",
+        "appengine"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/appengine/v1"
+    },
+    {
       "id": "Google.Cloud.ArtifactRegistry.V1Beta2",
       "version": "1.0.0-beta01",
       "type": "grpc",
@@ -354,6 +372,23 @@
       "dependencies": {},
       "generator": "micro",
       "protoPath": "google/cloud/binaryauthorization/v1beta1"
+    },
+    {
+      "id": "Google.Cloud.CloudBuild.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Cloud Build",
+      "productUrl": "https://cloud.google.com/cloud-build",
+      "description": "Recommended Google client library to access the Google Cloud Build API, which creates and manages builds on Google Cloud Platform.",
+      "tags": [
+        "build",
+        "cloudbuild"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/devtools/cloudbuild/v1"
     },
     {
       "id": "Google.Cloud.Container.V1",
@@ -1747,13 +1782,13 @@
       "type": "rest",
       "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
       "dependencies": {
-        "Google.Apis.Storage.v1": "1.49.0.2084",
+        "Google.Apis.Storage.v1": "1.49.0.2151",
         "Google.Api.Gax.Rest": "3.2.0"
       },
       "testDependencies": {
         "Google.Cloud.PubSub.V1": "project",
         "Google.Api.Gax.Testing": "3.2.0",
-        "Google.Apis.Iam.v1": "1.49.0.2079"
+        "Google.Apis.Iam.v1": "1.49.0.2151"
       },
       "tags": [
         "Storage"

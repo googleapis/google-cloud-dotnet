@@ -19,6 +19,7 @@ Each package name links to the documentation for that package.
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha03) | 1.0.0-alpha03 | Google Analytics Data |
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha02) | 1.0.0-alpha02 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](https://googleapis.dev/dotnet/Google.Cloud.AccessApproval.V1/1.0.0-beta02) | 1.0.0-beta02 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
+| [Google.Cloud.AppEngine.V1](https://googleapis.dev/dotnet/Google.Cloud.AppEngine.V1/1.0.0-beta01) | 1.0.0-beta01 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.ArtifactRegistry.V1Beta2/1.0.0-beta01) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](https://googleapis.dev/dotnet/Google.Cloud.Asset.V1/2.6.0) | 2.6.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AssuredWorkloads.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.AssuredWorkloads.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
@@ -35,6 +36,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Billing.Budgets.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Billing.Budgets.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](https://googleapis.dev/dotnet/Google.Cloud.Billing.V1/2.1.0) | 2.1.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
 | [Google.Cloud.BinaryAuthorization.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.BinaryAuthorization.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
+| [Google.Cloud.CloudBuild.V1](https://googleapis.dev/dotnet/Google.Cloud.CloudBuild.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.Container.V1](https://googleapis.dev/dotnet/Google.Cloud.Container.V1/2.2.0) | 2.2.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](https://googleapis.dev/dotnet/Google.Cloud.DataCatalog.V1/1.1.0) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 | [Google.Cloud.DataLabeling.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.DataLabeling.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Data Labeling](https://cloud.google.com/ai-platform/data-labeling/docs) |
