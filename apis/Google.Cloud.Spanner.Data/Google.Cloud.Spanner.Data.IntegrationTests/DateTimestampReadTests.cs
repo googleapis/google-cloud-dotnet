@@ -1,4 +1,4 @@
-﻿// Copyright 2020 Google LLC
+﻿// Copyright 2021 Google LLC
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
@@ -26,73 +27,66 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public DateTimestampReadTests(DateTimestampTableFixture fixture) =>
             _fixture = fixture;
 
-        [Fact]
-        public async void WriteDateThenRead_ShouldBeEqual()
+        public static IEnumerable<object[]> TestDates =>
+            new List<object[]>
+            {
+                new object[] { new DateTime(2020, 9, 29) },
+                new object[] { DateTime.SpecifyKind(new DateTime(2020, 10, 29), DateTimeKind.Utc) },
+                new object[] { DateTime.SpecifyKind(new DateTime(2020, 11, 29), DateTimeKind.Local) },
+                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Utc) },
+                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Local) },
+                new object[] { new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Local) },
+            };
+
+        [Theory]
+        [MemberData(nameof(TestDates))]
+        public async void WriteDateThenRead_ShouldBeEqual(DateTime expectedDate)
         {
             using (var connection = _fixture.GetConnection())
             {
-                foreach (var date in new DateTime[] {
-                    new DateTime(2020, 9, 29),
-                    DateTime.SpecifyKind(new DateTime(2020, 10, 29), DateTimeKind.Utc),
-                    DateTime.SpecifyKind(new DateTime(2020, 11, 29), DateTimeKind.Local),
-                    new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Utc),
-                    new DateTime(2020, 12, 29, 0, 0, 0, DateTimeKind.Local),
-                    DateTime.Today,
-                })
-                {
-                    // Write the date value and read it back.
-                    await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
-                        new SpannerParameterCollection
-                        {
-                            new SpannerParameter("DateValue", SpannerDbType.Date, date),
-                        }
-                    ).ExecuteNonQueryAsync();
-                    using (var reader = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteReaderAsync())
+                // Write the date value and read it back.
+                await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
+                    new SpannerParameterCollection
                     {
-                        Assert.True(await reader.ReadAsync());
-                        Assert.Equal(date, reader.GetFieldValue<DateTime>("DateValue"));
-                        Assert.False(await reader.ReadAsync());
+                        new SpannerParameter("DateValue", SpannerDbType.Date, expectedDate),
                     }
-                }
+                ).ExecuteNonQueryAsync();
+                var dbDate = await connection.CreateSelectCommand($"SELECT DateValue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
+                Assert.Equal(expectedDate, dbDate);
             }
         }
 
-        [Fact]
-        public async void WriteTimestampThenRead_ShouldBeEqual()
+        public static IEnumerable<object[]> TestTimestamps =>
+            new List<object[]>
+            {
+                new object[] { new DateTime(2020, 9, 29, 18, 51, 10) },
+                new object[] { DateTime.SpecifyKind(new DateTime(2020, 10, 29, 18, 51, 10), DateTimeKind.Utc) },
+                new object[] { DateTime.SpecifyKind(new DateTime(2020, 11, 29, 18, 51, 10), DateTimeKind.Local) },
+                new object[] { new DateTime(2020, 10, 29, 18, 51, 10, DateTimeKind.Utc) },
+                new object[] { new DateTime(2020, 11, 29, 18, 51, 10, DateTimeKind.Local) },
+            };
+
+        [Theory]
+        [MemberData(nameof(TestTimestamps))]
+        public async void WriteTimestampThenRead_ShouldBeEqual(DateTime expectedTimestamp)
         {
             using (var connection = _fixture.GetConnection())
             {
-                foreach (var timestamp in new DateTime[] {
-                    new DateTime(2020, 9, 29, 18, 51, 10),
-                    DateTime.SpecifyKind(new DateTime(2020, 10, 29, 18, 51, 10), DateTimeKind.Utc),
-                    DateTime.SpecifyKind(new DateTime(2020, 11, 29, 18, 51, 10), DateTimeKind.Local),
-                    new DateTime(2020, 10, 29, 18, 51, 10, DateTimeKind.Utc),
-                    new DateTime(2020, 11, 29, 18, 51, 10, DateTimeKind.Local),
-                    DateTime.Now,
-                    DateTime.UtcNow,
-                })
-                {
-                    // Write the timestamp value and read it back.
-                    await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
-                        new SpannerParameterCollection
-                        {
-                            new SpannerParameter("TimestampValue", SpannerDbType.Timestamp, timestamp),
-                        }
-                    ).ExecuteNonQueryAsync();
-                    using (var reader = await connection.CreateSelectCommand($"SELECT TimestampValue FROM {_fixture.TableName}").ExecuteReaderAsync())
+                // Write the timestamp value and read it back.
+                await connection.CreateInsertOrUpdateCommand(_fixture.TableName,
+                    new SpannerParameterCollection
                     {
-                        Assert.True(await reader.ReadAsync());
-                        var dbTimestamp = reader.GetFieldValue<DateTime>("TimestampValue");
-                        // Cloud Spanner always stores the timestamp in UTC, so if the original input value was
-                        // a local time, we need to convert the value that we read in the database back to local time.
-                        if (timestamp.Kind == DateTimeKind.Local)
-                        {
-                            dbTimestamp = dbTimestamp.ToLocalTime();
-                        }
-                        Assert.Equal(timestamp, dbTimestamp);
-                        Assert.False(await reader.ReadAsync());
+                        new SpannerParameter("TimestampValue", SpannerDbType.Timestamp, expectedTimestamp),
                     }
+                ).ExecuteNonQueryAsync();
+                var dbTimestamp = await connection.CreateSelectCommand($"SELECT TimestampValue FROM {_fixture.TableName}").ExecuteScalarAsync<DateTime>();
+                // Cloud Spanner always stores the timestamp in UTC, so if the original input value was
+                // a local time, we need to convert the value that we read in the database back to local time.
+                if (expectedTimestamp.Kind == DateTimeKind.Local)
+                {
+                    dbTimestamp = dbTimestamp.ToLocalTime();
                 }
+                Assert.Equal(expectedTimestamp, dbTimestamp);
             }
         }
     }

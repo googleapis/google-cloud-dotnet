@@ -178,7 +178,7 @@ namespace Google.Cloud.Spanner.Data
                         // If the DateTime is local the value should be changed to unspecified
                         // before serializing it as UTC to prevent accidentally changing to a
                         // different date.
-                        value = new DateTime(date.Year, date.Month, date.Day);
+                        value = DateTime.SpecifyKind(date, DateTimeKind.Unspecified);
                     }
                     return new Value
                     {
