@@ -2422,7 +2422,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Devtools.Cloudbuild.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.CloudBuild.V1"
     },
     {
       "ServiceDirectory": "google/devtools/clouddebugger/v2",
