@@ -1047,6 +1047,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Gaming.V1Beta"
     },
     {
+      "ServiceDirectory": "google/cloud/gkehub/v1alpha2",
+      "Name": "gkehub.googleapis.com",
+      "Title": "GKE Hub",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gkehub/v1alpha2/gkehub_v1alpha2.yaml",
+      "Version": "v1alpha2",
+      "PackageFromDirectory": "google.cloud.gkehub.v1alpha2",
+      "PackageFromProtos": "google.cloud.gkehub.v1alpha2",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Gkehub.V1Alpha2"
+    },
+    {
       "ServiceDirectory": "google/cloud/gkehub/v1beta1",
       "Name": "gkehub.googleapis.com",
       "Title": "GKE Hub",
