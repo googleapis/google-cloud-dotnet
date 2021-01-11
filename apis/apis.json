@@ -374,6 +374,23 @@
       "protoPath": "google/cloud/binaryauthorization/v1beta1"
     },
     {
+      "id": "Google.Cloud.Channel.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Channel",
+      "productUrl": "https://cloud.google.com/channel/docs/",
+      "description": "Recommended Google client library to access the Google Cloud Channel API, which enables Google Cloud resellers and distributors to manage their customers, channel partners, entitlements and reports.",
+      "tags": [
+        "channel",
+        "reseller"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/channel/v1"
+    },
+    {
       "id": "Google.Cloud.CloudBuild.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
