@@ -1061,7 +1061,7 @@
         "google/protobuf"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Gkehub.V1Alpha2"
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Alpha2"
     },
     {
       "ServiceDirectory": "google/cloud/gkehub/v1beta1",
