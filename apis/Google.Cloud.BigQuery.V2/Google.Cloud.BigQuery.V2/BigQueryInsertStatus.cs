@@ -45,9 +45,9 @@ namespace Google.Cloud.BigQuery.V2
         /// returned by the insert operation will contain error information about the invalid rows.
         /// This can happen when:
         /// <list type="bullet">
-        /// <item> No rows are valid.</item>
-        /// <item> <see cref="InsertOptions.SkipInvalidRows"/> is not set to true and at least
-        /// one row is invalid.</item>
+        /// <item><description>No rows are valid.</description></item>
+        /// <item><description><see cref="InsertOptions.SkipInvalidRows"/> is not set to true and at least
+        /// one row is invalid.</description></item>
         /// </list>
         /// </summary>
         NoRowsInserted
