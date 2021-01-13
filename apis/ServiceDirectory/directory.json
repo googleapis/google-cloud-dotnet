@@ -1079,7 +1079,7 @@
         "google/rpc"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Gkehub.V1Beta1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Beta1"
     },
     {
       "ServiceDirectory": "google/cloud/iot/v1",
