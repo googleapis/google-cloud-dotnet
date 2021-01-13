@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,13 +30,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Timestamp, DbType.DateTime };
             yield return new object[] { SpannerDbType.Float64, DbType.Double };
             yield return new object[] { SpannerDbType.Int64, DbType.Int64 };
+            yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric };
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object };
             yield return new object[] { SpannerDbType.String, DbType.String };
         }
 
         [Theory]
         [MemberData(nameof(GetDbTypeConversions))]
-        public void DbTypeMappgings(SpannerDbType spannerType, DbType adoType)
+        public void DbTypeMappings(SpannerDbType spannerType, DbType adoType)
         {
             var parameter = new SpannerParameter { SpannerDbType = spannerType };
             Assert.Equal(adoType, parameter.DbType);
@@ -44,6 +46,29 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             parameter.DbType = adoType;
             Assert.Equal(spannerType, parameter.SpannerDbType);
+        }
+
+        // TODO: There is no value that will default to Spanner type DATE.
+        public static IEnumerable<object[]> GetValueConversions()
+        {
+            yield return new object[] { new byte[] { 1 }, SpannerDbType.Bytes, DbType.Binary };
+            yield return new object[] { true, SpannerDbType.Bool, DbType.Boolean };
+            yield return new object[] { new DateTime(2021, 1, 13, 12, 3, 10), SpannerDbType.Timestamp, DbType.DateTime };
+            yield return new object[] { 3.14D, SpannerDbType.Float64, DbType.Double };
+            yield return new object[] { 1L, SpannerDbType.Int64, DbType.Int64 };
+            yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, DbType.VarNumeric };
+            yield return new object[] { "test", SpannerDbType.String, DbType.String };
+        }
+
+        [Theory]
+        [MemberData(nameof(GetValueConversions))]
+        public void ValueMappings(object value, SpannerDbType spannerType, DbType adoType)
+        {
+            var parameter = new SpannerParameter { Value = value };
+
+            Assert.Equal(value.GetType(), spannerType.DefaultClrType);
+            Assert.Equal(spannerType, parameter.SpannerDbType);
+            Assert.Equal(adoType, parameter.DbType);
         }
 
         public static IEnumerable<object[]> GetDbTypeSizes()
