@@ -39,6 +39,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Billing.Budgets.V1Beta1](Google.Cloud.Billing.Budgets.V1Beta1/index.html) | 1.0.0-beta02 | [Cloud Billing Budget (V1Beta1 API)](https://cloud.google.com/billing/docs/how-to/budget-api-overview) |
 | [Google.Cloud.Billing.V1](Google.Cloud.Billing.V1/index.html) | 2.1.0 | [Google Cloud Billing](https://cloud.google.com/billing/docs/) |
 | [Google.Cloud.BinaryAuthorization.V1Beta1](Google.Cloud.BinaryAuthorization.V1Beta1/index.html) | 1.0.0-beta01 | [Binary Authorization](https://cloud.google.com/binary-authorization/docs/reference/rpc) |
+| [Google.Cloud.Channel.V1](Google.Cloud.Channel.V1/index.html) | 1.0.0-beta01 | [Cloud Channel](https://cloud.google.com/channel/docs/) |
 | [Google.Cloud.CloudBuild.V1](Google.Cloud.CloudBuild.V1/index.html) | 1.0.0-beta01 | [Cloud Build](https://cloud.google.com/cloud-build) |
 | [Google.Cloud.Container.V1](Google.Cloud.Container.V1/index.html) | 2.2.0 | [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/docs/reference/rest/) |
 | [Google.Cloud.DataCatalog.V1](Google.Cloud.DataCatalog.V1/index.html) | 1.1.0 | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
