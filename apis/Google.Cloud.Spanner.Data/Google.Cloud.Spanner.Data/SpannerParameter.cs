@@ -59,6 +59,9 @@ namespace Google.Cloud.Spanner.Data
                     case DbType.Int64:
                         SpannerDbType = SpannerDbType.Int64;
                         break;
+                    case DbType.VarNumeric:
+                        SpannerDbType = SpannerDbType.Numeric;
+                        break;
                     case DbType.Object:
                         SpannerDbType = SpannerDbType.Unspecified;
                         break;

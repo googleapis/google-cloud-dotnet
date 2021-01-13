@@ -140,6 +140,8 @@ namespace Google.Cloud.Spanner.Data
                         return DbType.Int64;
                     case TypeCode.Float64:
                         return DbType.Double;
+                    case TypeCode.Numeric:
+                        return DbType.VarNumeric;
                     case TypeCode.Timestamp:
                         return DbType.DateTime;
                     case TypeCode.Date:
@@ -284,6 +286,10 @@ namespace Google.Cloud.Spanner.Data
                 || type == typeof(ulong) || type == typeof(ushort) || type == typeof(uint))
             {
                 return Int64;
+            }
+            if (type == typeof(SpannerNumeric))
+            {
+                return Numeric;
             }
             if (type == typeof(string))
             {
