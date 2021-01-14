@@ -880,8 +880,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -891,8 +889,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -902,8 +898,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -913,8 +907,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the account to lookup.
@@ -931,8 +923,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the account to lookup.
@@ -949,8 +939,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the account to lookup.
@@ -964,8 +952,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the account to lookup.
@@ -982,8 +968,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the account to lookup.
@@ -1000,8 +984,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the account to lookup.
@@ -1281,7 +1263,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1289,7 +1273,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateAccount(new UpdateAccountRequest
             {
                 Account = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -1300,7 +1284,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1308,7 +1294,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateAccountAsync(new UpdateAccountRequest
             {
                 Account = gax::GaxPreconditions.CheckNotNull(account, nameof(account)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -1319,7 +1305,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1373,9 +1361,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1385,9 +1370,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1397,9 +1379,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1409,9 +1388,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1428,9 +1404,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1447,9 +1420,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1463,9 +1433,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1482,9 +1449,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1501,9 +1465,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1855,7 +1816,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1863,7 +1826,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateProperty(new UpdatePropertyRequest
             {
                 Property = gax::GaxPreconditions.CheckNotNull(property, nameof(property)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -1875,7 +1838,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1883,7 +1848,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdatePropertyAsync(new UpdatePropertyRequest
             {
                 Property = gax::GaxPreconditions.CheckNotNull(property, nameof(property)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -1895,7 +1860,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2718,9 +2685,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2730,9 +2694,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2742,9 +2703,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2754,9 +2712,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the web data stream to lookup.
@@ -2773,9 +2728,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the web data stream to lookup.
@@ -2792,9 +2744,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the web data stream to lookup.
@@ -2808,9 +2757,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the web data stream to lookup.
@@ -2827,9 +2773,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the web data stream to lookup.
@@ -2846,9 +2789,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the web data stream to lookup.
@@ -3012,7 +2952,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the web stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3020,7 +2962,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateWebDataStream(new UpdateWebDataStreamRequest
             {
                 WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -3031,7 +2973,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the web stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3039,7 +2983,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateWebDataStreamAsync(new UpdateWebDataStreamRequest
             {
                 WebDataStream = gax::GaxPreconditions.CheckNotNull(webDataStream, nameof(webDataStream)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -3050,7 +2994,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the web stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3332,9 +3278,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3344,9 +3287,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3356,9 +3296,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3368,9 +3305,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the iOS app data stream to lookup.
@@ -3387,9 +3321,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the iOS app data stream to lookup.
@@ -3406,9 +3337,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the iOS app data stream to lookup.
@@ -3422,9 +3350,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the iOS app data stream to lookup.
@@ -3441,9 +3366,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the iOS app data stream to lookup.
@@ -3460,9 +3382,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the iOS app data stream to lookup.
@@ -3626,7 +3545,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the iOS app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3634,7 +3555,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateIosAppDataStream(new UpdateIosAppDataStreamRequest
             {
                 IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -3645,7 +3566,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the iOS app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3653,7 +3576,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateIosAppDataStreamAsync(new UpdateIosAppDataStreamRequest
             {
                 IosAppDataStream = gax::GaxPreconditions.CheckNotNull(iosAppDataStream, nameof(iosAppDataStream)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -3664,7 +3587,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the iOS app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3946,9 +3871,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3958,9 +3880,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3970,9 +3889,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3982,9 +3898,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the android app data stream to lookup.
@@ -4001,9 +3914,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the android app data stream to lookup.
@@ -4020,9 +3930,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the android app data stream to lookup.
@@ -4036,9 +3943,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the android app data stream to lookup.
@@ -4055,9 +3959,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the android app data stream to lookup.
@@ -4074,9 +3975,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the android app data stream to lookup.
@@ -4240,7 +4138,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the android app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4248,7 +4148,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateAndroidAppDataStream(new UpdateAndroidAppDataStreamRequest
             {
                 AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -4259,7 +4159,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the android app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4267,7 +4169,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateAndroidAppDataStreamAsync(new UpdateAndroidAppDataStreamRequest
             {
                 AndroidAppDataStream = gax::GaxPreconditions.CheckNotNull(androidAppDataStream, nameof(androidAppDataStream)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -4278,7 +4180,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the android app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4599,7 +4503,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
-        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4619,7 +4522,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
-        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4639,7 +4541,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
-        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4656,7 +4557,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
-        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4676,7 +4576,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
-        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4696,7 +4595,6 @@ namespace Google.Analytics.Admin.V1Alpha
         /// <param name="name">
         /// Required. The name of the settings to lookup.
         /// Format:
-        /// 
         /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
         /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
         /// </param>
@@ -4748,7 +4646,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4756,7 +4656,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateEnhancedMeasurementSettings(new UpdateEnhancedMeasurementSettingsRequest
             {
                 EnhancedMeasurementSettings = gax::GaxPreconditions.CheckNotNull(enhancedMeasurementSettings, nameof(enhancedMeasurementSettings)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -4769,7 +4669,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4777,7 +4679,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateEnhancedMeasurementSettingsAsync(new UpdateEnhancedMeasurementSettingsRequest
             {
                 EnhancedMeasurementSettings = gax::GaxPreconditions.CheckNotNull(enhancedMeasurementSettings, nameof(enhancedMeasurementSettings)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -4790,7 +4692,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4982,7 +4886,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The Firebase link to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4990,7 +4896,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateFirebaseLink(new UpdateFirebaseLinkRequest
             {
                 FirebaseLink = gax::GaxPreconditions.CheckNotNull(firebaseLink, nameof(firebaseLink)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -5000,7 +4906,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The Firebase link to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5008,7 +4916,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateFirebaseLinkAsync(new UpdateFirebaseLinkRequest
             {
                 FirebaseLink = gax::GaxPreconditions.CheckNotNull(firebaseLink, nameof(firebaseLink)),
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -5018,7 +4926,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The Firebase link to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5142,8 +5052,8 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ListFirebaseLinksResponse ListFirebaseLinks(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -5152,34 +5062,34 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListFirebaseLinksResponse> ListFirebaseLinksAsync(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists FirebaseLinks on a property.
         /// Properties can have at most one FirebaseLink.
         /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call.</param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListFirebaseLinksResponse> ListFirebaseLinksAsync(ListFirebaseLinksRequest request, st::CancellationToken cancellationToken) =>
-            ListFirebaseLinksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lists FirebaseLinks on a property.
-        /// Properties can have at most one FirebaseLink.
-        /// </summary>
         /// <param name="parent">
         /// Required. Format: properties/{property_id}
         /// Example: properties/1234
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ListFirebaseLinksResponse ListFirebaseLinks(string parent, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListFirebaseLinks(new ListFirebaseLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -5190,12 +5100,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. Format: properties/{property_id}
         /// Example: properties/1234
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListFirebaseLinksResponse> ListFirebaseLinksAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListFirebaseLinksAsync(new ListFirebaseLinksRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -5206,25 +5126,22 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. Format: properties/{property_id}
         /// Example: properties/1234
         /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListFirebaseLinksResponse> ListFirebaseLinksAsync(string parent, st::CancellationToken cancellationToken) =>
-            ListFirebaseLinksAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Lists FirebaseLinks on a property.
-        /// Properties can have at most one FirebaseLink.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public virtual ListFirebaseLinksResponse ListFirebaseLinks(PropertyName parent, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListFirebaseLinks(new ListFirebaseLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
 
         /// <summary>
@@ -5235,26 +5152,23 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. Format: properties/{property_id}
         /// Example: properties/1234
         /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListFirebaseLinksResponse> ListFirebaseLinksAsync(PropertyName parent, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A pageable asynchronous sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(PropertyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListFirebaseLinksAsync(new ListFirebaseLinksRequest
             {
                 ParentAsPropertyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
             }, callSettings);
-
-        /// <summary>
-        /// Lists FirebaseLinks on a property.
-        /// Properties can have at most one FirebaseLink.
-        /// </summary>
-        /// <param name="parent">
-        /// Required. Format: properties/{property_id}
-        /// Example: properties/1234
-        /// </param>
-        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ListFirebaseLinksResponse> ListFirebaseLinksAsync(PropertyName parent, st::CancellationToken cancellationToken) =>
-            ListFirebaseLinksAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns the Site Tag for the specified web stream.
@@ -5549,7 +5463,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5557,7 +5473,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateGoogleAdsLink(new UpdateGoogleAdsLinkRequest
             {
                 GoogleAdsLink = googleAdsLink,
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -5567,7 +5483,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5575,7 +5493,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateGoogleAdsLinkAsync(new UpdateGoogleAdsLinkRequest
             {
                 GoogleAdsLink = googleAdsLink,
-                UpdateMask = updateMask,
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
             }, callSettings);
 
         /// <summary>
@@ -5585,7 +5503,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to be updated. Omitted fields will not be updated.
+        /// Required. The list of fields to be updated. Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match
+        /// all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6399,8 +6319,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6413,8 +6331,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single Account.
-        /// Throws "Target not found" if no such account found, or if caller does not
-        /// have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6575,9 +6491,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6590,9 +6503,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single "GA4" Property.
-        /// 
-        /// Throws "Target not found" if no such property found, if property is not
-        /// of the type "GA4", or if caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7001,9 +6911,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7016,9 +6923,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single WebDataStream
-        /// 
-        /// Throws "Target not found" if no such web data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7133,9 +7037,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7148,9 +7049,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single IosAppDataStream
-        /// 
-        /// Throws "Target not found" if no such iOS app data stream found, or if the
-        /// caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7265,9 +7163,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7280,9 +7175,6 @@ namespace Google.Analytics.Admin.V1Alpha
 
         /// <summary>
         /// Lookup for a single AndroidAppDataStream
-        /// 
-        /// Throws "Target not found" if no such android app data stream found, or if
-        /// the caller does not have permissions to access it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7533,11 +7425,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The RPC response.</returns>
-        public override ListFirebaseLinksResponse ListFirebaseLinks(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public override gax::PagedEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinks(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListFirebaseLinksRequest(ref request, ref callSettings);
-            return _callListFirebaseLinks.Sync(request, callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListFirebaseLinksRequest, ListFirebaseLinksResponse, FirebaseLink>(_callListFirebaseLinks, request, callSettings);
         }
 
         /// <summary>
@@ -7546,11 +7438,11 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<ListFirebaseLinksResponse> ListFirebaseLinksAsync(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A pageable asynchronous sequence of <see cref="FirebaseLink"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListFirebaseLinksResponse, FirebaseLink> ListFirebaseLinksAsync(ListFirebaseLinksRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListFirebaseLinksRequest(ref request, ref callSettings);
-            return _callListFirebaseLinks.Async(request, callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFirebaseLinksRequest, ListFirebaseLinksResponse, FirebaseLink>(_callListFirebaseLinks, request, callSettings);
         }
 
         /// <summary>
@@ -7734,6 +7626,10 @@ namespace Google.Analytics.Admin.V1Alpha
     {
     }
 
+    public partial class ListFirebaseLinksRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListGoogleAdsLinksRequest : gaxgrpc::IPageRequest
     {
     }
@@ -7798,6 +7694,14 @@ namespace Google.Analytics.Admin.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<AndroidAppDataStream> GetEnumerator() => AndroidAppDataStreams.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListFirebaseLinksResponse : gaxgrpc::IPageResponse<FirebaseLink>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FirebaseLink> GetEnumerator() => FirebaseLinks.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

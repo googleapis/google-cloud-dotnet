@@ -28,138 +28,133 @@ namespace Google.Analytics.Admin.V1Alpha {
             "b3RvEh5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2ds",
-            "ZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byKPAgoHQWNjb3VudBIRCgRuYW1l",
+            "ZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byKOAgoHQWNjb3VudBIRCgRuYW1l",
             "GAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
             "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMZGlzcGxheV9uYW1l",
-            "GAQgASgJQgPgQQISFAoMY291bnRyeV9jb2RlGAUgASgJEhQKB2RlbGV0ZWQY",
-            "BiABKAhCA+BBAzo+6kE7CiVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
-            "bS9BY2NvdW50EhJhY2NvdW50cy97YWNjb3VudH0iigMKCFByb3BlcnR5EhEK",
-            "BG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZwYXJlbnQY",
-            "AiABKAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYBSABKAlCA+BBAhJLChFpbmR1",
-            "c3RyeV9jYXRlZ29yeRgGIAEoDjIwLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4u",
-            "djFhbHBoYS5JbmR1c3RyeUNhdGVnb3J5EhEKCXRpbWVfem9uZRgHIAEoCRIV",
-            "Cg1jdXJyZW5jeV9jb2RlGAggASgJEhQKB2RlbGV0ZWQYCSABKAhCA+BBAzpC",
-            "6kE/CiZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0eRIV",
-            "cHJvcGVydGllcy97cHJvcGVydHl9IuQCChRBbmRyb2lkQXBwRGF0YVN0cmVh",
-            "bRIRCgRuYW1lGAEgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIgASgJ",
-            "QgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGQoMcGFja2FnZV9uYW1lGAUgASgJ",
-            "QgPgQQUSFAoMZGlzcGxheV9uYW1lGAYgASgJOn7qQXsKMmFuYWx5dGljc2Fk",
-            "bWluLmdvb2dsZWFwaXMuY29tL0FuZHJvaWRBcHBEYXRhU3RyZWFtEkVwcm9w",
-            "ZXJ0aWVzL3twcm9wZXJ0eX0vYW5kcm9pZEFwcERhdGFTdHJlYW1zL3thbmRy",
-            "b2lkX2FwcF9kYXRhX3N0cmVhbX0i1AIKEElvc0FwcERhdGFTdHJlYW0SEQoE",
-            "bmFtZRgBIAEoCUID4EEDEhwKD2ZpcmViYXNlX2FwcF9pZBgCIAEoCUID4EED",
-            "EjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEhkKCWJ1bmRsZV9pZBgFIAEoCUIG4EEF4EEC",
-            "EhQKDGRpc3BsYXlfbmFtZRgGIAEoCTpy6kFvCi5hbmFseXRpY3NhZG1pbi5n",
-            "b29nbGVhcGlzLmNvbS9Jb3NBcHBEYXRhU3RyZWFtEj1wcm9wZXJ0aWVzL3tw",
-            "cm9wZXJ0eX0vaW9zQXBwRGF0YVN0cmVhbXMve2lvc19hcHBfZGF0YV9zdHJl",
-            "YW19IugCCg1XZWJEYXRhU3RyZWFtEhEKBG5hbWUYASABKAlCA+BBAxIbCg5t",
-            "ZWFzdXJlbWVudF9pZBgCIAEoCUID4EEDEhwKD2ZpcmViYXNlX2FwcF9pZBgD",
-            "IAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhgKC2RlZmF1bHRfdXJpGAYg",
-            "ASgJQgPgQQUSGQoMZGlzcGxheV9uYW1lGAcgASgJQgPgQQI6aOpBZQorYW5h",
-            "bHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vV2ViRGF0YVN0cmVhbRI2cHJv",
-            "cGVydGllcy97cHJvcGVydHl9L3dlYkRhdGFTdHJlYW1zL3t3ZWJfZGF0YV9z",
-            "dHJlYW19IsoBCghVc2VyTGluaxIMCgRuYW1lGAEgASgJEhUKDWVtYWlsX2Fk",
-            "ZHJlc3MYAiABKAkSFAoMZGlyZWN0X3JvbGVzGAMgAygJOoIB6kF/CiZhbmFs",
-            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Vc2VyTGluaxIoYWNjb3VudHMv",
-            "e2FjY291bnR9L3VzZXJMaW5rcy97dXNlcl9saW5rfRIrcHJvcGVydGllcy97",
-            "cHJvcGVydHl9L3VzZXJMaW5rcy97dXNlcl9saW5rfSJjCg1BdWRpdFVzZXJM",
-            "aW5rEgwKBG5hbWUYASABKAkSFQoNZW1haWxfYWRkcmVzcxgCIAEoCRIUCgxk",
-            "aXJlY3Rfcm9sZXMYAyADKAkSFwoPZWZmZWN0aXZlX3JvbGVzGAQgAygJIugF",
-            "ChtFbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID",
-            "4EEDEhYKDnN0cmVhbV9lbmFibGVkGAIgASgIEh8KEnBhZ2Vfdmlld3NfZW5h",
-            "YmxlZBgDIAEoCEID4EEDEhcKD3Njcm9sbHNfZW5hYmxlZBgEIAEoCBIfChdv",
-            "dXRib3VuZF9jbGlja3NfZW5hYmxlZBgFIAEoCBIdChVjb250ZW50X3ZpZXdz",
-            "X2VuYWJsZWQYBiABKAgSGwoTc2l0ZV9zZWFyY2hfZW5hYmxlZBgHIAEoCBIh",
-            "Chlmb3JtX2ludGVyYWN0aW9uc19lbmFibGVkGAggASgIEiAKGHZpZGVvX2Vu",
-            "Z2FnZW1lbnRfZW5hYmxlZBgJIAEoCBIeChZmaWxlX2Rvd25sb2Fkc19lbmFi",
-            "bGVkGAogASgIEioKImRhdGFfdGFnZ2VkX2VsZW1lbnRfY2xpY2tzX2VuYWJs",
-            "ZWQYCyABKAgSGgoScGFnZV9sb2Fkc19lbmFibGVkGAwgASgIEhwKFHBhZ2Vf",
-            "Y2hhbmdlc19lbmFibGVkGA0gASgIEiIKGmFydGljbGVzX2FuZF9ibG9nc19l",
-            "bmFibGVkGA4gASgIEiYKHnByb2R1Y3RzX2FuZF9lY29tbWVyY2VfZW5hYmxl",
-            "ZBgPIAEoCBIjChZzZWFyY2hfcXVlcnlfcGFyYW1ldGVyGBAgASgJQgPgQQIS",
-            "GwoTdXJsX3F1ZXJ5X3BhcmFtZXRlchgRIAEoCRIYChBleGNsdWRlZF9kb21h",
-            "aW5zGBIgASgJOpMB6kGPAQo5YW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5j",
-            "b20vRW5oYW5jZWRNZWFzdXJlbWVudFNldHRpbmdzElJwcm9wZXJ0aWVzL3tw",
-            "cm9wZXJ0eX0vd2ViRGF0YVN0cmVhbXMve3dlYl9kYXRhX3N0cmVhbX0vZW5o",
-            "YW5jZWRNZWFzdXJlbWVudFNldHRpbmdzIqMCCgxGaXJlYmFzZUxpbmsSEQoE",
-            "bmFtZRgBIAEoCUID4EEDEhQKB3Byb2plY3QYAiABKAlCA+BBBRI0CgtjcmVh",
-            "dGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxJOChNtYXhpbXVtX3VzZXJfYWNjZXNzGAQgASgOMjEuZ29vZ2xlLmFuYWx5",
-            "dGljcy5hZG1pbi52MWFscGhhLk1heGltdW1Vc2VyQWNjZXNzOmTqQWEKKmFu",
-            "YWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0ZpcmViYXNlTGluaxIzcHJv",
-            "cGVydGllcy97cHJvcGVydHl9L2ZpcmViYXNlTGlua3Mve2ZpcmViYXNlX2xp",
-            "bmt9IooBCg1HbG9iYWxTaXRlVGFnEhQKB3NuaXBwZXQYASABKAlCA+BBBRIM",
-            "CgRuYW1lGAIgASgJOlXqQVIKK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMu",
-            "Y29tL0dsb2JhbFNpdGVUYWcSI3Byb3BlcnRpZXMve3Byb3BlcnR5fS9nbG9i",
-            "YWxTaXRlVGFnIqUDCg1Hb29nbGVBZHNMaW5rEhEKBG5hbWUYASABKAlCA+BB",
-            "AxITCgZwYXJlbnQYAiABKAlCA+BBBRIYCgtjdXN0b21lcl9pZBgDIAEoCUID",
-            "4EEFEh8KEmNhbl9tYW5hZ2VfY2xpZW50cxgEIAEoCEID4EEDEj8KG2Fkc19w",
-            "ZXJzb25hbGl6YXRpb25fZW5hYmxlZBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5Cb29sVmFsdWUSGgoNZW1haWxfYWRkcmVzcxgGIAEoCUID4EEDEjQKC2Ny",
-            "ZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDEjQKC3VwZGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDOmjqQWUKK2FuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMu",
-            "Y29tL0dvb2dsZUFkc0xpbmsSNnByb3BlcnRpZXMve3Byb3BlcnR5fS9nb29n",
-            "bGVBZHNMaW5rcy97Z29vZ2xlX2Fkc19saW5rfSLrAgoTRGF0YVNoYXJpbmdT",
-            "ZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPgQQMSKwojc2hhcmluZ193aXRoX2dv",
-            "b2dsZV9zdXBwb3J0X2VuYWJsZWQYAiABKAgSMgoqc2hhcmluZ193aXRoX2dv",
-            "b2dsZV9hc3NpZ25lZF9zYWxlc19lbmFibGVkGAMgASgIEi0KJXNoYXJpbmdf",
-            "d2l0aF9nb29nbGVfYW55X3NhbGVzX2VuYWJsZWQYBCABKAgSLAokc2hhcmlu",
-            "Z193aXRoX2dvb2dsZV9wcm9kdWN0c19lbmFibGVkGAUgASgIEiMKG3NoYXJp",
-            "bmdfd2l0aF9vdGhlcnNfZW5hYmxlZBgGIAEoCDpe6kFbCjFhbmFseXRpY3Nh",
-            "ZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhU2hhcmluZ1NldHRpbmdzEiZhY2Nv",
-            "dW50cy97YWNjb3VudH0vZGF0YVNoYXJpbmdTZXR0aW5ncyKVAgoOQWNjb3Vu",
-            "dFN1bW1hcnkSDAoEbmFtZRgBIAEoCRI7CgdhY2NvdW50GAIgASgJQir6QScK",
-            "JWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291bnQSFAoMZGlz",
-            "cGxheV9uYW1lGAMgASgJEksKEnByb3BlcnR5X3N1bW1hcmllcxgEIAMoCzIv",
-            "Lmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5Qcm9wZXJ0eVN1bW1h",
-            "cnk6VepBUgosYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjb3Vu",
-            "dFN1bW1hcnkSImFjY291bnRTdW1tYXJpZXMve2FjY291bnRfc3VtbWFyeX0i",
-            "ZgoPUHJvcGVydHlTdW1tYXJ5Ej0KCHByb3BlcnR5GAEgASgJQiv6QSgKJmFu",
-            "YWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1Byb3BlcnR5EhQKDGRpc3Bs",
-            "YXlfbmFtZRgCIAEoCSqnAQoRTWF4aW11bVVzZXJBY2Nlc3MSIwofTUFYSU1V",
-            "TV9VU0VSX0FDQ0VTU19VTlNQRUNJRklFRBAAEg0KCU5PX0FDQ0VTUxABEhQK",
-            "EFJFQURfQU5EX0FOQUxZWkUQAhIiCh5FRElUT1JfV0lUSE9VVF9MSU5LX01B",
-            "TkFHRU1FTlQQAxIkCiBFRElUT1JfSU5DTFVESU5HX0xJTktfTUFOQUdFTUVO",
-            "VBAEKqoEChBJbmR1c3RyeUNhdGVnb3J5EiEKHUlORFVTVFJZX0NBVEVHT1JZ",
-            "X1VOU1BFQ0lGSUVEEAASDgoKQVVUT01PVElWRRABEiMKH0JVU0lORVNTX0FO",
-            "RF9JTkRVU1RSSUFMX01BUktFVFMQAhILCgdGSU5BTkNFEAMSDgoKSEVBTFRI",
-            "Q0FSRRAEEg4KClRFQ0hOT0xPR1kQBRIKCgZUUkFWRUwQBhIJCgVPVEhFUhAH",
-            "EhoKFkFSVFNfQU5EX0VOVEVSVEFJTk1FTlQQCBIWChJCRUFVVFlfQU5EX0ZJ",
-            "VE5FU1MQCRIYChRCT09LU19BTkRfTElURVJBVFVSRRAKEhIKDkZPT0RfQU5E",
-            "X0RSSU5LEAsSCQoFR0FNRVMQDBIXChNIT0JCSUVTX0FORF9MRUlTVVJFEA0S",
-            "EwoPSE9NRV9BTkRfR0FSREVOEA4SGAoUSU5URVJORVRfQU5EX1RFTEVDT00Q",
-            "DxIWChJMQVdfQU5EX0dPVkVSTk1FTlQQEBIICgRORVdTEBESFgoST05MSU5F",
-            "X0NPTU1VTklUSUVTEBISFgoSUEVPUExFX0FORF9TT0NJRVRZEBMSFAoQUEVU",
-            "U19BTkRfQU5JTUFMUxAUEg8KC1JFQUxfRVNUQVRFEBUSDQoJUkVGRVJFTkNF",
-            "EBYSCwoHU0NJRU5DRRAXEgoKBlNQT1JUUxAYEhYKEkpPQlNfQU5EX0VEVUNB",
-            "VElPThAZEgwKCFNIT1BQSU5HEBpCewoiY29tLmdvb2dsZS5hbmFseXRpY3Mu",
-            "YWRtaW4udjFhbHBoYUIOUmVzb3VyY2VzUHJvdG9QAVpDZ29vZ2xlLmdvbGFu",
-            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hbmFseXRpY3MvYWRtaW4vdjFh",
-            "bHBoYTthZG1pbmIGcHJvdG8z"));
+            "GAQgASgJQgPgQQISEwoLcmVnaW9uX2NvZGUYBSABKAkSFAoHZGVsZXRlZBgG",
+            "IAEoCEID4EEDOj7qQTsKJWFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29t",
+            "L0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fSKKAwoIUHJvcGVydHkSEQoE",
+            "bmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhMKBnBhcmVudBgC",
+            "IAEoCUID4EEFEhkKDGRpc3BsYXlfbmFtZRgFIAEoCUID4EECEksKEWluZHVz",
+            "dHJ5X2NhdGVnb3J5GAYgASgOMjAuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52",
+            "MWFscGhhLkluZHVzdHJ5Q2F0ZWdvcnkSEQoJdGltZV96b25lGAcgASgJEhUK",
+            "DWN1cnJlbmN5X2NvZGUYCCABKAkSFAoHZGVsZXRlZBgJIAEoCEID4EEDOkLq",
+            "QT8KJmFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1Byb3BlcnR5EhVw",
+            "cm9wZXJ0aWVzL3twcm9wZXJ0eX0i5AIKFEFuZHJvaWRBcHBEYXRhU3RyZWFt",
+            "EhEKBG5hbWUYASABKAlCA+BBAxIcCg9maXJlYmFzZV9hcHBfaWQYAiABKAlC",
+            "A+BBAxI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIZCgxwYWNrYWdlX25hbWUYBSABKAlC",
+            "A+BBBRIUCgxkaXNwbGF5X25hbWUYBiABKAk6fupBewoyYW5hbHl0aWNzYWRt",
+            "aW4uZ29vZ2xlYXBpcy5jb20vQW5kcm9pZEFwcERhdGFTdHJlYW0SRXByb3Bl",
+            "cnRpZXMve3Byb3BlcnR5fS9hbmRyb2lkQXBwRGF0YVN0cmVhbXMve2FuZHJv",
+            "aWRfYXBwX2RhdGFfc3RyZWFtfSLUAgoQSW9zQXBwRGF0YVN0cmVhbRIRCgRu",
+            "YW1lGAEgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAIgASgJQgPgQQMS",
+            "NAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSGQoJYnVuZGxlX2lkGAUgASgJQgbgQQXgQQIS",
+            "FAoMZGlzcGxheV9uYW1lGAYgASgJOnLqQW8KLmFuYWx5dGljc2FkbWluLmdv",
+            "b2dsZWFwaXMuY29tL0lvc0FwcERhdGFTdHJlYW0SPXByb3BlcnRpZXMve3By",
+            "b3BlcnR5fS9pb3NBcHBEYXRhU3RyZWFtcy97aW9zX2FwcF9kYXRhX3N0cmVh",
+            "bX0i6AIKDVdlYkRhdGFTdHJlYW0SEQoEbmFtZRgBIAEoCUID4EEDEhsKDm1l",
+            "YXN1cmVtZW50X2lkGAIgASgJQgPgQQMSHAoPZmlyZWJhc2VfYXBwX2lkGAMg",
+            "ASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSGAoLZGVmYXVsdF91cmkYBiAB",
+            "KAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYByABKAlCA+BBAjpo6kFlCithbmFs",
+            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9XZWJEYXRhU3RyZWFtEjZwcm9w",
+            "ZXJ0aWVzL3twcm9wZXJ0eX0vd2ViRGF0YVN0cmVhbXMve3dlYl9kYXRhX3N0",
+            "cmVhbX0iygEKCFVzZXJMaW5rEgwKBG5hbWUYASABKAkSFQoNZW1haWxfYWRk",
+            "cmVzcxgCIAEoCRIUCgxkaXJlY3Rfcm9sZXMYAyADKAk6ggHqQX8KJmFuYWx5",
+            "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL1VzZXJMaW5rEihhY2NvdW50cy97",
+            "YWNjb3VudH0vdXNlckxpbmtzL3t1c2VyX2xpbmt9Eitwcm9wZXJ0aWVzL3tw",
+            "cm9wZXJ0eX0vdXNlckxpbmtzL3t1c2VyX2xpbmt9ImMKDUF1ZGl0VXNlckxp",
+            "bmsSDAoEbmFtZRgBIAEoCRIVCg1lbWFpbF9hZGRyZXNzGAIgASgJEhQKDGRp",
+            "cmVjdF9yb2xlcxgDIAMoCRIXCg9lZmZlY3RpdmVfcm9sZXMYBCADKAkimQQK",
+            "G0VuaGFuY2VkTWVhc3VyZW1lbnRTZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSFgoOc3RyZWFtX2VuYWJsZWQYAiABKAgSHwoScGFnZV92aWV3c19lbmFi",
+            "bGVkGAMgASgIQgPgQQMSFwoPc2Nyb2xsc19lbmFibGVkGAQgASgIEh8KF291",
+            "dGJvdW5kX2NsaWNrc19lbmFibGVkGAUgASgIEhsKE3NpdGVfc2VhcmNoX2Vu",
+            "YWJsZWQYByABKAgSIAoYdmlkZW9fZW5nYWdlbWVudF9lbmFibGVkGAkgASgI",
+            "Eh4KFmZpbGVfZG93bmxvYWRzX2VuYWJsZWQYCiABKAgSHwoScGFnZV9sb2Fk",
+            "c19lbmFibGVkGAwgASgIQgPgQQMSHAoUcGFnZV9jaGFuZ2VzX2VuYWJsZWQY",
+            "DSABKAgSIwoWc2VhcmNoX3F1ZXJ5X3BhcmFtZXRlchgQIAEoCUID4EECEhsK",
+            "E3VyaV9xdWVyeV9wYXJhbWV0ZXIYESABKAk6kwHqQY8BCjlhbmFseXRpY3Nh",
+            "ZG1pbi5nb29nbGVhcGlzLmNvbS9FbmhhbmNlZE1lYXN1cmVtZW50U2V0dGlu",
+            "Z3MSUnByb3BlcnRpZXMve3Byb3BlcnR5fS93ZWJEYXRhU3RyZWFtcy97d2Vi",
+            "X2RhdGFfc3RyZWFtfS9lbmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3MiowIK",
+            "DEZpcmViYXNlTGluaxIRCgRuYW1lGAEgASgJQgPgQQMSFAoHcHJvamVjdBgC",
+            "IAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEk4KE21heGltdW1fdXNlcl9hY2Nlc3MYBCAB",
+            "KA4yMS5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuTWF4aW11bVVz",
+            "ZXJBY2Nlc3M6ZOpBYQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
+            "RmlyZWJhc2VMaW5rEjNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZmlyZWJhc2VM",
+            "aW5rcy97ZmlyZWJhc2VfbGlua30ijwEKDUdsb2JhbFNpdGVUYWcSEQoEbmFt",
+            "ZRgBIAEoCUID4EEDEhQKB3NuaXBwZXQYAiABKAlCA+BBBTpV6kFSCithbmFs",
+            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9HbG9iYWxTaXRlVGFnEiNwcm9w",
+            "ZXJ0aWVzL3twcm9wZXJ0eX0vZ2xvYmFsU2l0ZVRhZyKQAwoNR29vZ2xlQWRz",
+            "TGluaxIRCgRuYW1lGAEgASgJQgPgQQMSGAoLY3VzdG9tZXJfaWQYAyABKAlC",
+            "A+BBBRIfChJjYW5fbWFuYWdlX2NsaWVudHMYBCABKAhCA+BBAxI/ChthZHNf",
+            "cGVyc29uYWxpemF0aW9uX2VuYWJsZWQYBSABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuQm9vbFZhbHVlEhoKDWVtYWlsX2FkZHJlc3MYBiABKAlCA+BBAxI0Cgtj",
+            "cmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAzpo6kFlCithbmFseXRpY3NhZG1pbi5nb29nbGVhcGlz",
+            "LmNvbS9Hb29nbGVBZHNMaW5rEjZwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vZ29v",
+            "Z2xlQWRzTGlua3Mve2dvb2dsZV9hZHNfbGlua30i6wIKE0RhdGFTaGFyaW5n",
+            "U2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEisKI3NoYXJpbmdfd2l0aF9n",
+            "b29nbGVfc3VwcG9ydF9lbmFibGVkGAIgASgIEjIKKnNoYXJpbmdfd2l0aF9n",
+            "b29nbGVfYXNzaWduZWRfc2FsZXNfZW5hYmxlZBgDIAEoCBItCiVzaGFyaW5n",
+            "X3dpdGhfZ29vZ2xlX2FueV9zYWxlc19lbmFibGVkGAQgASgIEiwKJHNoYXJp",
+            "bmdfd2l0aF9nb29nbGVfcHJvZHVjdHNfZW5hYmxlZBgFIAEoCBIjChtzaGFy",
+            "aW5nX3dpdGhfb3RoZXJzX2VuYWJsZWQYBiABKAg6XupBWwoxYW5hbHl0aWNz",
+            "YWRtaW4uZ29vZ2xlYXBpcy5jb20vRGF0YVNoYXJpbmdTZXR0aW5ncxImYWNj",
+            "b3VudHMve2FjY291bnR9L2RhdGFTaGFyaW5nU2V0dGluZ3MilQIKDkFjY291",
+            "bnRTdW1tYXJ5EgwKBG5hbWUYASABKAkSOwoHYWNjb3VudBgCIAEoCUIq+kEn",
+            "CiVhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhQKDGRp",
+            "c3BsYXlfbmFtZRgDIAEoCRJLChJwcm9wZXJ0eV9zdW1tYXJpZXMYBCADKAsy",
+            "Ly5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuUHJvcGVydHlTdW1t",
+            "YXJ5OlXqQVIKLGFuYWx5dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0FjY291",
+            "bnRTdW1tYXJ5EiJhY2NvdW50U3VtbWFyaWVzL3thY2NvdW50X3N1bW1hcnl9",
+            "ImYKD1Byb3BlcnR5U3VtbWFyeRI9Cghwcm9wZXJ0eRgBIAEoCUIr+kEoCiZh",
+            "bmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9Qcm9wZXJ0eRIUCgxkaXNw",
+            "bGF5X25hbWUYAiABKAkqpwEKEU1heGltdW1Vc2VyQWNjZXNzEiMKH01BWElN",
+            "VU1fVVNFUl9BQ0NFU1NfVU5TUEVDSUZJRUQQABINCglOT19BQ0NFU1MQARIU",
+            "ChBSRUFEX0FORF9BTkFMWVpFEAISIgoeRURJVE9SX1dJVEhPVVRfTElOS19N",
+            "QU5BR0VNRU5UEAMSJAogRURJVE9SX0lOQ0xVRElOR19MSU5LX01BTkFHRU1F",
+            "TlQQBCqqBAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRFR09S",
+            "WV9VTlNQRUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVTU19B",
+            "TkRfSU5EVVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhFQUxU",
+            "SENBUkUQBBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RIRVIQ",
+            "BxIaChZBUlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FORF9G",
+            "SVRORVNTEAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09EX0FO",
+            "RF9EUklOSxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VSRRAN",
+            "EhMKD0hPTUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxFQ09N",
+            "EA8SFgoSTEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9OTElO",
+            "RV9DT01NVU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQKEFBF",
+            "VFNfQU5EX0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVSRU5D",
+            "RRAWEgsKB1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9FRFVD",
+            "QVRJT04QGRIMCghTSE9QUElORxAaQnsKImNvbS5nb29nbGUuYW5hbHl0aWNz",
+            "LmFkbWluLnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFaQ2dvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYW5hbHl0aWNzL2FkbWluL3Yx",
+            "YWxwaGE7YWRtaW5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.MaximumUserAccess), typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "CountryCode", "Deleted" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Account), global::Google.Analytics.Admin.V1Alpha.Account.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "DisplayName", "RegionCode", "Deleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.Property), global::Google.Analytics.Admin.V1Alpha.Property.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Parent", "DisplayName", "IndustryCategory", "TimeZone", "CurrencyCode", "Deleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream), global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream.Parser, new[]{ "Name", "FirebaseAppId", "CreateTime", "UpdateTime", "PackageName", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.IosAppDataStream), global::Google.Analytics.Admin.V1Alpha.IosAppDataStream.Parser, new[]{ "Name", "FirebaseAppId", "CreateTime", "UpdateTime", "BundleId", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.WebDataStream), global::Google.Analytics.Admin.V1Alpha.WebDataStream.Parser, new[]{ "Name", "MeasurementId", "FirebaseAppId", "CreateTime", "UpdateTime", "DefaultUri", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.UserLink), global::Google.Analytics.Admin.V1Alpha.UserLink.Parser, new[]{ "Name", "EmailAddress", "DirectRoles" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AuditUserLink), global::Google.Analytics.Admin.V1Alpha.AuditUserLink.Parser, new[]{ "Name", "EmailAddress", "DirectRoles", "EffectiveRoles" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings), global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings.Parser, new[]{ "Name", "StreamEnabled", "PageViewsEnabled", "ScrollsEnabled", "OutboundClicksEnabled", "ContentViewsEnabled", "SiteSearchEnabled", "FormInteractionsEnabled", "VideoEngagementEnabled", "FileDownloadsEnabled", "DataTaggedElementClicksEnabled", "PageLoadsEnabled", "PageChangesEnabled", "ArticlesAndBlogsEnabled", "ProductsAndEcommerceEnabled", "SearchQueryParameter", "UrlQueryParameter", "ExcludedDomains" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings), global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings.Parser, new[]{ "Name", "StreamEnabled", "PageViewsEnabled", "ScrollsEnabled", "OutboundClicksEnabled", "SiteSearchEnabled", "VideoEngagementEnabled", "FileDownloadsEnabled", "PageLoadsEnabled", "PageChangesEnabled", "SearchQueryParameter", "UriQueryParameter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.FirebaseLink), global::Google.Analytics.Admin.V1Alpha.FirebaseLink.Parser, new[]{ "Name", "Project", "CreateTime", "MaximumUserAccess" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag), global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag.Parser, new[]{ "Snippet", "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink), global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink.Parser, new[]{ "Name", "Parent", "CustomerId", "CanManageClients", "AdsPersonalizationEnabled", "EmailAddress", "CreateTime", "UpdateTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag), global::Google.Analytics.Admin.V1Alpha.GlobalSiteTag.Parser, new[]{ "Name", "Snippet" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink), global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink.Parser, new[]{ "Name", "CustomerId", "CanManageClients", "AdsPersonalizationEnabled", "EmailAddress", "CreateTime", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataSharingSettings), global::Google.Analytics.Admin.V1Alpha.DataSharingSettings.Parser, new[]{ "Name", "SharingWithGoogleSupportEnabled", "SharingWithGoogleAssignedSalesEnabled", "SharingWithGoogleAnySalesEnabled", "SharingWithGoogleProductsEnabled", "SharingWithOthersEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccountSummary), global::Google.Analytics.Admin.V1Alpha.AccountSummary.Parser, new[]{ "Name", "Account", "DisplayName", "PropertySummaries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.PropertySummary), global::Google.Analytics.Admin.V1Alpha.PropertySummary.Parser, new[]{ "Property", "DisplayName" }, null, null, null, null)
@@ -351,7 +346,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       displayName_ = other.displayName_;
-      countryCode_ = other.countryCode_;
+      regionCode_ = other.regionCode_;
       deleted_ = other.deleted_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -419,21 +414,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "country_code" field.</summary>
-    public const int CountryCodeFieldNumber = 5;
-    private string countryCode_ = "";
+    /// <summary>Field number for the "region_code" field.</summary>
+    public const int RegionCodeFieldNumber = 5;
+    private string regionCode_ = "";
     /// <summary>
-    /// Country of business. Must be a non-deprecated code for a UN M.49 region.
-    ///
-    /// https:
-    /// //unicode.org/cldr/charts/latest/supplem
-    /// // ental/territory_containment_un_m_49.html
+    /// Country of business. Must be a Unicode CLDR region code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CountryCode {
-      get { return countryCode_; }
+    public string RegionCode {
+      get { return regionCode_; }
       set {
-        countryCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        regionCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -469,7 +460,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (DisplayName != other.DisplayName) return false;
-      if (CountryCode != other.CountryCode) return false;
+      if (RegionCode != other.RegionCode) return false;
       if (Deleted != other.Deleted) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -481,7 +472,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (CountryCode.Length != 0) hash ^= CountryCode.GetHashCode();
+      if (RegionCode.Length != 0) hash ^= RegionCode.GetHashCode();
       if (Deleted != false) hash ^= Deleted.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -515,9 +506,9 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
-      if (CountryCode.Length != 0) {
+      if (RegionCode.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(CountryCode);
+        output.WriteString(RegionCode);
       }
       if (Deleted != false) {
         output.WriteRawTag(48);
@@ -548,9 +539,9 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
-      if (CountryCode.Length != 0) {
+      if (RegionCode.Length != 0) {
         output.WriteRawTag(42);
-        output.WriteString(CountryCode);
+        output.WriteString(RegionCode);
       }
       if (Deleted != false) {
         output.WriteRawTag(48);
@@ -577,8 +568,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
-      if (CountryCode.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(CountryCode);
+      if (RegionCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RegionCode);
       }
       if (Deleted != false) {
         size += 1 + 1;
@@ -612,8 +603,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
       }
-      if (other.CountryCode.Length != 0) {
-        CountryCode = other.CountryCode;
+      if (other.RegionCode.Length != 0) {
+        RegionCode = other.RegionCode;
       }
       if (other.Deleted != false) {
         Deleted = other.Deleted;
@@ -655,7 +646,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             break;
           }
           case 42: {
-            CountryCode = input.ReadString();
+            RegionCode = input.ReadString();
             break;
           }
           case 48: {
@@ -699,7 +690,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             break;
           }
           case 42: {
-            CountryCode = input.ReadString();
+            RegionCode = input.ReadString();
             break;
           }
           case 48: {
@@ -898,9 +889,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int DeletedFieldNumber = 9;
     private bool deleted_;
     /// <summary>
-    /// Output only. Indicates whether this Property is soft-deleted or not.
-    /// Deleted properties are excluded from List results unless specifically
-    /// requested.
+    /// Output only. Indicates whether this Property is soft-deleted or not. Deleted properties
+    /// are excluded from List results unless specifically requested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Deleted {
@@ -3051,19 +3041,13 @@ namespace Google.Analytics.Admin.V1Alpha {
       pageViewsEnabled_ = other.pageViewsEnabled_;
       scrollsEnabled_ = other.scrollsEnabled_;
       outboundClicksEnabled_ = other.outboundClicksEnabled_;
-      contentViewsEnabled_ = other.contentViewsEnabled_;
       siteSearchEnabled_ = other.siteSearchEnabled_;
-      formInteractionsEnabled_ = other.formInteractionsEnabled_;
       videoEngagementEnabled_ = other.videoEngagementEnabled_;
       fileDownloadsEnabled_ = other.fileDownloadsEnabled_;
-      dataTaggedElementClicksEnabled_ = other.dataTaggedElementClicksEnabled_;
       pageLoadsEnabled_ = other.pageLoadsEnabled_;
       pageChangesEnabled_ = other.pageChangesEnabled_;
-      articlesAndBlogsEnabled_ = other.articlesAndBlogsEnabled_;
-      productsAndEcommerceEnabled_ = other.productsAndEcommerceEnabled_;
       searchQueryParameter_ = other.searchQueryParameter_;
-      urlQueryParameter_ = other.urlQueryParameter_;
-      excludedDomains_ = other.excludedDomains_;
+      uriQueryParameter_ = other.uriQueryParameter_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3078,7 +3062,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// <summary>
     /// Output only. Resource name of this Data Stream.
     /// Format:
-    ///
     /// properties/{property_id}/webDataStreams/{stream_id}/enhancedMeasurementSettings
     /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
     /// </summary>
@@ -3112,8 +3095,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int PageViewsEnabledFieldNumber = 3;
     private bool pageViewsEnabled_;
     /// <summary>
-    /// Output only. If enabled, capture a page view event each time a page loads
-    /// or the website changes the browser history state.
+    /// Output only. If enabled, capture a page view event each time a page loads or the
+    /// website changes the browser history state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool PageViewsEnabled {
@@ -3153,21 +3136,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "content_views_enabled" field.</summary>
-    public const int ContentViewsEnabledFieldNumber = 6;
-    private bool contentViewsEnabled_;
-    /// <summary>
-    /// Capture events when your visitors view content on your site that has
-    /// structured data (eg, articles, blog posts, product details screens, etc.).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool ContentViewsEnabled {
-      get { return contentViewsEnabled_; }
-      set {
-        contentViewsEnabled_ = value;
-      }
-    }
-
     /// <summary>Field number for the "site_search_enabled" field.</summary>
     public const int SiteSearchEnabledFieldNumber = 7;
     private bool siteSearchEnabled_;
@@ -3180,21 +3148,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       get { return siteSearchEnabled_; }
       set {
         siteSearchEnabled_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "form_interactions_enabled" field.</summary>
-    public const int FormInteractionsEnabledFieldNumber = 8;
-    private bool formInteractionsEnabled_;
-    /// <summary>
-    /// If enabled, capture a view search results event each time a visitor
-    /// interacts with a form on your site.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool FormInteractionsEnabled {
-      get { return formInteractionsEnabled_; }
-      set {
-        formInteractionsEnabled_ = value;
       }
     }
 
@@ -3228,26 +3181,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "data_tagged_element_clicks_enabled" field.</summary>
-    public const int DataTaggedElementClicksEnabledFieldNumber = 11;
-    private bool dataTaggedElementClicksEnabled_;
-    /// <summary>
-    /// If enabled, capture a click event each time a visitor clicks a link or
-    /// element that has data attributes beginning with "data-ga".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool DataTaggedElementClicksEnabled {
-      get { return dataTaggedElementClicksEnabled_; }
-      set {
-        dataTaggedElementClicksEnabled_ = value;
-      }
-    }
-
     /// <summary>Field number for the "page_loads_enabled" field.</summary>
     public const int PageLoadsEnabledFieldNumber = 12;
     private bool pageLoadsEnabled_;
     /// <summary>
-    /// If enabled, capture a page view event each time a page loads.
+    /// Output only. If enabled, capture a page view event each time a page loads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool PageLoadsEnabled {
@@ -3272,36 +3210,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "articles_and_blogs_enabled" field.</summary>
-    public const int ArticlesAndBlogsEnabledFieldNumber = 14;
-    private bool articlesAndBlogsEnabled_;
-    /// <summary>
-    /// Capture events when your visitors view content on your site that has
-    /// articles or blog posts.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool ArticlesAndBlogsEnabled {
-      get { return articlesAndBlogsEnabled_; }
-      set {
-        articlesAndBlogsEnabled_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "products_and_ecommerce_enabled" field.</summary>
-    public const int ProductsAndEcommerceEnabledFieldNumber = 15;
-    private bool productsAndEcommerceEnabled_;
-    /// <summary>
-    /// Capture events when your visitors view content on your site that has
-    /// product details screens, etc.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool ProductsAndEcommerceEnabled {
-      get { return productsAndEcommerceEnabled_; }
-      set {
-        productsAndEcommerceEnabled_ = value;
-      }
-    }
-
     /// <summary>Field number for the "search_query_parameter" field.</summary>
     public const int SearchQueryParameterFieldNumber = 16;
     private string searchQueryParameter_ = "";
@@ -3317,32 +3225,18 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
     }
 
-    /// <summary>Field number for the "url_query_parameter" field.</summary>
-    public const int UrlQueryParameterFieldNumber = 17;
-    private string urlQueryParameter_ = "";
+    /// <summary>Field number for the "uri_query_parameter" field.</summary>
+    public const int UriQueryParameterFieldNumber = 17;
+    private string uriQueryParameter_ = "";
     /// <summary>
     /// Additional URL query parameters.
     /// Max length is 1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string UrlQueryParameter {
-      get { return urlQueryParameter_; }
+    public string UriQueryParameter {
+      get { return uriQueryParameter_; }
       set {
-        urlQueryParameter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "excluded_domains" field.</summary>
-    public const int ExcludedDomainsFieldNumber = 18;
-    private string excludedDomains_ = "";
-    /// <summary>
-    /// Domains to exclude from measurement. Max length is 1024 characters.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ExcludedDomains {
-      get { return excludedDomains_; }
-      set {
-        excludedDomains_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        uriQueryParameter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3364,19 +3258,13 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (PageViewsEnabled != other.PageViewsEnabled) return false;
       if (ScrollsEnabled != other.ScrollsEnabled) return false;
       if (OutboundClicksEnabled != other.OutboundClicksEnabled) return false;
-      if (ContentViewsEnabled != other.ContentViewsEnabled) return false;
       if (SiteSearchEnabled != other.SiteSearchEnabled) return false;
-      if (FormInteractionsEnabled != other.FormInteractionsEnabled) return false;
       if (VideoEngagementEnabled != other.VideoEngagementEnabled) return false;
       if (FileDownloadsEnabled != other.FileDownloadsEnabled) return false;
-      if (DataTaggedElementClicksEnabled != other.DataTaggedElementClicksEnabled) return false;
       if (PageLoadsEnabled != other.PageLoadsEnabled) return false;
       if (PageChangesEnabled != other.PageChangesEnabled) return false;
-      if (ArticlesAndBlogsEnabled != other.ArticlesAndBlogsEnabled) return false;
-      if (ProductsAndEcommerceEnabled != other.ProductsAndEcommerceEnabled) return false;
       if (SearchQueryParameter != other.SearchQueryParameter) return false;
-      if (UrlQueryParameter != other.UrlQueryParameter) return false;
-      if (ExcludedDomains != other.ExcludedDomains) return false;
+      if (UriQueryParameter != other.UriQueryParameter) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3388,19 +3276,13 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (PageViewsEnabled != false) hash ^= PageViewsEnabled.GetHashCode();
       if (ScrollsEnabled != false) hash ^= ScrollsEnabled.GetHashCode();
       if (OutboundClicksEnabled != false) hash ^= OutboundClicksEnabled.GetHashCode();
-      if (ContentViewsEnabled != false) hash ^= ContentViewsEnabled.GetHashCode();
       if (SiteSearchEnabled != false) hash ^= SiteSearchEnabled.GetHashCode();
-      if (FormInteractionsEnabled != false) hash ^= FormInteractionsEnabled.GetHashCode();
       if (VideoEngagementEnabled != false) hash ^= VideoEngagementEnabled.GetHashCode();
       if (FileDownloadsEnabled != false) hash ^= FileDownloadsEnabled.GetHashCode();
-      if (DataTaggedElementClicksEnabled != false) hash ^= DataTaggedElementClicksEnabled.GetHashCode();
       if (PageLoadsEnabled != false) hash ^= PageLoadsEnabled.GetHashCode();
       if (PageChangesEnabled != false) hash ^= PageChangesEnabled.GetHashCode();
-      if (ArticlesAndBlogsEnabled != false) hash ^= ArticlesAndBlogsEnabled.GetHashCode();
-      if (ProductsAndEcommerceEnabled != false) hash ^= ProductsAndEcommerceEnabled.GetHashCode();
       if (SearchQueryParameter.Length != 0) hash ^= SearchQueryParameter.GetHashCode();
-      if (UrlQueryParameter.Length != 0) hash ^= UrlQueryParameter.GetHashCode();
-      if (ExcludedDomains.Length != 0) hash ^= ExcludedDomains.GetHashCode();
+      if (UriQueryParameter.Length != 0) hash ^= UriQueryParameter.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3437,17 +3319,9 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(40);
         output.WriteBool(OutboundClicksEnabled);
       }
-      if (ContentViewsEnabled != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(ContentViewsEnabled);
-      }
       if (SiteSearchEnabled != false) {
         output.WriteRawTag(56);
         output.WriteBool(SiteSearchEnabled);
-      }
-      if (FormInteractionsEnabled != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(FormInteractionsEnabled);
       }
       if (VideoEngagementEnabled != false) {
         output.WriteRawTag(72);
@@ -3457,10 +3331,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(80);
         output.WriteBool(FileDownloadsEnabled);
       }
-      if (DataTaggedElementClicksEnabled != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(DataTaggedElementClicksEnabled);
-      }
       if (PageLoadsEnabled != false) {
         output.WriteRawTag(96);
         output.WriteBool(PageLoadsEnabled);
@@ -3469,25 +3339,13 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(104);
         output.WriteBool(PageChangesEnabled);
       }
-      if (ArticlesAndBlogsEnabled != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(ArticlesAndBlogsEnabled);
-      }
-      if (ProductsAndEcommerceEnabled != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(ProductsAndEcommerceEnabled);
-      }
       if (SearchQueryParameter.Length != 0) {
         output.WriteRawTag(130, 1);
         output.WriteString(SearchQueryParameter);
       }
-      if (UrlQueryParameter.Length != 0) {
+      if (UriQueryParameter.Length != 0) {
         output.WriteRawTag(138, 1);
-        output.WriteString(UrlQueryParameter);
-      }
-      if (ExcludedDomains.Length != 0) {
-        output.WriteRawTag(146, 1);
-        output.WriteString(ExcludedDomains);
+        output.WriteString(UriQueryParameter);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3518,17 +3376,9 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(40);
         output.WriteBool(OutboundClicksEnabled);
       }
-      if (ContentViewsEnabled != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(ContentViewsEnabled);
-      }
       if (SiteSearchEnabled != false) {
         output.WriteRawTag(56);
         output.WriteBool(SiteSearchEnabled);
-      }
-      if (FormInteractionsEnabled != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(FormInteractionsEnabled);
       }
       if (VideoEngagementEnabled != false) {
         output.WriteRawTag(72);
@@ -3538,10 +3388,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(80);
         output.WriteBool(FileDownloadsEnabled);
       }
-      if (DataTaggedElementClicksEnabled != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(DataTaggedElementClicksEnabled);
-      }
       if (PageLoadsEnabled != false) {
         output.WriteRawTag(96);
         output.WriteBool(PageLoadsEnabled);
@@ -3550,25 +3396,13 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(104);
         output.WriteBool(PageChangesEnabled);
       }
-      if (ArticlesAndBlogsEnabled != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(ArticlesAndBlogsEnabled);
-      }
-      if (ProductsAndEcommerceEnabled != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(ProductsAndEcommerceEnabled);
-      }
       if (SearchQueryParameter.Length != 0) {
         output.WriteRawTag(130, 1);
         output.WriteString(SearchQueryParameter);
       }
-      if (UrlQueryParameter.Length != 0) {
+      if (UriQueryParameter.Length != 0) {
         output.WriteRawTag(138, 1);
-        output.WriteString(UrlQueryParameter);
-      }
-      if (ExcludedDomains.Length != 0) {
-        output.WriteRawTag(146, 1);
-        output.WriteString(ExcludedDomains);
+        output.WriteString(UriQueryParameter);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3594,13 +3428,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (OutboundClicksEnabled != false) {
         size += 1 + 1;
       }
-      if (ContentViewsEnabled != false) {
-        size += 1 + 1;
-      }
       if (SiteSearchEnabled != false) {
-        size += 1 + 1;
-      }
-      if (FormInteractionsEnabled != false) {
         size += 1 + 1;
       }
       if (VideoEngagementEnabled != false) {
@@ -3609,29 +3437,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (FileDownloadsEnabled != false) {
         size += 1 + 1;
       }
-      if (DataTaggedElementClicksEnabled != false) {
-        size += 1 + 1;
-      }
       if (PageLoadsEnabled != false) {
         size += 1 + 1;
       }
       if (PageChangesEnabled != false) {
         size += 1 + 1;
       }
-      if (ArticlesAndBlogsEnabled != false) {
-        size += 1 + 1;
-      }
-      if (ProductsAndEcommerceEnabled != false) {
-        size += 1 + 1;
-      }
       if (SearchQueryParameter.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(SearchQueryParameter);
       }
-      if (UrlQueryParameter.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(UrlQueryParameter);
-      }
-      if (ExcludedDomains.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(ExcludedDomains);
+      if (UriQueryParameter.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(UriQueryParameter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3659,14 +3475,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (other.OutboundClicksEnabled != false) {
         OutboundClicksEnabled = other.OutboundClicksEnabled;
       }
-      if (other.ContentViewsEnabled != false) {
-        ContentViewsEnabled = other.ContentViewsEnabled;
-      }
       if (other.SiteSearchEnabled != false) {
         SiteSearchEnabled = other.SiteSearchEnabled;
-      }
-      if (other.FormInteractionsEnabled != false) {
-        FormInteractionsEnabled = other.FormInteractionsEnabled;
       }
       if (other.VideoEngagementEnabled != false) {
         VideoEngagementEnabled = other.VideoEngagementEnabled;
@@ -3674,29 +3484,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (other.FileDownloadsEnabled != false) {
         FileDownloadsEnabled = other.FileDownloadsEnabled;
       }
-      if (other.DataTaggedElementClicksEnabled != false) {
-        DataTaggedElementClicksEnabled = other.DataTaggedElementClicksEnabled;
-      }
       if (other.PageLoadsEnabled != false) {
         PageLoadsEnabled = other.PageLoadsEnabled;
       }
       if (other.PageChangesEnabled != false) {
         PageChangesEnabled = other.PageChangesEnabled;
       }
-      if (other.ArticlesAndBlogsEnabled != false) {
-        ArticlesAndBlogsEnabled = other.ArticlesAndBlogsEnabled;
-      }
-      if (other.ProductsAndEcommerceEnabled != false) {
-        ProductsAndEcommerceEnabled = other.ProductsAndEcommerceEnabled;
-      }
       if (other.SearchQueryParameter.Length != 0) {
         SearchQueryParameter = other.SearchQueryParameter;
       }
-      if (other.UrlQueryParameter.Length != 0) {
-        UrlQueryParameter = other.UrlQueryParameter;
-      }
-      if (other.ExcludedDomains.Length != 0) {
-        ExcludedDomains = other.ExcludedDomains;
+      if (other.UriQueryParameter.Length != 0) {
+        UriQueryParameter = other.UriQueryParameter;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3732,16 +3530,8 @@ namespace Google.Analytics.Admin.V1Alpha {
             OutboundClicksEnabled = input.ReadBool();
             break;
           }
-          case 48: {
-            ContentViewsEnabled = input.ReadBool();
-            break;
-          }
           case 56: {
             SiteSearchEnabled = input.ReadBool();
-            break;
-          }
-          case 64: {
-            FormInteractionsEnabled = input.ReadBool();
             break;
           }
           case 72: {
@@ -3752,10 +3542,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             FileDownloadsEnabled = input.ReadBool();
             break;
           }
-          case 88: {
-            DataTaggedElementClicksEnabled = input.ReadBool();
-            break;
-          }
           case 96: {
             PageLoadsEnabled = input.ReadBool();
             break;
@@ -3764,24 +3550,12 @@ namespace Google.Analytics.Admin.V1Alpha {
             PageChangesEnabled = input.ReadBool();
             break;
           }
-          case 112: {
-            ArticlesAndBlogsEnabled = input.ReadBool();
-            break;
-          }
-          case 120: {
-            ProductsAndEcommerceEnabled = input.ReadBool();
-            break;
-          }
           case 130: {
             SearchQueryParameter = input.ReadString();
             break;
           }
           case 138: {
-            UrlQueryParameter = input.ReadString();
-            break;
-          }
-          case 146: {
-            ExcludedDomains = input.ReadString();
+            UriQueryParameter = input.ReadString();
             break;
           }
         }
@@ -3818,16 +3592,8 @@ namespace Google.Analytics.Admin.V1Alpha {
             OutboundClicksEnabled = input.ReadBool();
             break;
           }
-          case 48: {
-            ContentViewsEnabled = input.ReadBool();
-            break;
-          }
           case 56: {
             SiteSearchEnabled = input.ReadBool();
-            break;
-          }
-          case 64: {
-            FormInteractionsEnabled = input.ReadBool();
             break;
           }
           case 72: {
@@ -3838,10 +3604,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             FileDownloadsEnabled = input.ReadBool();
             break;
           }
-          case 88: {
-            DataTaggedElementClicksEnabled = input.ReadBool();
-            break;
-          }
           case 96: {
             PageLoadsEnabled = input.ReadBool();
             break;
@@ -3850,24 +3612,12 @@ namespace Google.Analytics.Admin.V1Alpha {
             PageChangesEnabled = input.ReadBool();
             break;
           }
-          case 112: {
-            ArticlesAndBlogsEnabled = input.ReadBool();
-            break;
-          }
-          case 120: {
-            ProductsAndEcommerceEnabled = input.ReadBool();
-            break;
-          }
           case 130: {
             SearchQueryParameter = input.ReadString();
             break;
           }
           case 138: {
-            UrlQueryParameter = input.ReadString();
-            break;
-          }
-          case 146: {
-            ExcludedDomains = input.ReadString();
+            UriQueryParameter = input.ReadString();
             break;
           }
         }
@@ -3939,9 +3689,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int ProjectFieldNumber = 2;
     private string project_ = "";
     /// <summary>
-    /// Immutable. Firebase project resource name. When creating a FirebaseLink,
-    /// you may provide this resource name using either a project number or project
-    /// ID. Once this resource has been created, returned FirebaseLinks will always
+    /// Immutable. Firebase project resource name. When creating a FirebaseLink, you may
+    /// provide this resource name using either a project number or project ID.
+    /// Once this resource has been created, returned FirebaseLinks will always
     /// have a project_name that contains a project number.
     ///
     /// Format: 'projects/{project number}'
@@ -4221,8 +3971,8 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GlobalSiteTag(GlobalSiteTag other) : this() {
-      snippet_ = other.snippet_;
       name_ = other.name_;
+      snippet_ = other.snippet_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4231,32 +3981,33 @@ namespace Google.Analytics.Admin.V1Alpha {
       return new GlobalSiteTag(this);
     }
 
-    /// <summary>Field number for the "snippet" field.</summary>
-    public const int SnippetFieldNumber = 1;
-    private string snippet_ = "";
-    /// <summary>
-    /// Immutable. JavaScript code snippet to be pasted as the first item into the
-    /// head tag of every webpage to measure.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Snippet {
-      get { return snippet_; }
-      set {
-        snippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
+    public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of this tag.
+    /// Output only. Resource name for this GlobalSiteTag resource.
+    /// Format: properties/{propertyId}/globalSiteTag
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "snippet" field.</summary>
+    public const int SnippetFieldNumber = 2;
+    private string snippet_ = "";
+    /// <summary>
+    /// Immutable. JavaScript code snippet to be pasted as the first item into the head tag of
+    /// every webpage to measure.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Snippet {
+      get { return snippet_; }
+      set {
+        snippet_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4273,16 +4024,16 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Snippet != other.Snippet) return false;
       if (Name != other.Name) return false;
+      if (Snippet != other.Snippet) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Snippet.Length != 0) hash ^= Snippet.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Snippet.Length != 0) hash ^= Snippet.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4299,13 +4050,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Snippet.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Snippet);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Name);
+      }
+      if (Snippet.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Snippet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4316,13 +4067,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Snippet.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Snippet);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Name);
+      }
+      if (Snippet.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Snippet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4333,11 +4084,11 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Snippet.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Snippet);
-      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Snippet.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Snippet);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4350,11 +4101,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (other == null) {
         return;
       }
-      if (other.Snippet.Length != 0) {
-        Snippet = other.Snippet;
-      }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.Snippet.Length != 0) {
+        Snippet = other.Snippet;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4371,11 +4122,11 @@ namespace Google.Analytics.Admin.V1Alpha {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Snippet = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 18: {
-            Name = input.ReadString();
+            Snippet = input.ReadString();
             break;
           }
         }
@@ -4393,11 +4144,11 @@ namespace Google.Analytics.Admin.V1Alpha {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Snippet = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 18: {
-            Name = input.ReadString();
+            Snippet = input.ReadString();
             break;
           }
         }
@@ -4440,7 +4191,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GoogleAdsLink(GoogleAdsLink other) : this() {
       name_ = other.name_;
-      parent_ = other.parent_;
       customerId_ = other.customerId_;
       canManageClients_ = other.canManageClients_;
       AdsPersonalizationEnabled = other.AdsPersonalizationEnabled;
@@ -4459,8 +4209,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. Format:
-    /// properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
+    /// Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId}
     ///
     /// Note: googleAdsLinkId is not the Google Ads customer ID.
     /// </summary>
@@ -4469,20 +4218,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "parent" field.</summary>
-    public const int ParentFieldNumber = 2;
-    private string parent_ = "";
-    /// <summary>
-    /// Immutable. Format: properties/{propertyId}
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Parent {
-      get { return parent_; }
-      set {
-        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4590,7 +4325,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         return true;
       }
       if (Name != other.Name) return false;
-      if (Parent != other.Parent) return false;
       if (CustomerId != other.CustomerId) return false;
       if (CanManageClients != other.CanManageClients) return false;
       if (AdsPersonalizationEnabled != other.AdsPersonalizationEnabled) return false;
@@ -4604,7 +4338,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (CustomerId.Length != 0) hash ^= CustomerId.GetHashCode();
       if (CanManageClients != false) hash ^= CanManageClients.GetHashCode();
       if (adsPersonalizationEnabled_ != null) hash ^= AdsPersonalizationEnabled.GetHashCode();
@@ -4630,10 +4363,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Name);
-      }
-      if (Parent.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Parent);
       }
       if (CustomerId.Length != 0) {
         output.WriteRawTag(26);
@@ -4671,10 +4400,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (Parent.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Parent);
-      }
       if (CustomerId.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(CustomerId);
@@ -4710,9 +4435,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (Parent.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
-      }
       if (CustomerId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerId);
       }
@@ -4744,9 +4466,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
-      }
-      if (other.Parent.Length != 0) {
-        Parent = other.Parent;
       }
       if (other.CustomerId.Length != 0) {
         CustomerId = other.CustomerId;
@@ -4790,10 +4509,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             break;
           case 10: {
             Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Parent = input.ReadString();
             break;
           }
           case 26: {
@@ -4845,10 +4560,6 @@ namespace Google.Analytics.Admin.V1Alpha {
             break;
           case 10: {
             Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Parent = input.ReadString();
             break;
           }
           case 26: {
