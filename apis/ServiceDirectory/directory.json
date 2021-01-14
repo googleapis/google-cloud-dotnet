@@ -2493,6 +2493,22 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ErrorReporting.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/devtools/cloudprofiler/v2",
+      "Name": "cloudprofiler.googleapis.com",
+      "Title": "Cloud Profiler API",
+      "Description": "Manages continuous profiling information.",
+      "ServiceConfigFile": "google/devtools/cloudprofiler/v2/cloudprofiler_v2.yaml",
+      "Version": "v2",
+      "PackageFromDirectory": "google.devtools.cloudprofiler.v2",
+      "PackageFromProtos": "google.devtools.cloudprofiler.v2",
+      "ImportDirectories": [
+        "google/api",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Devtools.Cloudprofiler.V2"
+    },
+    {
       "ServiceDirectory": "google/devtools/cloudtrace/v1",
       "Name": "cloudtrace.googleapis.com",
       "Title": "Stackdriver Trace API",
