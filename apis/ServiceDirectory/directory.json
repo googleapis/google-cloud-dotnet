@@ -2319,6 +2319,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Workflows.Executions.V1Beta"
     },
     {
+      "ServiceDirectory": "google/cloud/workflows/v1",
+      "Name": "workflows.googleapis.com",
+      "Title": "Workflows API",
+      "Description": "Orchestrate Workflows that invoke Google Cloud APIs, SaaS APIs or private API endpoints.",
+      "ServiceConfigFile": "google/cloud/workflows/v1/workflows_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.workflows.v1",
+      "PackageFromProtos": "google.cloud.workflows.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Workflows.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/workflows/v1beta",
       "Name": "workflows.googleapis.com",
       "Title": "Workflows API",
