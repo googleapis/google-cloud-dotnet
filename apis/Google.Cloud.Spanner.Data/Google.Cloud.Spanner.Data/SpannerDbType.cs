@@ -191,6 +191,26 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
+        /// <summary>
+        /// Converts a <see cref="DbType"/> to the corresponding <see cref="SpannerDbType"/>
+        /// </summary>
+        internal static SpannerDbType FromDbType(DbType dbType)
+        {
+            return dbType switch
+            {
+                DbType.Binary => Bytes,
+                DbType.Boolean => Bool,
+                DbType.Date => Date,
+                DbType.DateTime => Timestamp,
+                DbType.Double => Float64,
+                DbType.Int64 => Int64,
+                DbType.VarNumeric => Numeric,
+                DbType.Object => Unspecified,
+                DbType.String => String,
+                _ => throw new ArgumentOutOfRangeException(nameof(DbType), dbType, null),
+            };
+        }
+
         internal static SpannerDbType FromProtobufType(V1.Type type)
         {
             switch (type.Code)
@@ -250,13 +270,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         internal static SpannerDbType ForStruct(SpannerStruct spannerStruct) =>
             new SpannerDbType(TypeCode.Struct, spannerStruct.Select(f => new StructField(f.Name, f.Type)).ToList());
-
-        /// <summary>
-        /// Factory method for creating a SpannerDbType from SpannerNumeric. Public access would be via the instance
-        /// method; making this internal allows us to avoid exposing constructors even internally.
-        /// </summary>
-        internal static SpannerDbType ForNumeric(SpannerNumeric spannerNumeric) =>
-            new SpannerDbType(TypeCode.Numeric);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.

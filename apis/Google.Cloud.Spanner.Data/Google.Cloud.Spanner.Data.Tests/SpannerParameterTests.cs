@@ -51,22 +51,33 @@ namespace Google.Cloud.Spanner.Data.Tests
         // TODO: There is no value that will default to Spanner type DATE.
         public static IEnumerable<object[]> GetValueConversions()
         {
-            yield return new object[] { new byte[] { 1 }, SpannerDbType.Bytes, DbType.Binary };
-            yield return new object[] { true, SpannerDbType.Bool, DbType.Boolean };
-            yield return new object[] { new DateTime(2021, 1, 13, 12, 3, 10), SpannerDbType.Timestamp, DbType.DateTime };
-            yield return new object[] { 3.14D, SpannerDbType.Float64, DbType.Double };
-            yield return new object[] { 1L, SpannerDbType.Int64, DbType.Int64 };
-            yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, DbType.VarNumeric };
-            yield return new object[] { "test", SpannerDbType.String, DbType.String };
+            yield return new object[] { new byte[] { 1 }, SpannerDbType.Bytes, DbType.Binary, typeof(byte[]) };
+            yield return new object[] { new List<byte> { 1 }, SpannerDbType.Bytes, DbType.Binary, typeof(byte[]) };
+            yield return new object[] { true, SpannerDbType.Bool, DbType.Boolean, typeof(bool) };
+            yield return new object[] { new DateTime(2021, 1, 13, 12, 3, 10), SpannerDbType.Timestamp, DbType.DateTime, typeof(DateTime) };
+
+            yield return new object[] { 3.14f, SpannerDbType.Float64, DbType.Double, typeof(double) };
+            yield return new object[] { 3.14d, SpannerDbType.Float64, DbType.Double, typeof(double) };
+            yield return new object[] { 3.14m, SpannerDbType.Float64, DbType.Double, typeof(double) };
+
+            yield return new object[] { (short)1, SpannerDbType.Int64, DbType.Int64, typeof(long) };
+            yield return new object[] { (ushort)1, SpannerDbType.Int64, DbType.Int64, typeof(long) };
+            yield return new object[] { 1, SpannerDbType.Int64, DbType.Int64, typeof(long) };
+            yield return new object[] { 1u, SpannerDbType.Int64, DbType.Int64, typeof(long) };
+            yield return new object[] { 1L, SpannerDbType.Int64, DbType.Int64, typeof(long) };
+            yield return new object[] { 1uL, SpannerDbType.Int64, DbType.Int64, typeof(long) };
+
+            yield return new object[] { (SpannerNumeric)3.14m, SpannerDbType.Numeric, DbType.VarNumeric, typeof(SpannerNumeric) };
+            yield return new object[] { "test", SpannerDbType.String, DbType.String, typeof(string) };
         }
 
         [Theory]
         [MemberData(nameof(GetValueConversions))]
-        public void ValueMappings(object value, SpannerDbType spannerType, DbType adoType)
+        public void ValueMappings(object value, SpannerDbType spannerType, DbType adoType, System.Type defaultClrType)
         {
             var parameter = new SpannerParameter { Value = value };
 
-            Assert.Equal(value.GetType(), spannerType.DefaultClrType);
+            Assert.Equal(defaultClrType, spannerType.DefaultClrType);
             Assert.Equal(spannerType, parameter.SpannerDbType);
             Assert.Equal(adoType, parameter.DbType);
         }

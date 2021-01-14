@@ -37,41 +37,7 @@ namespace Google.Cloud.Spanner.Data
         public override DbType DbType
         {
             get => (SpannerDbType?.DbType).GetValueOrDefault(DbType.Object);
-            set
-            {
-                switch (value)
-                {
-                    case DbType.Binary:
-                        SpannerDbType = SpannerDbType.Bytes;
-                        break;
-                    case DbType.Boolean:
-                        SpannerDbType = SpannerDbType.Bool;
-                        break;
-                    case DbType.Date:
-                        SpannerDbType = SpannerDbType.Date;
-                        break;
-                    case DbType.DateTime:
-                        SpannerDbType = SpannerDbType.Timestamp;
-                        break;
-                    case DbType.Double:
-                        SpannerDbType = SpannerDbType.Float64;
-                        break;
-                    case DbType.Int64:
-                        SpannerDbType = SpannerDbType.Int64;
-                        break;
-                    case DbType.VarNumeric:
-                        SpannerDbType = SpannerDbType.Numeric;
-                        break;
-                    case DbType.Object:
-                        SpannerDbType = SpannerDbType.Unspecified;
-                        break;
-                    case DbType.String:
-                        SpannerDbType = SpannerDbType.String;
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException(nameof(DbType), value, null);
-                }
-            }
+            set => SpannerDbType = SpannerDbType.FromDbType(value);
         }
 
         /// <inheritdoc />
