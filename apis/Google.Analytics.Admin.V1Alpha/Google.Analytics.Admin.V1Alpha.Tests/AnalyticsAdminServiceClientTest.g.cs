@@ -41,7 +41,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -65,7 +65,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -91,7 +91,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -115,7 +115,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -141,7 +141,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -165,7 +165,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.GetAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -285,7 +285,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -310,7 +310,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -337,7 +337,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccount(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -362,7 +362,7 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 DisplayName = "display_name137f65c2",
-                CountryCode = "country_code8debec55",
+                RegionCode = "region_code72561d46",
                 Deleted = true,
             };
             mockGrpcClient.Setup(x => x.UpdateAccountAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Account>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3183,19 +3183,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.GetEnhancedMeasurementSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3219,19 +3213,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.GetEnhancedMeasurementSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EnhancedMeasurementSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3257,19 +3245,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.GetEnhancedMeasurementSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3293,19 +3275,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.GetEnhancedMeasurementSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EnhancedMeasurementSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3331,19 +3307,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.GetEnhancedMeasurementSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3367,19 +3337,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.GetEnhancedMeasurementSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EnhancedMeasurementSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3406,19 +3370,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.UpdateEnhancedMeasurementSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3443,19 +3401,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.UpdateEnhancedMeasurementSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EnhancedMeasurementSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3482,19 +3434,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.UpdateEnhancedMeasurementSettings(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3519,19 +3465,13 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
                 PageViewsEnabled = true,
                 ScrollsEnabled = true,
                 OutboundClicksEnabled = false,
-                ContentViewsEnabled = true,
                 SiteSearchEnabled = false,
-                FormInteractionsEnabled = false,
                 VideoEngagementEnabled = true,
                 FileDownloadsEnabled = true,
-                DataTaggedElementClicksEnabled = true,
                 PageLoadsEnabled = false,
                 PageChangesEnabled = false,
-                ArticlesAndBlogsEnabled = false,
-                ProductsAndEcommerceEnabled = true,
                 SearchQueryParameter = "search_query_parameter3de0ea6b",
-                UrlQueryParameter = "url_query_parametera65ea380",
-                ExcludedDomains = "excluded_domains64938220",
+                UriQueryParameter = "uri_query_parameter55687bee",
             };
             mockGrpcClient.Setup(x => x.UpdateEnhancedMeasurementSettingsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EnhancedMeasurementSettings>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -3876,126 +3816,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
         }
 
         [xunit::FactAttribute]
-        public void ListFirebaseLinksRequestObject()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            ListFirebaseLinksResponse expectedResponse = new ListFirebaseLinksResponse
-            {
-                FirebaseLinks = { new FirebaseLink(), },
-            };
-            mockGrpcClient.Setup(x => x.ListFirebaseLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            ListFirebaseLinksResponse response = client.ListFirebaseLinks(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListFirebaseLinksRequestObjectAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            ListFirebaseLinksResponse expectedResponse = new ListFirebaseLinksResponse
-            {
-                FirebaseLinks = { new FirebaseLink(), },
-            };
-            mockGrpcClient.Setup(x => x.ListFirebaseLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListFirebaseLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            ListFirebaseLinksResponse responseCallSettings = await client.ListFirebaseLinksAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ListFirebaseLinksResponse responseCancellationToken = await client.ListFirebaseLinksAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListFirebaseLinks()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            ListFirebaseLinksResponse expectedResponse = new ListFirebaseLinksResponse
-            {
-                FirebaseLinks = { new FirebaseLink(), },
-            };
-            mockGrpcClient.Setup(x => x.ListFirebaseLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            ListFirebaseLinksResponse response = client.ListFirebaseLinks(request.Parent);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListFirebaseLinksAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            ListFirebaseLinksResponse expectedResponse = new ListFirebaseLinksResponse
-            {
-                FirebaseLinks = { new FirebaseLink(), },
-            };
-            mockGrpcClient.Setup(x => x.ListFirebaseLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListFirebaseLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            ListFirebaseLinksResponse responseCallSettings = await client.ListFirebaseLinksAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ListFirebaseLinksResponse responseCancellationToken = await client.ListFirebaseLinksAsync(request.Parent, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ListFirebaseLinksResourceNames()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            ListFirebaseLinksResponse expectedResponse = new ListFirebaseLinksResponse
-            {
-                FirebaseLinks = { new FirebaseLink(), },
-            };
-            mockGrpcClient.Setup(x => x.ListFirebaseLinks(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            ListFirebaseLinksResponse response = client.ListFirebaseLinks(request.ParentAsPropertyName);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ListFirebaseLinksResourceNamesAsync()
-        {
-            moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
-            ListFirebaseLinksRequest request = new ListFirebaseLinksRequest
-            {
-                ParentAsPropertyName = PropertyName.FromProperty("[PROPERTY]"),
-            };
-            ListFirebaseLinksResponse expectedResponse = new ListFirebaseLinksResponse
-            {
-                FirebaseLinks = { new FirebaseLink(), },
-            };
-            mockGrpcClient.Setup(x => x.ListFirebaseLinksAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListFirebaseLinksResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
-            ListFirebaseLinksResponse responseCallSettings = await client.ListFirebaseLinksAsync(request.ParentAsPropertyName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            ListFirebaseLinksResponse responseCancellationToken = await client.ListFirebaseLinksAsync(request.ParentAsPropertyName, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetGlobalSiteTagRequestObject()
         {
             moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient> mockGrpcClient = new moq::Mock<AnalyticsAdminService.AnalyticsAdminServiceClient>(moq::MockBehavior.Strict);
@@ -4005,8 +3825,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
-                Snippet = "snippet5e4cde54",
                 GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4025,8 +3845,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
-                Snippet = "snippet5e4cde54",
                 GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4047,8 +3867,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
-                Snippet = "snippet5e4cde54",
                 GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4067,8 +3887,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
-                Snippet = "snippet5e4cde54",
                 GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4089,8 +3909,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
-                Snippet = "snippet5e4cde54",
                 GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTag(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4109,8 +3929,8 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             };
             GlobalSiteTag expectedResponse = new GlobalSiteTag
             {
-                Snippet = "snippet5e4cde54",
                 GlobalSiteTagName = GlobalSiteTagName.FromProperty("[PROPERTY]"),
+                Snippet = "snippet5e4cde54",
             };
             mockGrpcClient.Setup(x => x.GetGlobalSiteTagAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GlobalSiteTag>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AnalyticsAdminServiceClient client = new AnalyticsAdminServiceClientImpl(mockGrpcClient.Object, null);
@@ -4133,7 +3953,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4160,7 +3979,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4189,7 +4007,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4216,7 +4033,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4245,7 +4061,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4272,7 +4087,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4301,7 +4115,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4328,7 +4141,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4357,7 +4169,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
@@ -4384,7 +4195,6 @@ namespace Google.Analytics.Admin.V1Alpha.Tests
             GoogleAdsLink expectedResponse = new GoogleAdsLink
             {
                 GoogleAdsLinkName = GoogleAdsLinkName.FromPropertyGoogleAdsLink("[PROPERTY]", "[GOOGLE_ADS_LINK]"),
-                Parent = "parent7858e4d0",
                 CustomerId = "customer_id3b3724cb",
                 CanManageClients = true,
                 AdsPersonalizationEnabled = true,
