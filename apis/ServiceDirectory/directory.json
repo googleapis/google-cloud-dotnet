@@ -2287,6 +2287,22 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.WebSecurityScanner.V1Beta"
     },
     {
+      "ServiceDirectory": "google/cloud/workflows/executions/v1",
+      "Name": "workflowexecutions.googleapis.com",
+      "Title": "Workflow Executions API",
+      "Description": "Execute workflows created with Workflows API.",
+      "ServiceConfigFile": "google/cloud/workflows/executions/v1/workflowexecutions_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.workflows.executions.v1",
+      "PackageFromProtos": "google.cloud.workflows.executions.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Workflows.Executions.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/workflows/executions/v1beta",
       "Name": "workflowexecutions.googleapis.com",
       "Title": "Workflow Executions API",
