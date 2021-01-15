@@ -1202,6 +1202,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.MediaTranslation.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/memcache/v1",
+      "Name": "memcache.googleapis.com",
+      "Title": "Cloud Memorystore for Memcached API",
+      "Description": "Google Cloud Memorystore for Memcached API is used for creating and managing Memcached instances in GCP.",
+      "ServiceConfigFile": "google/cloud/memcache/v1/memcache_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.memcache.v1",
+      "PackageFromProtos": "google.cloud.memcache.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Memcache.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/memcache/v1beta2",
       "Name": "memcache.googleapis.com",
       "Title": "Cloud Memorystore for Memcached API",
