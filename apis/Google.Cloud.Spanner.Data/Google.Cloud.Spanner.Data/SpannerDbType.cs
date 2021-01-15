@@ -194,22 +194,19 @@ namespace Google.Cloud.Spanner.Data
         /// <summary>
         /// Converts a <see cref="DbType"/> to the corresponding <see cref="SpannerDbType"/>
         /// </summary>
-        internal static SpannerDbType FromDbType(DbType dbType)
+        internal static SpannerDbType FromDbType(DbType dbType) => dbType switch
         {
-            return dbType switch
-            {
-                DbType.Binary => Bytes,
-                DbType.Boolean => Bool,
-                DbType.Date => Date,
-                DbType.DateTime => Timestamp,
-                DbType.Double => Float64,
-                DbType.Int64 => Int64,
-                DbType.VarNumeric => Numeric,
-                DbType.Object => Unspecified,
-                DbType.String => String,
-                _ => throw new ArgumentOutOfRangeException(nameof(DbType), dbType, null),
-            };
-        }
+            DbType.Binary => Bytes,
+            DbType.Boolean => Bool,
+            DbType.Date => Date,
+            DbType.DateTime => Timestamp,
+            DbType.Double => Float64,
+            DbType.Int64 => Int64,
+            DbType.VarNumeric => Numeric,
+            DbType.Object => Unspecified,
+            DbType.String => String,
+            _ => throw new ArgumentOutOfRangeException(nameof(DbType), dbType, null),
+        };
 
         internal static SpannerDbType FromProtobufType(V1.Type type)
         {
