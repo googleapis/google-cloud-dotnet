@@ -125,8 +125,8 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.WebRisk.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.WebRisk.V1Beta1/2.0.0-beta03) | 2.0.0-beta03 | [Google Cloud Web Risk (V1Beta1 API)](https://cloud.google.com/web-risk/) |
 | [Google.Cloud.WebSecurityScanner.V1](https://googleapis.dev/dotnet/Google.Cloud.WebSecurityScanner.V1/1.0.0-beta01) | 1.0.0-beta01 | [Web Security Scanner](https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview) |
 | [Google.Cloud.Workflows.Common.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Common.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | Common resource names used by all Workflows V1Beta APIs |
-| [Google.Cloud.Workflows.Executions.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Executions.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflow Executions](https://cloud.google.com/workflows/docs/apis) |
-| [Google.Cloud.Workflows.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflows](https://cloud.google.com/workflows/docs/apis) |
+| [Google.Cloud.Workflows.Executions.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.Executions.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflow Executions (V1Beta API)](https://cloud.google.com/workflows/docs/apis) |
+| [Google.Cloud.Workflows.V1Beta](https://googleapis.dev/dotnet/Google.Cloud.Workflows.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Workflows (V1Beta API)](https://cloud.google.com/workflows/docs/apis) |
 | [Google.Identity.AccessContextManager.Type](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.Type/1.0.0) | 1.0.0 | Version-agnostic types for the Google Identity Access Context Manager API |
 | [Google.Identity.AccessContextManager.V1](https://googleapis.dev/dotnet/Google.Identity.AccessContextManager.V1/1.1.0) | 1.1.0 | Protocol buffer types for the Google Identity Access Context Manager API V1 |
 | [Google.LongRunning](https://googleapis.dev/dotnet/Google.LongRunning/2.1.0) | 2.1.0 | Support for the Long-Running Operations API pattern |
