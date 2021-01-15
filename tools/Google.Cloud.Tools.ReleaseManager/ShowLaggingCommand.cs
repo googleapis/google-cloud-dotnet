@@ -13,7 +13,9 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using LibGit2Sharp;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -30,13 +32,46 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override void ExecuteImpl(string[] args)
         {
+            Console.WriteLine($"Lagging packages (package ID, current version, date range of current version prerelease series):");
+            var root = DirectoryLayout.DetermineRootDirectory();
             var catalog = ApiCatalog.Load();
-            var lagging = catalog.Apis.Where(api => api.CanHaveGaRelease && api.StructuredVersion.Prerelease is string);
-            Console.WriteLine($"Lagging packages:");
-            foreach (var api in lagging)
+            using (var repo = new Repository(root))
             {
-                Console.WriteLine($"{api.Id} ({api.Version})");
+                var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
+                foreach (var api in catalog.Apis)
+                {
+                    MaybeShowLagging(repo, allTags, api);
+                }
             }
+        }
+
+        private static void MaybeShowLagging(Repository repo, List<Tag> allTags, ApiMetadata api)
+        {
+            var currentVersion = api.StructuredVersion;
+            // Skip anything that is naturally pre-release (in the API), or where the current release is GA already.
+            if (!api.CanHaveGaRelease || currentVersion.Prerelease is null)
+            {
+                return;
+            }
+
+            // Find all the existing prereleases for the expected "next GA" release.
+            var expectedGa = StructuredVersion.FromMajorMinorPatch(currentVersion.Major, currentVersion.Minor, currentVersion.Patch, prerelease: null);
+            string expectedGaPrefix = $"{api.Id}-{expectedGa}";
+            var matchingReleaseTags = allTags.Where(tag => tag.FriendlyName.StartsWith(expectedGaPrefix, StringComparison.Ordinal)).ToList();
+
+            // Skip if we haven't even released the current prerelease.
+            if (matchingReleaseTags.Count == 0)
+            {
+                return;
+            }
+
+            var latest = GitHelpers.GetDate(matchingReleaseTags.First());
+            var earliest = GitHelpers.GetDate(matchingReleaseTags.Last());
+
+            string dateRange = latest == earliest
+                ? $"{latest:yyyy-MM-dd}"
+                : $"{earliest:yyyy-MM-dd} - {latest:yyyy-MM-dd}";
+            Console.WriteLine($"{api.Id,-50}{api.Version,-20}{dateRange}");
         }
     }
 }
