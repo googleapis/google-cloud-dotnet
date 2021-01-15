@@ -2065,6 +2065,20 @@
       "protoPath": "google/cloud/websecurityscanner/v1"
     },
     {
+      "id": "Google.Cloud.Workflows.Common.V1",
+      "type": "other",
+      "targetFrameworks": "netstandard2.0;net461",
+      "version": "1.0.0-beta00",
+      "description": "Common resource names used by all Workflows V1 APIs",
+      "tags": [
+        "Spanner"
+      ],
+      "dependencies": {
+        "Google.Api.Gax": "3.2.0"
+      },
+      "noVersionHistory": true
+    },
+    {
       "id": "Google.Cloud.Workflows.Common.V1Beta",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
