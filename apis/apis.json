@@ -1127,6 +1127,23 @@
       "protoPath": "google/cloud/mediatranslation/v1beta1"
     },
     {
+      "id": "Google.Cloud.Memcache.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Memorystore for Memcached",
+      "productUrl": "https://cloud.google.com/memorystore/",
+      "description": "Recommended Google client library at access the Google Cloud Memorystore for Memcached API (v1), which is used for creating and managing Memcached instances in GCP.",
+      "tags": [
+        "Redis",
+        "Memorystore"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/memcache/v1"
+    },
+    {
       "id": "Google.Cloud.Memcache.V1Beta2",
       "generator": "micro",
       "protoPath": "google/cloud/memcache/v1beta2",
