@@ -1267,7 +1267,7 @@
         "google/protobuf"
       ],
       "Stable": false,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Networkconnectivity.V1Alpha1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.NetworkConnectivity.V1Alpha1"
     },
     {
       "ServiceDirectory": "google/cloud/notebooks/v1beta1",
