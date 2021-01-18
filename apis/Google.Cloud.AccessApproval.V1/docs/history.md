@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.0.0, released 2021-01-18
+
+No API changes since 1.0.0-beta02.
+
 # Version 1.0.0-beta02, released 2020-12-09
 
 - [Commit d093233](https://github.com/googleapis/google-cloud-dotnet/commit/d093233): fix!: Regenerate Google.Cloud.AccessApproval.V1
