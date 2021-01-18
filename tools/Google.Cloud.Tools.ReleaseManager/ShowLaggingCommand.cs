@@ -40,12 +40,12 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
                 foreach (var api in catalog.Apis)
                 {
-                    MaybeShowLagging(repo, allTags, api);
+                    MaybeShowLagging(allTags, api);
                 }
             }
         }
 
-        private static void MaybeShowLagging(Repository repo, List<Tag> allTags, ApiMetadata api)
+        private static void MaybeShowLagging(List<Tag> allTags, ApiMetadata api)
         {
             var currentVersion = api.StructuredVersion;
             // Skip anything that is naturally pre-release (in the API), or where the current release is GA already.
