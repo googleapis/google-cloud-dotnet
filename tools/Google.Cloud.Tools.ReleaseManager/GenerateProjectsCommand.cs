@@ -41,9 +41,19 @@ namespace Google.Cloud.Tools.ReleaseManager
             { "Google.Cloud.SampleUtil", @"..\..\..\tools\Google.Cloud.SampleUtil\Google.Cloud.SampleUtil.csproj"}
         };
 
-        private const string DefaultRestTargetFrameworks = "netstandard2.0;net461";
-        private const string DefaultGrpcTargetFrameworks = "netstandard2.0;net461";
+        private static readonly Dictionary<ApiType, string> PackageTypeToDefaultTargetFrameworks = new Dictionary<ApiType, string>
+        {
+            { ApiType.Rest, "netstandard2.0;net461" },
+            { ApiType.Grpc, "netstandard2.0;net461" }
+        };
+
         private const string DefaultTestTargetFrameworks = "netcoreapp2.1;net461";
+
+        private static Dictionary<ApiType, string[]> PackageTypeToImplicitDependencies = new Dictionary<ApiType, string[]>
+        {
+            {  ApiType.Rest, new[] { "Google.Api.Gax.Rest" } },
+            {  ApiType.Grpc, new[] { "Grpc.Core", "Google.Api.Gax.Grpc.GrpcCore" } },
+        };
 
         private const string AnalyzersTargetFramework = "netstandard1.3";
         private const string AnalyzersTestTargetFramework = "netcoreapp2.0";
@@ -184,6 +194,21 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         public static void UpdateDependencies(ApiCatalog catalog, ApiMetadata api)
         {
+            // Update any previously-defaulted versions to be explicit, if the new version is GA.
+            // (This only affects production dependencies, so is not performed in UpdateDependencyDictionary.)
+            // Implicit dependencies are always present in DefaultPackageVersions, so we don't need to worry about
+            // "internal" dependencies.
+            if (api.IsReleaseVersion && PackageTypeToImplicitDependencies.TryGetValue(api.Type, out var implicitDependencies))
+            {
+                foreach (var implicitDependency in implicitDependencies)
+                {
+                    if (!api.Dependencies.ContainsKey(implicitDependency))
+                    {
+                        api.Dependencies[implicitDependency] = DefaultPackageVersions[implicitDependency];
+                    }
+                }
+            }
+
             UpdateDependencyDictionary(api.Dependencies, "dependencies");
             UpdateDependencyDictionary(api.TestDependencies, "testDependencies");
 
@@ -220,6 +245,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                         }
                     }
                 }
+
                 if (api.Json is object)
                 {
                     api.Json[jsonName] = new JObject(dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
@@ -510,7 +536,7 @@ shell.run(
             {
                 throw new UserErrorException($"No version specified for {api.Id}");
             }
-            string targetFrameworks = api.TargetFrameworks;
+            string targetFrameworks = api.TargetFrameworks ?? PackageTypeToDefaultTargetFrameworks.GetValueOrDefault(api.Type);
 
             SortedList<string, string> dependencies;
             if (api.Type == ApiType.Analyzers)
@@ -531,17 +557,13 @@ shell.run(
 
                 dependencies = new SortedList<string, string>(CommonHiddenProductionDependencies, StringComparer.Ordinal);
 
-                switch (api.Type)
+                // Default dependencies by package type
+                if (PackageTypeToImplicitDependencies.TryGetValue(api.Type, out var implicitDependencies))
                 {
-                    case ApiType.Rest:
-                        dependencies.Add("Google.Api.Gax.Rest", DefaultVersionValue);
-                        targetFrameworks = targetFrameworks ?? DefaultRestTargetFrameworks;
-                        break;
-                    case ApiType.Grpc:
-                        dependencies.Add("Google.Api.Gax.Grpc.GrpcCore", DefaultVersionValue);
-                        dependencies.Add("Grpc.Core", DefaultVersionValue);
-                        targetFrameworks = targetFrameworks ?? DefaultGrpcTargetFrameworks;
-                        break;
+                    foreach (var dependency in implicitDependencies)
+                    {
+                        dependencies[dependency] = DefaultVersionValue;
+                    }
                 }
 
                 // Deliberately not using Add, so that a project can override the defaults.
