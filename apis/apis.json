@@ -907,7 +907,7 @@
     },
     {
       "id": "Google.Cloud.Iam.Credentials.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "IAM Service Account Credentials",
       "productUrl": "https://cloud.google.com/iam/docs/reference/credentials/rest",
@@ -918,7 +918,10 @@
         "access",
         "account"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Grpc.Core": "2.31.0"
+      },
       "generator": "micro",
       "protoPath": "google/iam/credentials/v1"
     },
