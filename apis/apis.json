@@ -946,7 +946,7 @@
     },
     {
       "id": "Google.Cloud.Iot.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud IoT",
       "productUrl": "https://cloud.google.com/iot/docs/reference/cloudiot/rest",
@@ -955,7 +955,9 @@
         "iot"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "2.0.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Cloud.Iam.V1": "2.1.0",
+        "Grpc.Core": "2.31.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/iot/v1"
