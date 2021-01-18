@@ -1608,7 +1608,7 @@
     },
     {
       "id": "Google.Cloud.ServiceControl.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Service Control",
       "productUrl": "https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc",
@@ -1618,7 +1618,9 @@
         "services"
       ],
       "dependencies": {
-        "Google.Cloud.Logging.Type": "3.1.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.Cloud.Logging.Type": "3.2.0",
+        "Grpc.Core": "2.31.0"
       },
       "generator": "micro",
       "protoPath": "google/api/servicecontrol/v1"
