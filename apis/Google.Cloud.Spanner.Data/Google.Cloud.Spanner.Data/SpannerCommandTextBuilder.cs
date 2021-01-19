@@ -31,6 +31,7 @@ namespace Google.Cloud.Spanner.Data
         private const string UpdateCommand = "UPDATE";
         private const string DeleteCommand = "DELETE";
         private const string SelectCommand = "SELECT";
+        private const string WithCommand = "WITH"; // Queries may also start with a WITH clause.
         private const string AlterCommand = "ALTER";
         private const string CreateCommand = "CREATE";
         private const string DropCommand = "DROP";
@@ -45,6 +46,7 @@ namespace Google.Cloud.Spanner.Data
             { UpdateCommand, SpannerCommandType.Update },
             { DeleteCommand, SpannerCommandType.Delete },
             { SelectCommand, SpannerCommandType.Select },
+            { WithCommand, SpannerCommandType.Select },
             // These three form the ddl for spanner.
             // For reference: https://cloud.google.com/spanner/docs/data-definition-language
             { AlterCommand, SpannerCommandType.Ddl },
@@ -217,7 +219,8 @@ namespace Google.Cloud.Spanner.Data
         {
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
             commandText = commandText.Trim();
-            var commandSections = commandText.Split(' ');
+            // Split(new char[0]) splits the string using all whitespace characters.
+            var commandSections = commandText.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
             if (commandSections.Length < 2)
             {
                 throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
