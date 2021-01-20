@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.3.0, released 2021-01-20
+
+- [Commit 9bd5f77](https://github.com/googleapis/google-cloud-dotnet/commit/9bd5f77): feat: added expire_time and ttl fields to Secret
+
 # Version 1.2.0, released 2020-11-09
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
