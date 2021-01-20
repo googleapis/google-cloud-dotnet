@@ -1840,7 +1840,7 @@
     },
     {
       "id": "Google.Cloud.Talent.V4",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Google Cloud Talent Solution",
       "productUrl": "https://cloud.google.com/talent-solution/",
@@ -1851,7 +1851,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
-        "Google.LongRunning": "2.0.0",
+        "Google.LongRunning": "2.1.0",
         "Grpc.Core": "2.31.0"
       },
       "generator": "micro",
