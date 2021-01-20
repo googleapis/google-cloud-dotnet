@@ -591,5 +591,28 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
+
+        [Fact]
+        public async Task WithCommand()
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                // Create a generic command and let the type be determined based on the command text.
+                // A statement that starts with a WITH clause should be treated as a query.
+                var cmd = connection.CreateCommand();
+                cmd.CommandText =
+                    $"WITH LastValue AS (" +
+                    $"  SELECT Key, StringValue" +
+                    $"  FROM {_fixture.TableName}" +
+                    $"  ORDER BY StringValue" +
+                    $"  LIMIT {int.MaxValue} OFFSET {_fixture.RowCount - 1}) " +
+                    $"SELECT * FROM LastValue";
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    Assert.True(await reader.ReadAsync());
+                    Assert.False(await reader.ReadAsync());
+                }
+            }
+        }
     }
 }

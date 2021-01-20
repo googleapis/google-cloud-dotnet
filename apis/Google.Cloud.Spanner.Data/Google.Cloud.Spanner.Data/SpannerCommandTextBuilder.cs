@@ -220,7 +220,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNullOrEmpty(commandText, nameof(commandText));
             commandText = commandText.Trim();
             // Split(new char[0]) splits the string using all whitespace characters.
-            var commandSections = commandText.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+            var commandSections = commandText.Split((char[]) null, StringSplitOptions.RemoveEmptyEntries);
             if (commandSections.Length < 2)
             {
                 throw new ArgumentException($"'{commandText}' is not a recognized Spanner command.", nameof(commandText));
