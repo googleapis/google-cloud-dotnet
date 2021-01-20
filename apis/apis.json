@@ -1458,7 +1458,7 @@
     },
     {
       "id": "Google.Cloud.Retail.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Retail",
       "productUrl": "https://cloud.google.com/retail/docs",
@@ -1467,7 +1467,9 @@
         "retail"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.1.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.LongRunning": "2.1.0",
+        "Grpc.Core": "2.31.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/retail/v2"
