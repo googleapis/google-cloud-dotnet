@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.0.0, released 2021-01-20
+
+No API changes since 1.0.0-beta02.
+
 # Version 1.0.0-beta02, released 2020-10-01
 
 - [Commit f4c1f60](https://github.com/googleapis/google-cloud-dotnet/commit/f4c1f60): fix!: removed Cycling and Walking elements from CommuteMethod enum
