@@ -137,7 +137,7 @@ namespace Google.Cloud.Retail.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent catalog resource name, such as
-    /// "projects/1234/locations/global/catalogs/default_catalog".
+    /// `projects/1234/locations/global/catalogs/default_catalog`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -366,7 +366,7 @@ namespace Google.Cloud.Retail.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent catalog name, such as
-    /// "projects/1234/locations/global/catalogs/default_catalog".
+    /// `projects/1234/locations/global/catalogs/default_catalog`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -666,7 +666,7 @@ namespace Google.Cloud.Retail.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent catalog resource name, such as
-    /// "projects/1234/locations/global/catalogs/default_catalog".
+    /// `projects/1234/locations/global/catalogs/default_catalog`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

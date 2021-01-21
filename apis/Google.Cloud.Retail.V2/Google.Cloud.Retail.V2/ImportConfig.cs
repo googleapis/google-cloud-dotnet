@@ -152,10 +152,11 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. Google Cloud Storage URIs to input files. URI can be up to
     /// 2000 characters long. URIs can match the full object path (for example,
-    /// gs://bucket/directory/object.json) or a pattern matching one or more
-    /// files, such as gs://bucket/directory/*.json. A request can
+    /// `gs://bucket/directory/object.json`) or a pattern matching one or more
+    /// files, such as `gs://bucket/directory/*.json`. A request can
     /// contain at most 100 files, and each file can be up to 2 GB. See
-    /// [Importing product information](/recommendations-ai/docs/upload-catalog)
+    /// [Importing product
+    /// information](https://cloud.google.com/recommendations-ai/docs/upload-catalog)
     /// for the expected file format and setup instructions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -175,7 +176,7 @@ namespace Google.Cloud.Retail.V2 {
     /// per line. Each product must
     ///   have a valid [Product.id][google.cloud.retail.v2.Product.id].
     /// * `product_merchant_center`: See [Importing catalog data from Merchant
-    ///   Center](/retail/recommendations-ai/docs/upload-catalog#mc).
+    ///   Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc).
     ///
     /// Supported values for user events imports:
     ///
@@ -448,7 +449,7 @@ namespace Google.Cloud.Retail.V2 {
     /// per line. Each product must
     ///   have a valid [Product.id][google.cloud.retail.v2.Product.id].
     /// * `product_merchant_center`: See [Importing catalog data from Merchant
-    ///   Center](/retail/recommendations-ai/docs/upload-catalog#mc).
+    ///   Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc).
     ///
     /// Supported values for user events imports:
     ///
@@ -1278,7 +1279,7 @@ namespace Google.Cloud.Retail.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required.
-    /// "projects/1234/locations/global/catalogs/default_catalog/branches/default_branch"
+    /// `projects/1234/locations/global/catalogs/default_catalog/branches/default_branch`
     ///
     /// If no updateMask is specified, requires products.create permission.
     /// If updateMask is specified, requires products.update permission.
@@ -1603,7 +1604,7 @@ namespace Google.Cloud.Retail.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. "projects/1234/locations/global/catalogs/default_catalog"
+    /// Required. `projects/1234/locations/global/catalogs/default_catalog`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
