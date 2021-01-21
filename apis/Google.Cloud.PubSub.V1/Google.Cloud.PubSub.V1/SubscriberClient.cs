@@ -401,7 +401,7 @@ namespace Google.Cloud.PubSub.V1
             // These values are validated in Settings.Validate() above, so no need to re-validate here.
             _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
             var autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
-            // Ensure the duration between lease extentions is at least MinimumLeaseExtensionDelay (5 seconds).
+            // Ensure the duration between lease extensions is at least MinimumLeaseExtensionDelay (5 seconds).
             // The minimum allowable lease duration is 10 seconds, so this will always be reasonable.
             _autoExtendInterval = TimeSpan.FromTicks(Math.Max(autoExtendInterval.Ticks, MinimumLeaseExtensionDelay.Ticks));
             _maxExtensionDuration = settings.MaxTotalAckExtension ?? DefaultMaxTotalAckExtension;
@@ -429,7 +429,10 @@ namespace Google.Cloud.PubSub.V1
         private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
         private CancellationTokenSource _globalHardStopCts;
 
-        // For testing
+        // This property only exists for testing.
+        // This is the interval between obtaining a lease on a message and then further extending the lease on that message
+        // (assuming it hasn't been handled).
+        // This is calculated from the AckDeadline, AckExtensionWindow, and MinimumLeaseExtensionDelay
         internal TimeSpan AutoExtendInterval => _autoExtendInterval;
 
         /// <inheritdoc />
