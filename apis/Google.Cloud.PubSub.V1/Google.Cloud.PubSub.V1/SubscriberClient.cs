@@ -265,6 +265,11 @@ namespace Google.Cloud.PubSub.V1
         public static TimeSpan DefaultAckExtensionWindow { get; } = TimeSpan.FromSeconds(15);
 
         /// <summary>
+        /// The enforced 5 second minimum duration between obtaining a lease on a message and when a lease extension can be requested.
+        /// </summary>
+        public static TimeSpan MinimumLeaseExtensionDelay { get; } = TimeSpan.FromSeconds(5);
+
+        /// <summary>
         /// The default maximum total ACKnowledgement extension of 60 minutes.
         /// </summary>
         public static TimeSpan DefaultMaxTotalAckExtension { get; } = TimeSpan.FromMinutes(60);
@@ -395,7 +400,10 @@ namespace Google.Cloud.PubSub.V1
             settings.Validate();
             // These values are validated in Settings.Validate() above, so no need to re-validate here.
             _modifyDeadlineSeconds = (int)((settings.AckDeadline ?? DefaultAckDeadline).TotalSeconds);
-            _autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
+            var autoExtendInterval = TimeSpan.FromSeconds(_modifyDeadlineSeconds) - (settings.AckExtensionWindow ?? DefaultAckExtensionWindow);
+            // Ensure the duration between lease extentions is at least MinimumLeaseExtensionDelay (5 seconds).
+            // The minimum allowable lease duration is 10 seconds, so this will always be reasonable.
+            _autoExtendInterval = TimeSpan.FromTicks(Math.Max(autoExtendInterval.Ticks, MinimumLeaseExtensionDelay.Ticks));
             _maxExtensionDuration = settings.MaxTotalAckExtension ?? DefaultMaxTotalAckExtension;
             _shutdown = shutdown;
             _scheduler = settings.Scheduler ?? SystemScheduler.Instance;
@@ -420,6 +428,9 @@ namespace Google.Cloud.PubSub.V1
         private TaskCompletionSource<int> _mainTcs;
         private CancellationTokenSource _globalSoftStopCts; // soft-stop is guarenteed to occur before hard-stop.
         private CancellationTokenSource _globalHardStopCts;
+
+        // For testing
+        internal TimeSpan AutoExtendInterval => _autoExtendInterval;
 
         /// <inheritdoc />
         public override SubscriptionName SubscriptionName { get; }
