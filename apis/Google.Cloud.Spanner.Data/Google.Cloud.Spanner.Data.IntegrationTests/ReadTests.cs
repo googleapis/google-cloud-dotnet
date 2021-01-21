@@ -601,12 +601,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 // A statement that starts with a WITH clause should be treated as a query.
                 var cmd = connection.CreateCommand();
                 cmd.CommandText =
-                    $"WITH LastValue AS (" +
-                    $"  SELECT Key, StringValue" +
-                    $"  FROM {_fixture.TableName}" +
-                    $"  ORDER BY StringValue" +
-                    $"  LIMIT {int.MaxValue} OFFSET {_fixture.RowCount - 1}) " +
-                    $"SELECT * FROM LastValue";
+                    $@"WITH LastValue AS (
+                      SELECT Key, StringValue
+                      FROM {_fixture.TableName}
+                      ORDER BY StringValue
+                      LIMIT {int.MaxValue} OFFSET {_fixture.RowCount - 1})
+                    SELECT * FROM LastValue";
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     Assert.True(await reader.ReadAsync());
