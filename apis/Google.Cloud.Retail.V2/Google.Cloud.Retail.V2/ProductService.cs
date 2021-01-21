@@ -134,7 +134,7 @@ namespace Google.Cloud.Retail.V2 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent catalog resource name, such as
-    /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch".
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -413,7 +413,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
     /// such as
-    /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
     ///
     /// If the caller does not have permission to access the
     /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -848,7 +848,7 @@ namespace Google.Cloud.Retail.V2 {
     /// <summary>
     /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
     /// such as
-    /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+    /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
     ///
     /// If the caller does not have permission to delete the
     /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it

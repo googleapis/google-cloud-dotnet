@@ -325,7 +325,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
         /// </param>
         /// <param name="product">
         /// Required. The [Product][google.cloud.retail.v2.Product] to create.
@@ -362,7 +362,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
         /// </param>
         /// <param name="product">
         /// Required. The [Product][google.cloud.retail.v2.Product] to create.
@@ -399,7 +399,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
         /// </param>
         /// <param name="product">
         /// Required. The [Product][google.cloud.retail.v2.Product] to create.
@@ -431,7 +431,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
         /// </param>
         /// <param name="product">
         /// Required. The [Product][google.cloud.retail.v2.Product] to create.
@@ -468,7 +468,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
         /// </param>
         /// <param name="product">
         /// Required. The [Product][google.cloud.retail.v2.Product] to create.
@@ -505,7 +505,7 @@ namespace Google.Cloud.Retail.V2
         /// </summary>
         /// <param name="parent">
         /// Required. The parent catalog resource name, such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch`.
         /// </param>
         /// <param name="product">
         /// Required. The [Product][google.cloud.retail.v2.Product] to create.
@@ -565,7 +565,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to access the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -588,7 +588,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to access the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -611,7 +611,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to access the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -631,7 +631,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to access the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -654,7 +654,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to access the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -677,7 +677,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to access the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -840,7 +840,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to delete the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -863,7 +863,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to delete the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -886,7 +886,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to delete the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -906,7 +906,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to delete the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -929,7 +929,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to delete the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
@@ -952,7 +952,7 @@ namespace Google.Cloud.Retail.V2
         /// <param name="name">
         /// Required. Full resource name of [Product][google.cloud.retail.v2.Product],
         /// such as
-        /// "projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id".
+        /// `projects/*/locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`.
         /// 
         /// If the caller does not have permission to delete the
         /// [Product][google.cloud.retail.v2.Product], regardless of whether or not it
