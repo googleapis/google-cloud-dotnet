@@ -834,6 +834,46 @@ namespace Google.Cloud.PubSub.V1.Tests
         }
 
         [Fact]
+        public void SilentlyFixedParameters()
+        {
+            var subscriptionName = new SubscriptionName("project", "subscriptionId");
+            var clients = new[] { new FakeEmptySubscriberServiceApiClient() };
+
+            // Test MinimumLeaseExtensionDelay is honoured when minimum ack-deadline used.
+            var settingsAckExtension1 = new SubscriberClient.Settings
+            {
+                AckDeadline = SubscriberClient.MinimumAckDeadline
+            };
+            var sub1 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension1, null);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, sub1.AutoExtendInterval);
+
+            // Test MinimumLeaseExtensionDelay is honoured when ack-deadline set to be equal to the default ack-extension window.
+            var settingsAckExtension2 = new SubscriberClient.Settings
+            {
+                AckDeadline = SubscriberClient.DefaultAckExtensionWindow
+            };
+            var sub2 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension2, null);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay, sub2.AutoExtendInterval);
+
+            // Test ack-extension-window is honoured when ack-deadline is a larger value.
+            var settingsAckExtension3 = new SubscriberClient.Settings
+            {
+                AckDeadline = SubscriberClient.DefaultAckExtensionWindow + SubscriberClient.MinimumLeaseExtensionDelay + TimeSpan.FromSeconds(1)
+            };
+            var sub3 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension3, null);
+            Assert.Equal(SubscriberClient.MinimumLeaseExtensionDelay + TimeSpan.FromSeconds(1), sub3.AutoExtendInterval);
+
+            // Test ack-extension-window is honoured when both ack-deadline and ack-extension-window are set to valid values.
+            var settingsAckExtension4 = new SubscriberClient.Settings
+            {
+                AckDeadline = TimeSpan.FromSeconds(60),
+                AckExtensionWindow = TimeSpan.FromSeconds(1)
+            };
+            var sub4 = new SubscriberClientImpl(subscriptionName, clients, settingsAckExtension4, null);
+            Assert.Equal(TimeSpan.FromSeconds(59), sub4.AutoExtendInterval);
+        }
+
+        [Fact]
         public void InvalidParameters()
         {
             var subscriptionName = new SubscriptionName("project", "subscriptionId");
