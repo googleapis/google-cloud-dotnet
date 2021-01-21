@@ -46,7 +46,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -93,7 +93,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -142,7 +142,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -189,7 +189,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -338,7 +338,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -384,7 +384,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -432,7 +432,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -478,7 +478,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -526,7 +526,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
@@ -572,7 +572,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceInfo(),
                 },
-                ComplianceRegime = Workload.Types.ComplianceRegime.FedrampHigh,
+                ComplianceRegime = Workload.Types.ComplianceRegime.UsRegionalAccess,
                 CreateTime = new wkt::Timestamp(),
                 BillingAccount = "billing_account2062abb6",
 #pragma warning disable CS0612
