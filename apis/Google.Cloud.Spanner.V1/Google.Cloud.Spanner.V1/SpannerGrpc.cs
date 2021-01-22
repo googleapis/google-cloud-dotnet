@@ -372,6 +372,12 @@ namespace Google.Cloud.Spanner.V1 {
       /// transactions. However, it can also happen for a variety of other
       /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
       /// the transaction from the beginning, re-using the same session.
+      ///
+      /// On very rare occasions, `Commit` might return `UNKNOWN`. This can happen,
+      /// for example, if the client job experiences a 1+ hour networking failure.
+      /// At that point, Cloud Spanner has lost track of the transaction outcome and
+      /// we recommend that you perform another read from the database to see the
+      /// state of things as they are now.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1173,6 +1179,12 @@ namespace Google.Cloud.Spanner.V1 {
       /// transactions. However, it can also happen for a variety of other
       /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
       /// the transaction from the beginning, re-using the same session.
+      ///
+      /// On very rare occasions, `Commit` might return `UNKNOWN`. This can happen,
+      /// for example, if the client job experiences a 1+ hour networking failure.
+      /// At that point, Cloud Spanner has lost track of the transaction outcome and
+      /// we recommend that you perform another read from the database to see the
+      /// state of things as they are now.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1192,6 +1204,12 @@ namespace Google.Cloud.Spanner.V1 {
       /// transactions. However, it can also happen for a variety of other
       /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
       /// the transaction from the beginning, re-using the same session.
+      ///
+      /// On very rare occasions, `Commit` might return `UNKNOWN`. This can happen,
+      /// for example, if the client job experiences a 1+ hour networking failure.
+      /// At that point, Cloud Spanner has lost track of the transaction outcome and
+      /// we recommend that you perform another read from the database to see the
+      /// state of things as they are now.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1209,6 +1227,12 @@ namespace Google.Cloud.Spanner.V1 {
       /// transactions. However, it can also happen for a variety of other
       /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
       /// the transaction from the beginning, re-using the same session.
+      ///
+      /// On very rare occasions, `Commit` might return `UNKNOWN`. This can happen,
+      /// for example, if the client job experiences a 1+ hour networking failure.
+      /// At that point, Cloud Spanner has lost track of the transaction outcome and
+      /// we recommend that you perform another read from the database to see the
+      /// state of things as they are now.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1228,6 +1252,12 @@ namespace Google.Cloud.Spanner.V1 {
       /// transactions. However, it can also happen for a variety of other
       /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
       /// the transaction from the beginning, re-using the same session.
+      ///
+      /// On very rare occasions, `Commit` might return `UNKNOWN`. This can happen,
+      /// for example, if the client job experiences a 1+ hour networking failure.
+      /// At that point, Cloud Spanner has lost track of the transaction outcome and
+      /// we recommend that you perform another read from the database to see the
+      /// state of things as they are now.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

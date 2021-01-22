@@ -1004,6 +1004,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 TransactionId = ByteString.Empty,
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
+                ReturnCommitStats = false,
             };
             // Make the request
             CommitResponse response = spannerClient.Commit(request);
@@ -1024,6 +1025,7 @@ namespace Google.Cloud.Spanner.V1.Snippets
                 TransactionId = ByteString.Empty,
                 SingleUseTransaction = new TransactionOptions(),
                 Mutations = { new Mutation(), },
+                ReturnCommitStats = false,
             };
             // Make the request
             CommitResponse response = await spannerClient.CommitAsync(request);
