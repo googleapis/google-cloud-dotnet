@@ -53,6 +53,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             UpdateFlowSettings = existing.UpdateFlowSettings;
             TrainFlowSettings = existing.TrainFlowSettings;
             TrainFlowOperationsSettings = existing.TrainFlowOperationsSettings.Clone();
+            ValidateFlowSettings = existing.ValidateFlowSettings;
+            GetFlowValidationResultSettings = existing.GetFlowValidationResultSettings;
             OnCopy(existing);
         }
 
@@ -165,6 +167,36 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>FlowsClient.ValidateFlow</c>
+        ///  and <c>FlowsClient.ValidateFlowAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ValidateFlowSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FlowsClient.GetFlowValidationResult</c> and <c>FlowsClient.GetFlowValidationResultAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetFlowValidationResultSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="FlowsSettings"/> object.</returns>
@@ -1026,6 +1058,165 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> TrainFlowAsync(FlowName name, st::CancellationToken cancellationToken) =>
             TrainFlowAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Validates the specified flow and creates or updates validation results.
+        /// Please call this API after the training is completed to get the complete
+        /// validation results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FlowValidationResult ValidateFlow(ValidateFlowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Validates the specified flow and creates or updates validation results.
+        /// Please call this API after the training is completed to get the complete
+        /// validation results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> ValidateFlowAsync(ValidateFlowRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Validates the specified flow and creates or updates validation results.
+        /// Please call this API after the training is completed to get the complete
+        /// validation results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> ValidateFlowAsync(ValidateFlowRequest request, st::CancellationToken cancellationToken) =>
+            ValidateFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FlowValidationResult GetFlowValidationResult(GetFlowValidationResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> GetFlowValidationResultAsync(GetFlowValidationResultRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> GetFlowValidationResultAsync(GetFlowValidationResultRequest request, st::CancellationToken cancellationToken) =>
+            GetFlowValidationResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The flow name.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/validationResult`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FlowValidationResult GetFlowValidationResult(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFlowValidationResult(new GetFlowValidationResultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The flow name.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/validationResult`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> GetFlowValidationResultAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFlowValidationResultAsync(new GetFlowValidationResultRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The flow name.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/validationResult`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> GetFlowValidationResultAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFlowValidationResultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The flow name.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/validationResult`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FlowValidationResult GetFlowValidationResult(FlowValidationResultName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFlowValidationResult(new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The flow name.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/validationResult`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> GetFlowValidationResultAsync(FlowValidationResultName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFlowValidationResultAsync(new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The flow name.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
+        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/validationResult`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FlowValidationResult> GetFlowValidationResultAsync(FlowValidationResultName name, st::CancellationToken cancellationToken) =>
+            GetFlowValidationResultAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Flows client wrapper implementation, for convenient use.</summary>
@@ -1045,6 +1236,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private readonly gaxgrpc::ApiCall<UpdateFlowRequest, Flow> _callUpdateFlow;
 
         private readonly gaxgrpc::ApiCall<TrainFlowRequest, lro::Operation> _callTrainFlow;
+
+        private readonly gaxgrpc::ApiCall<ValidateFlowRequest, FlowValidationResult> _callValidateFlow;
+
+        private readonly gaxgrpc::ApiCall<GetFlowValidationResultRequest, FlowValidationResult> _callGetFlowValidationResult;
 
         /// <summary>
         /// Constructs a client wrapper for the Flows service, with the specified gRPC client and settings.
@@ -1075,6 +1270,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callTrainFlow = clientHelper.BuildApiCall<TrainFlowRequest, lro::Operation>(grpcClient.TrainFlowAsync, grpcClient.TrainFlow, effectiveSettings.TrainFlowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callTrainFlow);
             Modify_TrainFlowApiCall(ref _callTrainFlow);
+            _callValidateFlow = clientHelper.BuildApiCall<ValidateFlowRequest, FlowValidationResult>(grpcClient.ValidateFlowAsync, grpcClient.ValidateFlow, effectiveSettings.ValidateFlowSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callValidateFlow);
+            Modify_ValidateFlowApiCall(ref _callValidateFlow);
+            _callGetFlowValidationResult = clientHelper.BuildApiCall<GetFlowValidationResultRequest, FlowValidationResult>(grpcClient.GetFlowValidationResultAsync, grpcClient.GetFlowValidationResult, effectiveSettings.GetFlowValidationResultSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetFlowValidationResult);
+            Modify_GetFlowValidationResultApiCall(ref _callGetFlowValidationResult);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1092,6 +1293,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_TrainFlowApiCall(ref gaxgrpc::ApiCall<TrainFlowRequest, lro::Operation> call);
 
+        partial void Modify_ValidateFlowApiCall(ref gaxgrpc::ApiCall<ValidateFlowRequest, FlowValidationResult> call);
+
+        partial void Modify_GetFlowValidationResultApiCall(ref gaxgrpc::ApiCall<GetFlowValidationResultRequest, FlowValidationResult> call);
+
         partial void OnConstruction(Flows.FlowsClient grpcClient, FlowsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Flows client</summary>
@@ -1108,6 +1313,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_UpdateFlowRequest(ref UpdateFlowRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TrainFlowRequest(ref TrainFlowRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ValidateFlowRequest(ref ValidateFlowRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetFlowValidationResultRequest(ref GetFlowValidationResultRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a flow in the specified agent.
@@ -1256,6 +1465,60 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_TrainFlowRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, wkt::Struct>(await _callTrainFlow.Async(request, callSettings).ConfigureAwait(false), TrainFlowOperationsClient);
+        }
+
+        /// <summary>
+        /// Validates the specified flow and creates or updates validation results.
+        /// Please call this API after the training is completed to get the complete
+        /// validation results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FlowValidationResult ValidateFlow(ValidateFlowRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateFlowRequest(ref request, ref callSettings);
+            return _callValidateFlow.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Validates the specified flow and creates or updates validation results.
+        /// Please call this API after the training is completed to get the complete
+        /// validation results.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FlowValidationResult> ValidateFlowAsync(ValidateFlowRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateFlowRequest(ref request, ref callSettings);
+            return _callValidateFlow.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FlowValidationResult GetFlowValidationResult(GetFlowValidationResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFlowValidationResultRequest(ref request, ref callSettings);
+            return _callGetFlowValidationResult.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the latest flow validation result. Flow validation is performed
+        /// when ValidateFlow is called.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FlowValidationResult> GetFlowValidationResultAsync(GetFlowValidationResultRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetFlowValidationResultRequest(ref request, ref callSettings);
+            return _callGetFlowValidationResult.Async(request, callSettings);
         }
     }
 

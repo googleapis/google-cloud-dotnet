@@ -583,7 +583,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// An **entity entry** for an associated entity type.
-      /// Next Id = 8
       /// </summary>
       public sealed partial class Entity : pb::IMessage<Entity>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

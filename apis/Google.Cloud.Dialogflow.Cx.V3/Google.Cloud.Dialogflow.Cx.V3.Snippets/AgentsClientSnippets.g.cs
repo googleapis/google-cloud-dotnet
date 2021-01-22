@@ -770,5 +770,129 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ValidateAgent</summary>
+        public void ValidateAgentRequestObject()
+        {
+            // Snippet: ValidateAgent(ValidateAgentRequest, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            ValidateAgentRequest request = new ValidateAgentRequest
+            {
+                AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            AgentValidationResult response = agentsClient.ValidateAgent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ValidateAgentAsync</summary>
+        public async Task ValidateAgentRequestObjectAsync()
+        {
+            // Snippet: ValidateAgentAsync(ValidateAgentRequest, CallSettings)
+            // Additional: ValidateAgentAsync(ValidateAgentRequest, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            ValidateAgentRequest request = new ValidateAgentRequest
+            {
+                AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            AgentValidationResult response = await agentsClient.ValidateAgentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentValidationResult</summary>
+        public void GetAgentValidationResultRequestObject()
+        {
+            // Snippet: GetAgentValidationResult(GetAgentValidationResultRequest, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            AgentValidationResult response = agentsClient.GetAgentValidationResult(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentValidationResultAsync</summary>
+        public async Task GetAgentValidationResultRequestObjectAsync()
+        {
+            // Snippet: GetAgentValidationResultAsync(GetAgentValidationResultRequest, CallSettings)
+            // Additional: GetAgentValidationResultAsync(GetAgentValidationResultRequest, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            AgentValidationResult response = await agentsClient.GetAgentValidationResultAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentValidationResult</summary>
+        public void GetAgentValidationResult()
+        {
+            // Snippet: GetAgentValidationResult(string, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/validationResult";
+            // Make the request
+            AgentValidationResult response = agentsClient.GetAgentValidationResult(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentValidationResultAsync</summary>
+        public async Task GetAgentValidationResultAsync()
+        {
+            // Snippet: GetAgentValidationResultAsync(string, CallSettings)
+            // Additional: GetAgentValidationResultAsync(string, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/validationResult";
+            // Make the request
+            AgentValidationResult response = await agentsClient.GetAgentValidationResultAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentValidationResult</summary>
+        public void GetAgentValidationResultResourceNames()
+        {
+            // Snippet: GetAgentValidationResult(AgentValidationResultName, CallSettings)
+            // Create client
+            AgentsClient agentsClient = AgentsClient.Create();
+            // Initialize request argument(s)
+            AgentValidationResultName name = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]");
+            // Make the request
+            AgentValidationResult response = agentsClient.GetAgentValidationResult(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentValidationResultAsync</summary>
+        public async Task GetAgentValidationResultResourceNamesAsync()
+        {
+            // Snippet: GetAgentValidationResultAsync(AgentValidationResultName, CallSettings)
+            // Additional: GetAgentValidationResultAsync(AgentValidationResultName, CancellationToken)
+            // Create client
+            AgentsClient agentsClient = await AgentsClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentValidationResultName name = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]");
+            // Make the request
+            AgentValidationResult response = await agentsClient.GetAgentValidationResultAsync(name);
+            // End snippet
+        }
     }
 }

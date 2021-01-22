@@ -608,5 +608,217 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void ValidateFlowRequestObject()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ValidateFlowRequest request = new ValidateFlowRequest
+            {
+                FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.ValidateFlow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult response = client.ValidateFlow(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ValidateFlowRequestObjectAsync()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ValidateFlowRequest request = new ValidateFlowRequest
+            {
+                FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.ValidateFlowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult responseCallSettings = await client.ValidateFlowAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            FlowValidationResult responseCancellationToken = await client.ValidateFlowAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetFlowValidationResultRequestObject()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFlowValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult response = client.GetFlowValidationResult(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetFlowValidationResultRequestObjectAsync()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFlowValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult responseCallSettings = await client.GetFlowValidationResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            FlowValidationResult responseCancellationToken = await client.GetFlowValidationResultAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetFlowValidationResult()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFlowValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult response = client.GetFlowValidationResult(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetFlowValidationResultAsync()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFlowValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult responseCallSettings = await client.GetFlowValidationResultAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            FlowValidationResult responseCancellationToken = await client.GetFlowValidationResultAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetFlowValidationResultResourceNames()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFlowValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult response = client.GetFlowValidationResult(request.FlowValidationResultName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetFlowValidationResultResourceNamesAsync()
+        {
+            moq::Mock<Flows.FlowsClient> mockGrpcClient = new moq::Mock<Flows.FlowsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+            };
+            FlowValidationResult expectedResponse = new FlowValidationResult
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                ValidationMessages =
+                {
+                    new ValidationMessage(),
+                },
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFlowValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<FlowValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FlowsClient client = new FlowsClientImpl(mockGrpcClient.Object, null);
+            FlowValidationResult responseCallSettings = await client.GetFlowValidationResultAsync(request.FlowValidationResultName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            FlowValidationResult responseCancellationToken = await client.GetFlowValidationResultAsync(request.FlowValidationResultName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
