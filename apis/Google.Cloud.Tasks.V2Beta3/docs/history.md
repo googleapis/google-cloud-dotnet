@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.0.0-beta04, released 2021-01-22
+
+- [Commit 3bc4a75](https://github.com/googleapis/google-cloud-dotnet/commit/3bc4a75):
+  - feat: Configurable tombstoning and task retention
+  - docs: updates to max burst size description
+
 # Version 2.0.0-beta03, released 2020-11-18
 
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
