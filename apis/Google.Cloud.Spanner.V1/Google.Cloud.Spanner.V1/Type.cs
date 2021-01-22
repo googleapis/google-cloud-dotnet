@@ -632,7 +632,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// SQL queries, it is the column alias (e.g., `"Word"` in the
         /// query `"SELECT 'hello' AS Word"`), or the column name (e.g.,
         /// `"ColName"` in the query `"SELECT ColName FROM Table"`). Some
-        /// columns might have an empty name (e.g., !"SELECT
+        /// columns might have an empty name (e.g., `"SELECT
         /// UPPER(ColName)"`). Note that a query result can contain
         /// multiple fields with the same name.
         /// </summary>
