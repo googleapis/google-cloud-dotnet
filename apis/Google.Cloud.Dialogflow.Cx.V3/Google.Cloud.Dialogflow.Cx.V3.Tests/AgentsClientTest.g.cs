@@ -48,6 +48,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -77,6 +78,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -108,6 +110,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -137,6 +140,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -168,6 +172,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -197,6 +202,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -229,6 +235,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -259,6 +266,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -291,6 +299,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -321,6 +330,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -353,6 +363,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -383,6 +394,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -415,6 +427,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -445,6 +458,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -477,6 +491,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -507,6 +522,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 AvatarUri = "avatar_urie1767db7",
                 SpeechToTextSettings = new SpeechToTextSettings(),
                 StartFlowAsFlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                SecuritySettingsAsSecuritySettingsName = SecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
                 EnableStackdriverLogging = false,
                 EnableSpellCorrection = true,
             };
@@ -615,6 +631,210 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
             await client.DeleteAgentAsync(request.AgentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteAgentAsync(request.AgentName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ValidateAgentRequestObject()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ValidateAgentRequest request = new ValidateAgentRequest
+            {
+                AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.ValidateAgent(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult response = client.ValidateAgent(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ValidateAgentRequestObjectAsync()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ValidateAgentRequest request = new ValidateAgentRequest
+            {
+                AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.ValidateAgentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult responseCallSettings = await client.ValidateAgentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AgentValidationResult responseCancellationToken = await client.ValidateAgentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAgentValidationResultRequestObject()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetAgentValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult response = client.GetAgentValidationResult(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAgentValidationResultRequestObjectAsync()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetAgentValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult responseCallSettings = await client.GetAgentValidationResultAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AgentValidationResult responseCancellationToken = await client.GetAgentValidationResultAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAgentValidationResult()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetAgentValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult response = client.GetAgentValidationResult(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAgentValidationResultAsync()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetAgentValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult responseCallSettings = await client.GetAgentValidationResultAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AgentValidationResult responseCancellationToken = await client.GetAgentValidationResultAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetAgentValidationResultResourceNames()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetAgentValidationResult(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult response = client.GetAgentValidationResult(request.AgentValidationResultName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetAgentValidationResultResourceNamesAsync()
+        {
+            moq::Mock<Agents.AgentsClient> mockGrpcClient = new moq::Mock<Agents.AgentsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetAgentValidationResultRequest request = new GetAgentValidationResultRequest
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+            };
+            AgentValidationResult expectedResponse = new AgentValidationResult
+            {
+                AgentValidationResultName = AgentValidationResultName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                FlowValidationResults =
+                {
+                    new FlowValidationResult(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetAgentValidationResultAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AgentValidationResult>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AgentsClient client = new AgentsClientImpl(mockGrpcClient.Object, null);
+            AgentValidationResult responseCallSettings = await client.GetAgentValidationResultAsync(request.AgentValidationResultName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            AgentValidationResult responseCancellationToken = await client.GetAgentValidationResultAsync(request.AgentValidationResultName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
     }

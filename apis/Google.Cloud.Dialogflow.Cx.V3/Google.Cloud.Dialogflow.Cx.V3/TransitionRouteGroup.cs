@@ -197,11 +197,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.TransitionRoute> transitionRoutes_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.TransitionRoute>();
     /// <summary>
     /// Transition routes associated with the [TransitionRouteGroup][google.cloud.dialogflow.cx.v3.TransitionRouteGroup].
-    /// Duplicate transition routes (i.e. using the same
-    /// [`intent`][google.cloud.dialogflow.cx.v3.TransitionRoute.intent]) are not allowed.
-    ///
-    /// Note that the [`name`][google.cloud.dialogflow.cx.v3.TransitionRoute.name] field is not used in the
-    /// transition route group scope.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.TransitionRoute> TransitionRoutes {

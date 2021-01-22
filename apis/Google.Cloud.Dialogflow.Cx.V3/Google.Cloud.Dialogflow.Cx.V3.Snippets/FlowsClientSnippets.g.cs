@@ -825,5 +825,129 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ValidateFlow</summary>
+        public void ValidateFlowRequestObject()
+        {
+            // Snippet: ValidateFlow(ValidateFlowRequest, CallSettings)
+            // Create client
+            FlowsClient flowsClient = FlowsClient.Create();
+            // Initialize request argument(s)
+            ValidateFlowRequest request = new ValidateFlowRequest
+            {
+                FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            FlowValidationResult response = flowsClient.ValidateFlow(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ValidateFlowAsync</summary>
+        public async Task ValidateFlowRequestObjectAsync()
+        {
+            // Snippet: ValidateFlowAsync(ValidateFlowRequest, CallSettings)
+            // Additional: ValidateFlowAsync(ValidateFlowRequest, CancellationToken)
+            // Create client
+            FlowsClient flowsClient = await FlowsClient.CreateAsync();
+            // Initialize request argument(s)
+            ValidateFlowRequest request = new ValidateFlowRequest
+            {
+                FlowName = FlowName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            FlowValidationResult response = await flowsClient.ValidateFlowAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFlowValidationResult</summary>
+        public void GetFlowValidationResultRequestObject()
+        {
+            // Snippet: GetFlowValidationResult(GetFlowValidationResultRequest, CallSettings)
+            // Create client
+            FlowsClient flowsClient = FlowsClient.Create();
+            // Initialize request argument(s)
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            FlowValidationResult response = flowsClient.GetFlowValidationResult(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFlowValidationResultAsync</summary>
+        public async Task GetFlowValidationResultRequestObjectAsync()
+        {
+            // Snippet: GetFlowValidationResultAsync(GetFlowValidationResultRequest, CallSettings)
+            // Additional: GetFlowValidationResultAsync(GetFlowValidationResultRequest, CancellationToken)
+            // Create client
+            FlowsClient flowsClient = await FlowsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetFlowValidationResultRequest request = new GetFlowValidationResultRequest
+            {
+                FlowValidationResultName = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            FlowValidationResult response = await flowsClient.GetFlowValidationResultAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFlowValidationResult</summary>
+        public void GetFlowValidationResult()
+        {
+            // Snippet: GetFlowValidationResult(string, CallSettings)
+            // Create client
+            FlowsClient flowsClient = FlowsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/flows/[FLOW]/validationResult";
+            // Make the request
+            FlowValidationResult response = flowsClient.GetFlowValidationResult(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFlowValidationResultAsync</summary>
+        public async Task GetFlowValidationResultAsync()
+        {
+            // Snippet: GetFlowValidationResultAsync(string, CallSettings)
+            // Additional: GetFlowValidationResultAsync(string, CancellationToken)
+            // Create client
+            FlowsClient flowsClient = await FlowsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/flows/[FLOW]/validationResult";
+            // Make the request
+            FlowValidationResult response = await flowsClient.GetFlowValidationResultAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFlowValidationResult</summary>
+        public void GetFlowValidationResultResourceNames()
+        {
+            // Snippet: GetFlowValidationResult(FlowValidationResultName, CallSettings)
+            // Create client
+            FlowsClient flowsClient = FlowsClient.Create();
+            // Initialize request argument(s)
+            FlowValidationResultName name = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]");
+            // Make the request
+            FlowValidationResult response = flowsClient.GetFlowValidationResult(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFlowValidationResultAsync</summary>
+        public async Task GetFlowValidationResultResourceNamesAsync()
+        {
+            // Snippet: GetFlowValidationResultAsync(FlowValidationResultName, CallSettings)
+            // Additional: GetFlowValidationResultAsync(FlowValidationResultName, CancellationToken)
+            // Create client
+            FlowsClient flowsClient = await FlowsClient.CreateAsync();
+            // Initialize request argument(s)
+            FlowValidationResultName name = FlowValidationResultName.FromProjectLocationAgentFlow("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]");
+            // Make the request
+            FlowValidationResult response = await flowsClient.GetFlowValidationResultAsync(name);
+            // End snippet
+        }
     }
 }

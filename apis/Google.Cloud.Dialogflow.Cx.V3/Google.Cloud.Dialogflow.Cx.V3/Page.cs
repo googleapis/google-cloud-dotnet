@@ -293,9 +293,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///
     /// *   TransitionRoutes defined in the page with intent specified.
     /// *   TransitionRoutes defined in the
-    /// [transition route groups][google.cloud.dialogflow.cx.v3.Page.transition_route_groups].
+    ///     [transition route groups][google.cloud.dialogflow.cx.v3.Page.transition_route_groups] with intent
+    ///     specified.
     /// *   TransitionRoutes defined in flow with intent specified.
     /// *   TransitionRoutes defined in the page with only condition specified.
+    /// *   TransitionRoutes defined in the
+    ///     [transition route groups][google.cloud.dialogflow.cx.v3.Page.transition_route_groups] with only
+    ///     condition specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.Cx.V3.TransitionRoute> TransitionRoutes {
@@ -888,9 +892,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int RedactFieldNumber = 11;
         private bool redact_;
         /// <summary>
-        /// Indicates whether the parameter content is logged in text and audio. If
-        /// it is set to true, the parameter content will be replaced to parameter
-        /// name in both request and response. The default value is false.
+        /// Indicates whether the parameter content should be redacted in text and
+        /// audio. If the flag is set to true, the parameter content will be replaced
+        /// by parameter name in both request and response.
+        /// Note: the parameter content is subject to redaction if either parameter
+        /// level redaction or [entity type level redaction][google.cloud.dialogflow.cx.v3.EntityType.redact] is
+        /// enabled.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool Redact {

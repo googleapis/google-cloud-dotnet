@@ -40,6 +40,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.UpdateFlowRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_TrainFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ValidateFlowRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> __Marshaller_google_cloud_dialogflow_cx_v3_FlowValidationResult = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowValidationResultRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow> __Method_CreateFlow = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow>(
         grpc::MethodType.Unary,
@@ -82,6 +85,20 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         "TrainFlow",
         __Marshaller_google_cloud_dialogflow_cx_v3_TrainFlowRequest,
         __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> __Method_ValidateFlow = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ValidateFlow",
+        __Marshaller_google_cloud_dialogflow_cx_v3_ValidateFlowRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_FlowValidationResult);
+
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> __Method_GetFlowValidationResult = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetFlowValidationResult",
+        __Marshaller_google_cloud_dialogflow_cx_v3_GetFlowValidationResultRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_FlowValidationResult);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -156,6 +173,31 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TrainFlow(global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Validates the specified flow and creates or updates validation results.
+      /// Please call this API after the training is completed to get the complete
+      /// validation results.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> ValidateFlow(global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the latest flow validation result. Flow validation is performed
+      /// when ValidateFlow is called.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> GetFlowValidationResult(global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -453,6 +495,106 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TrainFlow, null, options, request);
       }
+      /// <summary>
+      /// Validates the specified flow and creates or updates validation results.
+      /// Please call this API after the training is completed to get the complete
+      /// validation results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult ValidateFlow(global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateFlow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Validates the specified flow and creates or updates validation results.
+      /// Please call this API after the training is completed to get the complete
+      /// validation results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult ValidateFlow(global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ValidateFlow, null, options, request);
+      }
+      /// <summary>
+      /// Validates the specified flow and creates or updates validation results.
+      /// Please call this API after the training is completed to get the complete
+      /// validation results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> ValidateFlowAsync(global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateFlowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Validates the specified flow and creates or updates validation results.
+      /// Please call this API after the training is completed to get the complete
+      /// validation results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> ValidateFlowAsync(global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ValidateFlow, null, options, request);
+      }
+      /// <summary>
+      /// Gets the latest flow validation result. Flow validation is performed
+      /// when ValidateFlow is called.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult GetFlowValidationResult(global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFlowValidationResult(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the latest flow validation result. Flow validation is performed
+      /// when ValidateFlow is called.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult GetFlowValidationResult(global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetFlowValidationResult, null, options, request);
+      }
+      /// <summary>
+      /// Gets the latest flow validation result. Flow validation is performed
+      /// when ValidateFlow is called.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> GetFlowValidationResultAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetFlowValidationResultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the latest flow validation result. Flow validation is performed
+      /// when ValidateFlow is called.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult> GetFlowValidationResultAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetFlowValidationResult, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override FlowsClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -470,7 +612,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_ListFlows, serviceImpl.ListFlows)
           .AddMethod(__Method_GetFlow, serviceImpl.GetFlow)
           .AddMethod(__Method_UpdateFlow, serviceImpl.UpdateFlow)
-          .AddMethod(__Method_TrainFlow, serviceImpl.TrainFlow).Build();
+          .AddMethod(__Method_TrainFlow, serviceImpl.TrainFlow)
+          .AddMethod(__Method_ValidateFlow, serviceImpl.ValidateFlow)
+          .AddMethod(__Method_GetFlowValidationResult, serviceImpl.GetFlowValidationResult).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -485,6 +629,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_GetFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow>(serviceImpl.GetFlow));
       serviceBinder.AddMethod(__Method_UpdateFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.UpdateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.Flow>(serviceImpl.UpdateFlow));
       serviceBinder.AddMethod(__Method_TrainFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.TrainFlowRequest, global::Google.LongRunning.Operation>(serviceImpl.TrainFlow));
+      serviceBinder.AddMethod(__Method_ValidateFlow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ValidateFlowRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult>(serviceImpl.ValidateFlow));
+      serviceBinder.AddMethod(__Method_GetFlowValidationResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.GetFlowValidationResultRequest, global::Google.Cloud.Dialogflow.Cx.V3.FlowValidationResult>(serviceImpl.GetFlowValidationResult));
     }
 
   }
