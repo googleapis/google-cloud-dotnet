@@ -29,7 +29,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJ2dvb2ds",
             "ZS9jbG91ZC90YXNrcy92MmJldGEzL3RhcmdldC5wcm90bxoeZ29vZ2xlL3By",
             "b3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIsQFCgVR",
+            "YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIt8GCgVR",
             "dWV1ZRIMCgRuYW1lGAEgASgJEk8KFWFwcF9lbmdpbmVfaHR0cF9xdWV1ZRgD",
             "IAEoCzIuLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkFwcEVuZ2luZUh0",
             "dHBRdWV1ZUgAEjsKC3JhdGVfbGltaXRzGAQgASgLMiYuZ29vZ2xlLmNsb3Vk",
@@ -37,33 +37,43 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "KAsyJy5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5SZXRyeUNvbmZpZxI2",
             "CgVzdGF0ZRgGIAEoDjInLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlF1",
             "ZXVlLlN0YXRlEi4KCnB1cmdlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wElgKGnN0YWNrZHJpdmVyX2xvZ2dpbmdfY29uZmlnGAog",
-            "ASgLMjQuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuU3RhY2tkcml2ZXJM",
-            "b2dnaW5nQ29uZmlnEjkKBHR5cGUYCyABKA4yJi5nb29nbGUuY2xvdWQudGFz",
-            "a3MudjJiZXRhMy5RdWV1ZS5UeXBlQgPgQQUiRQoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESCgoGUEFVU0VEEAISDAoIRElT",
-            "QUJMRUQQAyIwCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIICgRQVUxM",
-            "EAESCAoEUFVTSBACOlzqQVkKH2Nsb3VkdGFza3MuZ29vZ2xlYXBpcy5jb20v",
-            "UXVldWUSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9xdWV1ZXMve3F1ZXVlfUIMCgpxdWV1ZV90eXBlImoKClJhdGVMaW1pdHMS",
-            "IQoZbWF4X2Rpc3BhdGNoZXNfcGVyX3NlY29uZBgBIAEoARIWCg5tYXhfYnVy",
-            "c3Rfc2l6ZRgCIAEoBRIhChltYXhfY29uY3VycmVudF9kaXNwYXRjaGVzGAMg",
-            "ASgFItEBCgtSZXRyeUNvbmZpZxIUCgxtYXhfYXR0ZW1wdHMYASABKAUSNQoS",
-            "bWF4X3JldHJ5X2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uEi4KC21pbl9iYWNrb2ZmGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uEi4KC21heF9iYWNrb2ZmGAQgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEhUKDW1heF9kb3VibGluZ3MYBSABKAUiMgoYU3RhY2tk",
-            "cml2ZXJMb2dnaW5nQ29uZmlnEhYKDnNhbXBsaW5nX3JhdGlvGAEgASgBQm8K",
-            "HmNvbS5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhM0IKUXVldWVQcm90b1AB",
-            "Wj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
-            "L3Rhc2tzL3YyYmV0YTM7dGFza3NiBnByb3RvMw=="));
+            "dWYuVGltZXN0YW1wEisKCHRhc2tfdHRsGAggASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uEjAKDXRvbWJzdG9uZV90dGwYCSABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SWAoac3RhY2tkcml2ZXJfbG9nZ2luZ19jb25m",
+            "aWcYCiABKAsyNC5nb29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5TdGFja2Ry",
+            "aXZlckxvZ2dpbmdDb25maWcSOQoEdHlwZRgLIAEoDjImLmdvb2dsZS5jbG91",
+            "ZC50YXNrcy52MmJldGEzLlF1ZXVlLlR5cGVCA+BBBRI6CgVzdGF0cxgMIAEo",
+            "CzImLmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlF1ZXVlU3RhdHNCA+BB",
+            "AyJFCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQ",
+            "ARIKCgZQQVVTRUQQAhIMCghESVNBQkxFRBADIjAKBFR5cGUSFAoQVFlQRV9V",
+            "TlNQRUNJRklFRBAAEggKBFBVTEwQARIICgRQVVNIEAI6XOpBWQofY2xvdWR0",
+            "YXNrcy5nb29nbGVhcGlzLmNvbS9RdWV1ZRI2cHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3F1ZXVlcy97cXVldWV9QgwKCnF1ZXVl",
+            "X3R5cGUiagoKUmF0ZUxpbWl0cxIhChltYXhfZGlzcGF0Y2hlc19wZXJfc2Vj",
+            "b25kGAEgASgBEhYKDm1heF9idXJzdF9zaXplGAIgASgFEiEKGW1heF9jb25j",
+            "dXJyZW50X2Rpc3BhdGNoZXMYAyABKAUi0QEKC1JldHJ5Q29uZmlnEhQKDG1h",
+            "eF9hdHRlbXB0cxgBIAEoBRI1ChJtYXhfcmV0cnlfZHVyYXRpb24YAiABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoLbWluX2JhY2tvZmYYAyAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SLgoLbWF4X2JhY2tvZmYY",
+            "BCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SFQoNbWF4X2RvdWJs",
+            "aW5ncxgFIAEoBSIyChhTdGFja2RyaXZlckxvZ2dpbmdDb25maWcSFgoOc2Ft",
+            "cGxpbmdfcmF0aW8YASABKAEi6AEKClF1ZXVlU3RhdHMSGAoLdGFza3NfY291",
+            "bnQYASABKANCA+BBAxJGCh1vbGRlc3RfZXN0aW1hdGVkX2Fycml2YWxfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxInChpl",
+            "eGVjdXRlZF9sYXN0X21pbnV0ZV9jb3VudBgDIAEoA0ID4EEDEigKG2NvbmN1",
+            "cnJlbnRfZGlzcGF0Y2hlc19jb3VudBgEIAEoA0ID4EEDEiUKGGVmZmVjdGl2",
+            "ZV9leGVjdXRpb25fcmF0ZRgFIAEoAUID4EEDQm8KHmNvbS5nb29nbGUuY2xv",
+            "dWQudGFza3MudjJiZXRhM0IKUXVldWVQcm90b1ABWj9nb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3Rhc2tzL3YyYmV0YTM7",
+            "dGFza3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Queue), global::Google.Cloud.Tasks.V2Beta3.Queue.Parser, new[]{ "Name", "AppEngineHttpQueue", "RateLimits", "RetryConfig", "State", "PurgeTime", "StackdriverLoggingConfig", "Type" }, new[]{ "QueueType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State), typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Queue), global::Google.Cloud.Tasks.V2Beta3.Queue.Parser, new[]{ "Name", "AppEngineHttpQueue", "RateLimits", "RetryConfig", "State", "PurgeTime", "TaskTtl", "TombstoneTtl", "StackdriverLoggingConfig", "Type", "Stats" }, new[]{ "QueueType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State), typeof(global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RateLimits), global::Google.Cloud.Tasks.V2Beta3.RateLimits.Parser, new[]{ "MaxDispatchesPerSecond", "MaxBurstSize", "MaxConcurrentDispatches" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.RetryConfig), global::Google.Cloud.Tasks.V2Beta3.RetryConfig.Parser, new[]{ "MaxAttempts", "MaxRetryDuration", "MinBackoff", "MaxBackoff", "MaxDoublings" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig), global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig.Parser, new[]{ "SamplingRatio" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig), global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig.Parser, new[]{ "SamplingRatio" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.QueueStats), global::Google.Cloud.Tasks.V2Beta3.QueueStats.Parser, new[]{ "TasksCount", "OldestEstimatedArrivalTime", "ExecutedLastMinuteCount", "ConcurrentDispatchesCount", "EffectiveExecutionRate" }, null, null, null, null)
           }));
     }
     #endregion
@@ -109,8 +119,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       retryConfig_ = other.retryConfig_ != null ? other.retryConfig_.Clone() : null;
       state_ = other.state_;
       purgeTime_ = other.purgeTime_ != null ? other.purgeTime_.Clone() : null;
+      taskTtl_ = other.taskTtl_ != null ? other.taskTtl_.Clone() : null;
+      tombstoneTtl_ = other.tombstoneTtl_ != null ? other.tombstoneTtl_.Clone() : null;
       stackdriverLoggingConfig_ = other.stackdriverLoggingConfig_ != null ? other.stackdriverLoggingConfig_.Clone() : null;
       type_ = other.type_;
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       switch (other.QueueTypeCase) {
         case QueueTypeOneofCase.AppEngineHttpQueue:
           AppEngineHttpQueue = other.AppEngineHttpQueue.Clone();
@@ -277,6 +290,54 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
     }
 
+    /// <summary>Field number for the "task_ttl" field.</summary>
+    public const int TaskTtlFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Duration taskTtl_;
+    /// <summary>
+    /// The maximum amount of time that a task will be retained in
+    /// this queue.
+    ///
+    /// Queues created by Cloud Tasks have a default `task_ttl` of 31 days.
+    /// After a task has lived for `task_ttl`, the task will be deleted
+    /// regardless of whether it was dispatched or not.
+    ///
+    /// The `task_ttl` for queues created via queue.yaml/xml is equal to the
+    /// maximum duration because there is a
+    /// [storage quota](https://cloud.google.com/appengine/quotas#Task_Queue) for
+    /// these queues. To view the maximum valid duration, see the documentation for
+    /// [Duration][google.protobuf.Duration].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration TaskTtl {
+      get { return taskTtl_; }
+      set {
+        taskTtl_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tombstone_ttl" field.</summary>
+    public const int TombstoneTtlFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Duration tombstoneTtl_;
+    /// <summary>
+    /// The task tombstone time to live (TTL).
+    ///
+    /// After a task is deleted or executed, the task's tombstone is
+    /// retained for the length of time specified by `tombstone_ttl`.
+    /// The tombstone is used by task de-duplication; another task with the same
+    /// name can't be created until the tombstone has expired. For more information
+    /// about task de-duplication, see the documentation for
+    /// [CreateTaskRequest][google.cloud.tasks.v2beta3.CreateTaskRequest.task].
+    ///
+    /// Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration TombstoneTtl {
+      get { return tombstoneTtl_; }
+      set {
+        tombstoneTtl_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stackdriver_logging_config" field.</summary>
     public const int StackdriverLoggingConfigFieldNumber = 10;
     private global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig stackdriverLoggingConfig_;
@@ -308,6 +369,22 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       get { return type_; }
       set {
         type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 12;
+    private global::Google.Cloud.Tasks.V2Beta3.QueueStats stats_;
+    /// <summary>
+    /// Output only. The realtime, informational statistics for a queue. In order
+    /// to receive the statistics the caller should include this field in the
+    /// FieldMask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Tasks.V2Beta3.QueueStats Stats {
+      get { return stats_; }
+      set {
+        stats_ = value;
       }
     }
 
@@ -348,8 +425,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (!object.Equals(RetryConfig, other.RetryConfig)) return false;
       if (State != other.State) return false;
       if (!object.Equals(PurgeTime, other.PurgeTime)) return false;
+      if (!object.Equals(TaskTtl, other.TaskTtl)) return false;
+      if (!object.Equals(TombstoneTtl, other.TombstoneTtl)) return false;
       if (!object.Equals(StackdriverLoggingConfig, other.StackdriverLoggingConfig)) return false;
       if (Type != other.Type) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
       if (QueueTypeCase != other.QueueTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -363,8 +443,11 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (retryConfig_ != null) hash ^= RetryConfig.GetHashCode();
       if (State != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (purgeTime_ != null) hash ^= PurgeTime.GetHashCode();
+      if (taskTtl_ != null) hash ^= TaskTtl.GetHashCode();
+      if (tombstoneTtl_ != null) hash ^= TombstoneTtl.GetHashCode();
       if (stackdriverLoggingConfig_ != null) hash ^= StackdriverLoggingConfig.GetHashCode();
       if (Type != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (stats_ != null) hash ^= Stats.GetHashCode();
       hash ^= (int) queueTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -406,6 +489,14 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(58);
         output.WriteMessage(PurgeTime);
       }
+      if (taskTtl_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TaskTtl);
+      }
+      if (tombstoneTtl_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TombstoneTtl);
+      }
       if (stackdriverLoggingConfig_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(StackdriverLoggingConfig);
@@ -413,6 +504,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (Type != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type.Unspecified) {
         output.WriteRawTag(88);
         output.WriteEnum((int) Type);
+      }
+      if (stats_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Stats);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -447,6 +542,14 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(58);
         output.WriteMessage(PurgeTime);
       }
+      if (taskTtl_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TaskTtl);
+      }
+      if (tombstoneTtl_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TombstoneTtl);
+      }
       if (stackdriverLoggingConfig_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(StackdriverLoggingConfig);
@@ -454,6 +557,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (Type != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type.Unspecified) {
         output.WriteRawTag(88);
         output.WriteEnum((int) Type);
+      }
+      if (stats_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Stats);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -482,11 +589,20 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (purgeTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PurgeTime);
       }
+      if (taskTtl_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TaskTtl);
+      }
+      if (tombstoneTtl_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TombstoneTtl);
+      }
       if (stackdriverLoggingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StackdriverLoggingConfig);
       }
       if (Type != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (stats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -523,6 +639,18 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         }
         PurgeTime.MergeFrom(other.PurgeTime);
       }
+      if (other.taskTtl_ != null) {
+        if (taskTtl_ == null) {
+          TaskTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        TaskTtl.MergeFrom(other.TaskTtl);
+      }
+      if (other.tombstoneTtl_ != null) {
+        if (tombstoneTtl_ == null) {
+          TombstoneTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        TombstoneTtl.MergeFrom(other.TombstoneTtl);
+      }
       if (other.stackdriverLoggingConfig_ != null) {
         if (stackdriverLoggingConfig_ == null) {
           StackdriverLoggingConfig = new global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig();
@@ -531,6 +659,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (other.Type != global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type.Unspecified) {
         Type = other.Type;
+      }
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::Google.Cloud.Tasks.V2Beta3.QueueStats();
+        }
+        Stats.MergeFrom(other.Stats);
       }
       switch (other.QueueTypeCase) {
         case QueueTypeOneofCase.AppEngineHttpQueue:
@@ -593,6 +727,20 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             input.ReadMessage(PurgeTime);
             break;
           }
+          case 66: {
+            if (taskTtl_ == null) {
+              TaskTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TaskTtl);
+            break;
+          }
+          case 74: {
+            if (tombstoneTtl_ == null) {
+              TombstoneTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TombstoneTtl);
+            break;
+          }
           case 82: {
             if (stackdriverLoggingConfig_ == null) {
               StackdriverLoggingConfig = new global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig();
@@ -602,6 +750,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           case 88: {
             Type = (global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (stats_ == null) {
+              Stats = new global::Google.Cloud.Tasks.V2Beta3.QueueStats();
+            }
+            input.ReadMessage(Stats);
             break;
           }
         }
@@ -656,6 +811,20 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             input.ReadMessage(PurgeTime);
             break;
           }
+          case 66: {
+            if (taskTtl_ == null) {
+              TaskTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TaskTtl);
+            break;
+          }
+          case 74: {
+            if (tombstoneTtl_ == null) {
+              TombstoneTtl = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(TombstoneTtl);
+            break;
+          }
           case 82: {
             if (stackdriverLoggingConfig_ == null) {
               StackdriverLoggingConfig = new global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig();
@@ -665,6 +834,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           case 88: {
             Type = (global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (stats_ == null) {
+              Stats = new global::Google.Cloud.Tasks.V2Beta3.QueueStats();
+            }
+            input.ReadMessage(Stats);
             break;
           }
         }
@@ -820,7 +996,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     public const int MaxBurstSizeFieldNumber = 2;
     private int maxBurstSize_;
     /// <summary>
-    /// Output only. The max burst size.
+    /// The max burst size.
     ///
     /// Max burst size limits how fast tasks in queue are processed when
     /// many tasks are in the queue and the rate is high. This field
@@ -837,21 +1013,21 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// continuously refilled with new tokens based on
     /// [max_dispatches_per_second][google.cloud.tasks.v2beta3.RateLimits.max_dispatches_per_second].
     ///
-    /// Cloud Tasks will pick the value of `max_burst_size` based on the
-    /// value of
+    /// The default value of `max_burst_size` is picked by Cloud Tasks
+    /// based on the value of
     /// [max_dispatches_per_second][google.cloud.tasks.v2beta3.RateLimits.max_dispatches_per_second].
+    ///
+    /// The maximum value of `max_burst_size` is 500.
     ///
     /// For App Engine queues that were created or updated using
     /// `queue.yaml/xml`, `max_burst_size` is equal to
     /// [bucket_size](https://cloud.google.com/appengine/docs/standard/python/config/queueref#bucket_size).
-    /// Since `max_burst_size` is output only, if
-    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] is called on a queue
-    /// created by `queue.yaml/xml`, `max_burst_size` will be reset based
-    /// on the value of
-    /// [max_dispatches_per_second][google.cloud.tasks.v2beta3.RateLimits.max_dispatches_per_second],
-    /// regardless of whether
-    /// [max_dispatches_per_second][google.cloud.tasks.v2beta3.RateLimits.max_dispatches_per_second]
-    /// is updated.
+    /// If
+    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] is called on a queue without
+    /// explicitly setting a value for `max_burst_size`,
+    /// `max_burst_size` value will get updated if
+    /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] is updating
+    /// [max_dispatches_per_second][google.cloud.tasks.v2beta3.RateLimits.max_dispatches_per_second].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxBurstSize {
@@ -1673,6 +1849,359 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             break;
           case 9: {
             SamplingRatio = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Statistics for a queue.
+  /// </summary>
+  public sealed partial class QueueStats : pb::IMessage<QueueStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueueStats> _parser = new pb::MessageParser<QueueStats>(() => new QueueStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<QueueStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueueStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueueStats(QueueStats other) : this() {
+      tasksCount_ = other.tasksCount_;
+      oldestEstimatedArrivalTime_ = other.oldestEstimatedArrivalTime_ != null ? other.oldestEstimatedArrivalTime_.Clone() : null;
+      executedLastMinuteCount_ = other.executedLastMinuteCount_;
+      concurrentDispatchesCount_ = other.concurrentDispatchesCount_;
+      effectiveExecutionRate_ = other.effectiveExecutionRate_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public QueueStats Clone() {
+      return new QueueStats(this);
+    }
+
+    /// <summary>Field number for the "tasks_count" field.</summary>
+    public const int TasksCountFieldNumber = 1;
+    private long tasksCount_;
+    /// <summary>
+    /// Output only. An estimation of the number of tasks in the queue, that is, the tasks in
+    /// the queue that haven't been executed, the tasks in the queue which the
+    /// queue has dispatched but has not yet received a reply for, and the failed
+    /// tasks that the queue is retrying.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TasksCount {
+      get { return tasksCount_; }
+      set {
+        tasksCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "oldest_estimated_arrival_time" field.</summary>
+    public const int OldestEstimatedArrivalTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp oldestEstimatedArrivalTime_;
+    /// <summary>
+    /// Output only. An estimation of the nearest time in the future where a task in the queue
+    /// is scheduled to be executed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp OldestEstimatedArrivalTime {
+      get { return oldestEstimatedArrivalTime_; }
+      set {
+        oldestEstimatedArrivalTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "executed_last_minute_count" field.</summary>
+    public const int ExecutedLastMinuteCountFieldNumber = 3;
+    private long executedLastMinuteCount_;
+    /// <summary>
+    /// Output only. The number of tasks that the queue has dispatched and received a reply for
+    /// during the last minute. This variable counts both successful and
+    /// non-successful executions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ExecutedLastMinuteCount {
+      get { return executedLastMinuteCount_; }
+      set {
+        executedLastMinuteCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "concurrent_dispatches_count" field.</summary>
+    public const int ConcurrentDispatchesCountFieldNumber = 4;
+    private long concurrentDispatchesCount_;
+    /// <summary>
+    /// Output only. The number of requests that the queue has dispatched but has not received
+    /// a reply for yet.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ConcurrentDispatchesCount {
+      get { return concurrentDispatchesCount_; }
+      set {
+        concurrentDispatchesCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "effective_execution_rate" field.</summary>
+    public const int EffectiveExecutionRateFieldNumber = 5;
+    private double effectiveExecutionRate_;
+    /// <summary>
+    /// Output only. The current maximum number of tasks per second executed by the queue.
+    /// The maximum value of this variable is controlled by the RateLimits of the
+    /// Queue. However, this value could be less to avoid overloading the endpoints
+    /// tasks in the queue are targeting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double EffectiveExecutionRate {
+      get { return effectiveExecutionRate_; }
+      set {
+        effectiveExecutionRate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as QueueStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(QueueStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TasksCount != other.TasksCount) return false;
+      if (!object.Equals(OldestEstimatedArrivalTime, other.OldestEstimatedArrivalTime)) return false;
+      if (ExecutedLastMinuteCount != other.ExecutedLastMinuteCount) return false;
+      if (ConcurrentDispatchesCount != other.ConcurrentDispatchesCount) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(EffectiveExecutionRate, other.EffectiveExecutionRate)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TasksCount != 0L) hash ^= TasksCount.GetHashCode();
+      if (oldestEstimatedArrivalTime_ != null) hash ^= OldestEstimatedArrivalTime.GetHashCode();
+      if (ExecutedLastMinuteCount != 0L) hash ^= ExecutedLastMinuteCount.GetHashCode();
+      if (ConcurrentDispatchesCount != 0L) hash ^= ConcurrentDispatchesCount.GetHashCode();
+      if (EffectiveExecutionRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(EffectiveExecutionRate);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TasksCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TasksCount);
+      }
+      if (oldestEstimatedArrivalTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OldestEstimatedArrivalTime);
+      }
+      if (ExecutedLastMinuteCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ExecutedLastMinuteCount);
+      }
+      if (ConcurrentDispatchesCount != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(ConcurrentDispatchesCount);
+      }
+      if (EffectiveExecutionRate != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(EffectiveExecutionRate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TasksCount != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TasksCount);
+      }
+      if (oldestEstimatedArrivalTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(OldestEstimatedArrivalTime);
+      }
+      if (ExecutedLastMinuteCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ExecutedLastMinuteCount);
+      }
+      if (ConcurrentDispatchesCount != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(ConcurrentDispatchesCount);
+      }
+      if (EffectiveExecutionRate != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(EffectiveExecutionRate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TasksCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TasksCount);
+      }
+      if (oldestEstimatedArrivalTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OldestEstimatedArrivalTime);
+      }
+      if (ExecutedLastMinuteCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ExecutedLastMinuteCount);
+      }
+      if (ConcurrentDispatchesCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ConcurrentDispatchesCount);
+      }
+      if (EffectiveExecutionRate != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(QueueStats other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TasksCount != 0L) {
+        TasksCount = other.TasksCount;
+      }
+      if (other.oldestEstimatedArrivalTime_ != null) {
+        if (oldestEstimatedArrivalTime_ == null) {
+          OldestEstimatedArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        OldestEstimatedArrivalTime.MergeFrom(other.OldestEstimatedArrivalTime);
+      }
+      if (other.ExecutedLastMinuteCount != 0L) {
+        ExecutedLastMinuteCount = other.ExecutedLastMinuteCount;
+      }
+      if (other.ConcurrentDispatchesCount != 0L) {
+        ConcurrentDispatchesCount = other.ConcurrentDispatchesCount;
+      }
+      if (other.EffectiveExecutionRate != 0D) {
+        EffectiveExecutionRate = other.EffectiveExecutionRate;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TasksCount = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            if (oldestEstimatedArrivalTime_ == null) {
+              OldestEstimatedArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(OldestEstimatedArrivalTime);
+            break;
+          }
+          case 24: {
+            ExecutedLastMinuteCount = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            ConcurrentDispatchesCount = input.ReadInt64();
+            break;
+          }
+          case 41: {
+            EffectiveExecutionRate = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TasksCount = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            if (oldestEstimatedArrivalTime_ == null) {
+              OldestEstimatedArrivalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(OldestEstimatedArrivalTime);
+            break;
+          }
+          case 24: {
+            ExecutedLastMinuteCount = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            ConcurrentDispatchesCount = input.ReadInt64();
+            break;
+          }
+          case 41: {
+            EffectiveExecutionRate = input.ReadDouble();
             break;
           }
         }

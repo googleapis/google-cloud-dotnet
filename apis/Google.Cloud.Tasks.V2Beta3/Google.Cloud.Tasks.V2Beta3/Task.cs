@@ -29,34 +29,36 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             "cm90bxonZ29vZ2xlL2Nsb3VkL3Rhc2tzL3YyYmV0YTMvdGFyZ2V0LnByb3Rv",
             "Gh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90",
             "b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3Rv",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIs0FCgRUYXNrEgwKBG5h",
+            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIo4GCgRUYXNrEgwKBG5h",
             "bWUYASABKAkSUwoXYXBwX2VuZ2luZV9odHRwX3JlcXVlc3QYAyABKAsyMC5n",
             "b29nbGUuY2xvdWQudGFza3MudjJiZXRhMy5BcHBFbmdpbmVIdHRwUmVxdWVz",
             "dEgAEj8KDGh0dHBfcmVxdWVzdBgLIAEoCzInLmdvb2dsZS5jbG91ZC50YXNr",
-            "cy52MmJldGEzLkh0dHBSZXF1ZXN0SAASMQoNc2NoZWR1bGVfdGltZRgEIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLY3JlYXRlX3RpbWUY",
-            "BSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjQKEWRpc3BhdGNo",
-            "X2RlYWRsaW5lGAwgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhYK",
-            "DmRpc3BhdGNoX2NvdW50GAYgASgFEhYKDnJlc3BvbnNlX2NvdW50GAcgASgF",
-            "EjoKDWZpcnN0X2F0dGVtcHQYCCABKAsyIy5nb29nbGUuY2xvdWQudGFza3Mu",
-            "djJiZXRhMy5BdHRlbXB0EjkKDGxhc3RfYXR0ZW1wdBgJIAEoCzIjLmdvb2ds",
-            "ZS5jbG91ZC50YXNrcy52MmJldGEzLkF0dGVtcHQSMwoEdmlldxgKIAEoDjIl",
-            "Lmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLlRhc2suVmlldyIxCgRWaWV3",
-            "EhQKEFZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEggKBEZVTEwQAjpo",
-            "6kFlCh5jbG91ZHRhc2tzLmdvb2dsZWFwaXMuY29tL1Rhc2sSQ3Byb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9xdWV1ZXMve3F1ZXVl",
-            "fS90YXNrcy97dGFza31CDgoMcGF5bG9hZF90eXBlIs8BCgdBdHRlbXB0EjEK",
-            "DXNjaGVkdWxlX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEjEKDWRpc3BhdGNoX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEjEKDXJlc3BvbnNlX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEisKD3Jlc3BvbnNlX3N0YXR1cxgEIAEoCzISLmdv",
-            "b2dsZS5ycGMuU3RhdHVzQm4KHmNvbS5nb29nbGUuY2xvdWQudGFza3MudjJi",
-            "ZXRhM0IJVGFza1Byb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvY2xvdWQvdGFza3MvdjJiZXRhMzt0YXNrc2IGcHJvdG8z"));
+            "cy52MmJldGEzLkh0dHBSZXF1ZXN0SAASPwoMcHVsbF9tZXNzYWdlGA0gASgL",
+            "MicuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuUHVsbE1lc3NhZ2VIABIx",
+            "Cg1zY2hlZHVsZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIvCgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASNAoRZGlzcGF0Y2hfZGVhZGxpbmUYDCABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SFgoOZGlzcGF0Y2hfY291bnQYBiABKAUSFgoO",
+            "cmVzcG9uc2VfY291bnQYByABKAUSOgoNZmlyc3RfYXR0ZW1wdBgIIAEoCzIj",
+            "Lmdvb2dsZS5jbG91ZC50YXNrcy52MmJldGEzLkF0dGVtcHQSOQoMbGFzdF9h",
+            "dHRlbXB0GAkgASgLMiMuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0YTMuQXR0",
+            "ZW1wdBIzCgR2aWV3GAogASgOMiUuZ29vZ2xlLmNsb3VkLnRhc2tzLnYyYmV0",
+            "YTMuVGFzay5WaWV3IjEKBFZpZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEgkK",
+            "BUJBU0lDEAESCAoERlVMTBACOmjqQWUKHmNsb3VkdGFza3MuZ29vZ2xlYXBp",
+            "cy5jb20vVGFzaxJDcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3F1ZXVlcy97cXVldWV9L3Rhc2tzL3t0YXNrfUIOCgxwYXlsb2Fk",
+            "X3R5cGUizwEKB0F0dGVtcHQSMQoNc2NoZWR1bGVfdGltZRgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNZGlzcGF0Y2hfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNcmVzcG9uc2VfdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoPcmVzcG9u",
+            "c2Vfc3RhdHVzGAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCbgoeY29tLmdv",
+            "b2dsZS5jbG91ZC50YXNrcy52MmJldGEzQglUYXNrUHJvdG9QAVo/Z29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90YXNrcy92",
+            "MmJldGEzO3Rhc2tzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Tasks.V2Beta3.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Task), global::Google.Cloud.Tasks.V2Beta3.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "HttpRequest", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "PayloadType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Task), global::Google.Cloud.Tasks.V2Beta3.Task.Parser, new[]{ "Name", "AppEngineHttpRequest", "HttpRequest", "PullMessage", "ScheduleTime", "CreateTime", "DispatchDeadline", "DispatchCount", "ResponseCount", "FirstAttempt", "LastAttempt", "View" }, new[]{ "PayloadType" }, new[]{ typeof(global::Google.Cloud.Tasks.V2Beta3.Task.Types.View) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tasks.V2Beta3.Attempt), global::Google.Cloud.Tasks.V2Beta3.Attempt.Parser, new[]{ "ScheduleTime", "DispatchTime", "ResponseTime", "ResponseStatus" }, null, null, null, null)
           }));
     }
@@ -111,6 +113,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           break;
         case PayloadTypeOneofCase.HttpRequest:
           HttpRequest = other.HttpRequest.Clone();
+          break;
+        case PayloadTypeOneofCase.PullMessage:
+          PullMessage = other.PullMessage.Clone();
           break;
       }
 
@@ -184,6 +189,26 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       set {
         payloadType_ = value;
         payloadTypeCase_ = value == null ? PayloadTypeOneofCase.None : PayloadTypeOneofCase.HttpRequest;
+      }
+    }
+
+    /// <summary>Field number for the "pull_message" field.</summary>
+    public const int PullMessageFieldNumber = 13;
+    /// <summary>
+    /// Pull Message contained in a task in a [PULL][google.cloud.tasks.v2beta3.Queue.type] queue type. This
+    /// payload type cannot be explicitly set through Cloud Tasks API. Its
+    /// purpose, currently is to provide backward compatibility with App Engine
+    /// Task Queue
+    /// [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/)
+    /// queues to provide a way to inspect contents of pull tasks through the
+    /// [CloudTasks.GetTask][google.cloud.tasks.v2beta3.CloudTasks.GetTask].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Tasks.V2Beta3.PullMessage PullMessage {
+      get { return payloadTypeCase_ == PayloadTypeOneofCase.PullMessage ? (global::Google.Cloud.Tasks.V2Beta3.PullMessage) payloadType_ : null; }
+      set {
+        payloadType_ = value;
+        payloadTypeCase_ = value == null ? PayloadTypeOneofCase.None : PayloadTypeOneofCase.PullMessage;
       }
     }
 
@@ -348,6 +373,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       None = 0,
       AppEngineHttpRequest = 3,
       HttpRequest = 11,
+      PullMessage = 13,
     }
     private PayloadTypeOneofCase payloadTypeCase_ = PayloadTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -377,6 +403,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (Name != other.Name) return false;
       if (!object.Equals(AppEngineHttpRequest, other.AppEngineHttpRequest)) return false;
       if (!object.Equals(HttpRequest, other.HttpRequest)) return false;
+      if (!object.Equals(PullMessage, other.PullMessage)) return false;
       if (!object.Equals(ScheduleTime, other.ScheduleTime)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(DispatchDeadline, other.DispatchDeadline)) return false;
@@ -395,6 +422,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (payloadTypeCase_ == PayloadTypeOneofCase.AppEngineHttpRequest) hash ^= AppEngineHttpRequest.GetHashCode();
       if (payloadTypeCase_ == PayloadTypeOneofCase.HttpRequest) hash ^= HttpRequest.GetHashCode();
+      if (payloadTypeCase_ == PayloadTypeOneofCase.PullMessage) hash ^= PullMessage.GetHashCode();
       if (scheduleTime_ != null) hash ^= ScheduleTime.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (dispatchDeadline_ != null) hash ^= DispatchDeadline.GetHashCode();
@@ -464,6 +492,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(98);
         output.WriteMessage(DispatchDeadline);
       }
+      if (payloadTypeCase_ == PayloadTypeOneofCase.PullMessage) {
+        output.WriteRawTag(106);
+        output.WriteMessage(PullMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -517,6 +549,10 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         output.WriteRawTag(98);
         output.WriteMessage(DispatchDeadline);
       }
+      if (payloadTypeCase_ == PayloadTypeOneofCase.PullMessage) {
+        output.WriteRawTag(106);
+        output.WriteMessage(PullMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -534,6 +570,9 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       }
       if (payloadTypeCase_ == PayloadTypeOneofCase.HttpRequest) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(HttpRequest);
+      }
+      if (payloadTypeCase_ == PayloadTypeOneofCase.PullMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PullMessage);
       }
       if (scheduleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduleTime);
@@ -625,6 +664,12 @@ namespace Google.Cloud.Tasks.V2Beta3 {
           }
           HttpRequest.MergeFrom(other.HttpRequest);
           break;
+        case PayloadTypeOneofCase.PullMessage:
+          if (PullMessage == null) {
+            PullMessage = new global::Google.Cloud.Tasks.V2Beta3.PullMessage();
+          }
+          PullMessage.MergeFrom(other.PullMessage);
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -710,6 +755,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
             input.ReadMessage(DispatchDeadline);
             break;
           }
+          case 106: {
+            global::Google.Cloud.Tasks.V2Beta3.PullMessage subBuilder = new global::Google.Cloud.Tasks.V2Beta3.PullMessage();
+            if (payloadTypeCase_ == PayloadTypeOneofCase.PullMessage) {
+              subBuilder.MergeFrom(PullMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PullMessage = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -791,6 +845,15 @@ namespace Google.Cloud.Tasks.V2Beta3 {
               DispatchDeadline = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(DispatchDeadline);
+            break;
+          }
+          case 106: {
+            global::Google.Cloud.Tasks.V2Beta3.PullMessage subBuilder = new global::Google.Cloud.Tasks.V2Beta3.PullMessage();
+            if (payloadTypeCase_ == PayloadTypeOneofCase.PullMessage) {
+              subBuilder.MergeFrom(PullMessage);
+            }
+            input.ReadMessage(subBuilder);
+            PullMessage = subBuilder;
             break;
           }
         }

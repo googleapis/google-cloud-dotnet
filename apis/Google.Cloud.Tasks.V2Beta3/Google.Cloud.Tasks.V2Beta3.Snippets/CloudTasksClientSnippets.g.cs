@@ -40,6 +40,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                ReadMask = new FieldMask(),
             };
             // Make the request
             PagedEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueues(request);
@@ -89,6 +90,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                ReadMask = new FieldMask(),
             };
             // Make the request
             PagedAsyncEnumerable<ListQueuesResponse, Queue> response = cloudTasksClient.ListQueuesAsync(request);
@@ -317,6 +319,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             GetQueueRequest request = new GetQueueRequest
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ReadMask = new FieldMask(),
             };
             // Make the request
             Queue response = cloudTasksClient.GetQueue(request);
@@ -334,6 +337,7 @@ namespace Google.Cloud.Tasks.V2Beta3.Snippets
             GetQueueRequest request = new GetQueueRequest
             {
                 QueueName = QueueName.FromProjectLocationQueue("[PROJECT]", "[LOCATION]", "[QUEUE]"),
+                ReadMask = new FieldMask(),
             };
             // Make the request
             Queue response = await cloudTasksClient.GetQueueAsync(request);
