@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.3.0, released 2021-01-25
+
+- [Commit 68db70f](https://github.com/googleapis/google-cloud-dotnet/commit/68db70f): fix: Fix error where the lease-extension-delay could be negative. Fixes [issue 5866](https://github.com/googleapis/google-cloud-dotnet/issues/5866)
+- [Commit d856a51](https://github.com/googleapis/google-cloud-dotnet/commit/d856a51): feat: add schema service
+- [Commit 66574a8](https://github.com/googleapis/google-cloud-dotnet/commit/66574a8): feat: Provide emulator detection in PublisherClient/SubscriberClient
+
 # Version 2.2.0, released 2020-12-02
 
 - [Commit 0ce91bb](https://github.com/googleapis/google-cloud-dotnet/commit/0ce91bb): feat: Enable server side flow control by default with the option to turn it off (see below)
