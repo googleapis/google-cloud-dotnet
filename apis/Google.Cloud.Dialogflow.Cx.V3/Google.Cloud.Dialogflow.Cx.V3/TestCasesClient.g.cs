@@ -961,9 +961,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Required. The test case to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to specify which fields should be updated. Only a test case's
-        /// metadata and replayed_conversation_turns may be updated. The original
-        /// test_case_conversation_turns may not be updated.
+        /// Required. The mask to specify which fields should be updated. The
+        /// [`creationTime`][google.cloud.dialogflow.cx.v3.TestCase.creation_time] and
+        /// [`lastTestResult`][google.cloud.dialogflow.cx.v3.TestCase.last_test_result] cannot be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -981,9 +981,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Required. The test case to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to specify which fields should be updated. Only a test case's
-        /// metadata and replayed_conversation_turns may be updated. The original
-        /// test_case_conversation_turns may not be updated.
+        /// Required. The mask to specify which fields should be updated. The
+        /// [`creationTime`][google.cloud.dialogflow.cx.v3.TestCase.creation_time] and
+        /// [`lastTestResult`][google.cloud.dialogflow.cx.v3.TestCase.last_test_result] cannot be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1001,9 +1001,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Required. The test case to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to specify which fields should be updated. Only a test case's
-        /// metadata and replayed_conversation_turns may be updated. The original
-        /// test_case_conversation_turns may not be updated.
+        /// Required. The mask to specify which fields should be updated. The
+        /// [`creationTime`][google.cloud.dialogflow.cx.v3.TestCase.creation_time] and
+        /// [`lastTestResult`][google.cloud.dialogflow.cx.v3.TestCase.last_test_result] cannot be updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
