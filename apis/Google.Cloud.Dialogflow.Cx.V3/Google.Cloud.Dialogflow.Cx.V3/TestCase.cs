@@ -5476,9 +5476,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. The mask to specify which fields should be updated. Only a test case's
-    /// metadata and replayed_conversation_turns may be updated. The original
-    /// test_case_conversation_turns may not be updated.
+    /// Required. The mask to specify which fields should be updated. The
+    /// [`creationTime`][google.cloud.dialogflow.cx.v3.TestCase.creation_time] and
+    /// [`lastTestResult`][google.cloud.dialogflow.cx.v3.TestCase.last_test_result] cannot be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {

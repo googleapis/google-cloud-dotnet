@@ -50,13 +50,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0GmUKD091dHB1dEF1ZGlvVGV4dBIO",
             "CgR0ZXh0GAEgASgJSAASDgoEc3NtbBgCIAEoCUgAEigKG2FsbG93X3BsYXli",
             "YWNrX2ludGVycnVwdGlvbhgDIAEoCEID4EEDQggKBnNvdXJjZRoQCg5FbmRJ",
-            "bnRlcmFjdGlvbhrBAQoKTWl4ZWRBdWRpbxJTCghzZWdtZW50cxgBIAMoCzJB",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLlJlc3BvbnNlTWVzc2Fn",
-            "ZS5NaXhlZEF1ZGlvLlNlZ21lbnQaXgoHU2VnbWVudBIPCgVhdWRpbxgBIAEo",
-            "DEgAEg0KA3VyaRgCIAEoCUgAEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVw",
-            "dGlvbhgDIAEoCEID4EEDQgkKB2NvbnRlbnQaTQoJUGxheUF1ZGlvEhYKCWF1",
-            "ZGlvX3VyaRgBIAEoCUID4EECEigKG2FsbG93X3BsYXliYWNrX2ludGVycnVw",
-            "dGlvbhgCIAEoCEID4EEDQgkKB21lc3NhZ2VCpAEKIWNvbS5nb29nbGUuY2xv",
+            "bnRlcmFjdGlvbhpNCglQbGF5QXVkaW8SFgoJYXVkaW9fdXJpGAEgASgJQgPg",
+            "QQISKAobYWxsb3dfcGxheWJhY2tfaW50ZXJydXB0aW9uGAIgASgIQgPgQQMa",
+            "wQEKCk1peGVkQXVkaW8SUwoIc2VnbWVudHMYASADKAsyQS5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy5jeC52My5SZXNwb25zZU1lc3NhZ2UuTWl4ZWRBdWRp",
+            "by5TZWdtZW50Gl4KB1NlZ21lbnQSDwoFYXVkaW8YASABKAxIABINCgN1cmkY",
+            "AiABKAlIABIoChthbGxvd19wbGF5YmFja19pbnRlcnJ1cHRpb24YAyABKAhC",
+            "A+BBA0IJCgdjb250ZW50QgkKB21lc3NhZ2VCpAEKIWNvbS5nb29nbGUuY2xv",
             "dWQuZGlhbG9nZmxvdy5jeC52M0IUUmVzcG9uc2VNZXNzYWdlUHJvdG9QAVo/",
             "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9k",
             "aWFsb2dmbG93L2N4L3YzO2N4+AEBogICREaqAh1Hb29nbGUuQ2xvdWQuRGlh",
@@ -69,8 +69,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.ConversationSuccess.Parser, new[]{ "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.OutputAudioText.Parser, new[]{ "Text", "Ssml", "AllowPlaybackInterruption" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.EndInteraction), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.EndInteraction.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Parser, new[]{ "Segments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment.Parser, new[]{ "Audio", "Uri", "AllowPlaybackInterruption" }, new[]{ "Content" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio.Parser, new[]{ "AudioUri", "AllowPlaybackInterruption" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.PlayAudio.Parser, new[]{ "AudioUri", "AllowPlaybackInterruption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Parser, new[]{ "Segments" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment), global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Types.MixedAudio.Types.Segment.Parser, new[]{ "Audio", "Uri", "AllowPlaybackInterruption" }, new[]{ "Content" }, null, null, null)})})
           }));
     }
     #endregion
@@ -1752,6 +1752,226 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
+      /// Specifies an audio clip to be played by the client as part of the response.
+      /// </summary>
+      public sealed partial class PlayAudio : pb::IMessage<PlayAudio>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PlayAudio> _parser = new pb::MessageParser<PlayAudio>(() => new PlayAudio());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<PlayAudio> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PlayAudio() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PlayAudio(PlayAudio other) : this() {
+          audioUri_ = other.audioUri_;
+          allowPlaybackInterruption_ = other.allowPlaybackInterruption_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public PlayAudio Clone() {
+          return new PlayAudio(this);
+        }
+
+        /// <summary>Field number for the "audio_uri" field.</summary>
+        public const int AudioUriFieldNumber = 1;
+        private string audioUri_ = "";
+        /// <summary>
+        /// Required. URI of the audio clip. Dialogflow does not impose any validation on this
+        /// value. It is specific to the client that reads it.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string AudioUri {
+          get { return audioUri_; }
+          set {
+            audioUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "allow_playback_interruption" field.</summary>
+        public const int AllowPlaybackInterruptionFieldNumber = 2;
+        private bool allowPlaybackInterruption_;
+        /// <summary>
+        /// Output only. Whether the playback of this message can be interrupted by the end
+        /// user's speech and the client can then starts the next Dialogflow
+        /// request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool AllowPlaybackInterruption {
+          get { return allowPlaybackInterruption_; }
+          set {
+            allowPlaybackInterruption_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as PlayAudio);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(PlayAudio other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (AudioUri != other.AudioUri) return false;
+          if (AllowPlaybackInterruption != other.AllowPlaybackInterruption) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (AudioUri.Length != 0) hash ^= AudioUri.GetHashCode();
+          if (AllowPlaybackInterruption != false) hash ^= AllowPlaybackInterruption.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (AudioUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(AudioUri);
+          }
+          if (AllowPlaybackInterruption != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(AllowPlaybackInterruption);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (AudioUri.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(AudioUri);
+          }
+          if (AllowPlaybackInterruption != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(AllowPlaybackInterruption);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (AudioUri.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AudioUri);
+          }
+          if (AllowPlaybackInterruption != false) {
+            size += 1 + 1;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(PlayAudio other) {
+          if (other == null) {
+            return;
+          }
+          if (other.AudioUri.Length != 0) {
+            AudioUri = other.AudioUri;
+          }
+          if (other.AllowPlaybackInterruption != false) {
+            AllowPlaybackInterruption = other.AllowPlaybackInterruption;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                AudioUri = input.ReadString();
+                break;
+              }
+              case 16: {
+                AllowPlaybackInterruption = input.ReadBool();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                AudioUri = input.ReadString();
+                break;
+              }
+              case 16: {
+                AllowPlaybackInterruption = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Represents an audio message that is composed of both segments
       /// synthesized from the Dialogflow agent prompts and ones hosted externally
       /// at the specified URIs.
@@ -1772,7 +1992,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2219,226 +2439,6 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
         }
         #endregion
-
-      }
-
-      /// <summary>
-      /// Specifies an audio clip to be played by the client as part of the response.
-      /// </summary>
-      public sealed partial class PlayAudio : pb::IMessage<PlayAudio>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<PlayAudio> _parser = new pb::MessageParser<PlayAudio>(() => new PlayAudio());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<PlayAudio> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessage.Descriptor.NestedTypes[6]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public PlayAudio() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public PlayAudio(PlayAudio other) : this() {
-          audioUri_ = other.audioUri_;
-          allowPlaybackInterruption_ = other.allowPlaybackInterruption_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public PlayAudio Clone() {
-          return new PlayAudio(this);
-        }
-
-        /// <summary>Field number for the "audio_uri" field.</summary>
-        public const int AudioUriFieldNumber = 1;
-        private string audioUri_ = "";
-        /// <summary>
-        /// Required. URI of the audio clip. Dialogflow does not impose any validation on this
-        /// value. It is specific to the client that reads it.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string AudioUri {
-          get { return audioUri_; }
-          set {
-            audioUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "allow_playback_interruption" field.</summary>
-        public const int AllowPlaybackInterruptionFieldNumber = 2;
-        private bool allowPlaybackInterruption_;
-        /// <summary>
-        /// Output only. Whether the playback of this message can be interrupted by the end
-        /// user's speech and the client can then starts the next Dialogflow
-        /// request.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool AllowPlaybackInterruption {
-          get { return allowPlaybackInterruption_; }
-          set {
-            allowPlaybackInterruption_ = value;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as PlayAudio);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(PlayAudio other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (AudioUri != other.AudioUri) return false;
-          if (AllowPlaybackInterruption != other.AllowPlaybackInterruption) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (AudioUri.Length != 0) hash ^= AudioUri.GetHashCode();
-          if (AllowPlaybackInterruption != false) hash ^= AllowPlaybackInterruption.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          if (AudioUri.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(AudioUri);
-          }
-          if (AllowPlaybackInterruption != false) {
-            output.WriteRawTag(16);
-            output.WriteBool(AllowPlaybackInterruption);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (AudioUri.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(AudioUri);
-          }
-          if (AllowPlaybackInterruption != false) {
-            output.WriteRawTag(16);
-            output.WriteBool(AllowPlaybackInterruption);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (AudioUri.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(AudioUri);
-          }
-          if (AllowPlaybackInterruption != false) {
-            size += 1 + 1;
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(PlayAudio other) {
-          if (other == null) {
-            return;
-          }
-          if (other.AudioUri.Length != 0) {
-            AudioUri = other.AudioUri;
-          }
-          if (other.AllowPlaybackInterruption != false) {
-            AllowPlaybackInterruption = other.AllowPlaybackInterruption;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                AudioUri = input.ReadString();
-                break;
-              }
-              case 16: {
-                AllowPlaybackInterruption = input.ReadBool();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                AudioUri = input.ReadString();
-                break;
-              }
-              case 16: {
-                AllowPlaybackInterruption = input.ReadBool();
-                break;
-              }
-            }
-          }
-        }
-        #endif
 
       }
 
