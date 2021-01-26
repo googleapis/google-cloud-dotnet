@@ -64,6 +64,8 @@ build_api_docs() {
     cp -r -t output/assembled output/$api/site/*
   else
     cp -r output/$api/site output/assembled/$api
+    # We need to make some changes to meet DevSite build expectations.
+    dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.PostProcessDevSite -- $api
   fi
   echo Finished building docs for $api
 }
@@ -79,8 +81,7 @@ mkdir output
 mkdir output/assembled
 
 # Build the tools once, then we can run them without restoring/building each time
-dotnet build ../tools/Google.Cloud.Tools.GenerateDocfxSources -v quiet -nologo -clp:NoSummary
-dotnet build ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -v quiet -nologo -clp:NoSummary
+dotnet build Google.Cloud.DocTools.sln -v quiet -nologo -clp:NoSummary
 
 apis=$@
 if [ -z "$apis" ]
