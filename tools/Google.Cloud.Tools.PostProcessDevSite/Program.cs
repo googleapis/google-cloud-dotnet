@@ -179,6 +179,14 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             var src = Path.Combine(_outputRoot, "obj", "snippets");
             var dest = Path.Combine(_devSiteRoot, "examples");
             Directory.CreateDirectory(dest);
+
+            // If we don't have any snippets, bail now. We'll keep
+            // the empty examples directory for the sake of consistency.
+            if (!Directory.Exists(src))
+            {
+                return;
+            }
+
             foreach (var file in Directory.GetFiles(src, "*.md"))
             {
                 var lines = File.ReadAllLines(file)
