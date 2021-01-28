@@ -254,6 +254,26 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.AccessApproval.V1"
     },
     {
+      "ServiceDirectory": "google/cloud/aiplatform/v1",
+      "Name": "aiplatform.googleapis.com",
+      "Title": "Cloud AI Platform API",
+      "Description": "Train high-quality custom machine learning models with minimal machine learning expertise and effort.",
+      "ServiceConfigFile": "google/cloud/aiplatform/v1/aiplatform_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.aiplatform.v1",
+      "PackageFromProtos": "google.cloud.aiplatform.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/aiplatform/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Aiplatform.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/aiplatform/v1beta1",
       "Name": "aiplatform.googleapis.com",
       "Title": "Cloud AI Platform API",
