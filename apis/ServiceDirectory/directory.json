@@ -277,7 +277,7 @@
       "ServiceDirectory": "google/cloud/aiplatform/v1beta1",
       "Name": "aiplatform.googleapis.com",
       "Title": "Cloud AI Platform API",
-      "Description": "Train high-quality custom machine learning models with minimum effort and machine learning expertise.",
+      "Description": "Train high-quality custom machine learning models with minimal machine learning expertise and effort.",
       "ServiceConfigFile": "google/cloud/aiplatform/v1beta1/aiplatform_v1beta1.yaml",
       "Version": "v1beta1",
       "PackageFromDirectory": "google.cloud.aiplatform.v1beta1",
