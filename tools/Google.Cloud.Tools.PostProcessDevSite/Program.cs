@@ -218,7 +218,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 // TODO: xrefs
             };
             string json = docUploaderMetadata.ToString(Formatting.Indented);
-            File.WriteAllText(Path.Combine(_devSiteRoot, "docs-metadata.json"), json);
+            File.WriteAllText(Path.Combine(_devSiteRoot, "docs.metadata.json"), json);
         }
 
         private const string GoogleApisXrefPrefix = "https://googleapis.dev/dotnet";
