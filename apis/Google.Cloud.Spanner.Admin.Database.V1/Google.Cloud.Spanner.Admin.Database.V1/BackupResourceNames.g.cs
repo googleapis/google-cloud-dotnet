@@ -283,6 +283,27 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
     }
 
+    public partial class CreateBackupMetadata
+    {
+        /// <summary>
+        /// <see cref="gcsadv::BackupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcsadv::BackupName BackupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcsadv::BackupName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName DatabaseAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
+            set => Database = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetBackupRequest
     {
         /// <summary>
@@ -328,6 +349,25 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : gcscv::InstanceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BackupInfo
+    {
+        /// <summary><see cref="BackupName"/>-typed view over the <see cref="Backup"/> resource name property.</summary>
+        public BackupName BackupAsBackupName
+        {
+            get => string.IsNullOrEmpty(Backup) ? null : BackupName.Parse(Backup, allowUnparsed: true);
+            set => Backup = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="SourceDatabase"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName SourceDatabaseAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(SourceDatabase) ? null : gcscv::DatabaseName.Parse(SourceDatabase, allowUnparsed: true);
+            set => SourceDatabase = value?.ToString() ?? "";
         }
     }
 }

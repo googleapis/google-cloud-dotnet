@@ -1395,6 +1395,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1411,6 +1413,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1427,6 +1431,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1440,6 +1446,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1456,6 +1464,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1472,6 +1482,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="database">
         /// Required. The database whose schema we wish to get.
+        /// Values are of the form
+        /// `projects/&amp;lt;project&amp;gt;/instances/&amp;lt;instance&amp;gt;/databases/&amp;lt;database&amp;gt;`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

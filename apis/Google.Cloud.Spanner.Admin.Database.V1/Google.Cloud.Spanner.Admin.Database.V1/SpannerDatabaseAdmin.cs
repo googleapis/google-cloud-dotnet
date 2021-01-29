@@ -38,58 +38,62 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "ZRgBIAEoDjIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlJl",
             "c3RvcmVTb3VyY2VUeXBlEkMKC2JhY2t1cF9pbmZvGAIgASgLMiwuZ29vZ2xl",
             "LnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQmFja3VwSW5mb0gAQg0KC3Nv",
-            "dXJjZV9pbmZvIpYDCghEYXRhYmFzZRIRCgRuYW1lGAEgASgJQgPgQQISRAoF",
+            "dXJjZV9pbmZvIv0DCghEYXRhYmFzZRIRCgRuYW1lGAEgASgJQgPgQQISRAoF",
             "c3RhdGUYAiABKA4yMC5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52",
             "MS5EYXRhYmFzZS5TdGF0ZUID4EEDEjQKC2NyZWF0ZV90aW1lGAMgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkgKDHJlc3RvcmVfaW5m",
             "bxgEIAEoCzItLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLlJl",
-            "c3RvcmVJbmZvQgPgQQMiTQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQ",
-            "ABIMCghDUkVBVElORxABEgkKBVJFQURZEAISFAoQUkVBRFlfT1BUSU1JWklO",
-            "RxADOmLqQV8KH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USPHBy",
-            "b2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9kYXRhYmFz",
-            "ZXMve2RhdGFiYXNlfSJ2ChRMaXN0RGF0YWJhc2VzUmVxdWVzdBI3CgZwYXJl",
-            "bnQYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0",
-            "YW5jZRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJv",
-            "ChVMaXN0RGF0YWJhc2VzUmVzcG9uc2USPQoJZGF0YWJhc2VzGAEgAygLMiou",
-            "Z29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuRGF0YWJhc2USFwoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIo4BChVDcmVhdGVEYXRhYmFzZVJlcXVl",
-            "c3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBp",
-            "cy5jb20vSW5zdGFuY2USHQoQY3JlYXRlX3N0YXRlbWVudBgCIAEoCUID4EEC",
-            "Eh0KEGV4dHJhX3N0YXRlbWVudHMYAyADKAlCA+BBASJQChZDcmVhdGVEYXRh",
-            "YmFzZU1ldGFkYXRhEjYKCGRhdGFiYXNlGAEgASgJQiT6QSEKH3NwYW5uZXIu",
-            "Z29vZ2xlYXBpcy5jb20vRGF0YWJhc2UiSwoSR2V0RGF0YWJhc2VSZXF1ZXN0",
-            "EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNv",
-            "bS9EYXRhYmFzZSKEAQoYVXBkYXRlRGF0YWJhc2VEZGxSZXF1ZXN0EjkKCGRh",
-            "dGFiYXNlGAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20v",
-            "RGF0YWJhc2USFwoKc3RhdGVtZW50cxgCIAMoCUID4EECEhQKDG9wZXJhdGlv",
-            "bl9pZBgDIAEoCSK2AQoZVXBkYXRlRGF0YWJhc2VEZGxNZXRhZGF0YRI2Cghk",
-            "YXRhYmFzZRgBIAEoCUIk+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0Rh",
-            "dGFiYXNlEhIKCnN0YXRlbWVudHMYAiADKAkSNQoRY29tbWl0X3RpbWVzdGFt",
-            "cHMYAyADKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhYKCXRocm90",
-            "dGxlZBgEIAEoCEID4EEDIlAKE0Ryb3BEYXRhYmFzZVJlcXVlc3QSOQoIZGF0",
-            "YWJhc2UYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9E",
-            "YXRhYmFzZSJSChVHZXREYXRhYmFzZURkbFJlcXVlc3QSOQoIZGF0YWJhc2UY",
-            "ASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFz",
-            "ZSIsChZHZXREYXRhYmFzZURkbFJlc3BvbnNlEhIKCnN0YXRlbWVudHMYASAD",
-            "KAkijwEKHUxpc3REYXRhYmFzZU9wZXJhdGlvbnNSZXF1ZXN0EjcKBnBhcmVu",
-            "dBgBIAEoCUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3Rh",
-            "bmNlEg4KBmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFn",
-            "ZV90b2tlbhgEIAEoCSJsCh5MaXN0RGF0YWJhc2VPcGVyYXRpb25zUmVzcG9u",
-            "c2USMQoKb3BlcmF0aW9ucxgBIAMoCzIdLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqsBChZSZXN0b3Jl",
+            "c3RvcmVJbmZvQgPgQQMSJQoYdmVyc2lvbl9yZXRlbnRpb25fcGVyaW9kGAYg",
+            "ASgJQgPgQQMSPgoVZWFybGllc3RfdmVyc2lvbl90aW1lGAcgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIk0KBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEhQKEFJF",
+            "QURZX09QVElNSVpJTkcQAzpi6kFfCh9zcGFubmVyLmdvb2dsZWFwaXMuY29t",
+            "L0RhdGFiYXNlEjxwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0",
+            "YW5jZX0vZGF0YWJhc2VzL3tkYXRhYmFzZX0idgoUTGlzdERhdGFiYXNlc1Jl",
+            "cXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xl",
+            "YXBpcy5jb20vSW5zdGFuY2USEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2Vf",
+            "dG9rZW4YBCABKAkibwoVTGlzdERhdGFiYXNlc1Jlc3BvbnNlEj0KCWRhdGFi",
+            "YXNlcxgBIAMoCzIqLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYx",
+            "LkRhdGFiYXNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKOAQoVQ3JlYXRl",
             "RGF0YWJhc2VSZXF1ZXN0EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhCh9zcGFu",
-            "bmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhgKC2RhdGFiYXNlX2lkGAIg",
-            "ASgJQgPgQQISNAoGYmFja3VwGAMgASgJQiL6QR8KHXNwYW5uZXIuZ29vZ2xl",
-            "YXBpcy5jb20vQmFja3VwSABCCAoGc291cmNlIucCChdSZXN0b3JlRGF0YWJh",
-            "c2VNZXRhZGF0YRIMCgRuYW1lGAEgASgJEkgKC3NvdXJjZV90eXBlGAIgASgO",
-            "MjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuUmVzdG9yZVNv",
-            "dXJjZVR5cGUSQwoLYmFja3VwX2luZm8YAyABKAsyLC5nb29nbGUuc3Bhbm5l",
-            "ci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXBJbmZvSAASRQoIcHJvZ3Jlc3MY",
-            "BCABKAsyMy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5PcGVy",
-            "YXRpb25Qcm9ncmVzcxIvCgtjYW5jZWxfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASKAogb3B0aW1pemVfZGF0YWJhc2Vfb3BlcmF0",
-            "aW9uX25hbWUYBiABKAlCDQoLc291cmNlX2luZm8idwogT3B0aW1pemVSZXN0",
-            "b3JlZERhdGFiYXNlTWV0YWRhdGESDAoEbmFtZRgBIAEoCRJFCghwcm9ncmVz",
+            "bmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEh0KEGNyZWF0ZV9zdGF0ZW1l",
+            "bnQYAiABKAlCA+BBAhIdChBleHRyYV9zdGF0ZW1lbnRzGAMgAygJQgPgQQEi",
+            "UAoWQ3JlYXRlRGF0YWJhc2VNZXRhZGF0YRI2CghkYXRhYmFzZRgBIAEoCUIk",
+            "+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlIksKEkdldERh",
+            "dGFiYXNlUmVxdWVzdBI1CgRuYW1lGAEgASgJQifgQQL6QSEKH3NwYW5uZXIu",
+            "Z29vZ2xlYXBpcy5jb20vRGF0YWJhc2UihAEKGFVwZGF0ZURhdGFiYXNlRGRs",
+            "UmVxdWVzdBI5CghkYXRhYmFzZRgBIAEoCUIn4EEC+kEhCh9zcGFubmVyLmdv",
+            "b2dsZWFwaXMuY29tL0RhdGFiYXNlEhcKCnN0YXRlbWVudHMYAiADKAlCA+BB",
+            "AhIUCgxvcGVyYXRpb25faWQYAyABKAkitgEKGVVwZGF0ZURhdGFiYXNlRGRs",
+            "TWV0YWRhdGESNgoIZGF0YWJhc2UYASABKAlCJPpBIQofc3Bhbm5lci5nb29n",
+            "bGVhcGlzLmNvbS9EYXRhYmFzZRISCgpzdGF0ZW1lbnRzGAIgAygJEjUKEWNv",
+            "bW1pdF90aW1lc3RhbXBzGAMgAygLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIWCgl0aHJvdHRsZWQYBCABKAhCA+BBAyJQChNEcm9wRGF0YWJhc2VS",
+            "ZXF1ZXN0EjkKCGRhdGFiYXNlGAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29v",
+            "Z2xlYXBpcy5jb20vRGF0YWJhc2UiUgoVR2V0RGF0YWJhc2VEZGxSZXF1ZXN0",
+            "EjkKCGRhdGFiYXNlGAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBp",
+            "cy5jb20vRGF0YWJhc2UiLAoWR2V0RGF0YWJhc2VEZGxSZXNwb25zZRISCgpz",
+            "dGF0ZW1lbnRzGAEgAygJIo8BCh1MaXN0RGF0YWJhc2VPcGVyYXRpb25zUmVx",
+            "dWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVh",
+            "cGlzLmNvbS9JbnN0YW5jZRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXpl",
+            "GAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkibAoeTGlzdERhdGFiYXNlT3Bl",
+            "cmF0aW9uc1Jlc3BvbnNlEjEKCm9wZXJhdGlvbnMYASADKAsyHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CSKrAQoWUmVzdG9yZURhdGFiYXNlUmVxdWVzdBI3CgZwYXJlbnQYASABKAlC",
+            "J+BBAvpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIYCgtk",
+            "YXRhYmFzZV9pZBgCIAEoCUID4EECEjQKBmJhY2t1cBgDIAEoCUIi+kEfCh1z",
+            "cGFubmVyLmdvb2dsZWFwaXMuY29tL0JhY2t1cEgAQggKBnNvdXJjZSKNAwoX",
+            "UmVzdG9yZURhdGFiYXNlTWV0YWRhdGESMgoEbmFtZRgBIAEoCUIk+kEhCh9z",
+            "cGFubmVyLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlEkgKC3NvdXJjZV90eXBl",
+            "GAIgASgOMjMuZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuUmVz",
+            "dG9yZVNvdXJjZVR5cGUSQwoLYmFja3VwX2luZm8YAyABKAsyLC5nb29nbGUu",
+            "c3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXBJbmZvSAASRQoIcHJv",
+            "Z3Jlc3MYBCABKAsyMy5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52",
+            "MS5PcGVyYXRpb25Qcm9ncmVzcxIvCgtjYW5jZWxfdGltZRgFIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKAogb3B0aW1pemVfZGF0YWJhc2Vf",
+            "b3BlcmF0aW9uX25hbWUYBiABKAlCDQoLc291cmNlX2luZm8inQEKIE9wdGlt",
+            "aXplUmVzdG9yZWREYXRhYmFzZU1ldGFkYXRhEjIKBG5hbWUYASABKAlCJPpB",
+            "IQofc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRJFCghwcm9ncmVz",
             "cxgCIAEoCzIzLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLk9w",
             "ZXJhdGlvblByb2dyZXNzKjUKEVJlc3RvcmVTb3VyY2VUeXBlEhQKEFRZUEVf",
             "VU5TUEVDSUZJRUQQABIKCgZCQUNLVVAQATKTHwoNRGF0YWJhc2VBZG1pbhLA",
@@ -194,7 +198,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.BackupReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo), global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo.Parser, new[]{ "SourceType", "BackupInfo" }, new[]{ "SourceInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database), global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser, new[]{ "Name", "State", "CreateTime", "RestoreInfo" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database), global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser, new[]{ "Name", "State", "CreateTime", "RestoreInfo", "VersionRetentionPeriod", "EarliestVersionTime" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.Parser, new[]{ "Databases", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest), global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.Parser, new[]{ "Parent", "CreateStatement", "ExtraStatements" }, null, null, null, null),
@@ -528,6 +532,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       state_ = other.state_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       restoreInfo_ = other.restoreInfo_ != null ? other.restoreInfo_.Clone() : null;
+      versionRetentionPeriod_ = other.versionRetentionPeriod_;
+      earliestVersionTime_ = other.earliestVersionTime_ != null ? other.earliestVersionTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -597,6 +603,39 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
     }
 
+    /// <summary>Field number for the "version_retention_period" field.</summary>
+    public const int VersionRetentionPeriodFieldNumber = 6;
+    private string versionRetentionPeriod_ = "";
+    /// <summary>
+    /// Output only. The period in which Cloud Spanner retains all versions of data
+    /// for the database. This is the same as the value of version_retention_period
+    /// database option set using
+    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl]. Defaults to 1 hour,
+    /// if not set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string VersionRetentionPeriod {
+      get { return versionRetentionPeriod_; }
+      set {
+        versionRetentionPeriod_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "earliest_version_time" field.</summary>
+    public const int EarliestVersionTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp earliestVersionTime_;
+    /// <summary>
+    /// Output only. Earliest timestamp at which older versions of the data can be
+    /// read.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EarliestVersionTime {
+      get { return earliestVersionTime_; }
+      set {
+        earliestVersionTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Database);
@@ -614,6 +653,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (State != other.State) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(RestoreInfo, other.RestoreInfo)) return false;
+      if (VersionRetentionPeriod != other.VersionRetentionPeriod) return false;
+      if (!object.Equals(EarliestVersionTime, other.EarliestVersionTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -624,6 +665,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       if (State != global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (restoreInfo_ != null) hash ^= RestoreInfo.GetHashCode();
+      if (VersionRetentionPeriod.Length != 0) hash ^= VersionRetentionPeriod.GetHashCode();
+      if (earliestVersionTime_ != null) hash ^= EarliestVersionTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -656,6 +699,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(RestoreInfo);
       }
+      if (VersionRetentionPeriod.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(VersionRetentionPeriod);
+      }
+      if (earliestVersionTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(EarliestVersionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -681,6 +732,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(RestoreInfo);
       }
+      if (VersionRetentionPeriod.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(VersionRetentionPeriod);
+      }
+      if (earliestVersionTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(EarliestVersionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -701,6 +760,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       if (restoreInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RestoreInfo);
+      }
+      if (VersionRetentionPeriod.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VersionRetentionPeriod);
+      }
+      if (earliestVersionTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EarliestVersionTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -730,6 +795,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           RestoreInfo = new global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo();
         }
         RestoreInfo.MergeFrom(other.RestoreInfo);
+      }
+      if (other.VersionRetentionPeriod.Length != 0) {
+        VersionRetentionPeriod = other.VersionRetentionPeriod;
+      }
+      if (other.earliestVersionTime_ != null) {
+        if (earliestVersionTime_ == null) {
+          EarliestVersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EarliestVersionTime.MergeFrom(other.EarliestVersionTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -767,6 +841,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             input.ReadMessage(RestoreInfo);
             break;
           }
+          case 50: {
+            VersionRetentionPeriod = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (earliestVersionTime_ == null) {
+              EarliestVersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EarliestVersionTime);
+            break;
+          }
         }
       }
     #endif
@@ -801,6 +886,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
               RestoreInfo = new global::Google.Cloud.Spanner.Admin.Database.V1.RestoreInfo();
             }
             input.ReadMessage(RestoreInfo);
+            break;
+          }
+          case 50: {
+            VersionRetentionPeriod = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (earliestVersionTime_ == null) {
+              EarliestVersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EarliestVersionTime);
             break;
           }
         }
@@ -2707,6 +2803,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     private string database_ = "";
     /// <summary>
     /// Required. The database whose schema we wish to get.
+    /// Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Database {
@@ -3099,11 +3197,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     /// Here are a few examples:
     ///
     ///   * `done:true` - The operation is complete.
-    ///   * `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata) AND` &lt;br/>
-    ///     `(metadata.source_type:BACKUP) AND` &lt;br/>
-    ///     `(metadata.backup_info.backup:backup_howl) AND` &lt;br/>
-    ///     `(metadata.name:restored_howl) AND` &lt;br/>
-    ///     `(metadata.progress.start_time &lt; \"2018-03-28T14:50:00Z\") AND` &lt;br/>
+    ///   * `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata) AND` \
+    ///     `(metadata.source_type:BACKUP) AND` \
+    ///     `(metadata.backup_info.backup:backup_howl) AND` \
+    ///     `(metadata.name:restored_howl) AND` \
+    ///     `(metadata.progress.start_time &lt; \"2018-03-28T14:50:00Z\") AND` \
     ///     `(error:*)` - Return operations where:
     ///     * The operation's metadata type is [RestoreDatabaseMetadata][google.spanner.admin.database.v1.RestoreDatabaseMetadata].
     ///     * The database is restored from a backup.
