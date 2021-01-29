@@ -31,54 +31,60 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "Z29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90",
             "b2J1Zi90aW1lc3RhbXAucHJvdG8aLWdvb2dsZS9zcGFubmVyL2FkbWluL2Rh",
             "dGFiYXNlL3YxL2NvbW1vbi5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90byLNAwoGQmFja3VwEjYKCGRhdGFiYXNlGAIgASgJQiT6QSEKH3Nw",
-            "YW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USLwoLZXhwaXJlX3RpbWUY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBG5hbWUYASAB",
-            "KAkSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSFwoKc2l6ZV9ieXRlcxgFIAEoA0ID4EEDEkIKBXN0YXRl",
-            "GAYgASgOMi4uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuQmFj",
-            "a3VwLlN0YXRlQgPgQQMSIgoVcmVmZXJlbmNpbmdfZGF0YWJhc2VzGAcgAygJ",
-            "QgPgQQMiNwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVB",
-            "VElORxABEgkKBVJFQURZEAI6XOpBWQodc3Bhbm5lci5nb29nbGVhcGlzLmNv",
-            "bS9CYWNrdXASOHByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3Rh",
-            "bmNlfS9iYWNrdXBzL3tiYWNrdXB9IqUBChNDcmVhdGVCYWNrdXBSZXF1ZXN0",
-            "EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMu",
-            "Y29tL0luc3RhbmNlEhYKCWJhY2t1cF9pZBgCIAEoCUID4EECEj0KBmJhY2t1",
-            "cBgDIAEoCzIoLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkJh",
-            "Y2t1cEID4EECIq4BChRDcmVhdGVCYWNrdXBNZXRhZGF0YRIMCgRuYW1lGAEg",
-            "ASgJEhAKCGRhdGFiYXNlGAIgASgJEkUKCHByb2dyZXNzGAMgASgLMjMuZ29v",
-            "Z2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjEuT3BlcmF0aW9uUHJvZ3Jl",
-            "c3MSLwoLY2FuY2VsX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wIooBChNVcGRhdGVCYWNrdXBSZXF1ZXN0Ej0KBmJhY2t1cBgBIAEo",
-            "CzIoLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxLkJhY2t1cEID",
-            "4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFza0ID4EECIkcKEEdldEJhY2t1cFJlcXVlc3QSMwoEbmFtZRgBIAEo",
-            "CUIl4EEC+kEfCh1zcGFubmVyLmdvb2dsZWFwaXMuY29tL0JhY2t1cCJKChNE",
-            "ZWxldGVCYWNrdXBSZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwodc3Bh",
-            "bm5lci5nb29nbGVhcGlzLmNvbS9CYWNrdXAihAEKEkxpc3RCYWNrdXBzUmVx",
-            "dWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIQofc3Bhbm5lci5nb29nbGVh",
-            "cGlzLmNvbS9JbnN0YW5jZRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXpl",
-            "GAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiaQoTTGlzdEJhY2t1cHNSZXNw",
-            "b25zZRI5CgdiYWNrdXBzGAEgAygLMiguZ29vZ2xlLnNwYW5uZXIuYWRtaW4u",
-            "ZGF0YWJhc2UudjEuQmFja3VwEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKN",
-            "AQobTGlzdEJhY2t1cE9wZXJhdGlvbnNSZXF1ZXN0EjcKBnBhcmVudBgBIAEo",
-            "CUIn4EEC+kEhCh9zcGFubmVyLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEg4K",
-            "BmZpbHRlchgCIAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tl",
-            "bhgEIAEoCSJqChxMaXN0QmFja3VwT3BlcmF0aW9uc1Jlc3BvbnNlEjEKCm9w",
-            "ZXJhdGlvbnMYASADKAsyHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJmCgpCYWNrdXBJbmZvEg4KBmJh",
-            "Y2t1cBgBIAEoCRIvCgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXASFwoPc291cmNlX2RhdGFiYXNlGAMgASgJQv8BCiRj",
-            "b20uZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2UudjFCC0JhY2t1cFBy",
-            "b3RvUAFaSGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
-            "c3Bhbm5lci9hZG1pbi9kYXRhYmFzZS92MTtkYXRhYmFzZaoCJkdvb2dsZS5D",
-            "bG91ZC5TcGFubmVyLkFkbWluLkRhdGFiYXNlLlYxygImR29vZ2xlXENsb3Vk",
-            "XFNwYW5uZXJcQWRtaW5cRGF0YWJhc2VcVjHqAitHb29nbGU6OkNsb3VkOjpT",
-            "cGFubmVyOjpBZG1pbjo6RGF0YWJhc2U6OlYxYgZwcm90bzM="));
+            "cy5wcm90byL/AwoGQmFja3VwEjYKCGRhdGFiYXNlGAIgASgJQiT6QSEKH3Nw",
+            "YW5uZXIuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USMAoMdmVyc2lvbl90aW1l",
+            "GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtleHBpcmVf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEbmFt",
+            "ZRgBIAEoCRI0CgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxIXCgpzaXplX2J5dGVzGAUgASgDQgPgQQMSQgoF",
+            "c3RhdGUYBiABKA4yLi5nb29nbGUuc3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52",
+            "MS5CYWNrdXAuU3RhdGVCA+BBAxIiChVyZWZlcmVuY2luZ19kYXRhYmFzZXMY",
+            "ByADKAlCA+BBAyI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwK",
+            "CENSRUFUSU5HEAESCQoFUkVBRFkQAjpc6kFZCh1zcGFubmVyLmdvb2dsZWFw",
+            "aXMuY29tL0JhY2t1cBI4cHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97",
+            "aW5zdGFuY2V9L2JhY2t1cHMve2JhY2t1cH0ipQEKE0NyZWF0ZUJhY2t1cFJl",
+            "cXVlc3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xl",
+            "YXBpcy5jb20vSW5zdGFuY2USFgoJYmFja3VwX2lkGAIgASgJQgPgQQISPQoG",
+            "YmFja3VwGAMgASgLMiguZ29vZ2xlLnNwYW5uZXIuYWRtaW4uZGF0YWJhc2Uu",
+            "djEuQmFja3VwQgPgQQIi+AEKFENyZWF0ZUJhY2t1cE1ldGFkYXRhEjAKBG5h",
+            "bWUYASABKAlCIvpBHwodc3Bhbm5lci5nb29nbGVhcGlzLmNvbS9CYWNrdXAS",
+            "NgoIZGF0YWJhc2UYAiABKAlCJPpBIQofc3Bhbm5lci5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhYmFzZRJFCghwcm9ncmVzcxgDIAEoCzIzLmdvb2dsZS5zcGFubmVy",
+            "LmFkbWluLmRhdGFiYXNlLnYxLk9wZXJhdGlvblByb2dyZXNzEi8KC2NhbmNl",
+            "bF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKKAQoT",
+            "VXBkYXRlQmFja3VwUmVxdWVzdBI9CgZiYWNrdXAYASABKAsyKC5nb29nbGUu",
+            "c3Bhbm5lci5hZG1pbi5kYXRhYmFzZS52MS5CYWNrdXBCA+BBAhI0Cgt1cGRh",
+            "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
+            "AiJHChBHZXRCYWNrdXBSZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwod",
+            "c3Bhbm5lci5nb29nbGVhcGlzLmNvbS9CYWNrdXAiSgoTRGVsZXRlQmFja3Vw",
+            "UmVxdWVzdBIzCgRuYW1lGAEgASgJQiXgQQL6QR8KHXNwYW5uZXIuZ29vZ2xl",
+            "YXBpcy5jb20vQmFja3VwIoQBChJMaXN0QmFja3Vwc1JlcXVlc3QSNwoGcGFy",
+            "ZW50GAEgASgJQifgQQL6QSEKH3NwYW5uZXIuZ29vZ2xlYXBpcy5jb20vSW5z",
+            "dGFuY2USDgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpw",
+            "YWdlX3Rva2VuGAQgASgJImkKE0xpc3RCYWNrdXBzUmVzcG9uc2USOQoHYmFj",
+            "a3VwcxgBIAMoCzIoLmdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYx",
+            "LkJhY2t1cBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkijQEKG0xpc3RCYWNr",
+            "dXBPcGVyYXRpb25zUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpBIQof",
+            "c3Bhbm5lci5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRIOCgZmaWx0ZXIYAiAB",
+            "KAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkiagoc",
+            "TGlzdEJhY2t1cE9wZXJhdGlvbnNSZXNwb25zZRIxCgpvcGVyYXRpb25zGAEg",
+            "AygLMh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbhIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAki4gEKCkJhY2t1cEluZm8SMgoGYmFja3VwGAEgASgJ",
+            "QiL6QR8KHXNwYW5uZXIuZ29vZ2xlYXBpcy5jb20vQmFja3VwEjAKDHZlcnNp",
+            "b25fdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
+            "Y3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "Ej0KD3NvdXJjZV9kYXRhYmFzZRgDIAEoCUIk+kEhCh9zcGFubmVyLmdvb2ds",
+            "ZWFwaXMuY29tL0RhdGFiYXNlQv8BCiRjb20uZ29vZ2xlLnNwYW5uZXIuYWRt",
+            "aW4uZGF0YWJhc2UudjFCC0JhY2t1cFByb3RvUAFaSGdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvc3Bhbm5lci9hZG1pbi9kYXRhYmFz",
+            "ZS92MTtkYXRhYmFzZaoCJkdvb2dsZS5DbG91ZC5TcGFubmVyLkFkbWluLkRh",
+            "dGFiYXNlLlYxygImR29vZ2xlXENsb3VkXFNwYW5uZXJcQWRtaW5cRGF0YWJh",
+            "c2VcVjHqAitHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpBZG1pbjo6RGF0YWJh",
+            "c2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.CommonReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Backup), global::Google.Cloud.Spanner.Admin.Database.V1.Backup.Parser, new[]{ "Database", "ExpireTime", "Name", "CreateTime", "SizeBytes", "State", "ReferencingDatabases" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Backup.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Backup), global::Google.Cloud.Spanner.Admin.Database.V1.Backup.Parser, new[]{ "Database", "VersionTime", "ExpireTime", "Name", "CreateTime", "SizeBytes", "State", "ReferencingDatabases" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.Backup.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest), global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupRequest.Parser, new[]{ "Parent", "BackupId", "Backup" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupMetadata), global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupMetadata.Parser, new[]{ "Name", "Database", "Progress", "CancelTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest), global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupRequest.Parser, new[]{ "Backup", "UpdateMask" }, null, null, null, null),
@@ -88,7 +94,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse), global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupsResponse.Parser, new[]{ "Backups", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest), global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse), global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo), global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo.Parser, new[]{ "Backup", "CreateTime", "SourceDatabase" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo), global::Google.Cloud.Spanner.Admin.Database.V1.BackupInfo.Parser, new[]{ "Backup", "VersionTime", "CreateTime", "SourceDatabase" }, null, null, null, null)
           }));
     }
     #endregion
@@ -128,6 +134,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Backup(Backup other) : this() {
       database_ = other.database_;
+      versionTime_ = other.versionTime_ != null ? other.versionTime_.Clone() : null;
       expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -157,6 +164,23 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       get { return database_; }
       set {
         database_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version_time" field.</summary>
+    public const int VersionTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp versionTime_;
+    /// <summary>
+    /// The backup will contain an externally consistent copy of the database at
+    /// the timestamp specified by `version_time`. If `version_time` is not
+    /// specified, the system will set `version_time` to the `create_time` of the
+    /// backup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp VersionTime {
+      get { return versionTime_; }
+      set {
+        versionTime_ = value;
       }
     }
 
@@ -209,10 +233,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int CreateTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. The backup will contain an externally consistent
-    /// copy of the database at the timestamp specified by
-    /// `create_time`. `create_time` is approximately the time the
-    /// [CreateBackup][google.spanner.admin.database.v1.DatabaseAdmin.CreateBackup] request is received.
+    /// Output only. The time the [CreateBackup][google.spanner.admin.database.v1.DatabaseAdmin.CreateBackup]
+    /// request is received. If the request does not specify `version_time`, the
+    /// `version_time` of the backup will be equivalent to the `create_time`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -283,6 +306,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return true;
       }
       if (Database != other.Database) return false;
+      if (!object.Equals(VersionTime, other.VersionTime)) return false;
       if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
       if (Name != other.Name) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
@@ -296,6 +320,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
+      if (versionTime_ != null) hash ^= VersionTime.GetHashCode();
       if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
@@ -343,6 +368,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteEnum((int) State);
       }
       referencingDatabases_.WriteTo(output, _repeated_referencingDatabases_codec);
+      if (versionTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(VersionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -377,6 +406,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteEnum((int) State);
       }
       referencingDatabases_.WriteTo(ref output, _repeated_referencingDatabases_codec);
+      if (versionTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(VersionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -388,6 +421,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       int size = 0;
       if (Database.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Database);
+      }
+      if (versionTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VersionTime);
       }
       if (expireTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
@@ -418,6 +454,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       if (other.Database.Length != 0) {
         Database = other.Database;
+      }
+      if (other.versionTime_ != null) {
+        if (versionTime_ == null) {
+          VersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        VersionTime.MergeFrom(other.VersionTime);
       }
       if (other.expireTime_ != null) {
         if (expireTime_ == null) {
@@ -489,6 +531,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             referencingDatabases_.AddEntriesFrom(input, _repeated_referencingDatabases_codec);
             break;
           }
+          case 74: {
+            if (versionTime_ == null) {
+              VersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionTime);
+            break;
+          }
         }
       }
     #endif
@@ -535,6 +584,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           }
           case 58: {
             referencingDatabases_.AddEntriesFrom(ref input, _repeated_referencingDatabases_codec);
+            break;
+          }
+          case 74: {
+            if (versionTime_ == null) {
+              VersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionTime);
             break;
           }
         }
@@ -2405,9 +2461,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     ///   * `done:true` - The operation is complete.
     ///   * `metadata.database:prod` - The database the backup was taken from has
     ///      a name containing the string "prod".
-    ///   * `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` &lt;br/>
-    ///     `(metadata.name:howl) AND` &lt;br/>
-    ///     `(metadata.progress.start_time &lt; \"2018-03-28T14:50:00Z\") AND` &lt;br/>
+    ///   * `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
+    ///     `(metadata.name:howl) AND` \
+    ///     `(metadata.progress.start_time &lt; \"2018-03-28T14:50:00Z\") AND` \
     ///     `(error:*)` - Returns operations where:
     ///     * The operation's metadata type is [CreateBackupMetadata][google.spanner.admin.database.v1.CreateBackupMetadata].
     ///     * The backup name contains the string "howl".
@@ -2899,6 +2955,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BackupInfo(BackupInfo other) : this() {
       backup_ = other.backup_;
+      versionTime_ = other.versionTime_ != null ? other.versionTime_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       sourceDatabase_ = other.sourceDatabase_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2923,12 +2980,30 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
     }
 
+    /// <summary>Field number for the "version_time" field.</summary>
+    public const int VersionTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp versionTime_;
+    /// <summary>
+    /// The backup contains an externally consistent copy of `source_database` at
+    /// the timestamp specified by `version_time`. If the
+    /// [CreateBackup][google.spanner.admin.database.v1.DatabaseAdmin.CreateBackup] request did not specify
+    /// `version_time`, the `version_time` of the backup is equivalent to the
+    /// `create_time`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp VersionTime {
+      get { return versionTime_; }
+      set {
+        versionTime_ = value;
+      }
+    }
+
     /// <summary>Field number for the "create_time" field.</summary>
     public const int CreateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// The backup contains an externally consistent copy of `source_database` at
-    /// the timestamp specified by `create_time`.
+    /// The time the [CreateBackup][google.spanner.admin.database.v1.DatabaseAdmin.CreateBackup] request was
+    /// received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -2966,6 +3041,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return true;
       }
       if (Backup != other.Backup) return false;
+      if (!object.Equals(VersionTime, other.VersionTime)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (SourceDatabase != other.SourceDatabase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2975,6 +3051,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Backup.Length != 0) hash ^= Backup.GetHashCode();
+      if (versionTime_ != null) hash ^= VersionTime.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (SourceDatabase.Length != 0) hash ^= SourceDatabase.GetHashCode();
       if (_unknownFields != null) {
@@ -3005,6 +3082,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(26);
         output.WriteString(SourceDatabase);
       }
+      if (versionTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(VersionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3026,6 +3107,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         output.WriteRawTag(26);
         output.WriteString(SourceDatabase);
       }
+      if (versionTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(VersionTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3037,6 +3122,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       int size = 0;
       if (Backup.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Backup);
+      }
+      if (versionTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VersionTime);
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -3057,6 +3145,12 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
       if (other.Backup.Length != 0) {
         Backup = other.Backup;
+      }
+      if (other.versionTime_ != null) {
+        if (versionTime_ == null) {
+          VersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        VersionTime.MergeFrom(other.VersionTime);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -3096,6 +3190,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             SourceDatabase = input.ReadString();
             break;
           }
+          case 34: {
+            if (versionTime_ == null) {
+              VersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionTime);
+            break;
+          }
         }
       }
     #endif
@@ -3123,6 +3224,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           }
           case 26: {
             SourceDatabase = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (versionTime_ == null) {
+              VersionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(VersionTime);
             break;
           }
         }
