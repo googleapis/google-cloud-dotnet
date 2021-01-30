@@ -51,6 +51,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -83,6 +84,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -116,6 +118,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -147,6 +150,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -180,6 +184,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -211,6 +216,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.GetEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -246,6 +252,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -279,6 +286,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -313,6 +321,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -345,6 +354,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -379,6 +389,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -411,6 +422,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.CreateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -446,6 +458,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -479,6 +492,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -513,6 +527,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityType(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
@@ -545,6 +560,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                     new EntityType.Types.ExcludedPhrase(),
                 },
                 EnableFuzzyExtraction = false,
+                Redact = true,
             };
             mockGrpcClient.Setup(x => x.UpdateEntityTypeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntityType>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EntityTypesClient client = new EntityTypesClientImpl(mockGrpcClient.Object, null);
