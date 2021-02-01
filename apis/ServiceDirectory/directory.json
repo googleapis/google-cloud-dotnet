@@ -1308,6 +1308,24 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Notebooks.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/orgpolicy/v2",
+      "Name": "orgpolicy.googleapis.com",
+      "Title": "Organization Policy API",
+      "Description": "The Org Policy API allows users to configure governance ruleson their GCP resources across the Cloud Resource Hierarchy.",
+      "ServiceConfigFile": "google/cloud/orgpolicy/v2/orgpolicy_v2.yaml",
+      "Version": "v2",
+      "PackageFromDirectory": "google.cloud.orgpolicy.v2",
+      "PackageFromProtos": "google.cloud.orgpolicy.v2",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/orgpolicy/v2",
+        "google/protobuf",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.OrgPolicy.V2"
+    },
+    {
       "ServiceDirectory": "google/cloud/osconfig/agentendpoint/v1",
       "Name": "osconfig.googleapis.com",
       "Title": "OS Config API",
