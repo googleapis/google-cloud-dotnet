@@ -279,13 +279,34 @@ namespace Google.Cloud.PubSub.V1
         /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
         /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
         /// settings may need changing; especially <see cref="Settings.AckDeadline"/>.
+        /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
+        /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
         /// </summary>
         /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="SubscriberClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
         /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
-        public static async Task<SubscriberClient> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
+        public static SubscriberClient Create(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
+            CreateMaybeAsync(subscriptionName, clientCreationSettings, settings, isAsync: false).ResultWithUnwrappedExceptions();
+
+        /// <summary>
+        /// Create a <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.
+        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
+        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing; especially <see cref="Settings.AckDeadline"/>.
+        /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
+        /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
+        /// </summary>
+        /// <param name="subscriptionName">The <see cref="SubscriptionName"/> to receive messages from.</param>
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <see cref="SubscriberClient"/>s.</param>
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="SubscriberClient"/>.</param>
+        /// <returns>A <see cref="SubscriberClient"/> instance associated with the specified <see cref="SubscriptionName"/>.</returns>
+        public static Task<SubscriberClient> CreateAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
+            CreateMaybeAsync(subscriptionName, clientCreationSettings, settings, isAsync: true);
+
+        private static async Task<SubscriberClient> CreateMaybeAsync(SubscriptionName subscriptionName, ClientCreationSettings clientCreationSettings, Settings settings, bool isAsync)
         {
             GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
             clientCreationSettings?.Validate();
@@ -312,7 +333,9 @@ namespace Google.Cloud.PubSub.V1
                     Settings = clientCreationSettings?.SubscriberServiceApiSettings,
                     ChannelOptions = grpcChannelOptions
                 };
-                var channel = await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false);
+                var channel = isAsync ?
+                    (await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false)) :
+                    builder.CreateChannel();
 
                 // Second builder doesn't need to do much, as we can build a call invoker from the channel.
                 clients[i] = new SubscriberServiceApiClientBuilder
