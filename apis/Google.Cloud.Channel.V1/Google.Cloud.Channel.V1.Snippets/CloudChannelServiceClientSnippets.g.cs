@@ -2201,5 +2201,165 @@ namespace Google.Cloud.Channel.V1.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for RegisterSubscriber</summary>
+        public void RegisterSubscriberRequestObject()
+        {
+            // Snippet: RegisterSubscriber(RegisterSubscriberRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            RegisterSubscriberRequest request = new RegisterSubscriberRequest
+            {
+                Account = "",
+                ServiceAccount = "",
+            };
+            // Make the request
+            RegisterSubscriberResponse response = cloudChannelServiceClient.RegisterSubscriber(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RegisterSubscriberAsync</summary>
+        public async Task RegisterSubscriberRequestObjectAsync()
+        {
+            // Snippet: RegisterSubscriberAsync(RegisterSubscriberRequest, CallSettings)
+            // Additional: RegisterSubscriberAsync(RegisterSubscriberRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RegisterSubscriberRequest request = new RegisterSubscriberRequest
+            {
+                Account = "",
+                ServiceAccount = "",
+            };
+            // Make the request
+            RegisterSubscriberResponse response = await cloudChannelServiceClient.RegisterSubscriberAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnregisterSubscriber</summary>
+        public void UnregisterSubscriberRequestObject()
+        {
+            // Snippet: UnregisterSubscriber(UnregisterSubscriberRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            UnregisterSubscriberRequest request = new UnregisterSubscriberRequest
+            {
+                Account = "",
+                ServiceAccount = "",
+            };
+            // Make the request
+            UnregisterSubscriberResponse response = cloudChannelServiceClient.UnregisterSubscriber(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnregisterSubscriberAsync</summary>
+        public async Task UnregisterSubscriberRequestObjectAsync()
+        {
+            // Snippet: UnregisterSubscriberAsync(UnregisterSubscriberRequest, CallSettings)
+            // Additional: UnregisterSubscriberAsync(UnregisterSubscriberRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UnregisterSubscriberRequest request = new UnregisterSubscriberRequest
+            {
+                Account = "",
+                ServiceAccount = "",
+            };
+            // Make the request
+            UnregisterSubscriberResponse response = await cloudChannelServiceClient.UnregisterSubscriberAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribers</summary>
+        public void ListSubscribersRequestObject()
+        {
+            // Snippet: ListSubscribers(ListSubscribersRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ListSubscribersRequest request = new ListSubscribersRequest { Account = "", };
+            // Make the request
+            PagedEnumerable<ListSubscribersResponse, string> response = cloudChannelServiceClient.ListSubscribers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscribersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribers</summary>
+        public async Task ListSubscribersRequestObjectAsync()
+        {
+            // Snippet: ListSubscribersAsync(ListSubscribersRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSubscribersRequest request = new ListSubscribersRequest { Account = "", };
+            // Make the request
+            PagedAsyncEnumerable<ListSubscribersResponse, string> response = cloudChannelServiceClient.ListSubscribersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubscribersResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }

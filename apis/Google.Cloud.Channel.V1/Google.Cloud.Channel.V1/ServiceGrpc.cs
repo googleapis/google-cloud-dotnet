@@ -96,6 +96,12 @@ namespace Google.Cloud.Channel.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse> __Marshaller_google_cloud_channel_v1_ListPurchasableSkusResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest> __Marshaller_google_cloud_channel_v1_ListPurchasableOffersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> __Marshaller_google_cloud_channel_v1_ListPurchasableOffersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest> __Marshaller_google_cloud_channel_v1_RegisterSubscriberRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.RegisterSubscriberRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> __Marshaller_google_cloud_channel_v1_RegisterSubscriberResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.RegisterSubscriberResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest> __Marshaller_google_cloud_channel_v1_UnregisterSubscriberRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> __Marshaller_google_cloud_channel_v1_UnregisterSubscriberResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSubscribersRequest> __Marshaller_google_cloud_channel_v1_ListSubscribersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.ListSubscribersRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSubscribersResponse> __Marshaller_google_cloud_channel_v1_ListSubscribersResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Channel.V1.ListSubscribersResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListCustomersRequest, global::Google.Cloud.Channel.V1.ListCustomersResponse> __Method_ListCustomers = new grpc::Method<global::Google.Cloud.Channel.V1.ListCustomersRequest, global::Google.Cloud.Channel.V1.ListCustomersResponse>(
         grpc::MethodType.Unary,
@@ -306,6 +312,27 @@ namespace Google.Cloud.Channel.V1 {
         "ListPurchasableOffers",
         __Marshaller_google_cloud_channel_v1_ListPurchasableOffersRequest,
         __Marshaller_google_cloud_channel_v1_ListPurchasableOffersResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> __Method_RegisterSubscriber = new grpc::Method<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RegisterSubscriber",
+        __Marshaller_google_cloud_channel_v1_RegisterSubscriberRequest,
+        __Marshaller_google_cloud_channel_v1_RegisterSubscriberResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> __Method_UnregisterSubscriber = new grpc::Method<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UnregisterSubscriber",
+        __Marshaller_google_cloud_channel_v1_UnregisterSubscriberRequest,
+        __Marshaller_google_cloud_channel_v1_UnregisterSubscriberResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListSubscribersRequest, global::Google.Cloud.Channel.V1.ListSubscribersResponse> __Method_ListSubscribers = new grpc::Method<global::Google.Cloud.Channel.V1.ListSubscribersRequest, global::Google.Cloud.Channel.V1.ListSubscribersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSubscribers",
+        __Marshaller_google_cloud_channel_v1_ListSubscribersRequest,
+        __Marshaller_google_cloud_channel_v1_ListSubscribersResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1200,6 +1227,96 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> ListPurchasableOffers(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account. Once you create a
+      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name with service email address registered if successful,
+      /// otherwise error is returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> RegisterSubscriber(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Unregisters a service account with subscriber privileges on the Cloud
+      /// Pub/Sub topic created for this Channel Services account. If there are no
+      /// more service account left with sunbscriber privileges, the topic will be
+      /// deleted. You can check this by calling ListSubscribers api.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name from which service email address has been unregistered if
+      /// successful, otherwise error is returned. If the service email was already
+      /// not associated with the topic, the success response will be returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> UnregisterSubscriber(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the account is not
+      /// a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// List of service email addresses if successful, otherwise error is
+      /// returned.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSubscribersResponse> ListSubscribers(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4777,6 +4894,366 @@ namespace Google.Cloud.Channel.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPurchasableOffers, null, options, request);
       }
+      /// <summary>
+      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account. Once you create a
+      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name with service email address registered if successful,
+      /// otherwise error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.RegisterSubscriberResponse RegisterSubscriber(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RegisterSubscriber(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account. Once you create a
+      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name with service email address registered if successful,
+      /// otherwise error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.RegisterSubscriberResponse RegisterSubscriber(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RegisterSubscriber, null, options, request);
+      }
+      /// <summary>
+      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account. Once you create a
+      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name with service email address registered if successful,
+      /// otherwise error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> RegisterSubscriberAsync(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RegisterSubscriberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account. Once you create a
+      /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name with service email address registered if successful,
+      /// otherwise error is returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> RegisterSubscriberAsync(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RegisterSubscriber, null, options, request);
+      }
+      /// <summary>
+      /// Unregisters a service account with subscriber privileges on the Cloud
+      /// Pub/Sub topic created for this Channel Services account. If there are no
+      /// more service account left with sunbscriber privileges, the topic will be
+      /// deleted. You can check this by calling ListSubscribers api.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name from which service email address has been unregistered if
+      /// successful, otherwise error is returned. If the service email was already
+      /// not associated with the topic, the success response will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse UnregisterSubscriber(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnregisterSubscriber(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unregisters a service account with subscriber privileges on the Cloud
+      /// Pub/Sub topic created for this Channel Services account. If there are no
+      /// more service account left with sunbscriber privileges, the topic will be
+      /// deleted. You can check this by calling ListSubscribers api.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name from which service email address has been unregistered if
+      /// successful, otherwise error is returned. If the service email was already
+      /// not associated with the topic, the success response will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse UnregisterSubscriber(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UnregisterSubscriber, null, options, request);
+      }
+      /// <summary>
+      /// Unregisters a service account with subscriber privileges on the Cloud
+      /// Pub/Sub topic created for this Channel Services account. If there are no
+      /// more service account left with sunbscriber privileges, the topic will be
+      /// deleted. You can check this by calling ListSubscribers api.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name from which service email address has been unregistered if
+      /// successful, otherwise error is returned. If the service email was already
+      /// not associated with the topic, the success response will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> UnregisterSubscriberAsync(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnregisterSubscriberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Unregisters a service account with subscriber privileges on the Cloud
+      /// Pub/Sub topic created for this Channel Services account. If there are no
+      /// more service account left with sunbscriber privileges, the topic will be
+      /// deleted. You can check this by calling ListSubscribers api.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the impersonated user
+      /// is not a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// Topic name from which service email address has been unregistered if
+      /// successful, otherwise error is returned. If the service email was already
+      /// not associated with the topic, the success response will be returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> UnregisterSubscriberAsync(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UnregisterSubscriber, null, options, request);
+      }
+      /// <summary>
+      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the account is not
+      /// a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// List of service email addresses if successful, otherwise error is
+      /// returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.ListSubscribersResponse ListSubscribers(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubscribers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the account is not
+      /// a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// List of service email addresses if successful, otherwise error is
+      /// returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.ListSubscribersResponse ListSubscribers(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSubscribers, null, options, request);
+      }
+      /// <summary>
+      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the account is not
+      /// a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// List of service email addresses if successful, otherwise error is
+      /// returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSubscribersResponse> ListSubscribersAsync(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubscribersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+      /// topic created for this Channel Services account.
+      ///
+      /// Possible Error Codes:
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being provided are different, or if the account is not
+      /// a super admin.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+      /// request.
+      /// * NOT_FOUND: If the topic resource doesn't exist.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in
+      /// the backend. In this case, contact Cloud Channel support.
+      ///
+      /// Return Value:
+      /// List of service email addresses if successful, otherwise error is
+      /// returned.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSubscribersResponse> ListSubscribersAsync(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSubscribers, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override CloudChannelServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -4818,7 +5295,10 @@ namespace Google.Cloud.Channel.V1 {
           .AddMethod(__Method_ListSkus, serviceImpl.ListSkus)
           .AddMethod(__Method_ListOffers, serviceImpl.ListOffers)
           .AddMethod(__Method_ListPurchasableSkus, serviceImpl.ListPurchasableSkus)
-          .AddMethod(__Method_ListPurchasableOffers, serviceImpl.ListPurchasableOffers).Build();
+          .AddMethod(__Method_ListPurchasableOffers, serviceImpl.ListPurchasableOffers)
+          .AddMethod(__Method_RegisterSubscriber, serviceImpl.RegisterSubscriber)
+          .AddMethod(__Method_UnregisterSubscriber, serviceImpl.UnregisterSubscriber)
+          .AddMethod(__Method_ListSubscribers, serviceImpl.ListSubscribers).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -4857,6 +5337,9 @@ namespace Google.Cloud.Channel.V1 {
       serviceBinder.AddMethod(__Method_ListOffers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListOffersRequest, global::Google.Cloud.Channel.V1.ListOffersResponse>(serviceImpl.ListOffers));
       serviceBinder.AddMethod(__Method_ListPurchasableSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest, global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse>(serviceImpl.ListPurchasableSkus));
       serviceBinder.AddMethod(__Method_ListPurchasableOffers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest, global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse>(serviceImpl.ListPurchasableOffers));
+      serviceBinder.AddMethod(__Method_RegisterSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse>(serviceImpl.RegisterSubscriber));
+      serviceBinder.AddMethod(__Method_UnregisterSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse>(serviceImpl.UnregisterSubscriber));
+      serviceBinder.AddMethod(__Method_ListSubscribers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListSubscribersRequest, global::Google.Cloud.Channel.V1.ListSubscribersResponse>(serviceImpl.ListSubscribers));
     }
 
   }

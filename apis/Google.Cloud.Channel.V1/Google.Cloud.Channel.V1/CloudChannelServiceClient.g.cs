@@ -87,6 +87,9 @@ namespace Google.Cloud.Channel.V1
             ListOffersSettings = existing.ListOffersSettings;
             ListPurchasableSkusSettings = existing.ListPurchasableSkusSettings;
             ListPurchasableOffersSettings = existing.ListPurchasableOffersSettings;
+            RegisterSubscriberSettings = existing.RegisterSubscriberSettings;
+            UnregisterSubscriberSettings = existing.UnregisterSubscriberSettings;
+            ListSubscribersSettings = existing.ListSubscribersSettings;
             OnCopy(existing);
         }
 
@@ -726,6 +729,53 @@ namespace Google.Cloud.Channel.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListPurchasableOffersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.RegisterSubscriber</c> and <c>CloudChannelServiceClient.RegisterSubscriberAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RegisterSubscriberSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.UnregisterSubscriber</c> and
+        /// <c>CloudChannelServiceClient.UnregisterSubscriberAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UnregisterSubscriberSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.ListSubscribers</c> and <c>CloudChannelServiceClient.ListSubscribersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSubscribersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudChannelServiceSettings"/> object.</returns>
@@ -3767,6 +3817,231 @@ namespace Google.Cloud.Channel.V1
         /// <returns>A pageable asynchronous sequence of <see cref="PurchasableOffer"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListPurchasableOffersResponse, PurchasableOffer> ListPurchasableOffersAsync(ListPurchasableOffersRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account. Once you create a
+        /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name with service email address registered if successful,
+        /// otherwise error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RegisterSubscriberResponse RegisterSubscriber(RegisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account. Once you create a
+        /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name with service email address registered if successful,
+        /// otherwise error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RegisterSubscriberResponse> RegisterSubscriberAsync(RegisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account. Once you create a
+        /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name with service email address registered if successful,
+        /// otherwise error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RegisterSubscriberResponse> RegisterSubscriberAsync(RegisterSubscriberRequest request, st::CancellationToken cancellationToken) =>
+            RegisterSubscriberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Unregisters a service account with subscriber privileges on the Cloud
+        /// Pub/Sub topic created for this Channel Services account. If there are no
+        /// more service account left with sunbscriber privileges, the topic will be
+        /// deleted. You can check this by calling ListSubscribers api.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name from which service email address has been unregistered if
+        /// successful, otherwise error is returned. If the service email was already
+        /// not associated with the topic, the success response will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UnregisterSubscriberResponse UnregisterSubscriber(UnregisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unregisters a service account with subscriber privileges on the Cloud
+        /// Pub/Sub topic created for this Channel Services account. If there are no
+        /// more service account left with sunbscriber privileges, the topic will be
+        /// deleted. You can check this by calling ListSubscribers api.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name from which service email address has been unregistered if
+        /// successful, otherwise error is returned. If the service email was already
+        /// not associated with the topic, the success response will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnregisterSubscriberResponse> UnregisterSubscriberAsync(UnregisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Unregisters a service account with subscriber privileges on the Cloud
+        /// Pub/Sub topic created for this Channel Services account. If there are no
+        /// more service account left with sunbscriber privileges, the topic will be
+        /// deleted. You can check this by calling ListSubscribers api.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name from which service email address has been unregistered if
+        /// successful, otherwise error is returned. If the service email was already
+        /// not associated with the topic, the success response will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UnregisterSubscriberResponse> UnregisterSubscriberAsync(UnregisterSubscriberRequest request, st::CancellationToken cancellationToken) =>
+            UnregisterSubscriberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the account is not
+        /// a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// List of service email addresses if successful, otherwise error is
+        /// returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubscribersResponse, string> ListSubscribers(ListSubscribersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the account is not
+        /// a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// List of service email addresses if successful, otherwise error is
+        /// returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubscribersResponse, string> ListSubscribersAsync(ListSubscribersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>CloudChannelService client wrapper implementation, for convenient use.</summary>
@@ -3854,6 +4129,12 @@ namespace Google.Cloud.Channel.V1
         private readonly gaxgrpc::ApiCall<ListPurchasableSkusRequest, ListPurchasableSkusResponse> _callListPurchasableSkus;
 
         private readonly gaxgrpc::ApiCall<ListPurchasableOffersRequest, ListPurchasableOffersResponse> _callListPurchasableOffers;
+
+        private readonly gaxgrpc::ApiCall<RegisterSubscriberRequest, RegisterSubscriberResponse> _callRegisterSubscriber;
+
+        private readonly gaxgrpc::ApiCall<UnregisterSubscriberRequest, UnregisterSubscriberResponse> _callUnregisterSubscriber;
+
+        private readonly gaxgrpc::ApiCall<ListSubscribersRequest, ListSubscribersResponse> _callListSubscribers;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudChannelService service, with the specified gRPC client and
@@ -3967,6 +4248,15 @@ namespace Google.Cloud.Channel.V1
             _callListPurchasableOffers = clientHelper.BuildApiCall<ListPurchasableOffersRequest, ListPurchasableOffersResponse>(grpcClient.ListPurchasableOffersAsync, grpcClient.ListPurchasableOffers, effectiveSettings.ListPurchasableOffersSettings).WithGoogleRequestParam("customer", request => request.Customer);
             Modify_ApiCall(ref _callListPurchasableOffers);
             Modify_ListPurchasableOffersApiCall(ref _callListPurchasableOffers);
+            _callRegisterSubscriber = clientHelper.BuildApiCall<RegisterSubscriberRequest, RegisterSubscriberResponse>(grpcClient.RegisterSubscriberAsync, grpcClient.RegisterSubscriber, effectiveSettings.RegisterSubscriberSettings).WithGoogleRequestParam("account", request => request.Account);
+            Modify_ApiCall(ref _callRegisterSubscriber);
+            Modify_RegisterSubscriberApiCall(ref _callRegisterSubscriber);
+            _callUnregisterSubscriber = clientHelper.BuildApiCall<UnregisterSubscriberRequest, UnregisterSubscriberResponse>(grpcClient.UnregisterSubscriberAsync, grpcClient.UnregisterSubscriber, effectiveSettings.UnregisterSubscriberSettings).WithGoogleRequestParam("account", request => request.Account);
+            Modify_ApiCall(ref _callUnregisterSubscriber);
+            Modify_UnregisterSubscriberApiCall(ref _callUnregisterSubscriber);
+            _callListSubscribers = clientHelper.BuildApiCall<ListSubscribersRequest, ListSubscribersResponse>(grpcClient.ListSubscribersAsync, grpcClient.ListSubscribers, effectiveSettings.ListSubscribersSettings).WithGoogleRequestParam("account", request => request.Account);
+            Modify_ApiCall(ref _callListSubscribers);
+            Modify_ListSubscribersApiCall(ref _callListSubscribers);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4032,6 +4322,12 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_ListPurchasableOffersApiCall(ref gaxgrpc::ApiCall<ListPurchasableOffersRequest, ListPurchasableOffersResponse> call);
 
+        partial void Modify_RegisterSubscriberApiCall(ref gaxgrpc::ApiCall<RegisterSubscriberRequest, RegisterSubscriberResponse> call);
+
+        partial void Modify_UnregisterSubscriberApiCall(ref gaxgrpc::ApiCall<UnregisterSubscriberRequest, UnregisterSubscriberResponse> call);
+
+        partial void Modify_ListSubscribersApiCall(ref gaxgrpc::ApiCall<ListSubscribersRequest, ListSubscribersResponse> call);
+
         partial void OnConstruction(CloudChannelService.CloudChannelServiceClient grpcClient, CloudChannelServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudChannelService client</summary>
@@ -4096,6 +4392,12 @@ namespace Google.Cloud.Channel.V1
         partial void Modify_ListPurchasableSkusRequest(ref ListPurchasableSkusRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListPurchasableOffersRequest(ref ListPurchasableOffersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RegisterSubscriberRequest(ref RegisterSubscriberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UnregisterSubscriberRequest(ref UnregisterSubscriberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSubscribersRequest(ref ListSubscribersRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// List downstream [Customer][google.cloud.channel.v1.Customer]s.
@@ -5963,6 +6265,192 @@ namespace Google.Cloud.Channel.V1
             Modify_ListPurchasableOffersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPurchasableOffersRequest, ListPurchasableOffersResponse, PurchasableOffer>(_callListPurchasableOffers, request, callSettings);
         }
+
+        /// <summary>
+        /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account. Once you create a
+        /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name with service email address registered if successful,
+        /// otherwise error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RegisterSubscriberResponse RegisterSubscriber(RegisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RegisterSubscriberRequest(ref request, ref callSettings);
+            return _callRegisterSubscriber.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Registers a service account with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account. Once you create a
+        /// subscriber, you will get the events as per [SubscriberEvent][google.cloud.channel.v1.SubscriberEvent]
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name with service email address registered if successful,
+        /// otherwise error is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RegisterSubscriberResponse> RegisterSubscriberAsync(RegisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RegisterSubscriberRequest(ref request, ref callSettings);
+            return _callRegisterSubscriber.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Unregisters a service account with subscriber privileges on the Cloud
+        /// Pub/Sub topic created for this Channel Services account. If there are no
+        /// more service account left with sunbscriber privileges, the topic will be
+        /// deleted. You can check this by calling ListSubscribers api.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name from which service email address has been unregistered if
+        /// successful, otherwise error is returned. If the service email was already
+        /// not associated with the topic, the success response will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UnregisterSubscriberResponse UnregisterSubscriber(UnregisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnregisterSubscriberRequest(ref request, ref callSettings);
+            return _callUnregisterSubscriber.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Unregisters a service account with subscriber privileges on the Cloud
+        /// Pub/Sub topic created for this Channel Services account. If there are no
+        /// more service account left with sunbscriber privileges, the topic will be
+        /// deleted. You can check this by calling ListSubscribers api.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the impersonated user
+        /// is not a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// Topic name from which service email address has been unregistered if
+        /// successful, otherwise error is returned. If the service email was already
+        /// not associated with the topic, the success response will be returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UnregisterSubscriberResponse> UnregisterSubscriberAsync(UnregisterSubscriberRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UnregisterSubscriberRequest(ref request, ref callSettings);
+            return _callUnregisterSubscriber.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the account is not
+        /// a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// List of service email addresses if successful, otherwise error is
+        /// returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="string"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSubscribersResponse, string> ListSubscribers(ListSubscribersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubscribersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSubscribersRequest, ListSubscribersResponse, string>(_callListSubscribers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists service accounts with subscriber privileges on the Cloud Pub/Sub
+        /// topic created for this Channel Services account.
+        /// 
+        /// Possible Error Codes:
+        /// 
+        /// * PERMISSION_DENIED: If the reseller account making the request and the
+        /// reseller account being provided are different, or if the account is not
+        /// a super admin.
+        /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
+        /// request.
+        /// * NOT_FOUND: If the topic resource doesn't exist.
+        /// * INTERNAL: Any non-user error related to a technical issue in the
+        /// backend. In this case, contact Cloud Channel support.
+        /// * UNKNOWN: Any non-user error related to a technical issue in
+        /// the backend. In this case, contact Cloud Channel support.
+        /// 
+        /// Return Value:
+        /// List of service email addresses if successful, otherwise error is
+        /// returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="string"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSubscribersResponse, string> ListSubscribersAsync(ListSubscribersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubscribersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubscribersRequest, ListSubscribersResponse, string>(_callListSubscribers, request, callSettings);
+        }
     }
 
     public partial class ListCustomersRequest : gaxgrpc::IPageRequest
@@ -6002,6 +6490,10 @@ namespace Google.Cloud.Channel.V1
     }
 
     public partial class ListPurchasableOffersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSubscribersRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6081,6 +6573,14 @@ namespace Google.Cloud.Channel.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<PurchasableOffer> GetEnumerator() => PurchasableOffers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSubscribersResponse : gaxgrpc::IPageResponse<string>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<string> GetEnumerator() => ServiceAccounts.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
