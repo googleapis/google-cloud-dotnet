@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListConstraints",
+    "client": "OrgPolicyClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  },
+  {
+    "method": "ListPolicies",
+    "client": "OrgPolicyClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
