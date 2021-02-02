@@ -209,13 +209,43 @@ namespace Google.Cloud.PubSub.V1
         /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
         /// settings may need changing; especially
         /// <see cref="ClientCreationSettings.PublisherServiceApiSettings"/>.<see cref="PublisherServiceApiSettings.PublishSettings"/>.<see cref="CallSettings.Retry"/>.
+        /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
+        /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
         /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
         /// <see cref="PublisherServiceApiClient"/>s.</param>
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
         /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
-        public static async Task<PublisherClient> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null)
+        public static PublisherClient Create(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
+            // With isAsync set to false, the returned task will already be completed (either successfully or faulted),
+            // so .ResultWithUnwrappedExceptions() will always return immediately.
+            CreateMaybeAsync(topicName, clientCreationSettings, settings, isAsync: false).ResultWithUnwrappedExceptions();
+
+        /// <summary>
+        /// Create a <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.
+        /// The default <paramref name="settings"/> and <paramref name="clientCreationSettings"/> are suitable for machines with
+        /// high network bandwidth (e.g. Google Compute Engine instances). If running with more limited network bandwidth, some
+        /// settings may need changing; especially
+        /// <see cref="ClientCreationSettings.PublisherServiceApiSettings"/>.<see cref="PublisherServiceApiSettings.PublishSettings"/>.<see cref="CallSettings.Retry"/>.
+        /// By default this method generates a gRPC channel per CPU core; if using a high-core-count machine and using many
+        /// clients concurrently then this may need reducing; use the setting <see cref="ClientCreationSettings.ClientCount"/>.
+        /// </summary>
+        /// <param name="topicName">The <see cref="TopicName"/> to publish messages to.</param>
+        /// <param name="clientCreationSettings">Optional. <see cref="ClientCreationSettings"/> specifying how to create
+        /// <see cref="PublisherServiceApiClient"/>s.</param>
+        /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
+        /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
+        public static Task<PublisherClient> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
+            // With isAsync set to true, the returned task will complete asynchronously (if required) as expected.
+            CreateMaybeAsync(topicName, clientCreationSettings, settings, isAsync: true);
+
+        /// <summary>
+        /// Creates a <see cref="PublisherClient"/>.
+        /// <paramref name="isAsync"/> controls whether the returned task will complete synchronously or asynchronously, allowing this
+        /// method to be used by both <see cref="Create"/> and <see cref="CreateAsync"/>.
+        /// </summary>
+        private static async Task<PublisherClient> CreateMaybeAsync(TopicName topicName, ClientCreationSettings clientCreationSettings, Settings settings, bool isAsync)
         {
             clientCreationSettings?.Validate();
             // Clone settings, just in case user modifies them and an await happens in this method
@@ -225,7 +255,9 @@ namespace Google.Cloud.PubSub.V1
             // Use default credentials if none given.
             if (channelCredentials == null)
             {
-                var credentials = await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false);
+                var credentials = isAsync ?
+                    (await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false)) :
+                    GoogleCredential.GetApplicationDefault();
                 if (credentials.IsCreateScopedRequired)
                 {
                     credentials = credentials.CreateScoped(PublisherServiceApiClient.DefaultScopes);
@@ -252,7 +284,9 @@ namespace Google.Cloud.PubSub.V1
                     Settings = clientCreationSettings?.PublisherServiceApiSettings,
                     ChannelOptions = grpcChannelOptions
                 };
-                var channel = await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false);
+                var channel = isAsync ?
+                    await builder.CreateChannelAsync(cancellationToken: default).ConfigureAwait(false) :
+                    builder.CreateChannel();
 
                 // Second builder doesn't need to do much, as we can build a call invoker from the channel.
                 clients[i] = new PublisherServiceApiClientBuilder

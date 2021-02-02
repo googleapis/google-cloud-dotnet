@@ -81,5 +81,19 @@ namespace Google.Cloud.PubSub.V1
             var grpcAdapter = GrpcAdapter ?? DefaultGrpcAdapter;
             return grpcAdapter.CreateChannel(endpoint, credentials, effectiveBuilder.GetChannelOptions());
         }
+
+        /// <summary>
+        /// Creates a channel for this builder, observing any emulator configuration that has been set.
+        /// This method is used by PublisherClient, which needs the channel for shutdown purposes.
+        /// </summary>
+        internal ChannelBase CreateChannel()
+        {
+            // Note: no need to try to detect the channel pool here, as we know we don't want to use it.
+            var effectiveBuilder = MaybeCreateEmulatorClientBuilder() ?? this;
+            var endpoint = effectiveBuilder.Endpoint ?? GetDefaultEndpoint();
+            var credentials = effectiveBuilder.GetChannelCredentials();
+            var grpcAdapter = GrpcAdapter ?? DefaultGrpcAdapter;
+            return grpcAdapter.CreateChannel(endpoint, credentials, effectiveBuilder.GetChannelOptions());
+        }
     }
 }
