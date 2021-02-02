@@ -749,5 +749,93 @@ namespace Google.Cloud.Channel.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void RegisterSubscriberRequestObject()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RegisterSubscriberRequest request = new RegisterSubscriberRequest
+            {
+                Account = "account3e4468e2",
+                ServiceAccount = "service_accounta3c1b923",
+            };
+            RegisterSubscriberResponse expectedResponse = new RegisterSubscriberResponse
+            {
+                Topic = "topicac689b9d",
+            };
+            mockGrpcClient.Setup(x => x.RegisterSubscriber(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            RegisterSubscriberResponse response = client.RegisterSubscriber(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RegisterSubscriberRequestObjectAsync()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RegisterSubscriberRequest request = new RegisterSubscriberRequest
+            {
+                Account = "account3e4468e2",
+                ServiceAccount = "service_accounta3c1b923",
+            };
+            RegisterSubscriberResponse expectedResponse = new RegisterSubscriberResponse
+            {
+                Topic = "topicac689b9d",
+            };
+            mockGrpcClient.Setup(x => x.RegisterSubscriberAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RegisterSubscriberResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            RegisterSubscriberResponse responseCallSettings = await client.RegisterSubscriberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RegisterSubscriberResponse responseCancellationToken = await client.RegisterSubscriberAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UnregisterSubscriberRequestObject()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UnregisterSubscriberRequest request = new UnregisterSubscriberRequest
+            {
+                Account = "account3e4468e2",
+                ServiceAccount = "service_accounta3c1b923",
+            };
+            UnregisterSubscriberResponse expectedResponse = new UnregisterSubscriberResponse
+            {
+                Topic = "topicac689b9d",
+            };
+            mockGrpcClient.Setup(x => x.UnregisterSubscriber(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            UnregisterSubscriberResponse response = client.UnregisterSubscriber(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UnregisterSubscriberRequestObjectAsync()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UnregisterSubscriberRequest request = new UnregisterSubscriberRequest
+            {
+                Account = "account3e4468e2",
+                ServiceAccount = "service_accounta3c1b923",
+            };
+            UnregisterSubscriberResponse expectedResponse = new UnregisterSubscriberResponse
+            {
+                Topic = "topicac689b9d",
+            };
+            mockGrpcClient.Setup(x => x.UnregisterSubscriberAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnregisterSubscriberResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            UnregisterSubscriberResponse responseCallSettings = await client.UnregisterSubscriberAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UnregisterSubscriberResponse responseCancellationToken = await client.UnregisterSubscriberAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }
