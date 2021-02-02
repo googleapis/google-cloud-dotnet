@@ -218,6 +218,8 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
         /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
         public static PublisherClient Create(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
+            // With isAsync set to false, the returned task will already be completed (either successfully or faulted),
+            // so .ResultWithUnwrappedExceptions() will always return immediately.
             CreateMaybeAsync(topicName, clientCreationSettings, settings, isAsync: false).ResultWithUnwrappedExceptions();
 
         /// <summary>
@@ -235,8 +237,14 @@ namespace Google.Cloud.PubSub.V1
         /// <param name="settings">Optional. <see cref="Settings"/> for creating a <see cref="PublisherClient"/>.</param>
         /// <returns>A <see cref="PublisherClient"/> instance associated with the specified <see cref="TopicName"/>.</returns>
         public static Task<PublisherClient> CreateAsync(TopicName topicName, ClientCreationSettings clientCreationSettings = null, Settings settings = null) =>
+            // With isAsync set to true, the returned task will complete asynchronously (if required) as expected.
             CreateMaybeAsync(topicName, clientCreationSettings, settings, isAsync: true);
 
+        /// <summary>
+        /// Creates a <see cref="PublisherClient"/>.
+        /// <paramref name="isAsync"/> controls whether the returned task will complete synchronously or asynchronously, allowing this
+        /// method to be used by both <see cref="Create"/> and <see cref="CreateAsync"/>.
+        /// </summary>
         private static async Task<PublisherClient> CreateMaybeAsync(TopicName topicName, ClientCreationSettings clientCreationSettings, Settings settings, bool isAsync)
         {
             clientCreationSettings?.Validate();
