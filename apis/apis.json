@@ -1240,6 +1240,22 @@
       }
     },
     {
+      "id": "Google.Cloud.OrgPolicy.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Organization Policy",
+      "productUrl": "https://cloud.google.com/resource-manager/docs/organization-policy/overview",
+      "description": "Recommended Google client library to access the Organization Policy API (v2), which allows users to configure governance rules on their GCP resources across the Cloud Resource Hierarchy.",
+      "tags": [
+        "organization",
+        "policy",
+        "governance"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/orgpolicy/v2"
+    },
+    {
       "id": "Google.Cloud.OsConfig.V1",
       "generator": "micro",
       "protoPath": "google/cloud/osconfig/v1",
