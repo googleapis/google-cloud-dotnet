@@ -2578,7 +2578,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Devtools.Cloudprofiler.V2"
+      "CSharpNamespaceFromProtos": "Google.Cloud.Profiler.V2"
     },
     {
       "ServiceDirectory": "google/devtools/cloudtrace/v1",
