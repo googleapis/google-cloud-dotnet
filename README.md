@@ -74,6 +74,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.Logging.V2](https://googleapis.dev/dotnet/Google.Cloud.Logging.V2/3.2.0) | 3.2.0 | [Google Cloud Logging](https://cloud.google.com/logging/) |
 | [Google.Cloud.ManagedIdentities.V1](https://googleapis.dev/dotnet/Google.Cloud.ManagedIdentities.V1/2.1.0) | 2.1.0 | [Managed Service for Microsoft Active Directory](https://cloud.google.com/managed-microsoft-ad/) |
 | [Google.Cloud.MediaTranslation.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.MediaTranslation.V1Beta1/1.0.0-beta01) | 1.0.0-beta01 | [Media Translation](https://cloud.google.com/media-translation) |
+| [Google.Cloud.Memcache.V1](https://googleapis.dev/dotnet/Google.Cloud.Memcache.V1/1.0.0-beta01) | 1.0.0-beta01 | [Cloud Memorystore for Memcached](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Memcache.V1Beta2](https://googleapis.dev/dotnet/Google.Cloud.Memcache.V1Beta2/1.0.0-beta03) | 1.0.0-beta03 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Monitoring.V3](https://googleapis.dev/dotnet/Google.Cloud.Monitoring.V3/2.2.0) | 2.2.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
 | [Google.Cloud.Notebooks.V1Beta1](https://googleapis.dev/dotnet/Google.Cloud.Notebooks.V1Beta1/1.0.0-beta02) | 1.0.0-beta02 | [AI Platform Notebooks](https://cloud.google.com/ai-platform-notebooks) |
