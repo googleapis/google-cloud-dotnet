@@ -120,25 +120,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5425")]
+        [Fact]
         public async Task Traces_Outgoing()
         {
-            Skip.If(TestEnvironment.IsWindows(), "https://github.com/googleapis/google-cloud-dotnet/issues/5425");
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoing)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
             var trace = s_polling.GetTrace(uri, _startTime);
 
-            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "https://weather.com/");
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "http://weather.com/");
             TraceEntryVerifiers.AssertSpanLabelsContains(
                 trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-        [SkippableFact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/5425")]
+        [Fact]
         public async Task Traces_OutgoingClientFactory()
         {
-            Skip.If(TestEnvironment.IsWindows(), "https://github.com/googleapis/google-cloud-dotnet/issues/5425");
             var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceOutgoingClientFactory)}/{_testId}";
 
             using var server = GetTestServer<TraceClientFactoryTestApplication.Startup>();
@@ -147,7 +145,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             var trace = s_polling.GetTrace(uri, _startTime);
 
-            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "https://weather.com/");
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, "http://weather.com/");
             TraceEntryVerifiers.AssertSpanLabelsContains(
                 trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
@@ -379,7 +377,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             using var httpClient = new HttpClient(traceHeaderHandler);
             // Any code that makes outgoing requests.
-            return await httpClient.GetAsync("https://weather.com/");
+            return await httpClient.GetAsync("http://weather.com/");
         }
         // End sample
 
@@ -394,7 +392,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             var httpClient = clientFactory.CreateClient("tracesOutgoing");
             // Any code that makes outgoing requests.
-            return await httpClient.GetAsync("https://weather.com/");
+            return await httpClient.GetAsync("http://weather.com/");
         }
         // End sample
     }
