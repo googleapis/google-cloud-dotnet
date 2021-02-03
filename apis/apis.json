@@ -1368,6 +1368,21 @@
       "protoPath": "google/cloud/policytroubleshooter/v1"
     },
     {
+      "id": "Google.Cloud.Profiler.V2",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Profiler",
+      "productUrl": "https://cloud.google.com/profiler/",
+      "description": "Recommended Google client library to access the Google Cloud Profiler API, which manages continuous profiling information.",
+      "tags": [
+        "profiling",
+        "profiler"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/devtools/cloudprofiler/v2"
+    },
+    {
       "id": "Google.Cloud.PubSub.V1",
       "generator": "micro",
       "protoPath": "google/pubsub/v1",
