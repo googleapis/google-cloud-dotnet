@@ -4,6 +4,9 @@ source ../toolversions.sh
 
 install_docfx
 
+# Some versions of docfx fail if VSINSTALLDIR is set.
+export VSINSTALLDIR=
+
 if [[ -z "$1" || -z "$2" ]]
 then
   echo 'Please specify utility and version'
