@@ -50,6 +50,7 @@ namespace Google.Cloud.Spanner.Data
         private const string DataSourceKeyword = "Data Source";
         private const string UseClrDefaultForNullKeyword = "UseClrDefaultForNull";
         private const string EnableGetSchemaTableKeyword = "EnableGetSchemaTable";
+        private const string LogCommitStatsKeyword = "LogCommitStats";
         private const string EmulatorDetectionKeyword = "EmulatorDetection";
 
         private InstanceName _instanceName;
@@ -288,6 +289,22 @@ namespace Google.Cloud.Spanner.Data
         {
             get => GetInt32OrDefault(nameof(Timeout), 0, int.MaxValue, DefaultTimeout);
             set => SetInt32WithValidation(nameof(Timeout), 0, int.MaxValue, value);
+        }
+
+        /// <summary>
+        /// Request commit statistics for all read/write transactions throughout the
+        /// lifetime of the connection and log these.
+        /// </summary>
+        /// <remarks>
+        /// Commit statistics that are returned for a transaction are logged using the
+        /// logger of the connection. Applications can set a custom logger on the
+        /// connection to log the output to a different destination.
+        /// <see cref="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogCommitStats(CommitRequest, CommitResponse)"/>
+        /// </remarks>
+        public bool LogCommitStats
+        {
+            get => GetValueOrDefault(LogCommitStatsKeyword).Equals("True", StringComparison.OrdinalIgnoreCase);
+            set => this[LogCommitStatsKeyword] = value.ToString(); // Always "True" or "False", regardless of culture.
         }
 
         /// <summary>

@@ -107,6 +107,22 @@ namespace Google.Cloud.Spanner.V1.Internal.Logging
         protected abstract void LogPerformanceEntries(IEnumerable<string> entries);
 
         /// <summary>
+        /// This method is called when a transaction that requested CommitStats is committed.
+        /// The default implementation logs the commit stats at log level Info. Derived classes
+        /// can override this method to log the statistics at a different level, or to a different
+        /// destination.
+        /// </summary>
+        /// <param name="request">The commit request that requested commit statistics</param>
+        /// <param name="response">The response with commit statistics</param>
+        public virtual void LogCommitStats(CommitRequest request, CommitResponse response)
+        {
+            if (response.CommitStats != null)
+            {
+                Info(() => $"Transaction {request.TransactionId?.ToBase64() ?? ""} mutation count: {response.CommitStats.MutationCount}");
+            }
+        }
+
+        /// <summary>
         /// Logs a message at a level of <see cref="LogLevel.Debug"/>.
         /// </summary>
         /// <param name="message">The message to log. May be null, in which case this method is a no-op.</param>

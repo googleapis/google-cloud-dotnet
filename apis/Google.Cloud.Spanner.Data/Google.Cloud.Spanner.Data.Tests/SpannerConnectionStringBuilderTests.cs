@@ -174,6 +174,19 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
+        public void LogCommitStats()
+        {
+            var connectionStringBuilder = new SpannerConnectionStringBuilder("LogCommitStats=true");
+            Assert.True(connectionStringBuilder.LogCommitStats);
+            connectionStringBuilder.LogCommitStats = false;
+            Assert.False(connectionStringBuilder.LogCommitStats);
+            // DbConnectionStringBuilder lower-cases keywords, annoyingly.
+            Assert.Equal("logcommitstats=False", connectionStringBuilder.ToString());
+            connectionStringBuilder = new SpannerConnectionStringBuilder("");
+            Assert.False(connectionStringBuilder.LogCommitStats);
+        }
+
+        [Fact]
         public void EmulatorDetectionProperty()
         {
             var connectionStringBuilder = new SpannerConnectionStringBuilder("EmulatorDetection=EmulatorOnly");

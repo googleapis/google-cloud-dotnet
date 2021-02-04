@@ -117,6 +117,21 @@ namespace Google.Cloud.Spanner.Data
         public QueryOptions QueryOptions { get; set; }
 
         /// <summary>
+        /// Request commit statistics for all read/write transactions throughout the
+        /// lifetime of the connection and log these. This value is set as the
+        /// default for read/write transactions created by this connection, and
+        /// is used for statements that are executed on this connection without
+        /// a transaction.
+        /// </summary>
+        /// <remarks>
+        /// Commit statistics that are returned for a transaction are logged using the
+        /// logger of this connection. Applications can set a custom logger on the
+        /// connection to log the output to a different destination.
+        /// <see cref="Google.Cloud.Spanner.V1.Internal.Logging.Logger.LogCommitStats(CommitRequest, CommitResponse)"/>
+        /// </remarks>
+        public bool LogCommitStats => Builder.LogCommitStats;
+
+        /// <summary>
         /// Creates a SpannerConnection with no datasource or credential specified.
         /// </summary>
         public SpannerConnection() : this(new SpannerConnectionStringBuilder())
@@ -772,7 +787,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     await OpenAsync(cancellationToken).ConfigureAwait(false);
                     var session = await AcquireSessionAsync(transactionOptions, cancellationToken).ConfigureAwait(false);
-                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp);
+                    return new SpannerTransaction(this, transactionMode, session, targetReadTimestamp) { LogCommitStats = LogCommitStats };
                 }, "SpannerConnection.BeginTransaction", Logger);
         }
 
