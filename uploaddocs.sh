@@ -67,7 +67,7 @@ do
     python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $GOOGLEAPIS_DEV_STAGING_BUCKET
 
     # For DevSite, we've already generated the metadata file, so we just need to do the upload.
-    cd ../obj/devsite
+    cd ../devsite
     
     echo "Final upload stage (DevSite)"
     python -m docuploader upload . --credentials $SERVICE_ACCOUNT_JSON --staging-bucket $DEVSITE_STAGING_BUCKET --destination-prefix docfx
