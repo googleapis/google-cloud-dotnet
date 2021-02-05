@@ -214,8 +214,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 ["language"] = "dotnet",
                 ["name"] = apiMetadata.Id,
                 ["xrefs"] = new JArray(GetXrefUrls(apiMetadata)),
-                ["xrefservices"] = new JArray("https://xref.docs.microsoft.com/query?uid={uid}")
-                // TODO: xrefs
+                ["xrefServices"] = new JArray("https://xref.docs.microsoft.com/query?uid={uid}")
             };
             string json = docUploaderMetadata.ToString(Formatting.Indented);
             File.WriteAllText(Path.Combine(_devSiteRoot, "docs.metadata.json"), json);
