@@ -25,7 +25,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.AppEngine.V1](Google.Cloud.AppEngine.V1/index.html) | 1.0.0-beta01 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](Google.Cloud.ArtifactRegistry.V1Beta2/index.html) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.6.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
-| [Google.Cloud.AssuredWorkloads.V1Beta1](Google.Cloud.AssuredWorkloads.V1Beta1/index.html) | 1.0.0-beta02 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
+| [Google.Cloud.AssuredWorkloads.V1Beta1](Google.Cloud.AssuredWorkloads.V1Beta1/index.html) | 1.0.0-beta03 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
 | [Google.Cloud.AutoML.V1](Google.Cloud.AutoML.V1/index.html) | 2.1.0 | [Google AutoML](https://cloud.google.com/automl/) |
 | [Google.Cloud.BigQuery.Connection.V1](Google.Cloud.BigQuery.Connection.V1/index.html) | 1.1.0 | [BigQuery Connection](https://cloud.google.com/bigquery/docs/reference/bigqueryconnection) |
 | [Google.Cloud.BigQuery.DataTransfer.V1](Google.Cloud.BigQuery.DataTransfer.V1/index.html) | 3.0.0 | [Google BigQuery Data Transfer](https://cloud.google.com/bigquery/transfer/) |
