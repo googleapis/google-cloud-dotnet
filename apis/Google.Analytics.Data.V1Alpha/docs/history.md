@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.0.0-alpha04, released 2021-02-05
+
+- [Commit b6675d1](https://github.com/googleapis/google-cloud-dotnet/commit/b6675d1):
+  - feat: custom_definition field added to DimensionMetadata object, indicating whether a dimension is a custom dimension for a property
+  - feat: custom_definition field added to MetricMetadata object, indicating whether a metric is a custom metric for a property
+  - docs: documentation urls updated docs: documentation for Cohort reporting feature is updated ([issue 5658](https://github.com/googleapis/google-cloud-dotnet/issues/5658))
+
 # Version 1.0.0-alpha03, released 2020-11-19
 
 - [Commit 92d988e](https://github.com/googleapis/google-cloud-dotnet/commit/92d988e):
