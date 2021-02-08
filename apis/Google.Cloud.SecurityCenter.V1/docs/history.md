@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.2.0, released 2021-02-08
+
+- [Commit d6c34ac](https://github.com/googleapis/google-cloud-dotnet/commit/d6c34ac):
+  - feat: added field severity to findings in v1 API
+  - Clients will now see a new field, severity, on findings. They will also be able to filter and group by severity on ListFinding and GroupFinding API calls.
+
 # Version 2.1.0, released 2020-11-10
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
