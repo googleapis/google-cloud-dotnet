@@ -140,7 +140,10 @@ generate_microgenerator() {
 
   # The microgenerator currently creates Google.Cloud directories due to being given
   # the common resources proto. Clean up for now; this is being fixed in the generator.
-  rm -rf $API_TMP_DIR/Google.Cloud{,.Snippets,.Tests}
+  rm -rf $API_TMP_DIR/Google.Cloud{,.Snippets,.Tests,.StandaloneSnippets}
+
+  # Remove the newly generated standalone snippets until they are ready for surfacing.
+  rm -rf $API_TMP_DIR/Google.*.StandaloneSnippets
 
   # We generate our own project files
   rm $(find tmp -name '*.csproj')
