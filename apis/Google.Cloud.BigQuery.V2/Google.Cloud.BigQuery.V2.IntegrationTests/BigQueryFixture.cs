@@ -14,7 +14,6 @@
 
 using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,7 +34,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
     /// operate on.
     /// </summary>
     [CollectionDefinition(nameof(BigQueryFixture))]
-    public class BigQueryFixture : CloudProjectFixtureBase, ICollectionFixture<BigQueryFixture>
+    public class BigQueryFixture : BigQueryFixtureBase, ICollectionFixture<BigQueryFixture>
     {
         /// <summary>
         /// Used to generate dataset IDs which are still clearly identifiable with this test.
@@ -50,23 +49,13 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public string ComplexTypesTableId { get; } = "complex";
         public string ExhaustiveTypesTableId { get; } = "exhaustive";
 
-        /// <summary>
-        /// A GCS bucket created for this fixture.
-        /// </summary>
-        public string StorageBucketName { get; }
-
-        public BigQueryFixture()
+        public BigQueryFixture() : base("bigquerytests-")
         {
             DatasetId = IdGenerator.FromDateTime(prefix: "test_");
             LabelsDatasetId = IdGenerator.FromDateTime(prefix: "testlabels_");
 
             CreateData();
-            StorageBucketName = GenerateStorageBucketName();
-            StorageClient.Create().CreateBucket(ProjectId, StorageBucketName);
         }
-
-        private string GenerateStorageBucketName() => IdGenerator.FromDateTime(prefix: "bigquerytests-");
-        internal string GenerateStorageObjectName() => IdGenerator.FromGuid(prefix: "file-");
 
         private void CreateData()
         {

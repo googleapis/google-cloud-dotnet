@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -161,8 +160,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var extractJob = bqClient.CreateExtractJob(originReference, destinationUri);
             extractJob = extractJob.PollUntilCompleted().ThrowOnAnyError();
 
-            var storageClient = StorageClient.Create();
-            var extracted = storageClient.GetObject(destinationBucket, destinationObject);
+            var extracted = _fixture.StorageClient.GetObject(destinationBucket, destinationObject);
 
             Assert.True(extracted.Size > 0);
         }
