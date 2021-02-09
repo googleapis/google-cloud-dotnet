@@ -3,7 +3,7 @@
 //     source: google/cloud/memcache/v1beta2/cloud_memcache.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -37,7 +36,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   /// * As such, Memcached instances are resources of the form:
   ///   `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
   ///
-  /// Note that location_id must be refering to a GCP `region`; for example:
+  /// Note that location_id must be a GCP `region`; for example:
   /// * `projects/my-memcached-project/locations/us-central1/instances/my-memcached`
   /// </summary>
   public static partial class CloudMemcache
@@ -54,6 +53,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1Beta2.UpdateParametersRequest> __Marshaller_google_cloud_memcache_v1beta2_UpdateParametersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Memcache.V1Beta2.UpdateParametersRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest> __Marshaller_google_cloud_memcache_v1beta2_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest> __Marshaller_google_cloud_memcache_v1beta2_ApplyParametersRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest> __Marshaller_google_cloud_memcache_v1beta2_ApplySoftwareUpdateRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Google.Cloud.Memcache.V1Beta2.ListInstancesRequest, global::Google.Cloud.Memcache.V1Beta2.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Memcache.V1Beta2.ListInstancesRequest, global::Google.Cloud.Memcache.V1Beta2.ListInstancesResponse>(
         grpc::MethodType.Unary,
@@ -104,6 +104,13 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         __Marshaller_google_cloud_memcache_v1beta2_ApplyParametersRequest,
         __Marshaller_google_longrunning_Operation);
 
+    static readonly grpc::Method<global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest, global::Google.LongRunning.Operation> __Method_ApplySoftwareUpdate = new grpc::Method<global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ApplySoftwareUpdate",
+        __Marshaller_google_cloud_memcache_v1beta2_ApplySoftwareUpdateRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -115,7 +122,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public abstract partial class CloudMemcacheBase
     {
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists Instances in a given location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -137,7 +144,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       }
 
       /// <summary>
-      /// Creates a new Instance in a given project and location.
+      /// Creates a new Instance in a given location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -159,9 +166,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       }
 
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -183,13 +191,24 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       }
 
       /// <summary>
-      /// ApplyParameters will update current set of Parameters to the set of
-      /// specified nodes of the Memcached Instance.
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
+      /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApplyParameters(global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates software on the selected nodes of the Instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApplySoftwareUpdate(global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -220,7 +239,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       }
 
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists Instances in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -232,7 +251,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return ListInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists Instances in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -242,7 +261,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstances, null, options, request);
       }
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists Instances in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -254,7 +273,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return ListInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Instances in a given project and location.
+      /// Lists Instances in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -308,7 +327,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstance, null, options, request);
       }
       /// <summary>
-      /// Creates a new Instance in a given project and location.
+      /// Creates a new Instance in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -320,7 +339,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CreateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Instance in a given project and location.
+      /// Creates a new Instance in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -330,7 +349,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInstance, null, options, request);
       }
       /// <summary>
-      /// Creates a new Instance in a given project and location.
+      /// Creates a new Instance in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -342,7 +361,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CreateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new Instance in a given project and location.
+      /// Creates a new Instance in a given location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -396,9 +415,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -410,9 +430,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return UpdateParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -422,9 +443,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateParameters, null, options, request);
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -436,9 +458,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return UpdateParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates the defined Memcached Parameters for an existing Instance.
+      /// Updates the defined Memcached parameters for an existing instance.
       /// This method only stages the parameters, it must be followed by
-      /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+      /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+      /// instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -492,8 +515,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
       /// <summary>
-      /// ApplyParameters will update current set of Parameters to the set of
-      /// specified nodes of the Memcached Instance.
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
+      /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -505,8 +528,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return ApplyParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ApplyParameters will update current set of Parameters to the set of
-      /// specified nodes of the Memcached Instance.
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
+      /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -516,8 +539,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return CallInvoker.BlockingUnaryCall(__Method_ApplyParameters, null, options, request);
       }
       /// <summary>
-      /// ApplyParameters will update current set of Parameters to the set of
-      /// specified nodes of the Memcached Instance.
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
+      /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -529,8 +552,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         return ApplyParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// ApplyParameters will update current set of Parameters to the set of
-      /// specified nodes of the Memcached Instance.
+      /// `ApplyParameters` restarts the set of specified nodes in order to update
+      /// them to the current set of parameters for the Memcached Instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -538,6 +561,50 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApplyParametersAsync(global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ApplyParameters, null, options, request);
+      }
+      /// <summary>
+      /// Updates software on the selected nodes of the Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ApplySoftwareUpdate(global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApplySoftwareUpdate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates software on the selected nodes of the Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation ApplySoftwareUpdate(global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ApplySoftwareUpdate, null, options, request);
+      }
+      /// <summary>
+      /// Updates software on the selected nodes of the Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApplySoftwareUpdateAsync(global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ApplySoftwareUpdateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates software on the selected nodes of the Instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApplySoftwareUpdateAsync(global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ApplySoftwareUpdate, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override CloudMemcacheClient NewInstance(ClientBaseConfiguration configuration)
@@ -557,7 +624,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
           .AddMethod(__Method_UpdateParameters, serviceImpl.UpdateParameters)
           .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
-          .AddMethod(__Method_ApplyParameters, serviceImpl.ApplyParameters).Build();
+          .AddMethod(__Method_ApplyParameters, serviceImpl.ApplyParameters)
+          .AddMethod(__Method_ApplySoftwareUpdate, serviceImpl.ApplySoftwareUpdate).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -573,6 +641,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       serviceBinder.AddMethod(__Method_UpdateParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.UpdateParametersRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateParameters));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
       serviceBinder.AddMethod(__Method_ApplyParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest, global::Google.LongRunning.Operation>(serviceImpl.ApplyParameters));
+      serviceBinder.AddMethod(__Method_ApplySoftwareUpdate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest, global::Google.LongRunning.Operation>(serviceImpl.ApplySoftwareUpdate));
     }
 
   }

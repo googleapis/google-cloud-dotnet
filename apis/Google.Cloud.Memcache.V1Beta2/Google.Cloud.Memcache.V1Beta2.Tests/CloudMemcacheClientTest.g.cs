@@ -67,6 +67,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                     new Instance.Types.InstanceMessage(),
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
+                UpdateAvailable = true,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudMemcacheClient client = new CloudMemcacheClientImpl(mockGrpcClient.Object, null);
@@ -114,6 +115,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                     new Instance.Types.InstanceMessage(),
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
+                UpdateAvailable = true,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudMemcacheClient client = new CloudMemcacheClientImpl(mockGrpcClient.Object, null);
@@ -163,6 +165,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                     new Instance.Types.InstanceMessage(),
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
+                UpdateAvailable = true,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudMemcacheClient client = new CloudMemcacheClientImpl(mockGrpcClient.Object, null);
@@ -210,6 +213,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                     new Instance.Types.InstanceMessage(),
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
+                UpdateAvailable = true,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudMemcacheClient client = new CloudMemcacheClientImpl(mockGrpcClient.Object, null);
@@ -259,6 +263,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                     new Instance.Types.InstanceMessage(),
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
+                UpdateAvailable = true,
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudMemcacheClient client = new CloudMemcacheClientImpl(mockGrpcClient.Object, null);
@@ -306,6 +311,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Tests
                     new Instance.Types.InstanceMessage(),
                 },
                 DiscoveryEndpoint = "discovery_endpointe07f14c7",
+                UpdateAvailable = true,
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudMemcacheClient client = new CloudMemcacheClientImpl(mockGrpcClient.Object, null);

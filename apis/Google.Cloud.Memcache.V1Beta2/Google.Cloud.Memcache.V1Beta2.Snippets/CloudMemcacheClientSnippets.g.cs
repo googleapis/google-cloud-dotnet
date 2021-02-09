@@ -920,7 +920,10 @@ namespace Google.Cloud.Memcache.V1Beta2.Snippets
             // Create client
             CloudMemcacheClient cloudMemcacheClient = CloudMemcacheClient.Create();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest { Name = "", };
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = cloudMemcacheClient.DeleteInstance(request);
 
@@ -950,7 +953,10 @@ namespace Google.Cloud.Memcache.V1Beta2.Snippets
             // Create client
             CloudMemcacheClient cloudMemcacheClient = await CloudMemcacheClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteInstanceRequest request = new DeleteInstanceRequest { Name = "", };
+            DeleteInstanceRequest request = new DeleteInstanceRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = await cloudMemcacheClient.DeleteInstanceAsync(request);
 
@@ -979,7 +985,7 @@ namespace Google.Cloud.Memcache.V1Beta2.Snippets
             // Create client
             CloudMemcacheClient cloudMemcacheClient = CloudMemcacheClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
             // Make the request
             Operation<Empty, OperationMetadata> response = cloudMemcacheClient.DeleteInstance(name);
 
@@ -1009,7 +1015,66 @@ namespace Google.Cloud.Memcache.V1Beta2.Snippets
             // Create client
             CloudMemcacheClient cloudMemcacheClient = await CloudMemcacheClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await cloudMemcacheClient.DeleteInstanceAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await cloudMemcacheClient.PollOnceDeleteInstanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstance</summary>
+        public void DeleteInstanceResourceNames()
+        {
+            // Snippet: DeleteInstance(InstanceName, CallSettings)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = CloudMemcacheClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = cloudMemcacheClient.DeleteInstance(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = cloudMemcacheClient.PollOnceDeleteInstance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteInstanceAsync</summary>
+        public async Task DeleteInstanceResourceNamesAsync()
+        {
+            // Snippet: DeleteInstanceAsync(InstanceName, CallSettings)
+            // Additional: DeleteInstanceAsync(InstanceName, CancellationToken)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = await CloudMemcacheClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
             // Make the request
             Operation<Empty, OperationMetadata> response = await cloudMemcacheClient.DeleteInstanceAsync(name);
 
@@ -1217,6 +1282,201 @@ namespace Google.Cloud.Memcache.V1Beta2.Snippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<Instance, OperationMetadata> retrievedResponse = await cloudMemcacheClient.PollOnceApplyParametersAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplySoftwareUpdate</summary>
+        public void ApplySoftwareUpdateRequestObject()
+        {
+            // Snippet: ApplySoftwareUpdate(ApplySoftwareUpdateRequest, CallSettings)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = CloudMemcacheClient.Create();
+            // Initialize request argument(s)
+            ApplySoftwareUpdateRequest request = new ApplySoftwareUpdateRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                NodeIds = { "", },
+                ApplyAll = false,
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudMemcacheClient.ApplySoftwareUpdate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudMemcacheClient.PollOnceApplySoftwareUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplySoftwareUpdateAsync</summary>
+        public async Task ApplySoftwareUpdateRequestObjectAsync()
+        {
+            // Snippet: ApplySoftwareUpdateAsync(ApplySoftwareUpdateRequest, CallSettings)
+            // Additional: ApplySoftwareUpdateAsync(ApplySoftwareUpdateRequest, CancellationToken)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = await CloudMemcacheClient.CreateAsync();
+            // Initialize request argument(s)
+            ApplySoftwareUpdateRequest request = new ApplySoftwareUpdateRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                NodeIds = { "", },
+                ApplyAll = false,
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudMemcacheClient.ApplySoftwareUpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudMemcacheClient.PollOnceApplySoftwareUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplySoftwareUpdate</summary>
+        public void ApplySoftwareUpdate()
+        {
+            // Snippet: ApplySoftwareUpdate(string, IEnumerable<string>, bool, CallSettings)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = CloudMemcacheClient.Create();
+            // Initialize request argument(s)
+            string instance = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            IEnumerable<string> nodeIds = new string[] { "", };
+            bool applyAll = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudMemcacheClient.ApplySoftwareUpdate(instance, nodeIds, applyAll);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudMemcacheClient.PollOnceApplySoftwareUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplySoftwareUpdateAsync</summary>
+        public async Task ApplySoftwareUpdateAsync()
+        {
+            // Snippet: ApplySoftwareUpdateAsync(string, IEnumerable<string>, bool, CallSettings)
+            // Additional: ApplySoftwareUpdateAsync(string, IEnumerable<string>, bool, CancellationToken)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = await CloudMemcacheClient.CreateAsync();
+            // Initialize request argument(s)
+            string instance = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            IEnumerable<string> nodeIds = new string[] { "", };
+            bool applyAll = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudMemcacheClient.ApplySoftwareUpdateAsync(instance, nodeIds, applyAll);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudMemcacheClient.PollOnceApplySoftwareUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplySoftwareUpdate</summary>
+        public void ApplySoftwareUpdateResourceNames()
+        {
+            // Snippet: ApplySoftwareUpdate(InstanceName, IEnumerable<string>, bool, CallSettings)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = CloudMemcacheClient.Create();
+            // Initialize request argument(s)
+            InstanceName instance = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            IEnumerable<string> nodeIds = new string[] { "", };
+            bool applyAll = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudMemcacheClient.ApplySoftwareUpdate(instance, nodeIds, applyAll);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudMemcacheClient.PollOnceApplySoftwareUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ApplySoftwareUpdateAsync</summary>
+        public async Task ApplySoftwareUpdateResourceNamesAsync()
+        {
+            // Snippet: ApplySoftwareUpdateAsync(InstanceName, IEnumerable<string>, bool, CallSettings)
+            // Additional: ApplySoftwareUpdateAsync(InstanceName, IEnumerable<string>, bool, CancellationToken)
+            // Create client
+            CloudMemcacheClient cloudMemcacheClient = await CloudMemcacheClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName instance = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            IEnumerable<string> nodeIds = new string[] { "", };
+            bool applyAll = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudMemcacheClient.ApplySoftwareUpdateAsync(instance, nodeIds, applyAll);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudMemcacheClient.PollOnceApplySoftwareUpdateAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

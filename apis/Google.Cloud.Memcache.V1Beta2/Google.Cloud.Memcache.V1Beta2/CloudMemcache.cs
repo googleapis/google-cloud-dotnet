@@ -30,7 +30,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
             "b3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
             "YXBpL3Jlc291cmNlLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0",
             "aW9ucy5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i1QwKCEluc3RhbmNl",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ikw0KCEluc3RhbmNl",
             "EhEKBG5hbWUYASABKAlCA+BBAhIUCgxkaXNwbGF5X25hbWUYAiABKAkSQwoG",
             "bGFiZWxzGAMgAygLMjMuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIu",
             "SW5zdGFuY2UuTGFiZWxzRW50cnkSGgoSYXV0aG9yaXplZF9uZXR3b3JrGAQg",
@@ -48,115 +48,128 @@ namespace Google.Cloud.Memcache.V1Beta2 {
             "Mi5JbnN0YW5jZS5TdGF0ZUID4EEDEiIKFW1lbWNhY2hlX2Z1bGxfdmVyc2lv",
             "bhgSIAEoCUID4EEDElIKEWluc3RhbmNlX21lc3NhZ2VzGBMgAygLMjcuZ29v",
             "Z2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFuY2UuSW5zdGFuY2VN",
-            "ZXNzYWdlEh8KEmRpc2NvdmVyeV9lbmRwb2ludBgUIAEoCUID4EEDGkEKCk5v",
-            "ZGVDb25maWcSFgoJY3B1X2NvdW50GAEgASgFQgPgQQISGwoObWVtb3J5X3Np",
-            "emVfbWIYAiABKAVCA+BBAhq5AgoETm9kZRIUCgdub2RlX2lkGAEgASgJQgPg",
-            "QQMSEQoEem9uZRgCIAEoCUID4EEDEkYKBXN0YXRlGAMgASgOMjIuZ29vZ2xl",
-            "LmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFuY2UuTm9kZS5TdGF0ZUID",
-            "4EEDEhEKBGhvc3QYBCABKAlCA+BBAxIRCgRwb3J0GAUgASgFQgPgQQMSRQoK",
-            "cGFyYW1ldGVycxgGIAEoCzIxLmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJl",
-            "dGEyLk1lbWNhY2hlUGFyYW1ldGVycyJTCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
-            "RUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghERUxFVElO",
-            "RxADEgwKCFVQREFUSU5HEAQargEKD0luc3RhbmNlTWVzc2FnZRJKCgRjb2Rl",
-            "GAEgASgOMjwuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFu",
-            "Y2UuSW5zdGFuY2VNZXNzYWdlLkNvZGUSDwoHbWVzc2FnZRgCIAEoCSI+CgRD",
-            "b2RlEhQKEENPREVfVU5TUEVDSUZJRUQQABIgChxaT05FX0RJU1RSSUJVVElP",
-            "Tl9VTkJBTEFOQ0VEEAEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASJhCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
-            "RBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAhIMCghERUxFVElORxAEEhoK",
-            "FlBFUkZPUk1JTkdfTUFJTlRFTkFOQ0UQBTpj6kFgCiBtZW1jYWNoZS5nb29n",
-            "bGVhcGlzLmNvbS9JbnN0YW5jZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9IpoBChRMaXN0",
-            "SW5zdGFuY2VzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9j",
-            "YXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCRIQCghv",
-            "cmRlcl9ieRgFIAEoCSKBAQoVTGlzdEluc3RhbmNlc1Jlc3BvbnNlEjoKCXJl",
-            "c291cmNlcxgBIAMoCzInLmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEy",
-            "Lkluc3RhbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNo",
-            "YWJsZRgDIAMoCSJMChJHZXRJbnN0YW5jZVJlcXVlc3QSNgoEbmFtZRgBIAEo",
-            "CUIo4EEC+kEiCiBtZW1jYWNoZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZSKs",
-            "AQoVQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC",
-            "+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SGAoLaW5z",
-            "dGFuY2VfaWQYAiABKAlCA+BBAhI+CghyZXNvdXJjZRgDIAEoCzInLmdvb2ds",
-            "ZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLkluc3RhbmNlQgPgQQIijQEKFVVw",
-            "ZGF0ZUluc3RhbmNlUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhI+CghyZXNvdXJjZRgCIAEo",
-            "CzInLmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLkluc3RhbmNlQgPg",
-            "QQIiJQoVRGVsZXRlSW5zdGFuY2VSZXF1ZXN0EgwKBG5hbWUYASABKAkidQoW",
-            "QXBwbHlQYXJhbWV0ZXJzUmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6QSIK",
-            "IG1lbWNhY2hlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhAKCG5vZGVfaWRz",
-            "GAIgAygJEhEKCWFwcGx5X2FsbBgDIAEoCCLOAQoXVXBkYXRlUGFyYW1ldGVy",
-            "c1JlcXVlc3QSNgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBtZW1jYWNoZS5nb29n",
-            "bGVhcGlzLmNvbS9JbnN0YW5jZRI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhJFCgpwYXJhbWV0ZXJzGAMg",
-            "ASgLMjEuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuTWVtY2FjaGVQ",
-            "YXJhbWV0ZXJzIqMBChJNZW1jYWNoZVBhcmFtZXRlcnMSDwoCaWQYASABKAlC",
-            "A+BBAxJNCgZwYXJhbXMYAyADKAsyPS5nb29nbGUuY2xvdWQubWVtY2FjaGUu",
-            "djFiZXRhMi5NZW1jYWNoZVBhcmFtZXRlcnMuUGFyYW1zRW50cnkaLQoLUGFy",
-            "YW1zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLWAQoR",
-            "T3BlcmF0aW9uTWV0YWRhdGESLwoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZ0YXJnZXQYAyABKAkSDAoEdmVy",
-            "YhgEIAEoCRIVCg1zdGF0dXNfZGV0YWlsGAUgASgJEhgKEGNhbmNlbF9yZXF1",
-            "ZXN0ZWQYBiABKAgSEwoLYXBpX3ZlcnNpb24YByABKAki2QEKEExvY2F0aW9u",
-            "TWV0YWRhdGESYQoPYXZhaWxhYmxlX3pvbmVzGAEgAygLMkMuZ29vZ2xlLmNs",
-            "b3VkLm1lbWNhY2hlLnYxYmV0YTIuTG9jYXRpb25NZXRhZGF0YS5BdmFpbGFi",
-            "bGVab25lc0VudHJ5QgPgQQMaYgoTQXZhaWxhYmxlWm9uZXNFbnRyeRILCgNr",
-            "ZXkYASABKAkSOgoFdmFsdWUYAiABKAsyKy5nb29nbGUuY2xvdWQubWVtY2Fj",
-            "aGUudjFiZXRhMi5ab25lTWV0YWRhdGE6AjgBIg4KDFpvbmVNZXRhZGF0YSpF",
-            "Cg9NZW1jYWNoZVZlcnNpb24SIAocTUVNQ0FDSEVfVkVSU0lPTl9VTlNQRUNJ",
-            "RklFRBAAEhAKDE1FTUNBQ0hFXzFfNRABMv8OCg1DbG91ZE1lbWNhY2hlEr8B",
-            "Cg1MaXN0SW5zdGFuY2VzEjMuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0",
-            "YTIuTGlzdEluc3RhbmNlc1JlcXVlc3QaNC5nb29nbGUuY2xvdWQubWVtY2Fj",
-            "aGUudjFiZXRhMi5MaXN0SW5zdGFuY2VzUmVzcG9uc2UiQ4LT5JMCNBIyL3Yx",
-            "YmV0YTIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5j",
-            "ZXPaQQZwYXJlbnQSrAEKC0dldEluc3RhbmNlEjEuZ29vZ2xlLmNsb3VkLm1l",
-            "bWNhY2hlLnYxYmV0YTIuR2V0SW5zdGFuY2VSZXF1ZXN0GicuZ29vZ2xlLmNs",
-            "b3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFuY2UiQYLT5JMCNBIyL3YxYmV0",
-            "YTIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMvKn3a",
-            "QQRuYW1lEqYCCg5DcmVhdGVJbnN0YW5jZRI0Lmdvb2dsZS5jbG91ZC5tZW1j",
-            "YWNoZS52MWJldGEyLkNyZWF0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5s",
-            "b25ncnVubmluZy5PcGVyYXRpb24ivgGC0+STAj4iMi92MWJldGEyL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFuY2VzOghyZXNvdXJj",
-            "ZdpBG3BhcmVudCxpbnN0YW5jZV9pZCxyZXNvdXJjZcpBWQomZ29vZ2xlLmNs",
-            "b3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFuY2USL2dvb2dsZS5jbG91ZC5t",
-            "ZW1jYWNoZS52MWJldGEyLk9wZXJhdGlvbk1ldGFkYXRhEqgCCg5VcGRhdGVJ",
-            "bnN0YW5jZRI0Lmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLlVwZGF0",
-            "ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24iwAGC0+STAkcyOy92MWJldGEyL3tyZXNvdXJjZS5uYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OghyZXNvdXJjZdpBFHVwZGF0",
-            "ZV9tYXNrLHJlc291cmNlykFZCiZnb29nbGUuY2xvdWQubWVtY2FjaGUudjFi",
-            "ZXRhMi5JbnN0YW5jZRIvZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIu",
-            "T3BlcmF0aW9uTWV0YWRhdGEStAIKEFVwZGF0ZVBhcmFtZXRlcnMSNi5nb29n",
-            "bGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5VcGRhdGVQYXJhbWV0ZXJzUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iyAGC0+STAkgy",
-            "Qy92MWJldGEyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFu",
-            "Y2VzLyp9OnVwZGF0ZVBhcmFtZXRlcnM6ASraQRtuYW1lLHVwZGF0ZV9tYXNr",
-            "LHBhcmFtZXRlcnPKQVkKJmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEy",
+            "ZXNzYWdlEh8KEmRpc2NvdmVyeV9lbmRwb2ludBgUIAEoCUID4EEDEh0KEHVw",
+            "ZGF0ZV9hdmFpbGFibGUYFSABKAhCA+BBAxpBCgpOb2RlQ29uZmlnEhYKCWNw",
+            "dV9jb3VudBgBIAEoBUID4EECEhsKDm1lbW9yeV9zaXplX21iGAIgASgFQgPg",
+            "QQIa2AIKBE5vZGUSFAoHbm9kZV9pZBgBIAEoCUID4EEDEhEKBHpvbmUYAiAB",
+            "KAlCA+BBAxJGCgVzdGF0ZRgDIAEoDjIyLmdvb2dsZS5jbG91ZC5tZW1jYWNo",
+            "ZS52MWJldGEyLkluc3RhbmNlLk5vZGUuU3RhdGVCA+BBAxIRCgRob3N0GAQg",
+            "ASgJQgPgQQMSEQoEcG9ydBgFIAEoBUID4EEDEkUKCnBhcmFtZXRlcnMYBiAB",
+            "KAsyMS5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5NZW1jYWNoZVBh",
+            "cmFtZXRlcnMSHQoQdXBkYXRlX2F2YWlsYWJsZRgHIAEoCEID4EEDIlMKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVS",
+            "RUFEWRACEgwKCERFTEVUSU5HEAMSDAoIVVBEQVRJTkcQBBquAQoPSW5zdGFu",
+            "Y2VNZXNzYWdlEkoKBGNvZGUYASABKA4yPC5nb29nbGUuY2xvdWQubWVtY2Fj",
+            "aGUudjFiZXRhMi5JbnN0YW5jZS5JbnN0YW5jZU1lc3NhZ2UuQ29kZRIPCgdt",
+            "ZXNzYWdlGAIgASgJIj4KBENvZGUSFAoQQ09ERV9VTlNQRUNJRklFRBAAEiAK",
+            "HFpPTkVfRElTVFJJQlVUSU9OX1VOQkFMQU5DRUQQARotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImEKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRAC",
+            "EgwKCERFTEVUSU5HEAQSGgoWUEVSRk9STUlOR19NQUlOVEVOQU5DRRAFOmPq",
+            "QWAKIG1lbWNhY2hlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEjxwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5zdGFuY2VzL3tp",
+            "bnN0YW5jZX0imgEKFExpc3RJbnN0YW5jZXNSZXF1ZXN0EjkKBnBhcmVudBgB",
+            "IAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
+            "b24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoG",
+            "ZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJIoEBChVMaXN0SW5zdGFu",
+            "Y2VzUmVzcG9uc2USOgoJcmVzb3VyY2VzGAEgAygLMicuZ29vZ2xlLmNsb3Vk",
+            "Lm1lbWNhY2hlLnYxYmV0YTIuSW5zdGFuY2USFwoPbmV4dF9wYWdlX3Rva2Vu",
+            "GAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIkwKEkdldEluc3RhbmNlUmVx",
+            "dWVzdBI2CgRuYW1lGAEgASgJQijgQQL6QSIKIG1lbWNhY2hlLmdvb2dsZWFw",
+            "aXMuY29tL0luc3RhbmNlIqwBChVDcmVhdGVJbnN0YW5jZVJlcXVlc3QSOQoG",
+            "cGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNv",
+            "bS9Mb2NhdGlvbhIYCgtpbnN0YW5jZV9pZBgCIAEoCUID4EECEj4KCHJlc291",
+            "cmNlGAMgASgLMicuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5z",
+            "dGFuY2VCA+BBAiKNAQoVVXBkYXRlSW5zdGFuY2VSZXF1ZXN0EjQKC3VwZGF0",
+            "ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEC",
+            "Ej4KCHJlc291cmNlGAIgASgLMicuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYx",
+            "YmV0YTIuSW5zdGFuY2VCA+BBAiJPChVEZWxldGVJbnN0YW5jZVJlcXVlc3QS",
+            "NgoEbmFtZRgBIAEoCUIo4EEC+kEiCiBtZW1jYWNoZS5nb29nbGVhcGlzLmNv",
+            "bS9JbnN0YW5jZSJ1ChZBcHBseVBhcmFtZXRlcnNSZXF1ZXN0EjYKBG5hbWUY",
+            "ASABKAlCKOBBAvpBIgogbWVtY2FjaGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFu",
+            "Y2USEAoIbm9kZV9pZHMYAiADKAkSEQoJYXBwbHlfYWxsGAMgASgIIs4BChdV",
+            "cGRhdGVQYXJhbWV0ZXJzUmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6QSIK",
+            "IG1lbWNhY2hlLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEjQKC3VwZGF0ZV9t",
+            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEkUK",
+            "CnBhcmFtZXRlcnMYAyABKAsyMS5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFi",
+            "ZXRhMi5NZW1jYWNoZVBhcmFtZXRlcnMifQoaQXBwbHlTb2Z0d2FyZVVwZGF0",
+            "ZVJlcXVlc3QSOgoIaW5zdGFuY2UYASABKAlCKOBBAvpBIgogbWVtY2FjaGUu",
+            "Z29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEAoIbm9kZV9pZHMYAiADKAkSEQoJ",
+            "YXBwbHlfYWxsGAMgASgIIqMBChJNZW1jYWNoZVBhcmFtZXRlcnMSDwoCaWQY",
+            "ASABKAlCA+BBAxJNCgZwYXJhbXMYAyADKAsyPS5nb29nbGUuY2xvdWQubWVt",
+            "Y2FjaGUudjFiZXRhMi5NZW1jYWNoZVBhcmFtZXRlcnMuUGFyYW1zRW50cnka",
+            "LQoLUGFyYW1zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ASL5AQoRT3BlcmF0aW9uTWV0YWRhdGESNAoLY3JlYXRlX3RpbWUYASABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEwoGdGFy",
+            "Z2V0GAMgASgJQgPgQQMSEQoEdmVyYhgEIAEoCUID4EEDEhoKDXN0YXR1c19k",
+            "ZXRhaWwYBSABKAlCA+BBAxIdChBjYW5jZWxfcmVxdWVzdGVkGAYgASgIQgPg",
+            "QQMSGAoLYXBpX3ZlcnNpb24YByABKAlCA+BBAyLZAQoQTG9jYXRpb25NZXRh",
+            "ZGF0YRJhCg9hdmFpbGFibGVfem9uZXMYASADKAsyQy5nb29nbGUuY2xvdWQu",
+            "bWVtY2FjaGUudjFiZXRhMi5Mb2NhdGlvbk1ldGFkYXRhLkF2YWlsYWJsZVpv",
+            "bmVzRW50cnlCA+BBAxpiChNBdmFpbGFibGVab25lc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRI6CgV2YWx1ZRgCIAEoCzIrLmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52",
+            "MWJldGEyLlpvbmVNZXRhZGF0YToCOAEiDgoMWm9uZU1ldGFkYXRhKkUKD01l",
+            "bWNhY2hlVmVyc2lvbhIgChxNRU1DQUNIRV9WRVJTSU9OX1VOU1BFQ0lGSUVE",
+            "EAASEAoMTUVNQ0FDSEVfMV81EAEywxEKDUNsb3VkTWVtY2FjaGUSvwEKDUxp",
+            "c3RJbnN0YW5jZXMSMy5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5M",
+            "aXN0SW5zdGFuY2VzUmVxdWVzdBo0Lmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52",
+            "MWJldGEyLkxpc3RJbnN0YW5jZXNSZXNwb25zZSJDgtPkkwI0EjIvdjFiZXRh",
+            "Mi97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2luc3RhbmNlc9pB",
+            "BnBhcmVudBKsAQoLR2V0SW5zdGFuY2USMS5nb29nbGUuY2xvdWQubWVtY2Fj",
+            "aGUudjFiZXRhMi5HZXRJbnN0YW5jZVJlcXVlc3QaJy5nb29nbGUuY2xvdWQu",
+            "bWVtY2FjaGUudjFiZXRhMi5JbnN0YW5jZSJBgtPkkwI0EjIvdjFiZXRhMi97",
+            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfdpBBG5h",
+            "bWUSpgIKDkNyZWF0ZUluc3RhbmNlEjQuZ29vZ2xlLmNsb3VkLm1lbWNhY2hl",
+            "LnYxYmV0YTIuQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiK+AYLT5JMCPiIyL3YxYmV0YTIve3BhcmVudD1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9pbnN0YW5jZXM6CHJlc291cmNl2kEb",
+            "cGFyZW50LGluc3RhbmNlX2lkLHJlc291cmNlykFZCiZnb29nbGUuY2xvdWQu",
+            "bWVtY2FjaGUudjFiZXRhMi5JbnN0YW5jZRIvZ29vZ2xlLmNsb3VkLm1lbWNh",
+            "Y2hlLnYxYmV0YTIuT3BlcmF0aW9uTWV0YWRhdGESqAIKDlVwZGF0ZUluc3Rh",
+            "bmNlEjQuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuVXBkYXRlSW5z",
+            "dGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLA",
+            "AYLT5JMCRzI7L3YxYmV0YTIve3Jlc291cmNlLm5hbWU9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKi9pbnN0YW5jZXMvKn06CHJlc291cmNl2kEUdXBkYXRlX21h",
+            "c2sscmVzb3VyY2XKQVkKJmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEy",
             "Lkluc3RhbmNlEi9nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5PcGVy",
-            "YXRpb25NZXRhZGF0YRL0AQoORGVsZXRlSW5zdGFuY2USNC5nb29nbGUuY2xv",
-            "dWQubWVtY2FjaGUudjFiZXRhMi5EZWxldGVJbnN0YW5jZVJlcXVlc3QaHS5n",
-            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIowBgtPkkwI0KjIvdjFiZXRh",
-            "Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfdpB",
-            "BG5hbWXKQUgKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIvZ29vZ2xlLmNsb3Vk",
-            "Lm1lbWNhY2hlLnYxYmV0YTIuT3BlcmF0aW9uTWV0YWRhdGESrQIKD0FwcGx5",
-            "UGFyYW1ldGVycxI1Lmdvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLkFw",
-            "cGx5UGFyYW1ldGVyc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
-            "cmF0aW9uIsMBgtPkkwJHIkIvdjFiZXRhMi97bmFtZT1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qL2luc3RhbmNlcy8qfTphcHBseVBhcmFtZXRlcnM6ASraQRdu",
-            "YW1lLG5vZGVfaWRzLGFwcGx5X2FsbMpBWQomZ29vZ2xlLmNsb3VkLm1lbWNh",
-            "Y2hlLnYxYmV0YTIuSW5zdGFuY2USL2dvb2dsZS5jbG91ZC5tZW1jYWNoZS52",
-            "MWJldGEyLk9wZXJhdGlvbk1ldGFkYXRhGkvKQRdtZW1jYWNoZS5nb29nbGVh",
-            "cGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
-            "dWQtcGxhdGZvcm1CgAEKIWNvbS5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFi",
-            "ZXRhMkISQ2xvdWRNZW1jYWNoZVByb3RvUAFaRWdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvbWVtY2FjaGUvdjFiZXRhMjtt",
-            "ZW1jYWNoZWIGcHJvdG8z"));
+            "YXRpb25NZXRhZGF0YRK0AgoQVXBkYXRlUGFyYW1ldGVycxI2Lmdvb2dsZS5j",
+            "bG91ZC5tZW1jYWNoZS52MWJldGEyLlVwZGF0ZVBhcmFtZXRlcnNSZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLIAYLT5JMCSDJDL3Yx",
+            "YmV0YTIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5jZXMv",
+            "Kn06dXBkYXRlUGFyYW1ldGVyczoBKtpBG25hbWUsdXBkYXRlX21hc2sscGFy",
+            "YW1ldGVyc8pBWQomZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuSW5z",
+            "dGFuY2USL2dvb2dsZS5jbG91ZC5tZW1jYWNoZS52MWJldGEyLk9wZXJhdGlv",
+            "bk1ldGFkYXRhEvQBCg5EZWxldGVJbnN0YW5jZRI0Lmdvb2dsZS5jbG91ZC5t",
+            "ZW1jYWNoZS52MWJldGEyLkRlbGV0ZUluc3RhbmNlUmVxdWVzdBodLmdvb2ds",
+            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24ijAGC0+STAjQqMi92MWJldGEyL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp92kEEbmFt",
+            "ZcpBSAoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ei9nb29nbGUuY2xvdWQubWVt",
+            "Y2FjaGUudjFiZXRhMi5PcGVyYXRpb25NZXRhZGF0YRKtAgoPQXBwbHlQYXJh",
+            "bWV0ZXJzEjUuZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0YTIuQXBwbHlQ",
+            "YXJhbWV0ZXJzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24iwwGC0+STAkciQi92MWJldGEyL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovaW5zdGFuY2VzLyp9OmFwcGx5UGFyYW1ldGVyczoBKtpBF25hbWUs",
+            "bm9kZV9pZHMsYXBwbHlfYWxsykFZCiZnb29nbGUuY2xvdWQubWVtY2FjaGUu",
+            "djFiZXRhMi5JbnN0YW5jZRIvZ29vZ2xlLmNsb3VkLm1lbWNhY2hlLnYxYmV0",
+            "YTIuT3BlcmF0aW9uTWV0YWRhdGESwQIKE0FwcGx5U29mdHdhcmVVcGRhdGUS",
+            "OS5nb29nbGUuY2xvdWQubWVtY2FjaGUudjFiZXRhMi5BcHBseVNvZnR3YXJl",
+            "VXBkYXRlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "zwGC0+STAk8iSi92MWJldGEyL3tpbnN0YW5jZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2luc3RhbmNlcy8qfTphcHBseVNvZnR3YXJlVXBkYXRlOgEq2kEb",
+            "aW5zdGFuY2Usbm9kZV9pZHMsYXBwbHlfYWxsykFZCiZnb29nbGUuY2xvdWQu",
+            "bWVtY2FjaGUudjFiZXRhMi5JbnN0YW5jZRIvZ29vZ2xlLmNsb3VkLm1lbWNh",
+            "Y2hlLnYxYmV0YTIuT3BlcmF0aW9uTWV0YWRhdGEaS8pBF21lbWNhY2hlLmdv",
+            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybUKAAQohY29tLmdvb2dsZS5jbG91ZC5tZW1jYWNo",
+            "ZS52MWJldGEyQhJDbG91ZE1lbWNhY2hlUHJvdG9QAVpFZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9tZW1jYWNoZS92MWJl",
+            "dGEyO21lbWNhY2hlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Memcache.V1Beta2.MemcacheVersion), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.Instance), global::Google.Cloud.Memcache.V1Beta2.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "AuthorizedNetwork", "Zones", "NodeCount", "NodeConfig", "MemcacheVersion", "Parameters", "MemcacheNodes", "CreateTime", "UpdateTime", "State", "MemcacheFullVersion", "InstanceMessages", "DiscoveryEndpoint" }, null, new[]{ typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.NodeConfig), global::Google.Cloud.Memcache.V1Beta2.Instance.Types.NodeConfig.Parser, new[]{ "CpuCount", "MemorySizeMb" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node), global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node.Parser, new[]{ "NodeId", "Zone", "State", "Host", "Port", "Parameters" }, null, new[]{ typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.Instance), global::Google.Cloud.Memcache.V1Beta2.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "AuthorizedNetwork", "Zones", "NodeCount", "NodeConfig", "MemcacheVersion", "Parameters", "MemcacheNodes", "CreateTime", "UpdateTime", "State", "MemcacheFullVersion", "InstanceMessages", "DiscoveryEndpoint", "UpdateAvailable" }, null, new[]{ typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.NodeConfig), global::Google.Cloud.Memcache.V1Beta2.Instance.Types.NodeConfig.Parser, new[]{ "CpuCount", "MemorySizeMb" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node), global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node.Parser, new[]{ "NodeId", "Zone", "State", "Host", "Port", "Parameters", "UpdateAvailable" }, null, new[]{ typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.InstanceMessage), global::Google.Cloud.Memcache.V1Beta2.Instance.Types.InstanceMessage.Parser, new[]{ "Code", "Message" }, null, new[]{ typeof(global::Google.Cloud.Memcache.V1Beta2.Instance.Types.InstanceMessage.Types.Code) }, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.ListInstancesRequest), global::Google.Cloud.Memcache.V1Beta2.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
@@ -167,6 +180,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest), global::Google.Cloud.Memcache.V1Beta2.DeleteInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest), global::Google.Cloud.Memcache.V1Beta2.ApplyParametersRequest.Parser, new[]{ "Name", "NodeIds", "ApplyAll" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.UpdateParametersRequest), global::Google.Cloud.Memcache.V1Beta2.UpdateParametersRequest.Parser, new[]{ "Name", "UpdateMask", "Parameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest), global::Google.Cloud.Memcache.V1Beta2.ApplySoftwareUpdateRequest.Parser, new[]{ "Instance", "NodeIds", "ApplyAll" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.MemcacheParameters), global::Google.Cloud.Memcache.V1Beta2.MemcacheParameters.Parser, new[]{ "Id", "Params" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.OperationMetadata), global::Google.Cloud.Memcache.V1Beta2.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusDetail", "CancelRequested", "ApiVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Memcache.V1Beta2.LocationMetadata), global::Google.Cloud.Memcache.V1Beta2.LocationMetadata.Parser, new[]{ "AvailableZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -191,6 +205,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
   #endregion
 
   #region Messages
+  /// <summary>
+  /// A Memorystore for Memcached instance
+  /// </summary>
   public sealed partial class Instance : pb::IMessage<Instance>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -236,6 +253,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       memcacheFullVersion_ = other.memcacheFullVersion_;
       instanceMessages_ = other.instanceMessages_.Clone();
       discoveryEndpoint_ = other.discoveryEndpoint_;
+      updateAvailable_ = other.updateAvailable_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -252,10 +270,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     /// location using the form:
     ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
     ///
-    /// Note: Memcached instances are managed and addressed at regional level so
-    /// location_id here refers to a GCP region; however, users may choose which
-    /// zones Memcached nodes within an instances should be provisioned in.
-    /// Refer to [zones] field for more details.
+    /// Note: Memcached instances are managed and addressed at the regional level
+    /// so `location_id` here refers to a Google Cloud region; however, users may
+    /// choose which zones Memcached nodes should be provisioned in within an
+    /// instance. Refer to [zones][google.cloud.memcache.v1beta2.Instance.zones] field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -269,7 +287,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. User provided name for the instance only used for display
+    /// User provided name for the instance, which is only used for display
     /// purposes. Cannot be more than 80 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -286,7 +304,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. Resource labels to represent user-provided metadata.
+    /// Resource labels to represent user-provided metadata.
     /// Refer to cloud documentation on labels for more details.
     /// https://cloud.google.com/compute/docs/labeling-resources
     /// </summary>
@@ -299,7 +317,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int AuthorizedNetworkFieldNumber = 4;
     private string authorizedNetwork_ = "";
     /// <summary>
-    /// Optional. The full name of the Google Compute Engine
+    /// The full name of the Google Compute Engine
     /// [network](https://cloud.google.com/vpc/docs/vpc) to which the
     /// instance is connected. If left unspecified, the `default` network
     /// will be used.
@@ -318,7 +336,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> zones_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Zones where Memcached nodes should be provisioned in.
+    /// Zones in which Memcached nodes should be provisioned.
     /// Memcached nodes will be equally distributed across these zones. If not
     /// provided, the service will by default create nodes in all zones in the
     /// region for the instance.
@@ -360,9 +378,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int MemcacheVersionFieldNumber = 9;
     private global::Google.Cloud.Memcache.V1Beta2.MemcacheVersion memcacheVersion_ = global::Google.Cloud.Memcache.V1Beta2.MemcacheVersion.Unspecified;
     /// <summary>
-    /// Optional. The major version of Memcached software.
+    /// The major version of Memcached software.
     /// If not provided, latest supported version will be used. Currently the
-    /// latest supported major version is MEMCACHE_1_5.
+    /// latest supported major version is `MEMCACHE_1_5`.
     /// The minor version will be automatically determined by our system based on
     /// the latest supported minor version.
     /// </summary>
@@ -396,7 +414,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node> memcacheNodes_ = new pbc::RepeatedField<global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node>();
     /// <summary>
     /// Output only. List of Memcached nodes.
-    /// Refer to [Node] message for more details.
+    /// Refer to [Node][google.cloud.memcache.v1beta2.Instance.Node] message for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Memcache.V1Beta2.Instance.Types.Node> MemcacheNodes {
@@ -468,7 +486,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         = pb::FieldCodec.ForMessage(154, global::Google.Cloud.Memcache.V1Beta2.Instance.Types.InstanceMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Memcache.V1Beta2.Instance.Types.InstanceMessage> instanceMessages_ = new pbc::RepeatedField<global::Google.Cloud.Memcache.V1Beta2.Instance.Types.InstanceMessage>();
     /// <summary>
-    /// List of messages that describe current statuses of memcached instance.
+    /// List of messages that describe the current state of the Memcached instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Memcache.V1Beta2.Instance.Types.InstanceMessage> InstanceMessages {
@@ -479,13 +497,27 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int DiscoveryEndpointFieldNumber = 20;
     private string discoveryEndpoint_ = "";
     /// <summary>
-    /// Output only. Endpoint for Discovery API
+    /// Output only. Endpoint for the Discovery API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string DiscoveryEndpoint {
       get { return discoveryEndpoint_; }
       set {
         discoveryEndpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "update_available" field.</summary>
+    public const int UpdateAvailableFieldNumber = 21;
+    private bool updateAvailable_;
+    /// <summary>
+    /// Output only. Returns true if there is an update waiting to be applied
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool UpdateAvailable {
+      get { return updateAvailable_; }
+      set {
+        updateAvailable_ = value;
       }
     }
 
@@ -518,6 +550,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (MemcacheFullVersion != other.MemcacheFullVersion) return false;
       if(!instanceMessages_.Equals(other.instanceMessages_)) return false;
       if (DiscoveryEndpoint != other.DiscoveryEndpoint) return false;
+      if (UpdateAvailable != other.UpdateAvailable) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -540,6 +573,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       if (MemcacheFullVersion.Length != 0) hash ^= MemcacheFullVersion.GetHashCode();
       hash ^= instanceMessages_.GetHashCode();
       if (DiscoveryEndpoint.Length != 0) hash ^= DiscoveryEndpoint.GetHashCode();
+      if (UpdateAvailable != false) hash ^= UpdateAvailable.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -608,6 +642,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         output.WriteRawTag(162, 1);
         output.WriteString(DiscoveryEndpoint);
       }
+      if (UpdateAvailable != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(UpdateAvailable);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -669,6 +707,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         output.WriteRawTag(162, 1);
         output.WriteString(DiscoveryEndpoint);
       }
+      if (UpdateAvailable != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(UpdateAvailable);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -717,6 +759,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       size += instanceMessages_.CalculateSize(_repeated_instanceMessages_codec);
       if (DiscoveryEndpoint.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(DiscoveryEndpoint);
+      }
+      if (UpdateAvailable != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -780,6 +825,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
       instanceMessages_.Add(other.instanceMessages_);
       if (other.DiscoveryEndpoint.Length != 0) {
         DiscoveryEndpoint = other.DiscoveryEndpoint;
+      }
+      if (other.UpdateAvailable != false) {
+        UpdateAvailable = other.UpdateAvailable;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -869,6 +917,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           }
           case 162: {
             DiscoveryEndpoint = input.ReadString();
+            break;
+          }
+          case 168: {
+            UpdateAvailable = input.ReadBool();
             break;
           }
         }
@@ -961,6 +1013,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
             DiscoveryEndpoint = input.ReadString();
             break;
           }
+          case 168: {
+            UpdateAvailable = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -972,7 +1028,6 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public static partial class Types {
       /// <summary>
       /// Different states of a Memcached instance.
-      /// LINT.IfChange
       /// </summary>
       public enum State {
         /// <summary>
@@ -1249,6 +1304,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           host_ = other.host_;
           port_ = other.port_;
           parameters_ = other.parameters_ != null ? other.parameters_.Clone() : null;
+          updateAvailable_ = other.updateAvailable_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1343,6 +1399,20 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           }
         }
 
+        /// <summary>Field number for the "update_available" field.</summary>
+        public const int UpdateAvailableFieldNumber = 7;
+        private bool updateAvailable_;
+        /// <summary>
+        /// Output only. Returns true if there is an update waiting to be applied
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool UpdateAvailable {
+          get { return updateAvailable_; }
+          set {
+            updateAvailable_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as Node);
@@ -1362,6 +1432,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           if (Host != other.Host) return false;
           if (Port != other.Port) return false;
           if (!object.Equals(Parameters, other.Parameters)) return false;
+          if (UpdateAvailable != other.UpdateAvailable) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1374,6 +1445,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           if (Host.Length != 0) hash ^= Host.GetHashCode();
           if (Port != 0) hash ^= Port.GetHashCode();
           if (parameters_ != null) hash ^= Parameters.GetHashCode();
+          if (UpdateAvailable != false) hash ^= UpdateAvailable.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1414,6 +1486,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
             output.WriteRawTag(50);
             output.WriteMessage(Parameters);
           }
+          if (UpdateAvailable != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(UpdateAvailable);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1447,6 +1523,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
             output.WriteRawTag(50);
             output.WriteMessage(Parameters);
           }
+          if (UpdateAvailable != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(UpdateAvailable);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1473,6 +1553,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
           }
           if (parameters_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(Parameters);
+          }
+          if (UpdateAvailable != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1505,6 +1588,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
               Parameters = new global::Google.Cloud.Memcache.V1Beta2.MemcacheParameters();
             }
             Parameters.MergeFrom(other.Parameters);
+          }
+          if (other.UpdateAvailable != false) {
+            UpdateAvailable = other.UpdateAvailable;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1545,6 +1631,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
                   Parameters = new global::Google.Cloud.Memcache.V1Beta2.MemcacheParameters();
                 }
                 input.ReadMessage(Parameters);
+                break;
+              }
+              case 56: {
+                UpdateAvailable = input.ReadBool();
                 break;
               }
             }
@@ -1588,6 +1678,10 @@ namespace Google.Cloud.Memcache.V1Beta2 {
                 input.ReadMessage(Parameters);
                 break;
               }
+              case 56: {
+                UpdateAvailable = input.ReadBool();
+                break;
+              }
             }
           }
         }
@@ -1599,7 +1693,6 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         public static partial class Types {
           /// <summary>
           /// Different states of a Memcached node.
-          /// LINT.IfChange
           /// </summary>
           public enum State {
             /// <summary>
@@ -1934,9 +2027,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     /// The maximum number of items to return.
     ///
     /// If not specified, a default value of 1000 will be used by the service.
-    /// Regardless of the page_size value, the response may include a partial list
-    /// and a caller should only rely on response's
-    /// [next_page_token][CloudMemcache.ListInstancesResponse.next_page_token]
+    /// Regardless of the `page_size` value, the response may include a partial
+    /// list and a caller should only rely on response's
+    /// [`next_page_token`][google.cloud.memcache.v1beta2.ListInstancesResponse.next_page_token]
     /// to determine if there are more instances left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1951,8 +2044,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The next_page_token value returned from a previous List request,
-    /// if any.
+    /// The `next_page_token` value returned from a previous List request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1967,7 +2059,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     private string filter_ = "";
     /// <summary>
     /// List filter. For example, exclude all Memcached instances with name as
-    /// my-instance by specifying "name != my-instance".
+    /// my-instance by specifying `"name != my-instance"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -2699,7 +2791,9 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     /// * Must start with a letter.
     /// * Must be between 1-40 characters.
     /// * Must end with a number or a letter.
-    /// * Must be unique within the user project / location
+    /// * Must be unique within the user project / location.
+    ///
+    /// If any of the above are not met, the API raises an invalid argument error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InstanceId {
@@ -2950,7 +3044,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Required. Mask of fields to update.
-    ///  *   `displayName`
+    ///  *  `displayName`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -3185,7 +3279,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Memcached instance resource name in the format:
+    /// Required. Memcached instance resource name in the format:
     ///     `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
     /// where `location_id` refers to a GCP region
     /// </summary>
@@ -3384,7 +3478,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> nodeIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Nodes to which we should apply the instance-level parameter group.
+    /// Nodes to which the instance-level parameter group is applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> NodeIds {
@@ -3396,8 +3490,8 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     private bool applyAll_;
     /// <summary>
     /// Whether to apply instance-level parameter group to all nodes. If set to
-    /// true, will explicitly restrict users from specifying any nodes, and apply
-    /// parameter group updates to all nodes within the instance.
+    /// true, users are restricted from specifying individual nodes, and
+    /// `ApplyParameters` updates all nodes within the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ApplyAll {
@@ -3843,6 +3937,262 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
   }
 
+  /// <summary>
+  /// Request for [ApplySoftwareUpdate][google.cloud.memcache.v1beta2.CloudMemcache.ApplySoftwareUpdate].
+  /// </summary>
+  public sealed partial class ApplySoftwareUpdateRequest : pb::IMessage<ApplySoftwareUpdateRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ApplySoftwareUpdateRequest> _parser = new pb::MessageParser<ApplySoftwareUpdateRequest>(() => new ApplySoftwareUpdateRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ApplySoftwareUpdateRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ApplySoftwareUpdateRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ApplySoftwareUpdateRequest(ApplySoftwareUpdateRequest other) : this() {
+      instance_ = other.instance_;
+      nodeIds_ = other.nodeIds_.Clone();
+      applyAll_ = other.applyAll_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ApplySoftwareUpdateRequest Clone() {
+      return new ApplySoftwareUpdateRequest(this);
+    }
+
+    /// <summary>Field number for the "instance" field.</summary>
+    public const int InstanceFieldNumber = 1;
+    private string instance_ = "";
+    /// <summary>
+    /// Required. Resource name of the Memcached instance for which software update should be
+    /// applied.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Instance {
+      get { return instance_; }
+      set {
+        instance_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "node_ids" field.</summary>
+    public const int NodeIdsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_nodeIds_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> nodeIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Nodes to which we should apply the update to. Note all the selected nodes
+    /// are updated in parallel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> NodeIds {
+      get { return nodeIds_; }
+    }
+
+    /// <summary>Field number for the "apply_all" field.</summary>
+    public const int ApplyAllFieldNumber = 3;
+    private bool applyAll_;
+    /// <summary>
+    /// Whether to apply the update to all nodes. If set to
+    /// true, will explicitly restrict users from specifying any nodes, and apply
+    /// software update to all nodes (where applicable) within the instance.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ApplyAll {
+      get { return applyAll_; }
+      set {
+        applyAll_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ApplySoftwareUpdateRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ApplySoftwareUpdateRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Instance != other.Instance) return false;
+      if(!nodeIds_.Equals(other.nodeIds_)) return false;
+      if (ApplyAll != other.ApplyAll) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Instance.Length != 0) hash ^= Instance.GetHashCode();
+      hash ^= nodeIds_.GetHashCode();
+      if (ApplyAll != false) hash ^= ApplyAll.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      nodeIds_.WriteTo(output, _repeated_nodeIds_codec);
+      if (ApplyAll != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ApplyAll);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Instance.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Instance);
+      }
+      nodeIds_.WriteTo(ref output, _repeated_nodeIds_codec);
+      if (ApplyAll != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ApplyAll);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Instance.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Instance);
+      }
+      size += nodeIds_.CalculateSize(_repeated_nodeIds_codec);
+      if (ApplyAll != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ApplySoftwareUpdateRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Instance.Length != 0) {
+        Instance = other.Instance;
+      }
+      nodeIds_.Add(other.nodeIds_);
+      if (other.ApplyAll != false) {
+        ApplyAll = other.ApplyAll;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            nodeIds_.AddEntriesFrom(input, _repeated_nodeIds_codec);
+            break;
+          }
+          case 24: {
+            ApplyAll = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Instance = input.ReadString();
+            break;
+          }
+          case 18: {
+            nodeIds_.AddEntriesFrom(ref input, _repeated_nodeIds_codec);
+            break;
+          }
+          case 24: {
+            ApplyAll = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The unique ID associated with this set of parameters. Users
+  /// can use this id to determine if the parameters associated with the instance
+  /// differ from the parameters associated with the nodes. A discrepancy between
+  /// parameter ids can inform users that they may need to take action to apply
+  /// parameters on nodes.
+  /// </summary>
   public sealed partial class MemcacheParameters : pb::IMessage<MemcacheParameters>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -3855,7 +4205,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3886,10 +4236,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// Output only. The unique ID associated with this set of parameters. Users
-    /// can use this id to determine if the parameters associated with the instance
-    /// differ from the parameters associated with the nodes and any action needs
-    /// to be taken to apply parameters on nodes.
+    /// Output only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
@@ -4064,7 +4411,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4100,7 +4447,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int CreateTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Time when the operation was created.
+    /// Output only. Time when the operation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
@@ -4114,7 +4461,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int EndTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Time when the operation finished running.
+    /// Output only. Time when the operation finished running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -4128,7 +4475,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int TargetFieldNumber = 3;
     private string target_ = "";
     /// <summary>
-    /// Server-defined resource path for the target of the operation.
+    /// Output only. Server-defined resource path for the target of the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Target {
@@ -4142,7 +4489,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int VerbFieldNumber = 4;
     private string verb_ = "";
     /// <summary>
-    /// Name of the verb executed by the operation.
+    /// Output only. Name of the verb executed by the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Verb {
@@ -4156,7 +4503,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int StatusDetailFieldNumber = 5;
     private string statusDetail_ = "";
     /// <summary>
-    /// Human-readable status of the operation, if any.
+    /// Output only. Human-readable status of the operation, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StatusDetail {
@@ -4170,7 +4517,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int CancelRequestedFieldNumber = 6;
     private bool cancelRequested_;
     /// <summary>
-    /// Identifies whether the user has requested cancellation
+    /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have successfully been cancelled
     /// have [Operation.error][] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
     /// corresponding to `Code.CANCELLED`.
@@ -4187,7 +4534,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
     public const int ApiVersionFieldNumber = 7;
     private string apiVersion_ = "";
     /// <summary>
-    /// API version used to start the operation.
+    /// Output only. API version used to start the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ApiVersion {
@@ -4497,7 +4844,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4663,7 +5010,7 @@ namespace Google.Cloud.Memcache.V1Beta2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Memcache.V1Beta2.CloudMemcacheReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
