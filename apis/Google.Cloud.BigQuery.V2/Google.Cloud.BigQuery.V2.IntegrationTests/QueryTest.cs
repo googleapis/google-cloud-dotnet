@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
-using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -592,10 +591,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             // Create the object in GCS
             byte[] bytes = Encoding.UTF8.GetBytes(string.Join("\n", csvRows));
-            StorageClient storage = StorageClient.Create();
             string bucketName = _fixture.StorageBucketName;
             string objectName = _fixture.GenerateStorageObjectName();
-            storage.UploadObject(bucketName, objectName, "text/csv", new MemoryStream(bytes));
+            _fixture.StorageClient.UploadObject(bucketName, objectName, "text/csv", new MemoryStream(bytes));
 
             // Create the table associated with it
             var client = BigQueryClient.Create(_fixture.ProjectId);
