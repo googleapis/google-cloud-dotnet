@@ -45,13 +45,33 @@
       ReturnType="BigQueryJob">
 
     <AdditionalParameters>
-      <Parameter Name="destinationUris" Type="IEnumerable&lt;string&gt;" Comment="The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty." />    
+      <Parameter Name="destinationUris" Type="IEnumerable&lt;string&gt;" Comment="The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty." />
     </AdditionalParameters>
     
     <Comments>
       <summary>
         Creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
-        See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.      
+        See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+      </summary>
+      <returns>The job created for the extract operation.</returns>
+    </Comments>
+  </Method>
+
+  <!-- CreateModelExtractJob(single uri) can't be generated yet, as it has an implementation. -->
+
+  <Method Name="CreateModelExtractJob"
+      RegionLabel="CreateModelExtractJob(multiple uris)"
+      TargetType="Model"
+      ReturnType="BigQueryJob">
+
+    <AdditionalParameters>
+      <Parameter Name="destinationUris" Type="IEnumerable&lt;string&gt;" Comment="The Google Cloud Storage URIs (possibly including a wildcard) to extract the model to. Must not be null or empty." />
+    </AdditionalParameters>
+
+    <Comments>
+      <summary>
+        Creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
       </summary>
       <returns>The job created for the extract operation.</returns>
     </Comments>

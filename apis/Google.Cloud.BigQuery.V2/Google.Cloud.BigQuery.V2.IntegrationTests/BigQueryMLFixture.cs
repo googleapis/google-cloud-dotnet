@@ -13,9 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Google.Cloud.Storage.V1;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
@@ -26,12 +24,19 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public string DatasetId { get; }
         public string ModelId { get; }
 
+        public string StorageBucketName { get; }
+
+        public StorageClient StorageClient { get; }
+
         public BigQueryMLFixture()
         {
             DatasetId = IdGenerator.FromDateTime(prefix: "testml_");
             ModelId = CreateModelId();
+            StorageClient = StorageClient.Create();
 
             CreateData();
+            StorageBucketName = IdGenerator.FromDateTime(prefix: "bigquerytestsml-");
+            StorageClient.CreateBucket(ProjectId, StorageBucketName);
         }
 
         private void CreateData()
@@ -60,5 +65,7 @@ SELECT 'b' AS f1, 3.8 AS label";
         }
 
         internal string CreateModelId() => IdGenerator.FromGuid(prefix: "model_", separator: "_");
+
+        internal string GenerateStoragePrefixName() => IdGenerator.FromGuid(prefix: "file-");
     }
 }

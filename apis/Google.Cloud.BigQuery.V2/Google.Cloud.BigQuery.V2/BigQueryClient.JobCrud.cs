@@ -655,5 +655,173 @@ namespace Google.Cloud.BigQuery.V2
             throw new NotImplementedException();
         }
         #endregion
+
+        #region CreateModelExtractJob(single uri)
+        /// <summary>
+        /// Creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJob(ModelReference, string, CreateModelExtractJobOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the model to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateModelExtractJob(string datasetId, string modelId, string destinationUri, CreateModelExtractJobOptions options = null) =>
+            CreateModelExtractJob(GetModelReference(datasetId, modelId), destinationUri, options);
+
+        /// <summary>
+        /// Creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJob(ModelReference, string, CreateModelExtractJobOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the model to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateModelExtractJob(string projectId, string datasetId, string modelId, string destinationUri, CreateModelExtractJobOptions options = null) =>
+            CreateModelExtractJob(GetModelReference(projectId, datasetId, modelId), destinationUri, options);
+
+        /// <summary>
+        /// Creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// </summary>
+        /// <param name="modelReference">A fully-qualified identifier for the model. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the model to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateModelExtractJob(ModelReference modelReference, string destinationUri, CreateModelExtractJobOptions options = null) =>
+            CreateModelExtractJob(modelReference, new string[] { GaxPreconditions.CheckNotNull(destinationUri, nameof(destinationUri)) }, options);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJobAsync(ModelReference, string, CreateModelExtractJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the model to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateModelExtractJobAsync(string datasetId, string modelId, string destinationUri, CreateModelExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
+            CreateModelExtractJobAsync(GetModelReference(datasetId, modelId), destinationUri, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJobAsync(ModelReference, string, CreateModelExtractJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the model to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateModelExtractJobAsync(string projectId, string datasetId, string modelId, string destinationUri, CreateModelExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
+            CreateModelExtractJobAsync(GetModelReference(projectId, datasetId, modelId), destinationUri, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// </summary>
+        /// <param name="modelReference">A fully-qualified identifier for the model. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the model to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateModelExtractJobAsync(ModelReference modelReference, string destinationUri, CreateModelExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
+            CreateModelExtractJobAsync(modelReference, new string[] { GaxPreconditions.CheckNotNull(destinationUri, nameof(destinationUri)) }, options, cancellationToken);
+        #endregion
+
+        #region CreateModelExtractJob(multiple uris) (autogenerated - do not edit manually)
+        /// <summary>
+        /// Creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJob(ModelReference, IEnumerable{string}, CreateModelExtractJobOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the model to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateModelExtractJob(string datasetId, string modelId, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null) =>
+            CreateModelExtractJob(GetModelReference(datasetId, modelId), destinationUris, options);
+        
+        /// <summary>
+        /// Creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJob(ModelReference, IEnumerable{string}, CreateModelExtractJobOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the model to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateModelExtractJob(string projectId, string datasetId, string modelId, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null) =>
+            CreateModelExtractJob(GetModelReference(projectId, datasetId, modelId), destinationUris, options);
+        
+        /// <summary>
+        /// Creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// </summary>
+        /// <param name="modelReference">A fully-qualified identifier for the model. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the model to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateModelExtractJob(ModelReference modelReference, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null) =>
+            throw new NotImplementedException();
+        
+        /// <summary>
+        /// Asynchronously creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJobAsync(ModelReference, IEnumerable{string}, CreateModelExtractJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the model to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateModelExtractJobAsync(string datasetId, string modelId, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
+            CreateModelExtractJobAsync(GetModelReference(datasetId, modelId), destinationUris, options, cancellationToken);
+        
+        /// <summary>
+        /// Asynchronously creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// This method just creates a <see cref="ModelReference"/> and delegates to <see cref="CreateModelExtractJobAsync(ModelReference, IEnumerable{string}, CreateModelExtractJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="modelId">The model ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the model to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateModelExtractJobAsync(string projectId, string datasetId, string modelId, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
+            CreateModelExtractJobAsync(GetModelReference(projectId, datasetId, modelId), destinationUris, options, cancellationToken);
+        
+        /// <summary>
+        /// Asynchronously creates a job to extract the specified BigQuery model to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery-ml/docs/exporting-models) for more information on model extract jobs.
+        /// </summary>
+        /// <param name="modelReference">A fully-qualified identifier for the model. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the model to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateModelExtractJobAsync(ModelReference modelReference, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null, CancellationToken cancellationToken = default) =>
+            throw new NotImplementedException();
+        #endregion
     }
 }

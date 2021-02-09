@@ -84,6 +84,7 @@ namespace Google.Storage.V2.CleanTestData
             name.StartsWith("tests-") ||
             name.StartsWith("snippets-") ||
             name.StartsWith("bigquerysnippets-") ||
-            name.StartsWith("bigquerytests-");
+            name.StartsWith("bigquerytests-") ||
+            name.StartsWith("bigquerytestsml-");
     }
 }
