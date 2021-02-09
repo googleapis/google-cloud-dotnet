@@ -304,7 +304,9 @@ as an easy way of specifying custom credentials, settings, or a custom endpoint.
 and we recommend using a single instance across your entire application unless you have a particular need
 to configure multiple client objects separately.";
 
-            string nonProductStub = $@"This package is not a product in its own right; this page is
+            string nonProductStub = $@"# {api.Id}
+
+This package is not a product in its own right; this page is
 present as a root for the [API reference documentation](obj/api/{api.Id}.yml)";
 
             text = text
