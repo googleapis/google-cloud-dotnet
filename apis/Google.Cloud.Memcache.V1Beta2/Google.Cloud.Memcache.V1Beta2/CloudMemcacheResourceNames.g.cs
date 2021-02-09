@@ -299,6 +299,18 @@ namespace Google.Cloud.Memcache.V1Beta2
         }
     }
 
+    public partial class DeleteInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ApplyParametersRequest
     {
         /// <summary>
@@ -320,6 +332,18 @@ namespace Google.Cloud.Memcache.V1Beta2
         {
             get => string.IsNullOrEmpty(Name) ? null : gcmv::InstanceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ApplySoftwareUpdateRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
         }
     }
 }

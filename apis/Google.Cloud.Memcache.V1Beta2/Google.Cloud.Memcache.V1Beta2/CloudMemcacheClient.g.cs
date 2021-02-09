@@ -60,6 +60,8 @@ namespace Google.Cloud.Memcache.V1Beta2
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             ApplyParametersSettings = existing.ApplyParametersSettings;
             ApplyParametersOperationsSettings = existing.ApplyParametersOperationsSettings.Clone();
+            ApplySoftwareUpdateSettings = existing.ApplySoftwareUpdateSettings;
+            ApplySoftwareUpdateOperationsSettings = existing.ApplySoftwareUpdateOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -239,6 +241,36 @@ namespace Google.Cloud.Memcache.V1Beta2
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudMemcacheClient.ApplySoftwareUpdate</c> and <c>CloudMemcacheClient.ApplySoftwareUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 1200 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ApplySoftwareUpdateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(1200000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudMemcacheClient.ApplySoftwareUpdate</c> and
+        /// <c>CloudMemcacheClient.ApplySoftwareUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ApplySoftwareUpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudMemcacheSettings"/> object.</returns>
         public CloudMemcacheSettings Clone() => new CloudMemcacheSettings(this);
@@ -317,7 +349,7 @@ namespace Google.Cloud.Memcache.V1Beta2
     /// * As such, Memcached instances are resources of the form:
     /// `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
     /// 
-    /// Note that location_id must be refering to a GCP `region`; for example:
+    /// Note that location_id must be a GCP `region`; for example:
     /// * `projects/my-memcached-project/locations/us-central1/instances/my-memcached`
     /// </remarks>
     public abstract partial class CloudMemcacheClient
@@ -397,7 +429,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         public virtual CloudMemcache.CloudMemcacheClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -406,7 +438,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -415,7 +447,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -441,7 +473,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -467,7 +499,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -493,7 +525,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -636,7 +668,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -645,7 +677,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -654,7 +686,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -689,7 +721,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -704,7 +736,9 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// * Must start with a letter.
         /// * Must be between 1-40 characters.
         /// * Must end with a number or a letter.
-        /// * Must be unique within the user project / location
+        /// * Must be unique within the user project / location.
+        /// 
+        /// If any of the above are not met, the API raises an invalid argument error.
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource
@@ -720,7 +754,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -735,7 +769,9 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// * Must start with a letter.
         /// * Must be between 1-40 characters.
         /// * Must end with a number or a letter.
-        /// * Must be unique within the user project / location
+        /// * Must be unique within the user project / location.
+        /// 
+        /// If any of the above are not met, the API raises an invalid argument error.
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource
@@ -751,7 +787,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -766,7 +802,9 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// * Must start with a letter.
         /// * Must be between 1-40 characters.
         /// * Must end with a number or a letter.
-        /// * Must be unique within the user project / location
+        /// * Must be unique within the user project / location.
+        /// 
+        /// If any of the above are not met, the API raises an invalid argument error.
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource
@@ -777,7 +815,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             CreateInstanceAsync(parent, instanceId, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -792,7 +830,9 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// * Must start with a letter.
         /// * Must be between 1-40 characters.
         /// * Must end with a number or a letter.
-        /// * Must be unique within the user project / location
+        /// * Must be unique within the user project / location.
+        /// 
+        /// If any of the above are not met, the API raises an invalid argument error.
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource
@@ -808,7 +848,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -823,7 +863,9 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// * Must start with a letter.
         /// * Must be between 1-40 characters.
         /// * Must end with a number or a letter.
-        /// * Must be unique within the user project / location
+        /// * Must be unique within the user project / location.
+        /// 
+        /// If any of the above are not met, the API raises an invalid argument error.
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource
@@ -839,7 +881,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the instance location using the form:
@@ -854,7 +896,9 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// * Must start with a letter.
         /// * Must be between 1-40 characters.
         /// * Must end with a number or a letter.
-        /// * Must be unique within the user project / location
+        /// * Must be unique within the user project / location.
+        /// 
+        /// If any of the above are not met, the API raises an invalid argument error.
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource
@@ -922,7 +966,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
-        /// *   `displayName`
+        /// *  `displayName`
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource.
@@ -942,7 +986,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
-        /// *   `displayName`
+        /// *  `displayName`
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource.
@@ -962,7 +1006,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// </summary>
         /// <param name="updateMask">
         /// Required. Mask of fields to update.
-        /// *   `displayName`
+        /// *  `displayName`
         /// </param>
         /// <param name="resource">
         /// Required. A Memcached [Instance] resource.
@@ -974,9 +1018,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             UpdateInstanceAsync(updateMask, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -985,9 +1030,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -996,9 +1042,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1033,9 +1080,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateParametersOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which the parameters should be
@@ -1058,9 +1106,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which the parameters should be
@@ -1083,9 +1132,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which the parameters should be
@@ -1103,9 +1153,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             UpdateParametersAsync(name, updateMask, parameters, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which the parameters should be
@@ -1128,9 +1179,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which the parameters should be
@@ -1153,9 +1205,10 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which the parameters should be
@@ -1229,33 +1282,39 @@ namespace Google.Cloud.Memcache.V1Beta2
         /// Deletes a single Instance.
         /// </summary>
         /// <param name="name">
-        /// Memcached instance resource name in the format:
+        /// Required. Memcached instance resource name in the format:
         /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
         /// where `location_id` refers to a GCP region
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteInstance(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteInstance(new DeleteInstanceRequest { Name = name ?? "", }, callSettings);
+            DeleteInstance(new DeleteInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Deletes a single Instance.
         /// </summary>
         /// <param name="name">
-        /// Memcached instance resource name in the format:
+        /// Required. Memcached instance resource name in the format:
         /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
         /// where `location_id` refers to a GCP region
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInstanceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteInstanceAsync(new DeleteInstanceRequest { Name = name ?? "", }, callSettings);
+            DeleteInstanceAsync(new DeleteInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Deletes a single Instance.
         /// </summary>
         /// <param name="name">
-        /// Memcached instance resource name in the format:
+        /// Required. Memcached instance resource name in the format:
         /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
         /// where `location_id` refers to a GCP region
         /// </param>
@@ -1265,8 +1324,53 @@ namespace Google.Cloud.Memcache.V1Beta2
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// Deletes a single Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memcached instance resource name in the format:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteInstance(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstance(new DeleteInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memcached instance resource name in the format:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInstanceAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstanceAsync(new DeleteInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Memcached instance resource name in the format:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+            DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1275,8 +1379,8 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1285,8 +1389,8 @@ namespace Google.Cloud.Memcache.V1Beta2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1321,20 +1425,20 @@ namespace Google.Cloud.Memcache.V1Beta2
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ApplyParametersOperationsClient, callSettings);
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which parameter group updates
         /// should be applied.
         /// </param>
         /// <param name="nodeIds">
-        /// Nodes to which we should apply the instance-level parameter group.
+        /// Nodes to which the instance-level parameter group is applied.
         /// </param>
         /// <param name="applyAll">
         /// Whether to apply instance-level parameter group to all nodes. If set to
-        /// true, will explicitly restrict users from specifying any nodes, and apply
-        /// parameter group updates to all nodes within the instance.
+        /// true, users are restricted from specifying individual nodes, and
+        /// `ApplyParameters` updates all nodes within the instance.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1350,20 +1454,20 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which parameter group updates
         /// should be applied.
         /// </param>
         /// <param name="nodeIds">
-        /// Nodes to which we should apply the instance-level parameter group.
+        /// Nodes to which the instance-level parameter group is applied.
         /// </param>
         /// <param name="applyAll">
         /// Whether to apply instance-level parameter group to all nodes. If set to
-        /// true, will explicitly restrict users from specifying any nodes, and apply
-        /// parameter group updates to all nodes within the instance.
+        /// true, users are restricted from specifying individual nodes, and
+        /// `ApplyParameters` updates all nodes within the instance.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1379,20 +1483,20 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which parameter group updates
         /// should be applied.
         /// </param>
         /// <param name="nodeIds">
-        /// Nodes to which we should apply the instance-level parameter group.
+        /// Nodes to which the instance-level parameter group is applied.
         /// </param>
         /// <param name="applyAll">
         /// Whether to apply instance-level parameter group to all nodes. If set to
-        /// true, will explicitly restrict users from specifying any nodes, and apply
-        /// parameter group updates to all nodes within the instance.
+        /// true, users are restricted from specifying individual nodes, and
+        /// `ApplyParameters` updates all nodes within the instance.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1400,20 +1504,20 @@ namespace Google.Cloud.Memcache.V1Beta2
             ApplyParametersAsync(name, nodeIds, applyAll, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which parameter group updates
         /// should be applied.
         /// </param>
         /// <param name="nodeIds">
-        /// Nodes to which we should apply the instance-level parameter group.
+        /// Nodes to which the instance-level parameter group is applied.
         /// </param>
         /// <param name="applyAll">
         /// Whether to apply instance-level parameter group to all nodes. If set to
-        /// true, will explicitly restrict users from specifying any nodes, and apply
-        /// parameter group updates to all nodes within the instance.
+        /// true, users are restricted from specifying individual nodes, and
+        /// `ApplyParameters` updates all nodes within the instance.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1429,20 +1533,20 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which parameter group updates
         /// should be applied.
         /// </param>
         /// <param name="nodeIds">
-        /// Nodes to which we should apply the instance-level parameter group.
+        /// Nodes to which the instance-level parameter group is applied.
         /// </param>
         /// <param name="applyAll">
         /// Whether to apply instance-level parameter group to all nodes. If set to
-        /// true, will explicitly restrict users from specifying any nodes, and apply
-        /// parameter group updates to all nodes within the instance.
+        /// true, users are restricted from specifying individual nodes, and
+        /// `ApplyParameters` updates all nodes within the instance.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1458,25 +1562,237 @@ namespace Google.Cloud.Memcache.V1Beta2
             }, callSettings);
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Memcached instance for which parameter group updates
         /// should be applied.
         /// </param>
         /// <param name="nodeIds">
-        /// Nodes to which we should apply the instance-level parameter group.
+        /// Nodes to which the instance-level parameter group is applied.
         /// </param>
         /// <param name="applyAll">
         /// Whether to apply instance-level parameter group to all nodes. If set to
-        /// true, will explicitly restrict users from specifying any nodes, and apply
-        /// parameter group updates to all nodes within the instance.
+        /// true, users are restricted from specifying individual nodes, and
+        /// `ApplyParameters` updates all nodes within the instance.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplyParametersAsync(InstanceName name, scg::IEnumerable<string> nodeIds, bool applyAll, st::CancellationToken cancellationToken) =>
             ApplyParametersAsync(name, nodeIds, applyAll, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> ApplySoftwareUpdate(ApplySoftwareUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(ApplySoftwareUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(ApplySoftwareUpdateRequest request, st::CancellationToken cancellationToken) =>
+            ApplySoftwareUpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ApplySoftwareUpdate</c>.</summary>
+        public virtual lro::OperationsClient ApplySoftwareUpdateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ApplySoftwareUpdate</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceApplySoftwareUpdate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ApplySoftwareUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ApplySoftwareUpdate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceApplySoftwareUpdateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ApplySoftwareUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Resource name of the Memcached instance for which software update should be
+        /// applied.
+        /// </param>
+        /// <param name="nodeIds">
+        /// Nodes to which we should apply the update to. Note all the selected nodes
+        /// are updated in parallel.
+        /// </param>
+        /// <param name="applyAll">
+        /// Whether to apply the update to all nodes. If set to
+        /// true, will explicitly restrict users from specifying any nodes, and apply
+        /// software update to all nodes (where applicable) within the instance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> ApplySoftwareUpdate(string instance, scg::IEnumerable<string> nodeIds, bool applyAll, gaxgrpc::CallSettings callSettings = null) =>
+            ApplySoftwareUpdate(new ApplySoftwareUpdateRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NodeIds =
+                {
+                    nodeIds ?? linq::Enumerable.Empty<string>(),
+                },
+                ApplyAll = applyAll,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Resource name of the Memcached instance for which software update should be
+        /// applied.
+        /// </param>
+        /// <param name="nodeIds">
+        /// Nodes to which we should apply the update to. Note all the selected nodes
+        /// are updated in parallel.
+        /// </param>
+        /// <param name="applyAll">
+        /// Whether to apply the update to all nodes. If set to
+        /// true, will explicitly restrict users from specifying any nodes, and apply
+        /// software update to all nodes (where applicable) within the instance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(string instance, scg::IEnumerable<string> nodeIds, bool applyAll, gaxgrpc::CallSettings callSettings = null) =>
+            ApplySoftwareUpdateAsync(new ApplySoftwareUpdateRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                NodeIds =
+                {
+                    nodeIds ?? linq::Enumerable.Empty<string>(),
+                },
+                ApplyAll = applyAll,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Resource name of the Memcached instance for which software update should be
+        /// applied.
+        /// </param>
+        /// <param name="nodeIds">
+        /// Nodes to which we should apply the update to. Note all the selected nodes
+        /// are updated in parallel.
+        /// </param>
+        /// <param name="applyAll">
+        /// Whether to apply the update to all nodes. If set to
+        /// true, will explicitly restrict users from specifying any nodes, and apply
+        /// software update to all nodes (where applicable) within the instance.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(string instance, scg::IEnumerable<string> nodeIds, bool applyAll, st::CancellationToken cancellationToken) =>
+            ApplySoftwareUpdateAsync(instance, nodeIds, applyAll, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Resource name of the Memcached instance for which software update should be
+        /// applied.
+        /// </param>
+        /// <param name="nodeIds">
+        /// Nodes to which we should apply the update to. Note all the selected nodes
+        /// are updated in parallel.
+        /// </param>
+        /// <param name="applyAll">
+        /// Whether to apply the update to all nodes. If set to
+        /// true, will explicitly restrict users from specifying any nodes, and apply
+        /// software update to all nodes (where applicable) within the instance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> ApplySoftwareUpdate(InstanceName instance, scg::IEnumerable<string> nodeIds, bool applyAll, gaxgrpc::CallSettings callSettings = null) =>
+            ApplySoftwareUpdate(new ApplySoftwareUpdateRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                NodeIds =
+                {
+                    nodeIds ?? linq::Enumerable.Empty<string>(),
+                },
+                ApplyAll = applyAll,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Resource name of the Memcached instance for which software update should be
+        /// applied.
+        /// </param>
+        /// <param name="nodeIds">
+        /// Nodes to which we should apply the update to. Note all the selected nodes
+        /// are updated in parallel.
+        /// </param>
+        /// <param name="applyAll">
+        /// Whether to apply the update to all nodes. If set to
+        /// true, will explicitly restrict users from specifying any nodes, and apply
+        /// software update to all nodes (where applicable) within the instance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(InstanceName instance, scg::IEnumerable<string> nodeIds, bool applyAll, gaxgrpc::CallSettings callSettings = null) =>
+            ApplySoftwareUpdateAsync(new ApplySoftwareUpdateRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                NodeIds =
+                {
+                    nodeIds ?? linq::Enumerable.Empty<string>(),
+                },
+                ApplyAll = applyAll,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. Resource name of the Memcached instance for which software update should be
+        /// applied.
+        /// </param>
+        /// <param name="nodeIds">
+        /// Nodes to which we should apply the update to. Note all the selected nodes
+        /// are updated in parallel.
+        /// </param>
+        /// <param name="applyAll">
+        /// Whether to apply the update to all nodes. If set to
+        /// true, will explicitly restrict users from specifying any nodes, and apply
+        /// software update to all nodes (where applicable) within the instance.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(InstanceName instance, scg::IEnumerable<string> nodeIds, bool applyAll, st::CancellationToken cancellationToken) =>
+            ApplySoftwareUpdateAsync(instance, nodeIds, applyAll, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudMemcache client wrapper implementation, for convenient use.</summary>
@@ -1494,7 +1810,7 @@ namespace Google.Cloud.Memcache.V1Beta2
     /// * As such, Memcached instances are resources of the form:
     /// `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
     /// 
-    /// Note that location_id must be refering to a GCP `region`; for example:
+    /// Note that location_id must be a GCP `region`; for example:
     /// * `projects/my-memcached-project/locations/us-central1/instances/my-memcached`
     /// </remarks>
     public sealed partial class CloudMemcacheClientImpl : CloudMemcacheClient
@@ -1513,6 +1829,8 @@ namespace Google.Cloud.Memcache.V1Beta2
 
         private readonly gaxgrpc::ApiCall<ApplyParametersRequest, lro::Operation> _callApplyParameters;
 
+        private readonly gaxgrpc::ApiCall<ApplySoftwareUpdateRequest, lro::Operation> _callApplySoftwareUpdate;
+
         /// <summary>
         /// Constructs a client wrapper for the CloudMemcache service, with the specified gRPC client and settings.
         /// </summary>
@@ -1528,6 +1846,7 @@ namespace Google.Cloud.Memcache.V1Beta2
             UpdateParametersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateParametersOperationsSettings);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings);
             ApplyParametersOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApplyParametersOperationsSettings);
+            ApplySoftwareUpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApplySoftwareUpdateOperationsSettings);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
@@ -1549,6 +1868,9 @@ namespace Google.Cloud.Memcache.V1Beta2
             _callApplyParameters = clientHelper.BuildApiCall<ApplyParametersRequest, lro::Operation>(grpcClient.ApplyParametersAsync, grpcClient.ApplyParameters, effectiveSettings.ApplyParametersSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callApplyParameters);
             Modify_ApplyParametersApiCall(ref _callApplyParameters);
+            _callApplySoftwareUpdate = clientHelper.BuildApiCall<ApplySoftwareUpdateRequest, lro::Operation>(grpcClient.ApplySoftwareUpdateAsync, grpcClient.ApplySoftwareUpdate, effectiveSettings.ApplySoftwareUpdateSettings).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callApplySoftwareUpdate);
+            Modify_ApplySoftwareUpdateApiCall(ref _callApplySoftwareUpdate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1567,6 +1889,8 @@ namespace Google.Cloud.Memcache.V1Beta2
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
         partial void Modify_ApplyParametersApiCall(ref gaxgrpc::ApiCall<ApplyParametersRequest, lro::Operation> call);
+
+        partial void Modify_ApplySoftwareUpdateApiCall(ref gaxgrpc::ApiCall<ApplySoftwareUpdateRequest, lro::Operation> call);
 
         partial void OnConstruction(CloudMemcache.CloudMemcacheClient grpcClient, CloudMemcacheSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1587,8 +1911,10 @@ namespace Google.Cloud.Memcache.V1Beta2
 
         partial void Modify_ApplyParametersRequest(ref ApplyParametersRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ApplySoftwareUpdateRequest(ref ApplySoftwareUpdateRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1600,7 +1926,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         }
 
         /// <summary>
-        /// Lists Instances in a given project and location.
+        /// Lists Instances in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1639,7 +1965,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         public override lro::OperationsClient CreateInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1651,7 +1977,7 @@ namespace Google.Cloud.Memcache.V1Beta2
         }
 
         /// <summary>
-        /// Creates a new Instance in a given project and location.
+        /// Creates a new Instance in a given location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1693,9 +2019,10 @@ namespace Google.Cloud.Memcache.V1Beta2
         public override lro::OperationsClient UpdateParametersOperationsClient { get; }
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1707,9 +2034,10 @@ namespace Google.Cloud.Memcache.V1Beta2
         }
 
         /// <summary>
-        /// Updates the defined Memcached Parameters for an existing Instance.
+        /// Updates the defined Memcached parameters for an existing instance.
         /// This method only stages the parameters, it must be followed by
-        /// ApplyParameters to apply the parameters to nodes of the Memcached Instance.
+        /// `ApplyParameters` to apply the parameters to nodes of the Memcached
+        /// instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1751,8 +2079,8 @@ namespace Google.Cloud.Memcache.V1Beta2
         public override lro::OperationsClient ApplyParametersOperationsClient { get; }
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1764,8 +2092,8 @@ namespace Google.Cloud.Memcache.V1Beta2
         }
 
         /// <summary>
-        /// ApplyParameters will update current set of Parameters to the set of
-        /// specified nodes of the Memcached Instance.
+        /// `ApplyParameters` restarts the set of specified nodes in order to update
+        /// them to the current set of parameters for the Memcached Instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1774,6 +2102,33 @@ namespace Google.Cloud.Memcache.V1Beta2
         {
             Modify_ApplyParametersRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, OperationMetadata>(await _callApplyParameters.Async(request, callSettings).ConfigureAwait(false), ApplyParametersOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ApplySoftwareUpdate</c>.</summary>
+        public override lro::OperationsClient ApplySoftwareUpdateOperationsClient { get; }
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> ApplySoftwareUpdate(ApplySoftwareUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApplySoftwareUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callApplySoftwareUpdate.Sync(request, callSettings), ApplySoftwareUpdateOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates software on the selected nodes of the Instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> ApplySoftwareUpdateAsync(ApplySoftwareUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ApplySoftwareUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callApplySoftwareUpdate.Async(request, callSettings).ConfigureAwait(false), ApplySoftwareUpdateOperationsClient);
         }
     }
 
