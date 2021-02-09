@@ -853,11 +853,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.CreateExtractJob(tableReference, uri, options),
                 client => client.CreateExtractJob(ProjectId, datasetId, tableId, uri, options),
                 client => client.CreateExtractJob(datasetId, tableId, uri, options),
-                client => client.CreateExtractJob(tableReference, uri, options),
                 client => client.CreateExtractJob(ProjectId, datasetId, tableId, new[] { uri }, options),
-                client => client.CreateExtractJob(datasetId, tableId, uri, options),
-                client => client.CreateExtractJob(datasetId, tableId, uri, options),
-                client => client.CreateExtractJob(ProjectId, datasetId, tableId, uri, options),
+                client => client.CreateExtractJob(datasetId, tableId, new[] { uri }, options),
                 client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJob(uri, options),
                 client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJob(new[] { uri }, options));
         }
@@ -1613,11 +1610,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.CreateExtractJobAsync(tableReference, uri, options, token),
                 client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, uri, options, token),
                 client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
-                client => client.CreateExtractJobAsync(tableReference, uri, options, token),
                 client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, new[] { uri }, options, token),
-                client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
-                client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
-                client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, uri, options, token),
+                client => client.CreateExtractJobAsync(datasetId, tableId, new[] { uri }, options, token),
                 client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJobAsync(uri, options, token),
                 client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJobAsync(new[] { uri }, options, token));
         }
