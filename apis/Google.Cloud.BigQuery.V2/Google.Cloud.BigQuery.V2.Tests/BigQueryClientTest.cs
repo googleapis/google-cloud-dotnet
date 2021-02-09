@@ -863,6 +863,27 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void CreateModelExtractJobEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var jobReference = GetJobReference("job");
+            var modelReference = GetModelReference(datasetId, modelId);
+            var uri = "gs://bucket/object";
+            var options = new CreateModelExtractJobOptions();
+
+            VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.CreateModelExtractJob(MatchesWhenSerialized(modelReference), new[] { uri }, options),
+                client => client.CreateModelExtractJob(ProjectId, datasetId, modelId, uri, options),
+                client => client.CreateModelExtractJob(datasetId, modelId, uri, options),
+                client => client.CreateModelExtractJob(modelReference, uri, options),
+                client => client.CreateModelExtractJob(ProjectId, datasetId, modelId, new[] { uri }, options),
+                client => client.CreateModelExtractJob(datasetId, modelId, new[] { uri }, options),
+                client => new BigQueryModel(client, GetModel(modelReference)).CreateModelExtractJob(uri, options),
+                client => new BigQueryModel(client, GetModel(modelReference)).CreateModelExtractJob(new[] { uri }, options));
+        }
+
+        [Fact]
         public void CreateCopyJobEquivalents()
         {
             var jobReference = GetJobReference("job");
@@ -1599,6 +1620,28 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, uri, options, token),
                 client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJobAsync(uri, options, token),
                 client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJobAsync(new[] { uri }, options, token));
+        }
+
+        [Fact]
+        public void CreateModelExtractJobAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var modelId = "model";
+            var jobReference = GetJobReference("job");
+            var modelReference = GetModelReference(datasetId, modelId);
+            var uri = "gs://bucket/object";
+            var options = new CreateModelExtractJobOptions();
+            var token = new CancellationTokenSource().Token;
+
+            VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.CreateModelExtractJobAsync(MatchesWhenSerialized(modelReference), new[] { uri }, options, token),
+                client => client.CreateModelExtractJobAsync(ProjectId, datasetId, modelId, uri, options, token),
+                client => client.CreateModelExtractJobAsync(datasetId, modelId, uri, options, token),
+                client => client.CreateModelExtractJobAsync(modelReference, uri, options, token),
+                client => client.CreateModelExtractJobAsync(ProjectId, datasetId, modelId, new[] { uri }, options, token),
+                client => client.CreateModelExtractJobAsync(datasetId, modelId, new[] { uri }, options, token),
+                client => new BigQueryModel(client, GetModel(modelReference)).CreateModelExtractJobAsync(uri, options, token),
+                client => new BigQueryModel(client, GetModel(modelReference)).CreateModelExtractJobAsync(new[] { uri }, options, token));
         }
 
         [Fact]

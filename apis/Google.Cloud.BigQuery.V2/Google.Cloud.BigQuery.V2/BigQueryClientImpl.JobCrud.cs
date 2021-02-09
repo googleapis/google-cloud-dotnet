@@ -160,6 +160,20 @@ namespace Google.Cloud.BigQuery.V2
             return new BigQueryJob(this, job);
         }
 
+        /// <inheritdoc />
+        public override BigQueryJob CreateModelExtractJob(ModelReference modelReference, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null)
+        {
+            var job = CreateModelExtractJobRequest(modelReference, destinationUris, options).Execute();
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryJob> CreateModelExtractJobAsync(ModelReference modelReference, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options = null, CancellationToken cancellationToken = default)
+        {
+            var job = await CreateModelExtractJobRequest(modelReference, destinationUris, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
         internal const string DefaultJobIdPrefix = "job_";
 
         /// <summary>
@@ -273,6 +287,18 @@ namespace Google.Cloud.BigQuery.V2
             RetryHandler.MarkAsRetriable(request);
             request.PrettyPrint = PrettyPrint;
             return request;
+        }
+
+        private InsertRequest CreateModelExtractJobRequest(ModelReference modelReference, IEnumerable<string> destinationUris, CreateModelExtractJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(modelReference, nameof(modelReference));
+            GaxPreconditions.CheckNotNull(destinationUris, nameof(destinationUris));
+            List<string> destinationUriList = destinationUris.ToList();
+            GaxPreconditions.CheckArgument(destinationUriList.Count != 0, nameof(destinationUris), "Destination URIs cannot be empty");
+
+            var extract = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceModel = modelReference };
+            options?.ModifyRequest(extract);
+            return CreateInsertJobRequest(new JobConfiguration { Extract = extract }, options);
         }
     }
 }

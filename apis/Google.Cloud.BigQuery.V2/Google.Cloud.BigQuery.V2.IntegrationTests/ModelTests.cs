@@ -154,5 +154,38 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
 
             Assert.Equal(modelId, model.Reference.ModelId);
         }
+
+        [Fact]
+        public void CreateModelExtractJob()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var modelReference = client.GetModel(_fixture.DatasetId, _fixture.ModelId);
+            var destinationBucket = _fixture.StorageBucketName;
+            var destinationPrefix = _fixture.GenerateStoragePrefixName();
+            var destinationUri = $"gs://{destinationBucket}/{destinationPrefix}";
+
+            client.CreateModelExtractJob(modelReference.Reference, destinationUri).PollUntilCompleted().ThrowOnAnyError();
+
+            // We don't know the format of the extracted model,
+            // there are several files, so, let's check that we at least have one.
+            Assert.True(_fixture.StorageClient.ListObjects(destinationBucket, destinationPrefix).Any());
+        }
+
+        [Fact]
+        public async Task CreateModelExtractJobAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var modelReference = client.GetModel(_fixture.DatasetId, _fixture.ModelId);
+            var destinationBucket = _fixture.StorageBucketName;
+            var destinationPrefix = _fixture.GenerateStoragePrefixName();
+            var destinationUri = $"gs://{destinationBucket}/{destinationPrefix}";
+
+            var job = await client.CreateModelExtractJobAsync(modelReference.Reference, destinationUri);
+            job.PollUntilCompleted().ThrowOnAnyError();
+
+            // We don't know the format of the extracted model,
+            // there are several files, so, let's check that we at least have one.
+            Assert.True(_fixture.StorageClient.ListObjects(destinationBucket, destinationPrefix).Any());
+        }
     }
 }
