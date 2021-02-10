@@ -131,7 +131,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
             // Construct a TOC for guides from files
             var guidesToc = new List<dynamic>();
-            foreach (var file in Directory.GetFiles(_outputRoot, "*.md"))
+            foreach (var file in Directory.GetFiles(_outputRoot, "*.md").OrderBy(GuideOrderingSelector, StringComparer.Ordinal))
             {
                 string title = Path.GetFileName(file) == "index.md"
                     ? "Getting started"
@@ -171,8 +171,20 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 .Build();
             string newText = serializer.Serialize(newToc);
             File.WriteAllText(tocFile, newText);
-
         }
+
+        /// <summary>
+        /// Simple hack to enforce a reasonable Guide ordering:
+        /// - Getting Started (index.md)
+        /// - Version History (history.md)
+        /// - Everything else
+        /// </summary>
+        private static string GuideOrderingSelector(string file) => Path.GetFileName(file) switch
+        {
+            "index.md" => "!0",
+            "history.md" => "!1",
+            var text => text
+        };
 
         private void CopySnippetsToExamples()
         {
