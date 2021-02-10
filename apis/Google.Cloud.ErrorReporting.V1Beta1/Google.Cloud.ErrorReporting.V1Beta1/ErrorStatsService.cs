@@ -249,11 +249,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string projectName_ = "";
     /// <summary>
     /// Required. The resource name of the Google Cloud Platform project. Written
-    /// as &lt;code>projects/&lt;/code> plus the
-    /// &lt;a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-    /// Platform project ID&lt;/a>.
+    /// as `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}`
+    /// and `{projectNumber}` can be found in the
+    /// [Google Cloud Console](https://support.google.com/cloud/answer/6158840).
     ///
-    /// Example: &lt;code>projects/my-project-123&lt;/code>.
+    /// Examples: `projects/my-project-123`, `projects/5551234`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectName {
@@ -1888,9 +1888,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string projectName_ = "";
     /// <summary>
     /// Required. The resource name of the Google Cloud Platform project. Written
-    /// as `projects/` plus the
+    /// as `projects/{projectID}`, where `{projectID}` is the
     /// [Google Cloud Platform project
     /// ID](https://support.google.com/cloud/answer/6158840).
+    ///
     /// Example: `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3021,9 +3022,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string projectName_ = "";
     /// <summary>
     /// Required. The resource name of the Google Cloud Platform project. Written
-    /// as `projects/` plus the
+    /// as `projects/{projectID}`, where `{projectID}` is the
     /// [Google Cloud Platform project
     /// ID](https://support.google.com/cloud/answer/6158840).
+    ///
     /// Example: `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

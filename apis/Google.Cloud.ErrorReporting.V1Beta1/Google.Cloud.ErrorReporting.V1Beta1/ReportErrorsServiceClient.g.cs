@@ -210,7 +210,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public virtual ReportErrorsService.ReportErrorsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -218,7 +218,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -227,7 +235,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -235,7 +243,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -244,7 +260,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -252,7 +268,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -261,7 +285,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ReportErrorEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -269,14 +293,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectId}`, where `{projectId}` is the
         /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840). Example:
-        /// `projects/my-project-123`.
+        /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
+        /// Example: // `projects/my-project-123`.
         /// </param>
         /// <param name="event">
         /// Required. The error event to be reported.
@@ -291,7 +324,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -299,14 +332,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectId}`, where `{projectId}` is the
         /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840). Example:
-        /// `projects/my-project-123`.
+        /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
+        /// Example: // `projects/my-project-123`.
         /// </param>
         /// <param name="event">
         /// Required. The error event to be reported.
@@ -321,7 +363,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -329,14 +371,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectId}`, where `{projectId}` is the
         /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840). Example:
-        /// `projects/my-project-123`.
+        /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
+        /// Example: // `projects/my-project-123`.
         /// </param>
         /// <param name="event">
         /// Required. The error event to be reported.
@@ -347,7 +398,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ReportErrorEventAsync(projectName, @event, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -355,14 +406,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectId}`, where `{projectId}` is the
         /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840). Example:
-        /// `projects/my-project-123`.
+        /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
+        /// Example: // `projects/my-project-123`.
         /// </param>
         /// <param name="event">
         /// Required. The error event to be reported.
@@ -377,7 +437,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -385,14 +445,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectId}`, where `{projectId}` is the
         /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840). Example:
-        /// `projects/my-project-123`.
+        /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
+        /// Example: // `projects/my-project-123`.
         /// </param>
         /// <param name="event">
         /// Required. The error event to be reported.
@@ -407,7 +476,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -415,14 +484,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectId}`, where `{projectId}` is the
         /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840). Example:
-        /// `projects/my-project-123`.
+        /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
+        /// Example: // `projects/my-project-123`.
         /// </param>
         /// <param name="event">
         /// Required. The error event to be reported.
@@ -470,7 +548,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         partial void Modify_ReportErrorEventRequest(ref ReportErrorEventRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -478,7 +556,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -490,7 +576,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         }
 
         /// <summary>
-        /// Report an individual error event.
+        /// Report an individual error event and record the event to a log.
         /// 
         /// This endpoint accepts **either** an OAuth token,
         /// **or** an [API key](https://support.google.com/cloud/answer/6158862)
@@ -498,7 +584,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// 
         /// `POST
-        /// https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+        /// https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+        /// 
+        /// **Note:** [Error Reporting](/error-reporting) is a global service built
+        /// on Cloud Logging and doesn't analyze logs stored
+        /// in regional log buckets or logs routed to other Google Cloud projects.
+        /// 
+        /// For more information, see
+        /// [Using Error Reporting with regionalized
+        /// logs](/error-reporting/docs/regionalization).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
