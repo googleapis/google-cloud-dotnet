@@ -26,9 +26,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           string.Concat(
             "Cjhnb29nbGUvY2xvdWQvYmluYXJ5YXV0aG9yaXphdGlvbi92MWJldGExL3Jl",
             "c291cmNlcy5wcm90bxIoZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRp",
-            "b24udjFiZXRhMRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZ",
-            "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLN",
+            "b24udjFiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29v",
+            "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
+            "dXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLN",
             "BgoGUG9saWN5EhEKBG5hbWUYASABKAlCA+BBAxIYCgtkZXNjcmlwdGlvbhgG",
             "IAEoCUID4EEBEncKHWdsb2JhbF9wb2xpY3lfZXZhbHVhdGlvbl9tb2RlGAcg",
             "ASgOMksuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRh",
@@ -93,7 +93,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "ZFxCaW5hcnlBdXRob3JpemF0aW9uXFYxYmV0YTHqAitHb29nbGU6OkNsb3Vk",
             "OjpCaW5hcnlBdXRob3JpemF0aW9uOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy), global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy.Parser, new[]{ "Name", "Description", "GlobalPolicyEvaluationMode", "AdmissionWhitelistPatterns", "ClusterAdmissionRules", "DefaultAdmissionRule", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy.Types.GlobalPolicyEvaluationMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionWhitelistPattern), global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionWhitelistPattern.Parser, new[]{ "NamePattern" }, null, null, null, null),
@@ -109,7 +109,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// A [policy][google.cloud.binaryauthorization.v1beta1.Policy] for container image binary authorization.
+  /// A [policy][google.cloud.binaryauthorization.v1beta1.Policy] for container
+  /// image binary authorization.
   /// </summary>
   public sealed partial class Policy : pb::IMessage<Policy>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -207,7 +208,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionWhitelistPattern.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionWhitelistPattern> admissionWhitelistPatterns_ = new pbc::RepeatedField<global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionWhitelistPattern>();
     /// <summary>
-    /// Optional. Admission policy whitelisting. A matching admission request will
+    /// Optional. Admission policy allowlisting. A matching admission request will
     /// always be permitted. This feature is typically used to exclude Google or
     /// third-party infrastructure images from Binary Authorization policies.
     /// </summary>
@@ -552,8 +553,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [admission whitelist pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern] exempts images
-  /// from checks by [admission rules][google.cloud.binaryauthorization.v1beta1.AdmissionRule].
+  /// An [admission allowlist
+  /// pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern]
+  /// exempts images from checks by [admission
+  /// rules][google.cloud.binaryauthorization.v1beta1.AdmissionRule].
   /// </summary>
   public sealed partial class AdmissionWhitelistPattern : pb::IMessage<AdmissionWhitelistPattern>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -597,7 +600,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int NamePatternFieldNumber = 1;
     private string namePattern_ = "";
     /// <summary>
-    /// An image name pattern to whitelist, in the form `registry/path/to/image`.
+    /// An image name pattern to allow, in the form `registry/path/to/image`.
     /// This supports a trailing `*` as a wildcard, but this is allowed only in
     /// text after the `registry/` part.
     /// </summary>
@@ -733,12 +736,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [admission rule][google.cloud.binaryauthorization.v1beta1.AdmissionRule] specifies either that all container images
-  /// used in a pod creation request must be attested to by one or more
-  /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], that all pod creations will be allowed, or that all
-  /// pod creations will be denied.
+  /// An [admission rule][google.cloud.binaryauthorization.v1beta1.AdmissionRule]
+  /// specifies either that all container images used in a pod creation request
+  /// must be attested to by one or more
+  /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], that all pod
+  /// creations will be allowed, or that all pod creations will be denied.
   ///
-  /// Images matching an [admission whitelist pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern]
+  /// Images matching an [admission allowlist
+  /// pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern]
   /// are exempted from admission rules and will never block a pod creation.
   /// </summary>
   public sealed partial class AdmissionRule : pb::IMessage<AdmissionRule>
@@ -1039,9 +1044,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] that attests to container image
-  /// artifacts. An existing attestor cannot be modified except where
-  /// indicated.
+  /// An [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] that attests
+  /// to container image artifacts. An existing attestor cannot be modified except
+  /// where indicated.
   /// </summary>
   public sealed partial class Attestor : pb::IMessage<Attestor>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1388,8 +1393,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [user owned drydock note][google.cloud.binaryauthorization.v1beta1.UserOwnedDrydockNote] references a Drydock
-  /// ATTESTATION_AUTHORITY Note created by the user.
+  /// An [user owned drydock
+  /// note][google.cloud.binaryauthorization.v1beta1.UserOwnedDrydockNote]
+  /// references a Drydock ATTESTATION_AUTHORITY Note created by the user.
   /// </summary>
   public sealed partial class UserOwnedDrydockNote : pb::IMessage<UserOwnedDrydockNote>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1947,8 +1953,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [attestor public key][google.cloud.binaryauthorization.v1beta1.AttestorPublicKey] that will be used to verify
-  /// attestations signed by this attestor.
+  /// An [attestor public
+  /// key][google.cloud.binaryauthorization.v1beta1.AttestorPublicKey] that will be
+  /// used to verify attestations signed by this attestor.
   /// </summary>
   public sealed partial class AttestorPublicKey : pb::IMessage<AttestorPublicKey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
