@@ -358,9 +358,9 @@ namespace Google.Cloud.Vision.V1 {
     private string productCategory_ = "";
     /// <summary>
     /// Immutable. The category for the product identified by the reference image. This should
-    /// be either "homegoods-v2", "apparel-v2", or "toys-v2". The legacy categories
-    /// "homegoods", "apparel", and "toys" are still supported, but these should
-    /// not be used for new products.
+    /// be one of "homegoods-v2", "apparel-v2", "toys-v2", "packagedgoods-v1" or
+    /// "general-v1". The legacy categories "homegoods", "apparel", and "toys" are
+    /// still supported, but these should not be used for new products.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProductCategory {
@@ -1210,7 +1210,6 @@ namespace Google.Cloud.Vision.V1 {
     /// The resource name of the reference image.
     ///
     /// Format is:
-    ///
     /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
     ///
     /// This field is ignored when creating a reference image.
@@ -3542,7 +3541,7 @@ namespace Google.Cloud.Vision.V1 {
     /// Required. Resource name of the ProductSet to get.
     ///
     /// Format is:
-    /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+    /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4921,7 +4920,6 @@ namespace Google.Cloud.Vision.V1 {
     /// Required. The resource name of the ReferenceImage to get.
     ///
     /// Format is:
-    ///
     /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5103,7 +5101,6 @@ namespace Google.Cloud.Vision.V1 {
     /// Required. The resource name of the reference image to delete.
     ///
     /// Format is:
-    ///
     /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

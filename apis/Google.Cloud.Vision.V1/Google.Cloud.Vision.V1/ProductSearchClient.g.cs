@@ -981,7 +981,7 @@ namespace Google.Cloud.Vision.V1
         /// Required. Resource name of the ProductSet to get.
         /// 
         /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1002,7 +1002,7 @@ namespace Google.Cloud.Vision.V1
         /// Required. Resource name of the ProductSet to get.
         /// 
         /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1023,7 +1023,7 @@ namespace Google.Cloud.Vision.V1
         /// Required. Resource name of the ProductSet to get.
         /// 
         /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Vision.V1
         /// Required. Resource name of the ProductSet to get.
         /// 
         /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Vision.V1
         /// Required. Resource name of the ProductSet to get.
         /// 
         /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1083,7 +1083,7 @@ namespace Google.Cloud.Vision.V1
         /// Required. Resource name of the ProductSet to get.
         /// 
         /// Format is:
-        /// `projects/PROJECT_ID/locations/LOG_ID/productSets/PRODUCT_SET_ID`
+        /// `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2671,7 +2671,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the reference image to delete.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2695,7 +2694,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the reference image to delete.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2719,7 +2717,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the reference image to delete.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2740,7 +2737,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the reference image to delete.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2764,7 +2760,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the reference image to delete.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2788,7 +2783,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the reference image to delete.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3008,7 +3002,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the ReferenceImage to get.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3030,7 +3023,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the ReferenceImage to get.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3052,7 +3044,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the ReferenceImage to get.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3071,7 +3062,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the ReferenceImage to get.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3093,7 +3083,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the ReferenceImage to get.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3115,7 +3104,6 @@ namespace Google.Cloud.Vision.V1
         /// Required. The resource name of the ReferenceImage to get.
         /// 
         /// Format is:
-        /// 
         /// `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

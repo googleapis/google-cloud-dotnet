@@ -25,11 +25,11 @@ namespace Google.Cloud.Vision.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3Byb2R1Y3Rfc2VhcmNoLnByb3Rv",
-            "EhZnb29nbGUuY2xvdWQudmlzaW9uLnYxGiVnb29nbGUvY2xvdWQvdmlzaW9u",
-            "L3YxL2dlb21ldHJ5LnByb3RvGjNnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3By",
-            "b2R1Y3Rfc2VhcmNoX3NlcnZpY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
-            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8iugEKE1Byb2R1Y3RTZWFyY2hQ",
+            "EhZnb29nbGUuY2xvdWQudmlzaW9uLnYxGhlnb29nbGUvYXBpL3Jlc291cmNl",
+            "LnByb3RvGiVnb29nbGUvY2xvdWQvdmlzaW9uL3YxL2dlb21ldHJ5LnByb3Rv",
+            "GjNnb29nbGUvY2xvdWQvdmlzaW9uL3YxL3Byb2R1Y3Rfc2VhcmNoX3NlcnZp",
+            "Y2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdv",
+            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iugEKE1Byb2R1Y3RTZWFyY2hQ",
             "YXJhbXMSOwoNYm91bmRpbmdfcG9seRgJIAEoCzIkLmdvb2dsZS5jbG91ZC52",
             "aXNpb24udjEuQm91bmRpbmdQb2x5EjoKC3Byb2R1Y3Rfc2V0GAYgASgJQiX6",
             "QSIKIHZpc2lvbi5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0U2V0EhoKEnByb2R1",
@@ -53,7 +53,7 @@ namespace Google.Cloud.Vision.V1 {
             "by9nb29nbGVhcGlzL2Nsb3VkL3Zpc2lvbi92MTt2aXNpb274AQGiAgRHQ1ZO",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.ProductSearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchParams), global::Google.Cloud.Vision.V1.ProductSearchParams.Parser, new[]{ "BoundingPoly", "ProductSet", "ProductCategories", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults), global::Google.Cloud.Vision.V1.ProductSearchResults.Parser, new[]{ "IndexTime", "Results", "ProductGroupedResults" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result), global::Google.Cloud.Vision.V1.ProductSearchResults.Types.Result.Parser, new[]{ "Product", "Score", "Image" }, null, null, null, null),
@@ -114,7 +114,7 @@ namespace Google.Cloud.Vision.V1 {
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingPoly_;
     /// <summary>
     /// The bounding polygon around the area of interest in the image.
-    /// Optional. If it is not specified, system discretion will be applied.
+    /// If it is not specified, system discretion will be applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
