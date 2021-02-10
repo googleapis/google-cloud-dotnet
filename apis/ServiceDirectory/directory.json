@@ -2558,7 +2558,6 @@
       "PackageFromProtos": "google.devtools.clouderrorreporting.v1beta1",
       "ImportDirectories": [
         "google/api",
-        "google/appengine/logging/v1",
         "google/devtools/clouderrorreporting/v1beta1",
         "google/protobuf"
       ],
