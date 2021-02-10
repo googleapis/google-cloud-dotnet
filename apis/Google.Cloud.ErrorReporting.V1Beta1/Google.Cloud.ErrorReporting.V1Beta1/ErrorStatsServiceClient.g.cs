@@ -265,11 +265,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as &amp;lt;code&amp;gt;projects/&amp;lt;/code&amp;gt; plus the
-        /// &amp;lt;a href="https://support.google.com/cloud/answer/6158840"&amp;gt;Google Cloud
-        /// Platform project ID&amp;lt;/a&amp;gt;.
+        /// as `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}`
+        /// and `{projectNumber}` can be found in the
+        /// [Google Cloud Console](https://support.google.com/cloud/answer/6158840).
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123&amp;lt;/code&amp;gt;.
+        /// Examples: `projects/my-project-123`, `projects/5551234`.
         /// </param>
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
@@ -305,11 +305,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as &amp;lt;code&amp;gt;projects/&amp;lt;/code&amp;gt; plus the
-        /// &amp;lt;a href="https://support.google.com/cloud/answer/6158840"&amp;gt;Google Cloud
-        /// Platform project ID&amp;lt;/a&amp;gt;.
+        /// as `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}`
+        /// and `{projectNumber}` can be found in the
+        /// [Google Cloud Console](https://support.google.com/cloud/answer/6158840).
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123&amp;lt;/code&amp;gt;.
+        /// Examples: `projects/my-project-123`, `projects/5551234`.
         /// </param>
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
@@ -345,11 +345,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as &amp;lt;code&amp;gt;projects/&amp;lt;/code&amp;gt; plus the
-        /// &amp;lt;a href="https://support.google.com/cloud/answer/6158840"&amp;gt;Google Cloud
-        /// Platform project ID&amp;lt;/a&amp;gt;.
+        /// as `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}`
+        /// and `{projectNumber}` can be found in the
+        /// [Google Cloud Console](https://support.google.com/cloud/answer/6158840).
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123&amp;lt;/code&amp;gt;.
+        /// Examples: `projects/my-project-123`, `projects/5551234`.
         /// </param>
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
@@ -385,11 +385,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as &amp;lt;code&amp;gt;projects/&amp;lt;/code&amp;gt; plus the
-        /// &amp;lt;a href="https://support.google.com/cloud/answer/6158840"&amp;gt;Google Cloud
-        /// Platform project ID&amp;lt;/a&amp;gt;.
+        /// as `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}`
+        /// and `{projectNumber}` can be found in the
+        /// [Google Cloud Console](https://support.google.com/cloud/answer/6158840).
         /// 
-        /// Example: &amp;lt;code&amp;gt;projects/my-project-123&amp;lt;/code&amp;gt;.
+        /// Examples: `projects/my-project-123`, `projects/5551234`.
         /// </param>
         /// <param name="timeRange">
         /// Optional. List data for the given time range.
@@ -443,9 +443,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -475,9 +476,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -507,9 +509,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -539,9 +542,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -598,9 +602,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -616,9 +621,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -634,9 +640,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -649,9 +656,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -667,9 +675,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -685,9 +694,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// Required. The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
+        /// as `projects/{projectID}`, where `{projectID}` is the
         /// [Google Cloud Platform project
         /// ID](https://support.google.com/cloud/answer/6158840).
+        /// 
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

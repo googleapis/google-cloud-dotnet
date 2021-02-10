@@ -254,7 +254,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// `projects/{projectID}/groups/{group_name}`. Call
         /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
         /// to return a list of groups belonging to this project.
@@ -273,7 +273,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// `projects/{projectID}/groups/{group_name}`. Call
         /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
         /// to return a list of groups belonging to this project.
@@ -292,7 +292,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// `projects/{projectID}/groups/{group_name}`. Call
         /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
         /// to return a list of groups belonging to this project.
@@ -308,7 +308,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// `projects/{projectID}/groups/{group_name}`. Call
         /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
         /// to return a list of groups belonging to this project.
@@ -327,7 +327,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// `projects/{projectID}/groups/{group_name}`. Call
         /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
         /// to return a list of groups belonging to this project.
@@ -346,7 +346,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Get the specified group.
         /// </summary>
         /// <param name="groupName">
-        /// The group resource name. Written as
+        /// Required. The group resource name. Written as
         /// `projects/{projectID}/groups/{group_name}`. Call
         /// [`groupStats.list`](https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.groupStats/list)
         /// to return a list of groups belonging to this project.

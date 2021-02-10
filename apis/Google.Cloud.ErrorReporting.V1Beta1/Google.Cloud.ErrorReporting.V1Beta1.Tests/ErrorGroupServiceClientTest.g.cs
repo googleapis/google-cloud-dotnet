@@ -42,6 +42,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -66,6 +67,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -92,6 +94,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -116,6 +119,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -142,6 +146,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -166,6 +171,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.GetGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -192,6 +198,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -216,6 +223,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -242,6 +250,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);
@@ -266,6 +275,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Tests
                 {
                     new TrackingIssue(),
                 },
+                ResolutionStatus = ResolutionStatus.Muted,
             };
             mockGrpcClient.Setup(x => x.UpdateGroupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ErrorGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ErrorGroupServiceClient client = new ErrorGroupServiceClientImpl(mockGrpcClient.Object, null);

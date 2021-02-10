@@ -116,10 +116,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private string projectName_ = "";
     /// <summary>
     /// Required. The resource name of the Google Cloud Platform project. Written
-    /// as `projects/` plus the
+    /// as `projects/{projectId}`, where `{projectId}` is the
     /// [Google Cloud Platform project
-    /// ID](https://support.google.com/cloud/answer/6158840). Example:
-    /// `projects/my-project-123`.
+    /// ID](https://support.google.com/cloud/answer/6158840).
+    ///
+    /// Example: // `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectName {
