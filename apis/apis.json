@@ -27,6 +27,21 @@
       "protoPath": "google/analytics/data/v1alpha"
     },
     {
+      "id": "Google.Apps.Script.Type",
+      "version": "1.0.0-beta00",
+      "targetFrameworks": "netstandard2.0;net461",
+      "type": "other",
+      "description": "Version-agnostic types for Apps Script APIs.",
+      "tags": [
+        "gsuite"
+      ],
+      "dependencies": {
+        "Google.Api.CommonProtos": "2.2.0"
+      },
+      "generator": "proto",
+      "protoPath": "google/apps/script/type"
+    },
+    {
       "id": "Google.Area120.Tables.V1Alpha1",
       "version": "1.0.0-alpha02",
       "type": "grpc",
