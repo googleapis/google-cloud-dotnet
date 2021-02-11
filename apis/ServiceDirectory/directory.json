@@ -1102,6 +1102,29 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.GkeHub.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/gsuiteaddons/v1",
+      "Name": "gsuiteaddons.googleapis.com",
+      "Title": "Google Workspace Add-ons API",
+      "Description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "ServiceConfigFile": "google/cloud/gsuiteaddons/v1/gsuiteaddons_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.gsuiteaddons.v1",
+      "PackageFromProtos": "google.cloud.gsuiteaddons.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/apps/script/type",
+        "google/apps/script/type/calendar",
+        "google/apps/script/type/docs",
+        "google/apps/script/type/drive",
+        "google/apps/script/type/gmail",
+        "google/apps/script/type/sheets",
+        "google/apps/script/type/slides",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.GSuiteAddOns.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/iot/v1",
       "Name": "cloudiot.googleapis.com",
       "Title": "Cloud IoT API",
