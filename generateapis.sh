@@ -156,9 +156,10 @@ generate_proto() {
   mkdir -p apis/$1/$1
   $PROTOC \
     --csharp_out=apis/$1/$1 \
+    --csharp_opt=base_namespace=$1 \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
-    $API_SRC_DIR/*.proto \
+    $(find $API_SRC_DIR -name '*.proto') \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 }
 
