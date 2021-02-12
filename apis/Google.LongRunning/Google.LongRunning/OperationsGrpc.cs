@@ -160,9 +160,9 @@ namespace Google.LongRunning {
       }
 
       /// <summary>
-      /// Waits for the specified long-running operation until it is done or reaches
-      /// at most a specified timeout, returning the latest state.  If the operation
-      /// is already done, the latest state is immediately returned.  If the timeout
+      /// Waits until the specified long-running operation is done or reaches at most
+      /// a specified timeout, returning the latest state.  If the operation is
+      /// already done, the latest state is immediately returned.  If the timeout
       /// specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
       /// timeout is used.  If the server does not support this method, it returns
       /// `google.rpc.Code.UNIMPLEMENTED`.
@@ -472,9 +472,9 @@ namespace Google.LongRunning {
         return CallInvoker.AsyncUnaryCall(__Method_CancelOperation, null, options, request);
       }
       /// <summary>
-      /// Waits for the specified long-running operation until it is done or reaches
-      /// at most a specified timeout, returning the latest state.  If the operation
-      /// is already done, the latest state is immediately returned.  If the timeout
+      /// Waits until the specified long-running operation is done or reaches at most
+      /// a specified timeout, returning the latest state.  If the operation is
+      /// already done, the latest state is immediately returned.  If the timeout
       /// specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
       /// timeout is used.  If the server does not support this method, it returns
       /// `google.rpc.Code.UNIMPLEMENTED`.
@@ -492,9 +492,9 @@ namespace Google.LongRunning {
         return WaitOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Waits for the specified long-running operation until it is done or reaches
-      /// at most a specified timeout, returning the latest state.  If the operation
-      /// is already done, the latest state is immediately returned.  If the timeout
+      /// Waits until the specified long-running operation is done or reaches at most
+      /// a specified timeout, returning the latest state.  If the operation is
+      /// already done, the latest state is immediately returned.  If the timeout
       /// specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
       /// timeout is used.  If the server does not support this method, it returns
       /// `google.rpc.Code.UNIMPLEMENTED`.
@@ -510,9 +510,9 @@ namespace Google.LongRunning {
         return CallInvoker.BlockingUnaryCall(__Method_WaitOperation, null, options, request);
       }
       /// <summary>
-      /// Waits for the specified long-running operation until it is done or reaches
-      /// at most a specified timeout, returning the latest state.  If the operation
-      /// is already done, the latest state is immediately returned.  If the timeout
+      /// Waits until the specified long-running operation is done or reaches at most
+      /// a specified timeout, returning the latest state.  If the operation is
+      /// already done, the latest state is immediately returned.  If the timeout
       /// specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
       /// timeout is used.  If the server does not support this method, it returns
       /// `google.rpc.Code.UNIMPLEMENTED`.
@@ -530,9 +530,9 @@ namespace Google.LongRunning {
         return WaitOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Waits for the specified long-running operation until it is done or reaches
-      /// at most a specified timeout, returning the latest state.  If the operation
-      /// is already done, the latest state is immediately returned.  If the timeout
+      /// Waits until the specified long-running operation is done or reaches at most
+      /// a specified timeout, returning the latest state.  If the operation is
+      /// already done, the latest state is immediately returned.  If the timeout
       /// specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
       /// timeout is used.  If the server does not support this method, it returns
       /// `google.rpc.Code.UNIMPLEMENTED`.
