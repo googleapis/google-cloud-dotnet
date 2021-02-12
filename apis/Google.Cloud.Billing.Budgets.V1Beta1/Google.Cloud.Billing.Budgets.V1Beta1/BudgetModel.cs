@@ -575,9 +575,10 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int SpecifiedAmountFieldNumber = 1;
     /// <summary>
     /// A specified amount to use as the budget.
-    /// `currency_code` is optional. If specified, it must match the
-    /// currency of the billing account. The `currency_code` is provided on
-    /// output.
+    /// `currency_code` is optional. If specified when creating a budget, it must
+    /// match the currency of the billing account. If specified when updating a
+    /// budget, it must match the existing budget currency_code.
+    /// The `currency_code` is provided on output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Money SpecifiedAmount {
@@ -1267,9 +1268,12 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     public const int SchemaVersionFieldNumber = 2;
     private string schemaVersion_ = "";
     /// <summary>
-    /// Optional. The schema version of the notification sent to `pubsub_topic`.
+    /// Optional. Required when
+    /// [AllUpdatesRule.pubsub_topic][google.cloud.billing.budgets.v1beta1.AllUpdatesRule.pubsub_topic]
+    /// is set. The schema version of the notification sent to
+    /// [AllUpdatesRule.pubsub_topic][google.cloud.billing.budgets.v1beta1.AllUpdatesRule.pubsub_topic].
     /// Only "1.0" is accepted. It represents the JSON schema as defined in
-    /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format
+    /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SchemaVersion {
