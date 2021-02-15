@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListDeployments",
+    "client": "GSuiteAddOnsClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
