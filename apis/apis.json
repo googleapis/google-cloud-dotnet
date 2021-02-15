@@ -887,6 +887,24 @@
       "protoPath": "google/cloud/functions/v1"
     },
     {
+      "id": "Google.Cloud.GSuiteAddOns.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Workspace Add-ons",
+      "productUrl": "https://developers.google.com/gsuite/add-ons/overview",
+      "description": "Recommended Google client library to access the Google Workspace Add-ons API",
+      "tags": [
+        "gsuite",
+        "workspace",
+        "add-ons"
+      ],
+      "dependencies": {
+        "Google.Apps.Script.Type": "project"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/gsuiteaddons/v1"
+    },
+    {
       "id": "Google.Cloud.Gaming.V1",
       "version": "1.0.0",
       "type": "grpc",
