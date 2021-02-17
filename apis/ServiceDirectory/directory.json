@@ -3134,6 +3134,25 @@
       "CSharpNamespaceFromProtos": "Google.Storage.V1"
     },
     {
+      "ServiceDirectory": "google/streetview/publish/v1",
+      "Name": "streetviewpublish.googleapis.com",
+      "Title": "Street View Publish API",
+      "Description": "The Street View Publish API allows your application to publish 360 photos to Google Maps, along with image metadata that specifies the position, orientation, and connectivity of each photo. With this API, any app can offer an interface for positioning, connecting, and uploading user-generated Street View images.",
+      "ServiceConfigFile": "google/streetview/publish/v1/streetview_publish.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.streetview.publish.v1",
+      "PackageFromProtos": "google.streetview.publish.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/protobuf",
+        "google/rpc",
+        "google/streetview/publish/v1",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Streetview.Publish.V1"
+    },
+    {
       "ServiceDirectory": "google/watcher/v1",
       "Name": "watcher.googleapis.com",
       "Title": "Google Watcher API",
