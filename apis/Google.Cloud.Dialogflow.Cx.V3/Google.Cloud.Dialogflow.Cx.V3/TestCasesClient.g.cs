@@ -1444,7 +1444,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callUpdateTestCase = clientHelper.BuildApiCall<UpdateTestCaseRequest, TestCase>(grpcClient.UpdateTestCaseAsync, grpcClient.UpdateTestCase, effectiveSettings.UpdateTestCaseSettings).WithGoogleRequestParam("test_case.name", request => request.TestCase?.Name);
             Modify_ApiCall(ref _callUpdateTestCase);
             Modify_UpdateTestCaseApiCall(ref _callUpdateTestCase);
-            _callRunTestCase = clientHelper.BuildApiCall<RunTestCaseRequest, lro::Operation>(grpcClient.RunTestCaseAsync, grpcClient.RunTestCase, effectiveSettings.RunTestCaseSettings);
+            _callRunTestCase = clientHelper.BuildApiCall<RunTestCaseRequest, lro::Operation>(grpcClient.RunTestCaseAsync, grpcClient.RunTestCase, effectiveSettings.RunTestCaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callRunTestCase);
             Modify_RunTestCaseApiCall(ref _callRunTestCase);
             _callBatchRunTestCases = clientHelper.BuildApiCall<BatchRunTestCasesRequest, lro::Operation>(grpcClient.BatchRunTestCasesAsync, grpcClient.BatchRunTestCases, effectiveSettings.BatchRunTestCasesSettings).WithGoogleRequestParam("parent", request => request.Parent);
