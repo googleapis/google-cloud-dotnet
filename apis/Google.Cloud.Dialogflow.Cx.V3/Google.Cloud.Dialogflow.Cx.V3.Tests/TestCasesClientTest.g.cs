@@ -648,7 +648,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CalculateCoverageRequest request = new CalculateCoverageRequest
             {
-                Type = CalculateCoverageRequest.Types.CoverageType.Unspecified,
+                Type = CalculateCoverageRequest.Types.CoverageType.TransitionRouteGroup,
                 AgentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
             };
             CalculateCoverageResponse expectedResponse = new CalculateCoverageResponse
@@ -656,6 +656,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 IntentCoverage = new IntentCoverage(),
                 TransitionCoverage = new TransitionCoverage(),
                 AgentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                RouteGroupCoverage = new TransitionRouteGroupCoverage(),
             };
             mockGrpcClient.Setup(x => x.CalculateCoverage(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
@@ -671,7 +672,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CalculateCoverageRequest request = new CalculateCoverageRequest
             {
-                Type = CalculateCoverageRequest.Types.CoverageType.Unspecified,
+                Type = CalculateCoverageRequest.Types.CoverageType.TransitionRouteGroup,
                 AgentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
             };
             CalculateCoverageResponse expectedResponse = new CalculateCoverageResponse
@@ -679,6 +680,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 IntentCoverage = new IntentCoverage(),
                 TransitionCoverage = new TransitionCoverage(),
                 AgentAsAgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
+                RouteGroupCoverage = new TransitionRouteGroupCoverage(),
             };
             mockGrpcClient.Setup(x => x.CalculateCoverageAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateCoverageResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TestCasesClient client = new TestCasesClientImpl(mockGrpcClient.Object, null);
