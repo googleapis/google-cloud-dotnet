@@ -996,6 +996,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// `END_OF_SINGLE_UTTERANCE` event and cease recognition. It will return no
     /// more than one `StreamingRecognitionResult` with the `is_final` flag set to
     /// `true`.
+    ///
+    /// The `single_utterance` field can only be used with specified models,
+    /// otherwise an error is thrown. The `model` field in [`RecognitionConfig`][]
+    /// must be set to:
+    ///
+    /// * `command_and_search`
+    /// * `phone_call` AND additional field `useEnhanced`=`true`
+    /// * The `model` field is left undefined. In this case the API auto-selects
+    ///   a model based on any other parameters that you set in
+    ///   `RecognitionConfig`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SingleUtterance {
@@ -2283,7 +2293,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         /// </summary>
         [pbr::OriginalName("SPEEX_WITH_HEADER_BYTE")] SpeexWithHeaderByte = 7,
         /// <summary>
-        /// MP3 audio. Support all standard MP3 bitrates (which range from 32-320
+        /// MP3 audio. MP3 encoding is a Beta feature and only available in
+        /// v1p1beta1. Support all standard MP3 bitrates (which range from 32-320
         /// kbps). When using this encoding, `sample_rate_hertz` has to match the
         /// sample rate of the file being used.
         /// </summary>
@@ -4151,8 +4162,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public const int UriFieldNumber = 4;
     private string uri_ = "";
     /// <summary>
-    /// The URI of the audio file being transcribed. Empty if the audio was sent
-    /// as byte content.
+    /// Output only. The URI of the audio file being transcribed. Empty if the
+    /// audio was sent as byte content.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
