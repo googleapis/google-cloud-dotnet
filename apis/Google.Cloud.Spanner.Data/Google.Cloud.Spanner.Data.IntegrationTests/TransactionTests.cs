@@ -490,9 +490,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact]
+        [SkippableFact]
         public async Task ReturnCommitStats()
         {
+            Skip.If(_fixture.RunningOnEmulator, "Emulator does not yet support CommitStats");
             CommitStatsCapturerLogger logger = new CommitStatsCapturerLogger();
             string key = IdGenerator.FromGuid();
             await RetryHelpers.ExecuteWithRetryAsync(async () =>
