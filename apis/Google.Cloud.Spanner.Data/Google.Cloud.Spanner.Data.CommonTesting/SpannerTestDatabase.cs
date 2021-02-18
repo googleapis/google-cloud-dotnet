@@ -13,9 +13,12 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
+using Google.Cloud.Spanner.Admin.Instance.V1;
 using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
+using Grpc.Core;
 using System;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting
@@ -95,6 +98,7 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             ConnectionString = databaseBuilder.ConnectionString;
             DatabaseName = databaseBuilder.DatabaseName;
 
+            MaybeCreateInstanceOnEmulator(projectId);
             if (Fresh)
             {
                 using (var connection = new SpannerConnection(NoDbConnectionString))
@@ -115,7 +119,41 @@ namespace Google.Cloud.Spanner.Data.CommonTesting
             string value = Environment.GetEnvironmentVariable(name);
             return string.IsNullOrEmpty(value) ? defaultValue : value;
         }
-        
+
+        private void MaybeCreateInstanceOnEmulator(string projectId)
+        {
+            if (SpannerClientCreationOptions.UsesEmulator)
+            {
+                // Try to create an instance on the emulator and ignore any AlreadyExists error.
+                var adminClientBuilder = new InstanceAdminClientBuilder
+                {
+                    EmulatorDetection = EmulatorDetection.EmulatorOnly
+                };
+                var instanceAdminClient = adminClientBuilder.Build();
+
+                var instanceName = InstanceName.FromProjectInstance(projectId, SpannerInstance);
+                try
+                {
+                    instanceAdminClient.CreateInstance(new CreateInstanceRequest
+                    {
+                        InstanceId = instanceName.InstanceId,
+                        ParentAsProjectName = ProjectName.FromProject(projectId),
+                        Instance = new Instance
+                        {
+                            InstanceName = instanceName,
+                            ConfigAsInstanceConfigName = new InstanceConfigName(projectId, "emulator-config"),
+                            DisplayName = "Test Instance",
+                            NodeCount = 1,
+                        },
+                    }).PollUntilCompleted();
+                }
+                catch (RpcException e) when (e.StatusCode == StatusCode.AlreadyExists)
+                {
+                    // Ignore
+                }
+            }
+        }
+
         public SpannerConnection GetConnection() => new SpannerConnection(ConnectionString);
 
         // Creates a SpannerConnection with a specific logger.
