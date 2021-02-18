@@ -5,39 +5,21 @@ on:
     branches:
       - master
 
-jobs:	
+jobs:
 
-  build:	
-    runs-on: ubuntu-18.04	
-    env:	
-      DOTNET_NOLOGO: true	
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DOTNET_NOLOGO: true
 
-    steps:	
-    - uses: actions/checkout@v2	
-      with:	
-        submodules: true	
-        fetch-depth: 100	
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
 
-    # We use the .NET Core 2.1 runtime for testing most packages
-    - name: Setup .NET Core 2.1	
-      uses: actions/setup-dotnet@v1	
-      with:	
-        dotnet-version: 2.1.x	
-
-    # We build with .NET Core 3.1 SDK	
-    - name: Setup .NET Core 3.1	
-      uses: actions/setup-dotnet@v1	
-      with:	
-        dotnet-version: 3.1.x	
-
-    - name: Setup Python	
-      uses: actions/setup-python@v2	
-      with:	
-        python-version: 3.x	
-
-    - name: Build and test	
-      run: |	
+    - name: Build and test
+      run: |
         dotnet --info
-        touch build_timing_log.txt	
+        touch build_timing_log.txt
         ./build.sh
-        ./processbuildtiminglog.sh	
+        ./processbuildtiminglog.sh
