@@ -1,0 +1,36 @@
+name: Spanner tests against emulator (Spanner changes only)
+
+on:
+  pull_request:
+    paths:
+    - '**[Ss]panner**'
+  push:
+    branches:
+      - master
+    paths:
+    - '**[Ss]panner**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      DOTNET_NOLOGO: true
+    services:
+      emulator:
+        image: gcr.io/cloud-spanner-emulator/emulator:latest
+        ports:
+          - 9010:9010
+          - 9020:9020
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Spanner Emulator
+      env:
+          SPANNER_EMULATOR_HOST: localhost:9010
+          TEST_PROJECT: emulator-test-project
+      run: |
+        dotnet test -c Release ./apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.IntegrationTests
+        dotnet test -c Release ./apis/Google.Cloud.Spanner.Data/Google.Cloud.Spanner.Data.Snippets
