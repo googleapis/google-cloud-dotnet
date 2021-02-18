@@ -105,11 +105,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_bind_numeric_null]
         // [START spanner_test_query_bind_numeric_array_null]
         // [END spanner_test_query_bind_numeric_array_null]
-        [SkippableTheory]
+        [Theory]
         [MemberData(nameof(BindNullNumericData))]
         public async Task BindNullNumeric(SpannerDbType parameterType)
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
             using (var connection = _fixture.GetConnection())
             {
                 var cmd = connection.CreateSelectCommand("SELECT @v");
@@ -275,19 +274,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_bind_int64_array_empty]
 
         // [START spanner_test_query_bind_numeric]
-        [SkippableFact]
+        [Fact]
         public async Task BindNumeric()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
             await TestBindNonNull(SpannerDbType.Numeric, SpannerNumeric.Parse("1.0"), r => r.GetNumeric(0));
         }
         // [END spanner_test_query_bind_numeric]
 
         // [START spanner_test_query_bind_numeric_array]
-        [SkippableFact]
+        [Fact]
         public async Task BindNumericArray()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
             await TestBindNonNull(
                 SpannerDbType.ArrayOf(SpannerDbType.Numeric),
                 new SpannerNumeric?[] {SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("1.0")});
@@ -295,10 +292,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // [END spanner_test_query_bind_numeric_array]
 
         // [START spanner_test_query_bind_numeric_array_empty]
-        [SkippableFact]
+        [Fact]
         public async Task BindNumericEmptyArray()
         {
-            Skip.If(_fixture.RunningOnEmulator, "The emulator doesn't yet support the NUMERIC type");
             await TestBindNonNull(SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[] { });
         }
         // [END spanner_test_query_bind_numeric_array_empty]
