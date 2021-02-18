@@ -111,6 +111,22 @@
       "CSharpNamespaceFromProtos": "Google.Analytics.Data.V1Alpha"
     },
     {
+      "ServiceDirectory": "google/analytics/data/v1beta",
+      "Name": "analyticsdata.googleapis.com",
+      "Title": "Google Analytics Data API",
+      "Description": "Accesses report data in Google Analytics.",
+      "ServiceConfigFile": "google/analytics/data/v1beta/analyticsdata_v1beta.yaml",
+      "Version": "v1beta",
+      "PackageFromDirectory": "google.analytics.data.v1beta",
+      "PackageFromProtos": "google.analytics.data.v1beta",
+      "ImportDirectories": [
+        "google/analytics/data/v1beta",
+        "google/api"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Analytics.Data.V1Beta"
+    },
+    {
       "ServiceDirectory": "google/api/servicecontrol/v1",
       "Name": "servicecontrol.googleapis.com",
       "Title": "Service Control API",
