@@ -25,8 +25,8 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvc3BlZWNoL3YxcDFiZXRhMS9yZXNvdXJjZS5wcm90",
-            "bxIdZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEaHGdvb2dsZS9hcGkv",
-            "YW5ub3RhdGlvbnMucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i",
+            "bxIdZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEaGWdvb2dsZS9hcGkv",
+            "cmVzb3VyY2UucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
             "gwIKC0N1c3RvbUNsYXNzEgwKBG5hbWUYASABKAkSFwoPY3VzdG9tX2NsYXNz",
             "X2lkGAIgASgJEkMKBWl0ZW1zGAMgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVj",
             "aC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MuQ2xhc3NJdGVtGhoKCUNsYXNzSXRl",
@@ -38,20 +38,20 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             "b29zdBgEIAEoAhomCgZQaHJhc2USDQoFdmFsdWUYASABKAkSDQoFYm9vc3QY",
             "AiABKAI6ZepBYgofc3BlZWNoLmdvb2dsZWFwaXMuY29tL1BocmFzZVNldBI/",
             "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3BocmFz",
-            "ZVNldHMve3BocmFzZV9zZXR9IpUBChBTcGVlY2hBZGFwdGF0aW9uEj0KC3Bo",
+            "ZVNldHMve3BocmFzZV9zZXR9IrQBChBTcGVlY2hBZGFwdGF0aW9uEj0KC3Bo",
             "cmFzZV9zZXRzGAEgAygLMiguZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0",
-            "YTEuUGhyYXNlU2V0EkIKDmN1c3RvbV9jbGFzc2VzGAIgAygLMiouZ29vZ2xl",
-            "LmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3NCiAEKIWNvbS5n",
-            "b29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMUITU3BlZWNoUmVzb3VyY2VQ",
-            "cm90b1ABWkNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Nsb3VkL3NwZWVjaC92MXAxYmV0YTE7c3BlZWNo+AEBogIDR0NTYgZwcm90",
-            "bzM="));
+            "YTEuUGhyYXNlU2V0Eh0KFXBocmFzZV9zZXRfcmVmZXJlbmNlcxgCIAMoCRJC",
+            "Cg5jdXN0b21fY2xhc3NlcxgDIAMoCzIqLmdvb2dsZS5jbG91ZC5zcGVlY2gu",
+            "djFwMWJldGExLkN1c3RvbUNsYXNzQogBCiFjb20uZ29vZ2xlLmNsb3VkLnNw",
+            "ZWVjaC52MXAxYmV0YTFCE1NwZWVjaFJlc291cmNlUHJvdG9QAVpDZ29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zcGVlY2gv",
+            "djFwMWJldGExO3NwZWVjaPgBAaICA0dDU2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser, new[]{ "Name", "CustomClassId", "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem.Parser, new[]{ "Value" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Parser, new[]{ "Name", "Phrases", "Boost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase.Parser, new[]{ "Value", "Boost" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation), global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "CustomClasses" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation), global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses" }, null, null, null, null)
           }));
     }
     #endregion
@@ -122,7 +122,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     private string customClassId_ = "";
     /// <summary>
     /// If this custom class is a resource, the custom_class_id is the resource id
-    /// of the CustomClass.
+    /// of the CustomClass. Case sensitive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CustomClassId {
@@ -1029,6 +1029,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SpeechAdaptation(SpeechAdaptation other) : this() {
       phraseSets_ = other.phraseSets_.Clone();
+      phraseSetReferences_ = other.phraseSetReferences_.Clone();
       customClasses_ = other.customClasses_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1053,10 +1054,23 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       get { return phraseSets_; }
     }
 
+    /// <summary>Field number for the "phrase_set_references" field.</summary>
+    public const int PhraseSetReferencesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_phraseSetReferences_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> phraseSetReferences_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// A collection of phrase set resource names to use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> PhraseSetReferences {
+      get { return phraseSetReferences_; }
+    }
+
     /// <summary>Field number for the "custom_classes" field.</summary>
-    public const int CustomClassesFieldNumber = 2;
+    public const int CustomClassesFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> _repeated_customClasses_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser);
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> customClasses_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1P1Beta1.CustomClass>();
     /// <summary>
     /// A collection of custom classes. To specify the classes inline, leave the
@@ -1083,6 +1097,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         return true;
       }
       if(!phraseSets_.Equals(other.phraseSets_)) return false;
+      if(!phraseSetReferences_.Equals(other.phraseSetReferences_)) return false;
       if(!customClasses_.Equals(other.customClasses_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1091,6 +1106,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= phraseSets_.GetHashCode();
+      hash ^= phraseSetReferences_.GetHashCode();
       hash ^= customClasses_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1109,6 +1125,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       output.WriteRawMessage(this);
     #else
       phraseSets_.WriteTo(output, _repeated_phraseSets_codec);
+      phraseSetReferences_.WriteTo(output, _repeated_phraseSetReferences_codec);
       customClasses_.WriteTo(output, _repeated_customClasses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1120,6 +1137,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       phraseSets_.WriteTo(ref output, _repeated_phraseSets_codec);
+      phraseSetReferences_.WriteTo(ref output, _repeated_phraseSetReferences_codec);
       customClasses_.WriteTo(ref output, _repeated_customClasses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1131,6 +1149,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     public int CalculateSize() {
       int size = 0;
       size += phraseSets_.CalculateSize(_repeated_phraseSets_codec);
+      size += phraseSetReferences_.CalculateSize(_repeated_phraseSetReferences_codec);
       size += customClasses_.CalculateSize(_repeated_customClasses_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1144,6 +1163,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         return;
       }
       phraseSets_.Add(other.phraseSets_);
+      phraseSetReferences_.Add(other.phraseSetReferences_);
       customClasses_.Add(other.customClasses_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1164,6 +1184,10 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           }
           case 18: {
+            phraseSetReferences_.AddEntriesFrom(input, _repeated_phraseSetReferences_codec);
+            break;
+          }
+          case 26: {
             customClasses_.AddEntriesFrom(input, _repeated_customClasses_codec);
             break;
           }
@@ -1186,6 +1210,10 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             break;
           }
           case 18: {
+            phraseSetReferences_.AddEntriesFrom(ref input, _repeated_phraseSetReferences_codec);
+            break;
+          }
+          case 26: {
             customClasses_.AddEntriesFrom(ref input, _repeated_customClasses_codec);
             break;
           }
