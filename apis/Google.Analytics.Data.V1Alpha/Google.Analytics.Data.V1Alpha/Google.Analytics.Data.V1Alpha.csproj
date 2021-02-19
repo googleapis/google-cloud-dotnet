@@ -4,7 +4,7 @@
     <Version>1.0.0-alpha04</Version>
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the Analytics Data API</Description>
+    <Description>Recommended Google client library to access the Analytics Data API (v1alpha)</Description>
     <PackageTags>analytics;Google;Cloud</PackageTags>
     <Copyright>Copyright 2021 Google LLC</Copyright>
     <CodeAnalysisRuleSet>..\..\..\grpc.ruleset</CodeAnalysisRuleSet>
