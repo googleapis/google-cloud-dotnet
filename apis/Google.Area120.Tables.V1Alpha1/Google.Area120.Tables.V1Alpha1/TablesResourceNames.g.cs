@@ -414,6 +414,236 @@ namespace Google.Area120.Tables.V1Alpha1
         public static bool operator !=(RowName a, RowName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Workspace</c> resource.</summary>
+    public sealed partial class WorkspaceName : gax::IResourceName, sys::IEquatable<WorkspaceName>
+    {
+        /// <summary>The possible contents of <see cref="WorkspaceName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>workspaces/{workspace}</c>.</summary>
+            Workspace = 1,
+        }
+
+        private static gax::PathTemplate s_workspace = new gax::PathTemplate("workspaces/{workspace}");
+
+        /// <summary>Creates a <see cref="WorkspaceName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="WorkspaceName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static WorkspaceName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new WorkspaceName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>Creates a <see cref="WorkspaceName"/> with the pattern <c>workspaces/{workspace}</c>.</summary>
+        /// <param name="workspaceId">The <c>Workspace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="WorkspaceName"/> constructed from the provided ids.</returns>
+        public static WorkspaceName FromWorkspace(string workspaceId) =>
+            new WorkspaceName(ResourceNameType.Workspace, workspaceId: gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkspaceName"/> with pattern
+        /// <c>workspaces/{workspace}</c>.
+        /// </summary>
+        /// <param name="workspaceId">The <c>Workspace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkspaceName"/> with pattern <c>workspaces/{workspace}</c>.
+        /// </returns>
+        public static string Format(string workspaceId) => FormatWorkspace(workspaceId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="WorkspaceName"/> with pattern
+        /// <c>workspaces/{workspace}</c>.
+        /// </summary>
+        /// <param name="workspaceId">The <c>Workspace</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="WorkspaceName"/> with pattern <c>workspaces/{workspace}</c>.
+        /// </returns>
+        public static string FormatWorkspace(string workspaceId) =>
+            s_workspace.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="WorkspaceName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>workspaces/{workspace}</c></description></item></list>
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="WorkspaceName"/> if successful.</returns>
+        public static WorkspaceName Parse(string workspaceName) => Parse(workspaceName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="WorkspaceName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>workspaces/{workspace}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="WorkspaceName"/> if successful.</returns>
+        public static WorkspaceName Parse(string workspaceName, bool allowUnparsed) =>
+            TryParse(workspaceName, allowUnparsed, out WorkspaceName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkspaceName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>workspaces/{workspace}</c></description></item></list>
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkspaceName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workspaceName, out WorkspaceName result) => TryParse(workspaceName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="WorkspaceName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>workspaces/{workspace}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="workspaceName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="WorkspaceName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string workspaceName, bool allowUnparsed, out WorkspaceName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(workspaceName, nameof(workspaceName));
+            gax::TemplatedResourceName resourceName;
+            if (s_workspace.TryParseName(workspaceName, out resourceName))
+            {
+                result = FromWorkspace(resourceName[0]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(workspaceName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private WorkspaceName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string workspaceId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            WorkspaceId = workspaceId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="WorkspaceName"/> class from the component parts of pattern
+        /// <c>workspaces/{workspace}</c>
+        /// </summary>
+        /// <param name="workspaceId">The <c>Workspace</c> ID. Must not be <c>null</c> or empty.</param>
+        public WorkspaceName(string workspaceId) : this(ResourceNameType.Workspace, workspaceId: gax::GaxPreconditions.CheckNotNullOrEmpty(workspaceId, nameof(workspaceId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Workspace</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string WorkspaceId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.Workspace: return s_workspace.Expand(WorkspaceId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as WorkspaceName);
+
+        /// <inheritdoc/>
+        public bool Equals(WorkspaceName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(WorkspaceName a, WorkspaceName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(WorkspaceName a, WorkspaceName b) => !(a == b);
+    }
+
+    public partial class GetTableRequest
+    {
+        /// <summary>
+        /// <see cref="gatv::TableName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gatv::TableName TableName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gatv::TableName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetWorkspaceRequest
+    {
+        /// <summary>
+        /// <see cref="gatv::WorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gatv::WorkspaceName WorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gatv::WorkspaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetRowRequest
+    {
+        /// <summary>
+        /// <see cref="gatv::RowName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gatv::RowName RowName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gatv::RowName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteRowRequest
     {
         /// <summary>
@@ -423,6 +653,22 @@ namespace Google.Area120.Tables.V1Alpha1
         {
             get => string.IsNullOrEmpty(Name) ? null : gatv::RowName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchDeleteRowsRequest
+    {
+        /// <summary><see cref="TableName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="RowName"/>-typed view over the <see cref="Names"/> resource name property.</summary>
+        public gax::ResourceNameList<RowName> RowNames
+        {
+            get => new gax::ResourceNameList<RowName>(Names, s => string.IsNullOrEmpty(s) ? null : RowName.Parse(s, allowUnparsed: true));
         }
     }
 
@@ -446,6 +692,18 @@ namespace Google.Area120.Tables.V1Alpha1
         public gatv::RowName RowName
         {
             get => string.IsNullOrEmpty(Name) ? null : gatv::RowName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Workspace
+    {
+        /// <summary>
+        /// <see cref="gatv::WorkspaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gatv::WorkspaceName WorkspaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gatv::WorkspaceName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

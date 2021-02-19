@@ -32,7 +32,10 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Create client
             TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
             // Initialize request argument(s)
-            GetTableRequest request = new GetTableRequest { Name = "", };
+            GetTableRequest request = new GetTableRequest
+            {
+                TableName = TableName.FromTable("[TABLE]"),
+            };
             // Make the request
             Table response = tablesServiceClient.GetTable(request);
             // End snippet
@@ -46,7 +49,10 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Create client
             TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GetTableRequest request = new GetTableRequest { Name = "", };
+            GetTableRequest request = new GetTableRequest
+            {
+                TableName = TableName.FromTable("[TABLE]"),
+            };
             // Make the request
             Table response = await tablesServiceClient.GetTableAsync(request);
             // End snippet
@@ -59,7 +65,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Create client
             TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "tables/[TABLE]";
             // Make the request
             Table response = tablesServiceClient.GetTable(name);
             // End snippet
@@ -73,7 +79,34 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Create client
             TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "tables/[TABLE]";
+            // Make the request
+            Table response = await tablesServiceClient.GetTableAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTable</summary>
+        public void GetTableResourceNames()
+        {
+            // Snippet: GetTable(TableName, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
+            // Initialize request argument(s)
+            TableName name = TableName.FromTable("[TABLE]");
+            // Make the request
+            Table response = tablesServiceClient.GetTable(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetTableAsync</summary>
+        public async Task GetTableResourceNamesAsync()
+        {
+            // Snippet: GetTableAsync(TableName, CallSettings)
+            // Additional: GetTableAsync(TableName, CancellationToken)
+            // Create client
+            TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TableName name = TableName.FromTable("[TABLE]");
             // Make the request
             Table response = await tablesServiceClient.GetTableAsync(name);
             // End snippet
@@ -169,6 +202,183 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetWorkspace</summary>
+        public void GetWorkspaceRequestObject()
+        {
+            // Snippet: GetWorkspace(GetWorkspaceRequest, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
+            // Initialize request argument(s)
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            // Make the request
+            Workspace response = tablesServiceClient.GetWorkspace(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkspaceAsync</summary>
+        public async Task GetWorkspaceRequestObjectAsync()
+        {
+            // Snippet: GetWorkspaceAsync(GetWorkspaceRequest, CallSettings)
+            // Additional: GetWorkspaceAsync(GetWorkspaceRequest, CancellationToken)
+            // Create client
+            TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            // Make the request
+            Workspace response = await tablesServiceClient.GetWorkspaceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkspace</summary>
+        public void GetWorkspace()
+        {
+            // Snippet: GetWorkspace(string, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "workspaces/[WORKSPACE]";
+            // Make the request
+            Workspace response = tablesServiceClient.GetWorkspace(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkspaceAsync</summary>
+        public async Task GetWorkspaceAsync()
+        {
+            // Snippet: GetWorkspaceAsync(string, CallSettings)
+            // Additional: GetWorkspaceAsync(string, CancellationToken)
+            // Create client
+            TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "workspaces/[WORKSPACE]";
+            // Make the request
+            Workspace response = await tablesServiceClient.GetWorkspaceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkspace</summary>
+        public void GetWorkspaceResourceNames()
+        {
+            // Snippet: GetWorkspace(WorkspaceName, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
+            // Initialize request argument(s)
+            WorkspaceName name = WorkspaceName.FromWorkspace("[WORKSPACE]");
+            // Make the request
+            Workspace response = tablesServiceClient.GetWorkspace(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetWorkspaceAsync</summary>
+        public async Task GetWorkspaceResourceNamesAsync()
+        {
+            // Snippet: GetWorkspaceAsync(WorkspaceName, CallSettings)
+            // Additional: GetWorkspaceAsync(WorkspaceName, CancellationToken)
+            // Create client
+            TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            WorkspaceName name = WorkspaceName.FromWorkspace("[WORKSPACE]");
+            // Make the request
+            Workspace response = await tablesServiceClient.GetWorkspaceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkspaces</summary>
+        public void ListWorkspacesRequestObject()
+        {
+            // Snippet: ListWorkspaces(ListWorkspacesRequest, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
+            // Initialize request argument(s)
+            ListWorkspacesRequest request = new ListWorkspacesRequest { };
+            // Make the request
+            PagedEnumerable<ListWorkspacesResponse, Workspace> response = tablesServiceClient.ListWorkspaces(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Workspace item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkspacesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Workspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Workspace> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Workspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkspaces</summary>
+        public async Task ListWorkspacesRequestObjectAsync()
+        {
+            // Snippet: ListWorkspacesAsync(ListWorkspacesRequest, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListWorkspacesRequest request = new ListWorkspacesRequest { };
+            // Make the request
+            PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> response = tablesServiceClient.ListWorkspacesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Workspace item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkspacesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Workspace item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Workspace> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Workspace item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for GetRow</summary>
         public void GetRowRequestObject()
         {
@@ -178,7 +388,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Initialize request argument(s)
             GetRowRequest request = new GetRowRequest
             {
-                Name = "",
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
                 View = View.Unspecified,
             };
             // Make the request
@@ -196,7 +406,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Initialize request argument(s)
             GetRowRequest request = new GetRowRequest
             {
-                Name = "",
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
                 View = View.Unspecified,
             };
             // Make the request
@@ -211,7 +421,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Create client
             TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "tables/[TABLE]/rows/[ROW]";
             // Make the request
             Row response = tablesServiceClient.GetRow(name);
             // End snippet
@@ -225,7 +435,34 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             // Create client
             TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "tables/[TABLE]/rows/[ROW]";
+            // Make the request
+            Row response = await tablesServiceClient.GetRowAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRow</summary>
+        public void GetRowResourceNames()
+        {
+            // Snippet: GetRow(RowName, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
+            // Initialize request argument(s)
+            RowName name = RowName.FromTableRow("[TABLE]", "[ROW]");
+            // Make the request
+            Row response = tablesServiceClient.GetRow(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRowAsync</summary>
+        public async Task GetRowResourceNamesAsync()
+        {
+            // Snippet: GetRowAsync(RowName, CallSettings)
+            // Additional: GetRowAsync(RowName, CancellationToken)
+            // Create client
+            TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RowName name = RowName.FromTableRow("[TABLE]", "[ROW]");
             // Make the request
             Row response = await tablesServiceClient.GetRowAsync(name);
             // End snippet
@@ -242,6 +479,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             {
                 Parent = "",
                 View = View.Unspecified,
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListRowsResponse, Row> response = tablesServiceClient.ListRows(request);
@@ -291,6 +529,7 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             {
                 Parent = "",
                 View = View.Unspecified,
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListRowsResponse, Row> response = tablesServiceClient.ListRowsAsync(request);
@@ -717,6 +956,47 @@ namespace Google.Area120.Tables.V1Alpha1.Snippets
             RowName name = RowName.FromTableRow("[TABLE]", "[ROW]");
             // Make the request
             await tablesServiceClient.DeleteRowAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteRows</summary>
+        public void BatchDeleteRowsRequestObject()
+        {
+            // Snippet: BatchDeleteRows(BatchDeleteRowsRequest, CallSettings)
+            // Create client
+            TablesServiceClient tablesServiceClient = TablesServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeleteRowsRequest request = new BatchDeleteRowsRequest
+            {
+                ParentAsTableName = TableName.FromTable("[TABLE]"),
+                RowNames =
+                {
+                    RowName.FromTableRow("[TABLE]", "[ROW]"),
+                },
+            };
+            // Make the request
+            tablesServiceClient.BatchDeleteRows(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeleteRowsAsync</summary>
+        public async Task BatchDeleteRowsRequestObjectAsync()
+        {
+            // Snippet: BatchDeleteRowsAsync(BatchDeleteRowsRequest, CallSettings)
+            // Additional: BatchDeleteRowsAsync(BatchDeleteRowsRequest, CancellationToken)
+            // Create client
+            TablesServiceClient tablesServiceClient = await TablesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeleteRowsRequest request = new BatchDeleteRowsRequest
+            {
+                ParentAsTableName = TableName.FromTable("[TABLE]"),
+                RowNames =
+                {
+                    RowName.FromTableRow("[TABLE]", "[ROW]"),
+                },
+            };
+            // Make the request
+            await tablesServiceClient.BatchDeleteRowsAsync(request);
             // End snippet
         }
     }

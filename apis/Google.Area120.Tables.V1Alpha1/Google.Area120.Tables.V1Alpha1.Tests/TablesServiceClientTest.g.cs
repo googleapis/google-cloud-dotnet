@@ -33,7 +33,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetTableRequest request = new GetTableRequest
             {
-                Name = "name1c9368b0",
+                TableName = TableName.FromTable("[TABLE]"),
             };
             Table expectedResponse = new Table
             {
@@ -57,7 +57,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetTableRequest request = new GetTableRequest
             {
-                Name = "name1c9368b0",
+                TableName = TableName.FromTable("[TABLE]"),
             };
             Table expectedResponse = new Table
             {
@@ -83,7 +83,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetTableRequest request = new GetTableRequest
             {
-                Name = "name1c9368b0",
+                TableName = TableName.FromTable("[TABLE]"),
             };
             Table expectedResponse = new Table
             {
@@ -107,7 +107,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetTableRequest request = new GetTableRequest
             {
-                Name = "name1c9368b0",
+                TableName = TableName.FromTable("[TABLE]"),
             };
             Table expectedResponse = new Table
             {
@@ -128,12 +128,194 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetTableResourceNames()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetTableRequest request = new GetTableRequest
+            {
+                TableName = TableName.FromTable("[TABLE]"),
+            };
+            Table expectedResponse = new Table
+            {
+                TableName = TableName.FromTable("[TABLE]"),
+                DisplayName = "display_name137f65c2",
+                Columns =
+                {
+                    new ColumnDescription(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Table response = client.GetTable(request.TableName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetTableResourceNamesAsync()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetTableRequest request = new GetTableRequest
+            {
+                TableName = TableName.FromTable("[TABLE]"),
+            };
+            Table expectedResponse = new Table
+            {
+                TableName = TableName.FromTable("[TABLE]"),
+                DisplayName = "display_name137f65c2",
+                Columns =
+                {
+                    new ColumnDescription(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Table>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Table responseCallSettings = await client.GetTableAsync(request.TableName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Table responseCancellationToken = await client.GetTableAsync(request.TableName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetWorkspaceRequestObject()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            Workspace expectedResponse = new Workspace
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+                DisplayName = "display_name137f65c2",
+                Tables = { new Table(), },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkspace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Workspace response = client.GetWorkspace(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetWorkspaceRequestObjectAsync()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            Workspace expectedResponse = new Workspace
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+                DisplayName = "display_name137f65c2",
+                Tables = { new Table(), },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkspaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workspace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Workspace responseCallSettings = await client.GetWorkspaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Workspace responseCancellationToken = await client.GetWorkspaceAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetWorkspace()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            Workspace expectedResponse = new Workspace
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+                DisplayName = "display_name137f65c2",
+                Tables = { new Table(), },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkspace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Workspace response = client.GetWorkspace(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetWorkspaceAsync()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            Workspace expectedResponse = new Workspace
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+                DisplayName = "display_name137f65c2",
+                Tables = { new Table(), },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkspaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workspace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Workspace responseCallSettings = await client.GetWorkspaceAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Workspace responseCancellationToken = await client.GetWorkspaceAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetWorkspaceResourceNames()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            Workspace expectedResponse = new Workspace
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+                DisplayName = "display_name137f65c2",
+                Tables = { new Table(), },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkspace(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Workspace response = client.GetWorkspace(request.WorkspaceName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetWorkspaceResourceNamesAsync()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetWorkspaceRequest request = new GetWorkspaceRequest
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+            };
+            Workspace expectedResponse = new Workspace
+            {
+                WorkspaceName = WorkspaceName.FromWorkspace("[WORKSPACE]"),
+                DisplayName = "display_name137f65c2",
+                Tables = { new Table(), },
+            };
+            mockGrpcClient.Setup(x => x.GetWorkspaceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workspace>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Workspace responseCallSettings = await client.GetWorkspaceAsync(request.WorkspaceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Workspace responseCancellationToken = await client.GetWorkspaceAsync(request.WorkspaceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetRowRequestObject()
         {
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetRowRequest request = new GetRowRequest
             {
-                Name = "name1c9368b0",
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
                 View = View.ColumnIdView,
             };
             Row expectedResponse = new Row
@@ -160,7 +342,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetRowRequest request = new GetRowRequest
             {
-                Name = "name1c9368b0",
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
                 View = View.ColumnIdView,
             };
             Row expectedResponse = new Row
@@ -189,7 +371,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetRowRequest request = new GetRowRequest
             {
-                Name = "name1c9368b0",
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
             };
             Row expectedResponse = new Row
             {
@@ -215,7 +397,7 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
             GetRowRequest request = new GetRowRequest
             {
-                Name = "name1c9368b0",
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
             };
             Row expectedResponse = new Row
             {
@@ -233,6 +415,60 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             Row responseCallSettings = await client.GetRowAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Row responseCancellationToken = await client.GetRowAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetRowResourceNames()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetRowRequest request = new GetRowRequest
+            {
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
+            };
+            Row expectedResponse = new Row
+            {
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
+                Values =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetRow(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Row response = client.GetRow(request.RowName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetRowResourceNamesAsync()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            GetRowRequest request = new GetRowRequest
+            {
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
+            };
+            Row expectedResponse = new Row
+            {
+                RowName = RowName.FromTableRow("[TABLE]", "[ROW]"),
+                Values =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+            };
+            mockGrpcClient.Setup(x => x.GetRowAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Row>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            Row responseCallSettings = await client.GetRowAsync(request.RowName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Row responseCancellationToken = await client.GetRowAsync(request.RowName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -639,6 +875,45 @@ namespace Google.Area120.Tables.V1Alpha1.Tests
             TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
             await client.DeleteRowAsync(request.RowName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteRowAsync(request.RowName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void BatchDeleteRowsRequestObject()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            BatchDeleteRowsRequest request = new BatchDeleteRowsRequest
+            {
+                ParentAsTableName = TableName.FromTable("[TABLE]"),
+                RowNames =
+                {
+                    RowName.FromTableRow("[TABLE]", "[ROW]"),
+                },
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchDeleteRows(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            client.BatchDeleteRows(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task BatchDeleteRowsRequestObjectAsync()
+        {
+            moq::Mock<TablesService.TablesServiceClient> mockGrpcClient = new moq::Mock<TablesService.TablesServiceClient>(moq::MockBehavior.Strict);
+            BatchDeleteRowsRequest request = new BatchDeleteRowsRequest
+            {
+                ParentAsTableName = TableName.FromTable("[TABLE]"),
+                RowNames =
+                {
+                    RowName.FromTableRow("[TABLE]", "[ROW]"),
+                },
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.BatchDeleteRowsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TablesServiceClient client = new TablesServiceClientImpl(mockGrpcClient.Object, null);
+            await client.BatchDeleteRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.BatchDeleteRowsAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }
