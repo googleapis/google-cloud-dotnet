@@ -295,9 +295,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
         /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
-        /// default 'draft' environment. If `User ID` is not specified, we are using
-        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
-        /// `User Id`. They can be a random number or some type of user and session
+        /// default 'draft' environment (`Environment ID` might be referred to as
+        /// environment name at some places). If `User ID` is not specified, we are
+        /// using "-". It's up to the API caller to choose an appropriate `Session ID`
+        /// and `User Id`. They can be a random number or some type of user and session
         /// identifiers (preferably hashed). The length of the `Session ID` and
         /// `User ID` must not exceed 36 characters.
         /// 
@@ -342,9 +343,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
         /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
-        /// default 'draft' environment. If `User ID` is not specified, we are using
-        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
-        /// `User Id`. They can be a random number or some type of user and session
+        /// default 'draft' environment (`Environment ID` might be referred to as
+        /// environment name at some places). If `User ID` is not specified, we are
+        /// using "-". It's up to the API caller to choose an appropriate `Session ID`
+        /// and `User Id`. They can be a random number or some type of user and session
         /// identifiers (preferably hashed). The length of the `Session ID` and
         /// `User ID` must not exceed 36 characters.
         /// 
@@ -389,9 +391,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
         /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
-        /// default 'draft' environment. If `User ID` is not specified, we are using
-        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
-        /// `User Id`. They can be a random number or some type of user and session
+        /// default 'draft' environment (`Environment ID` might be referred to as
+        /// environment name at some places). If `User ID` is not specified, we are
+        /// using "-". It's up to the API caller to choose an appropriate `Session ID`
+        /// and `User Id`. They can be a random number or some type of user and session
         /// identifiers (preferably hashed). The length of the `Session ID` and
         /// `User ID` must not exceed 36 characters.
         /// 
@@ -432,9 +435,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
         /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
-        /// default 'draft' environment. If `User ID` is not specified, we are using
-        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
-        /// `User Id`. They can be a random number or some type of user and session
+        /// default 'draft' environment (`Environment ID` might be referred to as
+        /// environment name at some places). If `User ID` is not specified, we are
+        /// using "-". It's up to the API caller to choose an appropriate `Session ID`
+        /// and `User Id`. They can be a random number or some type of user and session
         /// identifiers (preferably hashed). The length of the `Session ID` and
         /// `User ID` must not exceed 36 characters.
         /// 
@@ -479,9 +483,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
         /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
-        /// default 'draft' environment. If `User ID` is not specified, we are using
-        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
-        /// `User Id`. They can be a random number or some type of user and session
+        /// default 'draft' environment (`Environment ID` might be referred to as
+        /// environment name at some places). If `User ID` is not specified, we are
+        /// using "-". It's up to the API caller to choose an appropriate `Session ID`
+        /// and `User Id`. They can be a random number or some type of user and session
         /// identifiers (preferably hashed). The length of the `Session ID` and
         /// `User ID` must not exceed 36 characters.
         /// 
@@ -526,9 +531,10 @@ namespace Google.Cloud.Dialogflow.V2
         /// `projects/{Project ID}/agent/sessions/{Session ID}`, or
         /// `projects/{Project ID}/agent/environments/{Environment ID}/users/{User
         /// ID&amp;gt;/sessions/&amp;lt;Session ID&amp;gt;`. If `Environment ID` is not specified, we assume
-        /// default 'draft' environment. If `User ID` is not specified, we are using
-        /// "-". It's up to the API caller to choose an appropriate `Session ID` and
-        /// `User Id`. They can be a random number or some type of user and session
+        /// default 'draft' environment (`Environment ID` might be referred to as
+        /// environment name at some places). If `User ID` is not specified, we are
+        /// using "-". It's up to the API caller to choose an appropriate `Session ID`
+        /// and `User Id`. They can be a random number or some type of user and session
         /// identifiers (preferably hashed). The length of the `Session ID` and
         /// `User ID` must not exceed 36 characters.
         /// 
