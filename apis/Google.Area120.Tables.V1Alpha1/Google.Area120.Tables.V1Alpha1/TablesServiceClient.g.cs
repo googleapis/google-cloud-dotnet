@@ -47,6 +47,8 @@ namespace Google.Area120.Tables.V1Alpha1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetTableSettings = existing.GetTableSettings;
             ListTablesSettings = existing.ListTablesSettings;
+            GetWorkspaceSettings = existing.GetWorkspaceSettings;
+            ListWorkspacesSettings = existing.ListWorkspacesSettings;
             GetRowSettings = existing.GetRowSettings;
             ListRowsSettings = existing.ListRowsSettings;
             CreateRowSettings = existing.CreateRowSettings;
@@ -54,6 +56,7 @@ namespace Google.Area120.Tables.V1Alpha1
             UpdateRowSettings = existing.UpdateRowSettings;
             BatchUpdateRowsSettings = existing.BatchUpdateRowsSettings;
             DeleteRowSettings = existing.DeleteRowSettings;
+            BatchDeleteRowsSettings = existing.BatchDeleteRowsSettings;
             OnCopy(existing);
         }
 
@@ -82,6 +85,30 @@ namespace Google.Area120.Tables.V1Alpha1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListTablesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TablesServiceClient.GetWorkspace</c> and <c>TablesServiceClient.GetWorkspaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetWorkspaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TablesServiceClient.ListWorkspaces</c> and <c>TablesServiceClient.ListWorkspacesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListWorkspacesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>TablesServiceClient.GetRow</c>
@@ -167,6 +194,18 @@ namespace Google.Area120.Tables.V1Alpha1
         /// </remarks>
         public gaxgrpc::CallSettings DeleteRowSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TablesServiceClient.BatchDeleteRows</c> and <c>TablesServiceClient.BatchDeleteRowsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeleteRowsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="TablesServiceSettings"/> object.</returns>
         public TablesServiceSettings Clone() => new TablesServiceSettings(this);
@@ -240,6 +279,10 @@ namespace Google.Area120.Tables.V1Alpha1
     /// 
     /// - Each Table has a collection of [Row][google.area120.tables.v1alpha1.Row]
     /// resources, named `tables/*/rows/*`
+    /// 
+    /// - The API has a collection of
+    /// [Workspace][google.area120.tables.v1alpha1.Workspace]
+    /// resources, named `workspaces/*`.
     /// </remarks>
     public abstract partial class TablesServiceClient
     {
@@ -258,6 +301,7 @@ namespace Google.Area120.Tables.V1Alpha1
         /// <item><description>https://www.googleapis.com/auth/drive.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/spreadsheets</description></item>
         /// <item><description>https://www.googleapis.com/auth/spreadsheets.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/tables</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
@@ -267,6 +311,7 @@ namespace Google.Area120.Tables.V1Alpha1
             "https://www.googleapis.com/auth/drive.readonly",
             "https://www.googleapis.com/auth/spreadsheets",
             "https://www.googleapis.com/auth/spreadsheets.readonly",
+            "https://www.googleapis.com/auth/tables",
         });
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(DefaultScopes);
@@ -395,6 +440,48 @@ namespace Google.Area120.Tables.V1Alpha1
             GetTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets a table. Returns NOT_FOUND if the table does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the table to retrieve.
+        /// Format: tables/{table}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Table GetTable(TableName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTable(new GetTableRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a table. Returns NOT_FOUND if the table does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the table to retrieve.
+        /// Format: tables/{table}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Table> GetTableAsync(TableName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTableAsync(new GetTableRequest
+            {
+                TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a table. Returns NOT_FOUND if the table does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the table to retrieve.
+        /// Format: tables/{table}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Table> GetTableAsync(TableName name, st::CancellationToken cancellationToken) =>
+            GetTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists tables for the user.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -410,6 +497,135 @@ namespace Google.Area120.Tables.V1Alpha1
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Table"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<ListTablesResponse, Table> ListTablesAsync(ListTablesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Workspace GetWorkspace(GetWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Workspace> GetWorkspaceAsync(GetWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Workspace> GetWorkspaceAsync(GetWorkspaceRequest request, st::CancellationToken cancellationToken) =>
+            GetWorkspaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the workspace to retrieve.
+        /// Format: workspaces/{workspace}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Workspace GetWorkspace(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkspace(new GetWorkspaceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the workspace to retrieve.
+        /// Format: workspaces/{workspace}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Workspace> GetWorkspaceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkspaceAsync(new GetWorkspaceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the workspace to retrieve.
+        /// Format: workspaces/{workspace}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Workspace> GetWorkspaceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetWorkspaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the workspace to retrieve.
+        /// Format: workspaces/{workspace}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Workspace GetWorkspace(WorkspaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkspace(new GetWorkspaceRequest
+            {
+                WorkspaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the workspace to retrieve.
+        /// Format: workspaces/{workspace}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Workspace> GetWorkspaceAsync(WorkspaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetWorkspaceAsync(new GetWorkspaceRequest
+            {
+                WorkspaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the workspace to retrieve.
+        /// Format: workspaces/{workspace}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Workspace> GetWorkspaceAsync(WorkspaceName name, st::CancellationToken cancellationToken) =>
+            GetWorkspaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists workspaces for the user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Workspace"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(ListWorkspacesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists workspaces for the user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Workspace"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(ListWorkspacesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -479,6 +695,48 @@ namespace Google.Area120.Tables.V1Alpha1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Row> GetRowAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRowAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a row. Returns NOT_FOUND if the row does not exist in the table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the row to retrieve.
+        /// Format: tables/{table}/rows/{row}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Row GetRow(RowName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRow(new GetRowRequest
+            {
+                RowName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a row. Returns NOT_FOUND if the row does not exist in the table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the row to retrieve.
+        /// Format: tables/{table}/rows/{row}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Row> GetRowAsync(RowName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRowAsync(new GetRowRequest
+            {
+                RowName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a row. Returns NOT_FOUND if the row does not exist in the table.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the row to retrieve.
+        /// Format: tables/{table}/rows/{row}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Row> GetRowAsync(RowName name, st::CancellationToken cancellationToken) =>
             GetRowAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -870,6 +1128,33 @@ namespace Google.Area120.Tables.V1Alpha1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteRowAsync(RowName name, st::CancellationToken cancellationToken) =>
             DeleteRowAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes multiple rows.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void BatchDeleteRows(BatchDeleteRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple rows.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteRowsAsync(BatchDeleteRowsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes multiple rows.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task BatchDeleteRowsAsync(BatchDeleteRowsRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeleteRowsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>TablesService client wrapper implementation, for convenient use.</summary>
@@ -882,12 +1167,20 @@ namespace Google.Area120.Tables.V1Alpha1
     /// 
     /// - Each Table has a collection of [Row][google.area120.tables.v1alpha1.Row]
     /// resources, named `tables/*/rows/*`
+    /// 
+    /// - The API has a collection of
+    /// [Workspace][google.area120.tables.v1alpha1.Workspace]
+    /// resources, named `workspaces/*`.
     /// </remarks>
     public sealed partial class TablesServiceClientImpl : TablesServiceClient
     {
         private readonly gaxgrpc::ApiCall<GetTableRequest, Table> _callGetTable;
 
         private readonly gaxgrpc::ApiCall<ListTablesRequest, ListTablesResponse> _callListTables;
+
+        private readonly gaxgrpc::ApiCall<GetWorkspaceRequest, Workspace> _callGetWorkspace;
+
+        private readonly gaxgrpc::ApiCall<ListWorkspacesRequest, ListWorkspacesResponse> _callListWorkspaces;
 
         private readonly gaxgrpc::ApiCall<GetRowRequest, Row> _callGetRow;
 
@@ -902,6 +1195,8 @@ namespace Google.Area120.Tables.V1Alpha1
         private readonly gaxgrpc::ApiCall<BatchUpdateRowsRequest, BatchUpdateRowsResponse> _callBatchUpdateRows;
 
         private readonly gaxgrpc::ApiCall<DeleteRowRequest, wkt::Empty> _callDeleteRow;
+
+        private readonly gaxgrpc::ApiCall<BatchDeleteRowsRequest, wkt::Empty> _callBatchDeleteRows;
 
         /// <summary>
         /// Constructs a client wrapper for the TablesService service, with the specified gRPC client and settings.
@@ -919,6 +1214,12 @@ namespace Google.Area120.Tables.V1Alpha1
             _callListTables = clientHelper.BuildApiCall<ListTablesRequest, ListTablesResponse>(grpcClient.ListTablesAsync, grpcClient.ListTables, effectiveSettings.ListTablesSettings);
             Modify_ApiCall(ref _callListTables);
             Modify_ListTablesApiCall(ref _callListTables);
+            _callGetWorkspace = clientHelper.BuildApiCall<GetWorkspaceRequest, Workspace>(grpcClient.GetWorkspaceAsync, grpcClient.GetWorkspace, effectiveSettings.GetWorkspaceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetWorkspace);
+            Modify_GetWorkspaceApiCall(ref _callGetWorkspace);
+            _callListWorkspaces = clientHelper.BuildApiCall<ListWorkspacesRequest, ListWorkspacesResponse>(grpcClient.ListWorkspacesAsync, grpcClient.ListWorkspaces, effectiveSettings.ListWorkspacesSettings);
+            Modify_ApiCall(ref _callListWorkspaces);
+            Modify_ListWorkspacesApiCall(ref _callListWorkspaces);
             _callGetRow = clientHelper.BuildApiCall<GetRowRequest, Row>(grpcClient.GetRowAsync, grpcClient.GetRow, effectiveSettings.GetRowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRow);
             Modify_GetRowApiCall(ref _callGetRow);
@@ -940,6 +1241,9 @@ namespace Google.Area120.Tables.V1Alpha1
             _callDeleteRow = clientHelper.BuildApiCall<DeleteRowRequest, wkt::Empty>(grpcClient.DeleteRowAsync, grpcClient.DeleteRow, effectiveSettings.DeleteRowSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRow);
             Modify_DeleteRowApiCall(ref _callDeleteRow);
+            _callBatchDeleteRows = clientHelper.BuildApiCall<BatchDeleteRowsRequest, wkt::Empty>(grpcClient.BatchDeleteRowsAsync, grpcClient.BatchDeleteRows, effectiveSettings.BatchDeleteRowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeleteRows);
+            Modify_BatchDeleteRowsApiCall(ref _callBatchDeleteRows);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -948,6 +1252,10 @@ namespace Google.Area120.Tables.V1Alpha1
         partial void Modify_GetTableApiCall(ref gaxgrpc::ApiCall<GetTableRequest, Table> call);
 
         partial void Modify_ListTablesApiCall(ref gaxgrpc::ApiCall<ListTablesRequest, ListTablesResponse> call);
+
+        partial void Modify_GetWorkspaceApiCall(ref gaxgrpc::ApiCall<GetWorkspaceRequest, Workspace> call);
+
+        partial void Modify_ListWorkspacesApiCall(ref gaxgrpc::ApiCall<ListWorkspacesRequest, ListWorkspacesResponse> call);
 
         partial void Modify_GetRowApiCall(ref gaxgrpc::ApiCall<GetRowRequest, Row> call);
 
@@ -963,6 +1271,8 @@ namespace Google.Area120.Tables.V1Alpha1
 
         partial void Modify_DeleteRowApiCall(ref gaxgrpc::ApiCall<DeleteRowRequest, wkt::Empty> call);
 
+        partial void Modify_BatchDeleteRowsApiCall(ref gaxgrpc::ApiCall<BatchDeleteRowsRequest, wkt::Empty> call);
+
         partial void OnConstruction(TablesService.TablesServiceClient grpcClient, TablesServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC TablesService client</summary>
@@ -971,6 +1281,10 @@ namespace Google.Area120.Tables.V1Alpha1
         partial void Modify_GetTableRequest(ref GetTableRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTablesRequest(ref ListTablesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetWorkspaceRequest(ref GetWorkspaceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListWorkspacesRequest(ref ListWorkspacesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRowRequest(ref GetRowRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -985,6 +1299,8 @@ namespace Google.Area120.Tables.V1Alpha1
         partial void Modify_BatchUpdateRowsRequest(ref BatchUpdateRowsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRowRequest(ref DeleteRowRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeleteRowsRequest(ref BatchDeleteRowsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a table. Returns NOT_FOUND if the table does not exist.
@@ -1032,6 +1348,54 @@ namespace Google.Area120.Tables.V1Alpha1
         {
             Modify_ListTablesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTablesRequest, ListTablesResponse, Table>(_callListTables, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Workspace GetWorkspace(GetWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWorkspaceRequest(ref request, ref callSettings);
+            return _callGetWorkspace.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Workspace> GetWorkspaceAsync(GetWorkspaceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetWorkspaceRequest(ref request, ref callSettings);
+            return _callGetWorkspace.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists workspaces for the user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Workspace"/> resources.</returns>
+        public override gax::PagedEnumerable<ListWorkspacesResponse, Workspace> ListWorkspaces(ListWorkspacesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkspacesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListWorkspacesRequest, ListWorkspacesResponse, Workspace>(_callListWorkspaces, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists workspaces for the user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Workspace"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListWorkspacesResponse, Workspace> ListWorkspacesAsync(ListWorkspacesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkspacesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWorkspacesRequest, ListWorkspacesResponse, Workspace>(_callListWorkspaces, request, callSettings);
         }
 
         /// <summary>
@@ -1201,9 +1565,37 @@ namespace Google.Area120.Tables.V1Alpha1
             Modify_DeleteRowRequest(ref request, ref callSettings);
             return _callDeleteRow.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Deletes multiple rows.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void BatchDeleteRows(BatchDeleteRowsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRowsRequest(ref request, ref callSettings);
+            _callBatchDeleteRows.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes multiple rows.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task BatchDeleteRowsAsync(BatchDeleteRowsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeleteRowsRequest(ref request, ref callSettings);
+            return _callBatchDeleteRows.Async(request, callSettings);
+        }
     }
 
     public partial class ListTablesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListWorkspacesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1215,6 +1607,14 @@ namespace Google.Area120.Tables.V1Alpha1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Table> GetEnumerator() => Tables.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListWorkspacesResponse : gaxgrpc::IPageResponse<Workspace>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Workspace> GetEnumerator() => Workspaces.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
