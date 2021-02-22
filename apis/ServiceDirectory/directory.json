@@ -3077,6 +3077,7 @@
         "google/iam/v1",
         "google/longrunning",
         "google/protobuf",
+        "google/rpc",
         "google/spanner/admin/database/v1"
       ],
       "Stable": true,
