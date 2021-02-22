@@ -38,7 +38,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             string bucketName = _fixture.GenerateBucketName();
             Bucket bucket = _fixture.CreateBucket(bucketName, false);
-            Assert.Null(bucket.IamConfiguration.PublicAccessPrevention);
+            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue);
 
             // Enforce PAP
             client.PatchBucket(CreateBucketRepresentation(bucketName, EnforcedValue));
@@ -75,7 +75,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             string bucketName = _fixture.GenerateBucketName();
             Bucket bucket = _fixture.CreateBucket(bucketName, false);
-            Assert.Null(bucket.IamConfiguration.PublicAccessPrevention);
+            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue);
 
             // Enforce PAP, then unenforce it
             client.PatchBucket(CreateBucketRepresentation(bucketName, EnforcedValue));
