@@ -233,49 +233,131 @@ namespace Google.Cloud.Tools.PostProcessDevSite
         }
 
         private const string GoogleApisXrefPrefix = "https://googleapis.dev/dotnet";
-        private const string GoogleApisXrefSuffix = "latest/xrefmap.yml";
-        private const string DevSiteXrefPrefix = "https://cloud.devsite.corp.google.com/dotnet/docs/reference";
-        private const string DevSiteXrefSuffix = "latest/xrefmap.yml";
+        private const string GoogleApisXrefSuffix = "/xrefmap.yml";
+        private const string DevSiteXrefPrefix = "devsite://dotnet";
 
-        private static readonly string[] s_utilityXrefUrls =
+        // Dependencies to assume are always present. Note that while these
+        // *are* valid packages in themselves, we may find other packages
+        // that are similar, e.g. for the GAX "subpackages". In each case,
+        // all the "subpackages" are contained in the same xrefmap because we
+        // publish sets of utility packages together.
+        private static readonly string[] s_defaultDependencies =
         {
-            $"{DevSiteXrefPrefix}/Google.Apis/{DevSiteXrefSuffix}",
-            $"{DevSiteXrefPrefix}/Google.Api.Gax/{DevSiteXrefSuffix}",
-            $"{DevSiteXrefPrefix}/Google.Protobuf/{DevSiteXrefSuffix}",
-            $"{DevSiteXrefPrefix}/Grpc.Core/{DevSiteXrefSuffix}",
+            "Google.Apis",
+            "Grpc.Core",
+            "Google.Protobuf",
+            "Google.Api.Gax",
+            "Google.Api.CommonProtos"
         };
 
-        private List<string> GetXrefUrls(ApiMetadata api) =>
-            s_utilityXrefUrls // It's harmless to include all of these, even if we don't use them.
-                .Concat(GetTransitiveDependencies(api).Select(GetXrefUrl))
+        private List<string> GetXrefUrls(ApiMetadata api)
+        {
+            // First create a dictionary of transitive dependencies, from
+            // package to version, or null for "latest".
+
+            // Start off with a bunch of default dependencies with "latest" version.
+            // It's unlikely that using a later version than the real transitive
+            // dependency will be a problem here.
+            var dependencies = s_defaultDependencies.ToDictionary(dep => dep, dep => (string) null);
+
+            PopulateTransitiveDependencies(api, dependencies);
+
+            // We can still have multiple dependencies with the same xref stem, because
+            // of the way utility packages are handled.
+            var xrefStemsToVersions = dependencies.GroupBy(pair => GetXrefStem(pair.Key), pair => pair.Value);
+
+            return xrefStemsToVersions
+                .Select(GroupToXref)
                 .Where(xref => xref is object)
                 .OrderBy(xref => xref)
                 .ToList();
 
-        private HashSet<string> GetTransitiveDependencies(ApiMetadata api)
-        {
-            // Note: this assumes there are no dependency cycles, but that's pretty reasonable.
-            HashSet<string> ret = new HashSet<string>(api.Dependencies.Keys);
-            foreach (var immediateDependency in ret.ToList())
+            // Fetch the non-version-specific part of the xref map URL, or null for no xref.
+            string GetXrefStem(string pkg)
             {
-                if (_apiIds.Contains(immediateDependency))
+                // We have four types of dependency to consider:
+                // - Utility: use a devsite:// URL for the package bundle
+                // - google-cloud-dotnet: use a devsite:// URL for the package
+                // - REST library (e.g. Storage, BigQuery): use an https://googleapis.dev URL for the package
+                // - Anything else: skip (by returning null)
+                return pkg switch
                 {
-                    var dependencyMetadata = _apiCatalog[immediateDependency];
-                    foreach (var transitive in GetTransitiveDependencies(dependencyMetadata))
+                    "Google.Apis" => $"{DevSiteXrefPrefix}/Google.Apis",
+                    "Google.Apis.Core" => $"{DevSiteXrefPrefix}/Google.Apis",
+                    "Google.Apis.Auth" => $"{DevSiteXrefPrefix}/Google.Apis",
+                    "Google.Api.CommonProtos" => $"{DevSiteXrefPrefix}/Google.Api.CommonProtos",
+                    var grpc when grpc.StartsWith("Grpc.") => $"{DevSiteXrefPrefix}/Grpc.Core",
+                    var gax when gax.StartsWith("Google.Api.Gax") => $"{DevSiteXrefPrefix}/Google.Api.Gax",
+                    var api when _apiIds.Contains(api) => $"{DevSiteXrefPrefix}/{api}",
+                    var api when api.StartsWith("Google.Apis") => $"{GoogleApisXrefPrefix}/{api}",
+                    _ => null
+                };
+            }
+
+            // Key is the xref stem; values are versions
+            string GroupToXref(IGrouping<string, string> dependencyGroup)
+            {
+                var stem = dependencyGroup.Key;
+                if (stem is null)
+                {
+                    return null;
+                }
+                // If we have more than one version, let's just go with "latest".
+                string version = dependencyGroup.Count() == 1 ? dependencyGroup.Single() : null;
+
+                return stem.StartsWith(DevSiteXrefPrefix)
+                    ? version is null ? stem : $"{stem}@{version}"
+                    : $"{stem}/{version ?? "latest"}{GoogleApisXrefSuffix}";
+            }
+        }
+
+        private void PopulateTransitiveDependencies(ApiMetadata api, Dictionary<string, string> dependencies)
+        {
+            foreach (var dependency in api.Dependencies)
+            {
+                string pkg = dependency.Key;
+                string version = dependency.Value switch
+                {
+                    "project" => _apiCatalog[pkg].Version,
+                    "default" => null, // Latest
+                    _ => dependency.Value
+                };
+                if (dependencies.TryGetValue(pkg, out var existingVersion))
+                {
+                    // Replace the existing dependency version with our new one if
+                    // the existing dependency is a specific version, and ours is
+                    // either "latest" or a more recent specific version.
+                    if (existingVersion is object)
                     {
-                        ret.Add(transitive);
+                        if (version is null)
+                        {
+                            dependencies[pkg] = null;
+                        }
+                        else
+                        {
+                            StructuredVersion existingStructured = StructuredVersion.FromString(existingVersion);
+                            StructuredVersion candidateStructured = StructuredVersion.FromString(version);
+                            if (candidateStructured.CompareTo(existingStructured) > 0)
+                            {
+                                dependencies[pkg] = version;
+                            }
+                        }
+                    }
+                    // We don't need to recurse here. We'll already have pulled in
+                    // any transitive dependencies when first adding it.
+                }
+                else
+                {
+                    dependencies[pkg] = version;
+                    // If the dependency is another API in google-cloud-dotnet, add transitive dependencies.
+                    // These are the dependencies of "latest" rather than the specific version, but it's
+                    // very unlikely to actually cause problems.
+                    if (_apiIds.Contains(pkg))
+                    {
+                        PopulateTransitiveDependencies(_apiCatalog[pkg], dependencies);
                     }
                 }
             }
-            return ret;
         }
-
-        private string GetXrefUrl(string dependency) =>
-            dependency switch
-            {
-                string pkg when pkg.StartsWith("Google.Apis") => $"{GoogleApisXrefPrefix}/{pkg}/{GoogleApisXrefSuffix}",
-                string pkg when _apiCatalog.CreateIdHashSet().Contains(pkg) => $"{DevSiteXrefPrefix}/{pkg}/{DevSiteXrefSuffix}",
-                _ => null
-            };
     }
 }

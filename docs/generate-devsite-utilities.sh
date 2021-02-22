@@ -159,7 +159,7 @@ python -m pip install -q gcp-docuploader
 XREF_TMP=""
 for xref in "${XREFS[@]}"
 do
-  FULL_XREF="https://cloud.devsite.corp.google.com/dotnet/docs/reference/$xref/latest/xrefmap.yml"
+  FULL_XREF="devsite://dotnet/$xref"
   XREF_TMP="$XREF_TMP --xrefs $FULL_XREF"
 done
 
