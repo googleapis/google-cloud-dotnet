@@ -157,6 +157,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
     }
 
+    public partial class RestoreDatabaseEncryptionConfig
+    {
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyName"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyNameAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
+            set => KmsKeyName = value?.ToString() ?? "";
+        }
+    }
+
     public partial class RestoreDatabaseMetadata
     {
         /// <summary>

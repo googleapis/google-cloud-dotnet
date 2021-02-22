@@ -317,6 +317,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 CreateStatement = "",
                 ExtraStatements = { "", },
+                EncryptionConfig = new EncryptionConfig(),
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = databaseAdminClient.CreateDatabase(request);
@@ -352,6 +353,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 CreateStatement = "",
                 ExtraStatements = { "", },
+                EncryptionConfig = new EncryptionConfig(),
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = await databaseAdminClient.CreateDatabaseAsync(request);
@@ -1235,6 +1237,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 BackupId = "",
                 Backup = new Backup(),
+                EncryptionConfig = new CreateBackupEncryptionConfig(),
             };
             // Make the request
             Operation<Backup, CreateBackupMetadata> response = databaseAdminClient.CreateBackup(request);
@@ -1270,6 +1273,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 BackupId = "",
                 Backup = new Backup(),
+                EncryptionConfig = new CreateBackupEncryptionConfig(),
             };
             // Make the request
             Operation<Backup, CreateBackupMetadata> response = await databaseAdminClient.CreateBackupAsync(request);
@@ -1946,6 +1950,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DatabaseId = "",
                 BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                EncryptionConfig = new RestoreDatabaseEncryptionConfig(),
             };
             // Make the request
             Operation<Database, RestoreDatabaseMetadata> response = databaseAdminClient.RestoreDatabase(request);
@@ -1981,6 +1986,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 DatabaseId = "",
                 BackupAsBackupName = BackupName.FromProjectInstanceBackup("[PROJECT]", "[INSTANCE]", "[BACKUP]"),
+                EncryptionConfig = new RestoreDatabaseEncryptionConfig(),
             };
             // Make the request
             Operation<Database, RestoreDatabaseMetadata> response = await databaseAdminClient.RestoreDatabaseAsync(request);
