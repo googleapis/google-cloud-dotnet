@@ -269,6 +269,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
             set => Database = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="ReferencingDatabases"/> resource name
+        /// property.
+        /// </summary>
+        public gax::ResourceNameList<gcscv::DatabaseName> ReferencingDatabasesAsDatabaseNames
+        {
+            get => new gax::ResourceNameList<gcscv::DatabaseName>(ReferencingDatabases, s => string.IsNullOrEmpty(s) ? null : gcscv::DatabaseName.Parse(s, allowUnparsed: true));
+        }
     }
 
     public partial class CreateBackupRequest
@@ -368,6 +377,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             get => string.IsNullOrEmpty(SourceDatabase) ? null : gcscv::DatabaseName.Parse(SourceDatabase, allowUnparsed: true);
             set => SourceDatabase = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateBackupEncryptionConfig
+    {
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKeyName"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyNameAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKeyName) ? null : CryptoKeyName.Parse(KmsKeyName, allowUnparsed: true);
+            set => KmsKeyName = value?.ToString() ?? "";
         }
     }
 }
