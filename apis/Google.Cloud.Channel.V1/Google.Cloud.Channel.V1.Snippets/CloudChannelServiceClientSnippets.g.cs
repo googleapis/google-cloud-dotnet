@@ -1637,7 +1637,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 Parent = "",
                 ChannelPartnerLink = new ChannelPartnerLink(),
-                Domain = "",
             };
             // Make the request
             ChannelPartnerLink response = cloudChannelServiceClient.CreateChannelPartnerLink(request);
@@ -1656,7 +1655,6 @@ namespace Google.Cloud.Channel.V1.Snippets
             {
                 Parent = "",
                 ChannelPartnerLink = new ChannelPartnerLink(),
-                Domain = "",
             };
             // Make the request
             ChannelPartnerLink response = await cloudChannelServiceClient.CreateChannelPartnerLinkAsync(request);
