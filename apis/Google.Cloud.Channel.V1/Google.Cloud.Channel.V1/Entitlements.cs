@@ -73,21 +73,18 @@ namespace Google.Cloud.Channel.V1 {
             "ZW50UGxhbhI2Cg1wYXltZW50X2N5Y2xlGAYgASgLMh8uZ29vZ2xlLmNsb3Vk",
             "LmNoYW5uZWwudjEuUGVyaW9kIkwKDVRyaWFsU2V0dGluZ3MSDQoFdHJpYWwY",
             "ASABKAgSLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wIvkBCg9UcmFuc2ZlcmFibGVTa3USMQoNaXNfY29tbWl0bWVudBgG",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5Cb29sVmFsdWUSPAoYY29tbWl0bWVu",
-            "dF9lbmRfdGltZXN0YW1wGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBJKChR0cmFuc2Zlcl9lbGlnaWJpbGl0eRgJIAEoCzIsLmdvb2dsZS5j",
-            "bG91ZC5jaGFubmVsLnYxLlRyYW5zZmVyRWxpZ2liaWxpdHkSKQoDc2t1GAsg",
-            "ASgLMhwuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuU2t1IvkBChNUcmFuc2Zl",
-            "ckVsaWdpYmlsaXR5EhMKC2lzX2VsaWdpYmxlGAEgASgIEhMKC2Rlc2NyaXB0",
-            "aW9uGAIgASgJElEKFGluZWxpZ2liaWxpdHlfcmVhc29uGAMgASgOMjMuZ29v",
-            "Z2xlLmNsb3VkLmNoYW5uZWwudjEuVHJhbnNmZXJFbGlnaWJpbGl0eS5SZWFz",
-            "b24iZQoGUmVhc29uEhYKElJFQVNPTl9VTlNQRUNJRklFRBAAEhoKFlBFTkRJ",
-            "TkdfVE9TX0FDQ0VQVEFOQ0UQARIUChBTS1VfTk9UX0VMSUdJQkxFEAISEQoN",
-            "U0tVX1NVU1BFTkRFRBADQnIKG2NvbS5nb29nbGUuY2xvdWQuY2hhbm5lbC52",
-            "MUIRRW50aXRsZW1lbnRzUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9jaGFubmVsL3YxO2NoYW5uZWxiBnBy",
-            "b3RvMw=="));
+            "ZXN0YW1wIogBCg9UcmFuc2ZlcmFibGVTa3USSgoUdHJhbnNmZXJfZWxpZ2li",
+            "aWxpdHkYCSABKAsyLC5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5UcmFuc2Zl",
+            "ckVsaWdpYmlsaXR5EikKA3NrdRgLIAEoCzIcLmdvb2dsZS5jbG91ZC5jaGFu",
+            "bmVsLnYxLlNrdSL5AQoTVHJhbnNmZXJFbGlnaWJpbGl0eRITCgtpc19lbGln",
+            "aWJsZRgBIAEoCBITCgtkZXNjcmlwdGlvbhgCIAEoCRJRChRpbmVsaWdpYmls",
+            "aXR5X3JlYXNvbhgDIAEoDjIzLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlRy",
+            "YW5zZmVyRWxpZ2liaWxpdHkuUmVhc29uImUKBlJlYXNvbhIWChJSRUFTT05f",
+            "VU5TUEVDSUZJRUQQABIaChZQRU5ESU5HX1RPU19BQ0NFUFRBTkNFEAESFAoQ",
+            "U0tVX05PVF9FTElHSUJMRRACEhEKDVNLVV9TVVNQRU5ERUQQA0JyChtjb20u",
+            "Z29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCEUVudGl0bGVtZW50c1Byb3RvUAFa",
+            "Pmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "Y2hhbm5lbC92MTtjaGFubmVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.OffersReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -98,7 +95,7 @@ namespace Google.Cloud.Channel.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CommitmentSettings), global::Google.Cloud.Channel.V1.CommitmentSettings.Parser, new[]{ "StartTime", "EndTime", "RenewalSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.RenewalSettings), global::Google.Cloud.Channel.V1.RenewalSettings.Parser, new[]{ "EnableRenewal", "ResizeUnitCount", "PaymentPlan", "PaymentCycle" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TrialSettings), global::Google.Cloud.Channel.V1.TrialSettings.Parser, new[]{ "Trial", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TransferableSku), global::Google.Cloud.Channel.V1.TransferableSku.Parser, new[]{ "IsCommitment", "CommitmentEndTimestamp", "TransferEligibility", "Sku" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TransferableSku), global::Google.Cloud.Channel.V1.TransferableSku.Parser, new[]{ "TransferEligibility", "Sku" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.TransferEligibility), global::Google.Cloud.Channel.V1.TransferEligibility.Parser, new[]{ "IsEligible", "Description", "IneligibilityReason" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.TransferEligibility.Types.Reason) }, null, null)
           }));
     }
@@ -2368,8 +2365,6 @@ namespace Google.Cloud.Channel.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransferableSku(TransferableSku other) : this() {
-      IsCommitment = other.IsCommitment;
-      commitmentEndTimestamp_ = other.commitmentEndTimestamp_ != null ? other.commitmentEndTimestamp_.Clone() : null;
       transferEligibility_ = other.transferEligibility_ != null ? other.transferEligibility_.Clone() : null;
       sku_ = other.sku_ != null ? other.sku_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2378,36 +2373,6 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TransferableSku Clone() {
       return new TransferableSku(this);
-    }
-
-    /// <summary>Field number for the "is_commitment" field.</summary>
-    public const int IsCommitmentFieldNumber = 6;
-    private static readonly pb::FieldCodec<bool?> _single_isCommitment_codec = pb::FieldCodec.ForStructWrapper<bool>(50);
-    private bool? isCommitment_;
-    /// <summary>
-    /// Whether a transferable SKU is commitment-based or not.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool? IsCommitment {
-      get { return isCommitment_; }
-      set {
-        isCommitment_ = value;
-      }
-    }
-
-
-    /// <summary>Field number for the "commitment_end_timestamp" field.</summary>
-    public const int CommitmentEndTimestampFieldNumber = 7;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp commitmentEndTimestamp_;
-    /// <summary>
-    /// Commitment end timestamp.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp CommitmentEndTimestamp {
-      get { return commitmentEndTimestamp_; }
-      set {
-        commitmentEndTimestamp_ = value;
-      }
     }
 
     /// <summary>Field number for the "transfer_eligibility" field.</summary>
@@ -2451,8 +2416,6 @@ namespace Google.Cloud.Channel.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsCommitment != other.IsCommitment) return false;
-      if (!object.Equals(CommitmentEndTimestamp, other.CommitmentEndTimestamp)) return false;
       if (!object.Equals(TransferEligibility, other.TransferEligibility)) return false;
       if (!object.Equals(Sku, other.Sku)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -2461,8 +2424,6 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (isCommitment_ != null) hash ^= IsCommitment.GetHashCode();
-      if (commitmentEndTimestamp_ != null) hash ^= CommitmentEndTimestamp.GetHashCode();
       if (transferEligibility_ != null) hash ^= TransferEligibility.GetHashCode();
       if (sku_ != null) hash ^= Sku.GetHashCode();
       if (_unknownFields != null) {
@@ -2481,13 +2442,6 @@ namespace Google.Cloud.Channel.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (isCommitment_ != null) {
-        _single_isCommitment_codec.WriteTagAndValue(output, IsCommitment);
-      }
-      if (commitmentEndTimestamp_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(CommitmentEndTimestamp);
-      }
       if (transferEligibility_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(TransferEligibility);
@@ -2505,13 +2459,6 @@ namespace Google.Cloud.Channel.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (isCommitment_ != null) {
-        _single_isCommitment_codec.WriteTagAndValue(ref output, IsCommitment);
-      }
-      if (commitmentEndTimestamp_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(CommitmentEndTimestamp);
-      }
       if (transferEligibility_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(TransferEligibility);
@@ -2529,12 +2476,6 @@ namespace Google.Cloud.Channel.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (isCommitment_ != null) {
-        size += _single_isCommitment_codec.CalculateSizeWithTag(IsCommitment);
-      }
-      if (commitmentEndTimestamp_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommitmentEndTimestamp);
-      }
       if (transferEligibility_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransferEligibility);
       }
@@ -2551,17 +2492,6 @@ namespace Google.Cloud.Channel.V1 {
     public void MergeFrom(TransferableSku other) {
       if (other == null) {
         return;
-      }
-      if (other.isCommitment_ != null) {
-        if (isCommitment_ == null || other.IsCommitment != false) {
-          IsCommitment = other.IsCommitment;
-        }
-      }
-      if (other.commitmentEndTimestamp_ != null) {
-        if (commitmentEndTimestamp_ == null) {
-          CommitmentEndTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        CommitmentEndTimestamp.MergeFrom(other.CommitmentEndTimestamp);
       }
       if (other.transferEligibility_ != null) {
         if (transferEligibility_ == null) {
@@ -2589,20 +2519,6 @@ namespace Google.Cloud.Channel.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            bool? value = _single_isCommitment_codec.Read(input);
-            if (isCommitment_ == null || value != false) {
-              IsCommitment = value;
-            }
-            break;
-          }
-          case 58: {
-            if (commitmentEndTimestamp_ == null) {
-              CommitmentEndTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CommitmentEndTimestamp);
-            break;
-          }
           case 74: {
             if (transferEligibility_ == null) {
               TransferEligibility = new global::Google.Cloud.Channel.V1.TransferEligibility();
@@ -2631,20 +2547,6 @@ namespace Google.Cloud.Channel.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            bool? value = _single_isCommitment_codec.Read(ref input);
-            if (isCommitment_ == null || value != false) {
-              IsCommitment = value;
-            }
-            break;
-          }
-          case 58: {
-            if (commitmentEndTimestamp_ == null) {
-              CommitmentEndTimestamp = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CommitmentEndTimestamp);
-            break;
-          }
           case 74: {
             if (transferEligibility_ == null) {
               TransferEligibility = new global::Google.Cloud.Channel.V1.TransferEligibility();

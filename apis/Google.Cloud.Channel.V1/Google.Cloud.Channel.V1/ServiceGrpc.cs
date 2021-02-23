@@ -3,7 +3,7 @@
 //     source: google/cloud/channel/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -355,7 +355,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
+      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -379,7 +379,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the result of an invalid name parameter.
       ///
       /// Return Value:
-      /// &lt;br/> [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -400,12 +400,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       /// * INVALID_VALUE: Invalid domain value in the request.
-      /// * NOT_FOUND: If there is no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] customer
-      /// for the domain specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources if any exist for
-      /// the domain, otherwise an error is returned.
+      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
+      /// List may be empty.
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resource match the domain.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -420,20 +420,16 @@ namespace Google.Cloud.Channel.V1 {
       /// account.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.&lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///  &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///  &lt;li> Domain field value doesn't match the domain specified in primary
-      ///  email.&lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Domain field value doesn't match the domain specified in primary
+      ///     email.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
+      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -458,7 +454,7 @@ namespace Google.Cloud.Channel.V1 {
       /// specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
+      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -507,7 +503,7 @@ namespace Google.Cloud.Channel.V1 {
       ///    Contact Cloud Channel support in this case.
       ///
       /// Return Value:
-      /// &lt;br/>  Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -530,7 +526,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
+      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -550,21 +546,16 @@ namespace Google.Cloud.Channel.V1 {
       /// the customer's Cloud Identity ID or Customer Name.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED, due to one of the following reasons:
-      /// &lt;ul>
-      ///    &lt;li> If the customer doesn't belong to the reseller and no auth token,
-      ///    or an invalid auth token is supplied. &lt;/li> &lt;li> If the reseller account
-      ///    making the request and the reseller account being queried for are
-      ///    different. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: Appears because of one of the following -
+      ///     * The customer doesn't belong to the reseller and no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request and the queries reseller
+      ///     account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -584,10 +575,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible Error Codes:
       ///
-      /// * PERMISSION_DENIED, due to one of the following reasons: (a) If the
-      /// customer doesn't belong to the reseller and no auth token or invalid auth
-      /// token is supplied. (b) If the reseller account making the request and the
-      /// reseller account being queried for are different.
+      /// * PERMISSION_DENIED: Appears because of one of the following:
+      ///     * If the customer doesn't belong to the reseller and no auth token or
+      ///     invalid auth token is supplied.
+      ///     * If the reseller account making the request and the reseller account
+      ///     being queried for are different.
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       ///
@@ -613,7 +605,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * NOT_FOUND: If the entitlement is not found for the customer.
       ///
       /// Return Value:
-      /// &lt;br/> If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
+      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -628,51 +620,38 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates an entitlement for a customer.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Cannot purchase an entitlement if there is already an
-      ///    entitlement for customer, for a SKU from the same product family. &lt;/li>
-      ///   &lt;li> INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      /// valid. If it is valid, then contact Google Channel support for further
-      /// troubleshooting. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: This failure can happen in the following cases:
-      ///   &lt;ul>
-      ///     &lt;li>If the SKU has been already purchased for the customer.&lt;/li>
-      ///     &lt;li>If the customer's primary email already exists. In this case retry
-      ///         after changing the customer's primary contact email.
-      ///     &lt;/li>
-      ///   &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This
-      /// failure can happen in the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Purchasing a SKU that requires domain verification and the
-      ///    domain has not been verified. &lt;/li>
-      ///    &lt;li> Purchasing an Add-On SKU like Vault or Drive without purchasing
-      ///    the pre-requisite SKU, such as Google Workspace Business Starter. &lt;/li>
-      ///    &lt;li> Applicable only for developer accounts: reseller and resold
-      ///    domain. Must meet the following domain naming requirements:
-      ///     &lt;ul>
-      ///       &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///       &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///     &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: It can happen in below scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Cannot purchase an entitlement if there is already an entitlement for
+      ///     customer, for a SKU from the same product family.
+      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
+      ///     valid. If it is valid, then contact Google Channel support for further
+      ///     troubleshooting.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: This failure can happen in the following cases:
+      ///     * If the SKU has been already purchased for the customer.
+      ///     * If the customer's primary email already exists. In this case retry
+      ///     after changing the customer's primary contact email.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Purchasing a SKU that requires domain verification and the domain has
+      ///     not been verified.
+      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as Google Workspace Business Starter.
+      ///     * Applicable only for developer accounts: reseller and resold domain.
+      ///     Must meet the following domain naming requirements:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -706,7 +685,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -740,7 +719,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -772,7 +751,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -807,7 +786,7 @@ namespace Google.Cloud.Channel.V1 {
       /// in the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -838,7 +817,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -874,7 +853,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -915,7 +894,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -933,36 +912,30 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements to new reseller.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the
-      /// reseller.&lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required
-      /// parameters in the request. &lt;/li> &lt;li> NOT_FOUND: If the customer or offer
-      /// resource is not found for the reseller. &lt;/li> &lt;li> ALREADY_EXISTS: If the
-      /// SKU has been already transferred for the customer. &lt;/li> &lt;li>
-      /// CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases: &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without transferring
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///   &lt;/li>
-      ///   &lt;li> All transferring entitlements must be specified. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
+      ///     the pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      ///     * All transferring entitlements must be specified.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -980,38 +953,29 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements from current reseller to Google.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found
-      /// for the reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: If the SKU has been already
-      /// transferred for the customer. &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
       /// the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without purchasing
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case.&lt;/li>
-      /// &lt;/ul>
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -1038,7 +1002,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
+      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
       /// for the distributor account, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1063,7 +1027,7 @@ namespace Google.Cloud.Channel.V1 {
       /// due invalid channel partner link name.
       ///
       /// Return Value:
-      /// &lt;br/> [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1096,7 +1060,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
+      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
       /// otherwise error is returned.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1113,26 +1077,22 @@ namespace Google.Cloud.Channel.V1 {
       /// To call this method, you must be a distributor.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different. &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Updating link state from invited to active or suspended. &lt;/li>
-      ///   &lt;li> Sending reseller_cloud_identity_id, invite_url or name in update
-      ///   mask. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: ChannelPartnerLink resource not found.&lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Updating link state from invited to active or suspended.
+      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      ///     mask.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
+      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1357,7 +1317,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
+      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1380,7 +1340,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
+      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1401,7 +1361,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
+      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1424,7 +1384,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
+      /// List of [Customer][google.cloud.channel.v1.Customer]s pertaining to the reseller or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1447,7 +1407,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the result of an invalid name parameter.
       ///
       /// Return Value:
-      /// &lt;br/> [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1471,7 +1431,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the result of an invalid name parameter.
       ///
       /// Return Value:
-      /// &lt;br/> [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1493,7 +1453,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the result of an invalid name parameter.
       ///
       /// Return Value:
-      /// &lt;br/> [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1517,7 +1477,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the result of an invalid name parameter.
       ///
       /// Return Value:
-      /// &lt;br/> [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
+      /// [Customer][google.cloud.channel.v1.Customer] resource if found, error otherwise.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1537,12 +1497,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       /// * INVALID_VALUE: Invalid domain value in the request.
-      /// * NOT_FOUND: If there is no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] customer
-      /// for the domain specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources if any exist for
-      /// the domain, otherwise an error is returned.
+      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
+      /// List may be empty.
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resource match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1564,12 +1524,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       /// * INVALID_VALUE: Invalid domain value in the request.
-      /// * NOT_FOUND: If there is no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] customer
-      /// for the domain specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources if any exist for
-      /// the domain, otherwise an error is returned.
+      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
+      /// List may be empty.
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resource match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1589,12 +1549,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       /// * INVALID_VALUE: Invalid domain value in the request.
-      /// * NOT_FOUND: If there is no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] customer
-      /// for the domain specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources if any exist for
-      /// the domain, otherwise an error is returned.
+      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
+      /// List may be empty.
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resource match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1616,12 +1576,12 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       /// * INVALID_VALUE: Invalid domain value in the request.
-      /// * NOT_FOUND: If there is no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] customer
-      /// for the domain specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources if any exist for
-      /// the domain, otherwise an error is returned.
+      /// List of [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resources for the domain.
+      /// List may be empty.
+      /// Note: in the v1alpha1 version of the API, a NOT_FOUND error is returned if
+      /// no [CloudIdentityCustomerAccount][google.cloud.channel.v1.CloudIdentityCustomerAccount] resource match the domain.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1635,20 +1595,16 @@ namespace Google.Cloud.Channel.V1 {
       /// account.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.&lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///  &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///  &lt;li> Domain field value doesn't match the domain specified in primary
-      ///  email.&lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Domain field value doesn't match the domain specified in primary
+      ///     email.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
+      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1665,20 +1621,16 @@ namespace Google.Cloud.Channel.V1 {
       /// account.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.&lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///  &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///  &lt;li> Domain field value doesn't match the domain specified in primary
-      ///  email.&lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Domain field value doesn't match the domain specified in primary
+      ///     email.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
+      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1693,20 +1645,16 @@ namespace Google.Cloud.Channel.V1 {
       /// account.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.&lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///  &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///  &lt;li> Domain field value doesn't match the domain specified in primary
-      ///  email.&lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Domain field value doesn't match the domain specified in primary
+      ///     email.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
+      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1723,20 +1671,16 @@ namespace Google.Cloud.Channel.V1 {
       /// account.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different.&lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///  &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///  &lt;li> Domain field value doesn't match the domain specified in primary
-      ///  email.&lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Domain field value doesn't match the domain specified in primary
+      ///     email.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
+      /// If successful, the newly created [Customer][google.cloud.channel.v1.Customer] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1760,7 +1704,7 @@ namespace Google.Cloud.Channel.V1 {
       /// specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
+      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1786,7 +1730,7 @@ namespace Google.Cloud.Channel.V1 {
       /// specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
+      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1810,7 +1754,7 @@ namespace Google.Cloud.Channel.V1 {
       /// specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
+      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1836,7 +1780,7 @@ namespace Google.Cloud.Channel.V1 {
       /// specified in the request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
+      /// If successful, the updated [Customer][google.cloud.channel.v1.Customer] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1947,7 +1891,7 @@ namespace Google.Cloud.Channel.V1 {
       ///    Contact Cloud Channel support in this case.
       ///
       /// Return Value:
-      /// &lt;br/>  Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -1979,7 +1923,7 @@ namespace Google.Cloud.Channel.V1 {
       ///    Contact Cloud Channel support in this case.
       ///
       /// Return Value:
-      /// &lt;br/>  Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2009,7 +1953,7 @@ namespace Google.Cloud.Channel.V1 {
       ///    Contact Cloud Channel support in this case.
       ///
       /// Return Value:
-      /// &lt;br/>  Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2041,7 +1985,7 @@ namespace Google.Cloud.Channel.V1 {
       ///    Contact Cloud Channel support in this case.
       ///
       /// Return Value:
-      /// &lt;br/>  Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2063,7 +2007,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
+      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2084,7 +2028,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
+      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2103,7 +2047,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
+      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2124,7 +2068,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
+      /// List of [Entitlement][google.cloud.channel.v1.Entitlement]s belonging to the customer, or empty list if
       /// there are none.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2143,21 +2087,16 @@ namespace Google.Cloud.Channel.V1 {
       /// the customer's Cloud Identity ID or Customer Name.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED, due to one of the following reasons:
-      /// &lt;ul>
-      ///    &lt;li> If the customer doesn't belong to the reseller and no auth token,
-      ///    or an invalid auth token is supplied. &lt;/li> &lt;li> If the reseller account
-      ///    making the request and the reseller account being queried for are
-      ///    different. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: Appears because of one of the following -
+      ///     * The customer doesn't belong to the reseller and no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request and the queries reseller
+      ///     account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2177,21 +2116,16 @@ namespace Google.Cloud.Channel.V1 {
       /// the customer's Cloud Identity ID or Customer Name.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED, due to one of the following reasons:
-      /// &lt;ul>
-      ///    &lt;li> If the customer doesn't belong to the reseller and no auth token,
-      ///    or an invalid auth token is supplied. &lt;/li> &lt;li> If the reseller account
-      ///    making the request and the reseller account being queried for are
-      ///    different. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: Appears because of one of the following -
+      ///     * The customer doesn't belong to the reseller and no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request and the queries reseller
+      ///     account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2209,21 +2143,16 @@ namespace Google.Cloud.Channel.V1 {
       /// the customer's Cloud Identity ID or Customer Name.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED, due to one of the following reasons:
-      /// &lt;ul>
-      ///    &lt;li> If the customer doesn't belong to the reseller and no auth token,
-      ///    or an invalid auth token is supplied. &lt;/li> &lt;li> If the reseller account
-      ///    making the request and the reseller account being queried for are
-      ///    different. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: Appears because of one of the following -
+      ///     * The customer doesn't belong to the reseller and no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request and the queries reseller
+      ///     account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2243,21 +2172,16 @@ namespace Google.Cloud.Channel.V1 {
       /// the customer's Cloud Identity ID or Customer Name.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li>PERMISSION_DENIED, due to one of the following reasons:
-      /// &lt;ul>
-      ///    &lt;li> If the customer doesn't belong to the reseller and no auth token,
-      ///    or an invalid auth token is supplied. &lt;/li> &lt;li> If the reseller account
-      ///    making the request and the reseller account being queried for are
-      ///    different. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: Appears because of one of the following -
+      ///     * The customer doesn't belong to the reseller and no auth token.
+      ///     * The supplied auth token is invalid.
+      ///     * The reseller account making the request and the queries reseller
+      ///     account are different.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
       ///
       /// Return Value:
-      /// &lt;br/> List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
+      /// List of [TransferableSku][google.cloud.channel.v1.TransferableSku] for the given customer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2276,10 +2200,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible Error Codes:
       ///
-      /// * PERMISSION_DENIED, due to one of the following reasons: (a) If the
-      /// customer doesn't belong to the reseller and no auth token or invalid auth
-      /// token is supplied. (b) If the reseller account making the request and the
-      /// reseller account being queried for are different.
+      /// * PERMISSION_DENIED: Appears because of one of the following:
+      ///     * If the customer doesn't belong to the reseller and no auth token or
+      ///     invalid auth token is supplied.
+      ///     * If the reseller account making the request and the reseller account
+      ///     being queried for are different.
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       ///
@@ -2305,10 +2230,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible Error Codes:
       ///
-      /// * PERMISSION_DENIED, due to one of the following reasons: (a) If the
-      /// customer doesn't belong to the reseller and no auth token or invalid auth
-      /// token is supplied. (b) If the reseller account making the request and the
-      /// reseller account being queried for are different.
+      /// * PERMISSION_DENIED: Appears because of one of the following:
+      ///     * If the customer doesn't belong to the reseller and no auth token or
+      ///     invalid auth token is supplied.
+      ///     * If the reseller account making the request and the reseller account
+      ///     being queried for are different.
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       ///
@@ -2332,10 +2258,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible Error Codes:
       ///
-      /// * PERMISSION_DENIED, due to one of the following reasons: (a) If the
-      /// customer doesn't belong to the reseller and no auth token or invalid auth
-      /// token is supplied. (b) If the reseller account making the request and the
-      /// reseller account being queried for are different.
+      /// * PERMISSION_DENIED: Appears because of one of the following:
+      ///     * If the customer doesn't belong to the reseller and no auth token or
+      ///     invalid auth token is supplied.
+      ///     * If the reseller account making the request and the reseller account
+      ///     being queried for are different.
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       ///
@@ -2361,10 +2288,11 @@ namespace Google.Cloud.Channel.V1 {
       ///
       /// Possible Error Codes:
       ///
-      /// * PERMISSION_DENIED, due to one of the following reasons: (a) If the
-      /// customer doesn't belong to the reseller and no auth token or invalid auth
-      /// token is supplied. (b) If the reseller account making the request and the
-      /// reseller account being queried for are different.
+      /// * PERMISSION_DENIED: Appears because of one of the following:
+      ///     * If the customer doesn't belong to the reseller and no auth token or
+      ///     invalid auth token is supplied.
+      ///     * If the reseller account making the request and the reseller account
+      ///     being queried for are different.
       /// * INVALID_ARGUMENT: Missing or invalid required parameters in the
       /// request.
       ///
@@ -2389,7 +2317,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * NOT_FOUND: If the entitlement is not found for the customer.
       ///
       /// Return Value:
-      /// &lt;br/> If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
+      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2412,7 +2340,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * NOT_FOUND: If the entitlement is not found for the customer.
       ///
       /// Return Value:
-      /// &lt;br/> If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
+      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2433,7 +2361,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * NOT_FOUND: If the entitlement is not found for the customer.
       ///
       /// Return Value:
-      /// &lt;br/> If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
+      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2456,7 +2384,7 @@ namespace Google.Cloud.Channel.V1 {
       /// * NOT_FOUND: If the entitlement is not found for the customer.
       ///
       /// Return Value:
-      /// &lt;br/> If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
+      /// If found, the requested [Entitlement][google.cloud.channel.v1.Entitlement] resource, otherwise returns
       /// an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2470,51 +2398,38 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates an entitlement for a customer.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Cannot purchase an entitlement if there is already an
-      ///    entitlement for customer, for a SKU from the same product family. &lt;/li>
-      ///   &lt;li> INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      /// valid. If it is valid, then contact Google Channel support for further
-      /// troubleshooting. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: This failure can happen in the following cases:
-      ///   &lt;ul>
-      ///     &lt;li>If the SKU has been already purchased for the customer.&lt;/li>
-      ///     &lt;li>If the customer's primary email already exists. In this case retry
-      ///         after changing the customer's primary contact email.
-      ///     &lt;/li>
-      ///   &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This
-      /// failure can happen in the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Purchasing a SKU that requires domain verification and the
-      ///    domain has not been verified. &lt;/li>
-      ///    &lt;li> Purchasing an Add-On SKU like Vault or Drive without purchasing
-      ///    the pre-requisite SKU, such as Google Workspace Business Starter. &lt;/li>
-      ///    &lt;li> Applicable only for developer accounts: reseller and resold
-      ///    domain. Must meet the following domain naming requirements:
-      ///     &lt;ul>
-      ///       &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///       &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///     &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: It can happen in below scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Cannot purchase an entitlement if there is already an entitlement for
+      ///     customer, for a SKU from the same product family.
+      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
+      ///     valid. If it is valid, then contact Google Channel support for further
+      ///     troubleshooting.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: This failure can happen in the following cases:
+      ///     * If the SKU has been already purchased for the customer.
+      ///     * If the customer's primary email already exists. In this case retry
+      ///     after changing the customer's primary contact email.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Purchasing a SKU that requires domain verification and the domain has
+      ///     not been verified.
+      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as Google Workspace Business Starter.
+      ///     * Applicable only for developer accounts: reseller and resold domain.
+      ///     Must meet the following domain naming requirements:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2533,51 +2448,38 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates an entitlement for a customer.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Cannot purchase an entitlement if there is already an
-      ///    entitlement for customer, for a SKU from the same product family. &lt;/li>
-      ///   &lt;li> INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      /// valid. If it is valid, then contact Google Channel support for further
-      /// troubleshooting. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: This failure can happen in the following cases:
-      ///   &lt;ul>
-      ///     &lt;li>If the SKU has been already purchased for the customer.&lt;/li>
-      ///     &lt;li>If the customer's primary email already exists. In this case retry
-      ///         after changing the customer's primary contact email.
-      ///     &lt;/li>
-      ///   &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This
-      /// failure can happen in the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Purchasing a SKU that requires domain verification and the
-      ///    domain has not been verified. &lt;/li>
-      ///    &lt;li> Purchasing an Add-On SKU like Vault or Drive without purchasing
-      ///    the pre-requisite SKU, such as Google Workspace Business Starter. &lt;/li>
-      ///    &lt;li> Applicable only for developer accounts: reseller and resold
-      ///    domain. Must meet the following domain naming requirements:
-      ///     &lt;ul>
-      ///       &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///       &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///     &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: It can happen in below scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Cannot purchase an entitlement if there is already an entitlement for
+      ///     customer, for a SKU from the same product family.
+      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
+      ///     valid. If it is valid, then contact Google Channel support for further
+      ///     troubleshooting.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: This failure can happen in the following cases:
+      ///     * If the SKU has been already purchased for the customer.
+      ///     * If the customer's primary email already exists. In this case retry
+      ///     after changing the customer's primary contact email.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Purchasing a SKU that requires domain verification and the domain has
+      ///     not been verified.
+      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as Google Workspace Business Starter.
+      ///     * Applicable only for developer accounts: reseller and resold domain.
+      ///     Must meet the following domain naming requirements:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2594,51 +2496,38 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates an entitlement for a customer.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Cannot purchase an entitlement if there is already an
-      ///    entitlement for customer, for a SKU from the same product family. &lt;/li>
-      ///   &lt;li> INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      /// valid. If it is valid, then contact Google Channel support for further
-      /// troubleshooting. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: This failure can happen in the following cases:
-      ///   &lt;ul>
-      ///     &lt;li>If the SKU has been already purchased for the customer.&lt;/li>
-      ///     &lt;li>If the customer's primary email already exists. In this case retry
-      ///         after changing the customer's primary contact email.
-      ///     &lt;/li>
-      ///   &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This
-      /// failure can happen in the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Purchasing a SKU that requires domain verification and the
-      ///    domain has not been verified. &lt;/li>
-      ///    &lt;li> Purchasing an Add-On SKU like Vault or Drive without purchasing
-      ///    the pre-requisite SKU, such as Google Workspace Business Starter. &lt;/li>
-      ///    &lt;li> Applicable only for developer accounts: reseller and resold
-      ///    domain. Must meet the following domain naming requirements:
-      ///     &lt;ul>
-      ///       &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///       &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///     &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: It can happen in below scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Cannot purchase an entitlement if there is already an entitlement for
+      ///     customer, for a SKU from the same product family.
+      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
+      ///     valid. If it is valid, then contact Google Channel support for further
+      ///     troubleshooting.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: This failure can happen in the following cases:
+      ///     * If the SKU has been already purchased for the customer.
+      ///     * If the customer's primary email already exists. In this case retry
+      ///     after changing the customer's primary contact email.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Purchasing a SKU that requires domain verification and the domain has
+      ///     not been verified.
+      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as Google Workspace Business Starter.
+      ///     * Applicable only for developer accounts: reseller and resold domain.
+      ///     Must meet the following domain naming requirements:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2657,51 +2546,38 @@ namespace Google.Cloud.Channel.V1 {
       /// Creates an entitlement for a customer.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Cannot purchase an entitlement if there is already an
-      ///    entitlement for customer, for a SKU from the same product family. &lt;/li>
-      ///   &lt;li> INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
-      /// valid. If it is valid, then contact Google Channel support for further
-      /// troubleshooting. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found for the
-      /// reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: This failure can happen in the following cases:
-      ///   &lt;ul>
-      ///     &lt;li>If the SKU has been already purchased for the customer.&lt;/li>
-      ///     &lt;li>If the customer's primary email already exists. In this case retry
-      ///         after changing the customer's primary contact email.
-      ///     &lt;/li>
-      ///   &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This
-      /// failure can happen in the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Purchasing a SKU that requires domain verification and the
-      ///    domain has not been verified. &lt;/li>
-      ///    &lt;li> Purchasing an Add-On SKU like Vault or Drive without purchasing
-      ///    the pre-requisite SKU, such as Google Workspace Business Starter. &lt;/li>
-      ///    &lt;li> Applicable only for developer accounts: reseller and resold
-      ///    domain. Must meet the following domain naming requirements:
-      ///     &lt;ul>
-      ///       &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///       &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///     &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: It can happen in below scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Cannot purchase an entitlement if there is already an entitlement for
+      ///     customer, for a SKU from the same product family.
+      ///     * INVALID_VALUE: Offer passed in isn't valid. Make sure OfferId is
+      ///     valid. If it is valid, then contact Google Channel support for further
+      ///     troubleshooting.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: This failure can happen in the following cases:
+      ///     * If the SKU has been already purchased for the customer.
+      ///     * If the customer's primary email already exists. In this case retry
+      ///     after changing the customer's primary contact email.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Purchasing a SKU that requires domain verification and the domain has
+      ///     not been verified.
+      ///     * Purchasing an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as Google Workspace Business Starter.
+      ///     * Applicable only for developer accounts: reseller and resold domain.
+      ///     Must meet the following domain naming requirements:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the
+      /// backend. Contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2734,7 +2610,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2769,7 +2645,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2802,7 +2678,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2837,7 +2713,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2870,7 +2746,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2905,7 +2781,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2938,7 +2814,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -2973,7 +2849,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3004,7 +2880,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3037,7 +2913,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3068,7 +2944,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3101,7 +2977,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3135,7 +3011,7 @@ namespace Google.Cloud.Channel.V1 {
       /// in the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3171,7 +3047,7 @@ namespace Google.Cloud.Channel.V1 {
       /// in the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3205,7 +3081,7 @@ namespace Google.Cloud.Channel.V1 {
       /// in the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3241,7 +3117,7 @@ namespace Google.Cloud.Channel.V1 {
       /// in the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3271,7 +3147,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3303,7 +3179,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3333,7 +3209,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3365,7 +3241,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3400,7 +3276,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3438,7 +3314,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3474,7 +3350,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3512,7 +3388,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3552,7 +3428,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3593,7 +3469,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3632,7 +3508,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3673,7 +3549,7 @@ namespace Google.Cloud.Channel.V1 {
       /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3690,36 +3566,30 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements to new reseller.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the
-      /// reseller.&lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required
-      /// parameters in the request. &lt;/li> &lt;li> NOT_FOUND: If the customer or offer
-      /// resource is not found for the reseller. &lt;/li> &lt;li> ALREADY_EXISTS: If the
-      /// SKU has been already transferred for the customer. &lt;/li> &lt;li>
-      /// CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases: &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without transferring
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///   &lt;/li>
-      ///   &lt;li> All transferring entitlements must be specified. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
+      ///     the pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      ///     * All transferring entitlements must be specified.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3738,36 +3608,30 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements to new reseller.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the
-      /// reseller.&lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required
-      /// parameters in the request. &lt;/li> &lt;li> NOT_FOUND: If the customer or offer
-      /// resource is not found for the reseller. &lt;/li> &lt;li> ALREADY_EXISTS: If the
-      /// SKU has been already transferred for the customer. &lt;/li> &lt;li>
-      /// CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases: &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without transferring
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///   &lt;/li>
-      ///   &lt;li> All transferring entitlements must be specified. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
+      ///     the pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      ///     * All transferring entitlements must be specified.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3784,36 +3648,30 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements to new reseller.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the
-      /// reseller.&lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required
-      /// parameters in the request. &lt;/li> &lt;li> NOT_FOUND: If the customer or offer
-      /// resource is not found for the reseller. &lt;/li> &lt;li> ALREADY_EXISTS: If the
-      /// SKU has been already transferred for the customer. &lt;/li> &lt;li>
-      /// CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases: &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without transferring
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///   &lt;/li>
-      ///   &lt;li> All transferring entitlements must be specified. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
+      ///     the pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      ///     * All transferring entitlements must be specified.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3832,36 +3690,30 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements to new reseller.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the
-      /// reseller.&lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required
-      /// parameters in the request. &lt;/li> &lt;li> NOT_FOUND: If the customer or offer
-      /// resource is not found for the reseller. &lt;/li> &lt;li> ALREADY_EXISTS: If the
-      /// SKU has been already transferred for the customer. &lt;/li> &lt;li>
-      /// CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
-      /// following cases: &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without transferring
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///   &lt;/li>
-      ///   &lt;li> All transferring entitlements must be specified. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in the
+      /// following cases:
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without transferring
+      ///     the pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      ///     * All transferring entitlements must be specified.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The Operation metadata will contain an
@@ -3878,38 +3730,29 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements from current reseller to Google.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found
-      /// for the reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: If the SKU has been already
-      /// transferred for the customer. &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
       /// the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without purchasing
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case.&lt;/li>
-      /// &lt;/ul>
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3929,38 +3772,29 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements from current reseller to Google.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found
-      /// for the reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: If the SKU has been already
-      /// transferred for the customer. &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
       /// the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without purchasing
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case.&lt;/li>
-      /// &lt;/ul>
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -3978,38 +3812,29 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements from current reseller to Google.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found
-      /// for the reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: If the SKU has been already
-      /// transferred for the customer. &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
       /// the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without purchasing
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case.&lt;/li>
-      /// &lt;/ul>
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -4029,38 +3854,29 @@ namespace Google.Cloud.Channel.V1 {
       /// Transfers customer entitlements from current reseller to Google.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the customer doesn't belong to the reseller.
-      /// &lt;/li> &lt;li> INVALID_ARGUMENT: Missing or invalid required parameters in the
-      /// request. &lt;/li>
-      /// &lt;li> NOT_FOUND: If the customer or offer resource is not found
-      /// for the reseller. &lt;/li>
-      /// &lt;li> ALREADY_EXISTS: If the SKU has been already
-      /// transferred for the customer. &lt;/li>
-      /// &lt;li> CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
+      ///
+      /// * PERMISSION_DENIED: If the customer doesn't belong to the reseller.
+      /// * INVALID_ARGUMENT: Missing or invalid required parameters in the request.
+      /// * NOT_FOUND: If the customer or offer resource is not found for the
+      /// reseller.
+      /// * ALREADY_EXISTS: If the SKU has been already transferred for the customer.
+      /// * CONDITION_NOT_MET or FAILED_PRECONDITION: This failure can happen in
       /// the following cases:
-      /// &lt;ul>
-      ///    &lt;li> Transferring a SKU that requires domain verification and the
-      /// domain has not been verified. &lt;/li>
-      ///    &lt;li> Transferring an Add-On SKU like Vault or Drive without purchasing
-      /// the pre-requisite SKU, such as G Suite Basic &lt;/li> &lt;li> Applicable only for
-      /// developer accounts: reseller and resold domain must follow the domain
-      /// naming convention as follows:
-      ///      &lt;ul>
-      ///         &lt;li> Domain names must start with goog-test. &lt;/li>
-      ///         &lt;li> Resold domain names must include the reseller domain. &lt;/li>
-      ///      &lt;/ul>
-      ///    &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. Please contact Cloud Channel Support in this case.&lt;/li>
-      /// &lt;/ul>
+      ///     * Transferring a SKU that requires domain verification and the domain
+      ///     has not been verified.
+      ///     * Transferring an Add-On SKU like Vault or Drive without purchasing the
+      ///     pre-requisite SKU, such as G Suite Basic.
+      ///     * Applicable only for developer accounts: reseller and resold domain
+      ///     must follow the domain naming convention as follows:
+      ///         * Domain names must start with goog-test.
+      ///         * Resold domain names must include the reseller domain.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// Please contact Cloud Channel Support in this case.
       ///
       /// Return Value:
-      /// &lt;br/> Long Running Operation ID.
+      /// Long Running Operation ID.
       ///
       /// To get the results of the operation, call the GetOperation method of
       /// CloudChannelOperationsService. The response will contain
@@ -4086,7 +3902,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
+      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
       /// for the distributor account, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4110,7 +3926,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
+      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
       /// for the distributor account, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4132,7 +3948,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
+      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
       /// for the distributor account, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4156,7 +3972,7 @@ namespace Google.Cloud.Channel.V1 {
       /// request.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
+      /// If successful, returns the list of [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resources
       /// for the distributor account, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4180,7 +3996,7 @@ namespace Google.Cloud.Channel.V1 {
       /// due invalid channel partner link name.
       ///
       /// Return Value:
-      /// &lt;br/> [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4205,7 +4021,7 @@ namespace Google.Cloud.Channel.V1 {
       /// due invalid channel partner link name.
       ///
       /// Return Value:
-      /// &lt;br/> [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4228,7 +4044,7 @@ namespace Google.Cloud.Channel.V1 {
       /// due invalid channel partner link name.
       ///
       /// Return Value:
-      /// &lt;br/> [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4253,7 +4069,7 @@ namespace Google.Cloud.Channel.V1 {
       /// due invalid channel partner link name.
       ///
       /// Return Value:
-      /// &lt;br/> [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
+      /// [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if found, otherwise returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4285,7 +4101,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
+      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
       /// otherwise error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4320,7 +4136,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
+      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
       /// otherwise error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4353,7 +4169,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
+      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
       /// otherwise error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4388,7 +4204,7 @@ namespace Google.Cloud.Channel.V1 {
       /// the backend. In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
+      /// Newly created [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource if successful,
       /// otherwise error is returned.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4404,26 +4220,22 @@ namespace Google.Cloud.Channel.V1 {
       /// To call this method, you must be a distributor.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different. &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Updating link state from invited to active or suspended. &lt;/li>
-      ///   &lt;li> Sending reseller_cloud_identity_id, invite_url or name in update
-      ///   mask. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: ChannelPartnerLink resource not found.&lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Updating link state from invited to active or suspended.
+      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      ///     mask.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
+      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4441,26 +4253,22 @@ namespace Google.Cloud.Channel.V1 {
       /// To call this method, you must be a distributor.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different. &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Updating link state from invited to active or suspended. &lt;/li>
-      ///   &lt;li> Sending reseller_cloud_identity_id, invite_url or name in update
-      ///   mask. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: ChannelPartnerLink resource not found.&lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Updating link state from invited to active or suspended.
+      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      ///     mask.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
+      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4476,26 +4284,22 @@ namespace Google.Cloud.Channel.V1 {
       /// To call this method, you must be a distributor.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different. &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Updating link state from invited to active or suspended. &lt;/li>
-      ///   &lt;li> Sending reseller_cloud_identity_id, invite_url or name in update
-      ///   mask. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: ChannelPartnerLink resource not found.&lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Updating link state from invited to active or suspended.
+      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      ///     mask.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
+      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -4513,26 +4317,22 @@ namespace Google.Cloud.Channel.V1 {
       /// To call this method, you must be a distributor.
       ///
       /// Possible Error Codes:
-      /// &lt;ul>
-      /// &lt;li> PERMISSION_DENIED: If the reseller account making the request and the
-      /// reseller account being queried for are different. &lt;/li>
-      /// &lt;li> INVALID_ARGUMENT:
-      /// &lt;ul>
-      ///   &lt;li> Missing or invalid required parameters in the request. &lt;/li>
-      ///   &lt;li> Updating link state from invited to active or suspended. &lt;/li>
-      ///   &lt;li> Sending reseller_cloud_identity_id, invite_url or name in update
-      ///   mask. &lt;/li>
-      /// &lt;/ul>
-      /// &lt;/li>
-      /// &lt;li> NOT_FOUND: ChannelPartnerLink resource not found.&lt;/li>
-      /// &lt;li> INTERNAL: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support. &lt;/li>
-      /// &lt;li> UNKNOWN: Any non-user error related to a technical issue in the
-      /// backend. In this case, contact Cloud Channel support.&lt;/li>
-      /// &lt;/ul>
+      ///
+      /// * PERMISSION_DENIED: If the reseller account making the request and the
+      /// reseller account being queried for are different.
+      /// * INVALID_ARGUMENT: It can happen in following scenarios -
+      ///     * Missing or invalid required parameters in the request.
+      ///     * Updating link state from invited to active or suspended.
+      ///     * Sending reseller_cloud_identity_id, invite_url or name in update
+      ///     mask.
+      /// * NOT_FOUND: ChannelPartnerLink resource not found.
+      /// * INTERNAL: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
+      /// * UNKNOWN: Any non-user error related to a technical issue in the backend.
+      /// In this case, contact Cloud Channel support.
       ///
       /// Return Value:
-      /// &lt;br/> If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
+      /// If successful, the updated [ChannelPartnerLink][google.cloud.channel.v1.ChannelPartnerLink] resource, otherwise
       /// returns an error.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

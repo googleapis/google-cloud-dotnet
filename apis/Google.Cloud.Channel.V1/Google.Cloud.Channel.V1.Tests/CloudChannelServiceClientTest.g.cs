@@ -639,7 +639,6 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 Parent = "parent7858e4d0",
                 ChannelPartnerLink = new ChannelPartnerLink(),
-                Domain = "domaine8825fad",
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
@@ -668,7 +667,6 @@ namespace Google.Cloud.Channel.V1.Tests
             {
                 Parent = "parent7858e4d0",
                 ChannelPartnerLink = new ChannelPartnerLink(),
-                Domain = "domaine8825fad",
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
