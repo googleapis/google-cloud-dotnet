@@ -109,11 +109,12 @@ generate_microgenerator() {
   # want to generate it.
   $PROTOC \
     --csharp_out=$PRODUCTION_PACKAGE_DIR \
+    --csharp_opt=base_namespace=$1 \
     --grpc_out=$PRODUCTION_PACKAGE_DIR \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
-    $API_SRC_DIR/*.proto \
+    $(find $API_SRC_DIR -name '*.proto') \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 
   # Allow protos to be changed after proto/gRPC generation but before the
@@ -134,7 +135,7 @@ generate_microgenerator() {
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
-    $API_SRC_DIR/*.proto \
+    $(find $API_SRC_DIR -name '*.proto') \
     $COMMON_RESOURCES_PROTO \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 
