@@ -148,6 +148,9 @@ do
   sleep 1
 done
 
+echo 'Regenerating TOC'
+dotnet run -p ../../tools/Google.Cloud.Tools.RegenerateToc -- devsite/api
+
 cd devsite
 
 echo 'Creating metadata file'

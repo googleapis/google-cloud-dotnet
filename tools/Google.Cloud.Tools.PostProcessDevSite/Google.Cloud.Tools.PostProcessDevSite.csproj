@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
+    <ProjectReference Include="..\Google.Cloud.Tools.RegenerateToc\Google.Cloud.Tools.RegenerateToc.csproj" />
   </ItemGroup>
 
 </Project>
