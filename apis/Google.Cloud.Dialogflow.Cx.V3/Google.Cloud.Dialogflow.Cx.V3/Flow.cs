@@ -934,7 +934,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
-    /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
+    /// languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
     /// are supported.
     /// Note: languages must be enabled in the agent before they can be used.
     /// </summary>
@@ -1454,7 +1454,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
-    /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
+    /// languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
     /// are supported.
     /// Note: languages must be enabled in the agent before they can be used.
     /// </summary>
@@ -1939,7 +1939,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
-    /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
+    /// languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
     /// are supported.
     /// Note: languages must be enabled in the agent before they can be used.
     /// </summary>
@@ -2181,7 +2181,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     ///
     /// If not specified, the agent's default language is used.
     /// [Many
-    /// languages](https://cloud.google.com/dialogflow/docs/reference/language)
+    /// languages](https://cloud.google.com/dialogflow/cx/docs/reference/language)
     /// are supported.
     /// Note: languages must be enabled in the agent before they can be used.
     /// </summary>

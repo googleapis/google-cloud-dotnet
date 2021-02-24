@@ -2597,9 +2597,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private string languageCode_ = "";
     /// <summary>
     /// Required. The language of the input. See [Language
-    /// Support](https://cloud.google.com/dialogflow/docs/reference/language) for a
-    /// list of the currently supported language codes. Note that queries in the
-    /// same session do not necessarily need to specify the same language.
+    /// Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
+    /// for a list of the currently supported language codes. Note that queries in
+    /// the same session do not necessarily need to specify the same language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -3076,7 +3076,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// <summary>
     /// The language that was triggered during intent detection.
     /// See [Language
-    /// Support](https://cloud.google.com/dialogflow/docs/reference/language)
+    /// Support](https://cloud.google.com/dialogflow/cx/docs/reference/language)
     /// for a list of the currently supported language codes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
