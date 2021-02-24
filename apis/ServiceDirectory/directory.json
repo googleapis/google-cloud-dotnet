@@ -415,6 +415,28 @@
       "CSharpNamespaceFromProtos": "<AMBIGUOUS: Google.Cloud.Asset.V1P5Beta1, Google.Cloud.Asset.V1p5Beta1>"
     },
     {
+      "ServiceDirectory": "google/cloud/asset/v1p7beta1",
+      "Name": "cloudasset.googleapis.com",
+      "Title": "Cloud Asset API",
+      "Description": "The cloud asset API manages the history and inventory of cloud resources.",
+      "ServiceConfigFile": "google/cloud/asset/v1p7beta1/cloudasset_v1p7beta1.yaml",
+      "Version": "v1p7beta1",
+      "PackageFromDirectory": "google.cloud.asset.v1p7beta1",
+      "PackageFromProtos": "google.cloud.asset.v1p7beta1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/asset/v1p7beta1",
+        "google/cloud/orgpolicy/v1",
+        "google/cloud/osconfig/v1",
+        "google/iam/v1",
+        "google/identity/accesscontextmanager/v1",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": false,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Asset.V1P7Beta1"
+    },
+    {
       "ServiceDirectory": "google/cloud/assuredworkloads/v1beta1",
       "Name": "assuredworkloads.googleapis.com",
       "Title": "Assured Workloads API",
