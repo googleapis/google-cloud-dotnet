@@ -28,84 +28,101 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "ZS5iaWd0YWJsZS5hZG1pbi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
             "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL3By",
             "b3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIpsBCgtSZXN0b3JlSW5mbxJACgtzb3VyY2VfdHlwZRgBIAEo",
-            "DjIrLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5SZXN0b3JlU291cmNlVHlw",
-            "ZRI7CgtiYWNrdXBfaW5mbxgCIAEoCzIkLmdvb2dsZS5iaWd0YWJsZS5hZG1p",
-            "bi52Mi5CYWNrdXBJbmZvSABCDQoLc291cmNlX2luZm8i+wcKBVRhYmxlEgwK",
-            "BG5hbWUYASABKAkSSgoOY2x1c3Rlcl9zdGF0ZXMYAiADKAsyMi5nb29nbGUu",
-            "YmlndGFibGUuYWRtaW4udjIuVGFibGUuQ2x1c3RlclN0YXRlc0VudHJ5EkwK",
-            "D2NvbHVtbl9mYW1pbGllcxgDIAMoCzIzLmdvb2dsZS5iaWd0YWJsZS5hZG1p",
-            "bi52Mi5UYWJsZS5Db2x1bW5GYW1pbGllc0VudHJ5EkkKC2dyYW51bGFyaXR5",
-            "GAQgASgOMjQuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlLlRpbWVz",
-            "dGFtcEdyYW51bGFyaXR5EjsKDHJlc3RvcmVfaW5mbxgGIAEoCzIlLmdvb2ds",
-            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5SZXN0b3JlSW5mbxr5AQoMQ2x1c3RlclN0",
-            "YXRlElgKEXJlcGxpY2F0aW9uX3N0YXRlGAEgASgOMj0uZ29vZ2xlLmJpZ3Rh",
-            "YmxlLmFkbWluLnYyLlRhYmxlLkNsdXN0ZXJTdGF0ZS5SZXBsaWNhdGlvblN0",
-            "YXRlIo4BChBSZXBsaWNhdGlvblN0YXRlEhMKD1NUQVRFX05PVF9LTk9XThAA",
-            "EhAKDElOSVRJQUxJWklORxABEhcKE1BMQU5ORURfTUFJTlRFTkFOQ0UQAhIZ",
-            "ChVVTlBMQU5ORURfTUFJTlRFTkFOQ0UQAxIJCgVSRUFEWRAEEhQKEFJFQURZ",
-            "X09QVElNSVpJTkcQBRpiChJDbHVzdGVyU3RhdGVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEjsKBXZhbHVlGAIgASgLMiwuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
-            "LlRhYmxlLkNsdXN0ZXJTdGF0ZToCOAEaXQoTQ29sdW1uRmFtaWxpZXNFbnRy",
-            "eRILCgNrZXkYASABKAkSNQoFdmFsdWUYAiABKAsyJi5nb29nbGUuYmlndGFi",
-            "bGUuYWRtaW4udjIuQ29sdW1uRmFtaWx5OgI4ASJJChRUaW1lc3RhbXBHcmFu",
-            "dWxhcml0eRIlCiFUSU1FU1RBTVBfR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQ",
-            "ABIKCgZNSUxMSVMQASJcCgRWaWV3EhQKEFZJRVdfVU5TUEVDSUZJRUQQABIN",
-            "CglOQU1FX09OTFkQARIPCgtTQ0hFTUFfVklFVxACEhQKEFJFUExJQ0FUSU9O",
-            "X1ZJRVcQAxIICgRGVUxMEAQ6WupBVwodYmlndGFibGUuZ29vZ2xlYXBpcy5j",
-            "b20vVGFibGUSNnByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3Rh",
-            "bmNlfS90YWJsZXMve3RhYmxlfSJBCgxDb2x1bW5GYW1pbHkSMQoHZ2NfcnVs",
-            "ZRgBIAEoCzIgLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HY1J1bGUi1QIK",
-            "BkdjUnVsZRIaChBtYXhfbnVtX3ZlcnNpb25zGAEgASgFSAASLAoHbWF4X2Fn",
-            "ZRgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEkUKDGludGVy",
-            "c2VjdGlvbhgDIAEoCzItLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HY1J1",
-            "bGUuSW50ZXJzZWN0aW9uSAASNwoFdW5pb24YBCABKAsyJi5nb29nbGUuYmln",
-            "dGFibGUuYWRtaW4udjIuR2NSdWxlLlVuaW9uSAAaPwoMSW50ZXJzZWN0aW9u",
-            "Ei8KBXJ1bGVzGAEgAygLMiAuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdj",
-            "UnVsZRo4CgVVbmlvbhIvCgVydWxlcxgBIAMoCzIgLmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5HY1J1bGVCBgoEcnVsZSLHAwoIU25hcHNob3QSDAoEbmFt",
-            "ZRgBIAEoCRI1Cgxzb3VyY2VfdGFibGUYAiABKAsyHy5nb29nbGUuYmlndGFi",
-            "bGUuYWRtaW4udjIuVGFibGUSFwoPZGF0YV9zaXplX2J5dGVzGAMgASgDEi8K",
-            "C2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBIvCgtkZWxldGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASNwoFc3RhdGUYBiABKA4yKC5nb29nbGUuYmlndGFibGUuYWRtaW4u",
-            "djIuU25hcHNob3QuU3RhdGUSEwoLZGVzY3JpcHRpb24YByABKAkiNQoFU3Rh",
-            "dGUSEwoPU1RBVEVfTk9UX0tOT1dOEAASCQoFUkVBRFkQARIMCghDUkVBVElO",
-            "RxACOnbqQXMKIGJpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL1NuYXBzaG90Ek9w",
-            "cm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vY2x1c3Rl",
-            "cnMve2NsdXN0ZXJ9L3NuYXBzaG90cy97c25hcHNob3R9ItcDCgZCYWNrdXAS",
-            "EQoEbmFtZRgBIAEoCUID4EEDEhwKDHNvdXJjZV90YWJsZRgCIAEoCUIG4EEF",
-            "4EECEjQKC2V4cGlyZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EECEjMKCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFwoKc2l6ZV9ieXRlcxgGIAEo",
-            "A0ID4EEDEjoKBXN0YXRlGAcgASgOMiYuZ29vZ2xlLmJpZ3RhYmxlLmFkbWlu",
-            "LnYyLkJhY2t1cC5TdGF0ZUID4EEDIjcKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACOnDqQW0KHmJpZ3Rh",
-            "YmxlLmdvb2dsZWFwaXMuY29tL0JhY2t1cBJLcHJvamVjdHMve3Byb2plY3R9",
-            "L2luc3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9iYWNr",
-            "dXBzL3tiYWNrdXB9IqQBCgpCYWNrdXBJbmZvEhMKBmJhY2t1cBgBIAEoCUID",
-            "4EEDEjMKCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSGQoMc291cmNlX3RhYmxlGAQgASgJQgPgQQMq",
-            "RAoRUmVzdG9yZVNvdXJjZVR5cGUSIwofUkVTVE9SRV9TT1VSQ0VfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgoKBkJBQ0tVUBABQtIBChxjb20uZ29vZ2xlLmJpZ3Rh",
-            "YmxlLmFkbWluLnYyQgpUYWJsZVByb3RvUAFaPWdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFibGUvYWRtaW4vdjI7YWRtaW6q",
-            "Ah5Hb29nbGUuQ2xvdWQuQmlndGFibGUuQWRtaW4uVjLKAh5Hb29nbGVcQ2xv",
-            "dWRcQmlndGFibGVcQWRtaW5cVjLqAiJHb29nbGU6OkNsb3VkOjpCaWd0YWJs",
-            "ZTo6QWRtaW46OlYyYgZwcm90bzM="));
+            "YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKbAQoLUmVzdG9y",
+            "ZUluZm8SQAoLc291cmNlX3R5cGUYASABKA4yKy5nb29nbGUuYmlndGFibGUu",
+            "YWRtaW4udjIuUmVzdG9yZVNvdXJjZVR5cGUSOwoLYmFja3VwX2luZm8YAiAB",
+            "KAsyJC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQmFja3VwSW5mb0gAQg0K",
+            "C3NvdXJjZV9pbmZvItgICgVUYWJsZRIMCgRuYW1lGAEgASgJEkoKDmNsdXN0",
+            "ZXJfc3RhdGVzGAIgAygLMjIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRh",
+            "YmxlLkNsdXN0ZXJTdGF0ZXNFbnRyeRJMCg9jb2x1bW5fZmFtaWxpZXMYAyAD",
+            "KAsyMy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuVGFibGUuQ29sdW1uRmFt",
+            "aWxpZXNFbnRyeRJJCgtncmFudWxhcml0eRgEIAEoDjI0Lmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5UYWJsZS5UaW1lc3RhbXBHcmFudWxhcml0eRI7Cgxy",
+            "ZXN0b3JlX2luZm8YBiABKAsyJS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "UmVzdG9yZUluZm8awQIKDENsdXN0ZXJTdGF0ZRJYChFyZXBsaWNhdGlvbl9z",
+            "dGF0ZRgBIAEoDjI9Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5UYWJsZS5D",
+            "bHVzdGVyU3RhdGUuUmVwbGljYXRpb25TdGF0ZRJGCg9lbmNyeXB0aW9uX2lu",
+            "Zm8YAiADKAsyKC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuRW5jcnlwdGlv",
+            "bkluZm9CA+BBAyKOAQoQUmVwbGljYXRpb25TdGF0ZRITCg9TVEFURV9OT1Rf",
+            "S05PV04QABIQCgxJTklUSUFMSVpJTkcQARIXChNQTEFOTkVEX01BSU5URU5B",
+            "TkNFEAISGQoVVU5QTEFOTkVEX01BSU5URU5BTkNFEAMSCQoFUkVBRFkQBBIU",
+            "ChBSRUFEWV9PUFRJTUlaSU5HEAUaYgoSQ2x1c3RlclN0YXRlc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRI7CgV2YWx1ZRgCIAEoCzIsLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52Mi5UYWJsZS5DbHVzdGVyU3RhdGU6AjgBGl0KE0NvbHVtbkZhbWls",
+            "aWVzRW50cnkSCwoDa2V5GAEgASgJEjUKBXZhbHVlGAIgASgLMiYuZ29vZ2xl",
+            "LmJpZ3RhYmxlLmFkbWluLnYyLkNvbHVtbkZhbWlseToCOAEiSQoUVGltZXN0",
+            "YW1wR3JhbnVsYXJpdHkSJQohVElNRVNUQU1QX0dSQU5VTEFSSVRZX1VOU1BF",
+            "Q0lGSUVEEAASCgoGTUlMTElTEAEicQoEVmlldxIUChBWSUVXX1VOU1BFQ0lG",
+            "SUVEEAASDQoJTkFNRV9PTkxZEAESDwoLU0NIRU1BX1ZJRVcQAhIUChBSRVBM",
+            "SUNBVElPTl9WSUVXEAMSEwoPRU5DUllQVElPTl9WSUVXEAUSCAoERlVMTBAE",
+            "OlrqQVcKHWJpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL1RhYmxlEjZwcm9qZWN0",
+            "cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vdGFibGVzL3t0YWJs",
+            "ZX0iQQoMQ29sdW1uRmFtaWx5EjEKB2djX3J1bGUYASABKAsyIC5nb29nbGUu",
+            "YmlndGFibGUuYWRtaW4udjIuR2NSdWxlItUCCgZHY1J1bGUSGgoQbWF4X251",
+            "bV92ZXJzaW9ucxgBIAEoBUgAEiwKB21heF9hZ2UYAiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25IABJFCgxpbnRlcnNlY3Rpb24YAyABKAsyLS5n",
+            "b29nbGUuYmlndGFibGUuYWRtaW4udjIuR2NSdWxlLkludGVyc2VjdGlvbkgA",
+            "EjcKBXVuaW9uGAQgASgLMiYuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkdj",
+            "UnVsZS5VbmlvbkgAGj8KDEludGVyc2VjdGlvbhIvCgVydWxlcxgBIAMoCzIg",
+            "Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5HY1J1bGUaOAoFVW5pb24SLwoF",
+            "cnVsZXMYASADKAsyIC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuR2NSdWxl",
+            "QgYKBHJ1bGUi2QIKDkVuY3J5cHRpb25JbmZvElUKD2VuY3J5cHRpb25fdHlw",
+            "ZRgDIAEoDjI3Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5FbmNyeXB0aW9u",
+            "SW5mby5FbmNyeXB0aW9uVHlwZUID4EEDEjIKEWVuY3J5cHRpb25fc3RhdHVz",
+            "GAQgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXNCA+BBAxJJCg9rbXNfa2V5X3Zl",
+            "cnNpb24YAiABKAlCMOBBA/pBKgooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
+            "Q3J5cHRvS2V5VmVyc2lvbiJxCg5FbmNyeXB0aW9uVHlwZRIfChtFTkNSWVBU",
+            "SU9OX1RZUEVfVU5TUEVDSUZJRUQQABIdChlHT09HTEVfREVGQVVMVF9FTkNS",
+            "WVBUSU9OEAESHwobQ1VTVE9NRVJfTUFOQUdFRF9FTkNSWVBUSU9OEAIixwMK",
+            "CFNuYXBzaG90EgwKBG5hbWUYASABKAkSNQoMc291cmNlX3RhYmxlGAIgASgL",
+            "Mh8uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlRhYmxlEhcKD2RhdGFfc2l6",
+            "ZV9ieXRlcxgDIAEoAxIvCgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASLwoLZGVsZXRlX3RpbWUYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEjcKBXN0YXRlGAYgASgOMiguZ29vZ2xl",
+            "LmJpZ3RhYmxlLmFkbWluLnYyLlNuYXBzaG90LlN0YXRlEhMKC2Rlc2NyaXB0",
+            "aW9uGAcgASgJIjUKBVN0YXRlEhMKD1NUQVRFX05PVF9LTk9XThAAEgkKBVJF",
+            "QURZEAESDAoIQ1JFQVRJTkcQAjp26kFzCiBiaWd0YWJsZS5nb29nbGVhcGlz",
+            "LmNvbS9TbmFwc2hvdBJPcHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97",
+            "aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfS9zbmFwc2hvdHMve3NuYXBz",
+            "aG90fSKfBAoGQmFja3VwEhEKBG5hbWUYASABKAlCA+BBAxIcCgxzb3VyY2Vf",
+            "dGFibGUYAiABKAlCBuBBBeBBAhI0CgtleHBpcmVfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhIzCgpzdGFydF90aW1lGAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90",
+            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhcK",
+            "CnNpemVfYnl0ZXMYBiABKANCA+BBAxI6CgVzdGF0ZRgHIAEoDjImLmdvb2ds",
+            "ZS5iaWd0YWJsZS5hZG1pbi52Mi5CYWNrdXAuU3RhdGVCA+BBAxJGCg9lbmNy",
+            "eXB0aW9uX2luZm8YCSABKAsyKC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
+            "RW5jcnlwdGlvbkluZm9CA+BBAyI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQAjpw6kFtCh5iaWd0YWJs",
+            "ZS5nb29nbGVhcGlzLmNvbS9CYWNrdXASS3Byb2plY3RzL3twcm9qZWN0fS9p",
+            "bnN0YW5jZXMve2luc3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0vYmFja3Vw",
+            "cy97YmFja3VwfSKkAQoKQmFja3VwSW5mbxITCgZiYWNrdXAYASABKAlCA+BB",
+            "AxIzCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDEhkKDHNvdXJjZV90YWJsZRgEIAEoCUID4EEDKkQK",
+            "EVJlc3RvcmVTb3VyY2VUeXBlEiMKH1JFU1RPUkVfU09VUkNFX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIKCgZCQUNLVVAQAUL8AgocY29tLmdvb2dsZS5iaWd0YWJs",
+            "ZS5hZG1pbi52MkIKVGFibGVQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIe",
+            "R29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3Vk",
+            "XEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6",
+            "OkFkbWluOjpWMupBpgEKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0",
+            "b0tleVZlcnNpb24SenByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0",
+            "b19rZXl9L2NyeXB0b0tleVZlcnNpb25zL3tjcnlwdG9fa2V5X3ZlcnNpb259",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.Admin.V2.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.RestoreInfo), global::Google.Cloud.Bigtable.Admin.V2.RestoreInfo.Parser, new[]{ "SourceType", "BackupInfo" }, new[]{ "SourceInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser, new[]{ "Name", "ClusterStates", "ColumnFamilies", "Granularity", "RestoreInfo" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity), typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState), global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser, new[]{ "ReplicationState" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table), global::Google.Cloud.Bigtable.Admin.V2.Table.Parser, new[]{ "Name", "ClusterStates", "ColumnFamilies", "Granularity", "RestoreInfo" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.TimestampGranularity), typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.View) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState), global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Parser, new[]{ "ReplicationState", "EncryptionInfo" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) }, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily), global::Google.Cloud.Bigtable.Admin.V2.ColumnFamily.Parser, new[]{ "GcRule" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Parser, new[]{ "MaxNumVersions", "MaxAge", "Intersection", "Union" }, new[]{ "Rule" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Intersection.Parser, new[]{ "Rules" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union), global::Google.Cloud.Bigtable.Admin.V2.GcRule.Types.Union.Parser, new[]{ "Rules" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo), global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Parser, new[]{ "EncryptionType", "EncryptionStatus", "KmsKeyVersion" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot), global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser, new[]{ "Name", "SourceTable", "DataSizeBytes", "CreateTime", "DeleteTime", "State", "Description" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup), global::Google.Cloud.Bigtable.Admin.V2.Backup.Parser, new[]{ "Name", "SourceTable", "ExpireTime", "StartTime", "EndTime", "SizeBytes", "State" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup), global::Google.Cloud.Bigtable.Admin.V2.Backup.Parser, new[]{ "Name", "SourceTable", "ExpireTime", "StartTime", "EndTime", "SizeBytes", "State", "EncryptionInfo" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.BackupInfo), global::Google.Cloud.Bigtable.Admin.V2.BackupInfo.Parser, new[]{ "Backup", "StartTime", "EndTime", "SourceTable" }, null, null, null, null)
           }));
     }
@@ -439,8 +456,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Output only. The unique name of the table. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
+    /// The unique name of the table. Values are of the form
+    /// `projects/{project}/instances/{instance}/tables/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
     /// Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -461,7 +478,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// If it could not be determined whether or not the table has data in a
     /// particular cluster (for example, if its zone is unavailable), then
     /// there will be an entry for the cluster with UNKNOWN `replication_status`.
-    /// Views: `REPLICATION_VIEW`, `FULL`
+    /// Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState> ClusterStates {
@@ -764,6 +781,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         /// </summary>
         [pbr::OriginalName("REPLICATION_VIEW")] ReplicationView = 3,
         /// <summary>
+        /// Only populates 'name' and fields related to the table's encryption state.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTION_VIEW")] EncryptionView = 5,
+        /// <summary>
         /// Populates all fields.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 4,
@@ -802,6 +823,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public ClusterState(ClusterState other) : this() {
           replicationState_ = other.replicationState_;
+          encryptionInfo_ = other.encryptionInfo_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -824,6 +846,23 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
         }
 
+        /// <summary>Field number for the "encryption_info" field.</summary>
+        public const int EncryptionInfoFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo> _repeated_encryptionInfo_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo> encryptionInfo_ = new pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo>();
+        /// <summary>
+        /// Output only. The encryption information for the table in this cluster.
+        /// If the encryption key protecting this resource is customer managed, then
+        /// its version can be rotated in Cloud Key Management Service (Cloud KMS).
+        /// The primary version of the key and its status will be reflected here when
+        /// changes propagate from Cloud KMS.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo> EncryptionInfo {
+          get { return encryptionInfo_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
           return Equals(other as ClusterState);
@@ -838,6 +877,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             return true;
           }
           if (ReplicationState != other.ReplicationState) return false;
+          if(!encryptionInfo_.Equals(other.encryptionInfo_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -845,6 +885,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         public override int GetHashCode() {
           int hash = 1;
           if (ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) hash ^= ReplicationState.GetHashCode();
+          hash ^= encryptionInfo_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -865,6 +906,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ReplicationState);
           }
+          encryptionInfo_.WriteTo(output, _repeated_encryptionInfo_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -878,6 +920,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ReplicationState);
           }
+          encryptionInfo_.WriteTo(ref output, _repeated_encryptionInfo_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -890,6 +933,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReplicationState);
           }
+          size += encryptionInfo_.CalculateSize(_repeated_encryptionInfo_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -904,6 +948,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           if (other.ReplicationState != global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState.StateNotKnown) {
             ReplicationState = other.ReplicationState;
           }
+          encryptionInfo_.Add(other.encryptionInfo_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -922,6 +967,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
                 ReplicationState = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) input.ReadEnum();
                 break;
               }
+              case 18: {
+                encryptionInfo_.AddEntriesFrom(input, _repeated_encryptionInfo_codec);
+                break;
+              }
             }
           }
         #endif
@@ -938,6 +987,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
                 break;
               case 8: {
                 ReplicationState = (global::Google.Cloud.Bigtable.Admin.V2.Table.Types.ClusterState.Types.ReplicationState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                encryptionInfo_.AddEntriesFrom(ref input, _repeated_encryptionInfo_codec);
                 break;
               }
             }
@@ -1904,6 +1957,310 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
+  /// Encryption information for a given resource.
+  /// If this resource is protected with customer managed encryption, the in-use
+  /// Cloud Key Management Service (Cloud KMS) key version is specified along with
+  /// its status.
+  /// </summary>
+  public sealed partial class EncryptionInfo : pb::IMessage<EncryptionInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EncryptionInfo> _parser = new pb::MessageParser<EncryptionInfo>(() => new EncryptionInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<EncryptionInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EncryptionInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EncryptionInfo(EncryptionInfo other) : this() {
+      encryptionType_ = other.encryptionType_;
+      encryptionStatus_ = other.encryptionStatus_ != null ? other.encryptionStatus_.Clone() : null;
+      kmsKeyVersion_ = other.kmsKeyVersion_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EncryptionInfo Clone() {
+      return new EncryptionInfo(this);
+    }
+
+    /// <summary>Field number for the "encryption_type" field.</summary>
+    public const int EncryptionTypeFieldNumber = 3;
+    private global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType encryptionType_ = global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType.Unspecified;
+    /// <summary>
+    /// Output only. The type of encryption used to protect this resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType EncryptionType {
+      get { return encryptionType_; }
+      set {
+        encryptionType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "encryption_status" field.</summary>
+    public const int EncryptionStatusFieldNumber = 4;
+    private global::Google.Rpc.Status encryptionStatus_;
+    /// <summary>
+    /// Output only. The status of encrypt/decrypt calls on underlying data for
+    /// this resource. Regardless of status, the existing data is always encrypted
+    /// at rest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Rpc.Status EncryptionStatus {
+      get { return encryptionStatus_; }
+      set {
+        encryptionStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "kms_key_version" field.</summary>
+    public const int KmsKeyVersionFieldNumber = 2;
+    private string kmsKeyVersion_ = "";
+    /// <summary>
+    /// Output only. The version of the Cloud KMS key specified in the parent
+    /// cluster that is in use for the data underlying this table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KmsKeyVersion {
+      get { return kmsKeyVersion_; }
+      set {
+        kmsKeyVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as EncryptionInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(EncryptionInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EncryptionType != other.EncryptionType) return false;
+      if (!object.Equals(EncryptionStatus, other.EncryptionStatus)) return false;
+      if (KmsKeyVersion != other.KmsKeyVersion) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EncryptionType != global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType.Unspecified) hash ^= EncryptionType.GetHashCode();
+      if (encryptionStatus_ != null) hash ^= EncryptionStatus.GetHashCode();
+      if (KmsKeyVersion.Length != 0) hash ^= KmsKeyVersion.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (KmsKeyVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KmsKeyVersion);
+      }
+      if (EncryptionType != global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) EncryptionType);
+      }
+      if (encryptionStatus_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EncryptionStatus);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KmsKeyVersion.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KmsKeyVersion);
+      }
+      if (EncryptionType != global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) EncryptionType);
+      }
+      if (encryptionStatus_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EncryptionStatus);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (EncryptionType != global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EncryptionType);
+      }
+      if (encryptionStatus_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionStatus);
+      }
+      if (KmsKeyVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(EncryptionInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EncryptionType != global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType.Unspecified) {
+        EncryptionType = other.EncryptionType;
+      }
+      if (other.encryptionStatus_ != null) {
+        if (encryptionStatus_ == null) {
+          EncryptionStatus = new global::Google.Rpc.Status();
+        }
+        EncryptionStatus.MergeFrom(other.EncryptionStatus);
+      }
+      if (other.KmsKeyVersion.Length != 0) {
+        KmsKeyVersion = other.KmsKeyVersion;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            KmsKeyVersion = input.ReadString();
+            break;
+          }
+          case 24: {
+            EncryptionType = (global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (encryptionStatus_ == null) {
+              EncryptionStatus = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(EncryptionStatus);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            KmsKeyVersion = input.ReadString();
+            break;
+          }
+          case 24: {
+            EncryptionType = (global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo.Types.EncryptionType) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (encryptionStatus_ == null) {
+              EncryptionStatus = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(EncryptionStatus);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EncryptionInfo message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Possible encryption types for a resource.
+      /// </summary>
+      public enum EncryptionType {
+        /// <summary>
+        /// Encryption type was not specified, though data at rest remains encrypted.
+        /// </summary>
+        [pbr::OriginalName("ENCRYPTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The data backing this resource is encrypted at rest with a key that is
+        /// fully managed by Google. No key version or status will be populated.
+        /// This is the default state.
+        /// </summary>
+        [pbr::OriginalName("GOOGLE_DEFAULT_ENCRYPTION")] GoogleDefaultEncryption = 1,
+        /// <summary>
+        /// The data backing this resource is encrypted at rest with a key that is
+        /// managed by the customer.
+        /// The in-use version of the key and its status are populated for
+        /// CMEK-protected tables.
+        /// CMEK-protected backups are pinned to the key version that was in use at
+        /// the time the backup was taken. This key version is populated but its
+        /// status is not tracked and is reported as `UNKNOWN`.
+        /// </summary>
+        [pbr::OriginalName("CUSTOMER_MANAGED_ENCRYPTION")] CustomerManagedEncryption = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A snapshot of a table at a particular time. A snapshot can be used as a
   /// checkpoint for data restoration or a data source for a new table.
   ///
@@ -1924,7 +2281,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1962,7 +2319,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// Output only. The unique name of the snapshot.
     /// Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/clusters/&lt;cluster>/snapshots/&lt;snapshot>`.
+    /// `projects/{project}/instances/{instance}/clusters/{cluster}/snapshots/{snapshot}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2397,7 +2754,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2421,6 +2778,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       sizeBytes_ = other.sizeBytes_;
       state_ = other.state_;
+      encryptionInfo_ = other.encryptionInfo_ != null ? other.encryptionInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2547,6 +2905,20 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "encryption_info" field.</summary>
+    public const int EncryptionInfoFieldNumber = 9;
+    private global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo encryptionInfo_;
+    /// <summary>
+    /// Output only. The encryption information for the backup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo EncryptionInfo {
+      get { return encryptionInfo_; }
+      set {
+        encryptionInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Backup);
@@ -2567,6 +2939,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (!object.Equals(EndTime, other.EndTime)) return false;
       if (SizeBytes != other.SizeBytes) return false;
       if (State != other.State) return false;
+      if (!object.Equals(EncryptionInfo, other.EncryptionInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2580,6 +2953,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (SizeBytes != 0L) hash ^= SizeBytes.GetHashCode();
       if (State != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (encryptionInfo_ != null) hash ^= EncryptionInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2624,6 +2998,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(56);
         output.WriteEnum((int) State);
       }
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(EncryptionInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2661,6 +3039,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(56);
         output.WriteEnum((int) State);
       }
+      if (encryptionInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(EncryptionInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2690,6 +3072,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (State != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (encryptionInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2731,6 +3116,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.State != global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State.Unspecified) {
         State = other.State;
+      }
+      if (other.encryptionInfo_ != null) {
+        if (encryptionInfo_ == null) {
+          EncryptionInfo = new global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo();
+        }
+        EncryptionInfo.MergeFrom(other.EncryptionInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2781,6 +3172,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 56: {
             State = (global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
             break;
           }
         }
@@ -2834,6 +3232,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             State = (global::Google.Cloud.Bigtable.Admin.V2.Backup.Types.State) input.ReadEnum();
             break;
           }
+          case 74: {
+            if (encryptionInfo_ == null) {
+              EncryptionInfo = new global::Google.Cloud.Bigtable.Admin.V2.EncryptionInfo();
+            }
+            input.ReadMessage(EncryptionInfo);
+            break;
+          }
         }
       }
     }
@@ -2882,7 +3287,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.TableReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

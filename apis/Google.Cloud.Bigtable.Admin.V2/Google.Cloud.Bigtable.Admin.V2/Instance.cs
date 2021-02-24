@@ -38,37 +38,44 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "RUFUSU5HEAIiPQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDgoKUFJP",
             "RFVDVElPThABEg8KC0RFVkVMT1BNRU5UEAI6TupBSwogYmlndGFibGUuZ29v",
             "Z2xlYXBpcy5jb20vSW5zdGFuY2USJ3Byb2plY3RzL3twcm9qZWN0fS9pbnN0",
-            "YW5jZXMve2luc3RhbmNlfSKnAwoHQ2x1c3RlchIRCgRuYW1lGAEgASgJQgPg",
+            "YW5jZXMve2luc3RhbmNlfSLNBAoHQ2x1c3RlchIRCgRuYW1lGAEgASgJQgPg",
             "QQMSOAoIbG9jYXRpb24YAiABKAlCJvpBIwohbG9jYXRpb25zLmdvb2dsZWFw",
             "aXMuY29tL0xvY2F0aW9uEjsKBXN0YXRlGAMgASgOMicuZ29vZ2xlLmJpZ3Rh",
             "YmxlLmFkbWluLnYyLkNsdXN0ZXIuU3RhdGVCA+BBAxIYCgtzZXJ2ZV9ub2Rl",
             "cxgEIAEoBUID4EECEkMKFGRlZmF1bHRfc3RvcmFnZV90eXBlGAUgASgOMiUu",
-            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlN0b3JhZ2VUeXBlIlEKBVN0YXRl",
-            "EhMKD1NUQVRFX05PVF9LTk9XThAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQ",
-            "AhIMCghSRVNJWklORxADEgwKCERJU0FCTEVEEAQ6YOpBXQofYmlndGFibGUu",
-            "Z29vZ2xlYXBpcy5jb20vQ2x1c3RlchI6cHJvamVjdHMve3Byb2plY3R9L2lu",
-            "c3RhbmNlcy97aW5zdGFuY2V9L2NsdXN0ZXJzL3tjbHVzdGVyfSLuAwoKQXBw",
-            "UHJvZmlsZRIMCgRuYW1lGAEgASgJEgwKBGV0YWcYAiABKAkSEwoLZGVzY3Jp",
-            "cHRpb24YAyABKAkSZwodbXVsdGlfY2x1c3Rlcl9yb3V0aW5nX3VzZV9hbnkY",
-            "BSABKAsyPi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5N",
-            "dWx0aUNsdXN0ZXJSb3V0aW5nVXNlQW55SAASWwoWc2luZ2xlX2NsdXN0ZXJf",
-            "cm91dGluZxgGIAEoCzI5Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQ",
-            "cm9maWxlLlNpbmdsZUNsdXN0ZXJSb3V0aW5nSAAaGwoZTXVsdGlDbHVzdGVy",
-            "Um91dGluZ1VzZUFueRpOChRTaW5nbGVDbHVzdGVyUm91dGluZxISCgpjbHVz",
-            "dGVyX2lkGAEgASgJEiIKGmFsbG93X3RyYW5zYWN0aW9uYWxfd3JpdGVzGAIg",
-            "ASgIOmrqQWcKImJpZ3RhYmxlLmdvb2dsZWFwaXMuY29tL0FwcFByb2ZpbGUS",
-            "QXByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3RhbmNlfS9hcHBQ",
-            "cm9maWxlcy97YXBwX3Byb2ZpbGV9QhAKDnJvdXRpbmdfcG9saWN5QtUBChxj",
-            "b20uZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyQg1JbnN0YW5jZVByb3RvUAFa",
-            "PWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmlndGFi",
-            "bGUvYWRtaW4vdjI7YWRtaW6qAh5Hb29nbGUuQ2xvdWQuQmlndGFibGUuQWRt",
-            "aW4uVjLKAh5Hb29nbGVcQ2xvdWRcQmlndGFibGVcQWRtaW5cVjLqAiJHb29n",
-            "bGU6OkNsb3VkOjpCaWd0YWJsZTo6QWRtaW46OlYyYgZwcm90bzM="));
+            "Z29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLlN0b3JhZ2VUeXBlElIKEWVuY3J5",
+            "cHRpb25fY29uZmlnGAYgASgLMjIuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
+            "LkNsdXN0ZXIuRW5jcnlwdGlvbkNvbmZpZ0ID4EEFGlAKEEVuY3J5cHRpb25D",
+            "b25maWcSPAoMa21zX2tleV9uYW1lGAEgASgJQib6QSMKIWNsb3Vka21zLmdv",
+            "b2dsZWFwaXMuY29tL0NyeXB0b0tleSJRCgVTdGF0ZRITCg9TVEFURV9OT1Rf",
+            "S05PV04QABIJCgVSRUFEWRABEgwKCENSRUFUSU5HEAISDAoIUkVTSVpJTkcQ",
+            "AxIMCghESVNBQkxFRBAEOmDqQV0KH2JpZ3RhYmxlLmdvb2dsZWFwaXMuY29t",
+            "L0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2luc3Rh",
+            "bmNlfS9jbHVzdGVycy97Y2x1c3Rlcn0i7gMKCkFwcFByb2ZpbGUSDAoEbmFt",
+            "ZRgBIAEoCRIMCgRldGFnGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEmcK",
+            "HW11bHRpX2NsdXN0ZXJfcm91dGluZ191c2VfYW55GAUgASgLMj4uZ29vZ2xl",
+            "LmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUuTXVsdGlDbHVzdGVyUm91",
+            "dGluZ1VzZUFueUgAElsKFnNpbmdsZV9jbHVzdGVyX3JvdXRpbmcYBiABKAsy",
+            "OS5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXBwUHJvZmlsZS5TaW5nbGVD",
+            "bHVzdGVyUm91dGluZ0gAGhsKGU11bHRpQ2x1c3RlclJvdXRpbmdVc2VBbnka",
+            "TgoUU2luZ2xlQ2x1c3RlclJvdXRpbmcSEgoKY2x1c3Rlcl9pZBgBIAEoCRIi",
+            "ChphbGxvd190cmFuc2FjdGlvbmFsX3dyaXRlcxgCIAEoCDpq6kFnCiJiaWd0",
+            "YWJsZS5nb29nbGVhcGlzLmNvbS9BcHBQcm9maWxlEkFwcm9qZWN0cy97cHJv",
+            "amVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vYXBwUHJvZmlsZXMve2FwcF9w",
+            "cm9maWxlfUIQCg5yb3V0aW5nX3BvbGljeULQAgocY29tLmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2Fk",
+            "bWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xl",
+            "XENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6Qmln",
+            "dGFibGU6OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
+            "Q3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9f",
+            "a2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType", "EncryptionConfig" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)})
           }));
@@ -510,6 +517,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       state_ = other.state_;
       serveNodes_ = other.serveNodes_;
       defaultStorageType_ = other.defaultStorageType_;
+      encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -596,6 +604,20 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    /// <summary>Field number for the "encryption_config" field.</summary>
+    public const int EncryptionConfigFieldNumber = 6;
+    private global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig encryptionConfig_;
+    /// <summary>
+    /// Immutable. The encryption configuration for CMEK-protected clusters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig EncryptionConfig {
+      get { return encryptionConfig_; }
+      set {
+        encryptionConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Cluster);
@@ -614,6 +636,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (State != other.State) return false;
       if (ServeNodes != other.ServeNodes) return false;
       if (DefaultStorageType != other.DefaultStorageType) return false;
+      if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -625,6 +648,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) hash ^= State.GetHashCode();
       if (ServeNodes != 0) hash ^= ServeNodes.GetHashCode();
       if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) hash ^= DefaultStorageType.GetHashCode();
+      if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -661,6 +685,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(40);
         output.WriteEnum((int) DefaultStorageType);
       }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(EncryptionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -690,6 +718,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(40);
         output.WriteEnum((int) DefaultStorageType);
       }
+      if (encryptionConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(EncryptionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -713,6 +745,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultStorageType);
+      }
+      if (encryptionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -739,6 +774,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (other.DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         DefaultStorageType = other.DefaultStorageType;
+      }
+      if (other.encryptionConfig_ != null) {
+        if (encryptionConfig_ == null) {
+          EncryptionConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig();
+        }
+        EncryptionConfig.MergeFrom(other.EncryptionConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -774,6 +815,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             DefaultStorageType = (global::Google.Cloud.Bigtable.Admin.V2.StorageType) input.ReadEnum();
             break;
           }
+          case 50: {
+            if (encryptionConfig_ == null) {
+              EncryptionConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig();
+            }
+            input.ReadMessage(EncryptionConfig);
+            break;
+          }
         }
       }
     #endif
@@ -806,6 +854,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           }
           case 40: {
             DefaultStorageType = (global::Google.Cloud.Bigtable.Admin.V2.StorageType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (encryptionConfig_ == null) {
+              EncryptionConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig();
+            }
+            input.ReadMessage(EncryptionConfig);
             break;
           }
         }
@@ -848,6 +903,192 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         /// exist, but no operations can be performed on the cluster.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 4,
+      }
+
+      /// <summary>
+      /// Cloud Key Management Service (Cloud KMS) settings for a CMEK-protected
+      /// cluster.
+      /// </summary>
+      public sealed partial class EncryptionConfig : pb::IMessage<EncryptionConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EncryptionConfig> _parser = new pb::MessageParser<EncryptionConfig>(() => new EncryptionConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<EncryptionConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Cluster.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public EncryptionConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public EncryptionConfig(EncryptionConfig other) : this() {
+          kmsKeyName_ = other.kmsKeyName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public EncryptionConfig Clone() {
+          return new EncryptionConfig(this);
+        }
+
+        /// <summary>Field number for the "kms_key_name" field.</summary>
+        public const int KmsKeyNameFieldNumber = 1;
+        private string kmsKeyName_ = "";
+        /// <summary>
+        /// Describes the Cloud KMS encryption key that will be used to protect the
+        /// destination Bigtable cluster. The requirements for this key are:
+        ///  1) The Cloud Bigtable service account associated with the project that
+        ///  contains this cluster must be granted the
+        ///  `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key.
+        ///  2) Only regional keys can be used and the region of the CMEK key must
+        ///  match the region of the cluster.
+        /// 3) All clusters within an instance must use the same CMEK key.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string KmsKeyName {
+          get { return kmsKeyName_; }
+          set {
+            kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as EncryptionConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(EncryptionConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (KmsKeyName != other.KmsKeyName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (KmsKeyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KmsKeyName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (KmsKeyName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(KmsKeyName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (KmsKeyName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(EncryptionConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.KmsKeyName.Length != 0) {
+            KmsKeyName = other.KmsKeyName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                KmsKeyName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                KmsKeyName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
       }
 
     }
@@ -914,7 +1155,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// (`OutputOnly`)
     /// The unique name of the app profile. Values are of the form
-    /// `projects/&lt;project>/instances/&lt;instance>/appProfiles/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
+    /// `projects/{project}/instances/{instance}/appProfiles/[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

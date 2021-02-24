@@ -1047,6 +1047,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 State = Cluster.Types.State.NotKnown,
                 ServeNodes = 0,
                 DefaultStorageType = StorageType.Unspecified,
+                EncryptionConfig = new Cluster.Types.EncryptionConfig(),
             };
             // Make the request
             Operation<Cluster, UpdateClusterMetadata> response = bigtableInstanceAdminClient.UpdateCluster(request);
@@ -1084,6 +1085,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 State = Cluster.Types.State.NotKnown,
                 ServeNodes = 0,
                 DefaultStorageType = StorageType.Unspecified,
+                EncryptionConfig = new Cluster.Types.EncryptionConfig(),
             };
             // Make the request
             Operation<Cluster, UpdateClusterMetadata> response = await bigtableInstanceAdminClient.UpdateClusterAsync(request);
