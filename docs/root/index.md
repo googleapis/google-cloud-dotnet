@@ -23,7 +23,7 @@ Each package name links to the documentation for that package.
 | [Google.Analytics.Data.V1Beta](Google.Analytics.Data.V1Beta/index.html) | 1.0.0-beta01 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
 | [Google.Area120.Tables.V1Alpha1](Google.Area120.Tables.V1Alpha1/index.html) | 1.0.0-alpha02 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](Google.Cloud.AccessApproval.V1/index.html) | 1.0.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
-| [Google.Cloud.AppEngine.V1](Google.Cloud.AppEngine.V1/index.html) | 1.0.0-beta01 | [App Engine Audit Data](https://cloud.google.com/appengine) |
+| [Google.Cloud.AppEngine.V1](Google.Cloud.AppEngine.V1/index.html) | 1.0.0 | [App Engine Audit Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.ArtifactRegistry.V1Beta2](Google.Cloud.ArtifactRegistry.V1Beta2/index.html) | 1.0.0-beta01 | [Artifact Registry](https://cloud.google.com/artifact-registry) |
 | [Google.Cloud.Asset.V1](Google.Cloud.Asset.V1/index.html) | 2.6.0 | [Google Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview) |
 | [Google.Cloud.AssuredWorkloads.V1Beta1](Google.Cloud.AssuredWorkloads.V1Beta1/index.html) | 1.0.0-beta03 | [Assured Workloads](https://cloud.google.com/assured-workloads/docs) |
