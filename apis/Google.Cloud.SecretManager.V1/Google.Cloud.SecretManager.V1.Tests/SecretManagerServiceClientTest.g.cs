@@ -53,6 +53,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -85,6 +86,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -119,6 +121,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -151,6 +154,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -185,6 +189,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -217,6 +222,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -399,6 +405,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -429,6 +436,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -461,6 +469,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -491,6 +500,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -523,6 +533,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -553,6 +564,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -586,6 +598,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -617,6 +630,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -650,6 +664,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
@@ -681,6 +696,7 @@ namespace Google.Cloud.SecretManager.V1.Tests
                         "value60c16320"
                     },
                 },
+                Topics = { new Topic(), },
                 ExpireTime = new wkt::Timestamp(),
                 Ttl = new wkt::Duration(),
             };
