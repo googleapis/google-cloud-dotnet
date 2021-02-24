@@ -50,6 +50,10 @@ namespace Google.Cloud.Datastore.Admin.V1
             ExportEntitiesOperationsSettings = existing.ExportEntitiesOperationsSettings.Clone();
             ImportEntitiesSettings = existing.ImportEntitiesSettings;
             ImportEntitiesOperationsSettings = existing.ImportEntitiesOperationsSettings.Clone();
+            CreateIndexSettings = existing.CreateIndexSettings;
+            CreateIndexOperationsSettings = existing.CreateIndexOperationsSettings.Clone();
+            DeleteIndexSettings = existing.DeleteIndexSettings;
+            DeleteIndexOperationsSettings = existing.DeleteIndexOperationsSettings.Clone();
             GetIndexSettings = existing.GetIndexSettings;
             ListIndexesSettings = existing.ListIndexesSettings;
             OnCopy(existing);
@@ -113,6 +117,66 @@ namespace Google.Cloud.Datastore.Admin.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings ImportEntitiesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatastoreAdminClient.CreateIndex</c> and <c>DatastoreAdminClient.CreateIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateIndexSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatastoreAdminClient.CreateIndex</c> and
+        /// <c>DatastoreAdminClient.CreateIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateIndexOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatastoreAdminClient.DeleteIndex</c> and <c>DatastoreAdminClient.DeleteIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteIndexSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatastoreAdminClient.DeleteIndex</c> and
+        /// <c>DatastoreAdminClient.DeleteIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteIndexOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -777,6 +841,178 @@ namespace Google.Cloud.Datastore.Admin.V1
             ImportEntitiesAsync(projectId, labels, inputUrl, entityFilter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates the specified index.
+        /// A newly created index's initial state is `CREATING`. On completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+        /// If the index already exists, the call will return an `ALREADY_EXISTS`
+        /// status.
+        /// 
+        /// During index creation, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, removing the index with
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+        /// re-creating the index with [create]
+        /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+        /// 
+        /// Indexes with a single property cannot be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Index, IndexOperationMetadata> CreateIndex(CreateIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates the specified index.
+        /// A newly created index's initial state is `CREATING`. On completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+        /// If the index already exists, the call will return an `ALREADY_EXISTS`
+        /// status.
+        /// 
+        /// During index creation, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, removing the index with
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+        /// re-creating the index with [create]
+        /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+        /// 
+        /// Indexes with a single property cannot be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, IndexOperationMetadata>> CreateIndexAsync(CreateIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates the specified index.
+        /// A newly created index's initial state is `CREATING`. On completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+        /// If the index already exists, the call will return an `ALREADY_EXISTS`
+        /// status.
+        /// 
+        /// During index creation, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, removing the index with
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+        /// re-creating the index with [create]
+        /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+        /// 
+        /// Indexes with a single property cannot be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, IndexOperationMetadata>> CreateIndexAsync(CreateIndexRequest request, st::CancellationToken cancellationToken) =>
+            CreateIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateIndex</c>.</summary>
+        public virtual lro::OperationsClient CreateIndexOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Index, IndexOperationMetadata> PollOnceCreateIndex(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, IndexOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Index, IndexOperationMetadata>> PollOnceCreateIndexAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, IndexOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes an existing index.
+        /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+        /// successful execution of the request, the index will be in a `DELETING`
+        /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+        /// 
+        /// During index deletion, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, followed by calling
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Index, IndexOperationMetadata> DeleteIndex(DeleteIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing index.
+        /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+        /// successful execution of the request, the index will be in a `DELETING`
+        /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+        /// 
+        /// During index deletion, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, followed by calling
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, IndexOperationMetadata>> DeleteIndexAsync(DeleteIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes an existing index.
+        /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+        /// successful execution of the request, the index will be in a `DELETING`
+        /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+        /// 
+        /// During index deletion, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, followed by calling
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Index, IndexOperationMetadata>> DeleteIndexAsync(DeleteIndexRequest request, st::CancellationToken cancellationToken) =>
+            DeleteIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteIndex</c>.</summary>
+        public virtual lro::OperationsClient DeleteIndexOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Index, IndexOperationMetadata> PollOnceDeleteIndex(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, IndexOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Index, IndexOperationMetadata>> PollOnceDeleteIndexAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Index, IndexOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteIndexOperationsClient, callSettings);
+
+        /// <summary>
         /// Gets an index.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -896,6 +1132,10 @@ namespace Google.Cloud.Datastore.Admin.V1
 
         private readonly gaxgrpc::ApiCall<ImportEntitiesRequest, lro::Operation> _callImportEntities;
 
+        private readonly gaxgrpc::ApiCall<CreateIndexRequest, lro::Operation> _callCreateIndex;
+
+        private readonly gaxgrpc::ApiCall<DeleteIndexRequest, lro::Operation> _callDeleteIndex;
+
         private readonly gaxgrpc::ApiCall<GetIndexRequest, Index> _callGetIndex;
 
         private readonly gaxgrpc::ApiCall<ListIndexesRequest, ListIndexesResponse> _callListIndexes;
@@ -912,12 +1152,20 @@ namespace Google.Cloud.Datastore.Admin.V1
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             ExportEntitiesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportEntitiesOperationsSettings);
             ImportEntitiesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportEntitiesOperationsSettings);
+            CreateIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateIndexOperationsSettings);
+            DeleteIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexOperationsSettings);
             _callExportEntities = clientHelper.BuildApiCall<ExportEntitiesRequest, lro::Operation>(grpcClient.ExportEntitiesAsync, grpcClient.ExportEntities, effectiveSettings.ExportEntitiesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callExportEntities);
             Modify_ExportEntitiesApiCall(ref _callExportEntities);
             _callImportEntities = clientHelper.BuildApiCall<ImportEntitiesRequest, lro::Operation>(grpcClient.ImportEntitiesAsync, grpcClient.ImportEntities, effectiveSettings.ImportEntitiesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callImportEntities);
             Modify_ImportEntitiesApiCall(ref _callImportEntities);
+            _callCreateIndex = clientHelper.BuildApiCall<CreateIndexRequest, lro::Operation>(grpcClient.CreateIndexAsync, grpcClient.CreateIndex, effectiveSettings.CreateIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
+            Modify_ApiCall(ref _callCreateIndex);
+            Modify_CreateIndexApiCall(ref _callCreateIndex);
+            _callDeleteIndex = clientHelper.BuildApiCall<DeleteIndexRequest, lro::Operation>(grpcClient.DeleteIndexAsync, grpcClient.DeleteIndex, effectiveSettings.DeleteIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("index_id", request => request.IndexId);
+            Modify_ApiCall(ref _callDeleteIndex);
+            Modify_DeleteIndexApiCall(ref _callDeleteIndex);
             _callGetIndex = clientHelper.BuildApiCall<GetIndexRequest, Index>(grpcClient.GetIndexAsync, grpcClient.GetIndex, effectiveSettings.GetIndexSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("index_id", request => request.IndexId);
             Modify_ApiCall(ref _callGetIndex);
             Modify_GetIndexApiCall(ref _callGetIndex);
@@ -933,6 +1181,10 @@ namespace Google.Cloud.Datastore.Admin.V1
 
         partial void Modify_ImportEntitiesApiCall(ref gaxgrpc::ApiCall<ImportEntitiesRequest, lro::Operation> call);
 
+        partial void Modify_CreateIndexApiCall(ref gaxgrpc::ApiCall<CreateIndexRequest, lro::Operation> call);
+
+        partial void Modify_DeleteIndexApiCall(ref gaxgrpc::ApiCall<DeleteIndexRequest, lro::Operation> call);
+
         partial void Modify_GetIndexApiCall(ref gaxgrpc::ApiCall<GetIndexRequest, Index> call);
 
         partial void Modify_ListIndexesApiCall(ref gaxgrpc::ApiCall<ListIndexesRequest, ListIndexesResponse> call);
@@ -945,6 +1197,10 @@ namespace Google.Cloud.Datastore.Admin.V1
         partial void Modify_ExportEntitiesRequest(ref ExportEntitiesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportEntitiesRequest(ref ImportEntitiesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateIndexRequest(ref CreateIndexRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteIndexRequest(ref DeleteIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIndexRequest(ref GetIndexRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1024,6 +1280,104 @@ namespace Google.Cloud.Datastore.Admin.V1
         {
             Modify_ImportEntitiesRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, ImportEntitiesMetadata>(await _callImportEntities.Async(request, callSettings).ConfigureAwait(false), ImportEntitiesOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateIndex</c>.</summary>
+        public override lro::OperationsClient CreateIndexOperationsClient { get; }
+
+        /// <summary>
+        /// Creates the specified index.
+        /// A newly created index's initial state is `CREATING`. On completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+        /// If the index already exists, the call will return an `ALREADY_EXISTS`
+        /// status.
+        /// 
+        /// During index creation, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, removing the index with
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+        /// re-creating the index with [create]
+        /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+        /// 
+        /// Indexes with a single property cannot be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Index, IndexOperationMetadata> CreateIndex(CreateIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, IndexOperationMetadata>(_callCreateIndex.Sync(request, callSettings), CreateIndexOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates the specified index.
+        /// A newly created index's initial state is `CREATING`. On completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+        /// If the index already exists, the call will return an `ALREADY_EXISTS`
+        /// status.
+        /// 
+        /// During index creation, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, removing the index with
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+        /// re-creating the index with [create]
+        /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+        /// 
+        /// Indexes with a single property cannot be created.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Index, IndexOperationMetadata>> CreateIndexAsync(CreateIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, IndexOperationMetadata>(await _callCreateIndex.Async(request, callSettings).ConfigureAwait(false), CreateIndexOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteIndex</c>.</summary>
+        public override lro::OperationsClient DeleteIndexOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes an existing index.
+        /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+        /// successful execution of the request, the index will be in a `DELETING`
+        /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+        /// 
+        /// During index deletion, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, followed by calling
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Index, IndexOperationMetadata> DeleteIndex(DeleteIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, IndexOperationMetadata>(_callDeleteIndex.Sync(request, callSettings), DeleteIndexOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes an existing index.
+        /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+        /// successful execution of the request, the index will be in a `DELETING`
+        /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+        /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+        /// 
+        /// During index deletion, the process could result in an error, in which
+        /// case the index will move to the `ERROR` state. The process can be recovered
+        /// by fixing the data that caused the error, followed by calling
+        /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Index, IndexOperationMetadata>> DeleteIndexAsync(DeleteIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<Index, IndexOperationMetadata>(await _callDeleteIndex.Async(request, callSettings).ConfigureAwait(false), DeleteIndexOperationsClient);
         }
 
         /// <summary>
