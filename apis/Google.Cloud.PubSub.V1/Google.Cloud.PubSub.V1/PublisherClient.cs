@@ -251,21 +251,8 @@ namespace Google.Cloud.PubSub.V1
             // Clone settings, just in case user modifies them and an await happens in this method
             settings = settings?.Clone() ?? new Settings();
             var clientCount = clientCreationSettings?.ClientCount ?? Environment.ProcessorCount;
-            var channelCredentials = clientCreationSettings?.Credentials;
-            // Use default credentials if none given.
-            if (channelCredentials == null)
-            {
-                var credentials = isAsync ?
-                    (await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false)) :
-                    GoogleCredential.GetApplicationDefault();
-                if (credentials.IsCreateScopedRequired)
-                {
-                    credentials = credentials.CreateScoped(PublisherServiceApiClient.DefaultScopes);
-                }
-                channelCredentials = credentials.ToChannelCredentials();
-            }
+
             // Create the channels and clients, and register shutdown functions for each channel
-            var endpoint = clientCreationSettings?.ServiceEndpoint ?? PublisherServiceApiClient.DefaultEndpoint;
             var clients = new PublisherServiceApiClient[clientCount];
             var shutdowns = new Func<Task>[clientCount];
             for (int i = 0; i < clientCount; i++)
