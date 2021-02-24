@@ -69,45 +69,57 @@ namespace Google.Cloud.Datastore.Admin.V1 {
             "IAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSPgoN",
             "ZW50aXR5X2ZpbHRlchgEIAEoCzInLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4u",
             "djEuRW50aXR5RmlsdGVyEhEKCWlucHV0X3VybBgFIAEoCSI0CgxFbnRpdHlG",
-            "aWx0ZXISDQoFa2luZHMYASADKAkSFQoNbmFtZXNwYWNlX2lkcxgCIAMoCSI3",
-            "Cg9HZXRJbmRleFJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIQCghpbmRl",
-            "eF9pZBgDIAEoCSJfChJMaXN0SW5kZXhlc1JlcXVlc3QSEgoKcHJvamVjdF9p",
-            "ZBgBIAEoCRIOCgZmaWx0ZXIYAyABKAkSEQoJcGFnZV9zaXplGAQgASgFEhIK",
-            "CnBhZ2VfdG9rZW4YBSABKAkiYQoTTGlzdEluZGV4ZXNSZXNwb25zZRIxCgdp",
-            "bmRleGVzGAEgAygLMiAuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5JbmRl",
-            "eBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkipQEKFkluZGV4T3BlcmF0aW9u",
-            "TWV0YWRhdGESOQoGY29tbW9uGAEgASgLMikuZ29vZ2xlLmRhdGFzdG9yZS5h",
-            "ZG1pbi52MS5Db21tb25NZXRhZGF0YRI+ChFwcm9ncmVzc19lbnRpdGllcxgC",
-            "IAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3MSEAoI",
-            "aW5kZXhfaWQYAyABKAkqfQoNT3BlcmF0aW9uVHlwZRIeChpPUEVSQVRJT05f",
-            "VFlQRV9VTlNQRUNJRklFRBAAEhMKD0VYUE9SVF9FTlRJVElFUxABEhMKD0lN",
-            "UE9SVF9FTlRJVElFUxACEhAKDENSRUFURV9JTkRFWBADEhAKDERFTEVURV9J",
-            "TkRFWBAEMpwHCg5EYXRhc3RvcmVBZG1pbhL2AQoORXhwb3J0RW50aXRpZXMS",
-            "MC5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkV4cG9ydEVudGl0aWVzUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ikgGC0+STAiUi",
-            "IC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH06ZXhwb3J0OgEq2kExcHJvamVj",
-            "dF9pZCxsYWJlbHMsZW50aXR5X2ZpbHRlcixvdXRwdXRfdXJsX3ByZWZpeMpB",
-            "MAoWRXhwb3J0RW50aXRpZXNSZXNwb25zZRIWRXhwb3J0RW50aXRpZXNNZXRh",
-            "ZGF0YRLtAQoOSW1wb3J0RW50aXRpZXMSMC5nb29nbGUuZGF0YXN0b3JlLmFk",
-            "bWluLnYxLkltcG9ydEVudGl0aWVzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
-            "bmluZy5PcGVyYXRpb24iiQGC0+STAiUiIC92MS9wcm9qZWN0cy97cHJvamVj",
-            "dF9pZH06aW1wb3J0OgEq2kEpcHJvamVjdF9pZCxsYWJlbHMsaW5wdXRfdXJs",
-            "LGVudGl0eV9maWx0ZXLKQS8KFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIWSW1w",
-            "b3J0RW50aXRpZXNNZXRhZGF0YRKOAQoIR2V0SW5kZXgSKi5nb29nbGUuZGF0",
-            "YXN0b3JlLmFkbWluLnYxLkdldEluZGV4UmVxdWVzdBogLmdvb2dsZS5kYXRh",
-            "c3RvcmUuYWRtaW4udjEuSW5kZXgiNILT5JMCLhIsL3YxL3Byb2plY3RzL3tw",
-            "cm9qZWN0X2lkfS9pbmRleGVzL3tpbmRleF9pZH0SlwEKC0xpc3RJbmRleGVz",
-            "Ei0uZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5MaXN0SW5kZXhlc1JlcXVl",
-            "c3QaLi5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkxpc3RJbmRleGVzUmVz",
-            "cG9uc2UiKYLT5JMCIxIhL3YxL3Byb2plY3RzL3twcm9qZWN0X2lkfS9pbmRl",
-            "eGVzGnbKQRhkYXRhc3RvcmUuZ29vZ2xlYXBpcy5jb23SQVhodHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGF0YXN0b3JlQr4BCh1jb20uZ29v",
-            "Z2xlLmRhdGFzdG9yZS5hZG1pbi52MUITRGF0YXN0b3JlQWRtaW5Qcm90b1AB",
-            "Wj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RhdGFz",
-            "dG9yZS9hZG1pbi92MTthZG1pbqoCH0dvb2dsZS5DbG91ZC5EYXRhc3RvcmUu",
-            "QWRtaW4uVjHqAiNHb29nbGU6OkNsb3VkOjpEYXRhc3RvcmU6OkFkbWluOjpW",
-            "MWIGcHJvdG8z"));
+            "aWx0ZXISDQoFa2luZHMYASADKAkSFQoNbmFtZXNwYWNlX2lkcxgCIAMoCSJZ",
+            "ChJDcmVhdGVJbmRleFJlcXVlc3QSEgoKcHJvamVjdF9pZBgBIAEoCRIvCgVp",
+            "bmRleBgDIAEoCzIgLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuSW5kZXgi",
+            "OgoSRGVsZXRlSW5kZXhSZXF1ZXN0EhIKCnByb2plY3RfaWQYASABKAkSEAoI",
+            "aW5kZXhfaWQYAyABKAkiNwoPR2V0SW5kZXhSZXF1ZXN0EhIKCnByb2plY3Rf",
+            "aWQYASABKAkSEAoIaW5kZXhfaWQYAyABKAkiXwoSTGlzdEluZGV4ZXNSZXF1",
+            "ZXN0EhIKCnByb2plY3RfaWQYASABKAkSDgoGZmlsdGVyGAMgASgJEhEKCXBh",
+            "Z2Vfc2l6ZRgEIAEoBRISCgpwYWdlX3Rva2VuGAUgASgJImEKE0xpc3RJbmRl",
+            "eGVzUmVzcG9uc2USMQoHaW5kZXhlcxgBIAMoCzIgLmdvb2dsZS5kYXRhc3Rv",
+            "cmUuYWRtaW4udjEuSW5kZXgSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqUB",
+            "ChZJbmRleE9wZXJhdGlvbk1ldGFkYXRhEjkKBmNvbW1vbhgBIAEoCzIpLmdv",
+            "b2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuQ29tbW9uTWV0YWRhdGESPgoRcHJv",
+            "Z3Jlc3NfZW50aXRpZXMYAiABKAsyIy5nb29nbGUuZGF0YXN0b3JlLmFkbWlu",
+            "LnYxLlByb2dyZXNzEhAKCGluZGV4X2lkGAMgASgJKn0KDU9wZXJhdGlvblR5",
+            "cGUSHgoaT1BFUkFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQABITCg9FWFBPUlRf",
+            "RU5USVRJRVMQARITCg9JTVBPUlRfRU5USVRJRVMQAhIQCgxDUkVBVEVfSU5E",
+            "RVgQAxIQCgxERUxFVEVfSU5ERVgQBDKECgoORGF0YXN0b3JlQWRtaW4S9gEK",
+            "DkV4cG9ydEVudGl0aWVzEjAuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5F",
+            "eHBvcnRFbnRpdGllc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3Bl",
+            "cmF0aW9uIpIBgtPkkwIlIiAvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9OmV4",
+            "cG9ydDoBKtpBMXByb2plY3RfaWQsbGFiZWxzLGVudGl0eV9maWx0ZXIsb3V0",
+            "cHV0X3VybF9wcmVmaXjKQTAKFkV4cG9ydEVudGl0aWVzUmVzcG9uc2USFkV4",
+            "cG9ydEVudGl0aWVzTWV0YWRhdGES7QEKDkltcG9ydEVudGl0aWVzEjAuZ29v",
+            "Z2xlLmRhdGFzdG9yZS5hZG1pbi52MS5JbXBvcnRFbnRpdGllc1JlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIokBgtPkkwIlIiAvdjEv",
+            "cHJvamVjdHMve3Byb2plY3RfaWR9OmltcG9ydDoBKtpBKXByb2plY3RfaWQs",
+            "bGFiZWxzLGlucHV0X3VybCxlbnRpdHlfZmlsdGVyykEvChVnb29nbGUucHJv",
+            "dG9idWYuRW1wdHkSFkltcG9ydEVudGl0aWVzTWV0YWRhdGESrwEKC0NyZWF0",
+            "ZUluZGV4Ei0uZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5DcmVhdGVJbmRl",
+            "eFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIlKC0+ST",
+            "AioiIS92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vaW5kZXhlczoFaW5kZXjK",
+            "QR8KBUluZGV4EhZJbmRleE9wZXJhdGlvbk1ldGFkYXRhErMBCgtEZWxldGVJ",
+            "bmRleBItLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuRGVsZXRlSW5kZXhS",
+            "ZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJWgtPkkwIu",
+            "KiwvdjEvcHJvamVjdHMve3Byb2plY3RfaWR9L2luZGV4ZXMve2luZGV4X2lk",
+            "fcpBHwoFSW5kZXgSFkluZGV4T3BlcmF0aW9uTWV0YWRhdGESjgEKCEdldElu",
+            "ZGV4EiouZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5HZXRJbmRleFJlcXVl",
+            "c3QaIC5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkluZGV4IjSC0+STAi4S",
+            "LC92MS9wcm9qZWN0cy97cHJvamVjdF9pZH0vaW5kZXhlcy97aW5kZXhfaWR9",
+            "EpcBCgtMaXN0SW5kZXhlcxItLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEu",
+            "TGlzdEluZGV4ZXNSZXF1ZXN0Gi4uZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52",
+            "MS5MaXN0SW5kZXhlc1Jlc3BvbnNlIimC0+STAiMSIS92MS9wcm9qZWN0cy97",
+            "cHJvamVjdF9pZH0vaW5kZXhlcxp2ykEYZGF0YXN0b3JlLmdvb2dsZWFwaXMu",
+            "Y29t0kFYaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
+            "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RhdGFz",
+            "dG9yZULgAQodY29tLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjFCE0RhdGFz",
+            "dG9yZUFkbWluUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9kYXRhc3RvcmUvYWRtaW4vdjE7YWRtaW6qAh9Hb29nbGUu",
+            "Q2xvdWQuRGF0YXN0b3JlLkFkbWluLlYxygIfR29vZ2xlXENsb3VkXERhdGFz",
+            "dG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkRhdGFzdG9yZTo6QWRt",
+            "aW46OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Datastore.Admin.V1.IndexReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Datastore.Admin.V1.OperationType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,6 +131,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata), global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata.Parser, new[]{ "Common", "ProgressEntities", "ProgressBytes", "EntityFilter", "OutputUrlPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata), global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata.Parser, new[]{ "Common", "ProgressEntities", "ProgressBytes", "EntityFilter", "InputUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.EntityFilter), global::Google.Cloud.Datastore.Admin.V1.EntityFilter.Parser, new[]{ "Kinds", "NamespaceIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest), global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest.Parser, new[]{ "ProjectId", "Index" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest), global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest.Parser, new[]{ "ProjectId", "IndexId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest), global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest.Parser, new[]{ "ProjectId", "IndexId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest), global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest.Parser, new[]{ "ProjectId", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse), global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse.Parser, new[]{ "Indexes", "NextPageToken" }, null, null, null, null),
@@ -2534,6 +2548,452 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   }
 
   /// <summary>
+  /// The request for
+  /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex][google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+  /// </summary>
+  public sealed partial class CreateIndexRequest : pb::IMessage<CreateIndexRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateIndexRequest> _parser = new pb::MessageParser<CreateIndexRequest>(() => new CreateIndexRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateIndexRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateIndexRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateIndexRequest(CreateIndexRequest other) : this() {
+      projectId_ = other.projectId_;
+      index_ = other.index_ != null ? other.index_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateIndexRequest Clone() {
+      return new CreateIndexRequest(this);
+    }
+
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 1;
+    private string projectId_ = "";
+    /// <summary>
+    /// Project ID against which to make the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 3;
+    private global::Google.Cloud.Datastore.Admin.V1.Index index_;
+    /// <summary>
+    /// The index to create. The name and state fields are output only and will be
+    /// ignored. Single property indexes cannot be created or deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Datastore.Admin.V1.Index Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateIndexRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateIndexRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectId != other.ProjectId) return false;
+      if (!object.Equals(Index, other.Index)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (index_ != null) hash ^= Index.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (index_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (index_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (index_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Index);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateIndexRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
+      }
+      if (other.index_ != null) {
+        if (index_ == null) {
+          Index = new global::Google.Cloud.Datastore.Admin.V1.Index();
+        }
+        Index.MergeFrom(other.Index);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (index_ == null) {
+              Index = new global::Google.Cloud.Datastore.Admin.V1.Index();
+            }
+            input.ReadMessage(Index);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (index_ == null) {
+              Index = new global::Google.Cloud.Datastore.Admin.V1.Index();
+            }
+            input.ReadMessage(Index);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request for
+  /// [google.datastore.admin.v1.DatastoreAdmin.DeleteIndex][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex].
+  /// </summary>
+  public sealed partial class DeleteIndexRequest : pb::IMessage<DeleteIndexRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteIndexRequest> _parser = new pb::MessageParser<DeleteIndexRequest>(() => new DeleteIndexRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteIndexRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteIndexRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteIndexRequest(DeleteIndexRequest other) : this() {
+      projectId_ = other.projectId_;
+      indexId_ = other.indexId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteIndexRequest Clone() {
+      return new DeleteIndexRequest(this);
+    }
+
+    /// <summary>Field number for the "project_id" field.</summary>
+    public const int ProjectIdFieldNumber = 1;
+    private string projectId_ = "";
+    /// <summary>
+    /// Project ID against which to make the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProjectId {
+      get { return projectId_; }
+      set {
+        projectId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "index_id" field.</summary>
+    public const int IndexIdFieldNumber = 3;
+    private string indexId_ = "";
+    /// <summary>
+    /// The resource ID of the index to delete.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string IndexId {
+      get { return indexId_; }
+      set {
+        indexId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteIndexRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteIndexRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ProjectId != other.ProjectId) return false;
+      if (IndexId != other.IndexId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
+      if (IndexId.Length != 0) hash ^= IndexId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (IndexId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IndexId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ProjectId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ProjectId);
+      }
+      if (IndexId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IndexId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ProjectId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectId);
+      }
+      if (IndexId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IndexId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteIndexRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ProjectId.Length != 0) {
+        ProjectId = other.ProjectId;
+      }
+      if (other.IndexId.Length != 0) {
+        IndexId = other.IndexId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            IndexId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ProjectId = input.ReadString();
+            break;
+          }
+          case 26: {
+            IndexId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The request for [google.datastore.admin.v1.DatastoreAdmin.GetIndex][google.datastore.admin.v1.DatastoreAdmin.GetIndex].
   /// </summary>
   public sealed partial class GetIndexRequest : pb::IMessage<GetIndexRequest>
@@ -2548,7 +3008,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2766,7 +3226,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3060,7 +3520,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3266,7 +3726,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Datastore.Admin.V1.DatastoreAdminReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

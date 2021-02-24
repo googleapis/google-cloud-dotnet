@@ -92,6 +92,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest> __Marshaller_google_datastore_admin_v1_ExportEntitiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest> __Marshaller_google_datastore_admin_v1_ImportEntitiesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest> __Marshaller_google_datastore_admin_v1_CreateIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest> __Marshaller_google_datastore_admin_v1_DeleteIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest> __Marshaller_google_datastore_admin_v1_GetIndexRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.Index> __Marshaller_google_datastore_admin_v1_Index = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.Admin.V1.Index.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest> __Marshaller_google_datastore_admin_v1_ListIndexesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest.Parser.ParseFrom);
@@ -109,6 +111,20 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         __ServiceName,
         "ImportEntities",
         __Marshaller_google_datastore_admin_v1_ImportEntitiesRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateIndex",
+        __Marshaller_google_datastore_admin_v1_CreateIndexRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest, global::Google.LongRunning.Operation> __Method_DeleteIndex = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteIndex",
+        __Marshaller_google_datastore_admin_v1_DeleteIndexRequest,
         __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest, global::Google.Cloud.Datastore.Admin.V1.Index> __Method_GetIndex = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest, global::Google.Cloud.Datastore.Admin.V1.Index>(
@@ -164,6 +180,50 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportEntities(global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates the specified index.
+      /// A newly created index's initial state is `CREATING`. On completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+      /// If the index already exists, the call will return an `ALREADY_EXISTS`
+      /// status.
+      ///
+      /// During index creation, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, removing the index with
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+      /// re-creating the index with [create]
+      /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+      ///
+      /// Indexes with a single property cannot be created.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateIndex(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an existing index.
+      /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+      /// successful execution of the request, the index will be in a `DELETING`
+      /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+      ///
+      /// During index deletion, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, followed by calling
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteIndex(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -350,6 +410,182 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ImportEntities, null, options, request);
       }
       /// <summary>
+      /// Creates the specified index.
+      /// A newly created index's initial state is `CREATING`. On completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+      /// If the index already exists, the call will return an `ALREADY_EXISTS`
+      /// status.
+      ///
+      /// During index creation, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, removing the index with
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+      /// re-creating the index with [create]
+      /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+      ///
+      /// Indexes with a single property cannot be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateIndex(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates the specified index.
+      /// A newly created index's initial state is `CREATING`. On completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+      /// If the index already exists, the call will return an `ALREADY_EXISTS`
+      /// status.
+      ///
+      /// During index creation, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, removing the index with
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+      /// re-creating the index with [create]
+      /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+      ///
+      /// Indexes with a single property cannot be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation CreateIndex(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateIndex, null, options, request);
+      }
+      /// <summary>
+      /// Creates the specified index.
+      /// A newly created index's initial state is `CREATING`. On completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+      /// If the index already exists, the call will return an `ALREADY_EXISTS`
+      /// status.
+      ///
+      /// During index creation, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, removing the index with
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+      /// re-creating the index with [create]
+      /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+      ///
+      /// Indexes with a single property cannot be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIndexAsync(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates the specified index.
+      /// A newly created index's initial state is `CREATING`. On completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the state will be `READY`.
+      /// If the index already exists, the call will return an `ALREADY_EXISTS`
+      /// status.
+      ///
+      /// During index creation, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, removing the index with
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex], then
+      /// re-creating the index with [create]
+      /// [google.datastore.admin.v1.DatastoreAdmin.CreateIndex].
+      ///
+      /// Indexes with a single property cannot be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIndexAsync(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateIndex, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing index.
+      /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+      /// successful execution of the request, the index will be in a `DELETING`
+      /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+      ///
+      /// During index deletion, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, followed by calling
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeleteIndex(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing index.
+      /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+      /// successful execution of the request, the index will be in a `DELETING`
+      /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+      ///
+      /// During index deletion, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, followed by calling
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeleteIndex(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteIndex, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing index.
+      /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+      /// successful execution of the request, the index will be in a `DELETING`
+      /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+      ///
+      /// During index deletion, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, followed by calling
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIndexAsync(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing index.
+      /// An index can only be deleted if it is in a `READY` or `ERROR` state. On
+      /// successful execution of the request, the index will be in a `DELETING`
+      /// [state][google.datastore.admin.v1.Index.State]. And on completion of the
+      /// returned [google.longrunning.Operation][google.longrunning.Operation], the index will be removed.
+      ///
+      /// During index deletion, the process could result in an error, in which
+      /// case the index will move to the `ERROR` state. The process can be recovered
+      /// by fixing the data that caused the error, followed by calling
+      /// [delete][google.datastore.admin.v1.DatastoreAdmin.DeleteIndex] again.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIndexAsync(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteIndex, null, options, request);
+      }
+      /// <summary>
       /// Gets an index.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -459,6 +695,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ExportEntities, serviceImpl.ExportEntities)
           .AddMethod(__Method_ImportEntities, serviceImpl.ImportEntities)
+          .AddMethod(__Method_CreateIndex, serviceImpl.CreateIndex)
+          .AddMethod(__Method_DeleteIndex, serviceImpl.DeleteIndex)
           .AddMethod(__Method_GetIndex, serviceImpl.GetIndex)
           .AddMethod(__Method_ListIndexes, serviceImpl.ListIndexes).Build();
     }
@@ -471,6 +709,8 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     {
       serviceBinder.AddMethod(__Method_ExportEntities, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportEntities));
       serviceBinder.AddMethod(__Method_ImportEntities, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportEntities));
+      serviceBinder.AddMethod(__Method_CreateIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateIndex));
+      serviceBinder.AddMethod(__Method_DeleteIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIndex));
       serviceBinder.AddMethod(__Method_GetIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest, global::Google.Cloud.Datastore.Admin.V1.Index>(serviceImpl.GetIndex));
       serviceBinder.AddMethod(__Method_ListIndexes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest, global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse>(serviceImpl.ListIndexes));
     }

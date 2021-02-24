@@ -300,6 +300,140 @@ namespace Google.Cloud.Datastore.Admin.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateIndex</summary>
+        public void CreateIndexRequestObject()
+        {
+            // Snippet: CreateIndex(CreateIndexRequest, CallSettings)
+            // Create client
+            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            // Initialize request argument(s)
+            CreateIndexRequest request = new CreateIndexRequest
+            {
+                ProjectId = "",
+                Index = new gcdav::Index(),
+            };
+            // Make the request
+            Operation<gcdav::Index, IndexOperationMetadata> response = datastoreAdminClient.CreateIndex(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdav::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = datastoreAdminClient.PollOnceCreateIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdav::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateIndexAsync</summary>
+        public async Task CreateIndexRequestObjectAsync()
+        {
+            // Snippet: CreateIndexAsync(CreateIndexRequest, CallSettings)
+            // Additional: CreateIndexAsync(CreateIndexRequest, CancellationToken)
+            // Create client
+            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateIndexRequest request = new CreateIndexRequest
+            {
+                ProjectId = "",
+                Index = new gcdav::Index(),
+            };
+            // Make the request
+            Operation<gcdav::Index, IndexOperationMetadata> response = await datastoreAdminClient.CreateIndexAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdav::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = await datastoreAdminClient.PollOnceCreateIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdav::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIndex</summary>
+        public void DeleteIndexRequestObject()
+        {
+            // Snippet: DeleteIndex(DeleteIndexRequest, CallSettings)
+            // Create client
+            DatastoreAdminClient datastoreAdminClient = DatastoreAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteIndexRequest request = new DeleteIndexRequest
+            {
+                ProjectId = "",
+                IndexId = "",
+            };
+            // Make the request
+            Operation<gcdav::Index, IndexOperationMetadata> response = datastoreAdminClient.DeleteIndex(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcdav::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = datastoreAdminClient.PollOnceDeleteIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdav::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteIndexAsync</summary>
+        public async Task DeleteIndexRequestObjectAsync()
+        {
+            // Snippet: DeleteIndexAsync(DeleteIndexRequest, CallSettings)
+            // Additional: DeleteIndexAsync(DeleteIndexRequest, CancellationToken)
+            // Create client
+            DatastoreAdminClient datastoreAdminClient = await DatastoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteIndexRequest request = new DeleteIndexRequest
+            {
+                ProjectId = "",
+                IndexId = "",
+            };
+            // Make the request
+            Operation<gcdav::Index, IndexOperationMetadata> response = await datastoreAdminClient.DeleteIndexAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcdav::Index, IndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcdav::Index result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcdav::Index, IndexOperationMetadata> retrievedResponse = await datastoreAdminClient.PollOnceDeleteIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcdav::Index retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for GetIndex</summary>
         public void GetIndexRequestObject()
         {

@@ -40,11 +40,12 @@ namespace Google.Cloud.Datastore.Admin.V1 {
             "RVNUT1JTEAIiRQoJRGlyZWN0aW9uEhkKFURJUkVDVElPTl9VTlNQRUNJRklF",
             "RBAAEg0KCUFTQ0VORElORxABEg4KCkRFU0NFTkRJTkcQAiJQCgVTdGF0ZRIV",
             "ChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFUSU5HEAESCQoFUkVBRFkQ",
-            "AhIMCghERUxFVElORxADEgkKBUVSUk9SEARCtQEKHWNvbS5nb29nbGUuZGF0",
+            "AhIMCghERUxFVElORxADEgkKBUVSUk9SEARC1wEKHWNvbS5nb29nbGUuZGF0",
             "YXN0b3JlLmFkbWluLnYxQgpJbmRleFByb3RvUAFaPmdvb2dsZS5nb2xhbmcu",
             "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YXN0b3JlL2FkbWluL3YxO2Fk",
-            "bWluqgIfR29vZ2xlLkNsb3VkLkRhdGFzdG9yZS5BZG1pbi5WMeoCI0dvb2ds",
-            "ZTo6Q2xvdWQ6OkRhdGFzdG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
+            "bWluqgIfR29vZ2xlLkNsb3VkLkRhdGFzdG9yZS5BZG1pbi5WMcoCH0dvb2ds",
+            "ZVxDbG91ZFxEYXRhc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3VkOjpE",
+            "YXRhc3RvcmU6OkFkbWluOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -56,7 +57,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   }
   #region Messages
   /// <summary>
-  /// A minimal index definition.
+  /// Datastore composite index definition.
   /// </summary>
   public sealed partial class Index : pb::IMessage<Index>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
