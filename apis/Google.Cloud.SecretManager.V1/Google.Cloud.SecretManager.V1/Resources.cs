@@ -29,66 +29,70 @@ namespace Google.Cloud.SecretManager.V1 {
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
             "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
             "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8i0AMKBlNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSRwoLcmVw",
+            "bnMucHJvdG8iiwQKBlNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSRwoLcmVw",
             "bGljYXRpb24YAiABKAsyKi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52",
             "MS5SZXBsaWNhdGlvbkIG4EEF4EECEjQKC2NyZWF0ZV90aW1lGAMgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkEKBmxhYmVscxgEIAMo",
             "CzIxLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlNlY3JldC5MYWJl",
-            "bHNFbnRyeRI2CgtleHBpcmVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAUgAEi0KA3R0bBgHIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbkID4EEESAAaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ATpN6kFKCiNzZWNyZXRtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3Jl",
-            "dHMve3NlY3JldH1CDAoKZXhwaXJhdGlvbiLfAwoNU2VjcmV0VmVyc2lvbhIR",
-            "CgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNQoMZGVzdHJveV90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkYKBXN0YXRl",
-            "GAQgASgOMjIuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuU2VjcmV0",
-            "VmVyc2lvbi5TdGF0ZUID4EEDEkwKEnJlcGxpY2F0aW9uX3N0YXR1cxgFIAEo",
-            "CzIwLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9u",
-            "U3RhdHVzIkgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHRU5B",
-            "QkxFRBABEgwKCERJU0FCTEVEEAISDQoJREVTVFJPWUVEEAM6bupBawoqc2Vj",
-            "cmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEj1wcm9q",
-            "ZWN0cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97c2Vj",
-            "cmV0X3ZlcnNpb259IpAECgtSZXBsaWNhdGlvbhJJCglhdXRvbWF0aWMYASAB",
-            "KAsyNC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlv",
-            "bi5BdXRvbWF0aWNIABJOCgx1c2VyX21hbmFnZWQYAiABKAsyNi5nb29nbGUu",
-            "Y2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbi5Vc2VyTWFuYWdl",
-            "ZEgAGm8KCUF1dG9tYXRpYxJiChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRp",
-            "b24YASABKAsyOC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0",
-            "b21lck1hbmFnZWRFbmNyeXB0aW9uQgPgQQEa5QEKC1VzZXJNYW5hZ2VkElUK",
-            "CHJlcGxpY2FzGAEgAygLMj4uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIu",
-            "djEuUmVwbGljYXRpb24uVXNlck1hbmFnZWQuUmVwbGljYUID4EECGn8KB1Jl",
-            "cGxpY2ESEAoIbG9jYXRpb24YASABKAkSYgobY3VzdG9tZXJfbWFuYWdlZF9l",
-            "bmNyeXB0aW9uGAIgASgLMjguZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIu",
-            "djEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvbkID4EEBQg0KC3JlcGxpY2F0",
-            "aW9uIjYKGUN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb24SGQoMa21zX2tleV9u",
-            "YW1lGAEgASgJQgPgQQIi6wQKEVJlcGxpY2F0aW9uU3RhdHVzElUKCWF1dG9t",
-            "YXRpYxgBIAEoCzJALmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJl",
-            "cGxpY2F0aW9uU3RhdHVzLkF1dG9tYXRpY1N0YXR1c0gAEloKDHVzZXJfbWFu",
-            "YWdlZBgCIAEoCzJCLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJl",
-            "cGxpY2F0aW9uU3RhdHVzLlVzZXJNYW5hZ2VkU3RhdHVzSAAaewoPQXV0b21h",
-            "dGljU3RhdHVzEmgKG2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgBIAEo",
-            "CzI+Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFu",
-            "YWdlZEVuY3J5cHRpb25TdGF0dXNCA+BBAxqPAgoRVXNlck1hbmFnZWRTdGF0",
-            "dXMSZwoIcmVwbGljYXMYASADKAsyUC5nb29nbGUuY2xvdWQuc2VjcmV0bWFu",
-            "YWdlci52MS5SZXBsaWNhdGlvblN0YXR1cy5Vc2VyTWFuYWdlZFN0YXR1cy5S",
-            "ZXBsaWNhU3RhdHVzQgPgQQMakAEKDVJlcGxpY2FTdGF0dXMSFQoIbG9jYXRp",
-            "b24YASABKAlCA+BBAxJoChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24Y",
-            "AiABKAsyPi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21l",
-            "ck1hbmFnZWRFbmNyeXB0aW9uU3RhdHVzQgPgQQNCFAoScmVwbGljYXRpb25f",
-            "c3RhdHVzIkQKH0N1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25TdGF0dXMSIQoU",
-            "a21zX2tleV92ZXJzaW9uX25hbWUYASABKAlCA+BBAiIdCg1TZWNyZXRQYXls",
-            "b2FkEgwKBGRhdGEYASABKAxC7QEKIWNvbS5nb29nbGUuY2xvdWQuc2VjcmV0",
-            "bWFuYWdlci52MUIOUmVzb3VyY2VzUHJvdG9QAVpKZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWNyZXRtYW5hZ2VyL3Yx",
-            "O3NlY3JldG1hbmFnZXL4AQGiAgNHU02qAh1Hb29nbGUuQ2xvdWQuU2VjcmV0",
-            "TWFuYWdlci5WMcoCHUdvb2dsZVxDbG91ZFxTZWNyZXRNYW5hZ2VyXFYx6gIg",
-            "R29vZ2xlOjpDbG91ZDo6U2VjcmV0TWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "bHNFbnRyeRI5CgZ0b3BpY3MYBSADKAsyJC5nb29nbGUuY2xvdWQuc2VjcmV0",
+            "bWFuYWdlci52MS5Ub3BpY0ID4EEBEjYKC2V4cGlyZV90aW1lGAYgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBSAASLQoDdHRsGAcgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQRIABotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOk3qQUoKI3Nl",
+            "Y3JldG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0EiNwcm9qZWN0cy97",
+            "cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fUIMCgpleHBpcmF0aW9uIt8DCg1T",
+            "ZWNyZXRWZXJzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI0CgtjcmVhdGVfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1Cgxk",
+            "ZXN0cm95X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSRgoFc3RhdGUYBCABKA4yMi5nb29nbGUuY2xvdWQuc2VjcmV0bWFu",
+            "YWdlci52MS5TZWNyZXRWZXJzaW9uLlN0YXRlQgPgQQMSTAoScmVwbGljYXRp",
+            "b25fc3RhdHVzGAUgASgLMjAuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIu",
+            "djEuUmVwbGljYXRpb25TdGF0dXMiSAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQAhINCglERVNUUk9Z",
+            "RUQQAzpu6kFrCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1NlY3Jl",
+            "dFZlcnNpb24SPXByb2plY3RzL3twcm9qZWN0fS9zZWNyZXRzL3tzZWNyZXR9",
+            "L3ZlcnNpb25zL3tzZWNyZXRfdmVyc2lvbn0ikAQKC1JlcGxpY2F0aW9uEkkK",
+            "CWF1dG9tYXRpYxgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2Vy",
+            "LnYxLlJlcGxpY2F0aW9uLkF1dG9tYXRpY0gAEk4KDHVzZXJfbWFuYWdlZBgC",
+            "IAEoCzI2Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0",
+            "aW9uLlVzZXJNYW5hZ2VkSAAabwoJQXV0b21hdGljEmIKG2N1c3RvbWVyX21h",
+            "bmFnZWRfZW5jcnlwdGlvbhgBIAEoCzI4Lmdvb2dsZS5jbG91ZC5zZWNyZXRt",
+            "YW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25CA+BBARrlAQoL",
+            "VXNlck1hbmFnZWQSVQoIcmVwbGljYXMYASADKAsyPi5nb29nbGUuY2xvdWQu",
+            "c2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbi5Vc2VyTWFuYWdlZC5SZXBs",
+            "aWNhQgPgQQIafwoHUmVwbGljYRIQCghsb2NhdGlvbhgBIAEoCRJiChtjdXN0",
+            "b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YAiABKAsyOC5nb29nbGUuY2xvdWQu",
+            "c2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uQgPg",
+            "QQFCDQoLcmVwbGljYXRpb24iNgoZQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlv",
+            "bhIZCgxrbXNfa2V5X25hbWUYASABKAlCA+BBAiLrBAoRUmVwbGljYXRpb25T",
+            "dGF0dXMSVQoJYXV0b21hdGljGAEgASgLMkAuZ29vZ2xlLmNsb3VkLnNlY3Jl",
+            "dG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMuQXV0b21hdGljU3RhdHVz",
+            "SAASWgoMdXNlcl9tYW5hZ2VkGAIgASgLMkIuZ29vZ2xlLmNsb3VkLnNlY3Jl",
+            "dG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMuVXNlck1hbmFnZWRTdGF0",
+            "dXNIABp7Cg9BdXRvbWF0aWNTdGF0dXMSaAobY3VzdG9tZXJfbWFuYWdlZF9l",
+            "bmNyeXB0aW9uGAEgASgLMj4uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIu",
+            "djEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1c0ID4EEDGo8CChFV",
+            "c2VyTWFuYWdlZFN0YXR1cxJnCghyZXBsaWNhcxgBIAMoCzJQLmdvb2dsZS5j",
+            "bG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3RhdHVzLlVzZXJN",
+            "YW5hZ2VkU3RhdHVzLlJlcGxpY2FTdGF0dXNCA+BBAxqQAQoNUmVwbGljYVN0",
+            "YXR1cxIVCghsb2NhdGlvbhgBIAEoCUID4EEDEmgKG2N1c3RvbWVyX21hbmFn",
+            "ZWRfZW5jcnlwdGlvbhgCIAEoCzI+Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5h",
+            "Z2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25TdGF0dXNCA+BBA0IU",
+            "ChJyZXBsaWNhdGlvbl9zdGF0dXMiRAofQ3VzdG9tZXJNYW5hZ2VkRW5jcnlw",
+            "dGlvblN0YXR1cxIhChRrbXNfa2V5X3ZlcnNpb25fbmFtZRgBIAEoCUID4EEC",
+            "Il8KBVRvcGljEhEKBG5hbWUYASABKAlCA+BBAjpD6kFAChtwdWJzdWIuZ29v",
+            "Z2xlYXBpcy5jb20vVG9waWMSIXByb2plY3RzL3twcm9qZWN0fS90b3BpY3Mv",
+            "e3RvcGljfSIdCg1TZWNyZXRQYXlsb2FkEgwKBGRhdGEYASABKAxC7QEKIWNv",
+            "bS5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MUIOUmVzb3VyY2VzUHJv",
+            "dG9QAVpKZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9j",
+            "bG91ZC9zZWNyZXRtYW5hZ2VyL3YxO3NlY3JldG1hbmFnZXL4AQGiAgNHU02q",
+            "Ah1Hb29nbGUuQ2xvdWQuU2VjcmV0TWFuYWdlci5WMcoCHUdvb2dsZVxDbG91",
+            "ZFxTZWNyZXRNYW5hZ2VyXFYx6gIgR29vZ2xlOjpDbG91ZDo6U2VjcmV0TWFu",
+            "YWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "ExpireTime", "Ttl" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication), global::Google.Cloud.SecretManager.V1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
@@ -96,6 +100,7 @@ namespace Google.Cloud.SecretManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "ReplicationStatus" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.AutomaticStatus.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus), global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus.Parser, new[]{ "KmsKeyVersionName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Topic), global::Google.Cloud.SecretManager.V1.Topic.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretPayload), global::Google.Cloud.SecretManager.V1.SecretPayload.Parser, new[]{ "Data" }, null, null, null, null)
           }));
     }
@@ -143,6 +148,7 @@ namespace Google.Cloud.SecretManager.V1 {
       replication_ = other.replication_ != null ? other.replication_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       labels_ = other.labels_.Clone();
+      topics_ = other.topics_.Clone();
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           ExpireTime = other.ExpireTime.Clone();
@@ -227,6 +233,20 @@ namespace Google.Cloud.SecretManager.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "topics" field.</summary>
+    public const int TopicsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.SecretManager.V1.Topic> _repeated_topics_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.SecretManager.V1.Topic.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Topic> topics_ = new pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Topic>();
+    /// <summary>
+    /// Optional. A list of up to 10 Pub/Sub topics to which messages are published when
+    /// control plane operations are called on the secret or its versions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.SecretManager.V1.Topic> Topics {
+      get { return topics_; }
+    }
+
     /// <summary>Field number for the "expire_time" field.</summary>
     public const int ExpireTimeFieldNumber = 6;
     /// <summary>
@@ -292,6 +312,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (!object.Equals(Replication, other.Replication)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if(!topics_.Equals(other.topics_)) return false;
       if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
       if (!object.Equals(Ttl, other.Ttl)) return false;
       if (ExpirationCase != other.ExpirationCase) return false;
@@ -305,6 +326,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (replication_ != null) hash ^= Replication.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       hash ^= Labels.GetHashCode();
+      hash ^= topics_.GetHashCode();
       if (expirationCase_ == ExpirationOneofCase.ExpireTime) hash ^= ExpireTime.GetHashCode();
       if (expirationCase_ == ExpirationOneofCase.Ttl) hash ^= Ttl.GetHashCode();
       hash ^= (int) expirationCase_;
@@ -337,6 +359,7 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteMessage(CreateTime);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      topics_.WriteTo(output, _repeated_topics_codec);
       if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
         output.WriteRawTag(50);
         output.WriteMessage(ExpireTime);
@@ -367,6 +390,7 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteMessage(CreateTime);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      topics_.WriteTo(ref output, _repeated_topics_codec);
       if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
         output.WriteRawTag(50);
         output.WriteMessage(ExpireTime);
@@ -394,6 +418,7 @@ namespace Google.Cloud.SecretManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      size += topics_.CalculateSize(_repeated_topics_codec);
       if (expirationCase_ == ExpirationOneofCase.ExpireTime) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
       }
@@ -427,6 +452,7 @@ namespace Google.Cloud.SecretManager.V1 {
         CreateTime.MergeFrom(other.CreateTime);
       }
       labels_.Add(other.labels_);
+      topics_.Add(other.topics_);
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           if (ExpireTime == null) {
@@ -476,6 +502,10 @@ namespace Google.Cloud.SecretManager.V1 {
           }
           case 34: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 42: {
+            topics_.AddEntriesFrom(input, _repeated_topics_codec);
             break;
           }
           case 50: {
@@ -530,6 +560,10 @@ namespace Google.Cloud.SecretManager.V1 {
           }
           case 34: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 42: {
+            topics_.AddEntriesFrom(ref input, _repeated_topics_codec);
             break;
           }
           case 50: {
@@ -3096,6 +3130,187 @@ namespace Google.Cloud.SecretManager.V1 {
   }
 
   /// <summary>
+  /// A Pub/Sub topic which Secret Manager will publish to when control plane
+  /// events occur on this secret.
+  /// </summary>
+  public sealed partial class Topic : pb::IMessage<Topic>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Topic> _parser = new pb::MessageParser<Topic>(() => new Topic());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Topic> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Topic() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Topic(Topic other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Topic Clone() {
+      return new Topic(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the Pub/Sub topic that will be published to, in the
+    /// following format: `projects/*/topics/*`. For publication to succeed, the
+    /// Secret Manager P4SA must have `pubsub.publisher` permissions on the topic.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Topic);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Topic other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Topic other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A secret payload resource in the Secret Manager API. This contains the
   /// sensitive secret payload that is associated with a [SecretVersion][google.cloud.secretmanager.v1.SecretVersion].
   /// </summary>
@@ -3111,7 +3326,7 @@ namespace Google.Cloud.SecretManager.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.SecretManager.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
