@@ -1699,6 +1699,22 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ResourceManager.V2"
     },
     {
+      "ServiceDirectory": "google/cloud/resourcesettings/v1",
+      "Name": "resourcesettings.googleapis.com",
+      "Title": "Resource Settings API",
+      "Description": "The Resource Settings API allows users to control and modify the behavior of their GCP resources (e.g., VM, firewall, Project, etc.) across the Cloud Resource Hierarchy.",
+      "ServiceConfigFile": "google/cloud/resourcesettings/v1/resourcesettings_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.resourcesettings.v1",
+      "PackageFromProtos": "google.cloud.resourcesettings.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Resourcesettings.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/retail/v2",
       "Name": "retail.googleapis.com",
       "Title": "Retail API",
