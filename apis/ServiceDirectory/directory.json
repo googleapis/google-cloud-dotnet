@@ -199,7 +199,8 @@
         "google/bigtable/admin/v2",
         "google/iam/v1",
         "google/longrunning",
-        "google/protobuf"
+        "google/protobuf",
+        "google/rpc"
       ],
       "Stable": true,
       "CSharpNamespaceFromProtos": "Google.Cloud.Bigtable.Admin.V2"
