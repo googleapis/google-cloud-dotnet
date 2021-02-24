@@ -1399,6 +1399,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1425,6 +1426,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1453,6 +1455,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1479,6 +1482,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1507,6 +1511,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1533,6 +1538,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1562,6 +1568,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1589,6 +1596,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1618,6 +1626,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
@@ -1645,6 +1654,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 EndTime = new wkt::Timestamp(),
                 SizeBytes = 4628423819757039038L,
                 State = Backup.Types.State.Unspecified,
+                EncryptionInfo = new EncryptionInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableTableAdminClient client = new BigtableTableAdminClientImpl(mockGrpcClient.Object, null);
