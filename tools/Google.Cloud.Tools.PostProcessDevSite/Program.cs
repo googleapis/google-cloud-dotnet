@@ -90,6 +90,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             Directory.CreateDirectory(_devSiteRoot);
 
             CopyApiDirectory();
+            RegenerateToc();
             CopyGuides();
             AddGuidesToToc();
             CopySnippetsToExamples();
@@ -105,6 +106,12 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             {
                 File.Copy(file, Path.Combine(dest, Path.GetFileName(file)));
             }
+        }
+
+        private void RegenerateToc()
+        {
+            var apiDir = Path.Combine(_devSiteRoot, "api");
+            Tools.RegenerateToc.Program.Regenerate(apiDir);
         }
 
         private void CopyGuides()
@@ -125,9 +132,6 @@ namespace Google.Cloud.Tools.PostProcessDevSite
         {
             var apiDirectory = Path.Combine(_devSiteRoot, "api");
             var tocFile = Path.Combine(apiDirectory, "toc.yml");
-            // Read the current TOC
-            var deserializer = new DeserializerBuilder().WithNamingConvention(CamelCaseNamingConvention.Instance).Build();
-            var apiToc = deserializer.Deserialize<List<dynamic>>(File.ReadAllText(tocFile));
 
             // Construct a TOC for guides from files
             var guidesToc = new List<dynamic>();
@@ -138,7 +142,6 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                     : File.ReadLines(file).First().TrimStart(' ', '#');
                 guidesToc.Add(new { Name = title, Href = Path.GetFileName(file) });
             }
-
             // All guides go under a "Guides" node
             var guidesNode = new Dictionary<string, object>
             {
@@ -146,30 +149,22 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                 ["items"] = guidesToc
             };
 
-            // After the Guides node, there's an "All types" page
-            var allTypesNode = new Dictionary<string, object>
-            {
-                ["name"] = "All types",
-                ["uid"] = apiToc[0]["uid"]
-            };
+            // Read the current TOC, and add the new node as the first child of the root element.
+            var deserializer = new DeserializerBuilder().WithNamingConvention(CamelCaseNamingConvention.Instance).Build();
+            var apiToc = deserializer.Deserialize<List<dynamic>>(File.ReadAllText(tocFile));
 
-            // All other items come after Guides and All types
-            var items = new dynamic[] { guidesNode, allTypesNode }.Concat((IEnumerable<dynamic>)apiToc[0]["items"]).ToList();
+            // We're building for a single package, so we should have a single TOC entry.
+            var root = apiToc[0];
 
-            var newToc = new[]
-            {
-                new Dictionary<string, object>
-                {
-                    ["name"] = apiToc[0]["name"],
-                    ["items"] = items
-                }
-            };
+            var rootItems = ((IEnumerable<dynamic>)root["items"]).ToList();
+            rootItems.Insert(0, guidesNode);
+            root["items"] = rootItems;
 
             var serializer = new SerializerBuilder()
                 .ConfigureDefaultValuesHandling(DefaultValuesHandling.OmitNull)
                 .WithNamingConvention(CamelCaseNamingConvention.Instance)
                 .Build();
-            string newText = serializer.Serialize(newToc);
+            string newText = serializer.Serialize(apiToc);
             File.WriteAllText(tocFile, newText);
         }
 
