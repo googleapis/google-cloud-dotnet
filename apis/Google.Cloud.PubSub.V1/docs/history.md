@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.4.0, released 2021-02-24
+
+- [Commit a43730c](https://github.com/googleapis/google-cloud-dotnet/commit/a43730c): fix: PublisherClient required credentials even when using the emulator. Fixes [issue 5973](https://github.com/googleapis/google-cloud-dotnet/issues/5973)
+- [Commit 071ea6f](https://github.com/googleapis/google-cloud-dotnet/commit/071ea6f): Add sync Create() method to PublisherClient and SubscriberClient ([issue 5895](https://github.com/googleapis/google-cloud-dotnet/issues/5895))
+
 # Version 2.3.0, released 2021-01-25
 
 - [Commit 68db70f](https://github.com/googleapis/google-cloud-dotnet/commit/68db70f): fix: Fix error where the lease-extension-delay could be negative. Fixes [issue 5866](https://github.com/googleapis/google-cloud-dotnet/issues/5866)
