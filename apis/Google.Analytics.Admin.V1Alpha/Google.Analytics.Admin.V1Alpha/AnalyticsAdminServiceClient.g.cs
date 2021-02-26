@@ -1263,9 +1263,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1284,9 +1284,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1305,9 +1305,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The account's `name` field is used to identify the account.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1816,9 +1816,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1838,9 +1838,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1860,9 +1860,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2952,9 +2952,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the web stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2973,9 +2973,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the web stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2994,9 +2994,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the web stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3545,9 +3545,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the iOS app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3566,9 +3566,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the iOS app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3587,9 +3587,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the iOS app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3597,7 +3597,15 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateIosAppDataStreamAsync(iosAppDataStream, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3606,7 +3614,15 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3615,7 +3631,15 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3624,7 +3648,15 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateIosAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this ios app data stream will be created.
@@ -3643,7 +3675,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this ios app data stream will be created.
@@ -3662,7 +3702,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this ios app data stream will be created.
@@ -3677,7 +3725,15 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateIosAppDataStreamAsync(parent, iosAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this ios app data stream will be created.
@@ -3696,7 +3752,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this ios app data stream will be created.
@@ -3715,7 +3779,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this ios app data stream will be created.
@@ -4138,9 +4210,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the android app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4159,9 +4231,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the android app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4180,9 +4252,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the android app stream to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4190,7 +4262,15 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateAndroidAppDataStreamAsync(androidAppDataStream, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4199,7 +4279,15 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4208,7 +4296,15 @@ namespace Google.Analytics.Admin.V1Alpha
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4217,7 +4313,15 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateAndroidAppDataStreamAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this android app data stream will be created.
@@ -4236,7 +4340,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this android app data stream will be created.
@@ -4255,7 +4367,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this android app data stream will be created.
@@ -4270,7 +4390,15 @@ namespace Google.Analytics.Admin.V1Alpha
             CreateAndroidAppDataStreamAsync(parent, androidAppDataStream, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this android app data stream will be created.
@@ -4289,7 +4417,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this android app data stream will be created.
@@ -4308,7 +4444,15 @@ namespace Google.Analytics.Admin.V1Alpha
             }, callSettings);
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this android app data stream will be created.
@@ -4646,9 +4790,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4669,9 +4813,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4692,9 +4836,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The `name` field is used to identify the settings to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4886,9 +5030,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The Firebase link to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4906,9 +5050,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The Firebase link to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4926,9 +5070,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// Required. The Firebase link to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5463,9 +5607,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5483,9 +5627,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5503,9 +5647,9 @@ namespace Google.Analytics.Admin.V1Alpha
         /// The GoogleAdsLink to update
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to be updated. Omitted fields will not be updated.
-        /// To replace the entire entity, use one path with the string "*" to match
-        /// all fields.
+        /// Required. The list of fields to be updated. Field names must be in snake case
+        /// (e.g., "field_to_update"). Omitted fields will not be updated. To replace
+        /// the entire entity, use one path with the string "*" to match all fields.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7108,7 +7252,15 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7120,7 +7272,15 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Creates an iOS app data stream with the specified location and attributes.
+        /// Creates an iOS app stream with the specified location and attributes.
+        /// 
+        /// Note that an iOS app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7234,7 +7394,15 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7246,7 +7414,15 @@ namespace Google.Analytics.Admin.V1Alpha
         }
 
         /// <summary>
-        /// Creates an android app stream with the specified location and attributes.
+        /// Creates an Android app stream with the specified location and attributes.
+        /// 
+        /// Note that an Android app stream must be linked to a Firebase app to receive
+        /// traffic.
+        /// 
+        /// To create a working app stream, make sure your property is linked to a
+        /// Firebase project. Then, use the Firebase API to create a Firebase app,
+        /// which will also create an appropriate data stream in Analytics (may take up
+        /// to 24 hours).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
