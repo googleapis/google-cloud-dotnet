@@ -165,8 +165,7 @@ Every API call needs to be authenticated. In order to successfully
 make a call, first ensure that the necessary [Google Cloud
 APIs](https://console.developers.google.com/apis/library/) are enabled for your project and that
 you've downloaded the right set of keys (if it applies to you) as
-explained in the [authentication
-document](https://github.com/googleapis/google-cloud-common/blob/master/authentication/readme.md#authentication).
+explained in the [authentication documentation](https://cloud.google.com/docs/authentication).
 
 Next, choose a method for authenticating API requests from within your project:
 
