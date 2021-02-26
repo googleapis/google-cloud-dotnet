@@ -497,6 +497,21 @@
       "protoPath": "google/cloud/datalabeling/v1beta1"
     },
     {
+      "id": "Google.Cloud.DataQnA.V1Alpha",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Data QnA",
+      "productUrl": "https://cloud.google.com/bigquery/docs/dataqna",
+      "description": "Recommended Google client library to access the Google Cloud Data QnA API (v1alpha) which is a natural language question and answer service for BigQuery data.",
+      "tags": [
+        "language",
+        "bigquery"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/dataqna/v1alpha"
+    },
+    {
       "id": "Google.Cloud.Dataproc.V1",
       "generator": "micro",
       "protoPath": "google/cloud/dataproc/v1",
