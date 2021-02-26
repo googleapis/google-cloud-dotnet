@@ -1975,6 +1975,23 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.ServiceDirectory.V1Beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/shell/v1",
+      "Name": "cloudshell.googleapis.com",
+      "Title": "Cloud Shell API",
+      "Description": "Allows users to start, configure, and connect to interactive shell sessions running in the cloud.",
+      "ServiceConfigFile": "google/cloud/shell/v1/cloudshell_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.shell.v1",
+      "PackageFromProtos": "google.cloud.shell.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/longrunning",
+        "google/protobuf"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.Shell.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/speech/v1",
       "Name": "speech.googleapis.com",
       "Title": "Cloud Speech-to-Text API",
