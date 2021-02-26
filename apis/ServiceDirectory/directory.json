@@ -170,6 +170,22 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.AppEngine.V1"
     },
     {
+      "ServiceDirectory": "google/apps/market/v2",
+      "Name": "appsmarket.googleapis.com",
+      "Title": "Google Workspace Marketplace API",
+      "Description": "Lets your Google Workspace Marketplace applications integrate with Google's licensing and billing services.",
+      "ServiceConfigFile": "google/apps/market/v2/appsmarket_v2.yaml",
+      "Version": "v2",
+      "PackageFromDirectory": "google.apps.market.v2",
+      "PackageFromProtos": "ccc.hosted.marketplace.v2",
+      "ImportDirectories": [
+        "google/api",
+        "google/apps/market/v2"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Ccc.Hosted.Marketplace.V2"
+    },
+    {
       "ServiceDirectory": "google/area120/tables/v1alpha1",
       "Name": "area120tables.googleapis.com",
       "Title": "Area120 Tables API",
