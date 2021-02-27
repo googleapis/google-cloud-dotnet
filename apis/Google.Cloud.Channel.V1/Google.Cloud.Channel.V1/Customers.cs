@@ -147,6 +147,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// Required. Address of the organization of the customer entity.
     /// Region and zip codes are required to enforce US laws and embargoes.
+    /// Valid address lines are required for all customers.
     /// Language code is discarded. Use the Customer-level language code to set the
     /// customer's language.
     /// </summary>
