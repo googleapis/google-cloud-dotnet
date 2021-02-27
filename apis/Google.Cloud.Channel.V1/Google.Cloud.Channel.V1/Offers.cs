@@ -58,42 +58,43 @@ namespace Google.Cloud.Channel.V1 {
             "IAMoDjI3Lmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkNsb3VkSWRlbnRpdHlJ",
             "bmZvLkN1c3RvbWVyVHlwZRJOChdwcm9tb3Rpb25hbF9vcmRlcl90eXBlcxgD",
             "IAMoDjItLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlByb21vdGlvbmFsT3Jk",
-            "ZXJUeXBlIu0BCgRQbGFuEjoKDHBheW1lbnRfcGxhbhgBIAEoDjIkLmdvb2ds",
+            "ZXJUeXBlIoYCCgRQbGFuEjoKDHBheW1lbnRfcGxhbhgBIAEoDjIkLmdvb2ds",
             "ZS5jbG91ZC5jaGFubmVsLnYxLlBheW1lbnRQbGFuEjoKDHBheW1lbnRfdHlw",
             "ZRgCIAEoDjIkLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLlBheW1lbnRUeXBl",
             "EjYKDXBheW1lbnRfY3ljbGUYAyABKAsyHy5nb29nbGUuY2xvdWQuY2hhbm5l",
             "bC52MS5QZXJpb2QSNQoMdHJpYWxfcGVyaW9kGAQgASgLMh8uZ29vZ2xlLmNs",
-            "b3VkLmNoYW5uZWwudjEuUGVyaW9kIrkBCg9QcmljZUJ5UmVzb3VyY2USPAoN",
-            "cmVzb3VyY2VfdHlwZRgBIAEoDjIlLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
-            "LlJlc291cmNlVHlwZRItCgVwcmljZRgCIAEoCzIeLmdvb2dsZS5jbG91ZC5j",
-            "aGFubmVsLnYxLlByaWNlEjkKDHByaWNlX3BoYXNlcxgDIAMoCzIjLmdvb2ds",
-            "ZS5jbG91ZC5jaGFubmVsLnYxLlByaWNlUGhhc2UiigEKBVByaWNlEiYKCmJh",
-            "c2VfcHJpY2UYASABKAsyEi5nb29nbGUudHlwZS5Nb25leRIQCghkaXNjb3Vu",
-            "dBgCIAEoARIrCg9lZmZlY3RpdmVfcHJpY2UYAyABKAsyEi5nb29nbGUudHlw",
-            "ZS5Nb25leRIaChJleHRlcm5hbF9wcmljZV91cmkYBCABKAki2QEKClByaWNl",
-            "UGhhc2USOAoLcGVyaW9kX3R5cGUYASABKA4yIy5nb29nbGUuY2xvdWQuY2hh",
-            "bm5lbC52MS5QZXJpb2RUeXBlEhQKDGZpcnN0X3BlcmlvZBgCIAEoBRITCgts",
-            "YXN0X3BlcmlvZBgDIAEoBRItCgVwcmljZRgEIAEoCzIeLmdvb2dsZS5jbG91",
-            "ZC5jaGFubmVsLnYxLlByaWNlEjcKC3ByaWNlX3RpZXJzGAUgAygLMiIuZ29v",
-            "Z2xlLmNsb3VkLmNoYW5uZWwudjEuUHJpY2VUaWVyImkKCVByaWNlVGllchIW",
-            "Cg5maXJzdF9yZXNvdXJjZRgBIAEoBRIVCg1sYXN0X3Jlc291cmNlGAIgASgF",
-            "Ei0KBXByaWNlGAMgASgLMh4uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUHJp",
-            "Y2UiVAoGUGVyaW9kEhAKCGR1cmF0aW9uGAEgASgFEjgKC3BlcmlvZF90eXBl",
-            "GAIgASgOMiMuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUGVyaW9kVHlwZSpt",
-            "ChRQcm9tb3Rpb25hbE9yZGVyVHlwZRIgChxQUk9NT1RJT05BTF9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASDwoLTkVXX1VQR1JBREUQARIMCghUUkFOU0ZFUhACEhQK",
-            "EFBST01PVElPTl9TV0lUQ0gQAyprCgtQYXltZW50UGxhbhIcChhQQVlNRU5U",
-            "X1BMQU5fVU5TUEVDSUZJRUQQABIOCgpDT01NSVRNRU5UEAESDAoIRkxFWElC",
-            "TEUQAhIICgRGUkVFEAMSCQoFVFJJQUwQBBILCgdPRkZMSU5FEAUqRAoLUGF5",
-            "bWVudFR5cGUSHAoYUEFZTUVOVF9UWVBFX1VOU1BFQ0lGSUVEEAASCgoGUFJF",
-            "UEFZEAESCwoHUE9TVFBBWRACKooBCgxSZXNvdXJjZVR5cGUSHQoZUkVTT1VS",
-            "Q0VfVFlQRV9VTlNQRUNJRklFRBAAEggKBFNFQVQQARIHCgNNQVUQAhIGCgJH",
-            "QhADEhEKDUxJQ0VOU0VEX1VTRVIQBBILCgdNSU5VVEVTEAUSDgoKSUFBU19V",
-            "U0FHRRAGEhAKDFNVQlNDUklQVElPThAHKkcKClBlcmlvZFR5cGUSGwoXUEVS",
-            "SU9EX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNEQVkQARIJCgVNT05USBACEggK",
-            "BFlFQVIQA0JsChtjb20uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjFCC09mZmVy",
-            "c1Byb3RvUAFaPmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvY2hhbm5lbC92MTtjaGFubmVsYgZwcm90bzM="));
+            "b3VkLmNoYW5uZWwudjEuUGVyaW9kEhcKD2JpbGxpbmdfYWNjb3VudBgFIAEo",
+            "CSK5AQoPUHJpY2VCeVJlc291cmNlEjwKDXJlc291cmNlX3R5cGUYASABKA4y",
+            "JS5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5SZXNvdXJjZVR5cGUSLQoFcHJp",
+            "Y2UYAiABKAsyHi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5QcmljZRI5Cgxw",
+            "cmljZV9waGFzZXMYAyADKAsyIy5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5Q",
+            "cmljZVBoYXNlIooBCgVQcmljZRImCgpiYXNlX3ByaWNlGAEgASgLMhIuZ29v",
+            "Z2xlLnR5cGUuTW9uZXkSEAoIZGlzY291bnQYAiABKAESKwoPZWZmZWN0aXZl",
+            "X3ByaWNlGAMgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXkSGgoSZXh0ZXJuYWxf",
+            "cHJpY2VfdXJpGAQgASgJItkBCgpQcmljZVBoYXNlEjgKC3BlcmlvZF90eXBl",
+            "GAEgASgOMiMuZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuUGVyaW9kVHlwZRIU",
+            "CgxmaXJzdF9wZXJpb2QYAiABKAUSEwoLbGFzdF9wZXJpb2QYAyABKAUSLQoF",
+            "cHJpY2UYBCABKAsyHi5nb29nbGUuY2xvdWQuY2hhbm5lbC52MS5QcmljZRI3",
+            "CgtwcmljZV90aWVycxgFIAMoCzIiLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYx",
+            "LlByaWNlVGllciJpCglQcmljZVRpZXISFgoOZmlyc3RfcmVzb3VyY2UYASAB",
+            "KAUSFQoNbGFzdF9yZXNvdXJjZRgCIAEoBRItCgVwcmljZRgDIAEoCzIeLmdv",
+            "b2dsZS5jbG91ZC5jaGFubmVsLnYxLlByaWNlIlQKBlBlcmlvZBIQCghkdXJh",
+            "dGlvbhgBIAEoBRI4CgtwZXJpb2RfdHlwZRgCIAEoDjIjLmdvb2dsZS5jbG91",
+            "ZC5jaGFubmVsLnYxLlBlcmlvZFR5cGUqbQoUUHJvbW90aW9uYWxPcmRlclR5",
+            "cGUSIAocUFJPTU9USU9OQUxfVFlQRV9VTlNQRUNJRklFRBAAEg8KC05FV19V",
+            "UEdSQURFEAESDAoIVFJBTlNGRVIQAhIUChBQUk9NT1RJT05fU1dJVENIEAMq",
+            "awoLUGF5bWVudFBsYW4SHAoYUEFZTUVOVF9QTEFOX1VOU1BFQ0lGSUVEEAAS",
+            "DgoKQ09NTUlUTUVOVBABEgwKCEZMRVhJQkxFEAISCAoERlJFRRADEgkKBVRS",
+            "SUFMEAQSCwoHT0ZGTElORRAFKkQKC1BheW1lbnRUeXBlEhwKGFBBWU1FTlRf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgoKBlBSRVBBWRABEgsKB1BPU1RQQVkQAiqK",
+            "AQoMUmVzb3VyY2VUeXBlEh0KGVJFU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIICgRTRUFUEAESBwoDTUFVEAISBgoCR0IQAxIRCg1MSUNFTlNFRF9VU0VS",
+            "EAQSCwoHTUlOVVRFUxAFEg4KCklBQVNfVVNBR0UQBhIQCgxTVUJTQ1JJUFRJ",
+            "T04QBypHCgpQZXJpb2RUeXBlEhsKF1BFUklPRF9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASBwoDREFZEAESCQoFTU9OVEgQAhIICgRZRUFSEANCbAobY29tLmdvb2ds",
+            "ZS5jbG91ZC5jaGFubmVsLnYxQgtPZmZlcnNQcm90b1ABWj5nb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2NoYW5uZWwvdjE7",
+            "Y2hhbm5lbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.PromotionalOrderType), typeof(global::Google.Cloud.Channel.V1.PaymentPlan), typeof(global::Google.Cloud.Channel.V1.PaymentType), typeof(global::Google.Cloud.Channel.V1.ResourceType), typeof(global::Google.Cloud.Channel.V1.PeriodType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,7 +102,7 @@ namespace Google.Cloud.Channel.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ParameterDefinition), global::Google.Cloud.Channel.V1.ParameterDefinition.Parser, new[]{ "Name", "ParameterType", "MinValue", "MaxValue", "AllowedValues", "Optional" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.ParameterDefinition.Types.ParameterType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Constraints), global::Google.Cloud.Channel.V1.Constraints.Parser, new[]{ "CustomerConstraints" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CustomerConstraints), global::Google.Cloud.Channel.V1.CustomerConstraints.Parser, new[]{ "AllowedRegions", "AllowedCustomerTypes", "PromotionalOrderTypes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Plan), global::Google.Cloud.Channel.V1.Plan.Parser, new[]{ "PaymentPlan", "PaymentType", "PaymentCycle", "TrialPeriod" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Plan), global::Google.Cloud.Channel.V1.Plan.Parser, new[]{ "PaymentPlan", "PaymentType", "PaymentCycle", "TrialPeriod", "BillingAccount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.PriceByResource), global::Google.Cloud.Channel.V1.PriceByResource.Parser, new[]{ "ResourceType", "Price", "PricePhases" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Price), global::Google.Cloud.Channel.V1.Price.Parser, new[]{ "BasePrice", "Discount", "EffectivePrice", "ExternalPriceUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.PricePhase), global::Google.Cloud.Channel.V1.PricePhase.Parser, new[]{ "PeriodType", "FirstPeriod", "LastPeriod", "Price", "PriceTiers" }, null, null, null, null),
@@ -1644,6 +1645,7 @@ namespace Google.Cloud.Channel.V1 {
       paymentType_ = other.paymentType_;
       paymentCycle_ = other.paymentCycle_ != null ? other.paymentCycle_.Clone() : null;
       trialPeriod_ = other.trialPeriod_ != null ? other.trialPeriod_.Clone() : null;
+      billingAccount_ = other.billingAccount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1714,6 +1716,21 @@ namespace Google.Cloud.Channel.V1 {
       }
     }
 
+    /// <summary>Field number for the "billing_account" field.</summary>
+    public const int BillingAccountFieldNumber = 5;
+    private string billingAccount_ = "";
+    /// <summary>
+    /// Reseller Billing account to charge after an offer transaction.
+    /// Only present for Google Cloud Platform offers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BillingAccount {
+      get { return billingAccount_; }
+      set {
+        billingAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Plan);
@@ -1731,6 +1748,7 @@ namespace Google.Cloud.Channel.V1 {
       if (PaymentType != other.PaymentType) return false;
       if (!object.Equals(PaymentCycle, other.PaymentCycle)) return false;
       if (!object.Equals(TrialPeriod, other.TrialPeriod)) return false;
+      if (BillingAccount != other.BillingAccount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1741,6 +1759,7 @@ namespace Google.Cloud.Channel.V1 {
       if (PaymentType != global::Google.Cloud.Channel.V1.PaymentType.Unspecified) hash ^= PaymentType.GetHashCode();
       if (paymentCycle_ != null) hash ^= PaymentCycle.GetHashCode();
       if (trialPeriod_ != null) hash ^= TrialPeriod.GetHashCode();
+      if (BillingAccount.Length != 0) hash ^= BillingAccount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1773,6 +1792,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(TrialPeriod);
       }
+      if (BillingAccount.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(BillingAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1798,6 +1821,10 @@ namespace Google.Cloud.Channel.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(TrialPeriod);
       }
+      if (BillingAccount.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(BillingAccount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1818,6 +1845,9 @@ namespace Google.Cloud.Channel.V1 {
       }
       if (trialPeriod_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrialPeriod);
+      }
+      if (BillingAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BillingAccount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1847,6 +1877,9 @@ namespace Google.Cloud.Channel.V1 {
           TrialPeriod = new global::Google.Cloud.Channel.V1.Period();
         }
         TrialPeriod.MergeFrom(other.TrialPeriod);
+      }
+      if (other.BillingAccount.Length != 0) {
+        BillingAccount = other.BillingAccount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1884,6 +1917,10 @@ namespace Google.Cloud.Channel.V1 {
             input.ReadMessage(TrialPeriod);
             break;
           }
+          case 42: {
+            BillingAccount = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1918,6 +1955,10 @@ namespace Google.Cloud.Channel.V1 {
               TrialPeriod = new global::Google.Cloud.Channel.V1.Period();
             }
             input.ReadMessage(TrialPeriod);
+            break;
+          }
+          case 42: {
+            BillingAccount = input.ReadString();
             break;
           }
         }
