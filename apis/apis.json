@@ -428,7 +428,7 @@
     },
     {
       "id": "Google.Cloud.CloudBuild.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud Build",
       "productUrl": "https://cloud.google.com/cloud-build",
@@ -438,7 +438,9 @@
         "cloudbuild"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.1.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Google.LongRunning": "2.1.0",
+        "Grpc.Core": "2.31.0"
       },
       "generator": "micro",
       "protoPath": "google/devtools/cloudbuild/v1"
