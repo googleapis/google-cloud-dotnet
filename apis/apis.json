@@ -1473,7 +1473,7 @@
     },
     {
       "id": "Google.Cloud.Profiler.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Cloud Profiler",
       "productUrl": "https://cloud.google.com/profiler/",
@@ -1482,7 +1482,10 @@
         "profiling",
         "profiler"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Grpc.Core": "2.31.0"
+      },
       "generator": "micro",
       "protoPath": "google/devtools/cloudprofiler/v2"
     },
