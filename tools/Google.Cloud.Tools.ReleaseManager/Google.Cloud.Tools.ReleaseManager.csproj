@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LibGit2Sharp" Version="0.26.1" />
-    <PackageReference Include="Octokit" Version="0.32.0" />
+    <PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0096" />
+    <PackageReference Include="Octokit" Version="0.50.0" />
     <ProjectReference Include="..\Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj" />
     <ProjectReference Include="..\Google.Cloud.Tools.VersionCompat\Google.Cloud.Tools.VersionCompat.csproj" />
     <EmbeddedResource Include="History/*.json" />
