@@ -979,6 +979,26 @@
       "CSharpNamespaceFromProtos": "Google.Cloud.Dialogflow.V2beta1"
     },
     {
+      "ServiceDirectory": "google/cloud/documentai/v1",
+      "Name": "documentai.googleapis.com",
+      "Title": "Cloud Document AI API",
+      "Description": "Service to parse structured information from unstructured or semi-structured documents using state-of-the-art Google AI such as natural language, computer vision, translation, and AutoML.",
+      "ServiceConfigFile": "google/cloud/documentai/v1/documentai_v1.yaml",
+      "Version": "v1",
+      "PackageFromDirectory": "google.cloud.documentai.v1",
+      "PackageFromProtos": "google.cloud.documentai.v1",
+      "ImportDirectories": [
+        "google/api",
+        "google/cloud/documentai/v1",
+        "google/longrunning",
+        "google/protobuf",
+        "google/rpc",
+        "google/type"
+      ],
+      "Stable": true,
+      "CSharpNamespaceFromProtos": "Google.Cloud.DocumentAI.V1"
+    },
+    {
       "ServiceDirectory": "google/cloud/documentai/v1beta2",
       "Name": "documentai.googleapis.com",
       "Title": "Cloud Document AI API",
