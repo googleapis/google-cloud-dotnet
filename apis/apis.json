@@ -89,6 +89,23 @@
       "protoPath": "google/cloud/accessapproval/v1"
     },
     {
+      "id": "Google.Cloud.ApiGateway.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "API Gateway",
+      "productUrl": "https://cloud.google.com/api-gateway/docs",
+      "description": "Recommended Google client library to access the API Gateway API, which enables you to provide secure access to your backend services with an API that is consistent across all of your services, regardless of the service implementation",
+      "tags": [
+        "api",
+        "gateway"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.1.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/apigateway/v1"
+    },
+    {
       "id": "Google.Cloud.AppEngine.V1",
       "version": "1.0.0",
       "type": "grpc",
