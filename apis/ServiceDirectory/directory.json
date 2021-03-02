@@ -329,7 +329,7 @@
         "google/protobuf"
       ],
       "Stable": true,
-      "CSharpNamespaceFromProtos": "Google.Cloud.Apigateway.V1"
+      "CSharpNamespaceFromProtos": "Google.Cloud.ApiGateway.V1"
     },
     {
       "ServiceDirectory": "google/cloud/asset/v1",
