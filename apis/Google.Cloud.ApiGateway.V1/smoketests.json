@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListGateways",
+    "client": "ApiGatewayServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListApis",
+    "client": "ApiGatewayServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
