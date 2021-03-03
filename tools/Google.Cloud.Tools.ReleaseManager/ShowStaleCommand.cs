@@ -40,12 +40,12 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
                 foreach (var api in catalog.Apis)
                 {
-                    MaybeShowStale(repo, allTags, api);
+                    MaybeShowStale(repo, allTags, catalog, api);
                 }
             }
         }
 
-        private static void MaybeShowStale(Repository repo, List<Tag> allTags, ApiMetadata api)
+        private static void MaybeShowStale(Repository repo, List<Tag> allTags, ApiCatalog catalog, ApiMetadata api)
         {
             string expectedTagName = $"{api.Id}-{api.Version}";
             var latestRelease = allTags.FirstOrDefault(tag => tag.FriendlyName == expectedTagName);
@@ -58,7 +58,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             var laterCommits = repo.Commits.TakeWhile(commit => commit.Sha != latestRelease.Target.Sha);
             var relevantCommits = laterCommits
-                .Where(GitHelpers.CreateCommitPredicate(repo, api.Id))
+                .Where(GitHelpers.CreateCommitPredicate(repo, catalog, api))
                 .Where(commit => !CommitOverrides.IsSkipped(commit))
                 .ToList();
 

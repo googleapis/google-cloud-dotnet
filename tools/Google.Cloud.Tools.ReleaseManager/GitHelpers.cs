@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -24,32 +26,65 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// Creates a predicate which determines whether or not a commit affects an API.
         /// Note that this does *not* observe commit overrides with "skip" (yet).
         /// </summary>
-        /// <param name="id">The ID of the API to create a predicate for.</param>
+        /// <param name="api">The API to create a predicate for.</param>
         /// <returns>The predicate.</returns>
-        internal static Func<Commit, bool> CreateCommitPredicate(Repository repo, string id)
+        internal static Func<Commit, bool> CreateCommitPredicate(Repository repo, ApiCatalog catalog, ApiMetadata api)
         {
-            var pathPrefix = $"apis/{id}/{id}/";
-            var projectFile = $"apis/{id}/{id}/{id}.csproj";
-            Func<string, bool> pathFilter = path => path.StartsWith(pathPrefix) && path != projectFile;
-            return CommitContainsApi;
+            // Work out which APIs we need to collect history for. This includes the API itself,
+            // and any API dependencies in this repo that don't keep history files themselves.
+            var apiIds = new HashSet<string>(GetHistoryApiIds(catalog, api));
 
-            bool CommitContainsApi(Commit commit)
+            var predicates = apiIds.Select(CreateCommitPredicateForId).ToList();
+            return commit => predicates.Any(p => p(commit));
+
+            Func<Commit, bool> CreateCommitPredicateForId(string id)
             {
-                if (commit.Parents.Count() != 1)
+                var pathPrefix = $"apis/{id}/{id}/";
+                var projectFile = $"apis/{id}/{id}/{id}.csproj";
+                Func<string, bool> pathFilter = path => path.StartsWith(pathPrefix) && path != projectFile;
+                return commit =>
                 {
-                    return false;
-                }
-                var tree = commit.Tree;
-                var parentTree = commit.Parents.First().Tree;
-                // If nothing has changed under apis/{id}/{id}, it's definitely not relevant.
-                if (tree[pathPrefix]?.Target.Sha == parentTree[pathPrefix]?.Target.Sha)
+                    if (commit.Parents.Count() != 1)
+                    {
+                        return false;
+                    }
+                    var tree = commit.Tree;
+                    var parentTree = commit.Parents.First().Tree;
+                    // If nothing has changed under apis/{id}/{id}, it's definitely not relevant.
+                    if (tree[pathPrefix]?.Target.Sha == parentTree[pathPrefix]?.Target.Sha)
+                    {
+                        return false;
+                    }
+                    // Otherwise, check whether something *other* than the project file has changed.
+                    var comparison = repo.Diff.Compare<TreeChanges>(parentTree, tree);
+                    // Some versions return forward slashes, some return backslashes :(
+                    return comparison.Select(change => change.Path.Replace('\\', '/')).Any(pathFilter);
+                };
+            }
+        }
+
+        /// <summary>
+        /// Returns the APIs IDs from which the version history of the given API is constructed.
+        /// This includes (transitively) dependencies using a "project" value (i.e. current HEAD)
+        /// that don't maintain their own version history.
+        /// </summary>
+        private static IEnumerable<string> GetHistoryApiIds(ApiCatalog catalog, ApiMetadata api)
+        {
+            yield return api.Id;
+            foreach (var (key, value) in api.Dependencies)
+            {
+                if (value != "project" ||
+                    !catalog.TryGetApi(key, out var dependency) ||
+                    !dependency.NoVersionHistory)
                 {
-                    return false;
+                    continue;
                 }
-                // Otherwise, check whether something *other* than the project file has changed.
-                var comparison = repo.Diff.Compare<TreeChanges>(parentTree, tree);
-                // Some versions return forward slashes, some return backslashes :(
-                return comparison.Select(change => change.Path.Replace('\\', '/')).Any(pathFilter);
+                // Note: this recursion would become really inefficient in a deep tree - but
+                // we simply don't have many dependencies like this.
+                foreach (var id in GetHistoryApiIds(catalog, dependency))
+                {
+                    yield return id;
+                }
             }
         }
 
