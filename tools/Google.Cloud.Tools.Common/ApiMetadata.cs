@@ -113,6 +113,7 @@ namespace Google.Cloud.Tools.Common
 
         /// <summary>
         /// When set to <c>true</c>, this API is skipped by the update-history command in ReleaseManager.
+        /// Instead, projects that depend on this API will include commits in their history.
         /// </summary>
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool NoVersionHistory { get; set; }

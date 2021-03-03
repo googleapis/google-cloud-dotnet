@@ -58,7 +58,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var root = DirectoryLayout.DetermineRootDirectory();
             using (var repo = new Repository(root))
             {
-                var releases = LoadReleases(repo, api).ToList();
+                var releases = LoadReleases(repo, catalog, api).ToList();
                 if (!File.Exists(historyFilePath))
                 {
                     File.WriteAllText(historyFilePath, "# Version history\r\n\r\n");
@@ -81,10 +81,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
         }
 
-        private static IEnumerable<Release> LoadReleases(Repository repo, ApiMetadata api)
+        private static IEnumerable<Release> LoadReleases(Repository repo, ApiCatalog catalog, ApiMetadata api)
         {
             var id = api.Id;
-            var commitPredicate = GitHelpers.CreateCommitPredicate(repo, api.Id);
+            var commitPredicate = GitHelpers.CreateCommitPredicate(repo, catalog, api);
 
             List<Release> releases = new List<Release>();
             StructuredVersion currentVersion = StructuredVersion.FromString(api.Version);

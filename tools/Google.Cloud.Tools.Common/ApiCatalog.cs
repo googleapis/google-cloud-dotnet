@@ -53,7 +53,16 @@ namespace Google.Cloud.Tools.Common
         /// <param name="id"></param>
         /// <exception cref="UserErrorException"></exception>
         /// <returns>The API associated with the given ID</returns>
-        public ApiMetadata this[string id] => Apis.SingleOrDefault(api => api.Id == id) ?? throw new UserErrorException($"No API with ID '{id}'");
+        public ApiMetadata this[string id] => TryGetApi(id, out var api) ? api : throw new UserErrorException($"No API with ID '{id}'");
+
+        /// <summary>
+        /// Tries to retrieves an API by ID, without throwing an exception if it's not present.
+        /// </summary>
+        public bool TryGetApi(string id, out ApiMetadata api)
+        {
+            api = Apis.SingleOrDefault(api => api.Id == id);
+            return api is object;
+        }
 
         /// <summary>
         /// The path to the API catalog (apis.json).
