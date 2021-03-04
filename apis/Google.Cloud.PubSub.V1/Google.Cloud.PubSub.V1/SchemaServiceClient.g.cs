@@ -194,6 +194,7 @@ namespace Google.Cloud.PubSub.V1
 
     /// <summary>SchemaService client wrapper, for convenient use.</summary>
     /// <remarks>
+    /// Service for doing schema-related operations.
     /// </remarks>
     public abstract partial class SchemaServiceClient
     {
@@ -979,6 +980,7 @@ namespace Google.Cloud.PubSub.V1
 
     /// <summary>SchemaService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
+    /// Service for doing schema-related operations.
     /// </remarks>
     public sealed partial class SchemaServiceClientImpl : SchemaServiceClient
     {
