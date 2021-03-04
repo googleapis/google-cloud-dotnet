@@ -281,6 +281,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
                     "Google.Apis.Core" => $"{DevSiteXrefPrefix}/Google.Apis",
                     "Google.Apis.Auth" => $"{DevSiteXrefPrefix}/Google.Apis",
                     "Google.Api.CommonProtos" => $"{DevSiteXrefPrefix}/Google.Api.CommonProtos",
+                    "Google.Protobuf" => $"{DevSiteXrefPrefix}/Google.Protobuf",
                     var grpc when grpc.StartsWith("Grpc.") => $"{DevSiteXrefPrefix}/Grpc.Core",
                     var gax when gax.StartsWith("Google.Api.Gax") => $"{DevSiteXrefPrefix}/Google.Api.Gax",
                     var api when _apiIds.Contains(api) => $"{DevSiteXrefPrefix}/{api}",
