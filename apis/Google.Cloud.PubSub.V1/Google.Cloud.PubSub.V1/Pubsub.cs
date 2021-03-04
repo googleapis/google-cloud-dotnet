@@ -830,8 +830,6 @@ namespace Google.Cloud.PubSub.V1 {
     private global::Google.Cloud.PubSub.V1.SchemaSettings schemaSettings_;
     /// <summary>
     /// Settings for validating messages published against a schema.
-    ///
-    /// EXPERIMENTAL: Schema support is in development and may not work yet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.SchemaSettings SchemaSettings {

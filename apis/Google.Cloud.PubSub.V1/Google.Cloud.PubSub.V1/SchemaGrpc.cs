@@ -23,6 +23,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.PubSub.V1 {
+  /// <summary>
+  /// Service for doing schema-related operations.
+  /// </summary>
   public static partial class SchemaService
   {
     static readonly string __ServiceName = "google.pubsub.v1.SchemaService";
