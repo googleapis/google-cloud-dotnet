@@ -61,6 +61,16 @@ namespace Google.Cloud.Metastore.V1Alpha
             CreateMetadataImportOperationsSettings = existing.CreateMetadataImportOperationsSettings.Clone();
             UpdateMetadataImportSettings = existing.UpdateMetadataImportSettings;
             UpdateMetadataImportOperationsSettings = existing.UpdateMetadataImportOperationsSettings.Clone();
+            ExportMetadataSettings = existing.ExportMetadataSettings;
+            ExportMetadataOperationsSettings = existing.ExportMetadataOperationsSettings.Clone();
+            RestoreServiceSettings = existing.RestoreServiceSettings;
+            RestoreServiceOperationsSettings = existing.RestoreServiceOperationsSettings.Clone();
+            ListBackupsSettings = existing.ListBackupsSettings;
+            GetBackupSettings = existing.GetBackupSettings;
+            CreateBackupSettings = existing.CreateBackupSettings;
+            CreateBackupOperationsSettings = existing.CreateBackupOperationsSettings.Clone();
+            DeleteBackupSettings = existing.DeleteBackupSettings;
+            DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -279,6 +289,156 @@ namespace Google.Cloud.Metastore.V1Alpha
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.ExportMetadata</c> and <c>DataprocMetastoreClient.ExportMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.ExportMetadata</c> and
+        /// <c>DataprocMetastoreClient.ExportMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportMetadataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.RestoreService</c> and <c>DataprocMetastoreClient.RestoreServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RestoreServiceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.RestoreService</c> and
+        /// <c>DataprocMetastoreClient.RestoreServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RestoreServiceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.ListBackups</c> and <c>DataprocMetastoreClient.ListBackupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.GetBackup</c> and <c>DataprocMetastoreClient.GetBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.CreateBackup</c> and <c>DataprocMetastoreClient.CreateBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.CreateBackup</c> and
+        /// <c>DataprocMetastoreClient.CreateBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataprocMetastoreClient.DeleteBackup</c> and <c>DataprocMetastoreClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataprocMetastoreClient.DeleteBackup</c> and
+        /// <c>DataprocMetastoreClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataprocMetastoreSettings"/> object.</returns>
         public DataprocMetastoreSettings Clone() => new DataprocMetastoreSettings(this);
@@ -360,7 +520,7 @@ namespace Google.Cloud.Metastore.V1Alpha
     /// * Each location has a collection of services, named: `/services/*`
     /// * Dataproc Metastore services are resources with names of the form:
     /// 
-    /// `/projects/{project_id}/locations/{location_id}/services/{service_id}`.
+    /// `/projects/{project_number}/locations/{location_id}/services/{service_id}`.
     /// </remarks>
     public abstract partial class DataprocMetastoreClient
     {
@@ -463,7 +623,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location of metastore services to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -490,7 +650,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location of metastore services to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -517,7 +677,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location of metastore services to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -544,7 +704,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location of metastore services to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -598,7 +758,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -615,7 +775,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -632,7 +792,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -646,7 +806,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -663,7 +823,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -680,7 +840,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -747,7 +907,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location in which to create a metastore
         /// service, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="service">
         /// Required. The Metastore service to create. The `name` field is
@@ -758,7 +918,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The ID of the metastore service, which is used as the final
         /// component of the metastore service's name.
         /// 
-        /// This value must be between 1 and 64 characters long, begin with a
+        /// This value must be between 2 and 63 characters long inclusive, begin with a
         /// letter, end with a letter or number, and consist of alpha-numeric
         /// ASCII characters or hyphens.
         /// </param>
@@ -779,7 +939,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location in which to create a metastore
         /// service, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="service">
         /// Required. The Metastore service to create. The `name` field is
@@ -790,7 +950,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The ID of the metastore service, which is used as the final
         /// component of the metastore service's name.
         /// 
-        /// This value must be between 1 and 64 characters long, begin with a
+        /// This value must be between 2 and 63 characters long inclusive, begin with a
         /// letter, end with a letter or number, and consist of alpha-numeric
         /// ASCII characters or hyphens.
         /// </param>
@@ -811,7 +971,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location in which to create a metastore
         /// service, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="service">
         /// Required. The Metastore service to create. The `name` field is
@@ -822,7 +982,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The ID of the metastore service, which is used as the final
         /// component of the metastore service's name.
         /// 
-        /// This value must be between 1 and 64 characters long, begin with a
+        /// This value must be between 2 and 63 characters long inclusive, begin with a
         /// letter, end with a letter or number, and consist of alpha-numeric
         /// ASCII characters or hyphens.
         /// </param>
@@ -838,7 +998,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location in which to create a metastore
         /// service, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="service">
         /// Required. The Metastore service to create. The `name` field is
@@ -849,7 +1009,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The ID of the metastore service, which is used as the final
         /// component of the metastore service's name.
         /// 
-        /// This value must be between 1 and 64 characters long, begin with a
+        /// This value must be between 2 and 63 characters long inclusive, begin with a
         /// letter, end with a letter or number, and consist of alpha-numeric
         /// ASCII characters or hyphens.
         /// </param>
@@ -870,7 +1030,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location in which to create a metastore
         /// service, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="service">
         /// Required. The Metastore service to create. The `name` field is
@@ -881,7 +1041,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The ID of the metastore service, which is used as the final
         /// component of the metastore service's name.
         /// 
-        /// This value must be between 1 and 64 characters long, begin with a
+        /// This value must be between 2 and 63 characters long inclusive, begin with a
         /// letter, end with a letter or number, and consist of alpha-numeric
         /// ASCII characters or hyphens.
         /// </param>
@@ -902,7 +1062,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the location in which to create a metastore
         /// service, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}".
+        /// `projects/{project_number}/locations/{location_id}`.
         /// </param>
         /// <param name="service">
         /// Required. The Metastore service to create. The `name` field is
@@ -913,7 +1073,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The ID of the metastore service, which is used as the final
         /// component of the metastore service's name.
         /// 
-        /// This value must be between 1 and 64 characters long, begin with a
+        /// This value must be between 2 and 63 characters long inclusive, begin with a
         /// letter, end with a letter or number, and consist of alpha-numeric
         /// ASCII characters or hyphens.
         /// </param>
@@ -1106,7 +1266,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to delete, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1123,7 +1283,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to delete, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1140,7 +1300,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to delete, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1154,7 +1314,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to delete, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1171,7 +1331,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to delete, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1188,7 +1348,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metastore service to delete, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1220,7 +1380,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service whose metadata imports to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1247,7 +1407,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service whose metadata imports to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1274,7 +1434,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service whose metadata imports to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1301,7 +1461,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service whose metadata imports to
         /// list, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1355,7 +1515,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metadata import to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1372,7 +1532,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metadata import to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1389,7 +1549,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metadata import to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1403,7 +1563,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metadata import to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1420,7 +1580,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metadata import to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1437,7 +1597,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the metadata import to retrieve, in the
         /// following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}".
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImports/{import_id}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1505,7 +1665,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service in which to create a metastore
         /// import, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}"
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The ID of the
@@ -1537,7 +1697,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service in which to create a metastore
         /// import, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}"
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The ID of the
@@ -1569,7 +1729,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service in which to create a metastore
         /// import, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}"
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The ID of the
@@ -1596,7 +1756,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service in which to create a metastore
         /// import, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}"
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The ID of the
@@ -1628,7 +1788,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service in which to create a metastore
         /// import, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}"
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The ID of the
@@ -1660,7 +1820,7 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// Required. The relative resource name of the service in which to create a metastore
         /// import, in the following form:
         /// 
-        /// "projects/{project_id}/locations/{location_id}/services/{service_id}"
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
         /// </param>
         /// <param name="metadataImport">
         /// Required. The metadata import to create. The `name` field is ignored. The ID of the
@@ -1810,6 +1970,875 @@ namespace Google.Cloud.Metastore.V1Alpha
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<MetadataImport, OperationMetadata>> UpdateMetadataImportAsync(MetadataImport metadataImport, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateMetadataImportAsync(metadataImport, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports metadata from a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MetadataExport, OperationMetadata> ExportMetadata(ExportMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports metadata from a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataExport, OperationMetadata>> ExportMetadataAsync(ExportMetadataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports metadata from a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MetadataExport, OperationMetadata>> ExportMetadataAsync(ExportMetadataRequest request, st::CancellationToken cancellationToken) =>
+            ExportMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportMetadata</c>.</summary>
+        public virtual lro::OperationsClient ExportMetadataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MetadataExport, OperationMetadata> PollOnceExportMetadata(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataExport, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MetadataExport, OperationMetadata>> PollOnceExportMetadataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MetadataExport, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Restore, OperationMetadata> RestoreService(RestoreServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Restore, OperationMetadata>> RestoreServiceAsync(RestoreServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Restore, OperationMetadata>> RestoreServiceAsync(RestoreServiceRequest request, st::CancellationToken cancellationToken) =>
+            RestoreServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RestoreService</c>.</summary>
+        public virtual lro::OperationsClient RestoreServiceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RestoreService</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Restore, OperationMetadata> PollOnceRestoreService(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Restore, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreServiceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RestoreService</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Restore, OperationMetadata>> PollOnceRestoreServiceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Restore, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestoreServiceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The relative resource name of the metastore service to run restore, in the
+        /// following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The relative resource name of the metastore service backup to restore
+        /// from, in the following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Restore, OperationMetadata> RestoreService(string service, string backup, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreService(new RestoreServiceRequest
+            {
+                Service = gax::GaxPreconditions.CheckNotNullOrEmpty(service, nameof(service)),
+                Backup = gax::GaxPreconditions.CheckNotNullOrEmpty(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The relative resource name of the metastore service to run restore, in the
+        /// following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The relative resource name of the metastore service backup to restore
+        /// from, in the following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Restore, OperationMetadata>> RestoreServiceAsync(string service, string backup, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreServiceAsync(new RestoreServiceRequest
+            {
+                Service = gax::GaxPreconditions.CheckNotNullOrEmpty(service, nameof(service)),
+                Backup = gax::GaxPreconditions.CheckNotNullOrEmpty(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The relative resource name of the metastore service to run restore, in the
+        /// following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The relative resource name of the metastore service backup to restore
+        /// from, in the following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Restore, OperationMetadata>> RestoreServiceAsync(string service, string backup, st::CancellationToken cancellationToken) =>
+            RestoreServiceAsync(service, backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The relative resource name of the metastore service to run restore, in the
+        /// following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The relative resource name of the metastore service backup to restore
+        /// from, in the following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Restore, OperationMetadata> RestoreService(ServiceName service, BackupName backup, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreService(new RestoreServiceRequest
+            {
+                ServiceAsServiceName = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
+                BackupAsBackupName = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The relative resource name of the metastore service to run restore, in the
+        /// following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The relative resource name of the metastore service backup to restore
+        /// from, in the following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Restore, OperationMetadata>> RestoreServiceAsync(ServiceName service, BackupName backup, gaxgrpc::CallSettings callSettings = null) =>
+            RestoreServiceAsync(new RestoreServiceRequest
+            {
+                ServiceAsServiceName = gax::GaxPreconditions.CheckNotNull(service, nameof(service)),
+                BackupAsBackupName = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="service">
+        /// Required. The relative resource name of the metastore service to run restore, in the
+        /// following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The relative resource name of the metastore service backup to restore
+        /// from, in the following form:
+        /// 
+        /// `projects/{project_id}/locations/{location_id}/services/{service_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Restore, OperationMetadata>> RestoreServiceAsync(ServiceName service, BackupName backup, st::CancellationToken cancellationToken) =>
+            RestoreServiceAsync(service, backup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service whose backups to
+        /// list, in the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service whose backups to
+        /// list, in the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service whose backups to
+        /// list, in the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackups(new ListBackupsRequest
+            {
+                ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service whose backups to
+        /// list, in the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ServiceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListBackupsAsync(new ListBackupsRequest
+            {
+                ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to retrieve, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to retrieve, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to retrieve, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to retrieve, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to retrieve, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to retrieve, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> CreateBackup(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(CreateBackupRequest request, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateBackup</c>.</summary>
+        public virtual lro::OperationsClient CreateBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> PollOnceCreateBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> PollOnceCreateBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service in which to create a backup
+        /// of the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create. The `name` field is ignored. The ID of the created
+        /// backup must be provided in the request's `backup_id` field.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID of the backup, which is used as the final component of the
+        /// backup's name.
+        /// 
+        /// This value must be between 1 and 64 characters long, begin with a letter,
+        /// end with a letter or number, and consist of alpha-numeric ASCII characters
+        /// or hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> CreateBackup(string parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackup(new CreateBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service in which to create a backup
+        /// of the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create. The `name` field is ignored. The ID of the created
+        /// backup must be provided in the request's `backup_id` field.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID of the backup, which is used as the final component of the
+        /// backup's name.
+        /// 
+        /// This value must be between 1 and 64 characters long, begin with a letter,
+        /// end with a letter or number, and consist of alpha-numeric ASCII characters
+        /// or hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(string parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupAsync(new CreateBackupRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service in which to create a backup
+        /// of the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create. The `name` field is ignored. The ID of the created
+        /// backup must be provided in the request's `backup_id` field.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID of the backup, which is used as the final component of the
+        /// backup's name.
+        /// 
+        /// This value must be between 1 and 64 characters long, begin with a letter,
+        /// end with a letter or number, and consist of alpha-numeric ASCII characters
+        /// or hyphens.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(string parent, Backup backup, string backupId, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(parent, backup, backupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service in which to create a backup
+        /// of the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create. The `name` field is ignored. The ID of the created
+        /// backup must be provided in the request's `backup_id` field.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID of the backup, which is used as the final component of the
+        /// backup's name.
+        /// 
+        /// This value must be between 1 and 64 characters long, begin with a letter,
+        /// end with a letter or number, and consist of alpha-numeric ASCII characters
+        /// or hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> CreateBackup(ServiceName parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackup(new CreateBackupRequest
+            {
+                ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service in which to create a backup
+        /// of the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create. The `name` field is ignored. The ID of the created
+        /// backup must be provided in the request's `backup_id` field.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID of the backup, which is used as the final component of the
+        /// backup's name.
+        /// 
+        /// This value must be between 1 and 64 characters long, begin with a letter,
+        /// end with a letter or number, and consist of alpha-numeric ASCII characters
+        /// or hyphens.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(ServiceName parent, Backup backup, string backupId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateBackupAsync(new CreateBackupRequest
+            {
+                ParentAsServiceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                BackupId = gax::GaxPreconditions.CheckNotNullOrEmpty(backupId, nameof(backupId)),
+                Backup = gax::GaxPreconditions.CheckNotNull(backup, nameof(backup)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The relative resource name of the service in which to create a backup
+        /// of the following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}`
+        /// </param>
+        /// <param name="backup">
+        /// Required. The backup to create. The `name` field is ignored. The ID of the created
+        /// backup must be provided in the request's `backup_id` field.
+        /// </param>
+        /// <param name="backupId">
+        /// Required. The ID of the backup, which is used as the final component of the
+        /// backup's name.
+        /// 
+        /// This value must be between 1 and 64 characters long, begin with a letter,
+        /// end with a letter or number, and consist of alpha-numeric ASCII characters
+        /// or hyphens.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(ServiceName parent, Backup backup, string backupId, st::CancellationToken cancellationToken) =>
+            CreateBackupAsync(parent, backup, backupId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public virtual lro::OperationsClient DeleteBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to delete, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to delete, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to delete, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to delete, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to delete, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The relative resource name of the backup to delete, in the
+        /// following form:
+        /// 
+        /// `projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataprocMetastore client wrapper implementation, for convenient use.</summary>
@@ -1830,7 +2859,7 @@ namespace Google.Cloud.Metastore.V1Alpha
     /// * Each location has a collection of services, named: `/services/*`
     /// * Dataproc Metastore services are resources with names of the form:
     /// 
-    /// `/projects/{project_id}/locations/{location_id}/services/{service_id}`.
+    /// `/projects/{project_number}/locations/{location_id}/services/{service_id}`.
     /// </remarks>
     public sealed partial class DataprocMetastoreClientImpl : DataprocMetastoreClient
     {
@@ -1852,6 +2881,18 @@ namespace Google.Cloud.Metastore.V1Alpha
 
         private readonly gaxgrpc::ApiCall<UpdateMetadataImportRequest, lro::Operation> _callUpdateMetadataImport;
 
+        private readonly gaxgrpc::ApiCall<ExportMetadataRequest, lro::Operation> _callExportMetadata;
+
+        private readonly gaxgrpc::ApiCall<RestoreServiceRequest, lro::Operation> _callRestoreService;
+
+        private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
+
+        private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
+
+        private readonly gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> _callCreateBackup;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> _callDeleteBackup;
+
         /// <summary>
         /// Constructs a client wrapper for the DataprocMetastore service, with the specified gRPC client and settings.
         /// </summary>
@@ -1867,6 +2908,10 @@ namespace Google.Cloud.Metastore.V1Alpha
             DeleteServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceOperationsSettings);
             CreateMetadataImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMetadataImportOperationsSettings);
             UpdateMetadataImportOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMetadataImportOperationsSettings);
+            ExportMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportMetadataOperationsSettings);
+            RestoreServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreServiceOperationsSettings);
+            CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings);
+            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings);
             _callListServices = clientHelper.BuildApiCall<ListServicesRequest, ListServicesResponse>(grpcClient.ListServicesAsync, grpcClient.ListServices, effectiveSettings.ListServicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListServices);
             Modify_ListServicesApiCall(ref _callListServices);
@@ -1894,6 +2939,24 @@ namespace Google.Cloud.Metastore.V1Alpha
             _callUpdateMetadataImport = clientHelper.BuildApiCall<UpdateMetadataImportRequest, lro::Operation>(grpcClient.UpdateMetadataImportAsync, grpcClient.UpdateMetadataImport, effectiveSettings.UpdateMetadataImportSettings).WithGoogleRequestParam("metadata_import.name", request => request.MetadataImport?.Name);
             Modify_ApiCall(ref _callUpdateMetadataImport);
             Modify_UpdateMetadataImportApiCall(ref _callUpdateMetadataImport);
+            _callExportMetadata = clientHelper.BuildApiCall<ExportMetadataRequest, lro::Operation>(grpcClient.ExportMetadataAsync, grpcClient.ExportMetadata, effectiveSettings.ExportMetadataSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callExportMetadata);
+            Modify_ExportMetadataApiCall(ref _callExportMetadata);
+            _callRestoreService = clientHelper.BuildApiCall<RestoreServiceRequest, lro::Operation>(grpcClient.RestoreServiceAsync, grpcClient.RestoreService, effectiveSettings.RestoreServiceSettings).WithGoogleRequestParam("service", request => request.Service);
+            Modify_ApiCall(ref _callRestoreService);
+            Modify_RestoreServiceApiCall(ref _callRestoreService);
+            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>(grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackups);
+            Modify_ListBackupsApiCall(ref _callListBackups);
+            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>(grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackup);
+            Modify_GetBackupApiCall(ref _callGetBackup);
+            _callCreateBackup = clientHelper.BuildApiCall<CreateBackupRequest, lro::Operation>(grpcClient.CreateBackupAsync, grpcClient.CreateBackup, effectiveSettings.CreateBackupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateBackup);
+            Modify_CreateBackupApiCall(ref _callCreateBackup);
+            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>(grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackup);
+            Modify_DeleteBackupApiCall(ref _callDeleteBackup);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1917,6 +2980,18 @@ namespace Google.Cloud.Metastore.V1Alpha
 
         partial void Modify_UpdateMetadataImportApiCall(ref gaxgrpc::ApiCall<UpdateMetadataImportRequest, lro::Operation> call);
 
+        partial void Modify_ExportMetadataApiCall(ref gaxgrpc::ApiCall<ExportMetadataRequest, lro::Operation> call);
+
+        partial void Modify_RestoreServiceApiCall(ref gaxgrpc::ApiCall<RestoreServiceRequest, lro::Operation> call);
+
+        partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
+
+        partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
+
+        partial void Modify_CreateBackupApiCall(ref gaxgrpc::ApiCall<CreateBackupRequest, lro::Operation> call);
+
+        partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
+
         partial void OnConstruction(DataprocMetastore.DataprocMetastoreClient grpcClient, DataprocMetastoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DataprocMetastore client</summary>
@@ -1939,6 +3014,18 @@ namespace Google.Cloud.Metastore.V1Alpha
         partial void Modify_CreateMetadataImportRequest(ref CreateMetadataImportRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateMetadataImportRequest(ref UpdateMetadataImportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportMetadataRequest(ref ExportMetadataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RestoreServiceRequest(ref RestoreServiceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateBackupRequest(ref CreateBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists services in a project and location.
@@ -2172,6 +3259,162 @@ namespace Google.Cloud.Metastore.V1Alpha
             Modify_UpdateMetadataImportRequest(ref request, ref callSettings);
             return new lro::Operation<MetadataImport, OperationMetadata>(await _callUpdateMetadataImport.Async(request, callSettings).ConfigureAwait(false), UpdateMetadataImportOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>ExportMetadata</c>.</summary>
+        public override lro::OperationsClient ExportMetadataOperationsClient { get; }
+
+        /// <summary>
+        /// Exports metadata from a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MetadataExport, OperationMetadata> ExportMetadata(ExportMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataExport, OperationMetadata>(_callExportMetadata.Sync(request, callSettings), ExportMetadataOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports metadata from a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MetadataExport, OperationMetadata>> ExportMetadataAsync(ExportMetadataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportMetadataRequest(ref request, ref callSettings);
+            return new lro::Operation<MetadataExport, OperationMetadata>(await _callExportMetadata.Async(request, callSettings).ConfigureAwait(false), ExportMetadataOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RestoreService</c>.</summary>
+        public override lro::OperationsClient RestoreServiceOperationsClient { get; }
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Restore, OperationMetadata> RestoreService(RestoreServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreServiceRequest(ref request, ref callSettings);
+            return new lro::Operation<Restore, OperationMetadata>(_callRestoreService.Sync(request, callSettings), RestoreServiceOperationsClient);
+        }
+
+        /// <summary>
+        /// Restores a service from a backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Restore, OperationMetadata>> RestoreServiceAsync(RestoreServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestoreServiceRequest(ref request, ref callSettings);
+            return new lro::Operation<Restore, OperationMetadata>(await _callRestoreService.Async(request, callSettings).ConfigureAwait(false), RestoreServiceOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists backups in a service.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateBackup</c>.</summary>
+        public override lro::OperationsClient CreateBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, OperationMetadata> CreateBackup(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(_callCreateBackup.Sync(request, callSettings), CreateBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new Backup in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, OperationMetadata>> CreateBackupAsync(CreateBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(await _callCreateBackup.Async(request, callSettings).ConfigureAwait(false), CreateBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public override lro::OperationsClient DeleteBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteBackup.Sync(request, callSettings), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackup.Async(request, callSettings).ConfigureAwait(false), DeleteBackupOperationsClient);
+        }
     }
 
     public partial class ListServicesRequest : gaxgrpc::IPageRequest
@@ -2179,6 +3422,10 @@ namespace Google.Cloud.Metastore.V1Alpha
     }
 
     public partial class ListMetadataImportsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2194,6 +3441,14 @@ namespace Google.Cloud.Metastore.V1Alpha
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<MetadataImport> GetEnumerator() => MetadataImports.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupsResponse : gaxgrpc::IPageResponse<Backup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Backup> GetEnumerator() => Backups.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

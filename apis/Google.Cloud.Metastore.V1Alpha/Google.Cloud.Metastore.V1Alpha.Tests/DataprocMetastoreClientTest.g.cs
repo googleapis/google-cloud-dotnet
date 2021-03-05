@@ -56,7 +56,11 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 State = Service.Types.State.Deleting,
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
-                Tier = Service.Types.Tier.Enterprise,
+                Tier = Service.Types.Tier.Developer,
+                MetadataIntegration = new MetadataIntegration(),
+                MaintenanceWindow = new MaintenanceWindow(),
+                Uid = "uida2d37198",
+                MetadataManagementActivity = new MetadataManagementActivity(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -93,7 +97,11 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 State = Service.Types.State.Deleting,
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
-                Tier = Service.Types.Tier.Enterprise,
+                Tier = Service.Types.Tier.Developer,
+                MetadataIntegration = new MetadataIntegration(),
+                MaintenanceWindow = new MaintenanceWindow(),
+                Uid = "uida2d37198",
+                MetadataManagementActivity = new MetadataManagementActivity(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -132,7 +140,11 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 State = Service.Types.State.Deleting,
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
-                Tier = Service.Types.Tier.Enterprise,
+                Tier = Service.Types.Tier.Developer,
+                MetadataIntegration = new MetadataIntegration(),
+                MaintenanceWindow = new MaintenanceWindow(),
+                Uid = "uida2d37198",
+                MetadataManagementActivity = new MetadataManagementActivity(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -169,7 +181,11 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 State = Service.Types.State.Deleting,
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
-                Tier = Service.Types.Tier.Enterprise,
+                Tier = Service.Types.Tier.Developer,
+                MetadataIntegration = new MetadataIntegration(),
+                MaintenanceWindow = new MaintenanceWindow(),
+                Uid = "uida2d37198",
+                MetadataManagementActivity = new MetadataManagementActivity(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -208,7 +224,11 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 State = Service.Types.State.Deleting,
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
-                Tier = Service.Types.Tier.Enterprise,
+                Tier = Service.Types.Tier.Developer,
+                MetadataIntegration = new MetadataIntegration(),
+                MaintenanceWindow = new MaintenanceWindow(),
+                Uid = "uida2d37198",
+                MetadataManagementActivity = new MetadataManagementActivity(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -245,7 +265,11 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
                 State = Service.Types.State.Deleting,
                 StateMessage = "state_message46cf28c0",
                 ArtifactGcsUri = "artifact_gcs_uri4d2b3985",
-                Tier = Service.Types.Tier.Enterprise,
+                Tier = Service.Types.Tier.Developer,
+                MetadataIntegration = new MetadataIntegration(),
+                MaintenanceWindow = new MaintenanceWindow(),
+                Uid = "uida2d37198",
+                MetadataManagementActivity = new MetadataManagementActivity(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
@@ -408,6 +432,162 @@ namespace Google.Cloud.Metastore.V1Alpha.Tests
             MetadataImport responseCallSettings = await client.GetMetadataImportAsync(request.MetadataImportName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             MetadataImport responseCancellationToken = await client.GetMetadataImportAsync(request.MetadataImportName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBackupRequestObject()
+        {
+            moq::Mock<DataprocMetastore.DataprocMetastoreClient> mockGrpcClient = new moq::Mock<DataprocMetastore.DataprocMetastoreClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                CreateTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = Backup.Types.State.Active,
+                ServiceRevision = new Service(),
+                Description = "description2cf9da67",
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupRequestObjectAsync()
+        {
+            moq::Mock<DataprocMetastore.DataprocMetastoreClient> mockGrpcClient = new moq::Mock<DataprocMetastore.DataprocMetastoreClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                CreateTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = Backup.Types.State.Active,
+                ServiceRevision = new Service(),
+                Description = "description2cf9da67",
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBackup()
+        {
+            moq::Mock<DataprocMetastore.DataprocMetastoreClient> mockGrpcClient = new moq::Mock<DataprocMetastore.DataprocMetastoreClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                CreateTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = Backup.Types.State.Active,
+                ServiceRevision = new Service(),
+                Description = "description2cf9da67",
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupAsync()
+        {
+            moq::Mock<DataprocMetastore.DataprocMetastoreClient> mockGrpcClient = new moq::Mock<DataprocMetastore.DataprocMetastoreClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                CreateTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = Backup.Types.State.Active,
+                ServiceRevision = new Service(),
+                Description = "description2cf9da67",
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetBackupResourceNames()
+        {
+            moq::Mock<DataprocMetastore.DataprocMetastoreClient> mockGrpcClient = new moq::Mock<DataprocMetastore.DataprocMetastoreClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                CreateTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = Backup.Types.State.Active,
+                ServiceRevision = new Service(),
+                Description = "description2cf9da67",
+            };
+            mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            Backup response = client.GetBackup(request.BackupName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetBackupResourceNamesAsync()
+        {
+            moq::Mock<DataprocMetastore.DataprocMetastoreClient> mockGrpcClient = new moq::Mock<DataprocMetastore.DataprocMetastoreClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetBackupRequest request = new GetBackupRequest
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+            };
+            Backup expectedResponse = new Backup
+            {
+                BackupName = BackupName.FromProjectLocationServiceBackup("[PROJECT]", "[LOCATION]", "[SERVICE]", "[BACKUP]"),
+                CreateTime = new wkt::Timestamp(),
+                EndTime = new wkt::Timestamp(),
+                State = Backup.Types.State.Active,
+                ServiceRevision = new Service(),
+                Description = "description2cf9da67",
+            };
+            mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataprocMetastoreClient client = new DataprocMetastoreClientImpl(mockGrpcClient.Object, null);
+            Backup responseCallSettings = await client.GetBackupAsync(request.BackupName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Backup responseCancellationToken = await client.GetBackupAsync(request.BackupName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
