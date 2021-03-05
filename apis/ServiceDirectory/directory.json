@@ -1352,7 +1352,8 @@
       "ImportDirectories": [
         "google/api",
         "google/longrunning",
-        "google/protobuf"
+        "google/protobuf",
+        "google/type"
       ],
       "Stable": false,
       "CSharpNamespaceFromProtos": "Google.Cloud.Metastore.V1Alpha"
