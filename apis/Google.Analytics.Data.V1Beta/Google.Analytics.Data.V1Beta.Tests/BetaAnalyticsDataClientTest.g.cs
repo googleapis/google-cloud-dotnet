@@ -27,6 +27,100 @@ namespace Google.Analytics.Data.V1Beta.Tests
     public sealed class GeneratedBetaAnalyticsDataClientTest
     {
         [xunit::FactAttribute]
+        public void RunReportRequestObject()
+        {
+            moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient> mockGrpcClient = new moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            RunReportRequest request = new RunReportRequest
+            {
+                Property = "propertyc9b48d1a",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                DateRanges = { new DateRange(), },
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                Offset = -4389998161825790342L,
+                Limit = 7494001492025909162L,
+                MetricAggregations =
+                {
+                    MetricAggregation.Minimum,
+                },
+                OrderBys = { new OrderBy(), },
+                CurrencyCode = "currency_code7f81e352",
+                CohortSpec = new CohortSpec(),
+                KeepEmptyRows = true,
+                ReturnPropertyQuota = true,
+            };
+            RunReportResponse expectedResponse = new RunReportResponse
+            {
+                DimensionHeaders =
+                {
+                    new DimensionHeader(),
+                },
+                MetricHeaders = { new MetricHeader(), },
+                Rows = { new Row(), },
+                Totals = { new Row(), },
+                Maximums = { new Row(), },
+                Minimums = { new Row(), },
+                RowCount = 743251772,
+                Metadata = new ResponseMetaData(),
+                PropertyQuota = new PropertyQuota(),
+            };
+            mockGrpcClient.Setup(x => x.RunReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            RunReportResponse response = client.RunReport(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RunReportRequestObjectAsync()
+        {
+            moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient> mockGrpcClient = new moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            RunReportRequest request = new RunReportRequest
+            {
+                Property = "propertyc9b48d1a",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                DateRanges = { new DateRange(), },
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                Offset = -4389998161825790342L,
+                Limit = 7494001492025909162L,
+                MetricAggregations =
+                {
+                    MetricAggregation.Minimum,
+                },
+                OrderBys = { new OrderBy(), },
+                CurrencyCode = "currency_code7f81e352",
+                CohortSpec = new CohortSpec(),
+                KeepEmptyRows = true,
+                ReturnPropertyQuota = true,
+            };
+            RunReportResponse expectedResponse = new RunReportResponse
+            {
+                DimensionHeaders =
+                {
+                    new DimensionHeader(),
+                },
+                MetricHeaders = { new MetricHeader(), },
+                Rows = { new Row(), },
+                Totals = { new Row(), },
+                Maximums = { new Row(), },
+                Minimums = { new Row(), },
+                RowCount = 743251772,
+                Metadata = new ResponseMetaData(),
+                PropertyQuota = new PropertyQuota(),
+            };
+            mockGrpcClient.Setup(x => x.RunReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            RunReportResponse responseCallSettings = await client.RunReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RunReportResponse responseCancellationToken = await client.RunReportAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void RunPivotReportRequestObject()
         {
             moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient> mockGrpcClient = new moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient>(moq::MockBehavior.Strict);
@@ -391,7 +485,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Metrics = { new Metric(), },
                 DimensionFilter = new FilterExpression(),
                 MetricFilter = new FilterExpression(),
-                PageSize = -226905851,
+                Limit = 7494001492025909162L,
                 MetricAggregations =
                 {
                     MetricAggregation.Minimum,
@@ -410,7 +504,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Totals = { new Row(), },
                 Maximums = { new Row(), },
                 Minimums = { new Row(), },
-                TotalSize = 1202968108,
+                RowCount = 743251772,
                 PropertyQuota = new PropertyQuota(),
             };
             mockGrpcClient.Setup(x => x.RunRealtimeReport(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -431,7 +525,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Metrics = { new Metric(), },
                 DimensionFilter = new FilterExpression(),
                 MetricFilter = new FilterExpression(),
-                PageSize = -226905851,
+                Limit = 7494001492025909162L,
                 MetricAggregations =
                 {
                     MetricAggregation.Minimum,
@@ -450,7 +544,7 @@ namespace Google.Analytics.Data.V1Beta.Tests
                 Totals = { new Row(), },
                 Maximums = { new Row(), },
                 Minimums = { new Row(), },
-                TotalSize = 1202968108,
+                RowCount = 743251772,
                 PropertyQuota = new PropertyQuota(),
             };
             mockGrpcClient.Setup(x => x.RunRealtimeReportAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RunRealtimeReportResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));

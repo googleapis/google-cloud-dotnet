@@ -21,7 +21,6 @@ using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
-using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -287,8 +286,8 @@ namespace Google.Analytics.Data.V1Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="DimensionHeader"/> resources.</returns>
-        public virtual gax::PagedEnumerable<RunReportResponse, DimensionHeader> RunReport(RunReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>The RPC response.</returns>
+        public virtual RunReportResponse RunReport(RunReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -302,9 +301,24 @@ namespace Google.Analytics.Data.V1Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="DimensionHeader"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<RunReportResponse, DimensionHeader> RunReportAsync(RunReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunReportResponse> RunReportAsync(RunReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns a customized report of your Google Analytics event data. Reports
+        /// contain statistics derived from data collected by the Google Analytics
+        /// tracking code. The data returned from the API is as a table with columns
+        /// for the requested dimensions and metrics. Metrics are individual
+        /// measurements of user activity on your property, such as active users or
+        /// event count. Dimensions break down metrics across some common criteria,
+        /// such as country or event name.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RunReportResponse> RunReportAsync(RunReportRequest request, st::CancellationToken cancellationToken) =>
+            RunReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Returns a customized pivot report of your Google Analytics event data.
@@ -776,11 +790,11 @@ namespace Google.Analytics.Data.V1Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable sequence of <see cref="DimensionHeader"/> resources.</returns>
-        public override gax::PagedEnumerable<RunReportResponse, DimensionHeader> RunReport(RunReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>The RPC response.</returns>
+        public override RunReportResponse RunReport(RunReportRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunReportRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedEnumerable<RunReportRequest, RunReportResponse, DimensionHeader>(_callRunReport, request, callSettings);
+            return _callRunReport.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -794,11 +808,11 @@ namespace Google.Analytics.Data.V1Beta
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>A pageable asynchronous sequence of <see cref="DimensionHeader"/> resources.</returns>
-        public override gax::PagedAsyncEnumerable<RunReportResponse, DimensionHeader> RunReportAsync(RunReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RunReportResponse> RunReportAsync(RunReportRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RunReportRequest(ref request, ref callSettings);
-            return new gaxgrpc::GrpcPagedAsyncEnumerable<RunReportRequest, RunReportResponse, DimensionHeader>(_callRunReport, request, callSettings);
+            return _callRunReport.Async(request, callSettings);
         }
 
         /// <summary>
@@ -954,17 +968,5 @@ namespace Google.Analytics.Data.V1Beta
             Modify_RunRealtimeReportRequest(ref request, ref callSettings);
             return _callRunRealtimeReport.Async(request, callSettings);
         }
-    }
-
-    public partial class RunReportRequest : gaxgrpc::IPageRequest
-    {
-    }
-
-    public partial class RunReportResponse : gaxgrpc::IPageResponse<DimensionHeader>
-    {
-        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
-        public scg::IEnumerator<DimensionHeader> GetEnumerator() => DimensionHeaders.GetEnumerator();
-
-        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }
