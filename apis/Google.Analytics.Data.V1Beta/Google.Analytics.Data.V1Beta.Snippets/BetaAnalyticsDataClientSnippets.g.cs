@@ -16,9 +16,6 @@
 
 namespace Google.Analytics.Data.V1Beta.Snippets
 {
-    using Google.Api.Gax;
-    using System;
-    using System.Linq;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -39,6 +36,8 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 DateRanges = { new DateRange(), },
                 DimensionFilter = new FilterExpression(),
                 MetricFilter = new FilterExpression(),
+                Offset = 0L,
+                Limit = 0L,
                 MetricAggregations =
                 {
                     MetricAggregation.Unspecified,
@@ -50,46 +49,15 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 ReturnPropertyQuota = false,
             };
             // Make the request
-            PagedEnumerable<RunReportResponse, DimensionHeader> response = betaAnalyticsDataClient.RunReport(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            foreach (DimensionHeader item in response)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (RunReportResponse page in response.AsRawResponses())
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (DimensionHeader item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            }
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<DimensionHeader> singlePage = response.ReadPage(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DimensionHeader item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            RunReportResponse response = betaAnalyticsDataClient.RunReport(request);
             // End snippet
         }
 
-        /// <summary>Snippet for RunReport</summary>
+        /// <summary>Snippet for RunReportAsync</summary>
         public async Task RunReportRequestObjectAsync()
         {
             // Snippet: RunReportAsync(RunReportRequest, CallSettings)
+            // Additional: RunReportAsync(RunReportRequest, CancellationToken)
             // Create client
             BetaAnalyticsDataClient betaAnalyticsDataClient = await BetaAnalyticsDataClient.CreateAsync();
             // Initialize request argument(s)
@@ -101,6 +69,8 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 DateRanges = { new DateRange(), },
                 DimensionFilter = new FilterExpression(),
                 MetricFilter = new FilterExpression(),
+                Offset = 0L,
+                Limit = 0L,
                 MetricAggregations =
                 {
                     MetricAggregation.Unspecified,
@@ -112,39 +82,7 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 ReturnPropertyQuota = false,
             };
             // Make the request
-            PagedAsyncEnumerable<RunReportResponse, DimensionHeader> response = betaAnalyticsDataClient.RunReportAsync(request);
-
-            // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((DimensionHeader item) =>
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            });
-
-            // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((RunReportResponse page) =>
-            {
-                // Do something with each page of items
-                Console.WriteLine("A page of results:");
-                foreach (DimensionHeader item in page)
-                {
-                    // Do something with each item
-                    Console.WriteLine(item);
-                }
-            });
-
-            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
-            int pageSize = 10;
-            Page<DimensionHeader> singlePage = await response.ReadPageAsync(pageSize);
-            // Do something with the page of items
-            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (DimensionHeader item in singlePage)
-            {
-                // Do something with each item
-                Console.WriteLine(item);
-            }
-            // Store the pageToken, for when the next page is required.
-            string nextPageToken = singlePage.NextPageToken;
+            RunReportResponse response = await betaAnalyticsDataClient.RunReportAsync(request);
             // End snippet
         }
 
@@ -384,7 +322,7 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 Metrics = { new Metric(), },
                 DimensionFilter = new FilterExpression(),
                 MetricFilter = new FilterExpression(),
-                PageSize = 0,
+                Limit = 0L,
                 MetricAggregations =
                 {
                     MetricAggregation.Unspecified,
@@ -412,7 +350,7 @@ namespace Google.Analytics.Data.V1Beta.Snippets
                 Metrics = { new Metric(), },
                 DimensionFilter = new FilterExpression(),
                 MetricFilter = new FilterExpression(),
-                PageSize = 0,
+                Limit = 0L,
                 MetricAggregations =
                 {
                     MetricAggregation.Unspecified,

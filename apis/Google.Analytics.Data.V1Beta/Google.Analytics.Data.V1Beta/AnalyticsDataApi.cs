@@ -34,7 +34,7 @@ namespace Google.Analytics.Data.V1Beta {
             "YmV0YS5EaW1lbnNpb25NZXRhZGF0YRI9CgdtZXRyaWNzGAIgAygLMiwuZ29v",
             "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNNZXRhZGF0YTpK6kFH",
             "CiVhbmFseXRpY3NkYXRhLmdvb2dsZWFwaXMuY29tL01ldGFkYXRhEh5wcm9w",
-            "ZXJ0aWVzL3twcm9wZXJ0eX0vbWV0YWRhdGEipAUKEFJ1blJlcG9ydFJlcXVl",
+            "ZXJ0aWVzL3twcm9wZXJ0eX0vbWV0YWRhdGEinAUKEFJ1blJlcG9ydFJlcXVl",
             "c3QSEAoIcHJvcGVydHkYASABKAkSOwoKZGltZW5zaW9ucxgCIAMoCzInLmdv",
             "b2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9uEjUKB21ldHJp",
             "Y3MYAyADKAsyJC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJp",
@@ -42,14 +42,71 @@ namespace Google.Analytics.Data.V1Beta {
             "YS52MWJldGEuRGF0ZVJhbmdlEkgKEGRpbWVuc2lvbl9maWx0ZXIYBSABKAsy",
             "Li5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkZpbHRlckV4cHJlc3Np",
             "b24SRQoNbWV0cmljX2ZpbHRlchgGIAEoCzIuLmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuRmlsdGVyRXhwcmVzc2lvbhIRCglwYWdlX3NpemUYByAB",
-            "KAUSEgoKcGFnZV90b2tlbhgIIAEoCRJMChNtZXRyaWNfYWdncmVnYXRpb25z",
-            "GAkgAygOMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNB",
-            "Z2dyZWdhdGlvbhI4CglvcmRlcl9ieXMYCiADKAsyJS5nb29nbGUuYW5hbHl0",
-            "aWNzLmRhdGEudjFiZXRhLk9yZGVyQnkSFQoNY3VycmVuY3lfY29kZRgLIAEo",
-            "CRI9Cgtjb2hvcnRfc3BlYxgMIAEoCzIoLmdvb2dsZS5hbmFseXRpY3MuZGF0",
-            "YS52MWJldGEuQ29ob3J0U3BlYxIXCg9rZWVwX2VtcHR5X3Jvd3MYDSABKAgS",
-            "HQoVcmV0dXJuX3Byb3BlcnR5X3F1b3RhGA4gASgIIqMEChFSdW5SZXBvcnRS",
+            "ZGF0YS52MWJldGEuRmlsdGVyRXhwcmVzc2lvbhIOCgZvZmZzZXQYByABKAMS",
+            "DQoFbGltaXQYCCABKAMSTAoTbWV0cmljX2FnZ3JlZ2F0aW9ucxgJIAMoDjIv",
+            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmljQWdncmVnYXRp",
+            "b24SOAoJb3JkZXJfYnlzGAogAygLMiUuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
+            "LnYxYmV0YS5PcmRlckJ5EhUKDWN1cnJlbmN5X2NvZGUYCyABKAkSPQoLY29o",
+            "b3J0X3NwZWMYDCABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "LkNvaG9ydFNwZWMSFwoPa2VlcF9lbXB0eV9yb3dzGA0gASgIEh0KFXJldHVy",
+            "bl9wcm9wZXJ0eV9xdW90YRgOIAEoCCKJBAoRUnVuUmVwb3J0UmVzcG9uc2US",
+            "SAoRZGltZW5zaW9uX2hlYWRlcnMYASADKAsyLS5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhLkRpbWVuc2lvbkhlYWRlchJCCg5tZXRyaWNfaGVhZGVy",
+            "cxgCIAMoCzIqLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuTWV0cmlj",
+            "SGVhZGVyEi8KBHJvd3MYAyADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
+            "djFiZXRhLlJvdxIxCgZ0b3RhbHMYBCADKAsyIS5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhLlJvdxIzCghtYXhpbXVtcxgFIAMoCzIhLmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWJldGEuUm93EjMKCG1pbmltdW1zGAYgAygLMiEu",
+            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSEQoJcm93X2NvdW50",
+            "GAcgASgFEkAKCG1ldGFkYXRhGAggASgLMi4uZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5SZXNwb25zZU1ldGFEYXRhEkMKDnByb3BlcnR5X3F1b3Rh",
+            "GAkgASgLMisuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Qcm9wZXJ0",
+            "eVF1b3RhIq8EChVSdW5QaXZvdFJlcG9ydFJlcXVlc3QSEAoIcHJvcGVydHkY",
+            "ASABKAkSOwoKZGltZW5zaW9ucxgCIAMoCzInLmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuRGltZW5zaW9uEjUKB21ldHJpY3MYAyADKAsyJC5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpYxI8CgtkYXRlX3Jhbmdl",
+            "cxgEIAMoCzInLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRGF0ZVJh",
+            "bmdlEjMKBnBpdm90cxgFIAMoCzIjLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
+            "MWJldGEuUGl2b3QSSAoQZGltZW5zaW9uX2ZpbHRlchgGIAEoCzIuLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRmlsdGVyRXhwcmVzc2lvbhJFCg1t",
+            "ZXRyaWNfZmlsdGVyGAcgASgLMi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYx",
+            "YmV0YS5GaWx0ZXJFeHByZXNzaW9uEhUKDWN1cnJlbmN5X2NvZGUYCCABKAkS",
+            "PQoLY29ob3J0X3NwZWMYCSABKAsyKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEu",
+            "djFiZXRhLkNvaG9ydFNwZWMSFwoPa2VlcF9lbXB0eV9yb3dzGAogASgIEh0K",
+            "FXJldHVybl9wcm9wZXJ0eV9xdW90YRgLIAEoCCLXAwoWUnVuUGl2b3RSZXBv",
+            "cnRSZXNwb25zZRJACg1waXZvdF9oZWFkZXJzGAEgAygLMikuZ29vZ2xlLmFu",
+            "YWx5dGljcy5kYXRhLnYxYmV0YS5QaXZvdEhlYWRlchJIChFkaW1lbnNpb25f",
+            "aGVhZGVycxgCIAMoCzItLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
+            "RGltZW5zaW9uSGVhZGVyEkIKDm1ldHJpY19oZWFkZXJzGAMgAygLMiouZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNIZWFkZXISLwoEcm93",
+            "cxgEIAMoCzIhLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUm93EjUK",
+            "CmFnZ3JlZ2F0ZXMYBSADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
+            "ZXRhLlJvdxJACghtZXRhZGF0YRgGIAEoCzIuLmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuUmVzcG9uc2VNZXRhRGF0YRJDCg5wcm9wZXJ0eV9xdW90",
+            "YRgHIAEoCzIrLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUHJvcGVy",
+            "dHlRdW90YSJsChZCYXRjaFJ1blJlcG9ydHNSZXF1ZXN0EhAKCHByb3BlcnR5",
+            "GAEgASgJEkAKCHJlcXVlc3RzGAIgAygLMi4uZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5SdW5SZXBvcnRSZXF1ZXN0IlsKF0JhdGNoUnVuUmVwb3J0",
+            "c1Jlc3BvbnNlEkAKB3JlcG9ydHMYASADKAsyLy5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhLlJ1blJlcG9ydFJlc3BvbnNlInYKG0JhdGNoUnVuUGl2",
+            "b3RSZXBvcnRzUmVxdWVzdBIQCghwcm9wZXJ0eRgBIAEoCRJFCghyZXF1ZXN0",
+            "cxgCIAMoCzIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVuUGl2",
+            "b3RSZXBvcnRSZXF1ZXN0ImsKHEJhdGNoUnVuUGl2b3RSZXBvcnRzUmVzcG9u",
+            "c2USSwoNcGl2b3RfcmVwb3J0cxgBIAMoCzI0Lmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuUnVuUGl2b3RSZXBvcnRSZXNwb25zZSJRChJHZXRNZXRh",
+            "ZGF0YVJlcXVlc3QSOwoEbmFtZRgBIAEoCUIt4EEC+kEnCiVhbmFseXRpY3Nk",
+            "YXRhLmdvb2dsZWFwaXMuY29tL01ldGFkYXRhIucDChhSdW5SZWFsdGltZVJl",
+            "cG9ydFJlcXVlc3QSEAoIcHJvcGVydHkYASABKAkSOwoKZGltZW5zaW9ucxgC",
+            "IAMoCzInLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9u",
+            "EjUKB21ldHJpY3MYAyADKAsyJC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
+            "ZXRhLk1ldHJpYxJIChBkaW1lbnNpb25fZmlsdGVyGAQgASgLMi4uZ29vZ2xl",
+            "LmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJFeHByZXNzaW9uEkUKDW1l",
+            "dHJpY19maWx0ZXIYBSABKAsyLi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFi",
+            "ZXRhLkZpbHRlckV4cHJlc3Npb24SDQoFbGltaXQYBiABKAMSTAoTbWV0cmlj",
+            "X2FnZ3JlZ2F0aW9ucxgHIAMoDjIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
+            "MWJldGEuTWV0cmljQWdncmVnYXRpb24SOAoJb3JkZXJfYnlzGAggAygLMiUu",
+            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5PcmRlckJ5Eh0KFXJldHVy",
+            "bl9wcm9wZXJ0eV9xdW90YRgJIAEoCCLPAwoZUnVuUmVhbHRpbWVSZXBvcnRS",
             "ZXNwb25zZRJIChFkaW1lbnNpb25faGVhZGVycxgBIAMoCzItLmdvb2dsZS5h",
             "bmFseXRpY3MuZGF0YS52MWJldGEuRGltZW5zaW9uSGVhZGVyEkIKDm1ldHJp",
             "Y19oZWFkZXJzGAIgAygLMiouZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
@@ -57,104 +114,46 @@ namespace Google.Analytics.Data.V1Beta {
             "Y3MuZGF0YS52MWJldGEuUm93EjEKBnRvdGFscxgEIAMoCzIhLmdvb2dsZS5h",
             "bmFseXRpY3MuZGF0YS52MWJldGEuUm93EjMKCG1heGltdW1zGAUgAygLMiEu",
             "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSMwoIbWluaW11bXMY",
-            "BiADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJvdxIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YByABKAkSEgoKdG90YWxfc2l6ZRgIIAEoBRJACght",
-            "ZXRhZGF0YRgJIAEoCzIuLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
-            "UmVzcG9uc2VNZXRhRGF0YRJDCg5wcm9wZXJ0eV9xdW90YRgKIAEoCzIrLmdv",
-            "b2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUHJvcGVydHlRdW90YSKvBAoV",
-            "UnVuUGl2b3RSZXBvcnRSZXF1ZXN0EhAKCHByb3BlcnR5GAEgASgJEjsKCmRp",
-            "bWVuc2lvbnMYAiADKAsyJy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LkRpbWVuc2lvbhI1CgdtZXRyaWNzGAMgAygLMiQuZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5NZXRyaWMSPAoLZGF0ZV9yYW5nZXMYBCADKAsyJy5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRhdGVSYW5nZRIzCgZwaXZv",
-            "dHMYBSADKAsyIy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlBpdm90",
-            "EkgKEGRpbWVuc2lvbl9maWx0ZXIYBiABKAsyLi5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLkZpbHRlckV4cHJlc3Npb24SRQoNbWV0cmljX2ZpbHRl",
-            "chgHIAEoCzIuLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuRmlsdGVy",
-            "RXhwcmVzc2lvbhIVCg1jdXJyZW5jeV9jb2RlGAggASgJEj0KC2NvaG9ydF9z",
-            "cGVjGAkgASgLMiguZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Db2hv",
-            "cnRTcGVjEhcKD2tlZXBfZW1wdHlfcm93cxgKIAEoCBIdChVyZXR1cm5fcHJv",
-            "cGVydHlfcXVvdGEYCyABKAgi1wMKFlJ1blBpdm90UmVwb3J0UmVzcG9uc2US",
-            "QAoNcGl2b3RfaGVhZGVycxgBIAMoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0",
-            "YS52MWJldGEuUGl2b3RIZWFkZXISSAoRZGltZW5zaW9uX2hlYWRlcnMYAiAD",
-            "KAsyLS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvbkhl",
-            "YWRlchJCCg5tZXRyaWNfaGVhZGVycxgDIAMoCzIqLmdvb2dsZS5hbmFseXRp",
-            "Y3MuZGF0YS52MWJldGEuTWV0cmljSGVhZGVyEi8KBHJvd3MYBCADKAsyIS5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJvdxI1CgphZ2dyZWdhdGVz",
-            "GAUgAygLMiEuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Sb3cSQAoI",
-            "bWV0YWRhdGEYBiABKAsyLi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LlJlc3BvbnNlTWV0YURhdGESQwoOcHJvcGVydHlfcXVvdGEYByABKAsyKy5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlByb3BlcnR5UXVvdGEibAoW",
-            "QmF0Y2hSdW5SZXBvcnRzUmVxdWVzdBIQCghwcm9wZXJ0eRgBIAEoCRJACghy",
-            "ZXF1ZXN0cxgCIAMoCzIuLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
-            "UnVuUmVwb3J0UmVxdWVzdCJbChdCYXRjaFJ1blJlcG9ydHNSZXNwb25zZRJA",
-            "CgdyZXBvcnRzGAEgAygLMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
-            "YS5SdW5SZXBvcnRSZXNwb25zZSJ2ChtCYXRjaFJ1blBpdm90UmVwb3J0c1Jl",
-            "cXVlc3QSEAoIcHJvcGVydHkYASABKAkSRQoIcmVxdWVzdHMYAiADKAsyMy5n",
-            "b29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blBpdm90UmVwb3J0UmVx",
-            "dWVzdCJrChxCYXRjaFJ1blBpdm90UmVwb3J0c1Jlc3BvbnNlEksKDXBpdm90",
-            "X3JlcG9ydHMYASADKAsyNC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "LlJ1blBpdm90UmVwb3J0UmVzcG9uc2UiUQoSR2V0TWV0YWRhdGFSZXF1ZXN0",
-            "EjsKBG5hbWUYASABKAlCLeBBAvpBJwolYW5hbHl0aWNzZGF0YS5nb29nbGVh",
-            "cGlzLmNvbS9NZXRhZGF0YSLrAwoYUnVuUmVhbHRpbWVSZXBvcnRSZXF1ZXN0",
-            "EhAKCHByb3BlcnR5GAEgASgJEjsKCmRpbWVuc2lvbnMYAiADKAsyJy5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvbhI1CgdtZXRyaWNz",
-            "GAMgAygLMiQuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWMS",
-            "SAoQZGltZW5zaW9uX2ZpbHRlchgEIAEoCzIuLmdvb2dsZS5hbmFseXRpY3Mu",
-            "ZGF0YS52MWJldGEuRmlsdGVyRXhwcmVzc2lvbhJFCg1tZXRyaWNfZmlsdGVy",
-            "GAUgASgLMi4uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5GaWx0ZXJF",
-            "eHByZXNzaW9uEhEKCXBhZ2Vfc2l6ZRgGIAEoBRJMChNtZXRyaWNfYWdncmVn",
-            "YXRpb25zGAcgAygOMi8uZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5N",
-            "ZXRyaWNBZ2dyZWdhdGlvbhI4CglvcmRlcl9ieXMYCCADKAsyJS5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLk9yZGVyQnkSHQoVcmV0dXJuX3Byb3Bl",
-            "cnR5X3F1b3RhGAkgASgIItADChlSdW5SZWFsdGltZVJlcG9ydFJlc3BvbnNl",
-            "EkgKEWRpbWVuc2lvbl9oZWFkZXJzGAEgAygLMi0uZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5EaW1lbnNpb25IZWFkZXISQgoObWV0cmljX2hlYWRl",
-            "cnMYAiADKAsyKi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJp",
-            "Y0hlYWRlchIvCgRyb3dzGAMgAygLMiEuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
-            "LnYxYmV0YS5Sb3cSMQoGdG90YWxzGAQgAygLMiEuZ29vZ2xlLmFuYWx5dGlj",
-            "cy5kYXRhLnYxYmV0YS5Sb3cSMwoIbWF4aW11bXMYBSADKAsyIS5nb29nbGUu",
-            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLlJvdxIzCghtaW5pbXVtcxgGIAMoCzIh",
-            "Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUm93EhIKCnRvdGFsX3Np",
-            "emUYByABKAUSQwoOcHJvcGVydHlfcXVvdGEYCCABKAsyKy5nb29nbGUuYW5h",
-            "bHl0aWNzLmRhdGEudjFiZXRhLlByb3BlcnR5UXVvdGEy4wkKEUJldGFBbmFs",
-            "eXRpY3NEYXRhEqIBCglSdW5SZXBvcnQSLi5nb29nbGUuYW5hbHl0aWNzLmRh",
-            "dGEudjFiZXRhLlJ1blJlcG9ydFJlcXVlc3QaLy5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLlJ1blJlcG9ydFJlc3BvbnNlIjSC0+STAi4iKS92MWJl",
-            "dGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06cnVuUmVwb3J0OgEqErYBCg5S",
-            "dW5QaXZvdFJlcG9ydBIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
-            "UnVuUGl2b3RSZXBvcnRSZXF1ZXN0GjQuZ29vZ2xlLmFuYWx5dGljcy5kYXRh",
-            "LnYxYmV0YS5SdW5QaXZvdFJlcG9ydFJlc3BvbnNlIjmC0+STAjMiLi92MWJl",
-            "dGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06cnVuUGl2b3RSZXBvcnQ6ASoS",
-            "ugEKD0JhdGNoUnVuUmVwb3J0cxI0Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
-            "MWJldGEuQmF0Y2hSdW5SZXBvcnRzUmVxdWVzdBo1Lmdvb2dsZS5hbmFseXRp",
-            "Y3MuZGF0YS52MWJldGEuQmF0Y2hSdW5SZXBvcnRzUmVzcG9uc2UiOoLT5JMC",
-            "NCIvL3YxYmV0YS97cHJvcGVydHk9cHJvcGVydGllcy8qfTpiYXRjaFJ1blJl",
-            "cG9ydHM6ASoSzgEKFEJhdGNoUnVuUGl2b3RSZXBvcnRzEjkuZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYmV0YS5CYXRjaFJ1blBpdm90UmVwb3J0c1JlcXVl",
-            "c3QaOi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkJhdGNoUnVuUGl2",
-            "b3RSZXBvcnRzUmVzcG9uc2UiP4LT5JMCOSI0L3YxYmV0YS97cHJvcGVydHk9",
-            "cHJvcGVydGllcy8qfTpiYXRjaFJ1blBpdm90UmVwb3J0czoBKhKcAQoLR2V0",
-            "TWV0YWRhdGESMC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkdldE1l",
-            "dGFkYXRhUmVxdWVzdBomLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEu",
-            "TWV0YWRhdGEiM4LT5JMCJhIkL3YxYmV0YS97bmFtZT1wcm9wZXJ0aWVzLyov",
-            "bWV0YWRhdGF92kEEbmFtZRLCAQoRUnVuUmVhbHRpbWVSZXBvcnQSNi5nb29n",
-            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blJlYWx0aW1lUmVwb3J0UmVx",
-            "dWVzdBo3Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVuUmVhbHRp",
-            "bWVSZXBvcnRSZXNwb25zZSI8gtPkkwI2IjEvdjFiZXRhL3twcm9wZXJ0eT1w",
-            "cm9wZXJ0aWVzLyp9OnJ1blJlYWx0aW1lUmVwb3J0OgEqGn7KQRxhbmFseXRp",
-            "Y3NkYXRhLmdvb2dsZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9hbmFseXRpY3MsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9hbmFseXRpY3MucmVhZG9ubHlCfQogY29tLmdvb2dsZS5hbmFs",
-            "eXRpY3MuZGF0YS52MWJldGFCFUFuYWx5dGljc0RhdGFBcGlQcm90b1ABWkBn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FuYWx5dGlj",
-            "cy9kYXRhL3YxYmV0YTtkYXRhYgZwcm90bzM="));
+            "BiADKAsyIS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJvdxIRCgly",
+            "b3dfY291bnQYByABKAUSQwoOcHJvcGVydHlfcXVvdGEYCCABKAsyKy5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlByb3BlcnR5UXVvdGEy4wkKEUJl",
+            "dGFBbmFseXRpY3NEYXRhEqIBCglSdW5SZXBvcnQSLi5nb29nbGUuYW5hbHl0",
+            "aWNzLmRhdGEudjFiZXRhLlJ1blJlcG9ydFJlcXVlc3QaLy5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFiZXRhLlJ1blJlcG9ydFJlc3BvbnNlIjSC0+STAi4i",
+            "KS92MWJldGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06cnVuUmVwb3J0OgEq",
+            "ErYBCg5SdW5QaXZvdFJlcG9ydBIzLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
+            "MWJldGEuUnVuUGl2b3RSZXBvcnRSZXF1ZXN0GjQuZ29vZ2xlLmFuYWx5dGlj",
+            "cy5kYXRhLnYxYmV0YS5SdW5QaXZvdFJlcG9ydFJlc3BvbnNlIjmC0+STAjMi",
+            "Li92MWJldGEve3Byb3BlcnR5PXByb3BlcnRpZXMvKn06cnVuUGl2b3RSZXBv",
+            "cnQ6ASoSugEKD0JhdGNoUnVuUmVwb3J0cxI0Lmdvb2dsZS5hbmFseXRpY3Mu",
+            "ZGF0YS52MWJldGEuQmF0Y2hSdW5SZXBvcnRzUmVxdWVzdBo1Lmdvb2dsZS5h",
+            "bmFseXRpY3MuZGF0YS52MWJldGEuQmF0Y2hSdW5SZXBvcnRzUmVzcG9uc2Ui",
+            "OoLT5JMCNCIvL3YxYmV0YS97cHJvcGVydHk9cHJvcGVydGllcy8qfTpiYXRj",
+            "aFJ1blJlcG9ydHM6ASoSzgEKFEJhdGNoUnVuUGl2b3RSZXBvcnRzEjkuZ29v",
+            "Z2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5CYXRjaFJ1blBpdm90UmVwb3J0",
+            "c1JlcXVlc3QaOi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkJhdGNo",
+            "UnVuUGl2b3RSZXBvcnRzUmVzcG9uc2UiP4LT5JMCOSI0L3YxYmV0YS97cHJv",
+            "cGVydHk9cHJvcGVydGllcy8qfTpiYXRjaFJ1blBpdm90UmVwb3J0czoBKhKc",
+            "AQoLR2V0TWV0YWRhdGESMC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "LkdldE1ldGFkYXRhUmVxdWVzdBomLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52",
+            "MWJldGEuTWV0YWRhdGEiM4LT5JMCJhIkL3YxYmV0YS97bmFtZT1wcm9wZXJ0",
+            "aWVzLyovbWV0YWRhdGF92kEEbmFtZRLCAQoRUnVuUmVhbHRpbWVSZXBvcnQS",
+            "Ni5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlJ1blJlYWx0aW1lUmVw",
+            "b3J0UmVxdWVzdBo3Lmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUnVu",
+            "UmVhbHRpbWVSZXBvcnRSZXNwb25zZSI8gtPkkwI2IjEvdjFiZXRhL3twcm9w",
+            "ZXJ0eT1wcm9wZXJ0aWVzLyp9OnJ1blJlYWx0aW1lUmVwb3J0OgEqGn7KQRxh",
+            "bmFseXRpY3NkYXRhLmdvb2dsZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9hbmFseXRpY3MsaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9hbmFseXRpY3MucmVhZG9ubHlCfQogY29tLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGFCFUFuYWx5dGljc0RhdGFBcGlQcm90",
+            "b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fu",
+            "YWx5dGljcy9kYXRhL3YxYmV0YTtkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Metadata), global::Google.Analytics.Data.V1Beta.Metadata.Parser, new[]{ "Name", "Dimensions", "Metrics" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunReportRequest), global::Google.Analytics.Data.V1Beta.RunReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DateRanges", "DimensionFilter", "MetricFilter", "PageSize", "PageToken", "MetricAggregations", "OrderBys", "CurrencyCode", "CohortSpec", "KeepEmptyRows", "ReturnPropertyQuota" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunReportResponse), global::Google.Analytics.Data.V1Beta.RunReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "NextPageToken", "TotalSize", "Metadata", "PropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunReportRequest), global::Google.Analytics.Data.V1Beta.RunReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DateRanges", "DimensionFilter", "MetricFilter", "Offset", "Limit", "MetricAggregations", "OrderBys", "CurrencyCode", "CohortSpec", "KeepEmptyRows", "ReturnPropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunReportResponse), global::Google.Analytics.Data.V1Beta.RunReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "Metadata", "PropertyQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunPivotReportRequest), global::Google.Analytics.Data.V1Beta.RunPivotReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DateRanges", "Pivots", "DimensionFilter", "MetricFilter", "CurrencyCode", "CohortSpec", "KeepEmptyRows", "ReturnPropertyQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunPivotReportResponse), global::Google.Analytics.Data.V1Beta.RunPivotReportResponse.Parser, new[]{ "PivotHeaders", "DimensionHeaders", "MetricHeaders", "Rows", "Aggregates", "Metadata", "PropertyQuota" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunReportsRequest), global::Google.Analytics.Data.V1Beta.BatchRunReportsRequest.Parser, new[]{ "Property", "Requests" }, null, null, null, null),
@@ -162,8 +161,8 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest), global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest.Parser, new[]{ "Property", "Requests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse), global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse.Parser, new[]{ "PivotReports" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.GetMetadataRequest), global::Google.Analytics.Data.V1Beta.GetMetadataRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest), global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DimensionFilter", "MetricFilter", "PageSize", "MetricAggregations", "OrderBys", "ReturnPropertyQuota" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse), global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "TotalSize", "PropertyQuota" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest), global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest.Parser, new[]{ "Property", "Dimensions", "Metrics", "DimensionFilter", "MetricFilter", "Limit", "MetricAggregations", "OrderBys", "ReturnPropertyQuota" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse), global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse.Parser, new[]{ "DimensionHeaders", "MetricHeaders", "Rows", "Totals", "Maximums", "Minimums", "RowCount", "PropertyQuota" }, null, null, null, null)
           }));
     }
     #endregion
@@ -442,8 +441,8 @@ namespace Google.Analytics.Data.V1Beta {
       dateRanges_ = other.dateRanges_.Clone();
       dimensionFilter_ = other.dimensionFilter_ != null ? other.dimensionFilter_.Clone() : null;
       metricFilter_ = other.metricFilter_ != null ? other.metricFilter_.Clone() : null;
-      pageSize_ = other.pageSize_;
-      pageToken_ = other.pageToken_;
+      offset_ = other.offset_;
+      limit_ = other.limit_;
       metricAggregations_ = other.metricAggregations_.Clone();
       orderBys_ = other.orderBys_.Clone();
       currencyCode_ = other.currencyCode_;
@@ -553,51 +552,50 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
-    /// <summary>Field number for the "page_size" field.</summary>
-    public const int PageSizeFieldNumber = 7;
-    private int pageSize_;
+    /// <summary>Field number for the "offset" field.</summary>
+    public const int OffsetFieldNumber = 7;
+    private long offset_;
     /// <summary>
-    /// Page size is for paging and specifies maximum number of rows to return. The
-    /// API returns a maximum of 200,000 rows per request, no matter how many you
-    /// ask for. Page size must be positive.
+    /// The row count of the start row. The first row is counted as row 0.
     ///
-    /// The API can also return fewer rows than the requested `pageSize`, if there
-    /// aren't as many dimension values as the `pageSize`. For instance, there are
-    /// fewer than 300 possible values for the dimension `country`, so when
-    /// reporting on only `country`, you can't get more than 300 rows, even if you
-    /// set `pageSize` to a higher value.
+    /// When paging, the first request does not specify offset; or equivalently,
+    /// sets offset to 0; the first request returns the first `limit` of rows. The
+    /// second request sets offset to the `limit` of the first request; the second
+    /// request returns the second `limit` of rows.
     ///
     /// To learn more about this pagination parameter, see
     /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PageSize {
-      get { return pageSize_; }
+    public long Offset {
+      get { return offset_; }
       set {
-        pageSize_ = value;
+        offset_ = value;
       }
     }
 
-    /// <summary>Field number for the "page_token" field.</summary>
-    public const int PageTokenFieldNumber = 8;
-    private string pageToken_ = "";
+    /// <summary>Field number for the "limit" field.</summary>
+    public const int LimitFieldNumber = 8;
+    private long limit_;
     /// <summary>
-    /// A continuation token to get the next page of the results. Adding this to
-    /// the request will return the next page of rows after the `pageToken`. The
-    /// `pageToken` should be the value returned in the `nextPageToken` parameter
-    /// in the response.
+    /// The number of rows to return. If unspecified, 10,000 rows are returned. The
+    /// API returns a maximum of 100,000 rows per request, no matter how many you
+    /// ask for. `limit` must be positive.
     ///
-    /// When paginating, all other parameters specified in `RunReportRequest` must
-    /// match the call that provided the page token.
+    /// The API can also return fewer rows than the requested `limit`, if there
+    /// aren't as many dimension values as the `limit`. For instance, there are
+    /// fewer than 300 possible values for the dimension `country`, so when
+    /// reporting on only `country`, you can't get more than 300 rows, even if you
+    /// set `limit` to a higher value.
     ///
     /// To learn more about this pagination parameter, see
     /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PageToken {
-      get { return pageToken_; }
+    public long Limit {
+      get { return limit_; }
       set {
-        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        limit_ = value;
       }
     }
 
@@ -708,8 +706,8 @@ namespace Google.Analytics.Data.V1Beta {
       if(!dateRanges_.Equals(other.dateRanges_)) return false;
       if (!object.Equals(DimensionFilter, other.DimensionFilter)) return false;
       if (!object.Equals(MetricFilter, other.MetricFilter)) return false;
-      if (PageSize != other.PageSize) return false;
-      if (PageToken != other.PageToken) return false;
+      if (Offset != other.Offset) return false;
+      if (Limit != other.Limit) return false;
       if(!metricAggregations_.Equals(other.metricAggregations_)) return false;
       if(!orderBys_.Equals(other.orderBys_)) return false;
       if (CurrencyCode != other.CurrencyCode) return false;
@@ -728,8 +726,8 @@ namespace Google.Analytics.Data.V1Beta {
       hash ^= dateRanges_.GetHashCode();
       if (dimensionFilter_ != null) hash ^= DimensionFilter.GetHashCode();
       if (metricFilter_ != null) hash ^= MetricFilter.GetHashCode();
-      if (PageSize != 0) hash ^= PageSize.GetHashCode();
-      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Offset != 0L) hash ^= Offset.GetHashCode();
+      if (Limit != 0L) hash ^= Limit.GetHashCode();
       hash ^= metricAggregations_.GetHashCode();
       hash ^= orderBys_.GetHashCode();
       if (CurrencyCode.Length != 0) hash ^= CurrencyCode.GetHashCode();
@@ -767,13 +765,13 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(50);
         output.WriteMessage(MetricFilter);
       }
-      if (PageSize != 0) {
+      if (Offset != 0L) {
         output.WriteRawTag(56);
-        output.WriteInt32(PageSize);
+        output.WriteInt64(Offset);
       }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(PageToken);
+      if (Limit != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(Limit);
       }
       metricAggregations_.WriteTo(output, _repeated_metricAggregations_codec);
       orderBys_.WriteTo(output, _repeated_orderBys_codec);
@@ -817,13 +815,13 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(50);
         output.WriteMessage(MetricFilter);
       }
-      if (PageSize != 0) {
+      if (Offset != 0L) {
         output.WriteRawTag(56);
-        output.WriteInt32(PageSize);
+        output.WriteInt64(Offset);
       }
-      if (PageToken.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(PageToken);
+      if (Limit != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(Limit);
       }
       metricAggregations_.WriteTo(ref output, _repeated_metricAggregations_codec);
       orderBys_.WriteTo(ref output, _repeated_orderBys_codec);
@@ -864,11 +862,11 @@ namespace Google.Analytics.Data.V1Beta {
       if (metricFilter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MetricFilter);
       }
-      if (PageSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      if (Offset != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Offset);
       }
-      if (PageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      if (Limit != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Limit);
       }
       size += metricAggregations_.CalculateSize(_repeated_metricAggregations_codec);
       size += orderBys_.CalculateSize(_repeated_orderBys_codec);
@@ -913,11 +911,11 @@ namespace Google.Analytics.Data.V1Beta {
         }
         MetricFilter.MergeFrom(other.MetricFilter);
       }
-      if (other.PageSize != 0) {
-        PageSize = other.PageSize;
+      if (other.Offset != 0L) {
+        Offset = other.Offset;
       }
-      if (other.PageToken.Length != 0) {
-        PageToken = other.PageToken;
+      if (other.Limit != 0L) {
+        Limit = other.Limit;
       }
       metricAggregations_.Add(other.metricAggregations_);
       orderBys_.Add(other.orderBys_);
@@ -981,11 +979,11 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           }
           case 56: {
-            PageSize = input.ReadInt32();
+            Offset = input.ReadInt64();
             break;
           }
-          case 66: {
-            PageToken = input.ReadString();
+          case 64: {
+            Limit = input.ReadInt64();
             break;
           }
           case 74:
@@ -1061,11 +1059,11 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           }
           case 56: {
-            PageSize = input.ReadInt32();
+            Offset = input.ReadInt64();
             break;
           }
-          case 66: {
-            PageToken = input.ReadString();
+          case 64: {
+            Limit = input.ReadInt64();
             break;
           }
           case 74:
@@ -1141,8 +1139,7 @@ namespace Google.Analytics.Data.V1Beta {
       totals_ = other.totals_.Clone();
       maximums_ = other.maximums_.Clone();
       minimums_ = other.minimums_.Clone();
-      nextPageToken_ = other.nextPageToken_;
-      totalSize_ = other.totalSize_;
+      rowCount_ = other.rowCount_;
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
       propertyQuota_ = other.propertyQuota_ != null ? other.propertyQuota_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1233,48 +1230,29 @@ namespace Google.Analytics.Data.V1Beta {
       get { return minimums_; }
     }
 
-    /// <summary>Field number for the "next_page_token" field.</summary>
-    public const int NextPageTokenFieldNumber = 7;
-    private string nextPageToken_ = "";
+    /// <summary>Field number for the "row_count" field.</summary>
+    public const int RowCountFieldNumber = 7;
+    private int rowCount_;
     /// <summary>
-    /// A token that can be sent as `pageToken` in a subsequent `RunReportRequest`
-    /// call to retrieve the next page of report rows. If this field is omitted,
-    /// there are no subsequent pages of report rows.
+    /// The total number of rows in the query result. `rowCount` is independent of
+    /// the number of rows returned in the response, the `limit` request
+    /// parameter, and the `offset` request parameter. For example if a query
+    /// returns 175 rows and includes `limit` of 50 in the API request, the
+    /// response will contain `rowCount` of 175 but only 50 rows.
     ///
     /// To learn more about this pagination parameter, see
     /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string NextPageToken {
-      get { return nextPageToken_; }
+    public int RowCount {
+      get { return rowCount_; }
       set {
-        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "total_size" field.</summary>
-    public const int TotalSizeFieldNumber = 8;
-    private int totalSize_;
-    /// <summary>
-    /// The total number of rows in the query result. `totalSize` is independent of
-    /// the number of rows returned in the response, the `pageSize` request
-    /// parameter, and the `pageToken` request parameter. For example if a query
-    /// returns 175 rows and includes `pageSize` of 50 in the API request, the
-    /// response will contain `totalSize` of 175 but only 50 rows.
-    ///
-    /// To learn more about this pagination parameter, see
-    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int TotalSize {
-      get { return totalSize_; }
-      set {
-        totalSize_ = value;
+        rowCount_ = value;
       }
     }
 
     /// <summary>Field number for the "metadata" field.</summary>
-    public const int MetadataFieldNumber = 9;
+    public const int MetadataFieldNumber = 8;
     private global::Google.Analytics.Data.V1Beta.ResponseMetaData metadata_;
     /// <summary>
     /// Metadata for the report.
@@ -1288,7 +1266,7 @@ namespace Google.Analytics.Data.V1Beta {
     }
 
     /// <summary>Field number for the "property_quota" field.</summary>
-    public const int PropertyQuotaFieldNumber = 10;
+    public const int PropertyQuotaFieldNumber = 9;
     private global::Google.Analytics.Data.V1Beta.PropertyQuota propertyQuota_;
     /// <summary>
     /// This Analytics Property's quota state including this request.
@@ -1320,8 +1298,7 @@ namespace Google.Analytics.Data.V1Beta {
       if(!totals_.Equals(other.totals_)) return false;
       if(!maximums_.Equals(other.maximums_)) return false;
       if(!minimums_.Equals(other.minimums_)) return false;
-      if (NextPageToken != other.NextPageToken) return false;
-      if (TotalSize != other.TotalSize) return false;
+      if (RowCount != other.RowCount) return false;
       if (!object.Equals(Metadata, other.Metadata)) return false;
       if (!object.Equals(PropertyQuota, other.PropertyQuota)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1336,8 +1313,7 @@ namespace Google.Analytics.Data.V1Beta {
       hash ^= totals_.GetHashCode();
       hash ^= maximums_.GetHashCode();
       hash ^= minimums_.GetHashCode();
-      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
-      if (TotalSize != 0) hash ^= TotalSize.GetHashCode();
+      if (RowCount != 0) hash ^= RowCount.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (propertyQuota_ != null) hash ^= PropertyQuota.GetHashCode();
       if (_unknownFields != null) {
@@ -1362,20 +1338,16 @@ namespace Google.Analytics.Data.V1Beta {
       totals_.WriteTo(output, _repeated_totals_codec);
       maximums_.WriteTo(output, _repeated_maximums_codec);
       minimums_.WriteTo(output, _repeated_minimums_codec);
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(NextPageToken);
-      }
-      if (TotalSize != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(TotalSize);
+      if (RowCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(RowCount);
       }
       if (metadata_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
       if (propertyQuota_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteMessage(PropertyQuota);
       }
       if (_unknownFields != null) {
@@ -1393,20 +1365,16 @@ namespace Google.Analytics.Data.V1Beta {
       totals_.WriteTo(ref output, _repeated_totals_codec);
       maximums_.WriteTo(ref output, _repeated_maximums_codec);
       minimums_.WriteTo(ref output, _repeated_minimums_codec);
-      if (NextPageToken.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(NextPageToken);
-      }
-      if (TotalSize != 0) {
-        output.WriteRawTag(64);
-        output.WriteInt32(TotalSize);
+      if (RowCount != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(RowCount);
       }
       if (metadata_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteMessage(Metadata);
       }
       if (propertyQuota_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteMessage(PropertyQuota);
       }
       if (_unknownFields != null) {
@@ -1424,11 +1392,8 @@ namespace Google.Analytics.Data.V1Beta {
       size += totals_.CalculateSize(_repeated_totals_codec);
       size += maximums_.CalculateSize(_repeated_maximums_codec);
       size += minimums_.CalculateSize(_repeated_minimums_codec);
-      if (NextPageToken.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
-      }
-      if (TotalSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSize);
+      if (RowCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RowCount);
       }
       if (metadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Metadata);
@@ -1453,11 +1418,8 @@ namespace Google.Analytics.Data.V1Beta {
       totals_.Add(other.totals_);
       maximums_.Add(other.maximums_);
       minimums_.Add(other.minimums_);
-      if (other.NextPageToken.Length != 0) {
-        NextPageToken = other.NextPageToken;
-      }
-      if (other.TotalSize != 0) {
-        TotalSize = other.TotalSize;
+      if (other.RowCount != 0) {
+        RowCount = other.RowCount;
       }
       if (other.metadata_ != null) {
         if (metadata_ == null) {
@@ -1509,22 +1471,18 @@ namespace Google.Analytics.Data.V1Beta {
             minimums_.AddEntriesFrom(input, _repeated_minimums_codec);
             break;
           }
-          case 58: {
-            NextPageToken = input.ReadString();
+          case 56: {
+            RowCount = input.ReadInt32();
             break;
           }
-          case 64: {
-            TotalSize = input.ReadInt32();
-            break;
-          }
-          case 74: {
+          case 66: {
             if (metadata_ == null) {
               Metadata = new global::Google.Analytics.Data.V1Beta.ResponseMetaData();
             }
             input.ReadMessage(Metadata);
             break;
           }
-          case 82: {
+          case 74: {
             if (propertyQuota_ == null) {
               PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
             }
@@ -1569,22 +1527,18 @@ namespace Google.Analytics.Data.V1Beta {
             minimums_.AddEntriesFrom(ref input, _repeated_minimums_codec);
             break;
           }
-          case 58: {
-            NextPageToken = input.ReadString();
+          case 56: {
+            RowCount = input.ReadInt32();
             break;
           }
-          case 64: {
-            TotalSize = input.ReadInt32();
-            break;
-          }
-          case 74: {
+          case 66: {
             if (metadata_ == null) {
               Metadata = new global::Google.Analytics.Data.V1Beta.ResponseMetaData();
             }
             input.ReadMessage(Metadata);
             break;
           }
-          case 82: {
+          case 74: {
             if (propertyQuota_ == null) {
               PropertyQuota = new global::Google.Analytics.Data.V1Beta.PropertyQuota();
             }
@@ -3578,7 +3532,7 @@ namespace Google.Analytics.Data.V1Beta {
       metrics_ = other.metrics_.Clone();
       dimensionFilter_ = other.dimensionFilter_ != null ? other.dimensionFilter_.Clone() : null;
       metricFilter_ = other.metricFilter_ != null ? other.metricFilter_.Clone() : null;
-      pageSize_ = other.pageSize_;
+      limit_ = other.limit_;
       metricAggregations_ = other.metricAggregations_.Clone();
       orderBys_ = other.orderBys_.Clone();
       returnPropertyQuota_ = other.returnPropertyQuota_;
@@ -3666,28 +3620,25 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
-    /// <summary>Field number for the "page_size" field.</summary>
-    public const int PageSizeFieldNumber = 6;
-    private int pageSize_;
+    /// <summary>Field number for the "limit" field.</summary>
+    public const int LimitFieldNumber = 6;
+    private long limit_;
     /// <summary>
-    /// Page size specifies maximum number of rows to return. If unspecified, up to
-    /// 10,000 rows are returned. The API returns a maximum of 100,000 rows per
-    /// request, no matter how many you ask for. Page size must be positive.
+    /// The number of rows to return. If unspecified, 10,000 rows are returned. The
+    /// API returns a maximum of 100,000 rows per request, no matter how many you
+    /// ask for. `limit` must be positive.
     ///
-    /// The API can also return fewer rows than the requested `pageSize`, if there
-    /// aren't as many dimension values as the `pageSize`. For instance, there are
+    /// The API can also return fewer rows than the requested `limit`, if there
+    /// aren't as many dimension values as the `limit`. For instance, there are
     /// fewer than 300 possible values for the dimension `country`, so when
     /// reporting on only `country`, you can't get more than 300 rows, even if you
-    /// set `pageSize` to a higher value.
-    ///
-    /// To learn more about this pagination parameter, see
-    /// [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics#pagination).
+    /// set `limit` to a higher value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PageSize {
-      get { return pageSize_; }
+    public long Limit {
+      get { return limit_; }
       set {
-        pageSize_ = value;
+        limit_ = value;
       }
     }
 
@@ -3751,7 +3702,7 @@ namespace Google.Analytics.Data.V1Beta {
       if(!metrics_.Equals(other.metrics_)) return false;
       if (!object.Equals(DimensionFilter, other.DimensionFilter)) return false;
       if (!object.Equals(MetricFilter, other.MetricFilter)) return false;
-      if (PageSize != other.PageSize) return false;
+      if (Limit != other.Limit) return false;
       if(!metricAggregations_.Equals(other.metricAggregations_)) return false;
       if(!orderBys_.Equals(other.orderBys_)) return false;
       if (ReturnPropertyQuota != other.ReturnPropertyQuota) return false;
@@ -3766,7 +3717,7 @@ namespace Google.Analytics.Data.V1Beta {
       hash ^= metrics_.GetHashCode();
       if (dimensionFilter_ != null) hash ^= DimensionFilter.GetHashCode();
       if (metricFilter_ != null) hash ^= MetricFilter.GetHashCode();
-      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (Limit != 0L) hash ^= Limit.GetHashCode();
       hash ^= metricAggregations_.GetHashCode();
       hash ^= orderBys_.GetHashCode();
       if (ReturnPropertyQuota != false) hash ^= ReturnPropertyQuota.GetHashCode();
@@ -3800,9 +3751,9 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(42);
         output.WriteMessage(MetricFilter);
       }
-      if (PageSize != 0) {
+      if (Limit != 0L) {
         output.WriteRawTag(48);
-        output.WriteInt32(PageSize);
+        output.WriteInt64(Limit);
       }
       metricAggregations_.WriteTo(output, _repeated_metricAggregations_codec);
       orderBys_.WriteTo(output, _repeated_orderBys_codec);
@@ -3833,9 +3784,9 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(42);
         output.WriteMessage(MetricFilter);
       }
-      if (PageSize != 0) {
+      if (Limit != 0L) {
         output.WriteRawTag(48);
-        output.WriteInt32(PageSize);
+        output.WriteInt64(Limit);
       }
       metricAggregations_.WriteTo(ref output, _repeated_metricAggregations_codec);
       orderBys_.WriteTo(ref output, _repeated_orderBys_codec);
@@ -3863,8 +3814,8 @@ namespace Google.Analytics.Data.V1Beta {
       if (metricFilter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MetricFilter);
       }
-      if (PageSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      if (Limit != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Limit);
       }
       size += metricAggregations_.CalculateSize(_repeated_metricAggregations_codec);
       size += orderBys_.CalculateSize(_repeated_orderBys_codec);
@@ -3899,8 +3850,8 @@ namespace Google.Analytics.Data.V1Beta {
         }
         MetricFilter.MergeFrom(other.MetricFilter);
       }
-      if (other.PageSize != 0) {
-        PageSize = other.PageSize;
+      if (other.Limit != 0L) {
+        Limit = other.Limit;
       }
       metricAggregations_.Add(other.metricAggregations_);
       orderBys_.Add(other.orderBys_);
@@ -3948,7 +3899,7 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           }
           case 48: {
-            PageSize = input.ReadInt32();
+            Limit = input.ReadInt64();
             break;
           }
           case 58:
@@ -4005,7 +3956,7 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           }
           case 48: {
-            PageSize = input.ReadInt32();
+            Limit = input.ReadInt64();
             break;
           }
           case 58:
@@ -4066,7 +4017,7 @@ namespace Google.Analytics.Data.V1Beta {
       totals_ = other.totals_.Clone();
       maximums_ = other.maximums_.Clone();
       minimums_ = other.minimums_.Clone();
-      totalSize_ = other.totalSize_;
+      rowCount_ = other.rowCount_;
       propertyQuota_ = other.propertyQuota_ != null ? other.propertyQuota_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4156,21 +4107,21 @@ namespace Google.Analytics.Data.V1Beta {
       get { return minimums_; }
     }
 
-    /// <summary>Field number for the "total_size" field.</summary>
-    public const int TotalSizeFieldNumber = 7;
-    private int totalSize_;
+    /// <summary>Field number for the "row_count" field.</summary>
+    public const int RowCountFieldNumber = 7;
+    private int rowCount_;
     /// <summary>
-    /// The total number of rows in the query result. `totalSize` is independent of
-    /// the number of rows returned in the response and the `pageSize` request
-    /// parameter. For example if a query returns 175 rows and includes `pageSize`
-    /// of 50 in the API request, the response will contain `totalSize` of 175 but
+    /// The total number of rows in the query result. `rowCount` is independent of
+    /// the number of rows returned in the response and the `limit` request
+    /// parameter. For example if a query returns 175 rows and includes `limit`
+    /// of 50 in the API request, the response will contain `rowCount` of 175 but
     /// only 50 rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int TotalSize {
-      get { return totalSize_; }
+    public int RowCount {
+      get { return rowCount_; }
       set {
-        totalSize_ = value;
+        rowCount_ = value;
       }
     }
 
@@ -4207,7 +4158,7 @@ namespace Google.Analytics.Data.V1Beta {
       if(!totals_.Equals(other.totals_)) return false;
       if(!maximums_.Equals(other.maximums_)) return false;
       if(!minimums_.Equals(other.minimums_)) return false;
-      if (TotalSize != other.TotalSize) return false;
+      if (RowCount != other.RowCount) return false;
       if (!object.Equals(PropertyQuota, other.PropertyQuota)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4221,7 +4172,7 @@ namespace Google.Analytics.Data.V1Beta {
       hash ^= totals_.GetHashCode();
       hash ^= maximums_.GetHashCode();
       hash ^= minimums_.GetHashCode();
-      if (TotalSize != 0) hash ^= TotalSize.GetHashCode();
+      if (RowCount != 0) hash ^= RowCount.GetHashCode();
       if (propertyQuota_ != null) hash ^= PropertyQuota.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4245,9 +4196,9 @@ namespace Google.Analytics.Data.V1Beta {
       totals_.WriteTo(output, _repeated_totals_codec);
       maximums_.WriteTo(output, _repeated_maximums_codec);
       minimums_.WriteTo(output, _repeated_minimums_codec);
-      if (TotalSize != 0) {
+      if (RowCount != 0) {
         output.WriteRawTag(56);
-        output.WriteInt32(TotalSize);
+        output.WriteInt32(RowCount);
       }
       if (propertyQuota_ != null) {
         output.WriteRawTag(66);
@@ -4268,9 +4219,9 @@ namespace Google.Analytics.Data.V1Beta {
       totals_.WriteTo(ref output, _repeated_totals_codec);
       maximums_.WriteTo(ref output, _repeated_maximums_codec);
       minimums_.WriteTo(ref output, _repeated_minimums_codec);
-      if (TotalSize != 0) {
+      if (RowCount != 0) {
         output.WriteRawTag(56);
-        output.WriteInt32(TotalSize);
+        output.WriteInt32(RowCount);
       }
       if (propertyQuota_ != null) {
         output.WriteRawTag(66);
@@ -4291,8 +4242,8 @@ namespace Google.Analytics.Data.V1Beta {
       size += totals_.CalculateSize(_repeated_totals_codec);
       size += maximums_.CalculateSize(_repeated_maximums_codec);
       size += minimums_.CalculateSize(_repeated_minimums_codec);
-      if (TotalSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSize);
+      if (RowCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RowCount);
       }
       if (propertyQuota_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PropertyQuota);
@@ -4314,8 +4265,8 @@ namespace Google.Analytics.Data.V1Beta {
       totals_.Add(other.totals_);
       maximums_.Add(other.maximums_);
       minimums_.Add(other.minimums_);
-      if (other.TotalSize != 0) {
-        TotalSize = other.TotalSize;
+      if (other.RowCount != 0) {
+        RowCount = other.RowCount;
       }
       if (other.propertyQuota_ != null) {
         if (propertyQuota_ == null) {
@@ -4362,7 +4313,7 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           }
           case 56: {
-            TotalSize = input.ReadInt32();
+            RowCount = input.ReadInt32();
             break;
           }
           case 66: {
@@ -4411,7 +4362,7 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           }
           case 56: {
-            TotalSize = input.ReadInt32();
+            RowCount = input.ReadInt32();
             break;
           }
           case 66: {
