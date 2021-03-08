@@ -108,10 +108,9 @@ namespace Google.Cloud.Spanner.V1.Tests
             // We expect calls of:
             // - Start: no token, MoveNext(yes), MoveNext(throw)
             // - Start: token1, MoveNext(throw)
-            // - No further calls, due to second failure
-            // Only the result with token1 is returned
-            await AssertResultsThenExceptionAsync(stream, results, 1);
-            Assert.Equal(2, client.Calls);
+            // - Start: token1, succeeds until the end of the stream.
+            await AssertResultsAsync(stream, results);
+            Assert.Equal(3, client.Calls);
         }
 
         [Fact]
@@ -160,6 +159,94 @@ namespace Google.Cloud.Spanner.V1.Tests
             Assert.Equal(1, client.Calls);
         }
 
+        [Fact]
+        public async Task RetryableError_ExceedsTimeout()
+        {
+            var results = CreateResultSets("token1", "token2", "token3");
+
+            var filter = CreateExceptionFilter("token2", RetriableStatusCode);
+            var client = new FakeSpannerClient(results, filter);
+            var clock = new FakeClock();
+            client.Settings.Clock = clock;
+            client.Settings.Scheduler = new FakeScheduler(clock);
+            // Create a call that will timeout if it has to backoff and retry once.
+            var callSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(10)));
+            var retrySettings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromSeconds(20),
+                maxBackoff: TimeSpan.FromSeconds(30),
+                backoffMultiplier: 2.0,
+                retryFilter: ignored => false,
+                RetrySettings.NoJitter);
+
+            var stream = CreateStream(client, maxBufferSize: 10, callSettings, retrySettings);
+
+            await AssertResultsThenExceptionAsync(stream, results, 1);
+            Assert.Equal(1, client.Calls);
+        }
+
+        [Fact]
+        public async Task MultipleRetryableErrors_ForDifferentResumeTokens_ResetsTimeout()
+        {
+            var results = CreateResultSets("token1", "token2", "token3");
+
+            var filter1 = CreateExceptionFilter("token2", RetriableStatusCode);
+            var filter2 = CreateExceptionFilter("token3", RetriableStatusCode);
+            var client = new FakeSpannerClient(results, prs => filter2(filter1(prs)));
+            var clock = new FakeClock();
+            client.Settings.Clock = clock;
+            client.Settings.Scheduler = new FakeScheduler(clock);
+
+            // The call will have a timeout of 15 seconds and a backoff of 10 seconds.
+            // One retry will therefore not cause it to fail. Two retries for different
+            // calls will also not cause it to fail, as the timeout is reset after each
+            // successful RPC.
+            var callSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(15)));
+            var retrySettings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromSeconds(10),
+                maxBackoff: TimeSpan.FromSeconds(10),
+                backoffMultiplier: 1.0,
+                retryFilter: ignored => false,
+                RetrySettings.NoJitter);
+
+            var stream = CreateStream(client, maxBufferSize: 10, callSettings, retrySettings);
+
+            await AssertResultsAsync(stream, results);
+            Assert.Equal(3, client.Calls);
+        }
+
+        [Fact]
+        public async Task MultipleRetryableErrors_ForSameResumeToken_CausesTimeout()
+        {
+            var results = CreateResultSets("token1", "token2", "token3");
+
+            var filter = CreateExceptionFilter("token3", RetriableStatusCode, 2);
+            var client = new FakeSpannerClient(results, filter);
+            var clock = new FakeClock();
+            client.Settings.Clock = clock;
+            client.Settings.Scheduler = new FakeScheduler(clock);
+
+            // The call will have a timeout of 15 seconds and a backoff of 10 seconds.
+            // token3 will return two consecutive retryable errors. After the second backoff
+            // the timeout of the call has been exceeded and a DeadlineExceeded error is thrown.
+            var callSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(15)));
+            var retrySettings = RetrySettings.FromExponentialBackoff(
+                maxAttempts: int.MaxValue,
+                initialBackoff: TimeSpan.FromSeconds(10),
+                maxBackoff: TimeSpan.FromSeconds(10),
+                backoffMultiplier: 1.0,
+                retryFilter: ignored => false,
+                RetrySettings.NoJitter);
+
+            var stream = CreateStream(client, maxBufferSize: 10, callSettings, retrySettings);
+
+            await AssertResultsThenExceptionAsync(stream, results, 2);
+            // 2 calls == 1 initial call + 1 retry of token3.
+            // A second retry of token3 is never executed as the deadline has already been exceeded.
+            Assert.Equal(2, client.Calls);
+        }
+
         private async Task AssertResultsAsync(SqlResultStream stream, IEnumerable<PartialResultSet> expectedResults)
         {
             var ret = new List<PartialResultSet>();
@@ -197,8 +284,8 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
         }
 
-        private static SqlResultStream CreateStream(SpannerClient client, int maxBufferSize = 10) =>
-            new SqlResultStream(client, new ExecuteSqlRequest(), new Session(), s_simpleCallSettings, maxBufferSize, s_retrySettings);
+        private static SqlResultStream CreateStream(SpannerClient client, int maxBufferSize = 10, CallSettings callSettings = null, RetrySettings retrySettings = null) =>
+            new SqlResultStream(client, new ExecuteSqlRequest(), new Session(), callSettings ?? s_simpleCallSettings, maxBufferSize, retrySettings ?? s_retrySettings);
 
         private static List<PartialResultSet> CreateResultSets(params string[] resumeTokens) =>
             resumeTokens
@@ -242,6 +329,19 @@ namespace Google.Cloud.Spanner.V1.Tests
                     // These arguments are all for aspects of gRPC streaming we don't care about.
                     Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
                 return new ExecuteStreamingSqlStreamImpl(call);
+            }
+        }
+
+        private sealed class FakeScheduler : IScheduler
+        {
+            private readonly FakeClock _clock;
+
+            public FakeScheduler(FakeClock clock) => _clock = clock;
+
+            public Task Delay(TimeSpan delay, CancellationToken cancellationToken)
+            {
+                _clock.Advance(delay);
+                return Task.CompletedTask;
             }
         }
     }

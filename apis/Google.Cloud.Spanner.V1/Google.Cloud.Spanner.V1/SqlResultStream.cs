@@ -111,7 +111,12 @@ namespace Google.Cloud.Spanner.V1
         private async Task<PartialResultSet> ComputeNextAsync(CancellationToken cancellationToken)
         {
             // The retry state is local to the method as we're not trying to handle callers retrying.
-            RetryState retryState = new RetryState(_client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings);
+            // Consecutive retryable errors will be retried until the call succeeds, or until the call times out or is cancelled.
+            RetryState retryState = new RetryState(_client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings, maxConsecutiveErrors: int.MaxValue);
+            var clock = _client.Settings.Clock ?? SystemClock.Instance;
+            var startTime = clock.GetCurrentDateTimeUtc();
+            var originalTimeout = _callSettings.Expiration?.Timeout ?? _client.Settings.ExecuteStreamingSqlSettings.Expiration?.Timeout ?? TimeSpan.FromMilliseconds(3600000);
+            var remainingTimeout = originalTimeout;
 
             while (true)
             {
@@ -133,6 +138,7 @@ namespace Google.Cloud.Spanner.V1
                 {
                     if (_grpcCall == null)
                     {
+                        var callSettings = _callSettings.WithTimeout(remainingTimeout);
                         // Note: no cancellation token here; if we've been given a short cancellation token,
                         // it ought to apply to just the MoveNext call, not the original request.
                         _grpcCall = _client.ExecuteStreamingSql(_request, _callSettings).GrpcCall;
@@ -188,6 +194,14 @@ namespace Google.Cloud.Spanner.V1
                     _buffer.Clear();
                     _grpcCall.Dispose();
                     _grpcCall = null;
+
+                    // Calculate the remaining timeout.
+                    var callDuration = clock.GetCurrentDateTimeUtc().Subtract(startTime);
+                    remainingTimeout = originalTimeout.Subtract(callDuration);
+                    if (remainingTimeout.CompareTo(TimeSpan.Zero) <= 0)
+                    {
+                        throw new RpcException(new Grpc.Core.Status(StatusCode.DeadlineExceeded, "Streaming call exceeded timeout"));
+                    }
                 }
             }
         }
