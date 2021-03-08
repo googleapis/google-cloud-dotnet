@@ -40,8 +40,14 @@ build_api_docs() {
   cp filterConfig.yml output/$api
   $DOCFX metadata --logLevel Warning -f output/$api/docfx.json | tee errors.txt | grep -v "Invalid file link"
   (! grep --quiet 'Build failed.' errors.txt)
-  $DOCFX metadata --logLevel Warning -f output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
-  (! grep --quiet 'Build failed.' errors.txt)
+
+  # Only build metadata for devsite where we have a "real" API (not root)
+  if [[ -f output/$api/docfx-devsite.json ]]
+  then
+    $DOCFX metadata --logLevel Warning -f output/$api/docfx-devsite.json | tee errors.txt | grep -v "Invalid file link"
+    (! grep --quiet 'Build failed.' errors.txt)
+  fi
+
   dotnet run --no-build --no-restore -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
   
   # Copy external dependency yml files into the API and concatenate toc.yml
