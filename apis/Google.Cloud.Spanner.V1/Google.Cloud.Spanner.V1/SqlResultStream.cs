@@ -111,7 +111,9 @@ namespace Google.Cloud.Spanner.V1
         private async Task<PartialResultSet> ComputeNextAsync(CancellationToken cancellationToken)
         {
             // The retry state is local to the method as we're not trying to handle callers retrying.
-            RetryState retryState = new RetryState(_client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings);
+            // Max 115 consecutive errors is roughly equal to the default timeout of ExecuteStreamingSql (1 hour)
+            // based on the default backoff settings (InitialBackoff: 1 second, MaxBackoff: 32 seconds).
+            RetryState retryState = new RetryState(_client.Settings.Scheduler ?? SystemScheduler.Instance, _retrySettings, maxConsecutiveErrors: 115);
 
             while (true)
             {

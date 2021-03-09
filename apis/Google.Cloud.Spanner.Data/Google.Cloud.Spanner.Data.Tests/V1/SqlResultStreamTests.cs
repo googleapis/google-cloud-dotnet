@@ -108,10 +108,23 @@ namespace Google.Cloud.Spanner.V1.Tests
             // We expect calls of:
             // - Start: no token, MoveNext(yes), MoveNext(throw)
             // - Start: token1, MoveNext(throw)
-            // - No further calls, due to second failure
-            // Only the result with token1 is returned
+            // - Start: token1, succeeds until the end of the stream.
+            await AssertResultsAsync(stream, results);
+            Assert.Equal(3, client.Calls);
+        }
+
+        [Fact]
+        public async Task MultipleErrors_ForSameResumeToken_DoesNotRetryForever()
+        {
+            var results = CreateResultSets("token1", "token2");
+            var client = new FakeSpannerClient(results, CreateExceptionFilter("token2", RetriableStatusCode, 120));
+            var stream = CreateStream(client);
+
+            // Expected calls:
+            // - Start: no token, MoveNext(yes), MoveNext(throw)
+            // - Start: token1, MoveNext(throw) until 115 attempts have been made.
             await AssertResultsThenExceptionAsync(stream, results, 1);
-            Assert.Equal(2, client.Calls);
+            Assert.Equal(116, client.Calls);
         }
 
         [Fact]
