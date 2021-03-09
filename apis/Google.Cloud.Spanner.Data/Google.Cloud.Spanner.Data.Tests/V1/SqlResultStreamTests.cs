@@ -35,7 +35,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         private const StatusCode RetriableStatusCode = StatusCode.Unavailable;
         private const StatusCode NonRetriableStatusCode = StatusCode.PermissionDenied;
 
-        private static readonly CallSettings s_simpleCallSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(1)));
+        private static readonly CallSettings s_simpleCallSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(30)));
         private static readonly RetrySettings s_retrySettings = RetrySettings.FromExponentialBackoff(
             maxAttempts: int.MaxValue,
             initialBackoff: TimeSpan.FromSeconds(1),
@@ -168,7 +168,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var client = new FakeSpannerClient(results, filter);
             var clock = new FakeClock();
             client.Settings.Clock = clock;
-            client.Settings.Scheduler = new FakeScheduler(clock);
+            client.Settings.Scheduler = new AdvanceFakeClockScheduler(clock);
             // Create a call that will timeout if it has to backoff and retry once.
             var callSettings = CallSettings.FromExpiration(Expiration.FromTimeout(TimeSpan.FromSeconds(10)));
             var retrySettings = RetrySettings.FromExponentialBackoff(
@@ -195,7 +195,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var client = new FakeSpannerClient(results, prs => filter2(filter1(prs)));
             var clock = new FakeClock();
             client.Settings.Clock = clock;
-            client.Settings.Scheduler = new FakeScheduler(clock);
+            client.Settings.Scheduler = new AdvanceFakeClockScheduler(clock);
 
             // The call will have a timeout of 15 seconds and a backoff of 10 seconds.
             // One retry will therefore not cause it to fail. Two retries for different
@@ -225,7 +225,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             var client = new FakeSpannerClient(results, filter);
             var clock = new FakeClock();
             client.Settings.Clock = clock;
-            client.Settings.Scheduler = new FakeScheduler(clock);
+            client.Settings.Scheduler = new AdvanceFakeClockScheduler(clock);
 
             // The call will have a timeout of 15 seconds and a backoff of 10 seconds.
             // token3 will return two consecutive retryable errors. After the second backoff
@@ -332,11 +332,14 @@ namespace Google.Cloud.Spanner.V1.Tests
             }
         }
 
-        private sealed class FakeScheduler : IScheduler
+        /// <summary>
+        /// Simple scheduler that automatically advances the fake clock when Delay is called.
+        /// </summary>
+        internal sealed class AdvanceFakeClockScheduler : IScheduler
         {
             private readonly FakeClock _clock;
 
-            public FakeScheduler(FakeClock clock) => _clock = clock;
+            public AdvanceFakeClockScheduler(FakeClock clock) => _clock = clock;
 
             public Task Delay(TimeSpan delay, CancellationToken cancellationToken)
             {
