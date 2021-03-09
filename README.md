@@ -17,7 +17,7 @@ Each package name links to the documentation for that package.
 |---------|----------------|-------------|
 | [Google.Analytics.Admin.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Admin.V1Alpha/1.0.0-alpha04) | 1.0.0-alpha04 | [Analytics Admin](https://developers.google.com/analytics) |
 | [Google.Analytics.Data.V1Alpha](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Alpha/1.0.0-alpha04) | 1.0.0-alpha04 | [Google Analytics Data (V1Alpha API)](https://developers.google.com/analytics) |
-| [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta01) | 1.0.0-beta01 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
+| [Google.Analytics.Data.V1Beta](https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/1.0.0-beta02) | 1.0.0-beta02 | [Google Analytics Data (V1Beta API)](https://developers.google.com/analytics) |
 | [Google.Area120.Tables.V1Alpha1](https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/1.0.0-alpha02) | 1.0.0-alpha02 | Google Area 120 Tables |
 | [Google.Cloud.AccessApproval.V1](https://googleapis.dev/dotnet/Google.Cloud.AccessApproval.V1/1.0.0) | 1.0.0 | [Access Approval](https://cloud.google.com/access-approval/docs/) |
 | [Google.Cloud.ApiGateway.V1](https://googleapis.dev/dotnet/Google.Cloud.ApiGateway.V1/1.0.0-beta01) | 1.0.0-beta01 | [API Gateway](https://cloud.google.com/api-gateway/docs) |
