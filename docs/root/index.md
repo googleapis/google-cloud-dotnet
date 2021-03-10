@@ -82,7 +82,7 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.MediaTranslation.V1Beta1](Google.Cloud.MediaTranslation.V1Beta1/index.html) | 1.0.0-beta01 | [Media Translation](https://cloud.google.com/media-translation) |
 | [Google.Cloud.Memcache.V1](Google.Cloud.Memcache.V1/index.html) | 1.0.0 | [Cloud Memorystore for Memcached](https://cloud.google.com/memorystore/) |
 | [Google.Cloud.Memcache.V1Beta2](Google.Cloud.Memcache.V1Beta2/index.html) | 1.0.0-beta03 | [Google Cloud Memorystore for Memcache](https://cloud.google.com/memorystore/) |
-| [Google.Cloud.Metastore.V1Alpha](Google.Cloud.Metastore.V1Alpha/index.html) | 1.0.0-alpha01 | [Dataproc Metastore](https://cloud.google.com/dataproc-metastore/docs) |
+| [Google.Cloud.Metastore.V1Alpha](Google.Cloud.Metastore.V1Alpha/index.html) | 1.0.0-alpha01 | [Dataproc Metastore (V1Alpha API)](https://cloud.google.com/dataproc-metastore/docs) |
 | [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html) | 2.2.0 | [Google Cloud Monitoring](https://cloud.google.com/monitoring/api/v3/) |
 | [Google.Cloud.NetworkConnectivity.V1Alpha1](Google.Cloud.NetworkConnectivity.V1Alpha1/index.html) | 1.0.0-alpha01 | [Network Connectivity](https://cloud.google.com/network-connectivity/docs/apis) |
 | [Google.Cloud.Notebooks.V1Beta1](Google.Cloud.Notebooks.V1Beta1/index.html) | 1.0.0-beta02 | [AI Platform Notebooks](https://cloud.google.com/ai-platform-notebooks) |
