@@ -1381,7 +1381,7 @@
     },
     {
       "id": "Google.Cloud.OrgPolicy.V2",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Organization Policy",
       "productUrl": "https://cloud.google.com/resource-manager/docs/organization-policy/overview",
@@ -1391,7 +1391,10 @@
         "policy",
         "governance"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.2.0",
+        "Grpc.Core": "2.31.0"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/orgpolicy/v2"
     },
