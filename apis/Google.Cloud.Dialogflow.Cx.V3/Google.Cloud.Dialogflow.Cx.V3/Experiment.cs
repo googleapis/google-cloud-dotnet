@@ -369,7 +369,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int ExperimentLengthFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Duration experimentLength_;
     /// <summary>
-    /// Maximum number of days to run the experiment.
+    /// Maximum number of days to run the experiment/rollout. If auto-rollout is
+    /// not enabled, default value and maximum will be 30 days. If auto-rollout is
+    /// enabled, default value and maximum will be 6 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration ExperimentLength {
