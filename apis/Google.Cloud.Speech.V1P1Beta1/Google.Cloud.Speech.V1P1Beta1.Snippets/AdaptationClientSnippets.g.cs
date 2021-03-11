@@ -523,6 +523,35 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdatePhraseSet</summary>
+        public void UpdatePhraseSet()
+        {
+            // Snippet: UpdatePhraseSet(PhraseSet, FieldMask, CallSettings)
+            // Create client
+            AdaptationClient adaptationClient = AdaptationClient.Create();
+            // Initialize request argument(s)
+            PhraseSet phraseSet = new PhraseSet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            PhraseSet response = adaptationClient.UpdatePhraseSet(phraseSet, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePhraseSetAsync</summary>
+        public async Task UpdatePhraseSetAsync()
+        {
+            // Snippet: UpdatePhraseSetAsync(PhraseSet, FieldMask, CallSettings)
+            // Additional: UpdatePhraseSetAsync(PhraseSet, FieldMask, CancellationToken)
+            // Create client
+            AdaptationClient adaptationClient = await AdaptationClient.CreateAsync();
+            // Initialize request argument(s)
+            PhraseSet phraseSet = new PhraseSet();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            PhraseSet response = await adaptationClient.UpdatePhraseSetAsync(phraseSet, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for DeletePhraseSet</summary>
         public void DeletePhraseSetRequestObject()
         {
@@ -1104,6 +1133,35 @@ namespace Google.Cloud.Speech.V1P1Beta1.Snippets
             };
             // Make the request
             CustomClass response = await adaptationClient.UpdateCustomClassAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomClass</summary>
+        public void UpdateCustomClass()
+        {
+            // Snippet: UpdateCustomClass(CustomClass, FieldMask, CallSettings)
+            // Create client
+            AdaptationClient adaptationClient = AdaptationClient.Create();
+            // Initialize request argument(s)
+            CustomClass customClass = new CustomClass();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CustomClass response = adaptationClient.UpdateCustomClass(customClass, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCustomClassAsync</summary>
+        public async Task UpdateCustomClassAsync()
+        {
+            // Snippet: UpdateCustomClassAsync(CustomClass, FieldMask, CallSettings)
+            // Additional: UpdateCustomClassAsync(CustomClass, FieldMask, CancellationToken)
+            // Create client
+            AdaptationClient adaptationClient = await AdaptationClient.CreateAsync();
+            // Initialize request argument(s)
+            CustomClass customClass = new CustomClass();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CustomClass response = await adaptationClient.UpdateCustomClassAsync(customClass, updateMask);
             // End snippet
         }
 

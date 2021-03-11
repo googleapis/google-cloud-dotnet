@@ -393,6 +393,58 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
         }
 
         [xunit::FactAttribute]
+        public void UpdatePhraseSet()
+        {
+            moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
+            UpdatePhraseSetRequest request = new UpdatePhraseSetRequest
+            {
+                PhraseSet = new PhraseSet(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PhraseSet expectedResponse = new PhraseSet
+            {
+                PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                Phrases =
+                {
+                    new PhraseSet.Types.Phrase(),
+                },
+                Boost = 7.584708E+17F,
+            };
+            mockGrpcClient.Setup(x => x.UpdatePhraseSet(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            PhraseSet response = client.UpdatePhraseSet(request.PhraseSet, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdatePhraseSetAsync()
+        {
+            moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
+            UpdatePhraseSetRequest request = new UpdatePhraseSetRequest
+            {
+                PhraseSet = new PhraseSet(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PhraseSet expectedResponse = new PhraseSet
+            {
+                PhraseSetName = PhraseSetName.FromProjectLocationPhraseSet("[PROJECT]", "[LOCATION]", "[PHRASE_SET]"),
+                Phrases =
+                {
+                    new PhraseSet.Types.Phrase(),
+                },
+                Boost = 7.584708E+17F,
+            };
+            mockGrpcClient.Setup(x => x.UpdatePhraseSetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseSet>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            PhraseSet responseCallSettings = await client.UpdatePhraseSetAsync(request.PhraseSet, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PhraseSet responseCancellationToken = await client.UpdatePhraseSetAsync(request.PhraseSet, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeletePhraseSetRequestObject()
         {
             moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
@@ -845,6 +897,58 @@ namespace Google.Cloud.Speech.V1P1Beta1.Tests
             CustomClass responseCallSettings = await client.UpdateCustomClassAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CustomClass responseCancellationToken = await client.UpdateCustomClassAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateCustomClass()
+        {
+            moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
+            UpdateCustomClassRequest request = new UpdateCustomClassRequest
+            {
+                CustomClass = new CustomClass(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomClass expectedResponse = new CustomClass
+            {
+                CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                CustomClassId = "custom_class_idb1fbae50",
+                Items =
+                {
+                    new CustomClass.Types.ClassItem(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomClass(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            CustomClass response = client.UpdateCustomClass(request.CustomClass, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateCustomClassAsync()
+        {
+            moq::Mock<Adaptation.AdaptationClient> mockGrpcClient = new moq::Mock<Adaptation.AdaptationClient>(moq::MockBehavior.Strict);
+            UpdateCustomClassRequest request = new UpdateCustomClassRequest
+            {
+                CustomClass = new CustomClass(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            CustomClass expectedResponse = new CustomClass
+            {
+                CustomClassName = CustomClassName.FromProjectLocationCustomClass("[PROJECT]", "[LOCATION]", "[CUSTOM_CLASS]"),
+                CustomClassId = "custom_class_idb1fbae50",
+                Items =
+                {
+                    new CustomClass.Types.ClassItem(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.UpdateCustomClassAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CustomClass>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            AdaptationClient client = new AdaptationClientImpl(mockGrpcClient.Object, null);
+            CustomClass responseCallSettings = await client.UpdateCustomClassAsync(request.CustomClass, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CustomClass responseCancellationToken = await client.UpdateCustomClassAsync(request.CustomClass, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
