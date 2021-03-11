@@ -714,6 +714,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 AgentUri = "",
                 AgentContent = ByteString.Empty,
+                RestoreOption = RestoreAgentRequest.Types.RestoreOption.Unspecified,
             };
             // Make the request
             Operation<Empty, Struct> response = agentsClient.RestoreAgent(request);
@@ -749,6 +750,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
                 AgentName = AgentName.FromProjectLocationAgent("[PROJECT]", "[LOCATION]", "[AGENT]"),
                 AgentUri = "",
                 AgentContent = ByteString.Empty,
+                RestoreOption = RestoreAgentRequest.Types.RestoreOption.Unspecified,
             };
             // Make the request
             Operation<Empty, Struct> response = await agentsClient.RestoreAgentAsync(request);
