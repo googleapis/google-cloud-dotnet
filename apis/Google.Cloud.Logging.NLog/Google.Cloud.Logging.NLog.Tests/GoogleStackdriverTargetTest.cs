@@ -280,6 +280,25 @@ namespace Google.Cloud.Logging.NLog.Tests
         }
 
         [Fact]
+        public async Task SingleLogEntryWithTraceId()
+        {
+            var guidTraceId = Guid.NewGuid();
+
+            var uploadedEntries = await RunTestWorkingServer(
+                googleTarget =>
+                {
+                    googleTarget.SpanId = "${event-properties:SpanId:Format=x16}";
+                    googleTarget.TraceId = "${activityid}";
+                    System.Diagnostics.Trace.CorrelationManager.ActivityId = guidTraceId;
+                    LogManager.GetLogger("testlogger").Info("Hello {SpanId}", 74);
+                    return Task.FromResult(0);
+                });
+            Assert.Single(uploadedEntries);
+            Assert.Equal("000000000000004a", uploadedEntries[0].SpanId);
+            Assert.Equal($"projects/projectId/traces/{guidTraceId}", uploadedEntries[0].Trace);
+        }
+
+        [Fact]
         public async Task SingleLogEntryWithLocation()
         {
             var uploadedEntries = await RunTestWorkingServer(

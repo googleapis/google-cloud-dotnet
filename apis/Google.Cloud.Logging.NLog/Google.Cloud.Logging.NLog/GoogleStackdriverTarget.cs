@@ -58,6 +58,7 @@ namespace Google.Cloud.Logging.NLog
         private Platform _platform;
         private MonitoredResource _resource;
         private string _logName;
+        private string _projectTraceId;
         private LogName _logNameToWrite;
         private Task _prevTask;
         private long _pendingTaskCount;
@@ -306,6 +307,7 @@ namespace Google.Cloud.Logging.NLog
                 resource = MonitoredResourceBuilder.FromPlatform(_platform);
                 resource.Labels.TryGetValue("project_id", out monitoredProjectId);
             }
+
             targetProjectId = ProjectId?.Render(LogEventInfo.CreateNullEvent());
 
             if (monitoredProjectId == null)
@@ -334,6 +336,7 @@ namespace Google.Cloud.Logging.NLog
             var logName = new LogName(targetProjectId, logId);
             _logName = logName.ToString();
             _logNameToWrite = logName;
+            _projectTraceId = !string.IsNullOrEmpty(targetProjectId) ? $"projects/{targetProjectId}/traces/" : string.Empty;
         }
 
         /// <summary>
@@ -487,6 +490,17 @@ namespace Google.Cloud.Logging.NLog
                 LogName = _logName,
                 Resource = _resource,
             };
+
+            if (!string.IsNullOrEmpty(_projectTraceId))
+            {
+                var traceId = RenderLogEvent(TraceId, loggingEvent);
+                if (!string.IsNullOrEmpty(traceId))
+                    logEntry.Trace = _projectTraceId + traceId;
+
+                var spanId = RenderLogEvent(SpanId, loggingEvent);
+                if (!string.IsNullOrEmpty(spanId))
+                    logEntry.SpanId = spanId;
+            }
 
             if (SendJsonPayload)
             {
