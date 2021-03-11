@@ -99,6 +99,22 @@ namespace Google.Cloud.Logging.NLog
         public Layout LogId { get; set; } = "Default";
 
         /// <summary>
+        /// Request TraceId for correlation of LogEvents from same request
+        /// </summary>
+        /// <remarks>
+        /// Resource name of the trace associated with the log entry. Ex: '06796866738c859f2f19b7cfb3214824'
+        /// </remarks>
+        public Layout TraceId { get; set; }
+
+        /// <summary>
+        /// Activity SpanId for correlation of LogEvents from same activity.
+        /// </summary>
+        /// <remarks>
+        /// Trace API v2 uses: a 16-character hexadecimal encoding of an 8-byte array. Ex: `000000000000004a` = String.format("{0:x16}", 74)
+        /// </remarks>
+        public Layout SpanId { get; set; }
+
+        /// <summary>
         /// Specify labels for the resource type;
         /// only used if platform detection is disabled or detects an unknown platform.
         /// </summary>
