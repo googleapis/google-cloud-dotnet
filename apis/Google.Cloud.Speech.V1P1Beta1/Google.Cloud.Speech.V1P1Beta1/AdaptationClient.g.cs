@@ -793,6 +793,68 @@ namespace Google.Cloud.Speech.V1P1Beta1
             UpdatePhraseSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Update a phrase set.
+        /// </summary>
+        /// <param name="phraseSet">
+        /// Required. The phrase set to update.
+        /// 
+        /// The phrase set's `name` field is used to identify the set to be
+        /// updated. Format:
+        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PhraseSet UpdatePhraseSet(PhraseSet phraseSet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePhraseSet(new UpdatePhraseSetRequest
+            {
+                PhraseSet = gax::GaxPreconditions.CheckNotNull(phraseSet, nameof(phraseSet)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a phrase set.
+        /// </summary>
+        /// <param name="phraseSet">
+        /// Required. The phrase set to update.
+        /// 
+        /// The phrase set's `name` field is used to identify the set to be
+        /// updated. Format:
+        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhraseSet> UpdatePhraseSetAsync(PhraseSet phraseSet, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePhraseSetAsync(new UpdatePhraseSetRequest
+            {
+                PhraseSet = gax::GaxPreconditions.CheckNotNull(phraseSet, nameof(phraseSet)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a phrase set.
+        /// </summary>
+        /// <param name="phraseSet">
+        /// Required. The phrase set to update.
+        /// 
+        /// The phrase set's `name` field is used to identify the set to be
+        /// updated. Format:
+        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhraseSet> UpdatePhraseSetAsync(PhraseSet phraseSet, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePhraseSetAsync(phraseSet, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Delete a phrase set.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1359,6 +1421,68 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CustomClass> UpdateCustomClassAsync(UpdateCustomClassRequest request, st::CancellationToken cancellationToken) =>
             UpdateCustomClassAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a custom class.
+        /// </summary>
+        /// <param name="customClass">
+        /// Required. The custom class to update.
+        /// 
+        /// The custom class's `name` field is used to identify the custom class to be
+        /// updated. Format:
+        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomClass UpdateCustomClass(CustomClass customClass, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomClass(new UpdateCustomClassRequest
+            {
+                CustomClass = gax::GaxPreconditions.CheckNotNull(customClass, nameof(customClass)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a custom class.
+        /// </summary>
+        /// <param name="customClass">
+        /// Required. The custom class to update.
+        /// 
+        /// The custom class's `name` field is used to identify the custom class to be
+        /// updated. Format:
+        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomClass> UpdateCustomClassAsync(CustomClass customClass, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomClassAsync(new UpdateCustomClassRequest
+            {
+                CustomClass = gax::GaxPreconditions.CheckNotNull(customClass, nameof(customClass)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a custom class.
+        /// </summary>
+        /// <param name="customClass">
+        /// Required. The custom class to update.
+        /// 
+        /// The custom class's `name` field is used to identify the custom class to be
+        /// updated. Format:
+        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomClass> UpdateCustomClassAsync(CustomClass customClass, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCustomClassAsync(customClass, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Delete a custom class.
