@@ -58,7 +58,7 @@ namespace Google.Cloud.Logging.NLog
         private Platform _platform;
         private MonitoredResource _resource;
         private string _logName;
-        private string _projectTraceId;
+        private string _traceResourcePath;
         private LogName _logNameToWrite;
         private Task _prevTask;
         private long _pendingTaskCount;
@@ -336,7 +336,7 @@ namespace Google.Cloud.Logging.NLog
             var logName = new LogName(targetProjectId, logId);
             _logName = logName.ToString();
             _logNameToWrite = logName;
-            _projectTraceId = !string.IsNullOrEmpty(targetProjectId) ? $"projects/{targetProjectId}/traces/" : string.Empty;
+            _traceResourcePath = !string.IsNullOrEmpty(targetProjectId) ? $"projects/{targetProjectId}/traces/" : null;
         }
 
         /// <summary>
@@ -491,15 +491,25 @@ namespace Google.Cloud.Logging.NLog
                 Resource = _resource,
             };
 
-            if (!string.IsNullOrEmpty(_projectTraceId))
+            if (!string.IsNullOrEmpty(_traceResourcePath))
             {
                 var traceId = RenderLogEvent(TraceId, loggingEvent);
                 if (!string.IsNullOrEmpty(traceId))
-                    logEntry.Trace = _projectTraceId + traceId;
+                {
+                    logEntry.Trace = _traceResourcePath + traceId;
 
-                var spanId = RenderLogEvent(SpanId, loggingEvent);
-                if (!string.IsNullOrEmpty(spanId))
-                    logEntry.SpanId = spanId;
+                    var spanId = RenderLogEvent(SpanId, loggingEvent);
+                    if (!string.IsNullOrEmpty(spanId))
+                    {
+                        logEntry.SpanId = spanId;
+                    }
+
+                    var traceSampled = RenderLogEvent(TraceSampled, loggingEvent);
+                    if (!string.IsNullOrEmpty(traceSampled))
+                    {
+                        logEntry.TraceSampled = bool.TrueString.Equals(traceSampled, StringComparison.OrdinalIgnoreCase) || traceSampled == "1";
+                    }
+                }
             }
 
             if (SendJsonPayload)
@@ -515,7 +525,7 @@ namespace Google.Cloud.Logging.NLog
                 else
                 {
                     jsonStruct.Fields.Add("message", Value.ForString(RenderLogEvent(Layout, loggingEvent)));
-                    
+
                     if (ServiceContextName != null)
                     {
                         var serviceName = RenderLogEvent(ServiceContextName, loggingEvent);
@@ -555,6 +565,7 @@ namespace Google.Cloud.Logging.NLog
                         propertiesStruct.Fields.Add(combinedProperty.Key, jsonValue);
                     }
                 }
+
                 logEntry.JsonPayload = jsonStruct;
             }
             else

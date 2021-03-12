@@ -115,6 +115,13 @@ namespace Google.Cloud.Logging.NLog
         public Layout SpanId { get; set; }
 
         /// <summary>
+        /// True means that the trace resource name in the trace field was sampled for storage in a trace backend.
+        /// False means that the trace was not sampled for storage when this log entry was written, or the sampling decision was unknown at the time.
+        /// A non-sampled trace value is still useful as a request correlation identifier. The default is False.
+        /// </summary>
+        public Layout TraceSampled { get; set; }
+
+        /// <summary>
         /// Specify labels for the resource type;
         /// only used if platform detection is disabled or detects an unknown platform.
         /// </summary>
