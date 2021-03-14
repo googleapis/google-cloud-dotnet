@@ -25,24 +25,26 @@ namespace Google.Cloud.AppEngine.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvYXBwZW5naW5lL3YxL3NlcnZpY2UucHJvdG8SE2dvb2dsZS5h",
-            "cHBlbmdpbmUudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iVQoH",
+            "cHBlbmdpbmUudjEaKmdvb2dsZS9hcHBlbmdpbmUvdjEvbmV0d29ya19zZXR0",
+            "aW5ncy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKVAQoH",
             "U2VydmljZRIMCgRuYW1lGAEgASgJEgoKAmlkGAIgASgJEjAKBXNwbGl0GAMg",
-            "ASgLMiEuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXQihAIKDFRy",
-            "YWZmaWNTcGxpdBI7CghzaGFyZF9ieRgBIAEoDjIpLmdvb2dsZS5hcHBlbmdp",
-            "bmUudjEuVHJhZmZpY1NwbGl0LlNoYXJkQnkSRwoLYWxsb2NhdGlvbnMYAiAD",
-            "KAsyMi5nb29nbGUuYXBwZW5naW5lLnYxLlRyYWZmaWNTcGxpdC5BbGxvY2F0",
-            "aW9uc0VudHJ5GjIKEEFsbG9jYXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgBOgI4ASI6CgdTaGFyZEJ5Eg8KC1VOU1BFQ0lGSUVEEAAS",
-            "CgoGQ09PS0lFEAESBgoCSVAQAhIKCgZSQU5ET00QA0K+AQoXY29tLmdvb2ds",
-            "ZS5hcHBlbmdpbmUudjFCDFNlcnZpY2VQcm90b1ABWjxnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwcGVuZ2luZS92MTthcHBlbmdp",
-            "bmWqAhlHb29nbGUuQ2xvdWQuQXBwRW5naW5lLlYxygIZR29vZ2xlXENsb3Vk",
-            "XEFwcEVuZ2luZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkFwcEVuZ2luZTo6VjFi",
-            "BnByb3RvMw=="));
+            "ASgLMiEuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXQSPgoQbmV0",
+            "d29ya19zZXR0aW5ncxgGIAEoCzIkLmdvb2dsZS5hcHBlbmdpbmUudjEuTmV0",
+            "d29ya1NldHRpbmdzIoQCCgxUcmFmZmljU3BsaXQSOwoIc2hhcmRfYnkYASAB",
+            "KA4yKS5nb29nbGUuYXBwZW5naW5lLnYxLlRyYWZmaWNTcGxpdC5TaGFyZEJ5",
+            "EkcKC2FsbG9jYXRpb25zGAIgAygLMjIuZ29vZ2xlLmFwcGVuZ2luZS52MS5U",
+            "cmFmZmljU3BsaXQuQWxsb2NhdGlvbnNFbnRyeRoyChBBbGxvY2F0aW9uc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoAToCOAEiOgoHU2hhcmRC",
+            "eRIPCgtVTlNQRUNJRklFRBAAEgoKBkNPT0tJRRABEgYKAklQEAISCgoGUkFO",
+            "RE9NEANCvgEKF2NvbS5nb29nbGUuYXBwZW5naW5lLnYxQgxTZXJ2aWNlUHJv",
+            "dG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9h",
+            "cHBlbmdpbmUvdjE7YXBwZW5naW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVuZ2lu",
+            "ZS5WMcoCGUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6OkNs",
+            "b3VkOjpBcHBFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.AppEngine.V1.NetworkSettingsReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Service), global::Google.Cloud.AppEngine.V1.Service.Parser, new[]{ "Name", "Id", "Split" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Service), global::Google.Cloud.AppEngine.V1.Service.Parser, new[]{ "Name", "Id", "Split", "NetworkSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.TrafficSplit), global::Google.Cloud.AppEngine.V1.TrafficSplit.Parser, new[]{ "ShardBy", "Allocations" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.TrafficSplit.Types.ShardBy) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -91,6 +93,7 @@ namespace Google.Cloud.AppEngine.V1 {
       name_ = other.name_;
       id_ = other.id_;
       split_ = other.split_ != null ? other.split_.Clone() : null;
+      networkSettings_ = other.networkSettings_ != null ? other.networkSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -148,6 +151,20 @@ namespace Google.Cloud.AppEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "network_settings" field.</summary>
+    public const int NetworkSettingsFieldNumber = 6;
+    private global::Google.Cloud.AppEngine.V1.NetworkSettings networkSettings_;
+    /// <summary>
+    /// Ingress settings for this service. Will apply to all versions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AppEngine.V1.NetworkSettings NetworkSettings {
+      get { return networkSettings_; }
+      set {
+        networkSettings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Service);
@@ -164,6 +181,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (Name != other.Name) return false;
       if (Id != other.Id) return false;
       if (!object.Equals(Split, other.Split)) return false;
+      if (!object.Equals(NetworkSettings, other.NetworkSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,6 +191,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (split_ != null) hash ^= Split.GetHashCode();
+      if (networkSettings_ != null) hash ^= NetworkSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -201,6 +220,10 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Split);
       }
+      if (networkSettings_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(NetworkSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -222,6 +245,10 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Split);
       }
+      if (networkSettings_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(NetworkSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -239,6 +266,9 @@ namespace Google.Cloud.AppEngine.V1 {
       }
       if (split_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Split);
+      }
+      if (networkSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NetworkSettings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -262,6 +292,12 @@ namespace Google.Cloud.AppEngine.V1 {
           Split = new global::Google.Cloud.AppEngine.V1.TrafficSplit();
         }
         Split.MergeFrom(other.Split);
+      }
+      if (other.networkSettings_ != null) {
+        if (networkSettings_ == null) {
+          NetworkSettings = new global::Google.Cloud.AppEngine.V1.NetworkSettings();
+        }
+        NetworkSettings.MergeFrom(other.NetworkSettings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -292,6 +328,13 @@ namespace Google.Cloud.AppEngine.V1 {
             input.ReadMessage(Split);
             break;
           }
+          case 50: {
+            if (networkSettings_ == null) {
+              NetworkSettings = new global::Google.Cloud.AppEngine.V1.NetworkSettings();
+            }
+            input.ReadMessage(NetworkSettings);
+            break;
+          }
         }
       }
     #endif
@@ -319,6 +362,13 @@ namespace Google.Cloud.AppEngine.V1 {
               Split = new global::Google.Cloud.AppEngine.V1.TrafficSplit();
             }
             input.ReadMessage(Split);
+            break;
+          }
+          case 50: {
+            if (networkSettings_ == null) {
+              NetworkSettings = new global::Google.Cloud.AppEngine.V1.NetworkSettings();
+            }
+            input.ReadMessage(NetworkSettings);
             break;
           }
         }
