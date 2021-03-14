@@ -41,6 +41,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
                 Split = new TrafficSplit(),
+                NetworkSettings = new NetworkSettings(),
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null);
@@ -63,6 +64,7 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Name = "name1c9368b0",
                 Id = "id74b70bb8",
                 Split = new TrafficSplit(),
+                NetworkSettings = new NetworkSettings(),
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServicesClient client = new ServicesClientImpl(mockGrpcClient.Object, null);

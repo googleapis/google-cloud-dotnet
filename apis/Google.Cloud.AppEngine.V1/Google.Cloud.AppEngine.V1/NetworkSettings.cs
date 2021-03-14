@@ -26,18 +26,238 @@ namespace Google.Cloud.AppEngine.V1 {
           string.Concat(
             "Cipnb29nbGUvYXBwZW5naW5lL3YxL25ldHdvcmtfc2V0dGluZ3MucHJvdG8S",
             "E2dvb2dsZS5hcHBlbmdpbmUudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG9CxgEKF2NvbS5nb29nbGUuYXBwZW5naW5lLnYxQhROZXR3b3JrU2V0",
-            "dGluZ3NQcm90b1ABWjxnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2FwcGVuZ2luZS92MTthcHBlbmdpbmWqAhlHb29nbGUuQ2xvdWQu",
-            "QXBwRW5naW5lLlYxygIZR29vZ2xlXENsb3VkXEFwcEVuZ2luZVxWMeoCHEdv",
-            "b2dsZTo6Q2xvdWQ6OkFwcEVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "cHJvdG8iqgIKD05ldHdvcmtTZXR0aW5ncxJbChdpbmdyZXNzX3RyYWZmaWNf",
+            "YWxsb3dlZBgBIAEoDjI6Lmdvb2dsZS5hcHBlbmdpbmUudjEuTmV0d29ya1Nl",
+            "dHRpbmdzLkluZ3Jlc3NUcmFmZmljQWxsb3dlZCK5AQoVSW5ncmVzc1RyYWZm",
+            "aWNBbGxvd2VkEicKI0lOR1JFU1NfVFJBRkZJQ19BTExPV0VEX1VOU1BFQ0lG",
+            "SUVEEAASHwobSU5HUkVTU19UUkFGRklDX0FMTE9XRURfQUxMEAESKQolSU5H",
+            "UkVTU19UUkFGRklDX0FMTE9XRURfSU5URVJOQUxfT05MWRACEisKJ0lOR1JF",
+            "U1NfVFJBRkZJQ19BTExPV0VEX0lOVEVSTkFMX0FORF9MQhADQsYBChdjb20u",
+            "Z29vZ2xlLmFwcGVuZ2luZS52MUIUTmV0d29ya1NldHRpbmdzUHJvdG9QAVo8",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hcHBlbmdp",
+            "bmUvdjE7YXBwZW5naW5lqgIZR29vZ2xlLkNsb3VkLkFwcEVuZ2luZS5WMcoC",
+            "GUdvb2dsZVxDbG91ZFxBcHBFbmdpbmVcVjHqAhxHb29nbGU6OkNsb3VkOjpB",
+            "cHBFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, null));
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.NetworkSettings), global::Google.Cloud.AppEngine.V1.NetworkSettings.Parser, new[]{ "IngressTrafficAllowed" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed) }, null, null)
+          }));
     }
     #endregion
 
   }
+  #region Messages
+  /// <summary>
+  /// A NetworkSettings resource is a container for ingress settings for a version
+  /// or service.
+  /// </summary>
+  public sealed partial class NetworkSettings : pb::IMessage<NetworkSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NetworkSettings> _parser = new pb::MessageParser<NetworkSettings>(() => new NetworkSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NetworkSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AppEngine.V1.NetworkSettingsReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetworkSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetworkSettings(NetworkSettings other) : this() {
+      ingressTrafficAllowed_ = other.ingressTrafficAllowed_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetworkSettings Clone() {
+      return new NetworkSettings(this);
+    }
+
+    /// <summary>Field number for the "ingress_traffic_allowed" field.</summary>
+    public const int IngressTrafficAllowedFieldNumber = 1;
+    private global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed ingressTrafficAllowed_ = global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed.Unspecified;
+    /// <summary>
+    /// The ingress settings for version or service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed IngressTrafficAllowed {
+      get { return ingressTrafficAllowed_; }
+      set {
+        ingressTrafficAllowed_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NetworkSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NetworkSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (IngressTrafficAllowed != other.IngressTrafficAllowed) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (IngressTrafficAllowed != global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed.Unspecified) hash ^= IngressTrafficAllowed.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (IngressTrafficAllowed != global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) IngressTrafficAllowed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IngressTrafficAllowed != global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) IngressTrafficAllowed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (IngressTrafficAllowed != global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IngressTrafficAllowed);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NetworkSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.IngressTrafficAllowed != global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed.Unspecified) {
+        IngressTrafficAllowed = other.IngressTrafficAllowed;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            IngressTrafficAllowed = (global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            IngressTrafficAllowed = (global::Google.Cloud.AppEngine.V1.NetworkSettings.Types.IngressTrafficAllowed) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NetworkSettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// If unspecified, INGRESS_TRAFFIC_ALLOWED_ALL will be used.
+      /// </summary>
+      public enum IngressTrafficAllowed {
+        /// <summary>
+        /// Unspecified
+        /// </summary>
+        [pbr::OriginalName("INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Allow HTTP traffic from public and private sources.
+        /// </summary>
+        [pbr::OriginalName("INGRESS_TRAFFIC_ALLOWED_ALL")] All = 1,
+        /// <summary>
+        /// Allow HTTP traffic from only private VPC sources.
+        /// </summary>
+        [pbr::OriginalName("INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY")] InternalOnly = 2,
+        /// <summary>
+        /// Allow HTTP traffic from private VPC sources and through load balancers.
+        /// </summary>
+        [pbr::OriginalName("INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB")] InternalAndLb = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  #endregion
+
 }
 
 #endregion Designer generated code

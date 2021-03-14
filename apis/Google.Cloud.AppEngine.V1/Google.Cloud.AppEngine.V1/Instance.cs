@@ -25,27 +25,37 @@ namespace Google.Cloud.AppEngine.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvYXBwZW5naW5lL3YxL2luc3RhbmNlLnByb3RvEhNnb29nbGUu",
-            "YXBwZW5naW5lLnYxGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIr4DCghJbnN0YW5jZRIM",
-            "CgRuYW1lGAEgASgJEgoKAmlkGAIgASgJEhoKEmFwcF9lbmdpbmVfcmVsZWFz",
-            "ZRgDIAEoCRJACgxhdmFpbGFiaWxpdHkYBCABKA4yKi5nb29nbGUuYXBwZW5n",
-            "aW5lLnYxLkluc3RhbmNlLkF2YWlsYWJpbGl0eRIPCgd2bV9uYW1lGAUgASgJ",
-            "EhQKDHZtX3pvbmVfbmFtZRgGIAEoCRINCgV2bV9pZBgHIAEoCRIuCgpzdGFy",
-            "dF90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghy",
-            "ZXF1ZXN0cxgJIAEoBRIOCgZlcnJvcnMYCiABKAUSCwoDcXBzGAsgASgCEhcK",
-            "D2F2ZXJhZ2VfbGF0ZW5jeRgMIAEoBRIUCgxtZW1vcnlfdXNhZ2UYDSABKAMS",
-            "EQoJdm1fc3RhdHVzGA4gASgJEhgKEHZtX2RlYnVnX2VuYWJsZWQYDyABKAgS",
-            "DQoFdm1faXAYECABKAkiOgoMQXZhaWxhYmlsaXR5Eg8KC1VOU1BFQ0lGSUVE",
-            "EAASDAoIUkVTSURFTlQQARILCgdEWU5BTUlDEAJCvwEKF2NvbS5nb29nbGUu",
-            "YXBwZW5naW5lLnYxQg1JbnN0YW5jZVByb3RvUAFaPGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYXBwZW5naW5lL3YxO2FwcGVuZ2lu",
-            "ZaoCGUdvb2dsZS5DbG91ZC5BcHBFbmdpbmUuVjHKAhlHb29nbGVcQ2xvdWRc",
-            "QXBwRW5naW5lXFYx6gIcR29vZ2xlOjpDbG91ZDo6QXBwRW5naW5lOjpWMWIG",
-            "cHJvdG8z"));
+            "YXBwZW5naW5lLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
+            "dGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
+            "Is4GCghJbnN0YW5jZRIRCgRuYW1lGAEgASgJQgPgQQMSDwoCaWQYAiABKAlC",
+            "A+BBAxIfChJhcHBfZW5naW5lX3JlbGVhc2UYAyABKAlCA+BBAxJFCgxhdmFp",
+            "bGFiaWxpdHkYBCABKA4yKi5nb29nbGUuYXBwZW5naW5lLnYxLkluc3RhbmNl",
+            "LkF2YWlsYWJpbGl0eUID4EEDEhQKB3ZtX25hbWUYBSABKAlCA+BBAxIZCgx2",
+            "bV96b25lX25hbWUYBiABKAlCA+BBAxISCgV2bV9pZBgHIAEoCUID4EEDEjMK",
+            "CnN0YXJ0X3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSFQoIcmVxdWVzdHMYCSABKAVCA+BBAxITCgZlcnJvcnMYCiABKAVC",
+            "A+BBAxIQCgNxcHMYCyABKAJCA+BBAxIcCg9hdmVyYWdlX2xhdGVuY3kYDCAB",
+            "KAVCA+BBAxIZCgxtZW1vcnlfdXNhZ2UYDSABKANCA+BBAxIWCgl2bV9zdGF0",
+            "dXMYDiABKAlCA+BBAxIdChB2bV9kZWJ1Z19lbmFibGVkGA8gASgIQgPgQQMS",
+            "EgoFdm1faXAYECABKAlCA+BBAxJOCgt2bV9saXZlbmVzcxgRIAEoDjI0Lmdv",
+            "b2dsZS5hcHBlbmdpbmUudjEuSW5zdGFuY2UuTGl2ZW5lc3MuTGl2ZW5lc3NT",
+            "dGF0ZUID4EEDGn8KCExpdmVuZXNzInMKDUxpdmVuZXNzU3RhdGUSHgoaTElW",
+            "RU5FU1NfU1RBVEVfVU5TUEVDSUZJRUQQABILCgdVTktOT1dOEAESCwoHSEVB",
+            "TFRIWRACEg0KCVVOSEVBTFRIWRADEgwKCERSQUlOSU5HEAQSCwoHVElNRU9V",
+            "VBAFIjoKDEF2YWlsYWJpbGl0eRIPCgtVTlNQRUNJRklFRBAAEgwKCFJFU0lE",
+            "RU5UEAESCwoHRFlOQU1JQxACOm3qQWoKIWFwcGVuZ2luZS5nb29nbGVhcGlz",
+            "LmNvbS9JbnN0YW5jZRJFYXBwcy97YXBwfS9zZXJ2aWNlcy97c2VydmljZX0v",
+            "dmVyc2lvbnMve3ZlcnNpb259L2luc3RhbmNlcy97aW5zdGFuY2V9Qr8BChdj",
+            "b20uZ29vZ2xlLmFwcGVuZ2luZS52MUINSW5zdGFuY2VQcm90b1ABWjxnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FwcGVuZ2luZS92",
+            "MTthcHBlbmdpbmWqAhlHb29nbGUuQ2xvdWQuQXBwRW5naW5lLlYxygIZR29v",
+            "Z2xlXENsb3VkXEFwcEVuZ2luZVxWMeoCHEdvb2dsZTo6Q2xvdWQ6OkFwcEVu",
+            "Z2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Instance), global::Google.Cloud.AppEngine.V1.Instance.Parser, new[]{ "Name", "Id", "AppEngineRelease", "Availability", "VmName", "VmZoneName", "VmId", "StartTime", "Requests", "Errors", "Qps", "AverageLatency", "MemoryUsage", "VmStatus", "VmDebugEnabled", "VmIp" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.Instance.Types.Availability) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Instance), global::Google.Cloud.AppEngine.V1.Instance.Parser, new[]{ "Name", "Id", "AppEngineRelease", "Availability", "VmName", "VmZoneName", "VmId", "StartTime", "Requests", "Errors", "Qps", "AverageLatency", "MemoryUsage", "VmStatus", "VmDebugEnabled", "VmIp", "VmLiveness" }, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.Instance.Types.Availability) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness), global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Parser, null, null, new[]{ typeof(global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState) }, null, null)})
           }));
     }
     #endregion
@@ -101,6 +111,7 @@ namespace Google.Cloud.AppEngine.V1 {
       vmStatus_ = other.vmStatus_;
       vmDebugEnabled_ = other.vmDebugEnabled_;
       vmIp_ = other.vmIp_;
+      vmLiveness_ = other.vmLiveness_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -113,10 +124,8 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Full path to the Instance resource in the API.
+    /// Output only. Full path to the Instance resource in the API.
     /// Example: `apps/myapp/services/default/versions/v1/instances/instance-1`.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -130,10 +139,8 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int IdFieldNumber = 2;
     private string id_ = "";
     /// <summary>
-    /// Relative name of the instance within the version.
+    /// Output only. Relative name of the instance within the version.
     /// Example: `instance-1`.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
@@ -147,9 +154,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int AppEngineReleaseFieldNumber = 3;
     private string appEngineRelease_ = "";
     /// <summary>
-    /// App Engine release this instance is running on.
-    ///
-    /// @OutputOnly
+    /// Output only. App Engine release this instance is running on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AppEngineRelease {
@@ -163,9 +168,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int AvailabilityFieldNumber = 4;
     private global::Google.Cloud.AppEngine.V1.Instance.Types.Availability availability_ = global::Google.Cloud.AppEngine.V1.Instance.Types.Availability.Unspecified;
     /// <summary>
-    /// Availability of the instance.
-    ///
-    /// @OutputOnly
+    /// Output only. Availability of the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AppEngine.V1.Instance.Types.Availability Availability {
@@ -179,10 +182,8 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int VmNameFieldNumber = 5;
     private string vmName_ = "";
     /// <summary>
-    /// Name of the virtual machine where this instance lives. Only applicable
+    /// Output only. Name of the virtual machine where this instance lives. Only applicable
     /// for instances in App Engine flexible environment.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VmName {
@@ -196,10 +197,8 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int VmZoneNameFieldNumber = 6;
     private string vmZoneName_ = "";
     /// <summary>
-    /// Zone where the virtual machine is located. Only applicable for instances
+    /// Output only. Zone where the virtual machine is located. Only applicable for instances
     /// in App Engine flexible environment.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VmZoneName {
@@ -213,10 +212,8 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int VmIdFieldNumber = 7;
     private string vmId_ = "";
     /// <summary>
-    /// Virtual machine ID of this instance. Only applicable for instances in
+    /// Output only. Virtual machine ID of this instance. Only applicable for instances in
     /// App Engine flexible environment.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VmId {
@@ -230,7 +227,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int StartTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Time that this instance was started.
+    /// Output only. Time that this instance was started.
     ///
     /// @OutputOnly
     /// </summary>
@@ -246,9 +243,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int RequestsFieldNumber = 9;
     private int requests_;
     /// <summary>
-    /// Number of requests since this instance was started.
-    ///
-    /// @OutputOnly
+    /// Output only. Number of requests since this instance was started.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Requests {
@@ -262,9 +257,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int ErrorsFieldNumber = 10;
     private int errors_;
     /// <summary>
-    /// Number of errors since this instance was started.
-    ///
-    /// @OutputOnly
+    /// Output only. Number of errors since this instance was started.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Errors {
@@ -278,9 +271,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int QpsFieldNumber = 11;
     private float qps_;
     /// <summary>
-    /// Average queries per second (QPS) over the last minute.
-    ///
-    /// @OutputOnly
+    /// Output only. Average queries per second (QPS) over the last minute.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Qps {
@@ -294,9 +285,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int AverageLatencyFieldNumber = 12;
     private int averageLatency_;
     /// <summary>
-    /// Average latency (ms) over the last minute.
-    ///
-    /// @OutputOnly
+    /// Output only. Average latency (ms) over the last minute.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AverageLatency {
@@ -310,9 +299,7 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int MemoryUsageFieldNumber = 13;
     private long memoryUsage_;
     /// <summary>
-    /// Total memory in use (bytes).
-    ///
-    /// @OutputOnly
+    /// Output only. Total memory in use (bytes).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long MemoryUsage {
@@ -326,10 +313,8 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int VmStatusFieldNumber = 14;
     private string vmStatus_ = "";
     /// <summary>
-    /// Status of the virtual machine where this instance lives. Only applicable
+    /// Output only. Status of the virtual machine where this instance lives. Only applicable
     /// for instances in App Engine flexible environment.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VmStatus {
@@ -343,10 +328,8 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int VmDebugEnabledFieldNumber = 15;
     private bool vmDebugEnabled_;
     /// <summary>
-    /// Whether this instance is in debug mode. Only applicable for instances in
+    /// Output only. Whether this instance is in debug mode. Only applicable for instances in
     /// App Engine flexible environment.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool VmDebugEnabled {
@@ -360,16 +343,29 @@ namespace Google.Cloud.AppEngine.V1 {
     public const int VmIpFieldNumber = 16;
     private string vmIp_ = "";
     /// <summary>
-    /// The IP address of this instance. Only applicable for instances in App
+    /// Output only. The IP address of this instance. Only applicable for instances in App
     /// Engine flexible environment.
-    ///
-    /// @OutputOnly
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string VmIp {
       get { return vmIp_; }
       set {
         vmIp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vm_liveness" field.</summary>
+    public const int VmLivenessFieldNumber = 17;
+    private global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState vmLiveness_ = global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState.Unspecified;
+    /// <summary>
+    /// Output only. The liveness health check of this instance. Only applicable for instances
+    /// in App Engine flexible environment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState VmLiveness {
+      get { return vmLiveness_; }
+      set {
+        vmLiveness_ = value;
       }
     }
 
@@ -402,6 +398,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (VmStatus != other.VmStatus) return false;
       if (VmDebugEnabled != other.VmDebugEnabled) return false;
       if (VmIp != other.VmIp) return false;
+      if (VmLiveness != other.VmLiveness) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -424,6 +421,7 @@ namespace Google.Cloud.AppEngine.V1 {
       if (VmStatus.Length != 0) hash ^= VmStatus.GetHashCode();
       if (VmDebugEnabled != false) hash ^= VmDebugEnabled.GetHashCode();
       if (VmIp.Length != 0) hash ^= VmIp.GetHashCode();
+      if (VmLiveness != global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState.Unspecified) hash ^= VmLiveness.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -504,6 +502,10 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(VmIp);
       }
+      if (VmLiveness != global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) VmLiveness);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -577,6 +579,10 @@ namespace Google.Cloud.AppEngine.V1 {
         output.WriteRawTag(130, 1);
         output.WriteString(VmIp);
       }
+      if (VmLiveness != global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) VmLiveness);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -633,6 +639,9 @@ namespace Google.Cloud.AppEngine.V1 {
       }
       if (VmIp.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(VmIp);
+      }
+      if (VmLiveness != global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) VmLiveness);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -695,6 +704,9 @@ namespace Google.Cloud.AppEngine.V1 {
       }
       if (other.VmIp.Length != 0) {
         VmIp = other.VmIp;
+      }
+      if (other.VmLiveness != global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState.Unspecified) {
+        VmLiveness = other.VmLiveness;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -775,6 +787,10 @@ namespace Google.Cloud.AppEngine.V1 {
           }
           case 130: {
             VmIp = input.ReadString();
+            break;
+          }
+          case 136: {
+            VmLiveness = (global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState) input.ReadEnum();
             break;
           }
         }
@@ -858,6 +874,10 @@ namespace Google.Cloud.AppEngine.V1 {
             VmIp = input.ReadString();
             break;
           }
+          case 136: {
+            VmLiveness = (global::Google.Cloud.AppEngine.V1.Instance.Types.Liveness.Types.LivenessState) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -874,6 +894,190 @@ namespace Google.Cloud.AppEngine.V1 {
         [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
         [pbr::OriginalName("RESIDENT")] Resident = 1,
         [pbr::OriginalName("DYNAMIC")] Dynamic = 2,
+      }
+
+      /// <summary>
+      /// Wrapper for LivenessState enum.
+      /// </summary>
+      public sealed partial class Liveness : pb::IMessage<Liveness>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Liveness> _parser = new pb::MessageParser<Liveness>(() => new Liveness());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Liveness> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AppEngine.V1.Instance.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Liveness() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Liveness(Liveness other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Liveness Clone() {
+          return new Liveness(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Liveness);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Liveness other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Liveness other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Liveness message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static partial class Types {
+          /// <summary>
+          /// Liveness health check status for Flex instances.
+          /// </summary>
+          public enum LivenessState {
+            /// <summary>
+            /// There is no liveness health check for the instance. Only applicable for
+            /// instances in App Engine standard environment.
+            /// </summary>
+            [pbr::OriginalName("LIVENESS_STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The health checking system is aware of the instance but its health is
+            /// not known at the moment.
+            /// </summary>
+            [pbr::OriginalName("UNKNOWN")] Unknown = 1,
+            /// <summary>
+            /// The instance is reachable i.e. a connection to the application health
+            /// checking endpoint can be established, and conforms to the requirements
+            /// defined by the health check.
+            /// </summary>
+            [pbr::OriginalName("HEALTHY")] Healthy = 2,
+            /// <summary>
+            /// The instance is reachable, but does not conform to the requirements
+            /// defined by the health check.
+            /// </summary>
+            [pbr::OriginalName("UNHEALTHY")] Unhealthy = 3,
+            /// <summary>
+            /// The instance is being drained. The existing connections to the instance
+            /// have time to complete, but the new ones are being refused.
+            /// </summary>
+            [pbr::OriginalName("DRAINING")] Draining = 4,
+            /// <summary>
+            /// The instance is unreachable i.e. a connection to the application health
+            /// checking endpoint cannot be established, or the server does not respond
+            /// within the specified timeout.
+            /// </summary>
+            [pbr::OriginalName("TIMEOUT")] Timeout = 5,
+          }
+
+        }
+        #endregion
+
       }
 
     }

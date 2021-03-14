@@ -92,6 +92,14 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Zones = { "zones3641f926", },
                 VpcAccessConnector = new VpcAccessConnector(),
                 Entrypoint = new Entrypoint(),
+                BuildEnvVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                ServiceAccount = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
@@ -164,6 +172,14 @@ namespace Google.Cloud.AppEngine.V1.Tests
                 Zones = { "zones3641f926", },
                 VpcAccessConnector = new VpcAccessConnector(),
                 Entrypoint = new Entrypoint(),
+                BuildEnvVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                ServiceAccount = "service_accounta3c1b923",
             };
             mockGrpcClient.Setup(x => x.GetVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Version>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
