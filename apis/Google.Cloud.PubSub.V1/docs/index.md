@@ -48,18 +48,18 @@ the CPU processor count as returned by `Environment.ProcessorCount`. This is to 
 than a single gRPC channel can support; the processor count is is a pragmatic choice to approximately
 scale maximum throughput performance by potential machine workload.
 
-If using multiple clients on a machine with a high processor count, then this may cause problems
+When using multiple clients on a machine with a high processor count, this may cause problems
 with TCP connection exhaustion. Set the relevant `ClientCreationSettings.ClientCount` to a low value
 (`1` is suitable for low or moderate throughput requirements) to mitigate this.
 
 # Coding considerations
 
-`PublisherClient` and `SubscriberClient` are expensive to create, so if regularly publishing or
+`PublisherClient` and `SubscriberClient` are expensive to create, so when regularly publishing or
 subscribing to the same topic or subscription then a singleton client instance should be created and
 used for the lifetime of the application.
 
 Both synchronous `Create(...)` and asynchronous `CreateAsync(...)` methods are provided, but note that
-if using default credentials on Google Compute Engine (GCE) then a network request may need to be made
+when using default credentials on Google Compute Engine (GCE) then a network request may need to be made
 to retrieve credentials from the GCE Metadata Server.
 
 When publishing, the `Task` returned by the various `Publish(...)` methods will complete only
